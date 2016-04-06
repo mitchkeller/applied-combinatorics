@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\usepackage{answers}                            
+\usepackage{enumitem}                       
+\usepackage{hyperref}
+\usepackage{multicol}
+
+\setlength{\parindent}{0.0mm}
+
+\hypersetup{colorlinks=true,
+linkcolor=blue}
+
+% very useful during de-bugging!
+%\usepackage[left]{showlabels}
+%\showlabels{hypertarget}
+%\showlabels{hyperlink}
+
+% solutions file
+\Opensolutionfile{mysolutions}
+\Newassociation{mysolution}{mySoln}{mysolutions}
+
+% new environment that sets up hypertargets both in the question
+% section, and in the answer section
+\newlist{myenum}{enumerate}{3}
+\newcounter{question}
+\newenvironment{question}%
+    {%
+    \refstepcounter{question}%
+    %  hyperlink to solution
+         \hypertarget{question:{\thequestion}}{}%
+         \Writetofile{mysolutions}{\protect\hypertarget{soln:\thequestion}{}}%
+         \begin{myenum}[label=\bfseries\protect\hyperlink{soln:\thequestion}{\thequestion},ref=\thequestion]
+         \item%
+        }%
+        {%
+        \end{myenum}}
+
+\begin{document}
+
+\section{Questions}
+%\begin{multicols}{3}
+    \begin{question}
+        $\int\sqrt{4-x}\mathrm{d}x$
+            \begin{mysolution}
+                $-\frac{2}{3}(4-x)^{\frac{3}{2}}+C$
+            \end{mysolution}
+    \end{question}
+    \begin{question}
+        $\int(2x-1)^{50}\mathrm{d}x$
+            \begin{mysolution}
+                $\frac{1}{102}(2x-1)^{51}+C$
+            \end{mysolution}
+    \end{question}
+    \begin{question}
+        $\int\sqrt[n]{x}\mathrm{d}x$
+            \begin{mysolution}
+                $\frac{n}{n+1}x^{\frac{1+n}{n}}+C$
+            \end{mysolution}
+    \end{question}
+%\end{multicols}
+
+% close solution file
+\Closesolutionfile{mysolutions}
+
+% renew the solution environment so that it hyperlinks back to 
+% the question
+\renewenvironment{mySoln}[1]{%
+         % add some glue
+         \vskip .5cm plus 2cm minus 0.1cm%
+         {\bfseries \hyperlink{question:#1}{#1.}}%
+}%
+{%
+}%
+
+\clearpage
+\section{Answers!}
+% input the file if it exists
+\IfFileExists{mysolutions.tex}{\input{mysolutions.tex}}{}
+\end{document}

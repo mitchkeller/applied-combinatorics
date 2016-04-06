@@ -1,0 +1,1159 @@
+% appendix-numbersystems.tex
+% Updated January 4, 2012
+
+\chapter{Set Theory, Relations and Number Systems and Relations}\label{app:numsys}
+
+\section{Introduction}
+
+Until the later $19^{th}$ century, mathematicians used the concepts
+of sets and numbers informally, chosing to ignore some troubling
+issues just beneath the surface.  Here's a famous example.
+Consider the set $X$ whose members are those sets which
+are not members of themselves, i.e., $X=\{A: A \notin A\}$.  Then
+it is impossible to settle whether $X$ is a member of itself!  
+And the problem rests with the assertion that $X$ is a set.
+
+This conundrum is known as the \textit{Russell Paradox}, and the debate 
+on its significance served as one of the motivating forces for putting
+set theory on a firm foundation, an effort which continues to this
+day.
+
+Most of the mathematics studied today is based on a system 
+of axioms commonly referred to as ZFC.  This is an
+abbreviation of ``Zermelo-Fraenkel plus the Axiom of Choice.''  
+For the sake of completeness, these axioms are listed in the closing
+section of this appendix, with the last one being the Axiom of Choice.
+It is the most controversial of the list.  While a full discussion of these 
+axioms would take us far away from combinatorial mathematics, here 
+are two of the axioms that are particularly relevant for our course.
+
+\medskip
+\noindent
+\textbf{Axiom of the Empty Set:}\quad There is a set $\emptyset$ which
+contains no elements.
+
+\medskip
+\noindent
+\textbf{Axiom of pairing:}\quad
+If $x$ and $y$ are sets, then there exists a set containing $x$ and $y$
+as its only elements, which we denote by $\{x,y\}$.  Note: If
+$x=y$, then we write only $\{x\}$.
+
+For the time being, do a memory dump and forget everything you have ever
+learned about numbers and arithmetic. The set
+of natural numbers has just been delivered on our
+door step in a big box with a warning label saying ``Assembly
+Required.''  We open the box and find a single piece of paper
+on which the following ``instructions'' are printed.  These
+defining properties of the natural numbers are known as the \textit{Peano 
+Postulates}.
+
+\begin{enumerate}
+\item[(i).] There is a non-empty set of elements called 
+\textit{natural numbers}.  There is natural number
+called \textit{zero} which is denoted~$0$.  The set of all natural
+numbers is denoted $\mathbb{N}_0$
+\item[(ii).] There is a one-to-one function $s:\mathbb{N}_0
+\injection \mathbb{N}_0$
+called the \textit{successor} function.  For each $n\in \mathbb{N}_0$,
+$s(n)$ is called the \textit{successor} of $n$.
+\item[(iii).] There is no natural number $n$ for which $0=s(n)$.
+\item[(iv).] Let $\mathbb{M}\subseteq \mathbb{N}_0$.  
+Then $\mathbb{M} =\mathbb{N}_0$ if and only if
+\begin{enumerate}
+\item[(a).] $0\in \mathbb{M}$; and 
+\item[(b).] $\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
+  \Longrightarrow(s(k)\in \mathbb{M})$. 
+\end{enumerate}
+\end{enumerate}
+
+Property~(iv) in the list of Peano Postulates is called 
+the \textit{Principle of Mathematical Induction}, or
+just the \textit{Principle of Induction}.
+
+Here's a way to convince yourself that the Peano Postulates
+make sense, given the Axioms of ZFC.  We could take $\emptyset$ as
+the natural number $0$.  Then using the Axiom of Pairing,
+we could define: 
+\begin{align*}
+s(\emptyset) =&\{\emptyset\}\\
+s(\{\emptyset\})=&\{\emptyset,\{\emptyset\}\}\\
+s(\{\emptyset,\{\emptyset\}\})=&
+\{\emptyset,\{\emptyset,\{\emptyset\}\}\} \\
+s(\{\emptyset,\{\emptyset,\{\emptyset\}\}\})=&
+\{\emptyset,\{\emptyset,\{\emptyset,\{\emptyset\}\}\}\}
+\end{align*}
+
+As a first application of the Principle of Induction, we prove the following
+basic property of the natural numbers.
+
+\begin{proposition}
+Let $n$ be a natural number with $n\neq0$.  Then there is a
+natural number $m$ so that $n=s(m)$.
+\end{proposition}
+\begin{proof}
+Let $\mathbb{S}=\{n\in\mathbb{N}_0:\exists m\in\mathbb{N}_0,
+n=s(m)\}$.  Then set $\mathbb{M}=\{0\}\cup\mathbb{S}$.
+We show that $\mathbb{M}=\mathbb{N}_0$.  First, note that
+$0\in\mathbb{M}$.  Next, we will show that for all $k\in\mathbb{N}_0$,
+if $k\in\mathbb{M}$, then $s(k)\in\mathbb{M}$. However, this is trivial
+since for all $k\in\mathbb{N}_0$, we have 
+$s(k)\in\mathbb{S}\subseteq\mathbb{M}$.
+We conclude that $\mathbb{M}=\mathbb{N}_0$.
+\end{proof}
+
+\subsection{Addition as a Binary Operation}\label{s:add}
+
+Recall that a \textit{binary operator} $*$ on set $X$ is just
+a function $*:X\times X\rightarrow X$.  So the image of
+the ordered pair $(x,y)$ would normally be denoted $*((x,y))$.
+However, this is usually abbreviated as $*(x,y)$ or
+even more compactly as $x*y$.  With this convention,
+we now define a binary operation $+$ 
+on the the set $\mathbb{N}_0$ of natural numbers.
+This operation is defined by:
+
+For every natural number $n\in\mathbb{N}_0$:
+\begin{enumerate}
+\item [(i).]  $n+0=n$.
+\item [(ii).] For all $k\in\mathbb{N}_0$, $n+s(k) = s(n+k)$.
+\end{enumerate}
+
+We pause to make it clear why the preceding two statements
+define $+$.  Let $n$ be
+an arbitrary natural number.  Then let $\mathbb{M}$ denote the
+set of all natural numbers $m$ for which $n+m$ is
+defined.  Note that $0\in \mathbb{M}$ by part~(i).  Also note
+that for all $k\in \mathbb{N}_0$, $s(k)\in \mathbb{M}$ whenever 
+$k\in \mathbb{M}$ by part~(ii).  This
+shows that $\mathbb{M}=\mathbb{N}_0$.  Since $n$ was arbitrary, this allows us
+to conclude that $n+m$ is defined for all $n,m\in \mathbb{N}_0$.
+
+We read $n+m$ as $n$ \textit{plus} $m$.  The operation $+$
+is also called \textit{addition}.  
+
+Among the natural numbers, the successor of zero plays a very
+important role, so important that it deserves its own special
+symbol.  Here we follow tradition and call the natural number
+$s(0)$ \textit{one} and denote it by~$1$.
+Note that for every natural number
+$n$, we have $n+1=n+s(0)=s(n)$.  In particular, $0+1=1$.
+
+With this notation, the Principle of Induction can be 
+restated in the following form, which many of you may already have seen.
+
+\medskip
+\noindent
+\textbf{The Principle of Induction.}\quad
+Let $\mathbb{M}\subseteq \mathbb{N}_0$.  
+Then $\mathbb{M} =\mathbb{N}_0$ if and only if
+\begin{enumerate}
+\item[(a).] $0\in \mathbb{M}$; and 
+\item[(b).] $\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
+  \Longrightarrow(k+1\in \mathbb{M})$. 
+\end{enumerate}
+
+\begin{theorem}{\rmfamily [Associative Property of Addition]}\\
+$m+(n+p) = (m+n)+p$, for all $m,n,p\in \mathbb{N}_0$.
+\end{theorem}
+
+\begin{proof}
+Let $m,n\in \mathbb{N}_0$. Then let 
+$\mathbb{M}$ denote the set of all natural numbers $p$ for
+which $m+(n+p)=(m+n)+p$.  We show that $\mathbb{M}=\mathbb{N}_0$.
+
+Note that 
+\[
+m+(n+0) = m+n = (m+n)+0 
+\]
+which shows that $0\in \mathbb{M}$.
+
+Now assume that $k\in \mathbb{M}$, i.e., $m+(n+k) = (m+n)+k$.
+Then
+\[
+m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1). 
+\]
+Notice here that the first, second, and fourth equalities follow from
+the second part of the definition of addition while the third uses our
+inductive assumption that $m+(n+k)=(m+n)+k)$. This shows that $k+1\in
+\mathbb{M}$.  Therefore, $\mathbb{M}= \mathbb{N}_0$.  Since $m$ and
+$n$ were arbitrary elements of $\mathbb{N}_0$, the theorem follows.
+\end{proof}
+
+In proofs to follow, we will trim out some of the wording
+and leave only the essential mathematical steps intact.
+In particular, we will (i)~omit reference to the set $\mathbb{M}$,
+and (ii)~drop the phrase ``For all $k\in\mathbb{N}_0$'' 
+For example, to define addition, we will just
+write (i)~$n+0=n$, and (ii)~$n+(k+1) = (n+k)+1$.
+
+\begin{lemma}
+$m+(n+1) = (m+1)+n$, for all $m,n\in\mathbb{N}_0$.
+\end{lemma}
+\begin{proof}
+Fix $m\in \mathbb{N}_0$.  Then
+\[
+m+(0+1)=m+1= (m+0)+1.
+\]
+Now assume that $m+(k+1)=(m+1)+k$.
+Then
+\[
+m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
+\]
+\end{proof}
+
+We next prove the commutative property, a task that takes
+two steps. First, we prove the following special case.
+
+\begin{lemma}
+$n+0 = 0+n=n$, for all $n\in \mathbb{N}_0$.
+\end{lemma}
+
+\begin{proof}
+The statement is trivially true when $n= 0$.
+Now suppose that $k+0=0+k=k$ for some $k\in \mathbb{N}_0$.
+Then
+\[
+(k+1) +0 = k+1 = (0+k)+1= 0+(k+1).
+\]
+\end{proof}
+
+\begin{theorem}{\rmfamily [Commutative Law of Addition]}\\
+$m+n=n+m$ for all $m,n\in \mathbb{N}_0$.
+\end{theorem}
+
+\begin{proof}
+Let $m\in \mathbb{N}_0$. Then $m+0=0+m$ from the preceding lemma.
+Assume $m+k=k+m$. Then
+\[
+m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:sum0}
+If $m,n\in\mathbb{N}_0$ and $m+n=0$, then $m=n=0$.
+\end{lemma}
+
+\begin{proof}
+Suppose that either of $m$ and $n$ is not zero. Since addition
+is commutative, we may assume without loss of generality that
+$n\neq0$.  Then there exists a natural number
+$p$ so that $n=s(p)$.  This implies that $m+n=m+s(p)=s(m+p)=0$,
+which is impossible since $0$ is not the successor of any
+natural number.
+\end{proof}
+
+\begin{theorem}{\rmfamily [Cancellation Law of Addition]}\\
+If $m,n,p\in \mathbb{N}_0$ and $m+p=n+p$, then $m=n$.
+\end{theorem}
+
+\begin{proof}
+Let $m,n\in \mathbb{N}_0$.  Suppose that $m+0=n+0$.  Then $m=n$.
+Now suppose that $m=n$ whenever $m+k=n+k$.
+If $m+(k+1)=n+(k+1)$, then 
+\[
+s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k).
+\]
+Since $s$ is an
+injection, this implies $m+k=n+k$.  Thus $m=n$.
+\end{proof}
+
+\section{Multiplication as a Binary Operation}\label{s:mult}
+
+We define a binary operation $\times$, called \textit{multiplication}, 
+on the set of natural numbers.  When $m$ and $n$ are natural
+numbers, $m\times n$ is also called the \textit{product}
+of $m$ and $n$, and it sometimes denoted 
+$m*n$ and even more compactly as $mn$.  We will use this
+last convention in the material to follow. Let $n\in \mathbb{N}_0$. 
+
+Then define:
+
+\begin{enumerate}
+\item[(i).] $n0=0$, and
+\item[(ii).] $n(k+1)=nk +n$.
+\end{enumerate}
+
+Note that $10=0$ and $01=00+0=0$.  Also, note that $11=10+1=0+1=1$.
+More generally, from~(ii) and Lemma~\ref{lem:sum0}, we 
+conclude that if $m,n\neq0$, then $mn\neq0$.
+
+\begin{theorem}{\rmfamily [Left Distributive Law]}\\
+$m(n+p)=mn + mp$, for all $m,n,p\in \mathbb{N}_0$.
+\end{theorem}
+
+\begin{proof}
+Let $m,n\in \mathbb{N}_0$.  Then 
+\[
+m(n+0)=mn = mn +0 = mn+ m0.
+\]
+Now assume $m(n+k) = mn + mk$.
+Then
+\begin{align*}
+m[n+(k+1)] &= m[(n+k)+1]=m(n+k)+m\\
+&=(mn+mk)+m=mn+(mk+m)= mn+m(k+1).
+\end{align*}
+\end{proof}
+
+\begin{theorem}{\rmfamily [Right Distributive Law]}\\
+$(m+n)p=mp + np$, for all $m,n,p\in \mathbb{N}_0$.
+\end{theorem}
+
+\begin{proof}
+Let $m,n\in \mathbb{N}_0$.  Then
+\[
+(m+n)0 =0 = 0+0 = m0 + n0.
+\]
+Now assume $(m+n)k = mk + nk$.
+Then
+\begin{align*}
+(m+n)(k+1)&=(m+n)k+(m+n)= (mk+nk) +(m+n)\\
+&=(mk+m)+(nk+n)=m(k+1)+n(k+1).
+\end{align*}
+\end{proof}
+
+\begin{theorem}{\rmfamily [Associative Law of Multiplication]}\\
+$m(np) = (mn)p$, for all $m,n,p\in \mathbb{N}_0$.
+\end{theorem}
+
+\begin{proof}
+Let $m,n\in \mathbb{N}_0$.  Then
+\[
+m(n0)= m0 = 0 = (mn)0.
+\]
+Now assume that $m(nk)=(mn)k$.  Then
+\[
+m[n(k+1)]= m(nk + n)= m(nk) + mn =(mn)k + mn = (mn)(k+1).
+\]
+\end{proof}
+
+The commutative law requires  some preliminary work.
+
+\begin{lemma}
+$n0= 0n=0$, for all $n\in \mathbb{N}_0$.
+\end{lemma}
+
+\begin{proof}
+The lemma holds trivially when $n=0$.  Assume $k0=
+0k=0$.  Then
+\[
+(k+1)0 =0 = 0+0= 0k+0=0(k+1).
+\]
+\end{proof}
+
+\begin{lemma}
+$n1 =1n=n$, for every $n\in \mathbb{N}_0$.
+\end{lemma}
+\begin{proof}
+$01=00+0=0 =10$.  Assume
+$k1=1k=k$.  Then
+\[
+(k+1)1=k1+11=1k+1=1(k+1).
+\]
+\end{proof}
+
+\begin{theorem}{\rmfamily [Commutative Law of Multiplication]}\\
+$mn=nm$, for all $m,n\in \mathbb{N}_0$.
+\end{theorem}
+
+\begin{proof} Let $m\in \mathbb{N}_0$.
+Then $m0=0m$.
+Assume $mk=km$. Then
+\[
+m (k+1) = mk +m = km+m= km +1m=(k+1)m.
+\]
+\end{proof}
+
+\section{Exponentiation}
+
+We now define a binary operation called \textit{exponentiation}
+which is defined only on those ordered pairs $(m,n)$ of natural
+numbers where not both are zero.  The notation for exponentiation
+is non-standard.  In books, it is written $m^n$ while the notations
+$m**n$, $m\wedge n$ and $\exp(m,n)$ are used in-line.  We will use
+the $m^n$ notation.
+
+When $m=0$, we set $0^n=0$ for all $n\in\mathbb{N}_0$
+with $n\neq0$.  Now let $m\neq0$.  We define $m^n$ by
+(i)~$m^0=1$ and (ii)~$m^{k+1}=mm^k$.
+
+\begin{theorem}
+For all $m,n,p\in\mathbb{N}_0$ with $m\neq0$,
+$m^{n+p}=m^n\,m^p$.
+\end{theorem}
+
+\begin{proof}
+Let $m,n\in\mathbb{N}_0$ with $m\neq0$.  Then
+$m^{n+0}=m^n=m^n\,1=m^n\,m^0$.
+Now suppose that $m^{n+k}=m^n\,m^k$.
+Then
+\[
+m^{n+(k+1)}=m^{(n+k)+1}=m\,m^{n+k}
+ = m(m^n\,m^k)=m^n(m\,m^k)=m^n\,m^{k+1}.
+\]
+\end{proof}
+
+\begin{theorem}
+For all $m,n,p\in\mathbb{N}_0$ with $m\neq0$,
+$(m^n)^p=m^{np}$.
+\end{theorem}
+\begin{proof}
+Let $m,n\in\mathbb{N}_0$ with $m\neq0$.  Then
+$(m^n)^0=1=m^0=m^{n0}$.  Now suppose that $(m^n)^k=m^{nk}$.
+Then 
+\[
+(m^n)^{k+1}=m^n(m^n)^k=m^n(m^{nk})=m^{n+nk}=m^{n(k+1)}.
+\]
+\end{proof}
+
+\section{Partial Orders and Total Orders}\label{s:order}
+
+A binary relation $R$ on a set $X$ is just a subset of
+the cartesian product $X\times X$.  In discussions of
+binary relations, the notation $(x,y)\in R$ is sometimes
+written as $xRy$.
+
+A binary relation $R$ is:
+
+\begin{enumerate} 
+\item[(i).] \textit{reflexive} if $(x,x)\in R$ for
+all $x\in X$.
+\item[(ii).] \textit{antisymmetric} if $x=y$ whenever $(x,y)\in R$ and $(y,x)\in R$, for all $x,y\in X$.
+\item[(iii).] \textit{transitive} if $(x,y)\in R$ and $(y,z)\in R$
+imply $(x,z)\in R$, for all $x,y,z\in X$.
+\end{enumerate}
+
+A binary relation $R$ on a set $X$ is called a \textit{partial order} on
+$X$ when it is reflexive, antisymmetric and transitive.
+Traditionally, symbols like $\le$ and $\subseteq$ are used to denote
+partial orders.  As an example, recall that if $X$ is a family of sets, 
+we write $A\subseteq B$ when $A$ is a subset of $B$.  
+
+When using the ordered pair notation for binary relations,
+to indicate that a pair $(x,y)$ is not in the relation,
+we simply write $(x,y)\notin R$. When using the alternate
+notation, this is usually denoted by using the negation
+symbol from logic and writing $\lnot (xRy)$.  Most of the
+special symbols used to denote partial orders 
+come with negative versions, e.g., $x\not\le y$, $x\nsubseteq y$.
+
+A partial order is called a \textit{total order} on $X$ when for
+all $x,y\in X$, $(x,y)\in R$ or $(y,x)\in R$.  For example,
+if 
+\[
+X=\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}
+\]
+then $\subseteq$ is a total order on $X$.
+
+When $\le$ is a partial order on a set $X$, we write
+$x<y$ when $x\le y$ and $x\neq y$.
+
+\section{A Total Order on Natural Numbers}
+
+Let $m,n\in \mathbb{N}_0$. Define a binary relation $\le$ on
+$\mathbb{N}_0$ by setting $m\le n$ if and only if
+there exists a natural number $p$ so
+that $m+p=n$.  
+
+\begin{proposition}
+$\le$ is a total order on $\mathbb{N}_0$.
+\end{proposition}
+\begin{proof}
+$\le$ is reflexive since $n+0=n$ and therefore $n\le n$, for all $n\in 
+\mathbb{N}_0$.  Next, we show that $\le$ is antisymmetric.  
+Let $m,n\in\mathbb{N}_0$ and suppose that $m\le n$ and $n\le m$.  
+Then there exist natural numbers $p$ and $q$ so that $m+p=n$ and $n+q=m$.
+It follows that
+\[
+m+(p+q)= (m+p)+q=n+q =m=m+0\]
+Therefore $p+q=0$, which implies that $p=q=0$.  Thus $m+p=m+0=m=n$.
+
+Next, we show that $\le$ is transitive.  Suppose that $m,n,p\in
+\mathbb{N}_0$, $m\le n$ and $n\le p$.  Then there exist
+natural numbers $q$ and $r$ so that $m+q=n$ and $n+r=p$.
+Then
+\[
+m+(q+r)=(m+q)+r=n+r=p.
+\]
+Thus $m\le p$, and we have now shown that $\le$ is a partial
+order on $\mathbb{N}_0$.
+
+
+Finally, we show that $\le$ is a total order.
+To accomplish this, we choose an arbitrary element $m\in\mathbb{N}_0$
+and show that for every $n\in\mathbb{N}_0$, either $m\le n$ or
+$n\le m$. We do this by induction on $n$.  
+Suppose first that $n=0$.  Since $0+m=m$, we conclude that
+$0\le m$.
+Now suppose that for some $k\in\mathbb{N}_0$, we have
+$m\le k$.  Then there is a natural number $p$ so that $m+p=k$.  Then
+$m+(p+1) =(m+p)+1=k+1$, so $m\le k+1$.
+
+On the other hand, suppose that for some $k\in\mathbb{N}_0$,
+we have $k\le m$.  If $k=m$, then $m\le k$ and
+$m\le k+1$ as above.  Now suppose that $k\le m$ and $k\neq m$.
+Since $k\le m$, there exists a natural number $p$ so that $k+p=m$.
+Since $k\neq m$, we know $p\neq 0$. Therefore, there is a 
+natural number $q$ so that
+$p=q+1$.  Then $m=k+p=k+(q+1)=(k+1)+q$ which shows that $k+1\le m$.
+\end{proof}
+
+Note that if $m,n\in\mathbb{N}_0$, then $m<n$ if and only if
+there exists a natural number $p\neq 0$ so that $m+p=n$.
+
+\begin{theorem}{\rmfamily [Monotonic Law for Addition]}\\ 
+Let $m,n,p\in \mathbb{N}_0$.  If $m\le n$, then
+$m+p\le n+p$. Furthermore, if $m<n$, then $m+p<n+p$.
+\end{theorem}
+
+\begin{proof}
+It suffices to prove that if $m,n\in \mathbb{N}_0$ with $m<n$, then
+$m+p<n+p$ for every $p\in\mathbb{N}_0$.  Let $q\neq0$ be
+the natural number so that $m+q =n$.  
+Now let $p\in \mathbb{N}_0$.
+Then $(m+p)+q=(m+q)+p=n+p$, so $m+p < n+p$.
+\end{proof} 
+
+\begin{lemma}
+If $m,n\in \mathbb{N}_0$, $m\neq0$ and $n\neq0$, then $mn\neq0$.
+\end{lemma}
+\begin{proof}
+Assume to the contrary, that $m,n\in \mathbb{N}_0$, $m\neq0$, $n\neq0$
+and $mn=0$.  Let $n=s(p)$.  Then $0=mn= ms(p)+m$ which requires
+$m=0$.  This is a contradiction.
+\end{proof}
+
+\begin{theorem}{\rmfamily [Monotonic Law for Multiplication]}\\  
+Let $m,n,p\in \mathbb{N}_0$.  If
+$m\le n$, then $mp\le np$.  Furthermore, if $m<n$ and $p\neq0$,
+then $mp<np$.
+\end{theorem}
+
+\begin{proof} Only the last statement requires proof.  Let 
+$m,n\in\mathbb{N}_0$ with $m< n$.  Then $m+q=n$ for some $q\neq0$.
+Then $np=(m+q)p=mp+pq$.  Since $pq\neq0$, we conclude $mp<np$.
+\end{proof}
+
+\begin{corollary}{\rmfamily [Cancellation Law of Multiplication]}\\
+If $m,n,p\in \mathbb{N}_0$, $mp=np$, and $p\neq 0$, then $m=n$.
+\end{corollary}
+
+\begin{proof}
+If $m<n$, then $mp<np$, and if $n<m$, then
+$np<mp$.  We conclude that $m=n$. 
+\end{proof}
+
+\section{Notation for Natural Numbers}\label{s:decimal}
+
+In some sense, we already have a workable notation for natural numbers.
+In fact, we really didn't need a special symbol for $s(0)$.
+The natural number $0$ and the sucessor function $s$ are enough.
+For example, the positive integer associated
+with the number of fingers (including the thumb) 
+on one hand is
+$s(s(s(s(s(0)))))$, our net worth is $0$, and the age of Professor
+Trotter's son in years is
+\[
+s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(0)))))))))))))))))).
+\]
+Admittedly, this is not very practical, especially if some day
+we win the lottery or want to discuss the federal deficit. 
+So it is natural (ugh!) to consider alternative notations.  
+
+Here is one such scheme.  First, let's
+decide on a natural $b>s(0)$ as \textit{base}.  We will
+then develop a notation which is called the \textit{base $b$
+notation}.  We already have a special symbol for zero, namely $0$,
+but we need additional symbols for each natural number $n$ with
+$0<n<b$. These symbols
+are called \textit{digits}.  For example,
+the positive integer $b=s(s(s(s(s(s(s(s(0))))))))$ is called 
+\textit{eight}, and it makes a popular choice as a base.
+Here are the symbols (digits) customarily chosen for this base: 
+$1=s(0)$, $2=s(1)$;
+$3=s(2)$; $4=s(3)$; $5=s(4)$; $6=s(5)$; and $7=s(6)$.  Technically
+speaking, it is not necessary to have a separate symbol for
+$b$, but it might be handy regardless. In this case, most
+people prefer the symbol $8$.  We like this symbol, unless and until
+it gets lazy and lays down sideways.
+
+So the first $8$ natural numbers are then $0$, $1$, $2$, $3$, $4$,
+$5$, $6$ and $7$.  To continue with our representation, we want 
+to use the following basic theorem.
+
+\begin{theorem}
+Let $n,d\in \mathbb{N}_0$ with $d>0$.  Then there exist unique natural
+numbers $q$ and $r$ so that $n=qd+r$ and $0\le r < d$.
+\end{theorem}
+
+\begin{proof}
+Let $d\in \mathbb{N}_0$ with $d>0$.  We first show that for each 
+$n\in\mathbb{N}_0$, there exists $q,r\in\mathbb{N}_0$ so that
+$n=qd+r$ and $0\le r<d$.  If $n=0$, we can take
+$q=0$ and $r=0$.  Now suppose that $k=qd+r$ and $0\le r<m$ for 
+some $k\in \mathbb{N}_0$.
+
+Note that $r<d$ implies $r+1\le d$.
+If $r+1<d$, then $k+1=qd+(r+1)$. On the other hand, if
+$r+1=d$, then $k+1=(q+1)d+0$.
+
+Now that existence has been settled, we note that the uniqueness 
+of $q$ and $r$ follow immediately from the cancellation properties.
+\end{proof}
+
+Now suppose that for some $k\in \mathbb{N}_0$, with
+$k\ge 7$, we have defined a base eight notation for the representation
+of $k$, for all $n$ with $0\le n\le k$, and that in each case, 
+this representation consists of a string of digits,
+written left to right, and selected from $\{0,1,2,3,4,5,6,7\}$.
+Write $k+1=qb+r$ where $0\le r<b$.  Note that $q\le k$, so that
+we already have a representation for $q$.  To obtain a representation
+of $k+1$, we simply append $r$ at the (right) end.  
+
+For example, consider the age of Professor Trotter's son. It is then written
+as~22.  And to emphasize the base eight notation, most people would
+say $22$, base~$8$ and write $(22)_8$.  
+
+Among the more popular bases are base~2, where only the digits~0 and~1
+are used, and base~sixteen, where sixteen is the popular word for 
+$(20)_8$.  Here the digit symbols are
+\[
+0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+\]
+Another popualar choice, in fact the one in most widespread use
+in banks, shopping centers and movie theatres, is base \textit{ten}.
+Ten is the natural number~A, base sixteen.  Also, ten is $(12)_8$.
+Most folks use the digits $0,1,2,3,4,5,6,7,8,9$ for base ten
+notation.  And when no other designation is made, then it is assumed
+that the natural number is written base ten.  So of course, Professor
+Trotter's son is 18 and is a freshman at Georgia Tech.  Which explains
+why his hair is as white as it is.
+
+For any base $b>1$, caution must be exercised when discussing 
+multiplication, since writing the product $m\times n$ in the 
+abbreviated form $mn$ causes us some grief.  For example, if $b = 8$,
+then writing the product $372\times4885$ as $3724885$ is
+ambiguous.  For this reason, when using base~$b$ notation, the
+product symbol $\times$ (or some variation of $\times$)
+is always used.
+
+\section{Equivalence Relations}\label{sec:numsys:equivalence}
+
+A binary relation $R$ is:
+
+\begin{enumerate}
+\item[(iv).] \textit{symmetric} if $(x,y)\in R$ implies $(y,x)\in R$ for
+all $x,y\in X$.
+\end{enumerate}
+
+A binary relation $R$ on a set $X$ is called an
+\textit{equivalence relation} when it is reflexive, symmetric
+and transitive.  Typically, symbols like, $=$, $\cong$,
+$\equiv$ and $\sim$ are used to
+denote equivalence relations.  An equivalence relation, say
+$\cong$, defines
+a partition on the set $X$ by setting
+\[
+\langle x\rangle =\{y\in X: x\cong y\}
+\]
+Note that if $x,y\in X$ and $\langle x\rangle\cap\langle y\rangle
+\neq\emptyset$, then $\langle x\rangle=\langle y\rangle$.
+The sets in this partition are called \textit{equivalence classes}.
+
+When using the ordered pair notation for binary relations,
+to indicate that a pair $(x,y)$ is not in the relation,
+we simply write $(x,y)\notin R$. When using the alternate
+notation, this is usually denoted by using the negation
+symbol from logic and writing $\lnot (xRy)$.  Many of the
+special symbols used to denote equivalence relations
+come with negative versions: $x\neq y$, $x\ncong y$,
+$x\nsim y$, etc.
+
+\section{The Integers as Equivalence Classes of Ordered Pairs}\label{s:integers}
+
+Define a binary relation $\cong$ on the set $Z=\mathbb{N}_0
+ \times\mathbb{N}_0$ by
+\[
+(a,b)\cong (c,d)\quad\textit{iff}\quad a+d=b+c.
+\]
+
+\begin{lemma}
+$\cong$ is reflexive.
+\end{lemma}
+
+\begin{proof}
+Let $(a,b)\in Z$.  Then $a+b=b+a$, so $(a,b)\cong(b,a)$.
+\end{proof}
+
+\begin{lemma}
+$\cong$ is symmetric.
+\end{lemma}
+
+\begin{proof} Let $(a,b),(c,d)\in Z$ and suppose
+that $(a,b)\cong (c,d)$.  Then $a+d=b+c$, so that
+$c+b=d+a$.  Thus $(c,d)\cong (a,b)$.
+\end{proof}
+
+\begin{lemma}
+$\cong$ is transitive.
+\end{lemma}
+
+\begin{proof}
+Let $(a,b), (c,d), (e,f)\in Z$.  Suppose that
+\[
+(a,b)\cong(c,d)\quad\text{and}\quad (c,d)\cong (e,f).
+\]
+Then $a+d=b+c$ and $c+f=d+e$.  Therefore,
+\[
+(a+d)+(c+f) =(b+c)+(d+e).
+\]
+It follows that
+\[
+(a+f)+(c+d) =(b+e)+(c+d).
+\]
+Thus $a+f = b+e$ so that $(a,b)\cong(e,f)$.
+\end{proof}
+
+Now that we know that $\cong$ is an equivalence relation on
+$Z$, we know that $\cong$ partitions $Z$ into equivalence classes.
+For an element $(a,b)\in Z$, we denote the equivalence class
+of $(a,b)$ by $\langle (a,b)\rangle$.
+
+Let $\ints$ denote the set of all equivalence classes of $Z$
+determined by the equivalence relation $\cong$.  The elements
+of $\ints$ are called \textit{integers}.
+
+\section{Properties of the Integers}\label{s:moreintegers}
+
+For the remainder of this chapter, most statements will be given
+without proof.  Students are encouraged to fill in the
+details.  
+
+We define a binary operation $+$ on $\ints$ by the following rule:
+\[
+\langle(a,b)\rangle+\langle(c,d)\rangle = \langle(a+c,b+d)\rangle.  
+\]
+
+Note that the definition of addition is made in terms of 
+representatives of the class, so we must pause to make sure
+that $+$ is \textit{well defined}, i.e., independent of
+the particular representatives.
+
+\begin{lemma}
+If $\langle(a,b)\rangle =\langle(c,d)\rangle$ and 
+$\langle(e,f)\rangle=\langle(g,h)\rangle$, then
+$\langle(a,b)\rangle+\langle(e,f)\rangle=
+\langle(c,d)\rangle+\langle(g,h)\rangle$.
+\end{lemma}
+
+\begin{proof}
+Since $(a,b)\cong(c,d)$, we know
+$a+d=b+c$.  Since $(e,f)\cong(g,h)$, 
+we know $e+h=f+g$. It follows that $(a+d)+(e+h) = (b+c)+ (f+g)$.
+Thus $(a+e)+(d+h)= (b+f)+(c+g)$, which implies that
+$\langle(a,b)\rangle+\langle(e,f)\rangle=
+\langle(c,d)\rangle+\langle(g,h)\rangle$.
+\end{proof}
+
+In what follows, we use a single symbol, like $x$, $y$ or
+$z$ to denote an integer, but remember that each integer
+is in fact an entire equivalence class whose elements are 
+ordered pairs of natural numbers.
+
+\begin{theorem}
+For all $x,y,z\in\ints$,
+\begin{enumerate}
+\item $x+y=y+x$;
+\item $x+(y+z)= (x+y)+z$; and
+\item $x+y= x+z$ implies $y=z$.
+\end{enumerate}
+\end{theorem}
+
+Next, we define a second binary operation called
+\textit{multiplication}, and denoted $x\times y$, $x*y$ or
+just $xy$.  When $x=\langle(a,b)\rangle$ and $y=\langle(c,d)\rangle$, 
+we define:
+\[
+xy =\langle(a,b)\rangle\langle(c,d)\rangle= \langle(ac+bd, ad+bc)\rangle.
+\]
+
+\begin{theorem}  Multiplication is well defined.  Furthermore,
+\begin{enumerate}
+\item $xy=yx$,  for every $x,y\in \ints$.
+\item $x(yz)=(xy)z$, for every $x,y,z\in \ints$.
+\item $x(y+z)=xy+xz$, for every $x,y,z\in \ints$.
+\end{enumerate}
+\end{theorem}
+
+The integer $\langle(0,0)\rangle$ has a number of special properties. 
+Note that for all $x\in\ints$, $x+\langle(0,0)\rangle= x$ 
+and $x\langle(0,0)\rangle=\langle(0,0)\rangle$.
+So most folks call $\langle(0,0)\rangle$ \textit{zero}
+and denote it by~$0$.  This is a terrible abuse of notation, 
+since we have already used the word zero and the symbol $0$ to 
+denote a particular natural number.
+
+But mathematicians, computer scientists and even
+real people do this all the time.  We use the same
+word and even the same phrase in many different settings 
+expecting that the listener
+will make the correct interpretation.  For example, how many
+different meanings do you know for \textit{You're so bad}?
+
+
+If $x=\langle(a,b)\rangle$ is an integer and $y=
+\langle(b,a)\rangle$, 
+then $x+y=\langle(a+b,a+b)\rangle=0$.  
+The integer $y$ is then
+called the \textit{additive inverse} of $x$  and is denoted
+$-x$.  The additive inverse of $x$ is also called \textit{minus $x$}.
+The basic property is that $x + (-x) = 0$, for every $x\in \ints$.
+
+We can now define a new binary operation, called \textit{subtraction}
+and denoted $-$, on $\ints$ by
+setting $x-y= x+(-y)$.  In general, subtraction is neither
+commutative nor associative.  However, we do have the following
+basic properties.
+
+\begin{theorem}
+For all $x,y,z\in\ints$,
+\begin{enumerate}
+\item $x(-y)=-xy$;
+\item $x(y-z)= xy-xz$; and
+\item $-(x-y)=y-x$.
+\end{enumerate}
+\end{theorem}
+
+Next, we define a total order on $\ints$ by
+setting $x\le y$ in $\ints$ when $x=\langle(a,b)\rangle$, $y=\langle(c,d)
+\rangle$ and
+$a+d \le b+c$ in $\mathbb{N}_0$.
+
+\begin{theorem}[Monotonic Law for Addition] 
+Let $x,y,z\in \ints$.  If $x\le y$, then
+$x+z\le y+z$.  Furthermore, if $x<y$, then $x+z<y+z$.
+\end{theorem}
+
+For multiplication, the situation is more complicated.
+
+\begin{theorem}[Monotonic Law for Multiplication]  
+Let $x,y,z\in \ints$.  If
+$x<y$, then
+\begin{enumerate}
+\item $xz<yz$, if $z>0$, 
+\item $xz=yz=0$, if $z=0$, and
+\item $xz>yz$, if $z<0$.
+\end{enumerate}
+\end{theorem}
+
+Now consider the function $f:\mathbb{N}_0\longrightarrow \ints$ defined
+by $f(n) = \langle(n,0)\rangle$.  It is easy to show that
+$f$ is an injection.  Furthermore, it respects addition
+and multiplication, i.e., $f(n+m)=f(n)+f(m)$ and
+$f(nm)=f(n)f(m)$.   Also, note that if $x\in \ints$, then
+$x>0$ if and only if $x=f(n)$ for some $n\in \mathbb{N}_0$. So, it is 
+customary to abuse notation slightly and say that $\mathbb{N}_0$ is a 
+``subset'' of $\ints$.  Similarly, we can either consider the set
+$\posints$ of positive integers as the set of natural numbers that are
+successors, or as the set of integers
+that are greater than~$0$.
+
+When $n$ is a positive integer and $0$ is the zero in $\ints$, we
+define $0^n=0$.  When $x\in\ints$, $x\neq 0$ and $n\in\mathbb{N}_0$,
+we define $x^n$ inductively by~(i)~$x^0=1$ and $x^{k+1}=xx^k$.
+
+\begin{theorem}
+If $x\in\ints$, $x\neq0$, and $m,n\in\mathbb{N}_0$, then
+$x^mx^n=x^{m+m}$ and $(x^m)^n=x^{mn}$.
+\end{theorem}
+
+\section{Obtaining the Rationals from the Integers}\label{s:rationals}
+
+We consider the set $\rats$ of all ordered pairs in $\ints\times \ints$ of
+the form $(x,y)$ with $y\neq 0$. Elements of $\rats$ are called
+\textit{rational numbers}, or \textit{fractions}.  Define
+an equivalence relation, denoted $=$, on $\ints$ by
+setting $(x,y)=(z,w)$ if and only if $xw=yz$.  Here we
+should point out that the symbol $=$ can be used (and often is)
+to denote an equivalence relation. It is not constrained to mean ``identically
+the same.''
+  
+When $q=(x,y)$ is a fraction, $x$ is called the \textit{numerator}
+and $y$ is called the \textit{denominator} of $q$.  
+Remember that the denominator of a fraction is never zero.
+
+Addition of fractions is defined by 
+\[
+(a,b)+(c,d) = (ad+bc,bd)
+\]
+while multiplication is defined by
+\[
+(a,b)(c,d) = (ac,bd).
+\]
+As was the case with integers, it is important to pause
+and prove that both operations are well defined.
+
+\begin{theorem}
+Let $x,y,z,w\in\rats$.
+If $x=y$ and $z=w$, then $x+z=y+w$ and $xz=yw$.
+\end{theorem} 
+
+Addition and multiplication are both associative and commutative. 
+Also, we have the distributive property.
+
+\begin{theorem}
+Let $x,y,z\in Q$.  Then
+\begin{enumerate}
+\item $x+y=y+x$ and $xy=yx$.
+\item $x+(y+z) = (x+y)+z$ and $x(yz)=(xy)z$.
+\item $x(y+z)=xy+xz$.
+\end{enumerate}
+\end{theorem}
+
+The additive inverse of a fraction $(a,b)$ is just $(-a,b)$.
+Using this, we define subtraction for fractions:
+$(a,b)-(c,d)=(a,b)+(-c,d)$.
+
+When $(a,b)$ is a fraction, and $a\neq 0$, the fraction $(b,a)$ is the 
+\textit{reciprocal} of $(a,b)$.  The reciprocal is also
+called the \textit{multiplicative inverse}, and the reciprocal 
+of $x$ is denoted $x^{-1}$.  When $y\neq0$, we can then define
+\textit{division} by setting $x/y=xy^{-1}$, i.e.,
+$(a,b)/(c,d)=(ad, bc)$.  Of course, division by zero is not
+defined, a fact that you probably already knew!
+
+As was the case for  both $\mathbb{N}_0$ and $\ints$, when
+$n$ is a positive integer, and $0$ is the zero in $\rats$,
+we define $0^n=0$.  When $x=(a,b)$ is a fraction with $x\neq0$
+and $n$ is a non-negative integer, we define $x^n$ inductively
+by (i)~$x^0=1$ and (ii)~$x^{n+1}=xx^n$.
+
+\begin{theorem}
+If $x\in\rats$, $x\neq0$, and $m,n\in\ints$, then
+$x^mx^n=x^{m+m}$ and $(x^m)^n=x^{mn}$.
+\end{theorem}
+
+Many folks prefer an alternate notation for fractions in
+which the numerator is written directly over the denominator
+with a horizontal line between them, so $(2,5)$ can
+also be written as $\frac{2}{5}$.
+
+Via the map $g(x) = (x,1)=\frac{x}{1}$, we again say that the integers
+are a ``subset'' of the rationals.  As before, note that
+$g(x+y) = g(x)+g(y)$, $g(x-y)=g(x)-g(y)$ and $g(xy)=g(x)g(y)$.
+
+In the third grade,
+you were probably told that $5 =\frac{5}{1}$, but by now
+you are realizing that this is not exactly true.   
+Similarly, if you had told your teacher that $\frac{3}{4}$ and
+$\frac{6}{8}$ weren't really the same and were only ``equal'' in 
+the broader sense of an equivalence relation defined on
+a subset of the cartesian product of the integers, you
+probably would have been sent to the Principal's office.
+
+Try to imagine the trouble you would have gotten into had
+you insisted that the real meaning
+of $\frac{1}{2}$ was
+\[
+\frac{1}{2} =\langle(\langle(s(s(0)),s(0))\rangle,
+  \langle(s(s(0)),0)\rangle)\rangle
+\]
+
+We can also define a total order on $\rats$. To do this, we assume
+that $(a,b),(c,d)\in\rats$ have $b,d>0$. (If $b<0$, for example, we
+would replace it by $(a',b')=(-a,-b)$, which is in the same
+equivalence class as $(a,b)$ and has $b'>0$.) Then we set $(a,b)\leq
+(c,d)$ in $\rats$ if $ad\leq bc$ in $\ints$.
+
+\subsection{Integer Exponents}
+
+When $n$ is a positive integer and $0$ is the zero in $\rats$, we
+define $0^n=0$.  When $x\in\rats$, $x\neq 0$ and $n\in\mathbb{N}_0$,
+we define $x^n$ inductively by~(i)~$x^0=1$ and $x^{k+1}=xx^k$.  When
+$n\in\ints$ and $n<0$, we set $x^n=1/x^{-n}$.
+
+\begin{theorem}
+If $x\in\rats$, $x\neq0$, and $m,n\in\ints$, then
+$x^mx^n=x^{m+m}$ and $(x^m)^n=x^{mn}$.
+\end{theorem}
+
+\section{Obtaining the Reals from the Rationals}\label{s:reals}
+
+A full discussion of this would take us far away from 
+a discrete math class, but let's at least provide the
+basic definitions.  A subset $S\subset \rats$ of the rationals
+is called a \textit{cut} (also, a \textit{Dedekind cut}), 
+if it satisfies the following properties:
+
+\begin{enumerate}
+\item $\emptyset\neq S\neq \rats$, i.e, $S$ is a proper non-empty subset
+of $\rats$.
+\item $x\in S$ and $y<x$ in $\rats$ implies $y\in S$, for all $x,y\in \rats$.
+\item For every $x\in S$, there exists $y\in S$ with $x<y$, i.e., 
+$S$ has no greatest element.
+\end{enumerate}
+
+Cuts are also called \textit{real numbers}, so a real number is
+a particular kind of set of rational numbers.
+For every rational number $q$, the set $\bar{q}= \{p\in \rats: p< q\}$
+is a cut.  Such cuts are called \textit{rational cuts}.  Inside
+the reals, the rational cuts behave just like the rational
+numbers and via the map $h(q)=\bar{q}$, we abuse notation again
+(we are getting used to this) and say that
+the rational numbers are a subset of the real numbers.  
+
+But there are cuts which are not rational.  Here is one:
+$\{p\in \rats: p\le 0\}\cup \{p\in \rats: p^2<2\}$.  The fact that
+this cut is not rational depends on the familiar proof that
+there is no rational $q$ for which $q^2=2$.
+
+The operation of addition on cuts is defined in the natural
+way.  If $S$ and $T$ are cuts, set $S+T=\{s+t:s\in S, t\in T\}$.
+Order on cuts is defined in terms of inclusion, i.e., $S<T$ if and
+only if $S\subsetneq T$.  A cut is \textit{positive} if it
+is greater than $\bar{0}$.  When $S$ and $T$ are positive
+cuts, the product $ST$ is defined by
+\[
+ST= \bar{0}\cup\{st:s\in S, t\in T, s\ge0, t\ge 0\}.
+\]
+
+One can easily show that there is a real number $r$ so that
+$r^2=\bar{2}$.  You may be surprised, but perhaps not, to learn
+that this real number is denoted $\sqrt2$.
+
+There are many other wonders to this story, but enough for
+one day.
+
+\section{Obtaining the Complex Numbers from the Reals}
+
+By now, the following discussion should be transparent.
+The complex number system $\mathbb{C}$ is just the cartesian product
+$\reals\times\reals$ with 
+\begin{enumerate}
+\item $(a,b) = (c,d)$ in $\mathbb{C}$ if and only if $a=c$ and $b=d$
+in $\reals$.
+\item $(a,b)+(c,d)=(a+c,b+d)$.
+\item $(a,b)(c,d)=(ac-bd, ad+bc)$.
+\end{enumerate}
+
+Now the complex numbers of the form $(a,0)$ behave just like
+real numbers, so is natural to say that the complex number system
+\textit{contains} the real number system.  Also, note that
+$(0,1)^2=(0,1)(0,1)=(-1,0)$, i.e., the complex number $(0,1)$ has the
+property that its square is the complex number behaving like the
+real number~$-1$.  So it is convenient to use a special symbol like
+$i$ for this very special complex number and note that $i^2=-1$.
+
+With this beginning, it is straightforward to develop all the
+familiar properties of the complex number system.
+
+\section{Supplementary Notes}
+
+\subsection{Alternate Versions of Induction}
+
+Many authors prefer to start the development of number systems
+with the set of \textit{positive integers} and defer the
+introduction of the concept of zero.  In this setting,
+you have a non-empty set $\posints$, a one-to-one 
+\textit{successor} function $s:\posints\injection\posints$ and
+a positive integer called \textit{one} and denoted~$1$ that
+is not the successor of any positive integer.  The Principle of
+Induction then becomes:  If $\mathbb{M}\subseteq\posints$, 
+then $\mathbb{M} =\posints$ if and only if
+\begin{enumerate}
+\item[(a).] $1\in \mathbb{M}$; and 
+\item[(b).] $\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
+  \Longrightarrow(s(k)\in \mathbb{M})$. 
+\end{enumerate}
+
+More generally, to show that a set $\mathbb{M}$ contains
+all integers greater than or equal to an integer~$n$, it is
+sufficient to show that (i)~$n\in\mathbb{M}$, and (ii)~For
+all $k\in\ints,\,(k\in\mathbb{M}\Longrightarrow(k+1\in\mathbb{M})$.
+
+Here is another version of induction, one that is particularly useful
+in combinatorial arguments.
+
+\begin{theorem}
+Let $\mathbb{M}\subseteq\posints$.  If $\mathbb{M}\neq\posints$,
+then there is a unique least positive integer $n$ that does not
+belong to $\mathbb{M}$.
+\end{theorem}
+
+\subsection{The Zermelo-Fraenkel Axioms of Set Theory}
+
+The notion of \textit{set} and the membership operator $\in$
+are undefined.  However, if $A$ and $B$ are sets, then
+exactly one of the following statements is true: 
+(i)~$A\in B$ is \textit{true}; (ii)~$A\in B$ is \textit{false}.  
+When $A\in B$ is false, we write $A\notin B$. Also, there 
+is an equivalence relation $=$ defined on sets.
+
+\medskip
+\noindent
+\textbf{Axiom of extensionality:}\quad
+Two sets are equal if and only if they have the same elements. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of empty set:}\quad
+There is a set $\emptyset$ with no elements. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of pairing:}\quad 
+If $x$ and $y$ are sets, then there exists a set containing $x$ and $y$ 
+as its only elements, which we denote by $\{x,y\}$.  Note: If
+$x=y$, then we write only $\{x\}$.
+ 
+\medskip
+\noindent
+\textbf{Axiom of union:}\quad 
+For any set $x$, there is a set $y$ such that the elements of $y$ 
+are precisely the elements of the elements of $x$. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of infinity:}\quad 
+There exists a set $x$ such that $\emptyset\in x$ and whenever 
+$y\in x$, so is $\{y ,\{y\}\}$. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of power set}\quad 
+Every set has a power set. That is, for any set $x$, 
+there exists a set $y$, such that the elements of $y$ are 
+precisely the subsets of~$x$. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of regularity:}\quad 
+Every non-empty set $x$ contains some element $y$ such that 
+$x$ and $y$ are disjoint sets. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of separation (or subset axiom):}\quad 
+Given any set and any proposition $P(x)$, there is a subset 
+of the original set containing precisely those elements $x$ 
+for which $P(x)$ holds. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of replacement:}\quad
+Given any set and any mapping, formally defined as a 
+proposition $P(x,y)$ where $P(x,y_1)$ and $P(x,y_2)$ implies 
+$y_1 = y_2$, there is a set containing precisely the images 
+of the original set's elements. 
+ 
+\medskip
+\noindent
+\textbf{Axiom of choice:}\quad 
+Given any set of mutually exclusive non-empty sets, there 
+exists at least one set that contains exactly one element in 
+common with each of the non-empty sets. 
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "book"
+%%% End: 

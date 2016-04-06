@@ -1,0 +1,33 @@
+\documentclass[10pt,letterpaper,chapterprefix]{scrreprt}
+\usepackage{amsthm,amsmath,amssymb,graphicx,color,array,chappg,pict2e}
+\usepackage[T1]{fontenc}
+%\usepackage{mathptmx}
+\usepackage[sc]{mathpazo}
+
+%\usepackage{showkeys}
+\usepackage[Bjarne]{fncychap}
+\usepackage{shorttoc}
+\usepackage{overpic}
+\usepackage[colorlinks,linkcolor=blue,urlcolor=blue]{hyperref}
+\numberwithin{figure}{chapter}
+\numberwithin{section}{chapter}
+%\renewcommand{\baselinestretch}{1.66}
+\input{macros.sty}
+
+\setcounter{chapter}{72} %% Set this to one less than the number you
+                        %% want, as it will be incremented when you
+                        %% invoke \chapter
+
+\setkomafont{captionlabel}{\sc\bfseries}
+\setkomafont{caption}{\sc}
+\begin{document}
+
+\include{probability} % Put the filename you're compiling here,
+                             % just without the .tex
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

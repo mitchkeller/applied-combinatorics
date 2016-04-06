@@ -1,0 +1,160 @@
+% book.tex
+% Updated January 5, 2012
+
+\documentclass[letterpaper,chapterprefix,numbers=noenddot,fontsize=10pt]{scrbook}
+\pdfoptionpdfminorversion=5
+\usepackage{amsthm,amsmath,amssymb,graphicx,color,array,pict2e,multicol,marvosym,enumitem}
+\usepackage[copyright]{ccicons}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage{chappg}
+% multicol to get multiple columns for multi-part exercises
+% (esp. genfunction.tex)
+% marvosym to get \EURdig (euro symbol) in genfunction.tex
+% enumerate to allow easy changes to formatting of enumerate labels
+
+\usepackage{tgpagella}
+%\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+
+\usepackage{scrpage2}
+\usepackage{subfig}
+%\usepackage{showkeys}
+%\usepackage[Conny]{fncychap}
+\usepackage{shorttoc}
+\usepackage{overpic}
+\usepackage[colorlinks,linkcolor=blue,urlcolor=blue]{hyperref}
+\numberwithin{figure}{chapter}
+\numberwithin{section}{chapter}
+%\renewcommand{\baselinestretch}{1.66}
+\input{macros.sty}
+\setkomafont{captionlabel}{\scshape\bfseries}
+\setkomafont{caption}{\scshape}
+\refoot{\ccbyncsa}% Mitchel T.\ Keller and William T.\ Trotter}
+\lofoot{\ccbyncsa}
+%\includeonly{strings}
+
+%\setuptoc{toc}{leveldown}
+\setcounter{tocdepth}{1}
+
+\colorlet{chaptercolor}{Cerulean}
+
+\setkomafont{chapter}{\normalfont\color{chaptercolor}\Huge\itshape}
+\setkomafont{chapterprefix}{\normalfont\Large}
+\renewcommand*{\raggedchapter}{\raggedleft}
+\renewcommand*{\chapterformat}{%
+  \MakeUppercase{\chapappifchapterprefix{}}%
+  \rlap{\enskip\resizebox{!}{1.2cm}{\thechapter} \rule{15cm}{1.2cm} }%
+}
+
+\RedeclareSectionCommand[beforeskip=30pt,afterskip=20pt]{chapter}
+\renewcommand*\chapterheadmidvskip{\par\nobreak\vspace{10pt}}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\parbox{1in}{}
+
+\vspace{.6in}
+\Huge{\textsf{Applied Combinatorics}}
+
+\vspace{24pt}
+\LARGE{\textsf{\textsl{Preliminary Edition}}}
+\vspace{36pt}
+
+\Large{\textsf{February 15, 2015}}\\
+\small{\textsf{Errors corrected as of September 21, 2015}}
+
+%\end{center}
+%\begin{flushright}
+\vfill \LARGE{\textsf{\textsl{Mitchel T.\
+      Keller}}}\\\Large{\textsf{Washington \& Lee University}}\\\vspace{12pt}\LARGE{\textsf{\textsl{William T.\ Trotter}}}\\
+  \Large{\textsf{Georgia Institute of Technology}}
+\end{center}
+%\end{flushright}
+\end{titlepage}
+\thispagestyle{empty}
+\parbox{1in}{ }
+\vskip4.75in
+
+%\lowertitleback{
+\begin{center}
+  \textsf{Copyright \copyright\ 2008--2015 Mitchel T.\ Keller and William
+    T.\ Trotter.}
+
+  \vspace{12pt}
+  \textsf{This text is licensed under the CreativeCommons
+    Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA
+    3.0) license. For more details, please see
+    \url{http://creativecommons.org/licenses/by-nc-sa/3.0/}\\{\Huge \ccbyncsa}}
+  
+  \vspace{12pt}
+  \textsf{This manuscript was typeset by the authors using the 
+    \LaTeX\ document processing system.}
+\end{center}
+%}
+
+
+\author{Mitchel T.\ Keller}
+\author{William T.\ Trotter}
+\title{Applied Combinatorics}
+%\maketitle
+\pagestyle{scrheadings}
+\frontmatter
+
+
+%\renewcommand*\contentsname{Contents (detailed)}
+
+{\hypersetup{linkcolor=black}
+\pdfbookmark[1]{Summary of Contents}{toc (brief)}
+\shorttoc{Summary of Contents}{0}
+
+\cleardoublepage
+\pdfbookmark[1]{Contents}{toc (detailed)}
+\tableofcontents
+}
+
+%\shorttoc{Brief table of contents}{0}
+%\setcounter{tocdepth}{1}
+%\tableofcontents
+\include{preface}
+\include{prologue}
+
+\mainmatter
+\include{introduction}
+\include{strings}
+\include{induction}
+\include{basics}
+\include{graphs}
+\include{posets}
+\include{inclusionexclusion}
+\include{genfunction}
+\include{recurrence}
+\include{probability}
+\include{ramsey}
+\include{graphalgorithms}
+\include{networkflow}
+\include{flowapplications}
+\include{polya}
+\include{kitchen-sink}
+% \include{kitchen-sink} % comment out this line and uncomment the block
+%                       % below (excepting the first and last lines)
+
+% Uncomment the block from here to the note saying to stop uncommenting
+% \chapter{The Many Faces of Combinatorics}
+
+% This is a forthcoming chapter containing a number of ``nuggets'' from
+% across combinatorics. Topics may include on-line algorithms, extremal
+% set theory, Markov chains, among others.
+% End region to uncomment to make a placeholder for kitchen sink
+
+\include{epilogue}
+
+\appendix
+
+\include{appendix-background}
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

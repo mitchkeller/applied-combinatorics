@@ -1,0 +1,451 @@
+% ramsey.tex
+% Updated January 11, 2012
+
+\chapter{Applying Probability to Combinatorics}\label{ch:probmeth}
+
+Bob likes to think of himself as a wild and crazy guy, totally 
+unpredictable.  Most guys do.  But Alice says that Bob
+can't change his basic nature, which is excruciatingly
+boring.  Carlos remarks that perhaps we shouldn't be
+so hard on Bob, because under certain circumstances, we
+can all be forced to be dull and repetitive. 
+
+\subsection{The Pigeon Hole Principle Revisited}
+
+Recall that when $n$ is a positive integer, 
+we let $[n]=\{1,2,\dots,n\}$.  In this chapter, when $X$ is
+a set and $k$ is a non-negative integer with $k\le |X|$, we
+borrow from our in-line notation for binomial coefficients
+and let $C(X,k)$ denote the family of all $k$-element subsets
+of $X$.  So $|C([n],k)|=C(n,k)$ whenever $0\le k\le n$.
+
+Recall that the pigeon hole principle asserts that if
+$n+1$ pigeons are placed in $n$ holes, then there must
+be some hole into which two or more pigeons have been
+placed.  More formally, if $n$ and $k$ are positive integers,
+$t>n(k-1)$ and $f:[t]\longrightarrow[n]$ is any function,
+then there is a $k$-element subset $H\subseteq [t]$ and
+an element $j\in[n]$ so that $f(i)=j$ for every $i\in H$.
+
+We now embark on a study of an elegant extension of this
+basic result, one that continues to fascinate and challenge.
+
+\subsection{A First Taste of Ramsey Theory}
+
+Returning to the discussion at the start of this section,
+you might say that an induced subgraph $H$ of a graph $G$ is
+``boring'' if it is either a complete subgraph or
+an independent set.  In either case, exactly every pair
+of vertices in $H$ behaves in exactly the same boring way.
+So is boredom inevitable?  The answer is yes---at least
+in a relative sense.  As a starter, let's show that
+any graph on six (or more) vertices has a boring subgraph
+of size three.
+
+\begin{lemma}\label{lem:r33}
+Let $G$ be any graph with six of more vertices.
+Then either $G$ contains a complete subgraph of size~$3$ or
+an independent set of size~$3$.
+\end{lemma}
+\begin{proof}
+Let $x$ be any vertex in $G$.  Then 
+split the remaining vertices into two sets
+$S_1$ and $S_2$ with $S_1$ being the neighbors of
+$x$ and $S_2$ the non-neighbors.  Since $G$ has
+at least six vertices, we know that either $|S_1|\ge 3$
+or $|S_2|\ge 3$.  Suppose first that $|S_1|\ge 3$ and
+let $y_1$, $y_2$ and $y_3$ be distinct vertices from
+$S_1$.  If $y_iy_j$ is an edge in $G$ for some distinct
+pair $i, j\in\{1,23\}$, then $\{x,y_i,y_j\}$ is a complete
+subgraph of size $3$ in $G$.  On the other hand, if
+there are no edges among the vertices in $\{y_1,y_2,y_3\}$,
+then we have an independent set of size~$3$.
+
+The argument when $|S_2|\ge3$ is dual.
+\end{proof} 
+We note that the bound of six in the preceding lemma is sharp,
+as a cycle on five vertices does not contain either a complete
+set of size~$3$ nor an independent set of size~$3$.
+
+Next, here is the general statement for a result, which is
+usually called the graph version of Ramsey's theorem.
+
+\begin{theorem}\label{thm:graphramsey}
+If $m$ and $n$ are positive integers, then there exists
+a least positive integer $R(m,n)$ so that if $G$ is a graph
+and $G$ has at least $R(m,n)$ vertices, then either $G$ contains
+a complete subgraph on $m$ vertices, or $G$ contains an
+independent set of size $n$.
+\end{theorem}
+\begin{proof}
+We show that $R(m,n)$ exists and is at most $\binom{m+n-2}{m-1}$.
+This claim is trivial when either $m\le 2$ or $n\le2$, so we
+may assume that $m,n\ge3$.  From this point, we proceed by induction
+on $t=m+n$ assuming that the result holds when $t\le 5$.
+
+Now let $x$ be any vertex in $G$.  Then there are at least
+$\binom{m+n-2}{m-1}-1$ other vertices, which we partition
+as $S_1\cup S_2$, where $S_1$ are those vertices adjacent to $x$
+in $G$ and $S_2$ are those vertices which are not adjacent to
+$s$.
+
+We recall that the binomial coefficients satisfy
+\[
+\binom{m+n-2}{m-1}=\binom{m+n-3}{m-2}+\binom{m+n-3}{m-1} =
+\binom{m+n-3}{m-2}+\binom{m+n-3}{n-2}
+\]
+So either $|S_1|\ge \binom{m+n-3}{m-2}$ or $|S_1|\ge\binom{m+n-3}{m-1}$.
+If the first option holds, and $S_1$ does not have an independent set
+of size $n$, then it contains a complete subgraph of size $m-1$.  It follows
+that we may add $x$ to this set to obtain a complete subgraph of size $m$
+in $G$.
+
+Similarly, if the second option holds, and $S_2$ does not contain a
+complete subgraph of size $m$, then $S_2$ contains an independent
+set of size $n-1$, and we may add $x$ to this set to obtain an
+independent set of size $n$ in $G$.
+\end{proof} 
+
+\section{Small Ramsey Numbers}\label{s:size}
+
+Actually determing the Ramsey numbers $R(m,n)$ referenced in \autoref{thm:graphramsey}
+seems to be a notoriously difficult problem, and only a handful of these
+values are known precisely.  In particular, $R(3,3)=6$ and $R(4,4)=18$, while
+$43\le R(5,5)\le 49$.  The distinguished Hungarian mathematician
+Paul Erd\"os said on many occasions that it might be possible
+to determine $R(5,5)$ exactly, if all the world's mathematical
+talent were to be focused on the problem.  But he also said that
+finding the exact value of $R(6,6)$ might be beyond our collective
+abilities.
+
+In the following table, we provide information about
+the ramsey numbers $R(m,n)$ when $m$ and $n$ are at least $3$ and at
+most $9$.   When a cell contains a single number, that
+is the precise answer.  When there are two numbers, they
+represent upper and lower bounds.
+
+\begin{center}
+\begin{tabular}{||cc||c|c|c|c|c|c|c||}
+\hline\hline
+&n&3&4&5&6&7&8&9\\
+m&&&&&&&&\\
+\hline\hline
+3&&6&9&14&18&23&36&39\\
+4&&&18&25&35, 41&49, 61&56, 84&69, 115\\
+5&&&&43, 49&58, 87&80, 143&95, 216&121, 316\\
+6&&&&&102, 165&111, 298&127, 495&153, 780\\
+7&&&&&&205, 540&216, 1031&216, 1713\\
+8&&&&&&&282, 1870&282, 3583\\
+9&&&&&&&&565, 6588\\
+\hline\hline
+\end{tabular}
+\end{center}
+
+For additional data, do a web search and look for
+Stanley Radziszowski, who maintains the most current information
+on his web site.
+
+\section{Estimating Ramsey Numbers}\label{s:estimatesize}
+
+We will find it convenient to utilize the following approximation
+due to Stirling.  You can find a proof in almost any
+advanced calculus book.
+
+\[
+n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n\bigl(1+
+  \frac{1}{12n}+\frac{1}{288n^2}-\frac{139}{51840n^3} +O(\frac{1}{n^4})\bigr).
+\]
+Of course, we will normally be satisfied with the
+first term:
+\[
+n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n
+\]
+Using Stirling's approximation, we have the following
+upper bound:
+\[
+R(n,n) \le \binom{2n-2}{n-1} \equiv \frac{2^{2n}}{4\sqrt{\pi n}} 
+\]
+
+
+\section{Applying Probability to Ramsey Theory}
+
+The following theorem, due to P. Erd\"os, is a true classic,
+and is presented here in a manner that is faithful to how it
+was first published.  As we shall see later, it was subsequently
+recast---but that's getting the cart ahead of the horse.
+
+\begin{theorem}\label{thm:rnn}
+\[
+R(n,n) \ge \frac{n}{e\sqrt2} 2^{\frac{1}{2}n}
+\]
+\end{theorem}
+
+\begin{proof}
+Let $t$ be an integer with $t>n$ and consider the set $\cgF$ of
+all labeled graphs with vertex set $\{1,2,\dots,t\}$.  Clearly,
+there are $2^{C(t,2)}$ graphs in this family.  Let $\cgF_1$ denote the
+subfamily consisting of those graphs which contain a complete subgraph of
+size~$n$.  It is easy to see that
+\[
+|\cgF_1|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}.
+\]
+Similarly, let $\cgF_2$ denote the subfamily consisting of those graphs which 
+contain an independent set of size~$n$.  It follows that
+\[
+|\cgF_2|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}.
+\]
+We want to take the integer $t$ as large as we can while still guaranteeing that
+$|\cgF_1|+|\cgF_2|\le |\cgF|$.  This will imply that there is a graph
+$G$ in $\cgF$ which does not contain a complete subgraph of size $n$ or
+an independent set of size~$n$.   So consider the following inequality:
+\begin{equation}\label{eqn:rnn}
+2\binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}<2^{C(t,2)}.
+\end{equation}
+
+Now we ask how large can $t$ be without violating inequality~\ref{eqn:rnn}?
+To answer this, we use the trivial inequality $\binom{t}{n}\le t^n/n!$ and the
+use the Stirling approximation for $n!$.  After some algebra and taking the
+$n^{\text{th}}$ root of both sides, we see 
+that we need only guarantee that 
+\[
+t\le \frac{n}{e\sqrt{n}}2^{\frac{1}{2}n} 
+\]
+\end{proof}
+
+Now let's take a second look at the proof of \autoref{thm:rnn}.
+We consider a probability space $(S,P)$ where the
+outcomes are graphs with vertex set $\{1,2,\dots,t\}$.  For each
+$i$ and $j$ with $1\le i < j\le t$, edge $ij$ is present
+in the graph with probability $1/2$.  Furthermore, the
+events for distinct pairs are independent.
+
+Let $X_1$ denote the random variable which counts the number
+of $n$-element subsets of $\{1,2,\dots,t\}$ for which all
+$\binom{n}{2}$ pairs are edges in the graph.  Similarly,
+$X_2$ is the random variable which counts the number
+of $n$-element independent subsets of $\{1,2,\dots,t\}$.
+Then set $X=X_1+X_2$.
+
+By linearity of expectation, $E(X)=E(X_1)+E(X_2)$ while
+
+\[
+E(X_1)=E(X_2) = \binom{t}{n} \frac{1}{2^{C(n,2)}}.
+\]
+
+If $E(X)<1$, then there must exist a graph with vertex
+set $\{1,2,\dots,t\}$ without a $K_n$ or an $I_n$.
+And the question of how large $t$ can be while maintaining
+$E(X)<1$ leads to exactly the same calculation we had before.
+
+After more than fifty years and the efforts of many very bright
+researchers, only marginal improvements have been made on the
+bounds on $R(n,n)$ from \autoref{thm:graphramsey} and 
+\autoref{thm:rnn}.  In particular, no one can settle
+whether there is some constant $c<2$ and an integer $n_0$ so that $R(n,n)<
+2^{cn}$ when $n>n_0$.  Similarly, no one has been able to answer
+whether there is some constant $d>1/2$ and an integer $n_1$ so
+that $R(n,n)>2^{dn}$ when $n>n_1$.  We would certainly give
+you an $A$ for this course if you managed to do either.
+
+Carlos said that he had been trying to prove a good lower bound
+on $R(n,n)$ using only constructive methods, i.e., no random
+techniques allowed.  But he was having problems.  Anything
+he tried seemed only to show that $R(n,n)\ge n^c$ where $c$
+is a constant.  That seems so weak compared to the exponential
+bound which the probabilistic method gives easily.  Usually
+Alice was not very sympathetic to the complaints of others and
+certainly not from Carlos, who seemed always to be out front.
+But this time, Alice said to Carlos and in a manner that all could
+hear ``Maybe you shouldn't be so hard on yourself.  I read an
+article on the web that nobody has been able to show that
+there is a constant $c>1$ and an integer $n_0$ so that $R(n,n)>c^n$
+when $n>n_0$, provided that only constructive methods are allowed.
+And maybe, just maybe, saying that you are unable to do
+something that lots of other famous people seem also unable
+to do is not so bad.''  Bob saw a new side of Alice and this
+too wasn't all bad.
+
+\section{Ramsey's Theorem}
+
+By this time, you are probably not surprised to see that there
+is a very general form of Ramsey's theorem.  We have a bounded
+number of bins or colors and we are placing the subsets of a
+fixed size into these categories.  The conclusion is that there
+is a large set which is treated uniformly.
+
+Here's the formal statement.
+
+\begin{theorem}\label{thm:genramsey}
+Let $r$ and $s$ be positive integers and
+let $\mathbf{h}=(h_1,h_2,\dots,h_r)$ be a string
+of integers with $h_i\ge s$ for each $i=1,2,\dots,s$. 
+Then there exists a least positive integer $R(s:h_1,h_2,\dots,h_r)$
+so that if $n\ge n_0$ and $\phi:C([n],s]\longrightarrow [r]$
+is any function, then there exists an integer $\alpha\in[r]$
+and a subset $H_\alpha\subseteq [n]$ with $|H_\alpha|=h_\alpha$
+so that $\phi(S)=\alpha$ for every $S\in C(H_\alpha, s)$.
+\end{theorem}
+We don't include the proof of this general statement here, but
+the more ambitious students may attempt it on their own.  Note
+that the case $s=1$ is just the Pigeon Hole principle, while the
+case $s=r=2$ is just the graph version of Ramsey's theorem,
+as established in \autoref{thm:graphramsey}.  An argument
+using double induction is required for the proof in the general
+case.  The first induction is on $r$ and the second is on $s$.
+
+\section{The Probabilistic Method}\label{s:probmeth:girth}
+
+At the outset of this chapter, we presented Erd\H{o}s' original proof
+for the lower bound for the Ramsey number $R(n,n)$ using counting.
+Later, we recast the proof in a probabilistic setting.  History has
+shown that this second perspective is the right one. To illustrate 
+the power of this approach, we present a classic 
+theorem, which is also due to Erd\H{o}s, showing that there
+are graphs with large girth and large chromatic number.
+ 
+The \textit{girth} $g$ of a graph $G$ is the smallest integer for
+which $G$ contains a cycle on $g$ vertices.  The girth of a forest is
+taken to be infinite, while the girth of a graph is three if and only
+if it has a triangle.  You can check the families of triangle-free,
+large chromatic number, graphs constructed in \autoref{ch:graphs} and
+see that each has girth four.
+
+\begin{theorem}[Erd\H{o}s]\label{thm:girth}
+For every pair $g,t$ of integers with $g\ge3$, there exists
+a graph $G$ with $\chi(G)>t$ and the girth of $G$ greater than $g$.
+\end{theorem}
+
+\begin{proof}
+Before proceeding with the details of the argument, let's pause
+to get the general idea behind the proof.  We choose integers
+$n$ and $s$ with $n>s$, and it will eventually be clear how
+large they need to be in terms of $g$ and $t$.  We will
+then consider a random graph on vertex set $\{1,2,\dots,n\}$,
+and just as before, for each $i$ and $j$ with $1\le i<j\le n$,
+the probability that the pair $ij$ is an edge is $p$, but now
+$p$ will depend on $n$.  Of course, the probability that any
+given pair is an edge is completely independent of all other
+pairs.
+
+Our first goal is to choose the values of $n$, $s$ and $p$ so that
+with high probability, a random graph does not have an independent
+set of size $s$.  You might think as a second goal, we would try
+to get a random graph without small cycles.  But this goal is too
+restrictive.  Instead, we just try to get a graph in which there
+are relatively few small cycles.  In fact, we want the number
+of small cycles to be less than $n/2$.  Then we will remove one
+vertex from each small cycles, resulting in a graph with at
+least $n/2$ vertices, having no small cycles and no independent
+set of size~$s$.  The chromatic number of this graph is at least
+$n/2s$, so we will want to have the inequality $n>2st$.
+
+Now for some details.  Let $X_1$ be the random variable that counts
+the number of $s$-element independent sets.  Then
+\[
+E(X_1)=\binom{n}{s}(1-p)^{C(s,2)}
+\]
+Now we want $E(X_1)<1/4$.  Since $C(n,s)\le n^s=e^{s\ln n}$ and
+$(1-p)^{C(s,2)}\le e^{-ps^2/2}$, it suffices to set
+$s=2\ln n/p$.  By Markov's law, the probability that $X_1$ exceeds
+$1/2\ge 2E(X_1)$ is less than $1/2$.
+
+Now let $X_2$ count the number of cycles in $G$ of size at most $g$.
+Then
+\[
+E(X_2)\le \sum_{i=3}^g n(n-1)(n-2)\dots(n-i+1) p^i\le g(pn)^g.
+\]
+Now, we want $E(X_2)\le n/4$, and an easy calculation shows that
+$g(np)^g\le n/4$ when $p=n^{1/g-1}/10$.  Again by Markov's Law,
+the probability that $X_2$ exceeds $n/2\ge 2E(X_2)$ is less than $1/2$.
+
+We conclude that there is a graph $G$ for which $X_1=0$ and $X_2\le n/2$.
+Remove a vertex from each of the small cycles in $G$ and let $H$ be
+the graph that remains.  Clearly, $H$ has at least $n/2$ vertices,
+no cycle of size at most~$g$ and no independent set of size $s$. 
+Finally, the inequality $n>2st$ requires $n^{1/g}/(40\ln n)>t$.
+\end{proof}
+
+\subsection{Gaining Intuition with the Probabilistic Method}
+
+Experienced researchers are able to simplify the calculations in
+an argument of this type, as they know what can safely be discarded
+and what can not.   Here's a quick tour of the essential steps.
+We want $E(X_1)$ to be small, so we set $n^se^{-ps^2}=1$ and
+get $s=\ln n/p$.  We want the number of small cycles to be about
+$n$ so we set $(gp)^g=n$ and get $p=n^{1/g-1}$.  Finally, we want
+$n=st$ which requires $n^{1/g}=t$.  The rest is just paying attention
+to details.
+
+\section{Discussion}
+
+Zori started the conversation with ``Who in their right
+mind would trust their lives to an algorithm that used random
+methods?''  Xing quickly responded ``Everyone.  At least everyone
+should.  We routinely deal with probabilistic concepts, like
+getting run over by a bus when crossing the street or having
+a piano fall on our head.  The general public is much more
+comfortable with notions of probability, even though they
+may never know the formal definition of a probability space.
+I for one am completely comfortable taking an airline flight
+if I can be assured that the probability of a disaster is
+less than $10^{-20}$.''
+
+Dave wasn't biting on this topic.  Instead he offered ``You have
+to be struck by the statements that it appears difficult to
+construct objects which you can prove exist in abundance. I wonder
+why this is so.''  Alice said ``We all find your brain to be
+a totally random thing, sometimes making sense but often not.''
+There was laughter or at least some snickering.  But after a bit,
+Carlos said ``There's something fundamental here.  Maybe one
+could prove that there are easily stated theorems which
+only have long proofs.'' Bob blurted ``That doens't make any
+sense.''  Zori saw an opportunity where a client would,
+at considerable expense, commission her to solve a problem
+(at least better than the competition) that was readily understood 
+but somehow difficult in the end.   She knew about the class
+$NP$ but maybe there were even bigger challenges (and bigger
+paychecks) out there.
+
+\section{Exercises}\label{exercises:ramsey}
+
+\begin{enumerate}
+\item  Consider a random graph with vertex set $\{1,2,\dot,n\}$.
+If the edge probability is $p=1/2$, then let $X$ denote the number
+of complete subgraphs is size $t=2\log n$ and let $Y$ denote the
+number of independent sets of size $t=2\log n$.
+\begin{enumerate}
+\item  Show that $E(X+Y)<1$, when $n$ is sufficiently large.
+\item  Use the result from part~a to show that $\omega(G)$ is less
+than $2\log n$, while the chromatic number of $G$ is at least $n/(2\log n)$
+(both statements holding with high probability).  As a result, the basic
+inequality $\chi(G)\ge\omega(G)$ is far from being tight for a random
+graph.
+\end{enumerate}
+\item  We form a random tournament as follows.  Start with a complete graph 
+with vertex set $\{1,2,\dots,n\}$.  For each distinct
+pair $i$, $j$ with $1\le i<j\le n$, flip a fair coin.  If the result is heads,
+orient the edge from $i$ to $j$, which we denote by $(x,y)$.  If the toss is
+tails, then the edge is oriented from $j$ to $i$, denoted $(y,x)$.
+Show that when $n$ is large, with high probability, the following 
+statement is true: For every set $S$ of size $\log n/10$, there is a vertex 
+$x$ so that $(x,y)$ in $T$ for every $y\in S$.
+\item  Let $T$ be a random tournament on $n$ vertices.  Show that with
+high probability, the following statement is true: For every pair $x$, $y$
+of distinct vertices, either (1)~$(x,y)$ in $T$, or (2)~there is a vertex
+$z$ for which both $(x,z)$ and $(z,y)$ are in $T$.
+\item Many statements for random graphs exhibit a threshold behavior.
+Show that a random graph with edge probability $p=10\log n/n$ almost
+certainly has no isolated vertices, while a random graph with edge probability 
+$p=\log n/(10 n)$ almost certainly has at least one isolated vertices.
+\item In the sense of the preceding problem, determine the threshold probability
+for a graph to be connected.
+\end{enumerate}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "book"
+%%% End: 
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "book"
+%%% End: 

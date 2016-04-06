@@ -1,0 +1,627 @@
+% appendix-settheory.tex
+% Updated January 4, 2012
+
+\chapter{Set Theory for Combinatorics}\label{app:settheory}
+
+This appendix treats background material essential to the
+study of combinatorial mathematics.  Students will find that
+most---and perhaps all---of this material has been covered somewhere
+in their prior course work, and we expect that very few instructors
+will include this appendix in the syllabus.  Nevertheless, students
+may find it convenient to consult this appendix from time to
+time when studying functions and relations.
+
+\section{Introduction}
+
+Set theory is concerned with \textit{elements}, certain collections
+of elements called \textit{sets} and a concept of \textit{membership}.
+For each element $x$ and each set $X$, \textit{exactly} one of the 
+following two statements holds:
+
+\begin{enumerate}
+\item $x$ is a member of $X$. 
+\item $x$ is \textit{not} a member of $X$. 
+\end{enumerate}
+
+It is important to note that membership cannot be ambiguous.
+
+When $x$ is an element and $X$ is a set, we write $x\in X$ when
+$x$ is a member of $X$.  Also, the statement $x$ belongs to $X$ means
+exactly the same thing as $x$ is a member of $X$.  Similarly, when
+$x$ is not a member of $X$, we write $x\notin X$ and say $x$ does
+not belong to $X$.
+
+Certain sets will be defined explicitly by listing the elements.
+For example, let $X=\{a,b,d,g,m\}$.  Then $b\in X$ and $h\notin X$.
+The order of elements in such a listing is irrelevant, so we could
+also write $X=\{g,d,b,m,a\}$.  In other situations, sets will be 
+defined by giving a rule for membership.
+As examples, let $\posints$ denote the set of positive integers.  
+Then let $X=\{n\in\posints:5\le n\le 9\}$.   Note that $6,8\in X$ while
+$4,10,238\notin X$.
+
+Given an element $x$ and a set $X$, it may at times be tedious and
+perhaps very difficult to determine which of the statements
+$x\in X$ and $x\notin X$ holds.  But if we are discussing sets,
+it must be the case that \textit{exactly} one is true.
+
+\begin{example}
+Let $X$ be the set consisting of the following $12$ positive
+integers:
+
+\begin{align*}
+&13232112332\\
+&13332112332\\
+&13231112132\\
+&13331112132\\
+&13232112112\\
+&13231112212\\
+&13331112212\\
+&13232112331\\
+&13231112131\\
+&13331112131\\
+&13331112132\\
+&13332112111\\
+&13231112131
+\end{align*}
+Note that one number is listed twice.  Which one is it?
+Also, does $13232112132$ belong to $X$?  Note that the
+apparent difficulty of answering these questions stems from
+(1) the size of the set $X$; and (2) the size of the integers 
+that belong to $X$.  Can you think of circumtances in which
+it is difficult to answer whether $x$ is a member of $X$
+even when it is known that $X$ contains exactly one element?
+\end{example}
+
+\begin{example}
+Let $P$ denote the set of primes.  Then $35\notin P$ since
+$35= 5\times 7$.  Also, $19\in P$.  Now consider the number
+\[
+n = 77788467064627123923601532364763319082817131766346039653933
+\]
+Does $n$ belong to $P$?  Alice says yes while Bob says no.
+How could Alice justify her affirmative answer?  How could Bob
+justify his negative stance?  In this specific case, I know that
+Alice is right.  Can you explain why?
+\end{example}
+
+\section{Intersections and Unions}
+
+When $X$ and $Y$ are sets, the \textit{intersection}
+of $X$ and $Y$, denoted $X\cap Y$, is defined by
+\[
+X\cap Y = \{x: x\in X, x\in Y\}
+\]
+Note that this notation uses the convention followed by
+many programming languages. Namely, the ``comma'' in the
+definition means that \textit{both} requirements for
+membership be satisfied.  For example, if $X=\{b,c,e,g,m\}$
+and $Y=\{a,c,d,h,m,n,p\}$, then $X\cap Y=\{c,m\}$.
+
+\subsection{The Meaning of $2$-Letter Words}
+
+In the not too distant past, there was considerable discussion
+in the popular press on the meaning of the $2$-letter word \textit{is}.
+For mathematicians and computer scientists, it would have
+been far more significant to have a discussion of the $2$-letter
+word \textit{or}.  The problem is that the English language uses
+\textit{or} in two fundamentally different ways. Consider the
+following sentences:
+
+\begin{enumerate}
+\item  A nearby restaurant has a dinner special featuring two choices for
+dessert: flan de casa \textbf{or} tirami-su.
+\item  A state university accepts all students who have graduated
+from in-state high schools and have SAT scores above $1000$ \textbf{or} 
+have grade point averages above $3.0$.
+\item A local newpaper offers 
+customers the option of paying their for their newspaper bills on a monthly
+\textbf{or} semi-annual basis.
+\end{enumerate}
+In the first and third statement, it is clear that there are
+two options but that \textit{only} one of them is allowed.  However,
+in the second statement, the interpretation is that admission will
+be granted to students who satisfy \textit{at least one} of the
+two requirements.  These interpretations are called 
+respectively the \textit{exclusive}
+and \textit{inclusive} versions of \textbf{or}.  In this class, we
+will assume that whenever the word ``or'' is used, 
+the inclusive interpretation is intended---unless otherwise
+stated.
+
+For example, when $X$ and $Y$ are sets, the \textit{union}
+of $X$ and $Y$, denoted $X\cup Y$, is defined by
+\[
+X\cup Y = \{x: x\in x \text{ or } x\in Y\}.
+\]
+membership be satisfied.  For example, if $X=\{b,c,e,g,m\}$
+and $Y=\{a,c,d,h,m,n,p\}$, then $X\cup Y=\{a,b,c,d,e,g,h,m,n,p\}$.
+
+Note that $\cap$ and $\cup$ are \textit{commutative} and
+\textit{associative} binary operations, as is the case with
+addition and multiplication for the set $\posints$ of positive
+integers, i.e., if $X$, $Y$ and $Z$ are sets, then
+\[
+X\cap Y = Y\cap X \quad\text{ and }\quad X\cup Y = Y\cup X. 
+\]
+Also,
+\[
+X\cap(Y\cap Z)= (X\cap Y)\cap Z\quad\text{ and }\quad
+X\cup(Y\cup Z)= (X\cup Y)\cup Z.
+\]
+Also, note that each of $\cap$ and $\cup$ distributes
+over the other, i.e., 
+\[
+X\cap(Y\cup Z)= (X\cap Y)\cup (X\cap Z)\quad\text{ and }\quad
+X\cup(Y\cap Z)= (X\cup Y)\cap (X\cup Z)
+\]
+On the other hand, in $\posints$, multiplication distributes
+over addition but not vice-versa.
+
+\subsection{The Empty Set: Much To Do About Nothing}
+
+The \textit{empty set}, denoted $\emptyset$ is the set for
+which $x\notin \emptyset$ for every element $x$.  Note that
+$X\cap \emptyset =\emptyset$ and $X\cup \emptyset=X$, for every
+set $X$. 
+
+The empty set is unique in the sense that if $x\notin X$ for every
+element $x$, then $X=\emptyset$.
+
+\subsection{The First So Many Positive Integers}
+
+In our course, we will use the symbols $\posints$, $\ints$,
+$\rats$ and $\reals$ to denote respectively the
+set of positive integers, the set of all integers (positive, negative
+and zero), the set of rational numbers (fractions) and the set of real
+numbers (rationals and irrationals).  On occasion, we will discuss
+the set $\nonnegints$ of \textit{non-negative integers}.
+When $n$ is a positive integer, we will use the 
+abbreviation $[n]$ for the set $\{1,2,\dots,n\}$ of the
+first $n$ positive integers.  For example, $[5]=\{1,2,3,4,5\}$.
+For reasons that may not be clear at the moment but hopefully
+will be transparent later in the semester, we use the
+notation $\bfn$ to denote the $n$-element set $\{0,1,2,\dots,n-1\}$.
+Of course, $\bfn$ is just the set of the first $n$ non-negative
+integers.  For example, $\mathbf{5}=\{0,1,2,3,4\}$.
+
+\subsection{Subsets, Proper Subsets and Equal Sets} 
+
+When $X$ and $Y$ are sets, we say $X$ is a \textit{subset} of $Y$ and
+write $X\subseteq Y$ when $x\in Y$ for every $x\in X$.  When $X$ is a
+subset of $Y$ and there exists at least one element $y\in Y$ with
+$y\notin X$, we say $X$ is a proper subset of $Y$ and write
+$X\subsetneq Y$.  For example, the $P$ of primes is a proper subset of
+the set $\posints$ of positive integers.
+
+Surprisingly often, we will encounter a situation where
+sets $X$ and $Y$ have different rules for membership
+yet both are in fact the same set.  For example, let
+$X=\{0,2\}$ and $Y=\{z\in\ints: z+z=z\times z\}$. Then $X=Y$.
+For this reason, it is useful to have a test when sets are
+equal.  If $X$ and $Y$ are sets, then
+
+\[
+X = Y \quad\text{ if and only if }\quad X\subseteq Y \text{ and } Y\subseteq X.
+\]  
+
+\section{Cartesian Products} 
+
+When $X$ and $Y$ are sets, the \textit{cartesian product}
+of $X$ and $Y$, denoted $X\times Y$, is defined by
+\[
+X\times Y=\{(x,y): x\in X \text{ and } y\in Y\}
+\]
+For example, if $X=\{a,b\}$ and $Y=[3]$, then
+$X\times Y=\{(a,1),(b,1),(a,2),(b,2),(a,3),(b,3)\}$.
+Elements of $X\times Y$ are called \textit{ordered pairs}.
+When $p=(x,y)$ is an ordered pair, the element $x$ is referred
+to as the \textit{first coordinate} of $p$ while $y$ is the
+\textit{second coordinate} of $p$.
+Note that if either $X$ or $Y$ is the empty set, then
+$X\times Y=\emptyset$.
+
+\begin{example}
+Let $X=\{\emptyset,(1,0),\{\emptyset\}\}$ and $Y=\{(\emptyset,0)\}$.
+Is $((1,0),\emptyset)$ a member of $X\times Y$?
+\end{example}
+
+Cartesian products can be defined for more than two factors.
+When $n\ge 2$ is a positive integer and $X_1,X_2,\dots,X_n$ are
+non-empty sets, their \textit{cartesian product} is defined
+by
+\[
+X_1\times X_2\times\dots\times X_n=\{(x_1,x_2,\dots,x_n): x_i\in X_i
+\text{ for } i = 1,2,\dots,n\}
+\]
+
+
+\section{Binary Relations and Functions}
+
+A subset $R\subseteq X\times Y$ is called a \textit{binary
+relation} on $X\times Y$, and a binary relation $R$ on $X\times Y$ 
+is called a \textit{function from} $X$ \textit{to} $Y$ when the
+following condition is satisfied:
+
+\medskip
+\noindent
+$C$:\quad For every $x\in X$, there is \textit{exactly one}
+element $y\in Y$ for which $(x,y)\in R$.
+
+\medskip
+Many authors prefer to write Condition~\textbf{C} in two parts:
+
+\medskip
+\noindent
+$C_1$:\quad For every $x\in X$, there is \textit{some}
+element $y\in Y$ for which $(x,y)\in R$.
+
+\medskip
+\noindent
+$C_2$:\quad For every $x\in X$, there is \textit{at most one}
+element $y\in Y$ for which $(x,y)\in R$.
+
+\medskip
+And this last condition is often stated in the following alternative
+form:
+
+\medskip
+\noindent
+$C'_2$: \quad If $x\in X$, $y_1,y_2\in Y$ and $(x,y_1),(x,y_2)\in R$, then
+$y_1=y_2$.
+
+\begin{example}\label{exa:function}
+
+For example, let $X=[4]$ and $Y=[5]$.  Then let
+
+$R_1=\{(2,1),(4,2),(1,1),(3,1)\}$, 
+
+$R_2=\{(4,2),(1,5),(3,2)\}$, and 
+
+$R_3=\{(3,2),(1,4),(2,2),(1,1),(4,5)\}$.
+
+\noindent
+Then only $R_1$ is a function from $X$ to $Y$.
+\end{example}
+
+In many settings (like calculus), it is customary to use letters like $f$,
+$g$ and $h$ to denote functions.  So let $f$ be a function from a
+set $X$ to a set $Y$. In view of the defining properties of functions, for
+each $x\in X$, there is a unique element $y\in Y$ with $(x,y)\in f$.
+And in this case, the convention is to write $y=f(x)$.  For example,
+if $f=R_1$ is the function in Example~\ref{exa:function}, then
+$2=f(4)$ and $f(3) =1$.
+
+The shorthand notation $f:X\rightarrow Y$ is used to indicate
+that $f$ is a function from the set $X$ to the set $Y$.  
+
+In calculus, we study functions defined by algebraic rules.
+For example, consider the function $f$ whose rule is $f(x) = 5x^3-8x+7$.
+This short hand notation means that $X=Y=\reals$ and that
+\[
+f=\{(x,5x^3-8x+7):x\in\reals\}
+\]
+In combinatorics, we sometimes study functions defined
+algebraically, just like in calculus, but we will frequently
+describe functions by other kinds of rules.  For example, let
+$f:\posints\rightarrow\posints$ be defined by
+$f(n) = |n/2|$ if $n$ is even and $f(n)=3|n|+1$ when $n$ is odd.
+
+A function $f:X\rightarrow Y$ is
+called an \textit{injection from} $X$ \textit{to} $Y$ when
+
+\medskip
+\noindent
+$I$:\quad For every $y\in Y$, there is \textit{at most} one element 
+$x\in X$ with $y=f(x)$.
+
+\medskip
+When the meaning of $X$ and $Y$ is clear, we just say $f$ is an 
+\textit{injection}.  An injection is also called a $1$--$1$ function
+(read this as ``one to one'') and this is sometimes denoted as
+$f:X\injection Y$.
+
+A function $f:X\rightarrow Y$ is called a \textit{surjection from}
+$X$ \textit{to} $Y$ when:
+
+\medskip
+\noindent
+$S$:\quad For every $y\in Y$, there is \textit{at least} one $x\in X$ with
+$y=f(x)$.
+
+\medskip
+Again, when the meaning of $X$ and $Y$ is clear, we just say $f$ is an 
+\textit{surjection}.  A surjection is also called an \textit{onto} 
+function and this is sometimes denoted as\\
+$f:X\surjection Y$.
+
+A function $f$ from $X$ to $Y$ which is both an injection and a surjection
+is called a \textit{bijection}.  Alternatively, a bijection is referred
+to as a $1$--$1$, onto function, and this is sometimes denoted as
+$f:X \bijection Y$.  A bijection is also called a 
+$1$--$1$-\textit{correspondence}.
+
+\begin{example}
+Let $X=Y=\reals$.  Then let $f$, $g$ and $h$ be the
+functions defined by
+
+\begin{enumerate}
+\item $f(x)=3x-7$.
+\item $g(x)=3(x-2)(x+5)(x-7)$.
+\item $h(x)=6x^2-5x+13$.
+\end{enumerate}
+Then $f$ is a bijection; $g$ is a surjection but not an
+injection (\textit{Why}?); and $h$ is neither an injection nor a
+surjection (\textit{Why}?).
+\end{example}
+
+\begin{proposition}
+Let $X$ and $Y$ be sets. Then there is a bijection from $X$ to $Y$
+if and only if there is a bijection from $Y$ to $X$.
+\end{proposition}
+
+\section{Finite Sets}
+
+A set $X$ is said to be \textit{finite} when either (1) $X=\emptyset$; or
+(2) there exists positive integer $n$ and a bijection $f:[n]\bijection X$.
+When $X$ is not finite, it is called \textit{infinite}.  For example,
+$\{a,\emptyset,(3,2),\posints\}$ is a finite set as is
+$\posints\times\emptyset$.  On the other hand, $\posints\times
+\{\emptyset\}$ is infinite.  Of course, $[n]$ and $\bfn$ are
+finite sets for every $n\in\posints$.
+
+\begin{proposition}
+Let $X$ be a non-empty finite set.  Then there is a unique
+positive integer $n$ for which there is a bijection $f:[n]\bijection X$.
+\end{proposition}
+
+In some cases, it may take some effort to determine whether a set
+is finite or infinite.  Here is a truly
+classic result.
+
+\begin{proposition}
+The set $P$ of primes is infinite.
+\end{proposition}
+\begin{proof}
+Suppose that the set $P$ of primes is finite.  It is non-empty
+since $2\in P$.  Let $n$ be the unique positive integer for
+which there exists a bijection $f:[n]\rightarrow P$.  Then let 
+
+\[
+p=1+f(1)\times f(2)\times f(3)\times \dots\times f(n)
+\]
+Then $p$ is prime (\textit{Why}?) yet larger than any element of $P$.
+The contradiction completes the proof.
+\end{proof}
+
+Here's a famous example of a set where no one knows if
+the set is finite or not.
+
+\begin{conjecture}  It is conjectured that the following
+set is infinite:
+\[
+T=\{n\in\posints:n \text{ and } n+2 \text{ are both
+primes }\}. 
+\]
+\end{conjecture}
+This conjecture is known as the \textit{Twin Primes Conjecture}.
+Guaranteed $\text{A}++$ for any student who can settle it!
+ 
+\begin{proposition}\label{exe:sb}
+Let $X$ and $Y$ be finite sets.  If there exists an injection
+$f:X\injection Y$ and an injection $g:Y \injection X$, then
+there exists a bijection $h:X \bijection Y$.
+\end{proposition}
+
+When $X$ is a finite non-empty set, the \textit{cardinality} of $X$,
+denoted $|X|$ is the unique positive integer $n$ for which
+there is a bijection $f:[n]\bijection X$.  Intuitively,
+$|X|$ is the number of elements in $X$.  For example,
+\[
+|\{(6,2), (8,(4,\emptyset)), \{3,\{5\}\}\}|=3.
+\]
+By convention, 
+the cardinality of the empty set is taken to be zero, and we write
+$|\emptyset|=0$.
+
+\begin{proposition}\label{prop:xy} 
+If $X$ and $Y$ are finite non-empty sets, then
+$|X\times Y| =|X|\times |Y|$.
+\end{proposition}
+
+\begin{remark}
+The statement in the last exercise is an example of ``operator
+overloading'', a technique featured in several programming
+languages.  Specifically, the times sign $\times$ is used
+twice but has different meanings.  As part of $X\times Y$, it
+denotes the cartesian product, while as part of $|X|\times |Y|$,
+it means ordinary multiplication of positive integers.  Programming
+languages can keep track of the data types of variables and
+apply the correct interpretation of an operator like $\times$
+depending on the variables to which it is applied.
+\end{remark}
+
+We also have the following general form of Proposition~\ref{prop:xy}:
+\[
+|X_1\times X_2\times\dots\times X_n|=
+|X_1|\times |X_2|\times\dots\times |X_n|
+\]
+
+\begin{theorem}\hfill\mbox{}\\
+\begin{enumerate}
+\item There is a bijection between any two of the following
+infinite sets $\posints$, $\ints$ and $\rats$. 
+\item There is an injection from $\rats$ to $\reals$.
+\item There is no surjection from $\rats$ to $\reals$.
+\end{enumerate}
+\end{theorem}
+
+\section{Notation from Set Theory and Logic}
+
+In set theory, it is common to deal with statements 
+involving one or more elements from the universe as
+variables.  Here are some examples:
+\begin{enumerate}
+\item For $n\in\posints$, $n^2-6n+8=0$.
+\item For $A\subseteq[100]$, $\{2,8,25,58,99\}\subseteq A$.
+\item For $n\in \ints$, $|n|$ is even.
+\item For $x\in \reals$, $1+1=2$.
+\item For $m,n\in \posints$, $m(m+1)+2n$ is even.
+\item For $n\in \posints$, $2n+1$ is even.
+\item For $n\in \posints$ and $x\in\reals$, $n+x$ is
+irrational.
+\end{enumerate}
+These statements may be true for some values of the variables
+and false for others.  The fourth and fifth statements
+are true for \textit{all} values of the variables, while
+the sixth is false for all values.
+
+Implications are frequently abbreviated using with
+a double arrow $\Longrightarrow$; the quantifier $\forall$ means ``for all'' 
+(or ``for every''); and the quantifier $\exists$ means 
+``there exists'' (or ``there is'').  Some
+writers use $\wedge$ and $\vee$ for logical ``and'' and
+``or'', respectively.  For example, 
+\[
+\forall A,B\subseteq[4]\quad \bigl((1,2\in A) \wedge |B|\ge 3)\bigr)
+\Longrightarrow\bigl((A\subseteq B)\vee (\exists n\in A\cup B, 
+ n^2=16)\bigr)
+\]
+The double arrow $\iff$ is used to denote logical equivalence
+of statements (also ``if and only if'').  For example
+\[
+\forall A\subseteq[7]\quad A\cap\{1,3,6\}\neq\emptyset\iff
+A\nsubseteq\{2,4,5,7\}
+\]
+We will use these notational shortcuts \textit{except} for
+the use of $\wedge$ and $\vee$, as we will use these two symbols
+in another context: binary operators in lattices. 
+
+\section{Supplementary Notes}
+
+Our treatment of set theory has been thoroughly intuitive \dots
+an approach that it fraught with danger.  As was first discovered
+more than 100 years ago, there are major conceptual hurdles
+in formulating consistent systems of axioms for set theory.
+And it is very easy to make statements that sound ``obvious''
+but are not.
+
+Here is one very famous example.  Let $X$ and $Y$ be
+sets and consider the following two
+statements:
+
+\begin{enumerate}
+\item There exists an injection $f:X\rightarrow Y$.
+\item There exists a surjection $g:Y\rightarrow X$.
+\end{enumerate}
+If $X$ and $Y$ are finite sets, these statements are
+equivalent, and it is perhaps natural to surmise that the
+same is true when $X$ and $Y$ are infinite.  But that is not
+the case.
+
+A good source of additional (free) information on set theory is
+the collection of Wikipedia articles.  Do a web search and
+look up the following topics and people:
+
+\begin{enumerate}
+\item Zermelo Frankel set theory.
+\item Axiom of Choice.
+\item Peano postulates.
+\item Georg Cantor, Augustus De Morgan, George Boole, Bertrand Russell
+and Kurt G\"odel.
+\end{enumerate}
+
+\subsection{Decimal Representation of Real Numbers}
+
+Every real number has a decimal expansion---although the
+number of digits after the decimal point may be infinite.
+A rational number $q=m/m$ from $\rats$ has an expansion
+in which a certain block of digits repeats indefinitely.
+For example, \[
+\frac{2859}{35} = 81.6857142857142857142857142857142857142857142\dots
+\]
+In this case, the block $857142$ of size~$6$ is repeated forever.
+
+Certain rational numbers have \textit{terminating} decimal expansions.
+For example $385/8= 48.125$.  If we chose to do so, we could
+write this instead as an infinite decimal by appending trailing $0$'s,
+as a repeating block of size~$1$:
+\[
+\frac{385}{8} = 48.1250000000000000000000000000000000\dots
+\]
+On the other hand, we can also write the decimal expansion of
+$385/8$ as:
+\[
+\frac{385}{8} = 48.12499999999999999999999999999999999\dots
+\]
+Here, we intend that the digit $9$, a block of size~$1$, be repeated forever.
+Apart from this anomaly, the decimal expansion of real numbers is unique.
+
+On the other hand, irrational numbers have non-repeating decimal 
+expansions in which there is no block of repeating digits that
+repeats forever.
+
+You all know that $\sqrt{2}$ is irrational.  Here is the first part 
+of its decimal expansion:
+\[
+\sqrt{2} =1.41421356237309504880168872420969807856967187537694807317667973\dots
+\]
+An irrational
+number is said to be \textit{algebraic} if it is the root of
+polynomial with integer coeffcients; else it is said to be
+\textit{transcendental}.   
+For example, $\sqrt{2}$ is \textit{algebraic} since it is the
+root of the polynomial $x^2-2$.
+
+Two other famous examples of irrational numbers are $\pi$ and $e$.
+Here are their decimal expansions:
+\[
+\pi =3.14159265358979323846264338327950288419716939937510582097494459\dots
+\]
+and 
+\[
+e=2.7182818284590452353602874713526624977572470936999595749669676277\dots
+\]
+Both $\pi$ and $e$ are \textit{transcendental}.
+
+\begin{example}
+Amanda and Bilal, both students at a nearby university, have
+been studying rational numbers that have
+large blocks of repeating digits in their decimal expansions.
+Amanda reports that she has found two positive integers
+$m$ and $n$ with $n<500$ for which the decimal expansion
+of the rational number $m/n$ has a block of 1961 digits which
+repeats indefinitely.  Not to be outdone, Bilal brags that
+he has found such a pair $s$ and $t$ of positive
+integers with $t<300$ for which the
+decimal expansion of $s/t$ has a block of $7643$ digits which
+repeats indefinitely.  Bilal should be (politely) told to
+do his arithmetic more carefully, as there is no such pair
+of positive integers (\textit{Why}?).  On the other hand, Amanda may in fact
+be correct---although, if she has done her work with more
+attention to detail, she would have reported that the decimal
+expansion of $m/n$ has a smaller block of repeating digits (\textit{Why}?).
+\end{example}
+
+\begin{proposition} 
+There is no surjection from $\posints$ to the
+set $X= \{x\in\reals:0<x<1\}$.
+\end{proposition}
+
+\begin{proof}
+Let $f$ be a function from $\posints$ to $X$.
+For each $n\in \posints$, consider the decimal
+expanion(s) of the real number $f(n)$.  Then
+choose a positive integer $a_n$ so that (1)~$a_n\le 8$, and
+(2)~$a_n$ is not the $n^{th}$ digit after the decimal
+point in any decimal expansion of $f(n)$.
+Then the real number $x$ whose decimal expansion
+is $x=.a_1a_2a_3a_4a_5\dots$ is an element of $X$
+which is distinct from $f(n)$, for every $n\in\posints$.
+This shows that $f$ is not a surjection.
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "book"
+%%% End: 

@@ -1,0 +1,291 @@
+  an odd cycle.   For each component $C$ of $\bfG$, we choose
+  an arbitrary vertex $r_C$ from $C$ and color all such vertices
+  with color $1$.  Then for each component $C$ and each vertex
+  $y\in C$ with $y\neq r_C$, let $P=(r_C=x_1,x_2,\dots,x_t=y)$ be
+  a shortest path from $r_C$ to $y$.  Assign $y$ color $1$ if
+  $t$ is odd and color~$2$ if $t$ is even.  It is easy to see that
+  this determines a $2$-coloring of $\bfG$.
+\end{proof}
+
+A graph $\bfG$ is called a bipartite graph when there is
+a partition of the vertex $V$ into two sets $A$ and $B$ 
+so that the subgraphs induced by $A$ and $B$ are independent graphs, 
+i.e., no edge of $\bfG$ has both of its endpoints in $A$ or in $B$. 
+Evidently, bipartite graphs are $2$-colorable.  On the other hand,
+when a $2$-colorable graph is disconnected, there is more than
+one way to define a suitable partition of the vertex set into
+two independent sets.
+
+Bipartite graphs are commonly used as models when there are two
+distinct types of objects being modeled and connections are only
+allowed between two objects of different types.  For example,
+on one side, list candidates who attend a career fair and on the
+other side list the available positions.  The edges might naturally
+correspond to candidate/position pairs which link a person to
+a responsibility they are capable of handling.
+
+As a second example, a
+bipartite graph could be used to visualize the languages spoken by a
+group of students. The vertices on one side would be the students with the
+languages listed on the other side.  We would then have an edge $xy$ when
+student $x$ spoke language $y$.
+A concrete example of this graph for our favorite group of students is
+shown in \autoref{fig:graphs:languages}, although Alice isn't so
+certain there should be an edge connecting Dave and English.
+
+\begin{figure}[b]
+  \centering
+  \includegraphics[scale=0.63]{graphs-figs/languages}
+  \caption{A bipartite graph}
+  \label{fig:graphs:languages}
+\end{figure}
+
+One special class of bipartite graphs that bears mention is the class
+of \emph{complete bipartite graphs}. The complete bipartite graph
+$\bfK_{m,n}$ has vertex set $V=V_1\cup V_2$ with $|V_1|=m$ and
+$|V_2|=n$. It has an edge $xy$ if and only if $x\in V_1$ and $y\in
+V_2$. The complete bipartite graph $\bfK_{3,3}$ is shown in \autoref{fig:graphs:k33}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[angle=90]{graphs-figs/k33}
+  \caption{The complete bipartite graph $\bfK_{3,3}$}
+  \label{fig:graphs:k33}
+\end{figure}
+
+\subsection{Cliques and Chromatic Number}
+
+A \textit{clique} in a graph $\GVE$ is a set $K\subseteq V$ such that
+the subgraph induced by $K$ is isomorphic to the complete graph
+$\bfK_{|K|}$. Equivalently, we can say that every pair of vertices in
+$K$ are adjacent. The \textit{maximum clique size} or \textit{clique
+  number} of a graph $\bfG$, denoted $\omega(\bfG)$, is the largest
+$t$ for which there exists a clique $K$ with $|K|=t$.  For example,
+the graph in \autoref{fig:graphs:eulerexample} has clique number $4$
+while the graph in \autoref{fig:graphs:chi4} has maximum clique
+size~$2$.
+
+For every graph $\bfG$, it is obvious that $\chi(\bfG)\ge
+\omega(\bfG)$.  On the other hand, the inequality may be far from
+tight. Before proving showing how bad it can be, we need to introduce
+a more general version of the
+\hyperref[prop:pigeon]{Pigeon Hole Principle
+  (Proposition~\ref*{prop:pigeon})}. Consider a function $f\colon X\to
+Y$ with $|X| = 2|Y|+1$. Since $|X|>|Y|$, the Pigeon Hole Principle
+as stated in \autoref{ch:basics} only tells us that there are distinct
+$x,x'\in X$ with $f(x)=f(x')$. However, we can say more here. Suppose
+that each element of $Y$ has at most two elements of $X$ mapped to
+it. Then adding up the number of elements of $X$ based on how many are
+mapped to each element of $Y$ would only allow $X$ to have (at most)
+$2|Y|$ elements. Thus, there must be $y\in Y$ so that there are three
+distinct elements $x,x',x''\in X$ with $f(x)=f(x')=f(x'')=y$. This
+argument generalizes to give the following version of the Pigeon Hole
+Principle:
+
+\begin{proposition}\label{prop:graphs:pigeon-general}
+  If $f\colon X\to Y$ is a function and $|X|\geq (m-1)|Y|+1$, then
+  there exists an element $y\in Y$ and distinct elements
+  $x_1,\dots,x_m \in X$ so that $f(x_i)=y$ for $i=1,\dots,m$.
+\end{proposition}
+
+We are now prepared to present the following proposition showing that
+clique number and chromatic number need not be close at all.
+
+\begin{proposition}\label{prop:triangle-free}
+  For every $t\ge3$, there exists a graph $\bfG_t$ so that
+  $\chi(\bfG_t)=t$ and $\omega(\bfG_t)=2$
+\end{proposition}
+
+\begin{proof}[Proof (J. Kelly and L. Kelly)]
+  We proceed by induction on $t$. For $t=3$, we take $\bfG_3$ to be
+  the cycle $\bfC_5$ on five vertices.  Now assume that for some
+  $t\ge3$, we have determined the graph $\bfG_t$.  Suppose that
+  $\bfG_t$ has $n_t$ vertices.  Label the vertices of $\bfG_t$ as
+  $x_1,x_2,\dots,x_{n_t}$.  Construct $\bfG_{t+1}$ as follows.  Begin
+  with an independent set $I$ of cardinality $t(n_t-1)+1$.  For every
+  subset $S$ of $I$ with $|S|=n_t$, label the elements of $S$ as
+  $y_1,y_2,\dots,y_{n_t}$.  For this particular $n_t$-element subset
+  attach a copy of $\bfG_t$ with $y_i$ adjacent to $x_i$ for
+  $i=1,2,\dots,n_t$.  Vertices in copies of $\bfG_t$ for distinct
+  $n_t$-element subsets of $I$ are nonadjacent, and a vertex in $I$
+  has at most one neighbor in a particular copy of $\bfG_t$.
+
+  To see that $\omega(\bfG_{t+1})=2$, it will suffice to argue that
+  $\bfG_{t+1}$ contains no triangle ($\bfK_3$).  Since $\bfG_t$ is
+  triangle-free, any triangle in $\bfG_{t+1}$ must contain a vertex of
+  $I$. Since none of the vertices of $I$ are adjacent, any triangle in
+  $\bfG_{t+1}$ contains only one point of $I$. Since each vertex of
+  $I$ is adjacent to at most one vertex of any fixed copy of $\bfG_t$,
+  if $y\in I$ is part of a triangle, the other two vertices must come
+  from distinct copies of $\bfG_t$. However, vertices in different
+  copies of $\bfG_t$ are not adjacent, so
+  $\omega(\bfG_{t+1})=2$. Notice that $\chi(\bfG_{t+1})\ge t$ since
+  $\bfG_{t+1}$ contains $\bfG_t$.  On the other hand,
+  $\chi(\bfG_{t+1})\le t+1$ since we may use $t$ colors on the copies
+  of $\bfG_t$ and a new color on the independent set $I$.  To see that
+  $\chi(\bfG_{t+1})=t+1$, observe that if we use only $t$ colors, then
+  by the generalized Pigeon Hole Principle, there is an $n_t$-element
+  subset of $I$ in which all vertices have the same color.  Then this
+  color cannot be used in the copy of $\bfG_t$ which is attached to
+  that $n_t$-element subset.
+\end{proof}
+
+Here is another argument for the same result.
+
+\begin{proof}[Proof (J. Mycielski)]
+  We again start with $\bfG_3$ as the cycle $\bfC_5$.  As before we
+  assume that we have constructed for some $t\ge3$ a graph $\bfG_t$
+  with $\omega(\bfG_t)=2$ and $\chi(\bfG_t) = t$.  Again, label the
+  vertices of $\bfG_t$ as $x_1,x_2,\dots,x_{n_t}$.  To construct
+  $\bfG_{t+1}$, we now start with an independent set $I$, but now $I$
+  has only $n_t$ points, which we label as $y_1,y_2,\dots,y_{n_t}$.  We
+  then add a copy of $\bfG_t$ with $y_i$ adjacent to $x_j$ if and only
+  if $x_i$ is adjacent to $x_j$.  Finally, attach a new vertex $z$
+  adjacent to all vertices in $I$.
+
+  Clearly, $\omega(\bfG_{t+1})=2$.  Also,
+  $\chi(\bfG_{t+1})\ge t$, since it contains $\bfG_t$ as a subgraph.
+  Furthermore,
+  $\chi(\bfG_{t+1})\leq t+1$, since we can color $\bfG_t$ with colors
+  from $\{1,2,\dots,t\}$, use color $t+1$ on the independent set $I$,
+  and then assign color~$1$ to the new vertex $z$. We claim that in fact
+  $\chi(\bfG_{t+1})=t+1$. Suppose not. Then we must have
+  $\chi(\bfG_{t+1})=t$.  Let $\phi$ be a proper
+  coloring of $\bfG_{t+1}$.  Without loss of generality, $\phi$ uses
+  the colors in $\{1,2,\dots,t\}$ and $\phi$ assigns color~$t$ to $z$.
+  Then consider the nonempty set $S$ of vertices in the copy of
+  $\bfG_t$ to which $\phi$ assigns color $t$.  For each $x_i$ in $S$,
+  change the color on $x_i$ so that it matches the color assigned to
+  $y_i$ by $\phi$, which cannot be $t$, as $z$ is colored $t$.  What
+  results is a proper coloring of the copy of $\bfG_t$ with only $t-1$
+  colors since $x_i$ and $y_i$ are adjacent to the same vertices of
+  the copy of $\bfG_t$.  The contradiction shows that
+  $\chi(\bfG_{t+1})=t+1$, as claimed.
+\end{proof}
+
+Since a $3$-clique looks like a triangle,
+\hyperref[prop:triangle-free]{Proposition~\ref*{prop:triangle-free}}
+is often stated as ``There exist triangle-free graphs with large
+chromatic number.'' As an illustration of the construction in the
+proof of Mycielski, we again refer to \autoref{fig:graphs:chi4}.  The
+graph shown is $\bfG_4$. We will return to the topic of graphs with
+large chromatic number in \autoref{s:probmeth:girth} where we show
+that are there graphs with large chromatic number which lack not only
+cliques of more than two vertices but also \emph{cycles} of less than
+$g$ vertices for \emph{any} value of $g$. In other words, there is a
+graph $\bfG$ with $\chi(\bfG)=10^6$ but no cycle with fewer than
+$10^{10}$ vertices!
+
+\subsection{Can We Determine Chromatic Number?}
+
+Suppose you are given a graph $\bfG$. It's starting to look like it is
+not easy to find an algorithm that answers the question ``Is
+$\chi(\bfG)\leq t$?'' It's easy to verify a certificate (a proper
+coloring using at most $t$ colors), but how could you even find a
+proper coloring, not to mention one with the fewest number of colors?
+Similarly for the question ``Is $\omega(\bfG)\geq k$?'', it is easy to
+verify a certificate. However, finding a maximum clique appears to be
+a very hard problem. Of course, since the gap between $\chi(\bfG)$ and
+$\omega(\bfG)$ can be arbitrarily large, being able to find one value
+would not (generally) help in finding the value of the other. No
+polynomial-time algorithm is known for either of these problems, and
+many believe that no such algorithm exists. In this subsection, we
+look at one approach to finding chromatic number and see a case where
+it does work efficiently.
+
+A very na\"ive algorithmic way to approach graph coloring is the First
+Fit, or ``greedy'', algorithm. For this algorithm, fix an ordering of
+the vertex set $V=\{v_1,v_2,\dots v_n\}$. We define the coloring
+function $\phi$ one vertex at a time in increasing order of
+subscript. We begin with $\phi(v_1)=1$ and then we define
+$\phi(v_{i+1})$ (assuming vertices $v_1,v_2,\dots,v_i$ have been
+colored) to be the least positive integer color that has not already
+been used on any of its neighbors in the set $\{v_1,\dots v_i\}$.
+
+\begin{figure}
+  \centering
+  \begin{picture}(0,0)
+    \put(0,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
+    \put(0,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
+    \put(0,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_5$}}}%
+    \put(0,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_7$}}}%
+    \put(65,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_2$}}}%
+    \put(65,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_4$}}}%
+    \put(65,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_6$}}}%
+    \put(65,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_8$}}}%
+    \put(110,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
+    \put(110,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_2$}}}%
+    \put(110,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
+    \put(110,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_4$}}}%
+    \put(175,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_5$}}}%
+    \put(175,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_6$}}}%
+    \put(175,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_7$}}}%
+    \put(175,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_8$}}}%
+  \end{picture}
+  \includegraphics[clip,viewport=0 324 54 400]{graphs-figs/k44-M}\hspace{.75in}\includegraphics[clip,viewport=0 324 54 400]{graphs-figs/k44-M}
+  \caption{Two orderings of the vertices of a bipartite graph.}
+  \label{fig:k44minus}
+\end{figure}
+\autoref{fig:k44minus} shows two different orderings of the same
+graph. \hyperref[ex:graphs:first-fit-color]{Exercise~\ref*{ex:graphs:first-fit-color}}
+demonstrates that the ordering of $V$ is vital to the ability of the
+First Fit algorithm to color $\bfG$ using $\chi(\bfG)$ colors. In
+general, finding an optimal ordering is just as difficult as coloring
+$\bfG$. Thus, this very simple algorithm does not work well in
+general. However, for some classes of graphs, there is a ``natural''
+ordering that leads to optimal performance of First Fit. Here is one
+such example---one that we will study again in the next chapter in a
+different context.
+
+Given an indexed family of sets $\cgF=\{S_\alpha:\alpha\in V\}$, we
+associate with $\cgF$ a graph $\bfG$ defined as follows.  The vertex
+set of $\bfG$ is the set $V$ and vertices $x$ and $y$ in $V$ are
+adjacent in $\bfG$ if and only if $S_x\cap S_y \neq\emptyset$.  We
+call $\bfG$ an \textit{intersection graph}.  It is easy to see that
+every graph is an intersection graph (\emph{why?}), so it makes sense
+to restrict the sets which belong to $\cgF$.  For example, we call
+$\bfG$ an \textit{interval graph} if it is the intersection graph of a
+family of closed intervals of the real line $\reals$. For example, in
+\autoref{fig:graphs:interval-graph}, we show a collection of six
+intervals of the real line on the left. On the right, we show the
+corresponding interval graph having an edge between vertices $x$ and
+$y$ if and only if intervals $x$ and $y$ overlap.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{graphs-figs/interval-graph}
+  \caption{A collection of intervals and its interval graph}
+  \label{fig:graphs:interval-graph}
+\end{figure}
+
+\begin{theorem}
+  \label{thm:intgraphcol}If $\GVE$ is an interval graph, then
+  $\chi(\bfG)=\omega(\bfG)$.
+\end{theorem}
+
+\begin{proof}
+  For each $v\in V$, let $I(v)=[a_v,b_v]$ be a closed interval of the
+  real line so that $uv$ is an edge in $\bfG$ if and only if $I(u)\cap
+  I(v)\neq\emptyset$. Order the vertex set $V$ as $\{v_1,v_2,\dots
+  v_n\}$ such that $a_1\leq a_2\leq \cdots \leq a_n$. (Ties may be
+  broken arbitrarily.) Apply the First Fit coloring algorithm to
+  $\bfG$ with this ordering on $V$. Now when the First Fit coloring
+  algorithm colors $v_i$, all of its neighbors have left end point at
+  most $a_i$. Since they are neighbors of $v_i$, however, we know that
+  their right endpoints are all at least $a_i$. Thus, $v_i$ and its
+  previously-colored neighbors form a clique. Hence, $v_i$ is adjacent
+  to at most $\omega(\bfG)-1$ other vertices that have already been
+  colored, so when the algorithm colors $v_i$, there will be a color
+  from $\{1,2,\dots,\omega(\bfG)\}$ not already in use on its
+  neighbors.  The algorithm will assign $v_i$ the smallest such
+  color. Thus, we never need to use more than $\omega(\bfG)$ colors,
+  so $\chi(\bfG)=\omega(\bfG)$.
+\end{proof}
+
+A graph $\bfG$ is said to be \emph{perfect} if
+$\chi(\bfH)=\omega(\bfH)$ for every induced subgraph $\bfH$. Since an
+induced subgraph of an interval graph is an interval graph,
+\autoref{thm:intgraphcol} shows interval graphs are perfect. The study
+of perfect graphs originated in connection with the theory of
+communications networks and has proved to be a major area of research
+in graph theory for many years now.

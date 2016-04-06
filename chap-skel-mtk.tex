@@ -1,0 +1,100 @@
+\documentclass[10pt,letterpaper,chapterprefix]{scrreprt}
+\usepackage{amsthm,amsmath,amssymb,graphicx,color,array,chappg,pict2e,multicol,marvosym}
+% multicol to get multiple columns for multi-part exercises
+% (esp. genfunction.tex)
+% marvosym to get \EURdig (euro symbol) in genfunction.tex
+\usepackage{floatflt}
+\usepackage[T1]{fontenc}
+%\usepackage{mathptmx}
+\usepackage[sc]{mathpazo}
+\usepackage{enumitem}
+\usepackage{subfig}
+%\usepackage{showkeys}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{overpic}
+\usepackage[colorlinks,linkcolor=blue,urlcolor=blue]{hyperref}
+\numberwithin{figure}{chapter}
+\numberwithin{section}{chapter}
+%\renewcommand{\baselinestretch}{1.66}
+\input{macros.sty}
+
+\setcounter{chapter}{2} %% Set this to one less than the number you
+                        %% want, as it will be incremented when you
+                        %% invoke \chapter
+
+\setkomafont{captionlabel}{\sc\bfseries}
+\setkomafont{caption}{\sc}
+
+\colorlet{chaptercolor}{Cerulean}
+
+\setkomafont{chapter}{\normalfont\color{chaptercolor}\Huge\itshape}
+\setkomafont{chapterprefix}{\normalfont\Large}
+\renewcommand*{\raggedchapter}{\raggedleft}
+\renewcommand*{\chapterformat}{%
+  \MakeUppercase{\chapappifchapterprefix{}}%
+  \rlap{\enskip\resizebox{!}{1.2cm}{\thechapter} \rule{15cm}{1.2cm} }%
+}
+
+\RedeclareSectionCommand[beforeskip=30pt,afterskip=20pt]{chapter}
+\renewcommand*\chapterheadmidvskip{\par\nobreak\vspace{10pt}}
+
+%%%% Beginning of solution manual definitions
+\usepackage{answers}
+
+% solutions file
+\Opensolutionfile{mysolutions}
+\Writetofile{mysolutions}{\protect\setlength{\parindent}{0.0mm}}
+\Newassociation{mysolution}{mySoln}{mysolutions}
+
+% new environment that sets up hypertargets both in the question
+% section, and in the answer section
+\newlist{myenum}{enumerate}{3}
+\newcounter{exercise}
+\newenvironment{exercise}%
+    {%
+    \refstepcounter{exercise}%
+    %  hyperlink to solution
+%         \hypertarget{exercise:{\theexercise}}{}%
+%         \Writetofile{mysolutions}{\protect\hypertarget{soln:\theexercise}{}}%
+         \begin{myenum}[label=\theexercise.,ref=\theexercise]
+         \item%
+        }%
+        {%
+        \end{myenum}}
+
+
+
+%%%% End of solution manual definitions
+
+
+\begin{document}
+
+\include{recurrence} % Put the filename you're compiling here,
+                             % just without the .tex
+
+% close solution file
+\Closesolutionfile{mysolutions}
+
+% renew the solution environment so that it hyperlinks back to 
+% the question
+\renewenvironment{mySoln}[1]{%
+         % add some glue
+         \vskip .5cm plus 2cm minus 0.1cm%
+         {\bfseries \hyperlink{question:#1}{#1.}}%
+}%
+{%
+}%
+
+\clearpage
+\section{Answers!}
+% input the file if it exists
+\IfFileExists{mysolutions.tex}{\input{mysolutions.tex}}{}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

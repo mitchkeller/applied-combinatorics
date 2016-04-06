@@ -1,0 +1,27 @@
+Mitch and Tom,
+
+I already told Mitch, but Tom may not know that I used your textbook for my Discrete Mathematics course in Louisville this semester. During the semester I collected some notes about the book, so I'm sending those now to you. Some of those are up to personal taste, and I certainly won't be offended if you just ignore them. It is also certainly possible that I'm wrong about some of the comments. In any case, use the list any way you want.
+
+Before I'm listing those comments though let me tell you that your book is great. Even in this preliminary stage, it is one of the best textbooks I used for this kind of course, and the students also liked it. Adding the fact that it's free (at least for now), I'll probably continue using it for this this course, if I'll be asked to teach it again.
+
+Note that I only covered the first 9 chapters, so I have no experience of the later ones, and I didn't even read them. So everything I say is only for Chapter 1 to Chapter 9.
+
+Detailed comments:
+
+• p26, I think the multinomial coefficient example should be changed. It is certainly fine, even funny, when the only students who use the book know you in person, but now it's out on the internet.
+• p43, end of section 3.5: You use big O notation before introduced, and the expression for S(n) is something they don't know how to get at this point. I would just say: This leads to a bound $c n\log n$ for some constant $c$. (You will learn later how to compute this.)
+• This is a style question, but I didn't like that Bob suddenly pops his head up in Section 3.9. It took me a while to realize this is the same Bob as in the discussions. Especially with that generic name. When you immerse yourself in a mathematics text, you can just introduce an abstract person here. Bob doesn't add anything to the understanding. I'm sure this happens at other times in the text.
+• "The validity of this proposition is trivial since it is stronger than the principle of induction." I'm not even sure what you mean by this. The validity of weak induction is a trivial consequence of the validity of strong induction, but not the other way around. There is a of course a simple proof (by weak induction) of the validity of strong induction, but I wouldn't call it trivial.
+• Section 4.1: Erdos-Szekeres as the first example of Pigeonhole Principle is a bit quick IMO. There are many non-trivial, but much simpler examples. Also, there are no real practice exercises of the PP.
+• The Chapter starts out great, but it seems to run out of steam. I assigned extra practice problems for practicing O, Theta, o.
+• p63 bottom: If E is a subset of 2-element sets then x and y are always distinct.
+• p70 at the end of the proof of Euler's Theorem (circuits): u_0 may be even degree. Only u_s is sure to be odd degree.
+• p76: First proof of Proposition 5.9: Are you sure this is due to Kelly and Kelly? I've seen this as Tutte's or Zykov's construction, and I think Tutte published it under a fake name.
+• p81: This was very surprising to me, but the majority of my students thought that planar graphs must be connected (that it's part of the definition). You have one sentence that is slightly misleading: the first sentence of the page says "in fact it holds for any planar drawing of any planar graph". It's only for connected graphs, which you do say in the theorem, but it would be better to be included here. Also, maybe a sentence in the introductory part of the section that emphasizes that planar graphs need not be connected.
+• p84: Since the girth of the Petersen graph is 5, one who understood the Euler theorem technique for K_5 and K_{3,3} is all but guaranteed to figure out that 5v-3e>=10 should be true, but it's not. So the half sentence "our argument using Euler’s formula to prove that $K_{3,3}$ is nonplanar was complex enough, we probably don’t want to try it for the Petersen graph" is silly.
+• Chapter 5 exercises: it would be probably a good idea to emphasize at the beginning that all graphs must be simple. My students gave me multigraphs as solutions all the time.
+• p120, typo: should be "so that $i<j$ whenever $D(x_i)$ is a proper subset of $D(x_j)$".
+• p126: Typo in Exercise 19: Space missing between the word Theorem and the number 6.17.
+• p153: Typo in Corollary 8.13: second term should be C(2n-2k,n-k)
+• This would a big change, but I think instead of that nice, but arbitrary application of Newton's binomial theorem you should compute the number of partitions on an n-gon into triangles with non-crossing diagonals. You derive the recursion, find the generating function, compute coefficients with the binomial theorem, and get the Catalan numbers. It's a bit harder, but more beautiful, and it would reflect back to the earlier chapter. Edit: I've seen that you later count RUBOTs, which is the same. Though I still like the n-gons better, it is probably not reasonable to change it. Maybe you can consider to bring that section ahead. In my lecture, I did the n-gon counting before getting into recurrences in details. It's not a linear recurrence anyway.
+• Students' most important comment was that they would love to see answers to as many exercises as possible. Of course this is a lot or work, but they said, even a small subset would be helpful.

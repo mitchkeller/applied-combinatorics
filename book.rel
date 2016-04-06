@@ -1,0 +1,909 @@
+;; RefTeX parse info file
+;; File: /Users/justice/Documents/class/103/math3012/book/book.tex
+;; User: justice (Mitchel T. Keller)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi t)
+
+(bibview-cache)
+
+(master-dir . "/Users/justice/Documents/class/103/math3012/book/")
+
+(label-numbers)
+
+(bof "/Users/justice/Documents/class/103/math3012/book/book.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/macros.sty")
+
+(eof "/Users/justice/Documents/class/103/math3012/book/macros.sty")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/preface.tex")
+
+(toc "toc" "  * Preface" "/Users/justice/Documents/class/103/math3012/book/preface.tex" nil 1 "*" "\\chapter*{Preface}" 1)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/preface.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/introduction.tex")
+
+(toc "toc" "  1 An Introduction to Combinatorics" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 1 "1" "\\chapter{An Introduction to Combinatorics}" 140)
+
+("ch:intro" "s" "% \\begin{abstract} % Welcome to Math 3012: Applied Combinatorics!! % As we hope you will sense right" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.1" "\\section{Introduction}" 1140)
+
+("s:intro:intro" "s" "There are three principal themes to our course: \\begin{description} " "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.2 Enumeration" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.2" "\\section{Enumeration}" 2639)
+
+("s:intro:enum" "s" "The roots of combinatorics lie in counting discrete (as opposed to continuous, as you studied in cal" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:necklace" "f" "Necklaces made with three colors" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.3 Combinatorics and Graph Theory" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.3" "\\section{Combinatorics and Graph Theory}" 6026)
+
+("s:intro:graph" "s" "A \\textit{graph} $G$ consists of a \\textit{vertex} set $V$ and a collection $E$ of $2$-element subse" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:graphdata" "f" "A graph defined by data" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:connectedgraph" "f" "A connected graph" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("ex:radiostations" "s" "In \\autoref{fig:radiostations}, we show the location of some radio stations in the plane, together w" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:radiostations" "f" "Radio Stations" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.4 Combinatorics and Number Theory" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.4" "\\section{Combinatorics and Number Theory}" 9866)
+
+("s:intro:number" "s" "Broadly, number theory concerns itself with the properties of the positive integers. G.H.\\ Hardy was" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("ex:collatz" "s" "Form a sequence of positive integers using the following rules. Start with a positive integer $n>1$." "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("tab:intro:partsof8" "t" "The partitions of $8$, noting those into distinct parts and those into odd parts." "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.5 Combinatorics and Geometry" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.5" "\\section{Combinatorics and Geometry}" 15934)
+
+("s:intro:geom" "s" "There are many problems in geometry that are innately combinatorial or for which combinatorial techn" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:linesregions" "f" "Lines and regions" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:crossingedges" "f" "A graph with crossing edges" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.6 Combinatorics and Optimization" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.6" "\\section{Combinatorics and Optimization}" 17791)
+
+("s:intro:opt" "s" "You likely have already been introduced to optimization problems, as calculus students around the wo" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:wgraph-1" "f" "A labeled graph with weighted edges" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:spantree-1" "f" "A weighted graph and spanning tree" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.7 Sudoku Puzzles" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.7" "\\section{Sudoku Puzzles}" 21892)
+
+("s:intro:sudoku" "s" "Here's an example which has more substance than you might think at first glance. It involves Sudoku " "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+("fig:sudoku" "f" "Sudoku puzzles" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(toc "toc" "    1.8 Closing Comments" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil 2 "1.8" "\\section{Closing Comments}" 23545)
+
+("s:intro:closing" "s" "Hopefully, these examples have piqued your interest in combinatorics, and you are ready to study mat" "/Users/justice/Documents/class/103/math3012/book/introduction.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/introduction.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/strings.tex")
+
+(toc "toc" "  2 Strings, Sets, and Binomial Coefficients" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 1 "2" "\\chapter{Strings, Sets, and Binomial Coefficients}" 68)
+
+("ch:strings" "s" "Much of combinatorial mathematics can be reduced to the study of strings, as they form the basis of " "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.1 Strings: A First Look" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.1" "\\section{Strings: A First Look}" 566)
+
+("s:strings:intro" "s" "Let $n$ be a positive integer. Throughout our course, we will use the shorthand notation $[n]$ to de" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.2 Permutations" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.2" "\\section{Permutations}" 3281)
+
+("s:strings:permutations" "s" "Let $X$ be a finite set and let $n$ be a positive integer. An $X$-string $s=x_1x_2\\dots x_n$ is call" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("prop:strings:permutations" "s" "If $X$ is an $m$-element set and $n$ is a positive integer with $m\\ge n$, then the number of $X$-str" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.3 Combinations" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.3" "\\section{Combinations}" 5172)
+
+("s:strings:combinations" "s" "Let $X$ be a finite set and let $k$ be an integer with $0\\le k\\le |X|$. Then a $k$-element subset of" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("prop:strings:binomraw" "s" "If $n$ and $k$ are integers with $0\\le k\\le n$, then \\begin{equation*} \\binom{n}{k}=\\frac{P(n,k)}{k!" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("prop:strings:symmetric" "s" "For all integers $n$ and $k$ with $0\\le k\\le n$, \\[ \\binom{n}{k}=\\binom{n}{n-k}. \\] " "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.4 Combinatorial Proofs" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.4" "\\section{Combinatorial Proofs}" 7398)
+
+("s:strings:comb-proof" "s" "Combinatorial arguments are among the most beautiful in all of mathematics. Oftentimes, statements t" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("fig:squaredots" "f" "The sum of the first $n$ integers" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("fig:oddsum2" "f" "The sum of the first $n$ odd integers " "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.5 The Ubiquitous Nature of Binomial Coefficients" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.5" "\\section{The Ubiquitous Nature of Binomial Coefficients}" 11413)
+
+("s:strings:bin-coeff" "s" "In this section, we present several combinatorial problems that can be solved by appeal to binomial " "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("fig:distrib" "f" "{Distributing Identical Objects into Distinct Cells}" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("fig:latticepath" "f" "A Lattice Path" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+("flippath" "f" "\\sc Transforming a Lattice Path" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.6 The Binomial Theorem" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.6" "\\section{The Binomial Theorem}" 19440)
+
+("s:strings:binom-thm" "s" "Here is a truly basic result from combinatorics kindergarten. \\begin{theorem}[Binomial Theorem] Let " "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.7 Multinomial Coefficients" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.7" "\\section{Multinomial Coefficients}" 20566)
+
+("s:strings:multinom" "s" "Let $X$ be a set of $n$ elements. Suppose that we have two colors of paint, say red and blue and we " "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(toc "toc" "    2.8 Exercises" "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil 2 "2.8" "\\section{Exercises}" 23683)
+
+("s:strings:exercises" "s" "\\begin{enumerate} " "/Users/justice/Documents/class/103/math3012/book/strings.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/strings.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/induction.tex")
+
+(toc "toc" "  3 Induction" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 1 "3" "\\chapter{Induction}" 1)
+
+("ch:induction" "s" "The twin concepts of recursion and induction are fundamentally important in combinatorial mathematic" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.1" "\\section{Introduction}" 608)
+
+("s:induction:intro" "s" "A professor decides to liven up the next combinatorics class by giving a door prize. As students ent" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.2 The Positive Integers are Well Ordered" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.2" "\\section{The Positive Integers are Well Ordered}" 1764)
+
+("s:induction:posintsord" "s" "Most likely, you answered the questions posed above with an enthusiastic ``yes'', in part because yo" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.3 The Meaning of Statements" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.3" "\\section{The Meaning of Statements}" 2989)
+
+("s:induction:statements" "s" "Have you ever taken standardized tests where they give you the first few terms of a sequence and the" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.4 Binomial Coefficients Revisited" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.4" "\\section{Binomial Coefficients Revisited}" 6351)
+
+("s:induction:bincoeffs" "s" "The binomial coefficient $\\binom{n}{k}$ was originally defined in terms of the factorial notation, a" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("fig:pascal" "f" "Pascal's Triangle" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.5 Solving Combinatorial Problems Recursively" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.5" "\\section{Solving Combinatorial Problems Recursively}" 8000)
+
+("s:induction:recursion" "s" "In this section, we present examples of combinatorial problems for which solutions can be computed r" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.6 Finding Greatest Common Divisors" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.6" "\\section{Finding Greatest Common Divisors}" 11437)
+
+("s:induction:gcd" "s" "There is more meat than you might think to the following elementary theorem, which seems to simply s" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("thm:division" "s" "Let $m$ and $n$ be positive integers. Then there exist unique integers $q$ and $r$ so that \\[ m = q\\" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("thm:euclideanalg" "s" "Let $m,n$ be positive integers and let $q$ and $r$ be the unique integers for which \\[ m = q\\cdot n+" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("thm:gcd-dioph" "s" "Let $m$, $n$, and $c$ be positive integers. Then there exist integers $a$ and $b$, not necessarily n" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.7 Mathematical Induction" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.7" "\\section{Mathematical Induction}" 15397)
+
+("s:induction:induction" "s" "Now we move on the induction, the powerful twin of recursion. Let $n$ be a positive integer. Conside" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.8 Inductive Definitions" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.8" "\\section{Inductive Definitions}" 17373)
+
+("s:induction:inductdefs" "s" "Although it is primarily a matter of taste, recursive definitions can also be recast in an inductive" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.9 Proofs by Induction" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.9" "\\section{Proofs by Induction}" 18550)
+
+("s:induction:proofs" "s" "No discussion of recursion and induction would be complete without some obligatory examples of proof" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("prop:sumints" "s" "For every positive integer $n$, the sum of the first $n$ positive integers is $n(n+1)/2$, i.e., \\[ \\" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("fig:squaregrid" "f" "The Sum of the First $n$ Integers" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("prop:sumodd" "s" "For each positive integer $n$, the sum of the first $n$ odd positive integers is $n^2$, i.e., \\[ \\su" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("fig:oddsum3" "f" "The Sum of the First $n$ Odd Integers" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+("prop:sum-bincoeffs" "s" "Let $n$ and $k$ be non-negative integers with $n\\ge k$. Then \\[ \\sum_{i=k}^n \\binom{i}{k}=\\binom{n+1" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(toc "toc" "    3.10 Exercises" "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil 2 "3.10" "\\section{Exercises}" 22700)
+
+("s:induction:exercises" "s" "\\begin{enumerate} " "/Users/justice/Documents/class/103/math3012/book/induction.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/induction.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/graphs.tex")
+
+(toc "toc" "  4 Basic Concepts of Graph Theory" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 1 "4" "\\chapter{Basic Concepts of Graph Theory}" 1)
+
+("ch:graphs" "s" "In \\hyperref[ex:radiostations]{Example~\\ref*{ex:radiostations}}, we discussed the problem of assigni" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(toc "toc" "    4.1 Basic Notation and Terminology for Graphs" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.1" "\\section{Basic Notation and Terminology for Graphs}" 1437)
+
+("s:graphs:intro" "s" "A \\textit{graph} $\\bfG$ is a pair $(V,E)$ where $V$ is a set (almost always finite) and $E$ is a set" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:small_graph" "f" "A graph on $5$ vertices" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:subgraphs" "f" "A Graph, a Subgraph and an Induced Subgraph" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:complete_graphs" "f" "Small complete graphs" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:paths" "f" "Short paths" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:cycles" "f" "Small cycles" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:isomorphic" "f" "A pair of isomorphic graphs" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:nonisomorphic" "f" "A pair of nonisomorphic graphs" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:spantree" "f" "A Graph and a Spanning Tree" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("prop:tree-leaves" "s" "Every tree on $n\\geq 2$ vertices has at least two leaves. " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(toc "toc" "    4.2 Multigraphs: Loops and Multiple Edges" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.2" "\\section{Multigraphs:  Loops and Multiple Edges}" 12540)
+
+("s:graphs:multigraphs" "s" "Consider a graph in which the vertices represent cities and the edges represent highways. Certain pa" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(toc "toc" "    4.3 Eulerian and Hamiltonian Graphs" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.3" "\\section{Eulerian and Hamiltonian Graphs}" 14447)
+
+("s:graphs:eulerham" "s" "Graph theory traces its origins to a problem in K\\\"onigsberg, Prussia (now Kaliningrad, Russia). The" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:bridges" "f" "The bridges of K\\\"onigsberg" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("def:eulerian-circuit" "i" "NO MATCH FOR CONTEXT REGEXP" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("thm:eulerian" "s" "A connected graph $\\bfG$ is eulerian if and only if every vertex has even degree. " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:eulerexample" "f" "An Eulerian Graph" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:bridges-graph" "f" "The multigraph of K\\\"onigsberg's bridges" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:eulham" "f" "Eulerian and Hamiltonian Graphs" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:petersen" "f" "The Petersen Graph" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(toc "toc" "    4.4 Graph Coloring" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.4" "\\section{Graph Coloring}" 20602)
+
+("s:graphs:color" "s" "Let's return now to the subject of \\hyperref[ex:radiostations]{Example~\\ref*{ex:radiostations}}, ass" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:chi4" "f" "A Graph with Chromatic Number 4" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("prop:graphs:bipartite" "s" "A graph is bipartite if and only if it does not contain an odd cycle. " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("prop:triangle-free" "s" "For every $t\\ge3$, there exists a graph $\\bfG_t$ so that $\\chi(\\bfG_t)=t$ and $\\omega(\\bfG_t)=2$ " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:k44minus" "f" "Two orderings of the vertices of a bipartite graph." "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("thm:intgraphcol" "s" "If $\\GVE$ is an interval graph, then $\\chi(\\bfG)=\\omega(\\bfG)$. " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(toc "toc" "    4.5 Planar Graphs" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.5" "\\section{Planar Graphs}" 34316)
+
+("s:graphs:planar" "s" "Let's return to the problem of providing lines for water, electricity, and natural gas to three home" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:k33" "f" "A graph of connecting homes to utilities" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:planar" "f" "A planar drawing of a graph" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:k4-planar" "f" "A planar drawing of $\\bfK_4$" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("thm:max-edge-planar" "s" "A planar graph on $n$ vertices has at most $3n-6$ edges. " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("thm:kuratowski" "s" "A graph is planar if and only if it does not contain a subgraph isomorphic to a subdivision of $\\bfK" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:petersen-graph-k33" "f" "A more illustrative drawing of the Petersen graph" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:needs-four-colors" "f" "A map that requires four colors" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("thm:4ct" "s" "Every planar graph has chromatic number at most four. " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(toc "toc" "    4.6 Counting Labeled Trees" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.6" "\\section{Counting Labeled Trees}" 53494)
+
+("s:graphs:counting-trees" "s" "How many trees are there with vertex set $[n]=\\{1,2,\\dots,n\\}$? Let $T_n$ be this number. For $n=1$," "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:trees-5verts" "f" "The nonisomorphic trees on $n=5$ vertices" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("thm:cayley" "s" "The number $T_n$ of labeled trees on $n$ vertices is $n^{n-2}$. " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("ex:prufer-code" "s" "Before using Pr\\\"ufer codes to prove Cayley's Formula, let's take a moment to make sure we understan" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:prufer-code" "f" "A labeled $9$-vertex tree" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:prufer-code-delete1" "f" "The tree $\\bfT-v$" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("ex:prufer-code-reverse" "s" "We close this section with an example of how to take a Pr\\\"ufer code and use it to construct a label" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("tab:prufer-code-reverse" "t" "Turning the Pr\\\"ufer code $75531$ into a labeled tree" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("fig:prufer-code-reverse" "f" "The labeled tree with Pr\\\"ufer code $75531$" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("s:graphs:matching" "s" "%This space reserved for a future section focusing on Hall's theorem %but also talking about general" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" t)
+
+(toc "toc" "    4.7 A Digression into Complexity Theory" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.7" "\\section{A Digression into Complexity Theory}" 65720)
+
+("s:graphs:complexity" "s" "In this section, we give a \\textit{very} informal discussion of some relevant topics from computatio" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(toc "toc" "    4.8 Exercises" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil 2 "4.8" "\\section{Exercises}" 68162)
+
+("s:graphs:exercises" "s" "\\begin{enumerate} " "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("exercise:color" "i" "Find a proper $(t+1)$-coloring of the graph $\\bfG_{t+1}$ in the second proof of \\hyperref[prop:trian" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+("exercise:first-fit-color" "i" "Use the First Fit algorithm to color the graph in \\autoref{fig:k44minus} using the two different ord" "/Users/justice/Documents/class/103/math3012/book/graphs.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/graphs.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/posets.tex")
+
+(toc "toc" "  5 Partially Ordered Sets" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 1 "5" "\\chapter{Partially Ordered Sets}" 1)
+
+("ch:posets" "s" "Alice was surfing the web and found a site listing top movies, grouped by categories (comedy, drama," "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:movies" "f" "Top Movies from the 90's" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.1 Basic Notation and Terminology" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.1" "\\section{Basic Notation and Terminology}" 2602)
+
+("s:posets:intro" "s" "A \\textit{partially ordered set} or \\textit{poset} is a pair $(X,P)$ where $X$ is a set and $P$ is a" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:poset-17pts" "f" "A Poset on 17 Points" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:diagram" "f" "Poset with Comparability and Incomparability Graphs" "/Users/justice/Documents/class/103/math3012/book/posets.tex" t)
+
+("fig:inclusion" "f" "An Inclusion Order" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:division" "f" "Positive Integers Ordered by Division" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:prod-euclid" "f" "The Product Order on Euclidean Space" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.2 Additional Concepts for Posets" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.2" "\\section{Additional Concepts for Posets}" 9870)
+
+("f:unlabelled" "f" "\\sc An Unlabelled Partially Ordered Set" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:diagram" "f" "Poset with Comparability and Incomparability Graphs" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.3 Dilworth's Chain Covering Theorem and its Dual" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.3" "\\section{Dilworth's Chain Covering Theorem and its Dual}" 13448)
+
+("s:posets:dilworth" "s" "In this section, we prove the following theorem of R. P. Dilworth, which is truly one of the classic" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("thm:dilworth" "s" "If $\\PXP$ is a poset and $\\width(X,P)=w$, then there exists a partition $X=C_1\\cup C_2\\cup\\dots \\cup" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("thm:dualdilworth" "s" "If $\\PXP$ is a poset and $\\height(P)=h$, then there exists a partition $X=A_1\\cup A_2\\cup\\dots\\cup A" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:height=5" "f" "A Poset of Height 5" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "      5.3.1 Proof of Dilworth's Theorem" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 3 "5.3.1" "\\subsection{Proof of Dilworth's Theorem}" 17153)
+
+("fig:width=7" "f" "A Poset of Width 7" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.4 Linear Extensions of Partially Ordered Sets" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.4" "\\section{Linear Extensions of Partially Ordered Sets}" 20837)
+
+("s:posets:sorting" "s" "Let $\\PXP$ be a partially ordered set. A linear order $L$ on $X$ is called a \\textit{linear extensio" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:posets:lin-extn" "f" "A poset and its linear extensions" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.5 The Subset Lattice" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.5" "\\section{The Subset Lattice}" 22592)
+
+("s:posets:subset-lattice" "s" "When $X$ is a finite set, the family of all subsets of $X$ forms a \\textit{subset lattice}. We illus" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:subset-lattice" "f" "A Subset Lattice" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "      5.5.1 Sperner's Theorem" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 3 "5.5.1" "\\subsection{Sperner's Theorem}" 24009)
+
+("ss:posets:subset-lattice:sperner" "s" "For the width of the subset lattice, we have the following classic result due to Sperner. \\begin{the" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("thm:sperner" "s" "For each $t\\ge1$, the width of the subset lattice $\\bftwo^t$ is the maximum size of a rank, i.e., \\[" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.6 An Alternative Proof of Sperner's Theorem" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.6" "\\section{An Alternative Proof of Sperner's Theorem}" 25995)
+
+("prop:symmchain-sperner" "s" "If a ranked poset has a partition into symmetric chains, then it is a sperner poset. In fact, its wi" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("thm:subset-lattice-symmchain" "s" "For each $t\\ge1$, the subset lattice $\\bftwo^t$ has a symmetric chain partition. " "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("lem:prodchain-symmchain" "s" "Let $m$ and $n$ be positive integers. Then the cartesian product $\\bfm\\times\\bfn$ has a symmetric ch" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("thm:ranked-prod-symmchain" "s" "If $\\bfP$ and $\\bfQ$ are ranked posets and each has a symmetric chain partition, then $\\bfP\\times\\bf" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.7 Dedekind's Problem" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.7" "\\section{Dedekind's Problem}" 29267)
+
+("s:posets:subset-lattice:dedekind" "s" "The problem of counting the number $A(t)$ of antichains in the subset lattice $\\bftwo^t$ is a famous" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.8 Interval Orders" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.8" "\\section{Interval Orders}" 29760)
+
+("s:posets:intervalorder" "s" "When we discussed Dilworth's theorem, we commented that the algorithmic aspects would be deferred un" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intervalorder" "f" "An interval order and its representation" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("thm:fishburn" "s" "Let $\\PXP$ be a poset. Then $\\bfP$ is an interval order if and only if it does not contain $\\bftwo+\\" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.9 Finding a Representation of an Interval Order" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.9" "\\section{Finding a Representation of an Interval Order}" 34431)
+
+("s:posets:intervalorder:findrep" "s" "When $\\PXP$ is an interval order and $n$ is a positive integer, there may be many different ways to " "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("prop:char-intord" "s" "Let $\\PXP$ be a poset. Then the following statements are equivalent. \\begin{enumerate} " "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("prop:intord-up=down" "s" "When $\\bfP$ is an interval order, $|\\mathcal{D}|=|\\mathcal{U}|$. " "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("prop:intord-minrep" "s" "Let $\\bfP$ be an interval order, and let $d=|\\mathcal{D}|$ and $I$ be defined as above. Then \\begin{" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:10intervalorder" "f" "An interval order on 10 Points" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.10 Dilworth's Theorem for Interval Orders" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.10" "\\section{Dilworth's Theorem for Interval Orders}" 38619)
+
+("s:posets:dilworth-intord" "s" "As remarked previously, we do not yet have an efficient process for determining the width of a poset" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(toc "toc" "    5.11 Exercises" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil 2 "5.11" "\\section{Exercises}" 41560)
+
+("exer:posets:division" "i" "Draw the diagram of the poset $\\bfP=(X,P)$ where $X=\\{1,2,3,5,6,10,15,30\\}$ and $x\\leq y$ in $P$ if " "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intord_to_diag_ex" "f" "An interval representation" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intord_to_diag_ex2" "f" "An interval representation" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intord_find_rep_ex1" "f" "Is this poset an interval order?" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intord_find_rep_ex4" "f" "Is this poset an interval order?" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intord_find_rep_ex2" "f" "Is this poset an interval order?" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intord_find_rep_ex3" "f" "Is this poset an interval order?" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+("fig:intord_firstfit_ex1" "f" "An interval representation" "/Users/justice/Documents/class/103/math3012/book/posets.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/posets.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex")
+
+(toc "toc" "  6 Inclusion-Exclusion" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil 1 "6" "\\chapter{Inclusion-Exclusion}" 1)
+
+("ch:inclusion-exclusion" "s" "In this chapter, we study a classic enumeration technique known as Inclusion-Exclusion. In its simpl" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+(toc "toc" "    6.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil 2 "6.1" "\\section{Introduction}" 502)
+
+("s:inclusion-exclusion:intro" "s" "We start this chapter with an elementary example. \\begin{example} Let $X$ be the set of $63$ student" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+("fig:venn-app-comb" "f" "A Venn diagram for an applied combinatorics class" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+("ex:perm-fix-pos" "s" "Let $m$ be a fixed positive integer and let $X$ consist of all bijections from $[m]$ to $[m]$. Eleme" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+(toc "toc" "    6.2 The Inclusion-Exclusion Formula" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil 2 "6.2" "\\section{The Inclusion-Exclusion Formula}" 6745)
+
+("s:inclusion-exclusion:statement" "s" "Now that we have an understanding of what we mean by a property, let's see how we can use this conce" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+("thm:inclusion-exclusion" "s" "The number of elements of $X$ which satisfy none of the properties in $\\mathcal{P}$ is given by \\beg" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+("eq:inclusion-exclusion" "e" "\\sum_{S\\subseteq [m]} (-1)^{|S|}N(S). " "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+(toc "toc" "    6.3 Enumerating Surjections" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil 2 "6.3" "\\section{Enumerating Surjections}" 10500)
+
+("s:inclusion-exclusion:surjections" "s" "As our first example of the power of inclusion-exclusion, consider the following situation: A grandf" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+(toc "toc" "    6.4 Derangements" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil 2 "6.4" "\\section{Derangements}" 13297)
+
+("s:inclusion-exclusion:derangements" "s" "Now let's consider a situation where we can make use of the properties defined in \\hyperref[ex:perm-" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+(toc "toc" "    6.5 The Euler $\\phi$ Function" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil 2 "6.5" "\\section{The Euler $\\phi$ Function}" 17348)
+
+("s:inclusion-exclusion:euler-phi" "s" "After reading the two previous sections, you're probably wondering why we stated the Principle of In" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+("thm:eulerphi" "s" "Let $n\\ge2$ be a positive integer and suppose that $n$ has $m$ distinct prime factors: $p_1$, $p_2,\\" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+("eq:eulerphi" "e" "\\phi(n) = n\\prod_{i = 1}^{m}\\frac{p_i-1}{p_i}. " "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+("prop:num-divisible" "s" "Let $n,k\\ge2$, and let $p_1,p_2,\\dots,p_k$ be distinct primes each of which divide $n$ evenly (witho" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil)
+
+(toc "toc" "    6.6 Exercises" "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex" nil 2 "6.6" "\\section{Exercises}" 21886)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/inclusionexclusion.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/genfunction.tex")
+
+(toc "toc" "  7 Generating Functions" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil 1 "7" "\\chapter{Generating Functions}" 1)
+
+("ch:genfunction" "s" "A standard topic of study in first-year calculus is the representation of functions as infinite sums" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+(toc "toc" "    7.1 Basic Notation and Terminology" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil 2 "7.1" "\\section{Basic Notation and Terminology}" 1169)
+
+("s:genfunction:intro" "s" "With a sequence $\\sigma=\\{a_n:n\\ge0\\}$ of real numbers, we associate a ``function'' $F(x)$ defined b" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("prop:genfunction-product" "s" "Let $A(x)=\\sum_{n=0}^\\infty a_nx^n$ and $B(x)=\\sum_{n=0}^\\infty b_nx^n$ be generating functions. The" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+(toc "toc" "    7.2 Making distributions with restrictions" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil 2 "7.2" "\\section{Making distributions with restrictions}" 5277)
+
+("s:genfunction:distributions" "s" "A recurring problem so far in this book as been to consider problems that ask about distributing ind" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+(toc "toc" "    7.3 Newton's Binomial Theorem" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil 2 "7.3" "\\section{Newton's Binomial Theorem}" 12891)
+
+("s:genfunction:gen-bin-thm" "s" "In \\autoref{ch:strings}, we discussed the binomial theorem and saw that the following formula holds " "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("thm:newton-binomial" "s" "For all real $p$ with $p\\neq0$, \\[ (1+x)^p=\\sum_{n=0}^\\infty\\binom{p}{n}x^n. \\] " "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+(toc "toc" "    7.4 Using the Binomial Theorem to Count Trees" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil 2 "7.4" "\\section{Using the Binomial Theorem to Count Trees}" 15652)
+
+("s:genfunction:rubots" "s" "In this section, we will use generating functions to enumerate the a certain type of trees and make " "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("fig:rubots" "f" "The RUBOTs with $n$ leaves for $n\\leq 4$" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("lem:perm-product" "s" "For each $k\\ge0$, $P(p,k+1)=P(p,k)(p-k)$. " "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("l:half-binomial" "s" "For each $k\\ge 1$, \\[ \\binom{1/2}{k}=\\frac{(-1)^{k-1}}{k}\\frac{\\binom{2k-2}{k-1}}{2^{2k-1}}. \\] " "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("thm:catalan-genfunction" "s" "The generating function for the number $c_n$ of rooted, unlabeled, binary, ordered trees with $n$ le" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("cor:2n-choose-n" "s" "The generating functon of the sequence $\\{\\binom{2n}{n}:n\\ge0\\}$ is $f(x)=(1-4x)^{-1/2}$. " "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+(toc "toc" "    7.5 Partitions of an Integer" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil 2 "7.5" "\\section{Partitions of an Integer}" 21406)
+
+("s:genfunction:partitions-integer" "s" "A recurring theme in this course has been to count the number of integer solutions to an equation of" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("tab:genfunction:partsof8" "t" "The partitions of $8$, noting those into distinct parts and those into odd parts." "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+("thm:partition" "s" "For each $n\\ge1$, the number of partitions of $n$ into distinct parts is equal to the number of part" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil)
+
+(toc "toc" "    7.6 Exercises" "/Users/justice/Documents/class/103/math3012/book/genfunction.tex" nil 2 "7.6" "\\section{Exercises}" 25283)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/genfunction.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/recurrence.tex")
+
+(toc "toc" "  8 Recurrence Equations" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 1 "8" "\\chapter{Recurrence Equations}" 1)
+
+("ch:recurrence" "s" "We have already seen many examples of recurrence in the definitions of combinatorial functions and e" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "    8.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 2 "8.1" "\\section{Introduction}" 1240)
+
+("s:recurrence:intro" "s" "\\subsection{Fibonacci numbers} One of the most well-known recurrences arises from a simple story. Su" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.1.1 Fibonacci numbers" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.1.1" "\\subsection{Fibonacci numbers}" 1290)
+
+("s:recurrence:intro:fib" "s" "One of the most well-known recurrences arises from a simple story. Suppose that a scientist introduc" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("tab:fib-ratios" "t" "The ratios $f_{n+1}/f_{n}$ for $n\\leq 18$" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.1.2 Recurrences for strings" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.1.2" "\\subsection{Recurrences for strings}" 5733)
+
+("s:recurrence:intro:strings" "s" "In \\autoref{ch:induction}, we saw several times how we could find recurrences that gave us the numbe" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:binary-strings-no-11" "s" "Let $a_{n}$ count the number of binary strings of length $n$ in which no two consecutive characters " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:ternary-strings-no-20" "s" "Let $t_n$ count the number of ternary strings in which we never have $(2,0)$ occuring as a substring" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.1.3 Lines and regions in the plane" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.1.3" "\\subsection{Lines and regions in the plane}" 8025)
+
+("s:recurrence:intro:lines" "s" "Our next example takes us back to one of the motivating problems discussed in \\autoref{ch:intro}. In" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("fig:geomregions" "f" "\\sc Lines and Regions" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "    8.2 Linear Recurrence Equations" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 2 "8.2" "\\section{Linear Recurrence Equations}" 9532)
+
+("s:recurrence:linear" "s" "What do all of the examples of the previous section have in common? The end result that we were able" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "    8.3 Advancement Operators" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 2 "8.3" "\\section{Advancement Operators}" 11738)
+
+("s:recurrence:adv-ops" "s" "% For the remainder of this chapter, we consider the vector space consisting % of all functions of t" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:diffeq" "s" "Solve the equation \\[Df = 3f\\] if $f(0) = 2$. Even if you've not studied differential equations, you" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:adveq" "s" "Suppose that the sequence $\\{s_n\\colon n\\geq 0\\}$ satisfies $s_0 = 3$ and $s_{n+1} = 2s_{n}$ for $n\\" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.3.1 Constant Coefficient Equations" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.3.1" "\\subsection{Constant Coefficient Equations}" 16871)
+
+("s:recurrence:adv-ops:const-coeff" "s" "It is easy to see that a linear recurrence equation can be conveniently rewritten using a polynomial" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:advance" "e" "p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \\dots+c_k)f = g. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.3.2 Roots and Factors" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.3.2" "\\subsection{Roots and Factors}" 17514)
+
+("s:recurrence:adv-ops:roots-factors" "s" "The polynomial $p(A)$ can be analyzed like any other polynomial. It has roots and factors, and altho" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.3.3 What's Special About Zero?" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.3.3" "\\subsection{What's Special About Zero?}" 17982)
+
+("s:recurrence:adv-ops:zero" "s" "Why have we limited our attention to recurrence equations of the form $p(A)f = g$ where the constant" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "    8.4 Solving advancement operator equations" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 2 "8.4" "\\section{Solving advancement operator
+  equations}" 19134)
+
+("s:recurrence:solving" "s" "In this section, we will explore some ways of solving advancement operator equations. Some we will m" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.4.1 Homogeneous equations" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.4.1" "\\subsection{Homogeneous equations}" 19716)
+
+("s:recurrence:solving:homogeneous" "s" "Homogeneous equations, it will turn out, can be solved using very explicit methodology that will wor" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:deg2" "s" "Find all solutions to the advancement operator equation \\begin{equation}(A^2+A-6)f = 0." "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:recurrence:deg2" "e" "(A^2+A-6)f = 0." "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:ternary-strings-no-20-solved" "s" "Let's revisit the problem of enumerating ternary strings of length $n$ that do have $(2,0)$ occurrin" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:recurrence:ternary" "e" "p(A)t=(A^2-3A+1)t=0. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:deg2-repeated" "s" "Find the general solution of the advancement operator equation \\[(A-2)^2 f=0.\\] Here we have the rep" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:deg4-repeated" "s" "Consider the recurrence equation \\[f_{n+4} = -2f_{n+3} + 12f_{n+2} + -14 f_{n+1} + 5f_n\\] with initi" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:recurrence:deg4-repeated" "e" "(A^4 +2A^3 -12A^2+14A-5)f = 0. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.4.2 Nonhomogeneous equations" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.4.2" "\\subsection{Nonhomogeneous equations}" 28158)
+
+("s:recurrence:solving:nonhomogeneous" "s" "As we mentioned earlier, nonhomogeneous equations are a bit trickier than solving homogeneous equati" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("ex:recurrence:lines-solved" "s" "We're now ready to answer the question of how many regions are determined by $n$ lines in the plane " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "    8.5 Formalizing our approach to recurrence equations" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 2 "8.5" "\\section{Formalizing our approach to recurrence equations}" 36298)
+
+("s:recurrence:rigorous" "s" "So far, our approach to solving recurrence equations has been based on intuition, and we've not give" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.5.1 The Principal Theorem" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.5.1" "\\subsection{The Principal Theorem}" 39301)
+
+("s:recurrence:rigorous:principal" "s" "Here is the basic theorem about solving recurrence equations (stated in terms of advancement operato" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("thm:advance" "s" "Let $k$ be a positive integer $k$, and let $c_0,c_1,\\dots,c_k$ be constants with $c_0,c_k\\neq 0$. Th" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.5.2 The Starting Case" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.5.2" "\\subsection{The Starting Case}" 40548)
+
+("s:recurrence:rigorous:start" "s" "The development proceeds by induction (surprise!) with the case $k=1$ being the base case. In this c" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("lem:base" "s" "Let $r\\neq0$,and let $f$ be a solution to the operator equation $(A-r)f=0$, Then let $c=f(0)$. Then " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("lem:particular" "s" "Consider a nonhomogeneous operator equation of the form \\begin{equation} p(A)f= (c_0A^{k}+ c_1A^{k-1" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:nonhomogeneous" "e" "p(A)f= (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \\dots+c_k)f = g, " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:homogeneous" "e" "p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \\dots+c_k)f = 0. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:distinct" "e" "p(A)f=(A-r_1)(A-r_2)\\dots(A-r_k)f=0. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:distinct2" "e" "(A-r_{m+1})f=d_1r_1^n+d_2r_2^n+\\dots+d_mr_m^n. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:distinct3" "e" "f_0(n)= c_1 r_1^n+c_2 r_2^n+\\dots+c_m r_m^n. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.5.3 Repeated Roots" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.5.3" "\\subsection{Repeated Roots}" 44560)
+
+("s:recurrence:rigorous:repeated" "s" "It is straightforward to modify the proof given in the preceding section to obtain the following res" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("lem:rr" "s" "Let $k\\ge1$ and consider the equation \\begin{equation} (A-r)^kf=0. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:rr" "e" "(A-r)^kf=0. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+("eqn:solutionrr" "e" "f(n)=c_1r^n+c_2nr^n+c_3n^2r^n+c_4n^3r^n+\\dots+c_kn^{k-1}r^n. " "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "      8.5.4 The General Case" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 3 "8.5.4" "\\subsection{The General Case}" 45111)
+
+("s:recurrence:rigorous:general" "s" "Combining the results in the preceding sections, we can quickly write the general solution of any ho" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "    8.6 Using generating functions to solve recurrences" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 2 "8.6" "\\section{Using generating functions to solve recurrences}" 46169)
+
+("s:recurrence:genfunction" "s" "This space reserved for a future section about using generating functions to solve recurrence equati" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil)
+
+(toc "toc" "    8.7 Exercises" "/Users/justice/Documents/class/103/math3012/book/recurrence.tex" nil 2 "8.7" "\\section{Exercises}" 46366)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/recurrence.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/ramsey.tex")
+
+(toc "toc" "  9 Ramsey Theory" "/Users/justice/Documents/class/103/math3012/book/ramsey.tex" nil 1 "9" "\\chapter{Ramsey Theory}" 1)
+
+(toc "toc" "    9.1 Basic Notation and Terminology" "/Users/justice/Documents/class/103/math3012/book/ramsey.tex" nil 2 "9.1" "\\section{Basic Notation and Terminology}" 546)
+
+("s:ramsey:intro" "s" "For a positive integer $n$, we let $[n]=\\{1,2,\\dots,n\\}$. For a set $X$ and a non-negative integer $" "/Users/justice/Documents/class/103/math3012/book/ramsey.tex" nil)
+
+(toc "toc" "    9.2 Small Ramsey Numbers" "/Users/justice/Documents/class/103/math3012/book/ramsey.tex" nil 2 "9.2" "\\section{Small Ramsey Numbers}" 5078)
+
+("s:size" "s" "In the following table, we provide information about the ramsey numbers $R(2;m,n)$ when $m$ and $n$ " "/Users/justice/Documents/class/103/math3012/book/ramsey.tex" nil)
+
+(toc "toc" "    9.3 Estimating Ramsey Numbers" "/Users/justice/Documents/class/103/math3012/book/ramsey.tex" nil 2 "9.3" "\\section{Estimating Ramsey Numbers}" 5907)
+
+("s:estimatesize" "s" "We will find it convenient to utilize the following approximation due to Stirling. You can find a pr" "/Users/justice/Documents/class/103/math3012/book/ramsey.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/ramsey.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex")
+
+(toc "toc" "  10 Graph Algorithms" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 1 "10" "\\chapter{Graph Algorithms}" 1)
+
+("ch:graphalgorithms" "s" "% % Abstract and Maketitle % \\begin{abstract} % In this chapter, we study two natural combinatorial " "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil)
+
+(toc "toc" "    10.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 2 "10.1" "\\section{Introduction}" 452)
+
+(toc "toc" "    10.2 Minimum Weight Spanning Trees" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 2 "10.2" "\\section{Minimum Weight Spanning Trees}" 1391)
+
+("l:tech" "s" "Let $F$ be a spanning forest of $\\bfG$ and let $C$ be a component of $F$. Also, let $e=xy$ be an edg" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil)
+
+(toc "toc" "      10.2.1 Kruskal's Algorithm" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 3 "10.2.1" "\\subsection{Kruskal's Algorithm}" 3482)
+
+(toc "toc" "      10.2.2 Prim's Algorithm" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 3 "10.2.2" "\\subsection{Prim's Algorithm}" 4968)
+
+("fig:spantreegraph" "f" " " "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil)
+
+(toc "toc" "    10.3 Digraphs" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 2 "10.3" "\\section{Digraphs}" 6705)
+
+("fig:digraph" "f" "\\sc A Digraph" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil)
+
+(toc "toc" "    10.4 Dijkstra's Algorithm for Shortest Paths" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 2 "10.4" "\\section{Dijkstra's Algorithm for Shortest Paths}" 7790)
+
+(toc "toc" "      10.4.1 Description of the Algorithm" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 3 "10.4.1" "\\subsection{Description of the Algorithm}" 8578)
+
+(toc "toc" "      10.4.2 The Correctness of Dijkstra's Algorithm" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 3 "10.4.2" "\\subsection{The Correctness of Dijkstra's Algorithm}" 9784)
+
+("fig:dijkstragraph" "f" " " "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil)
+
+(toc "toc" "    10.5 Exercises" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil 2 "10.5" "\\section{Exercises}" 16388)
+
+("fig:span_tree_ex1" "f" "Find a minimum weight spanning tree" "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/graphalgorithms.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/networkflow.tex")
+
+(toc "toc" "  11 Network Flows" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 1 "11" "\\chapter{Network Flows}" 1)
+
+(toc "toc" "    11.1 Basic Notation and Terminology" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 2 "11.1" "\\section{Basic Notation and Terminology}" 976)
+
+("s:networkflow:intro" "s" "The basic setup for a network flow problem begins with an oriented graph $G$, called a \\textit{netwo" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil)
+
+("fig:network" "f" "A Network" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil)
+
+("fig:netflow" "f" "A Network Flow" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil)
+
+(toc "toc" "    11.2 Flows and Cuts" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 2 "11.2" "\\section{Flows and Cuts}" 3413)
+
+(toc "toc" "    11.3 Augmenting Paths and the Labeling Algorithm" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 2 "11.3" "\\section{Augmenting Paths and the Labeling Algorithm}" 5431)
+
+(toc "toc" "      11.3.1 Caution on Augmenting Paths" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 3 "11.3.1" "\\subsection{Caution on Augmenting Paths}" 8975)
+
+("exa:small" "s" "Let $M$ be a large positive integer. Then consider the network on four vertices in \\autoref{fig:netw" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil)
+
+("fig:networkflow:smallnet" "f" "A Small Network" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil)
+
+(toc "toc" "    11.4 The Ford-Fulkerson Labeling Algorithm" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 2 "11.4" "\\section{The Ford-Fulkerson Labeling Algorithm}" 11740)
+
+(toc "toc" "    11.5 A Concrete Example" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 2 "11.5" "\\section{A Concrete Example}" 18397)
+
+("fig:updated-flow" "f" "An Updated Network Flow" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil)
+
+(toc "toc" "      11.5.1 How the Labeling Algorithm Halts" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 3 "11.5.1" "\\subsection{How the Labeling Algorithm Halts}" 21130)
+
+("fig:networkflow:flow4" "f" "Another Network Flow" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil)
+
+(toc "toc" "    11.6 Integer Solutions of Linear Programming Problems" "/Users/justice/Documents/class/103/math3012/book/networkflow.tex" nil 2 "11.6" "\\section{Integer Solutions of Linear Programming Problems}" 22458)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/networkflow.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex")
+
+(toc "toc" "  12 Combinatorial Applications of Network Flows" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil 1 "12" "\\chapter{Combinatorial Applications of Network Flows}" 1)
+
+(toc "toc" "    12.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil 2 "12.1" "\\section{Introduction}" 611)
+
+(toc "toc" "    12.2 Matchings in Bipartite Graphs" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil 2 "12.2" "\\section{Matchings in Bipartite Graphs}" 2248)
+
+("fig:bip_graph" "f" "\\sc A bipartite graph" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:bip_match" "f" "\\sc A matching in a bipartite graph" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:bipmatch_network" "f" "\\sc The network corresponding to a bipartite graph" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:initial_flow" "f" "\\sc The flow corresponding to a matching" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:bipmatch_maxflow" "f" "\\sc The augmented flow" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+(toc "toc" "    12.3 Chain partitioning" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil 2 "12.3" "\\section{Chain partitioning}" 9550)
+
+("fig:poset" "f" "\\sc A partially ordered set" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:poset_network" "f" "\\sc The network of the poset from Figure~\\ref{fig:poset}" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:poset_network_flow" "f" "\\sc An initial flow" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:poset_network_flow2" "f" "\\sc A better flow" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+("fig:poset_network_flow3" "f" "\\sc A maximum flow with labelled vertices in green" "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex" nil)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/flowapplications.tex")
+
+(appendix . t)
+
+(bof "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex")
+
+(toc "toc" "  A Set Theory for Combinatorics" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 1 "A" "\\chapter{Set Theory for Combinatorics}" 1)
+
+("app:settheory" "s" "% % Abstract and Maketitle % \\begin{abstract} % In this appendix, we present a brief summary of the " "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil)
+
+(toc "toc" "    A.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 2 "A.1" "\\section{Introduction}" 513)
+
+(toc "toc" "    A.2 Intersections and Unions" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 2 "A.2" "\\section{Intersections and Unions}" 3131)
+
+(toc "toc" "      A.2.1 The Meaning of $2$-Letter Words" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 3 "A.2.1" "\\subsection{The Meaning of $2$-Letter Words}" 3585)
+
+(toc "toc" "      A.2.2 The Empty Set: Much To Do About Nothing" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 3 "A.2.2" "\\subsection{The Empty Set: Much To Do About Nothing}" 6009)
+
+(toc "toc" "      A.2.3 The First So Many Positive Integers" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 3 "A.2.3" "\\subsection{The First So Many Positive Integers}" 6358)
+
+(toc "toc" "      A.2.4 Subsets, Proper Subsets and Equal Sets" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 3 "A.2.4" "\\subsection{Subsets, Proper Subsets and Equal Sets}" 7252)
+
+(toc "toc" "    A.3 Cartesian Products" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 2 "A.3" "\\section{Cartesian Products}" 8096)
+
+(toc "toc" "    A.4 Binary Relations and Functions" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 2 "A.4" "\\section{Binary Relations and Functions}" 9128)
+
+("exa:function" "s" "For example, let $X=[4]$ and $Y=[5]$. Then let $R_1=\\{(2,1),(4,2),(1,1),(3,1)\\}$, $R_2=\\{(4,2),(1,5)" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil)
+
+(toc "toc" "    A.5 Finite Sets" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 2 "A.5" "\\section{Finite Sets}" 13040)
+
+("exe:sb" "s" "Let $X$ and $Y$ be finite sets. If there exists an injection $f:X\\injection Y$ and an injection $g:Y" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil)
+
+("prop:xy" "s" "If $X$ and $Y$ are finite non-empty sets, then $|X\\times Y| =|X|\\times |Y|$. " "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil)
+
+(toc "toc" "    A.6 Notation from Set Theory and Logic" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 2 "A.6" "\\section{Notation from Set Theory and Logic}" 16395)
+
+(toc "toc" "    A.7 Supplementary Notes" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 2 "A.7" "\\section{Supplementary Notes}" 18011)
+
+(toc "toc" "      A.7.1 Decimal Representation of Real Numbers" "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex" nil 3 "A.7.1" "\\subsection{Decimal Representation of Real Numbers}" 19161)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/appendix-settheory.tex")
+
+(bof "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex")
+
+(toc "toc" "  B Number Systems and Relations" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 1 "B" "\\chapter{Number Systems and Relations}" 1)
+
+("app:numsys" "s" "% Abstract and Maketitle % \\begin{abstract} % Induction and Recursion are fundamental concepts of co" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.1 Introduction" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.1" "\\section{Introduction}" 735)
+
+(toc "toc" "      B.1.1 Addition as a Binary Operation" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 3 "B.1.1" "\\subsection{Addition as a Binary Operation}" 4878)
+
+("s:add" "s" "Recall that a \\textit{binary operator} $*$ on set $X$ is just a function $*:X\\times X\\rightarrow X$." "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+("lem:sum0" "s" "If $m,n\\in\\mathbb{N}_0$ and $m+n=0$, then $m=n=0$. " "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.2 Multiplication as a Binary Operation" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.2" "\\section{Multiplication as a Binary Operation}" 9837)
+
+("s:mult" "s" "We define a binary operation $\\times$, called \\textit{multiplication}, on the set of natural numbers" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.3 Exponentiation" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.3" "\\section{Exponentiation}" 12244)
+
+(toc "toc" "    B.4 Partial Orders and Total Orders" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.4" "\\section{Partial Orders and Total Orders}" 13402)
+
+("s:order" "s" "A binary relation $R$ on a set $X$ is just a subset of the cartesian product $X\\times X$. In discuss" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.5 A Total Order on Natural Numbers" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.5" "\\section{A Total Order on Natural Numbers}" 15040)
+
+(toc "toc" "    B.6 Notation for Natural Numbers" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.6" "\\section{Notation for Natural Numbers}" 18370)
+
+("s:decimal" "s" "In some sense, we already have a workable notation for natural numbers. In fact, we really didn't ne" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.7 Equivalence Relations" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.7" "\\section{Equivalence Relations}" 22586)
+
+("s:equivalence" "s" "A binary relation $R$ is: \\begin{enumerate} " "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.8 The Integers as Equivalence Classes of Ordered Pairs" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.8" "\\section{The Integers as Equivalence Classes of Ordered Pairs}" 23753)
+
+("s:integers" "s" "Define a binary relation $\\cong$ on the set $Z=\\mathbb{N}_0 \\times\\mathbb{N}_0$ by \\[ (a,b)\\cong (c," "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.9 Properties of the Integers" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.9" "\\section{Properties of the Integers}" 25046)
+
+("s:moreintegers" "s" "For the remainder of this chapter, most statements will be given without proof. Students are encoura" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.10 Obtaining the Rationals from the Integers" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.10" "\\section{Obtaining the Rationals from the Integers}" 29997)
+
+("s:rationals" "s" "We consider the set $\\rats$ of all ordered pairs in $\\ints\\times \\ints$ of the form $(x,y)$ with $y\\" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "      B.10.1 Integer Exponents" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 3 "B.10.1" "\\subsection{Integer Exponents}" 33645)
+
+(toc "toc" "    B.11 Obtaining the Reals from the Rationals" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.11" "\\section{Obtaining the Reals from the Rationals}" 34048)
+
+("s:reals" "s" "A full discussion of this would take us far away from a discrete math class, but let's at least prov" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil)
+
+(toc "toc" "    B.12 Obtaining the Complex Numbers from the Reals" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.12" "\\section{Obtaining the Complex Numbers from the Reals}" 36022)
+
+(toc "toc" "    B.13 Supplementary Notes" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 2 "B.13" "\\section{Supplementary Notes}" 36981)
+
+(toc "toc" "      B.13.1 Alternate Versions of Induction" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 3 "B.13.1" "\\subsection{Alternate Versions of Induction}" 37012)
+
+(toc "toc" "      B.13.2 The Zermelo-Fraenkel Axioms of Set Theory" "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex" nil 3 "B.13.2" "\\subsection{The Zermelo-Fraenkel Axioms of Set Theory}" 38276)
+
+(eof "/Users/justice/Documents/class/103/math3012/book/appendix-numbersystems.tex")
+
+(eof "/Users/justice/Documents/class/103/math3012/book/book.tex")
+))
+

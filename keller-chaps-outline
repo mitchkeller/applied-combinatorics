@@ -1,0 +1,37 @@
+(1) Cryptography
+    - Overview of elementary encryption and decryption. Wave hands at
+      more complicated schemes (DES, AES). Leads to problem of
+      exchanging keys.
+    - RSA
+    - Elliptic curve cryptosystems - This may be too ambitious,
+      but it seems possible to give an overview at a level appropriate
+      to the audience. Would be a nice way of showing how shorter keys
+      can offer comparable security.
+(2) Polya counting
+    - Motivating example (harken back to Chapter 1 and necklaces)
+    - Permutation groups, cycle decomposition
+    - Burnside's theorem on stabilizers
+    - Cycle index
+    - Basic Polya counting, full version
+    - Ideally, conclude with an example from music theory
+    
+    A thought for the Polya counting segment: There are some tedious
+    steps that would not generally be done by hand any more. What do
+    we think about including (after showing how things are done by
+    hand) examples of Mathematica code that makes that process easier?
+
+(3) Generating Functions/Recurrence Relations
+    - Exponential generating functions (Counting where labels are
+      involved) - My current inclination is to treat this as a
+      digression. I have yet to find an example appropriate to the
+      course that can't be solved the the recurrence relation
+      techniques we've already developed. However, there are some
+      really powerful things you can do with egfs. I'd basically wave
+      hands at their existence and maybe do one quick example and then
+      move on.
+    - Solving recurrence relations with generating functions. - I
+      think this should just be a short section on an alternate
+      approach. Moving the section on RUBOTs (generating function for
+      Catalan numbers) from the generating functions chapter to the
+      recurrence relations chapter would be appropriate, since it's
+      about using generating functions to solve a recurrence.

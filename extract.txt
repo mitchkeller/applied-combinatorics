@@ -1,0 +1,245 @@
+\section{The Lovasz Local Lemma}
+
+Even though humans seem to have great difficulty in 
+providing expicit constructions for expontially large graphs 
+which do not have complete subgraphs or independent sets 
+of size~$n$, such graphs exist with great abundance.  Just 
+take one at random and you are almost certain to get one.  And as a general
+rule, probabilistic techniques often provide a method for
+finding something that readily exists, but is hard to find.
+
+Similarly, in the probabilistic proof that there exist
+graphs with large girth and large chromatic number, we actually
+showed that almost all graphs have modest sized independence
+number and relatively few small cycles, provided that the
+edge probability is chosen appropriately. The small cycles can
+be destroyed without significantly changing the size of the
+graph.
+
+By way of contrast, probabilistic techniques can, in certain
+circumstances, be used to find something which is exceedingly
+rare.  We next present an elegant but elementary result, known
+as the Lov\'asz Local Lemma, which has
+proved to be very, very powerful.  The treatment is simplified
+by the following natural notation.   When $E$ is an event
+in a probability space, we let $\overline{E}$ denote the complement
+of $E$.  Also, when $\cgF=\{E_1,E_2,\dots,E_k\}$ we
+let
+\[
+\prod_{E\in\cgF}E=\prod_{i=1}^k E_i=E_1E_2E_3\dots E_k
+\]
+denote the event $E_1\cap E_2\cap\dots\cap E_k$, i.e.,
+concatenation is short hand for intersection.  These notations
+can be mixed, so $E_1\overline{E_2}\overline{E_3}$ represents
+$E_1\cap \overline{E_2}\cap\overline{E_3}$.   Now let $\cgF$
+be a finite family of events, let $E\in\cgF$ and let $\cgN$
+be a subfamily of $\cgF-\{E\}$.  In the statement of the lemma 
+below, we will say that $E$ is independent of any event not in 
+$\cgN$ when
+\[
+P(E|\prod_{F\in\cgG}\overline{F}=P(E)
+\]
+provided $\cgG\cap\cgN=\emptyset$.
+
+We first state and prove the lemma in \textit{asymmetric} form.
+Later, we will give a simpler version which is called the
+\textit{symmetric} version.
+
+\begin{lemma}[Lov\'asz Local Lemma]\label{lem:LLL}
+Let $\cgF$ be a finite family of events in a probability space 
+and for each event $E\in\cgF$, let $\cgN(E)$ denote a
+subfamily of events from $\cgF-\{E\}$ so that $E$ is independent of 
+any event not in $\cgN(E)$.  Suppose that
+for each event $E\in\cgF$, there is a real number $x(E)$ with
+$0<x(E)<1$ such that
+\[
+P(E)\le x(E)\prod_{F\in\cgN(E)}(1-x(F)).
+\]
+Then for every non-empty subfamily $\cgG\subseteq\cgF$,
+\[
+P(\prod_{E\in\cgG}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)).
+\]
+In particular, the probability that all events in $\cgF$ 
+fail is positive.
+\end{lemma}
+\begin{proof}
+We proceed by induction on $\cgG$. If $|\cgG|=1$ and $\cgG=\{E\}$,
+we are simply asserting that $P(\overline{E})\ge 1-x(E)$, which is true
+since $P(E)\le x(E)$.  Now suppose that $|\cgG|=k\ge2$ and that the lemma
+holds whenever $1\le |\cgG|<k$.  Let $\cgG =\{E_1,E_2,\dots,E_k\}$.
+Then
+\[
+P(\prod_{i\ge1}^k \overline{E_i})=P(\overline{E_1}|\prod_{i=2}^k\overline{E_i})
+  P(\overline{E_2}|\prod_{i=3}^k\overline{E_i})P(E_3|\prod_{i=4}^k\overline{E_i})\dots
+\]
+Now each term in the product on the right has the following
+form:
+\[
+P(\overline{E}|\prod_{F\in\cgF_E}\overline{F})
+\]
+where $|\cgF_E|<k$.
+
+So, we done if we can show that
+\[
+P(\overline{E}|\prod_{F\in\cgF_E}\overline{F})\ge 1- x(E)
+\]
+
+This is equivalent to showing that
+\[
+P(E|\prod_{F\in\cgF_E}\overline{F})\le x(E)
+\]
+
+Suppose first that $\cgF_E\cap\cgN(E)=\emptyset$.  Then
+\[
+P(E|\prod_{F\in\cgF_E}\overline{F})=P(E)\le x(E).
+\]
+So we may assume that $\cgF_E\cap\cgN(E)\neq\emptyset$.  Let
+$\cgF_E=\{F_1,F_2,F_r,F_{r+1},F_{r+2},\dots, F_t\}$, with
+$F_i\in\cgN_E$ if and only if $r+1\le i\le t$.  Then
+
+\[
+PE|\prod_{F\in\cgF_E}\overline{F})=
+ \frac{P(E\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F}|\prod_{F\in\cgF_E-\cgN(E)}\overline{F})}
+ {P(\prod_{F\in\cgF_E\cap \cgN(E)}\overline{F})}
+\]
+
+Consider first the numerator in this last expression.  Note that
+\[
+P(E\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F}|\prod_{F\in\cgF_E-\cgN(E)}\overline{F})\le
+P(E|\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F})\le x(E)\prod_{F\in\cgF_E\cap\cgN(E)}(1-x(F))
+\]
+Next, consider the denominator.  By the inductive hypothesis, we have
+\[
+P(\prod_F\in\cgF_E\cap\cgN(E)\overline{F}\ge \prod_{F\in\cgF_E\cap\cgN(E)}(1-x(F)).
+\] 
+Combining these last two inequalities, we have
+\[
+P(E|\prod_{F\in\cgF_E}\overline{F})\le x(E)\prod_{\cgN(E)-\cgF_E}(1-x(F))\le x(E),
+\]
+and the proof is complete.
+\end{proof}
+
+Now here is the symmetric version.
+
+\begin{lemma}[Lov\'asz Local Lemma]\label{lem:LLL-sym}
+Let $p$ and $d$ be numbers with $0<p<1$ and $d\ge 1$.  Also,
+let $\cgF$ be a finite family of events in a probability space 
+and for each event $E\in\cgF$, let $\cgN(E)$ denote the 
+subfamily of events from $\cgF-\{E\}$ so that $E$ is independent of 
+any event not in $\cgN(E)$.  Suppose that $P(E)\le p$, $|\cgN(E)|\le d$ for 
+every event $E\in\cgF$ and that $ep(d+1)<1$, where 
+$e=2.71828\dots$ is the base for natural logarithms.  Then
+Then
+\[
+P(\prod_{E\in\cgF}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)),
+\]
+i.e., the probability that all events in $\cgF$ is positive.
+\end{lemma}
+\begin{proof}
+Set $x(E)=1/(d+1)$ for every event $E\in\cgF$.  Then
+\[
+P(E)\le p\le \frac{1}{e(d+1)}\le x(E)\prod(F\in\cgN(E)(1-\frac{1}{d+1}).
+\]
+\end{proof}
+
+A number of applications of the symmetric form of the Lov\'asz Local
+Lemma are stated in terms of the condition that $4pd<1$.  The proof
+of this alternate form is just a trivial modification of the argument
+we have presented here.
+
+\section{Applying the Local Lemma}
+
+The list of applications of the Local Lemma has been growing
+steadily, as has the interest in how the lemma can be applied
+algorithmically, i.e., in a constructive setting.  But here
+we present one of the early applications to Ramsey theory---estimating
+the Ramsey number $(R,3,n)$.  Recall that we have the basic inequality 
+$R(3,n)\le \binom{n+1}{3}$ from \autoref{thm:graphramsey}, and it is
+natural to turn to the probabilistic method to look for good lower bounds.
+But a few minutes thought shows that there are challenges to this
+approach.
+
+First, let's try a direct computation.  Suppose we try a random graph
+on $t$ vertices with edge probability $p$.  So we would want no triangles,
+and that would say we need $t^3p^3=1$, i.e., $p=1/t$.  Then we
+would want no independent sets of size $n$, which would require
+$n^te^{-pn^2}=1$, i.e., $t\ln n=pn^2$, so we can't even make
+$t$ larger than $n$.  That's not helpful.
+
+We can do a bit better by by allowing some triangles and then removing
+one point from each, as was done in the proof for
+\autoref{thm:girth}. Along these lines, we would
+set $t^3p^3=t$, i.e., $p=t^{-2/3}$.  And the calculation now
+yields the lower bound $R(3,n)\ge n^{6/5}/\ln^{-3/5} n$, so even
+the exponent of $n$ is different from the upper bound.
+
+So which one is right, or is the answer somewhere in between?
+In a classic 1961 paper, Erd\H{o}s used a very clever application
+of the probabilistic method to show the existence of a graph from
+which a good lower bound could be extracted.  His technique
+yielded the lower bound $R(3,n)\ge n^2/\ln^2 n$, so the two
+on the exponent of $n$ is correct.
+
+Here we will use the Lov\'asz Local Lemma to obtain this
+same lower bound in a much more direct manner.  We consider
+a random graph on $t$ vertices with edge probability $p$.
+For each $3$-element subset $S$, we have the event $E_S$ which is
+true when $S$ forms a triangle.  For each $n$-element set $T$, we have
+the event $E_T$ which is true when $T$ is an independent set.  In
+the discussion to follow, we abuse notation slightly and refer to
+events $E_S$ and $E_T$ as just $S$ and $T$, respectively.  Note
+that the probability of $S$ is $p^3$ for each $3$-element
+set $S$, while the probability of $T$ is $q=(1-p)^{C(n,2)}\sim
+e^{-pn^2/2}$ for each $n$-element set $T$.  
+
+When we apply the Local Lemma, we will set $x=x(S)$ to be $e^2p^3$,
+for each $3$-element set $S$.  And we will set $y=Y(T)=q^{1/2}\sim
+e^{-pn^2/4}$.  It will be clear in a moment where we got those values.
+
+Furthermore, the neighborhood of an event consists of all sets
+in the family which have two or more elements in common.
+So the neighborhood of a $3$-element set $S$ consists of $3(t-3)$ 
+other $3$-element sets and $C(t-3,n-3)+3C(t-3,n-2)$ sets of size~$n$.  
+Similarly, the neighborhood of an $n$-element set $T$ consists of $C(n,3)+
+(t-n)C(n,2)$ sets of size $3$ and $\sum_{i=2}^{n-1}C(n,i)
+C(t-n,n-i)$ other sets of size~$n$.  So the basic inequalities
+we need to satisfy are:
+
+\begin{align*}
+p^3 \le & x(1-x)^{3(t-3)}(1-y)^{C(t-3,n-3)+3C(t-n,n-2)}\\
+q \le & y(1-x)^{C(n,3)+(t-n)C(n,2)}(1-y)^{C(t-3,n-3)+3C(t-n,n-2)}\\
+\end{align*}
+
+Next, we assume that $n^{3/2}<t<n^2$ and then make the usual 
+approximations, ignoring smaller order terms and multiplicative
+constants, to see that these inequalities can be considered in 
+the following simplified form:
+
+\begin{align*}
+p^3 \le & x(1-x)^{t}(1-y)^{t^n}\\
+q \le & y(1-x)^{tn^2}(1-y)^{t^n}\\
+\end{align*}
+
+A moments reflection makes it clear that
+we want to keep the terms involving
+$(1-y)$ relatively large, i.e.,
+at least $1/e$.  This will certainly be true if
+we keep  $t^n\le 1/y$. This is equivalent
+to $n\ln t\le pn^2$, or $\ln t\le pn$.
+
+Similarly, we want to keep the term $(1-x)^{t}$ relatively large,
+so we keep $t\le 1/x$, i.e., $t\le 1/p^3$.  On the other hand,
+we want only to keep the term $(1-x)^{tn^2}\sim e^{-xtn^2}$ at least as large
+as $y$.  This is equivalent to keeping
+$p\le xt$, and since $x\sim p^3$, this can be rewritten as $p^{-1}\le t^{1/2}$.  
+
+Now we have our marching orders.  We just set $\ln t=pn$ and
+$p^{-1}=t^{1/2}$.  After substituting, we get $t= n^2/\ln^2t$ and
+since $\ln t=\ln n$ (at least within the kind of approximations we
+are using), we get the desired result $t=n^2/\ln^2n$.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "book"
+%%% End: 
