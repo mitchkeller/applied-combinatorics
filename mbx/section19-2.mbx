@@ -1,0 +1,171 @@
+
+<section>
+<title>Intersections and Unions</title><introduction>
+<p>
+When <m>X</m> and <m>Y</m> are sets, the <em>intersection</em>
+of <m>X</m> and <m>Y</m>, denoted <m>X\cap Y</m>, is defined by
+</p>
+  
+<me>
+
+X\cap Y = \{x: x\in X, x\in Y\}
+
+</me>
+ 
+<p>
+Note that this notation uses the convention followed by
+many programming languages. Namely, the <q>comma</q> in the
+definition means that <em>both</em> requirements for
+membership be satisfied. For example, if <m>X=\{b,c,e,g,m\}</m>
+and <m>Y=\{a,c,d,h,m,n,p\}</m>, then <m>X\cap Y=\{c,m\}</m>.
+</p>
+ </introduction> 
+<subsection>
+<title>The Meaning of <m>2</m>-Letter Words</title>
+<p>
+In the not too distant past, there was considerable discussion
+in the popular press on the meaning of the <m>2</m>-letter word <em>is</em>.
+For mathematicians and computer scientists, it would have
+been far more significant to have a discussion of the <m>2</m>-letter
+word <em>or</em>. The problem is that the English language uses
+<em>or</em> in two fundamentally different ways. Consider the
+following sentences:
+</p>
+  <ol><li>A nearby restaurant has a dinner special featuring two choices for
+dessert: flan de casa <b>or</b> tirami-su.</li>
+<li>A state university accepts all students who have graduated
+from in-state high schools and have SAT scores above <m>1000</m> <b>or</b> 
+have grade point averages above <m>3.0</m>.</li>
+<li>A local newpaper offers 
+customers the option of paying their for their newspaper bills on a monthly
+<b>or</b> semi-annual basis.</li>
+ </ol>  
+<p>
+In the first and third statement, it is clear that there are
+two options but that <em>only</em> one of them is allowed. However,
+in the second statement, the interpretation is that admission will
+be granted to students who satisfy <em>at least one</em> of the
+two requirements. These interpretations are called
+respectively the <em>exclusive</em>
+and <em>inclusive</em> versions of <b>or</b>. In this class, we
+will assume that whenever the word <q>or</q> is used,
+the inclusive interpretation is intended&#8202;&#x2014;&#8202;unless otherwise
+stated.
+</p>
+  
+<p>
+For example, when <m>X</m> and <m>Y</m> are sets, the <em>union</em>
+of <m>X</m> and <m>Y</m>, denoted <m>X\cup Y</m>, is defined by
+</p>
+  
+<me>
+
+X\cup Y = \{x: x\in x \text{ or }  x\in Y\}.
+
+</me>
+ 
+<p>
+membership be satisfied. For example, if <m>X=\{b,c,e,g,m\}</m>
+and <m>Y=\{a,c,d,h,m,n,p\}</m>, then <m>X\cup Y=\{a,b,c,d,e,g,h,m,n,p\}</m>.
+</p>
+  
+<p>
+Note that <m>\cap</m> and <m>\cup</m> are <em>commutative</em> and
+<em>associative</em> binary operations, as is the case with
+addition and multiplication for the set <m>\posints</m> of positive
+integers, i.e., if <m>X</m>, <m>Y</m> and <m>Z</m> are sets, then
+</p>
+  
+<me>
+
+X\cap Y = Y\cap X \quad\text{ and } \quad X\cup Y = Y\cup X. 
+
+</me>
+ 
+<p>
+Also,
+</p>
+  
+<me>
+
+X\cap(Y\cap Z)= (X\cap Y)\cap Z\quad\text{ and } \quad
+X\cup(Y\cup Z)= (X\cup Y)\cup Z.
+
+</me>
+ 
+<p>
+Also, note that each of <m>\cap</m> and <m>\cup</m> distributes
+over the other, i.e.,
+</p>
+  
+<me>
+
+X\cap(Y\cup Z)= (X\cap Y)\cup (X\cap Z)\quad\text{ and } \quad
+X\cup(Y\cap Z)= (X\cup Y)\cap (X\cup Z)
+
+</me>
+ 
+<p>
+On the other hand, in <m>\posints</m>, multiplication distributes
+over addition but not vice-versa.
+</p>
+ </subsection> 
+<subsection>
+<title>The Empty Set: Much To Do About Nothing</title>
+<p>
+The <em>empty set</em>, denoted <m>\emptyset</m> is the set for
+which <m>x\notin \emptyset</m> for every element <m>x</m>. Note that
+<m>X\cap \emptyset =\emptyset</m> and <m>X\cup \emptyset=X</m>, for every
+set <m>X</m>.
+</p>
+  
+<p>
+The empty set is unique in the sense that if <m>x\notin X</m> for every
+element <m>x</m>, then <m>X=\emptyset</m>.
+</p>
+ </subsection> 
+<subsection>
+<title>The First So Many Positive Integers</title>
+<p>
+In our course, we will use the symbols <m>\posints</m>, <m>\ints</m>,
+<m>\rats</m> and <m>\reals</m> to denote respectively the
+set of positive integers, the set of all integers (positive, negative
+and zero), the set of rational numbers (fractions) and the set of real
+numbers (rationals and irrationals). On occasion, we will discuss
+the set <m>\nonnegints</m> of <em>non-negative integers</em>.
+When <m>n</m> is a positive integer, we will use the
+abbreviation <m>[n]</m> for the set <m>\{1,2,\dots,n\}</m> of the
+first <m>n</m> positive integers. For example, <m>[5]=\{1,2,3,4,5\}</m>.
+For reasons that may not be clear at the moment but hopefully
+will be transparent later in the semester, we use the
+notation <m>\bfn</m> to denote the <m>n</m>-element set <m>\{0,1,2,\dots,n-1\}</m>.
+Of course, <m>\bfn</m> is just the set of the first <m>n</m> non-negative
+integers. For example, <m>\mathbf{5}=\{0,1,2,3,4\}</m>.
+</p>
+ </subsection> 
+<subsection>
+<title>Subsets, Proper Subsets and Equal Sets</title>
+<p>
+When <m>X</m> and <m>Y</m> are sets, we say <m>X</m> is a <em>subset</em> of <m>Y</m> and
+write <m>X\subseteq Y</m> when <m>x\in Y</m> for every <m>x\in X</m>. When <m>X</m> is a
+subset of <m>Y</m> and there exists at least one element <m>y\in Y</m> with
+<m>y\notin X</m>, we say <m>X</m> is a proper subset of <m>Y</m> and write
+<m>X\subsetneq Y</m>. For example, the <m>P</m> of primes is a proper subset of
+the set <m>\posints</m> of positive integers.
+</p>
+  
+<p>
+Surprisingly often, we will encounter a situation where
+sets <m>X</m> and <m>Y</m> have different rules for membership
+yet both are in fact the same set. For example, let
+<m>X=\{0,2\}</m> and <m>Y=\{z\in\ints: z+z=z\times z\}</m>. Then <m>X=Y</m>.
+For this reason, it is useful to have a test when sets are
+equal. If <m>X</m> and <m>Y</m> are sets, then
+</p>
+  
+<me>
+
+X = Y \quad\text{ if and only if } \quad X\subseteq Y \text{ and }  Y\subseteq X.
+
+</me>
+ </subsection> </section>

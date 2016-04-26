@@ -1,0 +1,192 @@
+
+<section xml:id="s_mult">
+<title>Multiplication as a Binary Operation</title>
+<p>
+We define a binary operation <m>\times</m>, called <em>multiplication</em>,
+on the set of natural numbers. When <m>m</m> and <m>n</m> are natural
+numbers, <m>m\times n</m> is also called the <em>product</em>
+of <m>m</m> and <m>n</m>, and it sometimes denoted
+<m>m*n</m> and even more compactly as <m>mn</m>. We will use this
+last convention in the material to follow. Let <m>n\in \mathbb{N}_0</m>.
+</p>
+  
+<p>
+Then define:
+</p>
+  <ol><li class="custom-list-style-type" label="(i)." ><m>n0=0</m>, and</li>
+<li class="custom-list-style-type" label="(ii)." ><m>n(k+1)=nk +n</m>.</li>
+ </ol>   
+<p>
+Note that <m>10=0</m> and <m>01=00+0=0</m>. Also, note that <m>11=10+1=0+1=1</m>.
+More generally, from<nbsp />(ii) and <xref ref="lem_sum0">Lemma</xref>, we
+conclude that if <m>m,n\neq0</m>, then <m>mn\neq0</m>.
+</p>
+  
+<theorem><statement>
+<p>
+{\upshape [Left Distributive Law]}<br />
+<m>m(n+p)=mn + mp</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+Let <m>m,n\in \mathbb{N}_0</m>. Then
+</p>
+  
+<me>
+
+m(n+0)=mn = mn +0 = mn+ m0.
+
+</me>
+ 
+<p>
+Now assume <m>m(n+k) = mn + mk</m>.
+Then
+</p>
+  
+<md><mrow>m[n+(k+1)] \amp = m[(n+k)+1]=m(n+k)+m</mrow>
+ <mrow>\amp =(mn+mk)+m=mn+(mk+m)= mn+m(k+1).</mrow>
+ 
+</md>
+ 
+</proof>
+  
+<theorem><statement>
+<p>
+{\upshape [Right Distributive Law]}<br />
+<m>(m+n)p=mp + np</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+Let <m>m,n\in \mathbb{N}_0</m>. Then
+</p>
+  
+<me>
+
+(m+n)0 =0 = 0+0 = m0 + n0.
+
+</me>
+ 
+<p>
+Now assume <m>(m+n)k = mk + nk</m>.
+Then
+</p>
+  
+<md><mrow>(m+n)(k+1)\amp =(m+n)k+(m+n)= (mk+nk) +(m+n)</mrow>
+ <mrow>\amp =(mk+m)+(nk+n)=m(k+1)+n(k+1).</mrow>
+ 
+</md>
+ 
+</proof>
+  
+<theorem><statement>
+<p>
+{\upshape [Associative Law of Multiplication]}<br />
+<m>m(np) = (mn)p</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+Let <m>m,n\in \mathbb{N}_0</m>. Then
+</p>
+  
+<me>
+
+m(n0)= m0 = 0 = (mn)0.
+
+</me>
+ 
+<p>
+Now assume that <m>m(nk)=(mn)k</m>. Then
+</p>
+  
+<me>
+
+m[n(k+1)]= m(nk + n)= m(nk) + mn =(mn)k + mn = (mn)(k+1).
+
+</me>
+ 
+</proof>
+  
+<p>
+The commutative law requires some preliminary work.
+</p>
+  
+<lemma><statement>
+<p>
+<m>n0= 0n=0</m>, for all <m>n\in \mathbb{N}_0</m>.
+</p>
+ </statement>
+</lemma>
+  
+<proof>
+
+<p>
+The lemma holds trivially when <m>n=0</m>. Assume <m>k0=
+0k=0</m>. Then
+</p>
+  
+<me>
+
+(k+1)0 =0 = 0+0= 0k+0=0(k+1).
+
+</me>
+ 
+</proof>
+  
+<lemma><statement>
+<p>
+<m>n1 =1n=n</m>, for every <m>n\in \mathbb{N}_0</m>.
+</p>
+ </statement>
+</lemma>
+  
+<proof>
+
+<p>
+<m>01=00+0=0 =10</m>. Assume
+<m>k1=1k=k</m>. Then
+</p>
+  
+<me>
+
+(k+1)1=k1+11=1k+1=1(k+1).
+
+</me>
+ 
+</proof>
+  
+<theorem><statement>
+<p>
+{\upshape [Commutative Law of Multiplication]}<br />
+<m>mn=nm</m>, for all <m>m,n\in \mathbb{N}_0</m>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+Let <m>m\in \mathbb{N}_0</m>.
+Then <m>m0=0m</m>.
+Assume <m>mk=km</m>. Then
+</p>
+  
+<me>
+
+m (k+1) = mk +m = km+m= km +1m=(k+1)m.
+
+</me>
+ 
+</proof>
+ </section>

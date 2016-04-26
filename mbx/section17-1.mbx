@@ -1,0 +1,190 @@
+
+<section xml:id="s_polya_square">
+<title>Coloring the Vertices of a Square</title>
+<p>
+Let's begin by coloring the vertices of a square using white and
+gold. If we fix the position of the square in the plane, there are
+<m>2^4=16</m> different colorings. These colorings are shown in
+<xref ref="fig_polya_squares" autoname="yes" />.
+</p>
+  <figure xml:id="fig_polya_squares" >
+<caption>The <m>16</m> colorings of the vertices of a square.</caption>
+\begin{overpic}[width=\linewidth]{polya-figs/square-colorings}
+    \put(4.5,17){<m>C_1</m>}
+    \put(16.5,17){<m>C_2</m>}
+    \put(29.5,17){<m>C_3</m>}
+    \put(42,17){<m>C_4</m>}
+    \put(54.5,17){<m>C_5</m>}
+    \put(67,17){<m>C_6</m>}
+    \put(80,17){<m>C_7</m>}
+    \put(92,17){<m>C_8</m>}
+
+    \put(4.5,5){<m>C_9</m>}
+    \put(16.3,5){<m>C_{10}</m>}
+    \put(29.2,5){<m>C_{11}</m>}
+    \put(41.8,5){<m>C_{12}</m>}
+    \put(54.3,5){<m>C_{13}</m>}
+    \put(67,5){<m>C_{14}</m>}
+    \put(79.6,5){<m>C_{15}</m>}
+    \put(91.6,5){<m>C_{16}</m>}
+
+  \end{overpic}
+  </figure>
+ 
+<p>
+However, if we think of the square as a metal frame with a white bead
+or a gold bead at each corner and allow the frame to be rotated and
+flipped over, we realize that many of these colorings are
+equivalent. For instance, if we flip coloring <m>C_7</m> over about the
+vertical line dividing the square in half, we obtain coloring
+<m>C_9</m>. If we rotate coloring <m>C_2</m> clockwise by <m>90^\circ</m>, we obtain
+coloring <m>C_3</m>. In many cases, we want to consider such equivalent
+colorings as a single coloring. (Recall our motivating example of
+necklaces made of colored beads. It makes little sense to
+differentiate between two necklaces if one can be rotated and flipped
+to become the other.)
+</p>
+  
+<p>
+To systematically determine how many of the colorings shown in
+<xref ref="fig_polya_squares" autoname="yes" /> are not equivalent, we must think about
+the transformations we can apply to the square and what each does to
+the colorings. Before examining the transformations' effects on the
+colorings, let's take a moment to see how they rearrange the
+vertices. To do this, we consider the upper-left vertex to be <m>1</m>, the
+upper-right vertex to be <m>2</m>, the lower-right vertex to be <m>3</m>, and
+the lower-left vertex to be <m>4</m>. We denote the clockwise rotation by
+<m>90^\circ</m> by <m>r_1</m> and see that <m>r_1</m> sends the vertex in position
+<m>1</m> to position <m>2</m>, the vertex in position <m>2</m> to position <m>3</m>, the
+vertex in position <m>3</m> to position <m>4</m>, and the vertex in position <m>4</m>
+to position <m>1</m>. For brevity, we will write <m>r_1(1) =2</m>, <m>r_1(2)=3</m>,
+etc. We can also rotate the square clockwise by <m>180^\circ</m> and denote
+that rotation by <m>r_2</m>. In this case, we find that <m>r_2(1) = 3</m>,
+<m>r_2(2)=4</m>, <m>r_2(3)= 1</m>, and <m>r_2(4)=2</m>. Notice that we can achieve
+the transformation <m>r_2</m> by doing <m>r_1</m> twice in
+succession. Furthermore, the clockwise rotation by <m>270^\circ</m>, <m>r_3</m>,
+can be achieved by doing <m>r_1</m> three times in
+succession. (Counterclockwise rotations can be avoided by noting that
+they have the same effect as a clockwise rotation, although by a
+different angle.)
+</p>
+  
+<p>
+When it comes to flipping the square, there are four axes about which
+we can flip it: vertical, horizontal, positive-slope diagonal, and
+negative-slope diagonal. We denote these flips by <m>v</m>, <m>h</m>, <m>p</m>, and
+<m>n</m>, respectively. Now notice that <m>v(1) = 2</m>, <m>v(2) = 1</m>, <m>v(3) = 4</m>,
+and <m>v(4) = 3</m>. For the flip about the horizontal axis, we have <m>h(1)
+= 4</m>, <m>h(2) = 3</m>, <m>h(3)=2</m>, and <m>h(4)= 1</m>. For <m>p</m>, we have <m>p(1) =
+3</m>, <m>p(2) = 2</m>, <m>p(3)=1</m>, and <m>p(4)=4</m>. Finally, for <m>n</m> we find <m>n(1)
+= 1</m>, <m>n(2) = 4</m>, <m>n(3) = 3</m>, and <m>n(4)=2</m>. There is one more
+transformation that we must mention; the transformation that does
+nothing to the square is called the <em>identity transformation</em>,
+denoted <m>\iota</m>. It has <m>\iota(1)=1</m>, <m>\iota(2)=2</m>, <m>\iota(3)=3</m>, and
+<m>\iota(4)=4</m>.
+</p>
+  
+<p>
+Now that we've identified the eight transformations of the square,
+let's make a table showing which colorings from
+<xref ref="fig_polya_squares" autoname="yes" /> are left unchanged by the application of
+each transformation. Not surprisingly, the identity transformation
+leaves all of the colorings unchanged. Because <m>r_1</m> moves the
+vertices cyclically, we see that only <m>C_1</m> and <m>C_{16}</m> remain
+unchanged when it is applied. Any coloring with more than one color
+would have a vertex of one color moved to one of the other
+color. Let's consider which colorings are fixed by <m>v</m>, the flip about
+the vertical axis. For this to happen, the color at position <m>1</m> must
+be the same as the color at position <m>2</m>, and the color at position
+<m>3</m> must be the same as the color at position <m>4</m>. Thus, we would
+expect to find <m>2\cdot 2 = 4</m> colorings unchanged by <m>v</m>. Examining
+<xref ref="fig_polya_squares" autoname="yes" />, we see that these colorings are <m>C_1</m>,
+<m>C_6</m>, <m>C_8</m>, and <m>C_{16}</m>. Performing a similar analysis for the
+remaining five transformations leads to
+<xref ref="tab_polya_fixed-square" autoname="yes" />.
+</p>
+  <figure xml:id="tab_polya_fixed-square" >
+<caption>Colorings fixed by transformations of the square</caption>
+<table id="6cda037a636d1ba38902ac77a7c6d725f00f6391" ><tr><td class='cv'>
+    Transformation \amp  Fixed colorings</td></tr>
+<tr><td class='hline' colspan='2'><hr /></td></tr>
+<tr><td class='cv'>
+    <m>\iota</m> \amp  All 16</td></tr>
+<tr><td class='cv'>
+    <m>r_1</m> \amp  <m>C_1</m>, <m>C_{16}</m></td></tr>
+<tr><td class='cv'>
+    <m>r_2</m> \amp  <m>C_{1}</m>, <m>C_{10}</m>, <m>C_{11}</m>, <m>C_{16}</m></td></tr>
+<tr><td class='cv'>
+    <m>r_3</m> \amp  <m>C_1</m>, <m>C_{16}</m></td></tr>
+<tr><td class='cv'>
+    <m>v</m> \amp  <m>C_1</m>, <m>C_6</m>, <m>C_8</m>, <m>C_{16}</m></td></tr>
+<tr><td class='cv'>
+    <m>h</m> \amp  <m>C_1</m>, <m>C_7</m>, <m>C_{9}</m>, <m>C_{16}</m></td></tr>
+<tr><td class='cv'>
+    <m>p</m> \amp  <m>C_1</m>, <m>C_3</m>, <m>C_5</m>, <m>C_{10}</m>, <m>C_{11}</m>, <m>C_{13}</m>, <m>C_{15}</m>,
+    <m>C_{16}</m></td></tr>
+<tr><td class='cv'>
+    <m>n</m> \amp  <m>C_1</m>, <m>C_2</m>, <m>C_4</m>, <m>C_{10}</m>, <m>C_{11}</m>, <m>C_{12}</m>, <m>C_{14}</m>,
+    <m>C_{16}</m></td></tr>
+<tr><td class='cv'></td></tr>
+</table> 
+  </figure>
+  
+<p>
+At this point, it's natural to ask where this is going. After all,
+we're trying to count the number of <em>nonequivalent</em> colorings,
+and <xref ref="tab_polya_fixed-square" autoname="yes" /> makes no effort to group
+colorings based on how a transformation changes one coloring to
+another. It turns out that there is a useful connection between
+counting the nonequivalent colorings and determining the number of
+colorings fixed by each transformation. To develop this connection, we
+first need to discuss the equivalence relation created by the action
+of the transformations of the square on the set <m>\cgC</m> of all
+<m>2</m>-colorings of the square. (Refer to
+<xref ref="sec_numsys_equivalence" autoname="yes" /> for a refresher on the definition of
+equivalence relation.) To do this, notice that applying a
+transformation to a square with colored vertices results in another
+square with colored vertices. For instance, applying the
+transformation <m>r_1</m> to a square colored as in <m>C_{12}</m> results in a
+square colored as in <m>C_{13}</m>. We say that the transformations of the
+square <em>act</em> on the set <m>\cgC</m> of colorings. We denote this
+action by adding a star to the transformation name. For instance,
+<m>r_1^*(C_{12})=C_{13}</m> and <m>v^*(C_{10})=C_{11}</m>.
+</p>
+  
+<p>
+If <m>\tau</m> is a transformation of the square with <m>\tau^*(C_i) = C_j</m>,
+then we say colorings <m>C_i</m> and <m>C_j</m> are <em>equivalent</em> and write
+<m>C_i\sim C_j</m>. Since <m>\iota^*(C)=C</m> for all <m>C\in\cgC</m>, <m>\sim</m> is
+reflexive. If <m>\tau_1^*(C_i) = C_j</m> and <m>\tau_2^*(C_j) = C_k</m>, then
+<m>\tau_2^*(\tau_1^*(C_i)) = C_k</m>, so <m>\sim</m> is transitive. To complete
+our verification that <m>\sim</m> is an equivalence relation, we must
+establish that it is symmetric. For this, we require the notion of the
+<em>inverse</em> of a transformation <m>\tau</m>, which is simply the
+transformation <m>\tau\inv</m> that undoes whatever <m>\tau</m> did. For
+instance, the inverse of <m>r_1</m> is the <em>counter</em>clockwise rotation
+by <m>90^\circ</m>, which has the same effect on the location of the
+vertices as <m>r_3</m>. If <m>\tau^*(C_i) = C_j</m>, then <m>{\tau^{-1}}^*(C_j) =
+C_i</m>, so <m>\sim</m> is symmetric.
+</p>
+  
+<p>
+Before proceeding to establish the connection between the number of
+nonequivalent colorings (equivalence classes under <m>\sim</m>) and the
+number of colorings fixed by a transformation in full generality,
+let's see how it looks for our example. In looking at
+<xref ref="fig_polya_squares" autoname="yes" />, you should notice that <m>\sim</m> partitions
+<m>\cgC</m> into six equivalence classes. Two contain one coloring each
+(the all white and all gold colorings). One contains two colorings
+(<m>C_{10}</m> and <m>C_{11}</m>). Finally, three contain four colorings each
+(one gold vertex, one white vertex, and the remaining four with two
+vertices of each color). Now look again at
+<xref ref="tab_polya_fixed-square" autoname="yes" /> and add up the number of colorings
+fixed by each transformation. In doing this, we obtain <m>48</m>, and when
+<m>48</m> is divided by the number of transformations (<m>8</m>), we get <m>6</m>
+(the number of equivalence classes)! It turns out that this is far
+from a fluke, as we will soon see. First, however, we introduce the
+concept of a permutation group to generalize our set of
+transformations of the square.
+</p>
+ </section>

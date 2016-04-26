@@ -1,0 +1,67 @@
+
+<section>
+<title>Discussion</title>
+<p>
+The group was debating the value of combinatorial proofs versus
+formal proofs by induction. Xing said that he actually preferred to
+do a proof by induction, as a combinatorial proof, it could be
+argued, wasn't really a proof. Dave mumbled <q>Combinatorial proofs
+can always be made rigorous.</q> They went back and forth for a
+while and then Alice said ``But the professor never explained
+that weird sequence
+</p>
+  
+<me>
+
+1,2,3,4,1,2,3,4,5,1,2,3,4,5,2,3,4,5,6,2,3,4,5,6,1,2,3,4,5,2,3,4,5,6,\dots
+
+</me>
+ 
+<p>
+Dave was on a roll <q>Who has change for a dollar?</q> but nobody
+understood why he would derail an argument over proofs when
+everybody had already paid for the coffee. Alice was more to the
+point <q>You know Dave, sometimes I just don't understand why
+you say the things you do.</q> Dave smiled (maybe it was more of
+a smirk) <q>It's about making change. The terms in this sequence
+are the fewest number of coins required to make change.</q>
+Bob said <q>I don't get it.</q> Dave continued <q>The term <m>a_n</m> is
+the fewest number of U.S. coins required to total to <m>n</m> cents.</q>
+Now everyone groaned, everyone except Carlos, who thought that
+at least this time, Dave was really clever.
+</p>
+  
+<p>
+<q>Well</q>, said Bob <q>that takes care of the strange sequence,
+but I still don't see any difference between
+induction and recursion. Dave couldn't keep quiet ``No one does.</q> Xing thought
+differently and said <q>In many programming languages, you try to
+avoid recursion, preferring to use loops instead. Otherwise, you
+wind up overloading the stack. As just one example, you can
+compute the greatest common divisor <m>d</m> of <m>m</m> and <m>n</m>, as well as
+find <m>a</m> and <m>b</m> so that <m>d=am+bn</m> using a loop&#8202;&#x2014;&#8202;with very
+little storage. The recursive approach discussed previously, with
+the inherent back tracking at the end, isn't really necessary.</q>
+Yolanda was impressed with Xing's extensive programming experience and
+knowledge, but Alice was less so.
+</p>
+  
+<p>
+Zori was losing her patience and was especially grumpy today <q>I don't
+see any value to any of this stuff. Who's going to pay me to find
+greatest common divisors?</q> Dave said <q>Nobody.</q> Alice said <q>But
+maybe there are some principles here that have practical application.</q>
+Carlos joined in <q>I think the basic principles behind establishing
+that a computer program does what you intend have a lot to do with
+induction and recursion.</q> Bob said <q>I don't understand. When
+I write a program, I just pay attention to details and after just
+a few corrections, they always work.</q> Alice was brutal <q>Maybe that's
+because you don't do anything complicated.</q> Carlos was more gentle
+<q>Big software projects might have hundreds of thousands of lines
+of code, and pieces of the final product might be written by
+different groups of programmers at different moments in time.
+Establishing correctness can be a very difficult task.</q>
+Zori's ears perked up as she thought she saw something in
+this last bit of conversation that might be a way to earn a salary.
+</p>
+ </section>

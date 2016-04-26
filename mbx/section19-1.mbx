@@ -1,0 +1,97 @@
+
+<section>
+<title>Introduction</title>
+<p>
+Set theory is concerned with <em>elements</em>, certain collections
+of elements called <em>sets</em> and a concept of <em>membership</em>.
+For each element <m>x</m> and each set <m>X</m>, <em>exactly</em> one of the
+following two statements holds:
+</p>
+  <ol><li><m>x</m> is a member of <m>X</m>.</li>
+<li><m>x</m> is <em>not</em> a member of <m>X</m>.</li>
+ </ol>   
+<p>
+It is important to note that membership cannot be ambiguous.
+</p>
+  
+<p>
+When <m>x</m> is an element and <m>X</m> is a set, we write <m>x\in X</m> when
+<m>x</m> is a member of <m>X</m>. Also, the statement <m>x</m> belongs to <m>X</m> means
+exactly the same thing as <m>x</m> is a member of <m>X</m>. Similarly, when
+<m>x</m> is not a member of <m>X</m>, we write <m>x\notin X</m> and say <m>x</m> does
+not belong to <m>X</m>.
+</p>
+  
+<p>
+Certain sets will be defined explicitly by listing the elements.
+For example, let <m>X=\{a,b,d,g,m\}</m>. Then <m>b\in X</m> and <m>h\notin X</m>.
+The order of elements in such a listing is irrelevant, so we could
+also write <m>X=\{g,d,b,m,a\}</m>. In other situations, sets will be
+defined by giving a rule for membership.
+As examples, let <m>\posints</m> denote the set of positive integers.
+Then let <m>X=\{n\in\posints:5\le n\le 9\}</m>. Note that <m>6,8\in X</m> while
+<m>4,10,238\notin X</m>.
+</p>
+  
+<p>
+Given an element <m>x</m> and a set <m>X</m>, it may at times be tedious and
+perhaps very difficult to determine which of the statements
+<m>x\in X</m> and <m>x\notin X</m> holds. But if we are discussing sets,
+it must be the case that <em>exactly</em> one is true.
+</p>
+  
+<example><statement>
+<p>
+Let <m>X</m> be the set consisting of the following <m>12</m> positive
+integers:
+</p>
+  
+<md><mrow>\amp 13232112332</mrow>
+ <mrow>\amp 13332112332</mrow>
+ <mrow>\amp 13231112132</mrow>
+ <mrow>\amp 13331112132</mrow>
+ <mrow>\amp 13232112112</mrow>
+ <mrow>\amp 13231112212</mrow>
+ <mrow>\amp 13331112212</mrow>
+ <mrow>\amp 13232112331</mrow>
+ <mrow>\amp 13231112131</mrow>
+ <mrow>\amp 13331112131</mrow>
+ <mrow>\amp 13331112132</mrow>
+ <mrow>\amp 13332112111</mrow>
+ <mrow>\amp 13231112131</mrow>
+ 
+</md>
+ 
+<p>
+Note that one number is listed twice. Which one is it?
+Also, does <m>13232112132</m> belong to <m>X</m>? Note that the
+apparent difficulty of answering these questions stems from
+(1) the size of the set <m>X</m>; and (2) the size of the integers
+that belong to <m>X</m>. Can you think of circumtances in which
+it is difficult to answer whether <m>x</m> is a member of <m>X</m>
+even when it is known that <m>X</m> contains exactly one element?
+</p>
+ </statement>
+</example>
+  
+<example><statement>
+<p>
+Let <m>P</m> denote the set of primes. Then <m>35\notin P</m> since
+<m>35= 5\times 7</m>. Also, <m>19\in P</m>. Now consider the number
+</p>
+  
+<me>
+
+n = 77788467064627123923601532364763319082817131766346039653933
+
+</me>
+ 
+<p>
+Does <m>n</m> belong to <m>P</m>? Alice says yes while Bob says no.
+How could Alice justify her affirmative answer? How could Bob
+justify his negative stance? In this specific case, I know that
+Alice is right. Can you explain why?
+</p>
+ </statement>
+</example>
+ </section>

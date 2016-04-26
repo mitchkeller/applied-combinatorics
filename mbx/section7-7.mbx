@@ -1,0 +1,49 @@
+
+<section xml:id="s_graphs_complexity">
+<title>A Digression into Complexity Theory</title>
+<p>
+We have already introduced in <xref ref="ch_basics" autoname="yes" /> a few notions about
+efficient algorithms. We also discussed the difficulty of determining
+a graph's chromatic number and clique number earlier in this
+chapter. We conclude with a brief discussion of some issues involving
+computational complexity for other problems discussed in this chapter.
+</p>
+  
+<p>
+Let's begin with some problems for which there are polynomial-time
+algorithms. Suppose you are given a graph on <m>n</m> vertices and asked
+whether or not the graph is connected. Here a positive answer can be
+justified by providing a spanning tree. On the other hand, a negative
+answer can be justified by providing a partition of the vertex sets
+<m>V=V_1\cup V_2</m> with <m>V_1</m> and <m>V_2</m> non-empty subsets and having no
+edges with one end-point in <m>V_1</m> and the other in <m>V_2</m>. In
+<xref ref="ch_graphalgorithms" autoname="yes" /> we will discuss two efficient algorithms
+that find spanning trees in connected graphs. They can easily be
+modified to produce a partition showing the graph is disconnected.
+</p>
+  
+<p>
+If you are asked whether a connected graph is eulerian, then a
+positive answer can be justified by producing the appropriate
+sequence. We gave an algorithm to do this earlier in the chapter. A
+negative answer can be justified by producing a vertex of odd degree,
+and our algorithm will identify such a vertex if it exists. (Depending
+on the data structures used to represent the graph, it may be most
+efficient to simply look for vertices of odd degree without using the
+algorithm to find an eulerian circuit.)
+</p>
+  
+<p>
+On the surface, the problem of determining if a graph is hamiltonian
+looks similar to that of determining if the graph is eulerian. Both
+call for a sequence of vertices in which each pair of consecutive
+vertices is joined by an edge. Of course, each problem has an
+additional requirement on yes certificates. However, justifying a
+negative answer to the question of whether a graph is hamiltonian is
+not straightforward. <xref ref="thm_graphs_dirac" autoname="yes" /> only gives a way to
+confirm that a graph <em>is</em> hamiltonian; there are many
+nonhamiltonian graphs that do not satisfy its hypothesis. At this
+time, no one knows how to justify a negative answer&#8202;&#x2014;&#8202;at least not in
+the general case.
+</p>
+ </section>

@@ -1,0 +1,141 @@
+
+<section>
+<title>Markov Chains</title><introduction>
+<p>
+We begin this section with a motivational example.
+Consider the connected graph on six
+vertices shown in <xref ref="fig_markovchain" autoname="yes" />.
+The first move is to choose a vertex at random and move
+there. Afterwards, we follow the following recursive
+procedures. If after <m>i</m> moves,
+you are at a vertex <m>x</m>
+and <m>x</m> has <m>d</m> neighbors, choose one of the neighbors
+at random, with each having probability <m>1/d</m> and move there.
+We then attempt to answer questions of the following
+flavor:
+</p>
+  <ol><li>For each vertex <m>x</m>, let <m>p_{x,m}</m> denote
+the probability that you are at vertex <m>x</m> after <m>m</m>
+moves.  Does <m>\lim_{m\rightarrow\infty}p_{x,m}</m> exist and
+if so, how fast does the sequence converge to this limit?</li>
+<li>How many moves must I make in order that the probability
+that I have walked on every edge in the graph is at least
+<m>0.999</m>?</li>
+ </ol>   
+<p>
+This example illustrates the characteristics of an important class
+of computational and combinatorial problems, which are collectively
+referred to as <em>Markov Chains</em>:
+</p>
+  <ol><li>There is a finite set of states <m>S_1</m>, <m>S_2,\dots,S_n</m>, and at
+time <m>i</m>, you are in one of these states.</li>
+<li>If you are in state <m>S_j</m> at time <m>i</m>, then for each
+<m>k=1,2,\dots,n</m>, there is a fixed probabilty <m>p(j,k)</m> (which does
+not depend on <m>i</m>) that you will be in state <m>S_k</m> at time <m>i+1</m>.</li>
+ </ol>   
+<p>
+The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m>
+of moving from state <m>S_j</m> to state <m>S_k</m> is called the <em>transition</em>
+matrix of the Markov chain. Note that <m>P</m> is a <em>stochastic</em>
+matrix, i.e., all entries are non-negative and all row sums are<nbsp /><m>1</m>.
+Conversely, each square stochastic matrix can be considered as the transition
+matrix of a Markov chain.
+</p>
+  
+<p>
+For example, here is the transition matrix for the graph shown in
+<xref ref="fig_markovchain" autoname="yes" />.
+</p>
+  
+<men xml:id="eqn_transition" >
+ P =\begin{pmatrix}0 \amp  1/4 \amp  1/4 \amp  1/4 \amp  1/4 \amp    0 \\
+    1/2 \amp    0 \amp    0 \amp  1/2 \amp    0 \amp    0 \\
+    1/3 \amp    0 \amp    0 \amp  1/3 \amp    0 \amp  1/3 \\
+    1/3 \amp  1/3 \amp  1/3 \amp    0 \amp    0 \amp    0 \\
+      1 \amp    0 \amp    0 \amp    0 \amp    0 \amp    0 \\
+      0 \amp    0 \amp    1 \amp    0 \amp    0 \amp    0 \\
+\end{pmatrix}
+</men>
+ 
+<p>
+A transition matrix <m>P</m> is <em>regular</em> if there is some integer <m>m</m>
+for which the matrix <m>P^m</m> has only positive entries. Here is a
+fundamental result from this subject, one that is easy to understand
+but a bit too complex to prove given our space constraints.
+</p>
+  
+<theorem xml:id="thm_regular"><statement>
+<p>
+Let <m>P</m> be a regular <m>n\times n</m> transition matrix. Then
+there is a row vector <m>W=(w_1, w_2,\dots,w_n</m>) of positive real
+numbers summing to <m>1</m> so that as <m>m</m> tends to infinity, each
+row of <m>P^m</m> tends to <m>W</m>. Furthermore, <m>WP=W</m>, and for each
+<m>i=1,2,\dots,n</m>, the value <m>w_i</m> is the limiting probability of
+being in state <m>S_i</m>.
+</p>
+ </statement>
+</theorem>
+  
+<p>
+Given the statement of <xref ref="thm_regular" autoname="yes" />, the computation of
+the row vector <m>W</m> can be carried out by eigenvalue
+techniques that are part of a standard undergraduate linear
+algebra course. For example, the transition matrix <m>P</m> displayed in
+<xref ref="eqn_transition">Equation</xref> is regular since all entries of
+<m>P^3</m> are positive. Furthermore, for this matrix, the row vector
+<m>W=(5/13, 3/13, 2/13, 2/13, 1/13, 1/13)</m>. However, the question involving how fast
+the convergence of <m>P^m</m> is to this limiting vector is more
+subtle, as is the question as to how long it takes for us to
+be relatively certain we have made every possible transition.
+</p>
+ </introduction> 
+<subsection>
+<title>Absorbing Markov Chains</title>
+<p>
+A state <m>S_i</m> in a Markov chain with transition matrix <m>P</m> is <em>absorbing</em>
+if <m>p_{i,i}=1</m> and <m>p_{i,j}=0</m> for all <m>j\neq i</m>, i.e., like the infamous
+Hotel California, once you are in state <m>S_i</m>, <q>you can never leave.</q>
+</p>
+  
+<example><statement>
+<p>
+We modify the transition matrix from <xref ref="eqn_transition">Equation</xref> by
+making states <m>4</m> and <m>5</m> absorbing. The revised transition matrix is now:
+</p>
+  
+<men xml:id="eqn_absorbing" >
+ P =\begin{pmatrix}0 \amp  1/4 \amp  1/4 \amp  1/4 \amp  1/4 \amp    0 \\
+    1/2 \amp    0 \amp    0 \amp  1/2 \amp    0 \amp    0 \\
+    1/3 \amp    0 \amp    0 \amp  1/3 \amp    0 \amp  1/3 \\
+    1/3 \amp  1/3 \amp  1/3 \amp    0 \amp    0 \amp    0 \\
+      0 \amp    0 \amp    0 \amp    0 \amp    1 \amp    0 \\
+      0 \amp    0 \amp    0 \amp    0 \amp    0 \amp    1 \\
+\end{pmatrix}
+</men>
+ </statement>
+</example>
+ 
+<p>
+Now we might consider the following game. Start at one of the
+four vertices in <m>\{1,2,3,4\}</m> and proceed as before, making
+moves by choosing a neighbor at random. Vertex <m>4</m> might
+be considered as an <q>escape</q> point, a safe harbor that once
+reached is never left. On the other hand, vertex <m>5</m> might
+be somewhere one meets a hungry tiger and be absorbed in a
+way not to be detailed here.
+</p>
+  
+<p>
+We say the Markov chain is <em>absorbing</em> if there is at least one
+absorbing state and for each state <m>S_j</m> that is not absorbing, it is possible
+to reach an absorbing state&#8202;&#x2014;&#8202;although it may take many steps to do so.
+Now the kinds of questions we would like to answer are:
+</p>
+  <ol><li>If we start in non-absorbing state <m>S_i</m>, what is the probability
+of reaching absorbing state <m>S_j</m> (and then being absorbed in that state,
+a question which takes on genuine unpleasantness relative to tigers)?</li>
+<li>If we are absorbed in state <m>S_j</m>, what is the probability
+that we started in non-absorbing state <m>S_i</m>?</li>
+<li>If we start in non-absorbing state <m>S_i</m>, what is the expected length of
+time before we will be absorbed?</li>
+ </ol>  </subsection> </section>

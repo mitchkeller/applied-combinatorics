@@ -1,0 +1,275 @@
+
+<section>
+<title>On-line algorithms</title><introduction>
+<p>
+Many applications of combinatorics occur in a dynamic, on-line
+manner. It is rare that one has all the information about the
+challenges a problem presents before circumstances compel that
+decisions be made. As examples, a decision to proceed with a
+major construction construction project must be made several
+years before ground is broken; investment decisions are made
+on the basis of today's information and may look particularly
+unwise when tomorrow's news is available; and deciding to
+exit a plane with a parachute is rarely reversible.
+</p>
+  
+<p>
+In this section, we present two examples intended to illustrate
+on-line problems in a combinatorial setting. Our first example
+involves graph coloring. As is customary in discussions of
+on-line algorithms, we consider a two-person game with the players
+called <em>Assigner</em> and <em>Builder</em>. The two players
+agree in advance on a class <m>\cgC</m> of graphs, and the game
+is played in a series of rounds. At round<nbsp /><m>1</m> Builder presents
+a single vertex, and Assigner assigns it a color. At each
+subsequent rounds, Builder presents a new vertex, and provides
+complete information at to which of the preceding vertices are
+adjacent to it. In turn, Assigner must give the new vertex a
+color distinct from colors she has assigned previously to its
+neighbors.
+</p>
+  
+<example xml:id="exa_P4"><statement>
+<p>
+Even if Builder is constrained to build a path on <m>4</m> vertices,
+then Assigner can be forced to use three colors.
+At Round<nbsp />1, Builder presents a vertex <m>x</m> and Assigner colors
+it. At Round<nbsp />2, Builder presents a vertex <m>y</m> and declares that
+<m>x</m> and <m>y</m> are not adjacent.
+</p>
+  
+<p>
+Now Assigner has a choice. She may either give <m>x</m> and <m>y</m> the
+same color, or she may elect to assign a new color to <m>y</m>.
+If Assigner gives <m>x</m> and <m>y</m> different colors, then in Round<nbsp />3,
+Builder presents a vertex <m>z</m> and declares that <m>z</m> is adjacent to
+both <m>x</m> and <m>y</m>. Now Assigner will be forced to use a third
+color on <m>z</m>. In Round<nbsp /><m>4</m>, Builder will add a vertex <m>w</m> adjacent
+to <m>y</m> but to neither <m>x</m> nor <m>z</m>, but the damage has already been
+done.
+</p>
+  
+<p>
+On the other hand, if Assigner <m>x</m> and <m>y</m> the same color, then
+in Round<nbsp />3, Builder presents a vertex <m>z</m>, with <m>z</m> adjacent to
+<m>x</m> but not to <m>y</m>. Assigner must use a second color on <m>z</m>,
+distinct from the one she gave to <m>x</m> and <m>y</m>. In Round<nbsp />4, Builder
+presents a vertex <m>w</m> adjcent to <m>z</m> and <m>y</m> but not to <m>x</m>. Assigner
+must use a third color on <m>w</m>.
+</p>
+ </statement>
+</example>
+  
+<p>
+Note that a path is a tree and trees are forests. The next result
+shows that while forests are trivial to color off-line, there is
+a genuine challenge ahead when you have to work on-line. To assist
+us in keeping track of the colors used by Assigner, we will
+use the notation from <xref ref="ch_graphs" autoname="yes" /> and write <m>\phi(x)</m> for
+the color given by Assigner to vertex <m>x</m>.
+</p>
+  
+<theorem xml:id="thm_olforest"><statement>
+<p>
+Let <m>n</m> be a positive integer. Then there is a strategy for
+Builder that will enable Builder to construct a forest having
+at most <m>2^{n-1}</m> vertices while forcing
+Assigner to use <m>n</m> colors.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+When <m>n=1</m>, all Builder does is present a single vertex. When
+<m>n=2</m>, two adjacent vertices are enough. When <m>n=3</m>, Builder
+constructs a path on <m>4</m> vertices as detailed in <xref ref="exa_P4">Example</xref>.
+Now assume that for some <m>k\ge3</m>, Builder has a strategy <m>S_i</m> for
+forcing Assigner to use <m>i</m> colors on a forest of at most <m>2^{i-1}</m>
+vertices, for each <m>i=1,2,\dots,k</m>. Here's how Builder proceeds
+to force <m>k+1</m> colors.
+</p>
+  
+<p>
+First, for each <m>i=1,2,\dots,k</m>, Builder follows strategy <m>S_i</m>
+to build a forest <m>F_i</m> having at most <m>2^{i-1}</m> vertices on which
+assigner is forced to use <m>i</m> colors. Furthermore, when <m>1\le i\lt j\le k</m>,
+there are no edges between vertices in <m>F_i</m> and vertices in <m>F_j</m>.
+</p>
+  
+<p>
+Next, Builder chooses a vertex <m>y_1</m> from <m>F_1</m>. Since
+Assigner uses two colors on <m>F_2</m>, there is a vertex <m>y_2</m> from
+<m>F_2</m> so that <m>\phi(y_2)\neq \phi(y_1)</m>. Since Assigner uses
+three colors on <m>F_3</m>, there is a vertex <m>y_3</m> in <m>F_3</m> so that
+<m>\{\phi(y_1),\phi(y_2),\phi(y_3)\}</m> are all distinct. It follows
+that Builder may identify vertices <m>y_1</m>, <m>y_2,\dots,y_k</m> with
+<m>y_i\in F_i</m> so that the colors <m>\{\phi(y_i:1\le i\le k\}</m> are
+all distinct. Builder now presents a new vertex <m>x</m> and
+declares <m>x</m> adjacent to all vertices in <m>\{y_1,y_2,\dots,y_k\}</m> and to
+no other vertices. Clearly, (1)<nbsp />the resulting graph is a forest;
+(2)<nbsp />Assigner is forced to use a color for <m>x</m> distinct from
+the <m>k</m> colors she assigned previously to the vertices in <m>\{y_1,y_2,\dots,
+y_k\}</m>. Also, the total number of vertices is at most <m>1+[1+2+4+8+\dots+2^{k-1}]=2^k</m>.
+</p>
+ 
+</proof>
+  
+<p>
+Bob reads the proof and asks whether it was really necessary to treat the
+cases <m>k=2</m> and <m>k=3</m> separately. Wasn't it enough just to note that the
+case <m>k=1</m> holds trivially. Carlos says yes.
+</p>
+ </introduction> 
+<subsection>
+<title>Doing Relatively Well in an On-Line Setting</title>
+<p>
+<xref ref="thm_olforest">Theorem</xref> should be viewed as a negative
+result. It is hard to imagine a family of graphs easier to color
+than forests, yet in an on-line setting, graphs in this family are
+difficult to color. On the other hand, in certain settings, one can
+do reasonably well in an on-line setting, perhaps not as well as
+the true optimal off-line result but good enough
+to be useful. Here we present a particularly elegant example
+involving partially ordered sets.
+</p>
+  
+<p>
+Recall that a poset <m>P</m> of height <m>h</m> can be partitioned into <m>h</m>
+antichains&#8202;&#x2014;&#8202;by recursively removing the set of minimal elements.
+But how many antichains are required in an on-line setting?
+Now Builder constructs a poset <m>P</m> one point at a time,
+while Assigner constructs a partition of <m>P</m> into antichains.
+At each round, Builder will present a new points <m>x</m>, and list
+those points presented earlier that are, respectively, less than <m>x</m>,
+greater than <m>x</m> and incomparable with <m>x</m>. Subsequently,
+Assigner will assign <m>x</m> to an antichain. This will be done
+either by adding <m>x</m> to an antichain already containing one
+or more of the points presented previously, or by assigning <m>x</m>
+to a new antichain.
+</p>
+  
+<theorem><statement>
+<p>
+For each <m>h\ge1</m>, there is a on-line strategy for Assigner that will enable
+her to partition a poset <m>P</m> into at most <m>\binom{h+1}{2}</m>
+antichains, provided the height of <m>P</m> is at most <m>h</m>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+It is important to note that Assigner does not need to know the value
+<m>h</m> in advance. For example, Builder may have in mind that ultimately
+the value of <m>h</m> will be <m>300</m>, but this information does not
+impact Assigner's strategy.
+</p>
+  
+<p>
+When the new point <m>x_n</m> enters <m>P</m>, Assigner computes the values
+<m>r</m> and <m>s</m>, where <m>r</m> is the largest integer for which there
+exists a chain <m>C</m> of <m>r</m> points in <m>\{x_1,x_2,\dots,x_n\}</m> having
+<m>x_n</m> as its least element. Also, <m>s</m> is the largest integer for which there
+exists a chain <m>D</m> of <m>s</m> points in <m>\{x_1,x_2,\dots,x_n\}</m> having
+<m>x_n</m> as its largest element. Assigner then places <m>x</m> in a set
+<m>A(r,s)</m>, claiming that any two points in this set are incomparable.
+To see that this claim is valid, consider the first moment where
+Builder has presented a new point <m>x</m>, Assigner places <m>x</m> in
+<m>A(r,s)</m> and there is already a point <m>y</m> in <m>A(r,s)</m> for which
+<m>x</m> and <m>y</m> are comparable.
+</p>
+  
+<p>
+When <m>y</m> was presented, there was at that moment in time a chain <m>C'</m> of <m>r</m>
+points having <m>y</m> as its least element. Also, there was a chain
+<m>D</m> of <m>s</m> points having <m>y</m> as its greatest element.
+</p>
+  
+<p>
+Now suppose that <m>y>x</m> in <m>P</m>. Then we can add <m>x</m> to <m>C'</m> to
+form a chain of <m>r+1</m> points having <m>x</m> as its least element.
+This would imply that <m>x</m> is not assigned in <m>A(r,s)</m>. Similarly,
+if <m>y\lt x</m> in <m>P</m>, then we may add <m>x</m> to <m>D'</m> to form a chain
+of <m>s+1</m> points having <m>x</m> as its greatest element. Again, this
+would imply that <m>x</m> is not assigned to <m>A(r,s)</m>.
+</p>
+  
+<p>
+So Assigner has indeed devised a good strategy for partitioning
+<m>P</m> into antichains, but how many antichains has she used?
+This is just asking how many ordered pairs <m>(i,j)</m> of positive integers
+are there subject to the restriction that <m>i+j-1\le h</m>. And we
+learned how to solve this kind of question in <xref ref="ch_strings" autoname="yes" />.
+The answer of course is <m>\binom{h+1}{2}</m>.
+</p>
+ 
+</proof>
+  
+<p>
+The strategy for Assigner is so simple and natural, it might be
+the case that a more complex strategy would yield a more efficient
+partitioning. Not so.
+</p>
+  
+<theorem><title>Szemer&#xe9;di</title>
+<statement>
+<p>
+For every <m>h\ge1</m>, there is a strategy <m>S_h</m> for builder
+that will enable him to build a poset <m>P</m> of height <m>h</m> so
+that assigner is forced to (1)<nbsp />use at least <m>\binom{h+1}{2}</m>
+antichains in partitioning <m>P</m>, and (2)<nbsp />use at least <m>h</m>
+different antichains on the set of maximal elements.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+Strategy <m>S_1</m> is just to present a single point.
+Now suppose that the theorem holds for some integer <m>h\ge1</m>.
+We show how strategy <m>S_{h+1}</m> proceeds.
+</p>
+  
+<p>
+First Builder follows strategy <m>S_h</m> to form a poset <m>P_1</m>.
+Then he follows it a second time for form a poset <m>P_2</m>, with
+all points of <m>P_1</m> incomparable to all points in <m>P_2</m>.
+Now we consider two cases. Suppose first that Assigner
+has used <m>h+1</m> or more antichains on the set of maximal elements of
+<m>P_1\cup P_2</m>. In this case, he follows strategy <m>S_h</m>
+a third time to build a poset <m>P_3</m> with all points of
+<m>P_3</m> less than all maximal elements of <m>P_1\cup P_2</m>
+and incomparable with all other points.
+</p>
+  
+<p>
+Clearly, the height of the resulting poset is at most <m>h+1</m>.
+Also, Assigner must use <m>h+1+\binom{h+1}{2}=\binom{h+2}{2}</m>
+antichains in partitioning the poset and she has used <m>h+1</m> on
+the set of maximal elements.
+</p>
+  
+<p>
+So it remains only to consider the case where Assigner has used
+a set <m>W</m> of <m>h</m> antichains on the maximal elements of <m>P_1</m>, and
+she has used exactly the same <m>h</m> antichains for the maximal elements
+of <m>P_2</m>. Then Builder presents a new point <m>x</m>
+and declares it to be greater than all points of <m>P_1</m> and
+incomparable with all points of <m>P_2</m>. Assigner must put <m>x</m>
+in some antichain which is not in <m>W</m>.
+</p>
+  
+<p>
+Builder then follows strategy <m>S_h</m> a third time, but
+now all points of <m>P_3</m> are less than <m>x</m> and the maximal elements
+of <m>P_2</m>. Again, Assigner has been forced to use <m>h+1</m> different
+antichains on the maximal elements and <m>\binom{h+2}{2}</m>
+antichains altogether.
+</p>
+ 
+</proof>
+ </subsection> </section>

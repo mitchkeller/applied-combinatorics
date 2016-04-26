@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+<docinfo>
+<macros>
+\newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\posints}{\mathbb{N}}
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\twospace}{\mathbb{R}^2}
+\newcommand{\threepace}{\mathbb{R}^3}
+\newcommand{\dspace}{\mathbb{R}^d}
+\newcommand{\nni}{\mathbb{N}_0}
+\newcommand{\nonnegints}{\mathbb{N}_0}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\prob}{\operatorname{prob}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\height}{\operatorname{height}}
+\newcommand{\width}{\operatorname{width}}
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\crit}{\operatorname{crit}}
+\newcommand{\inc}{\operatorname{inc}}
+\newcommand{\HP}{\mathbf{H_P}}
+\newcommand{\HCP}{\mathbf{H^c_P}}
+\newcommand{\GP}{\mathbf{G_P}}
+\newcommand{\GQ}{\mathbf{G_Q}}
+\newcommand{\AG}{\mathbf{A_G}}
+\newcommand{\GCP}{\mathbf{G^c_P}}
+\newcommand{\PXP}{\mathbf{P}=(X,P)}
+\newcommand{\QYQ}{\mathbf{Q}=(Y,Q)}
+\newcommand{\GVE}{\mathbf{G}=(V,E)}
+\newcommand{\HWF}{\mathbf{H}=(W,F)}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfQ}{\mathbf{Q}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfNP}{\mathbf{NP}}
+\newcommand{\bftwo}{\mathbf{2}}
+\newcommand{\cgA}{\mathcal{A}}
+\newcommand{\cgB}{\mathcal{B}}
+\newcommand{\cgC}{\mathcal{C}}
+\newcommand{\cgD}{\mathcal{D}}
+\newcommand{\cgE}{\mathcal{E}}
+\newcommand{\cgF}{\mathcal{F}}
+\newcommand{\cgG}{\mathcal{G}}
+\newcommand{\cgM}{\mathcal{M}}
+\newcommand{\cgN}{\mathcal{N}}
+\newcommand{\cgP}{\mathcal{P}}
+\newcommand{\cgR}{\mathcal{R}}
+\newcommand{\cgS}{\mathcal{S}}
+\newcommand{\bfn}{\mathbf{n}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfk}{\mathbf{k}}
+\newcommand{\bfs}{\mathbf{s}}
+\newcommand{\bijection}{\xrightarrow[\text{onto}]{\text{$1$--$1$}}}
+\newcommand{\injection}{\xrightarrow[]{\text{$1$--$1$}}}
+\newcommand{\surjection}{\xrightarrow[\text{onto}]{}}
+\newcommand{\nin}{\not\in}
+\newcommand{\prufer}{\mbox{pr\"ufer}}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\var}{var}
+\newcommand{\inv}{^{-1}}
+\renewcommand{\raggedchapter}{\raggedleft}
+\renewcommand{\chapterformat}{
+  \MakeUppercase{\chapappifchapterprefix{}}
+  \rlap{\enskip\resizebox{!}{1.2cm}{\thechapter} \rule{15cm}{1.2cm} }}
+\renewcommand{\chapterheadmidvskip}{
+
+\vspace{10pt}}
+</macros>
+
+</docinfo>
+
+
+<book>
+    <title>Applied Combinatorics    </title>
+<frontmatter>
+<titlepage>
+<author>
+<personname>Mitchel T.\ Keller</personname>
+</author>
+<author>
+<personname>William T.\ Trotter</personname>
+</author>
+</titlepage>
+</frontmatter>
+
+
+<xi:include href="./chapter2.mbx" />
+
+<xi:include href="./chapter3.mbx" />
+
+<xi:include href="./chapter4.mbx" />
+
+<xi:include href="./chapter5.mbx" />
+
+<xi:include href="./chapter6.mbx" />
+
+<xi:include href="./chapter7.mbx" />
+
+<xi:include href="./chapter8.mbx" />
+
+<xi:include href="./chapter9.mbx" />
+
+<xi:include href="./chapter10.mbx" />
+
+<xi:include href="./chapter11.mbx" />
+
+<xi:include href="./chapter12.mbx" />
+
+<xi:include href="./chapter13.mbx" />
+
+<xi:include href="./chapter14.mbx" />
+
+<xi:include href="./chapter15.mbx" />
+
+<xi:include href="./chapter16.mbx" />
+
+<xi:include href="./chapter17.mbx" />
+
+<xi:include href="./chapter18.mbx" />
+
+<xi:include href="./chapter1x.mbx" />
+
+<xi:include href="./chapter19.mbx" />
+
+</book>
+</mathbook>

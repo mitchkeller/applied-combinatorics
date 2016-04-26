@@ -1,0 +1,21 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_graphalgorithms">
+<title>Graph Algorithms</title><introduction>
+<p>
+In previous chapters, we have encountered a few algorithms for
+problems involving discrete structures such as finding euler circuits
+(<xref ref="ch_graphs" autoname="yes" />) or partitioning a poset into antichains
+(<xref ref="ch_posets" autoname="yes" />). This chapter begins a sequence of three
+chapters that focus on algorithms. In this chapter we explore two
+minimization problems for graphs in which we assign a weight to each
+edge of the graph. The first problem studied is determining a spanning
+tree of minimum weight. The second is of finding shortest paths from
+a root vertex to each other vertex in a directed graph.
+</p>
+ </introduction> <xi:include  href="section14-1.mbx" />
+ <xi:include  href="section14-2.mbx" />
+ <xi:include  href="section14-3.mbx" />
+ <xi:include  href="section14-4.mbx" />
+ <xi:include  href="section14-5.mbx" />
+ <xi:include  href="section14-6.mbx" />
+ </chapter>
