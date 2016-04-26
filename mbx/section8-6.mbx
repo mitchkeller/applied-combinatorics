@@ -1,0 +1,63 @@
+
+<section xml:id="s_posets_intervalorder">
+<title>Interval Orders</title>
+<p>
+When we discussed Dilworth's theorem, we commented that the
+algorithmic aspects would be deferred until later in the text. But
+there is one important class of orders for which the full solution is
+easy to obtain.
+</p>
+  
+<p>
+A poset <m>\PXP</m> is called an <em>interval order</em> if there exists a
+function <m>I</m> assigning to each element <m>x\in X</m> a closed interval
+<m>I(x)=[a_x,b_x]</m> of the real line <m>\reals</m> so that for all <m>x</m>, <m>y\in
+X</m>, <m>x\lt y</m> in <m>P</m> if and only if <m>b_x\lt a_y</m> in <m>\reals</m>. We call <m>I</m> an
+<em>interval representation</em> of <m>\bfP</m>, or just a
+<em>representation</em> for short. For brevity, whenever we say that
+<m>I</m> is a representation of an interval order <m>\PXP</m>, we will use the
+alternate notation <m>[a_x,b_x]</m> for the closed interval <m>I(x)</m>. Also,
+we let <m>|I(x)|</m> denote the <em>length</em> of the interval, i.e.,
+<m>|I(x)|=b_x-a_x</m>. Returning to the poset <m>\bfP_3</m>, the representation
+shown in <xref ref="fig_6ptintorder" autoname="yes" /> shows that it is an interval order.
+</p>
+  <figure xml:id="fig_6ptintorder" >
+<caption>An interval order and its representation</caption>
+<image source="images/6ptintorder.png" /> </figure>
+  
+<p>
+Note that end points of intervals used in a representation need not be
+distinct. In fact, distinct points <m>x</m> and <m>y</m> from <m>X</m> may satisfy
+<m>I(x)=I(y)</m>. We even allow degenerate intervals, i.e., those of the
+form <m>[a,a]</m>. On the other hand, a representation is said to be
+<em>distinguishing</em> if all intervals are non-degenerate and all
+end points are distinct. It is relatively easy to see that every interval order
+has a distinguishing representation.
+</p>
+  
+<theorem xml:id="thm_fishburn"><title>Fishburn</title>
+<statement>
+<p>
+Let <m>\PXP</m> be a poset. Then <m>\bfP</m> is an interval order if
+and only if it excludes <m>\bftwo+\bftwo</m>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+We show only that an interval order cannot contain a subposet
+isomorphic to <m>\bftwo+\bftwo</m>, deferring the proof in the other
+direction to the next section. Now suppose that <m>\PXP</m> is a poset,
+<m>\{x,y,z,w\}\subseteq X</m> and the subposet
+determined by these four points is isomorphic to <m>\bftwo+\bftwo</m>.
+We show that <m>\bfP</m> is not an interval order. Suppose to the
+contrary that <m>I</m> is an interval representation of <m>\bfP</m>. Without loss
+of generality, we may assume that <m>x\lt y</m> and <m>z\lt w</m> in <m>P</m>. Thus <m>x\Vert w</m> and
+<m>z\Vert y</m> in <m>P</m>. Then <m>b_x\lt a_y</m> and <m>b_z \lt  a_w</m> in <m>\reals</m>
+so that <m>a_w \le b_x \lt a_y \le b_z</m>, which is a contradiction.
+</p>
+ 
+</proof>
+ </section>

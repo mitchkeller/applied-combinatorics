@@ -1,0 +1,170 @@
+
+<section xml:id="s_strings_comb-proof">
+<title>Combinatorial Proofs</title>
+<p>
+Combinatorial arguments are among the most beautiful in all of
+mathematics. Oftentimes, statements that can be proved by other,
+more complicated methods (usually involving large amounts of tedious algebraic
+manipulations) have very short proofs once you can make a connection
+to counting. In this section, we introduce a new way of thinking about
+combinatorial problems with several examples. Our goal is to help you
+develop a <q>gut feeling</q> for combinatorial problems.
+</p>
+  
+<example><statement>
+<p>
+Let <m>n</m> be a positive integer. Explain why
+</p>
+  
+<me>
+
+1+2+3+\dots+n=\frac{n(n+1)}{2}.
+
+</me>
+  
+<p>
+Consider an <m>(n+1)\times (n+1)</m> array of dots as depicted
+in <xref ref="fig_squaredots" autoname="yes" />. There are
+<m>(n+1)^2</m> dots altogether, with exactly <m>n+1</m>
+on the main diagonal.
+The off-diagonal entries split
+naturally into two equal size parts, those above and
+those below the diagonal.
+</p>
+  
+<p>
+Furthermore, each of those
+two parts has <m>S(n)=1+2+3+\dots+n</m> dots.
+It follows that
+</p>
+  
+<me>
+
+S(n)=\frac{(n+1)^2-(n+1)}{2}
+
+</me>
+ 
+<p>
+and this is obvious! Now a little algebra on the right
+hand side of this expression produces the formula given
+earlier.
+</p>
+ </statement>
+</example>
+  <figure xml:id="fig_squaredots" >
+<caption>The sum of the first <m>n</m> integers</caption>
+<image source="images/3012-fig25.png" /> <br /> </figure>
+  
+<example><statement>
+<p>
+Let <m>n</m> be a positive integer. Explain why
+</p>
+  
+<me>
+
+1+3+5+\dots+2n-1=n^2.
+
+</me>
+  
+<p>
+The left hand side is just the
+sum of the first <m>n</m> odd integers. But as suggested in
+<xref ref="fig_oddsum2" autoname="yes" />, this is clearly equal to <m>n^2</m>.
+</p>
+  <figure xml:id="fig_oddsum2" >
+<caption>The sum of the first <m>n</m> odd integers </caption>
+<image source="images/3012-fig21.png" /> <br /> </figure>
+ </statement>
+</example>
+  
+<example><statement>
+<p>
+Let <m>n</m> be a positive integer. Explain why
+</p>
+  
+<me>
+
+\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\dots+\binom{n}{n}=2^n.
+
+</me>
+ 
+<p>
+Both sides count the number of bit strings of length <m>n</m>, with
+the left side first grouping them according to the number of
+<m>0</m>'s.
+</p>
+ </statement>
+</example>
+  
+<example><statement>
+<p>
+Let <m>n</m> and <m>k</m> be integers with <m>0\le k\lt n</m>.
+Then
+</p>
+  
+<me>
+
+\binom{n}{k+1} = \binom{k}{k} + \binom{k+1}{k} +
+\binom{k+2}{k} +\dots+
+\binom{n-1}{k}.
+
+</me>
+ 
+<p>
+To prove this formula, we simply observe that both sides count the
+number of bit strings of length<nbsp /><m>n</m> that contain <m>k+1</m> <m>1</m>'s with the
+right hand side first partitioning them according to the last
+occurence of a<nbsp /><m>1</m>. (For example, if the last <m>1</m> occurs in position
+<m>k+5</m>, then the remaining <m>k</m> <m>1</m>'s must appear in the preceding <m>k+4</m>
+positions, giving <m>C(k+4,k)</m> strings of this type.) Note that
+when <m>k=1</m> (so <m>k+1=2</m>), we have the same formula as developed earlier for the
+sum of the first <m>n</m> positive integers.
+</p>
+ </statement>
+</example>
+  
+<example><statement>
+<p>
+Explain the identity
+</p>
+  
+<me>
+3^n=\binom{n}{0}2^0+\binom{n}{1}2^1+\binom{n}{2}2^2+
+\dots+\binom{n}{n}2^n.
+
+</me>
+ 
+<p>
+Both sides count the number of <m>\{0,1,2\}</m>-strings of length<nbsp /><m>n</m>,
+the right hand side first partitioning them according to positions
+in the string which are not<nbsp /><m>2</m>. (For instance, if <m>6</m> of the
+positions are not<nbsp /><m>2</m>, we must first choose those <m>6</m> positions in
+<m>C(n,6)</m> ways and then there are <m>2^6</m> ways to fill in those six
+positions by choosing either a <m>0</m> or a <m>1</m> for each position.)
+</p>
+ </statement>
+</example>
+  
+<example><statement>
+<p>
+For each non-negative integer<nbsp /><m>n</m>,
+</p>
+  
+<me>
+
+\binom{2n}{n}=
+{\binom{n}{0}}^2+{\binom{n}{1}}^2+{\binom{n}{2}}^2+\dots+
+ {\binom{n}{n}}^2.
+
+</me>
+ 
+<p>
+Both sides count the number of bit strings of length <m>2n</m> with half
+the bits being <m>0</m>'s, with the right side first partitioning them
+according to the number of <m>1</m>'s occurring in the first <m>n</m> positions
+of the string. Note that we are also using the trivial identity
+<m>\binom{n}{k}=\binom{n}{n-k}</m>.
+</p>
+ </statement>
+</example>
+ </section>

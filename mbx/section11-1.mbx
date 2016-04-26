@@ -1,0 +1,205 @@
+
+<section xml:id="s_recurrence_intro">
+<title>Introduction</title> 
+<subsection xml:id="s_recurrence_intro_fib">
+<title>Fibonacci numbers</title>
+<p>
+One of the most well-known recurrences arises from a simple
+story. Suppose that a scientist introduces a pair of newborn rabbits
+to an isolated island. This species of rabbits is unable to reproduce
+until their third month of life, but after that produces a new pair of
+rabbits each month. Thus, in the first and second months, there is one
+pair of rabbits on the island, but in the third month, there are two
+pairs of rabbits, as the first pair has a pair of offspring. In the
+fourth month, the original pair of rabbits is still there, as is their
+first pair of offspring, which are not yet mature enough to
+reproduce. However, the original pair gives birth to another pair of
+rabbits, meaning that the island now has three pairs of
+rabbits. Assuming that there are no rabbit-killing predators on the
+island and the rabbits have an indefinite lifespan, how many pairs of
+rabbits are on the island in the tenth month?
+</p>
+  
+<p>
+Let's see how we can get a recurrence from this story. Let <m>f_n</m>
+denote the number of pairs rabbits on the island in month <m>n</m>. Thus,
+<m>f_1 = 1</m>, <m>f_2 = 1</m>, <m>f_3=2</m>, and <m>f_4=3</m> from our account above. How
+can we compute <m>f_n</m>? Well, in the <m>n^\text{th} </m> month we have all the
+pairs of rabbits that were there during the previous month, which is
+<m>f_{n-1}</m>; however, some of those pairs of rabbits also reproduce
+during this month. Only the ones who were born prior to the previous
+month are able to reproduce during month <m>n</m>, so there are <m>f_{n-2}</m>
+pairs of rabbits who are able to reproduce, and each produces a new
+pair of rabbits. Thus, we have that the number of rabbits in month <m>n</m>
+is <m>f_n = f_{n-1} + f_{n-2}</m> for <m>n\geq 3</m> with <m>f_1=f_2=1</m>. The
+sequence of numbers <m>\{f_n\colon n\geq 0\}</m> (we take <m>f_0=0</m>, which
+satisfies our recurrence) is known as the <em>Fibonacci sequence</em>
+after Leonardo of Pisa, better known as Fibonacci, an Italian
+mathematician who lived from about 1170 until about 1250. The terms
+<m>f_0,f_1,\dots,f_{20}</m> of the Fibonacci sequence are
+</p>
+  
+<me>
+
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987, 1597,2584,4181,6765.
+
+</me>
+ 
+<p>
+Thus, the answer to our question about the number of pairs of rabbits
+on the island in the tenth month is <m>55</m>. That's really easy to
+compute, but what if we asked for the value of <m>f_{1000}</m> in the
+Fibonacci sequence? Could you even tell whether the following
+inequality is true or false&#8202;&#x2014;&#8202;without actually finding <m>f_{1000}</m>?
+</p>
+  
+<me>
+
+f_{1000} \lt  232748383849990383201823093383773932
+
+</me>
+  
+<p>
+Consider the sequence <m>\{f_{n+1}/f_n:n\ge1\}</m> of ratios of consecutive
+terms of the Fibonacci sequence. <xref ref="tab_fib-ratios" autoname="yes" /> shows these
+ratios for <m>n\geq 18</m>.
+</p>
+  <figure xml:id="tab_fib-ratios" >
+<caption>The ratios <m>f_{n+1}/f_{n}</m> for <m>n\leq 18</m> </caption>
+
+<md><mrow>1/1 \amp = 1.0000000000</mrow>
+ <mrow>2/1 \amp = 2.0000000000</mrow>
+ <mrow>3/2 \amp = 1.5000000000</mrow>
+ <mrow>5/3 \amp = 1.6666666667</mrow>
+ <mrow>8/5 \amp = 1.6000000000</mrow>
+ <mrow>13/8 \amp = 1.6250000000</mrow>
+ <mrow>21/13 \amp = 1.6153846154</mrow>
+ <mrow>34/21 \amp = 1.6190476190</mrow>
+ <mrow>55/34 \amp = 1.6176470588</mrow>
+ <mrow>89/55 \amp = 1.6181818182</mrow>
+ <mrow>144/89 \amp = 1.6179775281</mrow>
+ <mrow>233/144 \amp = 1.6180555556</mrow>
+ <mrow>377/233 \amp = 1.6180257511</mrow>
+ <mrow>610/377 \amp = 1.6180371353</mrow>
+ <mrow>987/610 \amp = 1.6180327869</mrow>
+ <mrow>1597/987 \amp = 1.6180344478</mrow>
+ <mrow>2584/1597 \amp = 1.6180338134</mrow>
+ <mrow>4181/2584 \amp = 1.6180340557</mrow>
+ 
+</md>
+ 
+</figure>
+ 
+<p>
+The ratios seem to be converging to a number. Can we determine this
+number? Does this number have anything to do with an explicit formula
+for <m>f_n</m> (if one even exists)?
+</p>
+  
+<example><statement>
+<p>
+The Fibonacci sequence would not be as well-studied as it is if it
+were only good for counting pairs of rabbits on a hypothetical
+island. Here's another instance which again results in the Fibonacci
+sequence. Let <m>c_n</m> count the number of ways a <m>2\times n</m>
+checkerboard can be covered by <m>2\times 1</m> tiles. Then <m>c_1=1</m> and
+<m>c_2=2</m> while the recurrence is just <m>c_{n+2} = c_{n+1}+c_n</m>, since
+either the rightmost column of the checkerboard contains a vertical
+tile (and thus the rest of it can be tiled in <m>c_{n+1}</m> ways) or the
+rightmost two columns contain two horizontal tiles (and thus the
+rest of it can be tiled in <m>c_n</m> ways).
+</p>
+ </statement>
+</example>
+ </subsection> 
+<subsection xml:id="s_recurrence_intro_strings">
+<title>Recurrences for strings</title>
+<p>
+In <xref ref="ch_induction" autoname="yes" />, we saw several times how we could find
+recurrences that gave us the number of binary or ternary strings of
+length <m>n</m> when we place a restriction on certain patterns appearing
+in the string. Let's recall a couple of those types of questions in
+order to help generate more recurrences to work with.
+</p>
+  
+<example xml:id="ex_recurrence_binary-strings-no-11"><statement>
+<p>
+Let <m>a_{n}</m> count the number of binary strings of length <m>n</m>
+in which no two consecutive characters are<nbsp /><m>1</m>'s. Evidently,
+<m>a_1=2</m> since both binary strings of length<nbsp /><m>1</m> are <q>good.</q> Also,
+<m>a_2=3</m> since only one of the four binary strings of length<nbsp /><m>2</m> is
+<q>bad,</q>, namely <m>(1,1)</m>. And <m>a_3= 5</m>, since of the <m>8</m> binary
+strings of length<nbsp /><m>3</m>, the following three strings are <q>bad</q>:
+</p>
+  
+<me>
+
+(1,1,0), (0,1,1), (1,1,1).  
+
+</me>
+ 
+<p>
+More generally, it is easy to see that the sequence satisfies the
+recurrence <m>a_{n+2} = a_{n+1}+a_n</m>, since we can partition the set of
+all <q>good</q> strings into two sets, those ending in <m>0</m> and those
+ending in<nbsp /><m>1</m>. If the last bit is<nbsp /><m>0</m>, then in the first <m>n+1</m>
+positions, we can have any <q>good</q> string of length<nbsp /><m>n+1</m>. However,
+if the last bit is<nbsp /><m>1</m>, then the preceding bit must be <m>0</m>, and then
+in the first <m>n</m> positions we can have any <q>good</q> string of
+length<nbsp /><m>n</m>.
+</p>
+  
+<p>
+As a result, this sequence is just the Fibonacci numbers, albeit
+offset by<nbsp /><m>1</m> position, i.e, <m>a_{n} = f_{n+1}</m>.
+</p>
+ </statement>
+</example>
+  
+<example xml:id="ex_recurrence_ternary-strings-no-20"><statement>
+<p>
+Let <m>t_n</m> count the number of ternary strings in which we never have
+<m>(2,0)</m> occuring as a substring in two consecutive positions. Now
+<m>t_1=3</m> and <m>t_2=8</m>, as of the <m>9</m> ternary strings of length<nbsp /><m>2</m>,
+exactly one of them is <q>bad.</q> Now consider the set of all good
+strings grouped according to the last character. If this character
+is a <m>2</m> or a <m>1</m>, then the preceding <m>n+1</m> characters can be any
+<q>good</q> string of length<nbsp /><m>n+1</m>. However, if the last character is
+a <m>0</m>, then the first <m>n+1</m> characters form a good string of length
+<nbsp /><m>n+1</m> which does not end in a<nbsp /><m>2</m>. The number of such strings is
+<m>t_{n+1} - t_n</m>. Accordingly, the recurrence is <m>t_{n+2} = 3t_{n+1}
+  - t_n</m>. In particular, <m>t_3 = 21</m>.
+</p>
+ </statement>
+</example>
+ </subsection> 
+<subsection xml:id="s_recurrence_intro_lines">
+<title>Lines and regions in the plane</title>
+<p>
+Our next example takes us back to one of the motivating problems
+discussed in <xref ref="ch_intro" autoname="yes" />. In <xref ref="fig_geomregions" autoname="yes" />, we
+show a family of <m>4</m> lines in the plane. Each pair of lines
+intersects and no point in the plane belongs to more than two lines.
+These lines determine<nbsp /><m>11</m> regions. We ask
+</p>
+  <figure xml:id="fig_geomregions" >
+<caption> Lines and Regions</caption>
+<image source="images/3012-fig9.png" /> <br /> </figure>
+ 
+<p>
+how many regions a family of <m>1000</m> lines would determine, given
+these same restrictions on how the lines intersect. More generally, let
+<m>r_n</m> denote the number of regions determined by <m>n</m> lines. Evidently,
+<m>r_1=2</m>, <m>r_2=4</m>, <m>r_3=7</m> and <m>r_4=11</m>. Now it is easy to see that
+we have the recurrence <m>r_{n+1} = r_n+n+1</m>. To see this, choose any
+one of the <m>n+1</m> lines and call it <m>l</m>. Line <m>l</m>
+intersects each of the other lines and since no point in the plane
+belongs to three or more lines, the points where <m>l</m> intersects
+the other lines are distinct. Label them consecutively as
+<m>x_1,x_2,\dots,x_n</m>. Then these points divide line <m>l</m> into
+<m>n+1</m> segments, two of which (first and last) are infinite. Each of
+these segments partitions one of the regions determined by the other
+<m>n</m> lines into two parts, meaning we have the <m>r_n</m> regions determined
+by the other <m>n</m> lines and <m>n+1</m> new regions that <m>l</m> creates.
+</p>
+ </subsection> </section>

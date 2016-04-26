@@ -1,0 +1,389 @@
+
+<section xml:id="s_induction_recursion">
+<title>Solving Combinatorial Problems Recursively</title><introduction>
+<p>
+In this section, we present examples of combinatorial problems for
+which solutions can be computed recursively. In
+<xref ref="ch_recurrence" autoname="yes" />, we return to these problems and obtain even
+more compact solutions. Our first problem is one discussed in our
+introductory chapter.
+</p>
+  
+<example><statement>
+<p>
+A family of <m>n</m> lines is drawn in the plane with (1)<nbsp />each pair of
+lines crossing and (2)<nbsp />no three lines crossing in the same point.
+Let <m>r(n)</m> denote the number of regions into which the plane is
+partitioned by these lines. Evidently, <m>r(1)=2</m>, <m>r(2)=4</m>, <m>r(3)=7</m>
+and <m>r(4)=11</m>. To determine <m>r(n)</m> for all positive integers, it is
+enough to note that <m>r(1)=1</m>, and when <m>n>1</m>, <m>r(n)=n+r(n-1)</m>. This
+formula follows from the observation that if we label the lines as
+<m>L_1</m>, <m>L_2, \dots, L_n</m>, then the <m>n-1</m> points on line <m>L_n</m> where
+it crosses the other lines in the family divide <m>L_n</m> into <m>n</m>
+segments, two of which are infinite. Each of these segments is
+associated with a region determined by the first <m>n-1</m> lines that
+has now been subdivided into two, giving us <m>n</m> more regions than
+were determined by <m>n-1</m> lines. This situation is illustrated in
+<xref ref="fig_induction_lines-regions" autoname="yes" />, where the line containing the
+three dots is <m>L_4</m>. The other lines divide it into four segments,
+which then divide larger regions to create regions <m>1</m> and <m>5</m>, <m>2</m>
+and <m>6</m>, <m>7</m> and <m>8</m>, and <m>4</m> and <m>9</m>.
+</p>
+  <figure xml:id="fig_induction_lines-regions" >
+<caption>Lines and regions in the plane</caption>
+<image source="images/lines-regions.png" /> </figure>
+ 
+<p>
+With the recursive formula, we thus have <m>r(5)=5+11=16</m>,
+<m>r(6)=6+16=22</m> and <m>r(7)=7+22=29</m>. Even by hand, it wouldn't be all
+that much trouble to calculate <m>r(100)</m>. We could do it before
+lunch.
+</p>
+ </statement>
+</example>
+  
+<example><statement>
+<p>
+A <m>2\times n</m> checkerboard will be tiled with rectangles of size
+<m>2\times1</m> and <m>1\times2</m>. Find a recursive formula for the number
+<m>t(n)</m> of tilings. Clearly, <m>t(1)=1</m> and <m>t(2)=2</m>. When <m>n>2</m>,
+consider the rectangle that covers the square in the upper right
+corner. If it is vertical, then preceding it, we have a tiling of
+the first <m>n-1</m> columns. If it is horizontal, then so is the
+rectangle immediately underneath it, and proceeding them is a tiling
+of the first <m>n-2</m> columns. This shows that <m>t(n)=t(n-1)+t(n-2)</m>.
+In particular, <m>t(3)=1+2=3</m>, <m>t(4)=2+3=5</m> and <m>t(5)= 3+5=8</m>.
+</p>
+ </statement>
+</example>
+  
+<p>
+Again, if compelled, we could get <m>t(100)</m> by hand, and a computer
+algebra system could get <m>t(1000)</m>.
+</p>
+  
+<example><statement>
+<p>
+Call a ternary string <em>good</em> if it never contains a <m>2</m>
+followed immediately by a <m>0</m>; otherwise, call it <em>bad</em>. Let
+<m>g(n)</m> be the number of good strings of length <m>n</m>. Obviously
+<m>g(1)=3</m>, since all strings of length <m>1</m> are good. Also, <m>g(2)=8</m>
+since the only bad string of length<nbsp /><m>2</m> is <m>(2,0)</m>. Now consider a
+value of <m>n</m> larger than<nbsp /><m>2</m>.
+</p>
+  
+<p>
+Partition the set of good strings of length<nbsp /><m>n</m> into three parts,
+according to the last character. Good strings ending in <m>1</m> can be
+preceded by any good string of length <m>n-1</m>, so there are <m>g(n-1)</m>
+such strings. The same applies for good strings ending in <m>2</m>. For
+good strings ending in <m>0</m>, however, we have to be more careful. We
+can precede the <m>0</m> by a good string of length<nbsp /><m>n-1</m> provided that
+the string does not end in <m>2</m>. There are <m>g(n-1)</m> good strings of
+length<nbsp /><m>n-1</m> and of these, exactly <m>g(n-2)</m> end in a<nbsp /><m>2</m>. Therefore
+there are <m>g(n-1)-g(n-2)</m> good strings of length<nbsp /><m>n</m> that end in
+a<nbsp /><m>0</m>. Hence the total number of good strings of length<nbsp /><m>n</m>
+satisfies the recursive formula <m>g(n) = 3g(n-1) - g(n-2)</m>. Thus
+<m>g(3) = 3\cdot8 -3= 21</m> and <m>g(4)= 3\cdot21-8= 55</m>.
+</p>
+ </statement>
+</example>
+  
+<p>
+Once more, <m>g(100)</m> is doable by hand, while even a modest computer can be
+coaxed into giving us <m>g(5000)</m>.
+</p>
+ </introduction> 
+<subsection xml:id="s_induction_gcd">
+<title>Finding Greatest Common Divisors</title>
+<p>
+There is more meat than you might think to the following elementary
+theorem, which seems to simply state a fact that you've known since
+second grade.
+</p>
+  
+<theorem xml:id="thm_division"><title>Division Theorem</title>
+<statement>
+<p>
+Let <m>m</m> and <m>n</m> be positive integers. Then there exist
+unique integers <m>q</m> and <m>r</m> so that
+</p>
+  
+<me>
+
+m = q\cdot n+r\quad\text{and} \quad 0 \le r \lt  n.
+
+</me>
+ 
+<p>
+We call <m>q</m> the <em>quotient</em> and <m>r</m> the <em>remainder</em>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+We settle the claim for existence. The uniqueness part is
+just high-school algebra. If the theorem fails to hold, then
+let <m>t</m> be the least positive integer for which there are
+integers <m>m</m> and <m>n</m> with <m>m+n=t</m>, but there
+do not exist integers <m>q</m> and <m>r</m> with <m>m=qn+r</m> and <m>0\le r\lt n</m>.
+</p>
+  
+<p>
+First, we note that <m>n\neq 1</m>, for if <m>n=1</m>, then we could take
+<m>q=m</m> and <m>r=0</m>. Also, we cannot have <m>m=1</m>, for if <m>m=1</m>, then
+we can take <m>q=0</m> and <m>r=1</m>. Now the statement holds for the
+pair <m>m-1</m>, <m>n</m> so there are integers <m>q</m> and <m>r</m> so that
+</p>
+  
+<me>
+
+m-1 = q\cdot n+r\quad\text{and} \quad 0 \le r \lt  n.
+
+</me>
+ 
+<p>
+Since <m>r\lt n</m>, we know that <m>r+1\le n</m>. If <m>r+1\lt n</m>, then
+</p>
+  
+<me>
+
+m = q\cdot n+(r+1)\quad\text{and} \quad 0 \le r+1 \lt  n.
+
+</me>
+ 
+<p>
+On the other hand, if <m>r+1=n</m>, then
+</p>
+  
+<me>
+
+m = q\cdot n+(r+1)=nq+n=(q+1)n=(q+1)n+0.
+
+</me>
+ 
+<p>
+The contradiction completes the proof.
+</p>
+ 
+</proof>
+  
+<p>
+Recall that an integer <m>n</m> is a <em>divisor</em> of an integer <m>m</m> if
+there is an integer <m>q</m> such that <m>m=qn</m>. (We write <m>n\mid m</m> and read
+<q><m>n</m> divides <m>m</m></q>.) An integer <m>d</m> is a <em>common divisor</em> of
+integers <m>m</m> and <m>n</m> if <m>d</m> is a divisor of both <m>m</m> and <m>n</m>. The
+<em>greatest common divisor</em> of <m>m</m> and <m>n</m>, written <m>\gcd(m,n)</m>, is
+the largest of all the common divisors of <m>m</m> and <m>n</m>.
+</p>
+  
+<p>
+Here's a particularly elegant application of the preceding basic
+theorem:
+</p>
+  
+<theorem xml:id="thm_euclideanalg"><title>Euclidean Algorithm</title>
+<statement>
+<p>
+Let <m>m,n</m> be positive integers and let <m>q</m> and <m>r</m> be
+the unique integers for which
+</p>
+  
+<me>
+
+m = q\cdot n+r\quad\text{and} \quad 0 \le r \lt  n.
+
+</me>
+ 
+<p>
+If <m>r>0</m>, then <m>\gcd(m,n)=\gcd(n,r)</m>.
+</p>
+ </statement>
+</theorem>
+  
+<proof>
+
+<p>
+Consider the expression <m>m=q\cdot n+r</m>, which is equivalent to
+<m>m-q\cdot n = r</m>. If a number <m>d</m> is a divisor
+of <m>m</m> and <m>n</m>, then <m>d</m> must also divide <m>r</m>. Similarly, if <m>d</m> is
+a divisor of <m>n</m> and <m>r</m>, then <m>d</m> must also divide <m>m</m>.
+</p>
+ 
+</proof>
+  
+<p>
+Here is a code snippet that computes the greatest common divisor of
+<m>m</m> and <m>n</m> when <m>m</m> and <m>n</m> are positive integers with <m>m\ge n</m>. We
+use the familiar notation <m>m\%n</m> to denote the remainder <m>r</m> in the
+expression <m>m=q\cdot n+r</m>, with <m>0\le r \lt  n</m>.
+</p>
+  
+<p>
+\begin{tt}
+</p>
+  
+<p>
+int gcd(int m, int n) \{<br />
+\mbox{} if (m<percent />n == 0) return n;<br />
+\mbox{} else return gcd(n, m<percent />n);<br />
+\}<br />
+\end{tt}
+</p>
+  
+<p>
+The disadvantage of this approach is the somewhat wasteful
+use of memory due to recursive function calls. It is not difficult to
+develop code for computing the greatest common divisor of <m>m</m> and <m>n</m>
+using only a loop, i.e., there are no recursive calls. With minimal
+extra work, such code can also be designed to solve the following
+diophantine equation problem:
+</p>
+  
+<theorem xml:id="thm_gcd-dioph"><statement>
+<p>
+Let <m>m</m>, <m>n</m>, and <m>c</m> be positive integers. Then there exist
+integers <m>a</m> and <m>b</m>, not necessarily non-negative, so that
+<m>am+bn=c</m> if and only if <m>c</m> is a multiple of the greatest common
+divisor of <m>m</m> and <m>n</m>.
+</p>
+ </statement>
+</theorem>
+  
+<p>
+Let's see how the Euclidean algorithm can be used to write <m>\gcd(m,n)</m>
+in the form <m>am+bn</m> with <m>a,b\in\ints</m> with the following example.
+</p>
+  
+<example><statement>
+<p>
+Find the greatest common divisor <m>d</m> of <m>3920</m> and <m>252</m> and find
+integers <m>a</m> and <m>b</m> such that <m>d=3920a+252b</m>.
+</p>
+  
+<p>
+In solving the problem, we demonstrate how to perform the Euclidean
+algorithm so that we can find <m>a</m> and <m>b</m> by working
+backward. First, we note that
+</p>
+  
+<me>
+3920 = 15\cdot 252 + 140.
+</me>
+ 
+<p>
+Now the Euclidean algorithm tells us that
+<m>\gcd(3920,252)=\gcd(252,140)</m>, so we write
+</p>
+  
+<me>
+252 = 1\cdot 140 + 112.
+</me>
+ 
+<p>
+Continuing, we have <m>140= 1\cdot 112 + 28</m> and <m>112 = 4\cdot 28+0</m>,
+so <m>d=28</m>.
+</p>
+  
+<p>
+To find <m>a</m> and <m>b</m>, we now work backward through the equations we
+found earlier, <q>solving</q> them for the remainder term and then
+substituting. We begin with
+</p>
+  
+<me>
+28 = 140-1\cdot 112.
+</me>
+ 
+<p>
+But we know that <m>112=252-1\cdot 140</m>, so
+</p>
+  
+<me>
+28=140-1(252-1\cdot 140) = 2\cdot 140 - 1\cdot 252.
+</me>
+ 
+<p>
+Finally, <m>140 = 3920-15\cdot 252</m>, so now we have
+</p>
+  
+<me>
+28= 2(3920-15\cdot 252) - 1\cdot 252 = 2\cdot 3920-31\cdot 252.
+</me>
+ 
+<p>
+Therefore <m>a=2</m> and <m>b=-31</m>.
+</p>
+ </statement>
+</example>
+ </subsection> 
+<subsection>
+<title>Sorting</title>
+<p>
+One of the most common and most basic computing problems is sorting:
+Given a sequence <m>a_1,a_2,\dots,a_n</m> of <m>n</m> distinct integers,
+rearrange them so that they are in increasing order. We describe
+here an easy recursive strategry for accomplishing this task. This
+strategy is known as <em>Merge Sort</em>, and it is one of several
+optimal algorithms for sorting. Introductory computer science
+courses treat this topic in greater depth. In our course, we simply
+need some good strategy and merge sort works fine for our purposes.
+</p>
+  
+<p>
+To present merge sort, must first develop a strategy for solving a
+special case of the sorting problem.
+Suppose we have two <m>s+t</m> distinct integers
+<m>\{u_1,u_2,\dots,u_s,v_1,v_2,\dots,v_t\}</m> with <m>u_1\lt u_2\lt \dots\lt u_s</m>
+and <m>v_1\lt v_2\lt \dots\lt v_t</m>. How do we <em>merge</em> these two sequences
+into a single increasing sequence of length <m>s+t</m>.
+Imagine the two sequences placed on two horizontal lines, one immediately
+under the other. Then let <m>u</m> be the least integer in the first
+sequence and <m>v</m> the least integer in the second. At the moment,
+this implies that <m>u=u_1</m> and <m>v=v_1</m>, but integers will be deleted
+from the two sequences as the process is carried out. Regardless, the
+meaning of <m>u</m> and <m>v</m> will be preserved. Also, set <m>n=1</m>.
+Then take <m>a_n</m> as the minimum of <m>u</m> and <m>v</m> and delete <m>a_n</m> from
+the sequence in which it occurs. Then increase <m>n</m> by <m>1</m> and
+repeat. Here is a code snippet for accomplishing a merge operation,
+with <m>u_p</m> now written as <m>u[p]</m>.
+</p>
+  
+<p>
+\begin{tt}
+</p>
+  
+<p>
+p = q = 1;
+for (i = 1; i \lt  s+t+1; i++) \{<br />
+a[i] = min(u[p], v[q]);<br />
+if (min(u[p], v[q])==u[p]) p = p+1;<br />
+<nbsp /><nbsp /> else q = q+1;<br />
+\}<br />
+\end{tt}
+</p>
+  
+<p>
+Now that we have a good strategy for merging, it is easy to
+develop a recursive strategy for sorting. Given a sequence
+<m>a_1,a_2,\dots,a_n</m> of <m>n</m> distinct integers, we set <m>s=\lceil n/2\rceil</m>
+and <m>t=\lfloor n/2\rfloor</m>. Then let <m>u_i=a_i</m> for <m>i=1,2,\dots,s</m> and
+<m>v_j=a_{s+j}</m>, for <m>j=1,2,\dots,t</m>. Sort the two subsequences
+and then merge them. For a concrete example, given the
+sequence <m>(2,8,5,9,3,7,4,1,6)</m>, we split into <m>(2,8,5,9,3)</m> and
+<m>(7,4,1,6)</m>. These subsequences are sorted (by a recursive call)
+into <m>(2,3,5,8,9)</m> and <m>(1,4,6,7)</m>, and then these two sorted
+sequences are merged.
+</p>
+  
+<p>
+For running time, if <m>S(n)</m> is the number of operations it takes
+to sort a sequence of <m>n</m> distinct integers, then <m>S(2n)\le2 S(n) + 2n</m>,
+since it clearly takes <m>2n</m> steps to merge two sorted sequences
+of length <m>n</m>. This leads to the bound <m>S(n) = O(n\log n)</m>,
+and in computer science courses, you will learn (here it is an
+exercise) that this is optimal.
+</p>
+ </subsection> </section>

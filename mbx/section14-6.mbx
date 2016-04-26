@@ -1,0 +1,195 @@
+
+<section>
+<title>Exercises</title><ol><li>For the graph in <xref ref="fig_span_tree_ex1" autoname="yes" />, use Kruskal's
+  algorithm (<q>avoid cycles</q>) to find a minimum weight spanning
+  tree. Your answer should include a complete list of the edges,
+  indicating which edges you take for your tree and which (if any) you
+  reject in the course of running the algorithm.
+  <figure xml:id="fig_span_tree_ex1" >
+<caption>Find a minimum weight spanning tree</caption>
+<image source="images/span_tree_ex1.png" /> </figure>
+</li>
+<li>For the graph in <xref ref="fig_span_tree_ex1" autoname="yes" />, use Prim's
+  algorithm (<q>build tree</q>) to find a minimum weight spanning
+  tree. Your answer should list the edges selected by the algorithm in
+  the order they were selected.</li>
+<li>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes" />, use Kruskal's
+  algorithm (<q>avoid cycles</q>) to find a minimum weight spanning
+  tree. Your answer should include a complete list of the edges,
+  indicating which edges you take for your tree and which (if any) you
+  reject in the course of running the algorithm.
+  <figure xml:id="fig_span_tree_ex2" >
+<caption>Find a minimum weight spanning tree</caption>
+<image source="images/span_tree_ex2.png" /> </figure>
+</li>
+<li>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes" />, use Prim's
+  algorithm (<q>build tree</q>) to find a minimum weight spanning
+  tree. Your answer should list the edges selected by the algorithm in
+  the order they were selected.</li>
+<li>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes" />, use Kruskal's
+  algorithm (<q>avoid cycles</q>) to find a minimum weight spanning
+  tree. Your answer should include a complete list of the edges,
+  indicating which edges you take for your tree and which (if any) you
+  reject in the course of running the algorithm.
+  <figure xml:id="fig_span_tree_ex3" >
+<caption>Find a minimum weight spanning tree</caption>
+<image source="images/span_tree_ex3.png" /> </figure>
+</li>
+<li>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes" />, use Prim's
+  algorithm (<q>build tree</q>) to find a minimum weight spanning
+  tree. Your answer should list the edges selected by the algorithm in
+  the order they were selected.</li>
+<li>A new local bank is being created and will establish a
+  headquarters <m>h</m>, two branches <m>b_1</m> and <m>b_2</m>, and four ATMs <m>a_1</m>,
+  <m>a_2</m>, <m>a_3</m>, and <m>a_4</m>. They need to build a computer network such
+  that the headquarters, branches, and ATMs can all
+  intercommunicate. Furthermore, they will need to be networked with
+  the Federal Reserve Bank of Atlanta, <m>f</m>. The costs of the feasible
+  network connections (in units of <dollar />10,000) are listed below:
+  
+<md><mrow>h f \amp  \quad 80 \amp 
+    h b_1 \amp  \quad 10</mrow>
+ <mrow>h b_2 \amp  \quad 20\amp 
+    b_1 b_2 \amp  \quad 8</mrow>
+ <mrow>f b_1 \amp  \quad 12\amp 
+    f a_1 \amp  \quad 20</mrow>
+ <mrow>b_1 a_1 \amp  \quad 3\amp 
+    a_1 a_2 \amp  \quad 13</mrow>
+ <mrow>h a_2 \amp  \quad 6\amp 
+    b_2 a_2 \amp  \quad 9</mrow>
+ <mrow>b_2 a_3 \amp  \quad 40\amp 
+    a_1 a_4 \amp  \quad 3</mrow>
+ <mrow>a_3 a_4 \amp \quad 6</mrow>
+ 
+</md>
+ 
+  The bank wishes to minimize the cost of building its network (which
+  must allow for connection, possibly routed through other nodes, from
+  each node to each other node), however due to the need for
+  high-speed communication, they <b>must</b> pay to build the
+  connection from <m>h</m> to <m>f</m> as well as the connection from <m>b_2</m> to
+  <m>a_3</m>. Give a list of the connections the bank should establish in
+  order to minimize their total cost, subject to this constraint. Be
+  sure to explain how you selected the connections and how you know
+  the total cost is minimized.</li>
+<li>A disconnected weighted graph obviously has no spanning
+  trees. However, it is possible to find a spanning forest of minimum
+  weight in such a graph. Explain how to modify both Kruskal's
+  algorithm and Prim's algorithm to do this.</li>
+<li>Prove
+  <xref ref="prop_graphalgorithms_spanforest">Proposition</xref>.</li>
+<li>In the paper where Kruskal's algorithm first appeared, he
+  considered the algorithm a route to a nicer proof that in a
+  connected weighted graph with no two edges having the same weight,
+  there is a <em>unique</em> minimum weight spanning tree. Prove this
+  fact using Kruskal's algorithm.</li>
+<li>Use Dijkstra's algorithm to find the distance from <m>a</m> to each
+  other vertex in the digraph shown in
+  <xref ref="fig_graphalgorithms_dijkstra_ex1" autoname="yes" /> and a directed path of
+  that length.
+  <figure xml:id="fig_graphalgorithms_dijkstra_ex1" >
+<caption>A directed graph</caption>
+<image source="images/dijkstra_ex1.png" /> </figure>
+  
+
+\begin{minipage}{0.5\textwidth}</li>
+<li>The table to the right contains the length of the directed edge
+  <m>(x,y)</m> in the intersection of <b>row</b> <m>x</m> and <b>column</b>
+  <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
+  <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and
+  Dijkstra's algorithm to find the distance from <m>a</m> to each of the
+  other vertices and a directed path of that length from <m>a</m>.
+\end{minipage}<div class="minipage">{0.45\textwidth}
+<table id="ae2174cf669c5ff2aff5b6d9311e40640d91d32f" ><tr><td class='hline' colspan='8'><hr /></td></tr>
+<tr><td class='vcv'>
+  <m>w</m> \amp   <m>a</m> \amp   <m>b</m> \amp   <m>c</m> \amp   <m>d</m> \amp   <m>e</m> \amp   <m>f</m> </td></tr>
+<tr><td class='hline' colspan='8'><hr /></td></tr>
+<tr><td class='vcv'> 
+  <m>a</m> \amp   0 \amp  12 \amp  8 \amp  43 \amp  79 \amp  35 </td></tr>
+<tr><td class='hline' colspan='8'><hr /></td></tr>
+<tr><td class='vcv'> 
+  <m>b</m> \amp  93 \amp   0 \amp  18 \amp  21 \amp  60 \amp  33  </td></tr>
+<tr><td class='hline' colspan='8'><hr /></td></tr>
+<tr><td class='vcv'> 
+  <m>c</m> \amp  17 \amp  3 \amp   0 \amp  37 \amp  50  \amp  30 </td></tr>
+<tr><td class='hline' colspan='8'><hr /></td></tr>
+<tr><td class='vcv'> 
+  <m>d</m> \amp  85 \amp  10 \amp  91 \amp   0 \amp  17  \amp  7 </td></tr>
+<tr><td class='hline' colspan='8'><hr /></td></tr>
+<tr><td class='vcv'> 
+  <m>e</m> \amp  28 \amp  47 \amp  39 \amp  14  \amp   0 \amp  108 </td></tr>
+<tr><td class='hline' colspan='8'><hr /></td></tr>
+<tr><td class='vcv'> 
+  <m>f</m> \amp  31 \amp  7  \amp  29 \amp  73 \amp  20 \amp   0 </td></tr>
+<tr><td class='hline' colspan='8'><hr /></td></tr>
+
+</table></div></li>
+<li>Use Dijkstra's algorithm to find the distance from <m>a</m> to each
+  other vertex in the digraph shown in
+  <xref ref="fig_graphalgorithms_dijkstra_ex2" autoname="yes" /> and a directed path of
+  that length.
+  <figure xml:id="fig_graphalgorithms_dijkstra_ex2" >
+<caption>A directed graph</caption>
+<image source="images/dijkstra_ex2.png" /> </figure>
+ 
+
+\begin{minipage}{0.5\textwidth}</li>
+<li>The table to the right contains the length of the directed edge
+  <m>(x,y)</m> in the intersection of <b>row</b> <m>x</m> and <b>column</b>
+  <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
+  <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and
+  Dijkstra's algorithm to find the distance from <m>a</m> to each of the
+  other vertices and a directed path of that length from <m>a</m>.
+\end{minipage}<div class="minipage">{0.45\textwidth}
+    <table id="1d7c0c3d6ba6c241c7600d5743fa9bb6003b1089" ><tr><td class='hline' colspan='7'><hr /></td></tr>
+<tr><td class='vcv'>
+      <m>w</m> \amp  <m>a</m> \amp  <m>b</m> \amp  <m>c</m> \amp  <m>d</m> \amp  <m>e</m> \amp  <m>f</m></td></tr>
+<tr><td class='hline' colspan='7'><hr /></td></tr>
+<tr><td class='vcv'>
+      <m>a</m> \amp  0 \amp  7 \amp  17 \amp  55 \amp  83 \amp  42</td></tr>
+<tr><td class='hline' colspan='7'><hr /></td></tr>
+<tr><td class='vcv'>
+      <m>b</m> \amp  14 \amp  0 \amp  13 \amp  47 \amp  27 \amp  17</td></tr>
+<tr><td class='hline' colspan='7'><hr /></td></tr>
+<tr><td class='vcv'>
+      <m>c</m> \amp  37 \amp  42 \amp  0 \amp  16 \amp  93 \amp  28</td></tr>
+<tr><td class='hline' colspan='7'><hr /></td></tr>
+<tr><td class='vcv'>
+      <m>d</m> \amp  10 \amp  6 \amp  8 \amp  0 \amp  4 \amp  32</td></tr>
+<tr><td class='hline' colspan='7'><hr /></td></tr>
+<tr><td class='vcv'>
+      <m>e</m> \amp  84 \amp  19 \amp  42 \amp  8 \amp  0 \amp  45</td></tr>
+<tr><td class='hline' colspan='7'><hr /></td></tr>
+<tr><td class='vcv'>
+      <m>f</m> \amp  36 \amp  3 \amp  76 \amp  5 \amp  17 \amp  0</td></tr>
+<tr><td class='hline' colspan='7'><hr /></td></tr>
+
+</table></div></li>
+<li>Give an example of a digraph having an <em>undirected</em> path
+  between each pair of vertices, but having a root vertex <m>r</m> so that
+  Dijkstra's algorithm cannot find a path of finite length from <m>r</m> to some
+  vertex <m>x</m>.</li>
+<li>Notice that in our discussion of Dijkstra's algorithm, we
+  required that the edge weights be nonnegative. If the edge weights
+  are lengths and meant to model distance, this makes perfect
+  sense. However, in some cases, it might be reasonable to allow
+  negative edge weights. For example, suppose that a positive weight
+  means there is a cost to travel along the directed edge while a
+  negative edge weight means that you make money for traveling along
+  the directed edge. In this case, a directed path with positive total
+  weight results in paying out to travel it, while one with negative
+  total weight results in a profit.
+  <ol><li>Give an example to show that Dijkstra's algorithm does not
+    always find the path of minimum total weight when negative edge
+    weights are allowed.</li>
+<li>Bob and Xing are considering this situation, and Bob suggests
+    that a little modification to the algorithm should solve the
+    problem. He says that if there are negative weights, they just
+    have to find the smallest (i.e., most negative weight) and add the
+    absolute value of that weight to every directed edge. For example, if
+    <m>w(x,y)\geq -10</m> for every directed edge <m>(x,y)</m>, Bob is
+    suggesting that they add <m>10</m> to every edge weight. Xing is
+    skeptical, and for good reason. Give an example to show why Bob's
+    modification won't work.</li>
+ </ol> </li>
+ </ol>  </section>

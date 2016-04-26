@@ -1,0 +1,54 @@
+
+<section xml:id="s_size">
+<title>Small Ramsey Numbers</title>
+<p>
+Actually determing the Ramsey numbers <m>R(m,n)</m> referenced in <xref ref="thm_graphramsey" autoname="yes" />
+seems to be a notoriously difficult problem, and only a handful of these
+values are known precisely. In particular, <m>R(3,3)=6</m> and <m>R(4,4)=18</m>, while
+<m>43\le R(5,5)\le 49</m>. The distinguished Hungarian mathematician
+Paul Erd&#xf6;s said on many occasions that it might be possible
+to determine <m>R(5,5)</m> exactly, if all the world's mathematical
+talent were to be focused on the problem. But he also said that
+finding the exact value of <m>R(6,6)</m> might be beyond our collective
+abilities.
+</p>
+  
+<p>
+In the following table, we provide information about
+the ramsey numbers <m>R(m,n)</m> when <m>m</m> and <m>n</m> are at least <m>3</m> and at
+most <m>9</m>. When a cell contains a single number, that
+is the precise answer. When there are two numbers, they
+represent upper and lower bounds.
+</p>
+  <table id="6ecdca6223ccbd7eb9ad6ca03d6cb1ccc26448eb" ><tr><td class='hlinethick' colspan='10'><hr /></td></tr>
+
+<tr><td  class='v|' >
+\amp n\amp 3\amp 4\amp 5\amp 6\amp 7\amp 8\amp 9</td></tr>
+<tr><td class='v|'>
+m\amp \amp \amp \amp \amp \amp \amp \amp </td></tr>
+<tr><td class='hlinethick' colspan='10'><hr /></td></tr>
+
+<tr><td  class='v|' >
+3\amp \amp 6\amp 9\amp 14\amp 18\amp 23\amp 36\amp 39</td></tr>
+<tr><td class='v|'>
+4\amp \amp \amp 18\amp 25\amp 35, 41\amp 49, 61\amp 56, 84\amp 69, 115</td></tr>
+<tr><td class='v|'>
+5\amp \amp \amp \amp 43, 49\amp 58, 87\amp 80, 143\amp 95, 216\amp 121, 316</td></tr>
+<tr><td class='v|'>
+6\amp \amp \amp \amp \amp 102, 165\amp 111, 298\amp 127, 495\amp 153, 780</td></tr>
+<tr><td class='v|'>
+7\amp \amp \amp \amp \amp \amp 205, 540\amp 216, 1031\amp 216, 1713</td></tr>
+<tr><td class='v|'>
+8\amp \amp \amp \amp \amp \amp \amp 282, 1870\amp 282, 3583</td></tr>
+<tr><td class='v|'>
+9\amp \amp \amp \amp \amp \amp \amp \amp 565, 6588</td></tr>
+<tr><td class='hlinethick' colspan='10'><hr /></td></tr>
+
+<tr><td  class='v|' ></td></tr>
+</table>  
+<p>
+For additional data, do a web search and look for
+Stanley Radziszowski, who maintains the most current information
+on his web site.
+</p>
+ </section>

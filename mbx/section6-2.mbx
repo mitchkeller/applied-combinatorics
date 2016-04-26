@@ -1,0 +1,189 @@
+
+<section>
+<title>An Introduction to Complexity Theory</title><introduction><paragraphs><title>Discussion</title>
+<p>
+Bob says that he's really getting to like this combinatorial
+mathematics stuff. The concrete nature of the subject is appealing.
+But he's not sure that he understands the algorithmic component.
+Sometimes he sees how one might actually compute the answer to a
+problem&#8202;&#x2014;&#8202;provided he had access to a powerful computer. At other
+times, it seems that a computational approach might be out of
+reach, even with the world's best and fastest computers at ready
+access. Carlos says it can be much worse than that. There are
+easily stateable problems that no one knows how to attack even
+if all the world's computational power is used in concert. And there's nothing on the
+horizon that will change that. In fact, build faster computers and
+you just change the threshold for what is computable. There will still
+be easily understood problems that will remain unresolved.
+</p>
+ </paragraphs> </introduction> 
+<subsection>
+<title>Three Questions</title>
+<p>
+We consider three problems with a common starting point. You are
+given<fn>The particulars of how the set is given to you
+aren't important to the discussion.  For example, the data could be given
+as a text file, with one number on each line.</fn> a set <m>S</m> of
+<m>10,000</m> distinct positive integers, each at most
+<m>100,000</m>, and then asked the following questions.
+</p>
+  <ol><li>Is <m>83,172</m> one of the integers in the set <m>S</m>?</li>
+<li>Are there three integers in <m>S</m> whose sum is <m>143,297</m>?</li>
+<li>Can the set <m>S</m> be partitioned as <m>S=A\cup B</m> with
+<m>A\cap B=\emptyset</m>, so that <m>\sum_{a\in A}a=\sum_{b\in B}b</m>.</li>
+ </ol>   
+<p>
+The first of the three problems sounds easy, and it is. You just consider
+the numbers in the set one by one and test to see if any of them is
+<m>83,172</m>. You can stop if you ever find this number and
+report that the answer is yes. If you return a no answer, then you
+will have to have read every number in the list. Either way, you halt
+with a correct answer to the question having done at most <m>10,000</m>
+tests, and even the most modest netbook can do this in a heartbeat.
+And if the list is expanded to <m>1,000,000</m> integers, all at most
+a billion, you can still do it easily. More generally, if you're
+given a set <m>S</m> of <m>n</m> numbers and an integer <m>x</m> with the question
+<q>Is <m>x</m> a member of <m>S</m>?</q>, you can answer this question in
+<m>n</m> steps, with each step an operation of testing a number in <m>S</m>
+to see if it is exactly equal to <m>n</m>. So the running time of this
+algorithm is proportional to <m>n</m>, with the constant depending on
+the amount of time it takes a computer to perform the basic operation
+of asking whether a particular integer is equal to the target value.
+</p>
+  
+<p>
+The second of the three problems is a bit more challenging. Now it seems
+that we must consider the <m>3</m>-element subsets of a set of size <m>10,000</m>.
+There are <m>C(10,000,3)</m> such sets. On the one hand, testing three
+numbers to see if their sum is <m>143,297</m> is very easy, but there are lots
+and lots of sets to test. Note that <m>C(10,000,3)=166,616,670,000</m>, and not
+too many computers will handle this many operations. Moreover, if the
+list is expanded to a million numbers, then we have more than <m>10^{17}</m>
+triples to test, and that's off the table with today's hardware.
+</p>
+  
+<p>
+Nevertheless, we can consider the general case. We are given a set <m>S</m> of <m>n</m>
+integers and a number <m>x</m>. Then we are asked whether there are
+three integers in <m>S</m> whose sum is <m>x</m>. The algorithm we have
+described would have running time proportional to <m>n^3</m>, where the constant
+of proportionality depends on the time it takes to test a triple of
+numbers to see if there sum is <m>x</m>. Of course, this depends in turn
+on just how large the integer <m>x</m> and the integers in <m>S</m> can be.
+</p>
+  
+<p>
+The third of the three problems is different. First, it seems to be much harder.
+There are <m>2^{n-1}</m> complementary pairs of subsets of a set of size<nbsp /><m>n</m>,
+and one of these involves the emptyset and the entire set. But that
+leaves <m>2^{n-1}-1</m> pairs to test. Each of these tests is not all that
+tough. A netbook can easily report whether a two subsets have the
+same sum, even when the two sets form a partition of a set of size
+<m>10,000</m>, but there are approximately <m>10^{3000}</m> partitions to test
+and no piece of hardware on the planet will touch that assignment.
+And if we go up to a set of size <m>1,000,000</m>, then the combined computing
+power of all the machines on earth won't get the job done.
+</p>
+  
+<p>
+In this setting, we have an algorithm, namely testing all partitions,
+but it is totally unworkable for <m>n</m> element sets when <m>n</m> is large since
+it has running time proportional to <m>2^n</m>.
+</p>
+ </subsection> 
+<subsection>
+<title>Certificates</title>
+<p>
+Each of the three problems we have posed is in the form of a
+<q>yes/no</q> question. A <q>yes</q> answer to any of the three can be justified
+by providing a certificate. For example, if you answer the first
+question with a yes, then you might provide the additional information
+that you will find <m>83,172</m> as the integer on line <m>584</m> in the input
+file. Of course, you could also provide the source code for the
+computer program, and let a referee run the entire procedure.
+</p>
+  
+<p>
+Similarly, if you answer the second question with a yes,
+then you could specify the three numbers and specify where in
+the input file they are located. An impartial referee could then
+verify, if it mattered, that the sum of the three integers was
+really <m>143,297</m> and that they were located at the specified places
+in the input file. Alternatively, you could again provide the source
+code which would require the referee to test all triples and
+verify that there is one that works.
+</p>
+  
+<p>
+Likewise, a yes for the third question admits a modest size
+certificate. You need only specify the elements of the subset <m>A</m>.
+The referee, who is equipped with a computer, can (a)<nbsp />check to see that
+all numbers in <m>A</m> belong to <m>S</m>; (b)<nbsp />form a list of the subset <m>B</m> consisting
+of those integers in <m>S</m> that do not belong to <m>A</m>; and (c)<nbsp />compute
+the sums of the integers in <m>A</m> and the integers in <m>B</m> and verify that
+the two sums are equal. But in this case, you would not provide
+source code for the algorithm, as there does not appear (at least nothing
+in our discussion thus far provides one) to be a reasonable strategy
+for deciding this problem when the problem size is large.
+</p>
+  
+<p>
+Now let's consider the situation with a <q>no</q> answer. When the answer
+to the first question is no, the certificate can again be a computer program
+that will enable the referee to consider all the elements of <m>S</m> and
+be satisfied that the number in question is not present. A similar
+remark holds for the second question, i.e., the program is the certificate.
+</p>
+  
+<p>
+But the situation with the third question is again very different.
+Now we can't say to the referee <q>We checked all the possibilities and
+none of them worked.</q> This could not possibly be a true statement.
+And we have no computer program that can be run by us or by the
+referee. The best we could say is that we tried to find a suitable partition
+and were unable to do so. As a result, we don't know what the correct answer
+to the question actually is.
+</p>
+ </subsection> 
+<subsection>
+<title>Operations</title>
+<p>
+Many of the algorithms we develop in this book, as well as many of
+the computer programs that result from these algorithms involve
+basic steps that are called <em>operations</em>. The meaning of
+the word operation is intentionally left as an imprecise notion.
+An operation might be just comparing two integers to see if they
+are equal; it might be updating the value of a variable <m>x</m> and
+replacing it by <m>x^2-3x+7</m>; and it might be checking whether two
+set sums are equal. In the third instance, we would typically
+limit the size of the two subsets as well as the integers in them.
+As a comsequence, we want to be able to say that there is some
+constant <m>c</m> so that an operation can be carried out in time
+at most <m>c</m> on a computer. Different computers yield different
+values of <m>c</m>, but that is a discrepancy which we can safely ignore.
+</p>
+ </subsection> 
+<subsection>
+<title>Input Size</title>
+<p>
+Problems come in various sizes. The three problems we have discussed
+in this chapter have the same input size. Roughly speaking this
+size is <m>10,000</m> blocks, with each block able to hold an integer
+of size at most <m>100,000</m>. In this text, we will say that the
+input size of this problem is <m>n=10,000</m>, and in some sense ignoring
+the question of the size of the integers in the set. There are
+obvious limitations to this approach. We could be given a set <m>S</m>
+of size<nbsp /><m>1</m> and a candidate element <m>x</m> and be asked whether <m>x</m> belongs
+to <m>S</m>. Now suppose that <m>x</m> is a bit string the size of a typical
+compact disk, i.e., some <m>700</m> megabytes in length. Just reading the single
+entry in <m>S</m> to see if it's exactly <m>x</m> will take some time.
+</p>
+  
+<p>
+In a similar vein, consider the problem of determing whether a file
+<m>x</m> is located anywhere in the directory structure under <m>y</m> in
+a unix file system. If you go on the basis of name only, then
+this may be relatively easy. But what if you want to be sure that an exact copy
+of <m>x</m> is present. Now it is much more challenging.
+</p>
+ </subsection> </section>

@@ -1,0 +1,233 @@
+
+<section xml:id="s_posets_intro">
+<title>Basic Notation and Terminology</title>
+<p>
+A <em>partially ordered set</em> or <em>poset</em> <m>\bfP</m> is a pair
+<m>(X,P)</m> where <m>X</m> is a set and <m>P</m> is a reflexive, antisymmetric, and
+transitive binary relation on <m>X</m>. (Refer to <xref ref="s_order" autoname="yes" /> for a
+refresher of what these properties are if you need to.) We call <m>X</m>
+the <em>ground set</em> while <m>P</m> is a <em>partial order</em> on
+<m>X</m>. Elements of the ground set <m>X</m> are also called <em>points</em>,
+and the poset <m>\bfP</m> is <em>finite</em> if its ground set <m>X</m> is a
+finite set.
+</p>
+  
+<example xml:id="exa_binaryrel"><statement>
+<p>
+Let <m>X=\{a,b,c,d,e,f\}</m> and consider the following binary relations
+on <m>X</m>.
+</p>
+  <ol><li><m>R_1=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(a,b),(a,c),(e,f)\}</m>.</li>
+<li><m>R_2=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(d,b),(d,e),(b,a),(e,a),</m><br />
+ <m>(d,a),(d,e),(c,f)\}</m>.</li>
+<li><m>R_3=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(a,c),(a,e),(a,f),(b,c),</m><br />
+ <m>(b,d),(b,e),(b,f),(d,e),(d,f),(e,f)\}</m>.</li>
+<li><m>R_4=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(d,b),(b,a),(e,a),(c,f)\}</m>.</li>
+<li><m>R_5=\{(a,a),(c,c),(d,d),(e,e),(a,e),(c,a),(c,e),(d,e)\}</m>.</li>
+<li><m>R_6=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(d,f),(b,e),(c,a),(e,b)\}</m>.</li>
+ </ol>  
+<p>
+Then <m>R_1</m>, <m>R_2</m> and <m>R_3</m> are partial orders on <m>X</m>, so <m>\bfP_1=(X,R_1)</m>,
+<m>\bfP_2=(X,R_2)</m> and <m>\bfP_3=(X,R_3)</m> are posets. Several of the other examples
+we will discuss in this chapter will use the poset <m>\bfP_3=(X,R_3)</m>.
+</p>
+  
+<p>
+On the other hand, <m>R_4</m>, <m>R_5</m> and <m>R_6</m> are not partial orders on
+<m>X</m>. Note that <m>R_4</m> is not transitive, as it contains <m>(d,b)</m> and
+<m>(b,a)</m> but not <m>(d,a)</m>. The relation <m>R_5</m> is not reflexive, since
+it doesn't contain <m>(b,b)</m>. (Also, it also doesn't contain <m>(f,f)</m>,
+but one shortcoming is enough.) Note that <m>R_5</m> is a partial order on
+<m>\{a,b,d,e\}</m>. The relation <m>R_6</m> is not antisymmetric, as it
+contains both <m>(b,e)</m> and <m>(e,b)</m>.
+</p>
+ </statement>
+</example>
+  
+<p>
+When <m>\PXP</m> is a poset, it is common to write <m>x\le y</m> in <m>P</m> and
+<m>y\ge x</m> in <m>P</m> as substitutes for <m>(x,y)\in P</m>. Of course, the notations <m>x\lt y</m> in
+<m>P</m> and <m>y>x</m> in <m>P</m> mean <m>x\le y</m> in <m>P</m> and <m>x\ne y</m>. When the
+poset <m>\bfP</m> remains fixed throughout a discussion, we will sometimes
+abbreviate <m>x\le y</m> in <m>P</m> by just writing <m>x\le y</m>, etc. When <m>x</m>
+and <m>y</m> are distinct points from <m>X</m>, we say <m>x</m> is <em>covered</em>
+by <m>y</m> in <m>P</m><fn>Reflecting the vagaries of the English
+  language, mathematicians use the phrases: (1) <m>x</m> is covered by <m>y</m>
+  in <m>P</m>; (2)<nbsp /><m>y</m> covers <m>x</m> in <m>P</m>; and (3)<nbsp /><m>(x,y)</m> is a cover in <m>P</m>
+  interchangeably.</fn> when <m>x\lt y</m> in <m>P</m>, and there is no point <m>z\in X</m>
+for which <m>x\lt z</m> an <m>z\lt y</m> in <m>P</m>. For example, in the poset
+<m>\bfP_3=(X,R_3)</m> from
+<xref ref="exa_binaryrel">Example</xref>, <m>d</m> is covered
+by <m>e</m> and <m>c</m> covers <m>b</m>. However, <m>a</m> is not covered by <m>f</m>, since
+<m>a\lt e\lt f</m> in <m>R_3</m>. We can then associate with the poset <m>\bfP</m> a
+<em>cover graph</em> <m>\mathbf{G}</m> whose vertex set is the ground set
+<m>X</m> of <m>\bfP</m> with <m>xy</m> an edge in <m>\mathbf{G}</m> if and only if one of
+<m>x</m> and <m>y</m> covers the other in <m>\bfP</m>. Again, for the poset <m>\bfP_3</m>
+from <xref ref="exa_binaryrel">Example</xref>, we show
+the cover graph on the left side of <xref ref="fig_covergraphs" autoname="yes" />.
+Actually, on the right side of this figure is just another drawing of
+this same graph.
+</p>
+  <figure xml:id="fig_covergraphs" >
+<caption>Cover Graph</caption>
+<image source="images/covergraphs.png" /> </figure>
+  
+<p>
+It is convenient to illustrate a poset with a suitably drawn diagram
+of the cover graph in the Euclidean plane. We choose a standard
+horizontal/vertical coordinate system in the plane and require that
+the vertical coordinate of the point corresponding to <m>y</m> be larger
+than the vertical coordinate of the point corresponding to <m>x</m>
+whenever <m>y</m> covers <m>x</m> in <m>P</m>. Each edge in the cover graph is
+represented by a straight line segment which contains no point
+corresponding to any element in the poset other than those associated
+with its two end points. Such diagrams are called <em>Hasse
+diagrams</em> (<em>poset diagrams, order diagrams</em>, or just
+<em>diagrams</em>). Now it should be clear that the drawing on the
+right side of <xref ref="fig_covergraphs" autoname="yes" /> is a diagram of the poset
+<m>\bfP_3</m> from <xref ref="exa_binaryrel">Example</xref>,
+while the diagram on the left is not.
+</p>
+  
+<p>
+For posets of moderate size, diagrams are frequently used to define a poset&#8202;&#x2014;&#8202;rather
+than the explicit binary relation notation illustrated in <xref ref="exa_binaryrel">Example</xref>.
+In <xref ref="fig_17ptposet" autoname="yes" />, we illustrate a poset <m>\PXP</m> with ground set
+<m>X=[17]=\{1,2,\dots,17\}</m>. It would take several lines of text to write out the
+binary relation <m>P</m>, and somehow the diagram serves to give us a more tactile sense
+of the properties of the poset.
+</p>
+  <figure xml:id="fig_17ptposet" >
+<caption>A Poset on 17 Points</caption>
+<image source="images/17ptposet.png" /> </figure>
+  
+<remark><statement>
+<p>
+Alice and Bob are talking about how you communicate with
+a computer in working with posets. Bob says that computers
+have incredible graphics capabilities these days and that you
+just give the computer a pdf scan of a diagram. Alice says
+that she doubts that anybody really does that. Carlos says
+that there are several effective strategies. One way is to label
+the points with positive integers from <m>[n]</m> where <m>n</m> is the
+number of points in the ground set and then define a <m>0</m>&#x2013;<m>1</m>
+<m>n\times n</m> matrix <m>A</m> with entry <m>a(i,j)=1</m> when <m>i\le j</m> in <m>P</m>
+and <m>a(i,j)=0</m> otherwise. Alternatively, you can just provide
+for each element <m>i</m> in the ground set a vector <m>U(x)</m> listing all
+elements which are greater than <m>x</m> in <m>P</m>. This vector can
+be what computer scientists call a <em>linked list</em>.
+</p>
+ </statement>
+</remark>
+  
+<example xml:id="exa_construct"><statement>
+<p>
+There are several quite natural ways to construct posets.
+</p>
+  <ol><li>A family <m>\mathcal{F}</m> of sets is partially ordered by
+inclusion, i.e., set <m>A\le B</m> if and only if <m>A</m> is a subset of
+<m>B</m>.</li>
+<li>A set <m>X</m> of positive integers is partially ordered by
+division&#8202;&#x2014;&#8202;without remainder, i.e., set <m>m\le n</m> if and only if
+<m>n\equiv 0\pmod{m}</m>.</li>
+<li>A set <m>X</m> of <m>t</m>-tuples of real numbers is
+partially ordered by the rule: <br />
+<m>(a_1,a_2,\dots,a_t)\le (b_1,b_2,\dots,b_t)</m> if
+and only if <m>a_i\le b_i</m> in the natural order on <m>\reals</m> for <m>i=1,2,\dots,t</m>.</li>
+<li>When <m>L_1</m>, <m>L_2,\dots,L_k</m> are linear orders on the same set
+<m>X</m>, we can define a partial order <m>P</m> on  <m>X</m> by setting
+<m>x\le y</m> in <m>P</m> if and only if <m>x\le y</m> in <m>L_i</m> for all <m>i=1,2,\dots,k</m>.</li>
+ </ol>  
+<p>
+We illustrate the first three constructions with the posets shown in
+<xref ref="fig_constructposets" autoname="yes" />. As is now clear, in the discussion at the
+very beginning of this chapter, Dave drew a diagram for the poset determined by
+the intersection of the linear orders given by Alice and the movie critic.
+</p>
+ </statement>
+</example>
+  <figure xml:id="fig_constructposets" >
+<caption>Constructing Posets</caption>
+<image source="images/constructposets.png" /> </figure>
+  
+<p>
+Distinct points <m>x</m> and <m>y</m> in a poset <m>\PXP</m> are <em>comparable</em>
+if either <m>x\lt y</m> in <m>P</m> or <m>x>y</m> in <m>P</m>; otherwise <m>x</m> and <m>y</m> are
+<em>incomparable</em>. With a poset <m>\PXP</m>, we associate a
+<em>comparability</em> graph <m>{\bfG}_1=(X,E_1)</m> and an
+<em>incomparability</em> graph <m>{\bfG}_2=(X,E_2)</m>. The edges in the
+comparability graph <m>{\bfG}_1</m> consist of the comparable pairs and
+the edges in the incomparability graph are the incomparable pairs. We
+illustrate these definitions in <xref ref="fig_compincomp" autoname="yes" />
+where we show the comparability graph and the incomparability graph
+of the poset <m>\bfP_3</m>.
+</p>
+  <figure xml:id="fig_compincomp" >
+<caption>Comparability and Incommparability Graphs</caption>
+<image source="images/compincomp.png" /> </figure>
+  
+<p>
+A partial order <m>P</m> is called a <em>total</em> order (also, a
+<em>linear</em> order) if for all <m>x,y\in X</m>, either <m>x\le y</m> in <m>P</m>
+or <m>y\le x</m> in <m>P</m>. For small finite sets, we can specify a linear
+order by listing the elements from least to greatest. For example,
+<m>L=[b,c,d,a,f,g,e]</m> is the linear order on the ground set <m>\{a,b,c,d,e,f,g\}</m> with
+<m>b\lt c\lt d\lt a\lt f\lt g\lt e</m> in <m>L</m>.
+</p>
+  
+<p>
+The set of real numbers comes equipped with a natural total order. For example,
+<m>1\lt 7/5\lt \sqrt{2}\lt \pi</m> in this order. But in this chapter, we will be interested
+primarily with partial orders that are <em>not</em> linear orders. Also, we note
+that special care must be taken when discussing partial orders on ground sets
+whose elements are real numbers. For the poset shown in <xref ref="fig_17ptposet" autoname="yes" />, note
+that <m>14</m> is less than <m>8</m>, while <m>3</m> and <m>6</m> are incomparable.
+Best not to tell your parents that you've learned that under certain circumstances,
+<m>14</m> can be less than <m>8</m> and that you may be able to say which of <m>3</m> and <m>6</m> is
+larger than the other. The subtlety may be lost in the heated
+discussion certain to follow.
+</p>
+  
+<p>
+When <m>\PXP</m> is a poset and <m>Y\subseteq X</m>, the binary relation
+<m>Q=P\cap(Y\times Y)</m> is a partial order on <m>Y</m>, and we call the
+poset <m>(Y,Q)</m> a <em>subposet</em> of <m>\bfP</m>. In <xref ref="fig_subposet" autoname="yes" />,
+we show a subposet of the poset first presented in <xref ref="fig_17ptposet" autoname="yes" />.
+</p>
+  <figure xml:id="fig_subposet" >
+<caption>A Subposet</caption>
+<image source="images/subposet.png" /> </figure>
+  
+<p>
+When <m>\PXP</m> is a poset and <m>C</m> is a subset of <m>X</m>,
+we say that <m>C</m> is a <em>chain</em> if every distinct pair of points
+from <m>C</m> is comparable in <m>P</m>. When <m>P</m> is a linear order, the entire ground
+set <m>X</m> is a chain. Dually, if <m>A</m> is a subset of <m>X</m>, we say that
+<m>A</m> is an <em>antichain</em> if every distinct pair of points from <m>A</m>
+is incomparable in <m>P</m>. Note that a one-element subset
+is both a chain and an antichain. Also, we consider the emptyset as
+both a chain and an antichain.
+</p>
+  
+<p>
+The <em>height</em> of a poset
+<m>(X,P)</m>, denoted <m>\height(P)</m>, is the largest <m>h</m> for which there exists
+a chain of <m>h</m> points in <m>P</m>.
+Dually, the <em>width</em> of a poset <m>\PXP</m>, denoted <m>\width(P)</m>, is the
+largest <m>w</m> for which there exists an antichain of <m>w</m> points in
+<m>P</m>.
+</p>
+  
+<remark><statement>
+<p>
+Given a poset <m>\PXP</m>, how hard is to determine its height and width?
+Bob says that it is very easy. For example, to find the width of a poset, just
+list all the subsets of <m>X</m>. Delete those which are not antichains.
+The answer is the size of the largest subset that remains. He is quick
+to assert that the same approach will work to find the height.
+Alice groans at Bob's naivety and suggests that he should read
+further in this chapter.
+</p>
+ </statement>
+</remark>
+ </section>

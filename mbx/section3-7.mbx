@@ -1,0 +1,54 @@
+
+<section xml:id="s_intro_sudoku">
+<title>Sudoku Puzzles</title>
+<p>
+Here's an example which has more substance than you might
+think at first glance. It involves Sudoku puzzles, which
+have become immensely popular in recent years.
+</p>
+  
+<example><statement>
+<p>
+A Sudoku puzzle is a <m>9\times 9</m> array of cells that when completed
+have the integers <m>1,2,\dots,9</m> appearing exactly once in each row
+and each column. Also (and this is what makes the puzzles so
+fascinating), the numbers <m>1</m>, <m>2</m>, <m>3,\dots,9</m> appear once in each
+of the nine <m>3\times 3</m> subquares identified by the darkened
+borders. To be considered a legitimate Sudoku puzzle, there should
+be a <em>unique</em> solution. In <xref ref="fig_sudoku" autoname="yes" />, we show two
+Sudoku puzzles. The one on the right is fairly easy, and the one on
+the left is far more challenging.
+</p>
+  <figure xml:id="fig_sudoku" >
+<caption>Sudoku puzzles</caption>
+<image source="images/mysudoku.png" /> <br /> </figure>
+  
+<p>
+There are many sources of Sudoku puzzles, and software that generates
+Sudoku puzzles and then allows you to play them with an attractive GUI
+is available for all operating systems we know anything about (although
+not recommend to play them during class!). Also, you can find
+Sudoku puzzles on the web at:
+</p>
+  \href{http://www.websudoku.com}.  
+<p>
+On this site, the <q>Evil</q> ones are just that.
+</p>
+  
+<p>
+How does Rory make up good Sudoku puzzles, ones that are difficult
+for Mandy to solve? How could Mandy use
+a computer to solve puzzles that Rory has constructed?
+What makes some Sudoku puzzles easy and some of them hard?
+</p>
+  
+<p>
+The size of a Sudoku puzzle can be expanded in an obvious
+way, and many newspapers include a <m>16\times16</m> Sudoku puzzle
+in their Sunday edition (just next to a challenging crosswords puzzle).
+How difficult would it be to solve a <m>1024\times1024</m> Sudoku puzzle,
+even if you had access to a powerful computer?
+</p>
+ </statement>
+</example>
+ </section>
