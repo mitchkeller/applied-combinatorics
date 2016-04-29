@@ -436,37 +436,61 @@ n$. (By convention, we will write the elements of $P$ from largest to
 smallest.) For example, $2+2+1$ is a partition of $5$. For each
 $n\ge0$, let $p_n$ denote the number of partitions of the integer $n$
 (with $p_0=1$ by convention).  Note that $p_8=22$ as evidenced by the
-list in \autoref{tab:genfunction:partsof8}.
-\begin{table}[b]
-\centering
-\begin{tabular}{lll}
-  8\quad\text{distinct parts}&
-  7+1\quad\text{distinct parts, odd parts}&
-  6+2\quad\text{distinct parts}\\
-  6+1+1&
-  5+3\quad\text{distinct parts, odd parts}&
-  5+2+1\quad\text{distinct parts}\\
-  5+1+1+1\quad\text{odd parts}&
-  4+4&
-  4+3+1\quad\text{distinct parts}\\
-  4+2+2&
-  4+2+1+1&
+list in \autoref{fig:genfunction:partsof8}.
+\begin{figure}[hb]
+%\centering
+\begin{multicols}{3}
+  8\quad\text{distinct}\\
+  7+1\quad\text{distinct and odd}\\
+  6+2\quad\text{distinct}\\
+  6+1+1\\
+  5+3\quad\text{distinct and odd}\\
+  5+2+1\quad\text{distinct}\\
+  5+1+1+1\quad\text{odd}\\
+  4+4\\
+  4+3+1\quad\text{distinct}\\
+  4+2+2\\
+  4+2+1+1\\
   4+1+1+1+1\\
-  3+3+2&
-  3+3+1+1\quad\text{odd parts}&
+  3+3+2\\
+  3+3+1+1\quad\text{odd}\\
   3+2+2+1\\
-  3+2+1+1+1&
-  3+1+1+1+1+1\quad\text{odd parts}&
+  3+2+1+1+1\\
+  3+1+1+1+1+1\quad\text{odd}\\
   2+2+2+2\\
-  2+2+2+1+1&
-  2+2+1+1+1+1&
-  2+1+1+1+1+1+1\\&
-  1+1+1+1+1+1+1+1\quad\text{odd parts}
-\end{tabular}
+  2+2+2+1+1\\
+  2+2+1+1+1+1\\
+  2+1+1+1+1+1+1\\
+  1+1+1+1+1+1+1+1\quad\text{odd}  
+\end{multicols}
+% \begin{tabular}{lll}
+%   8\quad\text{distinct parts}&
+%   7+1\quad\text{distinct parts, odd parts}&
+%   6+2\quad\text{distinct parts}\\
+%   6+1+1&
+%   5+3\quad\text{distinct parts, odd parts}&
+%   5+2+1\quad\text{distinct parts}\\
+%   5+1+1+1\quad\text{odd parts}&
+%   4+4&
+%   4+3+1\quad\text{distinct parts}\\
+%   4+2+2&
+%   4+2+1+1&
+%   4+1+1+1+1\\
+%   3+3+2&
+%   3+3+1+1\quad\text{odd parts}&
+%   3+2+2+1\\
+%   3+2+1+1+1&
+%   3+1+1+1+1+1\quad\text{odd parts}&
+%   2+2+2+2\\
+%   2+2+2+1+1&
+%   2+2+1+1+1+1&
+%   2+1+1+1+1+1+1\\&
+%   1+1+1+1+1+1+1+1\quad\text{odd parts}
+% \end{tabular}
 \caption{The partitions of $8$, noting those into distinct parts
   and those into odd parts.}
-\label{tab:genfunction:partsof8}
-\end{table}
+\label{fig:genfunction:partsof8}
+\end{figure}
 Note that there are $6$ partitions of $8$ into \textit{distinct} parts. Also
 there are $6$ partitions of $8$ into \textit{odd} parts. While it
 might seem that this is a coincidence, it in fact is always the case
