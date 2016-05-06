@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
     <docinfo>
+	<latex-image-preamble>
+            \usepackage{overpic}	    
+	</latex-image-preamble>
         <macros>
-            \usepackage{overpic}
             \newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
             \newcommand{\ints}{\mathbb{Z}}
             \newcommand{\posints}{\mathbb{N}}
@@ -69,13 +71,6 @@
             \DeclareMathOperator{\stab}{stab}
             \DeclareMathOperator{\var}{var}
             \newcommand{\inv}{^{-1}}
-            \renewcommand{\raggedchapter}{\raggedleft}
-            \renewcommand{\chapterformat}{
-            \MakeUppercase{\chapappifchapterprefix{}}
-            \rlap{\enskip\resizebox{!}{1.2cm}{\thechapter} \rule{15cm}{1.2cm} }}
-            \renewcommand{\chapterheadmidvskip}{
-
-            \vspace{10pt}}
         </macros>
 
     </docinfo>

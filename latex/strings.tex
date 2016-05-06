@@ -95,13 +95,23 @@ $X$-string is also called a \textit{ternary} string.
   positions allow lower-case English letters, `*', `\%',
   and `\#'. The thirteenth position must be a digit. How many users
   can the website accept registrations from?
-  \medskip
 
-  \noindent We can visualize the options by thinking of the $13$
+  We can visualize the options by thinking of the $13$
   positions in the string as blanks that need to be filled in and
   putting the options for that blank above. Below, we've used U to
   denote the set of upper-case letters, L for the set of lower-case
   letters, and D for the set of digits.
+  \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+      \draw (0,0) -- node[midway,below] {$26$} node[midway,above]{U}
+      (0.4,0);
+            \draw (0.45,0) -- node[midway,below] {$62$}
+            node[midway,above]{U} node[midway,above]{L}  (0.85,0);
+    \end{tikzpicture}
+    \caption{String Template}
+    \label{fig:string-template}
+  \end{figure}
   \begin{center}
     \begin{tabular}{ccccccccccccc}
       &&&&&&&\#&\#&\#&\#&\#&\\
@@ -111,15 +121,16 @@ $X$-string is also called a \textit{ternary} string.
       26 & 62 & 62 & 62 & 62 & 62 & 2 & 29 & 29 & 29 & 29 & 29 & 10
     \end{tabular}
   \end{center}
+  \noindent Below each position in the string, we've written the
+  number of options for that position. (For example, there are 62
+  options for the second position, since there are $52$ letters once
+  both cases are accounted for and $10$ digits. We then multiply these
+  possibilities together, since each choice is independent of the
+  others. Therefore, we have
+  \[26\times 62^5 \times 2 \times 29^5\times 10 = 
+  9\,771\,287\,250\,890\,863\,360\]
+  total possible usernames.
 \end{example}
-\noindent Below each position in the string, we've written the number of options
-for that position. (For example, there are 62 options for the second
-position, since there are $52$ letters once both cases are accounted for and $10$
-digits. We then multiply these possibilities together, since each
-choice is independent of the others. Therefore, we have
-\[26\times 62^5 \times 2 \times 29^5\times 10 =
-9\,771\,287\,250\,890\,863\,360\]
-total possible usernames.
 
 \section{Permutations}\label{s:strings:permutations}
 
@@ -1092,5 +1103,5 @@ in which she was compelled to use big integer arithmetic as a job skill.  Arrggh
 
 %%% Local Variables: 
 %%% mode: latex
-%%% TeX-master: "chap-skel-mtk"
+%%% TeX-master: "book"
 %%% End: 
