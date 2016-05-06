@@ -2,6 +2,7 @@
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
     <docinfo>
         <macros>
+            \usepackage{overpic}
             \newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
             \newcommand{\ints}{\mathbb{Z}}
             \newcommand{\posints}{\mathbb{N}}
@@ -96,7 +97,7 @@
         </frontmatter>
 
         <xi:include href="./chapter1.mbx" />
-	
+        
         <xi:include href="./chapter2.mbx" />
         
         <xi:include href="./chapter3.mbx" />

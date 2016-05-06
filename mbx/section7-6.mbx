@@ -260,15 +260,19 @@ edge indicated. The tree we construct in this manner is shown in
 </p>
   <figure xml:id="fig_prufer-code-reverse" >
 <caption>The labeled tree with Pr&#xfc;fer code <m>75531</m></caption>
-\begin{overpic}{graphs-figs/prufer-code-reverse}
-      \put(2,21){<m>4</m>}
-      \put(62,14.5){<m>1</m>}
-      \put(36.8,14.5){<m>3</m>}
-      \put(2,2){<m>6</m>}
-      \put(9,12){<m>5</m>}
-      \put(90,12){<m>7</m>}
-      \put(93,21){<m>2</m>}
-    \end{overpic}
+            <image xml:id="img-fig_prufer-code-reverse">
+                <latex-image-code><![CDATA[
+                \begin{overpic}{images/prufer-code-reverse}
+                \put(2,21){<m>4</m>}
+                \put(62,14.5){<m>1</m>}
+                \put(36.8,14.5){<m>3</m>}
+                \put(2,2){<m>6</m>}
+                \put(9,12){<m>5</m>}
+                \put(90,12){<m>7</m>}
+                \put(93,21){<m>2</m>}
+                \end{overpic}]]>
+                </latex-image-code>
+            </image>
     </figure>
  </statement>
 </example>
