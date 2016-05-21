@@ -359,7 +359,7 @@ this problem in 1736 by using graph theory in the form of
 
 \begin{figure}
   \centering
-  \includegraphics[clip,viewport=0 306 200 400]{graphs-figs/konigsberg}
+  \includegraphics{graphs-figs/konigsberg_bridges}
   \caption{\label{fig:bridges}The bridges of K\"onigsberg}
 \end{figure}
 
@@ -460,7 +460,7 @@ pair of vertices.)
 
 \begin{figure}[h]
   \centering
-  \includegraphics[clip,viewport=228 306 298 400]{graphs-figs/konigsberg}
+  \includegraphics{graphs-figs/konigsberg_graph}
   \caption{The multigraph of K\"onigsberg's bridges}
   \label{fig:bridges-graph}
 \end{figure}
@@ -477,7 +477,7 @@ The first graph shown in \autoref{fig:eulham} both eulerian and
 hamiltonian.  The second is hamiltonian but not eulerian.
 \begin{figure}
 \begin{center}
-\includegraphics*[viewport = 47 358 524 680, width=3.55in]{graphs-figs/eulerian_hamiltonian}
+\includegraphics*[width=3.55in]{graphs-figs/eulerian_hamiltonian_crop}
 \caption{\label{fig:eulham}Eulerian and Hamiltonian Graphs}
 \end{center}
 \end{figure}
@@ -487,7 +487,7 @@ as the Petersen graph. It is not hamiltonian.
 % Might we want to include the proof of this?
 \begin{figure}
 \begin{center}
-\includegraphics*[width=3in]{graphs-figs/petersen_graph}
+\includegraphics*[width=0.56\textwidth]{graphs-figs/petersen_graph}
 \caption{\label{fig:petersen}The Petersen Graph}
 \end{center}
 \end{figure}
@@ -800,24 +800,24 @@ been used on any of its neighbors in the set $\{v_1,\dots v_i\}$.
 \begin{figure}
   \centering
   \begin{picture}(0,0)
-    \put(0,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
-    \put(0,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
-    \put(0,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_5$}}}%
-    \put(0,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_7$}}}%
-    \put(65,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_2$}}}%
-    \put(65,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_4$}}}%
-    \put(65,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_6$}}}%
-    \put(65,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_8$}}}%
-    \put(110,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
-    \put(110,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_2$}}}%
-    \put(110,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
-    \put(110,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_4$}}}%
-    \put(175,70){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_5$}}}%
-    \put(175,46){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_6$}}}%
-    \put(175,23){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_7$}}}%
-    \put(175,1){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_8$}}}%
+    \put(0,76){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
+    \put(0,52){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
+    \put(0,29){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_5$}}}%
+    \put(0,7){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_7$}}}%
+    \put(65,76){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_2$}}}%
+    \put(65,52){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_4$}}}%
+    \put(65,29){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_6$}}}%
+    \put(65,7){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_8$}}}%
+    \put(113,76){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
+    \put(113,52){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_2$}}}%
+    \put(113,29){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
+    \put(113,7){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_4$}}}%
+    \put(178,76){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_5$}}}%
+    \put(178,52){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_6$}}}%
+    \put(178,29){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_7$}}}%
+    \put(178,7){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_8$}}}%
   \end{picture}
-  \includegraphics[clip,viewport=0 324 54 400]{graphs-figs/k44-M}\hspace{.75in}\includegraphics[clip,viewport=0 324 54 400]{graphs-figs/k44-M}
+  \includegraphics{graphs-figs/k44-M_crop}\hspace{.75in}\includegraphics{graphs-figs/k44-M_crop}
   \caption{Two orderings of the vertices of a bipartite graph.}
   \label{fig:k44minus}
 \end{figure}
@@ -1588,7 +1588,7 @@ now.
   \end{enumerate}
  \begin{figure}[h]
     \centering
-    \includegraphics*[viewport=0 0 227 280,height=1.75in]{graphs-figs/spanning_tree}    
+    \includegraphics*[height=1.75in]{graphs-figs/graph_ex}    
     \caption{A graph}
     \label{fig:graphs:graph_ex}
   \end{figure}
