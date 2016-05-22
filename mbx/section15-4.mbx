@@ -67,7 +67,7 @@ algorithm</b> in detail.
   rules by which we label vertices will be explicit.</li>
 <li class="custom-list-style-type" label="Potential on a Labeled Vertex." >Let <m>u</m> be a labeled vertex.
   The third coordinate of the label given to <m>u</m> will be positive real
-  number&#8202;&#x2014;&#8202;although it may be infinite.  We call this quantity the
+  number<mdash />although it may be infinite.  We call this quantity the
   <em>potential</em> on <m>u</m> and denote it by <m>p(u)</m>. (The potential
   will serve as the amount that the flow can be updated by.) Note that
   the potential on the source is infinite.</li>
@@ -77,8 +77,8 @@ algorithm</b> in detail.
   always be the first vertex in this order.  After that, the order in
   which vertices are labeled will change with time.  But the important
   rule is that we scan vertices in the order that they are
-  labeled&#8202;&#x2014;&#8202;until we label the sink.  If for example, the initial
-  scan&#8202;&#x2014;&#8202;always done from the source&#8202;&#x2014;&#8202;results in labels being applied
+  labeled<mdash />until we label the sink.  If for example, the initial
+  scan<mdash />always done from the source<mdash />results in labels being applied
   to vertices <m>D</m>, <m>G</m> and <m>M</m>, then we next scan from vertex <m>D</m>.  If
   that scan results in vertices <m>B</m>, <m>F</m>, <m>G</m> and <m>Q</m> being labeled,
   then we next scan from <m>G</m>, as it was labeled before <m>B</m>, even
@@ -87,7 +87,7 @@ algorithm</b> in detail.
   vertices looking for ways to label previously unlabeled vertices.</li>
 <li class="custom-list-style-type" label="Never Relabel a Vertex." >Once a vertex is labeled, we do not
   change its label.  We are content to label previously unlabeled
-  vertices&#8202;&#x2014;&#8202;up until the time where we label the sink.  Then, after
+  vertices<mdash />up until the time where we label the sink.  Then, after
   updating the flow and increasing the value, all labels, except of
   course the special label on the source, are discarded and we start
   all over again.</li>

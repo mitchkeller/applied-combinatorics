@@ -91,7 +91,7 @@ while the diagram on the left is not.
 </p>
 
 <p>
-For posets of moderate size, diagrams are frequently used to define a poset&#8202;&#x2014;&#8202;rather
+For posets of moderate size, diagrams are frequently used to define a poset<mdash />rather
 than the explicit binary relation notation illustrated in <xref ref="exa_binaryrel">Example</xref>.
 In <xref ref="fig_17ptposet" autoname="yes" />, we illustrate a poset <m>\PXP</m> with ground set
 <m>X=[17]=\{1,2,\dots,17\}</m>. It would take several lines of text to write out the
@@ -112,7 +112,7 @@ just give the computer a pdf scan of a diagram. Alice says
 that she doubts that anybody really does that. Carlos says
 that there are several effective strategies. One way is to label
 the points with positive integers from <m>[n]</m> where <m>n</m> is the
-number of points in the ground set and then define a <m>0</m>&#x2013;<m>1</m>
+number of points in the ground set and then define a <m>0</m><ndash /><m>1</m>
 <m>n\times n</m> matrix <m>A</m> with entry <m>a(i,j)=1</m> when <m>i\le j</m> in <m>P</m>
 and <m>a(i,j)=0</m> otherwise. Alternatively, you can just provide
 for each element <m>i</m> in the ground set a vector <m>U(x)</m> listing all
@@ -133,7 +133,7 @@ There are several quite natural ways to construct posets.
 inclusion, i.e., set <m>A\le B</m> if and only if <m>A</m> is a subset of
 <m>B</m>.</li>
 <li>A set <m>X</m> of positive integers is partially ordered by
-division&#8202;&#x2014;&#8202;without remainder, i.e., set <m>m\le n</m> if and only if
+division<mdash />without remainder, i.e., set <m>m\le n</m> if and only if
 <m>n\equiv 0\pmod{m}</m>.</li>
 <li>A set <m>X</m> of <m>t</m>-tuples of real numbers is
 partially ordered by the rule: <br />

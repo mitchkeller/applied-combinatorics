@@ -209,7 +209,7 @@ c h 79
 An implementation of Kruskal's algorithm seems to require that
 the edges be sorted. If the graph has <m>n</m> vertices and <m>m</m> edges,
 this requires <m>m\log m</m> operations just for the sort. But once
-the sort is done, the process takes only <m>n-1</m> steps&#8202;&#x2014;&#8202;provided
+the sort is done, the process takes only <m>n-1</m> steps<mdash />provided
 you keep track of the components as the spanning forest expands.
 Regardless, it is easy to see that at most <m>O(n^2\log n)</m> operations
 are required.
