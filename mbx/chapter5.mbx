@@ -1,6 +1,8 @@
-
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_induction">
-<title>Induction</title><introduction>
+<title>Induction</title>
+
+
+<introduction>
 <p>
 The twin concepts of recursion and induction are fundamentally
 important in combinatorial mathematics and computer science. In this
@@ -12,7 +14,8 @@ to prove combinatorial statements. Our treatment will also include
 some code snippets that illustrate how functions are defined
 recursively in computer programs.
 </p>
- </introduction> <xi:include  href="section5-1.mbx" />
+</introduction>
+<xi:include  href="section5-1.mbx" />
  <xi:include  href="section5-2.mbx" />
  <xi:include  href="section5-3.mbx" />
  <xi:include  href="section5-4.mbx" />
@@ -23,4 +26,4 @@ recursively in computer programs.
  <xi:include  href="section5-9.mbx" />
  <xi:include  href="section5-10.mbx" />
  <xi:include  href="section5-11.mbx" />
- </chapter>
+</chapter>

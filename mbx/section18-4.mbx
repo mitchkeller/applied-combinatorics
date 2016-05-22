@@ -1,6 +1,7 @@
-
 <section>
 <title>Miscellaneous Gems</title>
+
+
 <subsection>
 <title>The Stable Matching Theorem</title>
 <p>
@@ -12,7 +13,7 @@ marriages, each involving one male and one female. In the process,
 we will try to make everyone happy&#8202;&#x2014;&#8202;or at least we will try to
 keep things stable.
 </p>
-  
+
 <p>
 Each female linearly orders the males in the order of her preference, i.e.,
 for each <m>i=1,2,\dots,n</m>, there is a permutation <m>\sigma_i</m> of
@@ -23,7 +24,7 @@ his preference, i.e., for each <m>i=1,2,\dots,n</m>, there is a permutation
 <m>\tau_i</m> of <m>[n]</m> so that if <m>b_i</m> prefers <m>g_j</m> to <m>g_k</m>, then
 <m>\tau_i(j)>\tau(k)</m>.
 </p>
-  
+
 <p>
 A <m>1</m>&#x2013;<m>1</m> matching of the <m>n</m> males to the <m>n</m> females is <em>stable</em>
 if there does not exist two males <m>b</m> and <m>b'</m> and two females
@@ -32,7 +33,7 @@ if there does not exist two males <m>b</m> and <m>b'</m> and two females
 preferences, <m>b</m> and <m>g</m> may be mutually inclined to dissolve their relationship
 and initiate daliances with other partners.
 </p>
-  
+
 <p>
 So the question is whether, regardless of their respective preferences, we can always
 generate a stable matching. The answer is yes and there is a quite
@@ -48,7 +49,7 @@ with one or more suitors at her door chooses the best among then
 and sends the others away. This process continues until eventually,
 each female is holding onto exactly one male.
 </p>
-  
+
 <p>
 It is interesting to note that each female's prospects improve over time, i.e.,
 once she has a suitor, things only get better. Conversely, each male's
@@ -64,4 +65,6 @@ exact moment, she had a male in hand that she prefers to <m>b</m>. Since
 her holdings only improve with time, it means that when the matching
 is finalized, female <m>g</m> has a mate <m>b</m> that she prefers to <m>b'</m>.
 </p>
- </subsection> </section>
+</subsection>
+
+</section>

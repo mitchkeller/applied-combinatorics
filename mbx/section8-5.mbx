@@ -1,6 +1,8 @@
-
 <section xml:id="s_posets_subset-lattice">
-<title>The Subset Lattice</title><introduction>
+<title>The Subset Lattice</title>
+
+
+<introduction>
 <p>
 When <m>X</m> is a finite set, the family of all subsets of <m>X</m>, partially
 ordered by inclusion, forms a
@@ -13,17 +15,19 @@ that we are representing sets by bit strings, and we have further
 abbreviated the notation by writing strings without commas and
 parentheses.
 </p>
-  <figure xml:id="fig_4cube" >
+<figure xml:id="fig_4cube" >
 <caption>A Subset Lattice</caption>
-<image source="images/4cube.png" /> </figure>
-  
+<image width="40%" source="images/4cube.png" />
+</figure>
 <p>
 For a positive integer <m>t</m>, we let <m>\bftwo^t</m> denote the subset
 lattice consisting of all subsets of <m>\{1,2,\dots,t\}</m>
 ordered by inclusion. Some elementary properties of this
 poset are:
 </p>
-  <ol><li>The height is <m>t+1</m> and all maximal chains have exactly
+
+<ol>
+<li>The height is <m>t+1</m> and all maximal chains have exactly
 <m>t+1</m> points.</li>
 <li>The size of the poset <m>\bftwo^t</m> is <m>2^t</m> and the elements
 are partitioned into ranks (antichains) <m>A_0, A_1,\dots, A_t</m>
@@ -34,31 +38,31 @@ largest binomial coefficient in the sequence <m>\binom{t}{0},
 \binom{t}{1},\binom{t}{2},\dots,\binom{t}{t}</m> is <m>\binom{t}{s}</m>.
 Note that when <m>t</m> is odd, there are two ranks of maximum size,
 but when <m>t</m> is even, there is only one.</li>
- </ol>  </introduction> 
+</ol>
+</introduction>
+
+
 <subsection xml:id="ss_posets_subset-lattice_sperner">
 <title>Sperner's Theorem</title>
 <p>
 For the width of the subset lattice, we have the following
 classic result due to Sperner.
 </p>
-  
-<theorem xml:id="thm_sperner"><title>Sperner</title>
+
+<theorem xml:id="thm_sperner">
+<title>Sperner</title>
 <statement>
 <p>
 For each <m>t\ge1</m>, the width of the subset lattice <m>\bftwo^t</m>
 is the maximum size of a rank, i.e.,
 </p>
-  
 <me>
-
-\width(\bftwo^t)=\binom{t}{\lfloor\frac{t}{2}\rfloor}
-
+  \width(\bftwo^t)=\binom{t}{\lfloor\frac{t}{2}\rfloor}
 </me>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 The width of the poset <m>\bftwo^t</m> is at least
 <m>C(t,\lfloor\frac{t}{2}\rfloor)</m> since the set of all
@@ -66,14 +70,14 @@ The width of the poset <m>\bftwo^t</m> is at least
 antichain. We now show that the width of <m>\bftwo^t</m> is at most
 <m>C(t,\lfloor\frac{t}{2}\rfloor)</m>.
 </p>
-  
+
 <p>
 Let <m>w</m> be the width of <m>\bftwo^t</m> and let <m>\{S_1,S_2,\dots, S_w\}</m> be
 an antichain of size <m>w</m> in this poset, i.e., each <m>S_i</m> is a subset
 of <m>\{1,2,\dots,t\}</m> and if <m>1\le i\lt j\le w</m>, then <m>S_i\nsubseteq
 S_j</m> and <m>S_j\nsubseteq S_i</m>.
 </p>
-  
+
 <p>
 For each <m>i</m>, consider the set <m>\cgS_i</m> of all maximal chains which
 pass through <m>S_i</m>. It is easy to see that if <m>|S_i|=k_i</m>, then
@@ -83,52 +87,41 @@ point, you delete the elements of <m>S_i</m> one at a time to form the
 sets of the lower part of the chain. Also, to form the upper part
 of the chain, you add the elements not in <m>S_i</m> one at a time.
 </p>
-  
+
 <p>
 Note further that if <m>1\le i \lt j\le w</m>, then <m>\cgS_i\cap \cgS_j
 =\emptyset</m>, for if there was a maximum chain belonging to both
 <m>\cgS_i</m> and <m>\cgS_j</m>, then it would imply that one of <m>S_i</m> and
 <m>S_j</m> is a subset of the other.
 </p>
-  
+
 <p>
 Altogether, there are exactly <m>t!</m> maximum chains in <m>\bftwo^t</m>. This
 implies that
 </p>
-  
 <me>
-\sum_{i=1}^{w} k_i!(t-k_i)!\le t!.
+  \sum_{i=1}^{w} k_i!(t-k_i)!\le t!.
 </me>
- 
 <p>
 This implies that
 </p>
-  
 <me>
-\sum_{i=1}^{w}\frac{k_i!(t-k_i)!}{t!}=
-\sum_{i=1}^{w}\frac{1}{\binom{t}{k_i}}\le 1. 
-
+  \sum_{i=1}^{w}\frac{k_i!(t-k_i)!}{t!}=
+\sum_{i=1}^{w}\frac{1}{\binom{t}{k_i}}\le 1.
 </me>
- 
 <p>
 It follows that
 </p>
-  
 <me>
-
-\sum_{i=1}^{i=w}\frac{1}{\binom{t}{\lceil\frac{t}{2}\rceil}}\le 1
-
+  \sum_{i=1}^{i=w}\frac{1}{\binom{t}{\lceil\frac{t}{2}\rceil}}\le 1
 </me>
- 
 <p>
 Thus
 </p>
-  
 <me>
-
-w\le \binom{t}{\lceil\frac{t}{2}\rceil}.
-
+  w\le \binom{t}{\lceil\frac{t}{2}\rceil}.
 </me>
- 
 </proof>
- </subsection> </section>
+</subsection>
+
+</section>

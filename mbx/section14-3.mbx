@@ -1,4 +1,3 @@
-
 <section>
 <title>Digraphs</title>
 <p>
@@ -19,7 +18,7 @@ are distinct, so the digraph may have one, both or neither of the
 directed edges <m>(x,y)</m> and <m>(y,x)</m>. This is in contrast to graphs,
 where edges are sets, so <m>\{x,y\}</m> and <m>\{y,x\}</m> are the same.
 </p>
-  
+
 <p>
 Diagrams of digraphs use arrowheads on the edges to indicate direction.
 This is illustrated in <xref ref="fig_graphalgorithms_digraph" autoname="yes" />. For
@@ -27,10 +26,10 @@ example, the digraph illustrated there contains the edge <m>(a,f)</m> but
 not the edge <m>(f,a)</m>. It does contain both edges <m>(c,d)</m> and <m>(d,c)</m>,
 however.
 </p>
-  <figure xml:id="fig_graphalgorithms_digraph" >
+<figure xml:id="fig_graphalgorithms_digraph" >
 <caption>A Digraph</caption>
-<image source="images/digraph.png" /> <br /> </figure>
-  
+<image width="56%" source="images/digraph.png" /> <br />
+</figure>
 <p>
 When <m>\bfG</m> is a digraph, a sequence <m>P=(r=u_0,u_1,\dots,u_t=x)</m> of
 distinct vertices is called a <em>directed path</em> from <m>r</m> to <m>x</m>
@@ -39,4 +38,4 @@ when <m>(u_iu_{i+1})</m> is a directed edge in <m>\bfG</m> for every
 called a <em>directed cycle</em> when <m>(u_t,u_0)</m> is a directed edge
 of <m>\bfG</m>.
 </p>
- </section>
+</section>

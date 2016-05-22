@@ -1,6 +1,8 @@
-
 <section>
-<title>Exact Versus Approximate</title><introduction>
+<title>Exact Versus Approximate</title>
+
+
+<introduction>
 <p>
 Many combinatorial problems admit <q>exact</q> solutions, and in these
 cases, we will usually try hard to find them. The Erd&#337;s/Szekeres
@@ -23,14 +25,16 @@ from each block, so <m>\sigma</m> has no increasing sequence of size<nbsp /><m>m
 On the other hand, any decreasing sequence in <m>\sigma</m> is contained
 in a single block, so <m>\sigma</m> has no decreasing sequence of size <m>n+1</m>.
 </p>
-  
+
 <p>
 As another example of an exact solution, the number of integer solutions
 to <m>x_1+x_2+\dots x_r=n</m> with <m>x_i>0</m> for <m>i-1,2,\dots,r</m> is exactly <m>C(n-1,r-1)</m>.
 On the other hand, nothing we have discussed thus far allows us to provide
 an exact solution for the number of partitions of an integer<nbsp /><m>n</m>.
 </p>
- </introduction> 
+</introduction>
+
+
 <subsection>
 <title>Approximate and Assymptotic Solutions</title>
 <p>
@@ -41,13 +45,9 @@ first <m>n</m> positive integers. For example,
 <m>\pi(12)=5</m> since <m>2</m>, <m>3</m>, <m>5</m>, <m>7</m> and <m>11</m> are primes.
 The exact value of <m>\pi(n)</m> is known when <m>n\le 10^{23}</m>, and in fact:
 </p>
-  
 <me>
-
-\pi(10^{23}) = 1,925,320,391,606,803,968,923
-
+  \pi(10^{23}) = 1,925,320,391,606,803,968,923
 </me>
- 
 <p>
 On the other hand, you might ask whether <m>\pi(n)</m> tends to infinity
 as <m>n</m> grows larger and larger. The answer is yes,
@@ -58,7 +58,7 @@ integer. Suppose these <m>k</m> primes are listed in increasing order as
 Then <m>n</m> is not divisible by any of these primes, and it is larger than
 <m>p_k</m>, which implies that <m>n</m> is a prime number larger than <m>p_k</m>.
 </p>
-  
+
 <p>
 So we know that <m>\lim_{n\rightarrow\infty}\pi(n)=\infty</m>.
 In a situation like this, mathematicians typically want to know more about
@@ -68,19 +68,15 @@ such as <m>\log n</m> or <m>\log\log n</m>. Some go to infinity quickly, like
 as fast as these last three functions, but it might go infinity like
 <m>\log n</m> or maybe <m>\sqrt{n}</m>.
 </p>
-  
+
 <p>
 On the basis of computational results (done by hand, long before there
 were computers), Legendre conjectured in 1796 that <m>\pi(n)</m> goes to
 infinity like <m>n/\ln n</m>. To be more precise, he conjectured that
 </p>
-  
 <me>
-
-\lim_{n\rightarrow\infty}\frac{\pi(n)\ln n}{n}=1.
-
+  \lim_{n\rightarrow\infty}\frac{\pi(n)\ln n}{n}=1.
 </me>
- 
 <p>
 In 1896, exactly one hundred years after Legendre's conjecture,
 Hadamard and de la Vall&#xe9;e-Poussin independently published proofs
@@ -90,7 +86,9 @@ known simply as the <em>Prime Number Theorem</em>, continues to this
 day to be much studied topic at the boundary of analysis and number
 theory.
 </p>
- </subsection> 
+</subsection>
+
+
 <subsection>
 <title>Polynomial Time Algorithms</title>
 <p>
@@ -101,7 +99,9 @@ is an algorithm <m>\cgA</m> for solving the problem which has running
 time <m>O(n^c)</m> where <m>n</m> is the input size.
 the symbol <m>\cgP</m> is suggestive of <em>polynomial</em>.
 </p>
- </subsection> 
+</subsection>
+
+
 <subsection>
 <title><m>\mathcal{P}=\mathcal{NP}</m>?</title>
 <p>
@@ -113,7 +113,7 @@ as <m>\mathcal{NP}</m>. This problem has the shorthand form:
 <m>\mathcal{P}=\mathcal{NP}</m>? Here, we present
 a brief informal discussion of this problem.
 </p>
-  
+
 <p>
 First, we have already introduced the class <m>\cgP</m> consisting of all
 yes-no combinatorial problems which admit polynomial time algorithms.
@@ -123,7 +123,7 @@ have running time <m>O(n)</m> and <m>O(n^3)</m>, respectively.
 Also, determing whether a graph is <m>2</m>-colorable and whether it
 is connected both admit polynomial time algorithms.
 </p>
-  
+
 <p>
 We should emphasize that it may be very difficult to determine
 whether a problem belongs to class <m>\mathcal{P}</m> or not.
@@ -131,7 +131,7 @@ For example, we don't see how to give a fast algorithm for
 solving the third problem (subset sum), but that doesn't mean
 that there isn't one. Maybe we all need to study harder!
 </p>
-  
+
 <p>
 Setting that issue aside for the moment, the class <m>\mathcal{NP}</m> consists of
 yes&#x2013;no problems for which there is a certificate for
@@ -139,7 +139,7 @@ a yes answer whose correctness can be verified in polynomial
 time. More formally, this is called the class of <em>nondeterministic
 polynomial time</em> problems. Our third problem definitely belongs to this class.
 </p>
-  
+
 <p>
 So the famous question is to detemine whether the two
 classes are the same. Evidently, any problem belonging
@@ -153,4 +153,6 @@ one or both authors of this text before you go public with
 your news. If it turns out that you are right, you are
 certain to treasure a photo opportunity with yours truly.
 </p>
- </subsection> </section>
+</subsection>
+
+</section>

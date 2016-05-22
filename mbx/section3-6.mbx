@@ -1,4 +1,3 @@
-
 <section xml:id="s_intro_opt">
 <title>Combinatorics and Optimization</title>
 <p>
@@ -15,53 +14,54 @@ examine a few optimization problems that are not continuous, as only
 integer values for the variables will make sense. It turns out that
 many of these problems are very hard to solve in general.
 </p>
-  
-<example><statement>
+<example>
+<statement>
 <p>
 In <xref ref="fig_wgraph-1" autoname="yes" />, we use letters for the labels on the
 vertices to help distinguish visually from the integer weights
 on the edges.
 </p>
-  <figure xml:id="fig_wgraph-1" >
+<figure xml:id="fig_wgraph-1" >
 <caption>A labeled graph with weighted edges</caption>
-<image source="images/3012-fig12.png" /> <br /> </figure>
-  
+<image width="60%" source="images/3012-fig12.png" /> <br />
+</figure>
 <p>
 Suppose the vertices are cities, the edges are highways
 and the weights on the edges represent <em>distance</em>.
 </p>
-  
+
 <p>
-<m>Q_1</m>:<nbsp /><nbsp /> What is the shortest path from vertex<nbsp /><m>E</m> to vertex<nbsp /><m>B</m>?
+<m>Q_1</m>:  What is the shortest path from vertex<nbsp /><m>E</m> to vertex<nbsp /><m>B</m>?
 </p>
-  
+
 <p>
 Suppose Ariel is a salesperson whose home base is city<nbsp /><m>A</m>.
 </p>
-  
+
 <p>
-<m>Q_2</m>:<nbsp /><nbsp /> In what order should Ariel visit the other cities so that she
+<m>Q_2</m>:  In what order should Ariel visit the other cities so that she
 goes through each of them at least once and returns home
 at the end&#8202;&#x2014;&#8202;while keeping the total distance traveled to a minimum?
 Can Ariel accomplish such a tour visiting
 each city <em>exactly</em> once?
 </p>
-  
+
 <p>
 Sanjay is a highway inspection engineer and must traverse every
 highway each month. Sanjay's homebase is City<nbsp /><m>E</m>.
 </p>
-  
+
 <p>
-<m>Q_3</m>:<nbsp /><nbsp /> In what
+<m>Q_3</m>:  In what
 order should Sanjay traverse the highways to minimize the total
 distance traveled? Can Sanjay make such a tour traveling
 along each highway exactly once?
 </p>
- </statement>
+</statement>
 </example>
   
-<example><statement>
+<example>
+<statement>
 <p>
 Now suppose that the vertices are locations of branch banks in
 Atlanta and that the weights on an edge represents the cost, in
@@ -72,7 +72,7 @@ a data link between this particular pair is prohibitively high (here
 we might be tempted to say the cost is infinite, but the authors don't
 admit to knowing the meaning of this word).
 </p>
-  
+
 <p>
 Our challenge is to decide which data links should be constructed to
 form a network in which any branch bank can communicate with any
@@ -83,10 +83,10 @@ construct a <em>spanning tree</em> in this network. In
 <xref ref="fig_spantree-1" autoname="yes" />, we show a graph <m>G</m> on the left and one of
 its many <em>spanning trees</em> on the right.
 </p>
-  <figure xml:id="fig_spantree-1" >
+<figure xml:id="fig_spantree-1" >
 <caption>A weighted graph and spanning tree</caption>
-<image source="images/3012-fig19.png" /> <br /> </figure>
-  
+<image width="60%" source="images/3012-fig19.png" /> <br />
+</figure>
 <p>
 The weight of the spanning tree is the sum of the weights on the
 edges. In our model, this represents the costs, again in millions of
@@ -94,18 +94,14 @@ dollars, of building the data links associated with the edges in the
 spanning tree. For the spanning tree shown in
 <xref ref="fig_spantree-1" autoname="yes" />, this total is
 </p>
-  
 <me>
-
-12+25+19+18+23+19 = 116.
-
+  12+25+19+18+23+19 = 116.
 </me>
- 
 <p>
 Of all spanning trees, the bank would naturally like to find one
 having minimum weight.
 </p>
-  
+
 <p>
 How many spanning trees does this graph have? For a large graph, say
 one with <m>2875</m> vertices, does it make sense to find all spanning
@@ -113,6 +109,6 @@ trees and simply take the one with minimum cost? In particular, for a
 positive integer<nbsp /><m>n</m>, how many trees have vertex set
 <m>\{1,2,3,\dots,n\}</m>?
 </p>
- </statement>
+</statement>
 </example>
- </section>
+</section>

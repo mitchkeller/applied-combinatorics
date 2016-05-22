@@ -1,6 +1,8 @@
-
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_polya">
-<title>P&#xf3;lya's Enumeration Theorem</title><introduction>
+<title>P&#xf3;lya's Enumeration Theorem</title>
+
+
+<introduction>
 <p>
 In this chapter, we introduce a powerful enumeration technique
 generally referred to as P&#xf3;lya's enumeration theorem<fn>Like
@@ -14,7 +16,9 @@ allows us to use symmetries (such as those of geometric objects like
 polygons) to form generating functions. These generating functions can
 then be used to answer combinatorial questions such as
 </p>
-  <ol><li>How many different necklaces of six beads can be formed using
+
+<ol>
+<li>How many different necklaces of six beads can be formed using
   red, blue and green beads? What about <m>500</m>-bead necklaces?</li>
 <li>How many musical scales consisting of <m>6</m> notes are there?</li>
 <li>How many isomers of the compound xylenol,
@@ -27,16 +31,18 @@ then be used to answer combinatorial questions such as
   <m>257,000</m> edges? How many <m>r</m>-regular graphs are there on <m>40</m>
   vertices? (A graph is <m>r</m><em>-regular</em> if every vertex has degree
   <m>r</m>.)</li>
- </ol>   
+</ol>
+
 <p>
 To use P&#xf3;lya's techniques, we will require the idea of a permutation
 group. However, our treatment will be self-contained and driven by
 examples. We begin with a simplified version of the first question above.
 </p>
- </introduction> <xi:include  href="section17-1.mbx" />
+</introduction>
+<xi:include  href="section17-1.mbx" />
  <xi:include  href="section17-2.mbx" />
  <xi:include  href="section17-3.mbx" />
  <xi:include  href="section17-4.mbx" />
  <xi:include  href="section17-5.mbx" />
  <xi:include  href="section17-6.mbx" />
- </chapter>
+</chapter>

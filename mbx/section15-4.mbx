@@ -1,4 +1,3 @@
-
 <section>
 <title>The Ford-Fulkerson Labeling Algorithm</title>
 <p>
@@ -17,7 +16,7 @@ limitation will not cramp our style. For real world problems, we take
 comfort in the fact that computers can deal quite easily with integer
 keys of just about any size.
 </p>
-  
+
 <p>
 Before providing a precise description of the algorithm, let's take a
 minute to consider a general overview. In carrying out the labeling
@@ -30,7 +29,7 @@ sink, then we will have discovered an augmenting path, and the flow
 will be suitably updated. After updating the flow, we start over again
 with just the source being labeled.
 </p>
-  
+
 <p>
 This process will be repeated until (and we will see that this always
 occurs) we reach a point where the labeling halts with some vertices
@@ -44,22 +43,25 @@ antichains and partitioning into chains than clique number and
 chromatic number. In particular, the labeling algorithm will provide a
 proof of the following theorem:
 </p>
-  
-<theorem><title>The Max Flow&#x2013;Min Cut Theorem</title>
+
+<theorem>
+<title>The Max Flow<ndash />Min Cut Theorem</title>
 <statement>
 <p>
 Let <m>G=(V,E)</m> be a network. Then let <m>v_0</m> be the maximum value of
 a flow, and let <m>c_0</m> be the minimum capacity <m>c_0</m> of a cut. Then
 <m>v_0=c_0</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 We're now ready to describe the <b>Ford-Fulkerson labeling
 algorithm</b> in detail.
 </p>
-  <ul><li class="custom-list-style-type" label="Labeling the Vertices." >Vertices will be labeled with ordered
+
+<ul>
+<li class="custom-list-style-type" label="Labeling the Vertices." >Vertices will be labeled with ordered
   triples of symbols.  Each time we start the labeling process, we
   begin by labeling the source with the triple <m>(*,+,\infty)</m>.  The
   rules by which we label vertices will be explicit.</li>
@@ -137,4 +139,5 @@ algorithm</b> in detail.
   Regardless, we see that the capacity of the cut <m>V=L\cup U</m> is
   exactly equal to the value of the current flow, so we have both a
   maximum flow and minimum cut providing a certificate of optimality.</li>
- </ul>  </section>
+</ul>
+</section>

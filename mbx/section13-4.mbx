@@ -1,4 +1,3 @@
-
 <section>
 <title>Ramsey's Theorem</title>
 <p>
@@ -8,12 +7,13 @@ number of bins or colors and we are placing the subsets of a
 fixed size into these categories. The conclusion is that there
 is a large set which is treated uniformly.
 </p>
-  
+
 <p>
 Here's the formal statement.
 </p>
-  
-<theorem xml:id="thm_genramsey"><statement>
+
+<theorem xml:id="thm_genramsey">
+<statement>
 <p>
 Let <m>r</m> and <m>s</m> be positive integers and
 let <m>\mathbf{h}=(h_1,h_2,\dots,h_r)</m> be a string
@@ -24,9 +24,9 @@ is any function, then there exists an integer <m>\alpha\in[r]</m>
 and a subset <m>H_\alpha\subseteq [n]</m> with <m>|H_\alpha|=h_\alpha</m>
 so that <m>\phi(S)=\alpha</m> for every <m>S\in C(H_\alpha, s)</m>.
 </p>
- </statement>
+</statement>
 </theorem>
- 
+
 <p>
 We don't include the proof of this general statement here, but
 the more ambitious students may attempt it on their own. Note
@@ -36,4 +36,4 @@ as established in <xref ref="thm_graphramsey" autoname="yes" />. An argument
 using double induction is required for the proof in the general
 case. The first induction is on <m>r</m> and the second is on <m>s</m>.
 </p>
- </section>
+</section>

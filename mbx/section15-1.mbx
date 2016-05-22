@@ -1,4 +1,3 @@
-
 <section xml:id="s_networkflow_intro">
 <title>Basic Notation and Terminology</title>
 <p>
@@ -22,31 +21,34 @@ illustrate a network in <xref ref="fig_networkflow_network" autoname="yes" />. T
 associated with the edges are their capacities, so, for instance,
 <m>c(E,B)=24</m> and <m>c(A,T)=56</m>.
 </p>
-  <figure xml:id="fig_networkflow_network" >
+<figure xml:id="fig_networkflow_network" >
 <caption>A Network</caption>
-<image source="images/webfig-31a.png" /> <br /></figure>
-  
+<image width="46%" source="images/webfig-31a.png" /> <br />
+</figure>
 <p>
 A <em>flow</em> <m>\phi</m> in a network is a function which assigns to
 each directed edge <m>e=(x,y)</m> a non-negative value
 <m>\phi(e)=\phi(x,y)\leq c(x,y)</m> so that the following <q>conservation</q>
 laws hold:
 </p>
-  <ol><li><m>\sum_{x} \phi(S,x)= \sum_{x} \phi(x,T)</m>, i.e., the amount leaving
+
+<ol>
+<li><m>\sum_{x} \phi(S,x)= \sum_{x} \phi(x,T)</m>, i.e., the amount leaving
 the source is equal to the amount arriving at the sink.  This quantity
 is called the <em>value</em> of the flow <m>\phi</m>.</li>
 <li>For every vertex <m>y</m> which is neither the source nor the
 sink, <m>\sum_{x}\phi(x,y)= \sum_{x}\phi(y,x)</m>, i.e., the amount leaving <m>y</m> 
 is equal to the amount entering <m>y</m>.</li>
- </ol>   
+</ol>
+
 <p>
 We illustrate a flow in a network in
 <xref ref="fig_networkflow_netflow" autoname="yes" />.
 </p>
-  <figure xml:id="fig_networkflow_netflow" >
+<figure xml:id="fig_networkflow_netflow" >
 <caption>A Network Flow</caption>
-<image source="images/webfig-31b.png" /> <br /> </figure>
- 
+<image width="46%" source="images/webfig-31b.png" /> <br />
+</figure>
 <p>
 In this figure, the numbers associated with each edge are its capacity
 and the amount of flow that <m>\phi</m> places on that edge. For example,
@@ -58,8 +60,8 @@ see that the second conservation law holds at, for example, vertex
 <m>B</m>, note that the flow into <m>B</m> is <m>\phi(S,B)+\phi(E,B)+\phi(D,B) =
 20</m> and the flow out of <m>B</m> is <m>\phi(B,F)+\phi(B,A)+\phi(B,C)=20</m>.
 </p>
-  
-<remark><statement>
+<remark>
+<statement>
 <p>
 Given a network, it is very easy to find a flow. We simply assign
 <m>\phi(e)=0</m> for every edge <m>e</m>. It is very easy to
@@ -71,6 +73,6 @@ a linear programming problem. In fact, conceptually, finding a
 feasible solution&#8202;&#x2014;&#8202;<em>any</em> solution&#8202;&#x2014;&#8202;is just as hard as
 finding an <em>optimal</em> solution.
 </p>
- </statement>
+</statement>
 </remark>
- </section>
+</section>

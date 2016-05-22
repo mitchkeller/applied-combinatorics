@@ -1,6 +1,8 @@
-
 <section>
-<title>Formal Development of Number Systems</title><introduction>
+<title>Formal Development of Number Systems</title>
+
+
+<introduction>
 <p>
 Up to this point, we have been discussing number systems
 in an entirely informal manner, assuming everyone knew
@@ -15,7 +17,9 @@ on which the following <q>instructions</q> are printed. These
 defining properties of the natural numbers are known as the <em>Peano
 Postulates</em>.
 </p>
-  <ol><li class="custom-list-style-type" label="(i)." >There is a non-empty set of elements called 
+
+<ol>
+<li class="custom-list-style-type" label="(i)." >There is a non-empty set of elements called 
 <em>natural numbers</em>.  There is natural number
 called <em>zero</em> which is denoted<nbsp /><m>0</m>.  The set of all natural
 numbers is denoted <m>\mathbb{N}_0</m></li>
@@ -26,11 +30,14 @@ called the <em>successor</em> function.  For each <m>n\in \mathbb{N}_0</m>,
 <li class="custom-list-style-type" label="(iii)." >There is no natural number <m>n</m> for which <m>0=s(n)</m>.</li>
 <li class="custom-list-style-type" label="(iv)." >Let <m>\mathbb{M}\subseteq \mathbb{N}_0</m>.  
 Then <m>\mathbb{M} =\mathbb{N}_0</m> if and only if
-<ol><li class="custom-list-style-type" label="(a)." ><m>0\in \mathbb{M}</m>; and</li>
+<ol>
+<li class="custom-list-style-type" label="(a)." ><m>0\in \mathbb{M}</m>; and</li>
 <li class="custom-list-style-type" label="(b)." ><m>\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
   \Longrightarrow(s(k)\in \mathbb{M})</m>.</li>
- </ol> </li>
- </ol>   
+</ol>
+</li>
+</ol>
+
 <p>
 Property<nbsp />(iv) in the list of Peano Postulates is called
 the <em>Principle of Mathematical Induction</em>, or
@@ -38,17 +45,17 @@ just the <em>Principle of Induction</em>.
 As a first application of the Principle of Induction, we prove the following
 basic property of the natural numbers.
 </p>
-  
-<proposition><statement>
+
+<proposition>
+<statement>
 <p>
 Let <m>n</m> be a natural number with <m>n\neq0</m>. Then there is a
 natural number <m>m</m> so that <m>n=s(m)</m>.
 </p>
- </statement>
+</statement>
 </proposition>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>\mathbb{S}=\{n\in\mathbb{N}_0:\exists m\in\mathbb{N}_0,
 n=s(m)\}</m>. Then set <m>\mathbb{M}=\{0\}\cup\mathbb{S}</m>.
@@ -59,9 +66,10 @@ since for all <m>k\in\mathbb{N}_0</m>, we have
 <m>s(k)\in\mathbb{S}\subseteq\mathbb{M}</m>.
 We conclude that <m>\mathbb{M}=\mathbb{N}_0</m>.
 </p>
- 
 </proof>
- </introduction> 
+</introduction>
+
+
 <subsection xml:id="s_add">
 <title>Addition as a Binary Operation</title>
 <p>
@@ -74,13 +82,16 @@ we now define a binary operation <m>+</m>
 on the the set <m>\mathbb{N}_0</m> of natural numbers.
 This operation is defined by:
 </p>
-  
+
 <p>
 For every natural number <m>n\in\mathbb{N}_0</m>:
 </p>
-  <ol><li class="custom-list-style-type" label="(i)." ><m>n+0=n</m>.</li>
+
+<ol>
+<li class="custom-list-style-type" label="(i)." ><m>n+0=n</m>.</li>
 <li class="custom-list-style-type" label="(ii)." >For all <m>k\in\mathbb{N}_0</m>, <m>n+s(k) = s(n+k)</m>.</li>
- </ol>   
+</ol>
+
 <p>
 We pause to make it clear why the preceding two statements
 define <m>+</m>. Let <m>n</m> be
@@ -92,12 +103,12 @@ that for all <m>k\in \mathbb{N}_0</m>, <m>s(k)\in \mathbb{M}</m> whenever
 shows that <m>\mathbb{M}=\mathbb{N}_0</m>. Since <m>n</m> was arbitrary, this allows us
 to conclude that <m>n+m</m> is defined for all <m>n,m\in \mathbb{N}_0</m>.
 </p>
-  
+
 <p>
 We read <m>n+m</m> as <m>n</m> <em>plus</em> <m>m</m>. The operation <m>+</m>
 is also called <em>addition</em>.
 </p>
-  
+
 <p>
 Among the natural numbers, the successor of zero plays a very
 important role, so important that it deserves its own special
@@ -106,62 +117,57 @@ symbol. Here we follow tradition and call the natural number
 Note that for every natural number
 <m>n</m>, we have <m>n+1=n+s(0)=s(n)</m>. In particular, <m>0+1=1</m>.
 </p>
-  
+
 <p>
 With this notation, the Principle of Induction can be
 restated in the following form, which many of you may already have seen.
 </p>
-  
+
 <p>
-<b>The Principle of Induction.</b><nbsp /><nbsp />
+<b>The Principle of Induction.</b> 
 Let <m>\mathbb{M}\subseteq \mathbb{N}_0</m>.
 Then <m>\mathbb{M} =\mathbb{N}_0</m> if and only if
 </p>
-  <ol><li class="custom-list-style-type" label="(a)." ><m>0\in \mathbb{M}</m>; and</li>
+
+<ol>
+<li class="custom-list-style-type" label="(a)." ><m>0\in \mathbb{M}</m>; and</li>
 <li class="custom-list-style-type" label="(b)." ><m>\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
   \Longrightarrow(k+1\in \mathbb{M})</m>.</li>
- </ol>   
-<theorem><statement>
+</ol>
+
+<theorem>
+<statement>
 <p>
-{\upshape [Associative Property of Addition]}<br />
+{ [Associative Property of Addition]}<br />
 <m>m+(n+p) = (m+n)+p</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>m,n\in \mathbb{N}_0</m>. Then let
 <m>\mathbb{M}</m> denote the set of all natural numbers <m>p</m> for
 which <m>m+(n+p)=(m+n)+p</m>. We show that <m>\mathbb{M}=\mathbb{N}_0</m>.
 </p>
-  
+
 <p>
 Note that
 </p>
-  
 <me>
-
-m+(n+0) = m+n = (m+n)+0 
-
+  m+(n+0) = m+n = (m+n)+0
 </me>
- 
 <p>
 which shows that <m>0\in \mathbb{M}</m>.
 </p>
-  
+
 <p>
 Now assume that <m>k\in \mathbb{M}</m>, i.e., <m>m+(n+k) = (m+n)+k</m>.
 Then
 </p>
-  
 <me>
-
-m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1). 
-
+  m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1).
 </me>
- 
 <p>
 Notice here that the first, second, and fourth equalities follow from
 the second part of the definition of addition while the third uses our
@@ -169,9 +175,8 @@ inductive assumption that <m>m+(n+k)=(m+n)+k)</m>. This shows that <m>k+1\in
 \mathbb{M}</m>. Therefore, <m>\mathbb{M}= \mathbb{N}_0</m>. Since <m>m</m> and
 <m>n</m> were arbitrary elements of <m>\mathbb{N}_0</m>, the theorem follows.
 </p>
- 
 </proof>
-  
+
 <p>
 In proofs to follow, we will trim out some of the wording
 and leave only the essential mathematical steps intact.
@@ -180,99 +185,83 @@ and (ii)<nbsp />drop the phrase <q>For all <m>k\in\mathbb{N}_0</m></q>
 For example, to define addition, we will just
 write (i)<nbsp /><m>n+0=n</m>, and (ii)<nbsp /><m>n+(k+1) = (n+k)+1</m>.
 </p>
-  
-<lemma><statement>
+
+<lemma>
+<statement>
 <p>
 <m>m+(n+1) = (m+1)+n</m>, for all <m>m,n\in\mathbb{N}_0</m>.
 </p>
- </statement>
+</statement>
 </lemma>
-  
-<proof>
 
+<proof>
 <p>
 Fix <m>m\in \mathbb{N}_0</m>. Then
 </p>
-  
 <me>
-
-m+(0+1)=m+1= (m+0)+1.
-
+  m+(0+1)=m+1= (m+0)+1.
 </me>
- 
 <p>
 Now assume that <m>m+(k+1)=(m+1)+k</m>.
 Then
 </p>
-  
 <me>
-
-m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
-
+  m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
 </me>
- 
 </proof>
-  
+
 <p>
 We next prove the commutative property, a task that takes
 two steps. First, we prove the following special case.
 </p>
-  
-<lemma><statement>
+
+<lemma>
+<statement>
 <p>
 <m>n+0 = 0+n=n</m>, for all <m>n\in \mathbb{N}_0</m>.
 </p>
- </statement>
+</statement>
 </lemma>
-  
-<proof>
 
+<proof>
 <p>
 The statement is trivially true when <m>n= 0</m>.
 Now suppose that <m>k+0=0+k=k</m> for some <m>k\in \mathbb{N}_0</m>.
 Then
 </p>
-  
 <me>
-
-(k+1) +0 = k+1 = (0+k)+1= 0+(k+1).
-
+  (k+1) +0 = k+1 = (0+k)+1= 0+(k+1).
 </me>
- 
 </proof>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
-{\upshape [Commutative Law of Addition]}<br />
+{ [Commutative Law of Addition]}<br />
 <m>m+n=n+m</m> for all <m>m,n\in \mathbb{N}_0</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>m\in \mathbb{N}_0</m>. Then <m>m+0=0+m</m> from the preceding lemma.
 Assume <m>m+k=k+m</m>. Then
 </p>
-  
 <me>
-
-m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
-
+  m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
 </me>
- 
 </proof>
-  
-<lemma xml:id="lem_sum0"><statement>
+
+<lemma xml:id="lem_sum0">
+<statement>
 <p>
 If <m>m,n\in\mathbb{N}_0</m> and <m>m+n=0</m>, then <m>m=n=0</m>.
 </p>
- </statement>
+</statement>
 </lemma>
-  
-<proof>
 
+<proof>
 <p>
 Suppose that either of <m>m</m> and <m>n</m> is not zero. Since addition
 is commutative, we may assume without loss of generality that
@@ -281,35 +270,31 @@ is commutative, we may assume without loss of generality that
 which is impossible since <m>0</m> is not the successor of any
 natural number.
 </p>
- 
 </proof>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
-{\upshape [Cancellation Law of Addition]}<br />
+{ [Cancellation Law of Addition]}<br />
 If <m>m,n,p\in \mathbb{N}_0</m> and <m>m+p=n+p</m>, then <m>m=n</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>m,n\in \mathbb{N}_0</m>. Suppose that <m>m+0=n+0</m>. Then <m>m=n</m>.
 Now suppose that <m>m=n</m> whenever <m>m+k=n+k</m>.
 If <m>m+(k+1)=n+(k+1)</m>, then
 </p>
-  
 <me>
-
-s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k).
-
+  s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k).
 </me>
- 
 <p>
 Since <m>s</m> is an
 injection, this implies <m>m+k=n+k</m>. Thus <m>m=n</m>.
 </p>
- 
 </proof>
- </subsection> </section>
+</subsection>
+
+</section>

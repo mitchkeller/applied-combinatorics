@@ -1,4 +1,3 @@
-
 <section>
 <title>Introduction</title>
 <p>
@@ -18,16 +17,17 @@ constraints (capacities in our case), the solution must be a rational
 number. However, in the case of network flows, something even stronger
 is true.
 </p>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
 In a network flow problem in which every edge has integer capacity,
 there is a maximum flow in which every edge carries an integer
 amount of flow.
 </p>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 Notice that the above theorem does not guarantee that every maximum
 flow has integer capacity on every edge, just that we are able to find
@@ -38,4 +38,4 @@ a maximum flow in which every edge carries a flow of either <m>0</m> or
 sense using the full edges as edges that we <q>take</q> in some useful
 sense.
 </p>
- </section>
+</section>

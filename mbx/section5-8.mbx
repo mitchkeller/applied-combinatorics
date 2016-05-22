@@ -1,4 +1,3 @@
-
 <section xml:id="s_induction_proofs">
 <title>Proofs by Induction</title>
 <p>
@@ -6,21 +5,19 @@ No discussion of recursion and induction would be
 complete without some obligatory examples of proofs using
 induction. We start with the <q>Hello World</q> example.
 </p>
-  
-<proposition xml:id="prop_sumints"><statement>
+
+<proposition xml:id="prop_sumints">
+<statement>
 <p>
 For every positive integer <m>n</m>, the sum of the first <m>n</m> positive
 integers is <m>n(n+1)/2</m>, i.e.,
 </p>
-  
 <me>
-
-\sum_{i=1}^n i=\frac{n(n+1)}{2}.
-
+  \sum_{i=1}^n i=\frac{n(n+1)}{2}.
 </me>
- </statement>
+</statement>
 </proposition>
-  
+
 <p>
 For our first version of a proof of
 <xref ref="prop_sumints">Proposition</xref>, we clearly
@@ -29,57 +26,44 @@ terms of <m>S_n</m>. As you develop more experience with writing proofs by
 induction, this will become less essential, as you'll see in the
 second version of the proof.
 </p>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>n</m> be a positive integer, and let <m>S_n</m> be the open statement
 </p>
-  
 <me>
-\sum_{i=1}^n i = \frac{n(n+1)}{2}.
+  \sum_{i=1}^n i = \frac{n(n+1)}{2}.
 </me>
- 
 <p>
 We will prove that <m>S_n</m> is true for all positive integers by
 induction. For the basis step, we must prove that <m>S_1</m> is
 true. When <m>n=1</m>, the left-hand side of <m>S_n</m> is just <m>1</m>, while the
 right-hand side evaluates to <m>1(1+1)/2=1</m>. Therefore, <m>S_1</m> is true.
 </p>
-  
+
 <p>
 Next we assume that for some positive integer <m>k</m>, <m>S_k</m> is
 true. That is, we assume
 </p>
-  
 <me>
-
   \sum_{i=1}^k i=\frac{k(k+1)}{2}.
-  
 </me>
- 
 <p>
 We now seek to prove that <m>S_{k+1}</m> is true, and begin by
 considering the left-hand side of <m>S_{k+1}</m>. We notice that
 </p>
-  
 <me>
-
   \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
   \frac{k(k+1)}{2}+(k+1),
 </me>
- 
 <p>
 since our inductive hypothesis that <m>S_k</m> is true gives us the
 simpler formula for the summation. Now continuing with a bit of
 algebra, we find
 </p>
-  
 <me>
-\frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
-  
+  \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
 </me>
- 
 <p>
 Therefore, <m>S_{k+1}</m> is true. Since we have shown that <m>S_1</m> is
 true and that for every positive integer <m>k</m>, if <m>S_k</m> is true,
@@ -87,9 +71,8 @@ then <m>S_{k+1}</m> is true, we conclude that <m>S_n</m> is true for all
 positive integers <m>n</m> by the Principle of
 Mathematical Induction.
 </p>
- 
 </proof>
-  
+
 <p>
 Before looking at a refined version of this proof, let's take a moment
 to discuss the key steps in every proof by induction. The first step
@@ -103,7 +86,7 @@ true. Notice how in the proof above, we discussed the left-hand side
 of <m>S_1</m> and the right-hand side of <m>S_1</m> and concluded that they were
 equal.
 </p>
-  
+
 <p>
 After the basis step comes the <em>inductive step</em>, in which we
 assume that <m>S_k</m> is true for <b>some</b> positive integer <m>k</m> and
@@ -121,7 +104,7 @@ left-hand side of <m>S_{k+1}</m> and separately work with the right-hand side of
 <m>S_{k+1}</m>. If you're able to manipulate both sides to be in the same
 form, then you have shown they are equal and <m>S_{k+1}</m> is true.
 </p>
-  
+
 <p>
 Now let's take a look at a more refined proof of
 <xref ref="prop_sumints">Proposition</xref>. From here
@@ -129,46 +112,36 @@ on, when we give a proof by induction, we'll use this style. As you're
 getting started with induction proofs, you may find it useful to be
 more explicit about the steps as we did in the first proof above.
 </p>
-  
-<proof>
 
+<proof>
 <p>
 We first prove the assertion when <m>n=1</m>. For this value of <m>n</m>, the
 left-hand side is just<nbsp /><m>1</m>, while the right-hand side evaluates to
 <m>1(1+1)/2=1</m>.
 </p>
-  
+
 <p>
 Now assume that for some positive integer <m>k</m>, the formula holds
 when <m>n=k</m>, i.e., assume that
 </p>
-  
 <me>
-
   \sum_{i=1}^k i=\frac{k(k+1)}{2}.
-  
 </me>
- 
 <p>
 Then it follows that
 </p>
-  
 <me>
-
   \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
   \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
-  
 </me>
- 
 <p>
 Thus the formula also holds when <m>n=k+1</m>. By the Principle of
 Mathematical Induction, it holds for all positive integers <m>n</m>.
 </p>
- 
 </proof>
-  
+
 <p>
-The preceding arguments are 100<percent /> correct... but some combinatorial
+The preceding arguments are 100<percent /> correct<ddots /> but some combinatorial
 mathematicians would argue that they may actually hide what is really
 going on. These folks would much prefer a combinatorial proof, as was
 provided in the preceding chapter. Our perspective is that you should
@@ -176,81 +149,66 @@ prefer to give a combinatorial proof&#8202;&#x2014;&#8202;when you can find one.
 pressed, you should be able to give a formal proof by mathematical
 induction.
 </p>
-  
+
 <p>
 Here's a second example, also quite a classic. Again, recall that we
 gave a combinatorial proof in the last chapter. As you read the proof,
 make sure you can identify the open statement <m>S_n</m>, the basis step,
 and the inductive step.
 </p>
-  
-<proposition xml:id="prop_sumodd"><statement>
+
+<proposition xml:id="prop_sumodd">
+<statement>
 <p>
 For each positive integer <m>n</m>, the
 sum of the first <m>n</m> odd positive integers is <m>n^2</m>, i.e.,
 </p>
-  
 <me>
-
-\sum_{i=1}^n (2i-1)= n^2.
-
+  \sum_{i=1}^n (2i-1)= n^2.
 </me>
- </statement>
+</statement>
 </proposition>
-  
-<proof>
 
+<proof>
 <p>
 We will prove this by induction. First, note that the formula holds when
 <m>n=1</m>. Now suppose that <m>k</m> is a positive integer and
 that the formula holds when <m>n=k</m>, i.e., assume
 </p>
-  
 <me>
-
-\sum_{i=1}^k (2i-1)= k^2.
-
+  \sum_{i=1}^k (2i-1)= k^2.
 </me>
- 
 <p>
 Then
 </p>
-  
 <me>
-
-\sum_{i=1}^{k+1}(2i-1)=\left(\sum_{i=1}^k 2i-1\right)+2k+1=
+  \sum_{i=1}^{k+1}(2i-1)=\left(\sum_{i=1}^k 2i-1\right)+2k+1=
 k^2+(2k+1)=(k+1)^2.
-
 </me>
- 
 <p>
 Therefore, the proposition follows by the Principle of Mathematical Induction.
 </p>
- 
 </proof>
-  
+
 <p>
 Here's a more general version of the first result in
 this section, and again we note that we gave a combinatorial
 proof in the last chapter.
 </p>
-  
-<proposition xml:id="prop_sum-bincoeffs"><statement>
+
+<proposition xml:id="prop_sum-bincoeffs">
+<statement>
 <p>
 Let <m>n</m> and <m>k</m> be non-negative integers with <m>n\ge k</m>.
 Then
 </p>
-  
 <me>
-
-\sum_{i=k}^n \binom{i}{k}=\binom{n+1}{k+1}.
-
+  \sum_{i=k}^n \binom{i}{k}=\binom{n+1}{k+1}.
 </me>
- </statement>
+</statement>
 </proposition>
-  
-<proof>
 
+<proof>
 <p>
 Fix a non-negative integer <m>k</m>. We then prove the
 formula by induction on <m>n</m>. If <m>n=k</m>, note that
@@ -260,26 +218,22 @@ Now assume that <m>m</m> is a non-negative integer, with
 <m>m\ge k</m>, and that the
 formula holds when <m>n=m</m>, i.e., assume that
 </p>
-  
 <me>
-
-\sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
-
+  \sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
 </me>
-  
 <p>
 Then
 </p>
-  
-<md><mrow>\sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}</mrow>
- <mrow>\amp =\binom{m+1}{k+1}+\binom{m+1}{k}</mrow>
- <mrow>\amp =\binom{m+2}{k+1}.</mrow>
- 
+<md>
+  <mrow>  \sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}
+      </mrow>
+  <mrow>  \amp =\binom{m+1}{k+1}+\binom{m+1}{k}
+      </mrow>
+  <mrow>  \amp =\binom{m+2}{k+1}.
+      </mrow>
 </md>
- 
 <p>
 Therefore, the proposition follows by the Principle of Mathematical Induction.
 </p>
- 
 </proof>
- </section>
+</section>

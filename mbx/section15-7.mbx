@@ -1,18 +1,21 @@
-
 <section>
-<title>Exercises</title><ol><li>Consider the network diagram in
+<title>Exercises</title>
+<ol>
+<li>Consider the network diagram in
   <xref ref="fig_networkflow_invalid" autoname="yes" />. For each directed edge, the first
   number is the capacity and the second value is intended to give a
   flow <m>\phi</m> in the network. However, the flow suggested is not
   valid.
-  <ol><li>Identify the reason(s) <m>\phi</m> is not valid.</li>
+<ol>
+<li>Identify the reason(s) <m>\phi</m> is not valid.</li>
 <li>Without changing any of the edge capacities, modify <m>\phi</m>
     into a valid flow <m>\widehat{\phi}</m>. Try to use as few modifications as
     possible.</li>
- </ol>  
-  <figure xml:id="fig_networkflow_invalid" >
+</ol>
+<figure xml:id="fig_networkflow_invalid" >
 <caption>An invalid flow in a network</caption>
-<image source="images/networkflow_ex_invalid.png" /> </figure>
+<image width="65%" source="images/networkflow_ex_invalid.png" />
+</figure>
 </li>
 <li>Alice claims to have found a (valid) network flow of value <m>20</m>
   in the network shown in <xref ref="fig_networkflow_network_ex" autoname="yes" />. Bob
@@ -20,7 +23,8 @@
   greater than <m>18</m>. Who's right and why?
   <figure xml:id="fig_networkflow_network_ex" >
 <caption>A network</caption>
-<image source="images/network_ex.png" /> </figure>
+<image width="65%" source="images/network_ex.png" />
+</figure>
 </li>
 <li>Find an augmenting path <m>P</m> with <em>at least one backward edge</em>
   for the flow <m>\phi</m> in the network shown in
@@ -29,7 +33,8 @@
   flow <m>\hat{\phi}</m>. What is the value of <m>\hat{\phi}</m>?
   <figure xml:id="fig_networkflow_augpath_ex" >
 <caption>A network with flow</caption>
-<image source="images/augpath_ex.png" /> </figure>
+<image width="65%" source="images/augpath_ex.png" />
+</figure>
 </li>
 <li xml:id="ex_networkflow_update" >Prove
   <xref ref="prop_networkflow_update">Proposition</xref>. You
@@ -39,19 +44,15 @@
   the two edges on the augmenting path that are incident with the
   vertex. </li>
 <li>Find the capacity of the cut <m>(L,U)</m> with
-  
 <me>
-L=\{S,F,H,C,B,G,I\}\qquad\text{and} \qquad U=\{A,D,E,T\}
+  L=\{S,F,H,C,B,G,I\}\qquad\text{and} \qquad U=\{A,D,E,T\}
 </me>
- 
-  in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />.</li>
+in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />.</li>
 <li>Find the capacity of the cut <m>(L,U)</m> with
-  
 <me>
-L=\{S,F,D,B,A\}\qquad\text{and} \qquad U=\{H,C,I,G,E,T\}
+  L=\{S,F,D,B,A\}\qquad\text{and} \qquad U=\{H,C,I,G,E,T\}
 </me>
- 
-  in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />.</li>
+in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />.</li>
 <li xml:id="ex_networkflow_do-update" >For each of the augmenting paths <m>P_1</m>, <m>P_2</m>, <m>P_3</m>, and <m>P_4</m>
   in
   <xref ref="exa_networkflow_delta">Example</xref>,
@@ -69,7 +70,8 @@ L=\{S,F,D,B,A\}\qquad\text{and} \qquad U=\{H,C,I,G,E,T\}
   current flow shown there.
   <figure xml:id="fig_networkflow_network_find_flow1" >
 <caption>A network with flow</caption>
-<image source="images/network_find_flow1.png" /> </figure>
+<image width="65%" source="images/network_find_flow1.png" />
+</figure>
 </li>
 <li><xref ref="fig_networkflow_network_find_flow2" autoname="yes" /> shows a
   network. Starting from the zero flow, i.e., the flow with
@@ -78,7 +80,8 @@ L=\{S,F,D,B,A\}\qquad\text{and} \qquad U=\{H,C,I,G,E,T\}
   minimum cut in this network.
   <figure xml:id="fig_networkflow_network_find_flow2" >
 <caption>A network</caption>
-<image source="images/network_find_flow2.png" /> </figure>
+<image width="65%" source="images/network_find_flow2.png" />
+</figure>
 </li>
 <li>Consider a network in which the source <m>S</m> has precisely three
   neighbors: <m>B</m>, <m>E</m>, and <m>F</m>. Suppose also that <m>c(S,B)=30</m>,
@@ -89,4 +92,5 @@ L=\{S,F,D,B,A\}\qquad\text{and} \qquad U=\{H,C,I,G,E,T\}
   labeled are <m>S</m> with label <m>(*,+,\infty)</m> and <m>F</m> with label
   <m>(S,+,15)</m>. Use this information to determine the value of the flow
   <m>\phi</m> and explain how you do so.</li>
- </ol>  </section>
+</ol>
+</section>

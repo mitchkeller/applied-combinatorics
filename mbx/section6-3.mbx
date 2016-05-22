@@ -1,4 +1,3 @@
-
 <section>
 <title>The Big <q>Oh</q> and Little <q>Oh</q> Notations</title>
 <p>
@@ -13,14 +12,14 @@ the number of operations required for two algorithms given input
 size <m>n</m>, then the meaning of <m>f=O(g)</m> is that <m>f</m> is no
 harder than <m>g</m> when the problem size is large.
 </p>
-  
+
 <p>
 We are particulary interested in comparing functions against
 certain natural benchmarks, e.g., <m>\log\log n</m>, <m>\log n</m>, <m>\sqrt{n}</m>,
 <m>n^\alpha</m> where <m>\alpha\lt 1</m>, <m>n</m>, <m>n^2</m>, <m>n^3</m>, <m>n^c</m> where <m>c>1</m>
 is a constant, <m>n^{\log n}</m>, <m>2^n</m>, <m>n!</m>, <m>2^{n^2}</m>, etc.
 </p>
-  
+
 <p>
 For example, later in this text, we will learn that there
 are sorting algorithms with running time <m>O(n\log n)</m> where
@@ -32,7 +31,7 @@ no one knows whether there is a constant <m>c</m> and an algorithm for
 determining whether the chromatic number of a graph is at most three
 which has running time <m>O(n^c)</m>.
 </p>
-  
+
 <p>
 It is important to remember that when we write <m>f=O(g)</m>, we are
 implying in some sense that <m>f</m> is no bigger than <m>g</m>, but it
@@ -41,7 +40,7 @@ when we really know that one function dominates
 another. And we have a second kind of notation to capture this
 relationship.
 </p>
-  
+
 <p>
 Let <m>f:\mathbb{N}\longrightarrow \mathbb{R}</m> and
 <m>g:\mathbb{N}\longrightarrow\mathbb{R}</m> be functions with
@@ -52,4 +51,4 @@ For example <m>\ln n=o(n^{.2})</m>; <m>n^\alpha=o(n^{\beta})</m> whenever
 <m>0\lt \alpha\lt \beta</m>; and <m>n^{100}=o(c^n)</m> for every <m>c>1</m>.
 In particular, we write <m>f(n)=o(1)</m> when <m>\lim_{n\rightarrow\infty}f(n)=0</m>.
 </p>
- </section>
+</section>

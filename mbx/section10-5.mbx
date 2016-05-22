@@ -1,4 +1,3 @@
-
 <section xml:id="s_genfunction_partitions-integer">
 <title>Partitions of an Integer</title>
 <p>
@@ -12,7 +11,7 @@ seem like easy questions to answer at first, but generating functions
 will allow us to say something very interesting about the answers to
 the last two questions.
 </p>
-  
+
 <p>
 By a <em>partition</em> <m>P</m> of an integer, we mean a collection of (not
 necessarily distinct) positive integers such that <m>\sum_{i\in P} i =
@@ -20,96 +19,79 @@ n</m>. (By convention, we will write the elements of <m>P</m> from largest to
 smallest.) For example, <m>2+2+1</m> is a partition of <m>5</m>. For each
 <m>n\ge0</m>, let <m>p_n</m> denote the number of partitions of the integer <m>n</m>
 (with <m>p_0=1</m> by convention). Note that <m>p_8=22</m> as evidenced by the
-list in <xref ref="tab_genfunction_partsof8" autoname="yes" />.
+list in <xref ref="fig_genfunction_partsof8" autoname="yes" />.
 </p>
-  <figure xml:id="tab_genfunction_partsof8" >
+<figure xml:id="fig_genfunction_partsof8" >
 <caption>The partitions of <m>8</m>, noting those into distinct parts
   and those into odd parts.</caption>
-<table id="7ab8e2b192324d7aa7018197293a03364d1e4bc3" ><tr><td class='l'>
-  8\quad\text{distinct parts} \amp 
-  7+1\quad\text{distinct parts, odd parts} \amp 
-  6+2\quad\text{distinct parts} </td></tr>
-<tr><td class='l'>
-  6+1+1\amp 
-  5+3\quad\text{distinct parts, odd parts} \amp 
-  5+2+1\quad\text{distinct parts} </td></tr>
-<tr><td class='l'>
-  5+1+1+1\quad\text{odd parts} \amp 
-  4+4\amp 
-  4+3+1\quad\text{distinct parts} </td></tr>
-<tr><td class='l'>
-  4+2+2\amp 
-  4+2+1+1\amp 
-  4+1+1+1+1</td></tr>
-<tr><td class='l'>
-  3+3+2\amp 
-  3+3+1+1\quad\text{odd parts} \amp 
-  3+2+2+1</td></tr>
-<tr><td class='l'>
-  3+2+1+1+1\amp 
-  3+1+1+1+1+1\quad\text{odd parts} \amp 
-  2+2+2+2</td></tr>
-<tr><td class='l'>
-  2+2+2+1+1\amp 
-  2+2+1+1+1+1\amp 
-  2+1+1+1+1+1+1</td></tr>
-<tr><td class='l'>\amp 
-  1+1+1+1+1+1+1+1\quad\text{odd parts} </td></tr>
-</table> 
+8\quad\text{distinct} <br />
+  7+1\quad\text{distinct and odd} <br />
+  6+2\quad\text{distinct} <br />
+  6+1+1<br />
+  5+3\quad\text{distinct and odd} <br />
+  5+2+1\quad\text{distinct} <br />
+  5+1+1+1\quad\text{odd} <br />
+  4+4<br />
+  4+3+1\quad\text{distinct} <br />
+  4+2+2<br />
+  4+2+1+1<br />
+  4+1+1+1+1<br />
+  3+3+2<br />
+  3+3+1+1\quad\text{odd} <br />
+  3+2+2+1<br />
+  3+2+1+1+1<br />
+  3+1+1+1+1+1\quad\text{odd} <br />
+  2+2+2+2<br />
+  2+2+2+1+1<br />
+  2+2+1+1+1+1<br />
+  2+1+1+1+1+1+1<br />
+  1+1+1+1+1+1+1+1\quad\text{odd}
 </figure>
- 
 <p>
 Note that there are <m>6</m> partitions of <m>8</m> into <em>distinct</em> parts. Also
 there are <m>6</m> partitions of <m>8</m> into <em>odd</em> parts. While it
 might seem that this is a coincidence, it in fact is always the case
 as the following theorem states.
 </p>
-  
-<theorem xml:id="thm_partition"><statement>
+
+<theorem xml:id="thm_partition">
+<statement>
 <p>
 For each <m>n\ge1</m>, the number of partitions of <m>n</m> into distinct parts is
 equal to the number of partitions of <m>n</m> into odd parts.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 The generating function <m>D(x)</m> for
 the number of partitions of <m>n</m> into distinct parts is
 </p>
-  
 <me>
-
-D(x)=\prod_{n=1}^\infty (1+x^n).
-
+  D(x)=\prod_{n=1}^\infty (1+x^n).
 </me>
- 
 <p>
 On the other hand, the generating function <m>O(x)</m> for the number of partitions
 of <m>n</m> into odd parts is
 </p>
-  
 <me>
-
-O(x)=\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}.
-
+  O(x)=\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}.
 </me>
- 
 <p>
 To see that <m>D(x)=O(x)</m>, we
 note that <m>1-x^{2n}=(1-x^n)(1+x^n)</m> for all <m>n\ge1</m>. Therefore,
 </p>
-  
-<md><mrow>D(x)\amp =\prod_{n=1}^\infty
-(1+x^n)=\prod_{n=1}^\infty\frac{1-x^{2n}}{1-x^n} =\frac{\prod_{n=1}^\infty(1-x^{2n})}{\prod_{n=1}^\infty(1-x^n)}</mrow>
- <mrow>\amp =\frac{\prod_{n=1}^\infty(1-x^{2n})}{
+<md>
+  <mrow>  D(x)\amp =\prod_{n=1}^\infty
+(1+x^n)=\prod_{n=1}^\infty\frac{1-x^{2n}}{1-x^n} =\frac{\prod_{n=1}^\infty(1-x^{2n})}{\prod_{n=1}^\infty(1-x^n)}
+      </mrow>
+  <mrow>  \amp =\frac{\prod_{n=1}^\infty(1-x^{2n})}{
        \prod_{n=1}^\infty(1-x^{2n-1})\prod_{n=1}^\infty(1-x^{2n})}
-    =\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}</mrow>
- <mrow>\amp = O(x).</mrow>
- 
+    =\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}
+      </mrow>
+  <mrow>  \amp = O(x).
+      </mrow>
 </md>
- 
 </proof>
- </section>
+</section>

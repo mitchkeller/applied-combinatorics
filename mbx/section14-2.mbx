@@ -1,6 +1,8 @@
-
 <section>
-<title>Discussion</title><introduction>
+<title>Discussion</title>
+
+
+<introduction>
 <p>
 Although Bob's combinatorial intuition has improved over the course
 he doesn't quite understand why we need
@@ -22,7 +24,9 @@ track record but suggests that
 <xref ref="lem_graphalgorithms_tech">Lemma</xref>
 may be enough to get one to succeed here.
 </p>
- </introduction> 
+</introduction>
+
+
 <subsection>
 <title>Kruskal's Algorithm</title>
 <p>
@@ -31,7 +35,7 @@ finding a minimum weight spanning tree. It is known as Kruskal's
 Algorithm, although some prefer the descriptive label <em>Avoid
 Cycles</em> because of the way it builds the spanning tree.
 </p>
-  
+
 <p>
 To start Kruskal's algorithm, we sort the edges according to weight.
 To be more precise, let <m>m</m> denote the number of edges in <m>\GVE</m>.
@@ -39,31 +43,27 @@ Then label the edges as <m>e_1,e_2,e_3,\dots,e_m</m> so that <m>w(e_1)\le
 w(e_2)\le \dots \le w(e_m)</m>. Any of the many available efficient
 sorting algorithms can be used to do this step.
 </p>
-  
+
 <p>
 Once the edges are sorted, Kruskal's algorithm proceeds to an
 initialization step and then inductively builds the spanning tree
 <m>\bfT=(V,S)</m>:
 </p>
-  
+
 <p>
-<b>Initialization.</b><nbsp /><nbsp />
+<b>Initialization.</b> 
 Set <m>S=\emptyset</m> and <m>i=0</m>.
 </p>
-  
+
 <p>
-<b>Inductive Step.</b><nbsp /><nbsp />
+<b>Inductive Step.</b> 
 While <m>|S| \lt  n-1</m>, let <m>j</m> be the least non-negative
 integer so that <m>j > i</m> and there are no cycles in
 <m>S\cup\{e_j\}</m>. Then (using pseudo-code) set
 </p>
-  
 <me>
-
-i = j\quad\text{and} \quad S= S\cup\{j\}.
-
+  i = j\quad\text{and} \quad S= S\cup\{j\}.
 </me>
-  
 <p>
 The correctness of Kruskal's Algorithm follows from an inductive
 argument. First, the set <m>S</m> is initialized as the empty set, so there
@@ -81,9 +81,10 @@ and the inductive hypothesis, we know that there will still be a
 minimum weight spanning tree of <m>\bfG</m> containing all the edges of
 <m>S\cup\{e\}</m>.
 </p>
-  <div class="minipage">{0.70\textwidth}
+<div class="minipage">{0.70\textwidth}
 
-<example><statement>
+<example>
+<statement>
 <p>
 Let's see what Kruskal's algorithm does on the weighted graph in
 <xref ref="fig_graphalgorithms_spantreegraph" autoname="yes" />. It first sorts all of
@@ -106,7 +107,7 @@ twelfth and final edge for this <m>13</m>-vertex spanning tree. The full
 list of edges added (in order) is shown to the right. The total
 weight of this spanning tree is <m>504</m>.
 </p>
- </statement>
+</statement>
 </example>
 </div>   <div class="minipage">{.25\textwidth}
 <b>Kruskal's Algorithm</b><br /> 
@@ -121,7 +122,10 @@ weight of this spanning tree is <m>504</m>.
      d l 55<br /> 
      d j 56<br /> 
      e k 59<br /> 
-     c h 79\end{tt} </div> </subsection> 
+     c h 79\end{tt} </div>
+</subsection>
+
+
 <subsection>
 <title>Prim's Algorithm</title>
 <p>
@@ -131,33 +135,30 @@ tree. This algorithm is also known by a more descriptive label:
 the algorithm proceeds with an initialization step followed by a
 series of inductive steps.
 </p>
-  
+
 <p>
-<b>Initialization.</b><nbsp /><nbsp />
+<b>Initialization.</b> 
 Set <m>W=\{r\}</m> and <m>S=\emptyset</m>.
 </p>
-  
+
 <p>
-<b>Inductive Step.</b><nbsp /><nbsp />
+<b>Inductive Step.</b> 
 While <m>|W| \lt  n</m>, let <m>e</m> be an edge of minimum weight among
 all edges with one endpoint in <m>W</m> and the other not in <m>W</m>.
 If <m>e=xy</m>, <m>x\in W</m> and <m>y\not\in W</m>, update <m>W</m> and <m>S</m> by
 setting (using pseudo-code)
 </p>
-  
 <me>
-
-W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
-
+  W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
 </me>
-  
 <p>
 The correctness of Prim's algorithm follows immediately from
 <xref ref="lem_graphalgorithms_tech">Lemma</xref>.
 </p>
-  <div class="minipage">{0.70\textwidth}
+<div class="minipage">{0.70\textwidth}
 
-<example><statement>
+<example>
+<statement>
 <p>
 Let's see what Prim's algorithm does on the weighted graph in
 <xref ref="fig_graphalgorithms_spantreegraph" autoname="yes" />. We start with vertex
@@ -179,7 +180,7 @@ that the spanning tree found is different, as this one contains
 both cases an arbitrary choice between two edges of equal weight
 was made.
 </p>
- </statement>
+</statement>
 </example>
 </div>   <div class="minipage">{.25\textwidth}
 <b>Prim's Algorithm</b><br />
@@ -198,7 +199,10 @@ d l 55<br />
 e k 59<br />
 e m 49<br />
 c h 79
-\end{tt} </div> </subsection> 
+\end{tt} </div>
+</subsection>
+
+
 <subsection>
 <title>Comments on Efficiency</title>
 <p>
@@ -210,7 +214,7 @@ you keep track of the components as the spanning forest expands.
 Regardless, it is easy to see that at most <m>O(n^2\log n)</m> operations
 are required.
 </p>
-  
+
 <p>
 On the other hand, an implementation of Prim's algorithm requires
 the program to conveniently keep track of the edges incident with
@@ -219,4 +223,6 @@ weight among subsets of these edges. In computer science, the
 data structure that enables this task to be carried out is called
 a <em>heap</em>.
 </p>
- </subsection> </section>
+</subsection>
+
+</section>

@@ -1,6 +1,8 @@
-
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_graphalgorithms">
-<title>Graph Algorithms</title><introduction>
+<title>Graph Algorithms</title>
+
+
+<introduction>
 <p>
 In previous chapters, we have encountered a few algorithms for
 problems involving discrete structures such as finding euler circuits
@@ -12,10 +14,11 @@ edge of the graph. The first problem studied is determining a spanning
 tree of minimum weight. The second is of finding shortest paths from
 a root vertex to each other vertex in a directed graph.
 </p>
- </introduction> <xi:include  href="section14-1.mbx" />
+</introduction>
+<xi:include  href="section14-1.mbx" />
  <xi:include  href="section14-2.mbx" />
  <xi:include  href="section14-3.mbx" />
  <xi:include  href="section14-4.mbx" />
  <xi:include  href="section14-5.mbx" />
  <xi:include  href="section14-6.mbx" />
- </chapter>
+</chapter>

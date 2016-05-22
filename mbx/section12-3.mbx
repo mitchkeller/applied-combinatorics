@@ -1,4 +1,3 @@
-
 <section>
 <title>Bernoulli Trials</title>
 <p>
@@ -7,7 +6,7 @@ and three are blue. A marble is drawn at random and we record whether it
 is red or blue. The probability <m>p</m> of getting a red marble
 is <m>4/7</m>; and the probability of getting a blue is <m>1-p=3/7</m>.
 </p>
-  
+
 <p>
 Now suppose the marble is put back in the jar, the marbles in the
 jar are stirred, and the experiment is repeated. Then the probability
@@ -15,7 +14,7 @@ of getting a red marble on the second trial is again <m>4/7</m>,
 and this pattern holds regardless of the number of times the experiment
 is repeated.
 </p>
-  
+
 <p>
 It is customary to call this situation a series of <em>Bernoulli
 trials</em>. More formally, we have an experiment with only two
@@ -24,7 +23,7 @@ of success is <m>p</m> and the probability of failure is <m>1-p</m>. Most import
 when the experiment is repeated, then the probability of success on any
 individual test is exactly <m>p</m>.
 </p>
-  
+
 <p>
 We fix a positive integer <m>n</m> and consider the case that the experiment
 is repeated <m>n</m> times. The outcomes are then the binary strings of
@@ -34,8 +33,8 @@ respectively. If <m>x</m> is a string with <m>i</m> sucesses and <m>n-i</m> fail
 and failure may be replaced by: head/tails, up/down, good/bad, forwards/backwards,
 red/blue, etc.
 </p>
-  
-<example><statement>
+<example>
+<statement>
 <p>
 When a die is rolled, let's say that we have a success if the result
 is a two or a five. Then the probability <m>p</m> of success is
@@ -43,24 +42,23 @@ is a two or a five. Then the probability <m>p</m> of success is
 rolled ten times in succession, then the probability that we get
 exactly exactly four successes is <m>C(10,4)(1/3)^4 (2/3)^{6}</m>.
 </p>
- </statement>
+</statement>
 </example>
   
-<example><statement>
+<example>
+<statement>
 <p>
 A fair coin is tossed <m>100</m> times and the outcome (heads or tails)
 is recorded. Then the probability of getting heads <m>40</m> times
 and tails the other <m>60</m> times is
 </p>
-  
 <me>
-
-\binom{100}{40}\left(\frac{1}{2}\right)^{40}\left(\frac{1}{2}\right)^{60}=\frac{\binom{100}{40}}{2^{100}}.
-
+  \binom{100}{40}\left(\frac{1}{2}\right)^{40}\left(\frac{1}{2}\right)^{60}=\frac{\binom{100}{40}}{2^{100}}.
 </me>
- </statement>
+</statement>
 </example>
-  <paragraphs><title>Discussion</title>
+  <paragraphs>
+<title>Discussion</title>
 <p>
 Bob says that if a fair coin is tossed <m>100</m> times, it is fairly likely
 that you will get exactly <m>50</m> heads and <m>50</m> tails. Dave is not so certain
@@ -68,13 +66,9 @@ this is right. Carlos fires up his computer and in few second, he reports
 that the probability of getting exactly <m>50</m> heads when a fair coin is
 tossed <m>100</m> times is
 </p>
-  
 <me>
-
-\frac{12611418068195524166851562157}{158456325028528675187087900672}
-
+  \frac{12611418068195524166851562157}{158456325028528675187087900672}
 </me>
- 
 <p>
 which is <m>.079589</m>, to six decimal places.
 In other words, not very likely at all. Xing is doing a modestly more complicated
@@ -84,4 +78,5 @@ is very large, then it is increasingly certain that the number of heads
 in <m>n</m> tosses will be close to <m>n/2</m>. Dave asks what do you mean by
 close, and what do you mean by very large?
 </p>
- </paragraphs> </section>
+</paragraphs>
+</section>

@@ -1,6 +1,8 @@
-
 <section>
-<title>Zero&#x2013;One Matrices</title><introduction>
+<title>Zero<ndash />One Matrices</title>
+
+
+<introduction>
 <p>
 Matrices with all entries <m>0</m> and <m>1</m> arise in many combinatorial
 settings, and here we present a classic result, called the Gale/Ryzer
@@ -14,7 +16,7 @@ and <m>n</m> be positive integers, and let <m>R=(r_1,r_2,\dots,r_m)</m> and
 question is whether there exists an <m>m\times n</m> zero&#x2013;one matrix
 <m>M</m> with row sum string <m>R</m> and column sum string <m>C</m>.
 </p>
-  
+
 <p>
 To attack this problem, we pause briefly to develop some additional
 background material. Note that we may assume without loss of
@@ -24,14 +26,14 @@ no zero&#x2013;one matrix with row sum string <m>R</m> and column sum string <m>
 Furthermore, we may assume that both <m>R</m> and <m>C</m> are non-increasing strings,
 i.e., <m>r_1\ge r_2\ge \dots\ge r_m</m> and <m>c_1\ge c_2\ge\dots\ge c_n</m>.
 </p>
-  
+
 <p>
 To see this note that whenever we exchange two rows in a zero&#x2013;one matrix,
 the column sum string is unchanged. Accordingly after a suitable
 permutation of the rows, we may assume that <m>R</m> is non-increasing.
 Then the process is repeated for the columns.
 </p>
-  
+
 <p>
 Finally, it is easy to see that we may assume that all entries in
 <m>R</m> and <m>C</m> are positive integers, since zeroes in these strings
@@ -40,7 +42,7 @@ Accordingly, the row sum string <m>R</m> and the colum sum string <m>C</m> can b
 viewed as partitions of the integer <m>t</m>, a topic we first introduced
 in <xref ref="ch_genfunction" autoname="yes" />.
 </p>
-  
+
 <p>
 For the balance of this section, we let <m>t</m> be a positive integer
 and we let <m>\cgP(t)</m> denote the family of all partitions of the integer
@@ -52,11 +54,11 @@ of partial sums for <m>V</m> is always at least as large, term by term,
 as the sequence of partial sums of <m>W</m>. For example, we show in
 <xref ref="fig_partitionlattice" autoname="yes" /> the partial order <m>\cgP(7)</m>.
 </p>
-  
+
 <p>
 FIGURE HERE
 </p>
-  
+
 <p>
 In the proof of the Gale-Ryser theorem, it will be essential
 to fully understand when one partition covers another. We state
@@ -64,28 +66,32 @@ the following proposition for emphasis; the proof consists
 of just considering the details of the definition of the partial
 order on partitions.
 </p>
-  
-<proposition xml:id="prop_partitioncover"><statement>
+
+<proposition xml:id="prop_partitioncover">
+<statement>
 <p>
 ] Let <m>V=(v_1,v_2,\dots,v_m)</m> and <m>W=(w_1,w_2,\dots,w_n)</m>
 be partitions of an integer<nbsp /><m>t</m>, and suppose that <m>V</m> covers <m>W</m> in
 the poset <m>\cgP(t)</m>. Then <m>n\le m+1</m>, and there exist integers <m>i</m> and <m>j</m> with
 <m>1\le i\lt j\le n</m> so that:
 </p>
-  <ol><li><m>v_\alpha=w_\alpha</m>, when <m>1\le \alpha\lt i</m>.</li>
+
+<ol>
+<li><m>v_\alpha=w_\alpha</m>, when <m>1\le \alpha\lt i</m>.</li>
 <li><m>v_\beta=w_\beta</m>, when <m>j\lt \beta\le m</m>.</li>
 <li><m>v_i=1+w_i</m>.</li>
 <li>Either (a)<nbsp /><m>j\le m</m> and <m>w_j=1+v_j</m>, or (b)<nbsp /><m>j=n=m+1</m> and <m>w_j=1</m>.</li>
 <li>If <m>j>i+1</m>, then <m>w_\gamma=v_\gamma=v_i-1</m> when <m>i\lt \gamma\lt j</m>.</li>
- </ol>  </statement>
+</ol>
+</statement>
 </proposition>
-  
+
 <p>
 To illustrate this concept, note that <m>(6,6,4,3,3,3,1,1,1,1,)</m> covers
 <m>(6,6,3,3,3,3,2,1,1,1)</m> in <m>\cgP(29)</m>. Also, <m>(5,4,3)</m> covers <m>(5,3,3,1)</m> in
 <m>\cgP(12)</m>.
 </p>
-  
+
 <p>
 With a partition <m>V=(v_1,v_2,\dots,v_m)</m> from <m>\cgP(t)</m>,
 we associate a <em>dual partition</em> <m>W=(w_1,w_2,\dots,w_n)</m> defined
@@ -97,7 +103,9 @@ of the universe! In what follows, we denote the dual of the partition
 <m>V</m> by <m>V^d</m>. Note that if <m>W=V^d</m>, then <m>V=W^d</m>, i.e., the dual of the
 dual is the original.
 </p>
- </introduction> 
+</introduction>
+
+
 <subsection>
 <title>The Obvious Necessary Condition</title>
 <p>
@@ -116,22 +124,22 @@ we have the inequality <m>\sum^{1\le i\le j} c''_i\le
 the left can only increase the partial sums. It follows that
 <m>R^d\ge C</m> in the poset <m>\cgP(t)</m>.
 </p>
-  
+
 <p>
 So here is the Gale-Ryser theorem.
 </p>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
 Let <m>R</m> and <m>C</m> be partitions of a positive integer <m>t</m>. Then there
 exists a zero&#x2013;one matrix with row sum string <m>R</m> and column sum
 string<nbsp /><m>C</m> if and only if <m>R^d\ge C</m> in the poset <m>\cgP(t)</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 The necessity of the condition has been established. We prove sufficiency.
 The proof is constructive. In the poset <m>\cgP(t</m>, let
@@ -148,6 +156,7 @@ while the <m>q,j</m> entry of <m>M</m> is <m>0</m>. Exchange these two entries
 to form the matrix <m>M_{p+1}</m>. Note that the exchange may in fact
 require adding a new column to the matrix.
 </p>
- 
 </proof>
- </subsection> </section>
+</subsection>
+
+</section>

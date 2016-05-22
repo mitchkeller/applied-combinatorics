@@ -1,6 +1,8 @@
-
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_graphs">
-<title>Graph Theory</title><introduction>
+<title>Graph Theory</title>
+
+
+<introduction>
 <p>
 In <xref ref="ex_radiostations">Example</xref>, we
 discussed the problem of assigning frequencies to radio stations in
@@ -9,7 +11,7 @@ broadcast on distinct frequencies. Clearly we would like to use the
 smallest number of frequencies possible for a given layouts of
 transmitters, but how can we determine what that number is?
 </p>
-  
+
 <p>
 Suppose three new homes are being built and each of them must be
 provided with utility connections. The utilites in question are water,
@@ -20,7 +22,7 @@ another provider's terminal or another house en route), and the three
 providers all wish to bury their lines exactly four feet below
 ground. Can they do this successfully without the lines crossing?
 </p>
-  
+
 <p>
 These are just two of many, many examples where the discrete structure
 known as a <em>graph</em> can serve as an enlightening mathematical
@@ -30,7 +32,8 @@ text. Many of the concepts we will study, while presented in a more
 abstract mathematical sense, have their origins in applications of
 graphs as models for real-world problems.
 </p>
- </introduction> <xi:include  href="section7-1.mbx" />
+</introduction>
+<xi:include  href="section7-1.mbx" />
  <xi:include  href="section7-2.mbx" />
  <xi:include  href="section7-3.mbx" />
  <xi:include  href="section7-4.mbx" />
@@ -39,4 +42,4 @@ graphs as models for real-world problems.
  <xi:include  href="section7-7.mbx" />
  <xi:include  href="section7-8.mbx" />
  <xi:include  href="section7-9.mbx" />
- </chapter>
+</chapter>

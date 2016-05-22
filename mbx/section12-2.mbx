@@ -1,13 +1,15 @@
-
 <section>
-<title>Conditional Probability and Independent Events</title><introduction>
+<title>Conditional Probability and Independent Events</title>
+
+
+<introduction>
 <p>
 A jar contains twenty marbles of which six are red, nine are blue
 and the remaining five are green. While blindfolded, Xing selects two of the twenty
 marbles random (without replacement) and puts one in his left pocket and
 one in his right pocket. He then takes off the blindfold.
 </p>
-  
+
 <p>
 The probability that the marble in his left pocket is red is <m>6/20</m>.
 But Xing first reaches into his right pocket, takes this marble out and
@@ -16,14 +18,15 @@ his left pocket is red still <m>6/20</m>? Intuition says that it's slightly
 higher than that. Here's a more formal framework for answering such
 questions.
 </p>
-  
+
 <p>
 Let <m>(S,P)</m> be a probability space and let <m>B</m> be an event for
 which <m>P(B)>0</m>. Then for every event <m>A\subseteq S</m>, we define
 the <em>probability of <m>A</m>, given <m>B</m></em>, denoted <m>P(A|B)</m>, by setting
 <m>P(A|B)=P(A\cap B)/P(B)</m>.
 </p>
-  <paragraphs><title>Discussion</title>
+<paragraphs>
+<title>Discussion</title>
 <p>
 Returning to the question raised at the beginning of the section,
 Bob says that this is just conditional probability. He says let <m>B</m>
@@ -33,8 +36,9 @@ be the event that the marble in the left pocket is red. Then
 <m>P(A|B)= \frac{54}{380}\frac{20}{9}=6/19</m>, which is of course
 slightly larger than <m>6/20</m>. Alice is impressed.
 </p>
- </paragraphs>  
-<example xml:id="exa_twojars"><statement>
+</paragraphs>  
+<example xml:id="exa_twojars">
+<statement>
 <p>
 Consider the jar of twenty marbles from the preceding example. A
 second jar of marbles is introduced. This jar has eighteen marbles:
@@ -49,21 +53,19 @@ jar, respectively. Then <m>G= (G\cap J_1)\cup (G\cap J_2)</m>, and
 <m>P(G|J_2)=\binom{4}{2}/\binom{18}{2}</m>, while <m>P(J_1)=P(J_2)=1/2</m>.
 Also <m>P(G\cap J_i)=P(J_i)P(G|J_i)</m> for each <m>i=1,2</m>. Therefore,
 </p>
-  
 <me>
-
-P(G)=\frac{1}{2}\frac{\binom{5}{2}}{\binom{20}{2}}+
+  P(G)=\frac{1}{2}\frac{\binom{5}{2}}{\binom{20}{2}}+
 \frac{1}{2}\frac{\binom{4}{2}}{\binom{18}{2}}=\frac{1}{2}\bigl(\frac{20}{380}+
-\frac{12}{306}\bigr).\text{''} 
-
+\frac{12}{306}\bigr).\text{''}
 </me>
-  
 <p>
 Now Alice is speechless.
 </p>
- </statement>
+</statement>
 </example>
- </introduction> 
+</introduction>
+
+
 <subsection>
 <title>Independent Events</title>
 <p>
@@ -75,8 +77,8 @@ when <m>P(B)\neq 0</m>, <m>A</m> and <m>B</m> are independent if and only if
 (<m>A</m>: the marble in Xing's left pocket is red and <m>B</m>: the marble in
 his right pocket is blue) are dependent.
 </p>
-  
-<example><statement>
+<example>
+<statement>
 <p>
 Consider the two jars of marbles from
 <xref ref="exa_twojars">Example</xref>. One of the two
@@ -90,10 +92,11 @@ two events are not independent. Intuitively, this should be clear,
 since once you know that the marble is green, it is more likely that
 you actually chose the first jar.
 </p>
- </statement>
+</statement>
 </example>
   
-<example xml:id="exa_twodie"><statement>
+<example xml:id="exa_twodie">
+<statement>
 <p>
 A pair of dice are rolled, one red and one blue. Let <m>A</m> be the event
 that the red die shows either a <m>3</m> or a <m>5</m>, and let <m>B</m> be the event that you
@@ -101,6 +104,8 @@ get doubles, i.e., the red die and the blue die show the same number.
 Then <m>P(A)=2/6</m>, <m>P(B)=6/36</m>, and <m>P(A\cap B) = 2/36</m>. So <m>A</m> and <m>B</m>
 are independent.
 </p>
- </statement>
+</statement>
 </example>
- </subsection> </section>
+</subsection>
+
+</section>

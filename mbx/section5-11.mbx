@@ -1,23 +1,25 @@
-
 <section xml:id="s_induction_exercises">
 <title>Exercises</title>
 <p>
 For questions asking you find a recursive formula, be sure to give
 enough initial values to get the recursion going.
 </p>
-  <ol><li>A database uses record identifiers that are alphanumeric
+
+<ol>
+<li>A database uses record identifiers that are alphanumeric
     strings in which the <m>10</m> decimal digits and <m>26</m> upper-case
     letters are valid symbols. The criteria that define a valid record
     identifier are recursive. A valid record identifier of length
     <m>n\geq 2</m> can be constructed in the following ways:
-    <ul><li>beginning with any upper-case letter other than <m>D</m> and
+<ul>
+<li>beginning with any upper-case letter other than <m>D</m> and
       followed by any valid record identifier of length <m>n-1</m>;</li>
 <li>beginning with <m>1C</m>, <m>2K</m>, or <m>7J</m> and followed by any valid
       record identifier of length <m>n-2</m>; or</li>
 <li>beginning with <m>D</m> and followed by any string of <m>n-1</m>
       decimal digits.</li>
- </ul>  
-    Let <m>r(n)</m> denote the number of valid record identifiers of length
+</ul>
+Let <m>r(n)</m> denote the number of valid record identifiers of length
     <m>n</m>. We take <m>r(0)=1</m> and note that <m>r(1) = 26</m>. Find a recursion
     for <m>r(n)</m> when <m>n\geq 2</m> and use it to compute <m>r(5)</m>.</li>
 <li>Consider a <m>1\times n</m> checkerboard. The squares of the
@@ -51,14 +53,15 @@ enough initial values to get the recursion going.
   each formula, give both a proof using the Principle of
   Mathematical Induction and a combinatorial proof. One of the two
   will be easier while the other will be more challenging.
-  <ol><li><m>\displaystyle 1^2+2^2+3^2+\dots+ n^2= \frac{n(n+1)(2n+1)}{6}</m></li>
+<ol>
+<li><m>\displaystyle 1^2+2^2+3^2+\dots+ n^2= \frac{n(n+1)(2n+1)}{6}</m></li>
 <li><m>\displaystyle\binom{n}{0}2^0+\binom{n}{1}2^1+\binom{n}{2}2^2+\dots+\binom{n}{n}2^n=3^n</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Show that for all integers <m>n\geq 4</m>, <m>2^n \lt  n!</m>.</li>
 <li>Show that for all positive integers <m>n</m>,
-  
 <me>
-\sum_{i=0}^n 2^i = 2^{n+1}-1.
+  \sum_{i=0}^n 2^i = 2^{n+1}-1.
 </me>
 </li>
 <li>Show that for all positive integers <m>n</m>, <m>7^n-4^n</m> is divisible
@@ -72,12 +75,10 @@ enough initial values to get the recursion going.
   all positive integers <m>n</m>.</li>
 <li>Use mathematical induction to prove that for all integers <m>n\geq
   1</m>,
-  
 <me>
-n^3 + (n+1)^3 + (n+2)^3
+  n^3 + (n+1)^3 + (n+2)^3
 </me>
- 
-  is divisible by <m>9</m>.</li>
+is divisible by <m>9</m>.</li>
 <li>Give a proof by induction of the Binomial Theorem
   (<xref ref="thm_binomial" autoname="yes" />). How do you think it compares to the
   combinatorial argument given in <xref ref="ch_strings" autoname="yes" />?</li>
@@ -96,4 +97,5 @@ n^3 + (n+1)^3 + (n+2)^3
  by a multiplicative fraction which is at most <m>1/2</m>.  So if there
  are <m>t</m> operations, then <m>2^t\ge n!</m>.  Now look up Stirling's
  approximation for <m>n!</m> and continue from there.</li>
- </ol>  </section>
+</ol>
+</section>

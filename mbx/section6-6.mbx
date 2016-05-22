@@ -1,12 +1,13 @@
-
 <section xml:id="s_basics_exercises">
-<title>Exercises</title><ol><li>Suppose you are given a list of <m>n</m> integers, each of size
+<title>Exercises</title>
+<ol>
+<li>Suppose you are given a list of <m>n</m> integers, each of size
 at most <m>100n</m>.   How many operations would it take you to do the following
 tasks (in answering these questions, we are interested primarily in whether it
-will take <m>\log n</m>, <m>\sqrt{n}</m>, <m>n</m>, <m>n^2</m>, <m>n^3</m>, <m>2^n</m>, ... steps.  In 
+will take <m>\log n</m>, <m>\sqrt{n}</m>, <m>n</m>, <m>n^2</m>, <m>n^3</m>, <m>2^n</m>, <ddots /> steps.  In 
 other words, ignore multiplicative constants.):
-
-<ol><li>Determine if the number <m>2n+7</m> is in the list.</li>
+<ol>
+<li>Determine if the number <m>2n+7</m> is in the list.</li>
 <li>Determine if there are two numbers in the list whose sum is
 <m>2n+7</m>.</li>
 <li>Determine if there are two numbers in the list whose product is
@@ -39,7 +40,8 @@ members of the list (arbitrarily many integers from the list are allowed to be
 factors in the product).</li>
 <li>Determine for which integers <m>m</m>, the list contains at least <m>10\%</m> of the
 integers from <m>\{1,2,\dots,m\}</m>.</li>
- </ol> </li>
+</ol>
+</li>
 <li>If you have to put <m>n+1</m> pigeons into <m>n</m> holes, you have to
 put two pigeons into the same hole.  What happens if you have to
 put <m>mn+1</m> pigeons into <m>n</m> holes?</li>
@@ -57,4 +59,5 @@ share your hunch with your friend in an effort to win the prize.</li>
 <li>Let <m>N</m> denote the set of positive integers.  When <m>f:N\rightarrow N</m> is
 a function, let <m>E(f)</m> be the function defined by <m>E(f)(n) = 2^{f(n)}</m>.
 What is <m>E^5(n^2)</m>?</li>
- </ol>  </section>
+</ol>
+</section>

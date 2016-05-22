@@ -1,6 +1,8 @@
-
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_networkflow">
-<title>Network Flows</title><introduction>
+<title>Network Flows</title>
+
+
+<introduction>
 <p>
 This chapter continues our look at the topics of algorithms and
 optimization. On an intuitive level, networks and network flows are
@@ -15,11 +17,12 @@ maximization, we will develop an algorithm that does it. We'll also
 see how to easily justify the optimality of our solution though the
 classic Max Flow-Min Cut Theorem.
 </p>
- </introduction> <xi:include  href="section15-1.mbx" />
+</introduction>
+<xi:include  href="section15-1.mbx" />
  <xi:include  href="section15-2.mbx" />
  <xi:include  href="section15-3.mbx" />
  <xi:include  href="section15-4.mbx" />
  <xi:include  href="section15-5.mbx" />
  <xi:include  href="section15-6.mbx" />
  <xi:include  href="section15-7.mbx" />
- </chapter>
+</chapter>

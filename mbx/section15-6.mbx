@@ -1,4 +1,3 @@
-
 <section>
 <title>Integer Solutions of Linear Programming Problems</title>
 <p>
@@ -6,34 +5,28 @@ A linear programming problem is an optimization problem that
 can be stated in the following form: Find the maximum
 value of a linear function
 </p>
-  
 <me>
-
-c_1x_1+c_2x_2+c_3x_3+\dots+c_n x_n
-
+  c_1x_1+c_2x_2+c_3x_3+\dots+c_n x_n
 </me>
- 
 <p>
 subject to <m>m</m> constraints <m>C_1</m>, <m>C_2,\dots,C_m</m>, where
 each constraint <m>C_i</m> is a linear equation of the form:
 </p>
-  
 <me>
-
-C_i:\quad a_{i1}x_1+a_{i2}x_2+a_{i3}x_3+\dots+a_{in}x_n=b_i
-
+  C_i:\quad a_{i1}x_1+a_{i2}x_2+a_{i3}x_3+\dots+a_{in}x_n=b_i
 </me>
- 
 <p>
 where all coefficients and constants are real numbers.
 </p>
-  
+
 <p>
 While the general subject of linear programming is far too
 broad for this course, we would be remiss if we didn't
 point out that:
 </p>
-  <ol><li>Linear programming problems are a <em>very</em>
+
+<ol>
+<li>Linear programming problems are a <em>very</em>
 important class of optimization problems and they have
 many applications in engineering, science, and industrial settings.</li>
 <li>There are relatively efficient algorithms for finding
@@ -56,4 +49,5 @@ The Ford-Fulkerson labeling algorithm guarantees this!</li>
 <li>In general, linear programming algorithms are not used
 on networks.  Instead, special purpose algorithms, such as Ford-Fulkerson,
 have proven to be more efficient in practice.</li>
- </ol>  </section>
+</ol>
+</section>

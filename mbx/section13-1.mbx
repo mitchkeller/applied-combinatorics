@@ -1,4 +1,3 @@
-
 <section xml:id="s_size">
 <title>Small Ramsey Numbers</title>
 <p>
@@ -12,7 +11,7 @@ talent were to be focused on the problem. But he also said that
 finding the exact value of <m>R(6,6)</m> might be beyond our collective
 abilities.
 </p>
-  
+
 <p>
 In the following table, we provide information about
 the ramsey numbers <m>R(m,n)</m> when <m>m</m> and <m>n</m> are at least <m>3</m> and at
@@ -20,35 +19,28 @@ most <m>9</m>. When a cell contains a single number, that
 is the precise answer. When there are two numbers, they
 represent upper and lower bounds.
 </p>
-  <table id="6ecdca6223ccbd7eb9ad6ca03d6cb1ccc26448eb" ><tr><td class='hlinethick' colspan='10'><hr /></td></tr>
+<tabular>
+<row bottom="medium"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
 
-<tr><td  class='v|' >
-\amp n\amp 3\amp 4\amp 5\amp 6\amp 7\amp 8\amp 9</td></tr>
-<tr><td class='v|'>
-m\amp \amp \amp \amp \amp \amp \amp \amp </td></tr>
-<tr><td class='hlinethick' colspan='10'><hr /></td></tr>
+<row><cell  ></cell><cell>n</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell></row>
+<row><cell>m</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="medium"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
 
-<tr><td  class='v|' >
-3\amp \amp 6\amp 9\amp 14\amp 18\amp 23\amp 36\amp 39</td></tr>
-<tr><td class='v|'>
-4\amp \amp \amp 18\amp 25\amp 35, 41\amp 49, 61\amp 56, 84\amp 69, 115</td></tr>
-<tr><td class='v|'>
-5\amp \amp \amp \amp 43, 49\amp 58, 87\amp 80, 143\amp 95, 216\amp 121, 316</td></tr>
-<tr><td class='v|'>
-6\amp \amp \amp \amp \amp 102, 165\amp 111, 298\amp 127, 495\amp 153, 780</td></tr>
-<tr><td class='v|'>
-7\amp \amp \amp \amp \amp \amp 205, 540\amp 216, 1031\amp 216, 1713</td></tr>
-<tr><td class='v|'>
-8\amp \amp \amp \amp \amp \amp \amp 282, 1870\amp 282, 3583</td></tr>
-<tr><td class='v|'>
-9\amp \amp \amp \amp \amp \amp \amp \amp 565, 6588</td></tr>
-<tr><td class='hlinethick' colspan='10'><hr /></td></tr>
+<row><cell  >
+3</cell><cell></cell><cell>6</cell><cell>9</cell><cell>14</cell><cell>18</cell><cell>23</cell><cell>36</cell><cell>39</cell></row>
+<row><cell>4</cell><cell></cell><cell></cell><cell>18</cell><cell>25</cell><cell>35, 41</cell><cell>49, 61</cell><cell>56, 84</cell><cell>69, 115</cell></row>
+<row><cell>5</cell><cell></cell><cell></cell><cell></cell><cell>43, 49</cell><cell>58, 87</cell><cell>80, 143</cell><cell>95, 216</cell><cell>121, 316</cell></row>
+<row><cell>6</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>102, 165</cell><cell>111, 298</cell><cell>127, 495</cell><cell>153, 780</cell></row>
+<row><cell>7</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>205, 540</cell><cell>216, 1031</cell><cell>216, 1713</cell></row>
+<row><cell>8</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>282, 1870</cell><cell>282, 3583</cell></row>
+<row><cell>9</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>565, 6588</cell></row>
+<row bottom="medium"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
 
-<tr><td  class='v|' ></td></tr>
-</table>  
+<row><cell  ></cell></row>
+</tabular>
 <p>
 For additional data, do a web search and look for
 Stanley Radziszowski, who maintains the most current information
 on his web site.
 </p>
- </section>
+</section>
