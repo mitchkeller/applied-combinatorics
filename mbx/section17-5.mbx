@@ -1,7 +1,9 @@
-
 <section xml:id="s_polya_apps">
 <title>Applications of P&#xf3;lya's Enumeration
-  Formula</title><introduction>
+  Formula</title>
+
+
+<introduction>
 <p>
 This section explores a number of situations in which P&#xf3;lya's
 enumeration formula can be used. The applications are from a variety
@@ -9,7 +11,9 @@ of domains and are arranged in increasing order of complexity,
 beginning with an example from music theory and concluding with
 counting nonisomorphic graphs.
 </p>
- </introduction> 
+</introduction>
+
+
 <subsection xml:id="ss_polya_scales">
 <title>Counting musical scales</title>
 <p>
@@ -29,7 +33,7 @@ subset, no regard is paid to which note starts the scale, either. The
 question we investigate in this section is <q>How many nonequivalent
 scales are there consisting of precisely <m>k</m> notes?</q>
 </p>
-  
+
 <p>
 Because of the cyclic nature of the note names, we may consider
 arranging them in order clockwise around a circle. Selecting the notes
@@ -44,15 +48,14 @@ that <m>S_3</m> could be obtained from <m>S_1</m> if we allowed flips in
 addition to rotations. Since the only operation allowed is the
 transposition, which corresponds to rotation, they are inequivalent.)
 </p>
-  <figure xml:id="fig_polya_scales" >
+<figure xml:id="fig_polya_scales" >
 <caption>Three scales depicted by coloring</caption>
 \begin{overpic}[width=\linewidth]{polya-figs/scales}
     \put(14,13){<m>S_1</m>}
     \put(49.5,13){<m>S_2</m>}
     \put(84,13){<m>S_3</m>}
   \end{overpic}
-  </figure>
-  
+</figure>
 <p>
 We have now mathematically modeled musical scales as discrete
 structures in a way that we can use P&#xf3;lya's enumeration
@@ -70,11 +73,9 @@ notation. The best way to do this is by multiplying <m>\tau^{i-1}</m> by
 <m>\tau</m> (i.e., compute <m>\tau\tau^{i-1}</m>) to find <m>\tau</m>. Once you've
 done this, you will be able to easily verify that the cycle index is
 </p>
-  
 <me>
-P_{C_{12}}(x_1,\dots,x_{12}) = \frac{x_1^{12}}{12}+\frac{x_2^6}{12}+\frac{x_3^4}{6}+\frac{x_4^3}{6}+\frac{x_6^2}{6}+\frac{x_{12}}{3}.
+  P_{C_{12}}(x_1,\dots,x_{12}) = \frac{x_1^{12}}{12}+\frac{x_2^6}{12}+\frac{x_3^4}{6}+\frac{x_4^3}{6}+\frac{x_6^2}{6}+\frac{x_{12}}{3}.
 </me>
-  
 <p>
 Since we've chosen colorings using black and white, it would make
 sense to substitute <m>x_i = b^i +w^i</m> for all <m>i</m> in <m>P_{C_{12}}</m> now
@@ -86,17 +87,17 @@ more like those to which we grew accustomed in
 deduced from the number that are included. Thus, we may eliminate the
 use of the variable <m>w</m>, replacing it by <m>1</m>. We now find
 </p>
-  
 <md>P_{C_{12}}(1+b,1+b^2,\dots,1+b^{12}) = b^{12}+b^{11}+6 b^{10}+19 b^9+43 b^8+66 b^7+80 b^6\\+66 b^5+43 b^4+19 b^3+6 b^2+b+1.
 </md>
- 
 <p>
 From this, we are able to deduce that the number of scales with <m>k</m>
 notes is the coefficient on <m>b^k</m>. Therefore, the answer to our
 question at the beginning of the chapter about the number of <m>6</m>-note
 scales is <m>80</m>.
 </p>
- </subsection> 
+</subsection>
+
+
 <subsection xml:id="ss_polya_isomers">
 <title>Enumerating isomers</title>
 <p>
@@ -109,7 +110,7 @@ benzene it is possible to form other chemical compounds that are part
 of a family known as <em>aromatic hydrocarbons</em>. These compounds are
 formed by replacing one or more of the hydrogen atoms by atoms of
 other elements or functional groups such as <m>\text{CH} _3</m> (methyl
-group) or <m>\text{OH} </m> (hydroxyl group). Because there are six choices
+group) or <m>\text{OH}</m> (hydroxyl group). Because there are six choices
 for which hydrogen atoms to replace, molecules with the same chemical
 formula but different structures can be formed in this manner. Such
 molecules are called <em>isomers</em>. In this subsection, we will see
@@ -117,7 +118,7 @@ how P&#xf3;lya's enumeration theorem can be used to determine the number
 of isomers of the aromatic hydrocarbon xylenol (also known as
 dimethylphenol).
 </p>
-  
+
 <p>
 Before we get into the molecular structure of xylenol, we need to
 discuss the permutation group that will act on a benzene ring. Much
@@ -135,35 +136,26 @@ permutations is shown in <xref ref="tab_polya_benzene" autoname="yes" />, where 
 permutation is accompanied by the monomial it contributes to the cycle
 index.
 </p>
-  <figure xml:id="tab_polya_benzene" >
+<figure xml:id="tab_polya_benzene" >
 <caption>Cycle representation of permutations in <m>D_{12}</m></caption>
-<table id="d95acd6721a3c8ec147a0ee95947849d258e0a51" ><tr><td class='cv'>
-    Permutation \amp  Monomial \amp  Permutation \amp  Monomial</td></tr>
-<tr><td class='hline' colspan='4'><hr /></td></tr>
-<tr><td class='cv'>
-    <m>\iota =(1)(2)(3)(4)(5)(6)</m> \amp  <m>x_1^6</m> \amp  <m>f=(16)(25)(34)</m> \amp  <m>x_2^3</m></td></tr>
-<tr><td class='cv'>[\smallskipamount]
-    <m>r=(123456)</m> \amp  <m>x_6^1</m>  \amp  <m>fr=(15)(24)(3)(6)</m> \amp  <m>x_1^2x_2^2</m></td></tr>
-<tr><td class='cv'>[\smallskipamount]
-    <m>r^2=(135)(246)</m> \amp  <m>x_3^2</m>  \amp  <m>fr^2=(14)(23)(56)</m> \amp  <m>x_2^3</m></td></tr>
-<tr><td class='cv'>[\smallskipamount]
-    <m>r^3=(14)(25)(36)</m> \amp  <m>x_2^3</m>  \amp  <m>fr^3=(13)(2)(46)(5)</m> \amp  <m>x_1^2x_2^2</m></td></tr>
-<tr><td class='cv'>[\smallskipamount]
-    <m>r^4=(153)(264)</m> \amp  <m>x_3^2</m>  \amp  <m>fr^4=(12)(36)(45)</m> \amp <m>x_2^3</m></td></tr>
-<tr><td class='cv'>[\smallskipamount]
-    <m>r^5=(165432)</m> \amp  <m>x_6^1</m>  \amp  <m>fr^5=(1)(26)(35)(4)</m> \amp  <m>x_1^2x_2^2</m></td></tr>
-</table> 
-  </figure>
-  
+<tabular>
+<row><cell>Permutation</cell><cell>Monomial</cell><cell>Permutation</cell><cell>Monomial</cell></row>
+<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row><cell><m>\iota =(1)(2)(3)(4)(5)(6)</m></cell><cell><m>x_1^6</m></cell><cell><m>f=(16)(25)(34)</m></cell><cell><m>x_2^3</m></cell></row>
+<row><cell><m>r=(123456)</m></cell><cell><m>x_6^1</m></cell><cell><m>fr=(15)(24)(3)(6)</m></cell><cell><m>x_1^2x_2^2</m></cell></row>
+<row><cell><m>r^2=(135)(246)</m></cell><cell><m>x_3^2</m></cell><cell><m>fr^2=(14)(23)(56)</m></cell><cell><m>x_2^3</m></cell></row>
+<row><cell><m>r^3=(14)(25)(36)</m></cell><cell><m>x_2^3</m></cell><cell><m>fr^3=(13)(2)(46)(5)</m></cell><cell><m>x_1^2x_2^2</m></cell></row>
+<row><cell><m>r^4=(153)(264)</m></cell><cell><m>x_3^2</m></cell><cell><m>fr^4=(12)(36)(45)</m></cell><cell><m>x_2^3</m></cell></row>
+<row><cell><m>r^5=(165432)</m></cell><cell><m>x_6^1</m></cell><cell><m>fr^5=(1)(26)(35)(4)</m></cell><cell><m>x_1^2x_2^2</m></cell></row>
+</tabular>
+</figure>
 <p>
 With the monomials associated to the permutations in <m>D_{12}</m> identified,
 we are able to write down the cycle index
 </p>
-  
 <me>
-P_{D_{12}}(x_1,\dots,x_6) = \frac{1}{12}(x_1^6 + 2x_6^1 + 2x_3^2+4x_2^3 + 3x_1^2x_2^2).
+  P_{D_{12}}(x_1,\dots,x_6) = \frac{1}{12}(x_1^6 + 2x_6^1 + 2x_3^2+4x_2^3 + 3x_1^2x_2^2).
 </me>
- 
 <p>
 With the cycle index determined, we now turn our attention to using it
 to find the number of isomers of xylenol. This aromatic hydrocarbon
@@ -175,19 +167,17 @@ let <m>m</m> denote methyl groups and <m>h</m> hydroxyl groups, we can then
 substitute <m>x_i = 1+m^i+h^i</m> in <m>P_{D_{12}}</m>. This substitution gives the
 generating function
 </p>
-  
 <md>1+h+3 h^2+3 h^3+3 h^4+h^5+h^6+m+3 h m+6 h^2 m+6 h^3
   m\\+3 h^4 m+h^5 m+3 m^2+6 h m^2+11 h^2 m^2+6 h^3 m^2+3 h^4 m^2+3
   m^3+6 h m^3\\+6 h^2 m^3+3 h^3 m^3+3 m^4+3 h m^4+3 h^2 m^4+m^5+h
   m^5+m^6.
 </md>
- 
 <p>
 Since xylenol has one hydroxyl group and two methyl groups, we are
 looking for the coefficient on <m>hm^2</m> in this generating function. The
 coefficient is <m>6</m>, so there are six isomers of xylenol.
 </p>
-  
+
 <p>
 In his original paper, P&#xf3;lya used his techniques to enumerate the
 number of isomers of the alkanes <m>\text{C} _n\text{H} _{2n+2}</m>. When
@@ -195,7 +185,9 @@ modeled as graphs, these chemical compounds are special types of
 trees. Since that time, P&#xf3;lya's enumeration theorem has been used to
 enumerate isomers for many different chemical compounds.
 </p>
- </subsection> 
+</subsection>
+
+
 <subsection xml:id="ss_polya_graphs">
 <title>Counting nonisomorphic graphs</title>
 <p>
@@ -207,15 +199,13 @@ only want to count the labeled graphs on <m>n</m> vertices with <m>k</m> edges,
 you simply must choose a <m>k</m>-element subset of the set of all <m>C(n,2)</m>
 possible edges. Thus, there are
 </p>
-  
 <me>
-\binom{\binom{n}{2}}{k}
+  \binom{\binom{n}{2}}{k}
 </me>
- 
 <p>
 graphs with vertex set <m>[n]</m> and exactly <m>k</m> edges.
 </p>
-  
+
 <p>
 A more difficult problem arises when we want to start counting
 <em>nonisomorphic</em> graphs on <m>n</m> vertices. (One can think of these
@@ -226,7 +216,7 @@ isomorphic to each other. Thus, only two nonisomorphic graphs on four
 vertices are illustrated in the figure. To account for isomorphisms,
 we need to bring P&#xf3;lya's enumeration theorem into play.
 </p>
-  <figure xml:id="fig_polya_graphs" >
+<figure xml:id="fig_polya_graphs" >
 <caption>Four lalbeled graphs on four vertices</caption>
 \begin{overpic}[width=\linewidth]{polya-figs/graphs}
     \put(1.2,0.7){<m>1</m>}
@@ -250,8 +240,7 @@ we need to bring P&#xf3;lya's enumeration theorem into play.
     \put(85.7,7.2){<m>4</m>}
 
   \end{overpic}
-  </figure>
-  
+</figure>
 <p>
 We begin by considering all <m>2^{C(n,2)}</m> graphs with vertex set <m>[n]</m>
 and choosing an appropriate permutation group to act in the
@@ -269,7 +258,7 @@ edge of <m>\bfG</m>. Similarly, if vertices <m>3</m> and <m>4</m> are not adjace
 <m>\bfG</m>, then <m>\pi(3)</m> and <m>\pi(4)</m> must also be nonadjacent in
 <m>\bfG</m>.
 </p>
-  
+
 <p>
 To account for edges, we move from the symmetric group <m>S_4</m> to its
 <em>pair group</em> <m>S_4^{(2)}</m>. The objects that <m>S_4^{(2)}</m> permutes
@@ -289,7 +278,7 @@ corresponding permutation of pairs is
 consider the permutation <m>(123)(4)</m>. It corresponds to the permutation
 <m>(e_{12}e_{23}e_{13})(e_{14}e_{24}e_{34})</m> in <m>S_4^{(2)}</m>.
 </p>
-  
+
 <p>
 Since we're only after the cycle index of <m>S_4^{(2)}</m>, we don't need
 to find all <m>24</m> permutations in the pair group. However, we do need
@@ -310,7 +299,7 @@ two <m>2</m>-cycles and two
 <m>1</m>-cycles. (<xref ref="ex_polya_perm-pairs">Exercise</xref>
 asks you to verify these claims using specific permutations.)
 </p>
-  
+
 <p>
 Now that we know the cycle structure of the permutations in
 <m>S_4^{(2)}</m>, the only task remaining before we can find its cycle
@@ -335,27 +324,23 @@ for when it is the <q>other two.</q> Thus, there are <m>3</m> permutations
 consisting of two <m>2</m>-cycles. Finally, only <m>\iota</m> consists of four
 <m>1</m>-cycles.
 </p>
-  
+
 <p>
 Now we're prepared to write down the cycle index of the pair group
 </p>
-  
 <me>
-P_{S_4^{(2)}}(x_1,\dots,x_6) = \frac{1}{24}\left( x_6^1 + 9x_1^2x_2^2 + 8 x_3^2 +
+  P_{S_4^{(2)}}(x_1,\dots,x_6) = \frac{1}{24}\left( x_6^1 + 9x_1^2x_2^2 + 8 x_3^2 +
   6x_2x_4\right).
 </me>
- 
 <p>
 To use this to enumerate graphs, we can now make the substitution <m>x_i
 = 1+x^i</m> for <m>1\leq i\leq 6</m>. This allows us to account for the two
 options of an edge not being present or being present. In doing so, we
 find
 </p>
-  
 <me>
-P_{S_4^{(2)}}(1+x,\dots,1+x^6)= 1+x+2 x^2+3 x^3+2 x^4+x^5+x^6
+  P_{S_4^{(2)}}(1+x,\dots,1+x^6)= 1+x+2 x^2+3 x^3+2 x^4+x^5+x^6
 </me>
- 
 <p>
 is the generating function for the number of <m>4</m>-vertex graphs with
 <m>m</m> edges, <m>0\leq m\leq 6</m>. To find the total number of nonisomorphic
@@ -364,29 +349,29 @@ polynomial. This allows us to conclude there are <m>11</m> nonisomorphic
 graphs on four vertices, a marked reduction from the <m>64</m> labeled
 graphs.
 </p>
-  
+
 <p>
 The techniques of this subsection can be used, given enough computing
 power, to find the number of nonisomorphic graphs on any number of
 vertices. For <m>30</m> vertices, there are
 </p>
-  
-<md><mrow>\amp 334494316309257669249439569928080028956631479935393064329967834887217</mrow>
- <mrow>\amp 734534880582749030521599504384\approx 3.3\times 10^{98}</mrow>
- 
+<md>
+  <mrow>  \amp 334494316309257669249439569928080028956631479935393064329967834887217
+      </mrow>
+  <mrow>  \amp 734534880582749030521599504384\approx 3.3\times 10^{98}
+      </mrow>
 </md>
- 
 <p>
 nonisomorphic graphs, as compared to <m>2^{435}\approx 8.9\times
 10^{130}</m> labeled graphs on <m>30</m> vertices. The number of nonisomorphic
 graphs with precisely <m>200</m> edges is
 </p>
-  
-<md><mrow>\amp 313382480997072627625877247573364018544676703365501785583608267705079</mrow>
- <mrow>\amp 9699893512219821910360979601\approx 3.1\times 10^{96}.</mrow>
- 
+<md>
+  <mrow>  \amp 313382480997072627625877247573364018544676703365501785583608267705079
+      </mrow>
+  <mrow>  \amp 9699893512219821910360979601\approx 3.1\times 10^{96}.
+      </mrow>
 </md>
- 
 <p>
 The last part of the question about graph enumeration at the beginning
 of the chapter was about enumerating the graphs on some number of
@@ -395,4 +380,6 @@ like it could be approached using the techniques of this chapter, it
 turns out that it cannot because of the increased dependency between
 where vertices are mapped.
 </p>
- </subsection> </section>
+</subsection>
+
+</section>

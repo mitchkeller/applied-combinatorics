@@ -1,4 +1,3 @@
-
 <section xml:id="s_posets_intervalorder">
 <title>Interval Orders</title>
 <p>
@@ -7,7 +6,7 @@ algorithmic aspects would be deferred until later in the text. But
 there is one important class of orders for which the full solution is
 easy to obtain.
 </p>
-  
+
 <p>
 A poset <m>\PXP</m> is called an <em>interval order</em> if there exists a
 function <m>I</m> assigning to each element <m>x\in X</m> a closed interval
@@ -21,10 +20,10 @@ we let <m>|I(x)|</m> denote the <em>length</em> of the interval, i.e.,
 <m>|I(x)|=b_x-a_x</m>. Returning to the poset <m>\bfP_3</m>, the representation
 shown in <xref ref="fig_6ptintorder" autoname="yes" /> shows that it is an interval order.
 </p>
-  <figure xml:id="fig_6ptintorder" >
+<figure xml:id="fig_6ptintorder" >
 <caption>An interval order and its representation</caption>
-<image source="images/6ptintorder.png" /> </figure>
-  
+<image width="40%" source="images/6ptintorder.png" />
+</figure>
 <p>
 Note that end points of intervals used in a representation need not be
 distinct. In fact, distinct points <m>x</m> and <m>y</m> from <m>X</m> may satisfy
@@ -34,18 +33,18 @@ form <m>[a,a]</m>. On the other hand, a representation is said to be
 end points are distinct. It is relatively easy to see that every interval order
 has a distinguishing representation.
 </p>
-  
-<theorem xml:id="thm_fishburn"><title>Fishburn</title>
+
+<theorem xml:id="thm_fishburn">
+<title>Fishburn</title>
 <statement>
 <p>
 Let <m>\PXP</m> be a poset. Then <m>\bfP</m> is an interval order if
 and only if it excludes <m>\bftwo+\bftwo</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 We show only that an interval order cannot contain a subposet
 isomorphic to <m>\bftwo+\bftwo</m>, deferring the proof in the other
@@ -58,6 +57,5 @@ of generality, we may assume that <m>x\lt y</m> and <m>z\lt w</m> in <m>P</m>. T
 <m>z\Vert y</m> in <m>P</m>. Then <m>b_x\lt a_y</m> and <m>b_z \lt  a_w</m> in <m>\reals</m>
 so that <m>a_w \le b_x \lt a_y \le b_z</m>, which is a contradiction.
 </p>
- 
 </proof>
- </section>
+</section>

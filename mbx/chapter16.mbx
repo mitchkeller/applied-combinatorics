@@ -1,7 +1,9 @@
-
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_flowapplications">
 <title>Combinatorial Applications of Network
-  Flows</title><introduction>
+  Flows</title>
+
+
+<introduction>
 <p>
 Clearly finding the maximum flow in a network can have many direct
 applications to problems in business, engineering, and computer
@@ -13,8 +15,9 @@ is to establish algorithms for two combinatorial problems: finding
 maximum matchings in bipartite graphs and finding the width of a poset
 as well as a minimal chain partition.
 </p>
- </introduction> <xi:include  href="section16-1.mbx" />
+</introduction>
+<xi:include  href="section16-1.mbx" />
  <xi:include  href="section16-2.mbx" />
  <xi:include  href="section16-3.mbx" />
  <xi:include  href="section16-4.mbx" />
- </chapter>
+</chapter>

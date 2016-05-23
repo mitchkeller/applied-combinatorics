@@ -1,4 +1,3 @@
-
 <section xml:id="s_graphs_counting-trees">
 <title>Counting Labeled Trees</title>
 <p>
@@ -22,7 +21,7 @@ degree <m>2</m> and two ways to select one of the remaining labels to be
 made adjacent to <m>i</m>. Thus, there are <m>12</m> ways to label <m>\bfP_4</m> by
 <m>[4]</m> and so <m>T_4=16</m>.
 </p>
-  
+
 <p>
 To this point, it looks like maybe there's a pattern forming. Perhaps
 it is the case that for all <m>n\geq 1</m>, <m>T_n = n^{n-2}</m>. This is in
@@ -43,23 +42,24 @@ leaves adjacent to the vertex of degree <m>3</m>, and <m>2</m> ways to label the
 remaining two vertices, giving <m>60</m> labelings. Therefore,
 <m>T_5=125=5^3=5^{5-2}</m>.
 </p>
-  <figure xml:id="fig_trees-5verts" >
+<figure xml:id="fig_trees-5verts" >
 <caption>The nonisomorphic trees on <m>n=5</m> vertices</caption>
-<image source="images/trees-5verts.png" /> </figure>
-  
+<image width="73%" source="images/trees-5verts.png" />
+</figure>
 <p>
 It turns out that we are in fact on the right track, and we will now
 set out to prove the following:
 </p>
-  
-<theorem xml:id="thm_cayley"><title>Cayley's Formula</title>
+
+<theorem xml:id="thm_cayley">
+<title>Cayley's Formula</title>
 <statement>
 <p>
 The number <m>T_n</m> of labeled trees on <m>n</m> vertices is <m>n^{n-2}</m>.
 </p>
- </statement>
+</statement>
 </theorem>
- 
+
 <p>
 This result is usually referred to as Cayley's Formula,
 although equivalent results were proven earlier by James J.<nbsp />Sylvester
@@ -84,7 +84,7 @@ bijection between the set of labeled trees on <m>n</m> vertices and a
 natural set of size <m>n^{n-2}</m>, the set of strings of length <m>n-2</m>
 where the symbols in the string come from <m>[n]</m>.
 </p>
-  
+
 <p>
 We define a recursive algorithm that takes a tree <m>\bfT</m> on <m>k\geq 2</m>
 vertices labeled by elements of a set <m>S</m> of positive integers of size
@@ -98,18 +98,21 @@ Pr&#xfc;fer code of the tree <m>\bfT</m>, and if <m>v</m> is a leaf of <m>\bfT</
 the subgraph induced by all the other vertices). We can then define
 <m>\prufer(\bfT)</m> recursively by
 </p>
-  <ol><li>If <m>\bfT\cong \bfK_2</m>, return the empty string.</li>
+
+<ol>
+<li>If <m>\bfT\cong \bfK_2</m>, return the empty string.</li>
 <li>Else, let <m>v</m> be the leaf of <m>\bfT</m> with the smallest label
   and let <m>u</m> be its unique neighbor. Let <m>i</m> be the label of
   <m>u</m>. Return <m>(i,\prufer(\bfT-v))</m>.</li>
- </ol>   
-<example xml:id="ex_prufer-code"><statement>
+</ol>
+<example xml:id="ex_prufer-code">
+<statement>
 <p>
 Before using Pr&#xfc;fer codes to prove Cayley's Formula, let's take a
 moment to make sure we understand how they are computed given a
 tree. Consider the <m>9</m>-vertex tree <m>\bfT</m> in <xref ref="fig_prufer-code" autoname="yes" />.
 </p>
-  <figure xml:id="fig_prufer-code" >
+<figure xml:id="fig_prufer-code" >
 <caption>A labeled <m>9</m>-vertex tree</caption>
 \begin{overpic}{graphs-figs/tree-9verts}
       \put(46,2){<m>1</m>}
@@ -122,8 +125,7 @@ tree. Consider the <m>9</m>-vertex tree <m>\bfT</m> in <xref ref="fig_prufer-cod
       \put(27.5,5.5){<m>8</m>}
       \put(77.3,21){<m>9</m>}
     \end{overpic}
-    </figure>
- 
+</figure>
 <p>
 How do we compute <m>\prufer(\bfT)</m>? Since <m>\bfT</m> has more than two
 vertices, we use the second step and find that <m>v</m> is the vertex with
@@ -131,7 +133,7 @@ label <m>2</m> and <m>u</m> is the vertex with label <m>6</m>, so
 <m>\prufer(\bfT)=(6,\prufer(\bfT-v))</m>. The graph <m>\bfT-v</m> is
 shown in <xref ref="fig_prufer-code-delete1" autoname="yes" />.
 </p>
-  <figure xml:id="fig_prufer-code-delete1" >
+<figure xml:id="fig_prufer-code-delete1" >
 <caption>The tree <m>\bfT-v</m></caption>
 \begin{overpic}{graphs-figs/tree-8verts}
       \put(46,2){<m>1</m>}
@@ -143,8 +145,7 @@ shown in <xref ref="fig_prufer-code-delete1" autoname="yes" />.
       \put(27.5,5.5){<m>8</m>}
       \put(77.3,21){<m>9</m>}
     \end{overpic}
-    </figure>
- 
+</figure>
 <p>
 The recursive call <m>\prufer(\bfT-v)</m> returns
 <m>(6,\prufer(\bfT-v-v'))</m>, where <m>v'</m> is the vertex labeled
@@ -156,15 +157,13 @@ deletion of <m>1</m>, appending <m>4</m>. Finally <m>4</m> is deleted, appending
 <m>\bfK_2</m> with vertices labeled <m>3</m> and <m>9</m>, and an empty string is
 returned. Thus, <m>\prufer(\bfT)=6643143</m>.
 </p>
- </statement>
+</statement>
 </example>
-  
 <p>
 We're now prepared to give a proof of Cayley's Formula.
 </p>
-  
-<proof>
 
+<proof>
 <p>
 It is clear that <m>\prufer(\bfT)</m> takes an <m>n</m>-vertex labeled tree
 with labels from <m>[n]</m> and returns a string of length <m>n-2</m> whose
@@ -175,7 +174,7 @@ bijection between the set <m>\mathcal{T}_n</m> of labeled trees on <m>n</m>
 vertices and the set of strings of length <m>n-2</m> whose symbols come
 from <m>[n]</m>, which will imply that <m>T_n=n^{n-2}</m>.
 </p>
-  
+
 <p>
 First, let's look at how <m>\prufer(\bfT)</m> behaves. What numbers
 actually appear in the Pr&#xfc;fer code? The numbers that appear in the
@@ -189,7 +188,7 @@ empty string. Thus if <m>I\subset [n]</m> is the set of symbols that
 appear in <m>\prufer(\bfT)</m>, the labels of the leaves of <m>\bfT</m> are
 precisely the elements of <m>[n]-I</m>.
 </p>
-  
+
 <p>
 With the knowledge of which labels belong to the leaves of <m>\bfT</m> in
 hand, we are ready to use induction to complete the proof. Our goal
@@ -210,10 +209,10 @@ unique tree <m>\bfT'</m> whose Pr&#xfc;fer code is <m>\bfs'</m>. We form <m>\bfT
 from <m>\bfT'</m> by attaching a leaf with label <m>k</m> to the vertex of
 <m>\bfT'</m> with label <m>s_1</m> and have a tree of the desired type.
 </p>
- 
 </proof>
-  
-<example xml:id="ex_prufer-code-reverse"><statement>
+
+<example xml:id="ex_prufer-code-reverse">
+<statement>
 <p>
 We close this section with an example of how to take a Pr&#xfc;fer code
 and use it to construct a labeled tree. Consider the string
@@ -229,25 +228,18 @@ vertex labeled <m>4</m> to the vertex labeled <m>5</m> in the tree we get by
 induction. In <xref ref="tab_prufer-code-reverse" autoname="yes" />, we show how this
 recursive process continues.
 </p>
-  <figure xml:id="tab_prufer-code-reverse" >
+<figure xml:id="tab_prufer-code-reverse" >
 <caption>Turning the Pr&#xfc;fer code <m>75531</m> into a labeled tree</caption>
-<table id="a2bb261a8b3cc237054b4426737b0a8920852446" ><tr><td class='c'>
-      Pr&#xfc;fer code \amp  Label set \amp  Edge added</td></tr>
-<tr><td class='c'>
-      75531 \amp  <m>\{1,2,3,4,5,6,7\}</m> \amp  2&#x2013;7</td></tr>
-<tr><td class='c'>
-      5531 \amp  <m>\{1,3,4,5,6,7\}</m> \amp  4&#x2013;5</td></tr>
-<tr><td class='c'>
-      531 \amp  <m>\{1,3,5,6,7\}</m> \amp  6&#x2013;5</td></tr>
-<tr><td class='c'>
-      31 \amp  <m>\{1,3,5,7\}</m> \amp  5&#x2013;3</td></tr>
-<tr><td class='c'>
-      1 \amp  <m>\{1,3,7\}</m> \amp  3&#x2013;1</td></tr>
-<tr><td class='c'>
-      (empty string) \amp  <m>\{1,7\}</m> \amp  1&#x2013;7</td></tr>
-</table> 
-    </figure>
- 
+<tabular>
+<row><cell>Pr&#xfc;fer code</cell><cell>Label set</cell><cell>Edge added</cell></row>
+<row><cell>75531</cell><cell><m>\{1,2,3,4,5,6,7\}</m></cell><cell>2<ndash />7</cell></row>
+<row><cell>5531</cell><cell><m>\{1,3,4,5,6,7\}</m></cell><cell>4<ndash />5</cell></row>
+<row><cell>531</cell><cell><m>\{1,3,5,6,7\}</m></cell><cell>6<ndash />5</cell></row>
+<row><cell>31</cell><cell><m>\{1,3,5,7\}</m></cell><cell>5<ndash />3</cell></row>
+<row><cell>1</cell><cell><m>\{1,3,7\}</m></cell><cell>3<ndash />1</cell></row>
+<row><cell>(empty string)</cell><cell><m>\{1,7\}</m></cell><cell>1<ndash />7</cell></row>
+</tabular>
+</figure>
 <p>
 We form each row from the row above it by removing the first label
 used on the edge added from the label set and removing the first
@@ -258,22 +250,18 @@ then work back up the edge added column, adding a new vertex and the
 edge indicated. The tree we construct in this manner is shown in
 <xref ref="fig_prufer-code-reverse" autoname="yes" />.
 </p>
-  <figure xml:id="fig_prufer-code-reverse" >
+<figure xml:id="fig_prufer-code-reverse" >
 <caption>The labeled tree with Pr&#xfc;fer code <m>75531</m></caption>
-            <image xml:id="img-fig_prufer-code-reverse">
-                <latex-image-code><![CDATA[
-                \begin{overpic}{images/prufer-code-reverse}
-                \put(2,21){$4$}
-                \put(62,14.5){$1$}
-                \put(36.8,14.5){$3$}
-                \put(2,2){$6$}
-                \put(9,12){$5$}
-                \put(90,12){$7$}
-                \put(93,21){$2$}
-                \end{overpic}]]>
-                </latex-image-code>
-            </image>
-    </figure>
- </statement>
+\begin{overpic}{graphs-figs/prufer-code-reverse}
+      \put(2,21){<m>4</m>}
+      \put(62,14.5){<m>1</m>}
+      \put(36.8,14.5){<m>3</m>}
+      \put(2,2){<m>6</m>}
+      \put(9,12){<m>5</m>}
+      \put(90,12){<m>7</m>}
+      \put(93,21){<m>2</m>}
+    \end{overpic}
+</figure>
+</statement>
 </example>
- </section>
+</section>

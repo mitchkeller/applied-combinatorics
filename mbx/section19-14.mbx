@@ -1,104 +1,85 @@
-
 <section xml:id="s_integers">
 <title>The Integers as Equivalence Classes of Ordered Pairs</title>
 <p>
 Define a binary relation <m>\cong</m> on the set <m>Z=\mathbb{N}_0
  \times\mathbb{N}_0</m> by
 </p>
-  
 <me>
-
-(a,b)\cong (c,d)\quad\textit{iff}\quad a+d=b+c.
-
+  (a,b)\cong (c,d)\quad\textit{iff}\quad a+d=b+c.
 </me>
-  
-<lemma><statement>
+
+<lemma>
+<statement>
 <p>
 <m>\cong</m> is reflexive.
 </p>
- </statement>
+</statement>
 </lemma>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>(a,b)\in Z</m>. Then <m>a+b=b+a</m>, so <m>(a,b)\cong(b,a)</m>.
 </p>
- 
 </proof>
-  
-<lemma><statement>
+
+<lemma>
+<statement>
 <p>
 <m>\cong</m> is symmetric.
 </p>
- </statement>
+</statement>
 </lemma>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>(a,b),(c,d)\in Z</m> and suppose
 that <m>(a,b)\cong (c,d)</m>. Then <m>a+d=b+c</m>, so that
 <m>c+b=d+a</m>. Thus <m>(c,d)\cong (a,b)</m>.
 </p>
- 
 </proof>
-  
-<lemma><statement>
+
+<lemma>
+<statement>
 <p>
 <m>\cong</m> is transitive.
 </p>
- </statement>
+</statement>
 </lemma>
-  
-<proof>
 
+<proof>
 <p>
 Let <m>(a,b), (c,d), (e,f)\in Z</m>. Suppose that
 </p>
-  
 <me>
-
-(a,b)\cong(c,d)\quad\text{and} \quad (c,d)\cong (e,f).
-
+  (a,b)\cong(c,d)\quad\text{and} \quad (c,d)\cong (e,f).
 </me>
- 
 <p>
 Then <m>a+d=b+c</m> and <m>c+f=d+e</m>. Therefore,
 </p>
-  
 <me>
-
-(a+d)+(c+f) =(b+c)+(d+e).
-
+  (a+d)+(c+f) =(b+c)+(d+e).
 </me>
- 
 <p>
 It follows that
 </p>
-  
 <me>
-
-(a+f)+(c+d) =(b+e)+(c+d).
-
+  (a+f)+(c+d) =(b+e)+(c+d).
 </me>
- 
 <p>
 Thus <m>a+f = b+e</m> so that <m>(a,b)\cong(e,f)</m>.
 </p>
- 
 </proof>
-  
+
 <p>
 Now that we know that <m>\cong</m> is an equivalence relation on
 <m>Z</m>, we know that <m>\cong</m> partitions <m>Z</m> into equivalence classes.
 For an element <m>(a,b)\in Z</m>, we denote the equivalence class
 of <m>(a,b)</m> by <m>\langle (a,b)\rangle</m>.
 </p>
-  
+
 <p>
 Let <m>\ints</m> denote the set of all equivalence classes of <m>Z</m>
 determined by the equivalence relation <m>\cong</m>. The elements
 of <m>\ints</m> are called <em>integers</em>.
 </p>
- </section>
+</section>

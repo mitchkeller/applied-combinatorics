@@ -1,181 +1,182 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_preface">
-    <title>Preface</title>
-    <p>
-        At Georgia Tech, MATH 3012: Applied Combinatorics, is a junior-level
-        course targeted primarily at students pursuing the B.S. in
-        Computer Science. The purpose of the course is to give students a
-        broad exposure to combinatorial mathematics, using applications to
-        emphasize fundamental concepts and techniques.
-        Applied Combinatorics is also required of students seeking the B.S. in
-        Applied Mathematics or the B.S in Discrete Mathematics, and it is one
-        of two discrete mathematics courses that computer engineering students may select to
-        fulfill a breadth requirement. The course will also often contain a selection
-        of other engineering and science majors who are interested in learning
-        more mathematics. As a consequence, in a typical semester, some 250 Georgia
-        Tech students are enrolled in Applied Combinatorics. Students enrolled
-        in Applied Combinatorics at Georgia Tech have already completed the
-        three semester calculus sequence&#8202;&#x2014;&#8202;with many students bypassing
-        one or more of the these courses on the basis of advanced placement
-        scores. Also, the students will know some linear algebra and can
-        at least have a reasonable discussion about vector spaces, bases and
-        dimension.
-    </p>
-    
-    <p>
-        Our approach to the course is to show students the beauty of
-        combinatorics and how combinatorial problems naturally arise in many
-        settings, particularly in computer science. While proofs are
-        periodically presented in class, the course is not intended to teach
-        students how to write proofs; there are other required courses in our
-        curriculum that meet this need. Students may occasionally be asked to
-        prove small facts, but these arguments are closer to the kind we
-        expect from students in second or third semester calculus as contrasted
-        with proofs we expect from a mathematics major in an upper-division course.
-        Regardless, we cut very few corners, and our text can readily be
-        used by instructors who elect to be even more rigorous in their
-        approach.
-    </p>
-    
-    <p>
-        This book arose from our feeling that a text that met our approach to
-        Applied Combinatorics was not available. Because of the diverse set of
-        instructors assigned to the course, the standard text was one that
-        covered every topic imaginable (and then some), but provided little
-        depth. We've taken a different approach, attacking the central
-        subjects of the course description to provide exposure, but taking the
-        time to go into greater depth in select areas to give the students a
-        better feel for how combinatorics works. We have also included some
-        results and topics that are not found in other texts at this level but
-        help reveal the nature of combinatorics to students. We want
-        students to understand that combinatorics is a subject
-        that you must feel <q>in the gut</q>, and we hope that our presentation
-        achieves this goal. The emphasis throughout remains on applications,
-        including algorithms. We do not get deeply into the details of what it
-        means for an algorithm to be <q>efficient</q>, but we do include an informal
-        discussion of the basic principles of complexity, intended
-        to prepare students in computer science, engineering and applied mathematics
-        for subsequent coursework.
-    </p>
-    
-    <p>
-        The materials included in this book have evolved over time. Early
-        versions of a few chapters date from 2004, but the pace quickened in
-        2006 when the authors team taught a large section of Applied
-        Combinatorics. In the last five years, existing chapters have been
-        updated and expanded, while new chapters
-        have been added. As matters now stand, our book includes more material
-        than we can cover in a single semester. We feel that the topics of
-        Chapters<nbsp />1 through<nbsp />9 plus Chapters 12, 13 and 14 are the core of
-        a one semester course in Applied Combinatorics.
-        Additional topics can then be selected from the remaining chapters
-        based on the interests of the instructor and students.
-    </p>
-    
-    <p>
-        We are grateful to our colleagues Alan Diaz, Thang Le, Noah Strebi, Prasad Tetali
-        and Carl Yerger, who have taught Applied Combinatorics from preliminary
-        versions and have given valuable feedback. As this text is freely
-        available on the internet, we welcome comments, criticisms, suggestions
-        and corrections from anyone who takes a look at our work.
-    </p>
-    
-    <p>
-        <b>About the Authors</b>
-    </p>
-    
-    <p>
-        William T. Trotter is a Professor in the School of Mathematics at
-        Georgia Tech. He was first exposed to combinatorial mathematics through
-        the 1971 Bowdoin Combinatorics Conference which featured an array of
-        superstars of that era, including Gian Carlo Rota, Paul Erd&#337;s,
-        Marshall Hall, Herb Ryzer, Herb Wilf, William Tutte, Ron Graham,
-        Daniel Kleitman and Ray Fulkerson.
-        Since that time, he has published more than 120 research papers on graph theory,
-        discrete geometry, ramsey theory and extremal combinatorics. Perhaps
-        his best known work is in the area of combinatorics and partially ordered
-        sets, and his 1992 research monograph on this topic has been very influential.
-        (He takes some pride in the fact that this monograph is still in print
-        and copies are being sold in 2014.) He has more than 70 co-authors, but
-        considers his extensive joint work with Graham Brightwell,
-        Stefan Felsner, Peter Fishburn, Hal Kierstead and Endre Szemer&#233;di
-        as representing his best work. His career includes invited
-        presentations at more than 50 international conferences
-        and more than 30 meetings of professional societies. He was the founding
-        editor of the <em>SIAM Journal on Discrete Mathematics</em> and has served on
-        the Editorial Board of <em>Order</em> since the journal was launched
-        in 1984, and his service includes an eight year stint as Editor-in-Chief. Currently,
-        he serves on the editorial boards of three other journals in combinatorial
-        mathematics.
-    </p>
-    
-    <p>
-        Still he has his quirks. First, he insists on being called <q>Tom</q>,
-        as Thomas is his middle name, while continuing to sign as William T. Trotter.
-        Second, he has invested time and energy serving five terms as department/school
-        chair, one at Georgia Tech, two at Arizona State University and two at
-        the University of South Carolina. In addition, he has served as
-        a Vice Provost and as an Assistant Dean. Third, he is fascinated by
-        computer operating systems and is always installing new ones. In one
-        particular week, he put eleven different flavors of Linux on the
-        same machine, interspersed with four complete installs of Windows<nbsp />7.
-        Incidentally, the entire process started and ended with Windows<nbsp />7. Fourth, he
-        likes to hit golf balls, not play golf, just hit balls. Without these
-        diversions, he might even have had enough time to settle the Riemann hypothesis.
-    </p>
-    
-    <p>
-        He has had eleven Ph.D. students, one of which is now his co-author on this
-        text.
-    </p>
-    
-    <p>
-        Mitchel T. Keller is a super-achiever (this description is written by WTT)
-        extraordinaire from North Dakota. As a graduate student at Georgia Tech,
-        he won a lengthy list of honors and awards, including a Vigre Graduate
-        Fellowship, an IMPACT Scholarship, a John R.<nbsp />Festa Fellowship and
-        the 2009 Price Research Award. Mitch is a natural leader and was
-        elected President (and Vice President) of the Georgia Tech Graduate
-        Student Governance Association, roles in which he served with distinction.
-        Indeed, after completing his terms, his student colleagues voted to
-        establish a continuing award for distinguished leadership, to be named
-        the Mitchel T.<nbsp />Keller award, with Mitch as the first recipient. Very
-        few graduate students win awards in the first place, but Mitch is the
-        only one I know who has an award <em>named</em> after them.
-    </p>
-    
-    <p>
-        Mitch is also a gifted teacher of mathematics, receiving the prestigious
-        Georgia Tech 2008 Outstanding Teacher Award, a campus-wide competition.
-        He is quick to experiment with the latest approaches to teaching mathematics,
-        adopting what works for him while refining and polishing things along the
-        way. He really understands the literature behind active learning
-        and the principles of engaging students in the learning process.
-        Mitch has even taught his more senior (some say ancient)
-        co-author a thing or two and got him to try personal response
-        systems in a large calculus section this fall.
-    </p>
-    
-    <p>
-        Mitch is off to a fast start in his own research career, and is already
-        an expert in the subject of linear discrepancy. Mitch has also made
-        substantive contributions to a topic known as Stanley depth,
-        which is right at the boundary of combinatorial mathematics and
-        algebraic combinatorics.
-    </p>
-    
-    <p>
-        After finishing his Ph.D., Mitch received another signal honor,
-        a Marshall Sherfield Postdoctoral Fellowship and spent
-        two years at the London School of Economics. He is presently an
-        Assistant Professor of Mathematics at Washington and Lee University, and a few years down the road,
-        he'll probably be president of something.
-    </p>
-    
-    <p>
-        On the personal side, Mitch is the keeper of the Mathematical
-        Genealogy Project, and he is a great cook. His desserts are to
-        die for.
-    </p>
-    Mitch Keller, <c>kellermt@wlu.edu</c><br />
-    Tom Trotter, <c>trotter@math.gatech.edu</c><br />
-    <em>Lexington, Virginia and Atlanta, Georgia</em> </chapter>
+<title>Preface</title>
+<p>
+At Georgia Tech, MATH 3012: Applied Combinatorics, is a junior-level
+course targeted primarily at students pursuing the B.S. in
+Computer Science. The purpose of the course is to give students a
+broad exposure to combinatorial mathematics, using applications to
+emphasize fundamental concepts and techniques.
+Applied Combinatorics is also required of students seeking the B.S. in
+Applied Mathematics or the B.S in Discrete Mathematics, and it is one
+of two discrete mathematics courses that computer engineering students may select to
+fulfill a breadth requirement. The course will also often contain a selection
+of other engineering and science majors who are interested in learning
+more mathematics. As a consequence, in a typical semester, some 250 Georgia
+Tech students are enrolled in Applied Combinatorics. Students enrolled
+in Applied Combinatorics at Georgia Tech have already completed the
+three semester calculus sequence<mdash />with many students bypassing
+one or more of the these courses on the basis of advanced placement
+scores. Also, the students will know some linear algebra and can
+at least have a reasonable discussion about vector spaces, bases and
+dimension.
+</p>
+
+<p>
+Our approach to the course is to show students the beauty of
+combinatorics and how combinatorial problems naturally arise in many
+settings, particularly in computer science. While proofs are
+periodically presented in class, the course is not intended to teach
+students how to write proofs; there are other required courses in our
+curriculum that meet this need. Students may occasionally be asked to
+prove small facts, but these arguments are closer to the kind we
+expect from students in second or third semester calculus as contrasted
+with proofs we expect from a mathematics major in an upper-division course.
+Regardless, we cut very few corners, and our text can readily be
+used by instructors who elect to be even more rigorous in their
+approach.
+</p>
+
+<p>
+This book arose from our feeling that a text that met our approach to
+Applied Combinatorics was not available. Because of the diverse set of
+instructors assigned to the course, the standard text was one that
+covered every topic imaginable (and then some), but provided little
+depth. We've taken a different approach, attacking the central
+subjects of the course description to provide exposure, but taking the
+time to go into greater depth in select areas to give the students a
+better feel for how combinatorics works. We have also included some
+results and topics that are not found in other texts at this level but
+help reveal the nature of combinatorics to students. We want
+students to understand that combinatorics is a subject
+that you must feel <q>in the gut</q>, and we hope that our presentation
+achieves this goal. The emphasis throughout remains on applications,
+including algorithms. We do not get deeply into the details of what it
+means for an algorithm to be <q>efficient</q>, but we do include an informal
+discussion of the basic principles of complexity, intended
+to prepare students in computer science, engineering and applied mathematics
+for subsequent coursework.
+</p>
+
+<p>
+The materials included in this book have evolved over time. Early
+versions of a few chapters date from 2004, but the pace quickened in
+2006 when the authors team taught a large section of Applied
+Combinatorics. In the last five years, existing chapters have been
+updated and expanded, while new chapters
+have been added. As matters now stand, our book includes more material
+than we can cover in a single semester. We feel that the topics of
+Chapters<nbsp />1 through<nbsp />9 plus Chapters 12, 13 and 14 are the core of
+a one semester course in Applied Combinatorics.
+Additional topics can then be selected from the remaining chapters
+based on the interests of the instructor and students.
+</p>
+
+<p>
+We are grateful to our colleagues Alan Diaz, Thang Le, Noah Strebi, Prasad Tetali
+and Carl Yerger, who have taught Applied Combinatorics from preliminary
+versions and have given valuable feedback. As this text is freely
+available on the internet, we welcome comments, criticisms, suggestions
+and corrections from anyone who takes a look at our work.
+</p>
+
+<p>
+<b>About the Authors</b>
+</p>
+
+<p>
+William T. Trotter is a Professor in the School of Mathematics at
+Georgia Tech. He was first exposed to combinatorial mathematics through
+the 1971 Bowdoin Combinatorics Conference which featured an array of
+superstars of that era, including Gian Carlo Rota, Paul Erd&#337;s,
+Marshall Hall, Herb Ryzer, Herb Wilf, William Tutte, Ron Graham,
+Daniel Kleitman and Ray Fulkerson.
+Since that time, he has published more than 120 research papers on graph theory,
+discrete geometry, ramsey theory and extremal combinatorics. Perhaps
+his best known work is in the area of combinatorics and partially ordered
+sets, and his 1992 research monograph on this topic has been very influential.
+(He takes some pride in the fact that this monograph is still in print
+and copies are being sold in 2014.) He has more than 70 co-authors, but
+considers his extensive joint work with Graham Brightwell,
+Stefan Felsner, Peter Fishburn, Hal Kierstead and Endre Szemer&egrave;di
+as representing his best work. His career includes invited
+presentations at more than 50 international conferences
+and more than 30 meetings of professional societies. He was the founding
+editor of the <em>SIAM Journal on Discrete Mathematics</em> and has served on
+the Editorial Board of <em>Order</em> since the journal was launched
+in 1984, and his service includes an eight year stint as Editor-in-Chief. Currently,
+he serves on the editorial boards of three other journals in combinatorial
+mathematics.
+</p>
+
+<p>
+Still he has his quirks. First, he insists on being called <q>Tom</q>,
+as Thomas is his middle name, while continuing to sign as William T. Trotter.
+Second, he has invested time and energy serving five terms as department/school
+chair, one at Georgia Tech, two at Arizona State University and two at
+the University of South Carolina. In addition, he has served as
+a Vice Provost and as an Assistant Dean. Third, he is fascinated by
+computer operating systems and is always installing new ones. In one
+particular week, he put eleven different flavors of Linux on the
+same machine, interspersed with four complete installs of Windows<nbsp />7.
+Incidentally, the entire process started and ended with Windows<nbsp />7. Fourth, he
+likes to hit golf balls, not play golf, just hit balls. Without these
+diversions, he might even have had enough time to settle the Riemann hypothesis.
+</p>
+
+<p>
+He has had eleven Ph.D. students, one of which is now his co-author on this
+text.
+</p>
+
+<p>
+Mitchel T. Keller is a super-achiever (this description is written by WTT)
+extraordinaire from North Dakota. As a graduate student at Georgia Tech,
+he won a lengthy list of honors and awards, including a Vigre Graduate
+Fellowship, an IMPACT Scholarship, a John R.<nbsp />Festa Fellowship and
+the 2009 Price Research Award. Mitch is a natural leader and was
+elected President (and Vice President) of the Georgia Tech Graduate
+Student Governance Association, roles in which he served with distinction.
+Indeed, after completing his terms, his student colleagues voted to
+establish a continuing award for distinguished leadership, to be named
+the Mitchel T.<nbsp />Keller award, with Mitch as the first recipient. Very
+few graduate students win awards in the first place, but Mitch is the
+only one I know who has an award <em>named</em> after them.
+</p>
+
+<p>
+Mitch is also a gifted teacher of mathematics, receiving the prestigious
+Georgia Tech 2008 Outstanding Teacher Award, a campus-wide competition.
+He is quick to experiment with the latest approaches to teaching mathematics,
+adopting what works for him while refining and polishing things along the
+way. He really understands the literature behind active learning
+and the principles of engaging students in the learning process.
+Mitch has even taught his more senior (some say ancient)
+co-author a thing or two and got him to try personal response
+systems in a large calculus section this fall.
+</p>
+
+<p>
+Mitch is off to a fast start in his own research career, and is already
+an expert in the subject of linear discrepancy. Mitch has also made
+substantive contributions to a topic known as Stanley depth,
+which is right at the boundary of combinatorial mathematics and
+algebraic combinatorics.
+</p>
+
+<p>
+After finishing his Ph.D., Mitch received another signal honor,
+a Marshall Sherfield Postdoctoral Fellowship and spent
+two years at the London School of Economics. He is presently an
+Assistant Professor of Mathematics at Washington and Lee University, and a few years down the road,
+he'll probably be president of something.
+</p>
+
+<p>
+On the personal side, Mitch is the keeper of the Mathematical
+Genealogy Project, and he is a great cook. His desserts are to
+die for.
+</p>
+Mitch Keller, <c>kellermt@wlu.edu</c><br />
+  Tom Trotter, <c>trotter@math.gatech.edu</c><br />
+  <em>Lexington, Virginia and Atlanta, Georgia</em>
+</chapter>

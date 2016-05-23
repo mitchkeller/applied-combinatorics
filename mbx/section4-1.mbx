@@ -1,4 +1,3 @@
-
 <section xml:id="s_strings_intro">
 <title>Strings: A First Look</title>
 <p>
@@ -11,9 +10,9 @@ refer to the elements of <m>X</m> as <em>characters</em>, while the element
 <m>s(i)</m> is the <m>i^{\text{th} }</m> character of <m>s</m>. Whenever practical, we
 prefer to denote a string <m>s</m> by writing <m>s=</m><q><m>x_1x_2x_3\dots x_n</m></q>,
 rather than the more cumbersome notation <m>s(1)=x_1</m>, <m>s(2)=x_2</m>,
-..., <m>s(n)=x_n</m>.
+<ddots />, <m>s(n)=x_n</m>.
 </p>
-  
+
 <p>
 There are several alternatives for the notation and terminology
 associated with strings. First, the characters in a string <m>s</m> are
@@ -23,14 +22,14 @@ Strings are also called <em>sequences</em>, especially when <m>X</m> is a
 set of numbers and the function <m>s</m> is defined by an algebraic rule.
 For example, the sequence of odd integers is defined by <m>s_i=2i-1</m>.
 </p>
-  
+
 <p>
 Alternatively, strings are called <em>words</em>, the set <m>X</m> is
 called the <em>alphabet</em> and the elements of <m>X</m> are
 called <em>letters</em>. For example, <m>aababbccabcbb</m> is a
 <m>13</m>-letter word on the <m>3</m>-letter alphabet <m>\{a,b,c\}</m>.
 </p>
-  
+
 <p>
 In many computing languages, strings are called <em>arrays</em>.
 Also, when the character <m>s(i)</m> is constrained to belong to a subset
@@ -39,27 +38,23 @@ cartesian product <m>X_1\times X_2\times \dots\times X_n</m>, which
 is normally viewed as <m>n</m>-tuples of the form <m>(x_1,x_2,\dots,x_n)</m>
 such that <m>x_i\in X_i</m> for all <m>i\in [n]</m>.
 </p>
-  
-<example xml:id="exa_strings_ga-plate"><statement>
+<example xml:id="exa_strings_ga-plate">
+<statement>
 <p>
 In the state of Georgia, license plates consist of four digits
 followed by a space followed by three capital letters. The first
 digit cannot be a<nbsp /><m>0</m>. How many license plates are possible?
 </p>
-  
+
 <p>
 Let <m>X</m> consist of the digits <m>\{0,1,2,\dots,9\}</m>, let <m>Y</m>
 be the singleton set whose only element is a space, and let <m>Z</m>
 denote the set of capital letters. A valid license plate is just a
 string from
 </p>
-  
 <me>
-
   (X-\{0\})\times X\times X\times X\times Y\times Z\times Z\times Z
-  
 </me>
- 
 <p>
 so the number of different license plates is
 <m>9\times10^3\times1\times 26^3=158\,184\,000</m>, since the size of a
@@ -77,16 +72,15 @@ the remaining digit blanks didn't depend on our choice of a <m>1</m> for
 the first position, we see that each of the <m>9</m> choices of initial
 digit gives <m>1\, 000</m> strings, for a total of <m>9\,000 = 9\times 10^3</m>.
 </p>
- </statement>
+</statement>
 </example>
-  
 <p>
-In the case that <m>X=\{0,1\}</m>, an <m>X</m>-string is called a <m>0</m>&#x2013;<m>1</m>
+In the case that <m>X=\{0,1\}</m>, an <m>X</m>-string is called a <m>0</m><ndash /><m>1</m>
 string (also a <em>binary string</em> or <em>bit string.</em>). When <m>X=\{0,1,2\}</m>, an
 <m>X</m>-string is also called a <em>ternary</em> string.
 </p>
-  
-<example><statement>
+<example>
+<statement>
 <p>
 A machine instruction in a <m>32</m>-bit operating system is just a bit
 string of length<nbsp /><m>32</m>. Thus, there are <m>2</m> options for each of <m>32</m>
@@ -94,22 +88,23 @@ positions to fill, making the number of such strings <m>2^{32} =
   4\,294\,967\,296</m>. In general, the number of bit strings of length<nbsp /><m>n</m> is
 <m>2^n</m>.
 </p>
- </statement>
+</statement>
 </example>
   
-<example><statement>
+<example>
+<statement>
 <p>
 Suppose that a website allows its users to pick their own usernames
 for accounts, but imposes some restrictions. The first chracter must
 be an upper-case letter in the English alphabet. The second through
 sixth characters can be letters (both upper-case and lower-case
-allowed) in the English alphabet or decimal digits (<m>0</m>&#x2013;<m>9</m>). The
+allowed) in the English alphabet or decimal digits (<m>0</m><ndash /><m>9</m>). The
 seventh position must be `@' or `.'. The eighth through twelfth
 positions allow lower-case English letters, `*', `<percent />',
 and `<hash />'. The thirteenth position must be a digit. How many users
 can the website accept registrations from?
 </p>
-  
+
 <p>
 We can visualize the options by thinking of the <m>13</m>
 positions in the string as blanks that need to be filled in and
@@ -117,34 +112,33 @@ putting the options for that blank above. Below, we've used U to
 denote the set of upper-case letters, L for the set of lower-case
 letters, and D for the set of digits.
 </p>
-  <table id="13f727062200c9674c816b3fb6331c85f5634cb2" ><tr><td class='c'>
-      \amp \amp \amp \amp \amp \amp \amp <hash />\amp <hash />\amp <hash />\amp <hash />\amp <hash />\amp </td></tr>
-<tr><td class='c'>
-      \amp D\amp D\amp D\amp D\amp D\amp \amp <percent />\amp <percent />\amp <percent />\amp <percent />\amp <percent />\amp </td></tr>
-<tr><td class='c'>
-      \amp L\amp L\amp L\amp L\amp L\amp .\amp *\amp *\amp *\amp *\amp *\amp </td></tr>
-<tr><td class='c'>
-      U\amp U\amp U\amp U\amp U\amp U\amp @\amp L\amp L\amp L\amp L\amp L\amp D</td></tr>
-<tr><td class='hline' colspan='13'><hr /></td></tr>
-<tr><td class='c'>
-      26 \amp  62 \amp  62 \amp  62 \amp  62 \amp  62 \amp  2 \amp  29 \amp  29 \amp  29 \amp  29 \amp  29 \amp  10</td></tr>
-</table> </statement>
-</example>
- 
+<figure xml:id="fig_string-template" >
+<caption>String Template</caption>
+<image width="73%" source="images/245ffe9811b09379997438ec3c2ecda4ace860c0.png" />
+</figure>
+<tabular>
+<row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell><hash /></cell><cell><hash /></cell><cell><hash /></cell><cell><hash /></cell><cell><hash /></cell><cell></cell></row>
+<row><cell></cell><cell>D</cell><cell>D</cell><cell>D</cell><cell>D</cell><cell>D</cell><cell></cell><cell><percent /></cell><cell><percent /></cell><cell><percent /></cell><cell><percent /></cell><cell><percent /></cell><cell></cell></row>
+<row><cell></cell><cell>L</cell><cell>L</cell><cell>L</cell><cell>L</cell><cell>L</cell><cell>.</cell><cell>*</cell><cell>*</cell><cell>*</cell><cell>*</cell><cell>*</cell><cell></cell></row>
+<row><cell>U</cell><cell>U</cell><cell>U</cell><cell>U</cell><cell>U</cell><cell>U</cell><cell>@</cell><cell>L</cell><cell>L</cell><cell>L</cell><cell>L</cell><cell>L</cell><cell>D</cell></row>
+<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row><cell>26</cell><cell>62</cell><cell>62</cell><cell>62</cell><cell>62</cell><cell>62</cell><cell>2</cell><cell>29</cell><cell>29</cell><cell>29</cell><cell>29</cell><cell>29</cell><cell>10</cell></row>
+</tabular>
 <p>
-Below each position in the string, we've written the number of options
-for that position. (For example, there are 62 options for the second
-position, since there are <m>52</m> letters once both cases are accounted for and <m>10</m>
-digits. We then multiply these possibilities together, since each
-choice is independent of the others. Therefore, we have
+Below each position in the string, we've written the
+number of options for that position. (For example, there are 62
+options for the second position, since there are <m>52</m> letters once
+both cases are accounted for and <m>10</m> digits. We then multiply these
+possibilities together, since each choice is independent of the
+others. Therefore, we have
 </p>
-  
 <me>
-26\times 62^5 \times 2 \times 29^5\times 10 =
-9\,771\,287\,250\,890\,863\,360
+  26\times 62^5 \times 2 \times 29^5\times 10 = 
+  9\,771\,287\,250\,890\,863\,360
 </me>
- 
 <p>
 total possible usernames.
 </p>
- </section>
+</statement>
+</example>
+</section>

@@ -1,4 +1,3 @@
-
 <section xml:id="s_estimatesize">
 <title>Estimating Ramsey Numbers</title>
 <p>
@@ -6,33 +5,22 @@ We will find it convenient to utilize the following approximation
 due to Stirling. You can find a proof in almost any
 advanced calculus book.
 </p>
-  
 <me>
-
-n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n\bigl(1+
+  n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n\bigl(1+
   \frac{1}{12n}+\frac{1}{288n^2}-\frac{139}{51840n^3} +O(\frac{1}{n^4})\bigr).
-
 </me>
- 
 <p>
 Of course, we will normally be satisfied with the
 first term:
 </p>
-  
 <me>
-
-n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n
-
+  n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n
 </me>
- 
 <p>
 Using Stirling's approximation, we have the following
 upper bound:
 </p>
-  
 <me>
-
-R(n,n) \le \binom{2n-2}{n-1} \equiv \frac{2^{2n}}{4\sqrt{\pi n}} 
-
+  R(n,n) \le \binom{2n-2}{n-1} \equiv \frac{2^{2n}}{4\sqrt{\pi n}}
 </me>
- </section>
+</section>

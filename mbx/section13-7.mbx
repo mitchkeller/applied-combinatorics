@@ -1,16 +1,19 @@
-
 <section xml:id="exercises_ramsey">
-<title>Exercises</title><ol><li>Consider a random graph with vertex set <m>\{1,2,\dot,n\}</m>.
+<title>Exercises</title>
+<ol>
+<li>Consider a random graph with vertex set <m>\{1,2,\dot,n\}</m>.
 If the edge probability is <m>p=1/2</m>, then let <m>X</m> denote the number
 of complete subgraphs is size <m>t=2\log n</m> and let <m>Y</m> denote the
 number of independent sets of size <m>t=2\log n</m>.
-<ol><li>Show that <m>E(X+Y)\lt 1</m>, when <m>n</m> is sufficiently large.</li>
+<ol>
+<li>Show that <m>E(X+Y)\lt 1</m>, when <m>n</m> is sufficiently large.</li>
 <li>Use the result from part<nbsp />a to show that <m>\omega(G)</m> is less
 than <m>2\log n</m>, while the chromatic number of <m>G</m> is at least <m>n/(2\log n)</m>
 (both statements holding with high probability).  As a result, the basic
 inequality <m>\chi(G)\ge\omega(G)</m> is far from being tight for a random
 graph.</li>
- </ol> </li>
+</ol>
+</li>
 <li>We form a random tournament as follows.  Start with a complete graph 
 with vertex set <m>\{1,2,\dots,n\}</m>.  For each distinct
 pair <m>i</m>, <m>j</m> with <m>1\le i\lt j\le n</m>, flip a fair coin.  If the result is heads,
@@ -29,4 +32,5 @@ certainly has no isolated vertices, while a random graph with edge probability
 <m>p=\log n/(10 n)</m> almost certainly has at least one isolated vertices.</li>
 <li>In the sense of the preceding problem, determine the threshold probability
 for a graph to be connected.</li>
- </ol>  </section>
+</ol>
+</section>

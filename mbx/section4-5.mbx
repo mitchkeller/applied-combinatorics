@@ -1,4 +1,3 @@
-
 <section xml:id="s_strings_bin-coeff">
 <title>The Ubiquitous Nature of Binomial Coefficients</title>
 <p>
@@ -7,15 +6,15 @@ that can be solved by appeal to binomial coefficients,
 even though at first glance, they do not appear to have
 anything to do with sets.
 </p>
-  
-<example><statement>
+<example>
+<statement>
 <p>
 The office assistant is distributing supplies. In how many ways can
 he distribute 18 identical folders among four office employees:
 Audrey, Bart, Cecilia and Darren, with the additional restriction that
 each will receive at least one folder?
 </p>
-  
+
 <p>
 Imagine the folders placed in a row. Then there are 17 gaps between
 them. Of these gaps, choose three and place a divider in each.
@@ -25,20 +24,22 @@ first goes to Audrey, the second to Bart, etc. Thus the answer is
 with Audrey receiving<nbsp /><m>6</m> folders, Bart getting<nbsp /><m>1</m>, Cecilia<nbsp /><m>4</m> and
 Darren<nbsp />7.
 </p>
-  <figure xml:id="fig_distrib" >
+<figure xml:id="fig_distrib" >
 <caption>Distributing Identical Objects into Distinct
     Cells</caption>
-<image source="images/3012-fig23.png" /> </figure>
- </statement>
+<image width="60%" source="images/3012-fig23.png" />
+</figure>
+</statement>
 </example>
   
-<example><statement>
+<example>
+<statement>
 <p>
 Suppose we redo the preceding problem but drop the restriction
 that each of the four employees gets at least one folder.
 Now how many ways can the distribution be made?
 </p>
-  
+
 <p>
 The solution involves a <q>trick</q> of sorts. First, we convert the
 problem to one that we already know how to solve. This is
@@ -48,12 +49,13 @@ will get <m>8</m>. Also, artificially inflate the number of folders by
 <m>4</m>, one for each of the four persons. So now imagine a row of
 <m>22=18+4</m> folders. Again, choose <m>3</m> gaps. This determines a
 non-zero allocation for each person. The actual allocation is one
-less&#8202;&#x2014;&#8202;and may be zero. So the answer is <m>C(21,3)</m>.
+less<mdash />and may be zero. So the answer is <m>C(21,3)</m>.
 </p>
- </statement>
+</statement>
 </example>
   
-<example><statement>
+<example>
+<statement>
 <p>
 Again we have the same problem as before, but now we want to count
 the number of distributions where only Audrey and Cecilia are
@@ -62,35 +64,34 @@ folders. Now the trick is to artificially inflate Bart and Darren's
 allocation, but leave the numbers for Audrey and Cecilia as is. So
 the answer is <m>C(19,3)</m>.
 </p>
- </statement>
+</statement>
 </example>
   
-<example><statement>
+<example>
+<statement>
 <p>
 Here is a reformulation of the preceding discussion expressed in terms
 of integer solutions of inequalities.
 </p>
-  
+
 <p>
 We count the number of integer solutions to the inequality
 </p>
-  
 <me>
-
-x_1+x_2+x_3+x_4+x_5+x_6\le 538
-
+  x_1+x_2+x_3+x_4+x_5+x_6\le 538
 </me>
- 
 <p>
 subject to various sets of restrictions on the values of
 <m>x_1,x_2,\dots,x_6</m>. Some of these restrictions will require
 that the inequality actually be an equation.
 </p>
-  
+
 <p>
 The number of integer solutions is:
 </p>
-  <ol><li><m>C(537,5)</m>, when all <m>x_i> 0</m> and equality holds.</li>
+
+<ol>
+<li><m>C(537,5)</m>, when all <m>x_i> 0</m> and equality holds.</li>
 <li><m>C(543,5)</m>, when all <m>x_i\ge 0</m> and equality holds.</li>
 <li><m>C(291,3)</m>, when <m>x_1,x_2,x_4,x_6>0</m>, <m>x_3=52</m>,
 <m>x_5=194</m>, and equality holds.</li>
@@ -101,41 +102,41 @@ the balance.  Note that <m>x_7</m> must be positive.</li>
 strict. <em>Hint:</em> Add a new variable <m>x_7</m> as above.   Now it
 is the only one which is required to be positive.</li>
 <li><m>C(544,6)</m>, when all <m>x_i \ge 0</m>.</li>
- </ol>  </statement>
+</ol>
+</statement>
 </example>
-  
 <p>
 A classical enumeration problem (with connections to several problems)
 involves counting lattice paths. A <em>lattice path</em> in the plane
 is a sequence of ordered pairs of integers:
 </p>
-  
 <me>
-
-(m_1,n_1), (m_2,n_2), (m_3,n_3),\dots,(m_t,n_t)
-
+  (m_1,n_1), (m_2,n_2), (m_3,n_3),\dots,(m_t,n_t)
 </me>
- 
 <p>
 so that for all <m>i=1,2,\dots,t-1</m>, either
 </p>
-  <ol><li><m>m_{i+1}=m_{i}+1</m> and <m>n_{i+1}=n_i</m>, or</li>
+
+<ol>
+<li><m>m_{i+1}=m_{i}+1</m> and <m>n_{i+1}=n_i</m>, or</li>
 <li><m>m_{i+1}=m_i</m> and <m>n_{i+1}=n_{i}+1</m>.</li>
- </ol>   
+</ol>
+
 <p>
 In <xref ref="fig_latticepath">Figure</xref>, we show a lattice path from
 <m>(0,0)</m> to <m>(13,8)</m>.
 </p>
-  <figure xml:id="fig_latticepath" >
+<figure xml:id="fig_latticepath" >
 <caption>A Lattice Path</caption>
-<image source="images/3012-fig22.png" /> </figure>
-  
-<example><statement>
+<image width="40%" source="images/3012-fig22.png" />
+</figure>
+<example>
+<statement>
 <p>
 The number of lattice paths from <m>(m,n)</m> to
 <m>(p,q)</m> is <m>C((p-m)+(q-n),p-m)</m>.
 </p>
-  
+
 <p>
 To see why this formula is valid, note that a lattice
 path is just an <m>X</m>-string with
@@ -143,22 +144,19 @@ path is just an <m>X</m>-string with
 for <em>vertical</em>. In this case, there are exactly <m>(p-m)+(q-n)</m>
 moves, of which <m>p-m</m> are horizontal.
 </p>
- </statement>
+</statement>
 </example>
   
-<example><statement>
+<example>
+<statement>
 <p>
 Let <m>n</m> be a non-negative integer. Then the number of lattice
 paths from <m>(0,0)</m> to <m>(n,n)</m> which never go above the diagonal
 line <m>y=x</m> is the Catalan number
 </p>
-  
 <me>
-
-C(n) =\frac{1}{n+1}\binom{2n}{n}.
-
+  C(n) =\frac{1}{n+1}\binom{2n}{n}.
 </me>
-  
 <p>
 To see that this formula holds, consider the family <m>\cgP</m> of all
 lattice paths from <m>(0,0)</m> to <m>(n,n)</m>. A lattice path from <m>(0,0)</m> to
@@ -172,12 +170,12 @@ example, the string <q><m>HHVHVVHHHVHVVV</m></q> is a good lattice path from
 the second case, note that after<nbsp /><m>9</m> moves, we have<nbsp /><m>5</m> <m>V</m>'s
 and<nbsp /><m>4</m><nbsp /><m>H</m>'s.
 </p>
-  
+
 <p>
 Let <m>\cgG</m> and <m>\cgB</m> denote the family of all good and bad paths,
 respectively. Of course, our goal is to determine <m>|\cgG|</m>.
 </p>
-  
+
 <p>
 Consider a path <m>s\in\cgB</m>. Then there is a least integer <m>i</m> so that
 <m>s</m> has more <m>V</m>'s than <m>H</m>'s in the first <m>i</m> positions. By the
@@ -195,10 +193,10 @@ is shown solid and <m>s'</m> agrees with <m>s</m> until it crosses the line
 <m>s'</m> is a lattice path from <m>(0,0)</m> to <m>(n-1,n+1)</m>. Note that there
 are <m>\binom{2n}{n-1}</m> such lattice paths.
 </p>
-  <figure xml:id="flippath" >
+<figure xml:id="flippath" >
 <caption>Transforming a Lattice Path</caption>
-<image source="images/3012-fig26.png" /> <br /> </figure>
-  
+<image width="40%" source="images/3012-fig26.png" /> <br />
+</figure>
 <p>
 We can also observe that the transformation we've described is in fact
 a bijection between <m>\cgB</m> and <m>\cgP'</m>, the set of lattice paths from
@@ -214,18 +212,15 @@ bad lattice path, as we did not adjust the first part of the path,
 which results in crossing the line <m>y=x</m> in position <m>i</m>. Therefore,
 <m>|\cgB|=|\cgP'|</m> and thus
 </p>
-  
 <me>
-C(n)=|\cgG|=|\cgP|-|\cgB|=|\cgP|-|\cgP'| = \binom{2n}{n} -
+  C(n)=|\cgG|=|\cgP|-|\cgB|=|\cgP|-|\cgP'| = \binom{2n}{n} -
 \binom{2n}{n-1} = \frac{1}{n+1}\binom{2n}{n},
 </me>
- 
 <p>
 after a bit of algebra.
 </p>
- </statement>
+</statement>
 </example>
-  
 <p>
 It is worth observing that in the preceding example, we made use of
 two common enumerative techniques: giving a bijection between two
@@ -233,4 +228,4 @@ classes of objects, one of which is <q>easier</q> to count than the
 other, and counting the objects we do <em>not</em> wish to enumerate
 and deducting their number from the total.
 </p>
- </section>
+</section>

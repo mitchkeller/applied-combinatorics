@@ -1,16 +1,18 @@
-
 <section>
-<title>Augmenting Paths</title><introduction>
+<title>Augmenting Paths</title>
+
+
+<introduction>
 <p>
 In this section, we develop the classic labeling algorithm of
 Ford and Fulkerson which starts with any flow in a network and
-proceeds to modify the flow&#8202;&#x2014;&#8202;always increasing
-the value of the flow&#8202;&#x2014;&#8202;until reaching a step
+proceeds to modify the flow<mdash />always increasing
+the value of the flow<mdash />until reaching a step
 where no further improvements are possible. The algorithm will also
 help resolve the debate Alice, Bob, Carlos, and Yolanda were having
 above.
 </p>
-  
+
 <p>
 Our presentation of the labeling algorithm makes use of some natural
 and quite descriptive terminology. Suppose we have a network <m>\GVE</m>
@@ -24,7 +26,7 @@ capacity</em>, and when <m>0=\phi(x,y)\lt c(x,y)</m>, we say the edge <m>(x,y)</
 is <em>empty</em>. Note that we simply ignore edges with zero
 capacity.
 </p>
-  
+
 <p>
 The key tool in modifying a network flow is a special type of path,
 and these paths are not necessarily directed paths. An
@@ -32,9 +34,11 @@ and these paths are not necessarily directed paths. An
 distinct vertices in the network such that <m>x_0=S</m>, <m>x_m=T</m>, and for
 each <m>i=1,2,\dots,m</m>, either
 </p>
-  <ol type="labelalph"><li xml:id="networkflow_spare" ><m>(x_{i-1},x_i)</m> has spare capacity or </li>
+
+<ol type="labelalph"><li xml:id="networkflow_spare" ><m>(x_{i-1},x_i)</m> has spare capacity or </li>
 <li xml:id="networkflow_used" ><m>(x_i,x_{i-1})</m> is used. </li>
- </ol>  
+</ol>
+
 <p>
 When condition ( <xref ref="networkflow_spare"></xref>) holds, it is customary to
 refer to the edge <m>(x_{i-1},x_i)</m> as a <em>forward</em> edge of the
@@ -43,8 +47,8 @@ holds, then the (nondirected) edge <m>(x_{i-1},x_i)</m> is called a
 <em>backward</em> edge since the path moves from <m>x_{i-1}</m> to <m>x_i</m>,
 which is opposite the direction of the edge.
 </p>
-  
-<example xml:id="exa_networkflow_augpath"><statement>
+<example xml:id="exa_networkflow_augpath">
+<statement>
 <p>
 Let's look again at the network and flow in
 <xref ref="fig_networkflow_netflow" autoname="yes" />. The sequence of vertices
@@ -54,7 +58,7 @@ each of <m>(S,F)</m>, <m>(F,A)</m>, and <m>(A,T)</m> by any positive amount <m>\
   \leq 12</m> results in increasing the value of the flow and preserves
 the conservation laws.
 </p>
-  
+
 <p>
 If our first example jumped out at you as an augmenting path, it's
 probably less clear at a quick glance that <m>(S,E,D,C,B,A,T)</m> is also
@@ -64,9 +68,8 @@ network. Don't worry if it's not clear how this path can be used to
 increase the value of the flow in the network, as that's our next
 topic.
 </p>
- </statement>
+</statement>
 </example>
-  
 <p>
 Ignoring, for the moment, the issue of finding augmenting paths, let's
 see how they can be used to modify the current flow in a way that
@@ -74,14 +77,10 @@ increases its value by some <m>\delta > 0</m>. Here's how for an augmenting
 path <m>P=(x_0,x_1,\dots,x_m)</m>. First, let <m>\delta_1</m> be the positive
 number defined by:
 </p>
-  
 <me>
-
-\delta_1 =\min\{c(x_{i-1},x_i)-\phi(x_{i-1},x_i):(x_{i-1},x_i) 
+  \delta_1 =\min\{c(x_{i-1},x_i)-\phi(x_{i-1},x_i):(x_{i-1},x_i) 
 \text{ a foward edge of }  P.\}
-
 </me>
- 
 <p>
 The quantity <m>c(x_{i-1},x_i)-\phi(x_{i-1},x_i)</m> is nothing but the
 spare capacity on the edge <m>(x_{i-1},x_i)</m>, and thus <m>\delta_1</m> is the
@@ -90,52 +89,53 @@ that the edges <m>(x_0,x_1)</m> and <m>(x_{m-1},x_m)</m> are always forward
 edges, so the <em>positive</em> quantity <m>\delta_1</m> is defined for every
 augmenting path.
 </p>
-  
+
 <p>
 When the augmenting path <m>P</m> has no backward edges, we set <m>\delta=
 \delta_1</m>. But when <m>P</m> has one or more backward edges, we pause
 to set
 </p>
-  
 <me>
-
-\delta_2 =\min\{\phi(x_{i},x_{i-1}):(x_{i-1},x_i) 
+  \delta_2 =\min\{\phi(x_{i},x_{i-1}):(x_{i-1},x_i) 
 \text{ a backward edge of }  P\}.
-
 </me>
- 
 <p>
 Since every backward edge is used, <m>\delta_2>0</m> whenever we need to
 define it. We then set <m>\delta=\min\{\delta_1,\delta_2\}</m>.
 </p>
-  
+
 <p>
 In either case, we now have a positive number <m>\delta</m> and we make the
 following elementary observation, for which you are asked to provide a
 proof in
 <xref ref="ex_networkflow_update">exercise</xref>.
 </p>
-  
-<proposition xml:id="prop_networkflow_update"><statement>
+
+<proposition xml:id="prop_networkflow_update">
+<statement>
 <p>
 Suppose we have an augmenting path <m>P=(x_0,x_1,\dots,x_m)</m> with
 <m>\delta>0</m> calculated as above. Modify the flow <m>\phi</m> by changing
 the values along the edges of the path <m>P</m> by an amount which is
 either <m>+\delta</m> or <m>-\delta</m> according to the following rule:
 </p>
-  <ol><li>Increase the flow along the edges of <m>P</m> which are
+
+<ol>
+<li>Increase the flow along the edges of <m>P</m> which are
 forwards, and</li>
 <li>Decrease the flow along the edges of <m>P</m> which are
 backwards.</li>
- </ol>  
+</ol>
+
 <p>
 Then the resulting function <m>\hat{\phi}</m> is a flow and it
 has value <m>v+\delta</m>.
 </p>
- </statement>
+</statement>
 </proposition>
-  
-<example xml:id="exa_networkflow_delta"><statement>
+
+<example xml:id="exa_networkflow_delta">
+<statement>
 <p>
 The network flow shown in
 <xref ref="fig_networkflow_netflow" autoname="yes" /> has many augmenting paths. We
@@ -145,22 +145,27 @@ which we call <m>P_1</m> and <m>P_3</m> below. In the list below, be sure you
 understand why each path is an augmenting path and how the value of
 <m>\delta</m> is determined for each path.
 </p>
-  <ol><li><m>P_1=(S,F,A,T)</m> with <m>\delta= 12</m>.  All edges are forward.</li>
+
+<ol>
+<li><m>P_1=(S,F,A,T)</m> with <m>\delta= 12</m>.  All edges are forward.</li>
 <li><m>P_2=(S,B,A,T)</m> with <m>\delta= 8</m>.  All edges are forward.</li>
 <li><m>P_3=(S,E,D,C,B,A,T)</m> with <m>\delta= 9</m>. All edges are forward,
   except <m>(C,B)</m> which is backward.</li>
 <li><m>P_4=(S,B,E,D,C,A,T)</m> with <m>\delta= 2</m>. All edges are forward, except
 <m>(B,E)</m> and <m>(C,A)</m> which are backward.</li>
- </ol>  
+</ol>
+
 <p>
 In
 <xref ref="ex_networkflow_do-update">exercise</xref>,
 you are asked to update the flow in <xref ref="fig_networkflow_netflow" autoname="yes" />
 for each of these four paths individually.
 </p>
- </statement>
+</statement>
 </example>
- </introduction> 
+</introduction>
+
+
 <subsection>
 <title>Caution on Augmenting Paths</title>
 <p>
@@ -176,7 +181,7 @@ in terms of the number of vertices in the network and that the size of
 the capacities on the edges and the value of a maximum flow should not
 have a role in the number of updates.
 </p>
-  
+
 <p>
 Bob says he can't see any way that the edge capacities could create
 a situation where a network with only a few vertices requires many
@@ -188,10 +193,10 @@ maximum value of a flow in this network is <m>2M</m>. He does this using
 the flow with <m>\phi(S,A)=M</m>, <m>\phi(A,T)=M</m>, <m>\phi(S,B)=M</m>,
 <m>\phi(B,T)=M</m> and <m>\phi(A,B)=0</m>. Carlos is pleased with Bob's work.
 </p>
-  <figure xml:id="fig_networkflow_smallnet" >
-<caption>A Small Network </caption>
-<image source="images/smallnet.png" /> <br /> </figure>
-  
+<figure xml:id="fig_networkflow_smallnet" >
+<caption>A Small Network</caption>
+<image width="37%" source="images/smallnet.png" /> <br />
+</figure>
 <p>
 Since this network is really small, it was easy for Bob to find the
 maximum flow. However, Bob and Carlos agree that <q>eyeballing</q> is not
@@ -206,7 +211,7 @@ augmenting path, so Carlos gives him <m>(S,B,A,T)</m>. Now <m>(B,A)</m> is
 backward, but that doesn't phase Bob. He performs the update,
 obtaining a flow of value <m>2</m> with <m>(A,B)</m> empty again.
 </p>
-  
+
 <p>
 Despite Carlos' hope that Bob could already see where this was
 heading, Bob eagerly asks for another augmenting path. Carlos promptly
@@ -221,7 +226,7 @@ have a flow of value <m>2M</m>. Since the network only has four vertices
 and <m>M</m> is very large, he realizes that using any old augmenting path
 is definitely not a good idea.
 </p>
-  
+
 <p>
 Carlos leaves Bob to try to figure out a better approach. He realizes
 that starting from the zero flow, he'd only need the augmenting paths
@@ -233,4 +238,6 @@ two edges, while Carlos' two evil augmenting paths each used
 three. Bob thinks that maybe Dave's onto something, so he decides to
 go back to reading his textbook.
 </p>
- </subsection> </section>
+</subsection>
+
+</section>

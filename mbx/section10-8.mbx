@@ -1,4 +1,3 @@
-
 <section>
 <title>Exercises</title>
 <p>
@@ -12,28 +11,31 @@ you use a computer algebra system, we strongly encourage you to solve
 the problem by hand. This will help you develop a better understanding
 of how generating functions can be used.
 </p>
-  
+
 <p>
 For all exercises in this section, <q>generating function</q> should be
 taken to mean <q>ordinary generating function.</q> Exponential generating
 functions are only required in exercises specifically mentioning them.
 </p>
-  <ol><li>For each <em>finite</em> sequence below, give its 
+
+<ol>
+<li>For each <em>finite</em> sequence below, give its 
   generating function.
-  
-    <ol><li><m>1, 4, 6, 4, 1</m></li>
+<ol>
+<li><m>1, 4, 6, 4, 1</m></li>
 <li><m>1,1,1,1,1,0,0,1</m></li>
 <li><m>0,0,0,1,2,3,4,5</m></li>
 <li><m>1,1,1,1,1,1,1</m></li>
 <li><m>3,0,0,1,-4,7</m></li>
 <li><m>0,0,0,0,1,2,-3,0,1</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>For each <em>infinite</em> sequence suggested below, give its
    generating function in closed form, i.e., <em>not</em> as an
   infinite sum. (Use the most obvious choice of form for the general
   term of each sequence.)
-  
-    <ol><li><m>0,1,1,1,1,1,\dots</m></li>
+<ol>
+<li><m>0,1,1,1,1,1,\dots</m></li>
 <li><m>1,0,0,1,0,0,1,0,0,1,0,0,1,\dots</m></li>
 <li><m>1,2,4,8,16,32,\dots</m></li>
 <li><m>0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,\dots</m></li>
@@ -45,10 +47,12 @@ functions are only required in exercises specifically mentioning them.
 <li><m>0,2,0,0,2,0,0,2,0,0,2,0,0,2,\dots</m></li>
 <li><m>6,0,-6,0,6,0,-6,0,6,\dots</m></li>
 <li><m>\displaystyle 1,3,6,10,15,\dots,\binom{n+2}{2},\dots</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>For each generating function below, give a closed form
   for the <m>n^{\text{th} }</m> term of its associated sequence.
-  <ol><li><m>(1+x)^{10}</m></li>
+<ol>
+<li><m>(1+x)^{10}</m></li>
 <li><m>\displaystyle \frac{1}{1-x^4}</m></li>
 <li><m>\displaystyle \frac{x^3}{1-x^4}</m></li>
 <li><m>\displaystyle \frac{1-x^4}{1-x}</m></li>
@@ -58,10 +62,12 @@ functions are only required in exercises specifically mentioning them.
 <li><m>\displaystyle \frac{x^5}{(1-x)^4}</m></li>
 <li><m>\displaystyle \frac{x^2+x+1}{1-x^7}</m></li>
 <li><m>\displaystyle 3x^4 + 7x^3 -x^2 + 10 + \frac{1}{1-x^3}</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Find the coefficient on <m>x^{10}</m> in each of the generating
   functions below.
-   <ol><li><m>(x^3+x^5+x^6)(x^4+x^5+x^7) (1+x^5+x^{10}+x^{15}+\cdots)</m></li>
+<ol>
+<li><m>(x^3+x^5+x^6)(x^4+x^5+x^7) (1+x^5+x^{10}+x^{15}+\cdots)</m></li>
 <li><m>(1+x^3) (x^3+x^4+x^5+\cdots)(x^4+x^5+x^6+x^7+x^8+\cdots)</m></li>
 <li><m>(1+x)^{12}</m></li>
 <li><m>\displaystyle\frac{x^5}{1-3x^5}</m></li>
@@ -69,7 +75,8 @@ functions are only required in exercises specifically mentioning them.
 <li><m>\displaystyle\frac{1}{1-5x^4}</m></li>
 <li><m>\displaystyle\frac{x}{1-2x^3}</m></li>
 <li><m>\displaystyle\frac{1-x^{14}}{1-x}</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Find the generating function for the number of ways to
    create a bunch of <m>n</m> balloons selected from white, gold, and blue
    balloons so that the bunch contains at least one white balloon, at
@@ -82,11 +89,10 @@ functions are only required in exercises specifically mentioning them.
    can distribute the cookies so that each volunteer receives at least
    two cookies and no more than seven cookies.</li>
 <li>Consider the inequality
-   
 <me>
-x_1+x_2+x_3+x_4\leq n
+  x_1+x_2+x_3+x_4\leq n
 </me>
-  where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all
+where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all
    integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of
    <m>4</m>, and <m>1\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of
    the inequality subject to these restrictions. Find the generating
@@ -107,25 +113,24 @@ x_1+x_2+x_3+x_4\leq n
    number of different types of fruit baskets containing of <m>n</m> pieces
    of fruit chosen from pomegranates, bananas, apples, oranges, pears,
    and figs that can be made subject to the following restrictions:
-  <ul><li>there are either <m>0</m> or <m>2</m> pomegranates,</li>
+<ul>
+<li>there are either <m>0</m> or <m>2</m> pomegranates,</li>
 <li>there is at least <m>1</m> banana,</li>
 <li>the number of figs is a multiple of <m>5</m>,</li>
 <li>there are at most <m>4</m> pears, and</li>
 <li>there are no restrictions on the number of apples or oranges.</li>
- </ul>  
-  How many ways are there to form such a fruit basket with <m>n=25</m> pieces of
+</ul>
+How many ways are there to form such a fruit basket with <m>n=25</m> pieces of
   fruit?</li>
 <li>Using generating functions, find the number of ways to make
   change for a <dollar /><m>100</m> bill using only dollar coins and <dollar /><m>1</m>, <dollar /><m>2</m>,
   and <dollar /><m>5</m> bills. (<em>Hint</em>: Find the partial fractions expansion
   for your generating function. Once you have it, you may find the
   following identity helpful
-  
 <me>
-\frac{p(x)}{1+x+x^2+\cdots + x^k} = \frac{p(x)(1-x)}{1-x^{k+1}},
+  \frac{p(x)}{1+x+x^2+\cdots + x^k} = \frac{p(x)(1-x)}{1-x^{k+1}},
 </me>
- 
-  where <m>p(x)</m> will be a polynomial in this instance.)</li>
+where <m>p(x)</m> will be a polynomial in this instance.)</li>
 <li>A businesswoman is traveling in Belgium and wants to
   buy chocolates for herself, her husband, and their two daughters. A
   store has dark chocolate truffles (\EURdig  10/box), milk
@@ -134,7 +139,8 @@ x_1+x_2+x_3+x_4\leq n
   (\EURdig  7/bar), and 75<percent /> cacao chocolate bars
   (\EURdig  11/bar). Her purchase is to be subject to the
   following:
-  <ul><li>Only the daughters like dark chocolate truffles, and her
+<ul>
+<li>Only the daughters like dark chocolate truffles, and her
     purchase must ensure that each daughter gets an equal number of
     boxes of them (if they get any).</li>
 <li>At least two boxes of milk chocolate truffles must be
@@ -145,8 +151,8 @@ x_1+x_2+x_3+x_4\leq n
 <li>At most three milk chocolate bars may be purchased.</li>
 <li>There are no restrictions on the number of 75<percent /> cacao
     chocolate bars.</li>
- </ul>  
-  Let <m>s_n</m> be the number of ways the businesswoman can spend exactly
+</ul>
+Let <m>s_n</m> be the number of ways the businesswoman can spend exactly
   \EURdig  <m>n</m> (<b>not</b> buy <m>n</m> items!) at this
   chocolate shop. Find the generating function for the sequence
   <m>\{s_n\colon n\geq 0\}</m>. In how many ways can she spend exactly
@@ -157,7 +163,7 @@ x_1+x_2+x_3+x_4\leq n
   peanut butter cups, peppermint candies, and fruit chews. Each bag
   must contain at least two chocolate bites, an even number of peanut
   butter cups, and at most six peppermint candies. The fruit chews are
-  available in four different flavors&#8202;&#x2014;&#8202;lemon, orange, strawberry, and
+  available in four different flavors<mdash />lemon, orange, strawberry, and
   cherry. A bag of candy may contain at most two fruit chews, which
   may be of the same or different flavors. Beyond the number of pieces
   of each type of candy included, bags of candy are distinguished by
@@ -165,8 +171,9 @@ x_1+x_2+x_3+x_4\leq n
   number. For example, a bag containing two orange fruit chews is
   different from a bag containing a cherry fruit chew and a strawberry
   fruit chew, even if the number of pieces of each other type of candy
-  is the same. 
-  <ol><li>Let <m>b_n</m> be the number of different bags of candy with <m>n</m>
+  is the same.
+<ol>
+<li>Let <m>b_n</m> be the number of different bags of candy with <m>n</m>
     pieces of candy that can be formed subject to these restrictions.
     Find the generating function for the sequence <m>\{b_n\colon n\geq
     0\}</m>.</li>
@@ -177,12 +184,12 @@ x_1+x_2+x_3+x_4\leq n
     smallest number of pieces of candy they can include in the bags
     that ensures each student gets a different bag of candy containing
     the same number of pieces of candy?</li>
- </ol> </li>
+</ol>
+</li>
 <li>Make up a combinatorial problem (similar to those found in this
   chapter) that leads to the generating function
-  
 <me>
-\frac{(1+x^2+x^4)x^2}{(1-x)^3(1-x^3)(1-x^{10})}.
+  \frac{(1+x^2+x^4)x^2}{(1-x)^3(1-x^3)(1-x^{10})}.
 </me>
 </li>
 <li>Tollbooths in Illinois accept all U.S. coins, including
@@ -190,8 +197,9 @@ x_1+x_2+x_3+x_4\leq n
   dimes, and quarters in his car as he drives on a tollway. He
   encounters a toll for <dollar /><m>0.95</m> and wonders how many different
   ways he could use his supply of coins to pay the toll without
-  getting change back. 
-  <ol><li>Use a generating function and computer algebra system to
+  getting change back.
+<ol>
+<li>Use a generating function and computer algebra system to
     determine the number of ways Carlos could pay his <dollar /><m>0.95</m> toll by
     dropping the coins together into the toll bin. (Assume coins of
     the same denomination cannot be distinguished from each other.)</li>
@@ -206,7 +214,8 @@ x_1+x_2+x_3+x_4\leq n
     an ordinary generating function and computer algebra system to
     determine the number of ways that Carlos could pay the <dollar /><m>0.95</m>
     toll when considering the order the coins are inserted.</li>
- </ol> </li>
+</ol>
+</li>
 <li>List the partitions of <m>9</m>. Write a D next to each partition
   into distinct parts and an O next to each partition into odd parts.</li>
 <li>Use generating functions to find the number of ways to
@@ -220,33 +229,36 @@ x_1+x_2+x_3+x_4\leq n
 <li>Find the exponential generating function (in closed form, not as
   an infinite sum) for each infinite sequence <m>\{a_n\colon n\geq 0\}</m>
   whose general term is given below.
-  
-    <ol><li><m>a_n = 5^n</m></li>
+<ol>
+<li><m>a_n = 5^n</m></li>
 <li><m>a_n = (-1)^n2^n</m></li>
 <li><m>a_n = 3^{n+2}</m></li>
 <li><m>a_n = n!</m></li>
 <li><m>a_n = n</m></li>
 <li><m>a_n = 1/(n+1)</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>For each exponential generating function below, give a formula
   in closed form for the sequence <m>\{a_n\colon n\geq 0\}</m> it
   represents.
-  
-    <ol><li><m>e^{7x}</m></li>
+<ol>
+<li><m>e^{7x}</m></li>
 <li><m>x^2 e^{3x}</m></li>
 <li><m>\displaystyle \frac{1}{1+x}</m></li>
 <li><m>e^{x^4}</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Find the coefficient on <m>x^{10}/{10!}</m> in each of the
   exponential generating functions below.
-  
-    <ol><li><m>e^{3x}</m></li>
+<ol>
+<li><m>e^{3x}</m></li>
 <li><m>\displaystyle\frac{e^x-e^{-x}}{2}</m></li>
 <li><m>\displaystyle\frac{e^x+e^{-x}}{2}</m></li>
 <li><m>xe^{3x}-x^2</m></li>
 <li><m>\displaystyle\frac{1}{1-2x}</m></li>
 <li><m>e^{x^2}</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Find the exponential generating function for the number of
   strings of length <m>n</m> formed from the set <m>\{a,b,c,d\}</m> if there
   must be at least one <m>a</m> and the number of <m>c</m>'s must be even. Find
@@ -265,10 +277,13 @@ x_1+x_2+x_3+x_4\leq n
 <li>Find the exponential generating function for the number of
   alphanumeric strings of length <m>n</m> formed from the <m>26</m> uppercase
   letters of the English alphabet and <m>10</m> decimal digits if
-  <ul><li>each vowel must appear at least one time;</li>
+<ul>
+<li>each vowel must appear at least one time;</li>
 <li>the letter <m>T</m> must appear at least three times;</li>
 <li>the letter <m>Z</m> may appear at most three times;</li>
 <li>each even digit must appear an even number of times; and</li>
 <li>each odd digit must appear an odd number of times.</li>
- </ul> </li>
- </ol>  </section>
+</ul>
+</li>
+</ol>
+</section>

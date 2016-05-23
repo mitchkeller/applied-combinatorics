@@ -1,22 +1,17 @@
-
 <section xml:id="s_recurrence_linear">
 <title>Linear Recurrence Equations</title>
 <p>
 What do all of the examples of the previous section have in common?
 The end result that we were able to achieve is a <em>linear
-recurrence</em>, which tells us how we can compute the <m>n^\text{th} </m>
+recurrence</em>, which tells us how we can compute the <m>n^\text{th}</m>
 term of a sequence given some number of previous values (and perhaps
 also depending nonrecursively on <m>n</m> as well, as in the last example).
 More precisely a recurrence equation is said to be <em>linear</em>
 when it has the following form
 </p>
-  
 <me>
-
-c_0a_{n+k}+ c_1a_{n+k-1} + c_2a_{n+k-2} + \dots+c_ka_{n} = g(n),
-
+  c_0a_{n+k}+ c_1a_{n+k-1} + c_2a_{n+k-2} + \dots+c_ka_{n} = g(n),
 </me>
- 
 <p>
 where <m>k\ge1</m> is an integer, <m>c_0,c_1,\dots,c_k</m> are constants with
 <m>c_0,c_k\neq0</m>, and
@@ -31,49 +26,37 @@ equations with <em>nonconstant coefficients</em> in case we allow the
 is the zero function. For example, the Fibonacci sequence satisfies
 the homogeneous linear recurrence equation
 </p>
-  
 <me>
-
-a_{n+2} - a_{n+1} - a_n = 0.
-
+  a_{n+2} - a_{n+1} - a_n = 0.
 </me>
- 
 <p>
 Note that in this example, <m>k=2</m>, <m>c_0=1</m> and <m>c_k=-1</m>.
 </p>
-  
+
 <p>
 As a second example, the ternary sequence in
 <xref ref="ex_recurrence_ternary-strings-no-20">Example</xref>
 satifies the homogeneous linear recurrence equation
 </p>
-  
 <me>
-
-t_{n+2} - 3t_{n+1} + t_n = 0.
-
+  t_{n+2} - 3t_{n+1} + t_n = 0.
 </me>
- 
 <p>
 Again, <m>k=2</m> with <m>c_0=c_k=1</m>.
 </p>
-  
+
 <p>
 On the other hand, the sequence <m>r_n</m> defined in
 <xref ref="s_recurrence_intro_lines" autoname="yes" /> satisfies the nonhomogeneous
 linear recurrence equation
 </p>
-  
 <me>
-
-r_{n+1} - r_{n} = n+1.
-
+  r_{n+1} - r_{n} = n+1.
 </me>
- 
 <p>
 In this case, <m>k=1</m>, <m>c_0=1</m> and <m>c_k=-1</m>.
 </p>
-  
+
 <p>
 Our immediate goal is to develop techniques for solving linear
 recurrence equations of both homogeneous and nonhomogeneous types. We
@@ -81,4 +64,4 @@ will be able to fully resolve the question of solving homogeneous
 linear recurrence equations and discuss a sort of <q>guess-and-test</q>
 method that can be used to tackle the more tricky nonhomogeneous type.
 </p>
- </section>
+</section>

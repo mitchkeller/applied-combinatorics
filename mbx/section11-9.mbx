@@ -1,15 +1,17 @@
-
 <section>
-<title>Exercises</title><ol><li>Write each of the following recurrence equations as advancement
+<title>Exercises</title>
+<ol>
+<li>Write each of the following recurrence equations as advancement
   operator equations.
-  
-    <ol><li><m>r_{n+2} = r_{n+1}+2r_n</m></li>
+<ol>
+<li><m>r_{n+2} = r_{n+1}+2r_n</m></li>
 <li><m>r_{n+4}=3r_{n+3} - r_{n+2}+2r_n</m></li>
 <li><m>g_{n+3} = 5 g_{n+1} - g_n + 3^n</m></li>
 <li><m>h_n = h_{n-1} - 2h_{n-2} + h_{n-3}</m></li>
 <li><m>r_n = 4r_{n-1} + r_{n-3} - 3 r_{n-5} + (-1)^n</m></li>
 <li><m>b_n = b_{n-1} + 3b_{n-2} + 2^{n+1} - n^2</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Solve the recurrence equation <m>r_{n+2} = r_{n+1} + 2r_n</m> if
   <m>r_0=1</m> and <m>r_2=3</m> (Yes, we specify a value for <m>r_2</m> but not for
   <m>r_1</m>).</li>
@@ -17,30 +19,33 @@
   3g_{n+1}-2g_n</m>.</li>
 <li>Solve the recurrence equation <m>h_{n+3} = 6h_{n+2}-11h_{n+1} +
   6h_n</m> if <m>h_0=3</m>, <m>h_1=2</m>, and <m>h_2=4</m>.</li>
-<li>Find an explicit formula for the <m>n^\text{th} </m> Fibonacci number
+<li>Find an explicit formula for the <m>n^\text{th}</m> Fibonacci number
   <m>f_n</m>. (See <xref ref="s_recurrence_intro_fib" autoname="yes" />.)</li>
 <li>For each advancement operator equation below, give its general
   solution.
-  
-    <ol><li><m>(A-2)(A+10)f=0</m></li>
+<ol>
+<li><m>(A-2)(A+10)f=0</m></li>
 <li><m>(A^2-36)f=0</m></li>
 <li><m>(A^2-2A-5)f=0</m></li>
 <li><m>(A^3-4 A^2-20 A+48)f=0</m></li>
 <li><m>(A^3 +A^2-5A+ 3)f=0</m></li>
 <li><m>(A^3+3 A^2+3 A+1)f=0</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Solve the advancement operator equation <m>(A^2+3 A-10)f=0</m> if
   <m>f(0)=2</m> and <m>f(1)=10</m>.</li>
 <li>Give the general solution to each advancement operator equation
   below.
-  <ol><li><m>(A-4)^3(A+1)(A-7)^4(A-1)^2 f =0</m></li>
+<ol>
+<li><m>(A-4)^3(A+1)(A-7)^4(A-1)^2 f =0</m></li>
 <li><m>(A+2)^4(A-3)^2(A-4)(A+7)(A-5)^3g=0</m></li>
 <li><m>(A-5)^2(A+3)^3(A-1)^3(A^2-1)(A-4)^3h=0</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>For each nonhomogeneous advancement operator equation, find its
   general solution.
-  
-    <ol><li><m>(A-5)(A+2)f=3^n</m></li>
+<ol>
+<li><m>(A-5)(A+2)f=3^n</m></li>
 <li><m>(A^2+3A-1)g = 2^n + (-1)^n</m></li>
 <li><m>(A-3)^3 f = 3n+1</m></li>
 <li><m>(A^2+3A-1)g = 2n</m></li>
@@ -50,7 +55,8 @@
 <li><m>(A-2)(A+3)f=5n2^n</m></li>
 <li><m>(A-2)^2(A-1)g=3n^22^n + 2^n</m></li>
 <li><m>(A+1)^2(A-3)f = 3^n + 2n^2</m></li>
- </ol> </li>
+</ol>
+</li>
 <li>Find and solve a recurrence equation for the number <m>g_n</m> of
   ternary strings of length <m>n</m> that do not contain <m>102</m> as a
   substring.</li>
@@ -67,15 +73,16 @@
   explicit formula for <m>t_n</m>.</li>
 <li>A valid database identifier of length <m>n</m> can be
   constructed in three ways:
-  <ul><li>Starting with <m>A</m> and followed by any valid identifier of
+<ul>
+<li>Starting with <m>A</m> and followed by any valid identifier of
     length <m>n-1</m>.</li>
 <li>Starting with one of the two-character strings <m>1A</m>, <m>1B</m>,
     <m>1C</m>, <m>1D</m>, <m>1E</m>, or <m>1F</m> and followed by any valid identifier of
     length <m>n-2</m>.</li>
 <li>Starting with <m>0</m> and followed by any ternary (<m>\{0,1,2\}</m>)
     string of length <m>n-1</m>.</li>
- </ul>  
-  Find a recurrence for the number <m>g(n)</m> of database identifiers of
+</ul>
+Find a recurrence for the number <m>g(n)</m> of database identifiers of
   length <m>n</m> and then solve your recurrence to obtain an explicit
   formula for <m>g(n)</m>. (You may consider the empty string of length <m>0</m>
   a valid database identifier, making <m>g(0)=1</m>. This will simplify the
@@ -106,12 +113,11 @@
   <xref ref="ch_strings" autoname="yes" />, where we learned they count certain lattice
   paths. Develop a recurrence for the number <m>l_n</m> of lattice paths
   similar to the recurrence
-  
 <me>
-c_n = \sum_{k=0}^n c_k c_{n-k}\qquad \text{for } n\geq 2
+  c_n = \sum_{k=0}^n c_k c_{n-k}\qquad \text{for } n\geq 2
 </me>
- 
-  for RUBOTs by thinking of ways to break up a lattice path from
+for RUBOTs by thinking of ways to break up a lattice path from
   <m>(0,0)</m> to <m>(n,n)</m> that does not cross the diagonal <m>y=x</m> into two
   smaller lattice paths of this type.</li>
- </ol>  </section>
+</ol>
+</section>

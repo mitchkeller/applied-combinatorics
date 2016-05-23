@@ -1,4 +1,3 @@
-
 <section xml:id="s_graphs_complexity">
 <title>A Digression into Complexity Theory</title>
 <p>
@@ -8,7 +7,7 @@ a graph's chromatic number and clique number earlier in this
 chapter. We conclude with a brief discussion of some issues involving
 computational complexity for other problems discussed in this chapter.
 </p>
-  
+
 <p>
 Let's begin with some problems for which there are polynomial-time
 algorithms. Suppose you are given a graph on <m>n</m> vertices and asked
@@ -21,7 +20,7 @@ edges with one end-point in <m>V_1</m> and the other in <m>V_2</m>. In
 that find spanning trees in connected graphs. They can easily be
 modified to produce a partition showing the graph is disconnected.
 </p>
-  
+
 <p>
 If you are asked whether a connected graph is eulerian, then a
 positive answer can be justified by producing the appropriate
@@ -32,7 +31,7 @@ on the data structures used to represent the graph, it may be most
 efficient to simply look for vertices of odd degree without using the
 algorithm to find an eulerian circuit.)
 </p>
-  
+
 <p>
 On the surface, the problem of determining if a graph is hamiltonian
 looks similar to that of determining if the graph is eulerian. Both
@@ -43,7 +42,7 @@ negative answer to the question of whether a graph is hamiltonian is
 not straightforward. <xref ref="thm_graphs_dirac" autoname="yes" /> only gives a way to
 confirm that a graph <em>is</em> hamiltonian; there are many
 nonhamiltonian graphs that do not satisfy its hypothesis. At this
-time, no one knows how to justify a negative answer&#8202;&#x2014;&#8202;at least not in
+time, no one knows how to justify a negative answer<mdash />at least not in
 the general case.
 </p>
- </section>
+</section>

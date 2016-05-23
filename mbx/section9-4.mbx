@@ -1,4 +1,3 @@
-
 <section xml:id="s_inclusion-exclusion_derangements">
 <title>Derangements</title>
 <p>
@@ -10,78 +9,72 @@ positive integer <m>n</m> and let <m>X</m> denote the set of all permutations on
 if <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. For example, the first
 permutation given below is a derangement, while the second is not.
 </p>
-  <table id="e4acbae02289b5e314e1fa0c03f9bbde8d28e693" ><tr><td class='cv'>
-    <m>i</m> \amp  1 \amp  2 \amp  3 \amp  4</td></tr>
-<tr><td class='hline' colspan='5'><hr /></td></tr>
-<tr><td class='cv'>
-    <m>\sigma(i)</m> \amp  2 \amp  4 \amp  1 \amp  3</td></tr>
-</table> \hspace{0.3in}
-  <table id="705e9d64e79e09d0e52842e22f0daa7e01d8012b" ><tr><td class='cv'>
-    <m>i</m> \amp  1 \amp  2 \amp  3 \amp  4</td></tr>
-<tr><td class='hline' colspan='5'><hr /></td></tr>
-<tr><td class='cv'>
-    <m>\sigma(i)</m> \amp  2 \amp  4 \amp  3 \amp  1</td></tr>
-</table> 
+<tabular>
+<row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell></row>
+<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row><cell><m>\sigma(i)</m></cell><cell>2</cell><cell>4</cell><cell>1</cell><cell>3</cell></row>
+</tabular>
+\hspace{0.3in}
+<tabular>
+<row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell></row>
+<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row><cell><m>\sigma(i)</m></cell><cell>2</cell><cell>4</cell><cell>3</cell><cell>1</cell></row>
+</tabular>
 <p>
 If we again let <m>P_i</m> be the property that <m>\sigma(i)=i</m>, then the
 derangements are precisely those permutations which do not satisfy
 <m>P_i</m> for any <m>i=1,2,\dots,n</m>.
 </p>
-  
-<lemma><statement>
+
+<lemma>
+<statement>
 <p>
 For each subset <m>S\subseteq [n]</m>, <m>N(S)</m> depends only on <m>|S|</m>. In
 fact, if <m>|S|=k</m>, then
 </p>
-  
 <me>
-
   N(S) = (n-k)!
-  
 </me>
- </statement>
+</statement>
 </lemma>
-  
-<proof>
 
+<proof>
 <p>
 For each <m>i\in S</m>, the value <m>\sigma(i)=i</m> is fixed. The other
 values of <m>\sigma</m> are a permutation among the remaining <m>n-k</m>
 positions, and there are <m>(n-k)!</m> of these.
 </p>
- 
 </proof>
-  
+
 <p>
 As before, the principal result of this section follows immediately
 from the lemma and the Principle of Inclusion-Exclusion.
 </p>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
 For each positive integer <m>n</m>, the number <m>d_n</m> of derangements of <m>[n]</m>
 satisfies
 </p>
-  
 <me>
-
-d_n=\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!.
-
+  d_n=\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!.
 </me>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 For example,
 </p>
-  
-<md><mrow>d_5 \amp  =\binom{5}{0}5!-\binom{5}{1}4!+\binom{5}{2}3!-\binom{5}{3}2!+
-   \binom{5}{4}1!-\binom{5}{5}0!</mrow>
- <mrow>\amp =120-120+60-20+5-1</mrow>
- <mrow>\amp =44.</mrow>
- 
+<md>
+  <mrow>  d_5 \amp  =\binom{5}{0}5!-\binom{5}{1}4!+\binom{5}{2}3!-\binom{5}{3}2!+
+   \binom{5}{4}1!-\binom{5}{5}0!
+      </mrow>
+  <mrow>  \amp =120-120+60-20+5-1
+      </mrow>
+  <mrow>  \amp =44.
+      </mrow>
 </md>
-  
 <p>
 It has been traditional to cast the subject of derangements as a
 story, called the Hat Check problem. The story belongs to the period
@@ -92,69 +85,61 @@ to return hats at random. What is the probability that all <m>100</m> men
 receive a hat other than their own? It turns out that the answer is
 very close to <m>1/e</m>, as the following result shows.
 </p>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
 For a positive integer <m>n</m>, let <m>d_n</m> denote the number of
 derangements of <m>[n]</m>. Then
 </p>
-  
 <me>
-
   \lim_{n\rightarrow\infty}\frac{d_n}{n!} = \frac{1}{e}.
-  
 </me>
- 
 <p>
 Equivalently, the fraction of all permutations of <m>[n]</m> that are
 derangments approaches <m>1/e</m> as <m>n</m> increases.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 It is easy to see that
 </p>
-  
-<md><mrow>\frac{d_n}{n!} \amp = \frac{\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!}{n!}</mrow>
- <mrow>\amp = \sum_{k=0}^n (-1)^k \frac{n!}{k!(n-k)!}\frac{(n-k)!}{n!}</mrow>
- <mrow>\amp = \sum_{k=0}^n (-1)^k \frac{1}{k!}.</mrow>
- 
+<md>
+  <mrow>  \frac{d_n}{n!} \amp = \frac{\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!}{n!}
+      </mrow>
+  <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{n!}{k!(n-k)!}\frac{(n-k)!}{n!}
+      </mrow>
+  <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{1}{k!}.
+      </mrow>
 </md>
- 
 <p>
 Recall from Calculus that the Taylor series expansion of <m>e^x</m> is given
 by
 </p>
-  
 <me>
-
-e^x = \sum_{k=0}^{\infty} \frac{x^k}{k!},
-
+  e^x = \sum_{k=0}^{\infty} \frac{x^k}{k!},
 </me>
- 
 <p>
 and thus the result then follows by substituting <m>x=-1</m>.
 </p>
- 
 </proof>
-  
+
 <p>
 Usually we're not as interested in <m>d_n</m> itself as we are in
 enumerating permutations with certain restrictions, as the following
 example illustrates.
 </p>
-  
-<example><statement>
+<example>
+<statement>
 <p>
 Consider the Hat Check problem, but suppose instead of wanting no
 man to leave with his own hat, we are interested in the number of
 ways to distribute the <m>100</m> hats so that precisely <m>40</m> of the men
 leave with their own hats.
 </p>
-  
+
 <p>
 If <m>40</m> men leave with their own hats, then there are <m>60</m> men who
 do not receive their own hats. There are <m>C(100,60)</m> ways to choose
@@ -163,16 +148,16 @@ to distribute those hats so that no man receives his own. There's
 only one way to distribute the <m>40</m> hats to the men who must receive
 their own hats, meaning that there are
 </p>
-  
-<md><mrow>\binom{100}{60}d_{60} =
-    \amp 420788734922281721283274628333913452107738151595140722182899444</mrow>
- <mrow>\amp 67852500232068048628965153767728913178940196920</mrow>
- 
+<md>
+  <mrow>  \binom{100}{60}d_{60} =
+    \amp 420788734922281721283274628333913452107738151595140722182899444
+      </mrow>
+  <mrow>  \amp 67852500232068048628965153767728913178940196920
+      </mrow>
 </md>
- 
 <p>
 such ways to return the hats.
 </p>
- </statement>
+</statement>
 </example>
- </section>
+</section>

@@ -1,16 +1,32 @@
 <section>
-    <title>Dijkstra's Algorithm for Shortest Paths</title>
-    <introduction>
-	<p>
-	    Just as with graphs, it is useful to assign weights to the directed edges of a digraph. Specifically, in this section we consider a pair <m>(\bfG,w)</m> where <m>\GVE</m> is a digraph and <m>w:E\rightarrow\mathbb{N}_0</m> is a function assigning to each directed edge <m>(x,y)</m> a non-negative weight <m>w(x,y)</m>. However, in this section, we interpret weight as <em>distance</em> so that <m>w(x,y)</m> is now called the <em>length</em> of the edge <m>(x,y)</m>. If <m>P=(r=u_0,u_1,\dots,u_t=x)</m> is a directed path from <m>r</m> to <m>x</m>, then the <em>length</em> of the path <m>P</m> is just the sum of the lengths of the edges in the path, <m>\sum_{i=0}^{t-1} w(u_iu_{i+1})</m>. The <em>distance</em> from <m>r</m> to <m>x</m> is then defined to be the minimum length of a directed path from <m>r</m> to <m>x</m>. Our goal in this section is to solve the following natural problem, which has many applications:
-	</p>
-  
-	<p>
-<b>Problem.</b><nbsp /><nbsp />
+<title>Dijkstra's Algorithm for Shortest Paths</title>
+
+
+<introduction>
+<p>
+Just as with graphs, it is useful to assign weights to the directed
+edges of a digraph. Specifically, in this section we consider a pair
+<m>(\bfG,w)</m> where <m>\GVE</m> is a digraph and <m>w:E\rightarrow\mathbb{N}_0</m>
+is a function assigning to each directed edge <m>(x,y)</m> a non-negative
+weight <m>w(x,y)</m>. However, in this section, we interpret weight as
+<em>distance</em> so that <m>w(x,y)</m> is now called the <em>length</em>
+of the edge <m>(x,y)</m>. If <m>P=(r=u_0,u_1,\dots,u_t=x)</m> is a directed
+path from <m>r</m> to <m>x</m>, then the <em>length</em> of the path <m>P</m> is just
+the sum of the lengths of the edges in the path, <m>\sum_{i=0}^{t-1}
+w(u_iu_{i+1})</m>. The <em>distance</em> from <m>r</m> to <m>x</m> is then defined
+to be the minimum length of a directed path from <m>r</m> to <m>x</m>. Our goal
+in this section is to solve the following natural problem, which has
+many applications:
+</p>
+
+<p>
+<b>Problem.</b> 
 For each vertex <m>x</m>, find the distance from <m>r</m> to <m>x</m>. Also, find a
 shortest path from <m>r</m> to <m>x</m>.
 </p>
- </introduction> 
+</introduction>
+
+
 <subsection>
 <title>Description of the Algorithm</title>
 <p>
@@ -23,50 +39,53 @@ extend the definition of the function <m>w</m>. We do this by by setting
   value given by the product of the number of vertices and the 
   maximum edge weight may be used to simulate infinity.</fn>
 </p>
-  
+
 <p>
 Let <m>n=|V|</m>. At Step<nbsp /><m>i</m>, where <m>1\le i\le n</m>, we will
 have determined:
 </p>
-  <ol><li>A sequence <m>\sigma=(v_1,v_2,v_3,\dots,v_i)</m> of distinct 
+
+<ol>
+<li>A sequence <m>\sigma=(v_1,v_2,v_3,\dots,v_i)</m> of distinct 
 vertices from <m>\bfG</m> with <m>r=v_1</m>.  These vertices are called 
 <em>permanent</em> vertices, while the remaining vertices will
 be called <em>temporary</em> vertices.</li>
 <li>For each vertex <m>x\in V</m>, we will have determined a
   number <m>\delta(x)</m> and a path <m>P(x)</m> from <m>r</m> to <m>x</m> of
   length <m>\delta(x)</m>.</li>
- </ol>   
+</ol>
+
 <p>
-<b>Initialization</b> (Step 1).<nbsp /><nbsp />
+<b>Initialization</b> (Step 1). 
 Set <m>i=1</m>. Set <m>\delta(r)=0</m> and let <m>P(r)=(r)</m> be the trivial
 one-point path. Also, set <m>\sigma= (r)</m>. For each <m>x\neq r</m>, set
 <m>\delta(x)= w(r,x)</m> and <m>P(x)=(r,x)</m>. Let <m>x</m> be a temporary vertex
 for which <m>\delta(x)</m> is minimum. Set <m>v_2 = x</m>, and update <m>\sigma</m>
 by appending <m>v_2</m> to the end of it. Increment <m>i</m>.
 </p>
-  
+
 <p>
-<b>Inductive Step</b> (Step <m>i</m>, <m>i>1</m>).<nbsp /><nbsp />
+<b>Inductive Step</b> (Step <m>i</m>, <m>i>1</m>). 
 If <m>i\lt n</m>, then
 for each temporary <m>x</m>, let
 </p>
-  
 <me>
-\delta(x) = \min\{\delta(x), \delta(v_i)+w(v_i,x)\}.
+  \delta(x) = \min\{\delta(x), \delta(v_i)+w(v_i,x)\}.
 </me>
- 
 <p>
 If this assignment results in a reduction in the
 value of <m>\delta(x)</m>, let <m>P(x)</m> be the
 path obtained by adding <m>x</m> to the end of <m>P(v_i)</m>.
 </p>
-  
+
 <p>
 Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set
 <m>v_{i+1}=x</m>, and update <m>\sigma</m> by appending <m>v_{i+1}</m> to
 it. Increment <m>i</m>.
 </p>
- </subsection> 
+</subsection>
+
+
 <subsection>
 <title>Example</title>
 <p>
@@ -78,26 +97,26 @@ graph</em>, i.e., for each distinct pair <m>x,y</m> of vertices, the graph
 contains at most one of the two possible directed edges <m>(x,y)</m> and
 <m>(y,x)</m>.
 </p>
-  <figure xml:id="fig_graphalgorithms_dijkstragraph" >
+<figure xml:id="fig_graphalgorithms_dijkstragraph" >
 <caption>A digraph with edge lengths</caption>
-<image source="images/dijkstragraph.png" /> <br /> </figure>
-  
+<image width="56%" source="images/dijkstragraph.png" /> <br />
+</figure>
 <p>
 Suppose that the root vertex <m>r</m> is the vertex labeled<nbsp /><m>a</m>. The
 initialization step of Dijkstra's algorithm then results in the
 following values for <m>\delta</m> and <m>P</m>:
 </p>
-  
+
 <p>
 <b>Initialization (Step 1)</b>
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -109,11 +128,11 @@ following values for <m>\delta</m> and <m>P</m>:
 <m>\delta(g)=\infty</m>; <m>P(g)=(a,g)</m><br />
 <m>\delta(h)=\infty</m>; <m>P(h)=(a,h)</m><br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
-  
+
 <p>
 Before finishing Step 1, the algorithm identifies vertex<nbsp /><m>f</m> as
 closest to <m>a</m> and appends it to <m>\sigma</m>, making <m>a</m> permanent. When
@@ -123,17 +142,17 @@ call this process <q>scanning from vertex<nbsp /><m>f</m>.</q> In this scan, the
 to vertex<nbsp /><m>d</m> is updated, since <m>\delta(f) + w(f,d)=24+120=144\lt 
 \infty=w(a,d)</m>.
 </p>
-  
+
 <p>
-<b>Step 2.</b><nbsp /><nbsp /> Scan from vertex<nbsp /><m>f</m>.
+<b>Step 2.</b>  Scan from vertex<nbsp /><m>f</m>.
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a,f)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -145,11 +164,11 @@ to vertex<nbsp /><m>d</m> is updated, since <m>\delta(f) + w(f,d)=24+120=144\lt
 <m>\delta(g)=\infty</m>; <m>P(g)=(a,f)</m><br />
 <m>\delta(h)=\infty</m>; <m>P(h)=(a,h)</m><br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
-  
+
 <p>
 Before proceeding to the next step, vertex<nbsp /><m>c</m> is made permanent by
 making it <m>v_3</m>. In Step 3, therefore, the scan is from vertex
@@ -158,17 +177,17 @@ although <m>\delta(c) + w(c,e) = 47+23=70=\delta(e)</m>, we do not
 change <m>P(e)</m> since <m>\delta(e)</m> is not <em>decreased</em> by routing
 <m>P(e)</m> through <m>c</m>.
 </p>
-  
+
 <p>
-<b>Step 3.</b><nbsp /><nbsp /> Scan from vertex<nbsp /><m>c</m>.
+<b>Step 3.</b>  Scan from vertex<nbsp /><m>c</m>.
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a,f,c)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -180,25 +199,25 @@ change <m>P(e)</m> since <m>\delta(e)</m> is not <em>decreased</em> by routing
 <m>\delta(g)=113=47+66= \delta(c)+w(c,g)</m>; <m>P(g)=(a,c,g)</m>\quad\text{updated} <br />
 <m>\delta(h)=\infty</m>; <m>P(h)=(a,h)</m><br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
-  
+
 <p>
 Now vertex <m>e</m> is made permanent.
 </p>
-  
+
 <p>
-<b>Step 4.</b><nbsp /><nbsp /> Scan from vertex<nbsp /><m>e</m>.
+<b>Step 4.</b>  Scan from vertex<nbsp /><m>e</m>.
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a,f,c,e)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -210,25 +229,25 @@ Now vertex <m>e</m> is made permanent.
 <m>\delta(g)=112=70+42= \delta(e)+w(e,g)</m>; <m>P(g)=(a,e,g)</m>\quad\text{updated} <br />
 <m>\delta(h)=\infty</m>; <m>P(h)=(a,h)</m><br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
-  
+
 <p>
 Now vertex <m>b</m> is made permanent.
 </p>
-  
+
 <p>
-<b>Step 5.</b><nbsp /><nbsp /> Scan from vertex<nbsp /><m>b</m>.
+<b>Step 5.</b>  Scan from vertex<nbsp /><m>b</m>.
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a,f,c,e,b)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -240,25 +259,25 @@ Now vertex <m>b</m> is made permanent.
 <m>\delta(g)=112</m>; <m>P(g)=(a,e,g)</m><br />
 <m>\delta(h)=180 = 101+79=\delta(b)+w(b,h)</m>; <m>P(h)=(a,e,b,h)</m>\quad\text{updated} <br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
-  
+
 <p>
 Now vertex <m>g</m> is made permanent.
 </p>
-  
+
 <p>
-<b>Step 6.</b><nbsp /><nbsp /> Scan from vertex<nbsp /><m>g</m>.
+<b>Step 6.</b>  Scan from vertex<nbsp /><m>g</m>.
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a,f,c,e,b,g)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -270,25 +289,25 @@ Now vertex <m>g</m> is made permanent.
 <m>\delta(g)=112</m>; <m>P(g)=(a,e,g)</m><br />
 <m>\delta(h)=178 = 112+66=\delta(g)+w(g,h)</m>; <m>P(h)=(a,e,g,h)</m>\quad\text{updated} <br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
-  
+
 <p>
 Now vertex <m>d</m> is made permanent.
 </p>
-  
+
 <p>
-<b>Step 7.</b><nbsp /><nbsp /> Scan from vertex<nbsp /><m>d</m>.
+<b>Step 7.</b>  Scan from vertex<nbsp /><m>d</m>.
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a,f,c,e,b,g,d)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -300,26 +319,26 @@ Now vertex <m>d</m> is made permanent.
 <m>\delta(g)=112</m>; <m>P(g)=(a,e,g)</m><br />
 <m>\delta(h)=161 = 132+29=\delta(d)+w(d,h)</m>; <m>P(h)=(a,e,b,d,h)</m>\quad\text{updated} <br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
-  
+
 <p>
 Now vertex <m>h</m> is made permanent. Since this is the last vertex, the
 algorithm halts and returns the following:
 </p>
-  
+
 <p>
-<b>FINAL RESULTS</b><nbsp /><nbsp />
+<b>FINAL RESULTS</b>
 </p>
-  
+
 <p>
 \begingroup
 \leftskip25pt
 \rightskip\leftskip
 </p>
-  
+
 <p>
 <m>\sigma=(a,f,c,e,b,g,d,h)</m><br />
 <m>\delta(a)=0</m>; <m>P(a)=(a)</m><br />
@@ -331,11 +350,13 @@ algorithm halts and returns the following:
 <m>\delta(g)=112</m>; <m>P(g)=(a,e,g)</m><br />
 <m>\delta(h)=161</m>; <m>P(h)=(a,e,b,d,h)</m><br />
 </p>
-  
+
 <p>
 \endgroup
 </p>
- </subsection> 
+</subsection>
+
+
 <subsection>
 <title>The Correctness of Dijkstra's Algorithm</title>
 <p>
@@ -346,8 +367,9 @@ length. To do this, we first state two elementary propositions. The
 first is about shortest paths in general, while the second is specific
 to the sequence of permanent vertices produced by Dijkstra's algorithm.
 </p>
-  
-<proposition><statement>
+
+<proposition>
+<statement>
 <p>
 Let <m>x</m> be a vertex and let <m>P=(r=u_0,u_1,\dots,u_t=x)</m> be
 a shortest path from <m>r</m> to <m>x</m>. Then for every
@@ -356,40 +378,40 @@ integer <m>j</m> with <m>0\lt j\lt t</m>,
 to <m>u_j</m> and <m>(u_j,u_{j+1},\dots,u_t)</m> is a shortest
 path from <m>u_j</m> to <m>u_t</m>
 </p>
- </statement>
+</statement>
 </proposition>
-  
-<proposition><statement>
+
+<proposition>
+<statement>
 <p>
 When the algorithm halts, let <m>\sigma=(v_1,v_2,v_3,\dots,v_n)</m>.
 Then
 </p>
-  
 <me>
-\delta(v_1)\le \delta(v_2)\le\dots \le \delta(v_n). 
+  \delta(v_1)\le \delta(v_2)\le\dots \le \delta(v_n).
 </me>
- </statement>
+</statement>
 </proposition>
-  
+
 <p>
 We are now ready to prove the correctness of the algorithm. The proof
 we give will be inductive, but the induction will have nothing to do
 with the total number of vertices in the digraph or the step number
 the algorithm is in.
 </p>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
 Dijkstra's algorithm yields shortest paths for every vertex <m>x</m> in
 <m>\bfG</m>. That is, when Dijkstra's algorithm terminates, for each
 <m>x\in V</m>, the value <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and
 <m>P(x)</m> is a shortest path from <m>r</m> to <m>x</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 The theorem holds trivially when <m>x=r</m>. So we consider the case
 where <m>x\neq r</m>. We argue that <m>\delta(x)</m> is the distance from <m>r</m>
@@ -399,7 +421,7 @@ induction on the minimum number <m>k</m> of edges in a shortest path from
 to <m>x</m>. Since <m>v_1=r</m>, we will set <m>\delta(x)=w(r,x)</m> and
 <m>P(x)=(r,x)</m> at Step<nbsp />1.
 </p>
-  
+
 <p>
 Now fix a positive integer <m>k</m>. Assume that if the minimum number of
 edges in a shortest path from <m>r</m> to <m>x</m> is at most <m>k</m>, then
@@ -410,7 +432,7 @@ a shortest path <m>P=(u_0,u_1,u_2,\dots,u_{k+1})</m> from <m>r=u_0</m> to
 <m>x=u_{k+1}</m>. Then <m>Q=(u_0,u_1,\dots,u_k)</m> is a shortest path from
 <m>r</m> to <m>u_k</m>. (See <xref ref="fig_graphalgorithms_dijkstra-proof" autoname="yes" />.)
 </p>
-  <figure xml:id="fig_graphalgorithms_dijkstra-proof" >
+<figure xml:id="fig_graphalgorithms_dijkstra-proof" >
 <caption>Shortest paths</caption>
 \begin{overpic}[width=0.6\textwidth]{graphalgorithms-figs/dijkstra-proof}
       \put(3,13){<m>r</m>}
@@ -420,8 +442,7 @@ a shortest path <m>P=(u_0,u_1,u_2,\dots,u_{k+1})</m> from <m>r=u_0</m> to
       \put(83,25){<m>P</m>}
       \put(93,21){<m>x</m>}
     \end{overpic}
-    </figure>
-  
+</figure>
 <p>
 By the inductive hypothesis, <m>\delta(u_k)</m> is the distance from <m>r</m>
 to <m>u_k</m>, and <m>P(u_k)</m> is a shortest path from <m>r</m> to <m>u_k</m>. Note
@@ -432,42 +453,34 @@ Also, the distance from <m>r</m> to <m>x</m> is <m>\delta(u_k)+w(u_k,x)\ge
   \delta(u_k)</m> since <m>P</m> is a shortest path from <m>r</m> to <m>x</m> and
 <m>w(u_k,x)\geq 0</m>.
 </p>
-  
+
 <p>
 Let <m>i</m> and <m>j</m> be the unique integers for which <m>u_k=v_i</m> and
 <m>x=v_j</m>. If <m>j \lt  i</m>, then
 </p>
-  
 <me>
-
   \delta(x)= \delta(v_j)\le \delta(v_i)= \delta(u_k)\le
   \delta(u_k)+w(u_k).
-  
 </me>
- 
 <p>
 Therefore the algorithm has found a path <m>P(x)</m> from <m>r</m> to <m>x</m>
 having length <m>\delta(x)</m> which is at most the distance from <m>r</m> to
 <m>x</m>. Clearly, this implies that <m>\delta(x)</m> is the distance from
 <m>r</m> to <m>x</m> and that <m>P(x)</m> is a shortest path.
 </p>
-  
+
 <p>
 On the other hand, if <m>j>i</m>, then the inductive step at Step<nbsp /><m>i</m>
 results in
 </p>
-  
 <me>
-
   \delta(x)\le \delta(v_i)+w(v_i,y)=\delta(u_k)+w(u_k,x).
-  
 </me>
- 
 <p>
 As before, this implies that <m>\delta(x)</m> is the distance from <m>r</m> to
 <m>x</m> and that <m>P(x)</m> is a shortest path.
 </p>
- 
 </proof>
 </subsection>
+
 </section>

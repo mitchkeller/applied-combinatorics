@@ -1,37 +1,29 @@
-
 <section xml:id="s_strings_binom-thm">
 <title>The Binomial Theorem</title>
 <p>
 Here is a truly basic result from combinatorics kindergarten.
 </p>
-  
-<theorem xml:id="thm_binomial"><title>Binomial Theorem</title>
+
+<theorem xml:id="thm_binomial">
+<title>Binomial Theorem</title>
 <statement>
 <p>
 Let <m>x</m> and <m>y</m> be real numbers with <m>x</m>, <m>y</m> and <m>x+y</m> non-zero.
 Then for every non-negative integer <m>n</m>,
 </p>
-  
 <me>
-
-(x+y)^n=\sum_{i=0}^{n}\binom{n}{i}x^{n-i}y^{i}.
-
+  (x+y)^n=\sum_{i=0}^{n}\binom{n}{i}x^{n-i}y^{i}.
 </me>
- </statement>
+</statement>
 </theorem>
-  
-<proof>
 
+<proof>
 <p>
 View <m>(x+y)^n</m> as a product
 </p>
-  
 <me>
- 
-(x+y)^n=\underbrace{(x+y)(x+y)(x+y)(x+y)\dots(x+y)(x+y)}_{n\text{ factors} }.
-
+  (x+y)^n=\underbrace{(x+y)(x+y)(x+y)(x+y)\dots(x+y)(x+y)}_{n\text{ factors} }.
 </me>
- 
 <p>
 Each term of the expansion of the product results from choosing either
 <m>x</m> or <m>y</m> from one of these factors. If <m>x</m> is chosen <m>n-i</m> times
@@ -40,16 +32,16 @@ and <m>y</m> is chosen <m>i</m> times, then the resulting product is
 out of the <m>n</m> factors, we choose the element <m>y</m> from <m>i</m> of them,
 while we take <m>x</m> in the remaining <m>n-i</m>.
 </p>
- 
 </proof>
-  
-<example><statement>
+
+<example>
+<statement>
 <p>
 There are times when we are interested not in the full expansion of
 a power of a binomial, but just the coefficient on one of the
 terms. The Binomial Theorem gives that the coefficient of <m>x^5y^8</m>
 in <m>(2x-3y)^{13}</m> is <m>\binom{13}{5}2^{5}(-3)^8</m>.
 </p>
- </statement>
+</statement>
 </example>
- </section>
+</section>

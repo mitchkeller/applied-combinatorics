@@ -1,4 +1,3 @@
-
 <section>
 <title>Arithmetic Combinatorics</title>
 <p>
@@ -10,15 +9,16 @@ shows connections with real and complex analysis, as well. Furthermore,
 the roots of arithmetic combinatorics go back many years. In this section,
 we present a brief overview of this rich and rapidly changing area.
 </p>
-  
+
 <p>
 Recall that an increasing sequence <m>a_1\lt a_2\lt a_3\lt \dots\lt a_t)</m> of integers is
 called an <em>arithmetic progression</em> when there exists a
 positive integer <m>d</m> for which <m>a_{i+1}-a_i=d</m>, for all <m>i=1,2,\dots,t-1</m>.
 The integer <m>t</m> is called the <em>length</em> of the arithmetic progression.
 </p>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
 For pair <m>r,t</m> of positive integers, there exists an integer <m>n_0</m>, so that
 if <m>n\ge n_0</m> and <m>\phi:\{1,2,\dots,n\}\rightarrow\{1,2,\dots,r\}</m> is any
@@ -26,10 +26,10 @@ function, then there exists a <m>t</m>-term arithmetic progression
 <m>1\le a_1\lt a_2\lt \dots\lt a_t\le n</m> and an element <m>\alpha\in\{1,2,\dots,r\}</m>
 so that <m>\phi(a_i)=\alpha</m>, for each <m>i=1,2,\dots,t</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 Material will be added here.
 </p>
- </section>
+</section>

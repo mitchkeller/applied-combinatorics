@@ -1,4 +1,3 @@
-
 <section xml:id="s_recurrence_rubots">
 <title>Solving a nonlinear recurrence</title>
 <p>
@@ -19,15 +18,15 @@ be focusing on rooted, unlabeled, binary, ordered trees (RUBOTs for
 short), we will call the two children of vertices that have children
 the <em>left</em> and <em>right</em> children.
 </p>
-  
+
 <p>
 In <xref ref="fig_rubots" autoname="yes" />, we show the rooted, unlabeled, binary, ordered
 trees with <m>n</m> leaves for <m>n\leq 4</m>.
 </p>
-  <figure xml:id="fig_rubots" >
+<figure xml:id="fig_rubots" >
 <caption>The RUBOTs with <m>n</m> leaves for <m>n\leq 4</m></caption>
-<image source="images/RUBOTs.png" /> </figure>
-  
+<image width="73%" source="images/RUBOTs.png" />
+</figure>
 <p>
 Let <m>C(x) = \sum_{n=0}^\infty c_n x^n</m> be the generating function for
 the sequence <m>\{c_n\colon n\geq 0\}</m> where <m>c_n</m> is the number of
@@ -46,108 +45,98 @@ and <m>c_{n-k}</m> sub-RUBOTs for the right child, there are a total of
 its sub-RUBOT. We can do this for any <m>k=1,2,\dots,n-1</m>, giving us
 that
 </p>
-  
 <me>
-c_n = \sum_{k=1}^{n-1} c_kc_{n-k}.
+  c_n = \sum_{k=1}^{n-1} c_kc_{n-k}.
 </me>
- 
 <p>
 (This is valid since <m>n\geq 2</m>.)
 Since <m>c_0=0</m>, we can actually write this as
 </p>
-  
 <me>
-c_n = \sum_{k=0}^{n} c_kc_{n-k}.
+  c_n = \sum_{k=0}^{n} c_kc_{n-k}.
 </me>
-  
 <p>
 Let's look at the square of the generating function <m>C(x)</m>. By
 <xref ref="prop_genfunction-product">Proposition</xref>,
 we have
 </p>
-  
-<md><mrow>C^2(x) \amp = c_0^2 + (c_0c_1 + c_1c_0)x + (c_0c_2 +c_1c_1 + c_2c_0)x^2 +
-  \cdots</mrow>
- <mrow>\amp  = 0 + 0 + (c_0c_2 +c_1c_1 + c_2c_0)x^2 + (c_0c_3 +
-  c_1c_2+c_2c_1+c_3c_0)x^3 + \cdots.</mrow>
- 
+<md>
+  <mrow>  C^2(x) \amp = c_0^2 + (c_0c_1 + c_1c_0)x + (c_0c_2 +c_1c_1 + c_2c_0)x^2 +
+  \cdots
+      </mrow>
+  <mrow>  \amp  = 0 + 0 + (c_0c_2 +c_1c_1 + c_2c_0)x^2 + (c_0c_3 +
+  c_1c_2+c_2c_1+c_3c_0)x^3 + \cdots.
+      </mrow>
 </md>
- 
 <p>
 But now we see from our recursion above that the coefficient on <m>x^n</m>
 in <m>C^2(x)</m> is nothing but <m>c_n</m> for <m>n\geq 2</m>. All we're missing is
 the <m>x</m> term, so adding it in gives us that
 </p>
-  
 <me>
-C(x) = x + C^2(x).
+  C(x) = x + C^2(x).
 </me>
- 
 <p>
 Now this is a quadratic equation in <m>C(x)</m>, so we can solve for <m>C(x)</m>
 and have
 </p>
-  
 <me>
-C(x) = \frac{1\pm \sqrt{1-4x}}{2} = \frac{1\pm (1-4x)^{1/2}}{2} .
+  C(x) = \frac{1\pm \sqrt{1-4x}}{2} = \frac{1\pm (1-4x)^{1/2}}{2} .
 </me>
- 
 <p>
 Hence, we can use Newton's Binomial
 Theorem ( <xref ref="thm_newton-binomial"></xref>) to expand <m>C(x)</m>. To do so, we
 use the following lemma. Its proof is nearly identical to that of
 <xref ref="l_newbinom">Lemma</xref>, and is thus omitted.
 </p>
-  
-<lemma xml:id="l_half-binomial"><statement>
+
+<lemma xml:id="l_half-binomial">
+<statement>
 <p>
 For each <m>k\ge 1</m>,
 </p>
-  
 <me>
-
-\binom{1/2}{k}=\frac{(-1)^{k-1}}{k}\frac{\binom{2k-2}{k-1}}{2^{2k-1}}.
-
+  \binom{1/2}{k}=\frac{(-1)^{k-1}}{k}\frac{\binom{2k-2}{k-1}}{2^{2k-1}}.
 </me>
- </statement>
+</statement>
 </lemma>
-  
+
 <p>
 Now we see that
 </p>
-  
-<md><mrow>C(x) \amp = \frac{1}{2} \pm \frac{1}{2} \sum_{n=0}^\infty\binom{1/2}{n}
+<md>
+  <mrow>  C(x) \amp = \frac{1}{2} \pm \frac{1}{2} \sum_{n=0}^\infty\binom{1/2}{n}
   (-4)^n x^n 
   = \frac{1}{2} \pm \frac{1}{2}\left(1+ \sum_{n=1}^\infty
 \frac{(-1)^{n-1}}{n}\frac{\binom{2n-2}{n-1}}{2^{2n-1}}(-4)^n
-x^n\right)</mrow>
- <mrow>\amp =
-\frac{1}{2} \pm\frac{1}{2} \mp\sum_{n=1}^\infty \frac{\binom{2n-2}{n-1}}{n} x^n.</mrow>
- 
+x^n\right)
+      </mrow>
+  <mrow>  \amp =
+\frac{1}{2} \pm\frac{1}{2} \mp\sum_{n=1}^\infty \frac{\binom{2n-2}{n-1}}{n} x^n.
+      </mrow>
 </md>
- 
 <p>
 Since we need <m>c_n\geq 0</m>, we take the <q>minus</q> option from the
 <q>plus-or-minus</q> in the quadratic formula and thus have the following
 theorem.
 </p>
-  
-<theorem xml:id="thm_catalan-genfunction"><statement>
+
+<theorem xml:id="thm_catalan-genfunction">
+<statement>
 <p>
 The generating function for the number <m>c_n</m> of rooted, unlabeled,
 binary, ordered trees with <m>n</m> leaves is
 </p>
-  
 <me>
-C(x) = \frac{1-\sqrt{1-4x}}{2} = \sum_{n=1}^\infty \frac{1}{n}\binom{2n-2}{n-1}x^n.
+  C(x) = \frac{1-\sqrt{1-4x}}{2} = \sum_{n=1}^\infty \frac{1}{n}\binom{2n-2}{n-1}x^n.
 </me>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 Notice that <m>c_n</m> is a Catalan number, which we first encountered in
 <xref ref="ch_strings" autoname="yes" />, where we were counting lattice paths that did
 not cross the diagonal line <m>y=x</m>. (The coefficient <m>c_n</m> is the
 Catalan number we called <m>C(n-1)</m> in <xref ref="ch_strings" autoname="yes" />.)
 </p>
- </section>
+</section>

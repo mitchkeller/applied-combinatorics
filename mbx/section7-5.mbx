@@ -1,4 +1,3 @@
-
 <section xml:id="s_graphs_planar">
 <title>Planar Graphs</title>
 <p>
@@ -12,22 +11,17 @@ cross. This graph is shown in <xref ref="fig_graphs_utils" autoname="yes" />. Yo
 recognize it as the complete bipartite graph <m>\bfK_{3,3}</m> we
 introduced earlier in the chapter.
 </p>
-  <figure xml:id="fig_graphs_utils" >
+<figure xml:id="fig_graphs_utils" >
 <caption>A graph of connecting homes to utilities</caption>
-            <image xml:id="img-fig_graphs_utils">
-                <latex-image-code><![CDATA[
-		\begin{overpic}{images/k33}
-		\put(-37,92){ Water}
-		\put(-66,50){ Electricity}
-		\put(-76,5){ Natural gas}
-		\put(90,92){ Home 1}
-		\put(90,50){ Home 2}
-		\put(90,5){ Home 3}
-		\end{overpic}]]>
-		</latex-image-code>
-	    </image>
-  </figure>
-  
+\begin{overpic}{graphs-figs/k33}
+    \put(-25,92){ Water}
+    \put(-43,50){ Electricity}
+    \put(-53,5){ Natural gas}
+    \put(92,92){ Home 1}
+    \put(92,50){ Home 2}
+    \put(92,5){ Home 3}
+  \end{overpic}
+</figure>
 <p>
 While this example of utility lines might seem a bit contrived, since
 there's really no good reason that the providers can't bury their
@@ -41,7 +35,7 @@ exist or is severely restricted. There is much deep mathematics that
 underlies this area, and this section is intended to introduce a few
 of the key concepts.
 </p>
-  
+
 <p>
 By a <em>drawing</em> of a graph, we mean a way of associating its
 vertices with points in the Cartesian plane <m>\reals^2</m> and its edges
@@ -60,7 +54,7 @@ planar drawing. A <em>face</em> of a planar drawing of a graph is a
 region bounded by edges and vertices and not containing any other
 vertices or edges.
 </p>
-  
+
 <p>
 <xref ref="fig_planar" autoname="yes" /> shows a planar drawing of a graph with <m>6</m>
 vertices and <m>9</m> edges. Notice how one of the edges is drawn as a true
@@ -68,58 +62,57 @@ polygonal arc rather than a straight line segment. This drawing
 determines <m>5</m> regions, since we also count the unbounded region that
 surrounds the drawing.
 </p>
-  <figure xml:id="fig_planar" >
+<figure xml:id="fig_planar" >
 <caption>A planar drawing of a graph</caption>
-<image source="images/planar_graph.png" /> </figure>
- 
+<image width="73%" source="images/planar_graph.png" />
+</figure>
 <p>
 <xref ref="fig_k4-planar" autoname="yes" /> shows a planar drawing of the complete graph
 <m>\bfK_4</m>. There are <m>4</m> vertices, <m>6</m> edges, and <m>4</m> faces in the
 drawing.
 </p>
-  <figure xml:id="fig_k4-planar" >
+<figure xml:id="fig_k4-planar" >
 <caption>A planar drawing of <m>\bfK_4</m></caption>
-<image source="images/k4_planar.png" /> </figure>
- 
+<image width="73%" source="images/k4_planar.png" />
+</figure>
 <p>
 What happens if we compute the number of vertices minus the number of
 edges plus the number of faces for these drawings? We have
 </p>
-  
-<md><mrow>6-9+5 \amp = 2</mrow>
- <mrow>4-6+4 \amp =2</mrow>
- 
+<md>
+  <mrow>  6-9+5 \amp = 2
+      </mrow>
+  <mrow>  4-6+4 \amp =2
+      </mrow>
 </md>
- 
 <p>
 While it might seem like a coincidence that this computation results
 in <m>2</m> for these planar drawings, there's a more general principle at
 work here, and in fact it holds for <em>any</em> planar drawing of
 <em>any</em> planar graph.
 </p>
-  
-<theorem><title>Euler</title>
+
+<theorem>
+<title>Euler</title>
 <statement>
 <p>
 Let <m>\bfG</m> be a connected planar graph with <m>n</m> vertices and <m>m</m>
 edges. Every planar drawing of <m>\bfG</m> has <m>f</m> faces, where <m>f</m>
 satisfies
 </p>
-  
 <me>
-n-m+f=2.
+  n-m+f=2.
 </me>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 The number <m>2</m> here actually results from a fundamental property of
 the plane, and there are a corresponding theorems for other
 surfaces. However, we only need the result as stated above.
 </p>
-  
-<proof>
 
+<proof>
 <p>
 Our proof is by induction on the number <m>m</m> of edges. If <m>m=0</m>, then
 since <m>\bfG</m> is connected, our graph has a single vertex, and so
@@ -131,22 +124,18 @@ from <m>\bfG</m>? If <m>\bfG'</m> is connected, our inductive hypothesis
 applies. Say that <m>\bfG'</m> has <m>n'</m> vertices, <m>m'</m> edges, and <m>f'</m>
 faces. Then by induction, these numbers satisfy
 </p>
-  
 <me>
-n'-m'+f'=2.
+  n'-m'+f'=2.
 </me>
- 
 <p>
 Since we only deleted one edge, <m>n'=n</m> and <m>m'=m-1</m>. What did the
 removal of <m>e</m> do to the number of faces? In <m>\bfG'</m> there's a new
 face that was formerly two faces divided by <m>e</m> in <m>\bfG</m>. Thus,
 <m>f'=f-1</m>. Substituting these into <m>n'-m'+f'=2</m>, we have
 </p>
-  
 <me>
-n-(m-1)+(f-1)=2 \iff n-m+f=2.
+  n-(m-1)+(f-1)=2 \iff n-m+f=2.
 </me>
- 
 <p>
 Thus, if <m>\bfG'</m> is connected, we are done. If <m>\bfG'</m> is
 disconnected, however, we cannot apply the inductive assumption to
@@ -158,28 +147,22 @@ edges, so we may apply the inductive hypothesis to them. For
 the number of edges of <m>\bfG'_i</m>, and <m>f'_i</m> the number of faces of
 <m>\bfG'_i</m>. Then by induction we have
 </p>
-  
 <me>
-n'_1 - m'_1 + f'_1 = 2 \quad \text{and} \quad n'_2-m'_2+f'_2 =2.
+  n'_1 - m'_1 + f'_1 = 2 \quad \text{and} \quad n'_2-m'_2+f'_2 =2.
 </me>
- 
 <p>
 Adding these together, we have
 </p>
-  
 <me>
-(n'_1 + n'_2) - (m'_1 + m'_2) + (f'_1 + f'_2) = 4.
+  (n'_1 + n'_2) - (m'_1 + m'_2) + (f'_1 + f'_2) = 4.
 </me>
- 
 <p>
 But now <m>n=n'_1 + n'_2</m>, and <m>m'_1 + m'_2 = m-1</m>, so the equality
 becomes
 </p>
-  
 <me>
-n - (m-1) + (f'_1+f'_2) = 4 \iff n-m + (f'_1 + f'_2) = 3.
+  n - (m-1) + (f'_1+f'_2) = 4 \iff n-m + (f'_1 + f'_2) = 3.
 </me>
- 
 <p>
 The only thing we have yet to figure out is how <m>f'_1+f'_2</m> relates
 to <m>f</m>, and we have to hope that it will allow us to knock the <m>3</m>
@@ -190,9 +173,8 @@ face. Further, the unbounded face is counted twice in the sum <m>f'_1
   + f'_2</m>, so <m>f=f'_1 + f'_2 -1</m>. This gives exactly what we need to
 complete the proof.
 </p>
- 
 </proof>
-  
+
 <p>
 Taken by itself, Euler's formula doesn't seem that useful, since it
 requires counting the number of faces in a planar embedding. However,
@@ -208,23 +190,22 @@ face <m>F</m> appears. Each face is bounded by at least <m>3</m> edges, so it
 appears in at least <m>3</m> pairs, and so <m>p\geq 3f</m>. Thus <m>3f\leq 2m</m> or
 <m>f\leq 2m/3</m>. Now, utilizing Euler's formula, we have
 </p>
-  
 <me>
-m = n+f-2 \leq n + \frac{2m}{3} - 2 \iff \frac{m}{3} \leq n-2.
+  m = n+f-2 \leq n + \frac{2m}{3} - 2 \iff \frac{m}{3} \leq n-2.
 </me>
- 
 <p>
 Thus, we've proven the following theorem.
 </p>
-  
-<theorem xml:id="thm_max-edge-planar"><statement>
+
+<theorem xml:id="thm_max-edge-planar">
+<statement>
 <p>
 A planar graph on <m>n</m> vertices has at most <m>3n-6</m> edges when
 <m>n\ge 3</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 The contrapositive of this theorem, namely that an <m>n</m>-vertex graph
 with more than <m>3n-6</m> edges is not planar, is usually the most useful
@@ -240,9 +221,9 @@ vertices and <m>9</m> edges, so it passes the test of
 <xref ref="thm_max-edge-planar" autoname="yes" />. However, if you spend a couple minutes
 trying to find a way to draw <m>\bfK_{3,3}</m> in the plane without
 any crossing edges, you'll pretty quickly begin to believe that it
-can't be done&#8202;&#x2014;&#8202;and you'd be right!
+can't be done<mdash />and you'd be right!
 </p>
-  
+
 <p>
 To see why <m>\bfK_{3,3}</m> is not planar, we'll have to return to Euler's
 formula, and we again work with edge-face pairs. For <m>\bfK_{3,3}</m>, we
@@ -258,7 +239,7 @@ see that the number of faces <m>f</m> must be <m>5</m>, so then <m>4f_4+6f_6\geq
 giving <m>18\geq 20</m>, which is clearly absurd. Thus, <m>\bfK_{3,3}</m> is not
 planar.
 </p>
-  
+
 <p>
 At this point, you're probably asking yourself <q>So what?</q> We've
 invested a fair amount of effort to establish that <m>\bfK_5</m> and
@@ -268,7 +249,7 @@ we could be at this forever. Fortunately, we won't be, since at its
 core, planarity really comes down to just these two graphs, as we
 shall soon see.
 </p>
-  
+
 <p>
 If <m>\GVE</m> is a graph and <m>uv\in E</m>, then we may form a new graph
 <m>\bfG'</m> called an <em>elementary subdivision</em> of <m>\bfG</m> by adding
@@ -278,7 +259,7 @@ edge set <m>E'=(E-\{uv\})\cup \{uv',v'v\}</m>. Two graphs <m>\bfG_1</m> and
 <m>\bfG_2</m> are <em>homeomorphic</em> if they can be obtained from the same
 graph by a (potentially trivial) sequence of elementary subdivisions.
 </p>
-  
+
 <p>
 The purpose of discussing homeomorphic graphs is that two homeomorphic
 graphs have the same properties when it comes to being drawn in the
@@ -290,16 +271,17 @@ graph is nonplanar. The following very deep theorem was proved by the
 Polish mathematician Kazimierz Kuratowski in 1930. Its proof is beyond
 the scope of this text.
 </p>
-  
-<theorem xml:id="thm_kuratowski"><title>Kuratowski</title>
+
+<theorem xml:id="thm_kuratowski">
+<title>Kuratowski</title>
 <statement>
 <p>
 A graph is planar if and only if it does not contain a subgraph
 homeomorphic to either <m>\bfK_5</m> or <m>\bfK_{3,3}</m>.
 </p>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 Kuratowski's Theorem gives a useful way for checking if a graph is
 planar. Although it's not always easy to find a subgraph homeomorphic
@@ -326,10 +308,10 @@ homeomorphic to <m>\bfK_{3,3}</m> is found by deleting the black vertex, as
 then the white vertices have degree two, and we can replace each of
 them and their two incident edges (shown in bold) by a single edge.
 </p>
-  <figure xml:id="fig_petersen-graph-k33" >
+<figure xml:id="fig_petersen-graph-k33" >
 <caption>A more illustrative drawing of the Petersen graph</caption>
-<image source="images/petersen_graph_k33.png" /> </figure>
-  
+<image width="40%" source="images/petersen_graph_k33.png" />
+</figure>
 <p>
 We close this section with a problem that brings the current section
 together with the topic of graph coloring. In 1852 Francis Guthrie, an
@@ -343,10 +325,10 @@ would require five colors. (He was able to find a map that required
 four colors, an example of which is shown in
 <xref ref="fig_needs-four-colors" autoname="yes" />.)
 </p>
-  <figure xml:id="fig_needs-four-colors" >
+<figure xml:id="fig_needs-four-colors" >
 <caption>A map that requires four colors</caption>
-<image source="images/needs_four_colors.png" /> </figure>
- 
+<image width="73%" source="images/needs_four_colors.png" />
+</figure>
 <p>
 Could it possibly be true that <em>every</em> map could be colored with
 only four colors? He asked his brother Frederick Guthrie, who was a
@@ -362,7 +344,7 @@ cycles are named, but Hamilton did not find the problem
 interesting. Hamilton is one of the few people who considered the Four
 Color Problem but did not become captivated by it.
 </p>
-  
+
 <p>
 We'll continue our discussion of the history of the Four Color Theorem
 in a moment, but first, we must consider how we can turn the problem
@@ -380,7 +362,7 @@ each vertex leads to a region and edges lead to common boundary
 segments. Thus, the Four Color Problem could be stated as <q>Does every
 planar graph have chromatic number at most four?</q>
 </p>
-  
+
 <p>
 Interest in the Four Color Problem languished until 1877, when the
 British mathematician Arthur Cayley worte a letter to the Royal
@@ -403,7 +385,7 @@ time, if at all. However, it would take until 1946 to find a
 counterexample to the conjecture Tait had used in his attempt to prove
 the Four Color Theorem.
 </p>
-  
+
 <p>
 In the first half of the twentieth century, some incremental progress
 toward resolving the Four Color Problem was made, but few prominent
@@ -419,15 +401,16 @@ SUFFICE</q> to its postage meter's imprint.<fn>A photograph of an envelope with 
     History, Topological Foundations, and Idea of Proof</em> by Rudolf and
   Gerda Fritsch. (Springer, 1998)</fn>
 </p>
-  
-<theorem xml:id="thm_4ct"><title>Four Color Theorem</title>
+
+<theorem xml:id="thm_4ct">
+<title>Four Color Theorem</title>
 <statement>
 <p>
 Every planar graph has chromatic number at most four.
 </p>
- </statement>
+</statement>
 </theorem>
-  
+
 <p>
 Appel and Haken's proof of the Four Color Theorem was at a minimum
 unsatisfactory for many mathematicians, and to some it simply wasn't a
@@ -454,4 +437,4 @@ largely been put to rest. However, many still wonder if anyone will
 ever find a proof of this simple statement that does not require the
 assistance of a computer.
 </p>
- </section>
+</section>

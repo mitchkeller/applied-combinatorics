@@ -1,4 +1,3 @@
-
 <section xml:id="s_posets_sorting">
 <title>Linear Extensions of Partially Ordered Sets</title>
 <p>
@@ -8,8 +7,8 @@ of <m>P</m>, if <m>x\lt y</m> in <m>L</m> whenever <m>x\lt y</m> in <m>P</m>. Fo
 table displayed in <xref ref="fig_posets_lin-extn" autoname="yes" /> shows that our familiar
 example <m>\bfP_3</m> has<nbsp />11 linear extensions.
 </p>
-  <figure xml:id="fig_posets_lin-extn" >
-<caption> A poset and its linear extensions</caption>
+<figure xml:id="fig_posets_lin-extn" >
+<caption>A poset and its linear extensions</caption>
 <div class="minipage">{.25\textwidth}
 \begin{overpic}[scale=.4]{posets-figs/wttfig-9}
 \put(-3,2){<m>z</m>}
@@ -20,10 +19,8 @@ example <m>\bfP_3</m> has<nbsp />11 linear extensions.
 \put(48,93){<m>d</m>}
 \end{overpic}\hspace{.5in}</div> 
 <div class="minipage">{.70\textwidth}
-
 <me>
-
-\begin{array}{ccccccccccc}
+  \begin{array}{ccccccccccc}
 L_1\amp  L_2 \amp  L_3 \amp  L_4 \amp  L_5 \amp  L_6 \amp  L_7 \amp  L_8 \amp  L_9 \amp  L_{10} \amp  L_{11}\\[.2in]
  d \amp  d \amp  d \amp  b \amp  d \amp  d \amp  d \amp  b \amp  d \amp  d \amp  b \\
  c \amp  c \amp  b \amp  d \amp  c \amp  c \amp  b \amp  d \amp  c \amp  b \amp  d \\
@@ -31,52 +28,51 @@ L_1\amp  L_2 \amp  L_3 \amp  L_4 \amp  L_5 \amp  L_6 \amp  L_7 \amp  L_8 \amp  L
  b \amp  w \amp  w \amp  w \amp  b \amp  w \amp  w \amp  w \amp  z \amp  z \amp  z \\
  a \amp  a \amp  a \amp  a \amp  z \amp  z \amp  z \amp  z \amp  w \amp  w \amp  w \\
  z \amp  z \amp  z \amp  z \amp  a \amp  a \amp  a \amp  a \amp  a \amp  a \amp  a \\
-\end{array} 
-
+\end{array}
 </me>
-</div> </figure>
-  
-<remark><statement>
+</div>
+</figure>
+<remark>
+<statement>
 <p>
 Bob says that he is not convinced that every finite poset has a linear
 extension. Alice says that it is easy to show that they do. Is she right?
 </p>
-  
+
 <p>
 Carlos says that there are subtleties to this question when the ground
 set <m>X</m> is infinite. You might want to do a web search on the name Szpilrajn and
 read about his contribution to this issue.
 </p>
- </statement>
+</statement>
 </remark>
-  
 <p>
 The classical sorting problem studied in all elementary computer
 science courses is to determine an unknown linear order <m>L</m> of a set <m>X</m>
-by asking a series of questions of the form:<nbsp /><nbsp /> Is <m>x\lt y</m> in <m>L</m>?
+by asking a series of questions of the form:  Is <m>x\lt y</m> in <m>L</m>?
 All the well known sorting algorithms (bubble sort,
 merge sort, quick sort, etc.) proceed in this manner.
 </p>
-  
+
 <p>
 Here is an important special case: determine an unknown linear
 extension <m>L</m> of a poset <m>\bfP</m> by asking a series of questions of the form:
-<nbsp /><nbsp /> Is <m>x \lt  y</m> in <m>L</m>?
+  Is <m>x \lt  y</m> in <m>L</m>?
 </p>
-  
-<remark><statement>
+<remark>
+<statement>
 <p>
 Given the poset <m>\PXP</m> shown in <xref ref="fig_17ptposet" autoname="yes" /> and the problem of
 determining an unknown linear extension of <m>P</m>, how should Alice decide
-which question (of the form:<nbsp /><nbsp /> Is <m>x\lt y</m> in <m>L</m>?) to ask?
+which question (of the form:  Is <m>x\lt y</m> in <m>L</m>?) to ask?
 </p>
-  
+
 <p>
 How would you like to be assigned to count the
 number of linear extensions of this poset? In general,
 how hard is it to determine the number of linear extensions of a poset?
 Could you (and your computer) do this count for a poset on <m>100,000</m> points?
 </p>
- </statement>
+</statement>
 </remark>
- </section>
+</section>

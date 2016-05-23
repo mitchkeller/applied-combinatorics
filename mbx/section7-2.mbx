@@ -1,4 +1,3 @@
-
 <section xml:id="s_graphs_multigraphs">
 <title>Multigraphs:  Loops and Multiple Edges</title>
 <p>
@@ -18,15 +17,18 @@ concept of a <em>loop</em>, i.e., an edge with both end points being
 the same vertex. Also, we can allow for more than one loop with the
 same end point.
 </p>
-  
+
 <p>
 Accordingly, authors frequently lead off a discussion on a graph
 theory topic with a sentence or two like:
 </p>
-  <ol><li>In this paper, all graphs will be <em>simple</em>, i.e., we will
+
+<ol>
+<li>In this paper, all graphs will be <em>simple</em>, i.e., we will
   not allow loops or multiple edges.</li>
 <li>In this paper, graphs can have loops and multiple edges.</li>
- </ol>  
+</ol>
+
 <p>
 The terminology is far from standard, but in this text, a graph will
 always be a <em>simple</em> graph, i.e., no loops or multiple edges.
@@ -37,4 +39,4 @@ if multiple edges are allowed but not loops. If we <em>really</em>
 needed to talk about such graphs, then the English language comes to
 our rescue, and we just state the restriction explicitly!
 </p>
- </section>
+</section>

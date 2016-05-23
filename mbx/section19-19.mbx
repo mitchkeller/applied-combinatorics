@@ -1,4 +1,3 @@
-
 <section>
 <title>The Zermelo-Fraenkel Axioms of Set Theory</title>
 <p>
@@ -11,33 +10,39 @@ in formulating consistent systems of axioms for set theory.
 And it is very easy to make statements that sound <q>obvious</q>
 but are not.
 </p>
-  
+
 <p>
 Here is one very famous example. Let <m>X</m> and <m>Y</m> be
 sets and consider the following two
 statements:
 </p>
-  <ol><li>There exists an injection <m>f:X\rightarrow Y</m>.</li>
+
+<ol>
+<li>There exists an injection <m>f:X\rightarrow Y</m>.</li>
 <li>There exists a surjection <m>g:Y\rightarrow X</m>.</li>
- </ol>  
+</ol>
+
 <p>
 If <m>X</m> and <m>Y</m> are finite sets, these statements are
 equivalent, and it is perhaps natural to surmise that the
 same is true when <m>X</m> and <m>Y</m> are infinite. But that is not
 the case.
 </p>
-  
+
 <p>
 A good source of additional (free) information on set theory is
 the collection of Wikipedia articles. Do a web search and
 look up the following topics and people:
 </p>
-  <ol><li>Zermelo Frankel set theory.</li>
+
+<ol>
+<li>Zermelo Frankel set theory.</li>
 <li>Axiom of Choice.</li>
 <li>Peano postulates.</li>
 <li>Georg Cantor, Augustus De Morgan, George Boole, Bertrand Russell
 and Kurt G&#xf6;del.</li>
- </ol>   
+</ol>
+
 <p>
 Here is the system of axioms popularly known as ZFC, which
 is an abbreviation for Zermelo-Frankel plus the Axiom of Choice.
@@ -49,68 +54,68 @@ exactly one of the following statements is true:
 When <m>A\in B</m> is false, we write <m>A\notin B</m>. Also, there
 is an equivalence relation <m>=</m> defined on sets.
 </p>
-  
+
 <p>
-<b>Axiom of extensionality:</b><nbsp /><nbsp />
+<b>Axiom of extensionality:</b> 
 Two sets are equal if and only if they have the same elements.
 </p>
-  
+
 <p>
-<b>Axiom of empty set:</b><nbsp /><nbsp />
+<b>Axiom of empty set:</b> 
 There is a set <m>\emptyset</m> with no elements.
 </p>
-  
+
 <p>
-<b>Axiom of pairing:</b><nbsp /><nbsp />
+<b>Axiom of pairing:</b> 
 If <m>x</m> and <m>y</m> are sets, then there exists a set containing <m>x</m> and <m>y</m>
 as its only elements, which we denote by <m>\{x,y\}</m>. Note: If
 <m>x=y</m>, then we write only <m>\{x\}</m>.
 </p>
-  
+
 <p>
-<b>Axiom of union:</b><nbsp /><nbsp />
+<b>Axiom of union:</b> 
 For any set <m>x</m>, there is a set <m>y</m> such that the elements of <m>y</m>
 are precisely the elements of the elements of <m>x</m>.
 </p>
-  
+
 <p>
-<b>Axiom of infinity:</b><nbsp /><nbsp />
+<b>Axiom of infinity:</b> 
 There exists a set <m>x</m> such that <m>\emptyset\in x</m> and whenever
 <m>y\in x</m>, so is <m>\{y ,\{y\}\}</m>.
 </p>
-  
+
 <p>
-<b>Axiom of power set</b><nbsp /><nbsp />
+<b>Axiom of power set</b> 
 Every set has a power set. That is, for any set <m>x</m>,
 there exists a set <m>y</m>, such that the elements of <m>y</m> are
 precisely the subsets of<nbsp /><m>x</m>.
 </p>
-  
+
 <p>
-<b>Axiom of regularity:</b><nbsp /><nbsp />
+<b>Axiom of regularity:</b> 
 Every non-empty set <m>x</m> contains some element <m>y</m> such that
 <m>x</m> and <m>y</m> are disjoint sets.
 </p>
-  
+
 <p>
-<b>Axiom of separation (or subset axiom):</b><nbsp /><nbsp />
+<b>Axiom of separation (or subset axiom):</b> 
 Given any set and any proposition <m>P(x)</m>, there is a subset
 of the original set containing precisely those elements <m>x</m>
 for which <m>P(x)</m> holds.
 </p>
-  
+
 <p>
-<b>Axiom of replacement:</b><nbsp /><nbsp />
+<b>Axiom of replacement:</b> 
 Given any set and any mapping, formally defined as a
 proposition <m>P(x,y)</m> where <m>P(x,y_1)</m> and <m>P(x,y_2)</m> implies
 <m>y_1 = y_2</m>, there is a set containing precisely the images
 of the original set's elements.
 </p>
-  
+
 <p>
-<b>Axiom of choice:</b><nbsp /><nbsp />
+<b>Axiom of choice:</b> 
 Given any set of mutually exclusive non-empty sets, there
 exists at least one set that contains exactly one element in
 common with each of the non-empty sets.
 </p>
- </section>
+</section>

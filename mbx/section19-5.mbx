@@ -1,4 +1,3 @@
-
 <section>
 <title>Finite Sets</title>
 <p>
@@ -10,111 +9,102 @@ When <m>X</m> is not finite, it is called <em>infinite</em>. For example,
 \{\emptyset\}</m> is infinite. Of course, <m>[n]</m> and <m>\bfn</m> are
 finite sets for every <m>n\in\posints</m>.
 </p>
-  
-<proposition><statement>
+
+<proposition>
+<statement>
 <p>
 Let <m>X</m> be a non-empty finite set. Then there is a unique
 positive integer <m>n</m> for which there is a bijection <m>f:[n]\bijection X</m>.
 </p>
- </statement>
+</statement>
 </proposition>
-  
+
 <p>
 In some cases, it may take some effort to determine whether a set
 is finite or infinite. Here is a truly
 classic result.
 </p>
-  
-<proposition><statement>
+
+<proposition>
+<statement>
 <p>
 The set <m>P</m> of primes is infinite.
 </p>
- </statement>
+</statement>
 </proposition>
-  
-<proof>
 
+<proof>
 <p>
 Suppose that the set <m>P</m> of primes is finite. It is non-empty
 since <m>2\in P</m>. Let <m>n</m> be the unique positive integer for
 which there exists a bijection <m>f:[n]\rightarrow P</m>. Then let
 </p>
-  
 <me>
-
-p=1+f(1)\times f(2)\times f(3)\times \dots\times f(n)
-
+  p=1+f(1)\times f(2)\times f(3)\times \dots\times f(n)
 </me>
- 
 <p>
 Then <m>p</m> is prime (<em>Why</em>?) yet larger than any element of <m>P</m>.
 The contradiction completes the proof.
 </p>
- 
 </proof>
-  
+
 <p>
 Here's a famous example of a set where no one knows if
 the set is finite or not.
 </p>
-  
-<conjecture><statement>
+<conjecture>
+<statement>
 <p>
 It is conjectured that the following
 set is infinite:
 </p>
-  
 <me>
-
-T=\{n\in\posints:n \text{ and }  n+2 \text{ are both
-primes } \}. 
-
+  T=\{n\in\posints:n \text{ and }  n+2 \text{ are both
+primes } \}.
 </me>
- </statement>
+</statement>
 </conjecture>
- 
 <p>
 This conjecture is known as the <em>Twin Primes Conjecture</em>.
 Guaranteed <m>\text{A} ++</m> for any student who can settle it!
 </p>
-  
-<proposition xml:id="exe_sb"><statement>
+
+<proposition xml:id="exe_sb">
+<statement>
 <p>
 Let <m>X</m> and <m>Y</m> be finite sets. If there exists an injection
 <m>f:X\injection Y</m> and an injection <m>g:Y \injection X</m>, then
 there exists a bijection <m>h:X \bijection Y</m>.
 </p>
- </statement>
+</statement>
 </proposition>
-  
+
 <p>
 When <m>X</m> is a finite non-empty set, the <em>cardinality</em> of <m>X</m>,
 denoted <m>|X|</m> is the unique positive integer <m>n</m> for which
 there is a bijection <m>f:[n]\bijection X</m>. Intuitively,
 <m>|X|</m> is the number of elements in <m>X</m>. For example,
 </p>
-  
 <me>
-
-|\{(6,2), (8,(4,\emptyset)), \{3,\{5\}\}\}|=3.
-
+  |\{(6,2), (8,(4,\emptyset)), \{3,\{5\}\}\}|=3.
 </me>
- 
 <p>
 By convention,
 the cardinality of the empty set is taken to be zero, and we write
 <m>|\emptyset|=0</m>.
 </p>
-  
-<proposition xml:id="prop_xy"><statement>
+
+<proposition xml:id="prop_xy">
+<statement>
 <p>
 If <m>X</m> and <m>Y</m> are finite non-empty sets, then
 <m>|X\times Y| =|X|\times |Y|</m>.
 </p>
- </statement>
+</statement>
 </proposition>
-  
-<remark><statement>
+
+<remark>
+<statement>
 <p>
 The statement in the last exercise is an example of <q>operator
 overloading</q>, a technique featured in several programming
@@ -126,28 +116,28 @@ languages can keep track of the data types of variables and
 apply the correct interpretation of an operator like <m>\times</m>
 depending on the variables to which it is applied.
 </p>
- </statement>
+</statement>
 </remark>
-  
 <p>
 We also have the following general form of <xref ref="prop_xy">Proposition</xref>:
 </p>
-  
 <me>
-
-|X_1\times X_2\times\dots\times X_n|=
+  |X_1\times X_2\times\dots\times X_n|=
 |X_1|\times |X_2|\times\dots\times |X_n|
-
 </me>
-  
-<theorem><statement>
+
+<theorem>
+<statement>
 <p>
 \hfill\mbox{} <br />
 </p>
-  <ol><li>There is a bijection between any two of the following
+
+<ol>
+<li>There is a bijection between any two of the following
 infinite sets <m>\posints</m>, <m>\ints</m> and <m>\rats</m>.</li>
 <li>There is an injection from <m>\rats</m> to <m>\reals</m>.</li>
 <li>There is no surjection from <m>\rats</m> to <m>\reals</m>.</li>
- </ol>  </statement>
+</ol>
+</statement>
 </theorem>
- </section>
+</section>
