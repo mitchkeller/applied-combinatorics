@@ -13,7 +13,7 @@ time, and we suspect that many instructors will encourage
 students to read this material to refresh their memories of key
 concepts.  
 
-\section{Introduction}
+\section{Introduction}\label{s:background:intro}
 
 Set theory is concerned with \textit{elements}, certain collections
 of elements called \textit{sets} and a concept of \textit{membership}.
@@ -87,7 +87,7 @@ justify his negative stance?  In this specific case, I know that
 Alice is right.  Can you explain why?
 \end{example}
 
-\section{Intersections and Unions}
+\section{Intersections and Unions}\label{s:background:int-union}
 
 When $X$ and $Y$ are sets, the \textit{intersection}
 of $X$ and $Y$, denoted $X\cap Y$, is defined by
@@ -207,7 +207,7 @@ equal.  If $X$ and $Y$ are sets, then
 X = Y \quad\text{ if and only if }\quad X\subseteq Y \text{ and } Y\subseteq X.
 \]  
 
-\section{Cartesian Products} 
+\section{Cartesian Products} \label{s:background:products}
 
 When $X$ and $Y$ are sets, the \textit{cartesian product}
 of $X$ and $Y$, denoted $X\times Y$, is defined by
@@ -238,7 +238,7 @@ X_1\times X_2\times\dots\times X_n=\{(x_1,x_2,\dots,x_n): x_i\in X_i
 \]
 
 
-\section{Binary Relations and Functions}
+\section{Binary Relations and Functions}\label{s:background:relations}
 
 A subset $R\subseteq X\times Y$ is called a \textit{binary
 relation} on $X\times Y$, and a binary relation $R$ on $X\times Y$ 
@@ -362,7 +362,7 @@ Let $X$ and $Y$ be sets. Then there is a bijection from $X$ to $Y$
 if and only if there is a bijection from $Y$ to $X$.
 \end{proposition}
 
-\section{Finite Sets}
+\section{Finite Sets}\label{s:background:finite-sets}
 
 A set $X$ is said to be \textit{finite} when either (1) $X=\emptyset$; or
 (2) there exists positive integer $n$ and a bijection $f:[n]\bijection X$.
@@ -458,7 +458,7 @@ infinite sets $\posints$, $\ints$ and $\rats$.
 \end{enumerate}
 \end{theorem}
 
-\section{Notation from Set Theory and Logic}
+\section{Notation from Set Theory and Logic}\label{s:background:notation}
 
 In set theory, it is common to deal with statements 
 involving one or more elements from the universe as
@@ -499,7 +499,7 @@ We will use these notational shortcuts \textit{except} for
 the use of $\wedge$ and $\vee$, as we will use these two symbols
 in another context: binary operators in lattices. 
 
-\section{Formal Development of Number Systems}
+\section{Formal Development of Number Systems}\label{s:background:formal-num-sys}
 
 Up to this point, we have been discussing number systems
 in an entirely informal manner, assuming everyone knew
@@ -554,7 +554,7 @@ $s(k)\in\mathbb{S}\subseteq\mathbb{M}$.
 We conclude that $\mathbb{M}=\mathbb{N}_0$.
 \end{proof}
 
-\subsection{Addition as a Binary Operation}\label{s:add}
+\subsection{Addition as a Binary Operation}\label{s:background:add}
 
 Recall that a \textit{binary operator} $*$ on set $X$ is just
 a function $*:X\times X\rightarrow X$.  So the image of
@@ -710,7 +710,7 @@ Since $s$ is an
 injection, this implies $m+k=n+k$.  Thus $m=n$.
 \end{proof}
 
-\section{Multiplication as a Binary Operation}\label{s:mult}
+\section{Multiplication as a Binary Operation}\label{s:background:mult}
 
 We define a binary operation $\times$, called \textit{multiplication}, 
 on the set of natural numbers.  When $m$ and $n$ are natural
@@ -816,7 +816,7 @@ m (k+1) = mk +m = km+m= km +1m=(k+1)m.
 \]
 \end{proof}
 
-\section{Exponentiation}
+\section{Exponentiation}\label{s:background:exp}
 
 We now define a binary operation called \textit{exponentiation}
 which is defined only on those ordered pairs $(m,n)$ of natural
@@ -858,7 +858,7 @@ Then
 \]
 \end{proof}
 
-\section{Partial Orders and Total Orders}\label{s:order}
+\section{Partial Orders and Total Orders}\label{s:background:order}
 
 A binary relation $R$ on a set $X$ is just a subset of
 the cartesian product $X\times X$.  In discussions of
@@ -900,7 +900,7 @@ then $\subseteq$ is a total order on $X$.
 When $\le$ is a partial order on a set $X$, we write
 $x<y$ when $x\le y$ and $x\neq y$.
 
-\section{A Total Order on Natural Numbers}
+\section{A Total Order on Natural Numbers}\label{s:background:total-order-N}
 
 Let $m,n\in \mathbb{N}_0$. Define a binary relation $\le$ on
 $\mathbb{N}_0$ by setting $m\le n$ if and only if
@@ -995,7 +995,7 @@ If $m<n$, then $mp<np$, and if $n<m$, then
 $np<mp$.  We conclude that $m=n$. 
 \end{proof}
 
-\section{Notation for Natural Numbers}\label{s:decimal}
+\section{Notation for Natural Numbers}\label{s:background:decimal}
 
 In some sense, we already have a workable notation for natural numbers.
 In fact, we really didn't need a special symbol for $s(0)$.
@@ -1120,7 +1120,7 @@ then there is a unique least positive integer $n$ that does not
 belong to $\mathbb{M}$.
 \end{theorem}
 
-\section{Equivalence Relations}\label{sec:numsys:equivalence}
+\section{Equivalence Relations}\label{s:background:equivalence}
 
 A binary relation $R$ is:
 
@@ -1152,7 +1152,7 @@ special symbols used to denote equivalence relations
 come with negative versions: $x\neq y$, $x\ncong y$,
 $x\nsim y$, etc.
 
-\section{The Integers as Equivalence Classes of Ordered Pairs}\label{s:integers}
+\section{The Integers as Equivalence Classes of Ordered Pairs}\label{s:background:integers}
 
 Define a binary relation $\cong$ on the set $Z=\mathbb{N}_0
  \times\mathbb{N}_0$ by
@@ -1206,7 +1206,7 @@ Let $\ints$ denote the set of all equivalence classes of $Z$
 determined by the equivalence relation $\cong$.  The elements
 of $\ints$ are called \textit{integers}.
 
-\section{Properties of the Integers}\label{s:moreintegers}
+\section{Properties of the Integers}\label{s:background:prop-integers}
 
 For the remainder of this chapter, most statements will be given
 without proof.  Students are encouraged to fill in the
@@ -1350,7 +1350,7 @@ If $x\in\ints$, $x\neq0$, and $m,n\in\mathbb{N}_0$, then
 $x^mx^n=x^{m+m}$ and $(x^m)^n=x^{mn}$.
 \end{theorem}
 
-\section{Obtaining the Rationals from the Integers}\label{s:rationals}
+\section{Obtaining the Rationals from the Integers}\label{s:background:rationals}
 
 We consider the set $\rats$ of all ordered pairs in $\ints\times \ints$ of
 the form $(x,y)$ with $y\neq 0$. Elements of $\rats$ are called
@@ -1460,7 +1460,7 @@ If $x\in\rats$, $x\neq0$, and $m,n\in\ints$, then
 $x^mx^n=x^{m+m}$ and $(x^m)^n=x^{mn}$.
 \end{theorem}
 
-\section{Obtaining the Reals from the Rationals}\label{s:reals}
+\section{Obtaining the Reals from the Rationals}\label{s:background:reals}
 
 A full discussion of this would take us far away from 
 a discrete math class, but let's at least provide the
@@ -1507,7 +1507,7 @@ that this real number is denoted $\sqrt2$.
 There are many other wonders to this story, but enough for
 one day.
 
-\section{Obtaining the Complex Numbers from the Reals}
+\section{Obtaining the Complex Numbers from the Reals}\label{s:background:complex}
 
 By now, the following discussion should be transparent.
 The complex number system $\mathbb{C}$ is just the cartesian product
@@ -1620,7 +1620,7 @@ which is distinct from $f(n)$, for every $n\in\posints$.
 This shows that $f$ is not a surjection.
 \end{proof}
 
-\section{The Zermelo-Fraenkel Axioms of Set Theory}
+\section{The Zermelo-Fraenkel Axioms of Set Theory}\label{s:background:ZFC}
 
 In the first part of this appendix, 
 we put number systems on a firm foundation, but in the

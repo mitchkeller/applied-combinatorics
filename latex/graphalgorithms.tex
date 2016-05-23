@@ -13,7 +13,7 @@ edge of the graph. The first problem studied is determining a spanning
 tree of minimum weight. The second is of finding shortest paths from
 a root vertex to each other vertex in a directed graph.
 
-\section{Minimum Weight Spanning Trees}
+\section{Minimum Weight Spanning Trees}\label{s:graphalgorithms:min-wt-span}
 
 In this section, we consider pairs $(\bfG,w)$ where $\GVE$ is a
 connected graph and $w:E\rightarrow\mathbb{N}_0$. For each edge $e\in
@@ -139,7 +139,7 @@ trivialities, we assume $n\ge3$.
   weight spanning tree we seek.
 \end{proof}
 
-\section{Discussion}
+\section{Discussion}\label{s:graphalgorithms:discussion}
   Although Bob's combinatorial intuition has improved over the course
   he doesn't quite understand why we need
   special algorithms to find minimum weight spanning trees. He figures
@@ -328,7 +328,7 @@ weight among subsets of these edges.  In computer science, the
 data structure that enables this task to be carried out is called
 a \textit{heap}.
 
-\section{Digraphs}
+\section{Digraphs}\label{s:graphalgorithms:digraphs}
 
 In this section, we introduce another useful variant of a graph. In a
 graph, the existence of an edge $xy$ can be used to model a connection
@@ -368,7 +368,7 @@ $i=0,1,\dots,t-1$.  A directed path $C=(r=u_0,u_1,\dots,u_t=x)$ is
 called a \textit{directed cycle} when $(u_t,u_0)$ is a directed edge
 of $\bfG$.
 
-\section{Dijkstra's Algorithm for Shortest Paths}
+\section{Dijkstra's Algorithm for Shortest Paths}\label{s:graphalgorithms:shortest-paths}
 
 Just as with graphs, it is useful to assign weights to the directed
 edges of a digraph. Specifically, in this section we consider a pair
@@ -736,7 +736,7 @@ the algorithm is in.
 \end{proof}
 
 
-\section{Historical Notes}
+\section{Historical Notes}\label{s:graphalgorithms:historical-notes}
 
 Kruskal's algorithm was published in 1956 by Joseph B.\ Kruskal in a
 three-page paper that appeared in \emph{Proceedings of the American
@@ -762,7 +762,7 @@ an equivalent form) by Edward F.\ Moore two years earlier. His result
 appeared in \emph{Proceedings of an International Symposium on the
   Theory of Switching}.
 
-\section{Exercises}
+\section{Exercises}\label{s:graphalgorithms:exercises}
 
 \begin{enumerate}
 \item For the graph in \autoref{fig:span_tree_ex1}, use Kruskal's
