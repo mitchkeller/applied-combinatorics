@@ -305,13 +305,11 @@ consider the problem of finding the least common multiple
 of $351785000$ and  $316752027900$ if you just happen to know that
 
 \begin{align*}
- 351785000 = & 2^3\times 5^4\times 7\times19\times 23^2\quad\text{and}\\ 
- 316752027900 = & 2^2\times3\times 5^2\times 7^3\times 11\times 23^4. 
+ 351785000 &=  2^3\times 5^4\times 7\times19\times 23^2\quad\text{and}\\ 
+ 316752027900 &=  2^2\times3\times 5^2\times 7^3\times 11\times 23^4. 
 \end{align*}
 Then the least common multiple is
-\begin{align*}
-300914426505000 = & 2^3\times3\times 5^4\times 7^3\times 11\times 19\times 23^4.
-\end{align*}
+\[300914426505000 =  2^3\times3\times 5^4\times 7^3\times 11\times 19\times 23^4.\]
 So to find the least common multiple of two numbers, we just have
 to factor them into primes.  That doesn't sound too hard. For starters, can you
 factor $1961$?  OK, how about $1348433$?  Now for a real challenge.
@@ -343,13 +341,11 @@ will get the prime factorization shown above.
 
 Now here's how we made up the challenge problem.  First, we found a
 site on the web that lists large primes and found these two values:
-
 \begin{align*}
-a = & 45095080578985454453\quad\text{and}\\ 
-b = & 115756986668303657898962467957.
+a &=  45095080578985454453\quad\text{and}\\ 
+b &=  115756986668303657898962467957.
 \end{align*}
 We then used \emph{Maple} to multiply them together using the following command:
-
 \[
 45095080578985454453*115756986668303657898962467957;
 \]
@@ -367,54 +363,54 @@ In \autoref{fig:intro:partsof8}, we show the integer partitions
 of~$8$.
 \begin{figure}[hb]
 %\centering
-\begin{multicols}{3}
-  8\quad\text{distinct}\\
-  7+1\quad\text{distinct and odd}\\
-  6+2\quad\text{distinct}\\
-  6+1+1\\
-  5+3\quad\text{distinct and odd}\\
-  5+2+1\quad\text{distinct}\\
-  5+1+1+1\quad\text{odd}\\
-  4+4\\
-  4+3+1\quad\text{distinct}\\
-  4+2+2\\
-  4+2+1+1\\
-  4+1+1+1+1\\
-  3+3+2\\
-  3+3+1+1\quad\text{odd}\\
-  3+2+2+1\\
-  3+2+1+1+1\\
-  3+1+1+1+1+1\quad\text{odd}\\
-  2+2+2+2\\
-  2+2+2+1+1\\
-  2+2+1+1+1+1\\
-  2+1+1+1+1+1+1\\
-  1+1+1+1+1+1+1+1\quad\text{odd}  
-\end{multicols}
-% \begin{tabular}{lll}
-%   8\quad\text{distinct parts}&
-%   7+1\quad\text{distinct parts, odd parts}&
-%   6+2\quad\text{distinct parts}\\
-%   6+1+1&
-%   5+3\quad\text{distinct parts, odd parts}&
-%   5+2+1\quad\text{distinct parts}\\
-%   5+1+1+1\quad\text{odd parts}&
-%   4+4&
-%   4+3+1\quad\text{distinct parts}\\
-%   4+2+2&
-%   4+2+1+1&
+% \begin{multicols}{3}
+%   8\quad\text{distinct}\\
+%   7+1\quad\text{distinct and odd}\\
+%   6+2\quad\text{distinct}\\
+%   6+1+1\\
+%   5+3\quad\text{distinct and odd}\\
+%   5+2+1\quad\text{distinct}\\
+%   5+1+1+1\quad\text{odd}\\
+%   4+4\\
+%   4+3+1\quad\text{distinct}\\
+%   4+2+2\\
+%   4+2+1+1\\
 %   4+1+1+1+1\\
-%   3+3+2&
-%   3+3+1+1\quad\text{odd parts}&
+%   3+3+2\\
+%   3+3+1+1\quad\text{odd}\\
 %   3+2+2+1\\
-%   3+2+1+1+1&
-%   3+1+1+1+1+1\quad\text{odd parts}&
+%   3+2+1+1+1\\
+%   3+1+1+1+1+1\quad\text{odd}\\
 %   2+2+2+2\\
-%   2+2+2+1+1&
-%   2+2+1+1+1+1&
-%   2+1+1+1+1+1+1\\&
-%   1+1+1+1+1+1+1+1\quad\text{odd parts}
-% \end{tabular}
+%   2+2+2+1+1\\
+%   2+2+1+1+1+1\\
+%   2+1+1+1+1+1+1\\
+%   1+1+1+1+1+1+1+1\quad\text{odd}  
+% \end{multicols}
+\begin{tabular}{lll}
+  8\quad\text{distinct parts}&
+  7+1\quad\text{distinct parts, odd parts}&
+  6+2\quad\text{distinct parts}\\
+  6+1+1&
+  5+3\quad\text{distinct parts, odd parts}&
+  5+2+1\quad\text{distinct parts}\\
+  5+1+1+1\quad\text{odd parts}&
+  4+4&
+  4+3+1\quad\text{distinct parts}\\
+  4+2+2&
+  4+2+1+1&
+  4+1+1+1+1\\
+  3+3+2&
+  3+3+1+1\quad\text{odd parts}&
+  3+2+2+1\\
+  3+2+1+1+1&
+  3+1+1+1+1+1\quad\text{odd parts}&
+  2+2+2+2\\
+  2+2+2+1+1&
+  2+2+1+1+1+1&
+  2+1+1+1+1+1+1\\&
+  1+1+1+1+1+1+1+1\quad\text{odd parts}
+\end{tabular}
 \caption{The partitions of $8$, noting those into distinct parts
   and those into odd parts.}
 \label{fig:intro:partsof8}
