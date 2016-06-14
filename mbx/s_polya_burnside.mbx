@@ -1,0 +1,133 @@
+<section xml:id="s_polya_burnside">
+<title>Burnside's Lemma</title>
+<p>
+Burnside's lemma<fn>Again, not originally proved by Burnside. It
+  was known to Frobenius and for the most part by Cauchy. However, it
+  was most easily found in Burnside's book, and thus his name came to
+  be attached.</fn> relates the number of equivalence classes of the
+action of a group on a finite set to the number of elements of the set
+fixed by the elements of the group. Before stating and proving it, we
+need some notation and a proposition. If a group <m>G</m> acts on a finite
+set <m>\cgC</m>, let <m>\sim</m> be the equivalence relation induced by this
+action. (As before, the action of <m>\pi\in G</m> on <m>\cgC</m> will be denoted
+<m>\pi^*</m>.) Denote the equivalence class containing <m>C\in \cgC</m> by
+<m>\langle C\rangle</m>. For <m>\pi\in G</m>, let <m>\fix_\cgC(\pi)=\{C\in
+\cgC\colon \pi^*(C) = C\}</m>, the set of colorings fixed by <m>\pi</m>. For
+<m>C\in\cgC</m>, let <m>\stab_G(C)=\{\pi\in G\colon \pi(C) = C\}</m> be the
+<em>stabilizer</em> of <m>C</m> in <m>G</m>, the permutations in <m>G</m> that fix <m>C</m>.
+</p>
+
+<p>
+To illustrate these concepts before applying them, refer back to
+<xref ref="tab_polya_fixed-square" autoname="yes" />. Using that information, we can
+determine that <m>\fix_\cgC(r_2) =
+\{C_1,C_{10},C_{11},C_{16}\}</m>. Determining the stabilizer of a
+coloring requires finding the rows of the table in which it
+appears. Thus, <m>\stab_{D_8}(C_7) = \{\iota,h\}</m> and
+<m>\stab_{D_8}(C_{11}) = \{\iota,r_2,p,n\}</m>.
+</p>
+
+<proposition xml:id="prop_polya_sum-stabs">
+<statement>
+<p>
+Let a group <m>G</m> act on a finite set <m>\cgC</m>. Then for all <m>C\in \cgC</m>,
+</p>
+<me>
+  \sum_{C'\in\langle C\rangle} |\stab_G(C')| = |G|.
+</me>
+</statement>
+</proposition>
+
+<proof>
+<p>
+Let <m>\stab_G(C) = \{\pi_1,\dots,\pi_k\}</m> and <m>T(C,C') = \{\pi\in
+  G\colon \pi^*(C) = C'\}</m>. (Note that <m>T(C,C) = \stab_G(C)</m>.) Take
+<m>\pi\in T(C,C')</m>. Then <m>\pi\circ \pi_i\in T(C,C')</m> for <m>1\leq i\leq
+  k</m>. Furthermore, if <m>\pi\circ \pi_i = \pi\circ \pi_j</m>, then
+<m>\pi^{-1}\circ\pi\circ \pi_i=\pi^{-1}\circ\pi\circ \pi_j</m>. Thus
+<m>\pi_i=\pi_j</m> and <m>i=j</m>. If <m>\pi'\in T(C,C')</m>, then <m>\pi\inv\circ
+  \pi'\in T(C,C)</m>. Thus, <m>\pi\inv\circ\pi' = \pi_i</m> for some <m>i</m>, and
+hence <m>\pi' = \pi\circ \pi_i</m>. Therefore <m>T(C,C') =
+  \{\pi\circ\pi_1,\dots,\pi\circ\pi_k\}</m>. Additionally, we observe
+that <m>T(C',C) = \{\pi\inv\colon \pi\in T(C,C')\}</m>. Now for all
+<m>C'\in\langle C\rangle</m>,
+</p>
+<me>
+  |\stab_G(C')|=|T(C',C')|=|T(C',C)| =
+  |T(C,C')| = |T(C,C)| = |\stab_G(C)|.
+</me>
+<p>
+Therefore,
+</p>
+<me>
+  \sum_{C'\in\langle C\rangle}|\stab_G(C')| =
+  \sum_{C'\in\langle C\rangle} |T(C,C')|.
+</me>
+<p>
+Now notice that each
+element of <m>G</m> appears in <m>T(C,C')</m> for precisely one <m>C'\in\langle
+  C\rangle</m>, and the proposition follows.
+</p>
+</proof>
+
+<p>
+With <xref ref="prop_polya_sum-stabs">Proposition</xref> established, we are now prepared for
+Burnside's lemma.
+</p>
+
+<lemma xml:id="lem_polya_burnside">
+<title>Burnside's Lemma</title>
+<statement>
+<p>
+Let a group <m>G</m> act on a finite set <m>\cgC</m> and let <m>N</m> be the
+number of equivalence classes of <m>\cgC</m> induced by this
+action. Then
+</p>
+<me>
+  N = \frac{1}{|G|} \sum_{\pi\in G} |\fix_\cgC(\pi)|.
+</me>
+</statement>
+</lemma>
+
+<p>
+Before we proceed to the proof, note that the calculation in
+Burnside's lemma for the example of <m>2</m>-coloring the vertices of a
+square is exactly the calculation we performed at the end of <xref ref="s_polya_square" autoname="yes" />.
+</p>
+
+<proof>
+<p>
+Let <m>X=\{(\pi,C)\in G\times \cgC\colon \pi(C) = C\}</m>. Notice that
+<m>\sum_{\pi \in G} |\fix_\cgC(\pi)| = |X|</m>, since each term in the
+sum counts how many ordered pairs of <m>X</m> have <m>\pi</m> in their first
+coordinate. Similarly, <m>\sum_{C\in \cgC} |\stab_G(C)| = |X|</m>, with
+each term of this sum counting how many ordered pairs of <m>X</m> have
+<m>C</m> as their second coordinate. Thus, <m>\sum_{\pi \in G}
+  |\fix_\cgC(\pi)|=\sum_{C\in \cgC} |\stab_G(C)|</m>. Now note that the
+latter sum may be rewritten
+as
+</p>
+<me>
+  \sum_{\substack{\text{equivalence} \\\text{classes }  \langle
+      C\rangle} }\left( \sum_{C'\in\langle C\rangle}
+    |\stab_G(C')|\right).
+</me>
+<p>
+By
+<xref ref="prop_polya_sum-stabs">Proposition</xref>,
+the inner sum is <m>|G|</m>. Therefore, the total sum is <m>N\cdot |G|</m>, so
+solving for <m>N</m> gives the desired equation.
+</p>
+</proof>
+
+<p>
+Burnside's lemma helpfully validates
+the computations we did in the previous section. However, what if
+instead of a square we were working with a hexagon and instead of two
+colors we allowed four? Then there would be <m>4^6=4096</m> different
+colorings and the dihedral group of the hexagon has <m>12</m>
+elements. Assembling the analogue of <xref ref="tab_polya_fixed-square" autoname="yes" />
+in this situation would be a nightmare! This is where the genius of
+P&#xf3;lya's approach comes into play, as we see in the next section.
+</p>
+</section>

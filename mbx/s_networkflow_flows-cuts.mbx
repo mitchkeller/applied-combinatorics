@@ -1,0 +1,161 @@
+<section xml:id="s_networkflow_flows-cuts">
+<title>Flows and Cuts</title>
+<p>
+Considering the applications suggested at the beginning of the
+chapter, it is natural to ask for the maximum value of a flow in a
+given network. Put another way, we want to find the largest number
+<m>v_0</m> so that there exists a flow <m>\phi</m> of value <m>v_0</m> in the
+network. Of course, we not only want to find the maximum value <m>v_0</m>,
+but we also want to find a flow <m>\phi</m> having this value. Although it
+may seem a bit surprising, we will develop an efficient algorithm
+which (a)<nbsp />finds a flow of maximum value, and (b)<nbsp />finds a certificate
+verifying the claim of optimality. This certificate makes use of the
+following important concept.
+</p>
+
+<p>
+A partition <m>V=L\cup U</m> of the vertex set <m>V</m> of a network
+with <m>S\in L</m> and <m>T\in U</m> is called a
+<em>cut</em>.<fn>Our choice of <m>L</m> and <m>U</m> for the names of the
+  two parts of the partition will make more sense later in the
+  chapter.</fn> The <em>capacity</em> of a cut <m>V=L\cup U</m>, denoted
+<m>c(L,U)</m>, is defined by
+</p>
+<me>
+  c(L,U) = \sum_{x\in L,y\in U} c(x,y).
+</me>
+<p>
+Put another way, the capacity of the cut <m>V=L\cup U</m> is the total
+capacity of all edges <em>from</em> <m>L\emph{to}U</m>. Note that in
+computing the capacity of the cut <m>V=L\cup U</m>, we only add the
+capacities of the edges from <m>L</m> to <m>U</m>. We do <em>not</em> include the
+edges from <m>U</m> to <m>L</m> in this sum.
+</p>
+<example>
+<statement>
+<p>
+Let's again take a look at the network in
+<xref ref="fig_networkflow_netflow" autoname="yes" />. Let's first consider the cut
+<m>V=L_1\cup U_1</m> with
+</p>
+<me>
+  L_1 = \{S,F,B,E,D\}\qquad\text{and} \qquad U_1= \{A,C,T\}.
+</me>
+<p>
+Here we see that the capacity of the cut is
+</p>
+<me>
+  c(L_1,U_1) = c(F,A) + c(B,A) + c(B,C)+ c(D,C) = 24+15+20+42 =
+  101.
+</me>
+<p>
+We must be a bit more careful, however, when we look at the cut
+<m>V=L_2\cup U_2</m> with
+</p>
+<me>
+  L_2 = \{S,F,B,E\}\qquad\text{and} \qquad U_2=\{A,D,C,T\}.
+</me>
+<p>
+Here the capacity of the cut is
+</p>
+<me>
+  c(L_2,U_2) = c(F,A) + c(B,A) + c(B,C) + c(E,D) = 24+15+20+20=79.
+</me>
+<p>
+Notice that we do not include <m>c(D,B)</m> in the calculation as the
+directed edge <m>(D,B)</m> is from <m>U_2</m> to <m>L_2</m>.
+</p>
+</statement>
+</example>
+<p>
+The relationship between flows and cuts rests on the following
+fundamentally important theorem.
+</p>
+
+<theorem xml:id="thm_networkflow_flowleqcut">
+<statement>
+<p>
+Let <m>\GVE</m> be a network, let <m>\phi</m> be a flow in <m>\bfG</m> and let
+<m>V=L\cup U</m> be a cut. Then the value of the flow is at most as
+large as the capacity of the cut.
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+In this proof (and throughout the chapter), we adopt the very
+reasonable convention that <m>\phi(x,y)=0</m> if <m>(x,y)</m> is not a
+directed edge of a network <m>\bfG</m>.
+</p>
+
+<p>
+Let <m>\phi</m> be a flow of value <m>v_0</m> and let <m>V=L\cup U</m> be a
+cut. First notice that
+</p>
+<me>
+  v_0 = \sum_{y\in V} \phi(S,y) - \sum_{z\in V}\phi(z,S),
+</me>
+<p>
+since the second summation is <m>0</m>. Also, by the second of our flow
+conservation laws, we have for any vertex other than the source and
+the sink,
+</p>
+<me>
+  \sum_{y\in V}\phi(x,y) -\sum_{z\in V}\phi(z,x) = 0.
+</me>
+<p>
+Now we have
+</p>
+<md>
+  <mrow>  v_0 \amp = \sum_{y\in V} \phi(S,y) - \sum_{z\in V}\phi(z,S)
+      </mrow>
+  <mrow>  \amp = \sum_{y\in V} \phi(S,y) - \sum_{z\in V}\phi(z,S) +
+    \sum_{\substack{x\in L\\x\neq S} }\left[\sum_{y\in V} \phi(x,y) -
+      \sum_{z\in V}\phi(z,x)\right]
+      </mrow>
+  <mrow>  \amp = \sum_{x\in L}\left[\sum_{y\in V} \phi(x,y) -
+      \sum_{z\in V}\phi(z,x)\right]
+      </mrow>
+</md>
+<p>
+At this point, we want to pause and look at the last line. Notice
+that if <m>(a,b)</m> is a directed edge with both endpoints in <m>L</m>, then
+when the outer sum is conducted for <m>x=a</m>, we get an overall
+contribution of <m>\phi(a,b)</m>. On the other hand, when it is conducted
+for <m>x=b</m>, we get a contribution of <m>-\phi(a,b)</m>. Thus, the terms
+cancel out and everything simplifies to
+</p>
+<me>
+  \sum_{\substack{x\in L\\y\in U} } \phi(x,y) - \sum_{\substack{x\in
+      L\\ z\in U} } \phi(z,x)\leq \sum_{\substack{x\in L\\y\in U} }
+  \phi(x,y)\leq \sum_{\substack{x\in L\\y\in U} } c(x,y)=c(L,U).
+</me>
+<p>
+Thus <m>v_0\leq c(L,U)</m>.
+</p>
+</proof>
+
+<paragraphs>
+<title>Discussion</title>
+<p>
+Bob's getting a bit of a sense of d&#xe9;j&#xe0; vu after reading
+<xref ref="thm_networkflow_flowleqcut" autoname="yes" />. He remembers from
+<xref ref="ch_graphs" autoname="yes" /> that the maximum size of a clique in a graph is
+always at most the minimum number of colors required to properly
+color the graph. However, he also remembers that there are graphs
+without cliques of size three but with arbitrarily large chromatic
+number, so he's not too hopeful that this theorem is going to help
+out much here. Yolanda chimes in with a reminder of
+<xref ref="ch_posets" autoname="yes" />, where they learned that the maximum size of an
+antichain in a poset is equal to the minimum number of chains into
+which the ground set of the poset can be partitioned. Alice points
+out that Yolanda's statement is still true if the words <q>chain</q> and
+<q>antichain</q> are swapped. This sparks some intense debate about
+whether the maximum value of a flow in a network must always be
+equal to the minimum capacity of a cut in that network. After a
+while, Carlos suggests that continuing to read might be the best
+idea for resolving their debate.
+</p>
+</paragraphs>
+</section>

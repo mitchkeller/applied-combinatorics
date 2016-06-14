@@ -1,0 +1,155 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_probmeth">
+<title>Applying Probability to Combinatorics</title>
+
+
+<introduction>
+<p>
+Bob likes to think of himself as a wild and crazy guy, totally
+unpredictable. Most guys do. But Alice says that Bob
+can't change his basic nature, which is excruciatingly
+boring. Carlos remarks that perhaps we shouldn't be
+so hard on Bob, because under certain circumstances, we
+can all be forced to be dull and repetitive.
+</p>
+
+<p>
+\subsection{The Pigeon Hole Principle Revisited} Recall that when <m>n</m> is a positive integer,
+we let <m>[n]=\{1,2,\dots,n\}</m>. In this chapter, when <m>X</m> is
+a set and <m>k</m> is a non-negative integer with <m>k\le |X|</m>, we
+borrow from our in-line notation for binomial coefficients
+and let <m>C(X,k)</m> denote the family of all <m>k</m>-element subsets
+of <m>X</m>. So <m>|C([n],k)|=C(n,k)</m> whenever <m>0\le k\le n</m>.
+</p>
+
+<p>
+Recall that the pigeon hole principle asserts that if
+<m>n+1</m> pigeons are placed in <m>n</m> holes, then there must
+be some hole into which two or more pigeons have been
+placed. More formally, if <m>n</m> and <m>k</m> are positive integers,
+<m>t>n(k-1)</m> and <m>f:[t]\longrightarrow[n]</m> is any function,
+then there is a <m>k</m>-element subset <m>H\subseteq [t]</m> and
+an element <m>j\in[n]</m> so that <m>f(i)=j</m> for every <m>i\in H</m>.
+</p>
+
+<p>
+We now embark on a study of an elegant extension of this
+basic result, one that continues to fascinate and challenge.
+</p>
+
+<p>
+\subsection{A First Taste of Ramsey Theory}
+</p>
+
+<p>
+Returning to the discussion at the start of this section,
+you might say that an induced subgraph <m>H</m> of a graph <m>G</m> is
+<q>boring</q> if it is either a complete subgraph or
+an independent set. In either case, exactly every pair
+of vertices in <m>H</m> behaves in exactly the same boring way.
+So is boredom inevitable? The answer is yes<mdash />at least
+in a relative sense. As a starter, let's show that
+any graph on six (or more) vertices has a boring subgraph
+of size three.
+</p>
+
+<lemma xml:id="lem_r33">
+<statement>
+<p>
+Let <m>G</m> be any graph with six of more vertices.
+Then either <m>G</m> contains a complete subgraph of size<nbsp /><m>3</m> or
+an independent set of size<nbsp /><m>3</m>.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+Let <m>x</m> be any vertex in <m>G</m>. Then
+split the remaining vertices into two sets
+<m>S_1</m> and <m>S_2</m> with <m>S_1</m> being the neighbors of
+<m>x</m> and <m>S_2</m> the non-neighbors. Since <m>G</m> has
+at least six vertices, we know that either <m>|S_1|\ge 3</m>
+or <m>|S_2|\ge 3</m>. Suppose first that <m>|S_1|\ge 3</m> and
+let <m>y_1</m>, <m>y_2</m> and <m>y_3</m> be distinct vertices from
+<m>S_1</m>. If <m>y_iy_j</m> is an edge in <m>G</m> for some distinct
+pair <m>i, j\in\{1,23\}</m>, then <m>\{x,y_i,y_j\}</m> is a complete
+subgraph of size <m>3</m> in <m>G</m>. On the other hand, if
+there are no edges among the vertices in <m>\{y_1,y_2,y_3\}</m>,
+then we have an independent set of size<nbsp /><m>3</m>.
+</p>
+
+<p>
+The argument when <m>|S_2|\ge3</m> is dual.
+</p>
+</proof>
+
+<p>
+We note that the bound of six in the preceding lemma is sharp,
+as a cycle on five vertices does not contain either a complete
+set of size<nbsp /><m>3</m> nor an independent set of size<nbsp /><m>3</m>.
+</p>
+
+<p>
+Next, here is the general statement for a result, which is
+usually called the graph version of Ramsey's theorem.
+</p>
+
+<theorem xml:id="thm_graphramsey">
+<statement>
+<p>
+If <m>m</m> and <m>n</m> are positive integers, then there exists
+a least positive integer <m>R(m,n)</m> so that if <m>G</m> is a graph
+and <m>G</m> has at least <m>R(m,n)</m> vertices, then either <m>G</m> contains
+a complete subgraph on <m>m</m> vertices, or <m>G</m> contains an
+independent set of size <m>n</m>.
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+We show that <m>R(m,n)</m> exists and is at most <m>\binom{m+n-2}{m-1}</m>.
+This claim is trivial when either <m>m\le 2</m> or <m>n\le2</m>, so we
+may assume that <m>m,n\ge3</m>. From this point, we proceed by induction
+on <m>t=m+n</m> assuming that the result holds when <m>t\le 5</m>.
+</p>
+
+<p>
+Now let <m>x</m> be any vertex in <m>G</m>. Then there are at least
+<m>\binom{m+n-2}{m-1}-1</m> other vertices, which we partition
+as <m>S_1\cup S_2</m>, where <m>S_1</m> are those vertices adjacent to <m>x</m>
+in <m>G</m> and <m>S_2</m> are those vertices which are not adjacent to
+<m>s</m>.
+</p>
+
+<p>
+We recall that the binomial coefficients satisfy
+</p>
+<me>
+  \binom{m+n-2}{m-1}=\binom{m+n-3}{m-2}+\binom{m+n-3}{m-1} =
+\binom{m+n-3}{m-2}+\binom{m+n-3}{n-2}
+</me>
+<p>
+So either <m>|S_1|\ge \binom{m+n-3}{m-2}</m> or <m>|S_1|\ge\binom{m+n-3}{m-1}</m>.
+If the first option holds, and <m>S_1</m> does not have an independent set
+of size <m>n</m>, then it contains a complete subgraph of size <m>m-1</m>. It follows
+that we may add <m>x</m> to this set to obtain a complete subgraph of size <m>m</m>
+in <m>G</m>.
+</p>
+
+<p>
+Similarly, if the second option holds, and <m>S_2</m> does not contain a
+complete subgraph of size <m>m</m>, then <m>S_2</m> contains an independent
+set of size <m>n-1</m>, and we may add <m>x</m> to this set to obtain an
+independent set of size <m>n</m> in <m>G</m>.
+</p>
+</proof>
+</introduction>
+<xi:include  href="s_ramsey_small.mbx" />
+ <xi:include  href="s_ramsey_estimatesize.mbx" />
+ <xi:include  href="s_ramsey_probability.mbx" />
+ <xi:include  href="s_ramsey_theorem.mbx" />
+ <xi:include  href="s_ramsey_girth.mbx" />
+ <xi:include  href="s_ramsey_discussion.mbx" />
+ <xi:include  href="s_ramsey_exercises.mbx" />
+</chapter>

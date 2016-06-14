@@ -1,0 +1,206 @@
+<section xml:id="s_inclusion-exclusion_intro">
+<title>Introduction</title>
+<p>
+We start this chapter with an elementary example.
+</p>
+<example xml:id="exa_inclusion-exclusion_students">
+<statement>
+<p>
+Let <m>X</m> be the set of <m>63</m> students in an applied combinatorics
+course at a large technological university. Suppose there are <m>47</m>
+computer science majors and <m>51</m> male students. Also, we know there
+are <m>45</m> male students majoring in computer science. How many
+students in the class are female students not majoring in computer
+science?
+</p>
+
+<p>
+Although the Venn diagrams that you've probably seen drawn many
+times over the years aren't always the best illustrations
+(especially if you try to think with some sort of scale), let's use
+one to get started. In <xref ref="fig_venn-app-comb" autoname="yes" />, we see how the
+groups in the scenario might overlap.
+</p>
+<figure xml:id="fig_venn-app-comb" >
+<caption>A Venn diagram for an applied combinatorics class</caption>
+<![CDATA[\begin{overpic}{inclusionexclusion-figs/Venn-diagram}
+      \put(15,28.5){Males}
+      \put(63,28.5){CS Majors}
+      \put(22,8){Non-CS major females}
+    \end{overpic}]]>
+</figure>
+<p>
+Now we can see that we're after the number of students in the white
+rectangle but outside the two shaded ovals, which is the female
+students not majoring in computer science. To compute this, we can
+start by subtracting the number of male students (the blue region)
+from the total number of students in the class and then subtracting
+the number of computer science majors (the yellow region). However,
+we've now subtracted the overlapping region (the male computer
+science majors) <em>twice</em>, so we must add that number
+back. Thus, the number of female students in the class who are not
+majoring in computer science is
+</p>
+<me>
+  63 - 51 - 47 + 45 = 10.
+</me>
+</statement>
+</example>
+
+<example xml:id="exa_inclusion-exclusion_int-solns">
+<statement>
+<p>
+Another type of problem where we can readily see how such a
+technique is applicable is a generalization of the problem of
+enumerating integer solutions of equations. In <xref ref="ch_strings" autoname="yes" />,
+we discussed how to count the number of solutions to an equation
+such as
+</p>
+<me>
+  x_1 + x_2 + x_3 + x_4 = 100,
+</me>
+<p>
+where <m>x_1>0</m>, <m>x_2, x_3 \geq 0</m>
+and <m>2\leq x_4\leq 10</m>. However, we steered clear of the situation
+where we add the further restriction that <m>x_3\leq 7</m>. The previous
+example suggests a way of approaching this modified problem.
+</p>
+
+<p>
+First, let's set up the problem so that the lower bound on each
+variable is of the form <m>x_i\geq 0</m>. This leads us
+to the revised problem of enumerating the integer solutions to
+</p>
+<me>
+  x_1' + x_2 + x_3 + x_4' = 97
+</me>
+<p>
+with <m>x_1',x_2,x_3,x_4'\geq 0</m>,
+<m>x_3\leq 7</m>, and <m>x_4'\leq 8</m>. (We'll then have <m>x_1 = x_1'+1</m> and
+<m>x_4 = x_4' + 2</m> to get our desired solution.) To count the number
+of integer solutions to this equation with <m>x_3\leq 7</m> and <m>x_4'\leq
+  8</m>, we must exclude any solution in which <m>x_3 > 7\emph{or}x_4'
+  > 8</m>. There are <m>C(92,3)</m> solutions with <m>x_3 > 7</m>, and the number
+of solutions in which <m>x_4'>8</m> is <m>C(91,3)</m>. At this point, it might
+be tempting to just subtract <m>C(92,3)</m> and <m>C(91,3)</m> from
+<m>C(100,3)</m>, the total number of solutions with all variables
+nonnegative. However, care is required. If we did that, we would
+eliminate the solutions with both <m>x_3>7\emph{and}x_4'>8</m>
+<em>twice</em>. To account for this, we notice that there are
+<m>C(83,3)</m> solutions with both <m>x_3>7</m> and <m>x_4'>8</m>. If we add this
+number back in after subtracting, we've ensured that the solutions
+with both <m>x_3>7</m> and <m>x_4'>8</m> are not included in the total count
+and are not excluded more than once. Thus, the total number of
+solutions is
+</p>
+<me>
+  \binom{100}{3} - \binom{92}{3} - \binom{91}{3} + \binom{83}{3} = 6516.
+</me>
+</statement>
+</example>
+<p>
+From these examples, you should start to see a pattern emerging that
+leads to a more general setting. In full generality, we will consider
+a set <m>X</m> and a family <m>\mathcal{P}=\{P_1,P_2,\dots,P_m\}</m> of
+<em>properties</em>. We intend that for every <m>x\in X</m> and each
+<m>i=1,2,\dots,m</m>, either <m>x</m> satisfies <m>P_i</m> or it does not. There is
+no ambiguity. Ultimately, we are interested in determining the number
+of elements of <m>X</m> which satisfy <em>none</em> of the properties in
+<m>\mathcal{P}</m>. In
+<xref ref="exa_inclusion-exclusion_students">Example</xref>,
+we could have made property <m>P_1</m> <q>is a computer science major</q> and
+property <m>P_2</m> <q>is male</q>. Then the number of students satisfying
+<em>neither</em> <m>P_1</m> nor <m>P_2</m> would be the number of female students
+majoring in something other than computer science, exactly the number
+we were asked to determine. What would the properties <m>P_1</m> and <m>P_2</m>
+be for
+<xref ref="exa_inclusion-exclusion_int-solns">Example</xref>?
+</p>
+
+<p>
+Let's consider three examples of larger sets of properties. These
+properties will come back up during the remainder of the chapter as we
+apply inclusion-exclusion to some more involved situations. Recall
+that throughout this book, we use the notation <m>[n]</m> for the set
+<m>\{1,2,\dots,n\}</m> when <m>n</m> is a positive integer.
+</p>
+<example xml:id="exa_inclusion-exclusion_prop-inject">
+<statement>
+<p>
+Let <m>m</m> and <m>n</m> be fixed positive integers and let <m>X</m> consist of
+all functions from <m>[n]</m> to <m>[m]</m>. Then for each <m>i=1,2,\dots,m</m>,
+and each function <m>f\in X</m>, we say that <m>f</m> satisfies <m>P_i</m> if there
+is no <m>j</m> so that <m>f(j)=i</m>. In other words, <m>i</m> is not in the image
+or output of the function <m>f</m>.
+</p>
+
+<p>
+As a specific example, suppose that <m>n=5</m> and <m>m=3</m>. Then the
+function given by the table
+</p>
+<tabular>
+<row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell></row>
+<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row><cell><m>f(i)</m></cell><cell>2</cell><cell>3</cell><cell>2</cell><cell>2</cell><cell>3</cell></row>
+</tabular>
+<p>
+satisfies <m>P_1</m> but not <m>P_2</m> or <m>P_3</m>.
+</p>
+</statement>
+</example>
+
+<example xml:id="exa_inclusion-exclusion_prop-derange">
+<statement>
+<p>
+Let <m>m</m> be a fixed positive integer and let <m>X</m> consist of all
+bijections from <m>[m]</m> to <m>[m]</m>. Elements of <m>X</m> are called
+<em>permutations</em>. Then for each <m>i=1,2,\dots,m</m>, and each
+permutation <m>\sigma\in X</m>, we say that <m>\sigma</m> satisfies <m>P_i</m> if
+<m>\sigma(i)=i</m>.
+</p>
+
+<p>
+For example, the permutation <m>\sigma</m> of <m>[5]</m> given in by the table
+</p>
+<tabular>
+<row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell></row>
+<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row><cell><m>\sigma(i)</m></cell><cell>2</cell><cell>4</cell><cell>3</cell><cell>1</cell><cell>5</cell></row>
+</tabular>
+<p>
+satisfies <m>P_3</m> and <m>P_5</m> and no other <m>P_i</m>.
+</p>
+</statement>
+</example>
+<p>
+Note that in the previous example, we could have said that <m>\sigma</m>
+satisfies property <m>P_i</m> if <m>\sigma(i)\neq i</m>. But remembering that
+our goal is to count the number of elements satisfying none of the
+properties, we would then be counting the number of permutations
+satisfying <m>\sigma(i)=i</m> for each <m>i=1,2,\dots,n</m>, and perhaps we
+don't need a lot of theory to accomplish this task<mdash />the number is
+one, of course.
+</p>
+<example xml:id="exa_inclusion-exclusion_prop-divis">
+<statement>
+<p>
+Let <m>m</m> and <m>n</m> be fixed positive integers and let <m>X=[n]</m>. Then
+for each <m>i=1,2,\dots,m</m>, and each <m>j\in X</m>, we say that <m>j</m>
+satisfies <m>P_i</m> if <m>i</m> is a divisor of <m>j</m>. Put another way, the
+positive integers that satisfy property <m>P_i</m> are precisely those
+that are multiples of <m>i</m>.
+</p>
+
+<p>
+At first this may appear to be the most complicated of the sets of
+properties we've discussed thus far. However, being concrete should
+help clear up any confusion. Suppose that <m>n=m=15</m>. Which properties
+does <m>12</m> satisfy? The divisors of <m>12</m> are <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m>, <m>6</m>,
+and <m>12</m>, so <m>12</m> satisfies <m>P_1</m>, <m>P_2</m>, <m>P_3</m>, <m>P_4</m>, <m>P_6</m>, and
+<m>P_{12}</m>. On the other end of the spectrum, notice that <m>7</m>
+satisfies only properties <m>P_1</m> and <m>P_7</m>, since those are its only
+divisors.
+</p>
+</statement>
+</example>
+</section>

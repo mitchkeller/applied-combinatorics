@@ -1,0 +1,29 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_induction">
+<title>Induction</title>
+
+
+<introduction>
+<p>
+The twin concepts of recursion and induction are fundamentally
+important in combinatorial mathematics and computer science. In this
+chapter, we give a number of examples of how recursive formulas arise
+naturally in combinatorial problems, and we explain how they can be
+used to make computations. We also introduce the Principle of
+Mathematical Induction and give several examples of how it is applied
+to prove combinatorial statements. Our treatment will also include
+some code snippets that illustrate how functions are defined
+recursively in computer programs.
+</p>
+</introduction>
+<xi:include  href="s_induction_intro.mbx" />
+ <xi:include  href="s_induction_posintsord.mbx" />
+ <xi:include  href="s_induction_statements.mbx" />
+ <xi:include  href="s_induction_bincoeffs.mbx" />
+ <xi:include  href="s_induction_recursion.mbx" />
+ <xi:include  href="s_induction_induction.mbx" />
+ <xi:include  href="s_induction_inductdefs.mbx" />
+ <xi:include  href="s_induction_proofs.mbx" />
+ <xi:include  href="s_induction_strong-induction.mbx" />
+ <xi:include  href="s_induction_discussion.mbx" />
+ <xi:include  href="s_induction_exercises.mbx" />
+</chapter>

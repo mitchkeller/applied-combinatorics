@@ -1,0 +1,40 @@
+<section xml:id="s_background_equivalence">
+<title>Equivalence Relations</title>
+<p>
+A binary relation <m>R</m> is:
+</p>
+
+<ol>
+<li class="custom-list-style-type" label="(iv)." ><em>symmetric</em> if <m>(x,y)\in R</m> implies <m>(y,x)\in R</m> for
+all <m>x,y\in X</m>.</li>
+</ol>
+
+<p>
+A binary relation <m>R</m> on a set <m>X</m> is called an
+<em>equivalence relation</em> when it is reflexive, symmetric
+and transitive. Typically, symbols like, <m>=</m>, <m>\cong</m>,
+<m>\equiv</m> and <m>\sim</m> are used to
+denote equivalence relations. An equivalence relation, say
+<m>\cong</m>, defines
+a partition on the set <m>X</m> by setting
+</p>
+<me>
+  \langle x\rangle =\{y\in X: x\cong y\}
+</me>
+<p>
+Note that if <m>x,y\in X</m> and <m>\langle x\rangle\cap\langle y\rangle
+\neq\emptyset</m>, then <m>\langle x\rangle=\langle y\rangle</m>.
+The sets in this partition are called <em>equivalence classes</em>.
+</p>
+
+<p>
+When using the ordered pair notation for binary relations,
+to indicate that a pair <m>(x,y)</m> is not in the relation,
+we simply write <m>(x,y)\notin R</m>. When using the alternate
+notation, this is usually denoted by using the negation
+symbol from logic and writing <m>\lnot (xRy)</m>. Many of the
+special symbols used to denote equivalence relations
+come with negative versions: <m>x\neq y</m>, <m>x\ncong y</m>,
+<m>x\nsim y</m>, etc.
+</p>
+</section>

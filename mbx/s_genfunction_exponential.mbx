@@ -1,0 +1,213 @@
+<section xml:id="s_genfunction_exponential">
+<title>Exponential generating functions</title>
+<p>
+If we had wanted to be absolutely precise earlier in the chapter, we
+would have referred to the generating functions we studied as
+<em>ordinary generating functions</em> or even <em>ordinary power
+series generating functions</em>. This is because there are other types
+of generating functions, based on other types of power series. In this
+section, we briefly introduce another type of generating function, the
+<em>exponential generating function</em>. While an ordinary generating
+function has the form <m>\sum_{n} a_n x^n</m>, an exponential generating
+function is based on the power series for the exponential function
+<m>e^x</m>. Thus, the exponential generating function for the sequence
+<m>\{a_n\colon n\geq 0\}</m> is <m>\sum_n a_n x^n/n!</m>. In this section, we
+will see some ways we can use exponential generating functions to
+solve problems that we could not tackle with ordinary generating
+functions. However, we will only scratch the surface of the potential
+of this type of generating function. We begin with the most
+fundamental exponential generating function, in analogy with the
+ordinary generating function <m>1/(1-x)</m> of
+<xref ref="exam_genfunction_geom-series">Example</xref>.
+</p>
+<example>
+<statement>
+<p>
+Consider the constant sequence <m>1, 1, 1, 1, \dots</m>. Then the
+exponential generating function for this sequence is
+</p>
+<me>
+  E(x) = \sum_{n=0}^\infty \frac{x^n}{n!}.
+</me>
+<p>
+From calculus, you probably recall that this is the power series for
+the exponential function <m>e^x</m>, which is why we call this type of
+generating function an exponential generating function. From this
+example, we can quickly recognize that the exponential generating
+function for the number of binary strings of length <m>n</m> is <m>e^{2x}</m>
+since
+</p>
+<me>
+  e^{2x} = \sum_{n=0}^\infty \frac{(2x)^n}{n!} = \sum_{n=0}^\infty
+  2^n\frac{x^n}{n!}.
+</me>
+</statement>
+</example>
+<p>
+In our study of ordinary generating functions earlier in this chapter,
+we considered examples where quantity (number of apples, etc.)
+mattered but order did not. One of the areas where exponential
+generating functions are preferable to ordinary generating functions
+is in applications where order matters, such as counting
+strings. For instance, although the bit strings <m>10001</m> and <m>011000</m>
+both contain three zeros and two ones, they are not the same
+strings. On the other hand, two fruit baskets containing two apples
+and three oranges would be considered equivalent, regardless of how
+you arranged the fruit. We now consider a couple of examples to
+illustrate this technique.
+</p>
+<example>
+<statement>
+<p>
+Suppose we wish to find the number of ternary strings in which the
+number of <m>0</m>s is even. (There are no restrictions on the number of
+<m>1</m>s and <m>2</m>s.) As with ordinary generating functions, we determine
+a generating function for each of the digits and multiply them. For
+<m>1</m>s and <m>2</m>s, since we may have any number of each of them, we
+introduce a factor of <m>e^x</m> for each. For an even number of <m>0</m>s,
+we need
+</p>
+<me>
+  1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots =
+  \sum_{n=0}^\infty \frac{x^{2n}}{(2n)!}.
+</me>
+<p>
+Unlike with ordinary generating functions, we cannot represent this
+series in a more compact form by simply substituting a function of
+<m>x</m> into the series for <m>e^y</m>. However, with a small amount of
+cleverness, we are able to achieve the desired result. To do this,
+first notice that
+</p>
+<me>
+  e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots =
+  \sum_{n=0}^\infty \frac{(-1)^nx^n}{n!}.
+</me>
+<p>
+Thus, when we add the series for <m>e^{-x}</m> to the series for <m>e^x</m>
+all of the terms with odd powers of <m>x</m> will cancel! We thus find
+</p>
+<me>
+  e^x+e^{-x} = 2+2\frac{x^2}{2!} + 2\frac{x^4}{4!} + \cdots,
+</me>
+<p>
+which is exactly twice what we need. Therefore, the factor we introduce
+for <m>0</m>s is <m>(e^x+e^{-x})/2</m>.
+</p>
+
+<p>
+Now we have an exponential generating function of
+</p>
+<me>
+  \frac{e^x+e^{-x}}{2}e^x e^x = \frac{e^{3x} + e^x}{2} =
+  \frac{1}{2}\left(\sum_{n=0}^\infty \frac{3^nx^n}{n!} +
+    \sum_{n=0}^\infty \frac{x^n}{n!}\right).
+</me>
+<p>
+To find the number of
+ternary strings in which the number of <m>0</m>s is even, we thus need to
+look at the coefficient on <m>x^n/n!</m> in the series expansion. In
+doing this, we find that the number of ternary strings with an even
+number of <m>0</m>s is <m>(3^n+1)/2</m>.
+</p>
+</statement>
+</example>
+<p>
+We can also use exponential generating functions when there are bounds
+on the number of times a symbol appears, such as in the following
+example.
+</p>
+<example>
+<statement>
+<p>
+How many ternary strings of length <m>n</m> have at least one <m>0</m> and at
+least one <m>1</m>? To ensure that a symbol appears at least once, we
+need the following exponential generating function
+</p>
+<me>
+  x+\frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=1}^\infty
+  \frac{x^n}{n!}.
+</me>
+<p>
+You should notice that this is almost the series
+for <m>e^x</m>, except it's missing the first term. Thus,
+<m>\sum_{n=1}^\infty x^n/n! = e^x-1</m>. Using this, we now have
+</p>
+<me>
+  (e^x-1)(e^x-1)e^x=e^{3x}-2e^{2x}+e^x
+</me>
+<p>
+as the exponential
+generating function for this problem. Finding the series expansion,
+we have
+</p>
+<me>
+  \sum_{n=0}^\infty \frac{3^nx^n}{n!} - 2\sum_{n=0}^\infty
+  \frac{2^nx^n}{n!} + \sum_{n=0}^\infty \frac{x^n}{n!}.
+</me>
+<p>
+Now we can answer the question by reading off the coefficient on
+<m>x^n/n!</m>, which is <m>3^n - 2\cdot 2^n + 1</m>.
+</p>
+</statement>
+</example>
+<p>
+Before proceeding to an additional example, let's take a minute to
+look at another way to answer the question from the previous
+example. To count the number of ternary strings of length <m>n</m> with at
+least one <m>0</m> and at least one <m>1</m>, we can count all ternary strings
+of length <m>n</m> and use the principle of inclusion-exclusion to
+eliminate the undesirable strings lacking a <m>0</m> and/or a <m>1</m>. If a
+ternary string lacks a <m>0</m>, we're counting all strings made up of <m>1</m>s
+and <m>2</m>s, so there are <m>2^n</m> strings. Similarly for lacking a
+<m>1</m>. However, if we subtract <m>2\cdot 2^n</m>, then we've subtracted the
+strings that lack both a <m>0</m> <em>and</em> a <m>1</m> twice. A ternary string
+that has no <m>0</m>s and no <m>1</m>s consists only of <m>2</m>s. There is a single
+ternary string of length <m>n</m> satisfying this criterion. Thus, we
+obtain <m>3^n-2\cdot 2^n+1</m> in another way.
+</p>
+<example>
+<statement>
+<p>
+Alice needs to set an eight-digit passcode for her mobile phone. The
+restrictions on the passcode are a little peculiar. Specifically, it
+must contain an even number of <m>0</m>s, at least one <m>1</m>, and at most
+three <m>2</m>s. Bob remarks that although the restrictions are unusual,
+they don't do much to reduce the number of possible passcodes from
+the total number of <m>10^8</m> eight-digit strings. Carlos isn't
+convinced that's the case, so he works up an exponential generating
+function as follows. For the seven digits on which there are no
+restrictions, a factor of <m>e^{7x}</m> is introduced. To account for an
+even number of <m>0</m>s, he uses <m>(e^x+e^{-x})/2</m>. For at least one
+<m>1</m>, a factor of <m>e^x-1</m> is required. Finally, <m>1+x+x^2/2!+x^3/3!</m>
+accounts for the restriction of at most three <m>2</m>s. The exponential
+generating function for the number of <m>n</m>-digit passcodes is thus
+</p>
+<me>
+  e^{7x}\frac{e^x+e^{-x}}{2}(e^x-1)\left(1+x+\frac{x^2}{2!} +
+    \frac{x^3}{3!}\right).
+</me>
+<p>
+Dave sees this mess written on the whiteboard and groans. He figures
+they'll be there all day multiplying and making algebra mistakes in
+trying to find the desired coefficient. Alice points out that they
+don't really need to find the coefficient on <m>x^n/n!</m> for all
+<m>n</m>. Instead, she suggests they use a computer algebra system to
+just find the coefficient on <m>x^8/8!</m>. After doing this, they find
+that there are <m>33847837</m> valid passcodes for the mobile phone. A
+quick calculation shows that Bob was totally off base in claiming
+that there was no significant reduction in the number of possible
+strings to use as a passcode. The total number of valid passcodes is
+only <m>33.85\%</m> of the total number of eight-digit strings!
+</p>
+</statement>
+</example>
+<p>
+Exponential generating functions are useful in many other situations
+beyond enumerating strings. For instance, they can be used to count
+the number of <m>n</m>-vertex, connected, labeled graphs. However, doing so
+is beyond the scope of this book. If you are interested in learning
+much more about generating functions, the book
+<em>generatingfunctionology</em> by Herbert S. Wilf is available online
+at \url{http://www.math.upenn.edu/<nbsp />wilf/DownldGF.html}.
+</p>
+</section>

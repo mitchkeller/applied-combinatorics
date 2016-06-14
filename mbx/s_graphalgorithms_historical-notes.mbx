@@ -1,0 +1,28 @@
+<section xml:id="s_graphalgorithms_historical-notes">
+<title>Historical Notes</title>
+<p>
+Kruskal's algorithm was published in 1956 by Joseph B.<nbsp />Kruskal in a
+three-page paper that appeared in <em>Proceedings of the American
+Mathematical Society</em>. Robert C.<nbsp />Prim published the algorithm that
+now bears his name the following year in <em>The Bell System
+Technical Journal</em>. Prim's paper focuses on application of the
+minimum weight (or length or cost) spanning tree problem to telephone
+networks. He was aware of Kruskal's prior work, as they were
+colleagues at Bell Laboratories at the time he published his paper. It
+turns out that Prim had been beaten to the punch by Czech
+mathematician Vojt&#x11b;ch Jarn&#xed;k in 1929, so some refer to Prim's
+algorithm as Jarn&#xed;k's algorithm. (It was later rediscovered by
+Dijkstra, so some attach his name as well, referring to it as the
+Dijkstra-Jarn&#xed;k-Prim algorithm.) Edsger Dijkstra published his
+algorithm for finding shortest paths in 1959 in a three-page
+paper<fn>This is also the paper in which Prim's algorithm was
+  published for the third time. Dijkstra was aware of Kruskal's prior
+  work but argued that his algorithm was preferable because it
+  required that less information about the graph be stored in memory
+  at each step of the algorithm.</fn> appearing in <em>Numerische
+Mathematik</em>. In fact, Dijkstra's algorithm had been discovered (in
+an equivalent form) by Edward F.<nbsp />Moore two years earlier. His result
+appeared in <em>Proceedings of an International Symposium on the
+Theory of Switching</em>.
+</p>
+</section>

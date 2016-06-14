@@ -1,0 +1,56 @@
+<section xml:id="s_background_order">
+<title>Partial Orders and Total Orders</title>
+<p>
+A binary relation <m>R</m> on a set <m>X</m> is just a subset of
+the cartesian product <m>X\times X</m>. In discussions of
+binary relations, the notation <m>(x,y)\in R</m> is sometimes
+written as <m>xRy</m>.
+</p>
+
+<p>
+A binary relation <m>R</m> is:
+</p>
+
+<ol>
+<li class="custom-list-style-type" label="(i)." ><em>reflexive</em> if <m>(x,x)\in R</m> for
+all <m>x\in X</m>.</li>
+<li class="custom-list-style-type" label="(ii)." ><em>antisymmetric</em> if <m>x=y</m> whenever <m>(x,y)\in R</m> and <m>(y,x)\in R</m>, for all <m>x,y\in X</m>.</li>
+<li class="custom-list-style-type" label="(iii)." ><em>transitive</em> if <m>(x,y)\in R</m> and <m>(y,z)\in R</m>
+imply <m>(x,z)\in R</m>, for all <m>x,y,z\in X</m>.</li>
+</ol>
+
+<p>
+A binary relation <m>R</m> on a set <m>X</m> is called a <em>partial order</em> on
+<m>X</m> when it is reflexive, antisymmetric and transitive.
+Traditionally, symbols like <m>\le</m> and <m>\subseteq</m> are used to denote
+partial orders. As an example, recall that if <m>X</m> is a family of sets,
+we write <m>A\subseteq B</m> when <m>A</m> is a subset of <m>B</m>.
+</p>
+
+<p>
+When using the ordered pair notation for binary relations,
+to indicate that a pair <m>(x,y)</m> is not in the relation,
+we simply write <m>(x,y)\notin R</m>. When using the alternate
+notation, this is usually denoted by using the negation
+symbol from logic and writing <m>\lnot (xRy)</m>. Most of the
+special symbols used to denote partial orders
+come with negative versions, e.g., <m>x\not\le y</m>, <m>x\nsubseteq y</m>.
+</p>
+
+<p>
+A partial order is called a <em>total order</em> on <m>X</m> when for
+all <m>x,y\in X</m>, <m>(x,y)\in R</m> or <m>(y,x)\in R</m>. For example,
+if
+</p>
+<me>
+  X=\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}
+</me>
+<p>
+then <m>\subseteq</m> is a total order on <m>X</m>.
+</p>
+
+<p>
+When <m>\le</m> is a partial order on a set <m>X</m>, we write
+<m>x\lt y</m> when <m>x\le y</m> and <m>x\neq y</m>.
+</p>
+</section>

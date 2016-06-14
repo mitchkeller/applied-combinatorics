@@ -1,0 +1,71 @@
+<section xml:id="s_probability_infinite-outcomes">
+<title>Probability Spaces with Infinitely Many Outcomes</title>
+<p>
+To this point, we have focused entirely on probability spaces
+<m>(S,P)</m> with <m>S</m> a finite set. More generally, probability
+spaces are defined where <m>S</m> is an infinite set. When <m>S</m> is
+countably infinite, we can still define <m>P</m> on the members
+of <m>S</m>, and now <m>\sum_{x\in S} P(x)</m> is an infinite sum
+which converges absolutely (since all terms are non-negative)
+to <m>1</m>. When <m>S</m> is uncountable, <m>P</m> is not defined on <m>S</m>.
+Instead, the probabilty function is defined on a family of
+subsets of <m>S</m>. Given our emphasis on finite sets and combinatorics,
+we will discuss the first case briefly and refer students to
+texts that focus on general concepts from probability and statistics
+for the second.
+</p>
+<example>
+<statement>
+<p>
+Consider the following game. Nancy rolls a single die. She wins
+if she rolls a six. If she rolls any other number, she then rolls
+again and again until the first time that one of the following two
+situations occurs: (1) she rolls a six, which now this results in a
+loss or (2) she rolls the same number as she got on her first roll,
+which results in a win. As an example, here are some sequences of
+rolls that this game might take:
+</p>
+
+<ol>
+<li><m>(4,2,3,5,1,1,1,4)</m>.  Nancy wins!</li>
+<li><m>(6)</m>.  Nancy wins!</li>
+<li><m>(5,2, 3,2,1,6)</m>. Nancy loses. Ouch.</li>
+</ol>
+
+<p>
+So what is the probability that Nancy will win this game?
+</p>
+
+<p>
+Nancy can win with a six on the first roll. That has probability <m>1/6</m>.
+Then she might win on round<nbsp /><m>n</m> where <m>n\ge2</m>. To accomplish this, she
+has a <m>5/6</m> chance of rolling a number other than six on the first roll;
+a <m>4/6</m> chance of rolling something that avoids a win/loss decision on
+each of the rolls, <m>2</m> through <m>n-1</m> and then a <m>1/6</m> chance of rolling
+the matching number on round<nbsp /><m>n</m>.
+So the probability of a win is given by:
+</p>
+<me>
+  \frac{1}{6}+\sum_{n\ge 2}\frac{5}{6}\left(\frac{4}{6}\right)^{n-2}\frac{1}{6} = \frac{7}{12}.
+</me>
+</statement>
+</example>
+
+<example>
+<statement>
+<p>
+You might think that something slightly more general is lurking
+in the background of the preceding example<mdash />and it is. Suppose we
+have two disjoint events <m>A</m> and <m>B</m> in a probability space <m>(S,P)</m> and
+that <m>P(A)+P(B)\lt 1</m>. Then suppose
+we make repeated samples from this space with each sample independent
+of all previous ones. Call it a win if event <m>A</m> holds and a loss if
+event <m>B</m> holds. Otherwise, it's a tie and we sample again. Now the
+probability of a win is:
+</p>
+<me>
+  P(A)+P(A)\sum_{n\ge 1}(1-P(A)-P(B))^n=\frac{P(A)}{P(A)+P(B)}.
+</me>
+</statement>
+</example>
+</section>

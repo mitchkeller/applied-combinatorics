@@ -1,0 +1,66 @@
+<section xml:id="s_strings_discussion">
+<title>Discussion</title>
+<p>
+Over coffee, Xing said that he had been experimenting with
+the Maple software discussed in the introductory chapter.
+He understood that Maple was treating a big integer as a string.
+Xing enthusiastically reported that he had asked Maple to
+find the sum <m>a+b</m> of two large integers <m>a</m> and <m>b</m>, each having more
+than <m>800</m> digits. Maple found the answer about as fast as he
+could hit the enter key on his netbook.
+<q>That's not so impressive</q> Alice interjected.
+<q>A human, even Bob, could do this in a couple of minutes using
+pencil and paper.</q> <q>Thanks for your kind remarks,</q> replied Bob,
+with the rest of the group noting that that Alice was being pretty
+harsh on Bob and not for any good reason.
+</p>
+
+<p>
+Dave took up Bob's case with the remark that <q>Very few humans, not
+even you Alice, would want to tackle finding the product of <m>a</m> and
+<m>b</m> by hand.</q> Xing jumped back in with <q>That's the point. Even
+a tiny netbook can find the product very, very quickly. In fact, I tried
+it out with two integers, each having more than one thousand
+digits. It found the product in about one second.</q> Ever the
+skeptic, Zori said <q>You mean you carefully typed in two
+integers of that size?</q> Xing quickly replied <q>Of course not. I
+just copied and pasted the data from one source to another.</q>
+Yolanda said <q>What a neat trick that is. Really cuts down the
+chance of an error.</q>
+</p>
+
+<p>
+Dave said <q>What about factoring? Can your netbook with its
+fancy software for strings factor big integers?</q> Xing
+said that he would try some sample problems and report back.
+Carlos said <q>Factoring an integer with several hundred digits is
+likely to be very challenging, not only for a netbook, but also for
+a super computer. For example, suppose the given integer was
+either a prime or the product of two large primes. Detecting
+which of these two statements holds could be very difficult.</q>
+</p>
+
+<p>
+Undeterred, Dave continued ''What about exponentiation? Can your
+software calculate <m>a^b</m> when <m>a</m> and <m>b</m> are large integers?''
+Xing said <q>That shouldn't be a problem. After all, <m>a^b</m> is just
+multiplying <m>a</m> times itself a total of <m>b</m> times, and if you
+can do multiplication quickly, that's just a loop.</q> Yolanda said
+that the way Xing was describing things, he was actually
+talking about a program with nested loops so it might take a long time
+for such a program to halt. Carlos was quiet but he thought
+there might be ways to speed up such computations.
+</p>
+
+<p>
+By this time, Alice reinserted herself into the conversation <q>Hey guys.
+While you were talking, I was looking for big integer topics on the
+web and found this problem. Is <m>838200020310007224300</m> a Catalan number?
+How would you answer this? Do you have to use special software?</q>
+</p>
+
+<p>
+Zori was not happy. She gloomily envisioned a future job hunt
+in which she was compelled to use big integer arithmetic as a job skill. Arrgghh.
+</p>
+</section>
