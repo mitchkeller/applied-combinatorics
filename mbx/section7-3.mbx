@@ -17,7 +17,7 @@ this problem in 1736 by using graph theory in the form of
 </p>
 <figure xml:id="fig_bridges" >
 <caption>The bridges of K&#xf6;nigsberg</caption>
-<image width="73%" source="images/konigsberg_bridges.png" />
+<image width="73%" source="images/konigsberg_bridges" />
 </figure>
 <p>
 A graph <m>\bfG</m> is <em>eulerian</em> if there is a sequence
@@ -127,7 +127,7 @@ consisting only of the vertex<nbsp /><m>1</m>.
 </md>
   <figure xml:id="fig_graphs_eulerexample" >
 <caption>An Eulerian Graph</caption>
-<image width="46%" source="images/eulerian_graph.png" />
+<image width="46%" source="images/eulerian_graph" />
 </figure>
 <p>
 You should note that <xref ref="thm_eulerian" autoname="yes" /> holds for loopless graphs
@@ -141,7 +141,7 @@ pair of vertices.)
 </p>
 <figure xml:id="fig_bridges-graph" >
 <caption>The multigraph of K&#xf6;nigsberg's bridges</caption>
-<image width="73%" source="images/konigsberg_graph.png" />
+<image width="73%" source="images/konigsberg_graph" />
 </figure>
 <p>
 A graph <m>\GVE</m> is said to be <em>hamiltonian</em> if there exists a
@@ -160,7 +160,7 @@ hamiltonian. The second is hamiltonian but not eulerian.
 </p>
 <figure xml:id="fig_eulham" >
 <caption>Eulerian and Hamiltonian Graphs</caption>
-<image width="66%" source="images/eulerian_hamiltonian_crop.png" />
+<image width="66%" source="images/eulerian_hamiltonian_crop" />
 </figure>
 <p>
 In <xref ref="fig_petersen" autoname="yes" />, we show a famous graph known
@@ -168,7 +168,7 @@ as the Petersen graph. It is not hamiltonian.
 </p>
 <figure xml:id="fig_petersen" >
 <caption>The Petersen Graph</caption>
-<image width="56%" source="images/petersen_graph.png" />
+<image width="56%" source="images/petersen_graph" />
 </figure>
 <p>
 Unlike the situation with eulerian circuits, there is no
