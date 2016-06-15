@@ -71,8 +71,7 @@ establish the equivalent inequality: <m>k P(|X|\ge k)\le E(|X|)</m>.
   <mrow>  \amp  \le \sum_{r> 0} r P(|X|=r)
       </mrow>
   <mrow>  \amp = E(|X|).
-      </mrow>
-</md>
+      </mrow></md>
 </proof>
 
 <p>
@@ -111,8 +110,7 @@ the variance <m>\var(X)</m> is:
   <mrow>  \amp =(108^2+105^2+100^2+93^2+84^2)/512
       </mrow>
   <mrow>  \amp =48394/512
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 It follows that the standard deviation <m>\sigma_X</m> of <m>X</m> is then
 <m>\sqrt{48394/512}\approx 9.722</m>.
@@ -190,8 +188,7 @@ Let <m>E(X)=\mu</m>. From its definition, we note that
   <mrow>  \amp = E(X^2) - \mu^2
       </mrow>
   <mrow>  \amp = E(X^2) - E^2(X).
-      </mrow>
-</md>
+      </mrow></md>
 </proof>
 
 <p>
@@ -232,8 +229,7 @@ Then we have:
   <mrow>  \amp \ge k^2\sigma_X^2\sum_{r\in A}\prob(X=r)
       </mrow>
   <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|>k\sigma_X).
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 Since <m>\var(X)=\sigma_X^2</m>, we may now deduce that <m>1/k^2\geq
 \prob(|X-\mu|)>k\sigma_X)</m>. Therefore, since <m>\prob(|X-\mu|\le

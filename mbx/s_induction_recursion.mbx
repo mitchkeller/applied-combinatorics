@@ -331,7 +331,7 @@ with <m>u_p</m> now written as <m>u[p]</m>.
 
 <p>
 p = q = 1;
-for (i = 1; i < s+t+1; i++) \{<br />
+for (i = 1; i <lt /> s+t+1; i++) \{<br />
 a[i] = min(u[p], v[q]);<br />
 if (min(u[p], v[q])==u[p]) p = p+1;<br />
   else q = q+1;<br />

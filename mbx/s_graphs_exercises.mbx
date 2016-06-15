@@ -61,7 +61,8 @@
   why.
   <figure xml:id="fig_graphs_isomorphic_ex" >
 <caption>Are these graphs isomorphic?</caption>
-<![CDATA[\begin{overpic}[scale=0.6]{graphs-figs/isomorphic_ex}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[scale=0.6]{graphs-figs/isomorphic_ex}
       \put(22,47){<m>\bfG_1</m>}
       \put(74,47){<m>\bfG_2</m>}
       \put(22,-5){<m>\bfG_3</m>}
@@ -74,7 +75,9 @@
       \put(37,3){<m>w_4</m>} \put(3,3){<m>w_5</m>} \put(-7.5,21){<m>w_6</m>}
       \put(56,38.3){<m>x_1</m>} \put(74,38.3){<m>x_2</m>} \put(92,38.3){<m>x_3</m>}
       \put(56,5){<m>x_4</m>} \put(74,5){<m>x_5</m>} \put(92,5){<m>x_6</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>Find an eulerian circuit in the graph <m>\bfG</m> in
@@ -82,7 +85,8 @@
   exist.
   <figure xml:id="fig_graphs_euler_exercise" >
 <caption>A graph <m>\bfG</m></caption>
-<![CDATA[\begin{overpic}[width=4in]{graphs-figs/euler_exercise}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=4in]{graphs-figs/euler_exercise}
         \put(6,19.5){<m>1</m>}
         \put(64.3,5){<m>2</m>}
         \put(43.8,15){<m>3</m>}
@@ -95,7 +99,9 @@
         \put(42,33){<m>10</m>}
         \put(71,26){<m>11</m>}
         \put(83,21){<m>12</m>}
-      \end{overpic}]]>
+      \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>Consider the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_hamilton_ex" autoname="yes" />. Determine if the graph is eulerian. If
@@ -113,7 +119,8 @@
   eulerian.
   <figure xml:id="fig_graphs_noneuler_exercise" >
 <caption>A graph <m>\bfG</m></caption>
-<![CDATA[\begin{overpic}[width=4in]{graphs-figs/noneuler_exercise}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=4in]{graphs-figs/noneuler_exercise}
         \put(6,19.5){<m>1</m>}
         \put(67,3){<m>2</m>}
         \put(48,11){<m>3</m>}
@@ -126,7 +133,9 @@
         \put(32,35){<m>10</m>}
         \put(72,24){<m>11</m>}
         \put(61,10){<m>12</m>}
-      \end{overpic}]]>
+      \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>An <em>eulerian trail</em> is defined in the same manner as an
@@ -330,7 +339,8 @@ Explain your answers. (Note that one sequence will get two labels
 <li>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1" autoname="yes" />.
   <figure xml:id="fig_graphs_tree-10verts-ex1" >
 <caption>A <m>10</m>-vertex tree</caption>
-<![CDATA[\begin{overpic}{graphs-figs/tree-10verts-ex1}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/tree-10verts-ex1}
         \put(35,11.2){<m>1</m>}
         \put(46,2){<m>2</m>}
         \put(22,25){<m>3</m>}
@@ -341,13 +351,16 @@ Explain your answers. (Note that one sequence will get two labels
         \put(77,21){<m>8</m>}
         \put(62,14.5){<m>9</m>}
         \put(0.5,2){<m>10</m>}
-      \end{overpic}]]>
+      \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2" autoname="yes" />.
   <figure xml:id="fig_graphs_tree-10verts-ex2" >
 <caption>A <m>10</m>-vertex tree</caption>
-<![CDATA[\begin{overpic}{graphs-figs/tree-8verts-ex2}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/tree-8verts-ex2}
         \put(50,32){<m>1</m>}
         \put(44,2){<m>2</m>}
         \put(26,22){<m>3</m>}
@@ -356,13 +369,16 @@ Explain your answers. (Note that one sequence will get two labels
         \put(94,32){<m>6</m>}
         \put(5,16){<m>7</m>}
         \put(77,21){<m>8</m>}
-      \end{overpic}]]>
+      \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3" autoname="yes" />.
   <figure xml:id="fig_graphs_tree-14verts-ex3" >
 <caption>A <m>14</m>-vertex tree</caption>
-<![CDATA[\begin{overpic}{graphs-figs/tree-14verts-ex3}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/tree-14verts-ex3}
         \put(50,32){<m>1</m>}
         \put(44,2){<m>2</m>}
         \put(2,34){<m>3</m>}
@@ -377,7 +393,9 @@ Explain your answers. (Note that one sequence will get two labels
         \put(44,9){<m>12</m>}
         \put(87,14){<m>13</m>}
         \put(64,14){<m>14</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>Construct the labeled tree <m>\bfT</m> with Pr&#xfc;fer code <m>96113473</m>.</li>

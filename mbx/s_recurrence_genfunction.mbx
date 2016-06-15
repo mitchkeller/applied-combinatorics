@@ -45,8 +45,7 @@ equation! Now let's see how this all lines up:
   <mrow>  xf(x) \amp = 0 + r_0 x + r_1x^2 + r_2 x^3 + \cdots r_{n-1}x^n + \cdots
       </mrow>
   <mrow>  -6x^2f(x) \amp  = 0 + 0 -6r_0x^2 - 6r_1 x^3 + \cdots - 6r_{n-2}x^n + \cdots
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 When we add the left-hand side, we get <m>f(x)(1+x-6x^2)</m>. On the
 right-hand side, the coefficient on <m>x^n</m> for <m>n\geq 2</m> is <m>0</m>
@@ -129,8 +128,7 @@ we have
   <mrow>  \amp = -\frac{1}{9} \sum_{n=0}^\infty 2^nx^n +
     \frac{2}{3}\sum_{n=0}^\infty n2^{n-1} x^{n-1} +
     \frac{13}{9}\sum_{n=0}^\infty (-1)^n.
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 From this generating function, we can now read off that
 </p>

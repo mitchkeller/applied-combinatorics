@@ -84,13 +84,16 @@ while the vertices in <m>V_2</m> are <m>y_1,\dots, y_7</m> from left to right.
 </p>
 <figure xml:id="fig_flowapplications_bipmatch_network" >
 <caption>The network corresponding to a bipartite graph</caption>
-<![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/bipartite_network}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/bipartite_network}
     \put(48,-6){<m>S</m>} \put(48,70){<m>T</m>}
     \put(9,13){<m>x_1</m>} 
     \put(85,13){<m>x_6</m>}
     \put(3,56){<m>y_1</m>}
     \put(92,56){<m>y_7</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 Now that we have translated a bipartite graph into a network, we need
@@ -116,13 +119,16 @@ a matching from <xref ref="fig_flowapplications_bip_match" autoname="yes" />.
 </p>
 <figure xml:id="fig_flowapplications_initial_flow" >
 <caption>The flow corresponding to a matching</caption>
-<![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/bipartite_network_flow}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/bipartite_network_flow}
     \put(48,-6){<m>S</m>} \put(48,70){<m>T</m>}
     \put(9,13){<m>x_1</m>} 
     \put(85,13){<m>x_6</m>}
     \put(3,56){<m>y_1</m>}
     \put(92,56){<m>y_7</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 Now with priority sequence <m>S,T,x_1,x_2,\dots,x_6,y_1,y_2,\dots,y_7</m>
@@ -143,21 +149,23 @@ produces the labels shown below.
   <mrow>  x_6:\quad \amp (y_4,-,1)\amp    x_2:\quad \amp (y_1,-,1)
       </mrow>
   <mrow>  x_4:\quad \amp (y_5,-,1)\amp   T:\quad \amp (y_2,+,1)
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 This leads us to the augmenting path <m>S,x_3,y_4,x_6,y_6,x_1,y_2,T</m>,
 which gives us the flow shown in <xref ref="fig_flowapplications_bipmatch_maxflow" autoname="yes" />.
 </p>
 <figure xml:id="fig_flowapplications_bipmatch_maxflow" >
 <caption>The augmented flow</caption>
-<![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/bipartite_network_flow2}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/bipartite_network_flow2}
     \put(48,-6){<m>S</m>} \put(48,70){<m>T</m>}
     \put(9,13){<m>x_1</m>} 
     \put(85,13){<m>x_6</m>}
     \put(3,56){<m>y_1</m>}
     \put(92,56){<m>y_7</m>}
- \end{overpic}]]>
+ \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 Is this a maximum flow? Another run of the labeling algorithm
@@ -169,8 +177,7 @@ produces
   <mrow>  x_5:\quad \amp  (S,+,1)\amp   y_4:\quad \amp (x_4,+,1)
       </mrow>
   <mrow>  y_5:\quad \amp  (x_5,+,1)\amp   x_3:\quad \amp (y_4,-,1)
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 and then halts. Thus, the flow in
 <xref ref="fig_flowapplications_bipmatch_maxflow" autoname="yes" /> is a maximum flow.

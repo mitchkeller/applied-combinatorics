@@ -434,14 +434,17 @@ a shortest path <m>P=(u_0,u_1,u_2,\dots,u_{k+1})</m> from <m>r=u_0</m> to
 </p>
 <figure xml:id="fig_graphalgorithms_dijkstra-proof" >
 <caption>Shortest paths</caption>
-<![CDATA[\begin{overpic}[width=0.6\textwidth]{graphalgorithms-figs/dijkstra-proof}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=0.6\textwidth]{graphalgorithms-figs/dijkstra-proof}
       \put(3,13){<m>r</m>}
       \put(33,25){<m>Q</m>}
       \put(58,3){<m>P(u_k)</m>}
       \put(73,28){<m>u_k</m>}
       \put(83,25){<m>P</m>}
       \put(93,21){<m>x</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 By the inductive hypothesis, <m>\delta(u_k)</m> is the distance from <m>r</m>

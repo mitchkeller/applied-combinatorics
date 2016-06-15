@@ -13,14 +13,17 @@ introduced earlier in the chapter.
 </p>
 <figure xml:id="fig_graphs_utils" >
 <caption>A graph of connecting homes to utilities</caption>
-<![CDATA[\begin{overpic}{graphs-figs/k33}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/k33}
     \put(-25,92){ Water}
     \put(-43,50){ Electricity}
     \put(-53,5){ Natural gas}
     \put(92,92){ Home 1}
     \put(92,50){ Home 2}
     \put(92,5){ Home 3}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 While this example of utility lines might seem a bit contrived, since
@@ -83,8 +86,7 @@ edges plus the number of faces for these drawings? We have
   <mrow>  6-9+5 \amp = 2
       </mrow>
   <mrow>  4-6+4 \amp =2
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 While it might seem like a coincidence that this computation results
 in <m>2</m> for these planar drawings, there's a more general principle at

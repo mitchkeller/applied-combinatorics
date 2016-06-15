@@ -47,8 +47,7 @@ The first vertex after <m>S</m> to be labeled was <m>B</m>, so we now scan from
   <mrow>  \amp C:\quad(B,+,8)
       </mrow>
   <mrow>  \amp D:\quad(B,-,6)
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 The next vertex to be scanned is <m>E</m>, but <m>E</m> has no unlabeled
 neighbors, so we then move on to <m>F</m>, which again has no unlabeled
@@ -96,8 +95,7 @@ algorithm is applied to this updated flow (Note that in the scan from
   <mrow>  \amp C:\quad(B,+,10)
       </mrow>
   <mrow>  \amp T:\quad(A,+,12)
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 This labeling results in the augmenting path <m>P=(S,F,A,T)</m> with
 <m>\delta=12</m>.
@@ -148,8 +146,7 @@ labels:
   <mrow>  \amp B:\quad(G,+,3)
       </mrow>
   <mrow>  \amp T:\quad(L,+,3)
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 These labels result in the augmenting path <m>P=(S,C,H,I,E,L,T)</m> with
 <m>\delta =3</m>. After updating the flow and increasing its value to
@@ -165,8 +162,7 @@ These labels result in the augmenting path <m>P=(S,C,H,I,E,L,T)</m> with
   <mrow>  \amp H:\quad(C,+,4)
       </mrow>
   <mrow>  \amp I:\quad(H,+,4)
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 Now we observe that the labeled and unlabeled vertices are
 <m>L=\{S,C,F,H,I\}</m> and <m>U=\{T,A,B,D,E,G,J,K\}</m>. Furthermore, the

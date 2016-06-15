@@ -29,8 +29,7 @@ When <m>k=0</m>, both sides evaluate to <m>p</m>. Now assume validity when
   <mrow>  \amp =[pP(p-1,m)](p-1-m)
       </mrow>
   <mrow>  \amp =P(p,m+1)[p-(m+1)].
-      </mrow>
-</md>
+      </mrow></md>
 </proof>
 
 <p>
@@ -64,8 +63,7 @@ integer <m>m</m>. Then
       </mrow>
   <mrow>  \amp =(-1)^{m+1}\frac{1}{2^{2m}}\frac{(2m+2)(2m+1)}{(2m+2)2(m+1)}\binom{2m}{m}=
                   (-1)^{m+1}\frac{\binom{2m+2}{m+2}}{2^{2m+2}}.
-      </mrow>
-</md>
+      </mrow></md>
 </proof>
 
 <theorem xml:id="t_sqrt">
@@ -88,8 +86,7 @@ By Newton's Binomial Theorem and
   <mrow>  \amp =\sum_{n=0}^\infty(-1)^n2^{2n}\binom{-1/2}{n}x^n
       </mrow>
   <mrow>  \amp =\sum_{n=0}^\infty \binom{2n}{n}x^n.
-      </mrow>
-</md>
+      </mrow></md>
 </proof>
 
 <p>

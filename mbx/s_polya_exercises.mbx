@@ -30,8 +30,7 @@
       </mrow>
   <mrow>  3 \amp  7 \amp  1 \amp  6 \amp  8 \amp  4 \amp  2 \amp  5 
     \end{pmatrix}
-      </mrow>
-</md>
+      </mrow></md>
 </li>
 <li>Compute <m>\pi_1\pi_2</m>, <m>\pi_2\pi_1</m>, <m>\pi_3\pi_4</m>, and
   <m>\pi_4\pi_3</m> for the permutations <m>\pi_i</m> in
@@ -44,13 +43,16 @@
   its vertices labeled. Use this labeling to complete this exercise.
   <figure xml:id="fig_polya_pentagon" >
 <caption>A pentagon with labeled vertices</caption>
-<![CDATA[\begin{overpic}[scale=0.65]{polya-figs/pentagon}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[scale=0.65]{polya-figs/pentagon}
       \put(9,2){<m>4</m>}
       \put(84,4){<m>3</m>}
       \put(102,53){<m>2</m>}
       \put(-8,53){<m>5</m>}
       \put(46,100){<m>1</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <ol>
 <li>The dihedral group of the pentagon, <m>D_{10}</m>, contains <m>10</m>

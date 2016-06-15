@@ -62,7 +62,7 @@ answer = 1;
 </p>
 
 <p>
-for (m = 2; m < n; m++) \{<br />
+for (m = 2; m <lt /> n; m++) \{<br />
 \mbox{}  if (gcd(m,n) == 1) \{<br />
 \mbox{}  answer++;<br />
 \mbox{}  \}<br />
@@ -146,8 +146,7 @@ Then Inclusion-Exclusion yields:
       (p_3+p_2+p_1) - 1}{p_1p_2p_3}
       </mrow>
   <mrow>  \amp =n \frac{p_1-1}{p_1}\frac{p_2-1}{p_2}\frac{p_3-1}{p_3}.
-      </mrow>
-</md>
+      </mrow></md>
 </proof>
 
 <example>
@@ -187,8 +186,7 @@ to find <m>\phi(n)</m> when
   <mrow>  \amp   39001922159851668531040708539722329324902813359241016
       </mrow>
   <mrow>  \amp   93211209710523.
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 However the Professor also tells Amanda that <m>n=p_1p_2</m> is the product
 of two large primes where

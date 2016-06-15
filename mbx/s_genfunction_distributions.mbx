@@ -73,8 +73,7 @@ quickly see satisfies
       </mrow>
   <mrow>  \amp  =\sum_{n=0}^\infty \frac{n(n-1)(n-2)(n-3)}{4!}x^{n+1} =
   \sum_{n=0}^\infty \binom{n}{4}x^{n+1}.
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 The coefficient on <m>x^n</m> in this series <m>C(n-1,4)</m>, just as we expected.
 </p>
@@ -187,8 +186,7 @@ Equating coefficients on terms of equal degree, we have:
   <mrow>  1 \amp = -2A + C
       </mrow>
   <mrow>  1 \amp = A - B
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 Solving the system, we find <m>A=1/4</m>, <m>B=-3/4</m>, and
 <m>C=3/2</m>. Therefore, our generating function is

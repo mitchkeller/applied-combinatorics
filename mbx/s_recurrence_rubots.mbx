@@ -66,8 +66,7 @@ we have
       </mrow>
   <mrow>  \amp  = 0 + 0 + (c_0c_2 +c_1c_1 + c_2c_0)x^2 + (c_0c_3 +
   c_1c_2+c_2c_1+c_3c_0)x^3 + \cdots.
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 But now we see from our recursion above that the coefficient on <m>x^n</m>
 in <m>C^2(x)</m> is nothing but <m>c_n</m> for <m>n\geq 2</m>. All we're missing is
@@ -113,8 +112,7 @@ x^n\right)
       </mrow>
   <mrow>  \amp =
 \frac{1}{2} \pm\frac{1}{2} \mp\sum_{n=1}^\infty \frac{\binom{2n-2}{n-1}}{n} x^n.
-      </mrow>
-</md>
+      </mrow></md>
 <p>
 Since we need <m>c_n\geq 0</m>, we take the <q>minus</q> option from the
 <q>plus-or-minus</q> in the quadratic formula and thus have the following
