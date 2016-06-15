@@ -14,7 +14,7 @@
 </ol>
 <figure xml:id="fig_networkflow_invalid" >
 <caption>An invalid flow in a network</caption>
-<image width="65%" source="images/networkflow_ex_invalid.png" />
+<image width="65%" source="images/networkflow_ex_invalid" />
 </figure>
 </li>
 <li>Alice claims to have found a (valid) network flow of value <m>20</m>
@@ -23,7 +23,7 @@
   greater than <m>18</m>. Who's right and why?
   <figure xml:id="fig_networkflow_network_ex" >
 <caption>A network</caption>
-<image width="65%" source="images/network_ex.png" />
+<image width="65%" source="images/network_ex" />
 </figure>
 </li>
 <li>Find an augmenting path <m>P</m> with <em>at least one backward edge</em>
@@ -33,7 +33,7 @@
   flow <m>\hat{\phi}</m>. What is the value of <m>\hat{\phi}</m>?
   <figure xml:id="fig_networkflow_augpath_ex" >
 <caption>A network with flow</caption>
-<image width="65%" source="images/augpath_ex.png" />
+<image width="65%" source="images/augpath_ex" />
 </figure>
 </li>
 <li xml:id="ex_networkflow_update" >Prove
@@ -70,7 +70,7 @@ in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />
   current flow shown there.
   <figure xml:id="fig_networkflow_network_find_flow1" >
 <caption>A network with flow</caption>
-<image width="65%" source="images/network_find_flow1.png" />
+<image width="65%" source="images/network_find_flow1" />
 </figure>
 </li>
 <li><xref ref="fig_networkflow_network_find_flow2" autoname="yes" /> shows a
@@ -80,7 +80,7 @@ in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />
   minimum cut in this network.
   <figure xml:id="fig_networkflow_network_find_flow2" >
 <caption>A network</caption>
-<image width="65%" source="images/network_find_flow2.png" />
+<image width="65%" source="images/network_find_flow2" />
 </figure>
 </li>
 <li>Consider a network in which the source <m>S</m> has precisely three
