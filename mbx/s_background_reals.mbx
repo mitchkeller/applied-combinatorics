@@ -1,0 +1,58 @@
+<section xml:id="s_background_reals">
+<title>Obtaining the Reals from the Rationals</title>
+<p>
+A full discussion of this would take us far away from
+a discrete math class, but let's at least provide the
+basic definitions. A subset <m>S\subset \rats</m> of the rationals
+is called a <em>cut</em> (also, a <em>Dedekind cut</em>),
+if it satisfies the following properties:
+</p>
+
+<ol>
+<li><m>\emptyset\neq S\neq \rats</m>, i.e, <m>S</m> is a proper non-empty subset
+of <m>\rats</m>.</li>
+<li><m>x\in S</m> and <m>y\lt x</m> in <m>\rats</m> implies <m>y\in S</m>, for all <m>x,y\in \rats</m>.</li>
+<li>For every <m>x\in S</m>, there exists <m>y\in S</m> with <m>x\lt y</m>, i.e., 
+<m>S</m> has no greatest element.</li>
+</ol>
+
+<p>
+Cuts are also called <em>real numbers</em>, so a real number is
+a particular kind of set of rational numbers.
+For every rational number <m>q</m>, the set <m>\bar{q}= \{p\in \rats: p\lt  q\}</m>
+is a cut. Such cuts are called <em>rational cuts</em>. Inside
+the reals, the rational cuts behave just like the rational
+numbers and via the map <m>h(q)=\bar{q}</m>, we abuse notation again
+(we are getting used to this) and say that
+the rational numbers are a subset of the real numbers.
+</p>
+
+<p>
+But there are cuts which are not rational. Here is one:
+<m>\{p\in \rats: p\le 0\}\cup \{p\in \rats: p^2\lt 2\}</m>. The fact that
+this cut is not rational depends on the familiar proof that
+there is no rational <m>q</m> for which <m>q^2=2</m>.
+</p>
+
+<p>
+The operation of addition on cuts is defined in the natural
+way. If <m>S</m> and <m>T</m> are cuts, set <m>S+T=\{s+t:s\in S, t\in T\}</m>.
+Order on cuts is defined in terms of inclusion, i.e., <m>S\lt T</m> if and
+only if <m>S\subsetneq T</m>. A cut is <em>positive</em> if it
+is greater than <m>\bar{0}</m>. When <m>S</m> and <m>T</m> are positive
+cuts, the product <m>ST</m> is defined by
+</p>
+<me>
+  ST= \bar{0}\cup\{st:s\in S, t\in T, s\ge0, t\ge 0\}.
+</me>
+<p>
+One can easily show that there is a real number <m>r</m> so that
+<m>r^2=\bar{2}</m>. You may be surprised, but perhaps not, to learn
+that this real number is denoted <m>\sqrt2</m>.
+</p>
+
+<p>
+There are many other wonders to this story, but enough for
+one day.
+</p>
+</section>

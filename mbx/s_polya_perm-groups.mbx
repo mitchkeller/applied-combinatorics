@@ -1,0 +1,210 @@
+<section xml:id="s_polya_perm-groups">
+<title>Permutation Groups</title>
+
+
+<introduction>
+<p>
+Entire books have been written on the theory of the mathematical
+structures known as <em>groups</em>. However, our study of P&#xf3;lya's
+enumeration theorem requires only a few facts about a particular class
+of groups that we introduce in this section. First, recall that a
+bijection from a set <m>X</m> to itself is called a <em>permutation</em>. A
+<em>permutation group</em> is a set <m>P</m> of permutations of a set <m>X</m> so
+that
+</p>
+
+<ol>
+<li>the identity permutation <m>\iota</m> is in <m>P</m>;</li>
+<li>if <m>\pi_1,\pi_2\in P</m>, then <m>\pi_2\circ \pi_1\in P</m>; and</li>
+<li>if <m>\pi_1\in P</m>, then <m>\pi_1\inv\in P</m>.</li>
+</ol>
+
+<p>
+For our purposes, <m>X</m> will always be finite and we will usually take
+<m>X=[n]</m> for some positive integer <m>n</m>. The <em>symmetric group on
+<m>n</m> elements</em>, denoted <m>S_n</m>, is the set of all permutations of
+<m>[n]</m>. Every finite permutation group (and more generally every finite
+group) is a subgroup of <m>S_n</m> for some positive integer <m>n</m>.
+</p>
+
+<p>
+As our first example of a permutation group, consider the set of
+permutations we discussed in <xref ref="s_polya_square" autoname="yes" />, called the
+<em>dihedral group of the square</em>. We will denote this group by
+<m>D_8</m>. We denote by <m>D_{2n}</m> the similar group of transformations for
+a regular <m>n</m>-gon, using <m>2n</m> as the subscript because there are <m>2n</m>
+permutations in this group.<fn>Some authors and computer algebra
+  systems use <m>D_n</m> as the notation for the dihedral group of the
+  <m>n</m>-gon.</fn> The first criterion to be a permutation group is clearly
+satisfied by <m>D_8</m>. Verifying the other two is quite tedious, so we
+only present a couple of examples. First, notice that <m>r_2\circ
+r_1=r_3</m>. This can be determined by carrying out the composition of
+these functions as permutations or by noting that rotating <m>90^\circ</m>
+clockwise and then <m>180^\circ</m> clockwise is the same as rotating
+<m>270^\circ</m> clockwise. For <m>v\circ r</m>, we find <m>v\circ r(1) = 1</m>,
+<m>v\circ r(3)=3</m>, <m>v\circ r(2)=4</m>, and <m>v\circ r(4)=2</m>, so <m>v\circ
+r=n</m>. For inverses, we have already discussed that <m>r_1\inv =
+r_3</m>. Also, <m>v\inv = v</m>, and more generally, the inverse of <em>any</em>
+flip is that same flip.
+</p>
+</introduction>
+
+
+<subsection xml:id="ss_polya_perm-groups_rep">
+<title>Representing permutations</title>
+<p>
+The way a permutation rearranges the elements of <m>X</m> is central to
+P&#xf3;lya's enumeration theorem. A proper choice of representation for a
+permutation is very important here, so let's discuss how permutations
+can be represented. One way to represent a permutation <m>\pi</m> of <m>[n]</m>
+is as a <m>2\times n</m> matrix in which the first row represents the
+domain and the second row represents <m>\pi</m> by putting <m>\pi(i)</m> in
+position <m>i</m>. For example,
+</p>
+<me>
+  \pi=
+\begin{pmatrix}1 \amp  2 \amp  3 \amp  4 \amp  5\\
+  2 \amp  4 \amp  3 \amp  5 \amp  1
+\end{pmatrix}
+</me>
+<p>
+is the permutation of <m>[5]</m> with <m>\pi(1) =2</m>, <m>\pi(2)=4</m>, <m>\pi(3)=3</m>,
+<m>\pi(4) = 5</m>, and <m>\pi(5) = 1</m>. This notation is rather awkward and
+provides only the most basic information about the permutation. A more
+compact (and more useful for our purposes) notation is known as
+<em>cycle notation</em>. One way to visualize how the cycle notation is
+constructed is by constructing a digraph from a permutation <m>\pi</m> of
+<m>[n]</m>. The digraph has <m>[n]</m> as its vertex set and a directed edge
+from <m>i</m> to <m>j</m> if and only if <m>\pi(i) = j</m>. (Here we allow a directed
+edge from a vertex to itself if <m>\pi(i) = i</m>.) The digraph
+corresponding to the permutation <m>\pi</m> from above is shown in
+<xref ref="fig_polya_perm-digraph" autoname="yes" />.
+</p>
+<figure xml:id="fig_polya_perm-digraph" >
+<caption>The digraph corresponding to permutation <m>\pi=(1245)(3)</m></caption>
+<![CDATA[\begin{overpic}[scale=0.9]{polya-figs/permutation-cycles}
+    \put(0,50){<m>1</m>}
+    \put(-1,5){<m>2</m>}
+    \put(87,6){<m>3</m>}
+    \put(60,5){<m>4</m>}
+    \put(60,50){<m>5</m>}
+  \end{overpic}]]>
+</figure>
+<p>
+Since <m>\pi</m> is a permutation, every component of such a digraph is a
+directed cycle. We can then use these cycles to write down the
+permutation in a compact manner. For each cycle, we start at the
+vertex with smallest label and go around the cycle in the direction of
+the edges, writing down the vertices' labels in order. We place this
+sequence of integers in parentheses. For the <m>4</m>-cycle in
+<xref ref="fig_polya_perm-digraph" autoname="yes" />, we thus obtain <m>(1245)</m>. (If <m>n\geq
+10</m>, we place spaces or commas between the integers.) The component
+with a single vertex is denoted simply as <m>(3)</m>, and thus we may write
+<m>\pi=(1245)(3)</m>. By convention, the disjoint cycles of a permutation
+are listed so that their first entries are in increasing order.
+</p>
+<example>
+<statement>
+<p>
+The permutation <m>\pi=(1483)(27)(56)</m> has <m>\pi(1)=4</m>,
+<m>\pi(8)=3</m>, <m>\pi(3)=1</m>, and <m>\pi(5)=6</m>. The permutation
+<m>\pi'=(13)(2)(478)(56)</m> has <m>\pi'(1)=3</m>, <m>\pi'(2) = 2</m>, and
+<m>\pi'(8)=4</m>. We say that <m>\pi</m> consists of two cycles of length <m>2</m>
+and one cycle of length <m>4</m>. For <m>\pi'</m>, we have one cycle of length
+<m>1</m>, two cycles of length <m>2</m>, and one cycle of length <m>3</m>. A cycle
+of length <m>k</m> will also called a <m>k</m>-cycle in this chapter.
+</p>
+</statement>
+</example>
+</subsection>
+
+
+<subsection xml:id="ss_polya_perm-groups_mult">
+<title>Multiplying permutations</title>
+<p>
+Because the operation in an arbitrary group is frequently called
+multiplication, it is common to refer to the composition of
+permutations as multiplication and write <m>\pi_2\pi_1</m> instead of
+<m>\pi_2\circ \pi_1</m>. The important thing to remember here, however, is
+that the operation is simply function composition. Let's see a couple
+of examples.
+</p>
+<example>
+<statement>
+<p>
+Let <m>\pi_1 = (1234)</m> and <m>\pi_2 = (12)(34)</m>. (Notice that these are
+the permutations <m>r_1</m> and <m>v</m>, respectively, from <m>D_8</m>.) Let
+<m>\pi_3=\pi_2\pi_1</m>. To determine <m>\pi_3</m>, we start by finding
+<m>\pi_3(1) = \pi_2\pi_1(1) = \pi_2(2) = 1</m>. We next find that
+<m>\pi_3(2) = \pi_2\pi_1(2) = \pi_2(3)=4</m>. Similarly, <m>\pi_3(3) = 3</m>
+and <m>\pi_3(4)=2</m>. Thus, <m>\pi_3=(1)(24)(3)</m>, which we called <m>n</m>
+earlier.
+</p>
+
+<p>
+Now let <m>\pi_4 = \pi_1\pi_2</m>. Then <m>\pi_4(1) = 3</m>, <m>\pi_4(2)=2</m>,
+<m>\pi_4(3)=1</m>, and <m>\pi_4(4)=4</m>. Therefore, <m>\pi_4=(13)(2)(4)</m>, which
+we called <m>p</m> earlier. It's important to note that <m>\pi_1\pi_2\neq
+  \pi_2\pi_1</m>, which hopefully does not surprise you, since function
+composition is not in general commutative. To further illustrate the
+lack of commutativity in permutation groups, pick up a book (Not
+this one! You need to keep reading directions here.) so that
+cover is up and the spine is to the left. First, flip the book over
+from left to right. Then rotate it <m>90^\circ</m>
+clockwise. Where is the spine? Now return the book to the cover-up,
+spine-left position. Rotate the book <m>90^\circ</m> clockwise and then
+flip it over from left to right. Where is the spine this time?
+</p>
+</statement>
+</example>
+<p>
+It quickly gets tedious to write down where the product of two (or
+more) permutations sends each element. A more efficient approach would
+be to draw the digraph and then write down the cycle structure. With
+some practice, however, you can build the cycle notation as you go
+along, as we demonstrate in the following example.
+</p>
+<example>
+<statement>
+<p>
+Let <m>\pi_1=(123)(487)(5)(6)</m> and <m>\pi_2=(18765)(234)</m>. Let <m>\pi_3 =
+  \pi_2\pi_1</m>. To start constructing the cycle notation for <m>\pi_3</m>,
+we must determine where <m>\pi_3</m> sends <m>1</m>. We find that it sends it
+to <m>3</m>, since <m>\pi_1</m> sends <m>1</m> to <m>2</m> and <m>\pi_2</m> sends <m>2</m> to
+<m>3</m>. Thus, the first cycle begins <m>13</m>. Now where is <m>3</m> sent? It's
+sent to <m>8</m>, which goes to <m>6</m>, which goes to <m>5</m>, which goes to
+<m>1</m>, completing our first cycle as <m>(13865)</m>. The first integer not
+in this cycle is <m>2</m>, which we use to start our next cycle. We find
+that <m>2</m> is sent to <m>4</m>, which is set to <m>7</m>, which is set to
+<m>2</m>. Thus, the second cycle is <m>(247)</m>. Now all elements of <m>8</m> are
+represented in these cycles, so we know that <m>\pi_3 = (13865)(247)</m>.
+</p>
+</statement>
+</example>
+<p>
+We conclude this section with one more example.
+</p>
+<example>
+<statement>
+<p>
+Let's find <m>[(123456)][(165432)]</m>, where we've written the two
+permutations being multiplied inside brackets. Since we work from
+<em>right</em> to <em>left</em>, we find that the first permutation
+applied sends <m>1</m> to <m>6</m>, and the second sends <m>6</m> to <m>1</m>, so our
+first cycle is <m>(1)</m>. Next, we find that the product sends <m>2</m> to
+<m>2</m>. It also sends <m>i</m> to <m>i</m> for every other <m>i\leq 6</m>. Thus, the
+product is <m>(1)(2)(3)(4)(5)(6)</m>, which is better known as the
+identity permutation. Thus, <m>(123456)</m> and <m>(165432)</m> are inverses.
+</p>
+</statement>
+</example>
+<p>
+In the next section, we will use standard counting techniques we've
+seen before in this book to prove results about groups acting ons
+ets. We will state the results for arbitrary groups, but you may
+safely replace <q>group</q> by <q>permutation group</q> without losing any
+understanding required for the remainder of the chapter.
+</p>
+</subsection>
+
+</section>

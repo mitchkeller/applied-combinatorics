@@ -1,0 +1,145 @@
+<section xml:id="s_background_total-order-N">
+<title>A Total Order on Natural Numbers</title>
+<p>
+Let <m>m,n\in \mathbb{N}_0</m>. Define a binary relation <m>\le</m> on
+<m>\mathbb{N}_0</m> by setting <m>m\le n</m> if and only if
+there exists a natural number <m>p</m> so
+that <m>m+p=n</m>.
+</p>
+
+<proposition>
+<statement>
+<p>
+<m>\le</m> is a total order on <m>\mathbb{N}_0</m>.
+</p>
+</statement>
+</proposition>
+
+<proof>
+<p>
+<m>\le</m> is reflexive since <m>n+0=n</m> and therefore <m>n\le n</m>, for all <m>n\in 
+\mathbb{N}_0</m>. Next, we show that <m>\le</m> is antisymmetric.
+Let <m>m,n\in\mathbb{N}_0</m> and suppose that <m>m\le n</m> and <m>n\le m</m>.
+Then there exist natural numbers <m>p</m> and <m>q</m> so that <m>m+p=n</m> and <m>n+q=m</m>.
+It follows that
+</p>
+<me>
+  m+(p+q)= (m+p)+q=n+q =m=m+0
+</me>
+<p>
+Therefore <m>p+q=0</m>, which implies that <m>p=q=0</m>. Thus <m>m+p=m+0=m=n</m>.
+</p>
+
+<p>
+Next, we show that <m>\le</m> is transitive. Suppose that <m>m,n,p\in
+\mathbb{N}_0</m>, <m>m\le n</m> and <m>n\le p</m>. Then there exist
+natural numbers <m>q</m> and <m>r</m> so that <m>m+q=n</m> and <m>n+r=p</m>.
+Then
+</p>
+<me>
+  m+(q+r)=(m+q)+r=n+r=p.
+</me>
+<p>
+Thus <m>m\le p</m>, and we have now shown that <m>\le</m> is a partial
+order on <m>\mathbb{N}_0</m>.
+</p>
+
+<p>
+Finally, we show that <m>\le</m> is a total order.
+To accomplish this, we choose an arbitrary element <m>m\in\mathbb{N}_0</m>
+and show that for every <m>n\in\mathbb{N}_0</m>, either <m>m\le n</m> or
+<m>n\le m</m>. We do this by induction on <m>n</m>.
+Suppose first that <m>n=0</m>. Since <m>0+m=m</m>, we conclude that
+<m>0\le m</m>.
+Now suppose that for some <m>k\in\mathbb{N}_0</m>, we have
+<m>m\le k</m>. Then there is a natural number <m>p</m> so that <m>m+p=k</m>. Then
+<m>m+(p+1) =(m+p)+1=k+1</m>, so <m>m\le k+1</m>.
+</p>
+
+<p>
+On the other hand, suppose that for some <m>k\in\mathbb{N}_0</m>,
+we have <m>k\le m</m>. If <m>k=m</m>, then <m>m\le k</m> and
+<m>m\le k+1</m> as above. Now suppose that <m>k\le m</m> and <m>k\neq m</m>.
+Since <m>k\le m</m>, there exists a natural number <m>p</m> so that <m>k+p=m</m>.
+Since <m>k\neq m</m>, we know <m>p\neq 0</m>. Therefore, there is a
+natural number <m>q</m> so that
+<m>p=q+1</m>. Then <m>m=k+p=k+(q+1)=(k+1)+q</m> which shows that <m>k+1\le m</m>.
+</p>
+</proof>
+
+<p>
+Note that if <m>m,n\in\mathbb{N}_0</m>, then <m>m\lt n</m> if and only if
+there exists a natural number <m>p\neq 0</m> so that <m>m+p=n</m>.
+</p>
+
+<theorem>
+<statement>
+<p>
+{ [Monotonic Law for Addition]}<br />
+Let <m>m,n,p\in \mathbb{N}_0</m>. If <m>m\le n</m>, then
+<m>m+p\le n+p</m>. Furthermore, if <m>m\lt n</m>, then <m>m+p\lt n+p</m>.
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+It suffices to prove that if <m>m,n\in \mathbb{N}_0</m> with <m>m\lt n</m>, then
+<m>m+p\lt n+p</m> for every <m>p\in\mathbb{N}_0</m>. Let <m>q\neq0</m> be
+the natural number so that <m>m+q =n</m>.
+Now let <m>p\in \mathbb{N}_0</m>.
+Then <m>(m+p)+q=(m+q)+p=n+p</m>, so <m>m+p \lt  n+p</m>.
+</p>
+</proof>
+
+<lemma>
+<statement>
+<p>
+If <m>m,n\in \mathbb{N}_0</m>, <m>m\neq0</m> and <m>n\neq0</m>, then <m>mn\neq0</m>.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+Assume to the contrary, that <m>m,n\in \mathbb{N}_0</m>, <m>m\neq0</m>, <m>n\neq0</m>
+and <m>mn=0</m>. Let <m>n=s(p)</m>. Then <m>0=mn= ms(p)+m</m> which requires
+<m>m=0</m>. This is a contradiction.
+</p>
+</proof>
+
+<theorem>
+<statement>
+<p>
+{ [Monotonic Law for Multiplication]}<br />
+Let <m>m,n,p\in \mathbb{N}_0</m>. If
+<m>m\le n</m>, then <m>mp\le np</m>. Furthermore, if <m>m\lt n</m> and <m>p\neq0</m>,
+then <m>mp\lt np</m>.
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+Only the last statement requires proof. Let
+<m>m,n\in\mathbb{N}_0</m> with <m>m\lt  n</m>. Then <m>m+q=n</m> for some <m>q\neq0</m>.
+Then <m>np=(m+q)p=mp+pq</m>. Since <m>pq\neq0</m>, we conclude <m>mp\lt np</m>.
+</p>
+</proof>
+
+<corollary>
+<statement>
+<p>
+{ [Cancellation Law of Multiplication]}<br />
+If <m>m,n,p\in \mathbb{N}_0</m>, <m>mp=np</m>, and <m>p\neq 0</m>, then <m>m=n</m>.
+</p>
+</statement>
+</corollary>
+
+<proof>
+<p>
+If <m>m\lt n</m>, then <m>mp\lt np</m>, and if <m>n\lt m</m>, then
+<m>np\lt mp</m>. We conclude that <m>m=n</m>.
+</p>
+</proof>
+</section>

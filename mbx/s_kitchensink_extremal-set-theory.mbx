@@ -1,0 +1,155 @@
+<section xml:id="s_kitchensink_extremal-set-theory">
+<title>Extremal Set Theory</title>
+<p>
+Let <m>n</m> be a positive integer and let <m>[n]=1,2,\dots,n</m>. In this
+section, we consider problems having the following general form:
+What is the maximum size of a family of subsets of <m>[n]</m> when the
+family is required to satisfy certain properties.
+</p>
+
+<p>
+Here is an elementary example.
+</p>
+<example xml:id="exa_intersecting">
+<statement>
+<p>
+The maximum size of a family <m>\cgF</m> of subsets of <m>[n]</m>, with
+<m>A\cap B\neq\emptyset</m> for all <m>A,B\in\cgF</m>, is <m>2^{n-1}</m>.
+</p>
+
+<p>
+For the lower bound, consider the family <m>\cgF</m> of all subsets of
+<m>[n]</m> that contain<nbsp /><m>1</m>. Clearly this family has <m>2^{n-1}</m> elements
+and any two sets in the family have non-empty intersection.
+</p>
+
+<p>
+For the upper bound, let <m>\cgF</m> be a family of subsets with
+each pair of sets in <m>\cgF</m> having non-empty intersection.
+Then whenever a subset <m>S</m> is a member of <m>\cgF</m>, the complement <m>S'</m> of
+<m>S</m> cannot belong to <m>\cgF</m>. Since the entire family of
+all <m>2^n</m> subsets of <m>[n]</m> can be considered as <m>2^{n-1}</m>
+complementary pairs, and at most one set from each pair
+can belong to <m>\cgF</m>, we conclude that <m>|\cgF|\le 2^{n-1}</m>.
+</p>
+</statement>
+</example>
+<p>
+As a second example, we can revisit
+Sperner's Theorem from the chapter on partially ordered sets and
+restate the result as follows.
+</p>
+<example xml:id="exa_Sperner">
+<statement>
+<p>
+The maximum size of a family <m>\cgF</m> of
+subsets of <m>[n]</m> subject to the constraint that when <m>A</m> and <m>B</m>
+are distinct sets in <m>\cgF</m>, then neither is a subset of the other,
+is <m>\binom{n}{\lfloor n/2\rfloor}</m>.
+</p>
+</statement>
+</example>
+<p>
+It is worth noting that in <xref ref="exa_Sperner">Example</xref>,
+there is a very small number (one or two) extremal families, i.e.,
+when <m>\cgF</m> is a family of subsets of <m>[n]</m>, <m>|\cgF|=
+\binom{n}{\lfloor n/2\rfloor}</m>, and no set in <m>\cgF</m> is
+a proper subset of another, then either <m>\cgF=\{S\subseteq[n]:
+|S|=\lfloor n/2\rfloor\}</m> or <m>\cgF=\{S\subseteq[n]:
+|S|=\lceil n/2\rceil\}</m>. And of course, when <m>n</m> is even, these
+are exactly the same family.
+</p>
+
+<p>
+On the other hand, for <xref ref="exa_intersecting">Example</xref>, there
+are many extremal families, since for every complementary
+pair of sets, either member can be selected.
+</p>
+
+<p>
+We close this brief tasting of extremal set theory with a real
+classic.
+</p>
+
+<theorem>
+<title>Erd&#xf6;s, Ko, Rado</title>
+<statement>
+<p>
+Let <m>n</m> and <m>k</m> be positive integers with <m>n\ge 2k</m>. Then
+the maximum size of a family <m>\cgF</m> of subsets of <m>[n]</m> subject to the
+restrictions that (1)<nbsp /><m>A\cap B\neq\emptyset</m> for all <m>A,B\in\cgF</m>,
+and (2)<nbsp /><m>|A|=k</m> for all <m>A\in\cgF</m>, is <m>\binom{n-1}{k-1}</m>.
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+For the lower bound, consider the family <m>\cgF</m> of all <m>k</m> element
+subset of <m>[n]</m> that contain<nbsp /><m>1</m>.
+</p>
+
+<p>
+For the upper bound, let <m>\cgF</m> be a family of subsets of <m>[n]</m>
+satisfying the two constraints. We show that <m>|\cgF|\le\binom{n-1}{k-1}</m>.
+To accomplish this, we consider a circle in the Euclidean
+plane with <m>n</m> points <m>p_1</m>, <m>p_2,\dots,p_n</m> equally
+spaced points around its circumference. Then there are
+<m>n!</m> different ways (one for each permutation <m>\sigma</m> of <m>[n]</m>)
+to place the integers in <m>[n]</m> at the points in <m>\{p_1,p_2,\dots,p_n\}</m>
+in one to one manner.
+</p>
+
+<p>
+For each permutation <m>\sigma</m> of <m>[n]</m>, let <m>\cgF(\sigma)</m> denote
+the subfamily of <m>\cgF</m> consisting of all sets <m>S</m> from <m>\cgF</m> whose
+elements occur in a consecutive block around the circle. Then
+let <m>t=\sum_\sigma|\cgF(\sigma)|</m>.
+</p>
+
+<p>
+<b>Claim 1.</b> 
+<m>t\le kn!</m>.
+</p>
+
+<p>
+<em>Proof.</em> 
+Let <m>\sigma</m> be a permutation and suppose that
+<m>|\cgF(\sigma)|=s \ge 1</m>. Then the union of the
+sets from <m>\cgF(\sigma)</m> is a set of points that form a
+consecutive block of points on the circle. Note that
+since <m>n\ge 2k</m>, this block does not encompass the entire
+circle. Accordingly there is a set <m>S</m> whose elements
+are the first <m>k</m> in a clockwise sense within this block.
+Since each other set in <m>\cgF</m> represents a clockwise shift
+of one of more positions, it follows immediately that
+<m>|\cgF|\le k</m>. Since there are <m>n!</m> permutations, the
+claim follows.
+</p>
+
+<p>
+<b>Claim 2.</b> 
+For each set <m>S\in\cgF</m>, there are exactly
+<m>n k!(n-k)!</m> permutations <m>\sigma</m> for which <m>S\in\cgF(\sigma)</m>.
+</p>
+
+<p>
+<em>Proof.</em> 
+There are <m>n</m> positions around the circle and each can be used
+as the first point in a block of <m>k</m> consecutive positions in
+which the elements of <m>S</m> can be placed. Then there are <m>k!</m>
+ways to order the elements of <m>S</m> and <m>(n-k)!</m> ways to order
+the remaining elements. This completes the proof of the claim.
+</p>
+
+<p>
+To complete the proof of the theorem, we note that we have
+</p>
+<me>
+  |\cgF| n k! (n-k)!\le t\le k n!
+</me>
+<p>
+And this implies that <m>|\cgF|le\binom{n-1}{k-1}</m>.
+</p>
+</proof>
+</section>

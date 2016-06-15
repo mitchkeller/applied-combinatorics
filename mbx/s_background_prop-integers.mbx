@@ -1,0 +1,205 @@
+<section xml:id="s_background_prop-integers">
+<title>Properties of the Integers</title>
+<p>
+For the remainder of this chapter, most statements will be given
+without proof. Students are encouraged to fill in the
+details.
+</p>
+
+<p>
+We define a binary operation <m>+</m> on <m>\ints</m> by the following rule:
+</p>
+<me>
+  \langle(a,b)\rangle+\langle(c,d)\rangle = \langle(a+c,b+d)\rangle.
+</me>
+<p>
+Note that the definition of addition is made in terms of
+representatives of the class, so we must pause to make sure
+that <m>+</m> is <em>well defined</em>, i.e., independent of
+the particular representatives.
+</p>
+
+<lemma>
+<statement>
+<p>
+If <m>\langle(a,b)\rangle =\langle(c,d)\rangle</m> and
+<m>\langle(e,f)\rangle=\langle(g,h)\rangle</m>, then
+<m>\langle(a,b)\rangle+\langle(e,f)\rangle=
+\langle(c,d)\rangle+\langle(g,h)\rangle</m>.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+Since <m>(a,b)\cong(c,d)</m>, we know
+<m>a+d=b+c</m>. Since <m>(e,f)\cong(g,h)</m>,
+we know <m>e+h=f+g</m>. It follows that <m>(a+d)+(e+h) = (b+c)+ (f+g)</m>.
+Thus <m>(a+e)+(d+h)= (b+f)+(c+g)</m>, which implies that
+<m>\langle(a,b)\rangle+\langle(e,f)\rangle=
+\langle(c,d)\rangle+\langle(g,h)\rangle</m>.
+</p>
+</proof>
+
+<p>
+In what follows, we use a single symbol, like <m>x</m>, <m>y</m> or
+<m>z</m> to denote an integer, but remember that each integer
+is in fact an entire equivalence class whose elements are
+ordered pairs of natural numbers.
+</p>
+
+<theorem>
+<statement>
+<p>
+For all <m>x,y,z\in\ints</m>,
+</p>
+
+<ol>
+<li><m>x+y=y+x</m>;</li>
+<li><m>x+(y+z)= (x+y)+z</m>; and</li>
+<li><m>x+y= x+z</m> implies <m>y=z</m>.</li>
+</ol>
+</statement>
+</theorem>
+
+<p>
+Next, we define a second binary operation called
+<em>multiplication</em>, and denoted <m>x\times y</m>, <m>x*y</m> or
+just <m>xy</m>. When <m>x=\langle(a,b)\rangle</m> and <m>y=\langle(c,d)\rangle</m>,
+we define:
+</p>
+<me>
+  xy =\langle(a,b)\rangle\langle(c,d)\rangle= \langle(ac+bd, ad+bc)\rangle.
+</me>
+
+<theorem>
+<statement>
+<p>
+Multiplication is well defined. Furthermore,
+</p>
+
+<ol>
+<li><m>xy=yx</m>,  for every <m>x,y\in \ints</m>.</li>
+<li><m>x(yz)=(xy)z</m>, for every <m>x,y,z\in \ints</m>.</li>
+<li><m>x(y+z)=xy+xz</m>, for every <m>x,y,z\in \ints</m>.</li>
+</ol>
+</statement>
+</theorem>
+
+<p>
+The integer <m>\langle(0,0)\rangle</m> has a number of special properties.
+Note that for all <m>x\in\ints</m>, <m>x+\langle(0,0)\rangle= x</m>
+and <m>x\langle(0,0)\rangle=\langle(0,0)\rangle</m>.
+So most folks call <m>\langle(0,0)\rangle</m> <em>zero</em>
+and denote it by<nbsp /><m>0</m>. This is a terrible abuse of notation,
+since we have already used the word zero and the symbol <m>0</m> to
+denote a particular natural number.
+</p>
+
+<p>
+But mathematicians, computer scientists and even
+real people do this all the time. We use the same
+word and even the same phrase in many different settings
+expecting that the listener
+will make the correct interpretation. For example, how many
+different meanings do you know for <em>You're so bad</em>?
+</p>
+
+<p>
+If <m>x=\langle(a,b)\rangle</m> is an integer and <m>y=
+\langle(b,a)\rangle</m>,
+then <m>x+y=\langle(a+b,a+b)\rangle=0</m>.
+The integer <m>y</m> is then
+called the <em>additive inverse</em> of <m>x</m> and is denoted
+<m>-x</m>. The additive inverse of <m>x</m> is also called <em>minus <m>x</m></em>.
+The basic property is that <m>x + (-x) = 0</m>, for every <m>x\in \ints</m>.
+</p>
+
+<p>
+We can now define a new binary operation, called <em>subtraction</em>
+and denoted <m>-</m>, on <m>\ints</m> by
+setting <m>x-y= x+(-y)</m>. In general, subtraction is neither
+commutative nor associative. However, we do have the following
+basic properties.
+</p>
+
+<theorem>
+<statement>
+<p>
+For all <m>x,y,z\in\ints</m>,
+</p>
+
+<ol>
+<li><m>x(-y)=-xy</m>;</li>
+<li><m>x(y-z)= xy-xz</m>; and</li>
+<li><m>-(x-y)=y-x</m>.</li>
+</ol>
+</statement>
+</theorem>
+
+<p>
+Next, we define a total order on <m>\ints</m> by
+setting <m>x\le y</m> in <m>\ints</m> when <m>x=\langle(a,b)\rangle</m>, <m>y=\langle(c,d)
+\rangle</m> and
+<m>a+d \le b+c</m> in <m>\mathbb{N}_0</m>.
+</p>
+
+<theorem>
+<title>Monotonic Law for Addition</title>
+<statement>
+<p>
+Let <m>x,y,z\in \ints</m>. If <m>x\le y</m>, then
+<m>x+z\le y+z</m>. Furthermore, if <m>x\lt y</m>, then <m>x+z\lt y+z</m>.
+</p>
+</statement>
+</theorem>
+
+<p>
+For multiplication, the situation is more complicated.
+</p>
+
+<theorem>
+<title>Monotonic Law for Multiplication</title>
+<statement>
+<p>
+Let <m>x,y,z\in \ints</m>. If
+<m>x\lt y</m>, then
+</p>
+
+<ol>
+<li><m>xz\lt yz</m>, if <m>z>0</m>,</li>
+<li><m>xz=yz=0</m>, if <m>z=0</m>, and</li>
+<li><m>xz>yz</m>, if <m>z\lt 0</m>.</li>
+</ol>
+</statement>
+</theorem>
+
+<p>
+Now consider the function <m>f:\mathbb{N}_0\longrightarrow \ints</m> defined
+by <m>f(n) = \langle(n,0)\rangle</m>. It is easy to show that
+<m>f</m> is an injection. Furthermore, it respects addition
+and multiplication, i.e., <m>f(n+m)=f(n)+f(m)</m> and
+<m>f(nm)=f(n)f(m)</m>. Also, note that if <m>x\in \ints</m>, then
+<m>x>0</m> if and only if <m>x=f(n)</m> for some <m>n\in \mathbb{N}_0</m>. So, it is
+customary to abuse notation slightly and say that <m>\mathbb{N}_0</m> is a
+<q>subset</q> of <m>\ints</m>. Similarly, we can either consider the set
+<m>\posints</m> of positive integers as the set of natural numbers that are
+successors, or as the set of integers
+that are greater than<nbsp /><m>0</m>.
+</p>
+
+<p>
+When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\ints</m>, we
+define <m>0^n=0</m>. When <m>x\in\ints</m>, <m>x\neq 0</m> and <m>n\in\mathbb{N}_0</m>,
+we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>.
+</p>
+
+<theorem>
+<statement>
+<p>
+If <m>x\in\ints</m>, <m>x\neq0</m>, and <m>m,n\in\mathbb{N}_0</m>, then
+<m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
+</p>
+</statement>
+</theorem>
+</section>

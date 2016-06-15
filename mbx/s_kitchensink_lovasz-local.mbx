@@ -1,0 +1,203 @@
+<section xml:id="s_kitchensink_lovasz-local">
+<title>The Lovasz Local Lemma</title>
+<p>
+Even though humans seem to have great difficulty in
+providing expicit constructions for expontially large graphs
+which do not have complete subgraphs or independent sets
+of size<nbsp /><m>n</m>, such graphs exist with great abundance. Just
+take one at random and you are almost certain to get one. And as a general
+rule, probabilistic techniques often provide a method for
+finding something that readily exists, but is hard to find.
+</p>
+
+<p>
+Similarly, in the probabilistic proof that there exist
+graphs with large girth and large chromatic number, we actually
+showed that almost all graphs have modest sized independence
+number and relatively few small cycles, provided that the
+edge probability is chosen appropriately. The small cycles can
+be destroyed without significantly changing the size of the
+graph.
+</p>
+
+<p>
+By way of contrast, probabilistic techniques can, in certain
+circumstances, be used to find something which is exceedingly
+rare. We next present an elegant but elementary result, known
+as the Lov&#xe1;sz Local Lemma, which has
+proved to be very, very powerful. The treatment is simplified
+by the following natural notation. When <m>E</m> is an event
+in a probability space, we let <m>\overline{E}</m> denote the complement
+of <m>E</m>. Also, when <m>\cgF=\{E_1,E_2,\dots,E_k\}</m> we
+let
+</p>
+<me>
+  \prod_{E\in\cgF}E=\prod_{i=1}^k E_i=E_1E_2E_3\dots E_k
+</me>
+<p>
+denote the event <m>E_1\cap E_2\cap\dots\cap E_k</m>, i.e.,
+concatenation is short hand for intersection. These notations
+can be mixed, so <m>E_1\overline{E_2}\overline{E_3}</m> represents
+<m>E_1\cap \overline{E_2}\cap\overline{E_3}</m>. Now let <m>\cgF</m>
+be a finite family of events, let <m>E\in\cgF</m> and let <m>\cgN</m>
+be a subfamily of <m>\cgF-\{E\}</m>. In the statement of the lemma
+below, we will say that <m>E</m> is independent of any event not in
+<m>\cgN</m> when
+</p>
+<me>
+  P(E|\prod_{F\in\cgG}\overline{F}=P(E)
+</me>
+<p>
+provided <m>\cgG\cap\cgN=\emptyset</m>.
+</p>
+
+<p>
+We first state and prove the lemma in <em>asymmetric</em> form.
+Later, we will give a simpler version which is called the
+<em>symmetric</em> version.
+</p>
+
+<lemma xml:id="lem_LLL">
+<title>Lov&#xe1;sz Local Lemma</title>
+<statement>
+<p>
+Let <m>\cgF</m> be a finite family of events in a probability space
+and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote a
+subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of
+any event not in <m>\cgN(E)</m>. Suppose that
+for each event <m>E\in\cgF</m>, there is a real number <m>x(E)</m> with
+<m>0\lt x(E)\lt 1</m> such that
+</p>
+<me>
+  P(E)\le x(E)\prod_{F\in\cgN(E)}(1-x(F)).
+</me>
+<p>
+Then for every non-empty subfamily <m>\cgG\subseteq\cgF</m>,
+</p>
+<me>
+  P(\prod_{E\in\cgG}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)).
+</me>
+<p>
+In particular, the probability that all events in <m>\cgF</m>
+fail is positive.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+We proceed by induction on <m>\cgG</m>. If <m>|\cgG|=1</m> and <m>\cgG=\{E\}</m>,
+we are simply asserting that <m>P(\overline{E})\ge 1-x(E)</m>, which is true
+since <m>P(E)\le x(E)</m>. Now suppose that <m>|\cgG|=k\ge2</m> and that the lemma
+holds whenever <m>1\le |\cgG|\lt k</m>. Let <m>\cgG =\{E_1,E_2,\dots,E_k\}</m>.
+Then
+</p>
+<me>
+  P(\prod_{i\ge1}^k \overline{E_i})=P(\overline{E_1}|\prod_{i=2}^k\overline{E_i})
+  P(\overline{E_2}|\prod_{i=3}^k\overline{E_i})P(E_3|\prod_{i=4}^k\overline{E_i})\dots
+</me>
+<p>
+Now each term in the product on the right has the following
+form:
+</p>
+<me>
+  P(\overline{E}|\prod_{F\in\cgF_E}\overline{F})
+</me>
+<p>
+where <m>|\cgF_E|\lt k</m>.
+</p>
+
+<p>
+So, we done if we can show that
+</p>
+<me>
+  P(\overline{E}|\prod_{F\in\cgF_E}\overline{F})\ge 1- x(E)
+</me>
+<p>
+This is equivalent to showing that
+</p>
+<me>
+  P(E|\prod_{F\in\cgF_E}\overline{F})\le x(E)
+</me>
+<p>
+Suppose first that <m>\cgF_E\cap\cgN(E)=\emptyset</m>. Then
+</p>
+<me>
+  P(E|\prod_{F\in\cgF_E}\overline{F})=P(E)\le x(E).
+</me>
+<p>
+So we may assume that <m>\cgF_E\cap\cgN(E)\neq\emptyset</m>. Let
+<m>\cgF_E=\{F_1,F_2,F_r,F_{r+1},F_{r+2},\dots, F_t\}</m>, with
+<m>F_i\in\cgN_E</m> if and only if <m>r+1\le i\le t</m>. Then
+</p>
+<me>
+  PE|\prod_{F\in\cgF_E}\overline{F})=
+ \frac{P(E\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F}|\prod_{F\in\cgF_E-\cgN(E)}\overline{F})}
+ {P(\prod_{F\in\cgF_E\cap \cgN(E)}\overline{F})}
+</me>
+<p>
+Consider first the numerator in this last expression. Note that
+</p>
+<me>
+  P(E\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F}|\prod_{F\in\cgF_E-\cgN(E)}\overline{F})\le
+P(E|\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F})\le x(E)\prod_{F\in\cgF_E\cap\cgN(E)}(1-x(F))
+</me>
+<p>
+Next, consider the denominator. By the inductive hypothesis, we have
+</p>
+<me>
+  P(\prod_F\in\cgF_E\cap\cgN(E)\overline{F}\ge \prod_{F\in\cgF_E\cap\cgN(E)}(1-x(F)).
+</me>
+<p>
+Combining these last two inequalities, we have
+</p>
+<me>
+  P(E|\prod_{F\in\cgF_E}\overline{F})\le x(E)\prod_{\cgN(E)-\cgF_E}(1-x(F))\le x(E),
+</me>
+<p>
+and the proof is complete.
+</p>
+</proof>
+
+<p>
+Now here is the symmetric version.
+</p>
+
+<lemma xml:id="lem_LLL-sym">
+<title>Lov&#xe1;sz Local Lemma</title>
+<statement>
+<p>
+Let <m>p</m> and <m>d</m> be numbers with <m>0\lt p\lt 1</m> and <m>d\ge 1</m>. Also,
+let <m>\cgF</m> be a finite family of events in a probability space
+and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote the
+subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of
+any event not in <m>\cgN(E)</m>. Suppose that <m>P(E)\le p</m>, <m>|\cgN(E)|\le d</m> for
+every event <m>E\in\cgF</m> and that <m>ep(d+1)\lt 1</m>, where
+<m>e=2.71828\dots</m> is the base for natural logarithms. Then
+Then
+</p>
+<me>
+  P(\prod_{E\in\cgF}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)),
+</me>
+<p>
+i.e., the probability that all events in <m>\cgF</m> is positive.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+Set <m>x(E)=1/(d+1)</m> for every event <m>E\in\cgF</m>. Then
+</p>
+<me>
+  P(E)\le p\le \frac{1}{e(d+1)}\le x(E)\prod(F\in\cgN(E)(1-\frac{1}{d+1}).
+</me>
+</proof>
+
+<p>
+A number of applications of the symmetric form of the Lov&#xe1;sz Local
+Lemma are stated in terms of the condition that <m>4pd\lt 1</m>. The proof
+of this alternate form is just a trivial modification of the argument
+we have presented here.
+</p>
+</section>

@@ -1,0 +1,234 @@
+<section xml:id="s_graphalgorithms_discussion">
+<title>Discussion</title>
+
+
+<introduction>
+<p>
+Although Bob's combinatorial intuition has improved over the course
+he doesn't quite understand why we need
+special algorithms to find minimum weight spanning trees. He figures
+there can't be that many spanning trees, so he wants to just write
+them down. Alice groans as she senses that Bob must have
+been absent when the material from
+<xref ref="s_graphs_counting-trees" autoname="yes" /> was discussed. In that section,
+we learned that a graph on <m>n</m> vertices can have as many as <m>n^{n-2}</m>
+spanning trees (or horrors, the instructor may have left it off the
+syllabus). Regardless, this exhaustive approach is already unusable
+when <m>n = 20</m>. Dave mumbles something about being greedy and just adding the
+lightest edges one-by-one while never adding an edge that would make
+a cycle. Zori remembers a strategy like this working for finding
+the height of a poset, but she's worried about the nightmare
+situation that we learned about with using FirstFit to color
+graphs. Alice agrees that greedy algorithms have an inconsistent
+track record but suggests that
+<xref ref="lem_graphalgorithms_tech">Lemma</xref>
+may be enough to get one to succeed here.
+</p>
+</introduction>
+
+
+<subsection>
+<title>Kruskal's Algorithm</title>
+<p>
+In this secton, we develop one of the best known algorithms for
+finding a minimum weight spanning tree. It is known as Kruskal's
+Algorithm, although some prefer the descriptive label <em>Avoid
+Cycles</em> because of the way it builds the spanning tree.
+</p>
+
+<p>
+To start Kruskal's algorithm, we sort the edges according to weight.
+To be more precise, let <m>m</m> denote the number of edges in <m>\GVE</m>.
+Then label the edges as <m>e_1,e_2,e_3,\dots,e_m</m> so that <m>w(e_1)\le
+w(e_2)\le \dots \le w(e_m)</m>. Any of the many available efficient
+sorting algorithms can be used to do this step.
+</p>
+
+<p>
+Once the edges are sorted, Kruskal's algorithm proceeds to an
+initialization step and then inductively builds the spanning tree
+<m>\bfT=(V,S)</m>:
+</p>
+
+<p>
+<b>Initialization.</b> 
+Set <m>S=\emptyset</m> and <m>i=0</m>.
+</p>
+
+<p>
+<b>Inductive Step.</b> 
+While <m>|S| \lt  n-1</m>, let <m>j</m> be the least non-negative
+integer so that <m>j > i</m> and there are no cycles in
+<m>S\cup\{e_j\}</m>. Then (using pseudo-code) set
+</p>
+<me>
+  i = j\quad\text{and} \quad S= S\cup\{j\}.
+</me>
+<p>
+The correctness of Kruskal's Algorithm follows from an inductive
+argument. First, the set <m>S</m> is initialized as the empty set, so there
+is certainly a minimum weight spanning tree containing all the edges
+in <m>S</m>. Now suppose that for some <m>i</m> with <m>0\le i \lt n</m>, <m>|S|=i</m> and
+there is a minimum weight spanning tree containing all the edges in
+<m>S</m>. Let <m>\bfF</m> be the spanning forest determined by the edges in
+<m>S</m>, and let <m>C_1, C_2,\dots,C_s</m> be the components of <m>\bfF</m>. For
+each <m>k=1,2,\dots,s</m>, let <m>f_k</m> be a minimum weight edge with one
+endpoint in <m>C_k</m> and the other not in <m>C_k</m>. Then the edge <m>e</m> added
+to <m>S</m> by Kruskal's Algorithm is just the edge <m>\{f_1,f_2,\dots,f_s\}</m>
+having minimum weight. Applying
+<xref ref="lem_graphalgorithms_tech">Lemma</xref>
+and the inductive hypothesis, we know that there will still be a
+minimum weight spanning tree of <m>\bfG</m> containing all the edges of
+<m>S\cup\{e\}</m>.
+</p>
+<sidebyside>
+{0.70\textwidth}
+
+<example>
+<statement>
+<p>
+Let's see what Kruskal's algorithm does on the weighted graph in
+<xref ref="fig_graphalgorithms_spantreegraph" autoname="yes" />. It first sorts all of
+the edges by weight. We won't reproduce the list here, since we
+won't need all of it. The edge of least weight is <m>ck</m>, which has
+weight <m>23</m>. It continues adding the edge of least weight, adding
+<m>ag</m>, <m>fg</m>, <m>fi</m>, <m>fj</m>, and <m>bj</m>. However, after doing this, the
+edge of lowest weight is <m>fb</m>, which has weight <m>38</m>. This edge
+cannot be added, as doing so would make <m>fjb</m> a cycle. Thus, the
+algorithm bypasses it and adds <m>bc</m>. Edge <m>ai</m> is next inspected,
+but it, too, would create a cycle and is eliminated from
+consideration. Then <m>em</m> is added, followed by <m>dl</m>. There are now
+<em>two</em> edges of weight <m>56</m> to be considered: <m>al</m> and <m>dj</m>. Our
+sorting algorithm has somehow decided one of them should appear
+first, so let's say it's <m>dj</m>. After adding <m>dj</m>, we cannot add
+<m>al</m>, as <m>agfjdl</m> would form a cycle. Edge <m>dk</m> is next considered,
+but it would also form a cycle. However, <m>ek</m> can be added. Edges
+<m>km</m> and <m>dm</m> are then bypassed. Finally, edge <m>ch</m> is added as the
+twelfth and final edge for this <m>13</m>-vertex spanning tree. The full
+list of edges added (in order) is shown to the right. The total
+weight of this spanning tree is <m>504</m>.
+</p>
+</statement>
+</example>
+
+{.25\textwidth}
+<b>Kruskal's Algorithm</b><br /> 
+  \begin{tt}c k 23<br /> 
+     a g 25<br /> 
+     f g 26<br /> 
+     f i 29<br /> 
+     f j 30<br /> 
+     b j 34<br /> 
+     b c 39<br /> 
+     e m 49<br /> 
+     d l 55<br /> 
+     d j 56<br /> 
+     e k 59<br /> 
+     c h 79\end{tt}
+</sidebyside>
+</subsection>
+
+
+<subsection>
+<title>Prim's Algorithm</title>
+<p>
+We now develop Prim's Algorithm for finding a minimum weight spanning
+tree. This algorithm is also known by a more descriptive label:
+<em>Build Tree</em>. We begin by choosing a root vertex <m>r</m>. Again,
+the algorithm proceeds with an initialization step followed by a
+series of inductive steps.
+</p>
+
+<p>
+<b>Initialization.</b> 
+Set <m>W=\{r\}</m> and <m>S=\emptyset</m>.
+</p>
+
+<p>
+<b>Inductive Step.</b> 
+While <m>|W| \lt  n</m>, let <m>e</m> be an edge of minimum weight among
+all edges with one endpoint in <m>W</m> and the other not in <m>W</m>.
+If <m>e=xy</m>, <m>x\in W</m> and <m>y\not\in W</m>, update <m>W</m> and <m>S</m> by
+setting (using pseudo-code)
+</p>
+<me>
+  W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
+</me>
+<p>
+The correctness of Prim's algorithm follows immediately from
+<xref ref="lem_graphalgorithms_tech">Lemma</xref>.
+</p>
+<sidebyside>
+{0.70\textwidth}
+
+<example>
+<statement>
+<p>
+Let's see what Prim's algorithm does on the weighted graph in
+<xref ref="fig_graphalgorithms_spantreegraph" autoname="yes" />. We start with vertex
+<m>a</m> as the root vertex. The lightest edge connecting <m>a</m> (the only
+vertex in the tree so far) to the rest of the graph is <m>ag</m>. Next,
+<m>fg</m> is added. This is followed by <m>fi</m>, <m>fj</m>, <m>bj</m>, and <m>bc</m>. Next,
+the algorithm identifies <m>ck</m> as the lightest edge connecting
+<m>\{a,g,i,f,j,b,c\}</m> to the remaining vertices. Notice that this is
+considerably later than Kruskal's algorithm finds the same edge. The
+algorithm then determines that <m>al</m> and <m>jd</m>, both of weight <m>56</m>
+are the lightest edges connecting vertices in the tree to the other
+vertices. It picks arbitrarily, so let's say it takes <m>al</m>. It next
+finds <m>dl</m>, then <m>ek</m>, and then <m>em</m>. The final edge added is <m>ch</m>. The full
+list of edges added (in order) is shown to the right. The total
+weight of this spanning tree is <m>504</m>. This (not surprisingly) the
+same weight we obtained using Kruskal's algorithm. However, notice
+that the spanning tree found is different, as this one contains
+<m>al</m> instead of <m>dj</m>. This is not an issue, of course, since in
+both cases an arbitrary choice between two edges of equal weight
+was made.
+</p>
+</statement>
+</example>
+
+{.25\textwidth}
+<b>Prim's Algorithm</b><br />
+
+
+\begin{tt}
+a g 25<br />
+f g 26<br />
+f i 29<br />
+f j 30<br />
+b j 34<br />
+b c 39<br />
+c k 23<br />
+a l 56<br />
+d l 55<br />
+e k 59<br />
+e m 49<br />
+c h 79
+\end{tt}
+</sidebyside>
+</subsection>
+
+
+<subsection>
+<title>Comments on Efficiency</title>
+<p>
+An implementation of Kruskal's algorithm seems to require that
+the edges be sorted. If the graph has <m>n</m> vertices and <m>m</m> edges,
+this requires <m>m\log m</m> operations just for the sort. But once
+the sort is done, the process takes only <m>n-1</m> steps<mdash />provided
+you keep track of the components as the spanning forest expands.
+Regardless, it is easy to see that at most <m>O(n^2\log n)</m> operations
+are required.
+</p>
+
+<p>
+On the other hand, an implementation of Prim's algorithm requires
+the program to conveniently keep track of the edges incident with
+each vertex and always be able to identify the edge with least
+weight among subsets of these edges. In computer science, the
+data structure that enables this task to be carried out is called
+a <em>heap</em>.
+</p>
+</subsection>
+
+</section>

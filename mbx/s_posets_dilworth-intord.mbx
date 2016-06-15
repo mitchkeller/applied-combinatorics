@@ -1,0 +1,126 @@
+<section xml:id="s_posets_dilworth-intord">
+<title>Dilworth's Theorem for Interval Orders</title>
+<p>
+As remarked previously, we do not yet have an efficient
+process for determining the width of a poset and a minimum
+partition into chains. For interval orders, there is indeed
+a simple way to find both. The explanation is just to establish
+a connection with coloring of interval graphs as discussed in
+<xref ref="ch_graphs" autoname="yes" />.
+</p>
+
+<p>
+Let <m>\PXP</m> be an interval order and let
+<m>\{[a_x,b_x]:x\in X\}</m> be intervals of the real line
+so that <m>x\lt y</m> in <m>\bfP</m> if and only <m>b_x\lt a_y</m>.
+Then let <m>\bfG</m> be the interval graph determined by this
+family of intervals. Note that if <m>x</m> and <m>y</m> are distinct
+elements of <m>X</m>, then <m>x</m> and <m>y</m> are incomparable in <m>\bfP</m> if and
+only if <m>xy</m> is an edge in <m>\bfG</m>. In other words, <m>\bfG</m> is
+just the incomparability graph of <m>\bfP</m>.
+</p>
+
+<p>
+Recall from Chapter<nbsp /><m>4</m> that interval graphs are perfect, i.e.,
+<m>\chi(\bfG)=\omega(\bfG)</m> for every interval graph <m>\bfG</m>. Furthermore,
+you can find an optimal coloring of an interval graph by applying first fit
+to the vertices in a linear order that respects left end points.
+Such a coloring concurrently determines a partition of <m>\bfP</m> into
+chains.
+</p>
+
+<p>
+In fact, if you want to skip the part about interval representations,
+take any linear ordering of the elements as <m>x_1</m>, <m>x_2,\dots,x_n</m> so that
+<m>i\lt j</m> whenever <m>D(x)</m> is a proper subset of <m>D(y)</m>. Then apply First
+Fit with respect to chains. For example, using
+the <m>10</m> point interval order illustrated in <xref ref="fig_10ptintorder" autoname="yes" />,
+here is such a labeling:
+</p>
+<me>
+  \begin{array}{ccccc}
+x_1 =g \amp 
+x_2 =f \amp 
+x_3 =c \amp 
+x_4 =d \amp 
+x_5 =h\\
+x_6 =a \amp 
+x_7 =j \amp 
+x_8 =b \amp 
+x_9 =i \amp 
+x_{10} =e
+\end{array}
+</me>
+<p>
+Now apply the <b>First Fit</b> algorithm to the points of <m>\bfP</m>,
+in this order, to assign them to chains <m>C_1</m>, <m>C_2,\dots</m>. In other
+words, assign <m>x_1</m> to chain<nbsp /><m>C_1</m>. Thereafter if you have
+assigned points <m>x_1</m>, <m>x_2,\dots,x_i</m> to chains, then assign
+<m>x_{i+1}</m> to chain <m>C_j</m> where <m>j</m> is the least positive integer
+for which <m>x_{i+1}</m> is comparable to <m>x_k</m> whenever <m>1\le k\le i</m> and
+<m>x_k</m> has already been assigned to <m>C_j</m>.
+For example, this rule results in the following chains for the
+interval order <m>\bfP</m> shown in <xref ref="fig_10ptintorder" autoname="yes" />.
+</p>
+<md>
+  <mrow>  C_1 \amp = \{g,h,b\}
+      </mrow>
+  <mrow>  C_2 \amp = \{f,a,e\}
+      </mrow>
+  <mrow>  C_3 \amp = \{c,d\}
+      </mrow>
+  <mrow>  C_4 \amp = \{j\}
+      </mrow>
+  <mrow>  C_5 \amp = \{i\}
+      </mrow>
+</md>
+<p>
+In this case, it is easy to see that the chain partition is
+optimal since the width of <m>\bfP</m> is <m>5</m> and <m>A=\{a,b,d,i,j\}</m>
+is a <m>5</m>-element antichain.
+</p>
+
+<p>
+However, you should be very careful in applying First Fit to find
+optimal chain partitions of posets<mdash />just as one must be leary of
+using First Fit to find optimal colorings of graphs.
+</p>
+<example>
+<statement>
+<p>
+The poset on the left side of <xref ref="fig_FirstFit" autoname="yes" /> is a height<nbsp /><m>2</m>
+poset on <m>10</m> points, and if the poset is partitioned into
+antichains by applying First Fit and considering the points in the
+order of their labels, then <m>5</m> antichains will be used. Do you see
+how to extend this poset to force First Fit to use arbitrarily many
+antichains, while keeping the height of the poset at <m>2</m>?
+</p>
+
+<p>
+On the right side, we show a poset of width<nbsp /><m>2</m>. Now if this poset
+is partitioned into chains by applying First Fit and considering the
+points in the order of their labels, then <m>4</m> chains will be used.
+Do you see how to extend this poset to force First Fit to use
+arbitrarily many chains while keeping the width of the poset at <m>2</m>?
+</p>
+
+<p>
+Do you get a feeling for why the second problem is a bit harder than
+the first?
+</p>
+</statement>
+</example>
+
+<figure xml:id="fig_FirstFit" >
+<caption>How First Fit Can Go Wrong</caption>
+<image width="40%" source="images/FirstFit.png" />
+</figure>
+<p>
+In general, there is always <em>some</em> linear order on the ground set
+of a poset for which First Fit will find an optimal partition into antichains.
+Also, there is a linear order (in general different from the first) on the ground
+set for which First Fit will find an optimal partition into chains.
+However, there is no advantage in searching for such orders, as the algorithms
+we develop for finding optimal antichain and chain partitions work quite well.
+</p>
+</section>

@@ -1,0 +1,170 @@
+<section xml:id="s_graphalgorithms_min-wt-span">
+<title>Minimum Weight Spanning Trees</title>
+
+
+<introduction>
+<p>
+In this section, we consider pairs <m>(\bfG,w)</m> where <m>\GVE</m> is a
+connected graph and <m>w:E\rightarrow\mathbb{N}_0</m>. For each edge <m>e\in
+E</m>, the quantity <m>w(e)</m> is called the <em>weight</em> of <m>e</m>. Given a
+set <m>S</m> of edges, we define the <em>weight</em> of <m>S</m>, denoted
+<m>w(S)</m>, by setting <m>w(S)=\sum_{e\in S} w(e)</m>. In particular, the
+weight of a spanning tree <m>T</m> is just the sum of the weights of the
+edges in <m>T</m>.
+</p>
+
+<p>
+Weighted graphs arise in many contexts. One of the most natural is
+when the weights on the edges are distances or costs. For example,
+consider the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph" autoname="yes" />. Suppose
+the vertices represent nodes of a network and the edges represent the
+ability to establish direct physical connections between those
+nodes. The weights associated to the edges represent the cost (let's
+say in thousands of dollars) of building those connections. The
+company establishing the network among the nodes only cares that there
+is a way to get data between each pair of nodes. Any additional links
+would create redundancy in which they are not interested at this
+time. A spanning tree of the graph ensures that each node can
+communicate with each of the others and has no redundancy, since
+removing any edge disconnects it. Thus, to minimize the cost of
+building the network, we want to find a minimum weight (or cost)
+spanning tree.
+</p>
+<figure xml:id="fig_graphalgorithms_spantreegraph" >
+<caption>A weighted graph</caption>
+<image width="65%" source="images/spantreegraph.png" />
+</figure>
+<p>
+To do this, this section considers the following problem:
+</p>
+<problem>
+<p>
+Find a minimum weight spanning tree <m>\bfT</m> of <m>\bfG</m>.
+</p>
+</problem>
+<p>
+To solve this problem, we will develop <em>two</em> efficient graph
+algorithms, each having certain computational advantages and
+disadvantages. Before developing the algorithms, we need to establish
+some preliminaries about spanning trees and forests.
+</p>
+</introduction>
+
+
+<subsection>
+<title>Preliminaries</title>
+<p>
+The following proposition about the number of components in a spanning
+forest of a graph <m>\bfG</m> has an easy inductive proof. You are asked to
+provide it in the exercises.
+</p>
+
+<proposition xml:id="prop_graphalgorithms_spanforest">
+<statement>
+<p>
+Let <m>\GVE</m> be a graph on <m>n</m> vertices, and let <m>\bfH=(V,S)</m> be
+a spanning forest. Then <m>0\le |S|\le n-1</m>. Futhermore, if
+<m>|S|= n-k</m>, then <m>\bfH</m> has <m>k</m> components. In particular, <m>\bfH</m> is
+a spanning tree if and only if it contains <m>n-1</m> edges.
+</p>
+</statement>
+</proposition>
+
+<p>
+The following proposition establishes a way to take a spanning tree of
+a graph, remove an edge from it, and add an edge of the graph that is
+not in the spanning tree to create a new spanning tree. Effectively,
+the process exchanges two edges to form the new spanning tree, so we
+call this the <em>exchange principle</em>.
+</p>
+
+<proposition xml:id="prop_graphalgorithms_exchange">
+<title>Exchange Principle</title>
+<statement>
+<p>
+Let <m>\bfT=(V,S)</m> be spanning tree in a graph <m>\bfG</m>, and let <m>e=xy</m> be
+an edge of <m>\bfG</m> which does not belong to <m>\bfT</m>. Then
+</p>
+
+<ol>
+<li>There is a <em>unique</em> path <m>P=(x_0,x_1,x_2,\dots,x_t)</m>
+with (a)<nbsp /><m>x=x_0</m>; (b)<nbsp /><m>y=x_t</m>; and (c)<nbsp /><m>x_ix_{i+1}\in S</m> for each
+<m>i=0,1,2,\dots,t-1</m>.</li>
+<li>For each <m>i=0,1,2,\dots,t-1</m>, let <m>f_i=x_ix_{i+1}</m> and 
+  then set
+<me>
+  S_i = \{e\}\cup\{g\in S: g\neq f_i\},
+</me>
+i.e., we <em>exchange</em>
+edge <m>f_i</m> for edge <m>e</m>. Then <m>\bfT_i=(V,S_i)</m> is a spanning tree of <m>\bfG</m>.</li>
+</ol>
+</statement>
+</proposition>
+
+<proof>
+<p>
+For the first fact, it suffices to note that if there were more than
+one distinct path from <m>x</m> to <m>y</m> in <m>\bfT</m>, we would be able to
+find a cycle in <m>\bfT</m>. This is impossible since it is a tree. For
+the second, we refer to <xref ref="fig_graphalgorithms_exchange" autoname="yes" />. The
+black and green edges in the graph shown at the left represent the
+spanning tree <m>\bfT</m>. Thus, <m>f</m> lies on the unique path from <m>x</m> to
+<m>y</m> in <m>\bfT</m> and <m>e=xy</m> is an edge of <m>\bfG</m> <em>not</em> in
+<m>\bfT</m>. Adding <m>e</m> to <m>\bfT</m> creates a graph with a unique cycle,
+since <m>\bfT</m> had a unique path from <m>x</m> to <m>y</m>. Removing <m>f</m> (which
+could be any edge <m>f_i</m> of the path, as stated in the proposition)
+destroys this cycle. Thus <m>\bfT_i</m> is an acyclic subgraph of <m>\bfG</m>
+with <m>n-1+1-1=n-1</m> edges, so it is a spanning tree.
+</p>
+<figure xml:id="fig_graphalgorithms_exchange" >
+<caption>The exchange principle</caption>
+<image width="45%" source="images/exchange1.png" /> \hspace{0.05\linewidth}<image width="45%" source="images/exchange2.png" />
+</figure>
+</proof>
+
+<p>
+For both of the algorithms we develop, the argument to show that the
+algorithm is optimal rests on the following technical lemma. To avoid
+trivialities, we assume <m>n\ge3</m>.
+</p>
+
+<lemma xml:id="lem_graphalgorithms_tech">
+<statement>
+<p>
+Let <m>\bfF</m> be a spanning forest of <m>\bfG</m> and let <m>C</m> be a component
+of <m>\bfF</m>. Also, let <m>e=xy</m> be an edge of minimum weight among all
+edges with one endpoint in <m>C</m> and the other not in <m>C</m>. Then among
+all spanning trees of <m>\bfG</m> that contain the forest <m>\bfF</m>, there
+is one of minimum weight that contains the edge <m>e</m>.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+Let <m>\bfT=(V,S)</m> be any spanning tree of minimum weight among all
+spanning trees that contain the forest <m>\bfF</m>, and suppose that
+<m>e=xy</m> is not an edge in <m>\bfT</m>. (If it were an edge in <m>\bfT</m>, we
+would be done.) Then let <m>P=(x_0,x_1,x_2,\dots,x_t)</m> be the unique
+path in <m>\bfT</m> with (a)<nbsp /><m>x=x_0</m>; (b)<nbsp /><m>y=x_t</m>; and (c)<nbsp /><m>x_ix_{i+1}\in
+  S</m> for each <m>i=0,1,2,\dots,t-1</m>. Without loss of generality, we may
+assume that <m>x=x_0</m> is a vertex in <m>C</m> while <m>y=x_t</m> does not
+belong to <m>C</m>. Then there is a
+least non-negative integer <m>i</m> for which <m>x_i</m> is in <m>C</m> and
+<m>x_{i+1}</m> is not in <m>C</m>. It follows that <m>x_j</m> is in <m>C</m> for all <m>j</m> with
+<m>0\le j\le i</m>.
+</p>
+
+<p>
+Let <m>f=x_ix_{i+1}</m>. The edge <m>e</m> has minimum weight among all edges
+with one endpoint in <m>C</m> and the other not in <m>C</m>, so <m>w(e)\le
+  w(f)</m>. Now let <m>\bfT_i</m> be the tree obtained by exchanging the edge
+<m>f</m> for edge<nbsp /><m>e</m>. It follows that <m>w(\bfT_i) = w(\bfT) - w(f)
+  +w(e)\le w(\bfT)</m>. Furthermore, <m>\bfT_i</m> contains the spanning
+forest <m>\bfF</m> as well as the edge<nbsp /><m>e</m>. It is therefore the minimum
+weight spanning tree we seek.
+</p>
+</proof>
+</subsection>
+
+</section>

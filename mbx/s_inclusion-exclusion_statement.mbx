@@ -1,0 +1,123 @@
+<section xml:id="s_inclusion-exclusion_statement">
+<title>The Inclusion-Exclusion Formula</title>
+<p>
+Now that we have an understanding of what we mean by a property, let's
+see how we can use this concept to generalize the process we used in
+the first two examples of the previous section.
+</p>
+
+<p>
+Let <m>X</m> be a set and let <m>\mathcal{P}=\{P_1,P_2,\dots,P_m\}</m> be a
+family of properties. Then for each subset <m>S\subseteq [m]</m>, let
+<m>N(S)</m> denote the number of elements of <m>X</m> which satisfy property
+<m>P_i</m> for all <m>i\in S</m>. Note that if <m>S=\emptyset</m>, then <m>N(S)=|X|</m>,
+as every element of <m>X</m> satisfies every property in <m>S</m> (which
+contains no actual properties).
+</p>
+
+<p>
+Returning for a moment to
+<xref ref="exa_inclusion-exclusion_students">Example</xref>
+with <m>P_1</m> being <q>is a computer science major</q> and <m>P_2</m> being <q>is
+male,</q> we note that <m>N(\{1\})=47</m>, since there are <m>47</m> computer
+science majors in the class. Also, <m>N(\{2\})=51</m> since <m>51</m> of the
+students are male. Finally, <m>N(\{1,2\})=45</m> since there are <m>45</m> male
+computer science majors in the class.
+</p>
+
+<p>
+In the examples of the previous section, we subtracted off <m>N(S)</m> for
+the sets <m>S</m> of size <m>1</m> and then added back <m>N(S)</m> for the set of
+properties of size <m>2</m>, since we'd subtracted the number of things
+with both properties (male computer science majors or solutions with
+both <m>x_3>7</m> and <m>x_4'>8</m>) twice. Symbolically, we determined that the
+number of objects satisfying none of the properties was
+</p>
+<me>
+  N(\emptyset) - N(\{1\}) - N(\{2\}) + N(\{1,2\}).
+</me>
+<p>
+Suppose that we
+had three properties <m>P_1,P_2</m>, and <m>P_3</m>. How would we count the
+number of objects satisfying none of the properties? As before, we
+start by subtracting for each of <m>P_1</m>, <m>P_2</m>, and <m>P_3</m>. Now we have
+removed the objects satisfying both <m>P_1</m> and <m>P_2</m> twice, so we must
+add back <m>N(\{1,2\})</m>. similarly, we must do this for the objects
+satisfying both <m>P_2</m> and <m>P_3</m> and both <m>P_1</m> and <m>P_3</m>. Now let's
+think about the objects satisfying all three properties. They're
+counted in <m>N(\emptyset)</m>, eliminated <em>three times</em> by the
+<m>N(\{i\})</m> terms, and added back three times by the <m>N(\{i,j\})</m>
+terms. Thus, they're still being counted! Thus, we must yet
+subtract <m>N(\{1,2,3\})</m> to get the desired number:
+</p>
+<me>
+  N(\emptyset) - N(\{1\}) - N(\{2\}) - N(\{3\}) + N(\{1,2\}) +
+N(\{2,3\}) + N(\{1,3\}) - N(\{1,2,3\}).
+</me>
+<p>
+We can generalize this as the following theorem:
+</p>
+
+<theorem xml:id="thm_inclusion-exclusion">
+<title>Principle of Inclusion-Exclusion</title>
+<statement>
+<p>
+The number of elements of <m>X</m> which satisfy none of the properties
+in <m>\mathcal{P}</m> is given by
+</p>
+<men xml:id="eq_inclusion-exclusion" >
+  \sum_{S\subseteq [m]} (-1)^{|S|}N(S).
+</men>
+</statement>
+</theorem>
+
+<proof>
+<p>
+We proceed by induction on the number <m>m</m> of properties. If <m>m=1</m>,
+then the formula reduces to <m>N(\emptyset)-N(\{1\})</m>. This is
+correct since it says just that the number of elements which do not
+satisfy property <m>P_1</m> is the total number of elements minus the
+number which do satisfy property <m>P_1</m>.
+</p>
+
+<p>
+Now assume validity when <m>m\le k</m> for some <m>k\ge1</m> and consider the
+case where <m>m=k+1</m>. Let <m>X'=\{x\in X: x</m> satisfies <m>P_{k+1}\}</m> and
+<m>X''=X-X'</m> (i.e., <m>X''</m> is the set of elements that do not satisfy
+<m>P_{k+1}</m>). Also, let <m>\mathcal{Q}=\{P_1,P_2,\dots,P_k\}</m>. Then for
+each subset <m>S\subseteq [k]</m>, let <m>N'(S)</m> count the number of
+elements of <m>X'</m> satisfying property <m>P_i</m> for all <m>i\in S</m>. Also,
+let <m>N''(S)</m> count the number of elements of <m>X''</m> satisfying
+property <m>P_i</m> for each <m>i\in S</m>. Note that <m>N(S)=N'(S)+N''(S)</m> for
+every <m>S\subseteq [k]</m>.
+</p>
+
+<p>
+Let <m>X'_0</m> denote the set of elements in <m>X'</m> which satisfy none of
+the properties in <m>\mathcal{Q}</m> (in other words, those that satisfy
+only <m>P_{k+1}</m> from <m>\mathcal{P}</m>), and let <m>X''_0</m> denote the set
+of elements of <m>X''</m> which satisfy none of the properties in
+<m>\mathcal{Q}</m>, and therefore none of the properties in <m>\mathcal{P}</m>.
+</p>
+
+<p>
+Now by the inductive hypothesis, we know
+</p>
+<me>
+  |X'_0| = \sum_{S\subseteq [k]} (-1)^{|S|}N'(S)\qquad \text{and} \qquad
+ |X''_0| = \sum_{S\subseteq [k]} (-1)^{|S|}N''(S).
+</me>
+<p>
+It follows that
+</p>
+<md>
+  <mrow>  |X''_0| \amp = \sum_{S\subseteq [k]} (-1)^{|S|}N''(S) = \sum_{S\subseteq [k]} (-1)^{|S|}\left(N(S)-N'(S)\right)
+      </mrow>
+  <mrow>  \amp = \sum_{S\subseteq [k]} (-1)^{|S|}N(S)+
+           \sum_{S\subseteq [k]} (-1)^{|S|+1}N(S\cup\{k+1\})
+      </mrow>
+  <mrow>  \amp = \sum_{S\subseteq [k+1]} (-1)^{|S|}N(S).
+      </mrow>
+</md>
+</proof>
+</section>

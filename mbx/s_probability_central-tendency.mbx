@@ -1,0 +1,291 @@
+<section xml:id="s_probability_central-tendency">
+<title>Central Tendency</title>
+
+
+<introduction>
+<p>
+Consider the following two situations.
+</p>
+
+<p>
+Situation 1.  A small town decides to hold a lottery to raise funds for
+charitable purposes. A total of <m>10,001</m> tickets are sold, and the
+tickets are labeled with numbers from the set <m>\{0,1,2,\dots,10,000\}</m>.
+At a public ceremony, duplicate tickets are placed in a big box, and
+the mayor draws the winning ticket from out of the box. Just to heighten
+the suspense as to who has actually won the prize, the mayor reports that
+the winning number is at least <m>7,500</m>. The citizens ooh and aah and they
+can't wait to see who among them will be the final winner.
+</p>
+
+<p>
+Situation 2.  Behind a curtain, a fair coin is tossed <m>10,000</m> times,
+and the number of heads is recorded by an observer, who is reputed to
+be honest and impartial. Again, the outcome is an integer in the
+set <m>\{0,1,2,\dots,10,000\}</m>. The observer then emerges from behind
+the curtain and announces that the number of heads is at least than <m>7,500</m>.
+There is a pause and then someone says <q>What? Are you out of your mind?</q>
+</p>
+
+<p>
+So we have two probability spaces, both with sample space
+<m>S=\{0,1,2,\dots,10,000\}</m>. For each, we have a random variable <m>X</m>,
+the winning ticket number in the first situation, and the number of
+heads in the second. In each case, the expected value, <m>E(X)</m>, of the
+random variable <m>X</m> is <m>5,000</m>. In the first case, we are not all
+that surprised at an outcome far from the expected value, while in the
+second, it seems intuitively clear that this is an extraordinary
+occurrence. The mathematical concept here is referred to as
+<em>central tendency</em>, and it helps us to understand just how
+likely a random variable is to stray from its expected value.
+</p>
+
+<p>
+For starters, we have the following elementary result which is
+called Markov's inequality.
+</p>
+
+<theorem xml:id="thm_markov">
+<statement>
+<p>
+Let <m>X</m> be a random variable in a probability
+space <m>(S,P)</m>. Then for every <m>k>0</m>,
+</p>
+<me>
+  P(|X|\ge k) \le E(|X|)/k.
+</me>
+</statement>
+</theorem>
+
+<proof>
+<p>
+Of course, the inequality holds trivially unless
+<m>k> E(|X|)</m>. For <m>k</m> in this range, we
+establish the equivalent inequality: <m>k P(|X|\ge k)\le E(|X|)</m>.
+</p>
+<md>
+  <mrow>  k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)
+      </mrow>
+  <mrow>  \amp  \le \sum_{r \ge k} r P(|X|=r)
+      </mrow>
+  <mrow>  \amp  \le \sum_{r> 0} r P(|X|=r)
+      </mrow>
+  <mrow>  \amp = E(|X|).
+      </mrow>
+</md>
+</proof>
+
+<p>
+To make Markov's inequality more concrete, we see that on the
+basis of this trivial result, the probability that either the
+winning lottery ticket or the number of heads is at least <m>7,500</m>
+is at most <m>5000/7500=2/3</m>. So nothing alarming here in either
+case. Since we still feel that the two cases are quite different,
+a more subtle measure will be required.
+</p>
+</introduction>
+
+
+<subsection>
+<title>Variance and Standard Deviation</title>
+<p>
+Again, let <m>(S,P)</m> be a probability space and let <m>X</m> be a random variable.
+The quantity <m>E((X-E(X))^2)</m> is called the <em>variance</em> of <m>X</m> and
+is denoted <m>\var(X)</m>. Evidently, the variance of <m>X</m> is a non-negative
+number. The <em>standard deviation</em> of <m>X</m>, denoted <m>\sigma_X</m> is then
+defined as the quantity <m>\sqrt{\var(x)}</m>, i.e., <m>\sigma_X^2 =\var(X)</m>.
+</p>
+<example>
+<statement>
+<p>
+For the spinner shown at the beginning of the chapter, let <m>X(i)=i^2</m> when
+the pointer stops in region<nbsp /><m>i</m>. Then we have already noted that the
+expectation <m>E(X)</m> of the random variable <m>X</m> is <m>109/8</m>. It follows that
+the variance <m>\var(X)</m> is:
+</p>
+<md>
+  <mrow>  \var(X)\amp =(1^2-\frac{109}{8})^2\frac{1}{8}+(2^2-\frac{109}{8})^2\frac{1}{4}+
+          (3^2-\frac{109}{8})^2\frac{1}{8}+(4^2-\frac{109}{8})^2\frac{1}{8}+
+          (5^2-\frac{109}{8})^2\frac{3}{8}
+      </mrow>
+  <mrow>  \amp =(108^2+105^2+100^2+93^2+84^2)/512
+      </mrow>
+  <mrow>  \amp =48394/512
+      </mrow>
+</md>
+<p>
+It follows that the standard deviation <m>\sigma_X</m> of <m>X</m> is then
+<m>\sqrt{48394/512}\approx 9.722</m>.
+</p>
+</statement>
+</example>
+
+<example>
+<statement>
+<p>
+Suppose that <m>0\lt p\lt 1</m> and consider a series of <m>n</m> Bernoulli trials with
+the probability of success being <m>p</m>, and let <m>X</m> count the number of
+successes. We have already noted that <m>E(X)=np</m>. Now we claim the the
+variance of <m>X</m> is given by:
+</p>
+<me>
+  \var(X)=\sum_{i=0}^n (i-np)^2\binom{n}{i}p^i(1-p)^{n-i} = np(1-p)
+</me>
+<p>
+There are several ways to establish this claim. One way is to proceed
+directly from the definition, using the same method we used previously
+to obtain the expectation. But now you need also to calculate the second
+derivative. Here is a second approach, one that capitalizes on the
+fact that separate trials in a Bernoulli series are independent.
+</p>
+
+<p>
+Let <m>\cgF=\{X_1,X_2,\dots,X_n\}</m> be a family of random variables
+in a probability space <m>(S,P)</m>. We say the family <m>\cgF</m> is
+<em>independent</em> if for each <m>i</m> and <m>j</m> with
+<m>1\le i\lt j\le n</m>, and for each pair <m>a,b</m> of real numbers with
+<m>0\le a,b\le 1</m>, the follwing two events are independent:
+<m>\{x\in S: X_i(x)\le a\}</m> and <m>\{x\in S:X_j(x)\le b\}</m>. When
+the family is independent, it is straightforward to verify that
+</p>
+<me>
+  \var(X_1+X_2+\dots+X_n)=\var(X_1)+\var(X_2)+\dots+\var(X_n).
+</me>
+<p>
+With the aid of this observation, the calculation of the variance of
+the random variable <m>X</m> which counts the number of successes becomes
+a trivial calculation. But in fact, the entire treatment we have outlined
+here is just a small part of a more complex subject which
+can be treated more elegantly and ultimately much more compactly<mdash />provided
+you first develop additional background material on families of
+random variables. For this we will refer
+you to suitable probability and statistics texts, such as those given
+in our references.
+</p>
+</statement>
+</example>
+
+<proposition xml:id="prop_altvar">
+<statement>
+<p>
+Let <m>X</m> be a random variable in a probability space <m>(S,P)</m>.
+Then <m>\var(X)= E(X^2)-E^2(X)</m>.
+</p>
+</statement>
+</proposition>
+
+<proof>
+<p>
+Let <m>E(X)=\mu</m>. From its definition, we note that
+</p>
+<md>
+  <mrow>  \var(X) \amp = \sum_{r} (r -\mu)^2\prob(X=r)
+      </mrow>
+  <mrow>  \amp = \sum_{r} (r^2 -2r \mu+\mu^2)\prob(X=r)
+      </mrow>
+  <mrow>  \amp = \sum_r r^2\prob(X=r) - 2 \mu\sum_r r\prob(X=r) +\mu^2\sum_r\prob(X=r)
+      </mrow>
+  <mrow>  \amp = E(X^2) -2\mu^2+\mu^2
+      </mrow>
+  <mrow>  \amp = E(X^2) - \mu^2
+      </mrow>
+  <mrow>  \amp = E(X^2) - E^2(X).
+      </mrow>
+</md>
+</proof>
+
+<p>
+Variance (and standard deviation) are quite useful tools in discussions of
+just how likely a random variable is to be near its expected value.
+This is reflected in the following theorem, known as Chebychev's
+inequality.
+</p>
+
+<theorem>
+<statement>
+<p>
+Let <m>X</m> be a random variable in a probability space <m>(S,P)</m>, and
+let <m>k>0</m> be a positive real number. If the expectation <m>E(X)</m> of
+<m>X</m> is <m>\mu</m> and the standard deviation is <m>\sigma_X</m>, then
+</p>
+<me>
+  \prob(|X- E(X)|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
+</me>
+</statement>
+</theorem>
+
+<proof>
+<p>
+Let <m>A=\{r\in \mathbb{R}:|r-\mu|>k\sigma_X\}</m>.
+</p>
+
+<p>
+Then we have:
+</p>
+<md>
+  <mrow>  \var(X) \amp = E((X-\mu)^2)
+      </mrow>
+  <mrow>  \amp = \sum_{r\in \mathbb{R}}(r-\mu)^2\prob(X=r)
+      </mrow>
+  <mrow>  \amp \ge \sum_{r\in A}(r-\mu)^2\prob(X=r)
+      </mrow>
+  <mrow>  \amp \ge k^2\sigma_X^2\sum_{r\in A}\prob(X=r)
+      </mrow>
+  <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|>k\sigma_X).
+      </mrow>
+</md>
+<p>
+Since <m>\var(X)=\sigma_X^2</m>, we may now deduce that <m>1/k^2\geq
+\prob(|X-\mu|)>k\sigma_X)</m>. Therefore, since <m>\prob(|X-\mu|\le
+k\sigma_X)=1-\prob(|X-\mu|> k\sigma_X)</m>, we conclude that
+</p>
+<me>
+  \prob(|X- \mu|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
+</me>
+</proof>
+
+<example>
+<statement>
+<p>
+Here's an example of how this inequality can be applied.
+Consider <m>n</m> tosses of a fair coin with <m>X</m> counting the
+number of heads. As noted before, <m>\mu=E(X)=n/2</m> and
+<m>\var(X)=n/4</m>, so <m>\sigma_X=\sqrt{n}/2</m>. When <m>n=10,000</m> and
+<m>\mu=5,000</m> and <m>\sigma_X=50</m>. Setting <m>k=50</m> so that
+<m>k\sigma_X=2500</m>, we see that the probability that <m>X</m> is within
+<m>2500</m> of the expected value of <m>5000</m> is at least <m>0.9996</m>.
+So it seems very unlikely indeed that the number of heads
+is at least <m>7,500</m>.
+</p>
+
+<p>
+Going back to lottery tickets, if we make the rational
+assumption that all ticket numbers are equally likely,
+then the probability that the winning number is at least
+<m>7,500</m> is exactly <m>2501/100001</m>, which is very close to <m>1/4</m>.
+</p>
+</statement>
+</example>
+
+<example>
+<statement>
+<p>
+In the case of Bernoulli trials, we can use basic properties
+of binomial coefficients to make even more accurate
+estimates. Clearly, in the case of coin tossing,
+the probability that the number of heads in <m>10,000</m> tosses
+is at least <m>7,500</m> is given by
+</p>
+<me>
+  \sum_{i = 7,500}^{10,000} \binom{10,000}{i}/2^{10,000}
+</me>
+<p>
+Now a computer algebra system can make this calculation exactly, and
+you are encouraged to check it out just to see how truly small this
+quantity actually is.
+</p>
+</statement>
+</example>
+</subsection>
+
+</section>

@@ -1,0 +1,92 @@
+<section xml:id="s_inclusion-exclusion_surjections">
+<title>Enumerating Surjections</title>
+<p>
+As our first example of the power of inclusion-exclusion, consider the
+following situation: A grandfather has <m>15</m> distinct lottery tickets
+and wants to distribute them to his four grandchildren so that each
+child gets at least one ticket. In how many ways can he make such a
+distribution? At first, this looks a lot like the problem of
+enumerating integers solutions of equations, except here the lottery
+tickets are not identical! A ticket bearing the numbers <m>1</m>, <m>3</m>,
+<m>10</m>, <m>23</m>, <m>47</m>, and <m>50</m> will almost surely not pay out the same
+amount as one with the numbers <m>2</m>, <m>7</m>, <m>10</m>, <m>30</m>, <m>31</m>, and <m>48</m>,
+so who gets which ticket really makes a difference. Hopefully, you
+have already recognized that the fact that we're dealing with lottery
+tickets and grandchildren isn't so important here. Rather, the
+important fact is that we want to distribute distinguishable objects
+to distinct entities, which calls for counting functions from one set
+(lottery tickets) to another (grandchildren). In our example, we don't
+simply want the total number of functions, but instead we want the
+number of surjections, so that we can ensure that every grandchild
+gets a ticket.
+</p>
+
+<p>
+For positive integers <m>n</m> and <m>m</m>, let <m>S(n,m)</m> denote the number of
+surjections from <m>[n]</m> to <m>[m]</m>. Note that <m>S(n,m)=0</m> when <m>n\lt m</m>. In
+this section, we apply the Inclusion-Exclusion formula to determine a
+formula for <m>S(n,m)</m>. We start by setting <m>X</m> to be the set of all
+functions from <m>[n]</m> to <m>[m]</m>. Then for each <m>f\in X</m> and each
+<m>i=1,2,\dots,m</m>, we say that <m>f</m> satisfies property <m>P_i</m> if <m>i</m> is
+not in the range of <m>f</m>.
+</p>
+
+<lemma>
+<statement>
+<p>
+For each subset <m>S\subseteq [m]</m>, <m>N(S)</m> depends only on <m>|S|</m>. In
+fact, if <m>|S|=k</m>, then
+</p>
+<me>
+  N(S)=(m-k)^n.
+</me>
+</statement>
+</lemma>
+
+<proof>
+<p>
+Let <m>|S|=k</m>. Then a
+function <m>f</m> satisfying property <m>P_i</m> for each <m>i\in S</m> is
+a string of length <m>n</m> from an alphabet consisting of <m>m-k</m> letters.
+This shows that
+</p>
+<me>
+  N(S)=(m-k)^n.
+</me>
+</proof>
+
+<p>
+Now the following result follows immediately from this lemma by
+applying the Principle of Inclusion-Exclusion, as there are <m>C(m,k)</m>
+<m>k</m>-element subsets of <m>[m]</m>.
+</p>
+
+<theorem>
+<statement>
+<p>
+The number <m>S(n,m)</m> of surjections from <m>[n]</m> to <m>[m]</m> is given by:
+</p>
+<me>
+  S(n,m) = \sum_{k=0}^m (-1)^k\binom{m}{k}(m-k)^n.
+</me>
+</statement>
+</theorem>
+
+<p>
+For example,
+</p>
+<md>
+  <mrow>  S(5,3) \amp = \binom{3}{0}(3-0)^5-\binom{3}{1}(3-1)^5+\binom{3}{2}(3-2)^5-\binom{3}{3}(3-3)^5
+      </mrow>
+  <mrow>  \amp = 243 -96+3-0
+      </mrow>
+  <mrow>  \amp = 150.
+      </mrow>
+</md>
+<p>
+Returning to our lottery ticket distribution problem at the start of
+the section, we see that there are <m>S(15,4)=1016542800</m> ways for the
+grandfather to distribute his <m>15</m> lottery tickets so that each of the
+<m>4</m> grandchildren receives at least one ticket.
+</p>
+</section>

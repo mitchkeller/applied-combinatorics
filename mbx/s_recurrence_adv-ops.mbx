@@ -1,0 +1,186 @@
+<section xml:id="s_recurrence_adv-ops">
+<title>Advancement Operators</title>
+
+
+<introduction>
+<p>
+Much of our motivation for solving recurrence equations comes from an
+analogous problem in continuous mathematics<mdash />differential
+equations. You don't need to have studied these beasts before in order
+to understand what we will do in the remainder of this chapter, but if
+you have, the motivation for how we tackle the problems will be
+clearer. As their name suggests, differential equations involve
+derivatives, which we will denote using <q>operator</q> notation by <m>Df</m>
+instead of the Leibniz notation <m>df/dx</m>. In our notation, the second
+derivative is <m>D^2 f</m>, the third is <m>D^3 f</m>, and so on. Consider the
+following example.
+</p>
+<example xml:id="ex_recurrence_diffeq">
+<statement>
+<p>
+Solve the equation
+</p>
+<me>
+  Df = 3f
+</me>
+<p>
+if <m>f(0) = 2</m>. Even if you've not studied differential
+equations, you should recognize that this question is really just
+asking us to find a function <m>f</m> such that <m>f(0)=2</m> and its
+derivative is three times itself. Let's ignore the <em>initial
+condition</em> <m>f(0)=2</m> for the moment and focus on the meat of the
+problem. What function, when you take its derivative, changes only
+by being multiplied by <m>3</m>? You should quickly think of the
+function <m>e^{3x}</m>, since <m>D(e^{3x}) = 3e^{3x}</m>, which has exactly
+the property we desire. Of course, for any constant <m>c</m>, the
+function <m>ce^{3x}</m> also satisfies this property, and this gives us
+the hook we need in order to satisfy our initial condition. We have
+<m>f(x) = ce^{3x}</m> and want to find <m>c</m> such that <m>f(0)=2</m>. Now <m>f(0)
+  = c\cdot 1</m>, so <m>c=2</m> does the trick and the solution to this very
+simple differential equation is <m>f(x) = 2e^{3x}</m>.
+</p>
+</statement>
+</example>
+<p>
+With differential equations, we apply the differential operator <m>D</m> to
+differentiable (usually infinitely differentiable) functions. For
+recurrence equations, we consider the vector space <m>V</m> whose elements
+are functions from the set <m>\mathbb{Z}</m> of integers to the set
+<m>\mathbb{C}</m> of complex numbers. We then consider a function
+<m>A:V\longrightarrow V</m>, called the
+<em>advancement operator</em>, and defined by <m>A f(n) = f(n+1)</m>
+(By various tricks and sleight of hand, we can extend a sequence
+<m>\{a_n\colon n\geq n_0\}</m> to be a function whose domain is all of <m>\ints</m>,
+so this technique will apply to our problems).
+More generally, <m>A^p f(n)= f(n+p)</m> when <m>p</m> is
+a positive integer.
+</p>
+<example>
+<statement>
+<p>
+Let <m>f\in V</m> be defined by <m>f(n)=7n-9</m>. Then we apply the advancement
+operator polynomial <m>3A^2-5A+4</m> to <m>f</m> with <m>n=0</m> as follows:
+</p>
+<me>
+  (3A^2-5A+4)f(0)=3f(2) - 5f(1) +4f(0)= 3(5)-5(-2)+4(-9)=-11.
+</me>
+</statement>
+</example>
+<p>
+As an analogue of
+<xref ref="ex_recurrence_diffeq">Example</xref>,
+consider the following simple example involving the advancement
+operator.
+</p>
+<example xml:id="ex_recurrence_adveq">
+<statement>
+<p>
+Suppose that the sequence <m>\{s_n\colon n\geq 0\}</m> satisfies <m>s_0 =
+  3</m> and <m>s_{n+1} = 2s_{n}</m> for <m>n\geq 1</m>. Find an explicit formula
+for <m>s_n</m>.
+</p>
+
+<p>
+First, let's write the question in terms of the advancement
+operator. We can define a function <m>f(n) = s_n</m> for <m>n\geq 0</m>, and
+then the information given becomes that <m>f(0)=3</m> and
+</p>
+<me>
+  Af(n) = 2f(n),\qquad n\geq 0.
+</me>
+<p>
+What function has the property that when we advance it, i.e.,
+evaluate it at <m>n+1</m>, it gives twice the value that it takes at <m>n</m>?
+The first function that comes into your mind should be <m>2^n</m>. Of
+course, just like with our differential equation, for any constant
+<m>c</m>, <m>c2^n</m> also has this property. This suggests that if we take
+<m>f(n) = c2^n</m>, we're well on our way to solving our problem. Since
+we know that <m>f(0) = 3</m>, we have <m>f(0) = c2^0 = c</m>, so <m>c=
+  3</m>. Therefore, <m>s_n = f(n) = 3\cdot 2^n</m> for <m>n\geq 0</m>. This clearly
+satisfies our initial condition, and now we can check that it also
+satisfies our advancement operator equation:
+</p>
+<me>
+  Af(n) = 3\cdot 2^{n+1} = 3\cdot 2\cdot 2^n = 2\cdot (3\cdot 2^n) =
+  2\cdot f(n).
+</me>
+</statement>
+</example>
+<p>
+Before moving on to develop general methods for solving advancement
+operator equations, let's say a word about why we keep talking in
+terms of operators and mentioned that we can view any sequence as a
+function with domain <m>\ints</m>. If you've studied any linear algebra, you
+probably remember learning that the set of all
+infinitely-differentiable functions on the real line form a vector
+space and that differentiation is a linear operator on those
+functions. Our analogy to differential equations holds up just fine
+here, and functions from <m>\ints</m> to <m>\mathbb{C}</m> form a vector space and <m>A</m> is a
+linear operator on that space. We won't dwell on the technical aspects
+of this, and no knowledge of linear algebra is required to understand
+our development of techniques to solve recurrence equations. However,
+if you're interested in more placing everything we do on rigorous
+footing, we discuss this further in <xref ref="s_recurrence_rigorous" autoname="yes" />.
+</p>
+</introduction>
+
+
+<subsection xml:id="s_recurrence_adv-ops_const-coeff">
+<title>Constant Coefficient Equations</title>
+<p>
+It is easy to see that a linear recurrence equation can be
+conveniently rewritten using a polynomial <m>p(A)</m> of the
+advancement operator:
+</p>
+<men xml:id="eqn_advance" >
+  p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g.
+</men>
+<p>
+In <xref ref="eqn_advance">equation</xref>, we intend that <m>k\ge1</m> is an integer,
+<m>g</m> is a fixed vector (function) from <m>V</m>, and <m>c_0,c_1,\dots,
+c_k</m> are constants with <m>c_0,c_k\neq0</m>. Note that since <m>c_0\neq0</m>,
+we can divide both sides by <m>c_0</m>, i.e., we may in fact assume
+that <m>c_0=1</m> whenever convenient to do so.
+</p>
+</subsection>
+
+
+<subsection xml:id="s_recurrence_adv-ops_roots-factors">
+<title>Roots and Factors</title>
+<p>
+The polynomial <m>p(A)</m> can be analyzed like any other polynomial.
+It has roots and factors, and although these may be difficult to
+determine, we know they exist. In fact, if the degree of <m>p(A)</m>
+is <m>k</m>, we know that over the field of complex numbers, <m>p(A)</m>
+has <m>k</m> roots, counting multiplicities. Note that since we assume
+that <m>c_k\neq0</m>, all the roots of the polynomial <m>p</m> are non-zero.
+</p>
+</subsection>
+
+
+<subsection xml:id="s_recurrence_adv-ops_zero">
+<title>What's Special About Zero?</title>
+<p>
+Why have we limited our attention to recurrence equations of the form
+<m>p(A)f = g</m> where the constant term in <m>p</m> is non-zero? Let's
+consider the alternative for a moment. Suppose that the constant term
+of <m>p</m> is zero and that <m>0</m> is a root of <m>p</m> of multiplicity <m>m</m>.
+Then <m>p(A) = A^mq(A)</m> where the constant term of <m>q</m> is non-zero. And
+the equation <m>p(A)f=g</m> can then be written as <m>A^mq(A)f=g</m>. To solve
+this equation, we consider instead the simpler problem <m>q(A)f=g</m>.
+Then <m>h</m> is a solution of the original problem if and only if the
+function <m>h'</m> defined by <m>h'(n) = h(n+m)</m> is a solution to the simpler
+problem. In other words, solutions to the original problem are just
+translations of solutions to the smaller one, so we will for the most
+part continue to focus on advancement operator equations where <m>p(A)</m>
+has nonzero constant term, since being able to solve such problems is
+all we need in order to solve the larger class of problems.
+</p>
+
+<p>
+As a special case, consider the equation <m>A^m f =g</m>. This requires
+<m>f(n+m)=g(n)</m>, i.e., <m>f</m> is just a translation of <m>g</m>.
+</p>
+</subsection>
+
+</section>

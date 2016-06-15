@@ -1,0 +1,113 @@
+<section xml:id="s_genfunction_binom-app">
+<title>An Application of the Binomial Theorem</title>
+<p>
+In this section, we see how Newton's
+Binomial Theorem can be used to derive another useful identity. We
+begin by establishing a different recursive formula for <m>P(p,k)</m> than
+was used in our definition of it.
+</p>
+
+<lemma>
+<statement>
+<p>
+For each <m>k\ge0</m>,
+<m>P(p,k+1)=P(p,k)(p-k)</m>.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+When <m>k=0</m>, both sides evaluate to <m>p</m>. Now assume validity when
+<m>k=m</m> for some non-negative integer <m>m</m>. Then
+</p>
+<md>
+  <mrow>  P(p,m+2)\amp =pP(p-1,m+1)
+      </mrow>
+  <mrow>  \amp = p[P(p-1,m)(p-1-m)]
+      </mrow>
+  <mrow>  \amp =[pP(p-1,m)](p-1-m)
+      </mrow>
+  <mrow>  \amp =P(p,m+1)[p-(m+1)].
+      </mrow>
+</md>
+</proof>
+
+<p>
+Our goal in this section will be to invoke
+Newton's Binomial Theorem with the
+exponent <m>p=-1/2</m>. To do so in a meaningful manner, we need a
+simplified expression for <m>C(-1/2,k)</m>, which the next lemma provides.
+</p>
+
+<lemma xml:id="l_newbinom">
+<statement>
+<p>
+For each <m>k\ge0</m>,
+<m>\displaystyle\binom{-1/2}{k}=(-1)^k\frac{\binom{2k}{k}}{2^{2k}}</m>.
+</p>
+</statement>
+</lemma>
+
+<proof>
+<p>
+We proceed by induction on <m>k</m>. Both sides reduce to <m>1</m> when
+<m>k=0</m>. Now assume validity when <m>k=m</m> for some non-negative
+integer <m>m</m>. Then
+</p>
+<md>
+  <mrow>  \binom{-1/2}{m+1} \amp =\frac{P(-1/2,m+1)}{(m+1)!}
+                  =\frac{P(-1/2,m)(-1/2-m)}{(m+1)m!}
+      </mrow>
+  <mrow>  \amp =\frac{-1/2-m}{m+1}\binom{-1/2}{m}
+                  =(-1)\frac{2m+1}{2(m+1)}(-1)^m\frac{\binom{2m}{m}}{2^{2m}}
+      </mrow>
+  <mrow>  \amp =(-1)^{m+1}\frac{1}{2^{2m}}\frac{(2m+2)(2m+1)}{(2m+2)2(m+1)}\binom{2m}{m}=
+                  (-1)^{m+1}\frac{\binom{2m+2}{m+2}}{2^{2m+2}}.
+      </mrow>
+</md>
+</proof>
+
+<theorem xml:id="t_sqrt">
+<statement>
+<p>
+The function <m>f(x)=(1-4x)^{-1/2}</m> is the generating function of the
+sequence <m>\{\binom{2n}{n}:n\ge0\}</m>.
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+By Newton's Binomial Theorem and
+<xref ref="l_newbinom">Lemma</xref>, we know that
+</p>
+<md>
+  <mrow>  (1-4x)^{-1/2}\amp =\sum_{n=0}^\infty\binom{-1/2}{n}(-4x)^n
+      </mrow>
+  <mrow>  \amp =\sum_{n=0}^\infty(-1)^n2^{2n}\binom{-1/2}{n}x^n
+      </mrow>
+  <mrow>  \amp =\sum_{n=0}^\infty \binom{2n}{n}x^n.
+      </mrow>
+</md>
+</proof>
+
+<p>
+Now recalling
+<xref ref="prop_genfunction-product">Proposition</xref>
+about the coefficients in the product of two generating functions, we
+are able to deduce the following corollary of <xref ref="t_sqrt" autoname="yes" /> by
+squaring the function <m>f(x) = (1-4x)^{-1/2}</m>.
+</p>
+
+<corollary>
+<statement>
+<p>
+For all <m>n\ge0</m>,
+</p>
+<me>
+  2^{2n}=\sum_{k=0}^n\binom{2k}{k}\binom{2n-2k}{k}.
+</me>
+</statement>
+</corollary>
+</section>

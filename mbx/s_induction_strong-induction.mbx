@@ -1,0 +1,69 @@
+<section xml:id="s_induction_strong-induction">
+<title>Strong Induction</title>
+<p>
+There are occasions where the Principle of Induction, at least
+as we have studied it up to this point, does not seem sufficient.
+Here is a concrete example.
+The professor asked Bob to study a function <m>f(n)</m> defined recursively by
+<m>f(n) = 2f(n-1) - f(n-2)</m> with <m>f(1)=3</m> and <m>f(2)=5</m>. Specifically,
+the professor asked Bob to compute <m>f(10^{10})</m>, which seems like
+a daunting task. Over coffee, Bob scribbled on a napkin and determined
+that <m>f(3)=7</m> and <m>f(4)=9</m>, and on the basis of these calculations alone,
+he thought that it might just be possible that
+<m>f(n) = 2n+1</m> for all <m>n\geq 1</m>. If this were true, he could
+simply report that <m>f(10^{10})=2\cdot 10^{10}+1=20000000001</m>.
+</p>
+
+<p>
+Bob was beginning to understand proofs by induction, so he tried to
+prove that <m>f(n)=2n+1</m> for all <m>n\ge1</m> by induction. For the base step,
+he noted that <m>f(1)= 3=2\cdot1+1</m>, so all is ok to this point.
+For the inductive step, he assumed that <m>f(k)=2k+1</m> for some <m>k\ge1</m>
+and then tried to prove that <m>f(k+1)=2(k+1)+1</m>. If this step could be completed,
+then the proof by induction would be done.
+</p>
+
+<p>
+But at this point, Bob seemed to hit a barrier, because
+</p>
+<me>
+  f(k+1) = 2f(k) - f(k-1) = 2(2k+1) - f(k-1),
+</me>
+<p>
+using the inductive hypothesis to replace <m>f(k)</m> by <m>2k+1</m>. However,
+he's was totally perplexed about what to do with the <m>f(k-1)</m>. If he knew
+that <m>f(k-1)=2(k-1)+1</m>, then the right hand side
+would result in <m>2(2k+1) -(2k-1)= 2k+3=2(k+1)+1</m>, which is
+exactly what he wants. Bob always plays by the rules, and he
+has to admit that he doesn't know that <m>f(k-1)=2(k-1)+1</m>. He
+only knows that <m>f(k)=2k+1</m>.
+</p>
+
+<p>
+Bob was about to throw in the towel and ask his computer to start
+making the calculations recursively, when
+Carlos comes along and asks what he's doing. Carlos sees right away
+that the approach Bob was taking to prove that <m>f(n)=2n+1</m> by induction
+won't work<mdash />but after a moment's reflection, Carlos says that there's
+a stronger form of an inductive proof that will do the trick.
+Carlos patiently explained to Bob a proposition which is called the
+<em>Strong</em> Principle of Mathematical Induction. To prove that
+an open statement <m>S_n</m> is valid for all <m>n\ge1</m>, it is enough to
+(a)<nbsp />Show that <m>S_1</m> is valid, and (b)<nbsp />Show that <m>S_{k+1}</m> is valid
+whenever <m>S_m</m> is valid for all integers <m>m</m> with <m>1\le m\le k</m>.
+</p>
+
+<p>
+The validity of this proposition is trivial since it is <em>stronger</em>
+than the principle of induction. What is novel here is that in order
+to prove a statement, it is sometimes to your advantage to prove
+something even stronger. Combinatorial mathematicians call this
+the <q>bootstrap</q> phenomenon.
+</p>
+
+<p>
+Equipped with this observation, Bob saw clearly that the strong principle
+of induction was enough to prove that <m>f(n)=2n+1</m> for all <m>n\ge1</m>.
+So he could power down his computer and enjoy his coffee.
+</p>
+</section>

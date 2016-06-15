@@ -1,0 +1,159 @@
+<section xml:id="s_background_complex">
+<title>Obtaining the Complex Numbers from the Reals</title>
+
+
+<introduction>
+<p>
+By now, the following discussion should be transparent.
+The complex number system <m>\mathbb{C}</m> is just the cartesian product
+<m>\reals\times\reals</m> with
+</p>
+
+<ol>
+<li><m>(a,b) = (c,d)</m> in <m>\mathbb{C}</m> if and only if <m>a=c</m> and <m>b=d</m>
+in <m>\reals</m>.</li>
+<li><m>(a,b)+(c,d)=(a+c,b+d)</m>.</li>
+<li><m>(a,b)(c,d)=(ac-bd, ad+bc)</m>.</li>
+</ol>
+
+<p>
+Now the complex numbers of the form <m>(a,0)</m> behave just like
+real numbers, so is natural to say that the complex number system
+<em>contains</em> the real number system. Also, note that
+<m>(0,1)^2=(0,1)(0,1)=(-1,0)</m>, i.e., the complex number <m>(0,1)</m> has the
+property that its square is the complex number behaving like the
+real number<nbsp /><m>-1</m>. So it is convenient to use a special symbol like
+<m>i</m> for this very special complex number and note that <m>i^2=-1</m>.
+</p>
+
+<p>
+With this beginning, it is straightforward to develop all the
+familiar properties of the complex number system.
+</p>
+</introduction>
+
+
+<subsection>
+<title>Decimal Representation of Real Numbers</title>
+<p>
+Every real number has a decimal expansion<mdash />although the
+number of digits after the decimal point may be infinite.
+A rational number <m>q=m/m</m> from <m>\rats</m> has an expansion
+in which a certain block of digits repeats indefinitely.
+For example,
+</p>
+<me>
+  \frac{2859}{35} = 81.6857142857142857142857142857142857142857142\dots
+</me>
+<p>
+In this case, the block <m>857142</m> of size<nbsp /><m>6</m> is repeated forever.
+</p>
+
+<p>
+Certain rational numbers have <em>terminating</em> decimal expansions.
+For example <m>385/8= 48.125</m>. If we chose to do so, we could
+write this instead as an infinite decimal by appending trailing <m>0</m>'s,
+as a repeating block of size<nbsp /><m>1</m>:
+</p>
+<me>
+  \frac{385}{8} = 48.1250000000000000000000000000000000\dots
+</me>
+<p>
+On the other hand, we can also write the decimal expansion of
+<m>385/8</m> as:
+</p>
+<me>
+  \frac{385}{8} = 48.12499999999999999999999999999999999\dots
+</me>
+<p>
+Here, we intend that the digit <m>9</m>, a block of size<nbsp /><m>1</m>, be repeated forever.
+Apart from this anomaly, the decimal expansion of real numbers is unique.
+</p>
+
+<p>
+On the other hand, irrational numbers have non-repeating decimal
+expansions in which there is no block of repeating digits that
+repeats forever.
+</p>
+
+<p>
+You all know that <m>\sqrt{2}</m> is irrational. Here is the first part
+of its decimal expansion:
+</p>
+<me>
+  \sqrt{2} =1.41421356237309504880168872420969807856967187537694807317667973\dots
+</me>
+<p>
+An irrational
+number is said to be <em>algebraic</em> if it is the root of
+polynomial with integer coeffcients; else it is said to be
+<em>transcendental</em>.
+For example, <m>\sqrt{2}</m> is <em>algebraic</em> since it is the
+root of the polynomial <m>x^2-2</m>.
+</p>
+
+<p>
+Two other famous examples of irrational numbers are <m>\pi</m> and <m>e</m>.
+Here are their decimal expansions:
+</p>
+<me>
+  \pi =3.14159265358979323846264338327950288419716939937510582097494459\dots
+</me>
+<p>
+and
+</p>
+<me>
+  e=2.7182818284590452353602874713526624977572470936999595749669676277\dots
+</me>
+<p>
+Both <m>\pi</m> and <m>e</m> are <em>transcendental</em>.
+</p>
+<example>
+<statement>
+<p>
+Amanda and Bilal, both students at a nearby university, have
+been studying rational numbers that have
+large blocks of repeating digits in their decimal expansions.
+Amanda reports that she has found two positive integers
+<m>m</m> and <m>n</m> with <m>n\lt 500</m> for which the decimal expansion
+of the rational number <m>m/n</m> has a block of 1961 digits which
+repeats indefinitely. Not to be outdone, Bilal brags that
+he has found such a pair <m>s</m> and <m>t</m> of positive
+integers with <m>t\lt 300</m> for which the
+decimal expansion of <m>s/t</m> has a block of <m>7643</m> digits which
+repeats indefinitely. Bilal should be (politely) told to
+do his arithmetic more carefully, as there is no such pair
+of positive integers (<em>Why</em>?). On the other hand, Amanda may in fact
+be correct<mdash />although, if she has done her work with more
+attention to detail, she would have reported that the decimal
+expansion of <m>m/n</m> has a smaller block of repeating digits (<em>Why</em>?).
+</p>
+</statement>
+</example>
+
+<proposition>
+<statement>
+<p>
+There is no surjection from <m>\posints</m> to the
+set <m>X= \{x\in\reals:0\lt x\lt 1\}</m>.
+</p>
+</statement>
+</proposition>
+
+<proof>
+<p>
+Let <m>f</m> be a function from <m>\posints</m> to <m>X</m>.
+For each <m>n\in \posints</m>, consider the decimal
+expanion(s) of the real number <m>f(n)</m>. Then
+choose a positive integer <m>a_n</m> so that (1)<nbsp /><m>a_n\le 8</m>, and
+(2)<nbsp /><m>a_n</m> is not the <m>n^{th}</m> digit after the decimal
+point in any decimal expansion of <m>f(n)</m>.
+Then the real number <m>x</m> whose decimal expansion
+is <m>x=.a_1a_2a_3a_4a_5\dots</m> is an element of <m>X</m>
+which is distinct from <m>f(n)</m>, for every <m>n\in\posints</m>.
+This shows that <m>f</m> is not a surjection.
+</p>
+</proof>
+</subsection>
+
+</section>
