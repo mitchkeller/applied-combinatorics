@@ -69,11 +69,10 @@ quickly see satisfies
 <md>
   <mrow>  \frac{x^5}{(1-x)^5} \amp =
   \frac{x^5}{4!}\frac{d^4}{dx^4}\left(\frac{1}{1-x}\right) =
-  \frac{x^5}{4!}\sum_{n=0}^\infty n(n-1)(n-2)(n-3)x^{n-4}
-      </mrow>
+  \frac{x^5}{4!}\sum_{n=0}^\infty n(n-1)(n-2)(n-3)x^{n-4}</mrow>
   <mrow>  \amp  =\sum_{n=0}^\infty \frac{n(n-1)(n-2)(n-3)}{4!}x^{n+1} =
-  \sum_{n=0}^\infty \binom{n}{4}x^{n+1}.
-      </mrow></md>
+  \sum_{n=0}^\infty \binom{n}{4}x^{n+1}.</mrow>
+</md>
 <p>
 The coefficient on <m>x^n</m> in this series <m>C(n-1,4)</m>, just as we expected.
 </p>
@@ -181,12 +180,10 @@ we clear the denominators, giving
 Equating coefficients on terms of equal degree, we have:
 </p>
 <md>
-  <mrow>  1 \amp = A+B+C
-      </mrow>
-  <mrow>  1 \amp = -2A + C
-      </mrow>
-  <mrow>  1 \amp = A - B
-      </mrow></md>
+  <mrow>  1 \amp = A+B+C</mrow>
+  <mrow>  1 \amp = -2A + C</mrow>
+  <mrow>  1 \amp = A - B</mrow>
+</md>
 <p>
 Solving the system, we find <m>A=1/4</m>, <m>B=-3/4</m>, and
 <m>C=3/2</m>. Therefore, our generating function is

@@ -72,13 +72,11 @@ note that <m>1-x^{2n}=(1-x^n)(1+x^n)</m> for all <m>n\ge1</m>. Therefore,
 </p>
 <md>
   <mrow>  D(x)\amp =\prod_{n=1}^\infty
-(1+x^n)=\prod_{n=1}^\infty\frac{1-x^{2n}}{1-x^n} =\frac{\prod_{n=1}^\infty(1-x^{2n})}{\prod_{n=1}^\infty(1-x^n)}
-      </mrow>
+(1+x^n)=\prod_{n=1}^\infty\frac{1-x^{2n}}{1-x^n} =\frac{\prod_{n=1}^\infty(1-x^{2n})}{\prod_{n=1}^\infty(1-x^n)}</mrow>
   <mrow>  \amp =\frac{\prod_{n=1}^\infty(1-x^{2n})}{
        \prod_{n=1}^\infty(1-x^{2n-1})\prod_{n=1}^\infty(1-x^{2n})}
-    =\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}
-      </mrow>
-  <mrow>  \amp = O(x).
-      </mrow></md>
+    =\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}</mrow>
+  <mrow>  \amp = O(x).</mrow>
+</md>
 </proof>
 </section>

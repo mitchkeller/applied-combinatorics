@@ -68,12 +68,10 @@ For example,
 </p>
 <md>
   <mrow>  d_5 \amp  =\binom{5}{0}5!-\binom{5}{1}4!+\binom{5}{2}3!-\binom{5}{3}2!+
-   \binom{5}{4}1!-\binom{5}{5}0!
-      </mrow>
-  <mrow>  \amp =120-120+60-20+5-1
-      </mrow>
-  <mrow>  \amp =44.
-      </mrow></md>
+   \binom{5}{4}1!-\binom{5}{5}0!</mrow>
+  <mrow>  \amp =120-120+60-20+5-1</mrow>
+  <mrow>  \amp =44.</mrow>
+</md>
 <p>
 It has been traditional to cast the subject of derangements as a
 story, called the Hat Check problem. The story belongs to the period
@@ -106,12 +104,10 @@ derangments approaches <m>1/e</m> as <m>n</m> increases.
 It is easy to see that
 </p>
 <md>
-  <mrow>  \frac{d_n}{n!} \amp = \frac{\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!}{n!}
-      </mrow>
-  <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{n!}{k!(n-k)!}\frac{(n-k)!}{n!}
-      </mrow>
-  <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{1}{k!}.
-      </mrow></md>
+  <mrow>  \frac{d_n}{n!} \amp = \frac{\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!}{n!}</mrow>
+  <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{n!}{k!(n-k)!}\frac{(n-k)!}{n!}</mrow>
+  <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{1}{k!}.</mrow>
+</md>
 <p>
 Recall from Calculus that the Taylor series expansion of <m>e^x</m> is given
 by
@@ -148,10 +144,9 @@ their own hats, meaning that there are
 </p>
 <md>
   <mrow>  \binom{100}{60}d_{60} =
-    \amp 420788734922281721283274628333913452107738151595140722182899444
-      </mrow>
-  <mrow>  \amp 67852500232068048628965153767728913178940196920
-      </mrow></md>
+    \amp 420788734922281721283274628333913452107738151595140722182899444</mrow>
+  <mrow>  \amp 67852500232068048628965153767728913178940196920</mrow>
+</md>
 <p>
 such ways to return the hats.
 </p>

@@ -111,12 +111,10 @@ Now by the inductive hypothesis, we know
 It follows that
 </p>
 <md>
-  <mrow>  |X''_0| \amp = \sum_{S\subseteq [k]} (-1)^{|S|}N''(S) = \sum_{S\subseteq [k]} (-1)^{|S|}\left(N(S)-N'(S)\right)
-      </mrow>
+  <mrow>  |X''_0| \amp = \sum_{S\subseteq [k]} (-1)^{|S|}N''(S) = \sum_{S\subseteq [k]} (-1)^{|S|}\left(N(S)-N'(S)\right)</mrow>
   <mrow>  \amp = \sum_{S\subseteq [k]} (-1)^{|S|}N(S)+
-           \sum_{S\subseteq [k]} (-1)^{|S|+1}N(S\cup\{k+1\})
-      </mrow>
-  <mrow>  \amp = \sum_{S\subseteq [k+1]} (-1)^{|S|}N(S).
-      </mrow></md>
+           \sum_{S\subseteq [k]} (-1)^{|S|+1}N(S\cup\{k+1\})</mrow>
+  <mrow>  \amp = \sum_{S\subseteq [k+1]} (-1)^{|S|}N(S).</mrow>
+</md>
 </proof>
 </section>

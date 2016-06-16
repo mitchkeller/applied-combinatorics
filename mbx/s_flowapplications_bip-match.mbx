@@ -136,20 +136,14 @@ replacing our usual pseudo-alphabetic order, the labeling algorithm
 produces the labels shown below.
 </p>
 <md>
-  <mrow>  S:\quad \amp (*,+,\infty)\amp    y_6:\quad \amp (x_6,+,1)
-      </mrow>
-  <mrow>  x_3:\quad \amp (S,+,1)\amp   x_1:\quad \amp (y_6,-,1)
-      </mrow>
-  <mrow>  x_5:\quad \amp (S,+,1)\amp    y_1:\quad \amp (x_1,+,1)
-      </mrow>
-  <mrow>  y_4:\quad \amp (x_3,+,1)\amp   y_2:\quad \amp  (x_1,+,1)
-      </mrow>
-  <mrow>  y_5:\quad \amp (x_3,+,1)\amp   y_3:\quad \amp (x_1,+,1)
-      </mrow>
-  <mrow>  x_6:\quad \amp (y_4,-,1)\amp    x_2:\quad \amp (y_1,-,1)
-      </mrow>
-  <mrow>  x_4:\quad \amp (y_5,-,1)\amp   T:\quad \amp (y_2,+,1)
-      </mrow></md>
+  <mrow>  S:\quad \amp (*,+,\infty)\amp    y_6:\quad \amp (x_6,+,1)</mrow>
+  <mrow>  x_3:\quad \amp (S,+,1)\amp   x_1:\quad \amp (y_6,-,1)</mrow>
+  <mrow>  x_5:\quad \amp (S,+,1)\amp    y_1:\quad \amp (x_1,+,1)</mrow>
+  <mrow>  y_4:\quad \amp (x_3,+,1)\amp   y_2:\quad \amp  (x_1,+,1)</mrow>
+  <mrow>  y_5:\quad \amp (x_3,+,1)\amp   y_3:\quad \amp (x_1,+,1)</mrow>
+  <mrow>  x_6:\quad \amp (y_4,-,1)\amp    x_2:\quad \amp (y_1,-,1)</mrow>
+  <mrow>  x_4:\quad \amp (y_5,-,1)\amp   T:\quad \amp (y_2,+,1)</mrow>
+</md>
 <p>
 This leads us to the augmenting path <m>S,x_3,y_4,x_6,y_6,x_1,y_2,T</m>,
 which gives us the flow shown in <xref ref="fig_flowapplications_bipmatch_maxflow" autoname="yes" />.
@@ -172,12 +166,10 @@ Is this a maximum flow? Another run of the labeling algorithm
 produces
 </p>
 <md>
-  <mrow>  S:\quad \amp  (*,+,\infty)\amp   x_4:\quad \amp  (y_5,-,1)
-      </mrow>
-  <mrow>  x_5:\quad \amp  (S,+,1)\amp   y_4:\quad \amp (x_4,+,1)
-      </mrow>
-  <mrow>  y_5:\quad \amp  (x_5,+,1)\amp   x_3:\quad \amp (y_4,-,1)
-      </mrow></md>
+  <mrow>  S:\quad \amp  (*,+,\infty)\amp   x_4:\quad \amp  (y_5,-,1)</mrow>
+  <mrow>  x_5:\quad \amp  (S,+,1)\amp   y_4:\quad \amp (x_4,+,1)</mrow>
+  <mrow>  y_5:\quad \amp  (x_5,+,1)\amp   x_3:\quad \amp (y_4,-,1)</mrow>
+</md>
 <p>
 and then halts. Thus, the flow in
 <xref ref="fig_flowapplications_bipmatch_maxflow" autoname="yes" /> is a maximum flow.

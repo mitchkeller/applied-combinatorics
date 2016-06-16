@@ -65,16 +65,12 @@ all of the solutions. Consider what happens if we take <m>f(n) = c_1
 </p>
 <md>
   <mrow>  (A+3)(A-2)f(n) \amp  = (A+3)(c_1 2^{n+1} + c_2 (-3)^{n+1} - 2(c_12^n +
-    c_2(-3)^n))
-      </mrow>
-  <mrow>  \amp  = (A+3)(-5c_2(-3)^{n})
-      </mrow>
-  <mrow>  \amp  = -5c_2(-3)^{n+1}-15c_2(-3)^n
-      </mrow>
-  <mrow>  \amp  = 15c_2(-3)^n - 15c_2(-3)^n
-      </mrow>
-  <mrow>  \amp =0.
-      </mrow></md>
+    c_2(-3)^n))</mrow>
+  <mrow>  \amp  = (A+3)(-5c_2(-3)^{n})</mrow>
+  <mrow>  \amp  = -5c_2(-3)^{n+1}-15c_2(-3)^n</mrow>
+  <mrow>  \amp  = 15c_2(-3)^n - 15c_2(-3)^n</mrow>
+  <mrow>  \amp =0.</mrow>
+</md>
 <p>
 It's not all that hard to see that since <m>f</m> gives a two-parameter family of
 solutions to <xref ref="eqn_recurrence_deg2" autoname="yes" />, it gives us all the
@@ -133,10 +129,9 @@ Because we have initial values for <m>t(n)</m>, we are able to solve for
 <m>c_1</m> and <m>c_2</m> here. Evaluating at <m>n=0</m> and <m>n=1</m> we get
 </p>
 <md>
-  <mrow>  3 \amp = c_1 + c_2
-      </mrow>
-  <mrow>  8 \amp  = c_1\frac{3+\sqrt{5}}{2} + c_2 \frac{3-\sqrt{5}}{2}.
-      </mrow></md>
+  <mrow>  3 \amp = c_1 + c_2</mrow>
+  <mrow>  8 \amp  = c_1\frac{3+\sqrt{5}}{2} + c_2 \frac{3-\sqrt{5}}{2}.</mrow>
+</md>
 <p>
 A little bit of computation gives
 </p>
@@ -205,14 +200,11 @@ this would be the analogous thing to try, so let's give it a
 shot. Let's apply <m>(A-2)^2</m> to this <m>f_2</m>. We have
 </p>
 <md>
-  <mrow>  (A-2)^2 f_2(n) \amp = (A-2)(c_2(n+1)2^{n+1} - 2c_2 n2^n)
-      </mrow>
-  <mrow>  \amp  = (A-2)(c_2 2^{n+1})
-      </mrow>
-  <mrow>  \amp  = c_22^{n+2} - 2c_2 2^{n+1}
-      </mrow>
-  <mrow>  \amp  = 0.
-      </mrow></md>
+  <mrow>  (A-2)^2 f_2(n) \amp = (A-2)(c_2(n+1)2^{n+1} - 2c_2 n2^n)</mrow>
+  <mrow>  \amp  = (A-2)(c_2 2^{n+1})</mrow>
+  <mrow>  \amp  = c_22^{n+2} - 2c_2 2^{n+1}</mrow>
+  <mrow>  \amp  = 0.</mrow>
+</md>
 <p>
 Since <m>f_2</m> satisfies our advancement operator equation, we have
 that the general solution is
@@ -253,18 +245,13 @@ suggest trying <m>f_4(n) = c_4 n^2</m> as another solution. To verify
 that it works, we see
 </p>
 <md>
-  <mrow>  (A+5)(A-1)^3 f_4(n) \amp = (A+5)(A-1)^2(c_4(n+1)^2 - c_4 n^2)
-      </mrow>
-  <mrow>  \amp  = (A+5)(A-1)^2 (2c_4 n + c_4)
-      </mrow>
-  <mrow>  \amp  = (A+5)(A-1)(2c_4(n+1) + c_4 - 2c_4 n -c_4)
-      </mrow>
-  <mrow>  \amp  = (A+5)(A-1)(2c_4)
-      </mrow>
-  <mrow>  \amp  = (A+5)(2c_4-2c_4)
-      </mrow>
-  <mrow>  \amp = 0.
-      </mrow></md>
+  <mrow>  (A+5)(A-1)^3 f_4(n) \amp = (A+5)(A-1)^2(c_4(n+1)^2 - c_4 n^2)</mrow>
+  <mrow>  \amp  = (A+5)(A-1)^2 (2c_4 n + c_4)</mrow>
+  <mrow>  \amp  = (A+5)(A-1)(2c_4(n+1) + c_4 - 2c_4 n -c_4)</mrow>
+  <mrow>  \amp  = (A+5)(A-1)(2c_4)</mrow>
+  <mrow>  \amp  = (A+5)(2c_4-2c_4)</mrow>
+  <mrow>  \amp = 0.</mrow>
+</md>
 <p>
 Thus, the general solution is
 </p>
@@ -275,14 +262,11 @@ Thus, the general solution is
 Since we have initial conditions, we see that
 </p>
 <md>
-  <mrow>  1= f(0) \amp  = c_1+c_2
-      </mrow>
-  <mrow>  2 = f(1) \amp  = -5c_1 + c_2 + c_3 + c_4
-      </mrow>
-  <mrow>  4 = f(2) \amp  = 25c_1 + c_2 + 2c_3 + 4c_4
-      </mrow>
-  <mrow>  4 = f(3) \amp  = -125c_1 + c_2 +3c_3 +9c_4
-      </mrow></md>
+  <mrow>  1= f(0) \amp  = c_1+c_2</mrow>
+  <mrow>  2 = f(1) \amp  = -5c_1 + c_2 + c_3 + c_4</mrow>
+  <mrow>  4 = f(2) \amp  = 25c_1 + c_2 + 2c_3 + 4c_4</mrow>
+  <mrow>  4 = f(3) \amp  = -125c_1 + c_2 +3c_3 +9c_4</mrow>
+</md>
 <p>
 is a system of equations whose solution gives the values for the
 <m>c_i</m>. Solving this system gives that the desired solution is
@@ -363,14 +347,11 @@ to help us actually get a solution. Thus, here we try <m>f_0(n) = d 3^n</m>. We
 have
 </p>
 <md>
-  <mrow>  (A+2)(A-6)f_0(n) \amp = (A+2)(d3^{n+1}-6d3^n)
-      </mrow>
-  <mrow>  \amp  = (A+2)(-d3^{n+1})
-      </mrow>
-  <mrow>  \amp  = -d3^{n+2} -2d3^{n+1}
-      </mrow>
-  <mrow>  \amp  = -5d 3^{n+1}
-      </mrow></md>
+  <mrow>  (A+2)(A-6)f_0(n) \amp = (A+2)(d3^{n+1}-6d3^n)</mrow>
+  <mrow>  \amp  = (A+2)(-d3^{n+1})</mrow>
+  <mrow>  \amp  = -d3^{n+2} -2d3^{n+1}</mrow>
+  <mrow>  \amp  = -5d 3^{n+1}</mrow>
+</md>
 <p>
 We want <m>f_0</m> to be a solution to the nonhomogeneous equation,
 meaning that <m>(A+2)(A-6)f_0 = 3^n</m>. This implies that we need to
@@ -418,14 +399,11 @@ homogeneous advancement operator equations with repeated roots and
 introduce a factor of <m>n</m>. Let's try <m>f_0(n) = dn6^n</m>. Now we have
 </p>
 <md>
-  <mrow>  (A+2)(A-6)(dn6^n) \amp = (A+2)(d(n+1)6^{n+1}-6dn6^n)
-      </mrow>
-  <mrow>  \amp = (A+2)d6^{n+1}
-      </mrow>
-  <mrow>  \amp = d6^{n+2} + 2d 6^{n+1}
-      </mrow>
-  <mrow>  \amp = 6^n(36d+12d) = 48d6^n.
-      </mrow></md>
+  <mrow>  (A+2)(A-6)(dn6^n) \amp = (A+2)(d(n+1)6^{n+1}-6dn6^n)</mrow>
+  <mrow>  \amp = (A+2)d6^{n+1}</mrow>
+  <mrow>  \amp = d6^{n+2} + 2d 6^{n+1}</mrow>
+  <mrow>  \amp = 6^n(36d+12d) = 48d6^n.</mrow>
+</md>
 <p>
 We want this to be equal to <m>6^n</m>, so we have <m>d = 1/48</m>. Therefore,
 the general solution is
@@ -439,10 +417,9 @@ constants <m>c_1</m> and <m>c_2</m>. We have that they satisfy the following
 pair of equations:
 </p>
 <md>
-  <mrow>  1 \amp  = c_1 + c_2
-      </mrow>
-  <mrow>  5 \amp  = \frac{1}{8} -2c_1+6c_2
-      </mrow></md>
+  <mrow>  1 \amp  = c_1 + c_2</mrow>
+  <mrow>  5 \amp  = \frac{1}{8} -2c_1+6c_2</mrow>
+</md>
 <p>
 Solving these, we arrive at the desired solution, which is
 </p>
@@ -481,10 +458,9 @@ increasing the powers of <m>n</m> by <m>1</m>, giving <m>f_0(n) = d_1n^2 +
   d_2n</m>. Now we have
 </p>
 <md>
-  <mrow>  (A-1)(d_1n^2+d_2n) \amp  = d_1(n+1)^2+d_2(n+1) - d_1n^2 -d_2n
-      </mrow>
-  <mrow>  \amp  = 2d_1n+d_1+d_2.
-      </mrow></md>
+  <mrow>  (A-1)(d_1n^2+d_2n) \amp  = d_1(n+1)^2+d_2(n+1) - d_1n^2 -d_2n</mrow>
+  <mrow>  \amp  = 2d_1n+d_1+d_2.</mrow>
+</md>
 <p>
 This tells us that we need <m>d_1=1/2</m> and <m>d_2=1/2</m>, giving <m>f_0(n) =
   n^2/2 + n/2</m>. The general solution is then
@@ -544,15 +520,12 @@ This gives
 </p>
 <md>
   <mrow>  (A-2)^2(d_1 3^n + d_2 n + d_3) \amp  = (A-2)(d_13^{n+1} + d_2(n+1)+d_3
-    - 2d_1 3^n - 2d_2 n -2d_3)
-      </mrow>
-  <mrow>  \amp  = (A-2)(d_13^n - d_2n + d_2 -d_3)
-      </mrow>
+    - 2d_1 3^n - 2d_2 n -2d_3)</mrow>
+  <mrow>  \amp  = (A-2)(d_13^n - d_2n + d_2 -d_3)</mrow>
   <mrow>  \amp  = d_1 3^{n+1} - d_2(n+1) + d_2 - d_3 - 2 d_1 3^n + 2d_2 n -2d_2
-    + 2d_3
-      </mrow>
-  <mrow>  \amp  = d_1 3^n + d_2 n -2d_2 + d_3.
-      </mrow></md>
+    + 2d_3</mrow>
+  <mrow>  \amp  = d_1 3^n + d_2 n -2d_2 + d_3.</mrow>
+</md>
 <p>
 We want this to be <m>3^n+2n</m>, so matching coefficients gives <m>d_1 =
   1</m>, <m>d_2 =2</m>, and <m>d_3=4</m>. Thus, the general solution is

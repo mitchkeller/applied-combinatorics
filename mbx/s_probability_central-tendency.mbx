@@ -64,14 +64,11 @@ Of course, the inequality holds trivially unless
 establish the equivalent inequality: <m>k P(|X|\ge k)\le E(|X|)</m>.
 </p>
 <md>
-  <mrow>  k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)
-      </mrow>
-  <mrow>  \amp  \le \sum_{r \ge k} r P(|X|=r)
-      </mrow>
-  <mrow>  \amp  \le \sum_{r> 0} r P(|X|=r)
-      </mrow>
-  <mrow>  \amp = E(|X|).
-      </mrow></md>
+  <mrow>  k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)</mrow>
+  <mrow>  \amp  \le \sum_{r \ge k} r P(|X|=r)</mrow>
+  <mrow>  \amp  \le \sum_{r> 0} r P(|X|=r)</mrow>
+  <mrow>  \amp = E(|X|).</mrow>
+</md>
 </proof>
 
 <p>
@@ -105,12 +102,10 @@ the variance <m>\var(X)</m> is:
 <md>
   <mrow>  \var(X)\amp =(1^2-\frac{109}{8})^2\frac{1}{8}+(2^2-\frac{109}{8})^2\frac{1}{4}+
           (3^2-\frac{109}{8})^2\frac{1}{8}+(4^2-\frac{109}{8})^2\frac{1}{8}+
-          (5^2-\frac{109}{8})^2\frac{3}{8}
-      </mrow>
-  <mrow>  \amp =(108^2+105^2+100^2+93^2+84^2)/512
-      </mrow>
-  <mrow>  \amp =48394/512
-      </mrow></md>
+          (5^2-\frac{109}{8})^2\frac{3}{8}</mrow>
+  <mrow>  \amp =(108^2+105^2+100^2+93^2+84^2)/512</mrow>
+  <mrow>  \amp =48394/512</mrow>
+</md>
 <p>
 It follows that the standard deviation <m>\sigma_X</m> of <m>X</m> is then
 <m>\sqrt{48394/512}\approx 9.722</m>.
@@ -177,18 +172,13 @@ Then <m>\var(X)= E(X^2)-E^2(X)</m>.
 Let <m>E(X)=\mu</m>. From its definition, we note that
 </p>
 <md>
-  <mrow>  \var(X) \amp = \sum_{r} (r -\mu)^2\prob(X=r)
-      </mrow>
-  <mrow>  \amp = \sum_{r} (r^2 -2r \mu+\mu^2)\prob(X=r)
-      </mrow>
-  <mrow>  \amp = \sum_r r^2\prob(X=r) - 2 \mu\sum_r r\prob(X=r) +\mu^2\sum_r\prob(X=r)
-      </mrow>
-  <mrow>  \amp = E(X^2) -2\mu^2+\mu^2
-      </mrow>
-  <mrow>  \amp = E(X^2) - \mu^2
-      </mrow>
-  <mrow>  \amp = E(X^2) - E^2(X).
-      </mrow></md>
+  <mrow>  \var(X) \amp = \sum_{r} (r -\mu)^2\prob(X=r)</mrow>
+  <mrow>  \amp = \sum_{r} (r^2 -2r \mu+\mu^2)\prob(X=r)</mrow>
+  <mrow>  \amp = \sum_r r^2\prob(X=r) - 2 \mu\sum_r r\prob(X=r) +\mu^2\sum_r\prob(X=r)</mrow>
+  <mrow>  \amp = E(X^2) -2\mu^2+\mu^2</mrow>
+  <mrow>  \amp = E(X^2) - \mu^2</mrow>
+  <mrow>  \amp = E(X^2) - E^2(X).</mrow>
+</md>
 </proof>
 
 <p>
@@ -220,16 +210,12 @@ Let <m>A=\{r\in \mathbb{R}:|r-\mu|>k\sigma_X\}</m>.
 Then we have:
 </p>
 <md>
-  <mrow>  \var(X) \amp = E((X-\mu)^2)
-      </mrow>
-  <mrow>  \amp = \sum_{r\in \mathbb{R}}(r-\mu)^2\prob(X=r)
-      </mrow>
-  <mrow>  \amp \ge \sum_{r\in A}(r-\mu)^2\prob(X=r)
-      </mrow>
-  <mrow>  \amp \ge k^2\sigma_X^2\sum_{r\in A}\prob(X=r)
-      </mrow>
-  <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|>k\sigma_X).
-      </mrow></md>
+  <mrow>  \var(X) \amp = E((X-\mu)^2)</mrow>
+  <mrow>  \amp = \sum_{r\in \mathbb{R}}(r-\mu)^2\prob(X=r)</mrow>
+  <mrow>  \amp \ge \sum_{r\in A}(r-\mu)^2\prob(X=r)</mrow>
+  <mrow>  \amp \ge k^2\sigma_X^2\sum_{r\in A}\prob(X=r)</mrow>
+  <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|>k\sigma_X).</mrow>
+</md>
 <p>
 Since <m>\var(X)=\sigma_X^2</m>, we may now deduce that <m>1/k^2\geq
 \prob(|X-\mu|)>k\sigma_X)</m>. Therefore, since <m>\prob(|X-\mu|\le

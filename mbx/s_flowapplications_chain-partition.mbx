@@ -104,18 +104,13 @@ When we run the labeling algorithm (using priority
 following list of labels:
 </p>
 <md>
-  <mrow>  S:\quad \amp (*,+,\infty) \amp  x''_9:\quad \amp (x'_5,+,1) \amp  x'_3:\quad \amp (S,+,1)
-      </mrow>
-  <mrow>  x'_3:\quad \amp (S,+,1) \amp  x''_4:\quad \amp (x'_6,+,1) \amp x''_1:\quad \amp (x'_7,+,1)
-      </mrow>
-  <mrow>  x'_5:\quad \amp (S,+,1)\amp  x''_5:\quad \amp (x'_6,+,1) \amp  x''_2:\quad \amp (x'_7,+,1)
-      </mrow>
-  <mrow>  x'_6:\quad \amp (S,+,1)\amp  x'_1:\quad \amp (x''_3,-,1) \amp  x'_2:\quad \amp (x'_7,+,1)
-      </mrow>
-  <mrow>  x'_9:\quad \amp (S,+,1)\amp  x'_8:\quad \amp (x''_9,-,1) \amp  T:\quad \amp (x''_2,+,1)
-      </mrow>
-  <mrow>  x''_3:\quad \amp (x'_5,+,1) \amp  x'_7:\quad \amp (x''_4,-,1)  \amp
-      </mrow></md>
+  <mrow>  S:\quad \amp (*,+,\infty) \amp  x''_9:\quad \amp (x'_5,+,1) \amp  x'_3:\quad \amp (S,+,1)</mrow>
+  <mrow>  x'_3:\quad \amp (S,+,1) \amp  x''_4:\quad \amp (x'_6,+,1) \amp x''_1:\quad \amp (x'_7,+,1)</mrow>
+  <mrow>  x'_5:\quad \amp (S,+,1)\amp  x''_5:\quad \amp (x'_6,+,1) \amp  x''_2:\quad \amp (x'_7,+,1)</mrow>
+  <mrow>  x'_6:\quad \amp (S,+,1)\amp  x'_1:\quad \amp (x''_3,-,1) \amp  x'_2:\quad \amp (x'_7,+,1)</mrow>
+  <mrow>  x'_9:\quad \amp (S,+,1)\amp  x'_8:\quad \amp (x''_9,-,1) \amp  T:\quad \amp (x''_2,+,1)</mrow>
+  <mrow>  x''_3:\quad \amp (x'_5,+,1) \amp  x'_7:\quad \amp (x''_4,-,1)  \amp</mrow>
+</md>
 <p>
 Thus, we find the augmenting path <m>(S,x'_6,x''_4,x'_7,x''_2,T)</m>, and the
 updated flow can be seen in <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" />.
@@ -141,11 +136,10 @@ below, leaving the sink unlabeled.
 </p>
 <md>
   <mrow>  S:\quad \amp  (*,+,\infty)\amp  x'_5:\quad \amp (S,+,1) \amp  x''_3:\quad
-  \amp (x'_5,+,1) \amp  x'_1:\quad \amp  (x''_3,-,1)
-      </mrow>
+  \amp (x'_5,+,1) \amp  x'_1:\quad \amp  (x''_3,-,1)</mrow>
   <mrow>  x'_3:\quad \amp (S,+,1) \amp  x'_9:\quad \amp (S,+,1) \amp  x''_9:\quad \amp  (x'_5,+,1)
-  \amp  x'_8:\quad \amp (x''_9,-,1)
-      </mrow></md>
+  \amp  x'_8:\quad \amp (x''_9,-,1)</mrow>
+</md>
 <p>
 In <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" />, the black
 vertices are those the labeled in the final run, while the gold
