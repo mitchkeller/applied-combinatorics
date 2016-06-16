@@ -46,12 +46,21 @@ the diagram.
     \subfloat[ ]{
 <image>
 <latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{flowapplications-figs/poset_network}
+<<<<<<< HEAD
     \put(48,-5){<m>S</m>}
     \put(48,93){<m>T</m>}
     \put(1,20){<m>x_1'</m>}
     \put(94,20){<m>x_{10}'</m>}
     \put(1,71){<m>x_1''</m>}
     \put(94,71){<m>x_{10}''</m>}
+=======
+    \put(48,-5){\(S\)}
+    \put(48,93){\(T\)}
+    \put(1,20){\(x_1'\)}
+    \put(94,20){\(x_{10}'\)}
+    \put(1,71){\(x_1''\)}
+    \put(94,71){\(x_{10}''\)}
+>>>>>>> 37f0ea666e83c47898a2ea9adebb974f06399885
  \end{overpic}]]></latex-image-code>
 </image>
 }
@@ -87,6 +96,7 @@ convention that thick edges are full, while thin edges are empty.)
 <caption>An initial flow</caption>
 <image>
 <latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/poset_network_flow}
+<<<<<<< HEAD
     \put(48,-5){<m>S</m>}
     \put(48,93){<m>T</m>}
     \put(1,20){<m>x_1'</m>}
@@ -97,6 +107,18 @@ convention that thick edges are full, while thin edges are empty.)
   \end{overpic}]]></latex-image-code>
 </image>
 
+=======
+    \put(48,-5){\(S\)}
+    \put(48,93){\(T\)}
+    \put(1,20){\(x_1'\)}
+    \put(94,20){\(x_{10}'\)}
+    \put(1,71){\(x_1''\)}
+    \put(94,71){\(x_{10}''\)}
+
+  \end{overpic}]]></latex-image-code>
+</image>
+
+>>>>>>> 37f0ea666e83c47898a2ea9adebb974f06399885
 </figure>
 <p>
 When we run the labeling algorithm (using priority
@@ -119,6 +141,7 @@ updated flow can be seen in <xref ref="fig_flowapplications_poset_network_flow2"
 <caption>A better flow</caption>
 <image>
 <latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/poset_network_flow2}
+<<<<<<< HEAD
     \put(48,-5){<m>S</m>}
     \put(48,93){<m>T</m>}
     \put(1,20){<m>x_1'</m>}
@@ -129,6 +152,18 @@ updated flow can be seen in <xref ref="fig_flowapplications_poset_network_flow2"
   \end{overpic}]]></latex-image-code>
 </image>
 
+=======
+    \put(48,-5){\(S\)}
+    \put(48,93){\(T\)}
+    \put(1,20){\(x_1'\)}
+    \put(94,20){\(x_{10}'\)}
+    \put(1,71){\(x_1''\)}
+    \put(94,71){\(x_{10}''\)}
+
+  \end{overpic}]]></latex-image-code>
+</image>
+
+>>>>>>> 37f0ea666e83c47898a2ea9adebb974f06399885
 </figure>
 <p>
 If we run the labeling algorithm again, the algorithm assigns the labels
