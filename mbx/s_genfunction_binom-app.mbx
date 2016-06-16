@@ -22,14 +22,10 @@ When <m>k=0</m>, both sides evaluate to <m>p</m>. Now assume validity when
 <m>k=m</m> for some non-negative integer <m>m</m>. Then
 </p>
 <md>
-  <mrow>  P(p,m+2)\amp =pP(p-1,m+1)
-      </mrow>
-  <mrow>  \amp = p[P(p-1,m)(p-1-m)]
-      </mrow>
-  <mrow>  \amp =[pP(p-1,m)](p-1-m)
-      </mrow>
-  <mrow>  \amp =P(p,m+1)[p-(m+1)].
-      </mrow>
+  <mrow>  P(p,m+2)\amp =pP(p-1,m+1)</mrow>
+  <mrow>  \amp = p[P(p-1,m)(p-1-m)]</mrow>
+  <mrow>  \amp =[pP(p-1,m)](p-1-m)</mrow>
+  <mrow>  \amp =P(p,m+1)[p-(m+1)].</mrow>
 </md>
 </proof>
 
@@ -57,14 +53,11 @@ integer <m>m</m>. Then
 </p>
 <md>
   <mrow>  \binom{-1/2}{m+1} \amp =\frac{P(-1/2,m+1)}{(m+1)!}
-                  =\frac{P(-1/2,m)(-1/2-m)}{(m+1)m!}
-      </mrow>
+                  =\frac{P(-1/2,m)(-1/2-m)}{(m+1)m!}</mrow>
   <mrow>  \amp =\frac{-1/2-m}{m+1}\binom{-1/2}{m}
-                  =(-1)\frac{2m+1}{2(m+1)}(-1)^m\frac{\binom{2m}{m}}{2^{2m}}
-      </mrow>
+                  =(-1)\frac{2m+1}{2(m+1)}(-1)^m\frac{\binom{2m}{m}}{2^{2m}}</mrow>
   <mrow>  \amp =(-1)^{m+1}\frac{1}{2^{2m}}\frac{(2m+2)(2m+1)}{(2m+2)2(m+1)}\binom{2m}{m}=
-                  (-1)^{m+1}\frac{\binom{2m+2}{m+2}}{2^{2m+2}}.
-      </mrow>
+                  (-1)^{m+1}\frac{\binom{2m+2}{m+2}}{2^{2m+2}}.</mrow>
 </md>
 </proof>
 
@@ -83,12 +76,9 @@ By Newton's Binomial Theorem and
 <xref ref="l_newbinom">Lemma</xref>, we know that
 </p>
 <md>
-  <mrow>  (1-4x)^{-1/2}\amp =\sum_{n=0}^\infty\binom{-1/2}{n}(-4x)^n
-      </mrow>
-  <mrow>  \amp =\sum_{n=0}^\infty(-1)^n2^{2n}\binom{-1/2}{n}x^n
-      </mrow>
-  <mrow>  \amp =\sum_{n=0}^\infty \binom{2n}{n}x^n.
-      </mrow>
+  <mrow>  (1-4x)^{-1/2}\amp =\sum_{n=0}^\infty\binom{-1/2}{n}(-4x)^n</mrow>
+  <mrow>  \amp =\sum_{n=0}^\infty(-1)^n2^{2n}\binom{-1/2}{n}x^n</mrow>
+  <mrow>  \amp =\sum_{n=0}^\infty \binom{2n}{n}x^n.</mrow>
 </md>
 </proof>
 

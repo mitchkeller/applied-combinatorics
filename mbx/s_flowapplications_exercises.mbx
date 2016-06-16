@@ -78,12 +78,15 @@
 </ol>
 <figure xml:id="fig_flowapplications_poset_network_ex1" >
 <caption>The network corresponding to a poset</caption>
-<![CDATA[\begin{overpic}[scale=0.6]{flowapplications-figs/poset_network_ex1}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[scale=0.6]{flowapplications-figs/poset_network_ex1}
       \put(47,-7){<m>S</m>}
       \put(47,91){<m>T</m>}
       \put(3,15){<m>x_1'</m>}      \put(90,15){<m>x_6'</m>}
       \put(3,70){<m>x_1''</m>}      \put(90,70){<m>x_6''</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>Draw the diagram of the poset that corresponds to the network in
@@ -101,7 +104,8 @@
   elements.
   <figure xml:id="fig_flowapplications_poset_network_ex" >
 <caption>A poset and the corresponding network diagram</caption>
-<![CDATA[\begin{overpic}[scale=0.5]{flowapplications-figs/chain-partition}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[scale=0.5]{flowapplications-figs/chain-partition}
       \put(2,21){<m>x_1</m>}
       \put(32,25){<m>x_2</m>}
       \put(17,21){<m>x_3</m>}
@@ -114,7 +118,9 @@
       \put(91,7){<m>x'_6</m>}
       \put(48,33){<m>x''_1</m>}
       \put(91,33){<m>x''_6</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 <li>Draw the network corresponding to the poset <m>\bfP</m> shown in
@@ -123,7 +129,8 @@
   of size <m>w</m>.
   <figure xml:id="fig_flowapplications_poset_ex" >
 <caption>A poset</caption>
-<![CDATA[\begin{overpic}[scale=0.5]{flowapplications-figs/poset_ex}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[scale=0.5]{flowapplications-figs/poset_ex}
       \put(55,48){<m>x_1</m>}
       \put(45,-2){<m>x_2</m>}
       \put(27,72){<m>x_3</m>}
@@ -134,7 +141,9 @@
       \put(0,54){<m>x_8</m>}
       \put(57,27){<m>x_9</m>}
       \put(94,31){<m>x_{10}</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </li>
 </ol>

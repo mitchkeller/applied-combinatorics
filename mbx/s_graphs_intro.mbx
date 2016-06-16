@@ -27,13 +27,16 @@ different ways without changing what it is as a graph.
 </p>
 <figure xml:id="fig_small_graph" >
 <caption>A graph on <m>5</m> vertices</caption>
-<![CDATA[\begin{overpic}{graphs-figs/small_graph}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/small_graph}
     \put(58,100){<m>a</m>}
     \put(100,48){<m>b</m>}
     \put(-7,10){<m>c</m>}
     \put(15,50,){<m>d</m>}
     \put(70,11){<m>e</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 As is often the case in science and mathematics, different authors use
@@ -84,13 +87,16 @@ graphs with at most <m>5</m> vertices.
 </p>
 <figure xml:id="fig_complete_graphs" >
 <caption>Small complete graphs</caption>
-<![CDATA[\begin{overpic}[width=4in]{graphs-figs/complete_graphs}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=4in]{graphs-figs/complete_graphs}
     \put(2.5,2){<m>\bfK_1</m>}
     \put(16.5,2){<m>\bfK_2</m>}
     \put(36.5,2){<m>\bfK_3</m>}
     \put(60.5,2){<m>\bfK_4</m>}
     \put(86,2){<m>\bfK_5</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 A sequence <m>(x_1,x_2,\dots,x_n)</m> of vertices in a graph <m>\GVE</m> is
@@ -112,21 +118,27 @@ at most <m>5</m>.
 </p>
 <figure xml:id="fig_paths" >
 <caption>Short paths</caption>
-<![CDATA[\begin{overpic}[width=4in]{graphs-figs/paths}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=4in]{graphs-figs/paths}
     \put(8,-2){<m>\bfP_1</m>}
     \put(24,-2){<m>\bfP_2</m>}
     \put(39.5,-2){<m>\bfP_3</m>}
     \put(59.5,-2){<m>\bfP_4</m>}
     \put(85,-2){<m>\bfP_5</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <figure xml:id="fig_cycles" >
 <caption>Small cycles</caption>
-<![CDATA[\begin{overpic}[width=4in]{graphs-figs/cycles}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=4in]{graphs-figs/cycles}
     \put(24,1){<m>\bfC_3</m>}
     \put(47.5,1){<m>\bfC_4</m>}
     \put(73,1){<m>\bfC_5</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 If <m>\GVE</m> and <m>\HWF</m> are graphs, we say <m>\bfG</m> is <em>isomorphic</em>
@@ -145,7 +157,8 @@ between these graphs is given by
 </me>
 <figure xml:id="fig_isomorphic" >
 <caption>A pair of isomorphic graphs</caption>
-<![CDATA[\begin{overpic}[width=4in]{graphs-figs/isomorphic_graphs}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=4in]{graphs-figs/isomorphic_graphs}
     \put(6,13){<m>a</m>}
     \put(20.5,1){<m>b</m>}
     \put(36,14){<m>c</m>}
@@ -159,7 +172,9 @@ between these graphs is given by
     \put(67.5,21.5){<m>4</m>}
     \put(53,13){<m>5</m>}
     \put(68,1){<m>6</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 On the other hand, the graphs shown in <xref ref="fig_nonisomorphic" autoname="yes" /> are
@@ -168,7 +183,8 @@ vertices and the same number of edges. Can you tell why?
 </p>
 <figure xml:id="fig_nonisomorphic" >
 <caption>A pair of nonisomorphic graphs</caption>
-<![CDATA[\begin{overpic}[width=4in]{graphs-figs/nonisomorphic_graphs}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=4in]{graphs-figs/nonisomorphic_graphs}
     \put(6,13){<m>a</m>}
     \put(20.5,1){<m>b</m>}
     \put(36,14){<m>c</m>}
@@ -182,7 +198,9 @@ vertices and the same number of edges. Can you tell why?
     \put(67.5,21.5){<m>4</m>}
     \put(53,13){<m>5</m>}
     \put(68,1){<m>6</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 A graph <m>\bfG</m> is <em>connected</em> when there is

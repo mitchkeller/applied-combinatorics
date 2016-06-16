@@ -225,12 +225,9 @@ formula holds when <m>n=m</m>, i.e., assume that
 Then
 </p>
 <md>
-  <mrow>  \sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}
-      </mrow>
-  <mrow>  \amp =\binom{m+1}{k+1}+\binom{m+1}{k}
-      </mrow>
-  <mrow>  \amp =\binom{m+2}{k+1}.
-      </mrow>
+  <mrow>  \sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}</mrow>
+  <mrow>  \amp =\binom{m+1}{k+1}+\binom{m+1}{k}</mrow>
+  <mrow>  \amp =\binom{m+2}{k+1}.</mrow>
 </md>
 <p>
 Therefore, the proposition follows by the Principle of Mathematical Induction.

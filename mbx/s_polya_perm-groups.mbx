@@ -82,13 +82,16 @@ corresponding to the permutation <m>\pi</m> from above is shown in
 </p>
 <figure xml:id="fig_polya_perm-digraph" >
 <caption>The digraph corresponding to permutation <m>\pi=(1245)(3)</m></caption>
-<![CDATA[\begin{overpic}[scale=0.9]{polya-figs/permutation-cycles}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[scale=0.9]{polya-figs/permutation-cycles}
     \put(0,50){<m>1</m>}
     \put(-1,5){<m>2</m>}
     \put(87,6){<m>3</m>}
     \put(60,5){<m>4</m>}
     \put(60,50){<m>5</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 Since <m>\pi</m> is a permutation, every component of such a digraph is a

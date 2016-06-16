@@ -50,11 +50,14 @@ transposition, which corresponds to rotation, they are inequivalent.)
 </p>
 <figure xml:id="fig_polya_scales" >
 <caption>Three scales depicted by coloring</caption>
-<![CDATA[\begin{overpic}[width=\linewidth]{polya-figs/scales}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=\linewidth]{polya-figs/scales}
     \put(14,13){<m>S_1</m>}
     \put(49.5,13){<m>S_2</m>}
     \put(84,13){<m>S_3</m>}
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 We have now mathematically modeled musical scales as discrete
@@ -218,7 +221,8 @@ we need to bring P&#xf3;lya's enumeration theorem into play.
 </p>
 <figure xml:id="fig_polya_graphs" >
 <caption>Four lalbeled graphs on four vertices</caption>
-<![CDATA[\begin{overpic}[width=\linewidth]{polya-figs/graphs}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[width=\linewidth]{polya-figs/graphs}
     \put(1.2,0.7){<m>1</m>}
     \put(19.7,0.7){<m>2</m>}
     \put(10.2,22){<m>3</m>}
@@ -239,7 +243,9 @@ we need to bring P&#xf3;lya's enumeration theorem into play.
     \put(85.7,22){<m>3</m>}
     \put(85.7,7.2){<m>4</m>}
 
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 We begin by considering all <m>2^{C(n,2)}</m> graphs with vertex set <m>[n]</m>
@@ -356,10 +362,8 @@ power, to find the number of nonisomorphic graphs on any number of
 vertices. For <m>30</m> vertices, there are
 </p>
 <md>
-  <mrow>  \amp 334494316309257669249439569928080028956631479935393064329967834887217
-      </mrow>
-  <mrow>  \amp 734534880582749030521599504384\approx 3.3\times 10^{98}
-      </mrow>
+  <mrow>  \amp 334494316309257669249439569928080028956631479935393064329967834887217</mrow>
+  <mrow>  \amp 734534880582749030521599504384\approx 3.3\times 10^{98}</mrow>
 </md>
 <p>
 nonisomorphic graphs, as compared to <m>2^{435}\approx 8.9\times
@@ -367,10 +371,8 @@ nonisomorphic graphs, as compared to <m>2^{435}\approx 8.9\times
 graphs with precisely <m>200</m> edges is
 </p>
 <md>
-  <mrow>  \amp 313382480997072627625877247573364018544676703365501785583608267705079
-      </mrow>
-  <mrow>  \amp 9699893512219821910360979601\approx 3.1\times 10^{96}.
-      </mrow>
+  <mrow>  \amp 313382480997072627625877247573364018544676703365501785583608267705079</mrow>
+  <mrow>  \amp 9699893512219821910360979601\approx 3.1\times 10^{96}.</mrow>
 </md>
 <p>
 The last part of the question about graph enumeration at the beginning
