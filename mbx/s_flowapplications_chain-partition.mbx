@@ -43,14 +43,18 @@ the diagram.
   \captionsetup[subfloat]{captionskip=15pt}
 <sidebyside>
 {2.47in}
-    \subfloat[ ]{<![CDATA[\begin{overpic}[angle=90,width=2.37in]{flowapplications-figs/poset_network}
+    \subfloat[ ]{
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{flowapplications-figs/poset_network}
     \put(48,-5){<m>S</m>}
     \put(48,93){<m>T</m>}
     \put(1,20){<m>x_1'</m>}
     \put(94,20){<m>x_{10}'</m>}
     \put(1,71){<m>x_1''</m>}
     \put(94,71){<m>x_{10}''</m>}
- \end{overpic}]]>}
+ \end{overpic}]]></latex-image-code>
+</image>
+}
 </sidebyside>
 
 </figure>
@@ -81,7 +85,8 @@ convention that thick edges are full, while thin edges are empty.)
 </p>
 <figure xml:id="fig_flowapplications_poset_network_flow" >
 <caption>An initial flow</caption>
-<![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/poset_network_flow}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/poset_network_flow}
     \put(48,-5){<m>S</m>}
     \put(48,93){<m>T</m>}
     \put(1,20){<m>x_1'</m>}
@@ -89,7 +94,9 @@ convention that thick edges are full, while thin edges are empty.)
     \put(1,71){<m>x_1''</m>}
     \put(94,71){<m>x_{10}''</m>}
 
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 When we run the labeling algorithm (using priority
@@ -97,18 +104,12 @@ When we run the labeling algorithm (using priority
 following list of labels:
 </p>
 <md>
-  <mrow>  S:\quad \amp (*,+,\infty) \amp  x''_9:\quad \amp (x'_5,+,1) \amp  x'_3:\quad \amp (S,+,1)
-      </mrow>
-  <mrow>  x'_3:\quad \amp (S,+,1) \amp  x''_4:\quad \amp (x'_6,+,1) \amp x''_1:\quad \amp (x'_7,+,1)
-      </mrow>
-  <mrow>  x'_5:\quad \amp (S,+,1)\amp  x''_5:\quad \amp (x'_6,+,1) \amp  x''_2:\quad \amp (x'_7,+,1)
-      </mrow>
-  <mrow>  x'_6:\quad \amp (S,+,1)\amp  x'_1:\quad \amp (x''_3,-,1) \amp  x'_2:\quad \amp (x'_7,+,1)
-      </mrow>
-  <mrow>  x'_9:\quad \amp (S,+,1)\amp  x'_8:\quad \amp (x''_9,-,1) \amp  T:\quad \amp (x''_2,+,1)
-      </mrow>
-  <mrow>  x''_3:\quad \amp (x'_5,+,1) \amp  x'_7:\quad \amp (x''_4,-,1)  \amp
-      </mrow>
+  <mrow>  S:\quad \amp (*,+,\infty) \amp  x''_9:\quad \amp (x'_5,+,1) \amp  x'_3:\quad \amp (S,+,1)</mrow>
+  <mrow>  x'_3:\quad \amp (S,+,1) \amp  x''_4:\quad \amp (x'_6,+,1) \amp x''_1:\quad \amp (x'_7,+,1)</mrow>
+  <mrow>  x'_5:\quad \amp (S,+,1)\amp  x''_5:\quad \amp (x'_6,+,1) \amp  x''_2:\quad \amp (x'_7,+,1)</mrow>
+  <mrow>  x'_6:\quad \amp (S,+,1)\amp  x'_1:\quad \amp (x''_3,-,1) \amp  x'_2:\quad \amp (x'_7,+,1)</mrow>
+  <mrow>  x'_9:\quad \amp (S,+,1)\amp  x'_8:\quad \amp (x''_9,-,1) \amp  T:\quad \amp (x''_2,+,1)</mrow>
+  <mrow>  x''_3:\quad \amp (x'_5,+,1) \amp  x'_7:\quad \amp (x''_4,-,1)  \amp</mrow>
 </md>
 <p>
 Thus, we find the augmenting path <m>(S,x'_6,x''_4,x'_7,x''_2,T)</m>, and the
@@ -116,7 +117,8 @@ updated flow can be seen in <xref ref="fig_flowapplications_poset_network_flow2"
 </p>
 <figure xml:id="fig_flowapplications_poset_network_flow2" >
 <caption>A better flow</caption>
-<![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/poset_network_flow2}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{flowapplications-figs/poset_network_flow2}
     \put(48,-5){<m>S</m>}
     \put(48,93){<m>T</m>}
     \put(1,20){<m>x_1'</m>}
@@ -124,7 +126,9 @@ updated flow can be seen in <xref ref="fig_flowapplications_poset_network_flow2"
     \put(1,71){<m>x_1''</m>}
     \put(94,71){<m>x_{10}''</m>}
 
-  \end{overpic}]]>
+  \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 If we run the labeling algorithm again, the algorithm assigns the labels
@@ -132,11 +136,9 @@ below, leaving the sink unlabeled.
 </p>
 <md>
   <mrow>  S:\quad \amp  (*,+,\infty)\amp  x'_5:\quad \amp (S,+,1) \amp  x''_3:\quad
-  \amp (x'_5,+,1) \amp  x'_1:\quad \amp  (x''_3,-,1)
-      </mrow>
+  \amp (x'_5,+,1) \amp  x'_1:\quad \amp  (x''_3,-,1)</mrow>
   <mrow>  x'_3:\quad \amp (S,+,1) \amp  x'_9:\quad \amp (S,+,1) \amp  x''_9:\quad \amp  (x'_5,+,1)
-  \amp  x'_8:\quad \amp (x''_9,-,1)
-      </mrow>
+  \amp  x'_8:\quad \amp (x''_9,-,1)</mrow>
 </md>
 <p>
 In <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" />, the black

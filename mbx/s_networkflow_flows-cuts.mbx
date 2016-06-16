@@ -108,15 +108,12 @@ the sink,
 Now we have
 </p>
 <md>
-  <mrow>  v_0 \amp = \sum_{y\in V} \phi(S,y) - \sum_{z\in V}\phi(z,S)
-      </mrow>
+  <mrow>  v_0 \amp = \sum_{y\in V} \phi(S,y) - \sum_{z\in V}\phi(z,S)</mrow>
   <mrow>  \amp = \sum_{y\in V} \phi(S,y) - \sum_{z\in V}\phi(z,S) +
     \sum_{\substack{x\in L\\x\neq S} }\left[\sum_{y\in V} \phi(x,y) -
-      \sum_{z\in V}\phi(z,x)\right]
-      </mrow>
+      \sum_{z\in V}\phi(z,x)\right]</mrow>
   <mrow>  \amp = \sum_{x\in L}\left[\sum_{y\in V} \phi(x,y) -
-      \sum_{z\in V}\phi(z,x)\right]
-      </mrow>
+      \sum_{z\in V}\phi(z,x)\right]</mrow>
 </md>
 <p>
 At this point, we want to pause and look at the last line. Notice

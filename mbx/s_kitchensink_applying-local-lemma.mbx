@@ -70,10 +70,8 @@ C(t-n,n-i)</m> other sets of size<nbsp /><m>n</m>. So the basic inequalities
 we need to satisfy are:
 </p>
 <md>
-  <mrow>  p^3 \le \amp  x(1-x)^{3(t-3)}(1-y)^{C(t-3,n-3)+3C(t-n,n-2)}
-      </mrow>
-  <mrow>  q \le \amp  y(1-x)^{C(n,3)+(t-n)C(n,2)}(1-y)^{C(t-3,n-3)+3C(t-n,n-2)}
-      </mrow>
+  <mrow>  p^3 \le \amp  x(1-x)^{3(t-3)}(1-y)^{C(t-3,n-3)+3C(t-n,n-2)}</mrow>
+  <mrow>  q \le \amp  y(1-x)^{C(n,3)+(t-n)C(n,2)}(1-y)^{C(t-3,n-3)+3C(t-n,n-2)}</mrow>
 </md>
 <p>
 Next, we assume that <m>n^{3/2}\lt t\lt n^2</m> and then make the usual
@@ -82,10 +80,8 @@ constants, to see that these inequalities can be considered in
 the following simplified form:
 </p>
 <md>
-  <mrow>  p^3 \le \amp  x(1-x)^{t}(1-y)^{t^n}
-      </mrow>
-  <mrow>  q \le \amp  y(1-x)^{tn^2}(1-y)^{t^n}
-      </mrow>
+  <mrow>  p^3 \le \amp  x(1-x)^{t}(1-y)^{t^n}</mrow>
+  <mrow>  q \le \amp  y(1-x)^{tn^2}(1-y)^{t^n}</mrow>
 </md>
 <p>
 A moments reflection makes it clear that

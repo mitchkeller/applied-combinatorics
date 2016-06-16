@@ -42,12 +42,9 @@ The first vertex after <m>S</m> to be labeled was <m>B</m>, so we now scan from
 <m>A</m>, <m>C</m>, and<nbsp /><m>D</m>. This results in the following labels:
 </p>
 <md>
-  <mrow>  \amp A:\quad(B,+,8)
-      </mrow>
-  <mrow>  \amp C:\quad(B,+,8)
-      </mrow>
-  <mrow>  \amp D:\quad(B,-,6)
-      </mrow>
+  <mrow>  \amp A:\quad(B,+,8)</mrow>
+  <mrow>  \amp C:\quad(B,+,8)</mrow>
+  <mrow>  \amp D:\quad(B,-,6)</mrow>
 </md>
 <p>
 The next vertex to be scanned is <m>E</m>, but <m>E</m> has no unlabeled
@@ -81,22 +78,14 @@ algorithm is applied to this updated flow (Note that in the scan from
 <m>(S,B)</m> is full.
 </p>
 <md>
-  <mrow>  \amp S:\quad(*,+,\infty)
-      </mrow>
-  <mrow>  \amp E:\quad(S,+,28)
-      </mrow>
-  <mrow>  \amp F:\quad(S,+,15)
-      </mrow>
-  <mrow>  \amp B:\quad(E,+,19)
-      </mrow>
-  <mrow>  \amp D:\quad(E,+,12)
-      </mrow>
-  <mrow>  \amp A:\quad(F,+,12)
-      </mrow>
-  <mrow>  \amp C:\quad(B,+,10)
-      </mrow>
-  <mrow>  \amp T:\quad(A,+,12)
-      </mrow>
+  <mrow>  \amp S:\quad(*,+,\infty)</mrow>
+  <mrow>  \amp E:\quad(S,+,28)</mrow>
+  <mrow>  \amp F:\quad(S,+,15)</mrow>
+  <mrow>  \amp B:\quad(E,+,19)</mrow>
+  <mrow>  \amp D:\quad(E,+,12)</mrow>
+  <mrow>  \amp A:\quad(F,+,12)</mrow>
+  <mrow>  \amp C:\quad(B,+,10)</mrow>
+  <mrow>  \amp T:\quad(A,+,12)</mrow>
 </md>
 <p>
 This labeling results in the augmenting path <m>P=(S,F,A,T)</m> with
@@ -129,26 +118,16 @@ algorithm using the pseudo-alphabetic order results in the following
 labels:
 </p>
 <md>
-  <mrow>  \amp S:\quad(*,+,\infty)
-      </mrow>
-  <mrow>  \amp C:\quad(S,+,8)
-      </mrow>
-  <mrow>  \amp F:\quad(S,+,23)
-      </mrow>
-  <mrow>  \amp H:\quad(C,+,7)
-      </mrow>
-  <mrow>  \amp I:\quad(H,+,7)
-      </mrow>
-  <mrow>  \amp E:\quad(I,-,3)
-      </mrow>
-  <mrow>  \amp G:\quad(E,-,3)
-      </mrow>
-  <mrow>  \amp L:\quad(E,+,3)
-      </mrow>
-  <mrow>  \amp B:\quad(G,+,3)
-      </mrow>
-  <mrow>  \amp T:\quad(L,+,3)
-      </mrow>
+  <mrow>  \amp S:\quad(*,+,\infty)</mrow>
+  <mrow>  \amp C:\quad(S,+,8)</mrow>
+  <mrow>  \amp F:\quad(S,+,23)</mrow>
+  <mrow>  \amp H:\quad(C,+,7)</mrow>
+  <mrow>  \amp I:\quad(H,+,7)</mrow>
+  <mrow>  \amp E:\quad(I,-,3)</mrow>
+  <mrow>  \amp G:\quad(E,-,3)</mrow>
+  <mrow>  \amp L:\quad(E,+,3)</mrow>
+  <mrow>  \amp B:\quad(G,+,3)</mrow>
+  <mrow>  \amp T:\quad(L,+,3)</mrow>
 </md>
 <p>
 These labels result in the augmenting path <m>P=(S,C,H,I,E,L,T)</m> with
@@ -156,16 +135,11 @@ These labels result in the augmenting path <m>P=(S,C,H,I,E,L,T)</m> with
 <m>175</m>, the labeling algorithm halts with the following labels:
 </p>
 <md>
-  <mrow>  \amp S:\quad(*,+,\infty)
-      </mrow>
-  <mrow>  \amp C:\quad(S,+,5)
-      </mrow>
-  <mrow>  \amp F:\quad(S,+,23)
-      </mrow>
-  <mrow>  \amp H:\quad(C,+,4)
-      </mrow>
-  <mrow>  \amp I:\quad(H,+,4)
-      </mrow>
+  <mrow>  \amp S:\quad(*,+,\infty)</mrow>
+  <mrow>  \amp C:\quad(S,+,5)</mrow>
+  <mrow>  \amp F:\quad(S,+,23)</mrow>
+  <mrow>  \amp H:\quad(C,+,4)</mrow>
+  <mrow>  \amp I:\quad(H,+,4)</mrow>
 </md>
 <p>
 Now we observe that the labeled and unlabeled vertices are

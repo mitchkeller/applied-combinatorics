@@ -114,7 +114,8 @@ tree. Consider the <m>9</m>-vertex tree <m>\bfT</m> in <xref ref="fig_prufer-cod
 </p>
 <figure xml:id="fig_prufer-code" >
 <caption>A labeled <m>9</m>-vertex tree</caption>
-<![CDATA[\begin{overpic}{graphs-figs/tree-9verts}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/tree-9verts}
       \put(46,2){<m>1</m>}
       \put(21,21){<m>2</m>}
       \put(62,14.5){<m>3</m>}
@@ -124,7 +125,9 @@ tree. Consider the <m>9</m>-vertex tree <m>\bfT</m> in <xref ref="fig_prufer-cod
       \put(90,12){<m>7</m>}
       \put(27.5,5.5){<m>8</m>}
       \put(77.3,21){<m>9</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 How do we compute <m>\prufer(\bfT)</m>? Since <m>\bfT</m> has more than two
@@ -135,7 +138,8 @@ shown in <xref ref="fig_prufer-code-delete1" autoname="yes" />.
 </p>
 <figure xml:id="fig_prufer-code-delete1" >
 <caption>The tree <m>\bfT-v</m></caption>
-<![CDATA[\begin{overpic}{graphs-figs/tree-8verts}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/tree-8verts}
       \put(46,2){<m>1</m>}
       \put(62,14.5){<m>3</m>}
       \put(36.8,14.5){<m>4</m>}
@@ -144,7 +148,9 @@ shown in <xref ref="fig_prufer-code-delete1" autoname="yes" />.
       \put(90,12){<m>7</m>}
       \put(27.5,5.5){<m>8</m>}
       \put(77.3,21){<m>9</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 <p>
 The recursive call <m>\prufer(\bfT-v)</m> returns
@@ -252,7 +258,8 @@ edge indicated. The tree we construct in this manner is shown in
 </p>
 <figure xml:id="fig_prufer-code-reverse" >
 <caption>The labeled tree with Pr&#xfc;fer code <m>75531</m></caption>
-<![CDATA[\begin{overpic}{graphs-figs/prufer-code-reverse}
+<image>
+<latex-image-code><![CDATA[\begin{overpic}{graphs-figs/prufer-code-reverse}
       \put(2,21){<m>4</m>}
       \put(62,14.5){<m>1</m>}
       \put(36.8,14.5){<m>3</m>}
@@ -260,7 +267,9 @@ edge indicated. The tree we construct in this manner is shown in
       \put(9,12){<m>5</m>}
       \put(90,12){<m>7</m>}
       \put(93,21){<m>2</m>}
-    \end{overpic}]]>
+    \end{overpic}]]></latex-image-code>
+</image>
+
 </figure>
 </statement>
 </example>

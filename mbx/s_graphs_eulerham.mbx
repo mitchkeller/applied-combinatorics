@@ -114,16 +114,11 @@ Here is the sequence of circuits starting with the trivial circuit <m>C</m>
 consisting only of the vertex<nbsp /><m>1</m>.
 </p>
 <md>
-  <mrow>  C \amp =(1)
-      </mrow>
-  <mrow>  \amp =(1,2,4,3,1)\quad \text{start next from <m>2</m>}
-      </mrow>
-  <mrow>  \amp =(1,2,5,8,2,4,3,1)\quad\text{start next from <m>4</m>}
-      </mrow>
-  <mrow>  \amp =(1,2,5,8,2,4,6,7,4,9,6,10,4,3,1)\quad\text{start next from <m>7</m>}
-      </mrow>
-  <mrow>  \amp =(1,2,5,8,2,4,6,7,9,11,7,4,9,6,10,4,3,1)\quad\text{Done!!}
-      </mrow>
+  <mrow>  C \amp =(1)</mrow>
+  <mrow>  \amp =(1,2,4,3,1)\quad \text{start next from <m>2</m>}</mrow>
+  <mrow>  \amp =(1,2,5,8,2,4,3,1)\quad\text{start next from <m>4</m>}</mrow>
+  <mrow>  \amp =(1,2,5,8,2,4,6,7,4,9,6,10,4,3,1)\quad\text{start next from <m>7</m>}</mrow>
+  <mrow>  \amp =(1,2,5,8,2,4,6,7,9,11,7,4,9,6,10,4,3,1)\quad\text{Done!!}</mrow>
 </md>
   <figure xml:id="fig_graphs_eulerexample" >
 <caption>An Eulerian Graph</caption>
