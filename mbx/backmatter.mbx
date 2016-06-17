@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<backmatter xml:id="backmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Back Matter</title> <!-- mostly for HTML sectioning -->
+
+    <xi:include href="./ch_epilogue.mbx" />
+    <xi:include href="./app_background.mbx" />
+
+<!--    <xi:include href="./gfdl-mathbook.xml" />  -->         <!-- GFDL License text -->
+
+    <!-- Index follows appendices, preceded only colophon -->
+    <index-part>
+
+        <index-list />
+    </index-part>
+
+    <colophon>
+        <p>This book was authored in MathBook XML.</p>
+    </colophon>
+
+</backmatter>
