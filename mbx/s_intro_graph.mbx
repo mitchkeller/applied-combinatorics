@@ -1,74 +1,59 @@
 <section xml:id="s_intro_graph">
-<title>Combinatorics and Graph Theory</title>
-<p>
-A <em>graph</em> <m>G</m> consists of a <em>vertex</em> set <m>V</m> and
-a collection <m>E</m> of <m>2</m>-element subsets of <m>V</m>. Elements of <m>E</m> are
-called edges. In our course, we will (almost always) use the convention
-that <m>V=\{1,2,3,\dots,n\}</m> for some positive integer<nbsp /><m>n</m>. With
-this convention, graphs can be described <em>precisely</em>
-with a text file:
-</p>
+  <title>Combinatorics and Graph Theory</title>
+  <p>A <term>graph</term> <m>G</m> consists of a <term>vertex</term> set   <m>V</m> and a collection <m>E</m> of <m>2</m>-element subsets of   <m>V</m>. Elements of <m>E</m> are called <term>edges</term>. In our course, we will (almost always) use the convention that <m>V=\{1,2,3,\dots,n\}</m> for some positive integer <m>n</m>. With this convention, graphs can be described <em>precisely</em> with a text file:</p>
 
-<ol>
-<li>The first line of the file contains a single integer <m>n</m>, the
-number of vertices in the graph.</li>
-<li>Each of the remaining lines of the file contains a pair of 
-distinct integers and specifies an edge of the graph.</li>
-</ol>
+  <ol>
+    <li>The first line of the file contains a single integer <m>n</m>, the number of vertices in the graph.</li>
+    <li>Each of the remaining lines of the file contains a pair of  distinct integers and specifies an edge of the graph.</li>
+  </ol>
 
-<p>
-We illustrate this convention in <xref ref="fig_graphdata" autoname="yes" /> with a text
-file and the diagram for the graph<nbsp /><m>G</m> it defines.
-</p>
-<figure xml:id="fig_graphdata" >
-<caption>A graph defined by data</caption>
-<sidebyside>
-{1.5in}
-<c>graph1.txt</c><br />
-9<br />
-6 2<br />
-1 5<br />
-1 7<br />
-6 8<br />
-9 1<br />
-4 3<br />
-5 7<br />
-1 3<br />
-5 9<br />
-7 9
-{3in}
-<image width="60%" source="images/3012-fig15" /> <br />
-</sidebyside>
+  <p>We illustrate this convention in <xref ref="fig_graphdata" autoname="yes" /> with a text file and the diagram for the graph<nbsp /><m>G</m> it defines.</p>
 
-</figure>
-<p>
-Much of the notation and terminology for graphs is quite natural.
-See if you can make sense out of the following statements which
-apply to the graph <m>G</m> defined above:
-</p>
+  <sidebyside xml:id="fig_graphdata">
+    <caption>A graph defined by data</caption>
+    <figure width="30%" valign="middle" halign="left">
+      <p>
+        <cd>
+          <cline>graph1.txt</cline>
+          <cline>9</cline>
+          <cline>6 2</cline>
+          <cline>1 5</cline>
+          <cline>1 7</cline>
+          <cline>6 8</cline>
+          <cline>9 1</cline>
+          <cline>4 3</cline>
+          <cline>5 7</cline>
+          <cline>1 3</cline>
+          <cline>5 9</cline>
+          <cline>7 9</cline>
+        </cd>
+      </p>
+    </figure>
+    <figure width="60%" valign="middle">
+      <image source="images/3012-fig15" />
+    </figure>
+  </sidebyside>
+  
+  <p>Much of the notation and terminology for graphs is quite natural. See if you can make sense out of the following statements which apply to the graph <m>G</m> defined above:</p>
 
-<ol>
-<li><m>G</m> has <m>9</m> vertices and <m>10</m> edges.</li>
-<li><m>\{2,6\}</m> is an edge.</li>
-<li>Vertices <m>5</m> and <m>9</m> are adjacent.</li>
-<li><m>\{5,4\}</m> is not an edge.</li>
-<li>Vertices <m>3</m> and <m>7</m> are not adjacent.</li>
-<li><m>P = (4, 3,1, 7,9,5)</m> is a path 
-of length<nbsp /><m>5</m> from vertex <m>4</m> to vertex<nbsp /><m>5</m>.</li>
-<li><m>C=(5,9,7,1)</m> is cycle of length<nbsp /><m>4</m>.</li>
-<li><m>G</m> is disconnected and has two components.
-One of the components has vertex set <m>\{2,6,8\}</m>.</li>
-<li><m>\{1,5,7\}</m> is a triangle.</li>
-<li><m>\{1,7,5,9\}</m> is a clique of size<nbsp /><m>4</m>.</li>
-<li><m>\{4,2,8,5\}</m> is an independent set of
-size<nbsp /><m>4</m>.</li>
-</ol>
-
-<p>
-Equipped only with this little bit of background
-material, we are already able to pose a number
-of interesting and challenging problems.
-</p>
+  <ol>
+    <li><m>G</m> has <m>9</m> vertices and <m>10</m> edges.</li>
+    <li><m>\{2,6\}</m> is an edge.</li>
+    <li>Vertices <m>5</m> and <m>9</m> are adjacent.</li>
+    <li><m>\{5,4\}</m> is not an edge.</li>
+    <li>Vertices <m>3</m> and <m>7</m> are not adjacent.</li>
+    <li><m>P = (4, 3,1, 7,9,5)</m> is a path 
+    of length<nbsp /><m>5</m> from vertex <m>4</m> to vertex<nbsp /><m>5</m>.</li>
+    <li><m>C=(5,9,7,1)</m> is cycle of length<nbsp /><m>4</m>.</li>
+    <li><m>G</m> is disconnected and has two components.
+    One of the components has vertex set <m>\{2,6,8\}</m>.</li>
+    <li><m>\{1,5,7\}</m> is a triangle.</li>
+    <li><m>\{1,7,5,9\}</m> is a clique of size<nbsp /><m>4</m>.</li>
+    <li><m>\{4,2,8,5\}</m> is an independent set of
+    size<nbsp /><m>4</m>.</li>
+  </ol>
+  
+  <p>Equipped only with this little bit of background material, we are already able to pose a number of interesting and challenging problems.</p>
 <example>
 <statement>
 <p>
