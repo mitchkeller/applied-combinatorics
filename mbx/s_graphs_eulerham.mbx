@@ -20,7 +20,7 @@ this problem in 1736 by using graph theory in the form of
 <image width="73%" source="images/konigsberg_bridges" />
 </figure>
 <p>
-A graph <m>\bfG</m> is <em>eulerian</em> if there is a sequence
+A graph <m>\bfG</m> is <term>eulerian</term><index><main>eulerian</main><sub>graph</sub></index> if there is a sequence
 <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition
 allowed, so that
 </p>
@@ -34,7 +34,7 @@ allowed, so that
 
 <p>
 When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions
-is called an <em>eulerian circuit</em>. A sequence of vertices
+is called an <term>eulerian circuit</term><index><main>eulerian</main><sub>circuit</sub></index>. A sequence of vertices
 <m>(x_0,x_1,\dots,x_t)</m> is called a <em>circuit</em> when it satisfies
 only the first two of these conditions. Note that a sequence
 consisting of a single vertex is a circuit. The following elementary

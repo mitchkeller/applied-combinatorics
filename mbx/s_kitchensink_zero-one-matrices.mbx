@@ -52,7 +52,7 @@ partial order on <m>\cgP(t)</m> defined by setting <m>V=(v_1,v_2,\dots,v_m)
 \sum_{1\le i\le j}w_j</m> for each <m>j=1,2,\dots,m</m>, i.e., the sequence
 of partial sums for <m>V</m> is always at least as large, term by term,
 as the sequence of partial sums of <m>W</m>. For example, we show in
-<xref ref="fig_partitionlattice" autoname="yes" /> the partial order <m>\cgP(7)</m>.
+<xref provisional="fig_partitionlattice" autoname="yes" /> the partial order <m>\cgP(7)</m>.
 </p>
 
 <p>
@@ -146,7 +146,7 @@ The proof is constructive. In the poset <m>\cgP(t</m>, let
 <m>W_0>W_1>\dots>W_s</m> be a chain so that (1)<nbsp /><m>W_0=R^d</m>, (2)<nbsp /><m>W_s=C</m> and
 (3)<nbsp />if <m>0\le p\lt s</m>, then <m>W_p</m> covers <m>W_{p+1}</m>. We start with a zero
 one matrix <m>M_0</m> having row sum string <m>R</m> and column sum string <m>W_0</m>,
-as suggested in <xref ref="fig_dualpartition" autoname="yes" /> for the partition
+as suggested in <xref provisional="fig_dualpartition" autoname="yes" /> for the partition
 <m>(8,4,3,1,1,1)</m>. If <m>s=0</m>, we are done, so we assume that for some <m>p</m> with
 <m>0\le p\lt s</m>, we have a zero<ndash />one matrix <m>M_p</m> with row sum string <m>R</m> and
 column sum string <m>W_p</m>. Then let <m>i</m> and <m>j</m> be the integers from

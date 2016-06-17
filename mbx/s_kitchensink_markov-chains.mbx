@@ -6,7 +6,7 @@
 <p>
 We begin this section with a motivational example.
 Consider the connected graph on six
-vertices shown in <xref ref="fig_markovchain" autoname="yes" />.
+vertices shown in <xref provisional="fig_markovchain" autoname="yes" />.
 The first move is to choose a vertex at random and move
 there. Afterwards, we follow the following recursive
 procedures. If after <m>i</m> moves,
@@ -52,7 +52,7 @@ matrix of a Markov chain.
 
 <p>
 For example, here is the transition matrix for the graph shown in
-<xref ref="fig_markovchain" autoname="yes" />.
+<xref provisional="fig_markovchain" autoname="yes" />.
 </p>
 <men xml:id="eqn_transition" >
   P =\begin{pmatrix}0 \amp  1/4 \amp  1/4 \amp  1/4 \amp  1/4 \amp    0 \\

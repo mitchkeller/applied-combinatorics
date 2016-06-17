@@ -27,25 +27,19 @@ from <m>x'_i</m> to <m>x''_j</m> if and only if <m>x_i \lt  x_j</m> in <m>\bfP</
 
 <p>
 Our running example in this section will be the poset in
-<xref ref="subfig_flowapplications_poset">Figure</xref>. We'll discuss the points of the
+<xref ref="fig_flowapplications-poset">Figure</xref>. We'll discuss the points of the
 poset as <m>x_i</m> where <m>i</m> is the number printed next to the point in
 the diagram.
 </p>
-<figure xml:id="fig_flowapplications_poset" >
-<caption>A partially ordered set 
-    \subref{subfig:flowapplications:poset} and the associated network 
-    \subref{subfig:flowapplications:network}</caption>
 <sidebyside>
-{1.3in}
-      \subfloat[ ]{<image width="20%" source="images/poset" /> }
-</sidebyside>
-\hspace{0.5in}
-  \captionsetup[subfloat]{captionskip=15pt}
-<sidebyside>
-{2.47in}
-    \subfloat[ ]{
-<image>
-<latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{images/poset_network}
+  <caption>A partially ordered set <xref ref="fig_flowapplications-poset" /> and the associated network <xref ref="fig_flowapplications-network" />.</caption>
+  <figure xml:id="fig_flowapplications-poset" >
+    <caption>A small poset</caption>
+    <image width="35%" source="images/poset" />
+  </figure>
+  <figure xml:id="fig_flowapplications-network" >
+    <caption>The associated network</caption>
+    <image> <latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{images/poset_network}
     \put(48,-5){\(S\)}
     \put(48,93){\(T\)}
     \put(1,20){\(x_1'\)}
@@ -54,13 +48,12 @@ the diagram.
     \put(94,71){\(x_{10}''\)}
  \end{overpic}]]></latex-image-code>
 </image>
-}
+  </figure>
 </sidebyside>
 
-</figure>
 <p>
 The first step is to create the network, which we show in
-<xref ref="subfig_flowapplications_network">Figure</xref>.
+<xref ref="fig_flowapplications-network">Figure</xref>.
 In this network, all capacities are <m>1</m>, edges are directed from
 bottom to top, the first row of ten vertices is the <m>x'_i</m> arranged
 consecutively with <m>x'_1</m> at the left and <m>x'_{10}</m> at the right, and
