@@ -136,46 +136,31 @@ Then <m>\mathbb{M} =\mathbb{N}_0</m> if and only if
 </ol>
 
 <theorem>
-<statement>
-<p>
-{ [Associative Property of Addition]}<br />
-<m>m+(n+p) = (m+n)+p</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
-</p>
-</statement>
-</theorem>
+  <title>Associative Property of Addition</title>
+  <statement>
+    <p>
+      <m>m+(n+p) = (m+n)+p</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+    </p>
+  </statement>
+  <proof>
+    <p>Let <m>m,n\in \mathbb{N}_0</m>. Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>p</m> for which <m>m+(n+p)=(m+n)+p</m>. We show that <m>\mathbb{M}=\mathbb{N}_0</m>.
+    </p>
 
-<proof>
-<p>
-Let <m>m,n\in \mathbb{N}_0</m>. Then let
-<m>\mathbb{M}</m> denote the set of all natural numbers <m>p</m> for
-which <m>m+(n+p)=(m+n)+p</m>. We show that <m>\mathbb{M}=\mathbb{N}_0</m>.
-</p>
-
-<p>
-Note that
-</p>
-<me>
-  m+(n+0) = m+n = (m+n)+0
-</me>
-<p>
-which shows that <m>0\in \mathbb{M}</m>.
-</p>
-
-<p>
-Now assume that <m>k\in \mathbb{M}</m>, i.e., <m>m+(n+k) = (m+n)+k</m>.
+    <p>Note that
+  <me>
+    m+(n+0) = m+n = (m+n)+0
+  </me>
+  which shows that <m>0\in \mathbb{M}</m>.
+  </p>
+  <p>Now assume that <m>k\in \mathbb{M}</m>, i.e., <m>m+(n+k) = (m+n)+k</m>.
 Then
-</p>
 <me>
   m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1).
 </me>
-<p>
-Notice here that the first, second, and fourth equalities follow from
-the second part of the definition of addition while the third uses our
-inductive assumption that <m>m+(n+k)=(m+n)+k)</m>. This shows that <m>k+1\in
-\mathbb{M}</m>. Therefore, <m>\mathbb{M}= \mathbb{N}_0</m>. Since <m>m</m> and
-<m>n</m> were arbitrary elements of <m>\mathbb{N}_0</m>, the theorem follows.
-</p>
+Notice here that the first, second, and fourth equalities follow from the second part of the definition of addition while the third uses our inductive assumption that <m>m+(n+k)=(m+n)+k)</m>. This shows that <m>k+1\in \mathbb{M}</m>. Therefore, <m>\mathbb{M}= \mathbb{N}_0</m>. Since <m>m</m> and <m>n</m> were arbitrary elements of <m>\mathbb{N}_0</m>, the theorem follows.
+  </p>
 </proof>
+</theorem>
 
 <p>
 In proofs to follow, we will trim out some of the wording
@@ -192,23 +177,21 @@ write (i)<nbsp /><m>n+0=n</m>, and (ii)<nbsp /><m>n+(k+1) = (n+k)+1</m>.
 <m>m+(n+1) = (m+1)+n</m>, for all <m>m,n\in\mathbb{N}_0</m>.
 </p>
 </statement>
-</lemma>
 
 <proof>
 <p>
 Fix <m>m\in \mathbb{N}_0</m>. Then
-</p>
 <me>
   m+(0+1)=m+1= (m+0)+1.
 </me>
-<p>
 Now assume that <m>m+(k+1)=(m+1)+k</m>.
 Then
-</p>
 <me>
   m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
 </me>
+</p>
 </proof>
+</lemma>
 
 <p>
 We next prove the commutative property, a task that takes
@@ -221,37 +204,37 @@ two steps. First, we prove the following special case.
 <m>n+0 = 0+n=n</m>, for all <m>n\in \mathbb{N}_0</m>.
 </p>
 </statement>
-</lemma>
 
 <proof>
 <p>
 The statement is trivially true when <m>n= 0</m>.
 Now suppose that <m>k+0=0+k=k</m> for some <m>k\in \mathbb{N}_0</m>.
 Then
-</p>
 <me>
   (k+1) +0 = k+1 = (0+k)+1= 0+(k+1).
 </me>
+</p>
 </proof>
+</lemma>
 
 <theorem>
+  <title>Commutative Law of Addition</title>
 <statement>
 <p>
-{ [Commutative Law of Addition]}<br />
 <m>m+n=n+m</m> for all <m>m,n\in \mathbb{N}_0</m>.
 </p>
 </statement>
-</theorem>
 
 <proof>
 <p>
 Let <m>m\in \mathbb{N}_0</m>. Then <m>m+0=0+m</m> from the preceding lemma.
 Assume <m>m+k=k+m</m>. Then
-</p>
 <me>
   m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
 </me>
+</p>
 </proof>
+</theorem>
 
 <lemma xml:id="lem_sum0">
 <statement>
@@ -259,7 +242,6 @@ Assume <m>m+k=k+m</m>. Then
 If <m>m,n\in\mathbb{N}_0</m> and <m>m+n=0</m>, then <m>m=n=0</m>.
 </p>
 </statement>
-</lemma>
 
 <proof>
 <p>
@@ -271,30 +253,30 @@ which is impossible since <m>0</m> is not the successor of any
 natural number.
 </p>
 </proof>
+</lemma>
 
 <theorem>
+  <title>Cancellation Law of Addition</title>
 <statement>
 <p>
-{ [Cancellation Law of Addition]}<br />
 If <m>m,n,p\in \mathbb{N}_0</m> and <m>m+p=n+p</m>, then <m>m=n</m>.
 </p>
 </statement>
-</theorem>
 
 <proof>
 <p>
 Let <m>m,n\in \mathbb{N}_0</m>. Suppose that <m>m+0=n+0</m>. Then <m>m=n</m>.
 Now suppose that <m>m=n</m> whenever <m>m+k=n+k</m>.
 If <m>m+(k+1)=n+(k+1)</m>, then
-</p>
 <me>
   s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k).
 </me>
-<p>
 Since <m>s</m> is an
 injection, this implies <m>m+k=n+k</m>. Thus <m>m=n</m>.
 </p>
 </proof>
+</theorem>
+
 </subsection>
 
 </section>
