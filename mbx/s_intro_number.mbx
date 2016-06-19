@@ -1,7 +1,7 @@
 <section xml:id="s_intro_number">
   <title>Combinatorics and Number Theory</title>
   <p>Broadly, number theory concerns itself with the properties of the positive integers. G.H.<nbsp />Hardy was a brilliant British mathematician who lived through both World Wars and conducted a large deal of number-theoretic research. He was also a pacifist who was happy that, from his perspective, his research was not <q>useful</q>. He wrote in his 1940 essay <em>A Mathematician's Apology</em> <q>[n]o one has yet discovered any warlike purpose to be served by the theory of numbers or relativity, and it seems very unlikely that anyone will do so for many years.</q><fn>G.H.<nbsp />Hardy, <em>A Mathematician's Apology</em>, Cambridge University Press, p. 140. (1993 printing)</fn> Little did he know, the purest mathematical ideas of number theory would soon become indispensable for the cryptographic techniques that kept communications secure. Our subject here is not number theory, but we will see a few times where combinatorial techniques are of use in number theory.</p>
-  <example xml:id="ex_collatz">
+  <example xml:id="ex_collatz"><index><main>Collatz sequence</main></index>
       <p>Form a sequence of positive integers using the following rules. Start with a positive integer <m>n>1</m>. If <m>n</m> is odd, then the next number is <m>3n+1</m>. If <m>n</m> is even, then the next number is <m>n/2</m>. Halt if you ever reach<nbsp /><m>1</m>. For example, if we start with <m>28</m>, the sequence is
       <me>
         28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.
@@ -13,7 +13,7 @@
       </me>
         But now we note that the integer <m>22</m> appears in the first sequence,
         so the two sequences will agree from this point on. Sequences formed
-        by this rule are called <em>Collatz sequences</em>.
+        by this rule are called <term>Collatz sequences</term>.
       </p>
 
       <p>Pick a number somewhere between <m>100</m> and <m>200</m> and write down the sequence you get. Regardless of your choice, you will eventually halt with a<nbsp /><m>1</m>. However, is there some positive integer <m>n</m> (possibly quite large) so that if you start from <m>n</m>, you will never reach<nbsp /><m>1</m>?
@@ -39,7 +39,7 @@
     </p>
     <p>So to find the least common multiple of two numbers, we just have to factor them into primes. That doesn't sound too hard. For starters, can you factor <m>1961</m>? OK, how about <m>1348433</m>? Now for a real challenge.  Suppose you are told that the integer
     <me>
-      c = 5220070641387698449504000148751379227274095462521
+      c = 55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799
     </me>
     is the product of two primes <m>a</m> and <m>b</m>. Can you find them?
     </p>
@@ -47,22 +47,33 @@
     <p>What if factoring is hard? Can you find the least common multiple of two relatively large integers, say each with about<nbsp /><m>500</m> digits, by another method? How should middle school students be taught to add fractions?
       </p>
 
-      <p>As an aside, we note that most calculators can't add or multiply two <m>20</m> digits numbers, much less two numbers with more than<nbsp /><m>500</m> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known examples are <em>Maple</em><registered /> and <em>Mathematica</em><registered />. For example, if you open up a <em>Maple</em> workspace and enter the command: <c>ifactor(300914426505000);</c> then about as fast as you hit the carriage return, you will get the prime factorization shown above.</p>
+      <p>As an aside, we note that most calculators can't add or multiply two <m>20</m> digits numbers, much less two numbers with more than<nbsp /><m>500</m> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known commercial examples are <em>Maple</em><registered /> and <em>Mathematica</em><registered />. In this text, we will from time to time, make use of the open source computer algebra system <url href="http://www.sagemath.org">SageMath</url>. We will sometimes embed interactive SageMath cells in the text, but you can also use SageMath for free online via the <url href="http://cloud.sagemath.com/">SageMath Cloud</url>. For example, the SageMath cell below will produce the factorization shown above.</p>
 
+      <sage>
+        <input>factor(300914426505000)</input>
+        <output>2^3 * 3 * 5^4 * 7^3 * 11 * 19 * 23^4</output>
+      </sage>
+
+      <p>If you're reading this text in a web browser, go ahead and change the integer in the SageMath cell above to some other, perhaps larger, integer and click the button again to get the prime factorization of your new integer.</p>
+      
       <p>Now here's how we made up the challenge problem. First, we found a site on the web that lists large primes and found these two values:
       <md>
-        <mrow>  a \amp =  45095080578985454453\quad\text{and}</mrow>
-        <mrow>  b \amp =  115756986668303657898962467957.</mrow>
+        <mrow>  a \amp =  2425967623052370772757633156976982469681\quad\text{and}</mrow>
+        <mrow>  b \amp =  22953686867719691230002707821868552601124472329079.</mrow>
       </md>
-        We then used <em>Maple</em> to multiply them together using the following command:
-      <me>
-        45095080578985454453*115756986668303657898962467957;
-      </me>
-        Almost instantly, <em>Maple</em> reported the value for <m>c</m> given above.
+      The SageMath code below calculates <m>a\times b</m>, and returns the result instantly.
       </p>
 
-      <p>Out of curiosity, we then asked <em>Maple</em> to factor<nbsp /><m>c</m>. It took almost <m>12</m> minutes on a powerful desktop computer.
-      </p>
+      <sage>
+        <input>a = 2425967623052370772757633156976982469681
+b = 22953686867719691230002707821868552601124472329079
+a*b</input>
+        <output>55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799</output>
+      </sage>
+      
+      <p>On the other hand, if you ask SageMath to factor <m>c</m>, as in the cell below, you'll likely be waiting a long time. If you get a response in more than a couple of minutes, please email us so that we can update the text with larger primes <m>a</m> and <m>b</m>!</p>
+      <sage> <input>factor(55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799)</input>
+      </sage>
   </example>
   <p>
     Questions arising in number theory can also have an enumerative flair,
@@ -78,14 +89,14 @@
         <caption>The partitions of <m>8</m>, noting those into distinct parts
         and those into odd parts.</caption>
         <tabular>
-          <row><cell>8\quad\text{distinct parts}</cell><cell>7+1\quad\text{distinct parts, odd parts}</cell><cell>6+2\quad\text{distinct parts}</cell></row>
-          <row><cell>6+1+1</cell><cell>5+3\quad\text{distinct parts, odd parts}</cell><cell>5+2+1\quad\text{distinct parts}</cell></row>
-          <row><cell>5+1+1+1\quad\text{odd parts}</cell><cell>4+4</cell><cell>4+3+1\quad\text{distinct parts}</cell></row>
+          <row><cell>8 distinct parts</cell><cell>7+1 distinct parts, odd parts</cell><cell>6+2 distinct parts</cell></row>
+          <row><cell>6+1+1</cell><cell>5+3 distinct parts, odd parts</cell><cell>5+2+1 distinct parts</cell></row>
+          <row><cell>5+1+1+1 odd parts</cell><cell>4+4</cell><cell>4+3+1 distinct parts</cell></row>
           <row><cell>4+2+2</cell><cell>4+2+1+1</cell><cell>4+1+1+1+1</cell></row>
-          <row><cell>3+3+2</cell><cell>3+3+1+1\quad\text{odd parts}</cell><cell>3+2+2+1</cell></row>
-          <row><cell>3+2+1+1+1</cell><cell>3+1+1+1+1+1\quad\text{odd parts}</cell><cell>2+2+2+2</cell></row>
+          <row><cell>3+3+2</cell><cell>3+3+1+1 odd parts</cell><cell>3+2+2+1</cell></row>
+          <row><cell>3+2+1+1+1</cell><cell>3+1+1+1+1+1 odd parts</cell><cell>2+2+2+2</cell></row>
           <row><cell>2+2+2+1+1</cell><cell>2+2+1+1+1+1</cell><cell>2+1+1+1+1+1+1</cell></row>
-          <row><cell></cell><cell>1+1+1+1+1+1+1+1\quad\text{odd parts}</cell></row>
+          <row><cell></cell><cell>1+1+1+1+1+1+1+1 odd parts</cell></row>
         </tabular>
       </table>
       <p>
@@ -95,12 +106,7 @@
       </p>
 
       <p>
-        What would be your reaction if we asked you to find the number of
-        integer partitions of <m>25892</m>? Do you think that the number of
-        partitions of <m>25892</m> into odd parts equals the number of partitions
-        of <m>25892</m> into distinct parts? Is there a way to answer this
-        question <em>without</em> actually calculating the number of
-        partitions of each type?
+        What would be your reaction if we asked you to find the number of integer partitions of <m>25892</m>? Do you think that the number of partitions of <m>25892</m> into odd parts equals the number of partitions of <m>25892</m> into distinct parts? Is there a way to answer this question <em>without</em> actually calculating the number of partitions of each type?
       </p>
     </statement>
   </example>
