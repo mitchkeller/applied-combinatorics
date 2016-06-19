@@ -68,9 +68,8 @@
       Suppose that the root vertex <m>r</m> is the vertex labeled<nbsp /><m>a</m>. The initialization step of Dijkstra's algorithm then results in the following values for <m>\delta</m> and <m>P</m>:
     </p>
 
-    <p>
-      <b>Initialization (Step 1)</b>
-    </p>
+    <paragraphs>
+      <title>Step 1. Initialization</title>
     <p>
     <md>
       <mrow>\sigma\amp=(a)\amp\amp</mrow>
@@ -86,10 +85,9 @@
     </p>
     <p>Before finishing Step 1, the algorithm identifies vertex<nbsp /><m>f</m> as closest to <m>a</m> and appends it to <m>\sigma</m>, making <m>a</m> permanent. When entering Step 2, Dijkstra's algorithm attempts to find shorter paths from <m>a</m> to each of the temporary vertices by going through <m>f</m>. We call this process <q>scanning from vertex<nbsp /><m>f</m>.</q> In this scan, the path to vertex<nbsp /><m>d</m> is updated, since <m>\delta(f) + w(f,d)=24+120=144\lt \infty=w(a,d)</m>.
     </p>
-
-    <p>
-      <b>Step 2.</b>  Scan from vertex<nbsp /><m>f</m>.
-    </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Step 2.  Scan from vertex<nbsp /><m>f</m></title>
 
     <p>
       <md>
@@ -113,10 +111,10 @@
       change <m>P(e)</m> since <m>\delta(e)</m> is not <em>decreased</em> by routing
       <m>P(e)</m> through <m>c</m>.
     </p>
+    </paragraphs>
+  <paragraphs>
+    <title>Step 3.  Scan from vertex<nbsp /><m>c</m></title>
 
-    <p>
-      <b>Step 3.</b>  Scan from vertex<nbsp /><m>c</m>.
-    </p>
 
     <p>
       <md>
@@ -135,10 +133,9 @@
     <p>
       Now vertex <m>e</m> is made permanent.
     </p>
-
-    <p>
-      <b>Step 4.</b>  Scan from vertex<nbsp /><m>e</m>.
-    </p>
+  </paragraphs>
+    <paragraphs>
+      <title>Step 4.  Scan from vertex<nbsp /><m>e</m></title>
     <p>
       <md>
         <mrow>\sigma\amp=(a,f,c,e)</mrow>
@@ -156,10 +153,9 @@
     <p>
       Now vertex <m>b</m> is made permanent.
     </p>
-
-    <p>
-      <b>Step 5.</b>  Scan from vertex<nbsp /><m>b</m>.
-    </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Step 5.  Scan from vertex<nbsp /><m>b</m></title>
 
     <p>
       <md>
@@ -177,10 +173,9 @@
     <p>
       Now vertex <m>g</m> is made permanent.
     </p>
-
-    <p>
-      <b>Step 6.</b>  Scan from vertex<nbsp /><m>g</m>.
-    </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Step 6.  Scan from vertex<nbsp /><m>g</m></title>
 
     <p>
       <md>
@@ -199,10 +194,9 @@
     <p>
       Now vertex <m>d</m> is made permanent.
     </p>
-
-    <p>
-      <b>Step 7.</b>  Scan from vertex<nbsp /><m>d</m>.
-    </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Step 7.  Scan from vertex<nbsp /><m>d</m></title>
 
     <p>
       <md>
@@ -222,10 +216,9 @@
       Now vertex <m>h</m> is made permanent. Since this is the last vertex, the
       algorithm halts and returns the following:
     </p>
-
-    <p>
-      <b>FINAL RESULTS</b>
-    </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Final Results of Dijkstra's Algorithm</title>
 
     <p>
       <md>
@@ -240,7 +233,7 @@
       <mrow>\delta(h)\amp=161; \amp P(h)\amp=(a,e,b,d,h)</mrow>
     </md>
     </p>
-
+    </paragraphs>
   </subsection>
 
 
