@@ -1,141 +1,84 @@
 <section xml:id="s_induction_statements">
-<title>The Meaning of Statements</title>
-<p>
-Have you ever taken standardized tests where they give you the first
-few terms of a sequence and then ask you for the next one? Here are
-some sample questions. In each case, see if you can determine a
-reasonable answer for the next term.
-</p>
+  <title>The Meaning of Statements</title>
+  <index><main>statements</main><sub>meaning of</sub></index>
+  <p>Have you ever taken standardized tests where they give you the first few terms of a sequence and then ask you for the next one? Here are some sample questions. In each case, see if you can determine a reasonable answer for the next term.
+  </p>
 
-<ol>
-<li><m>2,5,8,11,14,17,20,23,26,\dots</m></li>
-<li><m>1,1,2,3,5,8,13,21,34,55,89,144,233,377,\dots</m></li>
-<li><m>1,2,5,14,42,132,429,1430,4862,\dots</m></li>
-<li><m>2,6,12,20,30,42,56,72,90,110,\dots</m></li>
-<li><m>2,3,6,11,18,27,38,51,\dots</m></li>
-</ol>
+  <ol>
+    <li><m>2,5,8,11,14,17,20,23,26,\dots</m></li>
+    <li><m>1,1,2,3,5,8,13,21,34,55,89,144,233,377,\dots</m></li>
+    <li><m>1,2,5,14,42,132,429,1430,4862,\dots</m></li>
+    <li><m>2,6,12,20,30,42,56,72,90,110,\dots</m></li>
+    <li><m>2,3,6,11,18,27,38,51,\dots</m></li>
+  </ol>
 
-<p>
-Pretty easy stuff! OK, now try the following somewhat more
-challenging sequence. Here, we'll give you a lot more terms and
-challenge you to find the next one.
-</p>
-<me>
-  1,2,3,4,1,2,3,4,5,1,2,3,4,5,2,3,4,5,6,2,3,4,5,6,1,2,3,4,5,2,3,4,5,6,\dots
-</me>
-<p>
-Trust us when we say that we really have in mind something very
-concrete, and once it's explained, you'll agree that it's <q>obvious.</q>
-But for now, it's far from it.
-</p>
+  <p>Pretty easy stuff! OK, now try the following somewhat more challenging sequence. Here, we'll give you a lot more terms and challenge you to find the next one.
+  <me>
+    1,2,3,4,1,2,3,4,5,1,2,3,4,5,2,3,4,5,6,2,3,4,5,6,1,2,3,4,5,2,3,4,5,6,\dots
+  </me>
+    Trust us when we say that we really have in mind something very concrete, and once it's explained, you'll agree that it's <q>obvious.</q> But for now, it's far from it.
+  </p>
 
-<p>
-Here's another danger lurking around the corner when we encounter
-formulas like
-</p>
-<me>
-  1+2+3+\dots+n = \frac{n(n+1)}{2}
-</me>
-<p>
-What do the dots in this statement mean? In fact, let's consider a
-much simpler question. What is meant by the following
-expression:
-</p>
-<me>
-  1+2+3+\dots+6
-</me>
-<p>
-Are we talking about the sum of the first six
-positive integers, or are we talking about the sum of the first<nbsp /><m>19</m>
-terms from the more complicated challenge sequence given above?
-You are supposed to answer that you don't know, and that's the
-correct answer.
-</p>
+  <p>Here's another danger lurking around the corner when we encounter formulas like
+  <me>
+    1+2+3+\dots+n = \frac{n(n+1)}{2}
+  </me>
+    What do the dots in this statement mean? In fact, let's consider a much simpler question. What is meant by the following expression:
+  <me>
+    1+2+3+\dots+6
+  </me>
+    Are we talking about the sum of the first six positive integers, or are we talking about the sum of the first<nbsp /><m>19</m> terms from the more complicated challenge sequence given above?  You are supposed to answer that you don't know, and that's the correct answer.
+  </p>
 
-<p>
-The point here is that without a clarifying comment or two, the
-notation <m>1+2+3+\dots+6</m> isn't precisely defined.
-Let's see how to make things right.
-</p>
+  <p>The point here is that without a clarifying comment or two, the notation <m>1+2+3+\dots+6</m> isn't precisely defined.  Let's see how to make things right.</p>
 
-<p>
-First, let <m>f:\posints\longrightarrow\posints</m> be
-a function. Set
-</p>
-<me>
-  \sum_{i=1}^1 f(i) = f(1)
-</me>
-<p>
-and if <m>n>1</m>, define
-</p>
-<me>
-  \sum_{i=1}^n f(i) = f(n)+\sum_{i=1}^{n-1}f(i)
-</me>
-<p>
-To see that these two statements imply that the expression
-<m>\sum_{i=1}^nf(i)</m> is defined for all positive integers, apply the
-Well Ordered Property to the set of all positive integers for which
-the expression is not defined and use the recursive definition to
-define it for the least element.
-</p>
+  <p>First, let <m>f:\posints\longrightarrow\posints</m> be a function. Set
+  <me>
+    \sum_{i=1}^1 f(i) = f(1)
+  </me>
+    and if <m>n>1</m>, define
+  <me>
+    \sum_{i=1}^n f(i) = f(n)+\sum_{i=1}^{n-1}f(i)
+  </me>
+    <index><main>Sigma-notation</main><sub>definition of</sub></index>To see that these two statements imply that the expression <m>\sum_{i=1}^nf(i)</m> is defined for all positive integers, apply the Well Ordered Property to the set of all positive integers for which the expression is not defined and use the recursive definition to define it for the least element.
+  </p>
 
-<p>
-So if we want to talk about the sum of the first six positive
-integers, then we should write:
-</p>
-<me>
-  \sum_{i=1}^6 i
-</me>
-<p>
-Now it is clear that we are talking about a computation that
-yields<nbsp /><m>21</m> as an answer.
-</p>
+  <p>So if we want to talk about the sum of the first six positive integers, then we should write:
+  <me>
+    \sum_{i=1}^6 i
+  </me>
+    Now it is clear that we are talking about a computation that yields<nbsp /><m>21</m> as an answer.
+  </p>
 
-<p>
-A second example:
-previously, we defined <m>n!</m> by
-writing
-</p>
-<me>
-  n! = n\times (n-1)\times (n-2)\times\dots\times3\times2\times 1
-</me>
-<p>
-By this point, you should realize that there's a problem here.
-Multiplication, like addition, is a binary operation. And what do
-those dots mean? Here's a way to do the job more precisely. Define
-<m>n!</m> to be <m>1</m> if <m>n=1</m>. And when <m>n>1</m>, set <m>n! = n(n-1)!</m>.
-</p>
+  <p>
+    A second example: previously, we defined <m>n!</m> by writing
+  <me>
+    n! = n\times (n-1)\times (n-2)\times\dots\times3\times2\times 1
+  </me>
+    By this point, you should realize that there's a problem here.  Multiplication, like addition, is a binary operation. And what do those dots mean? Here's a way to do the job more precisely. Define <m>n!</m> to be <m>1</m> if <m>n=1</m>. And when <m>n>1</m>, set <m>n! = n(n-1)!</m>.<index><main>factorial</main><sub>recursive definition</sub></index>
+  </p>
 
-<p>
-Definitions like these are called <em>recursive</em>
-definitions. They can be made with different
-starting points. For example, we could have set
-<m>n!=1</m> when <m>n=0</m>, and when <m>n>0</m>, set <m>n!=n(n-1)!</m>.
-</p>
+  <p>Definitions like these are called <em>recursive</em> definitions. They can be made with different starting points. For example, we could have set <m>n!=1</m> when <m>n=0</m>, and when <m>n>0</m>, set <m>n!=n(n-1)!</m>.
+  </p>
 
-<p>
-Here's a code snippet using the C-programming language:
-</p>
+  <p>
+    Here's a code snippet in SageMath, which is based on Python, so this also works as Python code.
+  </p>
 
-<p>
-\begin{tt}
-</p>
+  <sage>
+    <input>def sumrecursive(n):
+    if n == 1:
+        return 2;
+    else:
+        return sumrecursive(n-1) + (n*n - 2*n + 3)
+sumrecursive(3)
+    </input>
+    <output>11</output>
+  </sage>
 
-<p>
-int sumrecursive(int n) \{<br />
-\mbox{} if (n == 1) return 2;<br />
-\mbox{} else return sumrecursive(n-1)+(n*n -2*n+3);<br />
-\}<br />
-\end{tt}
-</p>
-
-<p>
-What is the value of <c>sumrecursive(4)</c>? Does it make
-sense to you to say that <c>sumrecursive(n)</c> is defined
-for all positive integers <m>n</m>? Did you recognize that this
-program provides a precise meaning to the expression:
-</p>
-<me>
-  2+3+6+11+18+27+38+51+\dots +(n^2-2n+3)
-</me>
+  <p>What is the value of <c>sumrecursive(4)</c>? (In order to make sure you understand how this recursive function works, calculate out <c>sumrecursive(4)</c>  should be by hand before modifying the SageMath cell above.) Does it make sense to you to say that <c>sumrecursive(n)</c> is defined for all positive integers <m>n</m>? Did you recognize that this program provides a precise meaning to the expression:
+  <me>
+    2+3+6+11+18+27+38+51+\dots +(n^2-2n+3)
+  </me>
+  </p>
 </section>
