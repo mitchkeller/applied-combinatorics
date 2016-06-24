@@ -38,9 +38,10 @@
     </me>
     </p>
     <p>So to find the least common multiple of two numbers, we just have to factor them into primes. That doesn't sound too hard. For starters, can you factor <m>1961</m>? OK, how about <m>1348433</m>? Now for a real challenge.  Suppose you are told that the integer
-    <me>
-      c = 55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799
-    </me>
+    <md>
+        <mrow>c = \amp\,\, 5568490117077035708244283173335040521716369235589951150965</mrow>
+        <mrow>\amp\,\, 2043138898236817075547572153799</mrow>
+    </md>
     is the product of two primes <m>a</m> and <m>b</m>. Can you find them?
     </p>
 
@@ -58,7 +59,7 @@
       
       <p>Now here's how we made up the challenge problem. First, we found a site on the web that lists large primes and found these two values:
       <md>
-        <mrow>  a \amp =  2425967623052370772757633156976982469681\quad\text{and}</mrow>
+        <mrow>  a \amp = 2425967623052370772757633156976982469681\quad\text{and}</mrow>
         <mrow>  b \amp =  22953686867719691230002707821868552601124472329079.</mrow>
       </md>
       The SageMath code below calculates <m>a\times b</m>, and returns the result instantly.
@@ -68,11 +69,12 @@
         <input>a = 2425967623052370772757633156976982469681
 b = 22953686867719691230002707821868552601124472329079
 a*b</input>
-        <output>55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799</output>
+<!--<output>55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799</output>-->
       </sage>
       
       <p>On the other hand, if you ask SageMath to factor <m>c</m>, as in the cell below, you'll likely be waiting a long time. If you get a response in more than a couple of minutes, please email us so that we can update the text with larger primes <m>a</m> and <m>b</m>!</p>
-      <sage> <input>factor(55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799)</input>
+      <sage> <input>factor(55684901170770357082442831733350405217163692\
+355899511509652043138898236817075547572153799)</input>
       </sage>
   </example>
   <p>
