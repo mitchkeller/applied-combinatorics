@@ -1,153 +1,60 @@
 <section xml:id="s_strings_permutations">
-<title>Permutations</title>
-<p>
-In the previous section, we considered strings in which repetition of
-symbols is allowed. For instance, <q><m>01110000</m></q> is a perfectly good
-bit string of length eight. However, in many applied settings where a
-string is an appropriate model, a symbol may be used in at most one
-position.
-</p>
-<example xml:id="exa_strings_perm">
-<statement>
-<p>
-Imagine placing the <m>26</m> letters of the English alphabet in a bag
-and drawing them out one at a time (without returning a letter once
-it's been drawn) to form a six-character string. We know there are
-<m>26^6</m> strings of length six that can be formed from the English
-alphabet. However, if we restrict the manner of string formation,
-not all strings are possible. The string <q>yellow</q> has six
-characters, but it uses the letter <q>l</q> twice and thus cannot be
-formed by drawing letters from a bag. However, <q>jacket</q> can be
-formed in this manner. Starting from a full bag, we note there are
-<m>26</m> choices for the first letter. Once it has been removed, there
-are <m>25</m> letters remaining in the bag. After drawing the second
-letter, there are <m>24</m> letters remaining. Continuing, we note that
-immediately before the sixth letter is drawn from the bag, there are
-<m>21</m> letters in the bag. Thus, we can form <m>26\cdot 25\cdot 24\cdot
-  23\cdot 22\cdot 21</m> six-character strings of English letters by
-drawing letters from a bag, a little more than half the total number
-of six-character strings on this alphabet.
-</p>
-</statement>
-</example>
-<p>
-To generalize the preceding example, we now introduce permutations. To
-do so, let <m>X</m> be a finite set and let <m>n</m> be a positive integer. An
-<m>X</m>-string <m>s=x_1x_2\dots x_n</m> is called a <em>permutation</em> if all
-<m>n</m> characters used in <m>s</m> are distinct. Clearly, the existence of an
-<m>X</m>-permutation of length<nbsp /><m>n</m> requires that <m>|X|\ge n</m>.
-</p>
+    <title>Permutations</title>
+    <p>In the previous section, we considered strings in which repetition of symbols is allowed. For instance, <q><m>01110000</m></q> is a perfectly good bit string of length eight. However, in many applied settings where a string is an appropriate model, a symbol may be used in at most one position.
+    </p>
+    <example xml:id="exa_strings_perm">
+        <p>Imagine placing the <m>26</m> letters of the English alphabet in a bag and drawing them out one at a time (without returning a letter once it's been drawn) to form a six-character string. We know there are <m>26^6</m> strings of length six that can be formed from the English alphabet. However, if we restrict the manner of string formation, not all strings are possible. The string <q>yellow</q> has six characters, but it uses the letter <q>l</q> twice and thus cannot be formed by drawing letters from a bag. However, <q>jacket</q> can be formed in this manner. Starting from a full bag, we note there are <m>26</m> choices for the first letter. Once it has been removed, there are <m>25</m> letters remaining in the bag. After drawing the second letter, there are <m>24</m> letters remaining. Continuing, we note that immediately before the sixth letter is drawn from the bag, there are <m>21</m> letters in the bag. Thus, we can form <m>26\cdot 25\cdot 24\cdot 23\cdot 22\cdot 21</m> six-character strings of English letters by drawing letters from a bag, a little more than half the total number of six-character strings on this alphabet.
+            </p>
+    </example>
+    <p>To generalize the preceding example, we now introduce permutations. To do so, let <m>X</m> be a finite set and let <m>n</m> be a positive integer. An <m>X</m>-string <m>s=x_1x_2\dots x_n</m> is called a <term>permutation</term><index><main>permutation</main></index> if all <m>n</m> characters used in <m>s</m> are distinct. Clearly, the existence of an <m>X</m>-permutation of length<nbsp /><m>n</m> requires that <m>|X|\ge n</m>.
+    </p>
 
-<p>
-When <m>n</m> is a positive integer, we define <m>n!</m> (read <q><m>n</m>
-<em>factorial</em></q>) by
-</p>
-<me>
-  n! = n\cdot (n-1)\cdot (n-2)\cdot \ldots\cdot 3\cdot 2\cdot 1.
-</me>
-<p>
-By convention, we set <m>0!=1</m>. As an example, <m>7!=7\cdot 6\cdot 5\cdot
-4\cdot 3\cdot 2 \cdot 1=5040</m>. Now for integers <m>m,n</m> with <m>m\ge
-n\ge0</m> define <m>P(m,n)</m> by
-</p>
-<me>
-  P(m,n) = \frac{m!}{(m-n)!} = m(m-1)\cdots(m-n+1).
-</me>
-<p>
-For example, <m>P(9,3)=9\cdot 8\cdot 7=504</m> and <m>P(8,4)=8\cdot 7\cdot
-6\cdot5 =1680</m>. Also, a computer algebra system will quickly report
-that
-</p>
-<me>
-  P(68,23) = 20732231223375515741894286164203929600000.
-</me>
+    <p>When <m>n</m> is a positive integer, we define <m>n!</m> (read <q><m>n</m> <term>factorial</term></q><index><main>factorial</main><sub>definition</sub></index><notation><usage>n!</usage><description><m>n</m> factorial</description></notation>) by
+        <me>
+            n! = n\cdot (n-1)\cdot (n-2)\cdot \cdots\cdot 3\cdot 2\cdot 1.
+        </me>
+        By convention, we set <m>0!=1</m>. As an example, <m>7!=7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2 \cdot 1=5040</m>. Now for integers <m>m,n</m> with <m>m\ge n\ge0</m> define <m>P(m,n)</m> by
+    <me>
+        P(m,n) = \frac{m!}{(m-n)!} = m(m-1)\cdots(m-n+1).
+    </me><notation><usage>P(m,n)</usage><description>number of permutations</description></notation>
+    For example, <m>P(9,3)=9\cdot 8\cdot 7=504</m> and <m>P(8,4)=8\cdot 7\cdot 6\cdot5 =1680</m>. Also, a computer algebra system will quickly report that
+    <me>
+        P(68,23) = 20732231223375515741894286164203929600000.
+    </me>
+    </p>
+    <proposition xml:id="prop_strings_permutations">
+        <statement>
+            <p>If <m>X</m> is an <m>m</m>-element set and <m>n</m> is a positive integer with <m>m\ge n</m>, then the number of <m>X</m>-strings of length<nbsp /><m>n</m> that are permutations is <m>P(m,n)</m>.
+            </p>
+        </statement>
 
-<proposition xml:id="prop_strings_permutations">
-<statement>
-<p>
-If <m>X</m> is an <m>m</m>-element set and <m>n</m> is a positive integer with <m>m\ge n</m>,
-then the number of <m>X</m>-strings of length<nbsp /><m>n</m> that are permutations
-is <m>P(m,n)</m>.
-</p>
-</statement>
-</proposition>
+        <proof>
+            <p>The proposition is true since when constructing a permutation <m>s=x_1x_2,\dots x_n</m> from an <m>m</m>-element set, we see that there are <m>m</m> choices for <m>x_1</m>. After fixing <m>x_1</m>, we have that for <m>x_2</m>, there are <m>m-1</m> choices, as we can use any element of <m>X-\{x_1\}</m>. For <m>x_3</m>, there are <m>m-2</m> choices, since we can use any element in <m>X-\{x_1,x_2\}</m>. For <m>x_n</m>, there are <m>m-n+1</m> choices, because we can use any element of <m>X</m> except <m>x_1,x_2,\dots x_{n-1}</m>. Noting that
+            <me>
+                P(m,n)=\frac{m!}{(m-n)!} = m(m-1)(m-2)\dots(m-n+1),
+            </me>
+            our proof is complete.
+            </p>
+        </proof>
+    </proposition>
 
-<proof>
-<p>
-The proposition is true since when constructing a permutation
-<m>s=x_1x_2,\dots x_n</m> from an <m>m</m>-element set, we see that there are
-<m>m</m> choices for <m>x_1</m>. After fixing <m>x_1</m>, we have that for <m>x_2</m>,
-there are <m>m-1</m> choices, as we can use any element of
-<m>X-\{x_1\}</m>. For <m>x_3</m>, there are <m>m-2</m> choices, since we can use
-any element in <m>X-\{x_1,x_2\}</m>. For <m>x_n</m>, there are <m>m-n+1</m>
-choices, because we can use any element of <m>X</m> except <m>x_1,x_2,\dots
-  x_{n-1}</m>. Noting that
-</p>
-<me>
-  P(m,n)=\frac{m!}{(m-n)!} = m(m-1)(m-2)\dots(m-n+1),
-</me>
-<p>
-our proof is complete.
-</p>
-</proof>
+    <p>Note that the answer we arrived at in <xref ref="exa_strings_perm">Example</xref> is simply <m>P(26,20)</m> as we would expect in light of <xref ref="prop_strings_permutations">Proposition</xref>.
+    </p>
+    <example xml:id="exa_strings_officers">
+        <statement>
+            <p>It's time to elect a slate of four class officers (President, Vice President, Secretary and Treasurer) from the pool of <m>80</m> students enrolled in Applied Combinatorics.  If any interested student could be elected to any position (Alice contends this is a big <q>if</q> since Bob is running), how many different slates of officers can be elected?
+            </p>
+        </statement>
+        <solution>
+            <p>To count possible officer slates, work from a set <m>X</m> containing the names of the <m>80</m> interested students (yes, even poor Bob). A permutation of length four chosen from <m>X</m> is then a slate of officers by considering the first name in the permutation as the President, the second as the Vice President, the third as the Secretary, and the fourth as the Treasurer. Thus, the number of officer slates is <m>P(80,4)=37957920</m>.
+            </p>
+        </solution>
+    </example>
 
-<p>
-Note that the answer we arrived at in
-<xref ref="exa_strings_perm">Example</xref> is simply
-<m>P(26,20)</m> as we would expect in light of
-<xref ref="prop_strings_permutations">Proposition</xref>.
-</p>
-<example xml:id="exa_strings_officers">
-<statement>
-<p>
-It's time to elect a slate of four class officers (President,
-Vice President, Secretary and Treasurer) from the pool of <m>80</m>
-students enrolled in Applied Combinatorics.
-If any interested student could be elected to
-any position (Alice contends this is a big <q>if</q> since Bob is
-running), how many different slates of officers can be elected?
-</p>
-
-<p>
-To count possible officer slates, work from a set <m>X</m> containing the
-names of the <m>80</m> interested students (yes, even poor Bob). A
-permutation of length four chosen from <m>X</m> is then a slate of
-officers by considering the first name in the permutation as the
-President, the second as the Vice President, the third as the
-Secretary, and the fourth as the Treasurer. Thus, the number of
-officer slates is <m>P(80,4)=37957920</m>.
-</p>
-</statement>
-</example>
-
-<example>
-<statement>
-<p>
-Let's return to the license plate question of
-<xref ref="exa_strings_ga-plate">Example</xref>. Suppose
-that Georgia required that the three letters be distinct from each
-other. Then, instead of having <m>26^3=17\,576</m> ways to fill the last three
-positions on the license plate, we'd have <m>P(26,3) = 26\times
-  25\times 24 = 15\,600</m> options, giving a total of <m>140\,400\,000</m>
-license plates.
-</p>
-
-<p>
-As another example, suppose that repetition of letters were allowed
-but the three digits in positions two through four must all be
-distinct from each other (but could repeat the first digit, which
-must still be nonzero). Then there are still <m>9</m> options for the
-first position and <m>26^3</m> options for the letters, but the three
-remaining digits can be completed in <m>P(10,3)</m> ways. The total
-number of license plates would then be <m>9\times P(10,3)\times
-  26^3</m>. If we want to prohibit repetition of the digit in the first
-position as well, we need a bit more thought. We first have <m>9</m>
-choices for that initial digit. Then, when filling in the next three
-positions with digits, we need a permutation of length <m>3</m> chosen
-from the remaining <m>9</m> digits. Thus, there are <m>9\times P(9,3)</m> ways
-to complete the digits portion, giving a total of <m>9\times
-  P(9,3)\times 26^3</m> license plates.
-</p>
-</statement>
-</example>
+    <example>
+        <p>Let's return to the license plate question of <xref ref="exa_strings_ga-plate">Example</xref>. Suppose that Georgia required that the three letters be distinct from each other. Then, instead of having <m>26^3=17\,576</m> ways to fill the last three positions on the license plate, we'd have <m>P(26,3) = 26\times 25\times 24 = 15\,600</m> options, giving a total of <m>140\,400\,000</m> license plates.
+        </p>
+        <p>As another example, suppose that repetition of letters were allowed but the three digits in positions two through four must all be distinct from each other (but could repeat the first digit, which must still be nonzero). Then there are still <m>9</m> options for the first position and <m>26^3</m> options for the letters, but the three remaining digits can be completed in <m>P(10,3)</m> ways. The total number of license plates would then be <m>9\times P(10,3)\times 26^3</m>. If we want to prohibit repetition of the digit in the first position as well, we need a bit more thought. We first have <m>9</m> choices for that initial digit. Then, when filling in the next three positions with digits, we need a permutation of length <m>3</m> chosen from the remaining <m>9</m> digits. Thus, there are <m>9\times P(9,3)</m> ways to complete the digits portion, giving a total of <m>9\times P(9,3)\times 26^3</m> license plates.
+            </p>
+    </example>
 </section>
