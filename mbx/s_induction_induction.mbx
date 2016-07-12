@@ -1,65 +1,44 @@
 <section xml:id="s_induction_induction">
-<title>Mathematical Induction</title>
-<p>
-Now we move on to induction, the powerful twin of recursion.
-</p>
+    <title>Mathematical Induction</title>
+    <p>Now we move on to induction, the powerful twin of recursion.
+    </p>
 
-<p>
-Let <m>n</m> be a positive integer. Consider the following mathematical
-statements, each of which involve <m>n</m>:
-</p>
+    <p>Let <m>n</m> be a positive integer. Consider the following mathematical statements, each of which involve <m>n</m>:
+    <ol>
+        <li><m>2n+7 = 13</m>.</li>
+        <li><m>3n-5=9</m>.</li>
+        <li><m>n^2-5n+9=3</m>.</li>
+        <li><m>8n-3 \lt  48</m>.</li>
+        <li><m>8n-3 > 0</m>.</li>
+        <li><m>(n+3)(n+2) =n^2+5n+6</m>.</li>
+        <li><m>n^2 -6n + 13 \ge 0</m>.</li>
+    </ol>
+    </p>
+    <p>Such statements are called <term>open statements</term><index><main>statement</main><sub>open</sub></index>. Open statements can be considered as <term>equations</term>, i.e., statements that are valid for certain values of <m>n</m>. Statement<nbsp />1 is valid only when <m>n=3</m>. Statement<nbsp />2 is never valid, i.e., it has no solutions among the positive integers. Statement<nbsp />3 has exactly two solutions, and Statement<nbsp />4 has six solutions. On the other hand, Statements<nbsp />5, 6 and<nbsp />7 are valid for all positive integers.
+    </p>
 
-<ol>
-<li><m>2n+7 = 13</m>.</li>
-<li><m>3n-5=9</m>.</li>
-<li><m>n^2-5n+9=3</m>.</li>
-<li><m>8n-3 \lt  48</m>.</li>
-<li><m>8n-3 > 0</m>.</li>
-<li><m>(n+3)(n+2) =n^2+5n+6</m>.</li>
-<li><m>n^2 -6n + 13 \ge 0</m>.</li>
-</ol>
+    <p>At this point, you are probably scratching your head, thinking that this discussion is trivial. But let's consider some statements that are a bit more complex.
+    </p>
 
-<p>
-Such statements are called <em>open</em> statements. Open statements
-can be considered as <em>equations</em>, i.e., statements that are
-valid for certain values of <m>n</m>. Statement<nbsp />1 is valid only when
-<m>n=3</m>. Statement<nbsp />2 is never valid, i.e., it has no solutions among
-the positive integers. Statement<nbsp />3 has exactly two solutions, and
-Statement<nbsp />4 has six solutions. On the other hand, Statements<nbsp />5, 6
-and<nbsp />7 are valid for all positive integers.
-</p>
+    <ol>
+        <li><p>The sum of the first <m>n</m> positive integers is <m>n(n+1)/2</m>.</p></li>
+        <li><p>The sum of the first <m>n</m> odd positive integers is <m>n^2</m>.</p></li>
+        <li><p><m>n^n \ge  n! + 4,000,000,000n2^n</m>  when <m>n\ge 14</m>.</p></li>
+    </ol>
 
-<p>
-At this point, you are probably scratching your head, thinking that
-this discussion is trivial. But let's consider some statements that
-are a bit more complex.
-</p>
+    <p>How can we establish the validity of such statements, provided of course that they are actually true? The starting point for providing an answer is the following property:
+    </p>
 
-<ol>
-<li>The sum of the first <m>n</m> positive integers is <m>n(n+1)/2</m>.</li>
-<li>The sum of the first <m>n</m> odd positive integers is <m>n^2</m>.</li>
-<li><m>n^n \ge  n! + 4,000,000,000n2^n</m>  when <m>n\ge 14</m>.</li>
-</ol>
+    <principle xml:id="princ_math-induction">
+        <title>Principle of Mathematical Induction</title>
+        <index><main>induction</main><sub>principle of mathematical</sub></index>
+        <statement>
+            <p>Let <m>S_n</m> be an open statement involving a positive integer <m>n</m>. If <m>S_1</m> is true, and if for each positive integer <m>k</m>, assuming that the statement <m>S_k</m> is true implies that the statement <m>S_{k+1}</m> is true, then <m>S_n</m> is true for every positive integer<nbsp /><m>n</m>.
+            </p>
+        </statement>
+    </principle>
 
-<p>
-How can we establish the validity of such statements, provided of
-course that they are actually true? The starting point for providing
-an answer is the following property:
-</p>
+    <p>With a little thought, you should see that the <xref ref="princ_math-induction" autoname="title" /> is logically equivalent to the <xref ref="princ_well-order" autoname="title" />. If you haven't already done so, now might be a good time to look over <xref ref="app_background" autoname="yes" /> on background material.
+    </p>
 
-<p>
-<b>Principle of Mathematical Induction</b> Let <m>S_n</m> be an open
-statement involving a positive integer <m>n</m>. If <m>S_1</m> is true, and if
-for each positive integer <m>k</m>, assuming that the statement <m>S_k</m> is
-true implies that the statement <m>S_{k+1}</m> is true, then <m>S_n</m> is true
-for every positive integer<nbsp /><m>n</m>.
-</p>
-
-<p>
-With a little thought, you should see that the Principle of
-Mathematical Induction is logically equivalent to the Well Ordered
-Property of Positive Integers. If you haven't already done so, now
-might be a good time to look over <xref ref="app_background" autoname="yes" /> on background
-material.
-</p>
 </section>
