@@ -1,4 +1,4 @@
-<section xml:id="s_genfunction_partitions-integer">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_genfunction_partitions-integer">
     <title>Partitions of an Integer</title>
     <p>A recurring theme in this course has been to count the number of integer solutions to an equation of the form <m>x_1+x_2+\cdots + x_k = n</m>. What if we wanted to count the number of such solutions but didn't care what <m>k</m> was? How about if we took this new question and required that the <m>x_i</m> be <em>distinct</em> (i.e., <m>x_i\neq x_j</m> for <m>i\neq j</m>)? What about if we required that each <m>x_i</m> be odd? These certainly don't seem like easy questions to answer at first, but generating functions will allow us to say something very interesting about the answers to the last two questions.
     </p>
