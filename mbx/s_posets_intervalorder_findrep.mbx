@@ -1,131 +1,65 @@
 <section xml:id="s_posets_intervalorder_findrep">
-<title>Finding a Representation of an Interval Order</title>
-<p>
-In this section, we develop an algorithm for finding an interval
-representation of an interval order. In fact, this
-algorithm can be applied to any poset. Either it will find
-an interval representation or it will find a subposet isomorphic
-to <m>\bftwo+\bftwo</m>. As a consequence, we establish the other half of Fishburn's theorem.
-</p>
+    <title>Finding a Representation of an Interval Order</title>
+    <p>In this section, we develop an algorithm for finding an interval representation of an interval order. In fact, this algorithm can be applied to any poset. Either it will find an interval representation or it will find a subposet isomorphic to <m>\bftwo+\bftwo</m>. As a consequence, we establish the other half of <xref ref="thm_fishburn" autoname="title" />.
+    </p>
 
-<p>
-When <m>\PXP</m> is an interval order and <m>n</m> is a positive integer, there
-may be many different ways to represent <m>\bfP</m> using intervals with
-integer end points in <m>[n]</m>. But there is certainly a least <m>n</m> for
-which a representation can be found, and here we see that the representation is
-unique. The discussion will again make use of the notation for down
-sets and up sets that we introduced prior to the proof of Dilworth's
-Theorem. As a reminder, we repeat it here. For a poset <m>\PXP</m> and a
-subset <m>S\subset X</m>, let <m>D(S) = \{y\in X:</m> there exists some <m>x\in S</m>
-with <m>y\lt x</m> in <m>P\}</m>. Also, let <m>D[S]=D(S)\cup S</m>. When <m>|S|=1</m>, say
-<m>S=\{x\}</m>, we write <m>D(x)</m> and <m>D[x]</m> rather than <m>D(\{x\})</m> and
-<m>D[\{x\}]</m>. Dually, for a subset <m>S\subseteq X</m>, we define <m>U(S) =
-\{y\in X:</m> there exists some <m>x\in X</m> with <m>y>x</m> in <m>P\}</m>. As before,
-set <m>U[S]=U(S)\cup S</m>. And when <m>S=\{x\}</m>, we just write <m>U(x)</m> for
-<m>\{y\in X:x\lt y</m> in <m>P\}</m>.
-</p>
+    <p>When <m>\PXP</m> is an interval order and <m>n</m> is a positive integer, there may be many different ways to represent <m>\bfP</m> using intervals with integer end points in <m>[n]</m>. But there is certainly a least <m>n</m> for which a representation can be found, and here we see that the representation is unique. The discussion will again make use of the notation for down sets and up sets that we introduced prior to the proof of <xref ref="thm_dilworth" autoname="title" />. As a reminder, we repeat it here. For a poset <m>\PXP</m> and a subset <m>S\subset X</m>, let <m>D(S) = \{y\in X:</m> there exists some <m>x\in S</m> with <m>y\lt x</m> in <m>P\}</m>. Also, let <m>D[S]=D(S)\cup S</m>. When <m>|S|=1</m>, say <m>S=\{x\}</m>, we write <m>D(x)</m> and <m>D[x]</m> rather than <m>D(\{x\})</m> and <m>D[\{x\}]</m>. Dually, for a subset <m>S\subseteq X</m>, we define <m>U(S) = \{y\in X:</m> there exists some <m>x\in X</m> with <m>y>x</m> in <m>P\}</m>. As before, set <m>U[S]=U(S)\cup S</m>. And when <m>S=\{x\}</m>, we just write <m>U(x)</m> for <m>\{y\in X:x\lt y</m> in <m>P\}</m>.
+    </p>
 
-<p>
-Let <m>\PXP</m> be a poset. We start our procedure by finding
-the following subsets of the ground set: 
-<m>\mathcal{D} = \{D(x):x\in X\}</m>. We then distinguish two
-cases. In the first case, there are distinct elements
-<m>x</m> and <m>y</m> for which <m>D(x)\nsubseteq D(y)</m> and <m>D(y)\nsubseteq D(x)</m>.
-In this case, we choose an element <m>z\in D(x)-D(y)</m> and an element
-<m>w\in D(y)-D(x)</m>. It follows that the four elements in
-<m>\{x,y,z,w\}</m> form a subposet of <m>\bfP</m> which is isomorphic to
-<m>\bftwo+\bftwo</m>.
-</p>
+    <p>Let <m>\PXP</m> be a poset. We start our procedure by finding the following subsets of the ground set: <m>\mathcal{D} = \{D(x):x\in X\}</m>. We then distinguish two cases. In the first case, there are distinct elements <m>x</m> and <m>y</m> for which <m>D(x)\nsubseteq D(y)</m> and <m>D(y)\nsubseteq D(x)</m>.  In this case, we choose an element <m>z\in D(x)-D(y)</m> and an element <m>w\in D(y)-D(x)</m>. It follows that the four elements in <m>\{x,y,z,w\}</m> form a subposet of <m>\bfP</m> which is isomorphic to <m>\bftwo+\bftwo</m>.
+    </p>
 
-<p>
-Our second case is that either <m>D(x)\subseteq D(y)</m> or
-<m>D(y)\subseteq D(x)</m> for all <m>x,y\in X</m>. In this case, we
-will show that <m>\bfP</m> is an interval order. Now find
-the family: <m>\mathcal{U} = \{U(x):x\in X\}</m>. In this case, it is
-easy to see that we will always have either <m>U(x)\subseteq U(y)</m> or
-<m>U(y)\subseteq U(x)</m> for all <m>x,y\in X</m>.
-</p>
+    <p>Our second case is that either <m>D(x)\subseteq D(y)</m> or <m>D(y)\subseteq D(x)</m> for all <m>x,y\in X</m>. In this case, we will show that <m>\bfP</m> is an interval order. Now find the family: <m>\mathcal{U} = \{U(x):x\in X\}</m>. In this case, it is easy to see that we will always have either <m>U(x)\subseteq U(y)</m> or <m>U(y)\subseteq U(x)</m> for all <m>x,y\in X</m>.
+    </p>
 
-<p>
-Let <m>d=|\mathcal{D}|</m>. In the exercises, we will provide
-(actually in doing your homework, <em>you</em> will provide) the details
-for backing up the following statement:
-<m>|\mathcal{U}|=|\mathcal{D}|</m>, so for now we assume that this
-statement is valid.
-Label the sets in <m>\mathcal{D}</m> and <m>\mathcal{U}</m> respectively as
-<m>D_1</m>, <m>D_2,\dots,D_d</m> and <m>U_1</m>, <m>U_2,\dots,U_d</m>
-so that
-</p>
-<me>
-  \emptyset= D_1\subset D_2\subset D_3\subset\dots\subset D_d
- \quad\text{and}
-</me>
-<me>
-  U_1\supset U_{2}\cdots \supset U_{d-2}\supset U_{d-1}\supset\dots\supset U_d
- =\emptyset.
-</me>
-<p>
-We form an interval representation <m>I</m> of <m>\bfP</m> by the
-following rule: For each <m>x\in X</m>, set <m>I(x)=[i,j]</m>, where
-<m>D(x)=D_i</m> and <m>U(x)=U_j</m>. It is not immediately clear that this
-rule is legal, i.e., it might happen that applying the rule results
-in values of <m>i</m> and <m>j</m> for which <m>j\lt i</m>. But again, as a result of
-the exercises, we will see that this never happens. This collection
-of exercises is summarized in the following theorem.
-</p>
+    <p>Let <m>d=|\mathcal{D}|</m>. In the exercises, we will provide (actually in doing your homework, <em>you</em> will provide) the details for backing up the following statement: <m>|\mathcal{U}|=|\mathcal{D}|</m>, so for now we assume that this statement is valid.  Label the sets in <m>\mathcal{D}</m> and <m>\mathcal{U}</m> respectively as <m>D_1</m>, <m>D_2,\dots,D_d</m> and <m>U_1</m>, <m>U_2,\dots,U_d</m> so that
+    <me>
+        \emptyset= D_1\subset D_2\subset D_3\subset\dots\subset D_d
+        \quad\text{and}
+    </me>
+    <me>
+        U_1\supset U_{2}\cdots \supset U_{d-2}\supset U_{d-1}\supset\dots\supset U_d
+        =\emptyset.
+    </me>
+        We form an interval representation <m>I</m> of <m>\bfP</m> by the following rule: For each <m>x\in X</m>, set <m>I(x)=[i,j]</m>, where <m>D(x)=D_i</m> and <m>U(x)=U_j</m>. It is not immediately clear that this rule is legal, i.e., it might happen that applying the rule results in values of <m>i</m> and <m>j</m> for which <m>j\lt i</m>. But again, as a result of the exercises, we will see that this never happens. This collection of exercises is summarized in the following theorem.
+    </p>
 
-<theorem xml:id="thm_intord-minrep">
-<statement>
-<p>
-Let <m>\bfP</m> be a poset excluding <m>\bftwo+\bftwo</m>.
-then
-</p>
+    <theorem xml:id="thm_intord-minrep">
+        <statement>
+            <p>If <m>\bfP</m> is a poset excluding <m>\bftwo+\bftwo</m>, then the following statements hold.
+            </p>
+            <ol>
+                <li><p>The number of down sets equals the number of up sets. That is, <m>|\mathcal{D}|=|\mathcal{U}|</m>.</p></li>
+                <li><p>For each <m>x\in X</m>, if <m>I(x)=[i,j]</m>, then <m>i\le j</m> in <m>\reals</m>.</p></li>
+                <li><p>For each <m>x,y\in X</m>, if <m>I(x)=[i,j]</m> and <m>I(y)=[k,l]</m>, then
+                <m>x\lt y</m> in <m>P</m> if and only if <m>j\lt k</m> in <m>\reals</m>.</p></li>
+                <li><p>The integer <m>d</m> is the least positive integer for which
+                <m>\bfP</m> has an interval representation using integer end points
+                from <m>[d]</m>.  This representation is unique.</p></li>
+            </ol>
+        </statement>
+    </theorem>
 
-<ol>
-<li><m>|\mathcal{D}|=|\mathcal{U}|</m>.</li>
-<li>For each <m>x\in X</m>, if <m>I(x)=[i,j]</m>, then <m>i\le j</m> in <m>\mathbb{R}</m>.</li>
-<li>For each <m>x,y\in X</m>, if <m>I(x)=[i,j]</m> and <m>I(y)=[k,l]</m>, then
-<m>x\lt y</m> in <m>P</m> if and only if <m>j\lt k</m> in <m>\mathbb{R}</m>.</li>
-<li>The integer <m>d</m> is the least positive integer for which
-<m>\bfP</m> has an interval representation using integer end points
-from <m>[d]</m>.  This representation is unique.</li>
-</ol>
-</statement>
-</theorem>
-
-<p>
-Consider the poset shown in <xref ref="fig_10ptintorder" autoname="yes" />.
-</p>
-<figure xml:id="fig_10ptintorder" >
-<caption>An interval order on 10 Points</caption>
-<image width="40%" source="images/10ptintorder" />
-</figure>
-<p>
-Then <m>d= 5</m> with
-<m>D_1=\emptyset</m>, <m>D_2=\{c\}</m>, <m>D_3=\{c,f,g\}</m>, <m>D_4=\{c,f,g,h\}</m>, and
-<m>D_5=\{a,c,f,g,h,j\}</m>. Also
-<m>U_1=\{a,b,d,e,h,i,j\}</m>, <m>U_2=\{a,b,e,h,i,j\}</m>,
-<m>U_3=\{b,e,i\}</m>, <m>U_4=\{e\}</m>, and <m>U_5=\emptyset</m>.
-So
-</p>
-<md>
-  <mrow>  I(a) \amp = [3,4]</mrow>
-  <mrow>  I(b) \amp = [4,5]</mrow>
-  <mrow>  I(c) \amp = [1,1]</mrow>
-  <mrow>  I(d) \amp = [2,5]</mrow>
-  <mrow>  I(e) \amp = [5,5]</mrow>
-  <mrow>  I(f) \amp = [1,2]</mrow>
-  <mrow>  I(g) \amp = [1,2]</mrow>
-  <mrow>  I(h) \amp = [3,3]</mrow>
-  <mrow>  I(i) \amp = [4,5]</mrow>
-  <mrow>  I(j) \amp = [3,4]</mrow>
-</md>
-<p>
-To illustrate the situation where this process can be used to
-determine when a poset is not an interval order, consider again the
-poset shown in Figure. Erase the line joining points <m>c</m> and <m>d</m>.
-For the resulting poset, you will then find that <m>D(j)=\{f,g\}</m>
-and <m>D(d)=\{c\}</m>. Therefore, the four points <m>c</m>, <m>d</m>, <m>f</m> and <m>j</m>
-form a copy of <m>\bftwo+\bftwo</m> in this modified poset.
-</p>
+    <p>Consider the poset shown in <xref ref="fig_10ptintorder" autoname="yes" />.
+    </p>
+    <figure xml:id="fig_10ptintorder" >
+        <caption>An interval order on 10 Points</caption>
+        <image width="30%" source="images/10ptintorder" />
+    </figure>
+    <p>
+        Then <m>d= 5</m> with <m>D_1=\emptyset</m>, <m>D_2=\{c\}</m>, <m>D_3=\{c,f,g\}</m>, <m>D_4=\{c,f,g,h\}</m>, and <m>D_5=\{a,c,f,g,h,j\}</m>. Also <m>U_1=\{a,b,d,e,h,i,j\}</m>, <m>U_2=\{a,b,e,h,i,j\}</m>, <m>U_3=\{b,e,i\}</m>, <m>U_4=\{e\}</m>, and <m>U_5=\emptyset</m>.  So
+    <md>
+        <mrow>  I(a) \amp = [3,4]</mrow>
+        <mrow>  I(b) \amp = [4,5]</mrow>
+        <mrow>  I(c) \amp = [1,1]</mrow>
+        <mrow>  I(d) \amp = [2,5]</mrow>
+        <mrow>  I(e) \amp = [5,5]</mrow>
+        <mrow>  I(f) \amp = [1,2]</mrow>
+        <mrow>  I(g) \amp = [1,2]</mrow>
+        <mrow>  I(h) \amp = [3,3]</mrow>
+        <mrow>  I(i) \amp = [4,5]</mrow>
+        <mrow>  I(j) \amp = [3,4]</mrow>
+    </md>
+        To illustrate the situation where this process can be used to determine when a poset is not an interval order, consider again the poset shown in <xref ref="fig_10ptintorder" autoname="yes" />. Erase the line joining points <m>c</m> and <m>d</m>.  For the resulting poset, you will then find that <m>D(j)=\{f,g\}</m> and <m>D(d)=\{c\}</m>. Therefore, the four points <m>c</m>, <m>d</m>, <m>f</m> and <m>j</m> form a copy of <m>\bftwo+\bftwo</m> in this modified poset.
+    </p>
 </section>
