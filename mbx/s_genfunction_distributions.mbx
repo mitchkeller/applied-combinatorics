@@ -1,210 +1,103 @@
 <section xml:id="s_genfunction_distributions">
-<title>Another look at distributing apples or folders</title>
-<p>
-A recurring problem so far in this book has been to consider problems
-that ask about distributing indistinguishable objects (say apples) to
-distinct entities (say children). We started in <xref ref="ch_strings" autoname="yes" />
-by asking how many ways there were to distribute <m>40</m> apples to <m>5</m>
-children so that each child is guaranteed to get at least one apple
-and saw that the answer was <m>C(39,4)</m>. We even saw how to restrict the
-situation so that one of the children was limited and could receive at
-most <m>10</m> apples. In <xref ref="ch_inclusion-exclusion" autoname="yes" />, we learned how
-to extend the restrictions so that more than one child had
-restrictions on the number of apples allowed by taking advantage of
-the Principle of Inclusion-Exclusion. Before moving on to see how
-generating functions can allow us to get even more creative with our
-restrictions, let's take a moment to see how generating functions
-would allow us to solve the most basic problem at hand.
-</p>
-<example>
-<statement>
-<p>
-We already know that the number of ways to distribute <m>n</m> apples to
-<m>5</m> children so that each child gets at least one apple is
-<m>C(n-1,4)</m>, but it will be instructive to see how we can derive this
-result using generating functions. Let's start with an even simpler
-problem: how many ways are there to distribute <m>n</m> apples to
-<em>one</em> child so that each child receives at least one apple?
-Well, this isn't too hard, there's only one way to do it<mdash />give all
-the apples to the lucky kid! Thus the <em>sequence</em> that
-enumerates the number of ways to do this is <m>\{a_n\colon n\geq 1\}</m>
-with <m>a_n=1</m> for all <m>n\geq 1</m>. Then the generating function for
-this sequence is
-</p>
-<me>
-  x+x^2+x^3+\cdots = x(1+x+x^2+x^3+\cdots) = \frac{x}{1-x}.
-</me>
-<p>
-How can we get from this fact to the question of five children?
-Notice what happens when we multiply
-</p>
-<me>
-  (x+x^2+\cdots)(x+x^2+\cdots)(x+x^2+\cdots)(x+x^2+\cdots)
-  (x+x^2+\cdots).
-</me>
-<p>
-To see what this product represents, first
-consider how many ways can we get an <m>x^6</m>? We could use the <m>x^2</m>
-from the first factor and <m>x</m> from each of the other four, or <m>x^2</m>
-from the second factor and <m>x</m> from each of the other four, etc.,
-meaning that the coefficient on <m>x^6</m> is <m>5 = C(5,4)</m>. More
-generally, what's the coefficient on <m>x^n</m> in the product? In the
-expansion, we get an <m>x^n</m> for every product of the form
-<m>x^{k_1}x^{k_2}x^{k_3}x^{k_4}x^{k_5}</m> where <m>k_1+k_2+k_3+k_4+k_5 =
-  n</m>. Returning to the general question here, we're really dealing
-with distributing <m>n</m> apples to <m>5</m> children, and since <m>k_i> 0</m> for
-<m>i=1,2,\dots,5</m>, we also have the guarantee that each child receives
-at least one apple, so the product of the generating function for
-<em>one</em> child gives the generating function for <em>five</em>
-children.
-</p>
+    <title>Another look at distributing apples or folders</title>
+    <p>A recurring problem so far in this book has been to consider problems that ask about distributing indistinguishable objects (say apples) to distinct entities (say children). We started in <xref ref="ch_strings" autoname="yes" /> by asking how many ways there were to distribute <m>40</m> apples to <m>5</m> children so that each child is guaranteed to get at least one apple and saw that the answer was <m>C(39,4)</m>. We even saw how to restrict the situation so that one of the children was limited and could receive at most <m>10</m> apples. In <xref ref="ch_inclusion-exclusion" autoname="yes" />, we learned how to extend the restrictions so that more than one child had restrictions on the number of apples allowed by taking advantage of the <xref ref="thm_inclusion-exclusion" autoname="title" />. Before moving on to see how generating functions can allow us to get even more creative with our restrictions, let's take a moment to see how generating functions would allow us to solve the most basic problem at hand.
+    </p>
+    <example>
+        <p>We already know that the number of ways to distribute <m>n</m> apples to <m>5</m> children so that each child gets at least one apple is <m>C(n-1,4)</m>, but it will be instructive to see how we can derive this result using generating functions. Let's start with an even simpler problem: how many ways are there to distribute <m>n</m> apples to <em>one</em> child so that each child receives at least one apple?  Well, this isn't too hard, there's only one way to do it<mdash />give all the apples to the lucky kid! Thus the <em>sequence</em> that enumerates the number of ways to do this is <m>\{a_n\colon n\geq 1\}</m> with <m>a_n=1</m> for all <m>n\geq 1</m>. Then the generating function for this sequence is
+        <me>
+            x+x^2+x^3+\cdots = x(1+x+x^2+x^3+\cdots) = \frac{x}{1-x}.
+        </me>
+        How can we get from this fact to the question of five children?  Notice what happens when we multiply
+        <me>
+            (x+x^2+\cdots)(x+x^2+\cdots)(x+x^2+\cdots)(x+x^2+\cdots)
+            (x+x^2+\cdots).
+        </me>
+        </p>
+        <p>To see what this product represents, first consider how many ways can we get an <m>x^6</m>? We could use the <m>x^2</m> from the first factor and <m>x</m> from each of the other four, or <m>x^2</m> from the second factor and <m>x</m> from each of the other four, etc., meaning that the coefficient on <m>x^6</m> is <m>5 = C(5,4)</m>. More generally, what's the coefficient on <m>x^n</m> in the product? In the expansion, we get an <m>x^n</m> for every product of the form <m>x^{k_1}x^{k_2}x^{k_3}x^{k_4}x^{k_5}</m> where <m>k_1+k_2+k_3+k_4+k_5 = n</m>. Returning to the general question here, we're really dealing with distributing <m>n</m> apples to <m>5</m> children, and since <m>k_i> 0</m> for <m>i=1,2,\dots,5</m>, we also have the guarantee that each child receives at least one apple, so the product of the generating function for <em>one</em> child gives the generating function for <em>five</em> children.
+        </p>
+        <p>Let's pretend for a minute that we didn't know that the coefficients must be <m>C(n-1,4)</m>. How could we figure out the coefficients just from the generating function? The generating function we're interested in is <m>x^5/(1-x)^5</m>, which you should be able to pretty quickly see satisfies
+        <md>
+            <mrow>  \frac{x^5}{(1-x)^5} \amp =
+            \frac{x^5}{4!}\frac{d^4}{dx^4}\left(\frac{1}{1-x}\right) =
+            \frac{x^5}{4!}\sum_{n=0}^\infty n(n-1)(n-2)(n-3)x^{n-4}</mrow>
+            <mrow>  \amp  =\sum_{n=0}^\infty \frac{n(n-1)(n-2)(n-3)}{4!}x^{n+1} =
+            \sum_{n=0}^\infty \binom{n}{4}x^{n+1}.</mrow>
+        </md>
+        The coefficient on <m>x^n</m> in this series <m>C(n-1,4)</m>, just as we expected.
+        </p>
+    </example>
 
-<p>
-Let's pretend for a minute that we didn't know that the coefficients
-must be <m>C(n-1,4)</m>. How could we figure out the coefficients just
-from the generating function? The generating function we're
-interested in is <m>x^5/(1-x)^5</m>, which you should be able to pretty
-quickly see satisfies
-</p>
-<md>
-  <mrow>  \frac{x^5}{(1-x)^5} \amp =
-  \frac{x^5}{4!}\frac{d^4}{dx^4}\left(\frac{1}{1-x}\right) =
-  \frac{x^5}{4!}\sum_{n=0}^\infty n(n-1)(n-2)(n-3)x^{n-4}</mrow>
-  <mrow>  \amp  =\sum_{n=0}^\infty \frac{n(n-1)(n-2)(n-3)}{4!}x^{n+1} =
-  \sum_{n=0}^\infty \binom{n}{4}x^{n+1}.</mrow>
-</md>
-<p>
-The coefficient on <m>x^n</m> in this series <m>C(n-1,4)</m>, just as we expected.
-</p>
-</statement>
-</example>
-<p>
-We could revisit an example from <xref ref="ch_inclusion-exclusion" autoname="yes" /> to
-see that if we wanted to limit a child to receive at most <m>4</m> apples,
-we would use <m>(x+x^2+x^3+x^4)</m> as its generating function instead of
-<m>x/(1-x)</m>, but rather than belabor that here, let's try something a
-bit more exotic.
-</p>
-<example>
-<statement>
-<p>
-A grocery store is preparing holiday fruit baskets for sale. Each
-fruit basket will have <m>20</m> pieces of fruit in it, chosen from
-apples, pears, oranges, and grapefruit. How many different ways can
-such a basket be prepared if there must be at least one apple in a
-basket, a basket cannot contain more than three pears, and the
-number of oranges must be a multiple of four?
-</p>
+    <p>We could revisit an example from <xref ref="ch_inclusion-exclusion" autoname="yes" /> to see that if we wanted to limit a child to receive at most <m>4</m> apples, we would use <m>(x+x^2+x^3+x^4)</m> as its generating function instead of <m>x/(1-x)</m>, but rather than belabor that here, let's try something a bit more exotic.
+    </p>
+    <example>
+        <statement>
+            <p>A grocery store is preparing holiday fruit baskets for sale. Each fruit basket will have <m>20</m> pieces of fruit in it, chosen from apples, pears, oranges, and grapefruit. How many different ways can such a basket be prepared if there must be at least one apple in a basket, a basket cannot contain more than three pears, and the number of oranges must be a multiple of four?
+            </p>
+        </statement>
+        <solution>
+            <p>In order to get at the number of baskets consisting of <m>20</m> pieces of fruit, let's solve the more general problem where each basket has <m>n</m> pieces of fruit. Our method is simple: find the generating function for how to do this with each type of fruit individually and then multiply them. As in the previous example, the product will contain the term <m>x^n</m> for every way of assembling a basket of <m>n</m> pieces of fruit subject to our restrictions. The apple generating function is <m>x/(1-x)</m>, since we only want positive powers of <m>x</m> (corresponding to ensuring at least one apple). The generating function for pears is <m>(1+x+x^2+x^3)</m>, since we can have only zero, one, two, or three pears in basket. For oranges we have <m>1/(1-x^4) = 1+x^4+x^8+\cdots</m>, and the unrestricted grapefruit give us a factor of <m>1/(1-x)</m>. Multiplying, we have
+            <me>
+                \frac{x}{1-x} (1+x+x^2+x^3) \frac{1}{1-x^4} \frac{1}{1-x} =
+                \frac{x}{(1-x)^2(1-x^4)} (1+x+x^2+x^3).
+            </me>
+            Now we want to make use of the fact that <m>(1+x+x^2+x^3) =(1-x^4)/(1-x)</m> to see that our generating function is
+            <me>
+                \frac{x}{(1-x)^3} = \frac{x}{2}\sum_{n=0}^\infty n(n-1)x^{n-2} =
+                \sum_{n=0}^\infty\frac{n(n-1)}{2} x^{n-1} =
+                \sum_{n=0}^\infty\binom{n}{2} x^{n-1} =
+                \sum_{n=0}^\infty\binom{n+1}{2} x^n.
+            </me>
+                Thus, there are <m>C(n+1,2)</m> possible fruit baskets containing <m>n</m> pieces of fruit, meaning that the answer to the question we originally asked is <m>C(21,2) = 210</m>.
+            </p>
+        </solution>
+    </example>
 
-<p>
-In order to get at the number of baskets consisting of <m>20</m> pieces
-of fruit, let's solve the more general problem where each basket has
-<m>n</m> pieces of fruit. Our method is simple: find the generating
-function for how to do this with each type of fruit individually and
-then multiply them. As in the previous example, the product will
-contain the term <m>x^n</m> for every way of assembling a basket of <m>n</m>
-pieces of fruit subject to our restrictions. The apple generating
-function is <m>x/(1-x)</m>, since we only want positive powers of <m>x</m>
-(corresponding to ensuring at least one apple). The generating
-function for pears is <m>(1+x+x^2+x^3)</m>, since we can have only zero,
-one, two, or three pears in basket. For oranges we have <m>1/(1-x^4) =
-  1+x^4+x^8+\cdots</m>, and the unrestricted grapefruit give us a factor
-of <m>1/(1-x)</m>. Multiplying, we have
-</p>
-<me>
-  \frac{x}{1-x} (1+x+x^2+x^3) \frac{1}{1-x^4} \frac{1}{1-x} =
-  \frac{x}{(1-x)^2(1-x^4)} (1+x+x^2+x^3).
-</me>
-<p>
-Now we want to make use of
-the fact that <m>(1+x+x^2+x^3) =(1-x^4)/(1-x)</m> to see that our
-generating function is
-</p>
-<me>
-  \frac{x}{(1-x)^3} = \frac{x}{2}\sum_{n=0}^\infty n(n-1)x^{n-2} =
-  \sum_{n=0}^\infty\frac{n(n-1)}{2} x^{n-1} =
-  \sum_{n=0}^\infty\binom{n}{2} x^{n-1} =
-  \sum_{n=0}^\infty\binom{n+1}{2} x^n.
-</me>
-<p>
-Thus, there are <m>C(n+1,2)</m> possible fruit baskets containing <m>n</m>
-pieces of fruit, meaning that the answer to the question we
-originally asked is <m>C(21,2) = 210</m>.
-</p>
-</statement>
-</example>
-
-<example>
-<statement>
-<p>
-Find the number of integer solutions to the equation
-</p>
-<me>
-  x_1 + x_2 + x_3 = n
-</me>
-<p>
-(<m>n\geq 0</m> an integer) with <m>x_1 \geq 0</m>
-even, <m>x_2\geq 0</m>, and <m>0\leq x_3\leq 2</m>.
-</p>
-
-<p>
-Again, we want to look at the generating function we would have if
-each variable existed individually and take their product. For
-<m>x_1</m>, we get a factor of <m>1/(1-x^2)</m>; for <m>x_2</m>, we have <m>1/(1-x)</m>;
-and for <m>x_3</m> our factor is <m>(1+x+x^2)</m>. Therefore, the generating
-function for the number of solutions to the equation above is
-</p>
-<me>
-  \frac{1+x+x^2}{(1-x)(1-x^2)} = \frac{1+x+x^2}{(1+x)(1-x)^2}.
-</me>
-<p>
-In calculus, when we wanted to integrate a rational function of this
-form, we would use the method of partial fractions to write it as a
-sum of <q>simpler</q> rational functions whose antiderivatives we
-recognized. Here, our technique is the same, as we can readily
-recognize the formal power series for many rational functions. Our
-goal is to write
-</p>
-<me>
-  \frac{1+x+x^2}{(1+x)(1-x)^2} = \frac{A}{1+x} + \frac{B}{1-x} +
-  \frac{C}{(1-x)^2}
-</me>
-<p>
-for appropriate constants, <m>A</m>, <m>B</m>, and <m>C</m>. To find the constants,
-we clear the denominators, giving
-</p>
-<me>
-  1+x+x^2 = A(1-x)^2 + B(1-x^2) + C(1+x).
-</me>
-<p>
-Equating coefficients on terms of equal degree, we have:
-</p>
-<md>
-  <mrow>  1 \amp = A+B+C</mrow>
-  <mrow>  1 \amp = -2A + C</mrow>
-  <mrow>  1 \amp = A - B</mrow>
-</md>
-<p>
-Solving the system, we find <m>A=1/4</m>, <m>B=-3/4</m>, and
-<m>C=3/2</m>. Therefore, our generating function is
-</p>
-<me>
-  \frac{1}{4}\frac{1}{1+x} -\frac{3}{4} \frac{1}{1-x} +\frac{3}{2}
-  \frac{1}{(1-x)^2} = \frac{1}{4}\sum_{n=0}^\infty (-1)^n x^n -
-  \frac{3}{4} \sum_{n=0}^\infty x^n + \frac{3}{2}\sum_{n=0}^\infty n
-  x^{n-1}.
-</me>
-<p>
-The solution to our question is thus the coefficient on <m>x^n</m> in the
-above generating function, which is
-</p>
-<me>
-  \frac{(-1)^n}{4} - \frac{3}{4} + \frac{3(n+1)}{2},
-</me>
-<p>
-a surprising answer that would not be too easy to come up with via
-other methods!
-</p>
-</statement>
-</example>
+    <example>
+        <statement>
+            <p>
+                Find the number of integer solutions to the equation
+            <me>
+                x_1 + x_2 + x_3 = n
+            </me>
+                (<m>n\geq 0</m> an integer) with <m>x_1 \geq 0</m>
+                even, <m>x_2\geq 0</m>, and <m>0\leq x_3\leq 2</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>Again, we want to look at the generating function we would have if each variable existed individually and take their product. For <m>x_1</m>, we get a factor of <m>1/(1-x^2)</m>; for <m>x_2</m>, we have <m>1/(1-x)</m>; and for <m>x_3</m> our factor is <m>(1+x+x^2)</m>. Therefore, the generating function for the number of solutions to the equation above is
+            <me>
+                \frac{1+x+x^2}{(1-x)(1-x^2)} = \frac{1+x+x^2}{(1+x)(1-x)^2}.
+            </me>
+            In calculus, when we wanted to integrate a rational function of this form, we would use the method of partial fractions to write it as a sum of <q>simpler</q> rational functions whose antiderivatives we recognized. Here, our technique is the same, as we can readily recognize the formal power series for many rational functions. Our goal is to write
+            <me>
+                \frac{1+x+x^2}{(1+x)(1-x)^2} = \frac{A}{1+x} + \frac{B}{1-x} +
+                \frac{C}{(1-x)^2}
+            </me>
+            for appropriate constants, <m>A</m>, <m>B</m>, and <m>C</m>. To find the constants, we clear the denominators, giving
+            <me>
+                1+x+x^2 = A(1-x)^2 + B(1-x^2) + C(1+x).
+            </me>
+            Equating coefficients on terms of equal degree, we have:
+            <md>
+                <mrow>  1 \amp = A+B+C</mrow>
+                <mrow>  1 \amp = -2A + C</mrow>
+                <mrow>  1 \amp = A - B</mrow>
+            </md>
+                Solving the system, we find <m>A=1/4</m>, <m>B=-3/4</m>, and <m>C=3/2</m>. Therefore, our generating function is
+            <me>
+                \frac{1}{4}\frac{1}{1+x} -\frac{3}{4} \frac{1}{1-x} +\frac{3}{2}
+                \frac{1}{(1-x)^2} = \frac{1}{4}\sum_{n=0}^\infty (-1)^n x^n -
+                \frac{3}{4} \sum_{n=0}^\infty x^n + \frac{3}{2}\sum_{n=0}^\infty n
+                x^{n-1}.
+            </me>
+            </p>
+            <p>The solution to our question is thus the coefficient on <m>x^n</m> in the above generating function, which is
+            <me>
+                \frac{(-1)^n}{4} - \frac{3}{4} + \frac{3(n+1)}{2},
+            </me>
+                a surprising answer that would not be too easy to come up with via
+                other methods!
+            </p>
+        </solution>
+    </example>
 </section>

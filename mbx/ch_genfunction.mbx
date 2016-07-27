@@ -1,34 +1,17 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_genfunction">
-<title>Generating Functions</title>
+    <title>Generating Functions</title>
 
 
-<introduction>
-<p>
-A standard topic of study in first-year calculus is the representation
-of functions as infinite sums called power series; such a
-representation has the form <m>F(x)=\sum_{n=0}^\infty a_nx^n</m>. Perhaps
-surprisingly these power series can also serve as very powerful
-enumerative tools. In a combinatorial setting, we consider such power
-series of this type as another way of encoding the values of a
-sequence <m>\{a_n:n\ge0\}</m> indexed by the non-negative integers. The
-strength of power series as an enumerative technique is that they can
-be manipulated just like ordinary functions, i.e., they can be added,
-subtracted and multiplied, and for our purposes, we generally will not
-care if the power series converges, which anyone who might have found
-all of the convergence tests studied in calculus daunting will likely
-find reassuring. However, when we find it convenient to do so, we will
-use the familiar techniques from calculus and differentiate or
-integrate them term by term, and for those familiar series that do
-converge, we will use their representations as functions to facilitate
-manipulation of the series.
-</p>
-</introduction>
-<xi:include  href="s_genfunction_intro.mbx" />
- <xi:include  href="s_genfunction_distributions.mbx" />
- <xi:include  href="s_genfunction_gen-bin-thm.mbx" />
- <xi:include  href="s_genfunction_binom-app.mbx" />
- <xi:include  href="s_genfunction_partitions-integer.mbx" />
- <xi:include  href="s_genfunction_exponential.mbx" />
- <xi:include  href="s_genfunction_discussion.mbx" />
- <xi:include  href="s_genfunction_exercises.mbx" />
+    <introduction>
+        <p>A standard topic of study in first-year calculus is the representation of functions as infinite sums called power series; such a representation has the form <m>F(x)=\sum_{n=0}^\infty a_nx^n</m>. Perhaps surprisingly these power series can also serve as very powerful enumerative tools. In a combinatorial setting, we consider such power series of this type as another way of encoding the values of a sequence <m>\{a_n:n\ge0\}</m> indexed by the non-negative integers. The strength of power series as an enumerative technique is that they can be manipulated just like ordinary functions, i.e., they can be added, subtracted and multiplied, and for our purposes, we generally will not care if the power series converges, which anyone who might have found all of the convergence tests studied in calculus daunting will likely find reassuring. However, when we find it convenient to do so, we will use the familiar techniques from calculus and differentiate or integrate them term by term, and for those familiar series that do converge, we will use their representations as functions to facilitate manipulation of the series.
+        </p>
+    </introduction>
+    <xi:include  href="s_genfunction_intro.mbx" />
+    <xi:include  href="s_genfunction_distributions.mbx" />
+    <xi:include  href="s_genfunction_gen-bin-thm.mbx" />
+    <xi:include  href="s_genfunction_binom-app.mbx" />
+    <xi:include  href="s_genfunction_partitions-integer.mbx" />
+    <xi:include  href="s_genfunction_exponential.mbx" />
+    <xi:include  href="s_genfunction_discussion.mbx" />
+    <xi:include  href="s_genfunction_exercises.mbx" />
 </chapter>

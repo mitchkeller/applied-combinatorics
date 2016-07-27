@@ -90,16 +90,7 @@ a*b</input>
       <table xml:id="fig_intro_partsof8" >
         <caption>The partitions of <m>8</m>, noting those into distinct parts
         and those into odd parts.</caption>
-        <tabular>
-          <row><cell>8 distinct parts</cell><cell>7+1 distinct parts, odd parts</cell><cell>6+2 distinct parts</cell></row>
-          <row><cell>6+1+1</cell><cell>5+3 distinct parts, odd parts</cell><cell>5+2+1 distinct parts</cell></row>
-          <row><cell>5+1+1+1 odd parts</cell><cell>4+4</cell><cell>4+3+1 distinct parts</cell></row>
-          <row><cell>4+2+2</cell><cell>4+2+1+1</cell><cell>4+1+1+1+1</cell></row>
-          <row><cell>3+3+2</cell><cell>3+3+1+1 odd parts</cell><cell>3+2+2+1</cell></row>
-          <row><cell>3+2+1+1+1</cell><cell>3+1+1+1+1+1 odd parts</cell><cell>2+2+2+2</cell></row>
-          <row><cell>2+2+2+1+1</cell><cell>2+2+1+1+1+1</cell><cell>2+1+1+1+1+1+1</cell></row>
-          <row><cell></cell><cell>1+1+1+1+1+1+1+1 odd parts</cell></row>
-        </tabular>
+        <xi:include href="tab_parts_of_8.mbx" />
       </table>
       <p>
         There are<nbsp /><m>22</m> partitions altogether, and as noted, exactly<nbsp /><m>6</m>

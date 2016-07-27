@@ -1,99 +1,63 @@
 <section xml:id="s_genfunction_gen-bin-thm">
-<title>Newton's Binomial Theorem</title>
-<p>
-In <xref ref="ch_strings" autoname="yes" />, we discussed the binomial theorem and saw
-that the following formula holds for all integers <m>p\ge1</m>:
-</p>
-<me>
-  (1+x)^p =\sum_{n=0}^{p}\binom{p}{n} x^n.
-</me>
-<p>
-You should quickly realize that this formula implies that the
-generating function for the number of <m>n</m>-element subsets of a
-<m>p</m>-element set is <m>(1+x)^p</m>. The topic of generating functions is
-what leads us to consider what happens if we encounter <m>(1+x)^p</m> as a
-generating function with <m>p</m> not a positive integer. It turns out
-that, by suitably extending the definition of the binomial
-coefficients to real numbers, we can also extend the binomial theorem
-in a manner originally discovered by Sir Isaac Newton.
-</p>
+    <title>Newton's Binomial Theorem</title>
+    <p>In <xref ref="ch_strings" autoname="yes" />, we discussed the binomial theorem and saw that the following formula holds for all integers <m>p\ge1</m>:
+    <me>
+        (1+x)^p =\sum_{n=0}^{p}\binom{p}{n} x^n.
+    </me>
+        You should quickly realize that this formula implies that the generating function for the number of <m>n</m>-element subsets of a <m>p</m>-element set is <m>(1+x)^p</m>. The topic of generating functions is what leads us to consider what happens if we encounter <m>(1+x)^p</m> as a generating function with <m>p</m> not a positive integer. It turns out that, by suitably extending the definition of the binomial coefficients to real numbers, we can also extend the binomial theorem in a manner originally discovered by Sir Isaac Newton.
+    </p>
 
-<p>
-We've seen several expressions that can be used to calculate the
-binomial coefficients, but in order to extend <m>C(p,k)</m> to real values
-of <m>p</m>, we will utilize the form
-</p>
-<me>
-  \binom{p}{k}=\frac{P(p,k)}{k!},
-</me>
-<p>
-recalling that we've defined <m>P(p,k)</m> recursively as <m>P(p,0)=1</m> for
-all integers <m>p\geq 0</m> and <m>P(p,k)=p P(p-1,k-1)</m> when <m>p\geq k > 0</m>
-(<m>k</m> an integer). Notice here, however, that the expression for
-<m>P(p,k)</m> makes sense for any real number <m>p</m>, so long as <m>k</m> is
-a non-negative integer. We make this definition formal.
-</p>
-<definition>
-<statement>
-<p>
-For all real numbers <m>p</m> and nonnegative integers <m>k</m>, the number
-<m>P(p,k)</m> is defined by
-</p>
+    <p>We've seen several expressions that can be used to calculate the binomial coefficients, but in order to extend <m>C(p,k)</m> to real values of <m>p</m>, we will utilize the form
+    <me>
+        \binom{p}{k}=\frac{P(p,k)}{k!},
+    </me>
+    recalling that we've defined <m>P(p,k)</m> recursively as <m>P(p,0)=1</m> for all integers <m>p\geq 0</m> and <m>P(p,k)=p P(p-1,k-1)</m> when <m>p\geq k > 0</m> (<m>k</m> an integer). Notice here, however, that the expression for <m>P(p,k)</m> makes sense for any real number <m>p</m>, so long as <m>k</m> is a non-negative integer. We make this definition formal.
+    </p>
+    <definition>
+        <statement>
+            <p>For all real numbers <m>p</m> and nonnegative integers <m>k</m>, the number <m>P(p,k)</m> is defined by
+            <ol>
+                <li><m>P(p,0)=1</m> for all real numbers <m>p</m> and</li>
+                <li><m>P(p,k) = p P(p-1,k-1)</m> for all real numbers <m>p</m> and integers <m>k>0</m>.</li>
+            </ol>
+            </p>
+        </statement>
+    </definition>
+    <p>(Notice that this definition does not require <m>p\geq k</m> as we did with integers.)
+    </p>
 
-<ol>
-<li><m>P(p,0)=1</m> for all real numbers <m>p</m> and</li>
-<li><m>P(p,k) = p P(p-1,k-1)</m> for all real numbers <m>p</m> and integers <m>k>0</m>.</li>
-</ol>
-</statement>
-</definition>
-<p>
-(Notice that this definition does not require <m>p\geq k</m> as we did with
-integers.)
-</p>
+    <p>We are now prepared to extend the definition of binomial coefficient so that <m>C(p,k)</m> is defined for all real <m>p</m> and nonnegative integer values of <m>k</m>. We do this as follows.
+    </p>
+    <definition>
+        <statement>
+            <p>For all real numbers <m>p</m> and nonnegative integers <m>k</m>,
+            <me>
+                \binom{p}{k}=\frac{P(p,k)}{k!}.
+            </me>            <notation><usage>\binom{p}{k}</usage><description>generalized binomial coefficient</description></notation><index><main>binomial coefficient</main><sub>generalized</sub></index>
+            </p>
+        </statement>
+    </definition>
+    <p>Note that <m>P(p,k)=C(p,k)= 0</m> when <m>p</m> and <m>k</m> are integers with <m>0\le p\lt k</m>. On the other hand, we have some interesting new concepts such as <m>P(-5,4)=(-5)(-6)(-7)(-8)</m> and
+    <me>
+        \binom{-7/2}{5}=\frac{(-7/2)(-9/2)(-11/2)(-13/2)(-15/2)}{5!}.
+    </me>
+    </p>
+    <p>With this more general definition of binomial coefficients in hand, we're ready to state Newton's Binomial Theorem for all non-zero real numbers. The proof of this theorem can be found in most advanced calculus books.
+    </p>
 
-<p>
-We are now prepared to extend the definition of binomial coefficient
-so that <m>C(p,k)</m> is defined for all real <m>p</m> and nonnegative integer
-values of <m>k</m>. We do this as follows.
-</p>
-<definition>
-<statement>
-<p>
-For all real numbers <m>p</m> and nonnegative integers <m>k</m>,
-</p>
-<me>
-  \binom{p}{k}=\frac{P(p,k)}{k!}.
-</me>
-</statement>
-</definition>
-<p>
-Note that <m>P(p,k)=C(p,k)= 0</m> when <m>p</m> and <m>k</m> are integers with
-<m>0\le p\lt k</m>. On the other hand, we have some interesting new concepts
-such as <m>P(-5,4)=(-5)(-6)(-7)(-8)</m> and
-</p>
-<me>
-  \binom{-7/2}{5}=\frac{(-7/2)(-9/2)(-11/2)(-13/2)(-15/2)}{5!}.
-</me>
-<p>
-With this more general definition of binomial coefficients in hand,
-we're ready to state Newton's Binomial Theorem for all non-zero real
-numbers. The proof of this theorem can be found in most advanced
-calculus books.
-</p>
+    <theorem xml:id="thm_newton-binomial">
+        <title>Newton's Binomial Theorem</title>
+        <index><main>binomial theorem</main><sub>Newton's</sub></index>
+        <statement>
+            <p>
+                For all real <m>p</m> with <m>p\neq0</m>,
+            <me>
+                (1+x)^p=\sum_{n=0}^\infty\binom{p}{n}x^n.
+            </me>
+            </p>
+        </statement>
+    </theorem>
 
-<theorem xml:id="thm_newton-binomial">
-<statement>
-<p>
-For all real <m>p</m> with <m>p\neq0</m>,
-</p>
-<me>
-  (1+x)^p=\sum_{n=0}^\infty\binom{p}{n}x^n.
-</me>
-</statement>
-</theorem>
-
-<p>
-Note that the general form reduces to the original version
-of the binomial theorem when <m>p</m> is a positive integer.
-</p>
+    <p>Note that the general form reduces to the original version of the binomial theorem when <m>p</m> is a positive integer.
+    </p>
 </section>
