@@ -1,45 +1,25 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_graphs">
-<title>Graph Theory</title>
+    <title>Graph Theory</title>
 
 
-<introduction>
-<p>
-In <xref ref="ex_radiostations">Example</xref>, we
-discussed the problem of assigning frequencies to radio stations in
-the situation where stations within <m>200</m> miles of each other must
-broadcast on distinct frequencies. Clearly we would like to use the
-smallest number of frequencies possible for a given layouts of
-transmitters, but how can we determine what that number is?
-</p>
+    <introduction>
+        <p>In <xref ref="ex_radiostations">Example</xref>, we discussed the problem of assigning frequencies to radio stations in the situation where stations within <m>200</m> miles of each other must broadcast on distinct frequencies. Clearly we would like to use the smallest number of frequencies possible for a given layouts of transmitters, but how can we determine what that number is?
+        </p>
 
-<p>
-Suppose three new homes are being built and each of them must be
-provided with utility connections. The utilites in question are water,
-electricity, and natural gas. Each provider needs a direct line from
-their terminal to each house (the line can zig-zag all it wants, but
-it must go from the terminal to the house without passing through
-another provider's terminal or another house en route), and the three
-providers all wish to bury their lines exactly four feet below
-ground. Can they do this successfully without the lines crossing?
-</p>
+        <p>Suppose three new homes are being built and each of them must be provided with utility connections. The utilites in question are water, electricity, and natural gas. Each provider needs a direct line from their terminal to each house (the line can zig-zag all it wants, but it must go from the terminal to the house without passing through another provider's terminal or another house en route), and the three providers all wish to bury their lines exactly four feet below ground. Can they do this successfully without the lines crossing?
+        </p>
 
-<p>
-These are just two of many, many examples where the discrete structure
-known as a <em>graph</em> can serve as an enlightening mathematical
-model. Graphs are perhaps the most basic and widely studied
-combinatorial structure, and they are prominently featured in this
-text. Many of the concepts we will study, while presented in a more
-abstract mathematical sense, have their origins in applications of
-graphs as models for real-world problems.
-</p>
-</introduction>
-<xi:include  href="s_graphs_intro.mbx" />
- <xi:include  href="s_graphs_multigraphs.mbx" />
- <xi:include  href="s_graphs_eulerham.mbx" />
- <xi:include  href="s_graphs_color.mbx" />
- <xi:include  href="s_graphs_planar.mbx" />
- <xi:include  href="s_graphs_counting-trees.mbx" />
- <xi:include  href="s_graphs_complexity.mbx" />
- <xi:include  href="s_graphs_discussion.mbx" />
- <xi:include  href="s_graphs_exercises.mbx" />
+        <p>
+            These are just two of many, many examples where the discrete structure known as a <term>graph</term> can serve as an enlightening mathematical model. Graphs are perhaps the most basic and widely studied combinatorial structure, and they are prominently featured in this text. Many of the concepts we will study, while presented in a more abstract mathematical sense, have their origins in applications of graphs as models for real-world problems.
+        </p>
+    </introduction>
+    <xi:include  href="s_graphs_intro.mbx" />
+    <xi:include  href="s_graphs_multigraphs.mbx" />
+    <xi:include  href="s_graphs_eulerham.mbx" />
+    <xi:include  href="s_graphs_color.mbx" />
+    <xi:include  href="s_graphs_planar.mbx" />
+    <xi:include  href="s_graphs_counting-trees.mbx" />
+    <xi:include  href="s_graphs_complexity.mbx" />
+    <xi:include  href="s_graphs_discussion.mbx" />
+    <xi:include  href="s_graphs_exercises.mbx" />
 </chapter>

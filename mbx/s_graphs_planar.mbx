@@ -1,441 +1,161 @@
 <section xml:id="s_graphs_planar">
-<title>Planar Graphs</title>
-<p>
-Let's return to the problem of providing lines for water, electricity,
-and natural gas to three homes which we discussed in the introduction
-to this chapter. How can we model this problem using a graph? The best
-way is to have a vertex for each utility and a vertex for each of the
-three homes. Then what we're asking is if we can draw the graph that
-has an edge from each utility to each home so that none of the edges
-cross. This graph is shown in <xref ref="fig_graphs_utils" autoname="yes" />. You should
-recognize it as the complete bipartite graph <m>\bfK_{3,3}</m> we
-introduced earlier in the chapter.
-</p>
-<figure xml:id="fig_graphs_utils" >
-<caption>A graph of connecting homes to utilities</caption>
-<image>
-<latex-image-code><![CDATA[\begin{overpic}{images/k33}
-    \put(-25,92){ Water}
-    \put(-43,50){ Electricity}
-    \put(-53,5){ Natural gas}
-    \put(92,92){ Home 1}
-    \put(92,50){ Home 2}
-    \put(92,5){ Home 3}
-  \end{overpic}]]></latex-image-code>
-</image>
+    <title>Planar Graphs</title>
+    <p>Let's return to the problem of providing lines for water, electricity, and natural gas to three homes which we discussed in the introduction to this chapter. How can we model this problem using a graph? The best way is to have a vertex for each utility and a vertex for each of the three homes. Then what we're asking is if we can draw the graph that has an edge from each utility to each home so that none of the edges cross. This graph is shown in <xref ref="fig_graphs_utils" autoname="yes" />. You should recognize it as the complete bipartite graph <m>\bfK_{3,3}</m> we introduced earlier in the chapter.
+    </p>
+    <figure xml:id="fig_graphs_utils" >
+        <caption>A graph of connecting homes to utilities</caption>
+        <image width="55%">
+            <latex-image-code><![CDATA[\begin{overpic}{images/k33}
+            \put(-38,92){ Water}
+            \put(-67,50){ Electricity}
+            \put(-78,5){ Natural gas}
+            \put(92,92){ Home 1}
+            \put(92,50){ Home 2}
+            \put(92,5){ Home 3}
+            \end{overpic}]]></latex-image-code>
+        </image>
+    </figure>
+    <p>While this example of utility lines might seem a bit contrived, since there's really no good reason that the providers can't bury their lines at different depths, the question of whether a graph can be drawn in the plane such that edges intersect only at vertices is a long-studied question in mathematics that does have useful applications. One area where it arises is in the design of microchips and circuit boards. In those contexts, the material is so thin that the option of placing connections at different depths either does not exist or is severely restricted. There is much deep mathematics that underlies this area, and this section is intended to introduce a few of the key concepts.
+    </p>
 
-</figure>
-<p>
-While this example of utility lines might seem a bit contrived, since
-there's really no good reason that the providers can't bury their
-lines at different depths, the question of whether a graph can be
-drawn in the plane such that edges intersect only at vertices is a
-long-studied question in mathematics that does have useful
-applications. One area where it arises is in the design of microchips
-and circuit boards. In those contexts, the material is so thin that
-the option of placing connections at different depths either does not
-exist or is severely restricted. There is much deep mathematics that
-underlies this area, and this section is intended to introduce a few
-of the key concepts.
-</p>
+    <p>By a <term>drawing</term><index><main>drawing of a graph</main></index> of a graph, we mean a way of associating its vertices with points in the Cartesian plane <m>\reals^2</m> and its edges with simple polygonal arcs whose endpoints are the points associated to the vertices that are the endpoints of the edge. You can think of a polygonal arc as just a finite sequence of line segments such that the endpoint of one line segment is the starting point of the next line segment, and a simple polygonal arc is one that does not cross itself. (Our choice of polygonal arcs rather than arbitrary curves actually doesn't cause an impediment, since by taking very, very, very short line segments we can approximate any curve.) A <term>planar drawing</term><index><main>drawing of a graph</main><sub>planar</sub></index><index><main>planar drawing</main><see>drawing of a graph, planar</see></index> of a graph is one in which the polygonal arcs corresponding to two edges intersect only at a point corresponding to a vertex to which they are both incident. A graph is <term>planar</term><index><main>planar graph</main></index> if it has a planar drawing. A <term>face</term><index><main>face</main></index> of a planar drawing of a graph is a region bounded by edges and vertices and not containing any other vertices or edges.
+    </p>
 
-<p>
-By a <em>drawing</em> of a graph, we mean a way of associating its
-vertices with points in the Cartesian plane <m>\reals^2</m> and its edges
-with simple polygonal arcs whose endpoints are the points associated
-to the vertices that are the endpoints of the edge. You can think of a
-polygonal arc as just a finite sequence of line segments such that the
-endpoint of one line segment is the starting point of the next line
-segment, and a simple polygonal arc is one that does not cross
-itself. (Our choice of polygonal arcs rather than arbitrary curves
-actually doesn't cause an impediment, since by taking very, very, very
-short line segments we can approximate any curve.) A <em>planar
-drawing</em> of a graph is one in which the polygonal arcs corresponding
-to two edges intersect only at a point corresponding to a vertex to
-which they are both incident. A graph is <em>planar</em> if it has a
-planar drawing. A <em>face</em> of a planar drawing of a graph is a
-region bounded by edges and vertices and not containing any other
-vertices or edges.
-</p>
+    <p><xref ref="fig_planar" autoname="yes" /> shows a planar drawing of a graph with <m>6</m> vertices and <m>9</m> edges. Notice how one of the edges is drawn as a true polygonal arc rather than a straight line segment. This drawing determines <m>5</m> regions, since we also count the unbounded region that surrounds the drawing.
+    </p>
+    <figure xml:id="fig_planar" >
+        <caption>A planar drawing of a graph</caption>
+        <image width="35%" source="images/planar_graph" />
+    </figure>
+    <p><xref ref="fig_k4-planar" autoname="yes" /> shows a planar drawing of the complete graph <m>\bfK_4</m>. There are <m>4</m> vertices, <m>6</m> edges, and <m>4</m> faces in the drawing.
+    </p>
+    <figure xml:id="fig_k4-planar" >
+        <caption>A planar drawing of <m>\bfK_4</m></caption>
+        <image width="35%" source="images/k4_planar" />
+    </figure>
+    <p>What happens if we compute the number of vertices minus the number of edges plus the number of faces for these drawings? We have
+    <md>
+        <mrow>  6-9+5 \amp = 2</mrow>
+        <mrow>  4-6+4 \amp =2</mrow>
+    </md>
+    </p>
+    <p>While it might seem like a coincidence that this computation results in <m>2</m> for these planar drawings, there's a more general principle at work here, and in fact it holds for <em>any</em> planar drawing of <em>any</em> planar graph.
+    </p>
 
-<p>
-<xref ref="fig_planar" autoname="yes" /> shows a planar drawing of a graph with <m>6</m>
-vertices and <m>9</m> edges. Notice how one of the edges is drawn as a true
-polygonal arc rather than a straight line segment. This drawing
-determines <m>5</m> regions, since we also count the unbounded region that
-surrounds the drawing.
-</p>
-<figure xml:id="fig_planar" >
-<caption>A planar drawing of a graph</caption>
-<image width="73%" source="images/planar_graph" />
-</figure>
-<p>
-<xref ref="fig_k4-planar" autoname="yes" /> shows a planar drawing of the complete graph
-<m>\bfK_4</m>. There are <m>4</m> vertices, <m>6</m> edges, and <m>4</m> faces in the
-drawing.
-</p>
-<figure xml:id="fig_k4-planar" >
-<caption>A planar drawing of <m>\bfK_4</m></caption>
-<image width="73%" source="images/k4_planar" />
-</figure>
-<p>
-What happens if we compute the number of vertices minus the number of
-edges plus the number of faces for these drawings? We have
-</p>
-<md>
-  <mrow>  6-9+5 \amp = 2</mrow>
-  <mrow>  4-6+4 \amp =2</mrow>
-</md>
-<p>
-While it might seem like a coincidence that this computation results
-in <m>2</m> for these planar drawings, there's a more general principle at
-work here, and in fact it holds for <em>any</em> planar drawing of
-<em>any</em> planar graph.
-</p>
+    <p>In fact, the number <m>2</m> here actually results from a fundamental property of the plane, and there are a corresponding theorems for other surfaces. However, we only need the result as stated above.
+    </p>
 
-<theorem>
-<title>Euler</title>
-<statement>
-<p>
-Let <m>\bfG</m> be a connected planar graph with <m>n</m> vertices and <m>m</m>
-edges. Every planar drawing of <m>\bfG</m> has <m>f</m> faces, where <m>f</m>
-satisfies
-</p>
-<me>
-  n-m+f=2.
-</me>
-</statement>
-</theorem>
+    
+    <theorem>
+        <title>Euler's Formula</title>
+        <index><main>Euler's formula</main></index>
+        <statement>
+            <p>Let <m>\bfG</m> be a connected planar graph with <m>n</m> vertices and <m>m</m> edges. Every planar drawing of <m>\bfG</m> has <m>f</m> faces, where <m>f</m> satisfies
+            <me>
+                n-m+f=2.
+            </me>
+            </p>
+        </statement>
 
-<p>
-The number <m>2</m> here actually results from a fundamental property of
-the plane, and there are a corresponding theorems for other
-surfaces. However, we only need the result as stated above.
-</p>
 
-<proof>
-<p>
-Our proof is by induction on the number <m>m</m> of edges. If <m>m=0</m>, then
-since <m>\bfG</m> is connected, our graph has a single vertex, and so
-there is one face. Thus <m>n-m+f = 1-0+1=2</m> as needed. Now suppose
-that we have proven Euler's formula for all graphs with less than
-<m>m</m> edges and let <m>\bfG</m> have <m>m</m> edges. Pick an edge <m>e</m> of
-<m>\bfG</m>. What happens if we form a new graph <m>\bfG'</m> by deleting <m>e</m>
-from <m>\bfG</m>? If <m>\bfG'</m> is connected, our inductive hypothesis
-applies. Say that <m>\bfG'</m> has <m>n'</m> vertices, <m>m'</m> edges, and <m>f'</m>
-faces. Then by induction, these numbers satisfy
-</p>
-<me>
-  n'-m'+f'=2.
-</me>
-<p>
-Since we only deleted one edge, <m>n'=n</m> and <m>m'=m-1</m>. What did the
-removal of <m>e</m> do to the number of faces? In <m>\bfG'</m> there's a new
-face that was formerly two faces divided by <m>e</m> in <m>\bfG</m>. Thus,
-<m>f'=f-1</m>. Substituting these into <m>n'-m'+f'=2</m>, we have
-</p>
-<me>
-  n-(m-1)+(f-1)=2 \iff n-m+f=2.
-</me>
-<p>
-Thus, if <m>\bfG'</m> is connected, we are done. If <m>\bfG'</m> is
-disconnected, however, we cannot apply the inductive assumption to
-<m>\bfG'</m> directly. Fortunately, since we removed only one edge,
-<m>\bfG'</m> has two components, which we can view as two connected
-graphs <m>\bfG'_1</m> and <m>\bfG'_2</m>. Each of these has fewer than <m>m</m>
-edges, so we may apply the inductive hypothesis to them. For
-<m>i=1,2</m>, let <m>n'_i</m> be the number of vertices of <m>\bfG'_i</m>, <m>m'_i</m>
-the number of edges of <m>\bfG'_i</m>, and <m>f'_i</m> the number of faces of
-<m>\bfG'_i</m>. Then by induction we have
-</p>
-<me>
-  n'_1 - m'_1 + f'_1 = 2 \quad \text{and} \quad n'_2-m'_2+f'_2 =2.
-</me>
-<p>
-Adding these together, we have
-</p>
-<me>
-  (n'_1 + n'_2) - (m'_1 + m'_2) + (f'_1 + f'_2) = 4.
-</me>
-<p>
-But now <m>n=n'_1 + n'_2</m>, and <m>m'_1 + m'_2 = m-1</m>, so the equality
-becomes
-</p>
-<me>
-  n - (m-1) + (f'_1+f'_2) = 4 \iff n-m + (f'_1 + f'_2) = 3.
-</me>
-<p>
-The only thing we have yet to figure out is how <m>f'_1+f'_2</m> relates
-to <m>f</m>, and we have to hope that it will allow us to knock the <m>3</m>
-down to a <m>2</m>. Every face of <m>\bfG'_1</m> and <m>\bfG'_2</m> is a face of
-<m>\bfG</m>, since the fact that removing <m>e</m> disconnects <m>\bfG</m> means
-that <m>e</m> must be part of the boundary of the unbounded
-face. Further, the unbounded face is counted twice in the sum <m>f'_1
-  + f'_2</m>, so <m>f=f'_1 + f'_2 -1</m>. This gives exactly what we need to
-complete the proof.
-</p>
-</proof>
+        <proof>
+            <p>Our proof is by induction on the number <m>m</m> of edges. If <m>m=0</m>, then since <m>\bfG</m> is connected, our graph has a single vertex, and so there is one face. Thus <m>n-m+f = 1-0+1=2</m> as needed. Now suppose that we have proven Euler's formula for all graphs with less than <m>m</m> edges and let <m>\bfG</m> have <m>m</m> edges. Pick an edge <m>e</m> of <m>\bfG</m>. What happens if we form a new graph <m>\bfG'</m> by deleting <m>e</m> from <m>\bfG</m>? If <m>\bfG'</m> is connected, our inductive hypothesis applies. Say that <m>\bfG'</m> has <m>n'</m> vertices, <m>m'</m> edges, and <m>f'</m> faces. Then by induction, these numbers satisfy
+        <me>
+            n'-m'+f'=2.
+        </me>
+        Since we only deleted one edge, <m>n'=n</m> and <m>m'=m-1</m>. What did the removal of <m>e</m> do to the number of faces? In <m>\bfG'</m> there's a new face that was formerly two faces divided by <m>e</m> in <m>\bfG</m>. Thus, <m>f'=f-1</m>. Substituting these into <m>n'-m'+f'=2</m>, we have
+        <me>
+            n-(m-1)+(f-1)=2 \iff n-m+f=2.
+        </me>
+        Thus, if <m>\bfG'</m> is connected, we are done. If <m>\bfG'</m> is disconnected, however, we cannot apply the inductive assumption to <m>\bfG'</m> directly. Fortunately, since we removed only one edge, <m>\bfG'</m> has two components, which we can view as two connected graphs <m>\bfG'_1</m> and <m>\bfG'_2</m>. Each of these has fewer than <m>m</m> edges, so we may apply the inductive hypothesis to them. For <m>i=1,2</m>, let <m>n'_i</m> be the number of vertices of <m>\bfG'_i</m>, <m>m'_i</m> the number of edges of <m>\bfG'_i</m>, and <m>f'_i</m> the number of faces of <m>\bfG'_i</m>. Then by induction we have
+        <me>
+            n'_1 - m'_1 + f'_1 = 2 \quad \text{and} \quad n'_2-m'_2+f'_2 =2.
+        </me>
+        Adding these together, we have
+        <me>
+            (n'_1 + n'_2) - (m'_1 + m'_2) + (f'_1 + f'_2) = 4.
+        </me>
+        But now <m>n=n'_1 + n'_2</m>, and <m>m'_1 + m'_2 = m-1</m>, so the equality becomes
+        <me>
+            n - (m-1) + (f'_1+f'_2) = 4 \iff n-m + (f'_1 + f'_2) = 3.
+        </me>
+        The only thing we have yet to figure out is how <m>f'_1+f'_2</m> relates to <m>f</m>, and we have to hope that it will allow us to knock the <m>3</m> down to a <m>2</m>. Every face of <m>\bfG'_1</m> and <m>\bfG'_2</m> is a face of <m>\bfG</m>, since the fact that removing <m>e</m> disconnects <m>\bfG</m> means that <m>e</m> must be part of the boundary of the unbounded face. Further, the unbounded face is counted twice in the sum <m>f'_1 + f'_2</m>, so <m>f=f'_1 + f'_2 -1</m>. This gives exactly what we need to complete the proof.
+            </p>
+        </proof>
+    </theorem>
 
-<p>
-Taken by itself, Euler's formula doesn't seem that useful, since it
-requires counting the number of faces in a planar embedding. However,
-we can use this formula to get a quick way to determine that a graph
-is not planar. Consider a drawing without edge crossings
-of a graph on <m>n</m> vertices and <m>m</m> edges, with <m>n\ge3</m>.
-We consider pairs <m>(e,F)</m> where <m>e</m> is an edge of
-<m>\bfG</m> and <m>F</m> is a face that has <m>e</m> as part of its boundary. How
-many such pairs are there? Let's call the number of pairs <m>p</m>. Each
-edge can bound either one or two faces, so we have that <m>p\leq
-2m</m>. We can also bound <m>p</m> by counting the number of pairs in which a
-face <m>F</m> appears. Each face is bounded by at least <m>3</m> edges, so it
-appears in at least <m>3</m> pairs, and so <m>p\geq 3f</m>. Thus <m>3f\leq 2m</m> or
-<m>f\leq 2m/3</m>. Now, utilizing Euler's formula, we have
-</p>
-<me>
-  m = n+f-2 \leq n + \frac{2m}{3} - 2 \iff \frac{m}{3} \leq n-2.
-</me>
-<p>
-Thus, we've proven the following theorem.
-</p>
+    <p>Taken by itself, Euler's formula doesn't seem that useful, since it requires counting the number of faces in a planar embedding. However, we can use this formula to get a quick way to determine that a graph is not planar. Consider a drawing without edge crossings of a graph on <m>n</m> vertices and <m>m</m> edges, with <m>n\ge3</m>.  We consider pairs <m>(e,F)</m> where <m>e</m> is an edge of <m>\bfG</m> and <m>F</m> is a face that has <m>e</m> as part of its boundary. How many such pairs are there? Let's call the number of pairs <m>p</m>. Each edge can bound either one or two faces, so we have that <m>p\leq 2m</m>. We can also bound <m>p</m> by counting the number of pairs in which a face <m>F</m> appears. Each face is bounded by at least <m>3</m> edges, so it appears in at least <m>3</m> pairs, and so <m>p\geq 3f</m>. Thus <m>3f\leq 2m</m> or <m>f\leq 2m/3</m>. Now, utilizing Euler's formula, we have
+    <me>
+        m = n+f-2 \leq n + \frac{2m}{3} - 2 \iff \frac{m}{3} \leq n-2.
+    </me>
+        Thus, we've proven the following theorem.
+    </p>
 
-<theorem xml:id="thm_max-edge-planar">
-<statement>
-<p>
-A planar graph on <m>n</m> vertices has at most <m>3n-6</m> edges when
-<m>n\ge 3</m>.
-</p>
-</statement>
-</theorem>
+    <theorem xml:id="thm_max-edge-planar">
+        <statement>
+            <p>
+                A planar graph on <m>n</m> vertices has at most <m>3n-6</m> edges when <m>n\ge 3</m>.
+            </p>
+        </statement>
+    </theorem>
 
-<p>
-The contrapositive of this theorem, namely that an <m>n</m>-vertex graph
-with more than <m>3n-6</m> edges is not planar, is usually the most useful
-formulation of this result. For instance, we've seen
-(<xref ref="fig_k4-planar" autoname="yes" />) that <m>\bfK_4</m> is planar. What about
-<m>\bfK_5</m>? It has <m>5</m> vertices and <m>C(5,2)=10 > 9 = 3\cdot 5-6</m> edges,
-so it is not planar, and thus for <m>n\geq 5</m>, <m>\bfK_n</m> is not planar,
-since it contains <m>\bfK_5</m>. It's important to note that
-<xref ref="thm_max-edge-planar" autoname="yes" /> is not the be-all, end-all of
-determining if a graph is planar. To see this, let's return to the
-subject of drawing <m>\bfK_{3,3}</m> in the plane. This graph has <m>6</m>
-vertices and <m>9</m> edges, so it passes the test of
-<xref ref="thm_max-edge-planar" autoname="yes" />. However, if you spend a couple minutes
-trying to find a way to draw <m>\bfK_{3,3}</m> in the plane without
-any crossing edges, you'll pretty quickly begin to believe that it
-can't be done<mdash />and you'd be right!
-</p>
+    <p>The contrapositive of this theorem, namely that an <m>n</m>-vertex graph with more than <m>3n-6</m> edges is not planar, is usually the most useful formulation of this result. For instance, we've seen (<xref ref="fig_k4-planar" autoname="yes" />) that <m>\bfK_4</m> is planar. What about <m>\bfK_5</m>? It has <m>5</m> vertices and <m>C(5,2)=10 > 9 = 3\cdot 5-6</m> edges, so it is not planar, and thus for <m>n\geq 5</m>, <m>\bfK_n</m> is not planar, since it contains <m>\bfK_5</m>. It's important to note that <xref ref="thm_max-edge-planar" autoname="yes" /> is not the be-all, end-all of determining if a graph is planar. To see this, let's return to the subject of drawing <m>\bfK_{3,3}</m> in the plane. This graph has <m>6</m> vertices and <m>9</m> edges, so it passes the test of <xref ref="thm_max-edge-planar" autoname="yes" />. However, if you spend a couple minutes trying to find a way to draw <m>\bfK_{3,3}</m> in the plane without any crossing edges, you'll pretty quickly begin to believe that it can't be done<mdash />and you'd be right!
+    </p>
 
-<p>
-To see why <m>\bfK_{3,3}</m> is not planar, we'll have to return to Euler's
-formula, and we again work with edge-face pairs. For <m>\bfK_{3,3}</m>, we
-see that every edge would have to be part of the boundary of two
-faces, and faces are bounded by cycles. Also, since the graph is
-bipartite, there are no odd cycles. Thus, counting edge-face pairs
-from the edge perspective, we see that there are <m>2m = 18</m> pairs. If
-we let <m>f_k</m> be the number of faces bounded by a cycle of length <m>k</m>,
-then <m>f= f_4 + f_6</m>. Thus, counting edge-face pairs from the face
-perspective, there are <m>4f_4 + 6f_6</m> pairs. From Euler's formula, we
-see that the number of faces <m>f</m> must be <m>5</m>, so then <m>4f_4+6f_6\geq
-20</m>. But from our count of edge-face pairs, we have <m>2m=4f_4+6f_6</m>,
-giving <m>18\geq 20</m>, which is clearly absurd. Thus, <m>\bfK_{3,3}</m> is not
-planar.
-</p>
+    <p>To see why <m>\bfK_{3,3}</m> is not planar, we'll have to return to Euler's formula, and we again work with edge-face pairs. For <m>\bfK_{3,3}</m>, we see that every edge would have to be part of the boundary of two faces, and faces are bounded by cycles. Also, since the graph is bipartite, there are no odd cycles. Thus, counting edge-face pairs from the edge perspective, we see that there are <m>2m = 18</m> pairs. If we let <m>f_k</m> be the number of faces bounded by a cycle of length <m>k</m>, then <m>f= f_4 + f_6</m>. Thus, counting edge-face pairs from the face perspective, there are <m>4f_4 + 6f_6</m> pairs. From Euler's formula, we see that the number of faces <m>f</m> must be <m>5</m>, so then <m>4f_4+6f_6\geq 20</m>. But from our count of edge-face pairs, we have <m>2m=4f_4+6f_6</m>, giving <m>18\geq 20</m>, which is clearly absurd. Thus, <m>\bfK_{3,3}</m> is not planar.
+    </p>
 
-<p>
-At this point, you're probably asking yourself <q>So what?</q> We've
-invested a fair amount of effort to establish that <m>\bfK_5</m> and
-<m>\bfK_{3,3}</m> are nonplanar. Clearly any graph that contains them is
-also nonplanar, but there are a lot of graphs, so you might think that
-we could be at this forever. Fortunately, we won't be, since at its
-core, planarity really comes down to just these two graphs, as we
-shall soon see.
-</p>
+    <p>At this point, you're probably asking yourself <q>So what?</q> We've invested a fair amount of effort to establish that <m>\bfK_5</m> and <m>\bfK_{3,3}</m> are nonplanar. Clearly any graph that contains them is also nonplanar, but there are a lot of graphs, so you might think that we could be at this forever. Fortunately, we won't be, since at its core, planarity really comes down to just these two graphs, as we shall soon see.
+    </p>
 
-<p>
-If <m>\GVE</m> is a graph and <m>uv\in E</m>, then we may form a new graph
-<m>\bfG'</m> called an <em>elementary subdivision</em> of <m>\bfG</m> by adding
-a new vertex <m>v'</m> and replacing the edge <m>uv</m> by edges <m>uv'</m> and
-<m>v'v</m>. In other words, <m>\bfG'</m> has vertex set <m>V'=V\cup\{v'\}</m> and
-edge set <m>E'=(E-\{uv\})\cup \{uv',v'v\}</m>. Two graphs <m>\bfG_1</m> and
-<m>\bfG_2</m> are <em>homeomorphic</em> if they can be obtained from the same
-graph by a (potentially trivial) sequence of elementary subdivisions.
-</p>
+    <p>If <m>\GVE</m> is a graph and <m>uv\in E</m>, then we may form a new graph <m>\bfG'</m> called an <term>elementary subdivision</term><index><main>subdivision</main><sub>elementary</sub></index> of <m>\bfG</m> by adding a new vertex <m>v'</m> and replacing the edge <m>uv</m> by edges <m>uv'</m> and <m>v'v</m>. In other words, <m>\bfG'</m> has vertex set <m>V'=V\cup\{v'\}</m> and edge set <m>E'=(E-\{uv\})\cup \{uv',v'v\}</m>. Two graphs <m>\bfG_1</m> and <m>\bfG_2</m> are <term>homeomorphic</term><index><main>homeomorphic</main></index> if they can be obtained from the same graph by a (potentially trivial) sequence of elementary subdivisions.
+    </p>
 
-<p>
-The purpose of discussing homeomorphic graphs is that two homeomorphic
-graphs have the same properties when it comes to being drawn in the
-plane. To see this, think about what happens to <m>\bfK_5</m> if we form an
-elementary subdivision of it via any one of its edges. Clearly it
-remains nonplanar. In fact, if you take any nonplanar graph and form
-the elementary subdivision using any one of its edges, the resulting
-graph is nonplanar. The following very deep theorem was proved by the
-Polish mathematician Kazimierz Kuratowski in 1930. Its proof is beyond
-the scope of this text.
-</p>
+    <p>The purpose of discussing homeomorphic graphs is that two homeomorphic graphs have the same properties when it comes to being drawn in the plane. To see this, think about what happens to <m>\bfK_5</m> if we form an elementary subdivision of it via any one of its edges. Clearly it remains nonplanar. In fact, if you take any nonplanar graph and form the elementary subdivision using any one of its edges, the resulting graph is nonplanar. The following very deep theorem was proved by the Polish mathematician Kazimierz Kuratowski in 1930. Its proof is beyond the scope of this text.
+    </p>
 
-<theorem xml:id="thm_kuratowski">
-<title>Kuratowski</title>
-<statement>
-<p>
-A graph is planar if and only if it does not contain a subgraph
-homeomorphic to either <m>\bfK_5</m> or <m>\bfK_{3,3}</m>.
-</p>
-</statement>
-</theorem>
+    <theorem xml:id="thm_kuratowski">
+        <title>Kuratowski's Theorem</title>
+        <statement>
+            <p>A graph is planar if and only if it does not contain a subgraph homeomorphic to either <m>\bfK_5</m> or <m>\bfK_{3,3}</m>.
+            </p>
+        </statement>
+    </theorem>
 
-<p>
-Kuratowski's Theorem gives a useful way for checking if a graph is
-planar. Although it's not always easy to find a subgraph homeomorphic
-to <m>\bfK_5</m> or <m>\bfK_{3,3}</m> by hand, there are efficient algorithms
-for planarity testing that make use of this characterization. To see
-this theorem at work, let's consider the Petersen graph shown in
-<xref ref="fig_petersen" autoname="yes" />. The Petersen graph has <m>10</m> vertices and <m>15</m>
-edges, so it passes the test of <xref ref="thm_max-edge-planar" autoname="yes" />, and our
-argument using Euler's formula to prove that <m>\bfK_{3,3}</m> is nonplanar
-was complex enough, we probably don't want to try it for the Petersen
-graph. To use Kuratowski's Theorem here, we need to decide if we would
-rather find a subgraph homeomorphic to <m>\bfK_5</m> or to
-<m>\bfK_{3,3}</m>. Although the Petersen graph looks very similar to
-<m>\bfK_5</m>, it's actually simultaneously <em>too</em> similar and too
-different for us to be able to find a subgraph homeomorphic to
-<m>\bfK_5</m>, since each vertex has degree <m>3</m>. Thus, we set out to find a
-subgraph of the Petersen graph homeomorphic to <m>\bfK_{3,3}</m>. To do so,
-note that <m>\bfK_{3,3}</m> contains a cycle of length <m>6</m> and three edges
-that are in place between vertices opposite each other on the
-cycle. We identify a six-cycle in the Petersen graph and draw it as a
-hexagon and place the remaining four vertices inside the cycle. Such a
-drawing is shown in <xref ref="fig_petersen-graph-k33" autoname="yes" />. The subgraph
-homeomorphic to <m>\bfK_{3,3}</m> is found by deleting the black vertex, as
-then the white vertices have degree two, and we can replace each of
-them and their two incident edges (shown in bold) by a single edge.
-</p>
-<figure xml:id="fig_petersen-graph-k33" >
-<caption>A more illustrative drawing of the Petersen graph</caption>
-<image width="40%" source="images/petersen_graph_k33" />
-</figure>
-<p>
-We close this section with a problem that brings the current section
-together with the topic of graph coloring. In 1852 Francis Guthrie, an
-Englishman who was at the time studying to be lawyer but subsequently
-became a professor of mathematics in South Africa, was trying to color
-a map of the counties of England so that any two counties that shared
-a boundary segment (meaning they touched in more than a single point)
-were colored with different colors. He noticed that he only needed
-four colors to do this, and was unable to draw any sort of map that
-would require five colors. (He was able to find a map that required
-four colors, an example of which is shown in
-<xref ref="fig_needs-four-colors" autoname="yes" />.)
-</p>
-<figure xml:id="fig_needs-four-colors" >
-<caption>A map that requires four colors</caption>
-<image width="73%" source="images/needs_four_colors" />
-</figure>
-<p>
-Could it possibly be true that <em>every</em> map could be colored with
-only four colors? He asked his brother Frederick Guthrie, who was a
-mathematics student at University College, London, about the problem,
-and Frederick eventually communicated the problem to Augustus de
-Morgan (of de Morgan's laws fame), one of his teachers. It was in this
-way that one of the most famous (or infamous) problems, known for a
-century as the Four Color Problem and now the Four Color Theorem, in
-graph theory was born. De Morgan was very interested in the Four Color
-Problem, and communicated it to Sir William Rowan Hamilton, a
-prominent Irish mathematician and the one for whom hamiltonian
-cycles are named, but Hamilton did not find the problem
-interesting. Hamilton is one of the few people who considered the Four
-Color Problem but did not become captivated by it.
-</p>
+    <p>Kuratowski's Theorem gives a useful way for checking if a graph is planar. Although it's not always easy to find a subgraph homeomorphic to <m>\bfK_5</m> or <m>\bfK_{3,3}</m> by hand, there are efficient algorithms for planarity testing that make use of this characterization. To see this theorem at work, let's consider the Petersen graph shown in <xref ref="fig_petersen" autoname="yes" />. The Petersen graph has <m>10</m> vertices and <m>15</m> edges, so it passes the test of <xref ref="thm_max-edge-planar" autoname="yes" />, and our argument using Euler's formula to prove that <m>\bfK_{3,3}</m> is nonplanar was complex enough, we probably don't want to try it for the Petersen graph. To use Kuratowski's Theorem here, we need to decide if we would rather find a subgraph homeomorphic to <m>\bfK_5</m> or to <m>\bfK_{3,3}</m>. Although the Petersen graph looks very similar to <m>\bfK_5</m>, it's actually simultaneously <em>too</em> similar and too different for us to be able to find a subgraph homeomorphic to <m>\bfK_5</m>, since each vertex has degree <m>3</m>. Thus, we set out to find a subgraph of the Petersen graph homeomorphic to <m>\bfK_{3,3}</m>. To do so, note that <m>\bfK_{3,3}</m> contains a cycle of length <m>6</m> and three edges that are in place between vertices opposite each other on the cycle. We identify a six-cycle in the Petersen graph and draw it as a hexagon and place the remaining four vertices inside the cycle. Such a drawing is shown in <xref ref="fig_petersen-graph-k33" autoname="yes" />. The subgraph homeomorphic to <m>\bfK_{3,3}</m> is found by deleting the black vertex, as then the white vertices have degree two, and we can replace each of them and their two incident edges (shown in bold) by a single edge.
+    </p>
+    <figure xml:id="fig_petersen-graph-k33" >
+        <caption>A more illustrative drawing of the Petersen graph</caption>
+        <image width="52%" source="images/petersen_graph_k33" />
+    </figure>
+    <p>We close this section with a problem that brings the current section together with the topic of graph coloring. In 1852 Francis Guthrie, an Englishman who was at the time studying to be lawyer but subsequently became a professor of mathematics in South Africa, was trying to color a map of the counties of England so that any two counties that shared a boundary segment (meaning they touched in more than a single point) were colored with different colors. He noticed that he only needed four colors to do this, and was unable to draw any sort of map that would require five colors. (He was able to find a map that required four colors, an example of which is shown in <xref ref="fig_needs-four-colors" autoname="yes" />.)
+    </p>
+    <figure xml:id="fig_needs-four-colors" >
+        <caption>A map that requires four colors</caption>
+        <image width="30%" source="images/needs_four_colors" />
+    </figure>
+    <p>
+        Could it possibly be true that <em>every</em> map could be colored with only four colors? He asked his brother Frederick Guthrie, who was a mathematics student at University College, London, about the problem, and Frederick eventually communicated the problem to Augustus de Morgan (of de Morgan's laws fame), one of his teachers. It was in this way that one of the most famous (or infamous) problems, known for a century as the Four Color Problem and now the Four Color Theorem, in graph theory was born. De Morgan was very interested in the Four Color Problem, and communicated it to Sir William Rowan Hamilton, a prominent Irish mathematician and the one for whom hamiltonian cycles are named, but Hamilton did not find the problem interesting. Hamilton is one of the few people who considered the Four Color Problem but did not become captivated by it.
+    </p>
 
-<p>
-We'll continue our discussion of the history of the Four Color Theorem
-in a moment, but first, we must consider how we can turn the problem
-of coloring a map into a graph theory question. Well, it seems natural
-that each region should be assigned a corresponding vertex. We want to
-force regions that share a boundary to have different colors, so this
-suggests that we should place an edge between two vertices if and only
-if their corresponding regions have a common boundary. (As an example,
-the map in <xref ref="fig_needs-four-colors" autoname="yes" /> corresponds to the graph
-<m>\bfK_4</m>.) It is not difficult to see that this produces a planar
-graph, since we may draw the edges through the common boundary
-segment. Furthermore, with a little bit of thought, you should see
-that given a planar drawing of a graph, you can create a map in which
-each vertex leads to a region and edges lead to common boundary
-segments. Thus, the Four Color Problem could be stated as <q>Does every
-planar graph have chromatic number at most four?</q>
-</p>
+    <p>We'll continue our discussion of the history of the Four Color Theorem in a moment, but first, we must consider how we can turn the problem of coloring a map into a graph theory question. Well, it seems natural that each region should be assigned a corresponding vertex. We want to force regions that share a boundary to have different colors, so this suggests that we should place an edge between two vertices if and only if their corresponding regions have a common boundary. (As an example, the map in <xref ref="fig_needs-four-colors" autoname="yes" /> corresponds to the graph <m>\bfK_4</m>.) It is not difficult to see that this produces a planar graph, since we may draw the edges through the common boundary segment. Furthermore, with a little bit of thought, you should see that given a planar drawing of a graph, you can create a map in which each vertex leads to a region and edges lead to common boundary segments. Thus, the Four Color Problem could be stated as <q>Does every planar graph have chromatic number at most four?</q>
+    </p>
 
-<p>
-Interest in the Four Color Problem languished until 1877, when the
-British mathematician Arthur Cayley worte a letter to the Royal
-Society asking if the problem had been resolved. This brought the
-problem to the attention of many more people, and the first <q>proof</q>
-of the Four Color Theorem, due to Alfred Bray Kempe, was completed in
-1878 and published a year later. It took <m>11</m> years before Percy John
-Heawood found a flaw in the proof but was able to salvage enough of it
-to show that every planar graph has chromatic number at most five. In
-1880, Peter Guthrie Tait, a British physicist best known for his book
-<em>Treatise on Natural Philosophy</em> with Sir William Thomson (Lord
-Kelvin), made an announcement that suggested he had a proof of the
-Four Color Theorem utilizing hamiltonian cycles in certain planar
-graphs. However, consistent with the way Tait approached some
-conjectures in the mathematical theory of knots, it appears that he
-subsequently realized around 1883 that he could not prove that the
-hamiltonian cycles he was using actually existed and so Tait likely
-only believed he had a proof of the Four Color Theorem for a short
-time, if at all. However, it would take until 1946 to find a
-counterexample to the conjecture Tait had used in his attempt to prove
-the Four Color Theorem.
-</p>
+    <p>Interest in the Four Color Problem languished until 1877, when the British mathematician Arthur Cayley worte a letter to the Royal Society asking if the problem had been resolved. This brought the problem to the attention of many more people, and the first <q>proof</q> of the Four Color Theorem, due to Alfred Bray Kempe, was completed in 1878 and published a year later. It took <m>11</m> years before Percy John Heawood found a flaw in the proof but was able to salvage enough of it to show that every planar graph has chromatic number at most five. In 1880, Peter Guthrie Tait, a British physicist best known for his book <booktitle>Treatise on Natural Philosophy</booktitle> with Sir William Thomson (Lord Kelvin), made an announcement that suggested he had a proof of the Four Color Theorem utilizing hamiltonian cycles in certain planar graphs. However, consistent with the way Tait approached some conjectures in the mathematical theory of knots, it appears that he subsequently realized around 1883 that he could not prove that the hamiltonian cycles he was using actually existed and so Tait likely only believed he had a proof of the Four Color Theorem for a short time, if at all. However, it would take until 1946 to find a counterexample to the conjecture Tait had used in his attempt to prove the Four Color Theorem.
+    </p>
 
-<p>
-In the first half of the twentieth century, some incremental progress
-toward resolving the Four Color Problem was made, but few prominent
-mathematicians took a serious interest in it. The final push to prove
-the Four Color Theorem came with about at the same time that
-the first electronic computers were coming into widespread use in
-industry and research. In 1976, two mathematicians at the University
-of Illinois announced their computer-assisted proof of the Four Color
-Theorem. The proof by Kenneth Appel and Wolfgang Haken led the
-University of Illinois to add the phrase <q>FOUR COLORS
-SUFFICE</q> to its postage meter's imprint.<fn>A photograph of an envelope with such a meter mark
-  on it can be found in the book <em>The Four-Color Theorem:
-    History, Topological Foundations, and Idea of Proof</em> by Rudolf and
-  Gerda Fritsch. (Springer, 1998)</fn>
-</p>
+    <p>In the first half of the twentieth century, some incremental progress toward resolving the Four Color Problem was made, but few prominent mathematicians took a serious interest in it. The final push to prove the Four Color Theorem came with about at the same time that the first electronic computers were coming into widespread use in industry and research. In 1976, two mathematicians at the University of Illinois announced their computer-assisted proof of the Four Color Theorem. The proof by Kenneth Appel and Wolfgang Haken led the University of Illinois to add the phrase <q>FOUR COLORS SUFFICE</q> to its postage meter's imprint.<fn>A photograph of an envelope with such a meter mark on it can be found in the book <booktitle>The Four-Color Theorem: History, Topological Foundations, and Idea of Proof</booktitle> by Rudolf and Gerda Fritsch. (Springer, 1998)</fn>
+    </p>
 
-<theorem xml:id="thm_4ct">
-<title>Four Color Theorem</title>
-<statement>
-<p>
-Every planar graph has chromatic number at most four.
-</p>
-</statement>
-</theorem>
+    <theorem xml:id="thm_4ct">
+        <title>Four Color Theorem</title>
+        <statement>
+            <p>
+                Every planar graph has chromatic number at most four.
+            </p>
+        </statement>
+    </theorem>
 
-<p>
-Appel and Haken's proof of the Four Color Theorem was at a minimum
-unsatisfactory for many mathematicians, and to some it simply wasn't a
-proof. These mathematicians felt that the using a computer to check
-various cases was simply too uncertain; how could you be certain that
-the code that checked the 1,482 <q>unavoidable configurations</q> didn't
-contain any logic errors? In fact, there were several mistakes found
-in the cases analyzed, but none were found to be fatal flaws. In 1989,
-Appel and Haken published a 741-page tome entitled <em>Every
-Planar Map is Four Colorable</em> which provided corrections to all
-known flaws in their original argument. This still didn't satisfy
-many, and in the early 1990's a team consisting of Neil Robertson from
-The Ohio State University; Daniel P. Sanders, a graduate student at
-the Georgia Institute of Technology; Paul Seymour of
-Bellcore; and Robin Thomas from Georgia Tech announced a new proof of
-the Four Color Theorem. However, it still required the use of
-computers. The proof did gain more widespread acceptance than that of
-Appel and Haken, in part because the new proof used fewer than half
-(<m>633</m>) of the number of configurations the Appel-Haken proof used and
-the computer code was provided online for anyone to verify. While
-still unsatisfactory to many, the proof by Robertson, et al. was
-generally accepted, and today the issue of the Four Color Theorem has
-largely been put to rest. However, many still wonder if anyone will
-ever find a proof of this simple statement that does not require the
-assistance of a computer.
-</p>
+    <p>Appel and Haken's proof of the Four Color Theorem was at a minimum unsatisfactory for many mathematicians, and to some it simply wasn't a proof. These mathematicians felt that the using a computer to check various cases was simply too uncertain; how could you be certain that the code that checked the 1,482 <q>unavoidable configurations</q> didn't contain any logic errors? In fact, there were several mistakes found in the cases analyzed, but none were found to be fatal flaws. In 1989, Appel and Haken published a 741-page tome entitled <booktitle>Every Planar Map is Four Colorable</booktitle> which provided corrections to all known flaws in their original argument. This still didn't satisfy many, and in the early 1990's a team consisting of Neil Robertson from The Ohio State University; Daniel P. Sanders, a graduate student at the Georgia Institute of Technology; Paul Seymour of Bellcore; and Robin Thomas from Georgia Tech announced a new proof of the Four Color Theorem. However, it still required the use of computers. The proof did gain more widespread acceptance than that of Appel and Haken, in part because the new proof used fewer than half (<m>633</m>) of the number of configurations the Appel-Haken proof used and the computer code was provided online for anyone to verify. While still unsatisfactory to many, the proof by Robertson, et al. was generally accepted, and today the issue of the Four Color Theorem has largely been put to rest. However, many still wonder if anyone will ever find a proof of this simple statement that does not require the assistance of a computer.
+    </p>
 </section>
