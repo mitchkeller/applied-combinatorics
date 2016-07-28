@@ -9,7 +9,7 @@
             <caption>A labeled graph with weighted edges</caption>
             <image width="60%" source="images/3012-fig12" />
         </figure>
-        <p>Suppose the vertices are cities, the edges are highways and the weights on the edges represent <em>distance</em>.
+        <p>Suppose the vertices are cities, the edges are highways and the weights on the edges represent <term>distance</term>.
         </p>
         <ol>
             <li>
@@ -30,7 +30,7 @@
     <example>
         <p>Now suppose that the vertices are locations of branch banks in Atlanta and that the weights on an edge represents the cost, in millions of dollars, of building a high capacity data link between the branch banks at it two end points. In this model, if there is no edge between two branch banks, it means that the cost of building a data link between this particular pair is prohibitively high (here we might be tempted to say the cost is infinite, but the authors don't admit to knowing the meaning of this word).
         </p>
-        <p>Our challenge is to decide which data links should be constructed to form a network in which any branch bank can communicate with any other branch. We assume that data can flow in either direction on a link, should it be built, and that data can be relayed through any number of data links. So to allow full communication, we should construct a <em>spanning tree</em> in this network. In <xref ref="fig_spantree-1" autoname="yes" />, we show a graph <m>G</m> on the left and one of its many <em>spanning trees</em> on the right.
+        <p>Our challenge is to decide which data links should be constructed to form a network in which any branch bank can communicate with any other branch. We assume that data can flow in either direction on a link, should it be built, and that data can be relayed through any number of data links. So to allow full communication, we should construct a <term>spanning tree</term> in this network. In <xref ref="fig_spantree-1" autoname="yes" />, we show a graph <m>G</m> on the left and one of its many spanning trees on the right.
         </p>
         <figure xml:id="fig_spantree-1" >
             <caption>A weighted graph and spanning tree</caption>
