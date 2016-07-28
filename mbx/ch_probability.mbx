@@ -1,58 +1,24 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_probability">
-<title>Probability</title>
+    <title>Probability</title>
+    <introduction>
+        <p>It was a slow day and Dave said he was bored. It was just after lunch, and he complained that there was nothing to do. Nobody really seemed to be listening, although Alice said that Dave might consider studying, even reading ahead in the chapter. Undeterred, Dave said <q>Hey Alice, how about we play a game. We could take turns tossing a coin, with the other person calling heads or tails. We could keep score with the first one to a hundred being the winner.</q> Alice rolled her eyes at such a lame idea. Sensing Alice's lack of interest, Dave countered <q>OK, how about a hundred games of Rock, Paper or Scissors?</q> Zori said <q>Why play a hundred times? If that's what you're going to do, just play a single game.</q>
+        </p>
 
+        <p>Now it was Alice's turn. <q>If you want to play a game, I've got a good one for you. Just as you wanted, first one to score a hundred wins. You roll a pair of dice. If you roll doubles, I win <m>2</m> points. If the two dice have a difference of one, I win <m>1</m> point.  If the difference is <m>2</m>, then it's a tie. If the difference is <m>3</m>, you win one point; if the difference is<nbsp /><m>4</m>, you win two points; and if the difference is <m>5</m>, you win three points.</q> Xing interrupted to say <q>In other words, if the difference is <m>d</m>, then Dave wins <m>d-2</m> points.</q> Alice continues <q>Right! And there are three ways Dave can win, with one of them being the biggest prize of all. Also, rolling doubles is rare, so this has to be a good game for Dave.</q>
+        </p>
 
-<introduction>
-<p>
-It was a slow day and Dave said he was bored. It was just after lunch,
-and he complained that there was nothing to do. Nobody really seemed
-to be listening, although Alice said that Dave might consider
-studying, even reading ahead in the chapter. Undeterred, Dave said
-<q>Hey Alice, how about we play a game. We could take turns tossing a
-coin, with the other person calling heads or tails. We could keep
-score with the first one to a hundred being the winner.</q> Alice
-rolled her eyes at such a lame idea. Sensing Alice's lack of
-interest, Dave countered <q>OK, how about a hundred games of Rock, Paper
-or Scissors?</q> Zori said <q>Why play a hundred times? If that's what
-you're going to do, just play a single game.</q>
-</p>
+        <p>Zori's ears perked up with Alice's description. She had a gut feeling that this game wasn't really in Dave's favor and that Alice knew what the real situation was. The idea of a payoff with some uncertainty involved seemed very relevant. Carlos was scribbling on a piece of paper, then said politely <q>Dave, you really should be reading ahead in the chapter</q>.
+        </p>
 
-<p>
-Now it was Alice's turn. <q>If you want to play a game, I've got a
-good one for you. Just as you wanted, first one to score a hundred
-wins. You roll a pair of dice. If you roll doubles, I win <m>2</m>
-points. If the two dice have a difference of one, I win <m>1</m> point.
-If the difference is <m>2</m>, then it's a tie. If the difference is <m>3</m>,
-you win one point; if the difference is<nbsp /><m>4</m>, you win two points; and if
-the difference is <m>5</m>, you win three points. Xing interrupted to say
-``In other words, if the difference is <m>d</m>, then Dave wins <m>d-2</m>
-points.</q> Alice continues <q>Right! And there are three ways Dave can
-win, with one of them being the biggest prize of all. Also, rolling
-doubles is rare, so this has to be a good game for Dave.</q>
-</p>
-
-<p>
-Zori's ears perked up with Alice's description. She had a gut feeling
-that this game wasn't really in Dave's favor and that Alice knew what
-the real situation was. The idea of a payoff with some
-uncertainty involved seemed very relevant. Carlos was scribbling on a piece of paper,
-then said politely <q>Dave, you really should be reading ahead in the
-chapter</q>.
-</p>
-
-<p>
-So what do you think? Is this a fair game? What does it mean for a
-game to be fair? Should Dave play<mdash />independent of the question of
-whether such silly stuff should occupy one's time? And what does any
-of this conversation have to do with combinatorics?
-</p>
-</introduction>
-<xi:include  href="s_probability_intro.mbx" />
- <xi:include  href="s_probability_conditional.mbx" />
- <xi:include  href="s_probability_bernoulli-trials.mbx" />
- <xi:include  href="s_probability_discrete-random-variables.mbx" />
- <xi:include  href="s_probability_central-tendency.mbx" />
- <xi:include  href="s_probability_infinite-outcomes.mbx" />
- <xi:include  href="s_probability_discussion.mbx" />
- <xi:include  href="s_probability_exercises.mbx" />
+        <p>So what do you think? Is this a fair game? What does it mean for a game to be fair? Should Dave play<mdash />independent of the question of whether such silly stuff should occupy one's time? And what does any of this conversation have to do with combinatorics?
+        </p>
+    </introduction>
+    <xi:include  href="s_probability_intro.mbx" />
+    <xi:include  href="s_probability_conditional.mbx" />
+    <xi:include  href="s_probability_bernoulli-trials.mbx" />
+    <xi:include  href="s_probability_discrete-random-variables.mbx" />
+    <xi:include  href="s_probability_central-tendency.mbx" />
+    <xi:include  href="s_probability_infinite-outcomes.mbx" />
+    <xi:include  href="s_probability_discussion.mbx" />
+    <xi:include  href="s_probability_exercises.mbx" />
 </chapter>
