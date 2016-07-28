@@ -1,211 +1,96 @@
 <section xml:id="s_flowapplications_chain-partition">
-<title>Chain partitioning</title>
-<p>
-In <xref ref="ch_posets" autoname="yes" />, we discussed
-Dilworth's theorem (<xref ref="thm_dilworth" autoname="yes" />),
-which told us that for any poset <m>\bfP</m> of width <m>w</m>, there is a
-partition of <m>\bfP</m> into <m>w</m>, but no fewer, chains. However, we were
-only able to devise an algorithm to find this chain partition (and a
-maximum antichain) in the special case where <m>\bfP</m> was an interval
-order. Now, through the magic of network flows, we will be able to
-devise an efficient algorithm that works in general for all
-posets. However, to do so, we will require a slightly more complicated
-network than we devised in the previous section.
-</p>
+    <title>Chain partitioning</title>
+    <p>In <xref ref="ch_posets" autoname="yes" />, we discussed <xref ref="thm_dilworth" autoname="title" />, which told us that for any poset <m>\bfP</m> of width <m>w</m>, there is a partition of <m>\bfP</m> into <m>w</m>, but no fewer, chains. However, we were only able to devise an algorithm to find this chain partition (and a maximum antichain) in the special case where <m>\bfP</m> was an interval order. Now, through the magic of network flows, we will be able to devise an efficient algorithm that works in general for all posets. However, to do so, we will require a slightly more complicated network than we devised in the previous section.<index><main>chain partition</main></index>
+    </p>
 
-<p>
-Suppose that the points of our poset <m>\bfP</m> are
-<m>\{x_1,x_2,\dots,x_n\}</m>. We construct a network from <m>\bfP</m> consisting
-of the source <m>S</m>, sink <m>T</m>, and two points <m>x'_i</m> and <m>x''_i</m> for
-each point <m>x_i</m> of <m>\bfP</m>. All edges in our network will have
-capacity <m>1</m>. We add edges from <m>S</m> to <m>x'_i</m> for <m>1\leq i\leq n</m> and
-from <m>x''_i</m> to <m>T</m> for <m>1\leq i\leq n</m>. Of course, this network
-wouldn't be too useful, as it has no edges from the single-prime nodes
-to the double-prime nodes. To resolve this, we add an edge directed
-from <m>x'_i</m> to <m>x''_j</m> if and only if <m>x_i \lt  x_j</m> in <m>\bfP</m>.
-</p>
+    <p>Suppose that the points of our poset <m>\bfP</m> are <m>\{x_1,x_2,\dots,x_n\}</m>. We construct a network from <m>\bfP</m> consisting of the source <m>S</m>, sink <m>T</m>, and two points <m>x'_i</m> and <m>x''_i</m> for each point <m>x_i</m> of <m>\bfP</m>. All edges in our network will have capacity <m>1</m>. We add edges from <m>S</m> to <m>x'_i</m> for <m>1\leq i\leq n</m> and from <m>x''_i</m> to <m>T</m> for <m>1\leq i\leq n</m>. Of course, this network wouldn't be too useful, as it has no edges from the single-prime nodes to the double-prime nodes. To resolve this, we add an edge directed from <m>x'_i</m> to <m>x''_j</m> if and only if <m>x_i \lt x_j</m> in <m>\bfP</m>.
+    </p>
 
-<p>
-Our running example in this section will be the poset in
-<xref ref="fig_flowapplications-poset">Figure</xref>. We'll discuss the points of the
-poset as <m>x_i</m> where <m>i</m> is the number printed next to the point in
-the diagram.
-</p>
-<sidebyside>
-  <caption>A partially ordered set <xref ref="fig_flowapplications-poset" /> and the associated network <xref ref="fig_flowapplications-network" />.</caption>
-  <figure xml:id="fig_flowapplications-poset" >
-    <caption>A small poset</caption>
-    <image width="35%" source="images/poset" />
-  </figure>
-  <figure xml:id="fig_flowapplications-network" >
-    <caption>The associated network</caption>
-    <image> <latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{images/poset_network}
-    \put(48,-5){\(S\)}
-    \put(48,93){\(T\)}
-    \put(1,20){\(x_1'\)}
-    \put(94,20){\(x_{10}'\)}
-    \put(1,71){\(x_1''\)}
-    \put(94,71){\(x_{10}''\)}
- \end{overpic}]]></latex-image-code>
-</image>
-  </figure>
-</sidebyside>
+    <p>Our running example in this section will be the poset in <xref ref="fig_flowapplications-poset" autoname="yes" />. We'll discuss the points of the poset as <m>x_i</m> where <m>i</m> is the number printed next to the point in the diagram.
+    </p>
+    <sidebyside widths="35% 60%">
+        <caption>A partially ordered set <xref ref="fig_flowapplications-poset" /> and the associated network <xref ref="fig_flowapplications-network" />.</caption>
+        <figure xml:id="fig_flowapplications-poset" >
+            <caption>A small poset</caption>
+            <image width="35%" source="images/poset" />
+        </figure>
+        <figure xml:id="fig_flowapplications-network" >
+            <caption>The associated network</caption>
+            <image> <latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{images/poset_network}
+            \put(48,-5){\(S\)}
+            \put(48,93){\(T\)}
+            \put(1,20){\(x_1'\)}
+            \put(94,20){\(x_{10}'\)}
+            \put(1,71){\(x_1''\)}
+            \put(94,71){\(x_{10}''\)}
+            \end{overpic}]]></latex-image-code>
+            </image>
+        </figure>
+    </sidebyside>
 
-<p>
-The first step is to create the network, which we show in
-<xref ref="fig_flowapplications-network">Figure</xref>.
-In this network, all capacities are <m>1</m>, edges are directed from
-bottom to top, the first row of ten vertices is the <m>x'_i</m> arranged
-consecutively with <m>x'_1</m> at the left and <m>x'_{10}</m> at the right, and
-the second row of ten vertices is the <m>x''_i</m> in increasing order of
-index. To see how this network is constructed, notice that <m>x_1\lt x_3</m>
-in the poset, so we have the directed edge <m>(x_1',x_3'')</m>. Similarly,
-<m>x_4</m> is less than <m>x_3</m>, <m>x_5</m>, and <m>x_9</m> in the poset, leading to
-three directed edges leaving <m>x_4'</m> in the network. As a third
-example, since <m>x_9</m> is maximal in the poset, there are no directed
-edges leaving <m>x_9'</m>.
-</p>
+    <p>The first step is to create the network, which we show in <xref ref="fig_flowapplications-network" autoname="yes" />.  In this network, all capacities are <m>1</m>, edges are directed from bottom to top, the first row of ten vertices is the <m>x'_i</m> arranged consecutively with <m>x'_1</m> at the left and <m>x'_{10}</m> at the right, and the second row of ten vertices is the <m>x''_i</m> in increasing order of index. To see how this network is constructed, notice that <m>x_1\lt x_3</m> in the poset, so we have the directed edge <m>(x_1',x_3'')</m>. Similarly, <m>x_4</m> is less than <m>x_3</m>, <m>x_5</m>, and <m>x_9</m> in the poset, leading to three directed edges leaving <m>x_4'</m> in the network. As a third example, since <m>x_9</m> is maximal in the poset, there are no directed edges leaving <m>x_9'</m>.
+    </p>
 
-<p>
-We have not yet seen how we might turn a maximum flow (or minimum cut)
-in the network we've just constructed into a minimum chain partition
-or a maximum antichain. It will be easier to see how this works once
-we have a confirmed maximum flow. Rather than running the labeling
-algorithm starting from the zero flow, we eyeball a flow, such as the
-one shown in
-<xref ref="fig_flowapplications_poset_network_flow" autoname="yes" />. (Again, we use the
-convention that thick edges are full, while thin edges are empty.)
-</p>
-<figure xml:id="fig_flowapplications_poset_network_flow" >
-<caption>An initial flow</caption>
-<image>
-<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/poset_network_flow}
-    \put(48,-5){\(S\)}
-    \put(48,93){\(T\)}
-    \put(1,20){\(x_1'\)}
-    \put(94,20){\(x_{10}'\)}
-    \put(1,71){\(x_1''\)}
-    \put(94,71){\(x_{10}''\)}
-  \end{overpic}]]></latex-image-code>
-</image>
-</figure>
-<p>
-When we run the labeling algorithm (using priority
-<m>S,T,x_1',\dots,x_{10}',x_1'',\dots,x_{10}''</m>), we obtain the
-following list of labels:
-</p>
-<md>
-  <mrow>  S:\quad \amp (*,+,\infty) \amp  x''_9:\quad \amp (x'_5,+,1) \amp  x'_3:\quad \amp (S,+,1)</mrow>
-  <mrow>  x'_3:\quad \amp (S,+,1) \amp  x''_4:\quad \amp (x'_6,+,1) \amp x''_1:\quad \amp (x'_7,+,1)</mrow>
-  <mrow>  x'_5:\quad \amp (S,+,1)\amp  x''_5:\quad \amp (x'_6,+,1) \amp  x''_2:\quad \amp (x'_7,+,1)</mrow>
-  <mrow>  x'_6:\quad \amp (S,+,1)\amp  x'_1:\quad \amp (x''_3,-,1) \amp  x'_2:\quad \amp (x'_7,+,1)</mrow>
-  <mrow>  x'_9:\quad \amp (S,+,1)\amp  x'_8:\quad \amp (x''_9,-,1) \amp  T:\quad \amp (x''_2,+,1)</mrow>
-  <mrow>  x''_3:\quad \amp (x'_5,+,1) \amp  x'_7:\quad \amp (x''_4,-,1)  \amp</mrow>
-</md>
-<p>
-Thus, we find the augmenting path <m>(S,x'_6,x''_4,x'_7,x''_2,T)</m>, and the
-updated flow can be seen in <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" />.
-</p>
-<figure xml:id="fig_flowapplications_poset_network_flow2" >
-<caption>A better flow</caption>
-<image>
-<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/poset_network_flow2}
-    \put(48,-5){\(S\)}
-    \put(48,93){\(T\)}
-    \put(1,20){\(x_1'\)}
-    \put(94,20){\(x_{10}'\)}
-    \put(1,71){\(x_1''\)}
-    \put(94,71){\(x_{10}''\)}
+    <p>We have not yet seen how we might turn a maximum flow (or minimum cut) in the network we've just constructed into a minimum chain partition or a maximum antichain. It will be easier to see how this works once we have a confirmed maximum flow. Rather than running the labeling algorithm starting from the zero flow, we eyeball a flow, such as the one shown in <xref ref="fig_flowapplications_poset_network_flow" autoname="yes" />. (Again, we use the convention that thick edges are full, while thin edges are empty.)
+    </p>
+    <figure xml:id="fig_flowapplications_poset_network_flow" >
+        <caption>An initial flow</caption>
+        <image width="70%">
+            <latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/poset_network_flow}
+            \put(48,-5){\(S\)}
+            \put(48,93){\(T\)}
+            \put(1,20){\(x_1'\)}
+            \put(94,20){\(x_{10}'\)}
+            \put(1,71){\(x_1''\)}
+            \put(94,71){\(x_{10}''\)}
+            \end{overpic}]]></latex-image-code>
+        </image>
+    </figure>
+    <p>When we run the labeling algorithm (using priority <m>S,T,x_1',\dots,x_{10}',x_1'',\dots,x_{10}''</m>), we obtain the following list of labels:
+    <md>
+        <mrow>  S:\quad \amp (*,+,\infty) \amp  x''_9:\quad \amp (x'_5,+,1) \amp  x'_3:\quad \amp (S,+,1)</mrow>
+        <mrow>  x'_3:\quad \amp (S,+,1) \amp  x''_4:\quad \amp (x'_6,+,1) \amp x''_1:\quad \amp (x'_7,+,1)</mrow>
+        <mrow>  x'_5:\quad \amp (S,+,1)\amp  x''_5:\quad \amp (x'_6,+,1) \amp  x''_2:\quad \amp (x'_7,+,1)</mrow>
+        <mrow>  x'_6:\quad \amp (S,+,1)\amp  x'_1:\quad \amp (x''_3,-,1) \amp  x'_2:\quad \amp (x'_7,+,1)</mrow>
+        <mrow>  x'_9:\quad \amp (S,+,1)\amp  x'_8:\quad \amp (x''_9,-,1) \amp  T:\quad \amp (x''_2,+,1)</mrow>
+        <mrow>  x''_3:\quad \amp (x'_5,+,1) \amp  x'_7:\quad \amp (x''_4,-,1)  \amp</mrow>
+    </md>
+    Thus, we find the augmenting path <m>(S,x'_6,x''_4,x'_7,x''_2,T)</m>, and the updated flow can be seen in <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" />.
+    </p>
+    <figure xml:id="fig_flowapplications_poset_network_flow2" >
+        <caption>A better flow</caption>
+        <image width="70%">
+            <latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/poset_network_flow2}
+            \put(48,-5){\(S\)}
+            \put(48,93){\(T\)}
+            \put(1,20){\(x_1'\)}
+            \put(94,20){\(x_{10}'\)}
+            \put(1,71){\(x_1''\)}
+            \put(94,71){\(x_{10}''\)}
 
-  \end{overpic}]]></latex-image-code>
-</image>
-</figure>
-<p>
-If we run the labeling algorithm again, the algorithm assigns the labels
-below, leaving the sink unlabeled.
-</p>
-<md>
-  <mrow>  S:\quad \amp  (*,+,\infty)\amp  x'_5:\quad \amp (S,+,1) \amp  x''_3:\quad
-  \amp (x'_5,+,1) \amp  x'_1:\quad \amp  (x''_3,-,1)</mrow>
-  <mrow>  x'_3:\quad \amp (S,+,1) \amp  x'_9:\quad \amp (S,+,1) \amp  x''_9:\quad \amp  (x'_5,+,1)
-  \amp  x'_8:\quad \amp (x''_9,-,1)</mrow>
-</md>
-<p>
-In <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" />, the black
-vertices are those the labeled in the final run, while the gold
-vertices are the unlabeled vertices.
-</p>
+            \end{overpic}]]></latex-image-code>
+        </image>
+    </figure>
+    <p>If we run the labeling algorithm again, the algorithm assigns the labels below, leaving the sink unlabeled.
+    <md>
+        <mrow>  S:\quad \amp  (*,+,\infty)\amp  x'_5:\quad \amp (S,+,1) \amp  x''_3:\quad
+        \amp (x'_5,+,1) \amp  x'_1:\quad \amp  (x''_3,-,1)</mrow>
+        <mrow>  x'_3:\quad \amp (S,+,1) \amp  x'_9:\quad \amp (S,+,1) \amp  x''_9:\quad \amp  (x'_5,+,1)
+        \amp  x'_8:\quad \amp (x''_9,-,1)</mrow>
+    </md>
+    In <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" />, the black vertices are those the labeled in the final run, while the gold vertices are the unlabeled vertices.
+    </p>
 
-<p>
-Now that we've gone over the part you already knew how to do, we need
-to discuss how to translate this network flow and cut into a chain
-partition and an antichain. If there is a unit of flow on an edge
-<m>(x_i',x_j'')</m>, then a good first instinct is to place <m>x_i</m> and <m>x_j</m>
-in the same chain of a chain partition. To be able to do this
-successfully, of course, we need to ensure that this won't result in
-two incomparable points being placed in a chain. A way to see that
-everything works as desired is to think of starting with
-<m>(x_i',x_j'')</m> and then looking for flow leaving <m>x_j'</m>. If there is,
-it goes to a vertex <m>x_k''</m>, so we may add <m>x_k</m> to the chain since
-<m>x_i\lt x_j\lt x_k</m>. Continue in this manner until reaching a vertex in the
-network that does not have any flow leaving it. Then see if <m>x_i''</m>
-has flow coming into it. If it does, it's from a vertex <m>x_m'</m> that
-can be added since <m>x_m\lt x_i\lt x_j</m>.
-</p>
+    <p>Now that we've gone over the part you already knew how to do, we need to discuss how to translate this network flow and cut into a chain partition and an antichain. If there is a unit of flow on an edge <m>(x_i',x_j'')</m>, then a good first instinct is to place <m>x_i</m> and <m>x_j</m> in the same chain of a chain partition. To be able to do this successfully, of course, we need to ensure that this won't result in two incomparable points being placed in a chain. A way to see that everything works as desired is to think of starting with <m>(x_i',x_j'')</m> and then looking for flow leaving <m>x_j'</m>. If there is, it goes to a vertex <m>x_k''</m>, so we may add <m>x_k</m> to the chain since <m>x_i\lt x_j\lt x_k</m>. Continue in this manner until reaching a vertex in the network that does not have any flow leaving it. Then see if <m>x_i''</m> has flow coming into it. If it does, it's from a vertex <m>x_m'</m> that can be added since <m>x_m\lt x_i\lt x_j</m>.
+    </p>
 
-<p>
-Let's see how following this process for the flow in
-<xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" /> leads to a chain
-partition. If we start with <m>x_1'</m>, we see that <m>(x_1',x_3'')</m> is
-full, so we place <m>x_1</m> and <m>x_3</m> in chain <m>C_1</m>. Since <m>x_3'</m> has no
-flow leaving it, there are no greater elements to add to the
-chain. However, <m>x_1''</m> has flow in from <m>x_2'</m>, so we add <m>x_2</m> to
-<m>C_1</m>. We now see that <m>x_2''</m> has flow in from <m>x_7'</m>, so now
-<m>C_1=\{x_1,x_2,x_3,x_7\}</m>. Vertex <m>x_7''</m> has no flow into it, so the
-building of the first chain stops. The first vertex we haven't placed
-into a chain is <m>x_4</m>, so we note that <m>(x_4',x_5'')</m> is full, placing
-<m>x_4</m> and <m>x_5</m> in chain <m>C_2</m>. We then look from <m>x_5'</m> and see no
-flow leaving. However, there is flow into <m>x_4''</m> from <m>x_6'</m>, so
-<m>x_6</m> is added to <m>C_2</m>. There is no flow out of <m>x_6''</m>, so
-<m>C_2=\{x_4,x_5,x_6\}</m>. Now the first point not in a chain is <m>x_8</m>, so
-we use the flow from <m>x_8'</m> to <m>x_9''</m> to place <m>x_8</m> and <m>x_9</m> in
-chain <m>C_3</m>. Again, no flow out of <m>x_9'</m>, so we look to <m>x_8''</m>,
-which is receiving flow from <m>x_{10}''</m>. Adding <m>x_{10}</m> to <m>C_3</m>
-gives <m>C_3=\{x_8,x_9,x_{10}\}</m>, and since every point is now in a
-chain, we may stop.
-</p>
+    <p>Let's see how following this process for the flow in <xref ref="fig_flowapplications_poset_network_flow2" autoname="yes" /> leads to a chain partition. If we start with <m>x_1'</m>, we see that <m>(x_1',x_3'')</m> is full, so we place <m>x_1</m> and <m>x_3</m> in chain <m>C_1</m>. Since <m>x_3'</m> has no flow leaving it, there are no greater elements to add to the chain. However, <m>x_1''</m> has flow in from <m>x_2'</m>, so we add <m>x_2</m> to <m>C_1</m>. We now see that <m>x_2''</m> has flow in from <m>x_7'</m>, so now <m>C_1=\{x_1,x_2,x_3,x_7\}</m>. Vertex <m>x_7''</m> has no flow into it, so the building of the first chain stops. The first vertex we haven't placed into a chain is <m>x_4</m>, so we note that <m>(x_4',x_5'')</m> is full, placing <m>x_4</m> and <m>x_5</m> in chain <m>C_2</m>. We then look from <m>x_5'</m> and see no flow leaving. However, there is flow into <m>x_4''</m> from <m>x_6'</m>, so <m>x_6</m> is added to <m>C_2</m>. There is no flow out of <m>x_6''</m>, so <m>C_2=\{x_4,x_5,x_6\}</m>. Now the first point not in a chain is <m>x_8</m>, so we use the flow from <m>x_8'</m> to <m>x_9''</m> to place <m>x_8</m> and <m>x_9</m> in chain <m>C_3</m>. Again, no flow out of <m>x_9'</m>, so we look to <m>x_8''</m>, which is receiving flow from <m>x_{10}''</m>. Adding <m>x_{10}</m> to <m>C_3</m> gives <m>C_3=\{x_8,x_9,x_{10}\}</m>, and since every point is now in a chain, we may stop.
+    </p>
 
-<p>
-Even once we see that the above process does in fact generate a chain
-partition, it is not immediately clear that it's a minimum chain
-partition. For this, we need to find an antichain of as many points as
-there are chains in our partition. (In the example we've been using,
-we need to find a three-element antichain.) This is where tracking
-the labeled vertices comes in handy. Suppose we have determined a
-chain <m>C=\{x_1\lt x_2\lt \cdots \lt  x_k\}</m> using the network flow. Since <m>x_1</m>
-is the minimal element of this chain, there is no flow into <m>x_1''</m>
-and hence no flow out of <m>x_1''</m>. Since <m>T</m> is unlabeled, this must
-mean that <m>x_1''</m> is unlabeled. Similarly, <m>x_k</m> is the maximal
-element of <m>C</m>, so there is no flow out of <m>x_k'</m>. Thus, <m>x_k'</m> is
-labeled. Now considering the sequence of vertices
-</p>
-<me>
-  x_k',x_k'',x_{k-1}',x_{k-1}'',\dots,x_2',x_2'',x_1',x_1'',
-</me>
-<p>
-there
-must be a place where the vertices switch from being labeled to
-unlabeled. This must happen with <m>x_i'</m> labeled and <m>x_i''</m>
-unlabeled. To see why, suppose that <m>x_i'</m> and <m>x_i''</m> are both
-unlabeled while <m>x_{i+1}'</m> and <m>x_{i+1}''</m> are both labeled. Because
-<m>x_i</m> and <m>x_{i+1}</m> are consecutive in <m>C</m>, there is flow on
-<m>(x_i',x_{i+1}'')</m>. Therefore, when scanning from <m>x_{i+1}''</m>, the
-vertex <m>x_i'</m> would be labeled. For each chain of the chain partition,
-we then take the first element <m>y</m> for which <m>y'</m> is labeled and <m>y''</m>
-is unlabeled to form an antichain <m>A=\{y_1,\dots,y_w\}</m>. To see that
-<m>A</m> is an antichain, notice that if <m>y_i\lt y_j</m>, then <m>(y_i',y_j'')</m> is
-an edge in the network. Therefore, the scan from <m>y_i'</m> would label
-<m>y_j''</m>. Using this process, we find that a maximum antichain in our
-example is <m>\{x_1,x_5,x_8\}</m>.
-</p>
+    <p>Even once we see that the above process does in fact generate a chain partition, it is not immediately clear that it's a minimum chain partition. For this, we need to find an antichain of as many points as there are chains in our partition. (In the example we've been using, we need to find a three-element antichain.) This is where tracking the labeled vertices comes in handy. Suppose we have determined a chain <m>C=\{x_1\lt x_2\lt \cdots \lt x_k\}</m> using the network flow. Since <m>x_1</m> is the minimal element of this chain, there is no flow into <m>x_1''</m> and hence no flow out of <m>x_1''</m>. Since <m>T</m> is unlabeled, this must mean that <m>x_1''</m> is unlabeled. Similarly, <m>x_k</m> is the maximal element of <m>C</m>, so there is no flow out of <m>x_k'</m>. Thus, <m>x_k'</m> is labeled. Now considering the sequence of vertices
+    <me>
+        x_k',x_k'',x_{k-1}',x_{k-1}'',\dots,x_2',x_2'',x_1',x_1'',
+    </me>
+    there must be a place where the vertices switch from being labeled to unlabeled. This must happen with <m>x_i'</m> labeled and <m>x_i''</m> unlabeled. To see why, suppose that <m>x_i'</m> and <m>x_i''</m> are both unlabeled while <m>x_{i+1}'</m> and <m>x_{i+1}''</m> are both labeled. Because <m>x_i</m> and <m>x_{i+1}</m> are consecutive in <m>C</m>, there is flow on <m>(x_i',x_{i+1}'')</m>. Therefore, when scanning from <m>x_{i+1}''</m>, the vertex <m>x_i'</m> would be labeled. For each chain of the chain partition, we then take the first element <m>y</m> for which <m>y'</m> is labeled and <m>y''</m> is unlabeled to form an antichain <m>A=\{y_1,\dots,y_w\}</m>. To see that <m>A</m> is an antichain, notice that if <m>y_i\lt y_j</m>, then <m>(y_i',y_j'')</m> is an edge in the network. Therefore, the scan from <m>y_i'</m> would label <m>y_j''</m>. Using this process, we find that a maximum antichain in our example is <m>\{x_1,x_5,x_8\}</m>.
+    </p>
 </section>
