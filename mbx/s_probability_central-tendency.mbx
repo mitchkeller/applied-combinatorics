@@ -113,13 +113,13 @@
             </statement>
 
             <proof>
-                <p>Let <m>A=\{r\in \mathbb{R}:|r-\mu|>k\sigma_X\}</m>.
+                <p>Let <m>A=\{r\in \reals:|r-\mu|>k\sigma_X\}</m>.
             </p>
             <p>
                 Then we have:
                 <md>
                     <mrow>  \var(X) \amp = E((X-\mu)^2)</mrow>
-                    <mrow>  \amp = \sum_{r\in \mathbb{R}}(r-\mu)^2\prob(X=r)</mrow>
+                    <mrow>  \amp = \sum_{r\in \reals}(r-\mu)^2\prob(X=r)</mrow>
                     <mrow>  \amp \ge \sum_{r\in A}(r-\mu)^2\prob(X=r)</mrow>
                     <mrow>  \amp \ge k^2\sigma_X^2\sum_{r\in A}\prob(X=r)</mrow>
                     <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|>k\sigma_X).</mrow>
