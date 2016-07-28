@@ -1,34 +1,18 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_recurrence">
-<title>Recurrence Equations</title>
+    <title>Recurrence Equations</title>
 
 
-<introduction>
-<p>
-We have already seen many examples of recurrence in the definitions of
-combinatorial functions and expressions. The development of number
-systems in <xref ref="app_background" autoname="yes" /> lays the groundwork for recurrence in
-mathematics. Other examples we have seen include the Collatz sequence
-of <xref ref="ex_collatz">Example</xref> and the binomial
-coefficients. In <xref ref="ch_induction" autoname="yes" />, we also saw how recurrences
-could arise when enumerating strings with certain restrictions, but we
-didn't discuss how we might get from a recursive definition of a
-function to an explicit definition depending only on <m>n</m>, rather than
-earlier values of the function. In this chapter, we present a more
-systematic treatment of recurrence with the end goal of finding closed
-form expressions for functions defined recursively<mdash />whenever
-possible. We will focus on the case of linear recurrence
-equations. At the end of the chapter, we will also revisit some of
-what we learned in <xref ref="ch_genfunction" autoname="yes" /> to see how generating
-functions can also be used to solve recurrences.
-</p>
-</introduction>
-<xi:include  href="s_recurrence_intro.mbx" />
- <xi:include  href="s_recurrence_linear.mbx" />
- <xi:include  href="s_recurrence_adv-ops.mbx" />
- <xi:include  href="s_recurrence_solving.mbx" />
- <xi:include  href="s_recurrence_rigorous.mbx" />
- <xi:include  href="s_recurrence_genfunction.mbx" />
- <xi:include  href="s_recurrence_rubots.mbx" />
- <xi:include  href="s_recurrence_discussion.mbx" />
- <xi:include  href="s_recurrence_exercises.mbx" />
+    <introduction>
+        <p>We have already seen many examples of recurrence in the definitions of combinatorial functions and expressions. The development of number systems in <xref ref="app_background" autoname="yes" /> lays the groundwork for recurrence in mathematics. Other examples we have seen include the Collatz sequence of <xref ref="ex_collatz" autoname="yes" /> and the binomial coefficients. In <xref ref="ch_induction" autoname="yes" />, we also saw how recurrences could arise when enumerating strings with certain restrictions, but we didn't discuss how we might get from a recursive definition of a function to an explicit definition depending only on <m>n</m>, rather than earlier values of the function. In this chapter, we present a more systematic treatment of recurrence with the end goal of finding closed form expressions for functions defined recursively<mdash />whenever possible. We will focus on the case of linear recurrence equations. At the end of the chapter, we will also revisit some of what we learned in <xref ref="ch_genfunction" autoname="yes" /> to see how generating functions can also be used to solve recurrences.
+        </p>
+    </introduction>
+    <xi:include  href="s_recurrence_intro.mbx" />
+    <xi:include  href="s_recurrence_linear.mbx" />
+    <xi:include  href="s_recurrence_adv-ops.mbx" />
+    <xi:include  href="s_recurrence_solving.mbx" />
+    <xi:include  href="s_recurrence_rigorous.mbx" />
+    <xi:include  href="s_recurrence_genfunction.mbx" />
+    <xi:include  href="s_recurrence_rubots.mbx" />
+    <xi:include  href="s_recurrence_discussion.mbx" />
+    <xi:include  href="s_recurrence_exercises.mbx" />
 </chapter>

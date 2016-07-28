@@ -1,339 +1,192 @@
 <section xml:id="s_recurrence_rigorous">
-<title>Formalizing our approach to recurrence equations</title>
+    <title>Formalizing our approach to recurrence equations</title>
 
 
-<introduction>
-<p>
-So far, our approach to solving recurrence equations has been based on
-intuition, and we've not given a lot of explanation for why the
-solutions we've given have been the general solution. In this section,
-we endeavor to remedy this. Some familiarity with the language of
-linear algebra will be useful for the remainder of this section, but
-it is not essential.
-</p>
+    <introduction>
+        <p>So far, our approach to solving recurrence equations has been based on intuition, and we've not given a lot of explanation for why the solutions we've given have been the general solution. In this section, we endeavor to remedy this. Some familiarity with the language of linear algebra will be useful for the remainder of this section, but it is not essential.
+        </p>
 
-<p>
-Our techniques for solving recurrence equations have their roots in a
-fundamentally important concept in mathematics, the notion of a vector
-space. Recall that a vector space<fn> To be more complete, we
-  should say that we are talking about a vector space over the field
-  of real numbers, but in our course, these are the only kind of
-  vector spaces we will consider.  For this reason, we just use the
-  short phrase <q>vector space</q>.</fn> consists of a set <m>V</m> of elements
-called <em>vectors</em>; in addition, there is a binary operation
-called <em>addition</em> with the sum of vectors <m>x</m> and <m>y</m> denoted
-by <m>x+y</m>; furthermore, there is an operation called <em>scalar
-multiplication</em> or <em>scalar product</em> which combines a scalar
-(real number) <m>\alpha</m> and a vector <m>x</m> to form a product denoted
-<m>\alpha x</m>. These operations satisfy the following properties.
-</p>
+        <p>Our techniques for solving recurrence equations have their roots in a fundamentally important concept in mathematics, the notion of a vector space. Recall that a vector space<fn>To be more complete, we should say that we are talking about a vector space over the field of real numbers, but in our course, these are the only kind of vector spaces we will consider.  For this reason, we just use the short phrase <q>vector space</q>.</fn> consists of a set <m>V</m> of elements called <term>vectors</term>; in addition, there is a binary operation called <term>addition</term> with the sum of vectors <m>x</m> and <m>y</m> denoted by <m>x+y</m>; furthermore, there is an operation called <term>scalar multiplication</term> which combines a scalar (real number) <m>\alpha</m> and a vector <m>x</m> to form a product denoted <m>\alpha x</m>. These operations satisfy the following properties:
+        </p>
 
-<ol>
-<li><m>x+y=y+x</m> for every <m>x,y,\in V</m>.</li>
-<li><m>x+(y+z) = (x+y)+z</m>, for every <m>x,y,z\in V</m>.</li>
-<li>There is a vector called <em>zero</em> and denoted <m>0</m> so that
-  <m>x+0=x</m> for every <m>x\in V</m>. <em>Note:</em> We are again overloading
-  an operator and using the symbol <m>0</m> for something other than a
-  number.</li>
-<li>For every element <m>x\in V</m>, there is an element <m>y\in V</m>, called
-  the <em>additive inverse</em> of <m>x</m> and denoted <m>-x</m> so that
-  <m>x+(-x)=0</m>.  This property enables us to define
-  <em>subtraction</em>, i.e., <m>x-y= x+(-y)</m>.</li>
-<li><m>1x=x</m> for every <m>x\in X</m>.</li>
-<li><m>\alpha(\beta x) = (\alpha\beta)x</m>, for every
-  <m>\alpha,\beta\in\reals</m> and every <m>x\in V</m>.</li>
-<li><m>\alpha(x+y)=\alpha x + \alpha y</m> for every <m>\alpha\in\reals</m>
-  and every <m>x,y\in V</m>.</li>
-<li><m>(\alpha +\beta) x = \alpha x + \beta x</m>, for every
-  <m>\alpha,\beta\in\reals</m> and every <m>x\in V</m>.</li>
-</ol>
+        <ol>
+            <li><p><m>x+y=y+x</m> for every <m>x,y,\in V</m>.</p></li>
+            <li><p><m>x+(y+z) = (x+y)+z</m>, for every <m>x,y,z\in V</m>.</p></li>
+            <li><p>There is a vector called <term>zero</term> and denoted <m>0</m> so that <m>x+0=x</m> for every <m>x\in V</m>. <em>Note:</em> We are again overloading an operator and using the symbol <m>0</m> for something other than a number.</p></li>
+            <li><p>For every element <m>x\in V</m>, there is an element <m>y\in V</m>, called the <term>additive inverse</term> of <m>x</m> and denoted <m>-x</m> so that <m>x+(-x)=0</m>.  This property enables us to define <term>subtraction</term>, i.e., <m>x-y= x+(-y)</m>.</p></li>
+            <li><p><m>1x=x</m> for every <m>x\in X</m>.</p></li>
+            <li><p><m>\alpha(\beta x) = (\alpha\beta)x</m>, for every <m>\alpha,\beta\in\reals</m> and every <m>x\in V</m>.</p></li>
+            <li><p><m>\alpha(x+y)=\alpha x + \alpha y</m> for every <m>\alpha\in\reals</m> and every <m>x,y\in V</m>.</p></li>
+            <li><p><m>(\alpha +\beta) x = \alpha x + \beta x</m>, for every
+            <m>\alpha,\beta\in\reals</m> and every <m>x\in V</m>.</p></li>
+        </ol>
 
-<p>
-When <m>V</m> is a vector space, a function <m>\phi:V\rightarrow V</m> is called
-an <em>linear operator</em>, or just <em>operator</em> for short, when
-<m>\phi(x+y)=\phi(x)+\phi(y)</m> and <m>\phi(\alpha x)=\alpha\phi(x)</m>. When
-<m>\phi:V\rightarrow V</m> is an operator, it is customary to write <m>\phi
-x</m> rather than <m>\phi(x)</m>, saving a set of parentheses. The set of all
-operators over a vector space <m>V</m> is itself a vector space with
-addition defined by <m>(\phi+\rho)x = \phi x +\rho x</m> and scalar
-multiplication by <m>(\alpha\phi)x=\alpha(\phi x)</m>.
-</p>
+        <p>When <m>V</m> is a vector space, a function <m>\phi\colon V\rightarrow V</m> is called an <term>linear operator</term><index><main>operator</main><sub>linear</sub></index>, or just <term>operator</term> for short, when <m>\phi(x+y)=\phi(x)+\phi(y)</m> and <m>\phi(\alpha x)=\alpha\phi(x)</m>. When <m>\phi\colon V\rightarrow V</m> is an operator, it is customary to write <m>\phi x</m> rather than <m>\phi(x)</m>, saving a set of parentheses. The set of all operators over a vector space <m>V</m> is itself a vector space with addition defined by <m>(\phi+\rho)x = \phi x +\rho x</m> and scalar multiplication by <m>(\alpha\phi)x=\alpha(\phi x)</m>.
+        </p>
 
-<p>
-In this chapter, we focus on the real vector space <m>V</m> consisting of
-all functions of the form <m>f:\ints\rightarrow\reals</m>. Addition is
-defined by <m>(f+g)(n)= f(n)+g(n)</m> and scalar multiplication is defined
-by <m>(\alpha f)(n)=\alpha(f(n))</m>.
-</p>
-</introduction>
+        <p>In this chapter, we focus on the real vector space <m>V</m> consisting of all functions of the form <m>f\colon\ints\rightarrow\reals</m>. Addition is defined by <m>(f+g)(n)= f(n)+g(n)</m> and scalar multiplication is defined by <m>(\alpha f)(n)=\alpha(f(n))</m>.
+        </p>
+    </introduction>
 
 
-<subsection xml:id="s_recurrence_rigorous_principal">
-<title>The Principal Theorem</title>
-<p>
-Here is the basic theorem about solving recurrence equations (stated
-in terms of advancement operator equations)<mdash />and while we won't prove
-the full result, we will provide enough of an outline where it
-shouldn't be too difficult to fill in the missing details.
-</p>
+    <subsection xml:id="s_recurrence_rigorous_principal">
+        <title>The Principal Theorem</title>
+        <p>Here is the basic theorem about solving recurrence equations (stated in terms of advancement operator equations)<mdash />and while we won't prove the full result, we will provide enough of an outline where it shouldn't be too difficult to fill in the missing details.
+        </p>
 
-<theorem xml:id="thm_advance">
-<statement>
-<p>
-Let <m>k</m> be a positive integer <m>k</m>, and let <m>c_0,c_1,\dots,c_k</m> be
-constants with <m>c_0,c_k\neq 0</m>. Then the set <m>W</m> of all solutions to the
-homogeneous linear equation
-</p>
-<men>
-  (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0
-</men>
-<p>
-is a <m>k</m>-dimensional subspace of <m>V</m>.
-</p>
-</statement>
-</theorem>
+        <theorem xml:id="thm_advance">
+            <statement>
+                <p>Let <m>k</m> be a positive integer <m>k</m>, and let <m>c_0,c_1,\dots,c_k</m> be constants with <m>c_0,c_k\neq 0</m>. Then the set <m>W</m> of all solutions to the homogeneous linear equation
+                <men>
+                    (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0
+                </men>
+                is a <m>k</m>-dimensional subspace of <m>V</m>.
+                </p>
+            </statement>
+        </theorem>
 
-<p>
-The conclusion that the set <m>W</m> of all solutions is a subspace
-of <m>V</m> is immediate, since
-</p>
-<me>
-  p(A)(f+g)=p(A)f+p(A)g\quad\text{ and } \quad p(a)(\alpha f)=\alpha p(A)(f).
-</me>
-<p>
-What takes a bit of work is to show that <m>W</m> is a
-<m>k</m>-dimensional subspace. But once this is done,
-then to solve the advancement operator
-equation given in the form of <xref ref="thm_advance" autoname="yes" />, it
-suffices to find a <em>basis</em> for the vector space <m>W</m>.
-Every solution is just a linear combination of basis vectors.
-In the next several sections, we outline
-how this goal can be achieved.
-</p>
-</subsection>
+        <p>The conclusion that the set <m>W</m> of all solutions is a subspace of <m>V</m> is immediate, since
+        <me>
+            p(A)(f+g)=p(A)f+p(A)g\quad\text{ and } \quad p(a)(\alpha f)=\alpha p(A)(f).
+        </me>
+        What takes a bit of work is to show that <m>W</m> is a <m>k</m>-dimensional subspace. But once this is done, then to solve the advancement operator equation given in the form of <xref ref="thm_advance" autoname="yes" />, it suffices to find a <term>basis</term> for the vector space <m>W</m>.  Every solution is just a linear combination of basis vectors.  In the next several subsections, we outline how this goal can be achieved.
+        </p>
+    </subsection>
 
 
-<subsection xml:id="s_recurrence_rigorous_start">
-<title>The Starting Case</title>
-<p>
-The development proceeds by induction (surprise!) with
-the case <m>k=1</m> being the base case. In this case, we study
-a simple equation of the form <m>(c_0A+c_1)f=0</m>. Dividing by
-<m>c_0</m> and rewriting using subtraction rather than addition, it
-is clear that we are just talking about an equation of the form
-<m>(A-r)f=0</m> where <m>r\neq0</m>.
-</p>
+    <subsection xml:id="s_recurrence_rigorous_start">
+        <title>The Starting Case</title>
+        <p>The development proceeds by induction (surprise!) with the case <m>k=1</m> being the base case. In this case, we study a simple equation of the form <m>(c_0A+c_1)f=0</m>. Dividing by <m>c_0</m> and rewriting using subtraction rather than addition, it is clear that we are just talking about an equation of the form <m>(A-r)f=0</m> where <m>r\neq0</m>.
+        </p>
 
-<lemma xml:id="lem_base">
-<statement>
-<p>
-Let <m>r\neq0</m>,and let <m>f</m> be a solution to the operator equation <m>(A-r)f=0</m>,
-Then let <m>c=f(0)</m>. Then <m>f(n)=cr^n</m> for every
-<m>n\in \ints</m>.
-</p>
-</statement>
-</lemma>
+        <lemma xml:id="lem_base">
+            <statement>
+                <p>Let <m>r\neq0</m>, and let <m>f</m> be a solution to the operator equation <m>(A-r)f=0</m>. If <m>c=f(0)</m>, then <m>f(n)=cr^n</m> for every <m>n\in \ints</m>.
+                </p>
+            </statement>
 
-<proof>
-<p>
-We first show that <m>f(n)=cr^n</m> for every
-<m>n\ge0</m>, by induction on <m>n</m>. The base case is trivial since
-<m>c=f(0) = cr^0</m>. Now suppose that <m>f(k)=cr^k</m> for some non-negative
-integer <m>k</m>. Then <m>(A-r)f=0</m> implies that <m>f(k+1)-rf(k)=0</m>, i.e.,
-</p>
-<me>
-  f(k+1)=rf(k)= rcr^k=cr^{k+1}.
-</me>
-<p>
-A very similar argument shows that <m>f(-n) = cr^{-n}</m> for
-every <m>n\le0</m>.
-</p>
-</proof>
+            <proof>
+                <p>We first show that <m>f(n)=cr^n</m> for every <m>n\ge0</m>, by induction on <m>n</m>. The base case is trivial since <m>c=f(0) = cr^0</m>. Now suppose that <m>f(k)=cr^k</m> for some non-negative integer <m>k</m>. Then <m>(A-r)f=0</m> implies that <m>f(k+1)-rf(k)=0</m>, i.e.,
+                <me>
+                    f(k+1)=rf(k)= rcr^k=cr^{k+1}.
+                </me>
+                A very similar argument shows that <m>f(-n) = cr^{-n}</m> for every <m>n\le0</m>.
+                </p>
+            </proof>
+        </lemma>
+        <lemma xml:id="lem_particular">
+            <statement>
+                <p>
+                    Consider a nonhomogeneous operator equation of the form
+                    <men xml:id="eqn_nonhomogeneous" >
+                        p(A)f= (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g,
+                    </men>
+                    with <m>c_0,c_k\neq0</m>, and let <m>W</m> be the subspace of <m>V</m> consisting of all solutions to the corresponding homogeneous equation
+                    <men xml:id="eqn_homogeneous" >
+                        p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0.
+                    </men>
+                    If <m>f_0</m> is a solution to <xref ref="eqn_nonhomogeneous" autoname="yes" />, then every solution <m>f</m> to <xref ref="eqn_nonhomogeneous" autoname="yes" /> has the form <m>f=f_0+f_1</m> where <m>f_1\in W</m>.
+                </p>
+            </statement>
+            <proof>
+                <p>Let <m>f</m> be a solution of <xref ref="eqn_nonhomogeneous" autoname="yes" />, and let <m>f_1=f-f_0</m>.  Then
+                <me>
+                    p(A)f_1 = p(A)(f-f_0)=p(A)f-p(A)f_0=g-g=0.
+                </me>
+                This implies that <m>f_1\in W</m> and that <m>f=f_0+f_1</m> so that all solutions to <xref ref="eqn_nonhomogeneous" autoname="yes" /> do in fact have the desired form.
+                </p>
+            </proof>
+        </lemma>
+        <p>Using the preceding two results, we can now provide an outline of the inductive step in the proof of <xref ref="thm_advance" autoname="yes" />, at least in the case where the polyomial in the advancement operator has distinct roots.
+        </p>
 
-<lemma xml:id="lem_particular">
-<statement>
-<p>
-Consider a nonhomogeneous operator equation of the form
-</p>
-<men xml:id="eqn_nonhomogeneous" >
-  p(A)f= (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g,
-</men>
-<p>
-with <m>c_0,c_k\neq0</m>,
-and let <m>W</m> be the subspace of <m>V</m> consisting of all solutions
-to the corresponding homogeneous equation
-</p>
-<men xml:id="eqn_homogeneous" >
-  p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0.
-</men>
-<p>
-If <m>f_0</m> is a solution to <xref ref="eqn_nonhomogeneous" autoname="yes" />, then every
-solution <m>f</m> to <xref ref="eqn_nonhomogeneous" autoname="yes" /> has the form
-<m>f=f_0+f_1</m> where <m>f_1\in W</m>.
-</p>
-</statement>
-</lemma>
+        <theorem>
+            <statement>
+                <p>
+                    Consider the following advancement operator equation
+                    <men xml:id="eqn_distinct" >
+                        p(A)f=(A-r_1)(A-r_2)\dots(A-r_k)f=0.
+                    </men>
+                    with <m>r_1,r_2,\dots,r_k</m> distinct non-zero constants.  Then every solution to <xref ref="eqn_distinct" autoname="yes" /> has the form
+                    <me>
+                        f(n)=c_1r_1^n+c_2 r_2^n+c_3r_3^n+\dots+c_kr_k^n.
+                    </me>
+                </p>
+            </statement>
+            <proof>
+                <p>The case <m>k=1</m> is <xref ref="lem_base" autoname="yes" />. Now suppose we have established the theorem for some positive integer <m>m</m> and consider the case <m>k=m+1</m>. Rewrite <xref ref="eqn_distinct" autoname="yes" /> as
+                <me>
+                    (A-r_1)(A-r_2)\dots(A-r_m)[(A-r_{m+1})f]=0.
+                </me>
+                By the inductive hypothesis, it follows that if <m>f</m> is a solution to <xref ref="eqn_distinct" autoname="yes" />, then <m>f</m> is also a solution to the nonhomogeneous equation
+                <men xml:id="eqn_distinct2" >
+                    (A-r_{m+1})f=d_1r_1^n+d_2r_2^n+\dots+d_mr_m^n.
+                </men>
+                To find a particular solution <m>f_0</m> to <xref ref="eqn_distinct2" autoname="yes" />, we look for a solution having the form
+                <men xml:id="eqn_distinct3" >
+                    f_0(n)= c_1 r_1^n+c_2 r_2^n+\dots+c_m r_m^n.
+                </men>
+                On the other hand, a simple calculation shows that for each <m>i=1,2,\dots,m</m>, we have
+                <me>
+                    (A-r_{m+1})c_i r_i^n=c_i r_i^{n+1}-r_{m+1}c_i r_i^n=c_i (r_i-r_{m+1})r_i^n,
+                </me>
+                so it suffices to choose <m>c_i</m> so that <m>c_i(r_i-r_{m+1})=d_i</m>, for each <m>i=1,2,\dots,m</m>. This can be done since <m>r_{m+1}</m> is distinct from <m>r_i</m> for <m>i=1,2,\dots m</m>.
+                </p>
 
-<proof>
-<p>
-Let <m>f</m> be a solution of <xref ref="eqn_nonhomogeneous" autoname="yes" />, and let
-<m>f_1=f-f_0</m>.
-Then
-</p>
-<me>
-  p(A)f_1 = p(A)(f-f_0)=p(A)f-p(A)f_0=g-g=0.
-</me>
-<p>
-This implies that <m>f_1\in W</m> and that <m>f=f_0+f_1</m> so that all
-solutions to <xref ref="eqn_nonhomogeneous" autoname="yes" /> do in fact have the desired
-form.
-</p>
-</proof>
-
-<p>
-Using the preceding two results, we can now provide an outline of the
-inductive step in the proof of <xref ref="thm_advance" autoname="yes" />, at least in the
-case where the polyomial in the advancement operator has distinct
-roots.
-</p>
-
-<theorem>
-<statement>
-<p>
-Consider the following advancement operator equation
-</p>
-<men xml:id="eqn_distinct" >
-  p(A)f=(A-r_1)(A-r_2)\dots(A-r_k)f=0.
-</men>
-<p>
-with <m>r_1,r_2,\dots,r_k</m> distinct non-zero constants.
-Then every solution
-to <xref ref="eqn_distinct" autoname="yes" /> has the form
-</p>
-<me>
-  f(n)=c_1r_1^n+c_2 r_2^n+c_3r_3^n+\dots+c_kr_k^n.
-</me>
-</statement>
-</theorem>
-
-<proof>
-<p>
-The case <m>k=1</m> is <xref ref="lem_base">Lemma</xref>. Now
-suppose we have established the theorem for some positive integer
-<m>m</m> and consider the case <m>k=m+1</m>. Rewrite <xref ref="eqn_distinct" autoname="yes" /> as
-</p>
-<me>
-  (A-r_1)(A-r_2)\dots(A-r_m)[(A-r_{m+1})f]=0.
-</me>
-<p>
-By the inductive hypothesis, it follows that if <m>f</m> is a solution to
-<xref ref="eqn_distinct" autoname="yes" />, then <m>f</m> is also a solution to the
-nonhomogeneous equation
-</p>
-<men xml:id="eqn_distinct2" >
-  (A-r_{m+1})f=d_1r_1^n+d_2r_2^n+\dots+d_mr_m^n.
-</men>
-<p>
-To find a particular solution <m>f_0</m> to <xref ref="eqn_distinct2" autoname="yes" />,
-we look for a solution having the form
-</p>
-<men xml:id="eqn_distinct3" >
-  f_0(n)= c_1 r_1^n+c_2 r_2^n+\dots+c_m r_m^n.
-</men>
-<p>
-On the other hand, a simple calculation shows that for each
-<m>i=1,2,\dots,m</m>, we have
-</p>
-<me>
-  (A-r_{m+1})c_i r_i^n=c_i r_i^{n+1}-r_{m+1}c_i r_i^n=c_i (r_i-r_{m+1})r_i^n,
-</me>
-<p>
-so it suffices to choose <m>c_i</m> so that <m>c_i(r_i-r_{m+1})=d_i</m>, for each
-<m>i=1,2,\dots,m</m>. This can be done since <m>r_{m+1}</m> is distinct from
-<m>r_i</m> for <m>i=1,2,\dots m</m>.
-</p>
-
-<p>
-So now we have a particular solution <m>f_0(n)=\sum_{i=1}^{m} c_i
-  r_i^n</m>. Next we consider the corresponding homogeneous equation
-<m>(A-r_{m+1})f=0</m>. The general solution to this equation has the
-form <m>f_1(n)=c_{m+1}r_{m+1}^n</m>. It follows that every solution to
-the original equation has the form
-</p>
-<me>
-  f(n)=f_0(n)+f_1(n) = c_1r_1^n+c_2r_2^n+\dots+c_m r_m^n+cr_{m+1}^n,
-</me>
-<p>
-which is exactly what we want!
-</p>
-</proof>
-</subsection>
+                <p>Now we have a particular solution <m>f_0(n)=\sum_{i=1}^{m} c_i r_i^n</m>. Next we consider the corresponding homogeneous equation <m>(A-r_{m+1})f=0</m>. The general solution to this equation has the form <m>f_1(n)=c_{m+1}r_{m+1}^n</m>. It follows that every solution to the original equation has the form
+                <me>
+                    f(n)=f_0(n)+f_1(n) = c_1r_1^n+c_2r_2^n+\dots+c_m r_m^n+cr_{m+1}^n,
+                </me>
+                which is exactly what we want!
+                </p>
+            </proof>
+        </theorem>
+    </subsection>
 
 
-<subsection xml:id="s_recurrence_rigorous_repeated">
-<title>Repeated Roots</title>
-<p>
-It is straightforward to modify the proof given in the preceding
-section to obtain the following result. We leave the details as an
-exercise.
-</p>
+    <subsection xml:id="s_recurrence_rigorous_repeated">
+        <title>Repeated Roots</title>
+        <p>It is straightforward to modify the proof given in the preceding section to obtain the following result. We leave the details as an exercise.
+        </p>
 
-<lemma xml:id="lem_rr">
-<statement>
-<p>
-Let <m>k\ge1</m> and consider the equation
-</p>
-<men xml:id="eqn_rr" >
-  (A-r)^kf=0.
-</men>
-<p>
-Then the general solution to <xref ref="eqn_rr" autoname="yes" /> has the following form
-</p>
-<men xml:id="eqn_solutionrr" >
-  f(n)=c_1r^n+c_2nr^n+c_3n^2r^n+c_4n^3r^n+\dots+c_kn^{k-1}r^n.
-</men>
-</statement>
-</lemma>
-</subsection>
+        <lemma xml:id="lem_rr">
+            <statement>
+                <p>Let <m>k\ge1</m> and consider the equation
+                <men xml:id="eqn_rr" >
+                    (A-r)^kf=0.
+                </men>
+                Then the general solution to <xref ref="eqn_rr" autoname="yes" /> has the following form
+                <men xml:id="eqn_solutionrr" >
+                    f(n)=c_1r^n+c_2nr^n+c_3n^2r^n+c_4n^3r^n+\dots+c_kn^{k-1}r^n.
+                </men>
+                </p>
+            </statement>
+        </lemma>
+    </subsection>
 
 
-<subsection xml:id="s_recurrence_rigorous_general">
-<title>The General Case</title>
-<p>
-Combining the results in the preceding sections, we can quickly write
-the general solution of any homogeneous equation of the form <m>p(A)f=0</m>
-<em>provided</em> we can factor the polynomial <m>p(A)</m>. Note that in
-general, this solution takes us into the field of <em>complex
-numbers</em>, since the roots of a polynomial with real coefficients are
-sometimes complex numbers<mdash />with non-zero imaginary parts.
-</p>
+    <subsection xml:id="s_recurrence_rigorous_general">
+        <title>The General Case</title>
+        <p>Combining the results in the preceding sections, we can quickly write the general solution of any homogeneous equation of the form <m>p(A)f=0</m> <em>provided</em> we can factor the polynomial <m>p(A)</m>. Note that in general, this solution takes us into the field of <em>complex numbers</em>, since the roots of a polynomial with real coefficients are sometimes complex numbers<mdash />with non-zero imaginary parts.
+        </p>
 
-<p>
-We close this section with one more example which illustrates how
-quickly we can read off the general solution of a homogeneous
-advancement operator equation <m>p(A)f=0</m>, provided that <m>p(A)</m> is
-factored.
-</p>
-<example>
-<statement>
-<p>
-Consider the advancement operator equation
-</p>
-<me>
-  (A-1)^5(A+1)^3(A-3)^2(A+8)(A-9)^4f=0.
-</me>
-<p>
-Then every solution has the following form
-</p>
-<md>
-  <mrow>  f(n)=\amp c_1+c_2n+c_3n^2+c_4n^3+c_5n^4</mrow>
-  <mrow>  \amp +c_6(-1)^n+c_7n(-1)^n+c_8n^2(-1)^n</mrow>
-  <mrow>  \amp +c_93^n+c_{10}n3^n</mrow>
-  <mrow>  \amp +c_{11}(-8)^n</mrow>
-  <mrow>  \amp +c_{12}9^n +c_{13}n 9^n+c_{14}n^2 9^n +c_{15}n^39^n.</mrow>
-</md>
-</statement>
-</example>
-</subsection>
+        <p>We close this section with one more example which illustrates how quickly we can read off the general solution of a homogeneous advancement operator equation <m>p(A)f=0</m>, provided that <m>p(A)</m> is factored.
+        </p>
+        <example>
+            <p>Consider the advancement operator equation
+            <me>
+                (A-1)^5(A+1)^3(A-3)^2(A+8)(A-9)^4f=0.
+            </me>
+            Then every solution has the following form
+            <md>
+                <mrow>  f(n)=\amp c_1+c_2n+c_3n^2+c_4n^3+c_5n^4</mrow>
+                <mrow>  \amp +c_6(-1)^n+c_7n(-1)^n+c_8n^2(-1)^n</mrow>
+                <mrow>  \amp +c_93^n+c_{10}n3^n</mrow>
+                <mrow>  \amp +c_{11}(-8)^n</mrow>
+                <mrow>  \amp +c_{12}9^n +c_{13}n 9^n+c_{14}n^2 9^n +c_{15}n^39^n.</mrow>
+            </md>
+            </p>
+        </example>
+    </subsection>
 
 </section>
