@@ -64,13 +64,13 @@
 
     <figure xml:id="fig_constructposets" >
         <caption>Constructing Posets</caption>
-        <image width="65%" source="images/constructposets" />
+        <image width="80%" source="images/constructposets" />
     </figure>
     <p>Distinct points <m>x</m> and <m>y</m> in a poset <m>\PXP</m> are <term>comparable</term><index><main>comparable</main></index> if either <m>x\lt y</m> in <m>P</m> or <m>x>y</m> in <m>P</m>; otherwise <m>x</m> and <m>y</m> are <term>incomparable</term>.<index><main>incomparable</main></index> If <m>x</m> and <m>y</m> are incomparable in <m>\bfP</m>, we sometimes write <m>x\| y</m> in <m>\bfP</m>.<notation><usage>x\| y</usage><description><m>x</m> and <m>y</m> are incomparable</description></notation>With a poset <m>\PXP</m>, we associate a <term>comparability graph</term><index><main>graph</main><sub>comparability</sub></index> <m>{\bfG}_1=(X,E_1)</m> and an <term>incomparability graph</term><index><main>graph</main><sub>incomparability</sub></index> <m>{\bfG}_2=(X,E_2)</m>. The edges in the comparability graph <m>{\bfG}_1</m> consist of the comparable pairs and the edges in the incomparability graph are the incomparable pairs. We illustrate these definitions in <xref ref="fig_compincomp" autoname="yes" /> where we show the comparability graph and the incomparability graph of the poset <m>\bfP_3</m>.
     </p>
     <figure xml:id="fig_compincomp" >
         <caption>Comparability and Incomparability Graphs</caption>
-        <image width="52%" source="images/compincomp" />
+        <image width="70%" source="images/compincomp" />
     </figure>
     <p>A partial order <m>P</m> is called a <term>total order</term><index><main>order</main><sub>total</sub></index> (also, a <term>linear order</term><index><main>order</main><sub>linear</sub></index>) if for all <m>x,y\in X</m>, either <m>x\le y</m> in <m>P</m> or <m>y\le x</m> in <m>P</m>. For small finite sets, we can specify a linear order by listing the elements from least to greatest. For example, <m>L=[b,c,d,a,f,g,e]</m> is the linear order on the ground set <m>\{a,b,c,d,e,f,g\}</m> with <m>b\lt c\lt d\lt a\lt f\lt g\lt e</m> in <m>L</m>.
     </p>

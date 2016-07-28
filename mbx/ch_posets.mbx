@@ -7,37 +7,55 @@
             
             <p>Alice was surfing the web and found a site listing top movies, grouped by categories (comedy, drama, family, etc) as well as by the decade in which they were released. Alice was intrigued by the critic's choices and his rankings, especially for the top seven dramas from the 1990's.  Alice agreed with the critic's choices as a group but not the specific rankings. She wrote the critic's rankings on the board and just to the right, she gave her own rankings, all the time insisting that she was certainly correct in her opinions.
             </p>
-            <sidebyside>
-                <p>
-                    <title>Movie Critic's Ranking</title>
-                    <ol>
-                        <li>Saving Private Ryan</li>
-                        <li>Life is Beautiful</li>
-                        <li>Forrest Gump</li>
-                        <li>Braveheart</li>
-                        <li>Good Will Hunting</li>
-                        <li>Titanic</li>
-                        <li>Jurassic Park</li>
-                    </ol>
-                </p>
-                <p>
-                    <title>Alice's Ranking</title>
-                    <ol>
-                        <li>Life is Beautiful</li>
-                        <li>Saving Private Ryan</li>
-                        <li>Good Will Hunting</li>
-                        <li>Titanic</li>
-                        <li>Braveheart</li>
-                        <li>Forrest Gump</li>
-                        <li>Jurassic Park</li>
-                    </ol>
-                </p>
-            </sidebyside>
+            <table xml:id="tab_movie-rankings">
+                <tabular>
+                    <row bottom="minor">
+                        <cell />
+                        <cell>Movie Critic's Ranking</cell>
+                        <cell>Alice's Ranking</cell>
+                    </row>
+                    <row>
+                        <cell>1</cell>
+                        <cell>Saving Private Ryan</cell>
+                        <cell>Life is Beautiful</cell>
+                    </row>
+                    <row>
+                        <cell>2</cell>
+                        <cell>Life is Beautiful</cell>
+                        <cell>Saving Private Ryan</cell>
+                    </row>
+                    <row>
+                        <cell>3</cell>
+                        <cell>Forrest Gump</cell>
+                        <cell>Good Will Hunting</cell>
+                    </row>
+                    <row>
+                        <cell>4</cell>
+                        <cell>Braveheart</cell>
+                        <cell>Titanic</cell>
+                    </row>
+                    <row>
+                        <cell>5</cell>
+                        <cell>Good Will Hunting</cell>
+                        <cell>Braveheart</cell>
+                    </row>
+                    <row>
+                        <cell>6</cell>
+                        <cell>Titanic</cell>
+                        <cell>Forrest Gump</cell>
+                    </row>
+                    <row>
+                        <cell>7</cell>
+                        <cell>Jurassic Park</cell>
+                        <cell>Jurassic Park</cell>
+                    </row>
+                </tabular>
+            </table>
             <p>Dave studied the two rankings and listened carefully to Alice's rationale (which he felt was a bit over the top), but eventually, he held up the following diagram and offered it as a statement of those comparisons on which both Alice and the movie critic were in agreement.
             </p>
             <figure xml:id="fig_movies" >
                 <caption>Top Movies from the 90's</caption>
-                <image width="55%" source="images/movies" />
+                <image width="65%" source="images/movies" />
             </figure>
             <p>Do you see how Dave made up this diagram? Add your own rankings of these seven films and then draw the diagram that Dave would produce as a statement about the comparisons on which you, Alice and the movie critic were in agreement.
             </p>
