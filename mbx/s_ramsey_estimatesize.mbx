@@ -1,26 +1,17 @@
 <section xml:id="s_ramsey_estimatesize">
-<title>Estimating Ramsey Numbers</title>
-<p>
-We will find it convenient to utilize the following approximation
-due to Stirling. You can find a proof in almost any
-advanced calculus book.
-</p>
-<me>
-  n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n\bigl(1+
-  \frac{1}{12n}+\frac{1}{288n^2}-\frac{139}{51840n^3} +O(\frac{1}{n^4})\bigr).
-</me>
-<p>
-Of course, we will normally be satisfied with the
-first term:
-</p>
-<me>
-  n!\equiv \sqrt{2\pi n} \bigl( \frac{n}{e}\bigr)^n
-</me>
-<p>
-Using Stirling's approximation, we have the following
-upper bound:
-</p>
-<me>
-  R(n,n) \le \binom{2n-2}{n-1} \equiv \frac{2^{2n}}{4\sqrt{\pi n}}
-</me>
+    <title>Estimating Ramsey Numbers</title>
+    <p>We will find it convenient to utilize the following approximation due to Stirling. You can find a proof in almost any advanced calculus book.
+    <me>
+        n!\approx \sqrt{2\pi n} \left( \frac{n}{e}\right)^n\left(1+
+        \frac{1}{12n}+\frac{1}{288n^2}-\frac{139}{51840n^3} +O\left(\frac{1}{n^4}\right)\right).
+    </me>
+    Of course, we will normally be satisfied with the first term:
+    <me>
+        n!\approx \sqrt{2\pi n} \left( \frac{n}{e}\right)^n
+    </me>
+    Using Stirling's approximation and the binomial coefficients from the proof of <xref ref="thm_graphramsey" autoname="title" />, we have the following upper bound:
+    <me>
+        R(n,n) \le \binom{2n-2}{n-1} \approx \frac{2^{2n}}{4\sqrt{\pi n}}
+    </me>
+    </p>
 </section>
