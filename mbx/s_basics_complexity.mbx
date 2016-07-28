@@ -16,10 +16,10 @@
         </p>
 
         <ol>
-            <li>Is <m>83,172</m> one of the integers in the set <m>S</m>?</li>
-            <li>Are there three integers in <m>S</m> whose sum is <m>143,297</m>?</li>
-            <li>Can the set <m>S</m> be partitioned as <m>S=A\cup B</m> with
-            <m>A\cap B=\emptyset</m>, so that <m>\sum_{a\in A}a=\sum_{b\in B}b</m>.</li>
+            <li><p>Is <m>83,172</m> one of the integers in the set <m>S</m>?</p></li>
+            <li><p>Are there three integers in <m>S</m> whose sum is <m>143,297</m>?</p></li>
+            <li><p>Can the set <m>S</m> be partitioned as <m>S=A\cup B</m> with
+            <m>A\cap B=\emptyset</m>, so that <m>\sum_{a\in A}a=\sum_{b\in B}b</m>.</p></li>
         </ol>
 
         <p>The first of the three problems sounds easy, and it is. You just consider the numbers in the set one by one and test to see if any of them is <m>83,172</m>. You can stop if you ever find this number and report that the answer is yes. If you return a no answer, then you will have to have read every number in the list. Either way, you halt with a correct answer to the question having done at most <m>10,000</m> tests, and even the most modest netbook can do this in a heartbeat.  And if the list is expanded to <m>1,000,000</m> integers, all at most a billion, you can still do it easily. More generally, if you're given a set <m>S</m> of <m>n</m> numbers and an integer <m>x</m> with the question <q>Is <m>x</m> a member of <m>S</m>?</q>, you can answer this question in <m>n</m> steps, with each step an operation of testing a number in <m>S</m> to see if it is exactly equal to <m>n</m>. So the running time of this algorithm is proportional to <m>n</m>, with the constant depending on the amount of time it takes a computer to perform the basic operation of asking whether a particular integer is equal to the target value.
