@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_networkflow_exercises">
+  <exercise>
+    <statement>
+      <p>Consider the network diagram in
+  <xref ref="fig_networkflow_invalid" autoname="yes"/>. For each directed edge, the first
 <section xml:id="s_networkflow_exercises">
 <title>Exercises</title>
 <ol>
@@ -12,78 +18,118 @@
     into a valid flow <m>\widehat{\phi}</m>. Try to use as few modifications as
     possible.</li>
 </ol>
-<figure xml:id="fig_networkflow_invalid" >
+<figure xml:id="fig_networkflow_invalid">
 <caption>An invalid flow in a network</caption>
-<image width="65%" source="images/networkflow_ex_invalid" />
+<image width="65%" source="images/networkflow_ex_invalid"/>
 </figure>
-</li>
-<li>Alice claims to have found a (valid) network flow of value <m>20</m>
-  in the network shown in <xref ref="fig_networkflow_network_ex" autoname="yes" />. Bob
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Alice claims to have found a (valid) network flow of value <m>20</m>
+  in the network shown in <xref ref="fig_networkflow_network_ex" autoname="yes"/>. Bob
   tells her that there's no way she's right, since no flow has value
   greater than <m>18</m>. Who's right and why?
-  <figure xml:id="fig_networkflow_network_ex" >
+  <figure xml:id="fig_networkflow_network_ex">
 <caption>A network</caption>
-<image width="65%" source="images/network_ex" />
+<image width="65%" source="images/network_ex"/>
 </figure>
-</li>
-<li>Find an augmenting path <m>P</m> with <em>at least one backward edge</em>
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find an augmenting path <m>P</m> with <em>at least one backward edge</em>
   for the flow <m>\phi</m> in the network shown in
-  <xref ref="fig_networkflow_augpath_ex" autoname="yes" />. What is the value of <m>\delta</m>
+  <xref ref="fig_networkflow_augpath_ex" autoname="yes"/>. What is the value of <m>\delta</m>
   for <m>P</m>? Carry out an update of <m>\phi</m> using <m>P</m> to obtain a new
   flow <m>\hat{\phi}</m>. What is the value of <m>\hat{\phi}</m>?
-  <figure xml:id="fig_networkflow_augpath_ex" >
+  <figure xml:id="fig_networkflow_augpath_ex">
 <caption>A network with flow</caption>
-<image width="65%" source="images/augpath_ex" />
+<image width="65%" source="images/augpath_ex"/>
 </figure>
-</li>
-<li xml:id="ex_networkflow_update" >Prove
-  <xref ref="prop_networkflow_update" autoname="yes" />. You
+</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_networkflow_update">
+    <statement>
+      <p>Prove
+  <xref ref="prop_networkflow_update">Proposition</xref>. You
   will need to verify that the flow conservation laws hold at each
   vertex along an augmenting path (other than <m>S</m> and <m>T</m>). There are
   four cases to consider depending on the forward/backward status of
   the two edges on the augmenting path that are incident with the
-  vertex. </li>
-<li>Find the capacity of the cut <m>(L,U)</m> with
+  vertex. </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find the capacity of the cut <m>(L,U)</m> with
 <me>
   L=\{S,F,H,C,B,G,I\}\qquad\text{and} \qquad U=\{A,D,E,T\}
 </me>
-in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />.</li>
-<li>Find the capacity of the cut <m>(L,U)</m> with
+in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes"/>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find the capacity of the cut <m>(L,U)</m> with
 <me>
   L=\{S,F,D,B,A\}\qquad\text{and} \qquad U=\{H,C,I,G,E,T\}
 </me>
-in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />.</li>
-<li xml:id="ex_networkflow_do-update" >For each of the augmenting paths <m>P_1</m>, <m>P_2</m>, <m>P_3</m>, and <m>P_4</m>
+in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes"/>.</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_networkflow_do-update">
+    <statement>
+      <p>For each of the augmenting paths <m>P_1</m>, <m>P_2</m>, <m>P_3</m>, and <m>P_4</m>
   in
-  <xref ref="exa_networkflow_delta" autoname="yes" />,
-  update the flow in <xref ref="fig_networkflow_netflow" autoname="yes" />. (Note that
+  <xref ref="exa_networkflow_delta">Example</xref>,
+  update the flow in <xref ref="fig_networkflow_netflow" autoname="yes"/>. (Note that
   your solution to this exercise should consist of four network
   flows. Do not attempt to use the four paths in sequence to create
-  one updated network flow.)</li>
-<li>Continue running the Ford-Fulkerson labeling algorithm on the
-  network flow in <xref ref="fig_networkflow_updated-flow" autoname="yes" /> until the
+  one updated network flow.)</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Continue running the Ford-Fulkerson labeling algorithm on the
+  network flow in <xref ref="fig_networkflow_updated-flow" autoname="yes"/> until the
   algorithm halts without labeling the sink. Find the value of the
-  maximum flow as well as a cut of minimum capacity.</li>
-<li>Use the Ford-Fulkerson labeling algorithm to find a maximum flow
+  maximum flow as well as a cut of minimum capacity.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Use the Ford-Fulkerson labeling algorithm to find a maximum flow
   and a minimum cut in the network shown in
-  <xref ref="fig_networkflow_network_find_flow1" autoname="yes" /> by starting from the
+  <xref ref="fig_networkflow_network_find_flow1" autoname="yes"/> by starting from the
   current flow shown there.
-  <figure xml:id="fig_networkflow_network_find_flow1" >
+  <figure xml:id="fig_networkflow_network_find_flow1">
 <caption>A network with flow</caption>
-<image width="65%" source="images/network_find_flow1" />
+<image width="65%" source="images/network_find_flow1"/>
 </figure>
-</li>
-<li><xref ref="fig_networkflow_network_find_flow2" autoname="yes" /> shows a
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p><xref ref="fig_networkflow_network_find_flow2" autoname="yes"/> shows a
   network. Starting from the zero flow, i.e., the flow with
   <m>\phi(e)=0</m> for every directed edge <m>e</m> in the network, use the
   Ford-Fulkerson labeling algorithm to find a maximum flow and a
   minimum cut in this network.
-  <figure xml:id="fig_networkflow_network_find_flow2" >
+  <figure xml:id="fig_networkflow_network_find_flow2">
 <caption>A network</caption>
-<image width="65%" source="images/network_find_flow2" />
+<image width="65%" source="images/network_find_flow2"/>
 </figure>
-</li>
-<li>Consider a network in which the source <m>S</m> has precisely three
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Consider a network in which the source <m>S</m> has precisely three
   neighbors: <m>B</m>, <m>E</m>, and <m>F</m>. Suppose also that <m>c(S,B)=30</m>,
   <m>c(S,E)=20</m>, and <m>c(S,F)=25</m>. You know that there is a flow <m>\phi</m>
   on the network but you do not know how much flow is on any edge. You
@@ -91,6 +137,7 @@ in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes" />
   run on the network with current flow <m>\phi</m>, the first two vertices
   labeled are <m>S</m> with label <m>(*,+,\infty)</m> and <m>F</m> with label
   <m>(S,+,15)</m>. Use this information to determine the value of the flow
-  <m>\phi</m> and explain how you do so.</li>
-</ol>
-</section>
+  <m>\phi</m> and explain how you do so.</p>
+    </statement>
+  </exercise>
+</exercises>

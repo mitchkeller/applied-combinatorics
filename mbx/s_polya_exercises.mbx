@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_polya_exercises">
+  <exercise xml:id="ex_polya_perm-rep">
+    <statement>
+      <p>Write the permutations shown below in cycle notation. 
 <section xml:id="s_polya_exercises">
 <title>Exercises</title>
 <ol>
@@ -26,26 +31,38 @@
   <mrow>  3 \amp  7 \amp  1 \amp  6 \amp  8 \amp  4 \amp  2 \amp  5 
     \end{pmatrix}</mrow>
 </md>
-</li>
-<li>Compute <m>\pi_1\pi_2</m>, <m>\pi_2\pi_1</m>, <m>\pi_3\pi_4</m>, and
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Compute <m>\pi_1\pi_2</m>, <m>\pi_2\pi_1</m>, <m>\pi_3\pi_4</m>, and
   <m>\pi_4\pi_3</m> for the permutations <m>\pi_i</m> in
-  <xref ref="ex_polya_perm-rep" autoname="yes" />.</li>
-<li>Find <m>\stab_{D_8}(C_3)</m> and <m>\stab_{D_8}(C_{16})</m> for the
+  <xref ref="ex_polya_perm-rep">exercise</xref>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find <m>\stab_{D_8}(C_3)</m> and <m>\stab_{D_8}(C_{16})</m> for the
   colorings of the vertices of the square shown in
-  <xref ref="fig_polya_squares" autoname="yes" /> by referring to
-  <xref ref="tab_polya_fixed-square" autoname="yes" />.</li>
-<li>In <xref ref="fig_polya_pentagon" autoname="yes" />, we show a regular pentagon with
+  <xref ref="fig_polya_squares" autoname="yes"/> by referring to
+  <xref ref="tab_polya_fixed-square" autoname="yes"/>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>In <xref ref="fig_polya_pentagon" autoname="yes"/>, we show a regular pentagon with
   its vertices labeled. Use this labeling to complete this exercise.
-  <figure xml:id="fig_polya_pentagon" >
+  <figure xml:id="fig_polya_pentagon">
 <caption>A pentagon with labeled vertices</caption>
 <image>
-<latex-image-code><![CDATA[\begin{overpic}[scale=0.65]{images/pentagon}
+<latex-image-code>\begin{overpic}[scale=0.65]{images/pentagon}
       \put(9,2){\(4\)}
       \put(84,4){\(3\)}
       \put(102,53){\(2\)}
       \put(-8,53){\(5\)}
       \put(46,100){\(1\)}
-    \end{overpic}]]></latex-image-code>
+    \end{overpic}</latex-image-code>
 </image>
 
 </figure>
@@ -72,37 +89,65 @@
     of the pentagon in which two vertices are colored black and three
     vertices are colored white. Draw these colorings.</li>
 </ol>
-</li>
-<li xml:id="ex_polya_cyclic12" >Write all permutations in <m>C_{12}</m>, the cyclic group of order
-  <m>12</m>, in cycle notation. </li>
-<li>The <m>12</m>-note western scale is not the only system on which
+</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_polya_cyclic12">
+    <statement>
+      <p>Write all permutations in <m>C_{12}</m>, the cyclic group of order
+  <m>12</m>, in cycle notation. </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>The <m>12</m>-note western scale is not the only system on which
   music is based. In classical Thai music, a scale with seven
   equally-spaced notes per octave is used. As in western music, a
   scale is a subset of these seven notes, and two scales are
   equivalent if they are transpositions of each other. Find the number
-  of <m>k</m>-note scales in classical Thai music for <m>1\leq k\leq 7</m>.</li>
-<li>Xylene is an aromatic hydrocarbon having two methyl groups (and
+  of <m>k</m>-note scales in classical Thai music for <m>1\leq k\leq 7</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Xylene is an aromatic hydrocarbon having two methyl groups (and
   four hydrogen atoms) attached to the hexagonal carbon ring. How many
-  isomers are there of xylene?</li>
-<li xml:id="ex_polya_perm-pairs" >Find the permutations in <m>S_4^{(2)}</m> corresponding to the
+  isomers are there of xylene?</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_polya_perm-pairs">
+    <statement>
+      <p>Find the permutations in <m>S_4^{(2)}</m> corresponding to the
   permutations <m>(1234)</m> and <m>(12)(34)</m> in <m>S_4</m>. Confirm that the
   first consists of a <m>4</m>-cycle and a <m>2</m>-cycle and the second
-  consists of two <m>2</m>-cycles and two <m>1</m>-cycles. </li>
-<li>Draw the three nonisomorphic graphs on four vertices with <m>3</m>
-  edges and the two nonisomorphic graphs on four vertices with <m>4</m> edges.</li>
-<li>
+  consists of two <m>2</m>-cycles and two <m>1</m>-cycles. </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw the three nonisomorphic graphs on four vertices with <m>3</m>
+  edges and the two nonisomorphic graphs on four vertices with <m>4</m> edges.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
 <ol>
-<li xml:id="ex_polya_graphs5-pt1" >Use the method of <xref ref="ss_polya_graphs" autoname="yes" /> to find the cycle
+<li xml:id="ex_polya_graphs5-pt1">Use the method of <xref ref="ss_polya_graphs" autoname="yes"/> to find the cycle
     index of the pair group <m>S_5^{(2)}</m> of the symmetric group on five
     elements.</li>
-<li>Use the cycle index from <xref ref="ex_polya_graphs5-pt1" /> to
+<li>Use the cycle index from <xref ref="ex_polya_graphs5-pt1"/> to
     determine the number of nonisomorphic graphs on five vertices. How
     many of them have <m>6</m> edges?</li>
 </ol>
-</li>
-<li>Tic-tac-toe is a two-player game played on a <m>9\times 9</m>
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Tic-tac-toe is a two-player game played on a <m>9\times 9</m>
   grid. The players mark the squares of the grid with the symbols X
-  and O. This exercise uses P&#xf3;lya's enumeration theorem to
+  and O. This exercise uses Pólya's enumeration theorem to
   investigate the number of different tic-tac-toe boards. (The
   analysis of <em>games</em> is more complex, since it requires
   attention to the order the squares are marked and stopping when one
@@ -117,11 +162,11 @@
     to be careful to choose the way this group is represented in terms
     of cycles. Here we are interested in how permutations rearrange
     the nine squares of the tic-tac-toe board as numbered in
-    <xref ref="fig_polya_TTT" autoname="yes" />. For example, the effect of the
+    <xref ref="fig_polya_TTT" autoname="yes"/>. For example, the effect of the
     transformation <m>r_1</m>, which rotates the board <m>90^\circ</m>
     clockwise, can be represented as a permutation of the nine squares
     as <m>(13971)(2684)(5)</m>.
-   <figure xml:id="fig_polya_TTT" >
+   <figure xml:id="fig_polya_TTT">
 <caption>Numbered squares of a tic-tac-toe board</caption>
 <image source="images/e1a4a005d3875a0375de2b8a2625e374ec2b3fb9"/>
 </figure>
@@ -146,8 +191,12 @@ Write each of the eight elements of <m>D_8</m> as permutations of the
     playing a game, assuming the players continue until the board is
     full, regardless of whether one of them has won the game.</li>
 </ol>
-</li>
-<li>Suppose you are painting the faces of a cube and you have white,
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Suppose you are painting the faces of a cube and you have white,
   gold, and blue paint available. Two painted cubes are equivalent if
   you can rotate one of them so that all corresponding faces are
   painted the same color. Determine the number of nonequivalent ways
@@ -156,6 +205,7 @@ Write each of the eight elements of <m>D_8</m> as permutations of the
   faces as <m>U</m> (<q>up</q>), <m>D</m> (<q>down</q>), <m>F</m> (<q>front</q>), <m>B</m>
   (<q>back</q>), <m>L</m> (<q>left</q>), and <m>R</m> (<q>right</q>) instead of using
   integers. Working with a three-dimensional model of a cube will also
-  aid in identifying the permutations you require.</li>
-</ol>
-</section>
+  aid in identifying the permutations you require.</p>
+    </statement>
+  </exercise>
+</exercises>

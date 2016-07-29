@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_graphalgorithms_exercises">
+  <exercise>
+    <statement>
+      <p>For the graph in <xref ref="fig_span_tree_ex1" autoname="yes"/>, use Kruskal's
 <section xml:id="s_graphalgorithms_exercises">
 <title>Exercises</title>
 <ol>
@@ -6,50 +11,74 @@
   tree. Your answer should include a complete list of the edges,
   indicating which edges you take for your tree and which (if any) you
   reject in the course of running the algorithm.
-  <figure xml:id="fig_span_tree_ex1" >
+  <figure xml:id="fig_span_tree_ex1">
 <caption>Find a minimum weight spanning tree</caption>
-<image width="65%" source="images/span_tree_ex1" />
+<image width="65%" source="images/span_tree_ex1"/>
 </figure>
-</li>
-<li>For the graph in <xref ref="fig_span_tree_ex1" autoname="yes" />, use Prim's
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For the graph in <xref ref="fig_span_tree_ex1" autoname="yes"/>, use Prim's
   algorithm (<q>build tree</q>) to find a minimum weight spanning
   tree. Your answer should list the edges selected by the algorithm in
-  the order they were selected.</li>
-<li>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes" />, use Kruskal's
+  the order they were selected.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes"/>, use Kruskal's
   algorithm (<q>avoid cycles</q>) to find a minimum weight spanning
   tree. Your answer should include a complete list of the edges,
   indicating which edges you take for your tree and which (if any) you
   reject in the course of running the algorithm.
-  <figure xml:id="fig_span_tree_ex2" >
+  <figure xml:id="fig_span_tree_ex2">
 <caption>Find a minimum weight spanning tree</caption>
-<image width="65%" source="images/span_tree_ex2" />
+<image width="65%" source="images/span_tree_ex2"/>
 </figure>
-</li>
-<li>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes" />, use Prim's
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes"/>, use Prim's
   algorithm (<q>build tree</q>) to find a minimum weight spanning
   tree. Your answer should list the edges selected by the algorithm in
-  the order they were selected.</li>
-<li>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes" />, use Kruskal's
+  the order they were selected.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes"/>, use Kruskal's
   algorithm (<q>avoid cycles</q>) to find a minimum weight spanning
   tree. Your answer should include a complete list of the edges,
   indicating which edges you take for your tree and which (if any) you
   reject in the course of running the algorithm.
-  <figure xml:id="fig_span_tree_ex3" >
+  <figure xml:id="fig_span_tree_ex3">
 <caption>Find a minimum weight spanning tree</caption>
-<image width="65%" source="images/span_tree_ex3" />
+<image width="65%" source="images/span_tree_ex3"/>
 </figure>
-</li>
-<li>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes" />, use Prim's
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes"/>, use Prim's
   algorithm (<q>build tree</q>) to find a minimum weight spanning
   tree. Your answer should list the edges selected by the algorithm in
-  the order they were selected.</li>
-<li>A new local bank is being created and will establish a
+  the order they were selected.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A new local bank is being created and will establish a
   headquarters <m>h</m>, two branches <m>b_1</m> and <m>b_2</m>, and four ATMs <m>a_1</m>,
   <m>a_2</m>, <m>a_3</m>, and <m>a_4</m>. They need to build a computer network such
   that the headquarters, branches, and ATMs can all
   intercommunicate. Furthermore, they will need to be networked with
   the Federal Reserve Bank of Atlanta, <m>f</m>. The costs of the feasible
-  network connections (in units of <dollar />10,000) are listed below:
+  network connections (in units of <dollar/>10,000) are listed below:
   
 <md>
   <mrow>  h f \amp  \quad 80 \amp 
@@ -75,28 +104,48 @@
   <m>a_3</m>. Give a list of the connections the bank should establish in
   order to minimize their total cost, subject to this constraint. Be
   sure to explain how you selected the connections and how you know
-  the total cost is minimized.</li>
-<li>A disconnected weighted graph obviously has no spanning
+  the total cost is minimized.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A disconnected weighted graph obviously has no spanning
   trees. However, it is possible to find a spanning forest of minimum
   weight in such a graph. Explain how to modify both Kruskal's
-  algorithm and Prim's algorithm to do this.</li>
-<li>Prove
-  <xref ref="prop_graphalgorithms_spanforest" autoname="yes" />.</li>
-<li>In the paper where Kruskal's algorithm first appeared, he
+  algorithm and Prim's algorithm to do this.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Prove
+  <xref ref="prop_graphalgorithms_spanforest">Proposition</xref>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>In the paper where Kruskal's algorithm first appeared, he
   considered the algorithm a route to a nicer proof that in a
   connected weighted graph with no two edges having the same weight,
   there is a <em>unique</em> minimum weight spanning tree. Prove this
-  fact using Kruskal's algorithm.</li>
-<li>Use Dijkstra's algorithm to find the distance from <m>a</m> to each
+  fact using Kruskal's algorithm.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each
   other vertex in the digraph shown in
-  <xref ref="fig_graphalgorithms_dijkstra_ex1" autoname="yes" /> and a directed path of
+  <xref ref="fig_graphalgorithms_dijkstra_ex1" autoname="yes"/> and a directed path of
   that length.
-  <figure xml:id="fig_graphalgorithms_dijkstra_ex1" >
+  <figure xml:id="fig_graphalgorithms_dijkstra_ex1">
 <caption>A directed graph</caption>
-<image width="65%" source="images/dijkstra_ex1" />
+<image width="65%" source="images/dijkstra_ex1"/>
 </figure>
-\begin{minipage}{0.5\textwidth}</li>
-<li>The table to the right contains the length of the directed edge
+\begin{minipage}{0.5\textwidth}</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>The table to the right contains the length of the directed edge
   <m>(x,y)</m> in the intersection of <b>row</b> <m>x</m> and <b>column</b>
   <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
   <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and
@@ -106,34 +155,42 @@
 <sidebyside>
 {0.45\textwidth}
 <tabular>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>w</m></cell><cell><m>a</m></cell><cell><m>b</m></cell><cell><m>c</m></cell><cell><m>d</m></cell><cell><m>e</m></cell><cell><m>f</m></cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>a</m></cell><cell>0</cell><cell>12</cell><cell>8</cell><cell>43</cell><cell>79</cell><cell>35</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>b</m></cell><cell>93</cell><cell>0</cell><cell>18</cell><cell>21</cell><cell>60</cell><cell>33</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>c</m></cell><cell>17</cell><cell>3</cell><cell>0</cell><cell>37</cell><cell>50</cell><cell>30</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>d</m></cell><cell>85</cell><cell>10</cell><cell>91</cell><cell>0</cell><cell>17</cell><cell>7</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>e</m></cell><cell>28</cell><cell>47</cell><cell>39</cell><cell>14</cell><cell>0</cell><cell>108</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>f</m></cell><cell>31</cell><cell>7</cell><cell>29</cell><cell>73</cell><cell>20</cell><cell>0</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 </tabular>
 </sidebyside>
-</li>
-<li>Use Dijkstra's algorithm to find the distance from <m>a</m> to each
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each
   other vertex in the digraph shown in
-  <xref ref="fig_graphalgorithms_dijkstra_ex2" autoname="yes" /> and a directed path of
+  <xref ref="fig_graphalgorithms_dijkstra_ex2" autoname="yes"/> and a directed path of
   that length.
-  <figure xml:id="fig_graphalgorithms_dijkstra_ex2" >
+  <figure xml:id="fig_graphalgorithms_dijkstra_ex2">
 <caption>A directed graph</caption>
-<image width="65%" source="images/dijkstra_ex2" />
+<image width="65%" source="images/dijkstra_ex2"/>
 </figure>
-\begin{minipage}{0.5\textwidth}</li>
-<li>The table to the right contains the length of the directed edge
+\begin{minipage}{0.5\textwidth}</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>The table to the right contains the length of the directed edge
   <m>(x,y)</m> in the intersection of <b>row</b> <m>x</m> and <b>column</b>
   <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
   <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and
@@ -143,29 +200,37 @@
 <sidebyside>
 {0.45\textwidth}
 <tabular>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>w</m></cell><cell><m>a</m></cell><cell><m>b</m></cell><cell><m>c</m></cell><cell><m>d</m></cell><cell><m>e</m></cell><cell><m>f</m></cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>a</m></cell><cell>0</cell><cell>7</cell><cell>17</cell><cell>55</cell><cell>83</cell><cell>42</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>b</m></cell><cell>14</cell><cell>0</cell><cell>13</cell><cell>47</cell><cell>27</cell><cell>17</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>c</m></cell><cell>37</cell><cell>42</cell><cell>0</cell><cell>16</cell><cell>93</cell><cell>28</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>d</m></cell><cell>10</cell><cell>6</cell><cell>8</cell><cell>0</cell><cell>4</cell><cell>32</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>e</m></cell><cell>84</cell><cell>19</cell><cell>42</cell><cell>8</cell><cell>0</cell><cell>45</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>f</m></cell><cell>36</cell><cell>3</cell><cell>76</cell><cell>5</cell><cell>17</cell><cell>0</cell></row>
-<row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 </tabular>
 </sidebyside>
-</li>
-<li>Give an example of a digraph having an <em>undirected</em> path
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Give an example of a digraph having an <em>undirected</em> path
   between each pair of vertices, but having a root vertex <m>r</m> so that
   Dijkstra's algorithm cannot find a path of finite length from <m>r</m> to some
-  vertex <m>x</m>.</li>
-<li>Notice that in our discussion of Dijkstra's algorithm, we
+  vertex <m>x</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Notice that in our discussion of Dijkstra's algorithm, we
   required that the edge weights be nonnegative. If the edge weights
   are lengths and meant to model distance, this makes perfect
   sense. However, in some cases, it might be reasonable to allow
@@ -189,6 +254,7 @@
     skeptical, and for good reason. Give an example to show why Bob's
     modification won't work.</li>
 </ol>
-</li>
-</ol>
-</section>
+</p>
+    </statement>
+  </exercise>
+</exercises>

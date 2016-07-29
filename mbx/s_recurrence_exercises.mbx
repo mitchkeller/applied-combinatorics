@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_recurrence_exercises">
+  <exercise>
+    <statement>
+      <p>Write each of the following recurrence equations as advancement
 <section xml:id="s_recurrence_exercises">
 <title>Exercises</title>
 <ol>
@@ -11,17 +16,37 @@
 <li><m>r_n = 4r_{n-1} + r_{n-3} - 3 r_{n-5} + (-1)^n</m></li>
 <li><m>b_n = b_{n-1} + 3b_{n-2} + 2^{n+1} - n^2</m></li>
 </ol>
-</li>
-<li>Solve the recurrence equation <m>r_{n+2} = r_{n+1} + 2r_n</m> if
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve the recurrence equation <m>r_{n+2} = r_{n+1} + 2r_n</m> if
   <m>r_0=1</m> and <m>r_2=3</m> (Yes, we specify a value for <m>r_2</m> but not for
-  <m>r_1</m>).</li>
-<li>Find the general solution of the recurrence equation <m>g_{n+2} =
-  3g_{n+1}-2g_n</m>.</li>
-<li>Solve the recurrence equation <m>h_{n+3} = 6h_{n+2}-11h_{n+1} +
-  6h_n</m> if <m>h_0=3</m>, <m>h_1=2</m>, and <m>h_2=4</m>.</li>
-<li>Find an explicit formula for the <m>n^\text{th}</m> Fibonacci number
-  <m>f_n</m>. (See <xref ref="s_recurrence_intro_fib" autoname="yes" />.)</li>
-<li>For each advancement operator equation below, give its general
+  <m>r_1</m>).</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find the general solution of the recurrence equation <m>g_{n+2} =
+  3g_{n+1}-2g_n</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve the recurrence equation <m>h_{n+3} = 6h_{n+2}-11h_{n+1} +
+  6h_n</m> if <m>h_0=3</m>, <m>h_1=2</m>, and <m>h_2=4</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find an explicit formula for the <m>n^\text{th}</m> Fibonacci number
+  <m>f_n</m>. (See <xref ref="s_recurrence_intro_fib" autoname="yes"/>.)</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For each advancement operator equation below, give its general
   solution.
 <ol>
 <li><m>(A-2)(A+10)f=0</m></li>
@@ -31,18 +56,30 @@
 <li><m>(A^3 +A^2-5A+ 3)f=0</m></li>
 <li><m>(A^3+3 A^2+3 A+1)f=0</m></li>
 </ol>
-</li>
-<li>Solve the advancement operator equation <m>(A^2+3 A-10)f=0</m> if
-  <m>f(0)=2</m> and <m>f(1)=10</m>.</li>
-<li>Give the general solution to each advancement operator equation
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Solve the advancement operator equation <m>(A^2+3 A-10)f=0</m> if
+  <m>f(0)=2</m> and <m>f(1)=10</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Give the general solution to each advancement operator equation
   below.
 <ol>
 <li><m>(A-4)^3(A+1)(A-7)^4(A-1)^2 f =0</m></li>
 <li><m>(A+2)^4(A-3)^2(A-4)(A+7)(A-5)^3g=0</m></li>
 <li><m>(A-5)^2(A+3)^3(A-1)^3(A^2-1)(A-4)^3h=0</m></li>
 </ol>
-</li>
-<li>For each nonhomogeneous advancement operator equation, find its
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For each nonhomogeneous advancement operator equation, find its
   general solution.
 <ol>
 <li><m>(A-5)(A+2)f=3^n</m></li>
@@ -56,11 +93,19 @@
 <li><m>(A-2)^2(A-1)g=3n^22^n + 2^n</m></li>
 <li><m>(A+1)^2(A-3)f = 3^n + 2n^2</m></li>
 </ol>
-</li>
-<li>Find and solve a recurrence equation for the number <m>g_n</m> of
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find and solve a recurrence equation for the number <m>g_n</m> of
   ternary strings of length <m>n</m> that do not contain <m>102</m> as a
-  substring.</li>
-<li>There is a famous puzzle called the Towers of Hanoi that
+  substring.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>There is a famous puzzle called the Towers of Hanoi that
   consists of three pegs and <m>n</m> circular discs, all of different
   sizes. The discs start on the leftmost peg, with the largest disc on
   the bottom, the second largest on top of it, and so on, up to the
@@ -70,8 +115,12 @@
   place a larger disc on top of a smaller disc. Let <m>t_n</m> denote the
   fewest moves (a move being taking a disc from one peg and placing it
   onto another) in which you can accomplish the goal. Determine an
-  explicit formula for <m>t_n</m>.</li>
-<li>A valid database identifier of length <m>n</m> can be
+  explicit formula for <m>t_n</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A valid database identifier of length <m>n</m> can be
   constructed in three ways:
 <ul>
 <li>Starting with <m>A</m> and followed by any valid identifier of
@@ -86,31 +135,63 @@ Find a recurrence for the number <m>g(n)</m> of database identifiers of
   length <m>n</m> and then solve your recurrence to obtain an explicit
   formula for <m>g(n)</m>. (You may consider the empty string of length <m>0</m>
   a valid database identifier, making <m>g(0)=1</m>. This will simplify the
-  arithmetic.)</li>
-<li>Let <m>t_n</m> be the number of ways to tile a <m>2\times n</m> rectangle
+  arithmetic.)</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Let <m>t_n</m> be the number of ways to tile a <m>2\times n</m> rectangle
   using <m>1\times 1</m> tiles and <m>L</m>-tiles. An <m>L</m>-tile is a <m>2\times 2</m>
   tile with the upper-right <m>1\times 1</m> square deleted. (An <m>L</m> tile
   may be rotated so that the <q>missing</q> square appears in any of the
   four positions.) Find a recursive formula for <m>t_n</m> along with
   enough initial conditions to get the recursion started. Use this
-  recursive formula to find a closed formula for <m>t_n</m>.</li>
-<li>Prove <xref ref="lem_rr" autoname="yes" /> about advancement
-  operator equations with repeated roots.</li>
-<li>Use generating functions to solve the recurrence equation
-  <m>r_n=4r_{n-1}+6r_{n-2}</m> for <m>n\geq 2</m> with <m>r_0=1</m> and <m>r_1=3</m>.</li>
-<li>Let <m>a_0=0</m>, <m>a_1=2</m>, and <m>a_2=5</m>. Use generating functions to
+  recursive formula to find a closed formula for <m>t_n</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Prove <xref ref="lem_rr">Lemma</xref> about advancement
+  operator equations with repeated roots.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Use generating functions to solve the recurrence equation
+  <m>r_n=4r_{n-1}+6r_{n-2}</m> for <m>n\geq 2</m> with <m>r_0=1</m> and <m>r_1=3</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Let <m>a_0=0</m>, <m>a_1=2</m>, and <m>a_2=5</m>. Use generating functions to
   solve the recurrence equation <m>a_{n+3} = 5a_{n+2} - 7a_{n+1}+3a_n +
-  2^n</m> for <m>n\geq 0</m>.</li>
-<li>Let <m>b_0=1</m>, <m>b_2=1</m>, and <m>b_3=4</m>. Use generating functions to
+  2^n</m> for <m>n\geq 0</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Let <m>b_0=1</m>, <m>b_2=1</m>, and <m>b_3=4</m>. Use generating functions to
   solve the recurrence equation <m>b_{n+3} = 4b_{n+2}-b_{n+1}-6b_n +
-  3^n</m> for <m>n\geq 0</m>.</li>
-<li>Use generating functions to find a closed formula for the
-  Fibonacci numbers <m>f_n</m>.</li>
-<li>How many rooted, unlabeled, binary, ordered, trees (RUBOTs) with
-  <m>6</m> leaves are there? Draw <m>6</m> distinct RUBOTs with <m>6</m> leaves.</li>
-<li>In this chapter, we developed a generating function for the
+  3^n</m> for <m>n\geq 0</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Use generating functions to find a closed formula for the
+  Fibonacci numbers <m>f_n</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>How many rooted, unlabeled, binary, ordered, trees (RUBOTs) with
+  <m>6</m> leaves are there? Draw <m>6</m> distinct RUBOTs with <m>6</m> leaves.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>In this chapter, we developed a generating function for the
   Catalan numbers. We first encountered the Catalan numbers in
-  <xref ref="ch_strings" autoname="yes" />, where we learned they count certain lattice
+  <xref ref="ch_strings" autoname="yes"/>, where we learned they count certain lattice
   paths. Develop a recurrence for the number <m>l_n</m> of lattice paths
   similar to the recurrence
 <me>
@@ -118,6 +199,7 @@ Find a recurrence for the number <m>g(n)</m> of database identifiers of
 </me>
 for RUBOTs by thinking of ways to break up a lattice path from
   <m>(0,0)</m> to <m>(n,n)</m> that does not cross the diagonal <m>y=x</m> into two
-  smaller lattice paths of this type.</li>
-</ol>
-</section>
+  smaller lattice paths of this type.</p>
+    </statement>
+  </exercise>
+</exercises>

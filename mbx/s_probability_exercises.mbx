@@ -1,7 +1,8 @@
-<section xml:id="s_probability_exercises">
-<title>Exercises</title>
-<ol>
-<li>Our gang of seven (Alice, Bob, Carlos, Dave, Xing, Yolanda and Zori) are
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_probability_exercises">
+  <exercise>
+    <statement>
+      <p>Our gang of seven (Alice, Bob, Carlos, Dave, Xing, Yolanda and Zori) are
 students in a class with a total enrollment of 35.  The professor
 chooses three students at random to go to the board to work
 challenge problems.
@@ -11,32 +12,48 @@ challenge problems.
 <li>What is the probability that exactly two members of the club are chosen?</li>
 <li>What is the probability that none of the seven members of club are chosen?</li>
 </ol>
-</li>
-<li>Bob says to no one in particular, <q>Did you know that the
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Bob says to no one in particular, <q>Did you know that the
   probability that you will get at least one ``7</q> in three rolls of a
   pair of dice is slightly less than <m>1/2</m>.  On the other hand, the
   probability that you'll get at least one <q>5</q> in six rolls of the
-  dice is just over <m>1/2</m>.''  Is Bob on target, or out to lunch?</li>
-<li>Consider the spinner shown in <xref ref="fig_spinner" autoname="yes" /> at the
+  dice is just over <m>1/2</m>.''  Is Bob on target, or out to lunch?</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Consider the spinner shown in <xref ref="fig_spinner" autoname="yes"/> at the
   beginning of the chapter.
 <ol>
 <li>What is the probability of getting at least one <q>5</q> in three spins?</li>
 <li>What is the probability of getting at least one <q>3</q> in three spins?</li>
 <li>If you keep spinning until you get either a <q>2</q> or a <q>5</q>, what is
 the probability that you get a <q>2</q> first?</li>
-<li>If you receive <m>i</m> dollars when the spinner halts in region<nbsp /><m>i</m>,
+<li>If you receive <m>i</m> dollars when the spinner halts in region<nbsp/><m>i</m>,
 what is the expected value?  Since three is right in the middle of the 
 possible outcomes, is it reasonable to pay three dollars to play this game?</li>
 </ol>
-</li>
-<li>Alice proposes to Bob the following game.  Bob pays one dollar to play.
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Alice proposes to Bob the following game.  Bob pays one dollar to play.
 Fifty balls marked <m>1,2,\dots,50</m> are placed in a big jar, stirred around,
 and then drawn out one by one by Zori, who is wearing a blindfold.  The result
 is a random permutation <m>\sigma</m> of the integers <m>1</m>, <m>2,\dots,50</m>.  Bob wins
 with a payout of two dollars and fifty cents if the permutation <m>\sigma</m> is 
 a derangement, i.e., <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. Is this a
-fair game for Bob?  If not how should the payoff be adjusted to make it fair?</li>
-<li>A random graph with vertex set <m>\{1,2,\dots,10\}</m> is constructed by
+fair game for Bob?  If not how should the payoff be adjusted to make it fair?</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A random graph with vertex set <m>\{1,2,\dots,10\}</m> is constructed by
 the following method.  For each two element subset <m>\{i,j\}</m> from <m>\{1,2,\dots,10\}</m>,
 a fair coin is tossed and the edge <m>\{i,j\}</m> then belongs to the graph when
 the result is <q>heads.</q>  For each <m>3</m>-element subset <m>S\subseteq\{1,2,\dots,n\}</m>,
@@ -47,8 +64,12 @@ let <m>E_S</m> be the event that <m>S</m> is a complete subgraph in our random g
 <li>Let <m>S=\{1,2,3\}</m>, <m>T=\{2,3,4\}</m> and <m>U=\{3,4,5\}</m>.  Show that
 <m>P(E_S|E_T)\neq P(E_S|E_TE_U)</m>.</li>
 </ol>
-</li>
-<li>Ten marbles labeled <m>1,2,\dots,10</m> are placed in a big jar and
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Ten marbles labeled <m>1,2,\dots,10</m> are placed in a big jar and
   then stirred up.  Zori, wearing a blindfold, pulls them out of the
   jar two at a time.  Players are allowed to place bets as to whether
   the sum of the two marbles in a pair is <m>11</m>.  There are <m>C(10,2)=
@@ -76,6 +97,7 @@ let <m>E_S</m> be the event that <m>S</m> is a complete subgraph in our random g
   Also explain why an observant player can make lots of money with a payout
   ratio of nine to one.  Now for a more challenging problem, what is
   the minimum payout ratio above which a player has a winning
-  strategy?</li>
-</ol>
-</section>
+  strategy?</p>
+    </statement>
+  </exercise>
+</exercises>

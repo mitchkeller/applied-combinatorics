@@ -1,36 +1,54 @@
-<section xml:id="s_ramsey_exercises">
-<title>Exercises</title>
-<ol>
-<li>Consider a random graph with vertex set <m>\{1,2,\dot,n\}</m>.
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_ramsey_exercises">
+  <exercise>
+    <statement>
+      <p>Consider a random graph with vertex set <m>\{1,2,\dot,n\}</m>.
 If the edge probability is <m>p=1/2</m>, then let <m>X</m> denote the number
 of complete subgraphs is size <m>t=2\log n</m> and let <m>Y</m> denote the
 number of independent sets of size <m>t=2\log n</m>.
 <ol>
 <li>Show that <m>E(X+Y)\lt 1</m>, when <m>n</m> is sufficiently large.</li>
-<li>Use the result from part<nbsp />a to show that <m>\omega(G)</m> is less
+<li>Use the result from part<nbsp/>a to show that <m>\omega(G)</m> is less
 than <m>2\log n</m>, while the chromatic number of <m>G</m> is at least <m>n/(2\log n)</m>
 (both statements holding with high probability).  As a result, the basic
 inequality <m>\chi(G)\ge\omega(G)</m> is far from being tight for a random
 graph.</li>
 </ol>
-</li>
-<li>We form a random tournament as follows.  Start with a complete graph 
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>We form a random tournament as follows.  Start with a complete graph 
 with vertex set <m>\{1,2,\dots,n\}</m>.  For each distinct
 pair <m>i</m>, <m>j</m> with <m>1\le i\lt j\le n</m>, flip a fair coin.  If the result is heads,
 orient the edge from <m>i</m> to <m>j</m>, which we denote by <m>(x,y)</m>.  If the toss is
 tails, then the edge is oriented from <m>j</m> to <m>i</m>, denoted <m>(y,x)</m>.
 Show that when <m>n</m> is large, with high probability, the following 
 statement is true: For every set <m>S</m> of size <m>\log n/10</m>, there is a vertex 
-<m>x</m> so that <m>(x,y)</m> in <m>T</m> for every <m>y\in S</m>.</li>
-<li>Let <m>T</m> be a random tournament on <m>n</m> vertices.  Show that with
+<m>x</m> so that <m>(x,y)</m> in <m>T</m> for every <m>y\in S</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Let <m>T</m> be a random tournament on <m>n</m> vertices.  Show that with
 high probability, the following statement is true: For every pair <m>x</m>, <m>y</m>
-of distinct vertices, either (1)<nbsp /><m>(x,y)</m> in <m>T</m>, or (2)<nbsp />there is a vertex
-<m>z</m> for which both <m>(x,z)</m> and <m>(z,y)</m> are in <m>T</m>.</li>
-<li>Many statements for random graphs exhibit a threshold behavior.
+of distinct vertices, either (1)<nbsp/><m>(x,y)</m> in <m>T</m>, or (2)<nbsp/>there is a vertex
+<m>z</m> for which both <m>(x,z)</m> and <m>(z,y)</m> are in <m>T</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Many statements for random graphs exhibit a threshold behavior.
 Show that a random graph with edge probability <m>p=10\log n/n</m> almost
 certainly has no isolated vertices, while a random graph with edge probability 
-<m>p=\log n/(10 n)</m> almost certainly has at least one isolated vertices.</li>
-<li>In the sense of the preceding problem, determine the threshold probability
-for a graph to be connected.</li>
-</ol>
-</section>
+<m>p=\log n/(10 n)</m> almost certainly has at least one isolated vertices.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>In the sense of the preceding problem, determine the threshold probability
+for a graph to be connected.</p>
+    </statement>
+  </exercise>
+</exercises>

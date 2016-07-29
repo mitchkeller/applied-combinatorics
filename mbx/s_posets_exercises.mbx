@@ -1,18 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_posets_exercises">
+  <exercise>
+    <statement>
+      <p>We say that a relation <m>R</m> on a set <m>X</m> is <em>symmetric</em> if
 <section xml:id="s_posets_exercises">
 <title>Exercises</title>
 <ol>
 <li>We say that a relation <m>R</m> on a set <m>X</m> is <em>symmetric</em> if
   <m>(x,y)\in R</m> implies <m>(y,x)\in R</m> for all <m>x,y\in X</m>. If
   <m>X=\{a,b,c,d,e,f\}</m>, how many symmetric relations are there on <m>X</m>?
-  How many of these are reflexive?</li>
-<li>A relation <m>R</m> on a set <m>X</m> is an <em>equivalence relation</em>
+  How many of these are reflexive?</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A relation <m>R</m> on a set <m>X</m> is an <em>equivalence relation</em>
   if <m>R</m> is reflexive, symmetric, and transitive. Fix an integer
   <m>m\geq 2</m>. Show that the relation defined on the set
   <m>\ints</m> of integers by <m>aRb</m> (<m>a,b\in\ints</m>) if and only if <m>a\equiv
   b\pmod{m}</m> is an equivalence relation. (Recall that <m>a\equiv
   b\pmod{m}</m> means that when dividing <m>a</m> by <m>m</m> and <m>b</m> by <m>m</m> you
-  get the same remainder.)</li>
-<li>Is the binary relation
+  get the same remainder.)</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Is the binary relation
 <me>
   P=\{(1,1),(2,2),(3,3),(4,4),(1,3),(2,4),(2,5),(4,5),(3,5),(1,5)\}
 </me>
@@ -20,34 +33,54 @@ a partial
   order on the set <m>X=\{1,2,3,4,5\}</m>? If so, discuss what properties
   you verified and how. If not, list the ordered pairs that must be
   added to <m>P</m> to make it a partial order or say why it cannot be made
-  a partial order by adding ordered pairs.</li>
-<li xml:id="exer_posets_division" >Draw the diagram of the poset <m>\bfP=(X,P)</m> where
+  a partial order by adding ordered pairs.</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="exer_posets_division">
+    <statement>
+      <p>Draw the diagram of the poset <m>\bfP=(X,P)</m> where
   <m>X=\{1,2,3,5,6,10,15,30\}</m> and <m>x\leq y</m> in <m>P</m> if and only if
   <m>x|y</m>. (Recall that <m>x|y</m> means that <m>x</m> evenly divides <m>y</m> without
   remainder. Equivalently <m>x|y</m>, if and only if <m>y\equiv
-  0\pmod{x}</m>.) </li>
-<li>Draw the diagram of the poset <m>\PXP</m> where
+  0\pmod{x}</m>.) </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw the diagram of the poset <m>\PXP</m> where
  
 <md>X=\{\{1,3,4,5,6\},\{1,2,4,5,6\},\{1,2,3,6\},\{1,2,3\},\{1,5,6\},\\\{1,3,6\},\{1,2\},\{1,6\},\{3,5\},\{1\},\{3\},\{4\}\}
 </md>
  
  and <m>P</m> is the partial order on <m>X</m> given by the <q>is a subset of</q>
- relationship.</li>
-<li>A <em>linear extension</em> of a poset <m>\bfP=(X,P)</m> is a total
+ relationship.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A <em>linear extension</em> of a poset <m>\bfP=(X,P)</m> is a total
   order <m>L</m> on <m>X</m> such that if <m>x\leq y</m> in <m>P</m>, then <m>x\leq y</m> in <m>L</m>. Give 
-  linear extension of the three posets shown in <xref ref="fig_constructposets" autoname="yes" />.
+  linear extension of the three posets shown in <xref ref="fig_constructposets" autoname="yes"/>.
   If you feel very ambitious, try to count the number of linear extensions of
   the poset on the left side of the figure.  Don't list them.  Just provide an
-  integer as your answer.</li>
-<li>Alice and Bob are considering posets <m>\bfP</m> and <m>\bfQ</m>. They
+  integer as your answer.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Alice and Bob are considering posets <m>\bfP</m> and <m>\bfQ</m>. They
   soon realize that <m>\bfQ</m> is isomorphic to <m>\bfP^d</m>. After <m>10</m>
   minutes of work, they figure out that <m>\bfP</m> has height <m>5</m> and
   width <m>3</m>. Bob doesn't want do find the height and width of <m>\bfQ</m>,
   since he figures it will take (at least) another <m>10</m> minutes to
   answer these questions for <m>\bfQ</m>. Alice says Bob is crazy and that
   she already knows the height and width of <m>\bfQ</m>. Who's right and
-  why?</li>
-<li>For this exercise, consider the poset <m>\bfP</m> in <xref ref="fig_17ptposet" autoname="yes" />.
+  why?</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For this exercise, consider the poset <m>\bfP</m> in <xref ref="fig_17ptposet" autoname="yes"/>.
 <ol>
 <li>List the maximal elements of <m>\bfP</m>.</li>
 <li>List the minimal elements of <m>\bfP</m>.</li>
@@ -56,98 +89,151 @@ a partial
     maximal. Say why your chain is not maximal.</li>
 <li>Find a maximal antichain with four points in <m>\bfP</m>.</li>
 </ol>
-</li>
-<li>Find the height <m>h</m> of the poset <m>\PXP</m> shown below as well as a
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find the height <m>h</m> of the poset <m>\PXP</m> shown below as well as a
   maximum chain and a partition of <m>X</m> into <m>h</m> antichains using the
   algorithm from this chapter.
-  <image width="73%" source="images/height_ex_poset" /> </li>
-<li>For each of the two distinct (up to isomorphism) posets in 
-  <xref ref="fig_constructposets" autoname="yes" />, find the width <m>w</m>, an
+  <image width="73%" source="images/height_ex_poset"/> </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For each of the two distinct (up to isomorphism) posets in 
+  <xref ref="fig_constructposets" autoname="yes"/>, find the width <m>w</m>, an
   antichain of size <m>w</m>, and a partition of the ground set into <m>w</m>
-  chains.</li>
-<li>A restaurant chef has designed a new set of dishes for his
+  chains.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A restaurant chef has designed a new set of dishes for his
   menu. His set of dishes contains <m>10</m> main courses, and he will
   select a subset of them to place on the menu each night. To ensure
   variety of main courses for his patrons, he wants to guarantee that
   a night's menu is neither completely contained in nor completely
   contains another night's menu. What is the largest number of menus
-  he can plan using his <m>10</m> main courses subject to this requirement?</li>
-<li>Draw the diagram of the interval order represented in
-  <xref ref="fig_intord_to_diag_ex" autoname="yes" />.
-  <figure xml:id="fig_intord_to_diag_ex" >
+  he can plan using his <m>10</m> main courses subject to this requirement?</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw the diagram of the interval order represented in
+  <xref ref="fig_intord_to_diag_ex" autoname="yes"/>.
+  <figure xml:id="fig_intord_to_diag_ex">
 <caption>An interval representation</caption>
-<image width="73%" source="images/intord_to_diag_ex" />
+<image width="73%" source="images/intord_to_diag_ex"/>
 </figure>
-</li>
-<li>Draw the diagram of the interval order represented in
-  <xref ref="fig_intord_to_diag_ex2" autoname="yes" />.
-  <figure xml:id="fig_intord_to_diag_ex2" >
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw the diagram of the interval order represented in
+  <xref ref="fig_intord_to_diag_ex2" autoname="yes"/>.
+  <figure xml:id="fig_intord_to_diag_ex2">
 <caption>An interval representation</caption>
-<image width="73%" source="images/intord_to_diag_ex2" />
+<image width="73%" source="images/intord_to_diag_ex2"/>
 </figure>
-</li>
-<li>Find an interval representation for the poset in
-  <xref ref="fig_intord_find_rep_ex1" autoname="yes" /> or give a reason why one does not
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find an interval representation for the poset in
+  <xref ref="fig_intord_find_rep_ex1" autoname="yes"/> or give a reason why one does not
   exist.
-  <figure xml:id="fig_intord_find_rep_ex1" >
+  <figure xml:id="fig_intord_find_rep_ex1">
 <caption>Is this poset an interval order?</caption>
-<image width="73%" source="images/intord_find_rep_ex1" />
+<image width="73%" source="images/intord_find_rep_ex1"/>
 </figure>
-</li>
-<li>Find an interval representation for the poset in
-  <xref ref="fig_intord_find_rep_ex4" autoname="yes" /> or give a reason why one does not
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find an interval representation for the poset in
+  <xref ref="fig_intord_find_rep_ex4" autoname="yes"/> or give a reason why one does not
   exist.
-  <figure xml:id="fig_intord_find_rep_ex4" >
+  <figure xml:id="fig_intord_find_rep_ex4">
 <caption>Is this poset an interval order?</caption>
-<image width="73%" source="images/intord_find_rep_ex4" />
+<image width="73%" source="images/intord_find_rep_ex4"/>
 </figure>
-</li>
-<li>Find an interval representation for the poset in
-  <xref ref="fig_intord_find_rep_ex2" autoname="yes" /> or give a reason why one does not
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find an interval representation for the poset in
+  <xref ref="fig_intord_find_rep_ex2" autoname="yes"/> or give a reason why one does not
   exist.
-  <figure xml:id="fig_intord_find_rep_ex2" >
+  <figure xml:id="fig_intord_find_rep_ex2">
 <caption>Is this poset an interval order?</caption>
-<image width="73%" source="images/intord_find_rep_ex2" />
+<image width="73%" source="images/intord_find_rep_ex2"/>
 </figure>
-</li>
-<li>Find an interval representation for the poset in
-  <xref ref="fig_intord_find_rep_ex3" autoname="yes" /> or give a reason why one does not
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find an interval representation for the poset in
+  <xref ref="fig_intord_find_rep_ex3" autoname="yes"/> or give a reason why one does not
   exist.
-  <figure xml:id="fig_intord_find_rep_ex3" >
+  <figure xml:id="fig_intord_find_rep_ex3">
 <caption>Is this poset an interval order?</caption>
-<image width="73%" source="images/intord_find_rep_ex3" />
+<image width="73%" source="images/intord_find_rep_ex3"/>
 </figure>
-</li>
-<li>Use the First Fit algorithm (ordering by left endpoints) to find
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Use the First Fit algorithm (ordering by left endpoints) to find
   the width <m>w</m> of the interval order shown in
-  <xref ref="fig_intord_firstfit_ex1" autoname="yes" /> and a partition into <m>w</m>
+  <xref ref="fig_intord_firstfit_ex1" autoname="yes"/> and a partition into <m>w</m>
   chains. Also give an antichain with <m>w</m> points.
-  <figure xml:id="fig_intord_firstfit_ex1" >
+  <figure xml:id="fig_intord_firstfit_ex1">
 <caption>An interval representation</caption>
-<image width="73%" source="images/intord_firstfit_ex1" />
+<image width="73%" source="images/intord_firstfit_ex1"/>
 </figure>
-</li>
-<li>Complete the proof of <xref ref="thm_intord-minrep" autoname="yes" />.  <em>Hint.</em>
+</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Complete the proof of <xref ref="thm_intord-minrep">Theorem</xref>.  <em>Hint.</em>
   The key idea is to show that if <m>d</m> is the least positive integer for
   which an interval order <m>\bfP</m> has a representation using end points from
   <m>\{1,2,\dots,n\}</m>, then every integer <m>i</m> from this set must be both a left
-  end point and a right end point of an interval.</li>
-<li>Show that every poset is isomorphic to a poset of each of the four types
-  illustrated in <xref ref="exa_construct" autoname="yes" />.  Hint: for each element <m>x</m>, choose
+  end point and a right end point of an interval.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Show that every poset is isomorphic to a poset of each of the four types
+  illustrated in <xref ref="exa_construct">Example</xref>.  Hint: for each element <m>x</m>, choose
   some unique identifying key which is an element/prime/coordinate/observer.  Then associate
-  with <m>x</m> a structure that identifies the keys of elements from <m>D[x]</m>.</li>
-<li>The <em>dimension</em> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for 
+  with <m>x</m> a structure that identifies the keys of elements from <m>D[x]</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>The <em>dimension</em> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for 
   which <m>P</m> is the intersection of <m>t</m> linear orders on <m>X</m>.
 <ol>
 <li>Show that the dimension of a poset <m>\bfP</m> is the same as the dimension of its dual.</li>
 <li>Show that <m>\bfP</m> is a subposet of <m>\bfQ</m>, then <m>\dim(\bfP)\le \dim(\bfQ)</m>.</li>
-<li>Show that the removal of a point can reduce the dimension by at most<nbsp /><m>1</m>.</li>
-<li>Find the dimension of the posets in <xref ref="fig_constructposets" autoname="yes" />.</li>
+<li>Show that the removal of a point can reduce the dimension by at most<nbsp/><m>1</m>.</li>
+<li>Find the dimension of the posets in <xref ref="fig_constructposets" autoname="yes"/>.</li>
 <li>Use Dilworth's theorem to show that the dimension of a poset is at most its width.</li>
-<li>Use the example on the left side of <xref ref="fig_FirstFit" autoname="yes" /> to show that
+<li>Use the example on the left side of <xref ref="fig_FirstFit" autoname="yes"/> to show that
    for every <m>n\ge2</m>, there exists a poset <m>\bfP_n</m> on <m>2n</m> points having width and dimension
    equal to <m>n</m>.</li>
 </ol>
-</li>
-</ol>
-</section>
+</p>
+    </statement>
+  </exercise>
+</exercises>
