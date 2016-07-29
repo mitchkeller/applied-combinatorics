@@ -1,435 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_strings_exercises">
-  <exercise>
-    <statement>
-      <p>The Hawaiian alphabet consists of <m>12</m> letters. How many
-    six-character strings can be made using the Hawaiian alphabet?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many <m>2n</m>-digit positive integers can be formed if the
-    digits in odd positions (counting the rightmost digit as position
-    <m>1</m>) must be odd and the digits in even positions must be even and
-    positive?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Matt is designing a website authentication system. He knows
-    passwords are most secure if they contain letters, numbers, and
-    symbols. However, he doesn't quite understand that this additional
-    security is defeated if he specifies in which positions each
-    character type appears. He decides that valid passwords for his
-    system will begin with three letters (uppercase and lowercase both
-    allowed), followed by two digits, followed by one of <m>10</m> symbols,
-    followed by two uppercase letters, followed by a digit, followed
-    by one of <m>10</m> symbols. How many different passwords are there for
-    his website system? How does this compare to the total number of
-    strings of length <m>10</m> made from the alphabet of all uppercase and
-    lowercase English letters, decimal digits, and <m>10</m> symbols?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many ternary strings of length <m>2n</m> are there in which the
-    zeroes appear only in odd-numbered positions?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Suppose we are making license plates of the form
-    <m>l_1l_2l_3-d_1d_2d_3</m> where <m>l_1,l_2,l_3</m> are capital letters in
-    the English alphabet and <m>d_1,d_2,d_3</m> are decimal digits (i.e.,
-    in <m>\{0,1,2,3,4,5,6,7,8,9\}</m>) subject to the restriction that at
-    least one digit is nonzero and at least one letter is <m>K</m>. How
-    many license plates can we make?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Mrs.<nbsp/>Steffen's third grade class has <m>30</m> students in it. The students
-    are divided into three groups (numbered <m>1</m>, <m>2</m>, and <m>3</m>), each
-    having <m>10</m> students.
-<ol>
-<li>The students in group <m>1</m> earned <m>10</m> extra minutes of
-      recess by winning a class competition. Before going out for
-      their extra recess time, they form a single file line. In how
-      many ways can they line up?</li>
-<li>When all <m>30</m> students come in from recess together, they
-      again form a single file line. However, this time the students
-      are arranged so that the first student is from group <m>1</m>, the
-      second from group <m>2</m>, the third from group <m>3</m>, and from there
-      on, the students continue to alternate by group in this
-      order. In how many ways can they line up to come in from recess?</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many strings of the form <m>l_1l_2d_1d_2d_3l_3l_4d_4l_5l_6</m>
-    are there where
-<ul>
-<li>for <m>1\leq i\leq 6</m>, <m>l_i</m> is an uppercase letter in the
-      English alphabet;</li>
-<li>for <m>1\leq i\leq 4</m>, <m>d_i</m> is a decimal digit;</li>
-<li><m>l_2</m> is not a vowel (i.e., <m>l_2\nin\{\text{A,E,I,O,U} \}</m>); and</li>
-<li>the digits <m>d_1</m>, <m>d_2</m>, and <m>d_3</m> are distinct (i.e.,
-      <m>d_1\neq d_2\neq d_3\neq d_1</m>).</li>
-</ul>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>In this exercise, we consider strings made from uppercase
-    letters in the English alphabet and decimal digits. How many
-    strings of length <m>10</m> can be constructed in each of the following
-    scenarios?
-<ol>
-<li>The first and last characters of the string are letters.</li>
-<li>The first character is a vowel, the second character is a
-      consonant, and the last character is a digit.</li>
-<li>Vowels (not necessarily distinct) appear in the third,
-      sixth, and eighth positions and no other positions.</li>
-<li>Vowels (not necessarily distinct) appear in exactly two
-      positions.</li>
-<li>Precisely four characters in the string are digits and no
-      digit appears more than one time.</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A database uses <m>20</m>-character strings as record
-    identifiers. The valid characters in these strings are upper-case
-    letters in the English alphabet and decimal digits. (Recall there
-    are <m>26</m> letters in the English alphabet and <m>10</m> decimal digits.)
-    How many valid record identifiers are possible if a valid record
-    identifier must meet <em>all</em> of the following criteria:
-<ul>
-<li>Letter(s) from the set <m>\{A,E,I,O,U\}</m> occur in
-      <em>exactly</em> three positions of the string.</li>
-<li>The last three characters in the string are <em>distinct</em>
-      decimal digits that do not appear elsewhere in the string.</li>
-<li>The remaining characters of the string may be filled with
-      any of the remaining letters or decimal digits.</li>
-</ul>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Let <m>X</m> be the set of the <m>26</m> lowercase English letters and
-    <m>10</m> decimal digits. How many <m>X</m>-strings of length <m>15</m>
-    satisfy <em>all</em> of the following properties (at the same time)?
-<ul>
-<li>The first and last symbols of the string are distinct digits
-      (which may appear elsewhere in the string).</li>
-<li>Precisely four of the symbols in the string are the letter '<m>t</m>'.</li>
-<li>Precisely three characters in the string are elements of the
-      set <m>V=\{a,e,i,o,u\}</m> and these characters are all distinct.</li>
-</ul>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A donut shop sells 12 types of donuts. A manager wants to buy
-    six donuts, one each for himself and his five employees.
-<ol>
-<li>Suppose that he does this by selecting a specific type of
-      donut for each person. (He can select the same type of donut for
-      more than one person.) In how many ways can he do this?</li>
-<li>How many ways could he select the donuts if he wants to
-      ensure that he chooses a different type of donut for each
-      person?</li>
-<li>Suppose instead that he wishes to select one donut of each
-      of six <em>different</em> types and place them in the
-      breakroom. In how many ways can he do this? (The order of the
-      donuts in the box is irrelevant.)</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>The sport of korfball is played by teams of eight
-    players. Each team has four men and four women on it. Halliday
-    High School has seven men and <m>11</m> women interested in playing
-    korfball. In how many ways can they form a korfball team from their
-    18 interested students?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Twenty students compete in a programming competition in which
-    the top four students are recognized with trophies for first,
-    second, third, and fourth places.
-<ol>
-<li>How many different outcomes are there for the top four
-      places?</li>
-<li>At the last minute, the judges decide that they will award
-      honorable mention certificates to four individuals who did not
-      receive trophies. In how many ways can the honorable mention
-      recipients be selected (after the top four places have been
-      determined)? How many total outcomes (trophies plus
-      certificates) are there then?</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>An ice cream shop has a special on banana splits, and Xing is
-    taking advantage of it. He's astounded at all the options he has
-    in constructing his banana split:
-<ul>
-<li>He must choose three different flavors of ice cream to place
-      in the asymmetric bowl the banana split is served in. The shop
-      has 20 flavors of ice cream available.</li>
-<li>Each scoop of ice cream must be topped by a sauce, chosen
-      from six different options. Xing is free to put the same type of
-      sauce on more than one scoop of ice cream.</li>
-<li>There are <m>10</m> sprinkled toppings available, and he must
-      choose three of them to have sprinkled over the entire banana
-      split.</li>
-</ul>
+    <exercise>
+        <statement>
+            <p>The Hawaiian alphabet consists of <m>12</m> letters. How many six-character strings can be made using the Hawaiian alphabet?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many <m>2n</m>-digit positive integers can be formed if the digits in odd positions (counting the rightmost digit as position <m>1</m>) must be odd and the digits in even positions must be even and positive?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Matt is designing a website authentication system. He knows passwords are most secure if they contain letters, numbers, and symbols. However, he doesn't quite understand that this additional security is defeated if he specifies in which positions each character type appears. He decides that valid passwords for his system will begin with three letters (uppercase and lowercase both allowed), followed by two digits, followed by one of <m>10</m> symbols, followed by two uppercase letters, followed by a digit, followed by one of <m>10</m> symbols. How many different passwords are there for his website system? How does this compare to the total number of strings of length <m>10</m> made from the alphabet of all uppercase and lowercase English letters, decimal digits, and <m>10</m> symbols?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many ternary strings of length <m>2n</m> are there in which the zeroes appear only in odd-numbered positions?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Suppose we are making license plates of the form <m>l_1l_2l_3-d_1d_2d_3</m> where <m>l_1,l_2,l_3</m> are capital letters in the English alphabet and <m>d_1,d_2,d_3</m> are decimal digits (i.e., in <m>\{0,1,2,3,4,5,6,7,8,9\}</m>) subject to the restriction that at least one digit is nonzero and at least one letter is <m>K</m>. How many license plates can we make?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Mrs.<nbsp/>Steffen's third grade class has <m>30</m> students in it. The students are divided into three groups (numbered <m>1</m>, <m>2</m>, and <m>3</m>), each having <m>10</m> students.
+            </p>
+            <ol>
+                <li><p>The students in group <m>1</m> earned <m>10</m> extra minutes of recess by winning a class competition. Before going out for their extra recess time, they form a single file line. In how many ways can they line up?</p></li>
+                <li><p>When all <m>30</m> students come in from recess together, they
+                again form a single file line. However, this time the students
+                are arranged so that the first student is from group <m>1</m>, the
+                second from group <m>2</m>, the third from group <m>3</m>, and from there
+                on, the students continue to alternate by group in this
+                order. In how many ways can they line up to come in from recess?</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many strings of the form <m>l_1l_2d_1d_2d_3l_3l_4d_4l_5l_6</m>
+            are there where
+            <ul>
+                <li>for <m>1\leq i\leq 6</m>, <m>l_i</m> is an uppercase letter in the
+                English alphabet;</li>
+                <li>for <m>1\leq i\leq 4</m>, <m>d_i</m> is a decimal digit;</li>
+                <li><m>l_2</m> is not a vowel (i.e., <m>l_2\nin\{\text{A,E,I,O,U} \}</m>); and</li>
+                <li>the digits <m>d_1</m>, <m>d_2</m>, and <m>d_3</m> are distinct (i.e.,
+                <m>d_1\neq d_2\neq d_3\neq d_1</m>).</li>
+            </ul>
+            </p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>In this exercise, we consider strings made from uppercase letters in the English alphabet and decimal digits. How many strings of length <m>10</m> can be constructed in each of the following scenarios?</p>
+            <ol>
+                <li><p>The first and last characters of the string are letters.</p></li>
+                <li><p>The first character is a vowel, the second character is a
+                consonant, and the last character is a digit.</p></li>
+                <li><p>Vowels (not necessarily distinct) appear in the third,
+                sixth, and eighth positions and no other positions.</p></li>
+                <li><p>Vowels (not necessarily distinct) appear in exactly two
+                positions.</p></li>
+                <li><p>Precisely four characters in the string are digits and no
+                digit appears more than one time.</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A database uses <m>20</m>-character strings as record identifiers. The valid characters in these strings are upper-case letters in the English alphabet and decimal digits. (Recall there are <m>26</m> letters in the English alphabet and <m>10</m> decimal digits.)  How many valid record identifiers are possible if a valid record identifier must meet <em>all</em> of the following criteria:
+            </p>
+            <ul>
+                <li><p>Letter(s) from the set <m>\{A,E,I,O,U\}</m> occur in <em>exactly</em> three positions of the string.</p></li>
+                <li><p>The last three characters in the string are <em>distinct</em> decimal digits that do not appear elsewhere in the string.</p></li>
+                <li><p>The remaining characters of the string may be filled with any of the remaining letters or decimal digits.</p></li>
+            </ul>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Let <m>X</m> be the set of the <m>26</m> lowercase English letters and <m>10</m> decimal digits. How many <m>X</m>-strings of length <m>15</m> satisfy <em>all</em> of the following properties (at the same time)?</p>
+            <ul>
+                <li><p>The first and last symbols of the string are distinct digits (which may appear elsewhere in the string).</p></li>
+                <li><p>Precisely four of the symbols in the string are the letter '<m>t</m>'.</p></li>
+                <li><p>Precisely three characters in the string are elements of the set <m>V=\{a,e,i,o,u\}</m> and these characters are all distinct.</p></li>
+            </ul>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A donut shop sells 12 types of donuts. A manager wants to buy six donuts, one each for himself and his five employees.</p>
+            <ol>
+                <li><p>Suppose that he does this by selecting a specific type of donut for each person. (He can select the same type of donut for more than one person.) In how many ways can he do this?</p></li>
+                <li><p>How many ways could he select the donuts if he wants to ensure that he chooses a different type of donut for each person?</p></li>
+                <li><p>Suppose instead that he wishes to select one donut of each of six <em>different</em> types and place them in the breakroom. In how many ways can he do this? (The order of the donuts in the box is irrelevant.)</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>The sport of korfball is played by teams of eight players. Each team has four men and four women on it. Halliday High School has seven men and <m>11</m> women interested in playing korfball. In how many ways can they form a korfball team from their 18 interested students?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Twenty students compete in a programming competition in which the top four students are recognized with trophies for first, second, third, and fourth places.
+            </p>
+            <ol>
+                <li><p>How many different outcomes are there for the top four places?</p></li>
+                <li><p>At the last minute, the judges decide that they will award honorable mention certificates to four individuals who did not receive trophies. In how many ways can the honorable mention recipients be selected (after the top four places have been determined)? How many total outcomes (trophies plus certificates) are there then?</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>An ice cream shop has a special on banana splits, and Xing is taking advantage of it. He's astounded at all the options he has in constructing his banana split:</p>
+            <ul>
+                <li><p>He must choose three different flavors of ice cream to place in the asymmetric bowl the banana split is served in. The shop has 20 flavors of ice cream available.</p></li>
+                <li><p>Each scoop of ice cream must be topped by a sauce, chosen from six different options. Xing is free to put the same type of sauce on more than one scoop of ice cream.</p></li>
+                <li><p>There are <m>10</m> sprinkled toppings available, and he must choose three of them to have sprinkled over the entire banana split.</p></li>
+            </ul>
 
-<ol>
-<li>How many different ways are there for Xing to construct a
-      banana split at this ice cream shop?</li>
-<li>Suppose that instead of requiring that Xing choose exactly
-      three sprinkled toppings, he is allowed to choose between zero
-      and three sprinkled toppings. In this scenario, how many
-      different ways are there for him to construct a banana split?</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Suppose that a teacher wishes to distribute <m>25</m> identical
-    pencils to Ahmed, Barbara, Casper, and Dieter such that Ahmed and
-    Dieter receive at least one pencil each, Casper receives no more
-    than five pencils, and Barbara receives at least four pencils. In
-    how many ways can such a distribution be made?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many integer-valued solutions are there to each of the
-    following equations and inequalities?
-<ol>
-<li><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i&gt;0</m></li>
-<li><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i\geq 0</m></li>
-<li><m>x_1+x_2+x_3+x_4+x_5\leq 63</m>, all <m>x_i\geq 0</m></li>
-<li><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i\geq 0</m>, <m>x_2\geq 10</m></li>
-<li><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i\geq 0</m>, <m>x_2\leq 9</m></li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many integer solutions are there to the equation
-<me>
-  x_1+x_2+x_3+x_4 = 132
-</me>
-provided that <m>x_1&gt;0</m>, and <m>x_2,x_3,x_4\geq 0</m>? What if we add the
-    restriction that <m>x_4\lt 17</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many integer solutions are there to the inequality
-<me>
-  x_1+x_2+x_3+x_4+x_5\leq 782
-</me>
-provided that
-    <m>x_1,x_2&gt;0</m>, <m>x_3\geq 0</m>, and <m>x_4,x_5\geq 10</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A teacher has <m>450</m> identical pieces of candy. He wants to
-    distribute them to his class of <m>65</m> students, although he is
-    willing to take some leftover candy home. (He does not insist on
-    taking any candy home, however.) The student who won a contest in
-    the last class is to receive at least <m>10</m> pieces of candy as a
-    reward. Of the remaining students, <m>34</m> of them insist on
-    receiving at least one piece of candy, while the remaining <m>30</m>
-    students are willing to receive no candy.
-<ol>
-<li>In how many ways can he distribute the candy?</li>
-<li>In how many ways can he distribute the candy if, in addition
-      to the conditions above, one of his students is diabetic and can
-      receive at most <m>7</m> pieces of candy?  (This student is one of
-      the <m>34</m> who insist on receiving at least one piece of candy.)</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Give a combinatorial argument to prove the identity
-<me>
-  k\binom{n}{k} = n\binom{n-1}{k-1}.
-</me>
-<em>Hint</em>: Think of
-    choosing a team with a captain.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Let <m>m</m> and <m>w</m> be positive integers. Give a combinatorial
-    argument to prove that for integers <m>k\geq 0</m>,
-<me>
-  \sum_{j=0}^k \binom{m}{j}\binom{w}{k-j} = \binom{m+w}{k}.
-</me>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many lattice paths are there from <m>(0,0)</m> to <m>(10,12)</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many lattice paths are there from <m>(3,5)</m> to <m>(10,12)</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many lattice paths are there from <m>(0,0)</m> to <m>(10,12)</m>
-    that pass through <m>(3,5)</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many lattice paths from <m>(0,0)</m> to <m>(17,12)</m> are there
-    that pass through <m>(7,6)</m> and <m>(12,9)</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many lattice paths from <m>(0,0)</m> to <m>(14,73)</m> are there
-    that do <em>not</em> pass through <m>(6,37)</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A small-town bank robber is driving his getaway car from the
-    bank he just robbed to his hideout. The bank is at the
-    intersection of <m>1^\text{st}</m> Street and <m>1^\text{st}</m> Avenue. He
-    needs to return to his hideout at the intersection of
-    <m>7^\text{th}</m> Street and <m>5^\text{th}</m> Avenue. However, one of his
-    lookouts has reported that the town's one police officer is parked
-    at the intersection of <m>4^\text{th}</m> Street and <m>4^\text{th}</m>
-    Avenue. Assuming that the bank robber does not want to get
-    arrested and drives only on streets and avenues, in how many ways
-    can he safely return to his hideout?  (Streets and avenues are
-    uniformly spaced and numbered consecutively in this small town.)</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>The setting for this problem is the fictional town of
-    Mascotville, which is laid out as a grid. Mascots are allowed to
-    travel only on the streets, and not <q>as the yellow jacket
-    flies.</q>  Buzz, the Georgia Tech mascot, wants to go visit his
-    friend Thundar, the North Dakota State University mascot, who
-    lives <m>6</m> blocks east and <m>7</m> blocks north of Buzz's
-    hive. However, Uga VIII has recently moved into the doghouse <m>2</m>
-    blocks east and <m>3</m> blocks north of Buzz's hive and already has a
-    restraining order against Buzz. There's also a pair of tigers (mother
-    and cub) from
-    Clemson who live <m>1</m> block east and <m>2</m> blocks north of Uga VIII,
-    and they're known for setting traps for Buzz. Buzz wants to travel
-    from his hive to Thundar's pen every day without encountering Uga
-    VIII or The Tiger and The Tiger Cub. However, he wants to avoid
-    the boredom caused by using a route he's used in the past. What is
-    the largest number of consecutive days on which Buzz can make the
-    trip to visit Thundar without reusing a route (you may assume
-    the routes taken by Buzz only go east and north)?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Determine the coefficient on <m>x^{15}y^{120}z^{25}</m> in
-    <m>(2x+3y^2+z)^{100}</m>.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Determine the coefficient on <m>x^{12}y^{24}</m> in
-    <m>(x^3+2xy^2+y+3)^{18}</m>. (Be careful, as <m>x</m> and <m>y</m> now appear in
-    multiple terms!)</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>For each word below, determine the number of rearrangements of
-    the word in which all letters must be used.
-<ol>
-<li>OVERNUMEROUSNESSES</li>
-<li>OPHTHALMOOTORHINOLARYNGOLOGY</li>
-<li>HONORIFICABILITUDINITATIBUS (the longest word in the English
-      language consisting strictly of alternating consonants and vowels<fn>\url{http://www.rinkworks.com/words/oddities.shtml}</fn>)</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many ways are there to paint a set of <m>27</m> elements such
-    that <m>7</m> are painted white, <m>6</m> are painted old gold, <m>2</m> are
-    painted blue, <m>7</m> are painted yellow, <m>5</m> are painted green, and
-    <m>0</m> of are painted red?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>There are many useful sets that are enumerated by the Catalan
-    numbers. (Volume two of R.P.<nbsp/>Stanley's <em>Enumerative
-      Combinatorics</em> contains a famous (or perhaps infamous) exercise
-    in <m>66</m> parts asking readers to find bijections that will show
-    that the number of various combinatorial structures is <m>C(n)</m>, and
-    his \href{http://www-math.mit.edu/<nbsp/>rstan/ec/catadd.pdf}{web page}
-    boasts an additional list of at least <m>100</m> parts.) Give bijective
-    arguments to show that each class of objects below is enumerated
-    by <m>C(n)</m>. (All three were selected from the list in Stanley's
-    book.)
-<ol>
-<li>The number of ways to fully-parenthesize a product of <m>n+1</m>
-      factors as if the <q>multiplication</q> operation in question were
-      not necessarily associative. For example, there is one way to
-      parenthesize a product of two factors <m>(a_1a_2)</m>, there are two
-      ways to parenthesize a product of three factors (<m>(a_1(a_2a_3))</m>
-      and <m>((a_1a_2)a_3)</m>), and there are five ways to parenthesize a
-      product of four factors:
-<me>
-  (a_1(a_2(a_3a_4))),
-      (a_1((a_2a_3)a_4)), ((a_1a_2)(a_3a_4)),
-      ((a_1(a_2a_3))a_4), (((a_1a_2)a_3)a_4).
-</me>
-</li>
-<li>Sequences of <m>n</m> <m>1</m>'s and <m>n</m> <m>-1</m>'s in which the sum of
-      the first <m>i</m> terms is nonnegative for all <m>i</m>.</li>
-<li>Sequences <m>1\leq a_1\leq \cdots \leq a_n</m> of integers with
-      <m>a_i\leq i</m>. For example, for <m>n=3</m>, the sequences are
-<me>
-  111\qquad 112\qquad 113\qquad 122\qquad 123.
-</me>
-<em>Hint</em>:
-      Think about drawing lattice paths on paper with grid lines and
-      (basically) the number of boxes below a lattice path in a
-      particular column.</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
+            <ol>
+                <li><p>How many different ways are there for Xing to construct a banana split at this ice cream shop?</p></li>
+                <li><p>Suppose that instead of requiring that Xing choose exactly three sprinkled toppings, he is allowed to choose between zero and three sprinkled toppings. In this scenario, how many different ways are there for him to construct a banana split?</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Suppose that a teacher wishes to distribute <m>25</m> identical pencils to Ahmed, Barbara, Casper, and Dieter such that Ahmed and Dieter receive at least one pencil each, Casper receives no more than five pencils, and Barbara receives at least four pencils. In how many ways can such a distribution be made?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many integer-valued solutions are there to each of the following equations and inequalities?</p>
+            <ol>
+                <li><p><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i&gt;0</m></p></li>
+                <li><p><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i\geq 0</m></p></li>
+                <li><p><m>x_1+x_2+x_3+x_4+x_5\leq 63</m>, all <m>x_i\geq 0</m></p></li>
+                <li><p><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i\geq 0</m>, <m>x_2\geq 10</m></p></li>
+                <li><p><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i\geq 0</m>, <m>x_2\leq 9</m></p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many integer solutions are there to the equation
+            <me>
+                x_1+x_2+x_3+x_4 = 132
+            </me>
+            provided that <m>x_1&gt;0</m>, and <m>x_2,x_3,x_4\geq 0</m>? What if we add the restriction that <m>x_4\lt 17</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many integer solutions are there to the inequality
+            <me>
+                x_1+x_2+x_3+x_4+x_5\leq 782
+            </me>
+            provided that <m>x_1,x_2&gt;0</m>, <m>x_3\geq 0</m>, and <m>x_4,x_5\geq 10</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A teacher has <m>450</m> identical pieces of candy. He wants to distribute them to his class of <m>65</m> students, although he is willing to take some leftover candy home. (He does not insist on taking any candy home, however.) The student who won a contest in the last class is to receive at least <m>10</m> pieces of candy as a reward. Of the remaining students, <m>34</m> of them insist on receiving at least one piece of candy, while the remaining <m>30</m> students are willing to receive no candy.</p>
+            <ol>
+                <li><p>In how many ways can he distribute the candy?</p></li>
+                <li><p>In how many ways can he distribute the candy if, in addition to the conditions above, one of his students is diabetic and can receive at most <m>7</m> pieces of candy?  (This student is one of the <m>34</m> who insist on receiving at least one piece of candy.)</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Give a combinatorial argument to prove the identity
+            <me>
+                k\binom{n}{k} = n\binom{n-1}{k-1}.
+            </me>
+            </p>
+        </statement>
+        <hint>
+            <p>Think of choosing a team with a captain.</p>
+        </hint>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Let <m>m</m> and <m>w</m> be positive integers. Give a combinatorial argument to prove that for integers <m>k\geq 0</m>,
+            <me>
+                \sum_{j=0}^k \binom{m}{j}\binom{w}{k-j} = \binom{m+w}{k}.
+            </me>
+            </p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many lattice paths are there from <m>(0,0)</m> to <m>(10,12)</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many lattice paths are there from <m>(3,5)</m> to <m>(10,12)</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many lattice paths are there from <m>(0,0)</m> to <m>(10,12)</m> that pass through <m>(3,5)</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many lattice paths from <m>(0,0)</m> to <m>(17,12)</m> are there that pass through <m>(7,6)</m> and <m>(12,9)</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many lattice paths from <m>(0,0)</m> to <m>(14,73)</m> are there that do <em>not</em> pass through <m>(6,37)</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A small-town bank robber is driving his getaway car from the bank he just robbed to his hideout. The bank is at the intersection of <m>1^\text{st}</m> Street and <m>1^\text{st}</m> Avenue. He needs to return to his hideout at the intersection of <m>7^\text{th}</m> Street and <m>5^\text{th}</m> Avenue. However, one of his lookouts has reported that the town's one police officer is parked at the intersection of <m>4^\text{th}</m> Street and <m>4^\text{th}</m> Avenue. Assuming that the bank robber does not want to get arrested and drives only on streets and avenues, in how many ways can he safely return to his hideout?  (Streets and avenues are uniformly spaced and numbered consecutively in this small town.)</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>The setting for this problem is the fictional town of Mascotville, which is laid out as a grid. Mascots are allowed to travel only on the streets, and not <q>as the yellow jacket flies.</q> Buzz, the Georgia Tech mascot, wants to go visit his friend Thundar, the North Dakota State University mascot, who lives <m>6</m> blocks east and <m>7</m> blocks north of Buzz's hive. However, Uga VIII has recently moved into the doghouse <m>2</m> blocks east and <m>3</m> blocks north of Buzz's hive and already has a restraining order against Buzz. There's also a pair of tigers (mother and cub) from Clemson who live <m>1</m> block east and <m>2</m> blocks north of Uga VIII, and they're known for setting traps for Buzz. Buzz wants to travel from his hive to Thundar's pen every day without encountering Uga VIII or The Tiger and The Tiger Cub. However, he wants to avoid the boredom caused by using a route he's used in the past. What is the largest number of consecutive days on which Buzz can make the trip to visit Thundar without reusing a route (you may assume the routes taken by Buzz only go east and north)?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Determine the coefficient on <m>x^{15}y^{120}z^{25}</m> in <m>(2x+3y^2+z)^{100}</m>.</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Determine the coefficient on <m>x^{12}y^{24}</m> in <m>(x^3+2xy^2+y+3)^{18}</m>. (Be careful, as <m>x</m> and <m>y</m> now appear in multiple terms!)</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>For each word below, determine the number of rearrangements of the word in which all letters must be used.</p>
+            <ol>
+                <li><p>OVERNUMEROUSNESSES</p></li>
+                <li><p>OPHTHALMOOTORHINOLARYNGOLOGY</p></li>
+                <li><p>HONORIFICABILITUDINITATIBUS (the longest word in the English
+                language consisting strictly of alternating consonants and vowels<fn><url href="http://www.rinkworks.com/words/oddities.shtml" /></fn>)</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many ways are there to paint a set of <m>27</m> elements such that <m>7</m> are painted white, <m>6</m> are painted old gold, <m>2</m> are painted blue, <m>7</m> are painted yellow, <m>5</m> are painted green, and <m>0</m> of are painted red?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>There are many useful sets that are enumerated by the Catalan numbers. (Volume two of R.P.<nbsp/>Stanley's <booktitle>Enumerative Combinatorics</booktitle> contains a famous (or perhaps infamous) exercise in <m>66</m> parts asking readers to find bijections that will show that the number of various combinatorial structures is <m>C(n)</m>, and his <url href="http://www-math.mit.edu/~rstan/ec/catadd.pdf">web page</url> boasts an additional list of at least <m>100</m> parts.) Give bijective arguments to show that each class of objects below is enumerated by <m>C(n)</m>. (All three were selected from the list in Stanley's book.)
+            </p>
+            <ol>
+                <li><p>The number of ways to fully-parenthesize a product of <m>n+1</m>
+                factors as if the <q>multiplication</q> operation in question were
+                not necessarily associative. For example, there is one way to
+                parenthesize a product of two factors <m>(a_1a_2)</m>, there are two
+                ways to parenthesize a product of three factors (<m>(a_1(a_2a_3))</m>
+                and <m>((a_1a_2)a_3)</m>), and there are five ways to parenthesize a
+                product of four factors:
+                <me>
+                    (a_1(a_2(a_3a_4))),
+                    (a_1((a_2a_3)a_4)), ((a_1a_2)(a_3a_4)),
+                    ((a_1(a_2a_3))a_4), (((a_1a_2)a_3)a_4).
+                </me>
+                </p></li>
+                <li><p>Sequences of <m>n</m> <m>1</m>'s and <m>n</m> <m>-1</m>'s in which the sum of
+                the first <m>i</m> terms is nonnegative for all <m>i</m>.</p></li>
+                <li xml:id="ex_part_seq_cat"><p>Sequences <m>1\leq a_1\leq \cdots \leq a_n</m> of integers with
+                <m>a_i\leq i</m>. For example, for <m>n=3</m>, the sequences are
+                <me>
+                    111\qquad 112\qquad 113\qquad 122\qquad 123.
+                </me>
+            </p>
+                </li>
+            </ol>
+        </statement>
+        <hint>
+            <p>For <xref ref="ex_part_seq_cat" autoname="no">part</xref>, think about drawing lattice paths on paper with grid lines and (basically) the number of boxes below a lattice path in a particular column.</p>
+        </hint>
+    </exercise>
 </exercises>

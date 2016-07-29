@@ -434,7 +434,9 @@
     </exercise>
     <exercise>
         <statement>
-            <p>(Challenge problem) When <m>\GVE</m> is a graph, let <m>\Delta(\bfG)</m> denote the maximum degree in <m>\bfG</m>.  Prove <em>Brooks' Theorem</em>: If <m>\bfG</m> is connected and <m>\Delta(\bfG)=k</m>, then <m>\chi(\bfG)\le k+1</m>.  Furthermore, equality holds if and only if (a)<nbsp/><m>k=2</m> and <m>\bfG</m> is an odd cycle, or (b)<nbsp/><m>k\neq2</m> and <m>\bfG=\bfK_{k+1}</m>.  Hint: It's clear that <m>\chi(\bfG)\le k+1</m> (in fact, this was already assigned as an exercise). Assume that <m>\chi(\bfG)=k+1</m> but that neither conclusion (a) or (b) holds.  Take a spanning tree of <m>\bfG</m> and an appropriate ordering of the vertices, with two leaves of the tree coming first.  Then show that a First Fit coloring of the graph will only use <m>k</m> colors.</p>
+            <p>(Challenge problem) When <m>\GVE</m> is a graph, let <m>\Delta(\bfG)</m> denote the maximum degree in <m>\bfG</m>.  Prove <em>Brooks' Theorem</em>: If <m>\bfG</m> is connected and <m>\Delta(\bfG)=k</m>, then <m>\chi(\bfG)\le k+1</m>.  Furthermore, equality holds if and only if (a)<nbsp/><m>k=2</m> and <m>\bfG</m> is an odd cycle, or (b)<nbsp/><m>k\neq2</m> and <m>\bfG=\bfK_{k+1}</m>.</p>
         </statement>
+        <hint><p>Hint: It's clear that <m>\chi(\bfG)\le k+1</m> (in fact, this was already assigned as an exercise). Assume that <m>\chi(\bfG)=k+1</m> but that neither conclusion (a) or (b) holds.  Take a spanning tree of <m>\bfG</m> and an appropriate ordering of the vertices, with two leaves of the tree coming first.  Then show that a First Fit coloring of the graph will only use <m>k</m> colors.</p>
+</hint>
     </exercise>
 </exercises>
