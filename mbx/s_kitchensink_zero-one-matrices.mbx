@@ -42,7 +42,7 @@
         <p>To illustrate this concept, note that <m>(6,6,4,3,3,3,1,1,1,1,)</m> covers <m>(6,6,3,3,3,3,2,1,1,1)</m> in <m>\cgP(29)</m>. Also, <m>(5,4,3)</m> covers <m>(5,3,3,1)</m> in <m>\cgP(12)</m>.
         </p>
 
-        <p>With a partition <m>V=(v_1,v_2,\dots,v_m)</m> from <m>\cgP(t)</m>, we associate a <em>dual partition</em> <m>W=(w_1,w_2,\dots,w_n)</m> defined as follows: (1)<nbsp /><m>n=v_1</m> and for each <m>j=1,\dots,n</m>, <m>w_j</m> is the number of entries in <m>V</m> that are at least <m>n+1-j</m>. For example, the dual partition of <m>V=(8,6,6,6,5,5,3,1,1,1)</m> is <m>(8,7,7,6,6,4,1,1)</m>.  Of course, they are both partitions of <m>42</m>, which is the secret of the universe! In what follows, we denote the dual of the partition <m>V</m> by <m>V^d</m>. Note that if <m>W=V^d</m>, then <m>V=W^d</m>, i.e., the dual of the dual is the original.
+        <p>With a partition <m>V=(v_1,v_2,\dots,v_m)</m> from <m>\cgP(t)</m>, we associate a <term>dual partition</term><index><main>partition</main><sub>dual</sub></index> <m>W=(w_1,w_2,\dots,w_n)</m> defined as follows: (1)<nbsp /><m>n=v_1</m> and for each <m>j=1,\dots,n</m>, <m>w_j</m> is the number of entries in <m>V</m> that are at least <m>n+1-j</m>. For example, the dual partition of <m>V=(8,6,6,6,5,5,3,1,1,1)</m> is <m>(8,7,7,6,6,4,1,1)</m>.  Of course, they are both partitions of <m>42</m>, which is the secret of the universe! In what follows, we denote the dual of the partition <m>V</m> by <m>V^d</m>. Note that if <m>W=V^d</m>, then <m>V=W^d</m>, i.e., the dual of the dual is the original.
         </p>
     </introduction>
 
