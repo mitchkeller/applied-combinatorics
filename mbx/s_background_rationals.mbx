@@ -1,163 +1,94 @@
 <section xml:id="s_background_rationals">
-<title>Obtaining the Rationals from the Integers</title>
+    <title>Obtaining the Rationals from the Integers</title>
+    <introduction>
+        <p>We consider the set <m>\rats</m> of all ordered pairs in <m>\ints\times \ints</m> of the form <m>(x,y)</m> with <m>y\neq 0</m>. Elements of <m>\rats</m> are called <term>rational numbers</term><index><main>rational numbers</main></index>, or <term>fractions</term>. Define an equivalence relation, denoted <m>=</m>, on <m>\rats</m> by setting <m>(x,y)=(z,w)</m> if and only if <m>xw=yz</m>. Here we should point out that the symbol <m>=</m> can be used (and often is) to denote an equivalence relation. It is not constrained to mean <q>identically the same.</q>
+        </p>
+
+        <p>When <m>q=(x,y)</m> is a fraction, <m>x</m> is called the <term>numerator</term><index><main>numerator</main></index> and <m>y</m> is called the <term>denominator</term><index><main>denominator</main></index> of <m>q</m>.  Remember that the denominator of a fraction is never zero.
+        </p>
+
+        <p>
+            Addition of fractions is defined by
+        <me>
+            (a,b)+(c,d) = (ad+bc,bd),
+        </me>
+            while multiplication is defined by
+        <me>
+            (a,b)(c,d) = (ac,bd).
+        </me>
+            As was the case with integers, it is important to pause and prove that both operations are well defined.
+        </p>
+
+        <theorem>
+            <statement>
+                <p>Let <m>x,y,z,w\in\rats</m>.  If <m>x=y</m> and <m>z=w</m>, then <m>x+z=y+w</m> and <m>xz=yw</m>.
+                </p>
+            </statement>
+        </theorem>
+
+        <p>Addition and multiplication are both associative and commutative.  Also, we have the distributive property.
+        </p>
+
+        <theorem>
+            <statement>
+                <p>
+                    Let <m>x,y,z\in Q</m>. Then
+                </p>
+
+                <ol>
+                    <li><p><m>x+y=y+x</m> and <m>xy=yx</m>.</p></li>
+                    <li><p><m>x+(y+z) = (x+y)+z</m> and <m>x(yz)=(xy)z</m>.</p></li>
+                    <li><p><m>x(y+z)=xy+xz</m>.</p></li>
+                </ol>
+            </statement>
+        </theorem>
+
+        <p>The additive inverse of a fraction <m>(a,b)</m> is just <m>(-a,b)</m>.  Using this, we define subtraction for fractions: <m>(a,b)-(c,d)=(a,b)+(-c,d)</m>.
+        </p>
+
+        <p>When <m>(a,b)</m> is a fraction, and <m>a\neq 0</m>, the fraction <m>(b,a)</m> is the <term>reciprocal</term><index><main>reciprocal</main></index> of <m>(a,b)</m>. The reciprocal is also called the <term>multiplicative inverse</term><index><main>multiplicative inverse</main></index>, and the reciprocal of <m>x</m> is denoted <m>x^{-1}</m>. When <m>y\neq0</m>, we can then define <term>division</term> by setting <m>x/y=xy^{-1}</m>, i.e., <m>(a,b)/(c,d)=(ad, bc)</m>. Of course, division by zero is not defined, a fact that you probably already knew!
+        </p>
+
+        <p>As was the case for both <m>\nonnegints</m> and <m>\ints</m>, when <m>n</m> is a positive integer, and <m>0</m> is the zero in <m>\rats</m>, we define <m>0^n=0</m>. When <m>x=(a,b)</m> is a fraction with <m>x\neq0</m> and <m>n</m> is a non-negative integer, we define <m>x^n</m> inductively by (i)<nbsp /><m>x^0=1</m> and (ii)<nbsp /><m>x^{n+1}=xx^n</m>.
+        </p>
+
+        <theorem>
+            <statement>
+                <p>If <m>x\in\rats</m>, <m>x\neq0</m>, and <m>m,n\in\ints</m>, then <m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
+                </p>
+            </statement>
+        </theorem>
+
+        <p>Many folks prefer an alternate notation for fractions in which the numerator is written directly over the denominator with a horizontal line between them, so <m>(2,5)</m> can also be written as <m>\frac{2}{5}</m>.
+        </p>
+
+        <p>Via the map <m>g(x) = (x,1)=\frac{x}{1}</m>, we again say that the integers are a <q>subset</q> of the rationals. As before, note that <m>g(x+y) = g(x)+g(y)</m>, <m>g(x-y)=g(x)-g(y)</m> and <m>g(xy)=g(x)g(y)</m>.
+        </p>
+
+        <p>In the third grade, you were probably told that <m>5 =\frac{5}{1}</m>, but by now you are realizing that this is not exactly true.  Similarly, if you had told your teacher that <m>\frac{3}{4}</m> and <m>\frac{6}{8}</m> weren't really the same and were only <q>equal</q> in the broader sense of an equivalence relation defined on a subset of the cartesian product of the integers, you probably would have been sent to the Principal's office.
+        </p>
+
+        <p>Try to imagine the trouble you would have gotten into had you insisted that the real meaning of <m>\frac{1}{2}</m> was
+        <me>
+            \frac{1}{2} =\langle(\langle(s(s(0)),s(0))\rangle,
+            \langle(s(s(0)),0)\rangle)\rangle
+        </me>
+        We can also define a total order on <m>\rats</m>. To do this, we assume that <m>(a,b),(c,d)\in\rats</m> have <m>b,d>0</m>. (If <m>b\lt 0</m>, for example, we would replace it by <m>(a',b')=(-a,-b)</m>, which is in the same equivalence class as <m>(a,b)</m> and has <m>b'>0</m>.) Then we set <m>(a,b)\leq (c,d)</m> in <m>\rats</m> if <m>ad\leq bc</m> in <m>\ints</m>.
+        </p>
+    </introduction>
 
 
-<introduction>
-<p>
-We consider the set <m>\rats</m> of all ordered pairs in <m>\ints\times \ints</m> of
-the form <m>(x,y)</m> with <m>y\neq 0</m>. Elements of <m>\rats</m> are called
-<em>rational numbers</em>, or <em>fractions</em>. Define
-an equivalence relation, denoted <m>=</m>, on <m>\ints</m> by
-setting <m>(x,y)=(z,w)</m> if and only if <m>xw=yz</m>. Here we
-should point out that the symbol <m>=</m> can be used (and often is)
-to denote an equivalence relation. It is not constrained to mean <q>identically
-the same.</q>
-</p>
+    <subsection>
+        <title>Integer Exponents</title>
+        <p>When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\rats</m>, we define <m>0^n=0</m>. When <m>x\in\rats</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>, we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>. When <m>n\in\ints</m> and <m>n\lt 0</m>, we set <m>x^n=1/x^{-n}</m>.
+        </p>
 
-<p>
-When <m>q=(x,y)</m> is a fraction, <m>x</m> is called the <em>numerator</em>
-and <m>y</m> is called the <em>denominator</em> of <m>q</m>.
-Remember that the denominator of a fraction is never zero.
-</p>
-
-<p>
-Addition of fractions is defined by
-</p>
-<me>
-  (a,b)+(c,d) = (ad+bc,bd)
-</me>
-<p>
-while multiplication is defined by
-</p>
-<me>
-  (a,b)(c,d) = (ac,bd).
-</me>
-<p>
-As was the case with integers, it is important to pause
-and prove that both operations are well defined.
-</p>
-
-<theorem>
-<statement>
-<p>
-Let <m>x,y,z,w\in\rats</m>.
-If <m>x=y</m> and <m>z=w</m>, then <m>x+z=y+w</m> and <m>xz=yw</m>.
-</p>
-</statement>
-</theorem>
-
-<p>
-Addition and multiplication are both associative and commutative.
-Also, we have the distributive property.
-</p>
-
-<theorem>
-<statement>
-<p>
-Let <m>x,y,z\in Q</m>. Then
-</p>
-
-<ol>
-<li><m>x+y=y+x</m> and <m>xy=yx</m>.</li>
-<li><m>x+(y+z) = (x+y)+z</m> and <m>x(yz)=(xy)z</m>.</li>
-<li><m>x(y+z)=xy+xz</m>.</li>
-</ol>
-</statement>
-</theorem>
-
-<p>
-The additive inverse of a fraction <m>(a,b)</m> is just <m>(-a,b)</m>.
-Using this, we define subtraction for fractions:
-<m>(a,b)-(c,d)=(a,b)+(-c,d)</m>.
-</p>
-
-<p>
-When <m>(a,b)</m> is a fraction, and <m>a\neq 0</m>, the fraction <m>(b,a)</m> is the
-<em>reciprocal</em> of <m>(a,b)</m>. The reciprocal is also
-called the <em>multiplicative inverse</em>, and the reciprocal
-of <m>x</m> is denoted <m>x^{-1}</m>. When <m>y\neq0</m>, we can then define
-<em>division</em> by setting <m>x/y=xy^{-1}</m>, i.e.,
-<m>(a,b)/(c,d)=(ad, bc)</m>. Of course, division by zero is not
-defined, a fact that you probably already knew!
-</p>
-
-<p>
-As was the case for both <m>\nonnegints</m> and <m>\ints</m>, when
-<m>n</m> is a positive integer, and <m>0</m> is the zero in <m>\rats</m>,
-we define <m>0^n=0</m>. When <m>x=(a,b)</m> is a fraction with <m>x\neq0</m>
-and <m>n</m> is a non-negative integer, we define <m>x^n</m> inductively
-by (i)<nbsp /><m>x^0=1</m> and (ii)<nbsp /><m>x^{n+1}=xx^n</m>.
-</p>
-
-<theorem>
-<statement>
-<p>
-If <m>x\in\rats</m>, <m>x\neq0</m>, and <m>m,n\in\ints</m>, then
-<m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
-</p>
-</statement>
-</theorem>
-
-<p>
-Many folks prefer an alternate notation for fractions in
-which the numerator is written directly over the denominator
-with a horizontal line between them, so <m>(2,5)</m> can
-also be written as <m>\frac{2}{5}</m>.
-</p>
-
-<p>
-Via the map <m>g(x) = (x,1)=\frac{x}{1}</m>, we again say that the integers
-are a <q>subset</q> of the rationals. As before, note that
-<m>g(x+y) = g(x)+g(y)</m>, <m>g(x-y)=g(x)-g(y)</m> and <m>g(xy)=g(x)g(y)</m>.
-</p>
-
-<p>
-In the third grade,
-you were probably told that <m>5 =\frac{5}{1}</m>, but by now
-you are realizing that this is not exactly true.
-Similarly, if you had told your teacher that <m>\frac{3}{4}</m> and
-<m>\frac{6}{8}</m> weren't really the same and were only <q>equal</q> in
-the broader sense of an equivalence relation defined on
-a subset of the cartesian product of the integers, you
-probably would have been sent to the Principal's office.
-</p>
-
-<p>
-Try to imagine the trouble you would have gotten into had
-you insisted that the real meaning
-of <m>\frac{1}{2}</m> was
-</p>
-<me>
-  \frac{1}{2} =\langle(\langle(s(s(0)),s(0))\rangle,
-  \langle(s(s(0)),0)\rangle)\rangle
-</me>
-<p>
-We can also define a total order on <m>\rats</m>. To do this, we assume
-that <m>(a,b),(c,d)\in\rats</m> have <m>b,d>0</m>. (If <m>b\lt 0</m>, for example, we
-would replace it by <m>(a',b')=(-a,-b)</m>, which is in the same
-equivalence class as <m>(a,b)</m> and has <m>b'>0</m>.) Then we set <m>(a,b)\leq
-(c,d)</m> in <m>\rats</m> if <m>ad\leq bc</m> in <m>\ints</m>.
-</p>
-</introduction>
-
-
-<subsection>
-<title>Integer Exponents</title>
-<p>
-When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\rats</m>, we
-define <m>0^n=0</m>. When <m>x\in\rats</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>,
-we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>. When
-<m>n\in\ints</m> and <m>n\lt 0</m>, we set <m>x^n=1/x^{-n}</m>.
-</p>
-
-<theorem>
-<statement>
-<p>
-If <m>x\in\rats</m>, <m>x\neq0</m>, and <m>m,n\in\ints</m>, then
-<m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
-</p>
-</statement>
-</theorem>
-</subsection>
+        <theorem>
+            <statement>
+                <p>If <m>x\in\rats</m>, <m>x\neq0</m>, and <m>m,n\in\ints</m>, then <m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
+                </p>
+            </statement>
+        </theorem>
+    </subsection>
 
 </section>
