@@ -1,3 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_graphs_exercises">
+  <exercise>
+    <statement>
+      <p>The questions in this exercise pertain to the graph <m>\bfG</m> shown in <xref ref="fig_graphs_graph_ex" autoname="yes"/>.
+      </p>
+      <sidebyside widths="45% 45%">
+        <ol>
+            <li><p>What is the degree of vertex <m>8</m>?</p></li>
+            <li><p>What is the degree of vertex <m>10</m>?</p></li>
+            <li><p>How many vertices of degree <m>2</m> are there in <m>\bfG</m>? List
+            them.</p></li>
+            <li><p>Find a cycle of length <m>8</m> in <m>\bfG</m>.</p></li>
+            <li><p>What is the length of a shortest path from <m>3</m> to <m>4</m>?</p></li>
+            <li><p>What is the length of a shortest path from <m>8</m> to <m>7</m>?</p></li>
+            <li><p>Find a path of length <m>5</m> from vertex <m>4</m> to vertex <m>6</m>.</p></li>
+        </ol>
+        <figure xml:id="fig_graphs_graph_ex">
+            <caption>A graph</caption>
+            <image width="45%" source="images/graph_ex"/>
+        </figure>
+      </sidebyside>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw a graph with <m>8</m> vertices, all of odd degree, that does not contain a path of length <m>3</m> or explain why such a graph does not exist.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw a graph with <m>6</m> vertices having degrees <m>5</m>, <m>4</m>, <m>4</m>, <m>2</m>, <m>1</m>, and <m>1</m> or explain why such a graph does not exist.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For the next Olympic Winter Games, the organizers wish to expand the number of teams competing in curling. They wish to have <m>14</m> teams enter, divided into two pools of seven teams each. Right now, they're thinking of requiring that in preliminary play each team will play seven games against distinct opponents. Five of the opponents will come from their own pool and two of the opponents will come from the other pool. They're having trouble setting up such a schedule, so they've come to you. By using an appropriate graph-theoretic model, either argue that they cannot use their current plan or devise a way for them to do so.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For this exercise, consider the graph <m>\bfG</m> in <xref ref="fig_graphs_subgraphs_ex" autoname="yes"/>.</p>
+        <ol>
+            <li><p>Let <m>V_1=\{g,j,c,h,e,f\}</m> and <m>E_1=\{ge,jg,ch,ef\}</m>. Is <m>(V_1,E_1)</m> a subgraph of <m>\bfG</m>?</p></li>
+            <li><p>Let <m>V_2=\{g,j,c,h,e,f\}</m> and <m>E_2=\{ge,jg,ch,ef,cj\}</m>. Is <m>(V_2,E_2)</m> a subgraph of <m>\bfG</m>?</p></li>
+            <li><p>Let <m>V_3=\{a,d,c,h,b\}</m> and <m>E_3=\{ch,ac,ad,bc\}</m>. Is <m>(V_3,E_3)</m> an induced subgraph of <m>\bfG</m>?</p></li>
+            <li><p>Draw the subgraph of <m>\bfG</m> induced by <m>\{g,j,d,a,c,i\}</m>.</p></li>
+            <li><p>Draw the subgraph of <m>\bfG</m> induced by <m>\{c,h,f,i,j\}</m>.</p></li>
+            <li><p>Draw a subgraph of <m>\bfG</m> having vertex set <m>\{e,f,b,c,h,j\}</m> that is <em>not</em> an induced subgraph.</p></li>
+            <li><p>Draw a spanning subgraph of <m>\bfG</m> with exactly <m>10</m> edges.</p></li>
+        </ol>
+        <figure xml:id="fig_graphs_subgraphs_ex">
+            <caption>A graph <m>\bfG</m></caption>
+            <image width="50%" source="images/subgraphs_ex"/>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Prove that every tree on <m>n</m> vertices has exactly <m>n-1</m> edges.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p><xref ref="fig_graphs_isomorphic_ex" autoname="yes"/> contains four graphs on six vertices. Determine which (if any) pairs of graphs are isomorphic. For pairs that are isomorphic, give an isomorphism between the two graphs. For pairs that are not isomorphic, explain why.</p>
+        <figure xml:id="fig_graphs_isomorphic_ex">
+            <caption>Are these graphs isomorphic?</caption>
+            <image width="65%">
+                <latex-image-code>\begin{overpic}[scale=0.6]{images/isomorphic_ex}
+                \put(22,47){\(\bfG_1\)}
+                \put(74,47){\(\bfG_2\)}
+                \put(22,-5){\(\bfG_3\)}
+                \put(74,-5){\(\bfG_4\)}
+                \put(4,87){\(v_1\)} \put(22,87){\(v_2\)} \put(41,87){\(v_3\)}
+                \put(4,54){\(v_4\)} \put(22,54){\(v_5\)} \put(41,54){\(v_6\)}
+                \put(63,96){\(u_1\)} \put(84,96){\(u_2\)} \put(99,73){\(u_3\)}
+                \put(89,55){\(u_4\)} \put(57,55){\(u_5\)} \put(46.5,73){\(u_6\)}
+                \put(10,41){\(w_1\)} \put(31.5,41){\(w_2\)} \put(45.5,20){\(w_3\)}
+                \put(37,3){\(w_4\)} \put(3,3){\(w_5\)} \put(-7.5,21){\(w_6\)}
+                \put(56,38.3){\(x_1\)} \put(74,38.3){\(x_2\)} \put(92,38.3){\(x_3\)}
+                \put(56,5){\(x_4\)} \put(74,5){\(x_5\)} \put(92,5){\(x_6\)}
+                \end{overpic}</latex-image-code>
+            </image>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find an eulerian circuit in the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_exercise" autoname="yes"/> or explain why one does not exist.</p>
+        <figure xml:id="fig_graphs_euler_exercise">
+            <caption>A graph <m>\bfG</m></caption>
+            <image width="75%">
+                <latex-image-code>\begin{overpic}[width=4in]{images/euler_exercise}
+                \put(6,19.5){\(1\)}
+                \put(64.3,5){\(2\)}
+                \put(43.8,15){\(3\)}
+                \put(60,23.5){\(4\)}
+                \put(26,2){\(5\)}
+                \put(21,32){\(6\)}
+                \put(85,9){7}
+                \put(32.3,26.3){\(8\)}
+                \put(53,-1){\(9\)}
+                \put(42,33){\(10\)}
+                \put(71,26){\(11\)}
+                \put(83,21){\(12\)}
+                \end{overpic}</latex-image-code>
+            </image>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Consider the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_hamilton_ex" autoname="yes"/>. Determine if the graph is eulerian. If it is, find an eulerian circuit. If it is not, explain why it is not. Determine if the graph is hamiltonian. If it is, find a hamiltonian cycle. If it is not, explain why it is not.</p>
+        <figure xml:id="fig_graphs_euler_hamilton_ex">
+            <caption>A graph <m>\bfG</m></caption>
+            <image width="75%" source="images/euler_hamilton_ex"/>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Explain why the graph <m>\bfG</m> in <xref ref="fig_graphs_noneuler_exercise" autoname="yes"/> does not have an eulerian circuit, but show that by adding a single edge, you can make it eulerian.</p>
+        <figure xml:id="fig_graphs_noneuler_exercise">
+            <caption>A graph <m>\bfG</m></caption>
+            <image width="75%">
+                <latex-image-code>\begin{overpic}[width=4in]{images/noneuler_exercise}
+                \put(6,19.5){\(1\)}
+                \put(67,3){\(2\)}
+                \put(48,11){\(3\)}
+                \put(64,33){\(4\)}
+                \put(3,4){\(5\)}
+                \put(21,26){\(6\)}
+                \put(85,9){7}
+                \put(24.7,12.8){\(8\)}
+                \put(45,-1){\(9\)}
+                \put(32,35){\(10\)}
+                \put(72,24){\(11\)}
+                \put(61,10){\(12\)}
+                \end{overpic}</latex-image-code>
+            </image>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>An <term>eulerian trail</term><index><main>eulerian</main><sub>trail</sub></index> is defined in the same manner as an eulerian circuit (see <xref ref="s_graphs_eulerham" autoname="yes"/>) except that we drop the condition that <m>x_0=x_t</m>. Prove that a graph has an eulerian trail if and only if it is connected and has at most two vertices of odd degree.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Alice and Bob are discussing a graph that has <m>17</m> vertices and <m>129</m> edges. Bob argues that the graph is Hamiltonian, while Alice says that he's wrong. Without knowing anything more about the graph, must one of them be right? If so, who and why, and if not, why not?</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find the chromatic number of the graph <m>\bfG</m> in <xref ref="fig_graphs_bipartite_ex" autoname="yes"/> and a coloring using <m>\chi(\bfG)</m> colors.</p>
+        <figure xml:id="fig_graphs_bipartite_ex">
+            <caption>A graph <m>\bfG</m> to color</caption>
+            <image width="60%" source="images/bipartite_ex"/>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find the chromatic number of the graph <m>\bfG</m> in <xref ref="fig_graphs_coloring_ex" autoname="yes"/> and a coloring using <m>\chi(\bfG)</m> colors.</p>
+        <figure xml:id="fig_graphs_coloring_ex">
+            <caption>A graph <m>\bfG</m> to color</caption>
+            <image width="60%" source="images/coloring_ex"/>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A pharmaceutical manufacturer is building a new warehouse to store its supply of <m>10</m> chemicals it uses in production. However, some of the chemicals cannot be stored in the same room due to undesirable reactions that will occur. The matrix below has a <m>1</m> in position <m>(i,j)</m> if and only if chemical <m>i</m> and chemical <m>j</m> cannot be stored in the same room. Develop an appropriate graph theoretic model and determine the smallest number of rooms into which they can divide their warehouse so that they can safely store all <m>10</m> chemicals in the warehouse.
+        <me>
+            \begin{bmatrix}0 \amp  1 \amp  0 \amp  1 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0\\
+            1 \amp  0 \amp  0 \amp  1 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1\\
+            0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  1 \amp  0\\
+            1 \amp  1 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0\\
+            1 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0\\
+            0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  1\\
+            1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0\\
+            0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0\\
+            0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0\\
+            0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0
+            \end{bmatrix}
+        </me>
+        </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>A school is preparing the schedule of classes for the next academic year. They are concerned about scheduling calculus, physics, English, statistics, economics, chemistry, and German classes, planning to offer a single section of each one. Below are the lists of courses that each of six students must take in order to successfully graduate. Determine the smallest number of class periods that can be used to schedule these courses if each student can take at most one course per class period. Explain why fewer class periods cannot be used.</p>
+      <table>
+          <tabular>
+            <row><cell>Student</cell><cell>Courses</cell></row>
+            <row bottom="minor"><cell/><cell/></row>
+            <row><cell>1</cell><cell>Chemistry, Physics, Economics</cell></row>
+            <row><cell>2</cell><cell>English, German, Statistics</cell></row>
+            <row><cell>3</cell><cell>Statistics, Calculus, German</cell></row>
+            <row><cell>4</cell><cell>Chemistry, Physics</cell></row>
+            <row><cell>5</cell><cell>English, Chemistry</cell></row>
+            <row><cell>6</cell><cell>Chemistry, Economics</cell></row>
+          </tabular>
+      </table>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>All trees with more than one vertex have the same chromatic number. What is it, and why?</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_color">
+    <statement>
+      <p> Find a proper <m>(t+1)</m>-coloring of the graph <m>\bfG_{t+1}</m> in Mycielski's proof of <xref ref="prop_triangle-free" autoname="yes" />. This establishes that <m>\chi(\bfG_{t+1})\leq t+1</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>How many vertices does the graph <m>\bfG_4</m> from the Kelly and Kelly proof of
+        <xref ref="prop_triangle-free" autoname="yes" />
+        have?</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Construct and draw the graph <m>\bfG_5</m> from Mycielski's proof of <xref ref="prop_triangle-free" autoname="yes" />.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find a recursive formula for the number of vertices <m>n_t</m> in the graph <m>\bfG_t</m> from the Kelly and Kelly proof of <xref ref="prop_triangle-free" autoname="yes" />.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Let <m>b_t</m> be the number of vertices in the graph <m>\bfG_t</m> from the Mycielski's proof of <xref ref="prop_triangle-free" autoname="yes" />. Find a recursive formula for <m>b_t</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>The <term>girth</term><index><main>girth</main></index> of a graph <m>\bfG</m> is the number of vertices in a shortest cycle of <m>\bfG</m>. Find the girth of the graph <m>\bfG_t</m> in the Kelly and Kelly proof of <xref ref="prop_triangle-free" autoname="yes" /> and prove that your answer is correct. As a challenge, see if you can modify the construction of <m>\bfG_t</m> to increase the girth. If so, how far are you able to increase it?</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_graphs_first-fit-color">
+    <statement>
+      <p> Use the First Fit algorithm to color the graph in <xref ref="fig_k44minus" autoname="yes"/> using the two different orderings of the vertex set shown there.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw the interval graph corresponding to the intervals in <xref ref="fig_graphs_intervals-ex" autoname="yes"/>.</p>
+        <figure xml:id="fig_graphs_intervals-ex">
+            <caption>A collection of intervals</caption>
+            <image width="73%" source="images/firstfit-intgraph"/>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Use the First Fit coloring algorithm to find the chromatic number of the interval graph whose interval representation is shown in <xref ref="fig_graphs_intervals-ex" autoname="yes"/> as well as a proper coloring using as few colors as possible.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+        <ol>
+                <li><p>From <xref ref="ex_graphs_first-fit-color" autoname="yes" /> you know that choosing a bad ordering of the vertices of a graph can lead to the First Fit coloring algorithm producing a coloring that is far from optimal. However, you can use this algorithm to prove a bound on the chromatic number. Show that if every vertex of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</p></li>
+                <li><p>Give an example of a bipartite graph with <m>D=1000</m> to show that this bound need not be tight.</p></li>
+            </ol>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Is the graph in <xref ref="fig_graphs_coloring_ex" autoname="yes"/> planar? If it is, find a drawing without edges crossings. If it is not give a reason why it is not.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Is the graph in <xref ref="fig_graphs_planar_ex" autoname="yes"/> planar? If it is, find a drawing without edge crossings. If it is not give a reason why it is not.</p>
+        <figure xml:id="fig_graphs_planar_ex">
+            <caption>Is this graph planar?</caption>
+            <image width="50%" source="images/planar_ex"/>
+        </figure>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Find a planar drawing of the graph <m>\bfK_5-e</m>, by which we mean the graph formed from the complete graph on <m>5</m> vertices by deleting any edge.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw a planar drawing of an eulerian planar graph with <m>10</m> vertices and <m>21</m> edges.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Show that every planar graph has a vertex that is incident to at most five edges.</p>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_graphs_degseq">
+    <statement>
+      <p> Let <m>\GVE</m> be a graph with <m>V=\{v_1,v_2,\dots,v_n\}</m>. Its <em>degree sequence</em> is the list of the degrees of its vertices, arranged in nonincreasing order. That is, the degree sequence of <m>\mathbf{G}</m> is <m>(\deg_\mathbf{G}(v_1),\deg_\mathbf{G}(v_2),\dots,\deg_\mathbf{G}(v_n))</m> with the vertices arranged such that <m>\deg_\mathbf{G}(v_1) \geq \deg_\mathbf{G}(v_2)\geq \cdots\geq \deg_\mathbf{G}(v_n)</m>. Below are five sequences of integers (along with <m>n</m>, the number of integers in the sequence). Identify
+        <ul>
+            <li>the <em>one</em> sequence that <b>cannot be the degree sequence of any graph</b>;</li>
+            <li>the <em>two</em> sequences that could be the degree sequence of a <b>planar</b> graph;</li>
+            <li>the <em>one</em> sequence that could be the degree sequence of a <b>tree</b>;</li>
+            <li>the <em>one</em> sequence that is the degree sequence of an <b>eulerian</b> graph; and</li>
+            <li>the <em>one</em> sequence that is the degree sequence of a graph that must be <b>hamiltonian</b>.</li>
+        </ul>
+        Explain your answers. (Note that one sequence will get two labels from above.)
+        </p>
+        <ol>
+            <li><p><m>n=10</m>: <m>(4,4,2,2,1,1,1,1,1,1)</m></p></li>
+            <li><p><m>n=9</m>: <m>(8,8,8,6,4,4,4,4,4)</m></p></li>
+            <li><p><m>n=7</m>: <m>(5,4,4,3,2,1,0)</m></p></li>
+            <li><p><m>n=10</m>: <m>(7,7,6,6,6,6,5,5,5,5)</m></p></li>
+            <li><p><m>n=6</m>: <m>(5,4,3,2,2,2)</m></p></li>
+        </ol>
+    </statement>
+  </exercise>
+  <exercise xml:id="ex_graphs_degseq2">
+    <statement>
+      <p> Below are three sequences of length <m>10</m>. One of the sequences cannot be the degree sequence (see <xref ref="ex_graphs_degseq" autoname="yes" />) of any graph. Identify it and say why. For each of the other two, say <em>why</em> (if you have enough information) a <em>connected</em> graph with that degree sequence
+        <ul>
+            <li>is definitely hamiltonian/cannot be hamiltonian;</li>
+            <li>is definitely eulerian/cannot be eulerian;</li>
+            <li>is definitely a tree/cannot be a tree; and</li>
+            <li>is definitely planar/cannot be planar.</li>
+        </ul>
+        (If you do not have enough information to make a determination for a sequence without having specific graph(s) with that degree sequence, write <q>not enough information</q> for that property.)</p>
+        <ol>
+            <li><p><m>(6,6,4,4,4,4,2,2,2,2)</m></p></li>
+            <li><p><m>(7,7,7,7,6,6,6,2,1,1)</m></p></li>
+            <li><p><m>(8,6,4,4,4,3,2,2,1,1)</m></p></li>
+        </ol>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>For the two degree sequences in <xref ref="ex_graphs_degseq2" autoname="yes" /> that correspond to graphs, there were some properties for which the degree sequence was not sufficient information to determine if the graph had that property. For each of those situations, see if you can draw both a graph that has the property and a graph that does not have the property.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Draw the <m>16</m> labeled trees on <m>4</m> vertices.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1" autoname="yes"/>.</p>
+        <figure xml:id="fig_graphs_tree-10verts-ex1">
+            <caption>A <m>10</m>-vertex tree</caption>
+            <image>
+                <latex-image-code>\begin{overpic}{images/tree-10verts-ex1}
+                \put(35,11.2){\(1\)}
+                \put(46,2){\(2\)}
+                \put(22,25){\(3\)}
+                \put(22,9){\(4\)}
+                \put(68,2.5){\(5\)}
+                \put(90,11){\(6\)}
+                \put(5,16){\(7\)}
+                \put(77,21){\(8\)}
+                \put(62,14.5){\(9\)}
+                \put(0.5,2){\(10\)}
+                \end{overpic}</latex-image-code>
+            </image>
 <section xml:id="s_graphs_exercises">
     <title>Exercises</title>
     <ol>
@@ -79,288 +446,15 @@
             </image>
 
         </figure>
-        </li>
-        <li>Find an eulerian circuit in the graph <m>\bfG</m> in
-        <xref ref="fig_graphs_euler_exercise" autoname="yes" /> or explain why one does not
-        exist.
-        <figure xml:id="fig_graphs_euler_exercise" >
-            <caption>A graph <m>\bfG</m></caption>
-            <image>
-                <latex-image-code><![CDATA[\begin{overpic}[width=4in]{images/euler_exercise}
-                \put(6,19.5){\(1\)}
-                \put(64.3,5){\(2\)}
-                \put(43.8,15){\(3\)}
-                \put(60,23.5){\(4\)}
-                \put(26,2){\(5\)}
-                \put(21,32){\(6\)}
-                \put(85,9){7}
-                \put(32.3,26.3){\(8\)}
-                \put(53,-1){\(9\)}
-                \put(42,33){\(10\)}
-                \put(71,26){\(11\)}
-                \put(83,21){\(12\)}
-                \end{overpic}]]></latex-image-code>
-            </image>
-
-        </figure>
-        </li>
-        <li>Consider the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_hamilton_ex" autoname="yes" />. Determine if the graph is eulerian. If
-        it is, find an eulerian circuit. If it is not, explain why it is
-        not. Determine if the graph is hamiltonian. If it is, find a
-        hamiltonian cycle. If it is not, explain why it is not.
-        <figure xml:id="fig_graphs_euler_hamilton_ex" >
-            <caption>A graph <m>\bfG</m></caption>
-            <image width="46%" source="images/euler_hamilton_ex" />
-        </figure>
-        </li>
-        <li>Explain why the graph <m>\bfG</m> in
-        <xref ref="fig_graphs_noneuler_exercise" autoname="yes" /> does not have an eulerian
-        circuit, but show that by adding a single edge, you can make it
-        eulerian.
-        <figure xml:id="fig_graphs_noneuler_exercise" >
-            <caption>A graph <m>\bfG</m></caption>
-            <image>
-                <latex-image-code><![CDATA[\begin{overpic}[width=4in]{images/noneuler_exercise}
-                \put(6,19.5){\(1\)}
-                \put(67,3){\(2\)}
-                \put(48,11){\(3\)}
-                \put(64,33){\(4\)}
-                \put(3,4){\(5\)}
-                \put(21,26){\(6\)}
-                \put(85,9){7}
-                \put(24.7,12.8){\(8\)}
-                \put(45,-1){\(9\)}
-                \put(32,35){\(10\)}
-                \put(72,24){\(11\)}
-                \put(61,10){\(12\)}
-                \end{overpic}]]></latex-image-code>
-            </image>
-
-        </figure>
-        </li>
-        <li>An <term>eulerian trail</term><index><main>eulerian</main><sub>trail</sub></index> is defined in the same manner as an
-        eulerian circuit (see
-        <xref ref="s_graphs_eulerham" autoname="yes" />)
-        except that we drop the condition that <m>x_0=x_t</m>. Prove that a
-        graph has an eulerian trail if and only if it is connected and has
-        at most two vertices of odd degree.</li>
-        <li>Alice and Bob are discussing a graph that has <m>17</m> vertices and
-        <m>129</m> edges. Bob argues that the graph is Hamiltonian, while Alice
-        says that he's wrong. Without knowing anything more about the graph,
-        must one of them be right? If so, who and why, and if not, why not?</li>
-        <li>Find the chromatic number of the graph <m>\bfG</m> in
-        <xref ref="fig_graphs_bipartite_ex" autoname="yes" /> and a coloring using <m>\chi(\bfG)</m> colors.
-        <figure xml:id="fig_graphs_bipartite_ex" >
-            <caption>A graph <m>\bfG</m> to color</caption>
-            <image width="60%" source="images/bipartite_ex" />
-        </figure>
-        </li>
-        <li>Find the chromatic number of the graph <m>\bfG</m> in
-        <xref ref="fig_graphs_coloring_ex" autoname="yes" /> and a coloring using <m>\chi(\bfG)</m> colors.
-        <figure xml:id="fig_graphs_coloring_ex" >
-            <caption>A graph <m>\bfG</m> to color</caption>
-            <image width="60%" source="images/coloring_ex" />
-        </figure>
-        </li>
-        <li>A pharmaceutical manufacturer is building a new warehouse to
-        store its supply of <m>10</m> chemicals it uses in production. However,
-        some of the chemicals cannot be stored in the same room due to undesirable
-        reactions that will occur. The matrix below has a <m>1</m> in position
-        <m>(i,j)</m> if and only if chemical <m>i</m> and chemical <m>j</m> cannot be
-        stored in the same room. Develop an appropriate graph theoretic
-        model and determine the smallest number of rooms into which they can
-        divide their warehouse so that they can safely store all <m>10</m>
-        chemicals in the warehouse.
-        <me>
-            \begin{bmatrix}0 \amp  1 \amp  0 \amp  1 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0\\
-            1 \amp  0 \amp  0 \amp  1 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1\\
-            0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  1 \amp  0\\
-            1 \amp  1 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0\\
-            1 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0\\
-            0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  1\\
-            1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0\\
-            0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0\\
-            0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0\\
-            0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0
-            \end{bmatrix}
-        </me>
-        </li>
-        <li>A school is preparing the schedule of classes for the next
-        academic year. They are concerned about scheduling calculus,
-        physics, English, statistics, economics, chemistry, and German
-        classes, planning to offer a single section of each one. Below are
-        the lists of courses that each of six students must take in order to
-        successfully graduate. Determine the smallest number of class
-        periods that can be used to schedule these courses if each student
-        can take at most one course per class period. Explain why fewer
-        class periods cannot be used.
-        <tabular>
-            <row><cell>Student</cell><cell>Courses</cell></row>
-            <row bottom="minor"><cell></cell><cell></cell></row>
-            <row><cell>1</cell><cell>Chemistry, Physics, Economics</cell></row>
-            <row><cell>2</cell><cell>English, German, Statistics</cell></row>
-            <row><cell>3</cell><cell>Statistics, Calculus, German</cell></row>
-            <row><cell>4</cell><cell>Chemistry, Physics</cell></row>
-            <row><cell>5</cell><cell>English, Chemistry</cell></row>
-            <row><cell>6</cell><cell>Chemistry, Economics</cell></row>
-        </tabular>
-        </li>
-        <li>All trees with more than one vertex have the same chromatic
-        number. What is it, and why?</li>
-        <li xml:id="ex_color" > Find a proper <m>(t+1)</m>-coloring of the
-        graph <m>\bfG_{t+1}</m> in Mycielski's proof of
-        <xref ref="prop_triangle-free" autoname="yes" />. This
-        establishes that <m>\chi(\bfG_{t+1})\leq t+1</m>.</li>
-        <li>How many vertices does the graph <m>\bfG_4</m> from the Kelly and
-        Kelly proof of
-        <xref ref="prop_triangle-free" autoname="yes" />
-        have?</li>
-        <li>Construct and draw the graph <m>\bfG_5</m> from Mycielski's proof of
-        <xref ref="prop_triangle-free" autoname="yes" />.</li>
-        <li>Find a recursive formula for the number of vertices <m>n_t</m> in the
-        graph <m>\bfG_t</m> from the Kelly and Kelly proof of
-        <xref ref="prop_triangle-free" autoname="yes" />.</li>
-        <li>Let <m>b_t</m> be the number of vertices in the graph <m>\bfG_t</m> from
-        the Mycielski's proof of
-        <xref ref="prop_triangle-free" autoname="yes" />. Find
-        a recursive formula for <m>b_t</m>.</li>
-        <li>The <em>girth</em> of a graph <m>\bfG</m> is the number of vertices in
-        a shortest cycle of <m>\bfG</m>. Find the girth of the graph <m>\bfG_t</m> in
-        the Kelly and Kelly proof of
-        <xref ref="prop_triangle-free" autoname="yes" />
-        and prove that your answer is correct. As a challenge, see if you
-        can modify the construction of <m>\bfG_t</m> to increase the girth. If
-        so, how far are you able to increase it?</li>
-        <li xml:id="ex_graphs_first-fit-color" > Use the First Fit algorithm to
-        color the graph in <xref ref="fig_k44minus" autoname="yes" /> using the two different
-        orderings of the vertex set shown there.</li>
-        <li>Draw the interval graph corresponding to the intervals in
-        <xref ref="fig_graphs_intervals-ex" autoname="yes" />.
-        <figure xml:id="fig_graphs_intervals-ex" >
-            <caption>A collection of intervals</caption>
-            <image width="73%" source="images/firstfit-intgraph" />
-        </figure>
-        </li>
-        <li>Use the First Fit coloring algorithm to find the chromatic
-        number of the interval graph whose interval representation is shown
-        in <xref ref="fig_graphs_intervals-ex" autoname="yes" /> as well as a proper coloring
-        using as few colors as possible.</li>
-        <li>
-            <ol>
-                <li>From
-                <xref ref="ex_graphs_first-fit-color" autoname="yes" />
-                you know that choosing a bad ordering of the vertices of a graph
-                can lead to the First Fit coloring algorithm producing a coloring
-                that is far from optimal. However, you can use this algorithm to
-                prove a bound on the chromatic number. Show that if every vertex
-                of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</li>
-                <li>Give an example of a bipartite graph with <m>D=1000</m> to show
-                that this bound need not be tight.</li>
-            </ol>
-        </li>
-        <li>Is the graph in <xref ref="fig_graphs_coloring_ex" autoname="yes" /> planar? If it
-        is, find a drawing without edges crossings. If it is not give a reason why it is
-        not.</li>
-        <li>Is the graph in <xref ref="fig_graphs_planar_ex" autoname="yes" /> planar? If it
-        is, find a drawing without edge crossings. If it is not give a reason why it is
-        not.
-        <figure xml:id="fig_graphs_planar_ex" >
-            <caption>Is this graph planar?</caption>
-            <image width="60%" source="images/planar_ex" />
-        </figure>
-        </li>
-        <li>Find a planar drawing of the graph <m>\bfK_5-e</m>, by which we mean
-        the graph formed from the complete graph on <m>5</m> vertices by deleting
-        any edge.</li>
-        <li>Draw a planar drawing of an eulerian planar graph with <m>10</m>
-        vertices and <m>21</m> edges.</li>
-        <li>Show that every planar graph has a vertex that is incident to at
-        most five edges.</li>
-        <li xml:id="ex_graphs_degseq" > Let <m>\GVE</m> be a graph with <m>V=\{v_1,v_2,\dots,v_n\}</m>. Its
-        <em>degree sequence</em> is the list of the degrees of its vertices,
-        arranged in nonincreasing order. That is, the degree sequence of
-        <m>\mathbf{G}</m> is
-        <m>(\deg_\mathbf{G}(v_1),\deg_\mathbf{G}(v_2),\dots,\deg_\mathbf{G}(v_n))</m>
-        with the vertices arranged such that <m>\deg_\mathbf{G}(v_1) \geq
-        \deg_\mathbf{G}(v_2)\geq \cdots\geq \deg_\mathbf{G}(v_n)</m>. Below
-        are five sequences of integers (along with <m>n</m>, the number of
-        integers in the sequence). Identify
-        <ul>
-            <li>the <em>one</em> sequence that <b>cannot be the degree
-            sequence of any graph</b>;</li>
-            <li>the <em>two</em> sequences that could be the degree sequence
-            of a <b>planar</b> graph;</li>
-            <li>the <em>one</em> sequence that could be the degree sequence of
-            a <b>tree</b>;</li>
-            <li>the <em>one</em> sequence that is the degree sequence of
-            an <b>eulerian</b> graph; and</li>
-            <li>the <em>one</em> sequence that is the degree sequence of a
-            graph that must be <b>hamiltonian</b>.</li>
-        </ul>
-        Explain your answers. (Note that one sequence will get two labels
-        from above.)
-        <ol>
-            <li><m>n=10</m>: <m>(4,4,2,2,1,1,1,1,1,1)</m></li>
-            <li><m>n=9</m>: <m>(8,8,8,6,4,4,4,4,4)</m></li>
-            <li><m>n=7</m>: <m>(5,4,4,3,2,1,0)</m></li>
-            <li><m>n=10</m>: <m>(7,7,6,6,6,6,5,5,5,5)</m></li>
-            <li><m>n=6</m>: <m>(5,4,3,2,2,2)</m></li>
-        </ol>
-        </li>
-        <li xml:id="ex_graphs_degseq2" > Below are three sequences of length <m>10</m>. One of the sequences
-        cannot be the degree sequence (see
-        <xref ref="ex_graphs_degseq" autoname="yes" />) of
-        any graph. Identify it and say why. For each of the other two, say
-        <em>why</em> (if you have enough information) a <em>connected</em> graph
-        with that degree sequence
-        <ul>
-            <li>is definitely hamiltonian/cannot be hamiltonian;</li>
-            <li>is definitely eulerian/cannot be eulerian;</li>
-            <li>is definitely a tree/cannot be a tree; and</li>
-            <li>is definitely planar/cannot be planar.</li>
-        </ul>
-        (If you do not have enough information to make a determination for a
-        sequence without having specific graph(s) with that degree sequence,
-        write <q>not enough information</q> for that property.)
-        <ol>
-            <li><m>(6,6,4,4,4,4,2,2,2,2)</m></li>
-            <li><m>(7,7,7,7,6,6,6,2,1,1)</m></li>
-            <li><m>(8,6,4,4,4,3,2,2,1,1)</m></li>
-        </ol>
-        </li>
-        <li>For the two degree sequences in
-        <xref ref="ex_graphs_degseq2" autoname="yes" /> that
-        correspond to graphs, there were some properties for which the
-        degree sequence was not sufficient information to determine if the
-        graph had that property. For each of those situations, see if you
-        can draw both a graph that has the property and a graph that does
-        not have the property.</li>
-        <li>Draw the <m>16</m> labeled trees on <m>4</m> vertices.</li>
-        <li>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1" autoname="yes" />.
-        <figure xml:id="fig_graphs_tree-10verts-ex1" >
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2" autoname="yes"/>.</p>
+        <figure xml:id="fig_graphs_tree-10verts-ex2">
             <caption>A <m>10</m>-vertex tree</caption>
-            <image>
-                <latex-image-code><![CDATA[\begin{overpic}{images/tree-10verts-ex1}
-                \put(35,11.2){\(1\)}
-                \put(46,2){\(2\)}
-                \put(22,25){\(3\)}
-                \put(22,9){\(4\)}
-                \put(68,2.5){\(5\)}
-                \put(90,11){\(6\)}
-                \put(5,16){\(7\)}
-                \put(77,21){\(8\)}
-                \put(62,14.5){\(9\)}
-                \put(0.5,2){\(10\)}
-                \end{overpic}]]></latex-image-code>
-            </image>
-
-        </figure>
-        </li>
-        <li>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2" autoname="yes" />.
-        <figure xml:id="fig_graphs_tree-10verts-ex2" >
-            <caption>A <m>10</m>-vertex tree</caption>
-            <image>
-                <latex-image-code><![CDATA[\begin{overpic}{images/tree-8verts-ex2}
+            <image width="70%">
+                <latex-image-code>\begin{overpic}{images/tree-8verts-ex2}
                 \put(50,32){\(1\)}
                 \put(44,2){\(2\)}
                 \put(26,22){\(3\)}
@@ -369,16 +463,19 @@
                 \put(94,32){\(6\)}
                 \put(5,16){\(7\)}
                 \put(77,21){\(8\)}
-                \end{overpic}]]></latex-image-code>
+                \end{overpic}</latex-image-code>
             </image>
 
         </figure>
-        </li>
-        <li>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3" autoname="yes" />.
-        <figure xml:id="fig_graphs_tree-14verts-ex3" >
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3" autoname="yes"/>.</p>
+        <figure xml:id="fig_graphs_tree-14verts-ex3">
             <caption>A <m>14</m>-vertex tree</caption>
-            <image>
-                <latex-image-code><![CDATA[\begin{overpic}{images/tree-14verts-ex3}
+            <image width="75%">
+                <latex-image-code>\begin{overpic}{images/tree-14verts-ex3}
                 \put(50,32){\(1\)}
                 \put(44,2){\(2\)}
                 \put(2,34){\(3\)}
@@ -393,26 +490,29 @@
                 \put(44,9){\(12\)}
                 \put(87,14){\(13\)}
                 \put(64,14){\(14\)}
-                \end{overpic}]]></latex-image-code>
+                \end{overpic}</latex-image-code>
             </image>
-
         </figure>
-        </li>
-        <li>Construct the labeled tree <m>\bfT</m> with Pr&#xfc;fer code <m>96113473</m>.</li>
-        <li>Construct the labeled tree <m>\bfT</m> with Pr&#xfc;fer code <m>23134</m>.</li>
-        <li>Construct the labeled tree <m>\bfT</m> with Pr&#xfc;fer code (using
-        commas to separate symbols in the string, since we have labels
-        greater than <m>9</m>) <m>10,1,7,4,3,4,10,2,2,8</m>.</li>
-        <li>(Challenge problem) When <m>\GVE</m> is a graph, let <m>\Delta(\bfG)</m> denote the maximum
-        degree in <m>\bfG</m>.  Prove <b>Brooks' Theorem</b>:  If <m>\bfG</m> is connected and
-        <m>\Delta(\bfG)=k</m>, then
-        <m>\chi(\bfG)\le k+1</m>.  Furthermore, equality holds if and only if
-        (a)<nbsp /><m>k=2</m> and <m>\bfG</m> is an odd cycle, or (b)<nbsp /><m>k\neq2</m> and <m>\bfG=\bfK_{k+1}</m>.
-        Hint: It's clear that <m>\chi(\bfG)\le k+1</m> (in fact, this was
-        already assigned as an exercise). Assume that <m>\chi(\bfG)=k+1</m>
-        but that neither conclusion (a) or (b) holds.  Take a spanning tree of
-        <m>\bfG</m> and an appropriate ordering of the
-        vertices, with two leaves of the tree coming first.  Then show that a 
-        First Fit coloring of the graph will only use <m>k</m> colors.</li>
-    </ol>
-</section>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Construct the labeled tree <m>\bfT</m> with Prüfer code <m>96113473</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Construct the labeled tree <m>\bfT</m> with Prüfer code <m>23134</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>Construct the labeled tree <m>\bfT</m> with Prüfer code (using commas to separate symbols in the string, since we have labels greater than <m>9</m>) <m>10,1,7,4,3,4,10,2,2,8</m>.</p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>(Challenge problem) When <m>\GVE</m> is a graph, let <m>\Delta(\bfG)</m> denote the maximum degree in <m>\bfG</m>.  Prove <em>Brooks' Theorem</em>: If <m>\bfG</m> is connected and <m>\Delta(\bfG)=k</m>, then <m>\chi(\bfG)\le k+1</m>.  Furthermore, equality holds if and only if (a)<nbsp/><m>k=2</m> and <m>\bfG</m> is an odd cycle, or (b)<nbsp/><m>k\neq2</m> and <m>\bfG=\bfK_{k+1}</m>.  Hint: It's clear that <m>\chi(\bfG)\le k+1</m> (in fact, this was already assigned as an exercise). Assume that <m>\chi(\bfG)=k+1</m> but that neither conclusion (a) or (b) holds.  Take a spanning tree of <m>\bfG</m> and an appropriate ordering of the vertices, with two leaves of the tree coming first.  Then show that a First Fit coloring of the graph will only use <m>k</m> colors.</p>
+    </statement>
+  </exercise>
+</exercises>
