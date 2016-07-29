@@ -18,26 +18,29 @@
         <p>To describe <term>Dijkstra's algorithm</term> in a compact manner, it is useful to extend the definition of the function <m>w</m>. We do this by by setting <m>w(x,y)=\infty</m> when <m>x\neq y</m> and <m>(x,y)</m> is not a directed edge of <m>\bfG</m>. In this way, we will treat <m>\infty</m> as if it were a number (although it is not!).<fn>This is not an issue for computer implementation of the algorithm, as instead of using <m>\infty</m>, a value given by the product of the number of vertices and the maximum edge weight may be used to simulate infinity.</fn>
         </p>
 
-        <p>Let <m>n=|V|</m>. At Step<nbsp /><m>i</m>, where <m>1\le i\le n</m>, we will have determined:
-        </p>
-
-        <ol>
-            <li><p>A sequence <m>\sigma=(v_1,v_2,v_3,\dots,v_i)</m> of distinct vertices from <m>\bfG</m> with <m>r=v_1</m>.  These vertices are called <term>permanent vertices</term>, while the remaining vertices will be called <term>temporary vertices</term>.</p></li>
-            <li><p>For each vertex <m>x\in V</m>, we will have determined a number <m>\delta(x)</m> and a path <m>P(x)</m> from <m>r</m> to <m>x</m> of length <m>\delta(x)</m>.</p></li>
-        </ol>
-        <p>We are now prepared to describe the steps of the algorithm.</p>
+        <p>We are now prepared to describe Dijkstra's Algorithm.</p>
         <algorithm xml:id="alg_dijkstra">
             <title>Dijkstra's Algorithm</title>
             <index><main>Dijkstra's algorithm</main></index>
             <index><main>graph</main><sub>shortest path in</sub></index>
             <statement>
+                <p>Let <m>n=|V|</m>. At Step<nbsp /><m>i</m>, where <m>1\le i\le n</m>, we will have determined:
+                </p>
+
                 <ol>
+                    <li><p>A sequence <m>\sigma=(v_1,v_2,v_3,\dots,v_i)</m> of distinct vertices from <m>\bfG</m> with <m>r=v_1</m>.  These vertices are called <term>permanent vertices</term>, while the remaining vertices will be called <term>temporary vertices</term>.</p></li>
+                    <li><p>For each vertex <m>x\in V</m>, we will have determined a number <m>\delta(x)</m> and a path <m>P(x)</m> from <m>r</m> to <m>x</m> of length <m>\delta(x)</m>.</p></li>
+                </ol>
+
+                <dl>
                     <li>
-                        <p><em>Initialization (Step 1)</em>.  Set <m>i=1</m>. Set <m>\delta(r)=0</m> and let <m>P(r)=(r)</m> be the trivial one-point path. Also, set <m>\sigma= (r)</m>. For each <m>x\neq r</m>, set <m>\delta(x)= w(r,x)</m> and <m>P(x)=(r,x)</m>. Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set <m>v_2 = x</m>, and update <m>\sigma</m> by appending <m>v_2</m> to the end of it. Increment <m>i</m>.
+                        <title>Initialization (Step 1)</title>
+                        <p>Set <m>i=1</m>. Set <m>\delta(r)=0</m> and let <m>P(r)=(r)</m> be the trivial one-point path. Also, set <m>\sigma= (r)</m>. For each <m>x\neq r</m>, set <m>\delta(x)= w(r,x)</m> and <m>P(x)=(r,x)</m>. Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set <m>v_2 = x</m>, and update <m>\sigma</m> by appending <m>v_2</m> to the end of it. Increment <m>i</m>.
                         </p>
                     </li>
                     <li>
-                        <p><em>Inductive Step (Step <m>i</m>, <m>i>1</m>)</em>.  If <m>i\lt n</m>, then for each temporary <m>x</m>, let
+                        <title>Inductive Step (Step <m>i</m>, <m>i>1</m>)</title>
+                        <p>If <m>i\lt n</m>, then for each temporary <m>x</m>, let
                         <me>
                             \delta(x) = \min\{\delta(x), \delta(v_i)+w(v_i,x)\}.
                         </me>
@@ -46,7 +49,7 @@
                         <p>Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set <m>v_{i+1}=x</m>, and update <m>\sigma</m> by appending <m>v_{i+1}</m> to it. Increment <m>i</m>.
                         </p>
                     </li>
-                </ol>
+                </dl>
             </statement>
         </algorithm>
     </subsection>

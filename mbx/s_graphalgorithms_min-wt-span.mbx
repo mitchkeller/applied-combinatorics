@@ -110,18 +110,19 @@
             <index><main>minimum weight spanning tree</main><sub>Kruskal's algorithm for</sub></index>
             <index><main>Kruskal's algorithm</main></index>
             <statement>
-                <ol>
+                <dl>
                     <li>
-                    <p><em>Initialization.</em> Set <m>S=\emptyset</m> and <m>i=0</m>.  </p></li>
+                    <title>Initialization.</title><p>Set <m>S=\emptyset</m> and <m>i=0</m>.  </p></li>
                     
                     <li>
-                        <p><em>Inductive Step.</em> While <m>|S| \lt n-1</m>, let <m>j</m> be the least non-negative integer so that <m>j > i</m> and there are no cycles in <m>S\cup\{e_j\}</m>. Then (using pseudo-code) set
+                        <title>Inductive Step.</title>
+                        <p>While <m>|S| \lt n-1</m>, let <m>j</m> be the least non-negative integer so that <m>j > i</m> and there are no cycles in <m>S\cup\{e_j\}</m>. Then (using pseudo-code) set
                         <me>
                             i = j\quad\text{and} \quad S= S\cup\{j\}.
                         </me>
                         </p>
                     </li>
-                </ol>
+                </dl>
             </statement>
         </algorithm>
 
@@ -159,19 +160,21 @@ c h 79</pre>
             <index><main>minimum weight spanning trees</main><sub>Prim's algorithm for</sub></index>
             <index><main>Prim's algorithm</main></index>
             <statement>
-                <ol>
+                <dl>
                     <li>
-                        <p><em>Initialization.</em> Set <m>W=\{r\}</m> and <m>S=\emptyset</m>.
+                        <title>Initialization.</title>
+                        <p>Set <m>W=\{r\}</m> and <m>S=\emptyset</m>.
                         </p>
                     </li>
                     <li>
-                        <p><em>Inductive Step.</em> While <m>|W| \lt n</m>, let <m>e</m> be an edge of minimum weight among all edges with one endpoint in <m>W</m> and the other not in <m>W</m>.  If <m>e=xy</m>, <m>x\in W</m> and <m>y\not\in W</m>, update <m>W</m> and <m>S</m> by setting (using pseudo-code)
+                        <title>Inductive Step.</title>
+                        <p>While <m>|W| \lt n</m>, let <m>e</m> be an edge of minimum weight among all edges with one endpoint in <m>W</m> and the other not in <m>W</m>.  If <m>e=xy</m>, <m>x\in W</m> and <m>y\not\in W</m>, update <m>W</m> and <m>S</m> by setting (using pseudo-code)
                         <me>
                             W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
                         </me>
                         </p>
                     </li>
-                </ol>
+                </dl>
             </statement>
         </algorithm>
         <p>The correctness of Prim's algorithm follows immediately from <xref ref="lem_graphalgorithms_tech" autoname="yes" />.
