@@ -127,13 +127,13 @@ a partial
 <image width="73%" source="images/intord_firstfit_ex1" />
 </figure>
 </li>
-<li>Complete the proof of <xref ref="thm_intord-minrep">Theorem</xref>.  <em>Hint.</em>
+<li>Complete the proof of <xref ref="thm_intord-minrep" autoname="yes" />.  <em>Hint.</em>
   The key idea is to show that if <m>d</m> is the least positive integer for
   which an interval order <m>\bfP</m> has a representation using end points from
   <m>\{1,2,\dots,n\}</m>, then every integer <m>i</m> from this set must be both a left
   end point and a right end point of an interval.</li>
 <li>Show that every poset is isomorphic to a poset of each of the four types
-  illustrated in <xref ref="exa_construct">Example</xref>.  Hint: for each element <m>x</m>, choose
+  illustrated in <xref ref="exa_construct" autoname="yes" />.  Hint: for each element <m>x</m>, choose
   some unique identifying key which is an element/prime/coordinate/observer.  Then associate
   with <m>x</m> a structure that identifies the keys of elements from <m>D[x]</m>.</li>
 <li>The <em>dimension</em> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for 

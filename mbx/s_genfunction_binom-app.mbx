@@ -55,7 +55,7 @@
             </p>
         </statement>
         <proof>
-            <p>By <xref ref="thm_newton-binomial" autoname="title" /> and <xref ref="l_newbinom">Lemma</xref>, we know that
+            <p>By <xref ref="thm_newton-binomial" autoname="title" /> and <xref ref="l_newbinom" autoname="yes" />, we know that
             <md>
                 <mrow>  (1-4x)^{-1/2}\amp =\sum_{n=0}^\infty\binom{-1/2}{n}(-4x)^n</mrow>
                 <mrow>  \amp =\sum_{n=0}^\infty(-1)^n2^{2n}\binom{-1/2}{n}x^n</mrow>

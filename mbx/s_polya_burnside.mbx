@@ -52,7 +52,7 @@
             C\rangle} }\left( \sum_{C'\in\langle C\rangle}
             |\stab_G(C')|\right).
         </me>
-        By <xref ref="prop_polya_sum-stabs">Proposition</xref>, the inner sum is <m>|G|</m>. Therefore, the total sum is <m>N\cdot |G|</m>, so solving for <m>N</m> gives the desired equation.
+        By <xref ref="prop_polya_sum-stabs" autoname="yes" />, the inner sum is <m>|G|</m>. Therefore, the total sum is <m>N\cdot |G|</m>, so solving for <m>N</m> gives the desired equation.
         </p>
     </proof>
     <p>Burnside's lemma helpfully validates the computations we did in the previous section. However, what if instead of a square we were working with a hexagon and instead of two colors we allowed four? Then there would be <m>4^6=4096</m> different colorings and the dihedral group of the hexagon has <m>12</m> elements. Assembling the analogue of <xref ref="tab_polya_fixed-square" autoname="yes" /> in this situation would be a nightmare! This is where the genius of P&#xf3;lya's approach comes into play, as we see in the next section.

@@ -39,7 +39,7 @@
         Since every backward edge is used, <m>\delta_2>0</m> whenever we need to define it. We then set <m>\delta=\min\{\delta_1,\delta_2\}</m>.
         </p>
 
-        <p>In either case, we now have a positive number <m>\delta</m> and we make the following elementary observation, for which you are asked to provide a proof in <xref ref="ex_networkflow_update">exercise</xref>.
+        <p>In either case, we now have a positive number <m>\delta</m> and we make the following elementary observation, for which you are asked to provide a proof in <xref ref="ex_networkflow_update" autoname="yes" />.
         </p>
 
         <proposition xml:id="prop_networkflow_update">
@@ -67,7 +67,7 @@
                 <li><p><m>P_4=(S,B,E,D,C,A,T)</m> with <m>\delta= 2</m>. All edges are forward, except <m>(B,E)</m> and <m>(C,A)</m> which are backward.</p></li>
             </ol>
 
-            <p>In <xref ref="ex_networkflow_do-update">exercise</xref>, you are asked to update the flow in <xref ref="fig_networkflow_netflow" autoname="yes" /> for each of these four paths individually.
+            <p>In <xref ref="ex_networkflow_do-update" autoname="yes" />, you are asked to update the flow in <xref ref="fig_networkflow_netflow" autoname="yes" /> for each of these four paths individually.
             </p>
         </example>
     </introduction>
