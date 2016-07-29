@@ -50,7 +50,7 @@ to use the following basic theorem.
 <theorem>
 <statement>
 <p>
-Let <m>n,d\in \mathbb{N}_0</m> with <m>d>0</m>. Then there exist unique natural
+Let <m>n,d\in \nonnegints</m> with <m>d>0</m>. Then there exist unique natural
 numbers <m>q</m> and <m>r</m> so that <m>n=qd+r</m> and <m>0\le r \lt  d</m>.
 </p>
 </statement>
@@ -58,11 +58,11 @@ numbers <m>q</m> and <m>r</m> so that <m>n=qd+r</m> and <m>0\le r \lt  d</m>.
 
 <proof>
 <p>
-Let <m>d\in \mathbb{N}_0</m> with <m>d>0</m>. We first show that for each
-<m>n\in\mathbb{N}_0</m>, there exists <m>q,r\in\mathbb{N}_0</m> so that
+Let <m>d\in \nonnegints</m> with <m>d>0</m>. We first show that for each
+<m>n\in\nonnegints</m>, there exists <m>q,r\in\nonnegints</m> so that
 <m>n=qd+r</m> and <m>0\le r\lt d</m>. If <m>n=0</m>, we can take
 <m>q=0</m> and <m>r=0</m>. Now suppose that <m>k=qd+r</m> and <m>0\le r\lt m</m> for
-some <m>k\in \mathbb{N}_0</m>.
+some <m>k\in \nonnegints</m>.
 </p>
 
 <p>
@@ -78,7 +78,7 @@ of <m>q</m> and <m>r</m> follow immediately from the cancellation properties.
 </proof>
 
 <p>
-Now suppose that for some <m>k\in \mathbb{N}_0</m>, with
+Now suppose that for some <m>k\in \nonnegints</m>, with
 <m>k\ge 7</m>, we have defined a base eight notation for the representation
 of <m>k</m>, for all <m>n</m> with <m>0\le n\le k</m>, and that in each case,
 this representation consists of a string of digits,
@@ -141,7 +141,7 @@ then <m>\mathbb{M} =\posints</m> if and only if
 
 <ol>
 <li class="custom-list-style-type" label="(a)." ><m>1\in \mathbb{M}</m>; and</li>
-<li class="custom-list-style-type" label="(b)." ><m>\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
+<li class="custom-list-style-type" label="(b)." ><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
   \Longrightarrow(s(k)\in \mathbb{M})</m>.</li>
 </ol>
 

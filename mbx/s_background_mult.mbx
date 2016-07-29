@@ -6,7 +6,7 @@
     numbers, <m>m\times n</m> is also called the <em>product</em>
     of <m>m</m> and <m>n</m>, and it sometimes denoted
     <m>m*n</m> and even more compactly as <m>mn</m>. We will use this
-    last convention in the material to follow. Let <m>n\in \mathbb{N}_0</m>.
+    last convention in the material to follow. Let <m>n\in \nonnegints</m>.
   </p>
 
   <p>
@@ -28,12 +28,12 @@
     <title>Left Distributive Law</title>
     <statement>
       <p>
-        <m>m(n+p)=mn + mp</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+        <m>m(n+p)=mn + mp</m>, for all <m>m,n,p\in \nonnegints</m>.
       </p>
     </statement>
   <proof>
     <p>
-      Let <m>m,n\in \mathbb{N}_0</m>. Then
+      Let <m>m,n\in \nonnegints</m>. Then
     <me>
       m(n+0)=mn = mn +0 = mn+ m0.
     </me>
@@ -51,13 +51,13 @@
     <title>Right Distributive Law</title>
     <statement>
       <p>
-        <m>(m+n)p=mp + np</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+        <m>(m+n)p=mp + np</m>, for all <m>m,n,p\in \nonnegints</m>.
       </p>
     </statement>
 
   <proof>
     <p>
-      Let <m>m,n\in \mathbb{N}_0</m>. Then
+      Let <m>m,n\in \nonnegints</m>. Then
     <me>
       (m+n)0 =0 = 0+0 = m0 + n0.
     </me>
@@ -75,13 +75,13 @@
     <title>Associative Law of Multiplication</title>
     <statement>
       <p>
-        <m>m(np) = (mn)p</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+        <m>m(np) = (mn)p</m>, for all <m>m,n,p\in \nonnegints</m>.
       </p>
     </statement>
 
   <proof>
     <p>
-      Let <m>m,n\in \mathbb{N}_0</m>. Then
+      Let <m>m,n\in \nonnegints</m>. Then
     <me>
       m(n0)= m0 = 0 = (mn)0.
     </me>
@@ -100,7 +100,7 @@
   <lemma>
     <statement>
       <p>
-        <m>n0= 0n=0</m>, for all <m>n\in \mathbb{N}_0</m>.
+        <m>n0= 0n=0</m>, for all <m>n\in \nonnegints</m>.
       </p>
     </statement>
 
@@ -118,7 +118,7 @@
   <lemma>
     <statement>
       <p>
-        <m>n1 =1n=n</m>, for every <m>n\in \mathbb{N}_0</m>.
+        <m>n1 =1n=n</m>, for every <m>n\in \nonnegints</m>.
       </p>
     </statement>
 
@@ -137,14 +137,14 @@
     <title>Commutative Law of Multiplication</title>
     <statement>
       <p>
-        <m>mn=nm</m>, for all <m>m,n\in \mathbb{N}_0</m>.
+        <m>mn=nm</m>, for all <m>m,n\in \nonnegints</m>.
       </p>
     </statement>
 
 
   <proof>
     <p>
-      Let <m>m\in \mathbb{N}_0</m>.  Then <m>m0=0m</m>.  Assume <m>mk=km</m>. Then
+      Let <m>m\in \nonnegints</m>.  Then <m>m0=0m</m>.  Assume <m>mk=km</m>. Then
     <me>
       m (k+1) = mk +m = km+m= km +1m=(k+1)m.
     </me>

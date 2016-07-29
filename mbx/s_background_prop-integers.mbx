@@ -141,7 +141,7 @@ For all <m>x,y,z\in\ints</m>,
 Next, we define a total order on <m>\ints</m> by
 setting <m>x\le y</m> in <m>\ints</m> when <m>x=\langle(a,b)\rangle</m>, <m>y=\langle(c,d)
 \rangle</m> and
-<m>a+d \le b+c</m> in <m>\mathbb{N}_0</m>.
+<m>a+d \le b+c</m> in <m>\nonnegints</m>.
 </p>
 
 <theorem>
@@ -175,13 +175,13 @@ Let <m>x,y,z\in \ints</m>. If
 </theorem>
 
 <p>
-Now consider the function <m>f:\mathbb{N}_0\longrightarrow \ints</m> defined
+Now consider the function <m>f:\nonnegints\longrightarrow \ints</m> defined
 by <m>f(n) = \langle(n,0)\rangle</m>. It is easy to show that
 <m>f</m> is an injection. Furthermore, it respects addition
 and multiplication, i.e., <m>f(n+m)=f(n)+f(m)</m> and
 <m>f(nm)=f(n)f(m)</m>. Also, note that if <m>x\in \ints</m>, then
-<m>x>0</m> if and only if <m>x=f(n)</m> for some <m>n\in \mathbb{N}_0</m>. So, it is
-customary to abuse notation slightly and say that <m>\mathbb{N}_0</m> is a
+<m>x>0</m> if and only if <m>x=f(n)</m> for some <m>n\in \nonnegints</m>. So, it is
+customary to abuse notation slightly and say that <m>\nonnegints</m> is a
 <q>subset</q> of <m>\ints</m>. Similarly, we can either consider the set
 <m>\posints</m> of positive integers as the set of natural numbers that are
 successors, or as the set of integers
@@ -190,14 +190,14 @@ that are greater than<nbsp /><m>0</m>.
 
 <p>
 When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\ints</m>, we
-define <m>0^n=0</m>. When <m>x\in\ints</m>, <m>x\neq 0</m> and <m>n\in\mathbb{N}_0</m>,
+define <m>0^n=0</m>. When <m>x\in\ints</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>,
 we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>.
 </p>
 
 <theorem>
 <statement>
 <p>
-If <m>x\in\ints</m>, <m>x\neq0</m>, and <m>m,n\in\mathbb{N}_0</m>, then
+If <m>x\in\ints</m>, <m>x\neq0</m>, and <m>m,n\in\nonnegints</m>, then
 <m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
 </p>
 </statement>

@@ -10,7 +10,7 @@ the <m>m^n</m> notation for the most part.
 </p>
 
 <p>
-When <m>m=0</m>, we set <m>0^n=0</m> for all <m>n\in\mathbb{N}_0</m>
+When <m>m=0</m>, we set <m>0^n=0</m> for all <m>n\in\nonnegints</m>
 with <m>n\neq0</m>. Now let <m>m\neq0</m>. We define <m>m^n</m> by
 (i)<nbsp /><m>m^0=1</m> and (ii)<nbsp /><m>m^{k+1}=mm^k</m>.
 </p>
@@ -18,7 +18,7 @@ with <m>n\neq0</m>. Now let <m>m\neq0</m>. We define <m>m^n</m> by
 <theorem>
 <statement>
 <p>
-For all <m>m,n,p\in\mathbb{N}_0</m> with <m>m\neq0</m>,
+For all <m>m,n,p\in\nonnegints</m> with <m>m\neq0</m>,
 <m>m^{n+p}=m^n\,m^p</m>.
 </p>
 </statement>
@@ -26,7 +26,7 @@ For all <m>m,n,p\in\mathbb{N}_0</m> with <m>m\neq0</m>,
 
 <proof>
 <p>
-Let <m>m,n\in\mathbb{N}_0</m> with <m>m\neq0</m>. Then
+Let <m>m,n\in\nonnegints</m> with <m>m\neq0</m>. Then
 <m>m^{n+0}=m^n=m^n\,1=m^n\,m^0</m>.
 Now suppose that <m>m^{n+k}=m^n\,m^k</m>.
 Then
@@ -40,7 +40,7 @@ Then
 <theorem>
 <statement>
 <p>
-For all <m>m,n,p\in\mathbb{N}_0</m> with <m>m\neq0</m>,
+For all <m>m,n,p\in\nonnegints</m> with <m>m\neq0</m>,
 <m>(m^n)^p=m^{np}</m>.
 </p>
 </statement>
@@ -48,7 +48,7 @@ For all <m>m,n,p\in\mathbb{N}_0</m> with <m>m\neq0</m>,
 
 <proof>
 <p>
-Let <m>m,n\in\mathbb{N}_0</m> with <m>m\neq0</m>. Then
+Let <m>m,n\in\nonnegints</m> with <m>m\neq0</m>. Then
 <m>(m^n)^0=1=m^0=m^{n0}</m>. Now suppose that <m>(m^n)^k=m^{nk}</m>.
 Then
 </p>

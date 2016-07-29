@@ -1,20 +1,20 @@
 <section xml:id="s_background_total-order-N">
   <title>A Total Order on Natural Numbers</title>
-  <p>Let <m>m,n\in \mathbb{N}_0</m>. Define a binary relation <m>\le</m> on <m>\mathbb{N}_0</m> by setting <m>m\le n</m> if and only if there exists a natural number <m>p</m> so that <m>m+p=n</m>.
+  <p>Let <m>m,n\in \nonnegints</m>. Define a binary relation <m>\le</m> on <m>\nonnegints</m> by setting <m>m\le n</m> if and only if there exists a natural number <m>p</m> so that <m>m+p=n</m>.
   </p>
 
   <proposition>
     <statement>
       <p>
-        <m>\le</m> is a total order on <m>\mathbb{N}_0</m>.
+        <m>\le</m> is a total order on <m>\nonnegints</m>.
       </p>
     </statement>
 
     <proof>
       <p>
         <m>\le</m> is reflexive since <m>n+0=n</m> and therefore <m>n\le n</m>, for all <m>n\in 
-        \mathbb{N}_0</m>. Next, we show that <m>\le</m> is antisymmetric.
-        Let <m>m,n\in\mathbb{N}_0</m> and suppose that <m>m\le n</m> and <m>n\le m</m>.
+        \nonnegints</m>. Next, we show that <m>\le</m> is antisymmetric.
+        Let <m>m,n\in\nonnegints</m> and suppose that <m>m\le n</m> and <m>n\le m</m>.
         Then there exist natural numbers <m>p</m> and <m>q</m> so that <m>m+p=n</m> and <m>n+q=m</m>.
         It follows that
       <me>
@@ -25,30 +25,30 @@
 
       <p>
         Next, we show that <m>\le</m> is transitive. Suppose that <m>m,n,p\in
-        \mathbb{N}_0</m>, <m>m\le n</m> and <m>n\le p</m>. Then there exist
+        \nonnegints</m>, <m>m\le n</m> and <m>n\le p</m>. Then there exist
         natural numbers <m>q</m> and <m>r</m> so that <m>m+q=n</m> and <m>n+r=p</m>.
         Then
       <me>
         m+(q+r)=(m+q)+r=n+r=p.
       </me>
         Thus <m>m\le p</m>, and we have now shown that <m>\le</m> is a partial
-        order on <m>\mathbb{N}_0</m>.
+        order on <m>\nonnegints</m>.
       </p>
 
       <p>
         Finally, we show that <m>\le</m> is a total order.
-        To accomplish this, we choose an arbitrary element <m>m\in\mathbb{N}_0</m>
-        and show that for every <m>n\in\mathbb{N}_0</m>, either <m>m\le n</m> or
+        To accomplish this, we choose an arbitrary element <m>m\in\nonnegints</m>
+        and show that for every <m>n\in\nonnegints</m>, either <m>m\le n</m> or
         <m>n\le m</m>. We do this by induction on <m>n</m>.
         Suppose first that <m>n=0</m>. Since <m>0+m=m</m>, we conclude that
         <m>0\le m</m>.
-        Now suppose that for some <m>k\in\mathbb{N}_0</m>, we have
+        Now suppose that for some <m>k\in\nonnegints</m>, we have
         <m>m\le k</m>. Then there is a natural number <m>p</m> so that <m>m+p=k</m>. Then
         <m>m+(p+1) =(m+p)+1=k+1</m>, so <m>m\le k+1</m>.
       </p>
 
       <p>
-        On the other hand, suppose that for some <m>k\in\mathbb{N}_0</m>,
+        On the other hand, suppose that for some <m>k\in\nonnegints</m>,
         we have <m>k\le m</m>. If <m>k=m</m>, then <m>m\le k</m> and
         <m>m\le k+1</m> as above. Now suppose that <m>k\le m</m> and <m>k\neq m</m>.
         Since <m>k\le m</m>, there exists a natural number <m>p</m> so that <m>k+p=m</m>.
@@ -60,23 +60,23 @@
   </proposition>
 
   <p>
-    Note that if <m>m,n\in\mathbb{N}_0</m>, then <m>m\lt n</m> if and only if
+    Note that if <m>m,n\in\nonnegints</m>, then <m>m\lt n</m> if and only if
     there exists a natural number <m>p\neq 0</m> so that <m>m+p=n</m>.
   </p>
 
   <theorem>
     <title>Monotonic Law for Addition</title>
     <statement>
-      <p>Let <m>m,n,p\in \mathbb{N}_0</m>. If <m>m\le n</m>, then <m>m+p\le n+p</m>. Furthermore, if <m>m\lt n</m>, then <m>m+p\lt n+p</m>.
+      <p>Let <m>m,n,p\in \nonnegints</m>. If <m>m\le n</m>, then <m>m+p\le n+p</m>. Furthermore, if <m>m\lt n</m>, then <m>m+p\lt n+p</m>.
       </p>
     </statement>
 
   <proof>
     <p>
-      It suffices to prove that if <m>m,n\in \mathbb{N}_0</m> with <m>m\lt n</m>, then
-      <m>m+p\lt n+p</m> for every <m>p\in\mathbb{N}_0</m>. Let <m>q\neq0</m> be
+      It suffices to prove that if <m>m,n\in \nonnegints</m> with <m>m\lt n</m>, then
+      <m>m+p\lt n+p</m> for every <m>p\in\nonnegints</m>. Let <m>q\neq0</m> be
       the natural number so that <m>m+q =n</m>.
-      Now let <m>p\in \mathbb{N}_0</m>.
+      Now let <m>p\in \nonnegints</m>.
       Then <m>(m+p)+q=(m+q)+p=n+p</m>, so <m>m+p \lt  n+p</m>.
     </p>
   </proof>
@@ -85,13 +85,13 @@
   <lemma>
     <statement>
       <p>
-        If <m>m,n\in \mathbb{N}_0</m>, <m>m\neq0</m> and <m>n\neq0</m>, then <m>mn\neq0</m>.
+        If <m>m,n\in \nonnegints</m>, <m>m\neq0</m> and <m>n\neq0</m>, then <m>mn\neq0</m>.
       </p>
     </statement>
 
   <proof>
     <p>
-      Assume to the contrary, that <m>m,n\in \mathbb{N}_0</m>, <m>m\neq0</m>, <m>n\neq0</m>
+      Assume to the contrary, that <m>m,n\in \nonnegints</m>, <m>m\neq0</m>, <m>n\neq0</m>
       and <m>mn=0</m>. Let <m>n=s(p)</m>. Then <m>0=mn= ms(p)+m</m> which requires
       <m>m=0</m>. This is a contradiction.
     </p>
@@ -101,14 +101,14 @@
   <theorem>
     <title>Monotonic Law for Multiplication</title>
     <statement>
-      <p>Let <m>m,n,p\in \mathbb{N}_0</m>. If <m>m\le n</m>, then <m>mp\le np</m>. Furthermore, if <m>m\lt n</m> and <m>p\neq0</m>, then <m>mp\lt np</m>.
+      <p>Let <m>m,n,p\in \nonnegints</m>. If <m>m\le n</m>, then <m>mp\le np</m>. Furthermore, if <m>m\lt n</m> and <m>p\neq0</m>, then <m>mp\lt np</m>.
       </p>
     </statement>
 
   <proof>
     <p>
       Only the last statement requires proof. Let
-      <m>m,n\in\mathbb{N}_0</m> with <m>m\lt  n</m>. Then <m>m+q=n</m> for some <m>q\neq0</m>.
+      <m>m,n\in\nonnegints</m> with <m>m\lt  n</m>. Then <m>m+q=n</m> for some <m>q\neq0</m>.
       Then <m>np=(m+q)p=mp+pq</m>. Since <m>pq\neq0</m>, we conclude <m>mp\lt np</m>.
     </p>
   </proof>
@@ -117,7 +117,7 @@
   <corollary>
     <title>Cancellation Law of Multiplication</title>
     <statement>
-      <p>f <m>m,n,p\in \mathbb{N}_0</m>, <m>mp=np</m>, and <m>p\neq 0</m>, then <m>m=n</m>.
+      <p>f <m>m,n,p\in \nonnegints</m>, <m>mp=np</m>, and <m>p\neq 0</m>, then <m>m=n</m>.
       </p>
     </statement>
 

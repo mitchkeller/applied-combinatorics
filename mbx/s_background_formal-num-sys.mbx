@@ -22,17 +22,17 @@ Postulates</em>.
 <li class="custom-list-style-type" label="(i)." >There is a non-empty set of elements called 
 <em>natural numbers</em>.  There is natural number
 called <em>zero</em> which is denoted<nbsp /><m>0</m>.  The set of all natural
-numbers is denoted <m>\mathbb{N}_0</m></li>
-<li class="custom-list-style-type" label="(ii)." >There is a one-to-one function <m>s:\mathbb{N}_0
-\injection \mathbb{N}_0</m>
-called the <em>successor</em> function.  For each <m>n\in \mathbb{N}_0</m>,
+numbers is denoted <m>\nonnegints</m></li>
+<li class="custom-list-style-type" label="(ii)." >There is a one-to-one function <m>s:\nonnegints
+\injection \nonnegints</m>
+called the <em>successor</em> function.  For each <m>n\in \nonnegints</m>,
 <m>s(n)</m> is called the <em>successor</em> of <m>n</m>.</li>
 <li class="custom-list-style-type" label="(iii)." >There is no natural number <m>n</m> for which <m>0=s(n)</m>.</li>
-<li class="custom-list-style-type" label="(iv)." >Let <m>\mathbb{M}\subseteq \mathbb{N}_0</m>.  
-Then <m>\mathbb{M} =\mathbb{N}_0</m> if and only if
+<li class="custom-list-style-type" label="(iv)." >Let <m>\mathbb{M}\subseteq \nonnegints</m>.  
+Then <m>\mathbb{M} =\nonnegints</m> if and only if
 <ol>
 <li class="custom-list-style-type" label="(a)." ><m>0\in \mathbb{M}</m>; and</li>
-<li class="custom-list-style-type" label="(b)." ><m>\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
+<li class="custom-list-style-type" label="(b)." ><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
   \Longrightarrow(s(k)\in \mathbb{M})</m>.</li>
 </ol>
 </li>
@@ -57,14 +57,14 @@ natural number <m>m</m> so that <m>n=s(m)</m>.
 
 <proof>
 <p>
-Let <m>\mathbb{S}=\{n\in\mathbb{N}_0:\exists m\in\mathbb{N}_0,
+Let <m>\mathbb{S}=\{n\in\nonnegints:\exists m\in\nonnegints,
 n=s(m)\}</m>. Then set <m>\mathbb{M}=\{0\}\cup\mathbb{S}</m>.
-We show that <m>\mathbb{M}=\mathbb{N}_0</m>. First, note that
-<m>0\in\mathbb{M}</m>. Next, we will show that for all <m>k\in\mathbb{N}_0</m>,
+We show that <m>\mathbb{M}=\nonnegints</m>. First, note that
+<m>0\in\mathbb{M}</m>. Next, we will show that for all <m>k\in\nonnegints</m>,
 if <m>k\in\mathbb{M}</m>, then <m>s(k)\in\mathbb{M}</m>. However, this is trivial
-since for all <m>k\in\mathbb{N}_0</m>, we have
+since for all <m>k\in\nonnegints</m>, we have
 <m>s(k)\in\mathbb{S}\subseteq\mathbb{M}</m>.
-We conclude that <m>\mathbb{M}=\mathbb{N}_0</m>.
+We conclude that <m>\mathbb{M}=\nonnegints</m>.
 </p>
 </proof>
 </introduction>
@@ -79,17 +79,17 @@ the ordered pair <m>(x,y)</m> would normally be denoted <m>*((x,y))</m>.
 However, this is usually abbreviated as <m>*(x,y)</m> or
 even more compactly as <m>x*y</m>. With this convention,
 we now define a binary operation <m>+</m>
-on the the set <m>\mathbb{N}_0</m> of natural numbers.
+on the the set <m>\nonnegints</m> of natural numbers.
 This operation is defined by:
 </p>
 
 <p>
-For every natural number <m>n\in\mathbb{N}_0</m>:
+For every natural number <m>n\in\nonnegints</m>:
 </p>
 
 <ol>
 <li class="custom-list-style-type" label="(i)." ><m>n+0=n</m>.</li>
-<li class="custom-list-style-type" label="(ii)." >For all <m>k\in\mathbb{N}_0</m>, <m>n+s(k) = s(n+k)</m>.</li>
+<li class="custom-list-style-type" label="(ii)." >For all <m>k\in\nonnegints</m>, <m>n+s(k) = s(n+k)</m>.</li>
 </ol>
 
 <p>
@@ -98,10 +98,10 @@ define <m>+</m>. Let <m>n</m> be
 an arbitrary natural number. Then let <m>\mathbb{M}</m> denote the
 set of all natural numbers <m>m</m> for which <m>n+m</m> is
 defined. Note that <m>0\in \mathbb{M}</m> by part<nbsp />(i). Also note
-that for all <m>k\in \mathbb{N}_0</m>, <m>s(k)\in \mathbb{M}</m> whenever
+that for all <m>k\in \nonnegints</m>, <m>s(k)\in \mathbb{M}</m> whenever
 <m>k\in \mathbb{M}</m> by part<nbsp />(ii). This
-shows that <m>\mathbb{M}=\mathbb{N}_0</m>. Since <m>n</m> was arbitrary, this allows us
-to conclude that <m>n+m</m> is defined for all <m>n,m\in \mathbb{N}_0</m>.
+shows that <m>\mathbb{M}=\nonnegints</m>. Since <m>n</m> was arbitrary, this allows us
+to conclude that <m>n+m</m> is defined for all <m>n,m\in \nonnegints</m>.
 </p>
 
 <p>
@@ -125,13 +125,13 @@ restated in the following form, which many of you may already have seen.
 
 <p>
 <b>The Principle of Induction.</b> 
-Let <m>\mathbb{M}\subseteq \mathbb{N}_0</m>.
-Then <m>\mathbb{M} =\mathbb{N}_0</m> if and only if
+Let <m>\mathbb{M}\subseteq \nonnegints</m>.
+Then <m>\mathbb{M} =\nonnegints</m> if and only if
 </p>
 
 <ol>
 <li class="custom-list-style-type" label="(a)." ><m>0\in \mathbb{M}</m>; and</li>
-<li class="custom-list-style-type" label="(b)." ><m>\forall k\in \mathbb{N}_0\quad(k\in \mathbb{M}) 
+<li class="custom-list-style-type" label="(b)." ><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
   \Longrightarrow(k+1\in \mathbb{M})</m>.</li>
 </ol>
 
@@ -139,11 +139,11 @@ Then <m>\mathbb{M} =\mathbb{N}_0</m> if and only if
   <title>Associative Property of Addition</title>
   <statement>
     <p>
-      <m>m+(n+p) = (m+n)+p</m>, for all <m>m,n,p\in \mathbb{N}_0</m>.
+      <m>m+(n+p) = (m+n)+p</m>, for all <m>m,n,p\in \nonnegints</m>.
     </p>
   </statement>
   <proof>
-    <p>Let <m>m,n\in \mathbb{N}_0</m>. Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>p</m> for which <m>m+(n+p)=(m+n)+p</m>. We show that <m>\mathbb{M}=\mathbb{N}_0</m>.
+    <p>Let <m>m,n\in \nonnegints</m>. Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>p</m> for which <m>m+(n+p)=(m+n)+p</m>. We show that <m>\mathbb{M}=\nonnegints</m>.
     </p>
 
     <p>Note that
@@ -157,7 +157,7 @@ Then
 <me>
   m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1).
 </me>
-Notice here that the first, second, and fourth equalities follow from the second part of the definition of addition while the third uses our inductive assumption that <m>m+(n+k)=(m+n)+k)</m>. This shows that <m>k+1\in \mathbb{M}</m>. Therefore, <m>\mathbb{M}= \mathbb{N}_0</m>. Since <m>m</m> and <m>n</m> were arbitrary elements of <m>\mathbb{N}_0</m>, the theorem follows.
+Notice here that the first, second, and fourth equalities follow from the second part of the definition of addition while the third uses our inductive assumption that <m>m+(n+k)=(m+n)+k)</m>. This shows that <m>k+1\in \mathbb{M}</m>. Therefore, <m>\mathbb{M}= \nonnegints</m>. Since <m>m</m> and <m>n</m> were arbitrary elements of <m>\nonnegints</m>, the theorem follows.
   </p>
 </proof>
 </theorem>
@@ -166,7 +166,7 @@ Notice here that the first, second, and fourth equalities follow from the second
 In proofs to follow, we will trim out some of the wording
 and leave only the essential mathematical steps intact.
 In particular, we will (i)<nbsp />omit reference to the set <m>\mathbb{M}</m>,
-and (ii)<nbsp />drop the phrase <q>For all <m>k\in\mathbb{N}_0</m></q>
+and (ii)<nbsp />drop the phrase <q>For all <m>k\in\nonnegints</m></q>
 For example, to define addition, we will just
 write (i)<nbsp /><m>n+0=n</m>, and (ii)<nbsp /><m>n+(k+1) = (n+k)+1</m>.
 </p>
@@ -174,13 +174,13 @@ write (i)<nbsp /><m>n+0=n</m>, and (ii)<nbsp /><m>n+(k+1) = (n+k)+1</m>.
 <lemma>
 <statement>
 <p>
-<m>m+(n+1) = (m+1)+n</m>, for all <m>m,n\in\mathbb{N}_0</m>.
+<m>m+(n+1) = (m+1)+n</m>, for all <m>m,n\in\nonnegints</m>.
 </p>
 </statement>
 
 <proof>
 <p>
-Fix <m>m\in \mathbb{N}_0</m>. Then
+Fix <m>m\in \nonnegints</m>. Then
 <me>
   m+(0+1)=m+1= (m+0)+1.
 </me>
@@ -201,14 +201,14 @@ two steps. First, we prove the following special case.
 <lemma>
 <statement>
 <p>
-<m>n+0 = 0+n=n</m>, for all <m>n\in \mathbb{N}_0</m>.
+<m>n+0 = 0+n=n</m>, for all <m>n\in \nonnegints</m>.
 </p>
 </statement>
 
 <proof>
 <p>
 The statement is trivially true when <m>n= 0</m>.
-Now suppose that <m>k+0=0+k=k</m> for some <m>k\in \mathbb{N}_0</m>.
+Now suppose that <m>k+0=0+k=k</m> for some <m>k\in \nonnegints</m>.
 Then
 <me>
   (k+1) +0 = k+1 = (0+k)+1= 0+(k+1).
@@ -221,13 +221,13 @@ Then
   <title>Commutative Law of Addition</title>
 <statement>
 <p>
-<m>m+n=n+m</m> for all <m>m,n\in \mathbb{N}_0</m>.
+<m>m+n=n+m</m> for all <m>m,n\in \nonnegints</m>.
 </p>
 </statement>
 
 <proof>
 <p>
-Let <m>m\in \mathbb{N}_0</m>. Then <m>m+0=0+m</m> from the preceding lemma.
+Let <m>m\in \nonnegints</m>. Then <m>m+0=0+m</m> from the preceding lemma.
 Assume <m>m+k=k+m</m>. Then
 <me>
   m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
@@ -239,7 +239,7 @@ Assume <m>m+k=k+m</m>. Then
 <lemma xml:id="lem_sum0">
 <statement>
 <p>
-If <m>m,n\in\mathbb{N}_0</m> and <m>m+n=0</m>, then <m>m=n=0</m>.
+If <m>m,n\in\nonnegints</m> and <m>m+n=0</m>, then <m>m=n=0</m>.
 </p>
 </statement>
 
@@ -259,13 +259,13 @@ natural number.
   <title>Cancellation Law of Addition</title>
 <statement>
 <p>
-If <m>m,n,p\in \mathbb{N}_0</m> and <m>m+p=n+p</m>, then <m>m=n</m>.
+If <m>m,n,p\in \nonnegints</m> and <m>m+p=n+p</m>, then <m>m=n</m>.
 </p>
 </statement>
 
 <proof>
 <p>
-Let <m>m,n\in \mathbb{N}_0</m>. Suppose that <m>m+0=n+0</m>. Then <m>m=n</m>.
+Let <m>m,n\in \nonnegints</m>. Suppose that <m>m+0=n+0</m>. Then <m>m=n</m>.
 Now suppose that <m>m=n</m> whenever <m>m+k=n+k</m>.
 If <m>m+(k+1)=n+(k+1)</m>, then
 <me>

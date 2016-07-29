@@ -82,7 +82,7 @@ defined, a fact that you probably already knew!
 </p>
 
 <p>
-As was the case for both <m>\mathbb{N}_0</m> and <m>\ints</m>, when
+As was the case for both <m>\nonnegints</m> and <m>\ints</m>, when
 <m>n</m> is a positive integer, and <m>0</m> is the zero in <m>\rats</m>,
 we define <m>0^n=0</m>. When <m>x=(a,b)</m> is a fraction with <m>x\neq0</m>
 and <m>n</m> is a non-negative integer, we define <m>x^n</m> inductively
@@ -145,7 +145,7 @@ equivalence class as <m>(a,b)</m> and has <m>b'>0</m>.) Then we set <m>(a,b)\leq
 <title>Integer Exponents</title>
 <p>
 When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\rats</m>, we
-define <m>0^n=0</m>. When <m>x\in\rats</m>, <m>x\neq 0</m> and <m>n\in\mathbb{N}_0</m>,
+define <m>0^n=0</m>. When <m>x\in\rats</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>,
 we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>. When
 <m>n\in\ints</m> and <m>n\lt 0</m>, we set <m>x^n=1/x^{-n}</m>.
 </p>
