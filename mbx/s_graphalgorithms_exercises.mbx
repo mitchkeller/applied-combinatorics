@@ -99,7 +99,7 @@
   The bank wishes to minimize the cost of building its network (which
   must allow for connection, possibly routed through other nodes, from
   each node to each other node), however due to the need for
-  high-speed communication, they <b>must</b> pay to build the
+  high-speed communication, they <alert>must</alert> pay to build the
   connection from <m>h</m> to <m>f</m> as well as the connection from <m>b_2</m> to
   <m>a_3</m>. Give a list of the connections the bank should establish in
   order to minimize their total cost, subject to this constraint. Be
@@ -146,7 +146,7 @@
   <exercise>
     <statement>
       <p>The table to the right contains the length of the directed edge
-  <m>(x,y)</m> in the intersection of <b>row</b> <m>x</m> and <b>column</b>
+  <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em>
   <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
   <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and
   Dijkstra's algorithm to find the distance from <m>a</m> to each of the
@@ -191,7 +191,7 @@
   <exercise>
     <statement>
       <p>The table to the right contains the length of the directed edge
-  <m>(x,y)</m> in the intersection of <b>row</b> <m>x</m> and <b>column</b>
+  <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em>
   <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
   <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and
   Dijkstra's algorithm to find the distance from <m>a</m> to each of the
