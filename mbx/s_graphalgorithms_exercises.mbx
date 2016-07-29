@@ -145,15 +145,16 @@
   </exercise>
   <exercise>
     <statement>
-      <p>The table to the right contains the length of the directed edge
+      <p><xref ref="tab_digraph1" autoname="yes" /> contains the length of the directed edge
   <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em>
   <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
   <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and
   Dijkstra's algorithm to find the distance from <m>a</m> to each of the
   other vertices and a directed path of that length from <m>a</m>.
-\end{minipage}
-<sidebyside>
-{0.45\textwidth}
+</p>
+<table xml:id="tab_digraph1">
+    <caption>A digraph represented as a table of data
+    </caption>
 <tabular>
 <row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>w</m></cell><cell><m>a</m></cell><cell><m>b</m></cell><cell><m>c</m></cell><cell><m>d</m></cell><cell><m>e</m></cell><cell><m>f</m></cell></row>
@@ -171,8 +172,7 @@
 <row><cell><m>f</m></cell><cell>31</cell><cell>7</cell><cell>29</cell><cell>73</cell><cell>20</cell><cell>0</cell></row>
 <row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 </tabular>
-</sidebyside>
-</p>
+</table>
     </statement>
   </exercise>
   <exercise>
@@ -185,21 +185,23 @@
 <caption>A directed graph</caption>
 <image width="65%" source="images/dijkstra_ex2"/>
 </figure>
-\begin{minipage}{0.5\textwidth}</p>
+</p>
     </statement>
   </exercise>
   <exercise>
     <statement>
-      <p>The table to the right contains the length of the directed edge
+      <p><xref ref="tab_digraph2" autoname="yes" /> contains the length of the directed edge
   <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em>
   <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example,
   <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and
   Dijkstra's algorithm to find the distance from <m>a</m> to each of the
-  other vertices and a directed path of that length from <m>a</m>.
-\end{minipage}
-<sidebyside>
-{0.45\textwidth}
-<tabular>
+  other vertices and a directed path of that length from <m>a</m>.</p>
+  <table xml:id="tab_digraph2">
+          <caption>A digraph represented as a table of data
+    </caption>
+
+    <tabular>
+        
 <row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 <row><cell><m>w</m></cell><cell><m>a</m></cell><cell><m>b</m></cell><cell><m>c</m></cell><cell><m>d</m></cell><cell><m>e</m></cell><cell><m>f</m></cell></row>
 <row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
@@ -216,8 +218,7 @@
 <row><cell><m>f</m></cell><cell>36</cell><cell>3</cell><cell>76</cell><cell>5</cell><cell>17</cell><cell>0</cell></row>
 <row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
 </tabular>
-</sidebyside>
-</p>
+</table>
     </statement>
   </exercise>
   <exercise>
