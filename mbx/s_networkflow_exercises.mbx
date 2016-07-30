@@ -55,7 +55,7 @@
   <exercise xml:id="ex_networkflow_update">
     <statement>
       <p>Prove
-  <xref ref="prop_networkflow_update">Proposition</xref>. You
+  <xref ref="prop_networkflow_update" autoname="yes" />. You
   will need to verify that the flow conservation laws hold at each
   vertex along an augmenting path (other than <m>S</m> and <m>T</m>). There are
   four cases to consider depending on the forward/backward status of
@@ -85,7 +85,7 @@ in the network shown in <xref ref="fig_networkflow_augpath_ex" autoname="yes"/>.
     <statement>
       <p>For each of the augmenting paths <m>P_1</m>, <m>P_2</m>, <m>P_3</m>, and <m>P_4</m>
   in
-  <xref ref="exa_networkflow_delta">Example</xref>,
+  <xref ref="exa_networkflow_delta" autoname="yes" />,
   update the flow in <xref ref="fig_networkflow_netflow" autoname="yes"/>. (Note that
   your solution to this exercise should consist of four network
   flows. Do not attempt to use the four paths in sequence to create
