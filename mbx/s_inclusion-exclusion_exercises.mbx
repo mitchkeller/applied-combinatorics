@@ -1,328 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_inclusion-exclusion_exercises">
-  <exercise>
-    <statement>
-      <p>A school has <m>147</m> third graders. The third grade teachers have
-<section xml:id="s_inclusion-exclusion_exercises">
-<title>Exercises</title>
-<ol>
-<li>A school has <m>147</m> third graders. The third grade teachers have
-  planned a special treat for the last day of school and brought ice
-  cream for their students. There are three flavors: mint chip,
-  chocolate, and strawberry. Suppose that <m>60</m> students like (at
-  least) mint chip, <m>103</m> like chocolate, <m>50</m> like strawberry, <m>30</m>
-  like mint chip and strawberry, <m>40</m> like mint chip and chocolate,
-  <m>25</m> like chocolate and strawberry, and <m>18</m> like all three
-  flavors. How many students don't like any of the flavors available?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>There are <m>1189</m> students majoring in computer science at a
-  particular university. They are surveyed about their knowledge of
-  three programming languages: C++, Java, and Python. The survey
-  results reflect that <m>856</m> students know C++, <m>748</m> know Java, and
-  <m>692</m> know Python. Additionally, <m>639</m> students know both C++ and
-  Java, <m>519</m> know both C++ and Python, and <m>632</m> know both Java and
-  Python. There are <m>488</m> students who report knowing all three
-  languages. How many students reported that they did not know any of
-  the three programming languages?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many positive integers less than or equal to <m>100</m> are
-  divisible by <m>2</m>? How many positive integers less than or equal to
-  <m>100</m> are divisible by <m>5</m>? Use this information to determine how
-  many positive integers less than or equal to <m>100</m> are divisible by
-  <em>neither</em> <m>2</m> nor <m>5</m>.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many positive integers less than or equal to <m>100</m> are
-  divisible by none of <m>2</m>, <m>3</m>, and <m>5</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many positive integers less than or equal to <m>1000</m> are
-  divisible by none of <m>3</m>, <m>8</m>, and <m>25</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>The State of Georgia is distributing <dollar/><m>173</m> million in funding
-  to Fulton, Gwinnett, DeKalb, Cobb, and Clayton counties (in millions
-  of dollars). In how many ways can this distribution be made,
-  assuming that each county receives at least <dollar/><m>1</m> million, Clayton
-  county receives at most <dollar/><m>10</m> million, and Cobb county receives at
-  most <dollar/><m>30</m> million? What if we add the restriction that Fulton
-  county is to receive at least <dollar/><m>5</m> million (instead of at least
-  <dollar/><m>1</m> million)?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many integer solutions are there to the equation <m>x_1 + x_2
-  + x_3 + x_4 = 32</m>
-  with <m>0\leq x_i\leq 10</m> for <m>i=1,2,3,4</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many integer solutions are there to the inequality
-<me>
-  y_1 + y_2 + y_3 + y_4 \lt  184
-</me>
-with <m>y_1&gt;0</m>, <m>0\lt y_2\leq 10</m>, <m>0\leq y_3\leq 17</m>, and <m>0\leq y_4 \lt 
-  19</m>?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A graduate student eats lunch in the campus food court every
-  Tuesday over the course of a <m>15</m>-week semester. He is joined each
-  week by some subset of a group of six friends from across
-  campus. Over the course of a semester, he ate lunch with each friend
-  <m>11</m> times, each pair <m>9</m> times, and each triple <m>6</m> times. He ate
-  lunch with each group of four friends <m>4</m> times and each group of
-  five friends <m>4</m> times. All seven of them ate lunch together only
-  once that semester. Did the graduate student ever eat lunch alone?
-  If so, how many times?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A group of <m>268</m> students are surveyed about their ability to
-  speak Mandarin, Japanese, and Korean. There are <m>37</m> students who do
-  not speak any of the three languages surveyed. Mandarin is spoken by
-  <m>174</m> of the students, Japenese is spoken by <m>139</m> of the students,
-  and Korean is spoken by <m>112</m> of the students. The survey results
-  also reflect that <m>102</m> students speak both Mandarin and Japanese,
-  <m>81</m> students speak both Mandarin and Korean, and <m>71</m> students
-  speak both Japanese and Korean. How many students speak all three
-  languages?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>As in
-  <xref ref="exa_inclusion-exclusion_prop-inject" autoname="yes" />,
-  let <m>X</m> be the set of functions from <m>[n]</m> to <m>[m]</m> and let a
-  function <m>f\in X</m> satisfy property <m>P_i</m> if there is no <m>j</m> such
-  that <m>f(j)=i</m>.
-<ol>
-<li>Let the function <m>f\colon [8]\to [7]</m> be defined by the table
-    below.
-<tabular>
-<row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell></row>
-<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
-<row><cell><m>f(i)</m></cell><cell>4</cell><cell>2</cell><cell>6</cell><cell>1</cell><cell>6</cell><cell>2</cell><cell>4</cell><cell>2</cell></row>
-</tabular>
-Does <m>f</m> satisfy property <m>P_2</m>? Why or why not? What about
-    property <m>P_3</m>? List all the properties <m>P_i</m> (with <m>i\leq 7</m>)
-    satisfied by <m>f</m>.</li>
-<li>Is it possible to define a function <m>g\colon [8]\to [7]</m> that
-    satisfies no property <m>P_i</m>, <m>i\leq 7</m>? If so, give an example. If
-    not, explain why not.</li>
-<li>Is it possible to define a function <m>h\colon [8]\to [9]</m> that
-    satisfies no property <m>P_i</m>, <m>i\leq 9</m>? If so, give an example. If
-    not, explain why not.</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>As in
-  <xref ref="exa_inclusion-exclusion_prop-derange" autoname="yes" />,
-  let <m>X</m> be the set of permutations of <m>[n]</m> and say that <m>\sigma\in
-  X</m> satisfies property <m>P_i</m> if <m>\sigma(i) = i</m>.
-<ol>
-<li>Let the permutation <m>\sigma\colon [8]\to [8]</m> be defined by the table
-    below.
-<tabular>
-<row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell></row>
-<row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
-<row><cell><m>\sigma(i)</m></cell><cell>3</cell><cell>1</cell><cell>8</cell><cell>4</cell><cell>7</cell><cell>6</cell><cell>5</cell><cell>2</cell></row>
-</tabular>
-Does <m>\sigma</m> satisfy property <m>P_2</m>? Why or why not? What about
-    property <m>P_6</m>? List all the properties <m>P_i</m> (with <m>i\leq 8</m>)
-    satisfied by <m>\sigma</m>.</li>
-<li>Give an example of a permutation <m>\tau\colon[8]\to[8]</m> that
-    satisfies properties <m>P_1</m>, <m>P_4</m>, and <m>P_8</m> and no other
-    properties <m>P_i</m> with <m>1\leq i\leq 8</m>.</li>
-<li>Give an example of a permutation <m>\pi\colon [8]\to[8]</m> that
-    does not satisfy any property <m>P_i</m> with <m>1\leq i\leq 8</m>.</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>As in
-  <xref ref="exa_inclusion-exclusion_prop-divis" autoname="yes" />,
-  let <m>m</m> and <m>n</m> be positive integers and <m>X=[n]</m>. Say that <m>j\in X</m>
-  satisfies property <m>P_i</m> for an <m>i</m> with <m>1\leq i\leq m</m> if <m>i</m> is a
-  divisor of <m>j</m>.
-<ol>
-<li>Let <m>m=n=15</m>. Does <m>12</m> satisfy property <m>P_3</m>? Why or why
-    not? What about property <m>P_5</m>? List the properties <m>P_i</m> with
-    <m>1\leq i\leq 15</m> that <m>12</m> satisfies.</li>
-<li>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that
-    satisfies exactly two properties <m>P_i</m> with <m>1\leq i\leq 15</m>.</li>
-<li>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that
-    satisfies exactly four properties <m>P_i</m> with <m>1\leq i\leq 15</m> or
-    explain why such an integer does not exist.</li>
-<li>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that
-    satisfies exactly three properties <m>P_i</m> with <m>1\leq i\leq 15</m> or
-    explain why such an integer does not exist.</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many surjections are there from an eight-element set to a
-  six-element set?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A teacher has <m>10</m> books (all different) that she wants to
- distribute to John, Paul, Ringo, and George, ensuring that each of
- them gets at least one book. In how many ways can she do this?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A supervisor has nine tasks that must be completed and five
-  employees to whom she may assign them. If she wishes to ensure that
-  each employee is assigned at least one task to perform, how many
-  ways are there to assign the tasks to the employees?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A professor is working with six undergraduate research
-  students. He has <m>12</m> topics that he would like these students to
-  begin investigating. Since he has been working with Katie for
-  several terms, he wants to ensure that she is given the most
-  challenging topic (and possibly others). Subject to this, in how
-  many ways can he assign the topics to his students if each student
-  must be assigned at least one topic?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>List all the derangements of <m>[4]</m>. (For brevity, you may write
-  a permutation <m>\sigma</m> as a string
-  <m>\sigma(1)\sigma(2)\sigma(3)\sigma(4)</m>.)</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>How many derangements of a nine-element set are there?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A soccer team's equipment manager is in a hurry to distribute
-  uniforms to the last six players to show up before a match. Instead
-  of ensuring that each player receives his own uniform, he simply
-  hands a uniform to each of the six players. In how many ways could
-  he hand out the uniforms so that no player receives his own uniform?
-  (Assume that the six remaining uniforms belong to the last six
-  players to arrive.)</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>A careless payroll clerk is placing employees' paychecks into
-  pre-labeled envelopes. The envelopes are sealed before the clerk
-  realizes he didn't match the names on the paychecks with the names
-  on the envelopes. If there are seven employees, in how many ways
-  could he have placed the paychecks into the envelopes so that
-  exactly three employees receive the correct paycheck?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>The principle of inclusion-exclusion is not the only approach
-  available for counting derangements. We know that <m>d_1=0</m> and
-  <m>d_2=1</m>. Using this initial information, it is possible to give a
-  recursive form for <m>d_n</m>. In this exercise, we consider two
-  recursions for <m>d_n</m>.
-<ol>
-<li>Give a combinatorial argument to prove that the number of
-    derangements satisfies the recursive formula <m>d_n =
-    (n-1)(d_{n-1}+d_{n-2})</m> for <m>n\geq 2</m>. (<em>Hint</em>: For a
-    derangement <m>\sigma</m>, consider the integer <m>k</m> with
-    <m>\sigma(k)=1</m>. Argue based on the number of choices for <m>k</m> and
-    then whether <m>\sigma(1)=k</m> or not.)</li>
-<li>Prove that the number of derangements also satisfies the
-    recursive formula <m>d_n = nd_{n-1} + (-1)^n</m> for <m>n\geq
-    2</m>. (<em>Hint</em>: You may find it easiest to prove this using the
-    other recursive formula and mathematical induction.)</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Determine <m>\phi(18)</m> by listing the integers it counts as well
-  as by using the formula of <xref ref="thm_eulerphi" autoname="yes"/>.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Compute <m>\phi(756)</m>.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Given that <m>1625190883965792 = (2)^5(3)^4(11)^2(13)(23)^3(181)^2</m>,
-  compute
-<me>
-  \phi(1625190883965792).
-</me>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Prove
-  <xref ref="prop_num-divisible" autoname="yes" />.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>At a very small school, there is a class with nine students in
-  it. The students, whom we will denote as <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m>, <m>E</m>,
-  <m>F</m>, <m>G</m>, <m>H</m>, and <m>I</m>, walk from their classroom to the lunchroom
-  in the order <m>ABCDEFGHI</m>. (Let's say that <m>A</m> is at the front of the
-  line.) On the way back to to their classroom after lunch, they would
-  like to walk in an order so that no student walks immediately behind
-  the same classmate he or she was behind on the way to lunch. (For
-  instance, <m>ACBDIHGFE</m> and <m>IHGFEDCBA</m> would meet their
-  criteria. However, they would not be happy with <m>CEFGBADHI</m> since it
-  contains <m>FG</m> and <m>HI</m>, so <m>G</m> is following <m>F</m> again and <m>I</m> is
-  following <m>H</m> again.)
-<ol>
-<li>One student ponders how many possible ways there would be for
-    them to line up meeting this criterion. Help him out by
-    determining the exact value of this number.</li>
-<li>Is this number bigger than, smaller than, or equal to the
-    number of ways they could return so that no student walks in the
-    same position as before (i.e., <m>A</m> is not first, <m>B</m> is not
-    second, <ellipsis/>, and <m>I</m> is not last)?</li>
-<li>What fraction (give it as a decimal) of the total
-    number of ways they could line up meet their criterion of no
-    student following immediately behind the same student on the
-    return trip?</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
+    <exercise>
+        <statement>
+            <p>A school has <m>147</m> third graders. The third grade teachers have planned a special treat for the last day of school and brought ice cream for their students. There are three flavors: mint chip, chocolate, and strawberry. Suppose that <m>60</m> students like (at least) mint chip, <m>103</m> like chocolate, <m>50</m> like strawberry, <m>30</m> like mint chip and strawberry, <m>40</m> like mint chip and chocolate, <m>25</m> like chocolate and strawberry, and <m>18</m> like all three flavors. How many students don't like any of the flavors available?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>There are <m>1189</m> students majoring in computer science at a particular university. They are surveyed about their knowledge of three programming languages: C++, Java, and Python. The survey results reflect that <m>856</m> students know C++, <m>748</m> know Java, and <m>692</m> know Python. Additionally, <m>639</m> students know both C++ and Java, <m>519</m> know both C++ and Python, and <m>632</m> know both Java and Python. There are <m>488</m> students who report knowing all three languages. How many students reported that they did not know any of the three programming languages?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many positive integers less than or equal to <m>100</m> are
+            divisible by <m>2</m>? How many positive integers less than or equal to
+            <m>100</m> are divisible by <m>5</m>? Use this information to determine how
+            many positive integers less than or equal to <m>100</m> are divisible by
+            <em>neither</em> <m>2</m> nor <m>5</m>.</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many positive integers less than or equal to <m>100</m> are
+            divisible by none of <m>2</m>, <m>3</m>, and <m>5</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many positive integers less than or equal to <m>1000</m> are
+            divisible by none of <m>3</m>, <m>8</m>, and <m>25</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>The State of Georgia is distributing <dollar/><m>173</m> million in funding to Fulton, Gwinnett, DeKalb, Cobb, and Clayton counties (in millions of dollars). In how many ways can this distribution be made, assuming that each county receives at least <dollar/><m>1</m> million, Clayton county receives at most <dollar/><m>10</m> million, and Cobb county receives at most <dollar/><m>30</m> million? What if we add the restriction that Fulton county is to receive at least <dollar/><m>5</m> million (instead of at least <dollar/><m>1</m> million)?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many integer solutions are there to the equation <m>x_1 + x_2 + x_3 + x_4 = 32</m> with <m>0\leq x_i\leq 10</m> for <m>i=1,2,3,4</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many integer solutions are there to the inequality
+            <me>
+                y_1 + y_2 + y_3 + y_4 \lt 184
+            </me>
+            with <m>y_1&gt;0</m>, <m>0\lt y_2\leq 10</m>, <m>0\leq y_3\leq 17</m>, and <m>0\leq y_4 \lt 19</m>?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A graduate student eats lunch in the campus food court every Tuesday over the course of a <m>15</m>-week semester. He is joined each week by some subset of a group of six friends from across campus. Over the course of a semester, he ate lunch with each friend <m>11</m> times, each pair <m>9</m> times, and each triple <m>6</m> times. He ate lunch with each group of four friends <m>4</m> times and each group of five friends <m>4</m> times. All seven of them ate lunch together only once that semester. Did the graduate student ever eat lunch alone?  If so, how many times?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A group of <m>268</m> students are surveyed about their ability to speak Mandarin, Japanese, and Korean. There are <m>37</m> students who do not speak any of the three languages surveyed. Mandarin is spoken by <m>174</m> of the students, Japenese is spoken by <m>139</m> of the students, and Korean is spoken by <m>112</m> of the students. The survey results also reflect that <m>102</m> students speak both Mandarin and Japanese, <m>81</m> students speak both Mandarin and Korean, and <m>71</m> students speak both Japanese and Korean. How many students speak all three languages?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>As in <xref ref="exa_inclusion-exclusion_prop-inject" autoname="yes" />, let <m>X</m> be the set of functions from <m>[n]</m> to <m>[m]</m> and let a function <m>f\in X</m> satisfy property <m>P_i</m> if there is no <m>j</m> such that <m>f(j)=i</m>.
+            </p>
+            <ol>
+                <li><p>Let the function <m>f\colon [8]\to [7]</m> be defined by <xref ref="tab_function_e-i-ex" autoname="yes" />. Does <m>f</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_3</m>? List all the properties <m>P_i</m> (with <m>i\leq 7</m>) satisfied by <m>f</m>.</p></li>
+                <li><p>Is it possible to define a function <m>g\colon [8]\to [7]</m> that satisfies no property <m>P_i</m>, <m>i\leq 7</m>? If so, give an example. If not, explain why not.</p></li>
+                <li><p>Is it possible to define a function <m>h\colon [8]\to [9]</m> that satisfies no property <m>P_i</m>, <m>i\leq 9</m>? If so, give an example. If not, explain why not.</p></li>
+            </ol>
+            <table xml:id="tab_function_e-i-ex">
+                <caption>A function defined by a table</caption>
+                    <tabular>
+                    <row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell></row>
+                    <row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
+                    <row><cell><m>f(i)</m></cell><cell>4</cell><cell>2</cell><cell>6</cell><cell>1</cell><cell>6</cell><cell>2</cell><cell>4</cell><cell>2</cell></row>
+                    </tabular>
+                </table>
+
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>As in <xref ref="exa_inclusion-exclusion_prop-derange" autoname="yes" />, let <m>X</m> be the set of permutations of <m>[n]</m> and say that <m>\sigma\in X</m> satisfies property <m>P_i</m> if <m>\sigma(i) = i</m>.
+            </p>
+            <ol>
+                <li><p>Let the permutation <m>\sigma\colon [8]\to [8]</m> be defined by <xref ref="tab_perm-e-i-ex" autoname="yes" />.  Does <m>\sigma</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_6</m>? List all the properties <m>P_i</m> (with <m>i\leq 8</m>) satisfied by <m>\sigma</m>.</p></li>
+                <li><p>Give an example of a permutation <m>\tau\colon[8]\to[8]</m> that satisfies properties <m>P_1</m>, <m>P_4</m>, and <m>P_8</m> and no other properties <m>P_i</m> with <m>1\leq i\leq 8</m>.</p></li>
+                <li><p>Give an example of a permutation <m>\pi\colon [8]\to[8]</m> that does not satisfy any property <m>P_i</m> with <m>1\leq i\leq 8</m>.</p></li>
+            </ol>
+            <table xml:id="tab_perm-e-i-ex">
+                <caption>A permutation defined by a table</caption>
+                <tabular>
+                    <row><cell><m>i</m></cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell></row>
+                    <row bottom="minor"><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/><cell/></row>
+                    <row><cell><m>\sigma(i)</m></cell><cell>3</cell><cell>1</cell><cell>8</cell><cell>4</cell><cell>7</cell><cell>6</cell><cell>5</cell><cell>2</cell></row>
+                </tabular>
+            </table>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>As in <xref ref="exa_inclusion-exclusion_prop-divis" autoname="yes" />, let <m>m</m> and <m>n</m> be positive integers and <m>X=[n]</m>. Say that <m>j\in X</m> satisfies property <m>P_i</m> for an <m>i</m> with <m>1\leq i\leq m</m> if <m>i</m> is a divisor of <m>j</m>.</p>
+            <ol>
+                <li><p>Let <m>m=n=15</m>. Does <m>12</m> satisfy property <m>P_3</m>? Why or why not? What about property <m>P_5</m>? List the properties <m>P_i</m> with <m>1\leq i\leq 15</m> that <m>12</m> satisfies.</p></li>
+                <li><p>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that satisfies exactly two properties <m>P_i</m> with <m>1\leq i\leq 15</m>.</p></li>
+                <li><p>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that satisfies exactly four properties <m>P_i</m> with <m>1\leq i\leq 15</m> or explain why such an integer does not exist.</p></li>
+                <li><p>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that satisfies exactly three properties <m>P_i</m> with <m>1\leq i\leq 15</m> or explain why such an integer does not exist.</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many surjections are there from an eight-element set to a six-element set?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A teacher has <m>10</m> books (all different) that she wants to distribute to John, Paul, Ringo, and George, ensuring that each of them gets at least one book. In how many ways can she do this?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A supervisor has nine tasks that must be completed and five employees to whom she may assign them. If she wishes to ensure that each employee is assigned at least one task to perform, how many ways are there to assign the tasks to the employees?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A professor is working with six undergraduate research students. He has <m>12</m> topics that he would like these students to begin investigating. Since he has been working with Katie for several terms, he wants to ensure that she is given the most challenging topic (and possibly others). Subject to this, in how many ways can he assign the topics to his students if each student must be assigned at least one topic?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>List all the derangements of <m>[4]</m>. (For brevity, you may write a permutation <m>\sigma</m> as a string <m>\sigma(1)\sigma(2)\sigma(3)\sigma(4)</m>.)</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>How many derangements of a nine-element set are there?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A soccer team's equipment manager is in a hurry to distribute uniforms to the last six players to show up before a match. Instead of ensuring that each player receives his own uniform, he simply hands a uniform to each of the six players. In how many ways could he hand out the uniforms so that no player receives his own uniform?  (Assume that the six remaining uniforms belong to the last six players to arrive.)</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>A careless payroll clerk is placing employees' paychecks into pre-labeled envelopes. The envelopes are sealed before the clerk realizes he didn't match the names on the paychecks with the names on the envelopes. If there are seven employees, in how many ways could he have placed the paychecks into the envelopes so that exactly three employees receive the correct paycheck?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>The principle of inclusion-exclusion is not the only approach available for counting derangements. We know that <m>d_1=0</m> and <m>d_2=1</m>. Using this initial information, it is possible to give a recursive form for <m>d_n</m>. In this exercise, we consider two recursions for <m>d_n</m>.
+            </p>
+            <ol>
+                <li><p>Give a combinatorial argument to prove that the number of derangements satisfies the recursive formula <m>d_n = (n-1)(d_{n-1}+d_{n-2})</m> for <m>n\geq 2</m>.</p></li>
+                <li><p>Prove that the number of derangements also satisfies the recursive formula <m>d_n = nd_{n-1} + (-1)^n</m> for <m>n\geq 2</m>. </p></li>
+            </ol>
+        </statement>
+        <hint>
+            <ol>
+                <li><p>For a derangement <m>\sigma</m>, consider the integer <m>k</m> with <m>\sigma(k)=1</m>. Argue based on the number of choices for <m>k</m> and then whether <m>\sigma(1)=k</m> or not.</p></li>
+                <li><p>You may find it easiest to prove this using the other recursive formula and mathematical induction.</p>
+                </li>
+            </ol>
+        </hint>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Determine <m>\phi(18)</m> by listing the integers it counts as well as by using the formula of <xref ref="thm_eulerphi" autoname="yes"/>.</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Compute <m>\phi(756)</m>.</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Given that <m>1625190883965792 = (2)^5(3)^4(11)^2(13)(23)^3(181)^2</m>, compute
+            <me>
+                \phi(1625190883965792).
+            </me>
+            </p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Prove <xref ref="prop_num-divisible" autoname="yes" />.</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>At a very small school, there is a class with nine students in it. The students, whom we will denote as <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m>, <m>E</m>, <m>F</m>, <m>G</m>, <m>H</m>, and <m>I</m>, walk from their classroom to the lunchroom in the order <m>ABCDEFGHI</m>. (Let's say that <m>A</m> is at the front of the line.) On the way back to to their classroom after lunch, they would like to walk in an order so that no student walks immediately behind the same classmate he or she was behind on the way to lunch. (For instance, <m>ACBDIHGFE</m> and <m>IHGFEDCBA</m> would meet their criteria. However, they would not be happy with <m>CEFGBADHI</m> since it contains <m>FG</m> and <m>HI</m>, so <m>G</m> is following <m>F</m> again and <m>I</m> is following <m>H</m> again.)
+            </p>
+            <ol>
+                <li><p>One student ponders how many possible ways there would be for them to line up meeting this criterion. Help him out by determining the exact value of this number.</p></li>
+                <li><p>Is this number bigger than, smaller than, or equal to the number of ways they could return so that no student walks in the same position as before (i.e., <m>A</m> is not first, <m>B</m> is not second, <ellipsis/>, and <m>I</m> is not last)?</p></li>
+                <li><p>What fraction (give it as a decimal) of the total number of ways they could line up meet their criterion of no student following immediately behind the same student on the return trip?</p></li>
+            </ol>
+        </statement>
+    </exercise>
 </exercises>

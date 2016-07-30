@@ -64,7 +64,7 @@
             <p>Find the height <m>h</m> of the poset <m>\PXP</m> shown below as well as a maximum chain and a partition of <m>X</m> into <m>h</m> antichains using the algorithm from this chapter.
             </p>
             <figure>
-                <image width="73%" source="images/height_ex_poset"/>
+                <image width="55%" source="images/height_ex_poset"/>
             </figure>
         </statement>
     </exercise>
@@ -73,6 +73,7 @@
             <p>For each of the two distinct (up to isomorphism) posets in <xref ref="fig_constructposets" autoname="yes"/>, find the width <m>w</m>, an antichain of size <m>w</m>, and a partition of the ground set into <m>w</m> chains.</p>
         </statement>
     </exercise>
+
     <exercise>
         <statement>
             <p>A restaurant chef has designed a new set of dishes for his menu. His set of dishes contains <m>10</m> main courses, and he will select a subset of them to place on the menu each night. To ensure variety of main courses for his patrons, he wants to guarantee that a night's menu is neither completely contained in nor completely contains another night's menu. What is the largest number of menus he can plan using his <m>10</m> main courses subject to this requirement?</p>
@@ -95,7 +96,7 @@
             </p>
             <figure xml:id="fig_intord_to_diag_ex2">
                 <caption>An interval representation</caption>
-                <image width="73%" source="images/intord_to_diag_ex2"/>
+                <image width="85%" source="images/intord_to_diag_ex2"/>
             </figure>
         </statement>
     </exercise>
@@ -105,8 +106,9 @@
             </p>
             <figure xml:id="fig_intord_find_rep_ex1">
                 <caption>Is this poset an interval order?</caption>
-                <image width="73%" source="images/intord_find_rep_ex1"/>
+                <image width="40%" source="images/intord_find_rep_ex1"/>
             </figure>
+
         </statement>
     </exercise>
     <exercise>
@@ -114,8 +116,9 @@
             <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex4" autoname="yes"/> or give a reason why one does not exist.</p>
             <figure xml:id="fig_intord_find_rep_ex4">
                 <caption>Is this poset an interval order?</caption>
-                <image width="73%" source="images/intord_find_rep_ex4"/>
+                <image width="40%" source="images/intord_find_rep_ex4"/>
             </figure>
+
         </statement>
     </exercise>
     <exercise>
@@ -124,7 +127,7 @@
             </p>
             <figure xml:id="fig_intord_find_rep_ex2">
                 <caption>Is this poset an interval order?</caption>
-                <image width="73%" source="images/intord_find_rep_ex2"/>
+                <image width="40%" source="images/intord_find_rep_ex2"/>
             </figure>
         </statement>
     </exercise>
@@ -134,7 +137,7 @@
             </p>
             <figure xml:id="fig_intord_find_rep_ex3">
                 <caption>Is this poset an interval order?</caption>
-                <image width="73%" source="images/intord_find_rep_ex3"/>
+                <image width="40%" source="images/intord_find_rep_ex3"/>
             </figure>
         </statement>
     </exercise>
@@ -144,21 +147,24 @@
             
             <figure xml:id="fig_intord_firstfit_ex1">
                 <caption>An interval representation</caption>
-                <image width="73%" source="images/intord_firstfit_ex1"/>
+                <image width="85%" source="images/intord_firstfit_ex1"/>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Complete the proof of <xref ref="thm_intord-minrep" autoname="yes" />.  <em>Hint.</em> The key idea is to show that if <m>d</m> is the least positive integer for which an interval order <m>\bfP</m> has a representation using end points from <m>\{1,2,\dots,n\}</m>, then every integer <m>i</m> from this set must be both a left end point and a right end point of an interval.</p>
+            <p>Complete the proof of <xref ref="thm_intord-minrep" autoname="yes" />.  </p>
         </statement>
+        <hint>
+            <p>The key idea is to show that if <m>d</m> is the least positive integer for which an interval order <m>\bfP</m> has a representation using end points from <m>\{1,2,\dots,n\}</m>, then every integer <m>i</m> from this set must be both a left end point and a right end point of an interval.</p>
+        </hint>
     </exercise>
     <exercise>
         <statement>
             <p>Show that every poset is isomorphic to a poset of each of the four types illustrated in <xref ref="exa_construct" autoname="yes" />.  </p>
         </statement>
         <hint>
-            <p>Hint: for each element <m>x</m>, choose some unique identifying key which is an element/prime/coordinate/observer.  Then associate with <m>x</m> a structure that identifies the keys of elements from <m>D[x]</m>.</p>
+            <p>For each element <m>x</m>, choose some unique identifying key which is an element/prime/coordinate/observer.  Then associate with <m>x</m> a structure that identifies the keys of elements from <m>D[x]</m>.</p>
         </hint>
     </exercise>
     <exercise>
