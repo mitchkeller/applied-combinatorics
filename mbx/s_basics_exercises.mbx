@@ -1,81 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_basics_exercises">
-  <exercise>
-    <statement>
-      <p>Suppose you are given a list of <m>n</m> integers, each of size
-at most <m>100n</m>.   How many operations would it take you to do the following
-tasks (in answering these questions, we are interested primarily in whether it
-will take <m>\log n</m>, <m>\sqrt{n}</m>, <m>n</m>, <m>n^2</m>, <m>n^3</m>, <m>2^n</m>, <ellipsis/> steps.  In 
-other words, ignore multiplicative constants.):
-<ol>
-<li>Determine if the number <m>2n+7</m> is in the list.</li>
-<li>Determine if there are two numbers in the list whose sum is
-<m>2n+7</m>.</li>
-<li>Determine if there are two numbers in the list whose product is
-<m>2n+7</m> (This one is more subtle than it might appear!  It may be
-to your advantage to sort the integers in the list).</li>
-<li>Determine if there is a number <m>i</m> for which all the numbers in
-the list are between <m>i</m> and <m>i+2n+7</m>.</li>
-<li>Determine  the longest sequence of consecutive integers belonging
-to the list.</li>
-<li>Determine the number of primes in the list.</li>
-<li>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from
-the list so that <m>x+y=z</m>.</li>
-<li>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from
-the list so that <m>x^2+y^2=z^2</m>.</li>
-<li>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from
-the list so that <m>xy=z</m>.</li>
-<li>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from
-the list so that <m>x^y=z</m>.</li>
-<li>Determine whether there are two integers <m>x</m> and <m>y</m> from
-the list so that <m>x^y</m> is a prime.</li>
-<li>Determine the longest arithmetic progression in the list (a
-sequence <m>(a_1, a_2,\dots,a_t)</m> is an arithmetic progression when
-there is a constant <m>d\neq 0</m> so that <m>a_{i+1}=a_i+d</m>, for each <m>i=1,2,
-\dots, t-1</m>).</li>
-<li>Determine the number of distinct sums that can be formed from
-members of the list (arbitrarily many integers from the list are allowed to
-be terms in the sum).</li>
-<li>Determine the number of distinct products that can be formed from
-members of the list (arbitrarily many integers from the list are allowed to be
-factors in the product).</li>
-<li>Determine for which integers <m>m</m>, the list contains at least <m>10\%</m> of the
-integers from <m>\{1,2,\dots,m\}</m>.</li>
-</ol>
-</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>If you have to put <m>n+1</m> pigeons into <m>n</m> holes, you have to
-put two pigeons into the same hole.  What happens if you have to
-put <m>mn+1</m> pigeons into <m>n</m> holes?</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Consider the set <m>X=\{1,2,3,4,5\}</m> and suppose you have two holes.
-Also suppose that you have <m>10</m> pigeons: the <m>2</m>-element subsets of
-<m>X</m>.  Can you put these <m>10</m> pigeons into the two holes in a way that there
-is no <m>3</m>-element subset <m>S=\{a,b,c\}\subset X</m> for which all pigeons from
-<m>S</m> go in the same hole?  Then answer the same question if <m>X=\{1,2,3,4,5,6\}</m>
-with <m>15 = C(6,2)</m> pigeons.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Let <m>n=10,000</m>. Suppose a friend tells you that he has a secret family of subsets
-of <m>\{1,2,\dots,n\}</m>, and if you guess it correctly, he will give you one million
-dollars.  You think you know the subset he has in mind and it contains exactly
-half the subsets, i.e., the family has <m>2^{n-1}</m> subsets.  Discuss how you can
-share your hunch with your friend in an effort to win the prize.</p>
-    </statement>
-  </exercise>
-  <exercise>
-    <statement>
-      <p>Let <m>N</m> denote the set of positive integers.  When <m>f:N\rightarrow N</m> is
-a function, let <m>E(f)</m> be the function defined by <m>E(f)(n) = 2^{f(n)}</m>.
-What is <m>E^5(n^2)</m>?</p>
-    </statement>
-  </exercise>
+    <exercise>
+        <statement>
+            <p>Suppose you are given a list of <m>n</m> integers, each of size at most <m>100n</m>.  How many operations would it take you to do the following tasks (in answering these questions, we are interested primarily in whether it will take <m>\log n</m>, <m>\sqrt{n}</m>, <m>n</m>, <m>n^2</m>, <m>n^3</m>, <m>2^n</m>, <ellipsis/> steps.  In other words, ignore multiplicative constants.):
+            </p>
+            <ol>
+                <li><p>Determine if the number <m>2n+7</m> is in the list.</p></li>
+                <li><p>Determine if there are two numbers in the list whose sum is <m>2n+7</m>.</p></li>
+                <li><p>Determine if there are two numbers in the list whose product is <m>2n+7</m> (This one is more subtle than it might appear!  It may be to your advantage to sort the integers in the list).</p></li>
+                <li><p>Determine if there is a number <m>i</m> for which all the numbers in the list are between <m>i</m> and <m>i+2n+7</m>.</p></li>
+                <li><p>Determine the longest sequence of consecutive integers belonging to the list.</p></li>
+                <li><p>Determine the number of primes in the list.</p></li>
+                <li><p>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from the list so that <m>x+y=z</m>.</p></li>
+                <li><p>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from the list so that <m>x^2+y^2=z^2</m>.</p></li>
+                <li><p>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from the list so that <m>xy=z</m>.</p></li>
+                <li><p>Determine whether there are three integers <m>x</m>, <m>y</m> and <m>z</m> from the list so that <m>x^y=z</m>.</p></li>
+                <li><p>Determine whether there are two integers <m>x</m> and <m>y</m> from the list so that <m>x^y</m> is a prime.</p></li>
+                <li><p>Determine the longest arithmetic progression in the list (a sequence <m>(a_1, a_2,\dots,a_t)</m> is an arithmetic progression when there is a constant <m>d\neq 0</m> so that <m>a_{i+1}=a_i+d</m>, for each <m>i=1,2, \dots, t-1</m>).</p></li>
+                <li><p>Determine the number of distinct sums that can be formed from members of the list (arbitrarily many integers from the list are allowed to be terms in the sum).</p></li>
+                <li><p>Determine the number of distinct products that can be formed from members of the list (arbitrarily many integers from the list are allowed to be factors in the product).</p></li>
+                <li><p>Determine for which integers <m>m</m>, the list contains at least <m>10\%</m> of the integers from <m>\{1,2,\dots,m\}</m>.</p></li>
+            </ol>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>If you have to put <m>n+1</m> pigeons into <m>n</m> holes, you have to put two pigeons into the same hole.  What happens if you have to put <m>mn+1</m> pigeons into <m>n</m> holes?</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Consider the set <m>X=\{1,2,3,4,5\}</m> and suppose you have two holes.  Also suppose that you have <m>10</m> pigeons: the <m>2</m>-element subsets of <m>X</m>.  Can you put these <m>10</m> pigeons into the two holes in a way that there is no <m>3</m>-element subset <m>S=\{a,b,c\}\subset X</m> for which all pigeons from <m>S</m> go in the same hole?  Then answer the same question if <m>X=\{1,2,3,4,5,6\}</m> with <m>15 = C(6,2)</m> pigeons.</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Let <m>n=10,000</m>. Suppose a friend tells you that he has a secret family of subsets of <m>\{1,2,\dots,n\}</m>, and if you guess it correctly, he will give you one million dollars.  You think you know the subset he has in mind and it contains exactly half the subsets, i.e., the family has <m>2^{n-1}</m> subsets.  Discuss how you can share your hunch with your friend in an effort to win the prize.</p>
+        </statement>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Let <m>N</m> denote the set of positive integers.  When <m>f:N\rightarrow N</m> is a function, let <m>E(f)</m> be the function defined by <m>E(f)(n) = 2^{f(n)}</m>.  What is <m>E^5(n^2)</m>?</p>
+        </statement>
+    </exercise>
 </exercises>
