@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_genfunction_exercises">
+    <introduction>
+        <p>Computer algebra systems can be powerful tools for working with generating functions. In addition to stand-alone applications that run on your computer, the website <url href="http://www.wolframalpha.com">WolframAlpha</url> is capable of finding general forms of some power series representations and specific coefficients for many more. However, unless an exercise specifically suggests that you use a computer algebra system, we strongly encourage you to solve the problem by hand. This will help you develop a better understanding of how generating functions can be used.</p>
+        <p>For all exercises in this section, <q>generating function</q> should be taken to mean <q>orderinary generating function.</q> Exponential generating functions are only required in exercises specifically mentioning them.</p>
+    </introduction>
     <exercise>
         <statement>
             <p>For each <em>finite</em> sequence below, give its generating function.</p>
@@ -79,13 +83,13 @@
             <p>A volunteer coordinator has <m>30</m> identical chocolate chip cookies to distribute to six volunteers. Use a generating function (and computer algebra system) to determine the number of ways she can distribute the cookies so that each volunteer receives at least two cookies and no more than seven cookies.</p>
         </statement>
     </exercise>
-    <exercise>
+    <exercise xml:id="ex_genfunction_ineq-clean">
         <statement>
             <p>Consider the inequality
             <me>
                 x_1+x_2+x_3+x_4\leq n
             </me>
-            where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of <m>4</m>, and <m>1\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of the inequality subject to these restrictions. Find the generating function for the sequence <m>\{c_n\colon n\geq 0\}</m> and use it to find a closed formula for <m>c_n</m>.</p>
+            where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of <m>4</m>, and <m>0\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of the inequality subject to these restrictions. Find the generating function for the sequence <m>\{c_n\colon n\geq 0\}</m> and use it to find a closed formula for <m>c_n</m>.</p>
         </statement>
     </exercise>
     <exercise>
@@ -116,7 +120,7 @@
             <p>Using generating functions, find the number of ways to make change for a <dollar/><m>100</m> bill using only dollar coins and <dollar/><m>1</m>, <dollar/><m>2</m>, and <dollar/><m>5</m> bills. </p>
         </statement>
         <hint>
-            <p>Find the partial fractions expansion for your generating function. Once you have it, you may find the following identity helpful
+            <p>Find the partial fractions expansion for your generating function. Be careful here, as you want a partial fraction expansion in which all coefficients for your denominator polynomials have integer coefficients. If a computer algebra system gives you two denominators with irrational coefficients in them, combine them into a single term before proceeding. (<em>Mathematica</em><registered /> has the <c>Apart</c> command, which produces the type of partial fractions expansion you want. WolframAlpha buries the <q>good one</q> far down the page.) Once you have the right partial fractions expansion, you may find the following identity helpful
             <me>
                 \frac{p(x)}{1+x+x^2+\cdots + x^k} = \frac{p(x)(1-x)}{1-x^{k+1}},
             </me>
@@ -158,11 +162,11 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for <dollar/><m>0.95</m> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back.
+            <p>Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for <dollar/><m>0.95</m> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you're not asked for the coefficient on <m>x^n</m>.)
             </p>
             <ol>
                 <li><p>Use a generating function and computer algebra system to determine the number of ways Carlos could pay his <dollar/><m>0.95</m> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)</p></li>
-                <li><p>Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the <dollar/><m>0.95</m> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <m>10=C(5,2)</m> ways to insert this combination. Use an ordinary generating function and computer algebra system to determine the number of ways that Carlos could pay the <dollar/><m>0.95</m> toll when considering the order the coins are inserted.</p></li>
+                <li><p>Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the <dollar/><m>0.95</m> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <m>10=C(5,2)</m> ways to insert this combination. Use an exponential generating function and computer algebra system to determine the number of ways that Carlos could pay the <dollar/><m>0.95</m> toll when considering the order the coins are inserted.</p></li>
             </ol>
         </statement>
     </exercise>
@@ -244,6 +248,7 @@
     <exercise>
         <statement>
             <p>Find the exponential generating function for the number of alphanumeric strings of length <m>n</m> formed from the <m>26</m> uppercase letters of the English alphabet and <m>10</m> decimal digits if
+            </p>
             <ul>
                 <li><p>each vowel must appear at least one time;</p></li>
                 <li><p>the letter <m>T</m> must appear at least three times;</p></li>
@@ -251,7 +256,19 @@
                 <li><p>each even digit must appear an even number of times; and</p></li>
                 <li><p>each odd digit must appear an odd number of times.</p></li>
             </ul>
-            </p>
         </statement>
     </exercise>
+    <exercise xml:id="ex_genfunction_ineq-messy">
+        <statement>
+            <p>Consider the inequality
+            <me>
+                x_1+x_2+x_3+x_4\leq n
+            </me>
+            where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of <m>4</m>, and <m>1\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of the inequality subject to these restrictions. Find the generating function for the sequence <m>\{c_n\colon n\geq 0\}</m> and use it to find a closed formula for <m>c_n</m>.</p>
+        </statement>
+        <hint>
+            <p>Yes, this is very close to <xref ref="ex_genfunction_ineq-clean" autoname="yes" />. However, the bounds on <m>x_4</m> are different here. You might try using a computer algebra system to expedite finding the partial fractions expansion, which will have several terms whose power series you can work with quickly. For the term involving <m>1/(1+x^2)</m>, work out the series by hand. You may find that your solution to this problem has two parts<mdash />one for when <m>n</m> is even and another for when <m>n</m> is odd.</p>
+        </hint>
+    </exercise>
+
 </exercises>

@@ -2,7 +2,7 @@
 <exercises xml:id="s_ramsey_exercises">
     <exercise>
         <statement>
-            <p>Consider a random graph with vertex set <m>\{1,2,\dot,n\}</m>.  If the edge probability is <m>p=1/2</m>, then let <m>X</m> denote the number of complete subgraphs is size <m>t=2\log n</m> and let <m>Y</m> denote the number of independent sets of size <m>t=2\log n</m>.</p>
+            <p>Consider a random graph with vertex set <m>\{1,2,\dot,n\}</m>.  If the edge probability is <m>p=1/2</m>, then let <m>X</m> denote the number of complete subgraphs of size <m>t=2\log n</m> and let <m>Y</m> denote the number of independent sets of size <m>t=2\log n</m>.</p>
             <ol>
                 <li><p>Show that <m>E(X+Y)\lt 1</m>, when <m>n</m> is sufficiently large.</p></li>
                 <li><p>Use the result from part<nbsp/>a to show that <m>\omega(G)</m> is less than <m>2\log n</m>, while the chromatic number of <m>G</m> is at least <m>n/(2\log n)</m> (both statements holding with high probability).  As a result, the basic inequality <m>\chi(G)\ge\omega(G)</m> is far from being tight for a random graph.</p></li>

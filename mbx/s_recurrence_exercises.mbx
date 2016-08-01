@@ -114,9 +114,9 @@
             <p>Prove <xref ref="lem_rr" autoname="yes" /> about advancement operator equations with repeated roots.</p>
         </statement>
     </exercise>
-    <exercise>
+    <exercise xml:id="ex_recurrence_gen-fn">
         <statement>
-            <p>Use generating functions to solve the recurrence equation <m>r_n=4r_{n-1}+6r_{n-2}</m> for <m>n\geq 2</m> with <m>r_0=1</m> and <m>r_1=3</m>.</p>
+            <p>Use generating functions to solve the recurrence equation <m>r_n=r_{n-1}+6r_{n-2}</m> for <m>n\geq 2</m> with <m>r_0=1</m> and <m>r_1=3</m>.</p>
         </statement>
     </exercise>
     <exercise>
