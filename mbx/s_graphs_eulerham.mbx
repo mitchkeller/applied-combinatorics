@@ -4,7 +4,7 @@
     </p>
     <figure xml:id="fig_bridges" >
         <caption>The bridges of K&#xf6;nigsberg</caption>
-        <image width="73%" source="images/konigsberg_bridges" />
+        <image width="65%" source="images/konigsberg_bridges" />
     </figure>
     <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><index><main>graph</main><sub>eulerian</sub></index> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
     <ol>
@@ -88,13 +88,13 @@ g.show()
     </p>
     <figure xml:id="fig_graphs_eulerexample" >
         <caption>An Eulerian Graph</caption>
-        <image width="60%" source="images/eulerian_graph" />
+        <image width="55%" source="images/eulerian_graph" />
     </figure>
     <p>You should note that <xref ref="thm_eulerian" autoname="yes" /> holds for loopless graphs in which multiple edges are allowed. Euler used his theorem to show that the multigraph of K&#xf6;nigsberg shown in <xref ref="fig_bridges-graph" autoname="yes" />, in which each land mass is a vertex and each bridge is an edge, is <em>not</em> eulerian, and thus the citizens could not find the route they desired. (Note that in <xref ref="fig_bridges-graph" autoname="yes" /> there are multiple edges between the same pair of vertices.)
     </p>
     <figure xml:id="fig_bridges-graph" >
         <caption>The multigraph of K&#xf6;nigsberg's bridges</caption>
-        <image width="17%" source="images/konigsberg_graph" />
+        <image width="13%" source="images/konigsberg_graph" />
     </figure>
 
     <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><index><main>graph</main><sub>hamiltonian</sub></index> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that
@@ -115,7 +115,7 @@ g.show()
     </p>
     <figure xml:id="fig_petersen" >
         <caption>The Petersen Graph</caption>
-        <image width="56%" source="images/petersen_graph" />
+        <image width="50%" source="images/petersen_graph" />
     </figure>
     <p>Unlike the situation with eulerian circuits, there is no known method for quickly determining whether a graph is hamiltonian. However, there are a number of interesting conditions which are sufficient. Here is one quite well known example, due to Dirac.
     </p>
