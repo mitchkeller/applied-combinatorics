@@ -35,7 +35,7 @@
             </proof>
         </theorem>
 
-        <p>When <m>\PXP</m> is a poset, a point <m>x\in X</m> with <m>\height(x)=1</m> is called a <term>minimal point</term><index><main>minimal</main><sub>point of a poset</sub></index> of <m>\bfP</m>. We denote the set of all minimal points of a poset <m>\PXP</m> by <m>\min(X,P)</m> <fn>Since we use the notation <m>\bfP= (X,P)</m> for a poset, the set of minimal elements can be denoted by <m>\min(\bfP)</m> or <m>\min(X,P)</m>. This convention will be used for all set valued and integer valued functions of posets.</fn>.
+        <p>When <m>\PXP</m> is a poset, a point <m>x\in X</m> with <m>\height(x)=1</m> is called a <term>minimal point</term><index><main>minimal</main><sub>point of a poset</sub></index> of <m>\bfP</m>. We denote the set of all minimal points of a poset <m>\PXP</m> by <m>\min(X,P)</m>.<fn>Since we use the notation <m>\bfP= (X,P)</m> for a poset, the set of minimal elements can be denoted by <m>\min(\bfP)</m> or <m>\min(X,P)</m>. This convention will be used for all set valued and integer valued functions of posets.</fn>
         </p>
 
         <p>The argument given for the proof of <xref ref="thm_dualdilworth" autoname="yes" /> yields an efficient algorithm, one that is defined recursively. Set <m>\bfP_0= \bfP</m>. If <m>\bfP_i</m> has been defined and <m>\bfP_i\neq \emptyset</m>, let <m>A_i=\min(\bfP_i)</m> and then let <m>\bfP_{i+1}</m> denote the subposet remaining when <m>A_i</m> is removed from <m>\bfP_i</m>.
@@ -45,7 +45,7 @@
         </p>
         <figure xml:id="fig_height5" >
             <caption>A Poset of Height 5</caption>
-            <image width="60%" source="images/height5" />
+            <image width="70%" source="images/height5" />
         </figure>
         <remark>
             <p>Alice claims that it is very easy to find the set of minimal elements of a poset. Do you agree?
@@ -95,7 +95,7 @@
         </p>
         <figure xml:id="fig_width7" >
             <caption>A Poset of Width 7</caption>
-            <image width="60%" source="images/width7" />
+            <image width="70%" source="images/width7" />
         </figure>
         <remark>
             <p>The ever alert Alice notes that the proof given above for Dilworth's theorem does not seem to provide an efficient algorithm for finding the width<nbsp /><m>w</m> of a poset, much less a partition of the poset into <m>w</m> chains. Bob has yet to figure out why listing all the subsets of <m>X</m> is a bad idea. Carlos is sitting quietly listening to their bickering, but finally, he says that a skilled programmer can devise an algorithm from the proof. Students are encouraged to discuss this dilemma<mdash />but rest assured that we will return to this issue later in the text.

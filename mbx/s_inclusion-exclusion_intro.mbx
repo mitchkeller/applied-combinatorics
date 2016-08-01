@@ -44,7 +44,7 @@
         <me>
             x_1' + x_2 + x_3 + x_4' = 97
         </me>
-        with <m>x_1',x_2,x_3,x_4'\geq 0</m>, <m>x_3\leq 7</m>, and <m>x_4'\leq 8</m>. (We'll then have <m>x_1 = x_1'+1</m> and <m>x_4 = x_4' + 2</m> to get our desired solution.) To count the number of integer solutions to this equation with <m>x_3\leq 7</m> and <m>x_4'\leq 8</m>, we must exclude any solution in which <m>x_3 > 7\emph{or}x_4' > 8</m>. There are <m>C(92,3)</m> solutions with <m>x_3 > 7</m>, and the number of solutions in which <m>x_4'>8</m> is <m>C(91,3)</m>. At this point, it might be tempting to just subtract <m>C(92,3)</m> and <m>C(91,3)</m> from <m>C(100,3)</m>, the total number of solutions with all variables nonnegative. However, care is required. If we did that, we would eliminate the solutions with both <m>x_3>7\emph{and}x_4'>8</m> <em>twice</em>. To account for this, we notice that there are <m>C(83,3)</m> solutions with both <m>x_3>7</m> and <m>x_4'>8</m>. If we add this number back in after subtracting, we've ensured that the solutions with both <m>x_3>7</m> and <m>x_4'>8</m> are not included in the total count and are not excluded more than once. Thus, the total number of solutions is
+        with <m>x_1',x_2,x_3,x_4'\geq 0</m>, <m>x_3\leq 7</m>, and <m>x_4'\leq 8</m>. (We'll then have <m>x_1 = x_1'+1</m> and <m>x_4 = x_4' + 2</m> to get our desired solution.) To count the number of integer solutions to this equation with <m>x_3\leq 7</m> and <m>x_4'\leq 8</m>, we must exclude any solution in which <m>x_3 \gt> 7</m> <em>or</em> <m>x_4' \gt 8</m>. There are <m>C(92,3)</m> solutions with <m>x_3 > 7</m>, and the number of solutions in which <m>x_4'>8</m> is <m>C(91,3)</m>. At this point, it might be tempting to just subtract <m>C(92,3)</m> and <m>C(91,3)</m> from <m>C(100,3)</m>, the total number of solutions with all variables nonnegative. However, care is required. If we did that, we would eliminate the solutions with both <m>x_3\gt 7</m> <em>and</em> <m>x_4'\gt 8</m> <em>twice</em>. To account for this, we notice that there are <m>C(83,3)</m> solutions with both <m>x_3>7</m> and <m>x_4'>8</m>. If we add this number back in after subtracting, we've ensured that the solutions with both <m>x_3>7</m> and <m>x_4'>8</m> are not included in the total count and are not excluded more than once. Thus, the total number of solutions is
         <me>
             \binom{100}{3} - \binom{92}{3} - \binom{91}{3} + \binom{83}{3} = 6516.
         </me>
@@ -61,24 +61,26 @@
 
         <p>As a specific example, suppose that <m>n=5</m> and <m>m=3</m>. Then the function given by the table below satisfies <m>P_1</m> but not <m>P_2</m> or <m>P_3</m>.
         </p>
-        <tabular>
-            <row bottom="minor">
-                <cell><m>i</m></cell>
-                <cell>1</cell>
-                <cell>2</cell>
-                <cell>3</cell>
-                <cell>4</cell>
-                <cell>5</cell>
-            </row>
-            <row>
-                <cell><m>f(i)</m></cell>
-                <cell>2</cell>
-                <cell>3</cell>
-                <cell>2</cell>
-                <cell>2</cell>
-                <cell>3</cell>
-            </row>
-        </tabular>
+        <table>
+            <tabular>
+                <row bottom="minor">
+                    <cell><m>i</m></cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                    <cell>5</cell>
+                </row>
+                <row>
+                    <cell><m>f(i)</m></cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>2</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                </row>
+            </tabular>
+        </table>
     </example>
 
     <example xml:id="exa_inclusion-exclusion_prop-derange">
@@ -87,24 +89,26 @@
 
         <p>For example, the permutation <m>\sigma</m> of <m>[5]</m> given in by the table below satisfies <m>P_3</m> and <m>P_5</m> and no other <m>P_i</m>.
         </p>
-        <tabular>
-            <row bottom="minor">
-                <cell><m>i</m></cell>
-                <cell>1</cell>
-                <cell>2</cell>
-                <cell>3</cell>
-                <cell>4</cell>
-                <cell>5</cell>
-            </row>
-            <row>
-                <cell><m>\sigma(i)</m></cell>
-                <cell>2</cell>
-                <cell>4</cell>
-                <cell>3</cell>
-                <cell>1</cell>
-                <cell>5</cell>
-            </row>
-        </tabular>
+        <table>
+            <tabular>
+                <row bottom="minor">
+                    <cell><m>i</m></cell>
+                    <cell>1</cell>
+                    <cell>2</cell>
+                    <cell>3</cell>
+                    <cell>4</cell>
+                    <cell>5</cell>
+                </row>
+                <row>
+                    <cell><m>\sigma(i)</m></cell>
+                    <cell>2</cell>
+                    <cell>4</cell>
+                    <cell>3</cell>
+                    <cell>1</cell>
+                    <cell>5</cell>
+                </row>
+            </tabular>
+        </table>
     </example>
     <p>Note that in the previous example, we could have said that <m>\sigma</m> satisfies property <m>P_i</m> if <m>\sigma(i)\neq i</m>. But remembering that our goal is to count the number of elements satisfying none of the properties, we would then be counting the number of permutations satisfying <m>\sigma(i)=i</m> for each <m>i=1,2,\dots,n</m>, and perhaps we don't need a lot of theory to accomplish this task<mdash />the number is one, of course.
     </p>
