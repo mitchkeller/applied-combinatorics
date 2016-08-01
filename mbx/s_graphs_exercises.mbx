@@ -65,7 +65,7 @@
             <p><xref ref="fig_graphs_isomorphic_ex" autoname="yes"/> contains four graphs on six vertices. Determine which (if any) pairs of graphs are isomorphic. For pairs that are isomorphic, give an isomorphism between the two graphs. For pairs that are not isomorphic, explain why.</p>
             <figure xml:id="fig_graphs_isomorphic_ex">
                 <caption>Are these graphs isomorphic?</caption>
-                <image width="65%">
+                <image width="55%">
                     <latex-image-code>\begin{overpic}[scale=0.6]{images/isomorphic_ex}
                     \put(22,47){\(\bfG_1\)}
                     \put(74,47){\(\bfG_2\)}
@@ -113,7 +113,7 @@
             <p>Consider the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_hamilton_ex" autoname="yes"/>. Determine if the graph is eulerian. If it is, find an eulerian circuit. If it is not, explain why it is not. Determine if the graph is hamiltonian. If it is, find a hamiltonian cycle. If it is not, explain why it is not.</p>
             <figure xml:id="fig_graphs_euler_hamilton_ex">
                 <caption>A graph <m>\bfG</m></caption>
-                <image width="75%" source="images/euler_hamilton_ex"/>
+                <image width="65%" source="images/euler_hamilton_ex"/>
             </figure>
         </statement>
     </exercise>
@@ -156,7 +156,7 @@
             <p>Find the chromatic number of the graph <m>\bfG</m> in <xref ref="fig_graphs_bipartite_ex" autoname="yes"/> and a coloring using <m>\chi(\bfG)</m> colors.</p>
             <figure xml:id="fig_graphs_bipartite_ex">
                 <caption>A graph <m>\bfG</m> to color</caption>
-                <image width="60%" source="images/bipartite_ex"/>
+                <image width="50%" source="images/bipartite_ex"/>
             </figure>
         </statement>
     </exercise>
@@ -252,7 +252,7 @@
             <p>Draw the interval graph corresponding to the intervals in <xref ref="fig_graphs_intervals-ex" autoname="yes"/>.</p>
             <figure xml:id="fig_graphs_intervals-ex">
                 <caption>A collection of intervals</caption>
-                <image width="73%" source="images/firstfit-intgraph"/>
+                <image width="80%" source="images/firstfit-intgraph"/>
             </figure>
         </statement>
     </exercise>
@@ -279,7 +279,7 @@
             <p>Is the graph in <xref ref="fig_graphs_planar_ex" autoname="yes"/> planar? If it is, find a drawing without edge crossings. If it is not give a reason why it is not.</p>
             <figure xml:id="fig_graphs_planar_ex">
                 <caption>Is this graph planar?</caption>
-                <image width="50%" source="images/planar_ex"/>
+                <image width="40%" source="images/planar_ex"/>
             </figure>
         </statement>
     </exercise>
@@ -351,7 +351,7 @@
             <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1" autoname="yes"/>.</p>
             <figure xml:id="fig_graphs_tree-10verts-ex1">
                 <caption>A <m>10</m>-vertex tree</caption>
-                <image>
+                <image width="75%">
                     <latex-image-code>\begin{overpic}{images/tree-10verts-ex1}
                     \put(35,11.2){\(1\)}
                     \put(46,2){\(2\)}
@@ -374,7 +374,7 @@
             <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2" autoname="yes"/>.</p>
             <figure xml:id="fig_graphs_tree-10verts-ex2">
                 <caption>A <m>10</m>-vertex tree</caption>
-                <image width="70%">
+                <image width="65%">
                     <latex-image-code>\begin{overpic}{images/tree-8verts-ex2}
                     \put(50,32){\(1\)}
                     \put(44,2){\(2\)}
@@ -395,7 +395,7 @@
             <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3" autoname="yes"/>.</p>
             <figure xml:id="fig_graphs_tree-14verts-ex3">
                 <caption>A <m>14</m>-vertex tree</caption>
-                <image width="75%">
+                <image width="65%">
                     <latex-image-code>\begin{overpic}{images/tree-14verts-ex3}
                     \put(50,32){\(1\)}
                     \put(44,2){\(2\)}
