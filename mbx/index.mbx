@@ -100,7 +100,7 @@
           </institution>
           <email>trotter@math.gatech.edu</email>
         </author>
-        <date><today /></date>
+        <date>2016 Edition</date>
       </titlepage>
 
       <colophon>
@@ -136,7 +136,9 @@
       </biography>
 
       <acknowledgement>
-        <p>We are grateful to our colleagues Alan Diaz, Thang Le, Noah Strebi, Prasad Tetali and Carl Yerger, who have taught Applied Combinatorics from preliminary versions and have given valuable feedback. As this text is freely available on the internet, we welcome comments, criticisms, suggestions and corrections from anyone who takes a look at our work.</p>
+          <p>We are grateful to our colleagues Alan Diaz, Thang Le, Noah Strebi, Prasad Tetali and Carl Yerger, who have taught Applied Combinatorics from preliminary versions and have given valuable feedback. As this text is freely available on the internet, we welcome comments, criticisms, suggestions and corrections from anyone who takes a look at our work.</p>
+
+          <p>For the 2016 Edition, we are grateful to Robert A. Beezer, David Farmer, and Kent Morrison for organizing the American Insitute of Mathematics workshop on Mathbook <init>XML</init> that enabled the new formats to be released. David Farmer's work on the initial conversion to Mathbook <init>XML</init> was invaluable. The Mathbook <init>XML</init> Google Group was an important resource in resolving challenges along the way, and Rob Beezer is a wonderfully-responsive developer who gladly put up with any number of feature requests in order to make everything we wanted possible in the Mathbook <init>XML</init> edition.</p>
       </acknowledgement>
 
       <preface>
@@ -154,7 +156,18 @@
     </preface>
         <preface>
             <title>Preface to 2016 Edition</title>
-            <p>Talk about MBX</p>
+            <p>In April 2016, the American Institue of Mathematics hosted a weeklong workshop in San Jose to introduce authors of open textbooks to <c>git</c> and Robert A. Beezer's Mathbook <init>XML</init> authoring language designed to seamlessly produce <init>HTML</init>, <latex />, and other formats from a common <init>XML</init> source file. I (<init>MTK</init>) attended and eagerly began the conversion of existing <latex /> source for this now decade-old project into Mathbook <init>XML</init>. David Farmer deserves an enormous amount of credit for automating much of the process through a finely-tuned script, but the code produced still required a good deal of cleanup. This edition, the first not labeled <q>preliminary</q>, will hopefully become the first of many annual editions of <booktitle>Applied Combinatorics</booktitle> released under an open source license.</p>
+
+            <p>The main effort in producing this 2016 edition was to successfully convert to Mathbook <init>XML</init>. Along the way, I attempted to correct all typographical errors we had noted in the past. There are undoubtedly more errors (typographical or otherwise) that will be corrected in future years, so please contact us via email if you spot any. The text now has an index, which may prove more helpful than searching PDF files when looking for the most essential locations of some common terms. Since Mathbook <init>XML</init> makes it easy, we now also ahve a list of notation. Instructors will likely be glad to know that there were no changes to the exercises, so lists of assigned exercises from past years remain completely valid. The only significant changes to the body of the text was to convert <init>WTT</init>'s code snippets from C to Python/SageMath. This has allowed us to embed interactive SageMath cells that readers who use the <init>HTML</init> version of the text can run and edit. We've only scratched the surface with this powerful feature of Mathbook <init>XML</init>, so look for more SageMath additions in future years.</p>
+
+            <p>The conversion to Mathbook <init>XML</init> allows us to make a wider variety of formats available:</p>
+            <ul>
+                <li><p><init>HTML</init>: With responsive design using <init>CSS</init>, we feel that the text now looks beautiful on personal computers, tablets, and even mobile phones. No longer will students be frantically resizing a PDF on their phone in order to try to read a passage from the text. The <q>knowls</q> offered in <init>HTML</init> also allow references to images, tables, and even theorems from other pages (or even a distance away on the same page) to provide a copy of the image/table/theorem right there, and another click/tap makes it disappear.</p></li>
+                <li><p><init>PDF</init>: Not much is changed here from previous years, other than the <init>PDF</init> is produced from the <latex /> that Mathbook <init>XML</init> generates, and so numbering and order is consistent with the <init>HTML</init> version.</p></li>
+                <li><p>Print: Campus bookstores have frequently produced coursepacks or inespensively-bound versions of the text from the <init>PDF</init> provided online, but we have not previously been able to provide a printed, bound version for purchase. With the 2016 edition, we are pleased to launch a print version available through a number of online purchase channels. Campus bookstores may also acquire the book through wholesale channels for sale directly to students. Because of the CreativeCommons license under which the text is released, campuses retain the option of selling their own printed version of the text for students, although this is likely only financially advantageous to students if only a few chapters of the text are being used.</p></li>
+            </ul>
+
+            <p>We have some ideas for what might be updated for the 2017 Edition (<eg />, <xref ref="ch_basics" autoname="yes" /> needs to be expanded both in the body and the exercises, <xref ref="ch_genfunction" autoname="yes" /> would benefit from integration of SageMath to assist with generating function computations, and <xref ref="ch_kitchensink" autoname="yes" /> is still not really finished). However, we would love to hear from those of you who are using the text, too. Are there additional topics you'd like to see added? Chapters in need of more exercises? Topics whose exposition could be improved? Please reach out to us via email, and we'll consider your suggestions.</p>
             <attribution>
                 <line>Mitchel T. Keller</line>
                 <line>Lexington, Virginia</line>
