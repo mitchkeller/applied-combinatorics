@@ -7,7 +7,7 @@
     </p>
     <figure xml:id="fig_small_graph" >
         <caption>A graph on <m>5</m> vertices</caption>
-        <image width="35%">
+        <image width="30%">
             <latex-image-code><![CDATA[\begin{overpic}{images/small_graph}
             \put(58,100){\(a\)}
             \put(100,48){\(b\)}
@@ -25,13 +25,13 @@
     </p>
     <figure xml:id="fig_subgraphs" >
         <caption>A Graph, a Subgraph and an Induced Subgraph</caption>
-        <image width="75%" source="images/subgraphs" />
+        <image width="80%" source="images/subgraphs" />
     </figure>
     <p>A graph <m>\GVE</m> is called a <term>complete graph</term><index><main>graph</main><sub>complete</sub></index> when <m>xy</m> is an edge in <m>\bfG</m> for every distinct pair <m>x,y\in V</m>. Conversely, <m>\bfG</m> is an <term>independent graph</term><index><main>graph</main><sub>independent</sub></index> if <m>xy\not\in E</m>, for every distinct pair <m>x,y\in V</m>. It is customary to denote a complete graph on <m>n</m> vertices by <m>\bfK_n</m> <notation><usage>\bfK_n</usage><description>complete graph on <m>n</m> vertices</description></notation> and an independent graph on <m>n</m> vertices by <m>\bfI_n</m><notation><usage>\bfI_n</usage><description>independent graph on <m>n</m> vertices</description></notation>. In <xref ref="fig_complete_graphs" autoname="yes" />, we show the complete graphs with at most <m>5</m> vertices.
     </p>
     <figure xml:id="fig_complete_graphs" >
         <caption>Small complete graphs</caption>
-        <image width="75%">
+        <image width="70%">
 <latex-image-code><![CDATA[\begin{overpic}[width=4in]{images/complete_graphs}
             \put(2.5,2){\(\bfK_1\)}
             \put(16.5,2){\(\bfK_2\)}
@@ -45,7 +45,7 @@
     </p>
     <figure xml:id="fig_paths" >
         <caption>Short paths</caption>
-        <image width="75%">
+        <image width="70%">
             <latex-image-code><![CDATA[\begin{overpic}[width=4in]{images/paths}
             \put(8,-2){\(\bfP_1\)}
             \put(24,-2){\(\bfP_2\)}
@@ -58,7 +58,7 @@
     </figure>
     <figure xml:id="fig_cycles" >
         <caption>Small cycles</caption>
-        <image width="75%">
+        <image width="60%">
             <latex-image-code><![CDATA[\begin{overpic}[width=4in]{images/cycles}
             \put(24,1){\(\bfC_3\)}
             \put(47.5,1){\(\bfC_4\)}
@@ -74,7 +74,7 @@
     <figure xml:id="fig_isomorphic" >
         <caption>A pair of isomorphic graphs</caption>
         <image width="75%">
-<latex-image-code><![CDATA[\begin{overpic}[width=4in]{images/isomorphic_graphs}
+<latex-image-code><![CDATA[\begin{overpic}[width=0.75\textwidth]{images/isomorphic_graphs}
             \put(6,13){\(a\)}
             \put(20.5,1){\(b\)}
             \put(36,14){\(c\)}
