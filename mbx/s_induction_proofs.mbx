@@ -5,7 +5,7 @@
 
     <proposition xml:id="prop_sumints">
         <statement>
-            <p>For every positive integer <m>n</m>, the sum of the first <m>n</m> positive integers is <m>n(n+1)/2</m>, i.e.,
+            <p>For every positive integer <m>n</m>, the sum of the first <m>n</m> positive integers is <m>n(n+1)/2</m>, <ie />,
             <me>
                 \sum_{i=1}^n i=\frac{n(n+1)}{2}.
             </me>
@@ -54,7 +54,7 @@
         <p>We first prove the assertion when <m>n=1</m>. For this value of <m>n</m>, the left-hand side is just<nbsp /><m>1</m>, while the right-hand side evaluates to <m>1(1+1)/2=1</m>.
         </p>
 
-        <p>Now assume that for some positive integer <m>k</m>, the formula holds when <m>n=k</m>, i.e., assume that
+        <p>Now assume that for some positive integer <m>k</m>, the formula holds when <m>n=k</m>, <ie />, assume that
         <me>
             \sum_{i=1}^k i=\frac{k(k+1)}{2}.
         </me>
@@ -75,7 +75,7 @@
 
     <proposition xml:id="prop_sumodd">
         <statement>
-            <p>For each positive integer <m>n</m>, the sum of the first <m>n</m> odd positive integers is <m>n^2</m>, i.e.,
+            <p>For each positive integer <m>n</m>, the sum of the first <m>n</m> odd positive integers is <m>n^2</m>, <ie />,
             <me>
                 \sum_{i=1}^n (2i-1)= n^2.
             </me>
@@ -83,7 +83,7 @@
         </statement>
 
         <proof>
-            <p>We will prove this by induction. First, note that the formula holds when <m>n=1</m>. Now suppose that <m>k</m> is a positive integer and that the formula holds when <m>n=k</m>, i.e., assume
+            <p>We will prove this by induction. First, note that the formula holds when <m>n=1</m>. Now suppose that <m>k</m> is a positive integer and that the formula holds when <m>n=k</m>, <ie />, assume
             <me>
                 \sum_{i=1}^k (2i-1)= k^2.
             </me>
@@ -111,7 +111,7 @@
         </statement>
 
         <proof>
-            <p>Fix a non-negative integer <m>k</m>. We then prove the formula by induction on <m>n</m>. If <m>n=k</m>, note that the left hand side is just <m>\binom{k}{k}=1</m>, while the right hand side is <m>\binom{k+1}{k+1}</m> which is also<nbsp /><m>1</m>.  Now assume that <m>m</m> is a non-negative integer, with <m>m\ge k</m>, and that the formula holds when <m>n=m</m>, i.e., assume that
+            <p>Fix a non-negative integer <m>k</m>. We then prove the formula by induction on <m>n</m>. If <m>n=k</m>, note that the left hand side is just <m>\binom{k}{k}=1</m>, while the right hand side is <m>\binom{k+1}{k+1}</m> which is also<nbsp /><m>1</m>.  Now assume that <m>m</m> is a non-negative integer, with <m>m\ge k</m>, and that the formula holds when <m>n=m</m>, <ie />, assume that
             <me>
                 \sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
             </me>

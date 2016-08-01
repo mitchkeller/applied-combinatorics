@@ -109,7 +109,7 @@ gcd(12,5)
 
         <p>Feel free to change the values <c>12</c> and <c>5</c> above in the SageMath cell in the HTML version of the text to calculate the greatest common divisor of some other integers. Just remember that the code assumes <m>m\geq n</m> when you do so!</p>
     
-        <p>The disadvantage of this approach is the somewhat wasteful use of memory due to recursive function calls. It is not difficult to develop code for computing the greatest common divisor of <m>m</m> and <m>n</m> using only a loop, i.e., there are no recursive calls. With minimal extra work, such code can also be designed to solve the following diophantine equation problem:
+        <p>The disadvantage of this approach is the somewhat wasteful use of memory due to recursive function calls. It is not difficult to develop code for computing the greatest common divisor of <m>m</m> and <m>n</m> using only a loop, <ie />, there are no recursive calls. With minimal extra work, such code can also be designed to solve the following diophantine equation problem:
         </p>
 
         <theorem xml:id="thm_gcd-dioph">

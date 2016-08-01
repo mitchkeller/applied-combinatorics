@@ -20,7 +20,7 @@
             <me>
                 (x+y)^n=\underbrace{(x+y)(x+y)(x+y)(x+y)\dots(x+y)(x+y)}_{n\text{ factors} }.
             </me>
-            Each term of the expansion of the product results from choosing either <m>x</m> or <m>y</m> from one of these factors. If <m>x</m> is chosen <m>n-i</m> times and <m>y</m> is chosen <m>i</m> times, then the resulting product is <m>x^{n-i}y^i</m>. Clearly, the number of such terms is <m>C(n,i)</m>, i.e., out of the <m>n</m> factors, we choose the element <m>y</m> from <m>i</m> of them, while we take <m>x</m> in the remaining <m>n-i</m>.
+            Each term of the expansion of the product results from choosing either <m>x</m> or <m>y</m> from one of these factors. If <m>x</m> is chosen <m>n-i</m> times and <m>y</m> is chosen <m>i</m> times, then the resulting product is <m>x^{n-i}y^i</m>. Clearly, the number of such terms is <m>C(n,i)</m>, <ie />, out of the <m>n</m> factors, we choose the element <m>y</m> from <m>i</m> of them, while we take <m>x</m> in the remaining <m>n-i</m>.
             </p>
         </proof>
     </theorem>

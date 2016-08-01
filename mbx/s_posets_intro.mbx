@@ -52,8 +52,8 @@
         </p>
         
         <ol>
-            <li><p>A family <m>\mathcal{F}</m> of sets is partially ordered by inclusion, i.e., set <m>A\le B</m> if and only if <m>A</m> is a subset of <m>B</m>.</p></li>
-            <li><p>A set <m>X</m> of positive integers is partially ordered by division<mdash />without remainder, i.e., set <m>m\le n</m> if and only if <m>n\equiv 0\pmod{m}</m>.</p></li>
+            <li><p>A family <m>\mathcal{F}</m> of sets is partially ordered by inclusion, <ie />, set <m>A\le B</m> if and only if <m>A</m> is a subset of <m>B</m>.</p></li>
+            <li><p>A set <m>X</m> of positive integers is partially ordered by division<mdash />without remainder, <ie />, set <m>m\le n</m> if and only if <m>n\equiv 0\pmod{m}</m>.</p></li>
             <li><p>A set <m>X</m> of <m>t</m>-tuples of real numbers is partially ordered by the rule <me>(a_1,a_2,\dots,a_t)\le (b_1,b_2,\dots,b_t)</me> if and only if <m>a_i\le b_i</m> in the natural order on <m>\reals</m> for <m>i=1,2,\dots,t</m>.</p></li>
             <li><p>When <m>L_1</m>, <m>L_2,\dots,L_k</m> are linear orders on the same set <m>X</m>, we can define a partial order <m>P</m> on <m>X</m> by setting <m>x\le y</m> in <m>P</m> if and only if <m>x\le y</m> in <m>L_i</m> for all <m>i=1,2,\dots,k</m>.</p></li>
         </ol>

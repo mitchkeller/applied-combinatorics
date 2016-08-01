@@ -57,7 +57,7 @@
 
     <subsection>
         <title>Example of Dijkstra's Algorithm</title>
-        <p>Before establishing why Dijkstra's algorithm works, it may be helpful to see an example of how it works. To do this, consider the digraph <m>\bfG</m> shown in <xref ref="fig_graphalgorithms_dijkstragraph" autoname="yes" />. For visual clarity, we have chosen a digraph which is an <term>oriented graph</term>, i.e., for each distinct pair <m>x,y</m> of vertices, the graph contains at most one of the two possible directed edges <m>(x,y)</m> and <m>(y,x)</m>.
+        <p>Before establishing why Dijkstra's algorithm works, it may be helpful to see an example of how it works. To do this, consider the digraph <m>\bfG</m> shown in <xref ref="fig_graphalgorithms_dijkstragraph" autoname="yes" />. For visual clarity, we have chosen a digraph which is an <term>oriented graph</term>, <ie />, for each distinct pair <m>x,y</m> of vertices, the graph contains at most one of the two possible directed edges <m>(x,y)</m> and <m>(y,x)</m>.
         </p>
         <figure xml:id="fig_graphalgorithms_dijkstragraph" >
             <caption>A digraph with edge lengths</caption>

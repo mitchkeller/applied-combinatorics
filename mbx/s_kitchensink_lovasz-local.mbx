@@ -10,7 +10,7 @@
     <me>
         \prod_{E\in\cgF}E=\prod_{i=1}^k E_i=E_1E_2E_3\dots E_k
     </me>
-    denote the event <m>E_1\cap E_2\cap\dots\cap E_k</m>, i.e., concatenation is short hand for intersection. These notations can be mixed, so <m>E_1\overline{E_2}\overline{E_3}</m> represents <m>E_1\cap \overline{E_2}\cap\overline{E_3}</m>. Now let <m>\cgF</m> be a finite family of events, let <m>E\in\cgF</m> and let <m>\cgN</m> be a subfamily of <m>\cgF-\{E\}</m>. In the statement of the lemma below, we will say that <m>E</m> is independent of any event not in <m>\cgN</m> when
+    denote the event <m>E_1\cap E_2\cap\dots\cap E_k</m>, <ie />, concatenation is short hand for intersection. These notations can be mixed, so <m>E_1\overline{E_2}\overline{E_3}</m> represents <m>E_1\cap \overline{E_2}\cap\overline{E_3}</m>. Now let <m>\cgF</m> be a finite family of events, let <m>E\in\cgF</m> and let <m>\cgN</m> be a subfamily of <m>\cgF-\{E\}</m>. In the statement of the lemma below, we will say that <m>E</m> is independent of any event not in <m>\cgN</m> when
     <me>
         P(E|\prod_{F\in\cgG}\overline{F})=P(E)
     </me>
@@ -96,7 +96,7 @@
             <me>
                 P(\prod_{E\in\cgF}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)),
             </me>
-            i.e., the probability that all events in <m>\cgF</m> is positive.
+            <ie />, the probability that all events in <m>\cgF</m> is positive.
             </p>
         </statement>
 

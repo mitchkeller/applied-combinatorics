@@ -13,7 +13,7 @@
             <li><p><m>x+y=y+x</m> for every <m>x,y,\in V</m>.</p></li>
             <li><p><m>x+(y+z) = (x+y)+z</m>, for every <m>x,y,z\in V</m>.</p></li>
             <li><p>There is a vector called <term>zero</term> and denoted <m>0</m> so that <m>x+0=x</m> for every <m>x\in V</m>. <em>Note:</em> We are again overloading an operator and using the symbol <m>0</m> for something other than a number.</p></li>
-            <li><p>For every element <m>x\in V</m>, there is an element <m>y\in V</m>, called the <term>additive inverse</term> of <m>x</m> and denoted <m>-x</m> so that <m>x+(-x)=0</m>.  This property enables us to define <term>subtraction</term>, i.e., <m>x-y= x+(-y)</m>.</p></li>
+            <li><p>For every element <m>x\in V</m>, there is an element <m>y\in V</m>, called the <term>additive inverse</term> of <m>x</m> and denoted <m>-x</m> so that <m>x+(-x)=0</m>.  This property enables us to define <term>subtraction</term>, <ie />, <m>x-y= x+(-y)</m>.</p></li>
             <li><p><m>1x=x</m> for every <m>x\in X</m>.</p></li>
             <li><p><m>\alpha(\beta x) = (\alpha\beta)x</m>, for every <m>\alpha,\beta\in\reals</m> and every <m>x\in V</m>.</p></li>
             <li><p><m>\alpha(x+y)=\alpha x + \alpha y</m> for every <m>\alpha\in\reals</m> and every <m>x,y\in V</m>.</p></li>
@@ -66,7 +66,7 @@
             </statement>
 
             <proof>
-                <p>We first show that <m>f(n)=cr^n</m> for every <m>n\ge0</m>, by induction on <m>n</m>. The base case is trivial since <m>c=f(0) = cr^0</m>. Now suppose that <m>f(k)=cr^k</m> for some non-negative integer <m>k</m>. Then <m>(A-r)f=0</m> implies that <m>f(k+1)-rf(k)=0</m>, i.e.,
+                <p>We first show that <m>f(n)=cr^n</m> for every <m>n\ge0</m>, by induction on <m>n</m>. The base case is trivial since <m>c=f(0) = cr^0</m>. Now suppose that <m>f(k)=cr^k</m> for some non-negative integer <m>k</m>. Then <m>(A-r)f=0</m> implies that <m>f(k+1)-rf(k)=0</m>, <ie />,
                 <me>
                     f(k+1)=rf(k)= rcr^k=cr^{k+1}.
                 </me>

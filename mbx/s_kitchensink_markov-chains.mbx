@@ -21,7 +21,7 @@
             <m>k=1,2,\dots,n</m>, there is a fixed probability <m>p(j,k)</m> (which does not depend on <m>i</m>) that you will be in state <m>S_k</m> at time <m>i+1</m>.</p></li>
         </ol>
 
-        <p>The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m> of moving from state <m>S_j</m> to state <m>S_k</m> is called the <term>transition matrix</term><index><main>matrix</main><sub>transition</sub></index> of the Markov chain. Note that <m>P</m> is a <term>stochastic matrix</term><index><main>matrix</main><sub>stochastic</sub></index>, i.e., all entries are non-negative and all row sums are<nbsp /><m>1</m>.  Conversely, each square stochastic matrix can be considered as the transition matrix of a Markov chain.
+        <p>The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m> of moving from state <m>S_j</m> to state <m>S_k</m> is called the <term>transition matrix</term><index><main>matrix</main><sub>transition</sub></index> of the Markov chain. Note that <m>P</m> is a <term>stochastic matrix</term><index><main>matrix</main><sub>stochastic</sub></index>, <ie />, all entries are non-negative and all row sums are<nbsp /><m>1</m>.  Conversely, each square stochastic matrix can be considered as the transition matrix of a Markov chain.
         </p>
 
         <p>For example, here is the transition matrix for the graph in <xref provisional="fig-markovchain" autoname="yes" />.
@@ -52,7 +52,7 @@
 
     <subsection>
         <title>Absorbing Markov Chains</title>
-        <p>A state <m>S_i</m> in a Markov chain with transition matrix <m>P</m> is <term>absorbing</term><index><main>absorbing</main><sub>state of a Markov chain</sub></index> if <m>p_{i,i}=1</m> and <m>p_{i,j}=0</m> for all <m>j\neq i</m>, i.e., like the infamous Hotel California, once you are in state <m>S_i</m>, <q>you can never leave.</q>
+        <p>A state <m>S_i</m> in a Markov chain with transition matrix <m>P</m> is <term>absorbing</term><index><main>absorbing</main><sub>state of a Markov chain</sub></index> if <m>p_{i,i}=1</m> and <m>p_{i,j}=0</m> for all <m>j\neq i</m>, <ie />, like the infamous Hotel California, once you are in state <m>S_i</m>, <q>you can never leave.</q>
         </p>
         <example>
             <p>We modify the transition matrix from <xref ref="eqn_transition" autoname="yes" /> by making states <m>4</m> and <m>5</m> absorbing. The revised transition matrix is now:

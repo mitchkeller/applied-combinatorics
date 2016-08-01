@@ -7,7 +7,7 @@
     <me>
         \langle(a,b)\rangle+\langle(c,d)\rangle = \langle(a+c,b+d)\rangle.
     </me>
-    Note that the definition of addition is made in terms of representatives of the class, so we must pause to make sure that <m>+</m> is <term>well defined</term>, i.e., independent of the particular representatives.
+    Note that the definition of addition is made in terms of representatives of the class, so we must pause to make sure that <m>+</m> is <term>well defined</term>, <ie />, independent of the particular representatives.
     </p>
 
     <lemma>
@@ -112,7 +112,7 @@
         </statement>
     </theorem>
 
-    <p>Now consider the function <m>f:\nonnegints\longrightarrow \ints</m> defined by <m>f(n) = \langle(n,0)\rangle</m>. It is easy to show that <m>f</m> is an injection. Furthermore, it respects addition and multiplication, i.e., <m>f(n+m)=f(n)+f(m)</m> and <m>f(nm)=f(n)f(m)</m>. Also, note that if <m>x\in \ints</m>, then <m>x>0</m> if and only if <m>x=f(n)</m> for some <m>n\in \nonnegints</m>. So, it is customary to abuse notation slightly and say that <m>\nonnegints</m> is a <q>subset</q> of <m>\ints</m>. Similarly, we can either consider the set <m>\posints</m> of positive integers as the set of natural numbers that are successors, or as the set of integers that are greater than<nbsp /><m>0</m>.
+    <p>Now consider the function <m>f:\nonnegints\longrightarrow \ints</m> defined by <m>f(n) = \langle(n,0)\rangle</m>. It is easy to show that <m>f</m> is an injection. Furthermore, it respects addition and multiplication, <ie />, <m>f(n+m)=f(n)+f(m)</m> and <m>f(nm)=f(n)f(m)</m>. Also, note that if <m>x\in \ints</m>, then <m>x>0</m> if and only if <m>x=f(n)</m> for some <m>n\in \nonnegints</m>. So, it is customary to abuse notation slightly and say that <m>\nonnegints</m> is a <q>subset</q> of <m>\ints</m>. Similarly, we can either consider the set <m>\posints</m> of positive integers as the set of natural numbers that are successors, or as the set of integers that are greater than<nbsp /><m>0</m>.
     </p>
 
     <p>When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\ints</m>, we define <m>0^n=0</m>. When <m>x\in\ints</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>, we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>.

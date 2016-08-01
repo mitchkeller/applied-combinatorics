@@ -50,7 +50,7 @@
 
     <subsection>
         <title>Variance and Standard Deviation</title>
-        <p>Again, let <m>(S,P)</m> be a probability space and let <m>X</m> be a random variable.  The quantity <m>E((X-E(X))^2)</m> is called the <term>variance</term><index><main>variance</main></index> of <m>X</m> and is denoted <m>\var(X)</m>. Evidently, the variance of <m>X</m> is a non-negative number. The <term>standard deviation</term><index><main>standard deviation</main></index> of <m>X</m>, denoted <m>\sigma_X</m> is then defined as the quantity <m>\sqrt{\var(x)}</m>, i.e., <m>\sigma_X^2 =\var(X)</m>.
+        <p>Again, let <m>(S,P)</m> be a probability space and let <m>X</m> be a random variable.  The quantity <m>E((X-E(X))^2)</m> is called the <term>variance</term><index><main>variance</main></index> of <m>X</m> and is denoted <m>\var(X)</m>. Evidently, the variance of <m>X</m> is a non-negative number. The <term>standard deviation</term><index><main>standard deviation</main></index> of <m>X</m>, denoted <m>\sigma_X</m> is then defined as the quantity <m>\sqrt{\var(x)}</m>, <ie />, <m>\sigma_X^2 =\var(X)</m>.
         </p>
         <example>
             <p>For the spinner shown at the beginning of the chapter, let <m>X(i)=i^2</m> when the pointer stops in region<nbsp /><m>i</m>. Then we have already noted that the expectation <m>E(X)</m> of the random variable <m>X</m> is <m>109/8</m>. It follows that the variance <m>\var(X)</m> is:

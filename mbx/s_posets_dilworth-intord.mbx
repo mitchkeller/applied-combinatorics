@@ -6,7 +6,7 @@
     <p>Let <m>\PXP</m> be an interval order and let <m>\{[a_x,b_x]:x\in X\}</m> be intervals of the real line so that <m>x\lt y</m> in <m>\bfP</m> if and only <m>b_x\lt a_y</m>.  Then let <m>\bfG</m> be the interval graph determined by this family of intervals. Note that if <m>x</m> and <m>y</m> are distinct elements of <m>X</m>, then <m>x</m> and <m>y</m> are incomparable in <m>\bfP</m> if and only if <m>xy</m> is an edge in <m>\bfG</m>. In other words, <m>\bfG</m> is just the incomparability graph of <m>\bfP</m>.
     </p>
 
-    <p>Recall from <xref ref="ch_graphs" autoname="yes" /> that interval graphs are perfect, i.e., <m>\chi(\bfG)=\omega(\bfG)</m> for every interval graph <m>\bfG</m>. Furthermore, you can find an optimal coloring of an interval graph by applying first fit to the vertices in a linear order that respects left end points.  Such a coloring concurrently determines a partition of <m>\bfP</m> into chains.
+    <p>Recall from <xref ref="ch_graphs" autoname="yes" /> that interval graphs are perfect, <ie />, <m>\chi(\bfG)=\omega(\bfG)</m> for every interval graph <m>\bfG</m>. Furthermore, you can find an optimal coloring of an interval graph by applying first fit to the vertices in a linear order that respects left end points.  Such a coloring concurrently determines a partition of <m>\bfP</m> into chains.
     </p>
 
     <p>In fact, if you want to skip the part about interval representations, take any linear ordering of the elements as <m>x_1</m>, <m>x_2,\dots,x_n</m> so that <m>i\lt j</m> whenever <m>D(x)</m> is a proper subset of <m>D(y)</m>. Then apply First Fit with respect to chains. For example, using the <m>10</m> point interval order illustrated in <xref ref="fig_10ptintorder" autoname="yes" />, here is such a labeling:

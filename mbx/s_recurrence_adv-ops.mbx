@@ -41,7 +41,7 @@
                 <me>
                     Af(n) = 2f(n),\qquad n\geq 0.
                 </me>
-                    What function has the property that when we advance it, i.e., evaluate it at <m>n+1</m>, it gives twice the value that it takes at <m>n</m>?  The first function that comes into your mind should be <m>2^n</m>. Of course, just like with our differential equation, for any constant <m>c</m>, <m>c2^n</m> also has this property. This suggests that if we take <m>f(n) = c2^n</m>, we're well on our way to solving our problem. Since we know that <m>f(0) = 3</m>, we have <m>f(0) = c2^0 = c</m>, so <m>c= 3</m>. Therefore, <m>s_n = f(n) = 3\cdot 2^n</m> for <m>n\geq 0</m>. This clearly satisfies our initial condition, and now we can check that it also satisfies our advancement operator equation:
+                    What function has the property that when we advance it, <ie />, evaluate it at <m>n+1</m>, it gives twice the value that it takes at <m>n</m>?  The first function that comes into your mind should be <m>2^n</m>. Of course, just like with our differential equation, for any constant <m>c</m>, <m>c2^n</m> also has this property. This suggests that if we take <m>f(n) = c2^n</m>, we're well on our way to solving our problem. Since we know that <m>f(0) = 3</m>, we have <m>f(0) = c2^0 = c</m>, so <m>c= 3</m>. Therefore, <m>s_n = f(n) = 3\cdot 2^n</m> for <m>n\geq 0</m>. This clearly satisfies our initial condition, and now we can check that it also satisfies our advancement operator equation:
                     <me>
                         Af(n) = 3\cdot 2^{n+1} = 3\cdot 2\cdot 2^n = 2\cdot (3\cdot 2^n) =
                         2\cdot f(n).
@@ -61,7 +61,7 @@
         <men xml:id="eqn_advance" >
             p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g.
         </men>
-        In <xref ref="eqn_advance" />, we intend that <m>k\ge1</m> is an integer, <m>g</m> is a fixed vector (function) from <m>V</m>, and <m>c_0,c_1,\dots, c_k</m> are constants with <m>c_0,c_k\neq0</m>. Note that since <m>c_0\neq0</m>, we can divide both sides by <m>c_0</m>, i.e., we may in fact assume that <m>c_0=1</m> whenever convenient to do so.
+        In <xref ref="eqn_advance" />, we intend that <m>k\ge1</m> is an integer, <m>g</m> is a fixed vector (function) from <m>V</m>, and <m>c_0,c_1,\dots, c_k</m> are constants with <m>c_0,c_k\neq0</m>. Note that since <m>c_0\neq0</m>, we can divide both sides by <m>c_0</m>, <ie />, we may in fact assume that <m>c_0=1</m> whenever convenient to do so.
         </p>
     </subsection>
 
@@ -78,7 +78,7 @@
         <p>Why have we limited our attention to recurrence equations of the form <m>p(A)f = g</m> where the constant term in <m>p</m> is non-zero? Let's consider the alternative for a moment. Suppose that the constant term of <m>p</m> is zero and that <m>0</m> is a root of <m>p</m> of multiplicity <m>m</m>.  Then <m>p(A) = A^mq(A)</m> where the constant term of <m>q</m> is non-zero. And the equation <m>p(A)f=g</m> can then be written as <m>A^mq(A)f=g</m>. To solve this equation, we consider instead the simpler problem <m>q(A)f=g</m>.  Then <m>h</m> is a solution of the original problem if and only if the function <m>h'</m> defined by <m>h'(n) = h(n+m)</m> is a solution to the simpler problem. In other words, solutions to the original problem are just translations of solutions to the smaller one, so we will for the most part continue to focus on advancement operator equations where <m>p(A)</m> has nonzero constant term, since being able to solve such problems is all we need in order to solve the larger class of problems.
         </p>
 
-        <p>As a special case, consider the equation <m>A^m f =g</m>. This requires <m>f(n+m)=g(n)</m>, i.e., <m>f</m> is just a translation of <m>g</m>.
+        <p>As a special case, consider the equation <m>A^m f =g</m>. This requires <m>f(n+m)=g(n)</m>, <ie />, <m>f</m> is just a translation of <m>g</m>.
         </p>
     </subsection>
 

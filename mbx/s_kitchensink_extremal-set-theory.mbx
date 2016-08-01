@@ -21,7 +21,7 @@
         <p>The maximum size of a family <m>\cgF</m> of subsets of <m>[n]</m> subject to the constraint that when <m>A</m> and <m>B</m> are distinct sets in <m>\cgF</m>, then neither is a subset of the other, is <m>\binom{n}{\lfloor n/2\rfloor}</m>.
         </p>
     </example>
-    <p>It is worth noting that in <xref ref="exa_Sperner" autoname="yes" />, there is a very small number (one or two) of extremal families, i.e., when <m>\cgF</m> is a family of subsets of <m>[n]</m>, <m>|\cgF|= \binom{n}{\lfloor n/2\rfloor}</m>, and no set in <m>\cgF</m> is a proper subset of another, then either <m>\cgF=\{S\subseteq[n]: |S|=\lfloor n/2\rfloor\}</m> or <m>\cgF=\{S\subseteq[n]: |S|=\lceil n/2\rceil\}</m>. And of course, when <m>n</m> is even, these are exactly the same family.
+    <p>It is worth noting that in <xref ref="exa_Sperner" autoname="yes" />, there is a very small number (one or two) of extremal families, <ie />, when <m>\cgF</m> is a family of subsets of <m>[n]</m>, <m>|\cgF|= \binom{n}{\lfloor n/2\rfloor}</m>, and no set in <m>\cgF</m> is a proper subset of another, then either <m>\cgF=\{S\subseteq[n]: |S|=\lfloor n/2\rfloor\}</m> or <m>\cgF=\{S\subseteq[n]: |S|=\lceil n/2\rceil\}</m>. And of course, when <m>n</m> is even, these are exactly the same family.
     </p>
 
     <p>On the other hand, for <xref ref="exa_intersecting" autoname="yes" />, there are many extremal families, since for every complementary pair of sets, either member can be selected.

@@ -16,7 +16,7 @@
             <li><p>The height is <m>t+1</m> and all maximal chains have exactly
             <m>t+1</m> points.</p></li>
             <li><p>The size of the poset <m>\bftwo^t</m> is <m>2^t</m> and the elements are partitioned into ranks (antichains) <m>A_0, A_1,\dots, A_t</m> with <m>|A_i|=\binom{t}{i}</m> for each <m>i=0,1,\dots,t</m>.</p></li>
-            <li><p>The maximum size of a rank in the subset lattice occurs in the middle, i.e. if <m>s=\lfloor t/2\rfloor</m>, then the largest binomial coefficient in the sequence <m>\binom{t}{0}, \binom{t}{1},\binom{t}{2},\dots,\binom{t}{t}</m> is <m>\binom{t}{s}</m>.  Note that when <m>t</m> is odd, there are two ranks of maximum size, but when <m>t</m> is even, there is only one.</p></li>
+            <li><p>The maximum size of a rank in the subset lattice occurs in the middle, <ie /> if <m>s=\lfloor t/2\rfloor</m>, then the largest binomial coefficient in the sequence <m>\binom{t}{0}, \binom{t}{1},\binom{t}{2},\dots,\binom{t}{t}</m> is <m>\binom{t}{s}</m>.  Note that when <m>t</m> is odd, there are two ranks of maximum size, but when <m>t</m> is even, there is only one.</p></li>
         </ol>
     </introduction>
 
@@ -29,7 +29,7 @@
         <theorem xml:id="thm_sperner">
             <title>Sperner's Theorem</title>
             <statement>
-                <p>For each <m>t\ge1</m>, the width of the subset lattice <m>\bftwo^t</m> is the maximum size of a rank, i.e.,
+                <p>For each <m>t\ge1</m>, the width of the subset lattice <m>\bftwo^t</m> is the maximum size of a rank, <ie />,
                 <me>
                     \width(\bftwo^t)=\binom{t}{\lfloor\frac{t}{2}\rfloor}
                 </me>
@@ -40,7 +40,7 @@
                 <p>The width of the poset <m>\bftwo^t</m> is at least <m>C(t,\lfloor\frac{t}{2}\rfloor)</m> since the set of all <m>\lfloor\frac{t}{2}\rfloor</m>-element subsets of <m>\{1,2,\dots,t\}</m> is an antichain. We now show that the width of <m>\bftwo^t</m> is at most <m>C(t,\lfloor\frac{t}{2}\rfloor)</m>.
                 </p>
 
-                <p>Let <m>w</m> be the width of <m>\bftwo^t</m> and let <m>\{S_1,S_2,\dots, S_w\}</m> be an antichain of size <m>w</m> in this poset, i.e., each <m>S_i</m> is a subset of <m>\{1,2,\dots,t\}</m> and if <m>1\le i\lt j\le w</m>, then <m>S_i\nsubseteq S_j</m> and <m>S_j\nsubseteq S_i</m>.
+                <p>Let <m>w</m> be the width of <m>\bftwo^t</m> and let <m>\{S_1,S_2,\dots, S_w\}</m> be an antichain of size <m>w</m> in this poset, <ie />, each <m>S_i</m> is a subset of <m>\{1,2,\dots,t\}</m> and if <m>1\le i\lt j\le w</m>, then <m>S_i\nsubseteq S_j</m> and <m>S_j\nsubseteq S_i</m>.
                 </p>
 
                 <p>For each <m>i</m>, consider the set <m>\cgS_i</m> of all maximal chains which pass through <m>S_i</m>. It is easy to see that if <m>|S_i|=k_i</m>, then <m>|\cgS_i|=k_i!(t-k_i)!</m>. This follows from the observation that to form such a maximum chain beginning with <m>S_i</m> as an intermediate point, you delete the elements of <m>S_i</m> one at a time to form the sets of the lower part of the chain. Also, to form the upper part of the chain, you add the elements not in <m>S_i</m> one at a time.
