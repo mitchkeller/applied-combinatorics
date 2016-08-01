@@ -7,7 +7,7 @@
         <p>The office assistant is distributing supplies. In how many ways can he distribute 18 identical folders among four office employees: Audrey, Bart, Cecilia and Darren, with the additional restriction that each will receive at least one folder?
         </p>
 
-        <p>Imagine the folders placed in a row. Then there are 17 gaps between them. Of these gaps, choose three and place a divider in each.  Then this choice divides the folders into four non-empty sets. The first goes to Audrey, the second to Bart, etc. Thus the answer is <m>C(17,3)</m>. In <xref ref="fig_distrib" autoname="yes" />, we illustrate this scheme with Audrey receiving<nbsp /><m>6</m> folders, Bart getting<nbsp /><m>1</m>, Cecilia<nbsp /><m>4</m> and Darren<nbsp />7.
+        <p>Imagine the folders placed in a row. Then there are 17 gaps between them. Of these gaps, choose three and place a divider in each.  Then this choice divides the folders into four non-empty sets. The first goes to Audrey, the second to Bart, <etc /> Thus the answer is <m>C(17,3)</m>. In <xref ref="fig_distrib" autoname="yes" />, we illustrate this scheme with Audrey receiving<nbsp /><m>6</m> folders, Bart getting<nbsp /><m>1</m>, Cecilia<nbsp /><m>4</m> and Darren<nbsp />7.
         </p>
         <figure xml:id="fig_distrib" >
             <caption>Distributing Identical Objects into Distinct
