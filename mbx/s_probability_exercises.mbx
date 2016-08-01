@@ -36,12 +36,12 @@
     </exercise>
     <exercise>
         <statement>
-            <p>A random graph with vertex set <m>\{1,2,\dots,10\}</m> is constructed by the following method.  For each two element subset <m>\{i,j\}</m> from <m>\{1,2,\dots,10\}</m>, a fair coin is tossed and the edge <m>\{i,j\}</m> then belongs to the graph when the result is <q>heads.</q> For each <m>3</m>-element subset <m>S\subseteq\{1,2,\dots,n\}</m>, let <m>E_S</m> be the event that <m>S</m> is a complete subgraph in our random graph.
+            <p>A random graph with vertex set <m>\{1,2,\dots,10\}</m> is constructed using the following method.  For each two element subset <m>\{i,j\}</m> from <m>\{1,2,\dots,10\}</m>, a fair coin is tossed and the edge <m>\{i,j\}</m> then belongs to the graph when the result is <q>heads.</q> For each <m>3</m>-element subset <m>S\subseteq\{1,2,\dots,n\}</m>, let <m>E_S</m> be the event that <m>S</m> is a complete subgraph in our random graph.
             </p>
             <ol>
                 <li><p>Explain why <m>P(E_S)= 1/8</m> for each <m>3</m>-element subset <m>S</m>.</p></li>
                 <li><p>Explain why <m>E_S</m> and <m>E_T</m> are independent when <m>|S\cap T|\le 1</m>.</p></li>
-                <li><p>Let <m>S=\{1,2,3\}</m>, <m>T=\{2,3,4\}</m> and <m>U=\{3,4,5\}</m>.  Show that <m>P(E_S|E_T)\neq P(E_S|E_TE_U)</m>.</p></li>
+                <li><p>Let <m>S=\{1,2,3\}</m>, <m>T=\{2,3,4\}</m> and <m>U=\{3,4,5\}</m>.  Show that <me>P(E_S|E_T)\neq P(E_S|E_TE_U).</me></p></li>
             </ol>
         </statement>
     </exercise>

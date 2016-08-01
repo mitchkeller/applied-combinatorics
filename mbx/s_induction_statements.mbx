@@ -74,7 +74,7 @@ sumrecursive(3)
         <output>11</output>
     </sage>
 
-    <p>What is the value of <c>sumrecursive(4)</c>? (In order to make sure you understand how this recursive function works, calculate out <c>sumrecursive(4)</c>  should be by hand before modifying the SageMath cell above.) Does it make sense to you to say that <c>sumrecursive(n)</c> is defined for all positive integers <m>n</m>? Did you recognize that this program provides a precise meaning to the expression:
+    <p>What is the value of <c>sumrecursive(4)</c>? (In order to make sure you understand how this recursive function works, calculate out <c>sumrecursive(4)</c>  should be by hand before modifying the SageMath cell above.) Does it make sense to say that <c>sumrecursive(n)</c> is defined for all positive integers <m>n</m>? Did you recognize that this program provides a precise meaning to the expression:
     <me>
         2+3+6+11+18+27+38+51+\dots +(n^2-2n+3)
     </me>

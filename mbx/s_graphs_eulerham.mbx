@@ -6,7 +6,7 @@
         <caption>The bridges of K&#xf6;nigsberg</caption>
         <image width="73%" source="images/konigsberg_bridges" />
     </figure>
-    <p>A graph <m>\bfG</m> without isolated vertices is <term>eulerian</term><index><main>eulerian</main><sub>graph</sub></index> if there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
+    <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><index><main>eulerian</main><sub>graph</sub></index> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
     <ol>
         <li><m>x_0=x_t</m>;</li>
         <li>for every <m>i=0,1,\dots t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
@@ -46,7 +46,7 @@ g.show()
 
     <p>One thing you probably noticed in running this second block of code is that it tended to come back much faster than the first. That would suggest that the non-eulerian graphs outnumber the eulerian graphs. Did you notice anything different about the degrees of the vertices in these graphs compared to the ones that were eulerian?
     </p>
-    <p>The following elementary theorem completely characterizes eulerian graphs. It comes with an algorithmic proof that is easily implemented.
+    <p>The following elementary theorem completely characterizes eulerian graphs. Its proof gives an algorithm that is easily implemented.
     </p>
             
     <theorem xml:id="thm_eulerian">
@@ -62,7 +62,7 @@ g.show()
             <p>We now describe a deterministic process that will either (a)<nbsp />find an eulerian circuit, (b)<nbsp />show that the graph is disconnected, or (c)<nbsp />find a vertex of odd degree.  The description is simplified by assuming that the vertices in <m>\bfG</m> have been labelled with the positive integers <m>1,2,\dots,n</m>, where <m>n</m> is the number of vertices in <m>\bfG</m>. Furthermore, we take <m>x_0=1</m>.
             </p>
 
-            <p>We launch our algorithm with a trivial circuit <m>C</m> consisting of just the vertex <m>x_0=(1)</m>. Thereafter suppose that we have a partial circuit <m>C</m> defined by a sequence <m>(x_0, x_1,\dots,x_t)</m> with <m>x_0=x_t=1</m>. The edges of the form <m>x_ix_{i+1}</m> have been <term>traversed</term>, while the remaining edges in <m>\bfG</m> (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.
+            <p>We launch our algorithm with a trivial circuit <m>C</m> consisting of the vertex <m>x_0=(1)</m>. Thereafter suppose that we have a partial circuit <m>C</m> defined by <m>(x_0, x_1,\dots,x_t)</m> with <m>x_0=x_t=1</m>. The edges of the form <m>x_ix_{i+1}</m> have been <term>traversed</term>, while the remaining edges in <m>\bfG</m> (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.
             </p>
 
             <p>We then choose the least integer <m>i</m> for which there is an edge incident with <m>x_i</m> that has not already been traversed. If there is no such integer, since there are edges that have not yet been traversed, then we have discovered that the graph is disconnected.  So we may assume that the integer <m>i</m> exists. Set <m>u_0=x_i</m>. We define a sequence <m>(u_0,u_1,\dots,u_s)</m> recursively. If <m>j\ge 0</m>, set

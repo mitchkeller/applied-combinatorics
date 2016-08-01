@@ -14,8 +14,8 @@
         the source is equal to the amount arriving at the sink.  This quantity
         is called the <term>value</term><index><main>flow</main><sub>value of</sub></index> of the flow <m>\phi</m>.</p></li>
         <li><index><main>conservation law</main></index> <p>For every vertex <m>y</m> which is neither the source nor the
-        sink, <m>\sum_{x}\phi(x,y)= \sum_{x}\phi(y,x)</m>, i.e., the amount leaving <m>y</m> 
-        is equal to the amount entering <m>y</m>.</p></li>
+        sink the amount leaving <m>y</m> 
+        is equal to the amount entering <m>y</m>. That is, <m>\sum_{x}\phi(x,y)= \sum_{x}\phi(y,x)</m>.</p></li>
     </ol>
 
     <p>We illustrate a flow in a network in <xref ref="fig_networkflow_netflow" autoname="yes" />.

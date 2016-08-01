@@ -18,7 +18,7 @@
             </p>
         </statement>
         <proof>
-            <p>Let <m>X</m> be an <m>n</m>-element set. The quantity <m>P(n,k)</m> counts the number of <m>X</m>-permutations of length <m>k</m>. Each of the <m>C(n,k)</m> <m>k</m>-element subsets of <m>X</m> can be turned into <m>k!</m> permutations, and this accounts for each permutation exactly once. Therefore, <m>k!  C(n,k)=P(n,k)</m> and dividing by <m>k!</m> gives the formula for the number of <m>k</m>-element subsets.
+            <p>If <m>X</m> is an <m>n</m>-element set, then <m>P(n,k)</m> counts the number of <m>X</m>-permutations of length <m>k</m>. Each of the <m>C(n,k)</m> <m>k</m>-element subsets of <m>X</m> can be turned into <m>k!</m> permutations, and this accounts for each permutation exactly once. Therefore, <m>k!  C(n,k)=P(n,k)</m> and dividing by <m>k!</m> gives the formula for the number of <m>k</m>-element subsets.
         </p>
     </proof>
     </proposition>

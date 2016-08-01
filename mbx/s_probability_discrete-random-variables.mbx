@@ -17,7 +17,7 @@
         </example>
 
         <example>
-            <p>For Alice's game as detailed at the start of the chapter, <m>S=\{0,1,2,3,4,5\}</m>, we could take <m>X</m> to be the function defined by <m>X(d)= 2-d</m>. Then <m>X(d)</m> records the amount that Bob wins when the difference is <m>d</m> (a negative win for Bob is just a win for Alice in the same amount). We calculate the expectation of <m>X</m> as follows:
+            <p>For Alice's game from the start of the chapter, <m>S=\{0,1,2,3,4,5\}</m>, we could take <m>X</m> to be the function defined by <m>X(d)= 2-d</m>. Then <m>X(d)</m> records the amount that Bob wins when the difference is <m>d</m> (a negative win for Bob is just a win for Alice in the same amount). We calculate the expectation of <m>X</m> as follows:
             <me>
                 E(X)=\sum_{d=0}^{5}X(d)p(d)= -2\frac{1}{6} -1\frac{10}{36}+0
                 \frac{8}{36}+1\frac{6}{36}+2\frac{4}{36}+3{2}{36}=\frac{-2}{36}.
