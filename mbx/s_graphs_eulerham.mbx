@@ -6,7 +6,7 @@
         <caption>The bridges of K&#xf6;nigsberg</caption>
         <image width="73%" source="images/konigsberg_bridges" />
     </figure>
-    <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><index><main>eulerian</main><sub>graph</sub></index> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
+    <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><index><main>graph</main><sub>eulerian</sub></index> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
     <ol>
         <li><m>x_0=x_t</m>;</li>
         <li>for every <m>i=0,1,\dots t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
@@ -97,12 +97,13 @@ g.show()
         <image width="17%" source="images/konigsberg_graph" />
     </figure>
 
-    <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><index><main>hamiltonian</main><sub>graph</sub></index> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that
+    <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><index><main>graph</main><sub>hamiltonian</sub></index> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that
     <ol>
         <li>every vertex of <m>\bfG</m> appears exactly once in the sequence;</li>
         <li><m>x_1x_n</m> is an edge of <m>\bfG</m>; and</li>
         <li>for each <m>i=1,2,\dots,n-1</m>, <m>x_ix_{i+1}</m> is an edge in <m>\bfG</m>.</li>
     </ol>
+    Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<index><main>hamiltonian</main><sub>cycle</sub></index>
     </p>
     <p>The first graph shown in <xref ref="fig_eulham" autoname="yes" /> both eulerian and hamiltonian. The second is hamiltonian but not eulerian.
     </p>

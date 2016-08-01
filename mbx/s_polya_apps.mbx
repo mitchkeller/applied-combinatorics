@@ -78,14 +78,14 @@
 
     <subsection xml:id="ss_polya_graphs">
         <title>Counting nonisomorphic graphs</title>
-        <p>Counting the graphs with vertex set <m>[n]</m> is not difficult. There are <m>C(n,2)</m> possible edges, each of which can be included or excluded. Thus, there are <m>2^{C(n,2)}</m> <term>labeled graphs</term><index><main>graphs</main><sub>labeled</sub></index> on <m>n</m> vertices. It's only a bit of extra thought to determine that if you only want to count the labeled graphs on <m>n</m> vertices with <m>k</m> edges, you simply must choose a <m>k</m>-element subset of the set of all <m>C(n,2)</m> possible edges. Thus, there are
+        <p>Counting the graphs with vertex set <m>[n]</m> is not difficult. There are <m>C(n,2)</m> possible edges, each of which can be included or excluded. Thus, there are <m>2^{C(n,2)}</m> <term>labeled graphs</term><index><main>graph</main><sub>labeled</sub></index> on <m>n</m> vertices. It's only a bit of extra thought to determine that if you only want to count the labeled graphs on <m>n</m> vertices with <m>k</m> edges, you simply must choose a <m>k</m>-element subset of the set of all <m>C(n,2)</m> possible edges. Thus, there are
         <me>
             \binom{\binom{n}{2}}{k}
         </me>
         graphs with vertex set <m>[n]</m> and exactly <m>k</m> edges.
         </p>
 
-        <p>A more difficult problem arises when we want to start counting <em>nonisomorphic</em> graphs on <m>n</m> vertices. (One can think of these as <term>unlabeled graphs</term><index><main>graphs</main><sub>unlabeled</sub></index> as well.) For example, in <xref ref="fig_polya_graphs" autoname="yes" />, we show four different labeled graphs on four vertices. The first three graphs shown there, however, are isomorphic to each other. Thus, only two nonisomorphic graphs on four vertices are illustrated in the figure. To account for isomorphisms, we need to bring <xref ref="thm_polya_polya" autoname="title" /> into play.
+        <p>A more difficult problem arises when we want to start counting <em>nonisomorphic</em> graphs on <m>n</m> vertices. (One can think of these as <term>unlabeled graphs</term><index><main>graph</main><sub>unlabeled</sub></index> as well.) For example, in <xref ref="fig_polya_graphs" autoname="yes" />, we show four different labeled graphs on four vertices. The first three graphs shown there, however, are isomorphic to each other. Thus, only two nonisomorphic graphs on four vertices are illustrated in the figure. To account for isomorphisms, we need to bring <xref ref="thm_polya_polya" autoname="title" /> into play.
         </p>
         <figure xml:id="fig_polya_graphs" >
             <caption>Four labeled graphs on four vertices</caption>
