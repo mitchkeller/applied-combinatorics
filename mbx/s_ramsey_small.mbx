@@ -1,9 +1,9 @@
 <section xml:id="s_ramsey_small">
     <title>Small Ramsey Numbers</title>
-    <p>Actually determing the <term>Ramsey numbers</term><index><main>Ramsey number</main></index><notation><usage>R(m,n)</usage><description>Ramsey number</description></notation> <m>R(m,n)</m> referenced in <xref ref="thm_graphramsey" autoname="yes" /> seems to be a notoriously difficult problem, and only a handful of these values are known precisely. In particular, <m>R(3,3)=6</m> and <m>R(4,4)=18</m>, while <m>43\le R(5,5)\le 49</m>. The distinguished Hungarian mathematician Paul Erd&#337;s said on many occasions that it might be possible to determine <m>R(5,5)</m> exactly, if all the world's mathematical talent were to be focused on the problem. But he also said that finding the exact value of <m>R(6,6)</m> might be beyond our collective abilities.
+    <p>Actually determining the <term>Ramsey numbers</term><index><main>Ramsey number</main></index><notation><usage>R(m,n)</usage><description>Ramsey number</description></notation> <m>R(m,n)</m> referenced in <xref ref="thm_graphramsey" autoname="yes" /> seems to be a notoriously difficult problem, and only a handful of these values are known precisely. In particular, <m>R(3,3)=6</m> and <m>R(4,4)=18</m>, while <m>43\le R(5,5)\le 49</m>. The distinguished Hungarian mathematician Paul Erd&#337;s said on many occasions that it might be possible to determine <m>R(5,5)</m> exactly, if all the world's mathematical talent were to be focused on the problem. But he also said that finding the exact value of <m>R(6,6)</m> might be beyond our collective abilities.
     </p>
 
-    <p>In the following table, we provide information about the ramsey numbers <m>R(m,n)</m> when <m>m</m> and <m>n</m> are at least <m>3</m> and at most <m>9</m>. When a cell contains a single number, that is the precise answer. When there are two numbers, they represent lower and upper bounds.
+    <p>In the following table, we provide information about the Ramsey numbers <m>R(m,n)</m> when <m>m</m> and <m>n</m> are at least <m>3</m> and at most <m>9</m>. When a cell contains a single number, that is the precise answer. When there are two numbers, they represent lower and upper bounds.
     </p>
     <table xml:id="tab_ramsey_small">
         <index><main>Ramsey number</main><sub>small</sub></index>

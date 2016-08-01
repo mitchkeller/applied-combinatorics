@@ -26,7 +26,7 @@
         <p>Ignoring, for the moment, the issue of finding augmenting paths, let's see how they can be used to modify the current flow in a way that increases its value by some <m>\delta > 0</m>. Here's how for an augmenting path <m>P=(x_0,x_1,\dots,x_m)</m>. First, let <m>\delta_1</m> be the positive number defined by:
         <me>
             \delta_1 =\min\{c(x_{i-1},x_i)-\phi(x_{i-1},x_i):(x_{i-1},x_i) 
-            \text{ a foward edge of }  P.\}
+            \text{ a forward edge of }  P.\}
         </me>
         The quantity <m>c(x_{i-1},x_i)-\phi(x_{i-1},x_i)</m> is nothing but the spare capacity on the edge <m>(x_{i-1},x_i)</m>, and thus <m>\delta_1</m> is the largest amount by which <em>all</em> of the forward edges of <m>P</m>. Note that the edges <m>(x_0,x_1)</m> and <m>(x_{m-1},x_m)</m> are always forward edges, so the <em>positive</em> quantity <m>\delta_1</m> is defined for every augmenting path.
         </p>

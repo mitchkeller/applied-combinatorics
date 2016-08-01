@@ -1,6 +1,6 @@
 <section xml:id="s_kitchensink_lovasz-local">
-    <title>The Lovasz Local Lemma</title>
-    <p>Even though humans seem to have great difficulty in providing expicit constructions for expontially large graphs which do not have complete subgraphs or independent sets of size<nbsp /><m>n</m>, such graphs exist with great abundance. Just take one at random and you are almost certain to get one. And as a general rule, probabilistic techniques often provide a method for finding something that readily exists, but is hard to find.
+    <title>The Lov&#xe1;sz Local Lemma</title>
+    <p>Even though humans seem to have great difficulty in providing explicit constructions for exponentially large graphs which do not have complete subgraphs or independent sets of size<nbsp /><m>n</m>, such graphs exist with great abundance. Just take one at random and you are almost certain to get one. And as a general rule, probabilistic techniques often provide a method for finding something that readily exists, but is hard to find.
     </p>
 
     <p>Similarly, in the probabilistic proof that there exist graphs with large girth and large chromatic number (<xref ref="thm_girth" autoname="yes" />), we actually showed that almost all graphs have modest sized independence number and relatively few small cycles, provided that the edge probability is chosen appropriately. The small cycles can be destroyed without significantly changing the size of the graph.
@@ -92,7 +92,7 @@
         <index><main>Lov&#xe1;sz Local Lemma</main><sub>symmetric</sub></index>
 
         <statement>
-            <p>Let <m>p</m> and <m>d</m> be numbers with <m>0\lt p\lt 1</m> and <m>d\ge 1</m>. Also, let <m>\cgF</m> be a finite family of events in a probability space and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote the subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of any event not in <m>\cgN(E)</m>. Suppose that <m>P(E)\le p</m>, <m>|\cgN(E)|\le d</m> for every event <m>E\in\cgF</m> and that <m>ep(d+1)\lt 1</m>, where <m>e=2.71828\dots</m> is the base for natural logarithms. Then Then
+            <p>Let <m>p</m> and <m>d</m> be numbers with <m>0\lt p\lt 1</m> and <m>d\ge 1</m>. Also, let <m>\cgF</m> be a finite family of events in a probability space and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote the subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of any event not in <m>\cgN(E)</m>. Suppose that <m>P(E)\le p</m>, <m>|\cgN(E)|\le d</m> for every event <m>E\in\cgF</m> and that <m>ep(d+1)\lt 1</m>, where <m>e=2.71828\dots</m> is the base for natural logarithms. Then 
             <me>
                 P(\prod_{E\in\cgF}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)),
             </me>

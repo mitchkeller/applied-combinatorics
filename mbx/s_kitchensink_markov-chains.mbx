@@ -18,7 +18,7 @@
         <ol>
             <li><p>There is a finite set of states <m>S_1</m>, <m>S_2,\dots,S_n</m>, and at time <m>i</m>, you are in one of these states.</p></li>
             <li><p>If you are in state <m>S_j</m> at time <m>i</m>, then for each
-            <m>k=1,2,\dots,n</m>, there is a fixed probabilty <m>p(j,k)</m> (which does not depend on <m>i</m>) that you will be in state <m>S_k</m> at time <m>i+1</m>.</p></li>
+            <m>k=1,2,\dots,n</m>, there is a fixed probability <m>p(j,k)</m> (which does not depend on <m>i</m>) that you will be in state <m>S_k</m> at time <m>i+1</m>.</p></li>
         </ol>
 
         <p>The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m> of moving from state <m>S_j</m> to state <m>S_k</m> is called the <term>transition matrix</term><index><main>matrix</main><sub>transition</sub></index> of the Markov chain. Note that <m>P</m> is a <term>stochastic matrix</term><index><main>matrix</main><sub>stochastic</sub></index>, i.e., all entries are non-negative and all row sums are<nbsp /><m>1</m>.  Conversely, each square stochastic matrix can be considered as the transition matrix of a Markov chain.

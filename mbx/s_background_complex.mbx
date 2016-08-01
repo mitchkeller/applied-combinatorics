@@ -45,7 +45,7 @@
         <me>
             \sqrt{2} =1.41421356237309504880168872420969807856967187537694807317667973\dots
         </me>
-        An irrational number is said to be <term>algebraic</term> if it is the root of polynomial with integer coeffcients; else it is said to be <term>transcendental</term>.  For example, <m>\sqrt{2}</m> is algebraic since it is the root of the polynomial <m>x^2-2</m>.
+        An irrational number is said to be <term>algebraic</term> if it is the root of polynomial with integer coefficients; else it is said to be <term>transcendental</term>.  For example, <m>\sqrt{2}</m> is algebraic since it is the root of the polynomial <m>x^2-2</m>.
         </p>
 
         <p>Two other famous examples of irrational numbers are <m>\pi</m> and <m>e</m>.  Here are their decimal expansions:
@@ -68,7 +68,7 @@
             </statement>
 
             <proof>
-                <p>Let <m>f</m> be a function from <m>\posints</m> to <m>X</m>.  For each <m>n\in \posints</m>, consider the decimal expanion(s) of the real number <m>f(n)</m>. Then choose a positive integer <m>a_n</m> so that (1)<nbsp /><m>a_n\le 8</m>, and (2)<nbsp /><m>a_n</m> is not the <m>n^{th}</m> digit after the decimal point in any decimal expansion of <m>f(n)</m>.  Then the real number <m>x</m> whose decimal expansion is <m>x=.a_1a_2a_3a_4a_5\dots</m> is an element of <m>X</m> which is distinct from <m>f(n)</m>, for every <m>n\in\posints</m>.  This shows that <m>f</m> is not a surjection.
+                <p>Let <m>f</m> be a function from <m>\posints</m> to <m>X</m>.  For each <m>n\in \posints</m>, consider the decimal expansion(s) of the real number <m>f(n)</m>. Then choose a positive integer <m>a_n</m> so that (1)<nbsp /><m>a_n\le 8</m>, and (2)<nbsp /><m>a_n</m> is not the <m>n^{th}</m> digit after the decimal point in any decimal expansion of <m>f(n)</m>.  Then the real number <m>x</m> whose decimal expansion is <m>x=.a_1a_2a_3a_4a_5\dots</m> is an element of <m>X</m> which is distinct from <m>f(n)</m>, for every <m>n\in\posints</m>.  This shows that <m>f</m> is not a surjection.
                 </p>
             </proof>
         </proposition>

@@ -15,7 +15,7 @@
 
     <subsection>
         <title>Description of the Algorithm</title>
-        <p>To describe <term>Dijkstra's algorithm</term> in a compact manner, it is useful to extend the definition of the function <m>w</m>. We do this by by setting <m>w(x,y)=\infty</m> when <m>x\neq y</m> and <m>(x,y)</m> is not a directed edge of <m>\bfG</m>. In this way, we will treat <m>\infty</m> as if it were a number (although it is not!).<fn>This is not an issue for computer implementation of the algorithm, as instead of using <m>\infty</m>, a value given by the product of the number of vertices and the maximum edge weight may be used to simulate infinity.</fn>
+        <p>To describe <term>Dijkstra's algorithm</term> in a compact manner, it is useful to extend the definition of the function <m>w</m>. We do this by setting <m>w(x,y)=\infty</m> when <m>x\neq y</m> and <m>(x,y)</m> is not a directed edge of <m>\bfG</m>. In this way, we will treat <m>\infty</m> as if it were a number (although it is not!).<fn>This is not an issue for computer implementation of the algorithm, as instead of using <m>\infty</m>, a value given by the product of the number of vertices and the maximum edge weight may be used to simulate infinity.</fn>
         </p>
 
         <p>We are now prepared to describe Dijkstra's Algorithm.</p>
@@ -257,7 +257,7 @@
                 <p>The theorem holds trivially when <m>x=r</m>. So we consider the case where <m>x\neq r</m>. We argue that <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and that <m>P(x)</m> is a shortest path from <m>r</m> to <m>x</m> by induction on the minimum number <m>k</m> of edges in a shortest path from <m>r</m> to <m>x</m>. When <m>k=1</m>, the edge <m>(r,x)</m> is a shortest path from <m>r</m> to <m>x</m>. Since <m>v_1=r</m>, we will set <m>\delta(x)=w(r,x)</m> and <m>P(x)=(r,x)</m> at Step<nbsp />1.
                 </p>
 
-                <p>Now fix a positive integer <m>k</m>. Assume that if the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is at most <m>k</m>, then <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and <m>P(x)</m> is a shortest path from <m>r</m> to <m>x</m>. Let <m>x</m> be a vertex for which the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is <m>k+1</m>. Fix a a shortest path <m>P=(u_0,u_1,u_2,\dots,u_{k+1})</m> from <m>r=u_0</m> to <m>x=u_{k+1}</m>. Then <m>Q=(u_0,u_1,\dots,u_k)</m> is a shortest path from <m>r</m> to <m>u_k</m>. (See <xref ref="fig_graphalgorithms_dijkstra-proof" autoname="yes" />.)
+                <p>Now fix a positive integer <m>k</m>. Assume that if the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is at most <m>k</m>, then <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and <m>P(x)</m> is a shortest path from <m>r</m> to <m>x</m>. Let <m>x</m> be a vertex for which the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is <m>k+1</m>. Fix a shortest path <m>P=(u_0,u_1,u_2,\dots,u_{k+1})</m> from <m>r=u_0</m> to <m>x=u_{k+1}</m>. Then <m>Q=(u_0,u_1,\dots,u_k)</m> is a shortest path from <m>r</m> to <m>u_k</m>. (See <xref ref="fig_graphalgorithms_dijkstra-proof" autoname="yes" />.)
                 </p>
                 <figure xml:id="fig_graphalgorithms_dijkstra-proof" >
                     <caption>Shortest paths</caption>

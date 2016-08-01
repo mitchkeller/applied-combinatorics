@@ -14,7 +14,7 @@
     </ol>
     </p>
 
-    <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian circuit</term><index><main>eulerian</main><sub>circuit</sub></index>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>circuit</term><index><main>circuit</main></index> when it satisfies only the first two of these conditions. Note that a sequence consisting of a single vertex is a circuit. Before proceding to Euler's elegant characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are not eulerian.</p>
+    <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian circuit</term><index><main>eulerian</main><sub>circuit</sub></index>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>circuit</term><index><main>circuit</main></index> when it satisfies only the first two of these conditions. Note that a sequence consisting of a single vertex is a circuit. Before proceeding to Euler's elegant characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are not eulerian.</p>
 
     <p>Run the code below. It will execute until it finds a graph <m>\bfG</m> that is eulerian. The output that will be produced is a list of the degrees of the vertices of the graph <m>\bfG</m> followed by a drawing of <m>\bfG</m>.</p>
     <sage>

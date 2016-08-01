@@ -46,7 +46,7 @@
         <p>Perhaps the most famous question at the boundary of combinatorial mathematics, theoretical computer science and mathematical logic is the notoriously challenging question of deciding whether <m>\cgP</m> is the same as <m>\cgN\cgP</m>. This problem has the shorthand form: <m>\cgP=\cgN\cgP</m>? Here, we present a brief informal discussion of this problem.
         </p>
 
-        <p>First, we have already introduced the class <m>\cgP</m> consisting of all yes-no combinatorial problems which admit polynomial time algorithms.  The first two problems discussed in this chapter belong to <m>\cgP</m> since they can be solved with algorithms that have running time <m>O(n)</m> and <m>O(n^3)</m>, respectively.  Also, determing whether a graph is <m>2</m>-colorable and whether it is connected both admit polynomial time algorithms.
+        <p>First, we have already introduced the class <m>\cgP</m> consisting of all yes-no combinatorial problems which admit polynomial time algorithms.  The first two problems discussed in this chapter belong to <m>\cgP</m> since they can be solved with algorithms that have running time <m>O(n)</m> and <m>O(n^3)</m>, respectively.  Also, determining whether a graph is <m>2</m>-colorable and whether it is connected both admit polynomial time algorithms.
         </p>
 
         <p>We should emphasize that it may be very difficult to determine whether a problem belongs to class <m>\cgP</m> or not.  For example, we don't see how to give a fast algorithm for solving the third problem (subset sum), but that doesn't mean that there isn't one. Maybe we all need to study harder!
@@ -55,7 +55,7 @@
         <p>Setting that issue aside for the moment, the class <m>\cgN\cgP</m><notation><usage>\cgN\cgP</usage><description>nondeterministic polynomial time problems</description></notation> consists of yes<ndash />no problems for which there is a certificate for a yes answer whose correctness can be verified in polynomial time. More formally, this is called the class of <term>nondeterministic polynomial time</term> problems. Our third problem definitely belongs to this class.<index><main>nondeterministic polynomial time</main></index>
         </p>
 
-        <p>The famous question is to detemine whether the two classes are the same. Evidently, any problem belonging to <m>\cgP</m> also belongs to <m>\cgN\cgP</m>, i.e, <m>\cgP\subseteq\cgN\cgP</m>, but are they equal?  It seems difficult to believe that there is a polynomial time algorithm for settling the third problem (the subset sum problem), and no one has come close to settling this issue. But if you get a good idea, be sure to discuss it with one or both authors of this text before you go public with your news. If it turns out that you are right, you are certain to treasure a photo opportunity with yours truly.
+        <p>The famous question is to determine whether the two classes are the same. Evidently, any problem belonging to <m>\cgP</m> also belongs to <m>\cgN\cgP</m>, i.e, <m>\cgP\subseteq\cgN\cgP</m>, but are they equal?  It seems difficult to believe that there is a polynomial time algorithm for settling the third problem (the subset sum problem), and no one has come close to settling this issue. But if you get a good idea, be sure to discuss it with one or both authors of this text before you go public with your news. If it turns out that you are right, you are certain to treasure a photo opportunity with yours truly.
         </p>
     </subsection>
 

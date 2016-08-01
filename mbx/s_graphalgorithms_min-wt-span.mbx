@@ -30,7 +30,7 @@
 
         <proposition xml:id="prop_graphalgorithms_spanforest">
             <statement>
-                <p>Let <m>\GVE</m> be a graph on <m>n</m> vertices, and let <m>\bfH=(V,S)</m> be a spanning forest. Then <m>0\le |S|\le n-1</m>. Futhermore, if <m>|S|= n-k</m>, then <m>\bfH</m> has <m>k</m> components. In particular, <m>\bfH</m> is a spanning tree if and only if it contains <m>n-1</m> edges.
+                <p>Let <m>\GVE</m> be a graph on <m>n</m> vertices, and let <m>\bfH=(V,S)</m> be a spanning forest. Then <m>0\le |S|\le n-1</m>. Furthermore, if <m>|S|= n-k</m>, then <m>\bfH</m> has <m>k</m> components. In particular, <m>\bfH</m> is a spanning tree if and only if it contains <m>n-1</m> edges.
                 </p>
             </statement>
         </proposition>
@@ -96,7 +96,7 @@
 
     <subsection>
         <title>Kruskal's Algorithm</title>
-        <p>In this secton, we develop one of the best known algorithms for finding a minimum weight spanning tree. It is known as <term>Kruskal's Algorithm</term>, although some prefer the descriptive label <em>Avoid Cycles</em> because of the way it builds the spanning tree.
+        <p>In this section, we develop one of the best known algorithms for finding a minimum weight spanning tree. It is known as <term>Kruskal's Algorithm</term>, although some prefer the descriptive label <em>Avoid Cycles</em> because of the way it builds the spanning tree.
         </p>
 
         <p>To start Kruskal's algorithm, we sort the edges according to weight.  To be more precise, let <m>m</m> denote the number of edges in <m>\GVE</m>.  Then label the edges as <m>e_1,e_2,e_3,\dots,e_m</m> so that <m>w(e_1)\le w(e_2)\le \dots \le w(e_m)</m>. Any of the many available efficient sorting algorithms can be used to do this step.

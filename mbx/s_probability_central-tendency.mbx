@@ -66,13 +66,13 @@
         </example>
 
         <example>
-            <p>Suppose that <m>0\lt p\lt 1</m> and consider a series of <m>n</m> Bernoulli trials with the probability of success being <m>p</m>, and let <m>X</m> count the number of successes. We have already noted that <m>E(X)=np</m>. Now we claim the the variance of <m>X</m> is given by:
+            <p>Suppose that <m>0\lt p\lt 1</m> and consider a series of <m>n</m> Bernoulli trials with the probability of success being <m>p</m>, and let <m>X</m> count the number of successes. We have already noted that <m>E(X)=np</m>. Now we claim the variance of <m>X</m> is given by:
             <me>
                 \var(X)=\sum_{i=0}^n (i-np)^2\binom{n}{i}p^i(1-p)^{n-i} = np(1-p)
             </me>
             There are several ways to establish this claim. One way is to proceed directly from the definition, using the same method we used previously to obtain the expectation. But now you need also to calculate the second derivative. Here is a second approach, one that capitalizes on the fact that separate trials in a Bernoulli series are independent.
             </p>
-            <p>Let <m>\cgF=\{X_1,X_2,\dots,X_n\}</m> be a family of random variables in a probability space <m>(S,P)</m>. We say the family <m>\cgF</m> is <term>independent</term><index><main>independent</main><sub>random variables</sub></index> if for each <m>i</m> and <m>j</m> with <m>1\le i\lt j\le n</m>, and for each pair <m>a,b</m> of real numbers with <m>0\le a,b\le 1</m>, the follwing two events are independent: <m>\{x\in S: X_i(x)\le a\}</m> and <m>\{x\in S:X_j(x)\le b\}</m>. When the family is independent, it is straightforward to verify that
+            <p>Let <m>\cgF=\{X_1,X_2,\dots,X_n\}</m> be a family of random variables in a probability space <m>(S,P)</m>. We say the family <m>\cgF</m> is <term>independent</term><index><main>independent</main><sub>random variables</sub></index> if for each <m>i</m> and <m>j</m> with <m>1\le i\lt j\le n</m>, and for each pair <m>a,b</m> of real numbers with <m>0\le a,b\le 1</m>, the following two events are independent: <m>\{x\in S: X_i(x)\le a\}</m> and <m>\{x\in S:X_j(x)\le b\}</m>. When the family is independent, it is straightforward to verify that
             <me>
                 \var(X_1+X_2+\dots+X_n)=\var(X_1)+\var(X_2)+\dots+\var(X_n).
             </me>
