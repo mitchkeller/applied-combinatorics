@@ -34,12 +34,12 @@
 
                 <dl>
                     <li>
-                        <title>Initialization (Step 1)</title>
+                        <title>Initialization (Step<nbsp />1)</title>
                         <p>Set <m>i=1</m>. Set <m>\delta(r)=0</m> and let <m>P(r)=(r)</m> be the trivial one-point path. Also, set <m>\sigma= (r)</m>. For each <m>x\neq r</m>, set <m>\delta(x)= w(r,x)</m> and <m>P(x)=(r,x)</m>. Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set <m>v_2 = x</m>, and update <m>\sigma</m> by appending <m>v_2</m> to the end of it. Increment <m>i</m>.
                         </p>
                     </li>
                     <li>
-                        <title>Inductive Step (Step <m>i</m>, <m>i>1</m>)</title>
+                        <title>Inductive Step (Step<nbsp /><m>i</m>, <m>i>1</m>)</title>
                         <p>If <m>i\lt n</m>, then for each temporary <m>x</m>, let
                         <me>
                             \delta(x) = \min\{\delta(x), \delta(v_i)+w(v_i,x)\}.

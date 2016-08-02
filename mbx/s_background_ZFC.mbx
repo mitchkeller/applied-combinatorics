@@ -22,28 +22,28 @@
         <title>Zermelo-Fraenkel Axioms with Axiom of Choice</title>
         <statement>
             <dl>
-                <li><title>Axiom of extensionality:</title>
+                <li><title>Axiom of extensionality</title>
                 <p>Two sets are equal if and only if they have the same elements.
                 </p>
                 </li>
 
                 <li>
-                    <title>Axiom of empty set:</title> 
+                    <title>Axiom of empty set</title> 
                     <p>There is a set <m>\emptyset</m> with no elements.</p>
                 </li>
 
                 <li>
-                    <title>Axiom of pairing:</title> 
+                    <title>Axiom of pairing</title> 
                     <p>If <m>x</m> and <m>y</m> are sets, then there exists a set containing <m>x</m> and <m>y</m> as its only elements, which we denote by <m>\{x,y\}</m>. Note: If <m>x=y</m>, then we write only <m>\{x\}</m>.</p>
                 </li>
 
                 <li>
-                    <title>Axiom of union:</title>
+                    <title>Axiom of union</title>
                     <p>For any set <m>x</m>, there is a set <m>y</m> such that the elements of <m>y</m> are precisely the elements of the elements of <m>x</m>.</p>
                 </li>
 
                 <li>
-                    <title>Axiom of infinity:</title> 
+                    <title>Axiom of infinity</title> 
                     <p>There exists a set <m>x</m> such that <m>\emptyset\in x</m> and whenever <m>y\in x</m>, so is <m>\{y ,\{y\}\}</m>.</p>
                 </li>
 
@@ -53,22 +53,22 @@
                 </li>
 
                 <li>
-                    <title>Axiom of regularity:</title> 
+                    <title>Axiom of regularity</title> 
                     <p>Every non-empty set <m>x</m> contains some element <m>y</m> such that <m>x</m> and <m>y</m> are disjoint sets.</p>
                 </li>
 
                 <li>
-                    <title>Axiom of separation (or subset axiom):</title>
+                    <title>Axiom of separation (or subset axiom)</title>
                     <p>Given any set and any proposition <m>P(x)</m>, there is a subset of the original set containing precisely those elements <m>x</m> for which <m>P(x)</m> holds.</p>
                 </li>
 
                 <li>
-                    <title>Axiom of replacement:</title> 
+                    <title>Axiom of replacement</title> 
                     <p>Given any set and any mapping, formally defined as a proposition <m>P(x,y)</m> where <m>P(x,y_1)</m> and <m>P(x,y_2)</m> implies <m>y_1 = y_2</m>, there is a set containing precisely the images of the original set's elements.</p>
                 </li>
 
                 <li>
-                    <title>Axiom of choice:</title> 
+                    <title>Axiom of choice</title> 
                     <p>Given any set of mutually exclusive non-empty sets, there exists at least one set that contains exactly one element in common with each of the non-empty sets.</p>
                 </li>
             </dl>

@@ -55,11 +55,12 @@
         <example>
             <p>For the spinner shown at the beginning of the chapter, let <m>X(i)=i^2</m> when the pointer stops in region<nbsp /><m>i</m>. Then we have already noted that the expectation <m>E(X)</m> of the random variable <m>X</m> is <m>109/8</m>. It follows that the variance <m>\var(X)</m> is:
             <md>
-                <mrow>  \var(X)\amp =(1^2-\frac{109}{8})^2\frac{1}{8}+(2^2-\frac{109}{8})^2\frac{1}{4}+
-                    (3^2-\frac{109}{8})^2\frac{1}{8}+(4^2-\frac{109}{8})^2\frac{1}{8}+
+                <mrow>  \var(X) =\amp(1^2-\frac{109}{8})^2\frac{1}{8}+(2^2-\frac{109}{8})^2\frac{1}{4}+
+                (3^2-\frac{109}{8})^2\frac{1}{8}+(4^2-\frac{109}{8})^2\frac{1}{8}</mrow>
+                <mrow>\amp+
                     (5^2-\frac{109}{8})^2\frac{3}{8}</mrow>
-                    <mrow>  \amp =(108^2+105^2+100^2+93^2+84^2)/512</mrow>
-                    <mrow>  \amp =48394/512</mrow>
+                    <mrow>  =\amp  (108^2+105^2+100^2+93^2+84^2)/512</mrow>
+                    <mrow>=\amp 48394/512</mrow>
             </md>
             It follows that the standard deviation <m>\sigma_X</m> of <m>X</m> is then <m>\sqrt{48394/512}\approx 9.722</m>.
             </p>

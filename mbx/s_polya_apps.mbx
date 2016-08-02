@@ -48,8 +48,8 @@
         <table xml:id="tab_polya_benzene" >
             <caption>Cycle representation of permutations in <m>D_{12}</m></caption>
             <tabular>
-                <col /> <col halign="center" /> <col halign="left" /><col halign="center" /> <row><cell>Permutation</cell><cell>Monomial</cell><cell>Permutation</cell><cell>Monomial</cell></row>
-                <row bottom="minor"><cell></cell><cell></cell><cell></cell><cell></cell></row>
+                <col /> <col halign="center" /> <col halign="left" /><col halign="center" /> <row bottom="minor"><cell>Permutation</cell><cell>Monomial</cell><cell>Permutation</cell><cell>Monomial</cell></row>
+
                 <row><cell><m>\iota =(1)(2)(3)(4)(5)(6)</m></cell><cell><m>x_1^6</m></cell><cell><m>f=(16)(25)(34)</m></cell><cell><m>x_2^3</m></cell></row>
                 <row><cell><m>r=(123456)</m></cell><cell><m>x_6^1</m></cell><cell><m>fr=(15)(24)(3)(6)</m></cell><cell><m>x_1^2x_2^2</m></cell></row>
                 <row><cell><m>r^2=(135)(246)</m></cell><cell><m>x_3^2</m></cell><cell><m>fr^2=(14)(23)(56)</m></cell><cell><m>x_2^3</m></cell></row>
@@ -90,7 +90,7 @@
         <figure xml:id="fig_polya_graphs" >
             <caption>Four labeled graphs on four vertices</caption>
             <image width="85%">
-                <latex-image-code><![CDATA[\begin{overpic}[width=\linewidth]{images/graphs}
+                <latex-image-code><![CDATA[\begin{overpic}[width=0.75\linewidth]{images/graphs}
                 \put(1.2,0.7){\(1\)}
                 \put(19.7,0.7){\(2\)}
                 \put(10.2,22){\(3\)}
