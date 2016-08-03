@@ -13,9 +13,7 @@
     </p>
 
     <p>While the general subject of linear programming is far too broad for this course, we would be remiss if we didn't point out that:
-    </p>
-
-    <ol>
+                  <ol>
         <li><p>Linear programming problems are a <em>very</em> important class of optimization problems and they have many applications in engineering, science, and industrial settings.</p></li>
         <li><p>There are relatively efficient algorithms for finding solutions to linear programming problems.</p></li>
         <li><p>A linear programming problem posed with rational coefficients and constants has an optimal solution with rational values<mdash />if it has an optimal solution at all.</p></li>
@@ -24,5 +22,7 @@
         <li><p>The problem of finding a maximum flow in a network is a special case of a linear programming problem.</p></li>
         <li><p>A network flow problem in which all capacities are integers has a maximum flow in which the flow on every edge is an integer.  The Ford-Fulkerson labeling algorithm guarantees this!</p></li>
         <li><p>In general, linear programming algorithms are not used on networks.  Instead, special purpose algorithms, such as Ford-Fulkerson, have proven to be more efficient in practice.</p></li>
-    </ol>
+    
+                  </ol>
+                </p>
 </section>

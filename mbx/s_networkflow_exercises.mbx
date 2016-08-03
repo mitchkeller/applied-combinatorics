@@ -3,11 +3,12 @@
     <exercise>
         <statement>
             <p>Consider the network diagram in <xref ref="fig_networkflow_invalid" autoname="yes"/>. For each directed edge, the first number is the capacity and the second value is intended to give a flow <m>\phi</m> in the network. However, the flow suggested is not valid.
-            </p>
-            <ol>
+                  <ol>
                 <li><p>Identify the reason(s) <m>\phi</m> is not valid.</p></li>
                 <li><p>Without changing any of the edge capacities, modify <m>\phi</m> into a valid flow <m>\widehat{\phi}</m>. Try to use as few modifications as possible.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
             <figure xml:id="fig_networkflow_invalid">
                 <caption>An invalid flow in a network</caption>
                 <image width="70%" source="images/networkflow_ex_invalid"/>

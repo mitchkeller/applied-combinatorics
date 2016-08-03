@@ -49,14 +49,15 @@
     <exercise>
         <statement>
             <p>For this exercise, consider the poset <m>\bfP</m> in <xref ref="fig_17ptposet" autoname="yes"/>.
-            </p>
-            <ol>
+                  <ol>
                 <li><p>List the maximal elements of <m>\bfP</m>.</p></li>
                 <li><p>List the minimal elements of <m>\bfP</m>.</p></li>
                 <li><p>Find a maximal chain with two points in <m>\bfP</m>.</p></li>
                 <li><p>Find a chain in <m>\bfP</m> with three points that is <em>not</em> maximal. Say why your chain is not maximal.</p></li>
                 <li><p>Find a maximal antichain with four points in <m>\bfP</m>.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>
@@ -169,9 +170,8 @@
     </exercise>
     <exercise>
         <statement>
-            <p>The <term>dimension</term><index><main>dimension</main></index> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for which <m>P</m> is the intersection of <m>t</m> linear orders on <m>X</m>.</p>
-            
-            <ol>
+            <p>The <term>dimension</term><index><main>dimension</main></index> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for which <m>P</m> is the intersection of <m>t</m> linear orders on <m>X</m>.
+                  <ol>
                 <li><p>Show that the dimension of a poset <m>\bfP</m> is the same as the dimension of its dual.</p></li>
                 <li><p>Show that <m>\bfP</m> is a subposet of <m>\bfQ</m>, then <m>\dim(\bfP)\le \dim(\bfQ)</m>.</p></li>
                 <li><p>Show that the removal of a point can reduce the dimension by at most<nbsp/><m>1</m>.</p></li>
@@ -180,7 +180,9 @@
                 <li><p>Use the example on the left side of <xref ref="fig_FirstFit" autoname="yes"/> to show that
                 for every <m>n\ge2</m>, there exists a poset <m>\bfP_n</m> on <m>2n</m> points having width and dimension
                 equal to <m>n</m>.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
 </exercises>

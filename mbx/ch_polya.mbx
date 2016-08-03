@@ -4,9 +4,7 @@
 
     <introduction>
         <p>In this chapter, we introduce a powerful enumeration technique generally referred to as P&#xf3;lya's enumeration theorem<fn>Like so many results of mathematics, the crux of the result was originally discovered by someone other than the mathematician whose name is associated with it. J.H. Redfield published this result in 1927, 10 years prior to P&#xf3;lya's work. It would take until 1960 for Redfield's work to be discovered, by which time P&#xf3;lya's name was firmly attached to the technique.</fn>. P&#xf3;lya's approach to counting allows us to use symmetries (such as those of geometric objects like polygons) to form generating functions. These generating functions can then be used to answer combinatorial questions such as
-        </p>
-
-        <ol>
+                  <ol>
             <li>
                 <p>How many different necklaces of six beads can be formed using red, blue and green beads? What about <m>500</m>-bead necklaces?</p>
             </li>
@@ -19,7 +17,9 @@
             <li>
                 <p>How many nonisomorphic graphs are there on four vertices? How many of them have three edges? What about on <m>1000</m> vertices with <m>257,000</m> edges? How many <m>r</m>-regular graphs are there on <m>40</m> vertices? (A graph is <term><m>r</m>-regular</term><index><main>graph</main><sub>regular</sub></index> if every vertex has degree <m>r</m>.)</p>
             </li>
-        </ol>
+        
+                  </ol>
+                </p>
 
         <p>To use P&#xf3;lya's techniques, we will require the idea of a permutation group. However, our treatment will be self-contained and driven by examples. We begin with a simplified version of the first question above.
         </p>

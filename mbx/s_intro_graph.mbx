@@ -1,11 +1,12 @@
 <section xml:id="s_intro_graph">
   <title>Combinatorics and Graph Theory</title>
-  <p>A <term>graph</term> <m>G</m> consists of a <term>vertex</term> set   <m>V</m> and a collection <m>E</m> of <m>2</m>-element subsets of   <m>V</m>. Elements of <m>E</m> are called <term>edges</term>. In our course, we will (almost always) use the convention that <m>V=\{1,2,3,\dots,n\}</m> for some positive integer <m>n</m>. With this convention, graphs can be described <em>precisely</em> with a text file:</p>
-
-  <ol>
+  <p>A <term>graph</term> <m>G</m> consists of a <term>vertex</term> set   <m>V</m> and a collection <m>E</m> of <m>2</m>-element subsets of   <m>V</m>. Elements of <m>E</m> are called <term>edges</term>. In our course, we will (almost always) use the convention that <m>V=\{1,2,3,\dots,n\}</m> for some positive integer <m>n</m>. With this convention, graphs can be described <em>precisely</em> with a text file:
+                  <ol>
     <li><p>The first line of the file contains a single integer <m>n</m>, the number of vertices in the graph.</p></li>
     <li><p>Each of the remaining lines of the file contains a pair of  distinct integers and specifies an edge of the graph.</p></li>
-  </ol>
+  
+                  </ol>
+                </p>
 
   <p>We illustrate this convention in <xref ref="fig_graphdata" autoname="yes" /> with a text file and the diagram for the graph<nbsp /><m>G</m> it defines.</p>
 
@@ -28,9 +29,8 @@
     </figure>
   </sidebyside>
   
-  <p>Much of the notation and terminology for graphs is quite natural. See if you can make sense out of the following statements which apply to the graph <m>G</m> defined above:</p>
-
-  <ol>
+  <p>Much of the notation and terminology for graphs is quite natural. See if you can make sense out of the following statements which apply to the graph <m>G</m> defined above:
+                  <ol>
     <li><p><m>G</m> has <m>9</m> vertices and <m>10</m> edges.</p></li>
     <li><p><m>\{2,6\}</m> is an edge.</p></li>
     <li><p>Vertices <m>5</m> and <m>9</m> are adjacent.</p></li>
@@ -45,7 +45,9 @@
     <li><p><m>\{1,7,5,9\}</m> is a clique of size<nbsp /><m>4</m>.</p></li>
     <li><p><m>\{4,2,8,5\}</m> is an independent set of
     size<nbsp /><m>4</m>.</p></li>
-  </ol>
+  
+                  </ol>
+                </p>
   
   <p>Equipped only with this little bit of background material, we are already able to pose a number of interesting and challenging problems.</p>
 <example>

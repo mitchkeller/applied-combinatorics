@@ -27,8 +27,7 @@
     <theorem xml:id="thm_intord-minrep">
         <statement>
             <p>If <m>\bfP</m> is a poset excluding <m>\bftwo+\bftwo</m>, then the following statements hold.
-            </p>
-            <ol>
+                  <ol>
                 <li><p>The number of down sets equals the number of up sets. That is, <m>|\mathcal{D}|=|\mathcal{U}|</m>.</p></li>
                 <li><p>For each <m>x\in X</m>, if <m>I(x)=[i,j]</m>, then <m>i\le j</m> in <m>\reals</m>.</p></li>
                 <li><p>For each <m>x,y\in X</m>, if <m>I(x)=[i,j]</m> and <m>I(y)=[k,l]</m>, then
@@ -36,7 +35,9 @@
                 <li><p>The integer <m>d</m> is the least positive integer for which
                 <m>\bfP</m> has an interval representation using integer end points
                 from <m>[d]</m>.  This representation is unique.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </theorem>
 

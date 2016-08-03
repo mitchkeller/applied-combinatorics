@@ -4,22 +4,22 @@
 
     <introduction>
         <p>We begin this section with a motivational example.  Consider the connected graph on six vertices shown in <xref provisional="fig-markovchain" autoname="yes" />.  The first move is to choose a vertex at random and move there. Afterwards, we follow the following recursive procedures. If after <m>i</m> moves, you are at a vertex <m>x</m> and <m>x</m> has <m>d</m> neighbors, choose one of the neighbors at random, with each having probability <m>1/d</m> and move there.  We then attempt to answer questions of the following flavor:
-        </p>
-
-        <ol>
+                  <ol>
             <li>
                 <p>For each vertex <m>x</m>, let <m>p_{x,m}</m> denote the probability that you are at vertex <m>x</m> after <m>m</m> moves.  Does <m>\lim_{m\rightarrow\infty}p_{x,m}</m> exist and if so, how fast does the sequence converge to this limit?</p></li>
             <li><p>How many moves must I make in order that the probability that I have walked on every edge in the graph is at least <m>0.999</m>?</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
 
         <p>This example illustrates the characteristics of an important class of computational and combinatorial problems, which are collectively referred to as <term>Markov Chains</term><index><main>Markov chain</main></index>:
-        </p>
-
-        <ol>
+                  <ol>
             <li><p>There is a finite set of states <m>S_1</m>, <m>S_2,\dots,S_n</m>, and at time <m>i</m>, you are in one of these states.</p></li>
             <li><p>If you are in state <m>S_j</m> at time <m>i</m>, then for each
             <m>k=1,2,\dots,n</m>, there is a fixed probability <m>p(j,k)</m> (which does not depend on <m>i</m>) that you will be in state <m>S_k</m> at time <m>i+1</m>.</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
 
         <p>The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m> of moving from state <m>S_j</m> to state <m>S_k</m> is called the <term>transition matrix</term><index><main>matrix</main><sub>transition</sub></index> of the Markov chain. Note that <m>P</m> is a <term>stochastic matrix</term><index><main>matrix</main><sub>stochastic</sub></index>, <ie />, all entries are non-negative and all row sums are<nbsp /><m>1</m>.  Conversely, each square stochastic matrix can be considered as the transition matrix of a Markov chain.
         </p>
@@ -71,13 +71,13 @@
         </p>
 
         <p>We say the Markov chain is <term>absorbing</term><index><main>absorbing</main><sub>Markov chain</sub></index> if there is at least one absorbing state and for each state <m>S_j</m> that is not absorbing, it is possible to reach an absorbing state<mdash />although it may take many steps to do so.  Now the kinds of questions we would like to answer are:
-        </p>
-
-        <ol>
+                  <ol>
             <li><p>If we start in non-absorbing state <m>S_i</m>, what is the probability of reaching absorbing state <m>S_j</m> (and then being absorbed in that state, a question which takes on genuine unpleasantness relative to tigers)?</p></li>
             <li><p>If we are absorbed in state <m>S_j</m>, what is the probability that we started in non-absorbing state <m>S_i</m>?</p></li>
             <li><p>If we start in non-absorbing state <m>S_i</m>, what is the expected length of time before we will be absorbed?</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
     </subsection>
 
 </section>

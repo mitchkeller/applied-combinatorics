@@ -4,12 +4,13 @@
     </p>
     <example>
         <p>Consider the following game. Nancy rolls a single die. She wins if she rolls a six. If she rolls any other number, she then rolls again and again until the first time that one of the following two situations occurs: (1) she rolls a six, which now this results in a loss or (2) she rolls the same number as she got on her first roll, which results in a win. As an example, here are some sequences of rolls that this game might take:
-        </p>
-        <ol>
+                  <ol>
             <li><p><m>(4,2,3,5,1,1,1,4)</m>.  Nancy wins!</p></li>
             <li><p><m>(6)</m>.  Nancy wins!</p></li>
             <li><p><m>(5,2, 3,2,1,6)</m>. Nancy loses. Ouch.</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
         
         <p>So what is the probability that Nancy will win this game?
         </p>

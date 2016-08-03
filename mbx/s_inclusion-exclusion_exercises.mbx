@@ -63,12 +63,13 @@
     <exercise>
         <statement>
             <p>As in <xref ref="exa_inclusion-exclusion_prop-inject" autoname="yes" />, let <m>X</m> be the set of functions from <m>[n]</m> to <m>[m]</m> and let a function <m>f\in X</m> satisfy property <m>P_i</m> if there is no <m>j</m> such that <m>f(j)=i</m>.
-            </p>
-            <ol>
+                  <ol>
                 <li><p>Let the function <m>f\colon [8]\to [7]</m> be defined by <xref ref="tab_function_e-i-ex" autoname="yes" />. Does <m>f</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_3</m>? List all the properties <m>P_i</m> (with <m>i\leq 7</m>) satisfied by <m>f</m>.</p></li>
                 <li><p>Is it possible to define a function <m>g\colon [8]\to [7]</m> that satisfies no property <m>P_i</m>, <m>i\leq 7</m>? If so, give an example. If not, explain why not.</p></li>
                 <li><p>Is it possible to define a function <m>h\colon [8]\to [9]</m> that satisfies no property <m>P_i</m>, <m>i\leq 9</m>? If so, give an example. If not, explain why not.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
             <table xml:id="tab_function_e-i-ex">
                 <caption>A function defined by a table</caption>
                     <tabular>
@@ -82,12 +83,13 @@
     <exercise>
         <statement>
             <p>As in <xref ref="exa_inclusion-exclusion_prop-derange" autoname="yes" />, let <m>X</m> be the set of permutations of <m>[n]</m> and say that <m>\sigma\in X</m> satisfies property <m>P_i</m> if <m>\sigma(i) = i</m>.
-            </p>
-            <ol>
+                  <ol>
                 <li><p>Let the permutation <m>\sigma\colon [8]\to [8]</m> be defined by <xref ref="tab_perm-e-i-ex" autoname="yes" />.  Does <m>\sigma</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_6</m>? List all the properties <m>P_i</m> (with <m>i\leq 8</m>) satisfied by <m>\sigma</m>.</p></li>
                 <li><p>Give an example of a permutation <m>\tau\colon[8]\to[8]</m> that satisfies properties <m>P_1</m>, <m>P_4</m>, and <m>P_8</m> and no other properties <m>P_i</m> with <m>1\leq i\leq 8</m>.</p></li>
                 <li><p>Give an example of a permutation <m>\pi\colon [8]\to[8]</m> that does not satisfy any property <m>P_i</m> with <m>1\leq i\leq 8</m>.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
             <table xml:id="tab_perm-e-i-ex">
                 <caption>A permutation defined by a table</caption>
                 <tabular>
@@ -99,13 +101,15 @@
     </exercise>
     <exercise>
         <statement>
-            <p>As in <xref ref="exa_inclusion-exclusion_prop-divis" autoname="yes" />, let <m>m</m> and <m>n</m> be positive integers and <m>X=[n]</m>. Say that <m>j\in X</m> satisfies property <m>P_i</m> for an <m>i</m> with <m>1\leq i\leq m</m> if <m>i</m> is a divisor of <m>j</m>.</p>
-            <ol>
+            <p>As in <xref ref="exa_inclusion-exclusion_prop-divis" autoname="yes" />, let <m>m</m> and <m>n</m> be positive integers and <m>X=[n]</m>. Say that <m>j\in X</m> satisfies property <m>P_i</m> for an <m>i</m> with <m>1\leq i\leq m</m> if <m>i</m> is a divisor of <m>j</m>.
+                  <ol>
                 <li><p>Let <m>m=n=15</m>. Does <m>12</m> satisfy property <m>P_3</m>? Why or why not? What about property <m>P_5</m>? List the properties <m>P_i</m> with <m>1\leq i\leq 15</m> that <m>12</m> satisfies.</p></li>
                 <li><p>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that satisfies exactly two properties <m>P_i</m> with <m>1\leq i\leq 15</m>.</p></li>
                 <li><p>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that satisfies exactly four properties <m>P_i</m> with <m>1\leq i\leq 15</m> or explain why such an integer does not exist.</p></li>
                 <li><p>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that satisfies exactly three properties <m>P_i</m> with <m>1\leq i\leq 15</m> or explain why such an integer does not exist.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>
@@ -151,18 +155,21 @@
     <exercise>
         <statement>
             <p>The principle of inclusion-exclusion is not the only approach available for counting derangements. We know that <m>d_1=0</m> and <m>d_2=1</m>. Using this initial information, it is possible to give a recursive form for <m>d_n</m>. In this exercise, we consider two recursions for <m>d_n</m>.
-            </p>
-            <ol>
+                  <ol>
                 <li><p>Give a combinatorial argument to prove that the number of derangements satisfies the recursive formula <m>d_n = (n-1)(d_{n-1}+d_{n-2})</m> for <m>n\geq 2</m>.</p></li>
                 <li><p>Prove that the number of derangements also satisfies the recursive formula <m>d_n = nd_{n-1} + (-1)^n</m> for <m>n\geq 2</m>. </p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
         <hint>
-            <ol>
+            <p>
+               <ol>
                 <li><p>For a derangement <m>\sigma</m>, consider the integer <m>k</m> with <m>\sigma(k)=1</m>. Argue based on the number of choices for <m>k</m> and then whether <m>\sigma(1)=k</m> or not.</p></li>
                 <li><p>You may find it easiest to prove this using the other recursive formula and mathematical induction.</p>
                 </li>
-            </ol>
+               </ol>
+            </p>
         </hint>
     </exercise>
     <exercise>
@@ -192,12 +199,13 @@
     <exercise>
         <statement>
             <p>At a very small school, there is a class with nine students in it. The students, whom we will denote as <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m>, <m>E</m>, <m>F</m>, <m>G</m>, <m>H</m>, and <m>I</m>, walk from their classroom to the lunchroom in the order <m>ABCDEFGHI</m>. (Let's say that <m>A</m> is at the front of the line.) On the way back to their classroom after lunch, they would like to walk in an order so that no student walks immediately behind the same classmate he or she was behind on the way to lunch. (For instance, <m>ACBDIHGFE</m> and <m>IHGFEDCBA</m> would meet their criteria. However, they would not be happy with <m>CEFGBADHI</m> since it contains <m>FG</m> and <m>HI</m>, so <m>G</m> is following <m>F</m> again and <m>I</m> is following <m>H</m> again.)
-            </p>
-            <ol>
+                  <ol>
                 <li><p>One student ponders how many possible ways there would be for them to line up meeting this criterion. Help him out by determining the exact value of this number.</p></li>
                 <li><p>Is this number bigger than, smaller than, or equal to the number of ways they could return so that no student walks in the same position as before (<ie />, <m>A</m> is not first, <m>B</m> is not second, <ellipsis/>, and <m>I</m> is not last)?</p></li>
                 <li><p>What fraction (give it as a decimal) of the total number of ways they could line up meet their criterion of no student following immediately behind the same student on the return trip?</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
 </exercises>

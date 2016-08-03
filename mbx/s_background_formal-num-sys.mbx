@@ -4,9 +4,7 @@
 
     <introduction>
         <p>Up to this point, we have been discussing number systems in an entirely informal manner, assuming everyone knew all that needed to be known. Now let's pause and put things on a more firm foundation. So for the time being, do a memory dump and forget everything you have ever learned about numbers and arithmetic. The set of natural numbers has just been delivered on our door step in a big box with a warning label saying <alert>Assembly Required.</alert> We open the box and find a single piece of paper on which the following <q>instructions</q> are printed. These defining properties of the natural numbers are known as the <term>Peano Postulates</term><index><main>Peano postulates</main></index>.
-        </p>
-
-        <ol label="i">
+                  <ol label="i">
             <li><p>There is a non-empty set of elements called <term>natural numbers</term><index><main>natural numbers</main></index>.  There is natural number called <term>zero</term> which is denoted<nbsp /><m>0</m>.  The set of all natural numbers is denoted <m>\nonnegints</m></p></li>
             <li><p>There is a one-to-one function <m>s:\nonnegints \injection \nonnegints</m> called the <term>successor function</term>.  For each <m>n\in \nonnegints</m>, <m>s(n)</m> is called the <term>successor</term><index><main>successor</main></index> of <m>n</m>.</p></li>
             <li><p>There is no natural number <m>n</m> for which <m>0=s(n)</m>.</p></li>
@@ -15,10 +13,12 @@
                 <li><p><m>0\in \mathbb{M}</m>; and</p></li>
                 <li><p><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
                 \Longrightarrow(s(k)\in \mathbb{M})</m>.</p></li>
-            </ol></p>
+            
+                  </ol>
+                </p>
             </li>
         </ol>
-
+     </p>
         <p>Property <xref ref="peano_induction" /> in the list of Peano Postulates is called the <term>Principle of Mathematical Induction</term>, or just the <term>Principle of Induction</term><index><main>induction</main><sub>principle of mathematical</sub></index>.  As a first application of the Principle of Induction, we prove the following basic property of the natural numbers.
         </p>
 
@@ -39,11 +39,12 @@
     <subsection xml:id="s_background_add">
         <title>Addition as a Binary Operation</title>
         <p>A <term>binary operation</term><index><main>operation</main><sub>binary</sub></index> <m>*</m> on set <m>X</m> is just a function <m>*:X\times X\rightarrow X</m>. So the image of the ordered pair <m>(x,y)</m> would normally be denoted <m>*((x,y))</m>.  However, this is usually abbreviated as <m>*(x,y)</m> or even more compactly as <m>x*y</m>. With this convention, we now define a binary operation <m>+</m> on the set <m>\nonnegints</m> of natural numbers.  This operation is defined as follows for every natural number <m>n\in\nonnegints</m>:
-        </p>
-        <ol label="i">
+                  <ol label="i">
             <li><p><m>n+0=n</m>.</p></li>
             <li><p>For all <m>k\in\nonnegints</m>, <m>n+s(k) = s(n+k)</m>.</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
 
         <p>We pause to make it clear why the preceding two statements define <m>+</m>. Let <m>n</m> be an arbitrary natural number. Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>m</m> for which <m>n+m</m> is defined. Note that <m>0\in \mathbb{M}</m> by part<nbsp />(i). Also note that for all <m>k\in \nonnegints</m>, <m>s(k)\in \mathbb{M}</m> whenever <m>k\in \mathbb{M}</m> by part<nbsp />(ii). This shows that <m>\mathbb{M}=\nonnegints</m>. Since <m>n</m> was arbitrary, this allows us to conclude that <m>n+m</m> is defined for all <m>n,m\in \nonnegints</m>.
         </p>
@@ -61,12 +62,13 @@
             <title>Principle of Induction</title>
             <statement>
                 <p>Let <m>\mathbb{M}\subseteq \nonnegints</m>.  Then <m>\mathbb{M} =\nonnegints</m> if and only if
-        </p>
-        <ol label="a">
+                  <ol label="a">
             <li><p><m>0\in \mathbb{M}</m>; and</p></li>
             <li><p><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
             \Longrightarrow(k+1\in \mathbb{M})</m>.</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
             </statement>
         </principle>
         <theorem>

@@ -4,15 +4,16 @@
         <statement>
             <p>Write each of the following recurrence equations as advancement
             operator equations.
-            </p>
-            <ol cols="2">
+                  <ol cols="2">
                 <li><p><m>r_{n+2} = r_{n+1}+2r_n</m></p></li>
                 <li><p><m>r_{n+4}=3r_{n+3} - r_{n+2}+2r_n</m></p></li>
                 <li><p><m>g_{n+3} = 5 g_{n+1} - g_n + 3^n</m></p></li>
                 <li><p><m>h_n = h_{n-1} - 2h_{n-2} + h_{n-3}</m></p></li>
                 <li><p><m>r_n = 4r_{n-1} + r_{n-3} - 3 r_{n-5} + (-1)^n</m></p></li>
                 <li><p><m>b_n = b_{n-1} + 3b_{n-2} + 2^{n+1} - n^2</m></p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>
@@ -37,16 +38,17 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For each advancement operator equation below, give its general solution.</p>
-            
-            <ol cols="2">
+            <p>For each advancement operator equation below, give its general solution.
+                  <ol cols="2">
                 <li><p><m>(A-2)(A+10)f=0</m></p></li>
                 <li><p><m>(A^2-36)f=0</m></p></li>
                 <li><p><m>(A^2-2A-5)f=0</m></p></li>
                 <li><p><m>(A^3-4 A^2-20 A+48)f=0</m></p></li>
                 <li><p><m>(A^3 +A^2-5A+ 3)f=0</m></p></li>
                 <li><p><m>(A^3+3 A^2+3 A+1)f=0</m></p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>
@@ -56,19 +58,20 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Give the general solution to each advancement operator equation below.</p>
-            <ol>
+            <p>Give the general solution to each advancement operator equation below.
+                  <ol>
                 <li><p><m>(A-4)^3(A+1)(A-7)^4(A-1)^2 f =0</m></p></li>
                 <li><p><m>(A+2)^4(A-3)^2(A-4)(A+7)(A-5)^3g=0</m></p></li>
                 <li><p><m>(A-5)^2(A+3)^3(A-1)^3(A^2-1)(A-4)^3h=0</m></p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>
         <statement>
             <p>For each nonhomogeneous advancement operator equation, find its general solution.
-            </p>
-            <ol cols="2">
+                  <ol cols="2">
                 <li><p><m>(A-5)(A+2)f=3^n</m></p></li>
                 <li><p><m>(A^2+3A-1)g = 2^n + (-1)^n</m></p></li>
                 <li><p><m>(A-3)^3 f = 3n+1</m></p></li>
@@ -79,7 +82,9 @@
                 <li><p><m>(A-2)(A+3)f=5n2^n</m></p></li>
                 <li><p><m>(A-2)^2(A-1)g=3n^22^n + 2^n</m></p></li>
                 <li><p><m>(A+1)^2(A-3)f = 3^n + 2n^2</m></p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>
@@ -95,12 +100,13 @@
     <exercise>
         <statement>
             <p>A valid database identifier of length <m>n</m> can be constructed in three ways:
-            </p>
-            <ul>
+                  <ul>
                 <li><p>Starting with <m>A</m> and followed by any valid identifier of length <m>n-1</m>.</p></li>
                 <li><p>Starting with one of the two-character strings <m>1A</m>, <m>1B</m>, <m>1C</m>, <m>1D</m>, <m>1E</m>, or <m>1F</m> and followed by any valid identifier of length <m>n-2</m>.</p></li>
                 <li><p>Starting with <m>0</m> and followed by any ternary (<m>\{0,1,2\}</m>) string of length <m>n-1</m>.</p></li>
-            </ul>
+            
+                  </ul>
+                </p>
             <p>Find a recurrence for the number <m>g(n)</m> of database identifiers of length <m>n</m> and then solve your recurrence to obtain an explicit formula for <m>g(n)</m>. (You may consider the empty string of length <m>0</m> a valid database identifier, making <m>g(0)=1</m>. This will simplify the arithmetic.)</p>
         </statement>
     </exercise>

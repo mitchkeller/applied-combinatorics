@@ -1,13 +1,13 @@
 <section xml:id="s_background_reals">
     <title>Obtaining the Reals from the Rationals</title>
     <p>A full discussion of this would take us far away from a discrete math class, but let's at least provide the basic definitions. A subset <m>S\subset \rats</m> of the rationals is called a <term>cut</term><index><main>cut</main><sub>Dedekind</sub></index> (also, a <term>Dedekind cut</term>), if it satisfies the following properties:
-    </p>
-
-    <ol>
+                  <ol>
         <li><p><m>\emptyset\neq S\neq \rats</m>, i.e, <m>S</m> is a proper non-empty subset of <m>\rats</m>.</p></li>
         <li><p><m>x\in S</m> and <m>y\lt x</m> in <m>\rats</m> implies <m>y\in S</m>, for all <m>x,y\in \rats</m>.</p></li>
         <li><p>For every <m>x\in S</m>, there exists <m>y\in S</m> with <m>x\lt y</m>, <ie />, <m>S</m> has no greatest element.</p></li>
-    </ol>
+    
+                  </ol>
+                </p>
 
     <p>Cuts are also called <term>real numbers</term><index><main>real number</main><sub>formal definition of</sub></index>, so a real number is a particular kind of set of rational numbers.  For every rational number <m>q</m>, the set <m>\bar{q}= \{p\in \rats: p\lt q\}</m> is a cut. Such cuts are called <term>rational cuts</term>. Inside the reals, the rational cuts behave just like the rational numbers and via the map <m>h(q)=\bar{q}</m>, we abuse notation again (we are getting used to this) and say that the rational numbers are a subset of the real numbers.
     </p>

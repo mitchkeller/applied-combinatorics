@@ -42,16 +42,16 @@
             <title>Exchange Principle</title>
             <statement>
                 <p>Let <m>\bfT=(V,S)</m> be spanning tree in a graph <m>\bfG</m>, and let <m>e=xy</m> be an edge of <m>\bfG</m> which does not belong to <m>\bfT</m>. Then
-                </p>
-
-                <ol>
+                  <ol>
                     <li><p>There is a <em>unique</em> path <m>P=(x_0,x_1,x_2,\dots,x_t)</m> with (a)<nbsp /><m>x=x_0</m>; (b)<nbsp /><m>y=x_t</m>; and (c)<nbsp /><m>x_ix_{i+1}\in S</m> for each <m>i=0,1,2,\dots,t-1</m>.</p></li>
                     <li><p>For each <m>i=0,1,2,\dots,t-1</m>, let <m>f_i=x_ix_{i+1}</m> and then set
                     <me>
                         S_i = \{e\}\cup\{g\in S: g\neq f_i\},
                     </me>
                     <ie />, we <term>exchange</term> edge <m>f_i</m> for edge <m>e</m>. Then <m>\bfT_i=(V,S_i)</m> is a spanning tree of <m>\bfG</m>.</p></li>
-                </ol>
+                
+                  </ol>
+                </p>
             </statement>
 
             <proof>
@@ -109,8 +109,9 @@
             <title>Kruskal's Algorithm</title>
             <index><main>minimum weight spanning tree</main><sub>Kruskal's algorithm for</sub></index>
             <index><main>Kruskal's algorithm</main></index>
-            <statement>
-                <dl>
+        <statement>
+            <p>
+               <dl>
                     <li>
                     <title>Initialization.</title><p>Set <m>S=\emptyset</m> and <m>i=0</m>.  </p></li>
                     
@@ -122,8 +123,9 @@
                         </me>
                         </p>
                     </li>
-                </dl>
-            </statement>
+               </dl>
+            </p>
+        </statement>
         </algorithm>
 
         <p>The correctness of Kruskal's Algorithm follows from an inductive argument. First, the set <m>S</m> is initialized as the empty set, so there is certainly a minimum weight spanning tree containing all the edges in <m>S</m>. Now suppose that for some <m>i</m> with <m>0\le i \lt n</m>, <m>|S|=i</m> and there is a minimum weight spanning tree containing all the edges in <m>S</m>. Let <m>\bfF</m> be the spanning forest determined by the edges in <m>S</m>, and let <m>C_1, C_2,\dots,C_s</m> be the components of <m>\bfF</m>. For each <m>k=1,2,\dots,s</m>, let <m>f_k</m> be a minimum weight edge with one endpoint in <m>C_k</m> and the other not in <m>C_k</m>. Then the edge <m>e</m> added to <m>S</m> by Kruskal's Algorithm is just the edge <m>\{f_1,f_2,\dots,f_s\}</m> having minimum weight. Applying <xref ref="lem_graphalgorithms_tech" autoname="yes" /> and the inductive hypothesis, we know that there will still be a minimum weight spanning tree of <m>\bfG</m> containing all the edges of <m>S\cup\{e\}</m>.
@@ -159,8 +161,9 @@ c h 79</pre>
             <title>Prim's Algorithm</title>
             <index><main>minimum weight spanning trees</main><sub>Prim's algorithm for</sub></index>
             <index><main>Prim's algorithm</main></index>
-            <statement>
-                <dl>
+        <statement>
+            <p>
+               <dl>
                     <li>
                         <title>Initialization.</title>
                         <p>Set <m>W=\{r\}</m> and <m>S=\emptyset</m>.
@@ -174,8 +177,9 @@ c h 79</pre>
                         </me>
                         </p>
                     </li>
-                </dl>
-            </statement>
+               </dl>
+            </p>
+        </statement>
         </algorithm>
         <p>The correctness of Prim's algorithm follows immediately from <xref ref="lem_graphalgorithms_tech" autoname="yes" />.
         </p>

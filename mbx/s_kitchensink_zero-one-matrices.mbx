@@ -28,14 +28,15 @@
         <proposition xml:id="prop_partitioncover">
             <statement>
                 <p>Let <m>V=(v_1,v_2,\dots,v_m)</m> and <m>W=(w_1,w_2,\dots,w_n)</m> be partitions of an integer<nbsp /><m>t</m>. If <m>V</m> covers <m>W</m> in the poset <m>\cgP(t)</m>, then <m>n\le m+1</m> and there exist integers <m>i</m> and <m>j</m> with <m>1\le i\lt j\le n</m> so that the following statements hold.
-                </p>
-                <ol>
+                  <ol>
                     <li><p><m>v_\alpha=w_\alpha</m>, when <m>1\le \alpha\lt i</m>.</p></li>
                     <li><p><m>v_\beta=w_\beta</m>, when <m>j\lt \beta\le m</m>.</p></li>
                     <li><p><m>v_i=1+w_i</m>.</p></li>
                     <li><p>Either (a)<nbsp /><m>j\le m</m> and <m>w_j=1+v_j</m>, or (b)<nbsp /><m>j=n=m+1</m> and <m>w_j=1</m>.</p></li>
                     <li><p>If <m>j>i+1</m>, then <m>w_\gamma=v_\gamma=v_i-1</m> when <m>i\lt \gamma\lt j</m>.</p></li>
-                </ol>
+                
+                  </ol>
+                </p>
             </statement>
         </proposition>
 
