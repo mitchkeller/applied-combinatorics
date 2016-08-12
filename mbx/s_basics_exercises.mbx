@@ -3,8 +3,7 @@
     <exercise>
         <statement>
             <p>Suppose you are given a list of <m>n</m> integers, each of size at most <m>100n</m>.  How many operations would it take you to do the following tasks (in answering these questions, we are interested primarily in whether it will take <m>\log n</m>, <m>\sqrt{n}</m>, <m>n</m>, <m>n^2</m>, <m>n^3</m>, <m>2^n</m>, <ellipsis/> steps.  In other words, ignore multiplicative constants.):
-            </p>
-            <ol>
+                  <ol>
                 <li><p>Determine if the number <m>2n+7</m> is in the list.</p></li>
                 <li><p>Determine if there are two numbers in the list whose sum is <m>2n+7</m>.</p></li>
                 <li><p>Determine if there are two numbers in the list whose product is <m>2n+7</m> (This one is more subtle than it might appear!  It may be to your advantage to sort the integers in the list).</p></li>
@@ -20,7 +19,9 @@
                 <li><p>Determine the number of distinct sums that can be formed from members of the list (arbitrarily many integers from the list are allowed to be terms in the sum).</p></li>
                 <li><p>Determine the number of distinct products that can be formed from members of the list (arbitrarily many integers from the list are allowed to be factors in the product).</p></li>
                 <li><p>Determine for which integers <m>m</m>, the list contains at least <m>10\%</m> of the integers from <m>\{1,2,\dots,m\}</m>.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>

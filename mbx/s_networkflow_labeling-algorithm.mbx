@@ -25,7 +25,8 @@
         <index><main>labeling algorithm</main></index>
         <index><main>Ford-Fulkerson labeling algorithm</main></index>
         <statement>
-            <dl>
+            <p>
+               <dl>
                 <li>
                     <title>Labeling the Vertices</title>
                     <p>Vertices will be labeled with ordered triples of symbols.  Each time we start the labeling process, we begin by labeling the source with the triple <m>(*,+,\infty)</m>.  The rules by which we label vertices will be explicit.</p>
@@ -58,7 +59,8 @@
                     <title>And if the Sink is Not Labeled?</title>
                     <p>On the other hand, suppose we have scanned from every labeled vertex and there are still unlabeled vertices remaining, one of which is the sink.  Now we claim victory.  To see that we have won, we simply observe that if <m>L</m> is the set of labeled vertices, and <m>U</m> is the set of unlabeled vertices, then every edge <m>e=(x,y)</m> with <m>x\in L</m> and <m>y\in U</m> is full, <ie />, <m>\phi(e)=c(e)</m>.  If this were not the case, then <m>y</m> would qualify for a label with <m>x</m> as the first coordinate.  Also, note that <m>\phi(y,x)=0</m> for every edge <m>e</m> with <m>x\in L</m> and <m>y\in U</m>.  Regardless, we see that the capacity of the cut <m>V=L\cup U</m> is exactly equal to the value of the current flow, so we have both a maximum flow and minimum cut providing a certificate of optimality.</p>
                 </li>
-            </dl>
+               </dl>
+            </p>
         </statement>
     </algorithm>
 </section>

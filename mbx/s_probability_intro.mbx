@@ -16,12 +16,13 @@
     </p>
 
     <p>We begin by defining a <term>probability space</term><index><main>probability</main><sub>space</sub></index> as a pair <m>(S,P)</m> where <m>S</m> is a finite set and <m>P</m> is a function that whose domain is the family of all subsets of <m>S</m> and whose range is the set <m>[0,1]</m> of all real numbers which are non-negative and at most one. Furthermore, the following two key properties must be satisfied:
-    </p>
-    <ol>
+                  <ol>
         <li><p><m>P(\emptyset)=0</m> and <m>P(S)=1</m>.</p></li>
         <li><p>If <m>A</m> and <m>B</m> are subsets of <m>S</m>, and <m>A\cap B=\emptyset</m>,
         then <m>P(A\cup B)= P(A)+P(B)</m>.</p></li>
-    </ol>
+    
+                  </ol>
+                </p>
 
     <p>
         When <m>(S,P)</m> is a probability space, the function <m>P</m> is called a <term>probability measure</term><index><main>probability</main><sub>measure</sub></index>, the subsets of <m>S</m> are called <term>events</term><index><main>event</main></index>, and when <m>E\subseteq S</m>, the quantity <m>P(E)</m> is referred to as the <term>probability</term><index><main>probability</main></index> of the event <m>E</m>.

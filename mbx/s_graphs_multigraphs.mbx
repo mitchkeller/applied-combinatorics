@@ -4,12 +4,12 @@
     </p>
 
     <p>Accordingly, authors frequently lead off a discussion on a graph theory topic with a sentence or two like:
-    </p>
-
-    <ol>
+                  <ol>
         <li><p>In this paper, all graphs will be <term>simple</term>, <ie />, we will not allow loops or multiple edges.</p></li>
         <li><p>In this paper, graphs can have loops and multiple edges.</p></li>
-    </ol>
+    
+                  </ol>
+                </p>
 
     <p>The terminology is far from standard, but in this text, a graph will always be a <term>simple</term><index><main>graph</main><sub>simple</sub></index> graph, <ie />, no loops or multiple edges.  When we want to allow for loops and multiple edges, we will use the term <term>multigraph</term><index><main>multigraph</main></index>. This suggests the question of what we would call a graph if it is allowed to have loops but not multiple edges, or if multiple edges are allowed but not loops. If we <em>really</em> needed to talk about such graphs, then the English language comes to our rescue, and we just state the restriction explicitly!
     </p>

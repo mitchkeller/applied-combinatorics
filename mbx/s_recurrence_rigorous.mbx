@@ -7,9 +7,7 @@
         </p>
 
         <p>Our techniques for solving recurrence equations have their roots in a fundamentally important concept in mathematics, the notion of a vector space. Recall that a vector space<fn>To be more complete, we should say that we are talking about a vector space over the field of real numbers, but in our course, these are the only kind of vector spaces we will consider.  For this reason, we just use the short phrase <q>vector space</q>.</fn> consists of a set <m>V</m> of elements called <term>vectors</term>; in addition, there is a binary operation called <term>addition</term> with the sum of vectors <m>x</m> and <m>y</m> denoted by <m>x+y</m>; furthermore, there is an operation called <term>scalar multiplication</term> which combines a scalar (real number) <m>\alpha</m> and a vector <m>x</m> to form a product denoted <m>\alpha x</m>. These operations satisfy the following properties:
-        </p>
-
-        <ol>
+                  <ol>
             <li><p><m>x+y=y+x</m> for every <m>x,y,\in V</m>.</p></li>
             <li><p><m>x+(y+z) = (x+y)+z</m>, for every <m>x,y,z\in V</m>.</p></li>
             <li><p>There is a vector called <term>zero</term> and denoted <m>0</m> so that <m>x+0=x</m> for every <m>x\in V</m>. <em>Note:</em> We are again overloading an operator and using the symbol <m>0</m> for something other than a number.</p></li>
@@ -19,7 +17,9 @@
             <li><p><m>\alpha(x+y)=\alpha x + \alpha y</m> for every <m>\alpha\in\reals</m> and every <m>x,y\in V</m>.</p></li>
             <li><p><m>(\alpha +\beta) x = \alpha x + \beta x</m>, for every
             <m>\alpha,\beta\in\reals</m> and every <m>x\in V</m>.</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
 
         <p>When <m>V</m> is a vector space, a function <m>\phi\colon V\rightarrow V</m> is called an <term>linear operator</term><index><main>operator</main><sub>linear</sub></index>, or just <term>operator</term> for short, when <m>\phi(x+y)=\phi(x)+\phi(y)</m> and <m>\phi(\alpha x)=\alpha\phi(x)</m>. When <m>\phi\colon V\rightarrow V</m> is an operator, it is customary to write <m>\phi x</m> rather than <m>\phi(x)</m>, saving a set of parentheses. The set of all operators over a vector space <m>V</m> is itself a vector space with addition defined by <m>(\phi+\rho)x = \phi x +\rho x</m> and scalar multiplication by <m>(\alpha\phi)x=\alpha(\phi x)</m>.
         </p>

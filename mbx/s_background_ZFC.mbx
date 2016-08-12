@@ -6,12 +6,12 @@
     </p>
 
     <p>Here is one very famous example. Let <m>X</m> and <m>Y</m> be sets and consider the following two statements:
-    </p>
-
-    <ol>
+                  <ol>
         <li><p>There exists an injection <m>f:X\rightarrow Y</m>.</p></li>
         <li><p>There exists a surjection <m>g:Y\rightarrow X</m>.</p></li>
-    </ol>
+    
+                  </ol>
+                </p>
 
     <p>If <m>X</m> and <m>Y</m> are finite sets, these statements are equivalent, and it is perhaps natural to surmise that the same is true when <m>X</m> and <m>Y</m> are infinite. But that is not the case.
     </p>
@@ -21,7 +21,8 @@
     <axiom xml:id="axiom_ZFC">
         <title>Zermelo-Fraenkel Axioms with Axiom of Choice</title>
         <statement>
-            <dl>
+            <p>
+               <dl>
                 <li><title>Axiom of extensionality</title>
                 <p>Two sets are equal if and only if they have the same elements.
                 </p>
@@ -71,19 +72,20 @@
                     <title>Axiom of choice</title> 
                     <p>Given any set of mutually exclusive non-empty sets, there exists at least one set that contains exactly one element in common with each of the non-empty sets.</p>
                 </li>
-            </dl>
+               </dl>
+            </p>
         </statement>
     </axiom>
 
     <p>A good source of additional (free) information on set theory is the collection of Wikipedia articles. Do a web search and look up the following topics and people:
-    </p>
-
-    <ol>
+                  <ol>
         <li><p>Zermelo-Fraenkel set theory.</p></li>
         <li><p>Axiom of Choice.</p></li>
         <li><p>Peano postulates.</p></li>
         <li><p>Georg Cantor, Augustus De Morgan, George Boole, Bertrand Russell
         and Kurt G&#xf6;del.</p></li>
-    </ol>
+    
+                  </ol>
+                </p>
 
 </section>

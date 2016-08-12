@@ -25,14 +25,12 @@
             <index><main>graph</main><sub>shortest path in</sub></index>
             <statement>
                 <p>Let <m>n=|V|</m>. At Step<nbsp /><m>i</m>, where <m>1\le i\le n</m>, we will have determined:
-                </p>
-
-                <ol>
+                  <ol>
                     <li><p>A sequence <m>\sigma=(v_1,v_2,v_3,\dots,v_i)</m> of distinct vertices from <m>\bfG</m> with <m>r=v_1</m>.  These vertices are called <term>permanent vertices</term>, while the remaining vertices will be called <term>temporary vertices</term>.</p></li>
                     <li><p>For each vertex <m>x\in V</m>, we will have determined a number <m>\delta(x)</m> and a path <m>P(x)</m> from <m>r</m> to <m>x</m> of length <m>\delta(x)</m>.</p></li>
-                </ol>
-
-                <dl>
+                
+                  </ol>
+                  <dl>
                     <li>
                         <title>Initialization (Step<nbsp />1)</title>
                         <p>Set <m>i=1</m>. Set <m>\delta(r)=0</m> and let <m>P(r)=(r)</m> be the trivial one-point path. Also, set <m>\sigma= (r)</m>. For each <m>x\neq r</m>, set <m>\delta(x)= w(r,x)</m> and <m>P(x)=(r,x)</m>. Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set <m>v_2 = x</m>, and update <m>\sigma</m> by appending <m>v_2</m> to the end of it. Increment <m>i</m>.
@@ -49,7 +47,9 @@
                         <p>Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set <m>v_{i+1}=x</m>, and update <m>\sigma</m> by appending <m>v_{i+1}</m> to it. Increment <m>i</m>.
                         </p>
                     </li>
-                </dl>
+                
+                  </dl>
+                </p>
             </statement>
         </algorithm>
     </subsection>

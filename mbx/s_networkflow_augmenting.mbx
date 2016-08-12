@@ -58,14 +58,14 @@
 
         <example xml:id="exa_networkflow_delta">
             <p>The network flow shown in <xref ref="fig_networkflow_netflow" autoname="yes" /> has many augmenting paths. We already saw two of them in <xref ref="exa_networkflow_augpath" autoname="yes" />, which we call <m>P_1</m> and <m>P_3</m> below. In the list below, be sure you understand why each path is an augmenting path and how the value of <m>\delta</m> is determined for each path.
-            </p>
-
-            <ol>
+                  <ol>
                 <li><p><m>P_1=(S,F,A,T)</m> with <m>\delta= 12</m>.  All edges are forward.</p></li>
                 <li><p><m>P_2=(S,B,A,T)</m> with <m>\delta= 8</m>.  All edges are forward.</p></li>
                 <li><p><m>P_3=(S,E,D,C,B,A,T)</m> with <m>\delta= 9</m>. All edges are forward, except <m>(C,B)</m> which is backward.</p></li>
                 <li><p><m>P_4=(S,B,E,D,C,A,T)</m> with <m>\delta= 2</m>. All edges are forward, except <m>(B,E)</m> and <m>(C,A)</m> which are backward.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
 
             <p>In <xref ref="ex_networkflow_do-update" autoname="yes" />, you are asked to update the flow in <xref ref="fig_networkflow_netflow" autoname="yes" /> for each of these four paths individually.
             </p>

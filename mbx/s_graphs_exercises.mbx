@@ -39,8 +39,8 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For this exercise, consider the graph <m>\bfG</m> in <xref ref="fig_graphs_subgraphs_ex" autoname="yes"/>.</p>
-            <ol>
+            <p>For this exercise, consider the graph <m>\bfG</m> in <xref ref="fig_graphs_subgraphs_ex" autoname="yes"/>.
+                  <ol>
                 <li><p>Let <m>V_1=\{g,j,c,h,e,f\}</m> and <m>E_1=\{ge,jg,ch,ef\}</m>. Is <m>(V_1,E_1)</m> a subgraph of <m>\bfG</m>?</p></li>
                 <li><p>Let <m>V_2=\{g,j,c,h,e,f\}</m> and <m>E_2=\{ge,jg,ch,ef,cj\}</m>. Is <m>(V_2,E_2)</m> a subgraph of <m>\bfG</m>?</p></li>
                 <li><p>Let <m>V_3=\{a,d,c,h,b\}</m> and <m>E_3=\{ch,ac,ad,bc\}</m>. Is <m>(V_3,E_3)</m> an induced subgraph of <m>\bfG</m>?</p></li>
@@ -48,7 +48,9 @@
                 <li><p>Draw the subgraph of <m>\bfG</m> induced by <m>\{c,h,f,i,j\}</m>.</p></li>
                 <li><p>Draw a subgraph of <m>\bfG</m> having vertex set <m>\{e,f,b,c,h,j\}</m> that is <em>not</em> an induced subgraph.</p></li>
                 <li><p>Draw a spanning subgraph of <m>\bfG</m> with exactly <m>10</m> edges.</p></li>
-            </ol>
+            
+                  </ol>
+                </p>
             <figure xml:id="fig_graphs_subgraphs_ex">
                 <caption>A graph <m>\bfG</m></caption>
                 <image width="50%" source="images/subgraphs_ex"/>
@@ -263,10 +265,12 @@
     </exercise>
     <exercise>
         <statement>
-            <ol>
+            <p>
+               <ol>
                 <li><p>From <xref ref="ex_graphs_first-fit-color" autoname="yes" /> you know that choosing a bad ordering of the vertices of a graph can lead to the First Fit coloring algorithm producing a coloring that is far from optimal. However, you can use this algorithm to prove a bound on the chromatic number. Show that if every vertex of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</p></li>
                 <li><p>Give an example of a bipartite graph with <m>D=1000</m> to show that this bound need not be tight.</p></li>
-            </ol>
+               </ol>
+            </p>
         </statement>
     </exercise>
     <exercise>
@@ -309,14 +313,15 @@
                 <li>the <em>one</em> sequence that is the degree sequence of a graph that must be <alert>hamiltonian</alert>.</li>
             </ul>
             Explain your answers. (Note that one sequence will get two labels from above.)
-            </p>
-            <ol>
+                  <ol>
                 <li><p><m>n=10</m>: <m>(4,4,2,2,1,1,1,1,1,1)</m></p></li>
                 <li><p><m>n=9</m>: <m>(8,8,8,6,4,4,4,4,4)</m></p></li>
                 <li><p><m>n=7</m>: <m>(5,4,4,3,2,1,0)</m></p></li>
                 <li><p><m>n=10</m>: <m>(7,7,6,6,6,6,5,5,5,5)</m></p></li>
                 <li><p><m>n=6</m>: <m>(5,4,3,2,2,2)</m></p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise xml:id="ex_graphs_degseq2">
@@ -328,12 +333,14 @@
                 <li>is definitely a tree/cannot be a tree; and</li>
                 <li>is definitely planar/cannot be planar.</li>
             </ul>
-            (If you do not have enough information to make a determination for a sequence without having specific graph(s) with that degree sequence, write <q>not enough information</q> for that property.)</p>
-            <ol>
+            (If you do not have enough information to make a determination for a sequence without having specific graph(s) with that degree sequence, write <q>not enough information</q> for that property.)
+                  <ol>
                 <li><p><m>(6,6,4,4,4,4,2,2,2,2)</m></p></li>
                 <li><p><m>(7,7,7,7,6,6,6,2,1,1)</m></p></li>
                 <li><p><m>(8,6,4,4,4,3,2,2,1,1)</m></p></li>
-            </ol>
+            
+                  </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>

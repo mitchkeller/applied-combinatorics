@@ -10,14 +10,14 @@
             <image width="60%" source="images/4cube" />
         </figure>
         <p>For a positive integer <m>t</m>, we let <m>\bftwo^t</m> denote the subset lattice consisting of all subsets of <m>\{1,2,\dots,t\}</m> ordered by inclusion. Some elementary properties of this poset are:
-        </p>
-
-        <ol>
+                  <ol>
             <li><p>The height is <m>t+1</m> and all maximal chains have exactly
             <m>t+1</m> points.</p></li>
             <li><p>The size of the poset <m>\bftwo^t</m> is <m>2^t</m> and the elements are partitioned into ranks (antichains) <m>A_0, A_1,\dots, A_t</m> with <m>|A_i|=\binom{t}{i}</m> for each <m>i=0,1,\dots,t</m>.</p></li>
             <li><p>The maximum size of a rank in the subset lattice occurs in the middle, <ie /> if <m>s=\lfloor t/2\rfloor</m>, then the largest binomial coefficient in the sequence <m>\binom{t}{0}, \binom{t}{1},\binom{t}{2},\dots,\binom{t}{t}</m> is <m>\binom{t}{s}</m>.  Note that when <m>t</m> is odd, there are two ranks of maximum size, but when <m>t</m> is even, there is only one.</p></li>
-        </ol>
+        
+                  </ol>
+                </p>
     </introduction>
 
 
