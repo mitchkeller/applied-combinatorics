@@ -59,14 +59,16 @@
                 </image>
 
             </figure>
-            <ol>
-                <li><p>The dihedral group of the pentagon, <m>D_{10}</m>, contains <m>10</m> permutations. Let <m>r_1=(12345)</m> be the clockwise rotation by <m>72^\circ</m> and <m>f_1=(1)(25)(34)</m> be the flip about the line passing through <m>1</m> and perpendicular to the opposite side. Let <m>r_2</m>, <m>r_3</m>, and <m>r_4</m> be the other rotations in <m>D_{10}</m>. Denote the flip about the line passing through vertex <m>i</m> and perpendicular to the other side by <m>f_i</m>, <m>1\leq i\leq 5</m>. Write all <m>10</m> elements of <m>D_{10}</m> in cycle notation.</p></li>
-                <li><p>Suppose we are coloring the vertices of the pentagon using black and white. Draw the colorings fixed by <m>r_1</m>. Draw the colorings fixed by <m>f_1</m>.</p></li>
-                <li><p>Find <m>\stab_{D_{10}}(C)</m> where <m>C</m> is the coloring of the vertices of the pentagon in which vertices <m>1</m>, <m>2</m>, and <m>5</m> are colored black and vertices <m>3</m> and <m>4</m> are colored white.</p></li>
-                <li><p>Find the cycle index of <m>D_{10}</m>.</p></li>
-                <li><p>Use the cycle index to determine the number of nonequivalent colorings of vertices of the pentagon using black and white.</p></li>
-                <li><p>Making an appropriate substitution for the <m>x_i</m> in the cycle index, find the number of nonequivalent colorings of the vertices of the pentagon in which two vertices are colored black and three vertices are colored white. Draw these colorings.</p></li>
-            </ol>
+            <p>
+                <ol>
+                    <li><p>The dihedral group of the pentagon, <m>D_{10}</m>, contains <m>10</m> permutations. Let <m>r_1=(12345)</m> be the clockwise rotation by <m>72^\circ</m> and <m>f_1=(1)(25)(34)</m> be the flip about the line passing through <m>1</m> and perpendicular to the opposite side. Let <m>r_2</m>, <m>r_3</m>, and <m>r_4</m> be the other rotations in <m>D_{10}</m>. Denote the flip about the line passing through vertex <m>i</m> and perpendicular to the other side by <m>f_i</m>, <m>1\leq i\leq 5</m>. Write all <m>10</m> elements of <m>D_{10}</m> in cycle notation.</p></li>
+                    <li><p>Suppose we are coloring the vertices of the pentagon using black and white. Draw the colorings fixed by <m>r_1</m>. Draw the colorings fixed by <m>f_1</m>.</p></li>
+                    <li><p>Find <m>\stab_{D_{10}}(C)</m> where <m>C</m> is the coloring of the vertices of the pentagon in which vertices <m>1</m>, <m>2</m>, and <m>5</m> are colored black and vertices <m>3</m> and <m>4</m> are colored white.</p></li>
+                    <li><p>Find the cycle index of <m>D_{10}</m>.</p></li>
+                    <li><p>Use the cycle index to determine the number of nonequivalent colorings of vertices of the pentagon using black and white.</p></li>
+                    <li><p>Making an appropriate substitution for the <m>x_i</m> in the cycle index, find the number of nonequivalent colorings of the vertices of the pentagon in which two vertices are colored black and three vertices are colored white. Draw these colorings.</p></li>
+                </ol>
+            </p>
         </statement>
     </exercise>
     <exercise xml:id="ex_polya_cyclic12">
@@ -130,17 +132,17 @@
                     </latex-image-code>
                     </image>
                 </figure>
-
-            <ol>
-                <li><p>Two tic-tac-toe boards are equivalent if one may be obtained from the other by rotating the board or flipping it over. (Imagine that it is drawn on a clear piece of plastic.) Since the <m>9\times 9</m> grid is a square, the group that acts on it in this manner is the dihedral group <m>D_8</m> that we have studied in this chapter. However, as with counting nonisomorphic graphs, we have to be careful to choose the way this group is represented in terms of cycles. Here we are interested in how permutations rearrange the nine squares of the tic-tac-toe board as numbered in <xref ref="fig_polya_TTT" autoname="yes"/>. For example, the effect of the transformation <m>r_1</m>, which rotates the board <m>90^\circ</m> clockwise, can be represented as a permutation of the nine squares as <m>(13971)(2684)(5)</m>.</p>
-                <p>Write each of the eight elements of <m>D_8</m> as permutations of the nine squares of a tic-tac-toe board.</p></li>
-                <li><p>Find the cycle index of <m>D_8</m> in terms of these permutations.</p></li>
-                <li><p>Make an appropriate substitution for <m>x_i</m> in the cycle index to find a generating function <m>t(X,O)</m> in which the coefficient on <m>X^iO^j</m> is the number of nonequivalent tic-tac-toe boards having <m>i</m> squares filled by symbol X and <m>j</m> squares filled by symbol O. (Notice that some squares might be blank!)</p></li>
-                <li><p>How many nonequivalent tic-tac-toe boards are there?</p></li>
-                <li><p>How many nonequivalent tic-tac-toe boards have three X's and three O's?</p></li>
-                <li><p>When playing tic-tac-toe, the players alternate turns, each drawing their symbol in a single unoccupied square during a turn. Assuming the first player marks her squares with X and the second marks his with O, then at each stage of the game there are either the same number of X's and O's or one more X than there are O's. Use this fact and <m>t(X,O)</m> to determine the number of nonequivalent tic-tac-toe boards that can actually be obtained in playing a game, assuming the players continue until the board is full, regardless of whether one of them has won the game.</p></li>
-            </ol>
-
+                <p>
+                    <ol>
+                        <li><p>Two tic-tac-toe boards are equivalent if one may be obtained from the other by rotating the board or flipping it over. (Imagine that it is drawn on a clear piece of plastic.) Since the <m>9\times 9</m> grid is a square, the group that acts on it in this manner is the dihedral group <m>D_8</m> that we have studied in this chapter. However, as with counting nonisomorphic graphs, we have to be careful to choose the way this group is represented in terms of cycles. Here we are interested in how permutations rearrange the nine squares of the tic-tac-toe board as numbered in <xref ref="fig_polya_TTT" autoname="yes"/>. For example, the effect of the transformation <m>r_1</m>, which rotates the board <m>90^\circ</m> clockwise, can be represented as a permutation of the nine squares as <m>(13971)(2684)(5)</m>.</p>
+                        <p>Write each of the eight elements of <m>D_8</m> as permutations of the nine squares of a tic-tac-toe board.</p></li>
+                        <li><p>Find the cycle index of <m>D_8</m> in terms of these permutations.</p></li>
+                        <li><p>Make an appropriate substitution for <m>x_i</m> in the cycle index to find a generating function <m>t(X,O)</m> in which the coefficient on <m>X^iO^j</m> is the number of nonequivalent tic-tac-toe boards having <m>i</m> squares filled by symbol X and <m>j</m> squares filled by symbol O. (Notice that some squares might be blank!)</p></li>
+                        <li><p>How many nonequivalent tic-tac-toe boards are there?</p></li>
+                        <li><p>How many nonequivalent tic-tac-toe boards have three X's and three O's?</p></li>
+                        <li><p>When playing tic-tac-toe, the players alternate turns, each drawing their symbol in a single unoccupied square during a turn. Assuming the first player marks her squares with X and the second marks his with O, then at each stage of the game there are either the same number of X's and O's or one more X than there are O's. Use this fact and <m>t(X,O)</m> to determine the number of nonequivalent tic-tac-toe boards that can actually be obtained in playing a game, assuming the players continue until the board is full, regardless of whether one of them has won the game.</p></li>
+                    </ol>
+                </p>
         </statement>
     </exercise>
     <exercise>
