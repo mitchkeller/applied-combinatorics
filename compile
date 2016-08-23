@@ -1,0 +1,3 @@
+xsltproc --xinclude --stringparam html.knowl.example "no" --stringparam html.css.file "mathbook-4.css" --stringparam numbering.theorems.level "1" ~/Documents/github/mathbook/xsl/mathbook-html.xsl ~/Documents/github/applied-combinatorics/mbx/index.mbx
+xmllint --xinclude --postvalid --noout --dtdvalid ~/Documents/github/mathbook/schema/dtd/mathbook.dtd ~/Documents/github/applied-combinatorics/mbx/index.mbx 2> dtdinfo.txt
+
