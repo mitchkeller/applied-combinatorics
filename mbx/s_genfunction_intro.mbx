@@ -50,7 +50,7 @@
         Integration of the series represented by <m>1/(1+x) = 1/(1-(-x))</m> yields (after a bit of algebraic manipulation)
         <me>
             \log(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-
-            \frac{x^6}{6}+\dots=\sum_{n=1}^\infty \frac{x^n}{n}
+            \frac{x^6}{6}+\dots=\sum_{n=1}^\infty (-1)^{n+1}\frac{x^n}{n}.
         </me>
         </p>
     </example>
