@@ -49,7 +49,7 @@ phi(321974)
         </statement>
     </theorem>
 
-    <p>Our proof of <xref ref="thm_eulerphi" /> requires the following elementary proposition whose proof we leave as an exercise.
+    <p>Our proof of <xref ref="thm_eulerphi" autoname="yes" /> requires the following elementary proposition whose proof we leave as an exercise.
     </p>
 
     <proposition xml:id="prop_num-divisible">
@@ -65,7 +65,7 @@ phi(321974)
     <proof>
         <p>We present the argument when <m>m=3</m>. The full result is an easy extension.
         </p>
-        <p>In light of <xref ref="prop_num-divisible" />, the Principle of Inclusion-Exclusion yields:
+        <p>In light of <xref ref="prop_num-divisible" autoname="yes" />, the Principle of Inclusion-Exclusion yields:
         <md>
             <mrow>  \phi(n) \amp = n-\left(\frac{n}{p_1}+\frac{n}{p_2}+
             \frac{n}{p_3}\right) +\left(\frac{n}{p_1p_2}+\frac{n}{p_1p_3}+
