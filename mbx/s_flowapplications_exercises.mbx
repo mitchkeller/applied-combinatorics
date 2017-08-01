@@ -28,7 +28,7 @@
         <statement>
             <p>Seven colleges and universities are competing to recruit six high school football players to play for their varsity teams. Each school is only allowed to sign one more player, and each player is only allowed to commit to a single school. The table below lists the seven institutions and the students they are trying to recruit, have been admitted, and are also interested in playing for that school. (There's no point in assigning a school a player who cannot meet academic requirements or doesn't want to be part of that team.)  The players are identified by the integers <m>1</m> through <m>6</m>.  Find a way of assigning the players to the schools that maximizes the number of schools who sign one of the six players.
             </p>
-            <table>
+            <sidebyside>
                 <tabular>
                     <col halign="right" /> <col />
                     <row bottom="minor"><cell>School</cell><cell>Player numbers</cell></row>
@@ -40,7 +40,7 @@
                     <row><cell>University of North Carolina</cell><cell>1, 2, 5</cell></row>
                     <row><cell>Virginia Polytechnic Institute and State University</cell><cell>1, 2, 5, 6</cell></row>
                 </tabular>
-            </table>
+            </sidebyside>
         </statement>
     </exercise>
     <exercise>

@@ -61,7 +61,7 @@
 
         <p>As a specific example, suppose that <m>n=5</m> and <m>m=3</m>. Then the function given by the table below satisfies <m>P_1</m> but not <m>P_2</m> or <m>P_3</m>.
         </p>
-        <table>
+        <sidebyside>
             <tabular>
                 <row bottom="minor">
                     <cell><m>i</m></cell>
@@ -80,7 +80,7 @@
                     <cell>3</cell>
                 </row>
             </tabular>
-        </table>
+        </sidebyside>
     </example>
 
     <example xml:id="exa_inclusion-exclusion_prop-derange">
@@ -89,7 +89,7 @@
 
         <p>For example, the permutation <m>\sigma</m> of <m>[5]</m> given in by the table below satisfies <m>P_3</m> and <m>P_5</m> and no other <m>P_i</m>.
         </p>
-        <table>
+        <sidebyside>
             <tabular>
                 <row bottom="minor">
                     <cell><m>i</m></cell>
@@ -108,7 +108,7 @@
                     <cell>5</cell>
                 </row>
             </tabular>
-        </table>
+        </sidebyside>
     </example>
     <p>Note that in the previous example, we could have said that <m>\sigma</m> satisfies property <m>P_i</m> if <m>\sigma(i)\neq i</m>. But remembering that our goal is to count the number of elements satisfying none of the properties, we would then be counting the number of permutations satisfying <m>\sigma(i)=i</m> for each <m>i=1,2,\dots,n</m>, and perhaps we don't need a lot of theory to accomplish this task<mdash />the number is one, of course.
     </p>
