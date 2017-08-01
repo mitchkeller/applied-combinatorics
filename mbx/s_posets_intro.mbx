@@ -46,6 +46,11 @@
         <p>Alice and Bob are talking about how you communicate with a computer in working with posets. Bob says that computers have incredible graphics capabilities these days and that you just give the computer a pdf scan of a diagram. Alice says that she doubts that anybody really does that. Carlos says that there are several effective strategies. One way is to label the points with positive integers from <m>[n]</m> where <m>n</m> is the number of points in the ground set and then define a <m>0</m><ndash /><m>1</m> <m>n\times n</m> matrix <m>A</m> with entry <m>a(i,j)=1</m> when <m>i\le j</m> in <m>P</m> and <m>a(i,j)=0</m> otherwise. Alternatively, you can just provide for each element <m>i</m> in the ground set a vector <m>U(x)</m> listing all elements which are greater than <m>x</m> in <m>P</m>. This vector can be what computer scientists call a <term>linked list</term>.
         </p>
     </remark>
+    <p>A partial order <m>P</m> is called a <term>total order</term><index><main>order</main><sub>total</sub></index> (also, a <term>linear order</term><index><main>order</main><sub>linear</sub></index>) if for all <m>x,y\in X</m>, either <m>x\le y</m> in <m>P</m> or <m>y\le x</m> in <m>P</m>. For small finite sets, we can specify a linear order by listing the elements from least to greatest. For example, <m>L=[b,c,d,a,f,g,e]</m> is the linear order on the ground set <m>\{a,b,c,d,e,f,g\}</m> with <m>b\lt c\lt d\lt a\lt f\lt g\lt e</m> in <m>L</m>.
+    </p>
+
+    <p>The set of real numbers comes equipped with a natural total order. For example, <m>1\lt 7/5\lt \sqrt{2}\lt \pi</m> in this order. But in this chapter, we will be interested primarily with partial orders that are <em>not</em> linear orders. Also, we note that special care must be taken when discussing partial orders on ground sets whose elements are real numbers. For the poset shown in <xref ref="fig_17ptposet" autoname="yes" />, note that <m>14</m> is less than <m>8</m>, while <m>3</m> and <m>6</m> are incomparable.  Best not to tell your parents that you've learned that under certain circumstances, <m>14</m> can be less than <m>8</m> and that you may be able to say which of <m>3</m> and <m>6</m> is larger than the other. The subtlety may be lost in the heated discussion certain to follow.
+    </p>
 
     <example xml:id="exa_construct">
         <p>There are several quite natural ways to construct posets.
@@ -72,11 +77,6 @@
         <caption>Comparability and Incomparability Graphs</caption>
         <image width="70%" source="images/compincomp" />
     </figure>
-    <p>A partial order <m>P</m> is called a <term>total order</term><index><main>order</main><sub>total</sub></index> (also, a <term>linear order</term><index><main>order</main><sub>linear</sub></index>) if for all <m>x,y\in X</m>, either <m>x\le y</m> in <m>P</m> or <m>y\le x</m> in <m>P</m>. For small finite sets, we can specify a linear order by listing the elements from least to greatest. For example, <m>L=[b,c,d,a,f,g,e]</m> is the linear order on the ground set <m>\{a,b,c,d,e,f,g\}</m> with <m>b\lt c\lt d\lt a\lt f\lt g\lt e</m> in <m>L</m>.
-    </p>
-
-    <p>The set of real numbers comes equipped with a natural total order. For example, <m>1\lt 7/5\lt \sqrt{2}\lt \pi</m> in this order. But in this chapter, we will be interested primarily with partial orders that are <em>not</em> linear orders. Also, we note that special care must be taken when discussing partial orders on ground sets whose elements are real numbers. For the poset shown in <xref ref="fig_17ptposet" autoname="yes" />, note that <m>14</m> is less than <m>8</m>, while <m>3</m> and <m>6</m> are incomparable.  Best not to tell your parents that you've learned that under certain circumstances, <m>14</m> can be less than <m>8</m> and that you may be able to say which of <m>3</m> and <m>6</m> is larger than the other. The subtlety may be lost in the heated discussion certain to follow.
-    </p>
 
     <p>When <m>\PXP</m> is a poset and <m>Y\subseteq X</m>, the binary relation <m>Q=P\cap(Y\times Y)</m> is a partial order on <m>Y</m>, and we call the poset <m>(Y,Q)</m> a <term>subposet</term><index><main>subposet</main></index> of <m>\bfP</m>. In <xref ref="fig_subposet" autoname="yes" />, we show a subposet of the poset first presented in <xref ref="fig_17ptposet" autoname="yes" />.
     </p>
