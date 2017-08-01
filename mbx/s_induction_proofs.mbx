@@ -13,7 +13,7 @@
         </statement>
     </proposition>
 
-    <p>For our first version of a proof of <xref ref="prop_sumints" autoname="yes" />, we clearly identify the open statement <m>S_n</m> and describe the proof carefully in terms of <m>S_n</m>. As you develop more experience with writing proofs by induction, this will become less essential, as you'll see in the second version of the proof.
+    <p>For our first version of a proof of <xref ref="prop_sumints"  />, we clearly identify the open statement <m>S_n</m> and describe the proof carefully in terms of <m>S_n</m>. As you develop more experience with writing proofs by induction, this will become less essential, as you'll see in the second version of the proof.
     </p>
 
     <proof>
@@ -37,7 +37,7 @@
         <me>
             \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
         </me>
-        Therefore, <m>S_{k+1}</m> is true. Since we have shown that <m>S_1</m> is true and that for every positive integer <m>k</m>, if <m>S_k</m> is true, then <m>S_{k+1}</m> is true, we conclude that <m>S_n</m> is true for all positive integers <m>n</m> by the <xref ref="princ_math-induction" autoname="title" />.
+        Therefore, <m>S_{k+1}</m> is true. Since we have shown that <m>S_1</m> is true and that for every positive integer <m>k</m>, if <m>S_k</m> is true, then <m>S_{k+1}</m> is true, we conclude that <m>S_n</m> is true for all positive integers <m>n</m> by the <xref ref="princ_math-induction" text="title" />.
         </p>
     </proof>
 
@@ -47,7 +47,7 @@
     <p>After the basis step comes the <term>inductive step</term><idx><h>inductive step</h></idx>, in which we assume that <m>S_k</m> is true for <em>some</em> positive integer <m>k</m> and prove that <m>S_{k+1}</m> is true. When doing this, we call <m>S_k</m> our <term>inductive hypothesis</term><idx><h>inductive hypothesis</h></idx>. In the inductive step, the most common mistake students make is starting with the entirety of <m>S_{k+1}</m> and manipulating it until they obtain a true statement. This is dangerous, as it is possible to start with something false and through valid algebraic steps, obtain a true statement. Instead, the best option is to work as with the basis step: if <m>S_{k+1}</m> is an equation or inequality, work on one side until you find a place to apply the inductive hypothesis and then continue until you obtain the other side. If the algebra gets tricky along the way, you can also work with the left-hand side of <m>S_{k+1}</m> and separately work with the right-hand side of <m>S_{k+1}</m>. If you're able to manipulate both sides to be in the same form, then you have shown they are equal and <m>S_{k+1}</m> is true.
     </p>
 
-    <p>Now let's take a look at a more refined proof of <xref ref="prop_sumints" autoname="yes" />. From here on, when we give a proof by induction, we'll use this style. As you're getting started with induction proofs, you may find it useful to be more explicit about the steps as we did in the first proof above.
+    <p>Now let's take a look at a more refined proof of <xref ref="prop_sumints"  />. From here on, when we give a proof by induction, we'll use this style. As you're getting started with induction proofs, you may find it useful to be more explicit about the steps as we did in the first proof above.
     </p>
 
     <proof>
@@ -63,11 +63,11 @@
             \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
             \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
         </me>
-        Thus the formula also holds when <m>n=k+1</m>. By the <xref ref="princ_math-induction" autoname="title" />, it holds for all positive integers <m>n</m>.
+        Thus the formula also holds when <m>n=k+1</m>. By the <xref ref="princ_math-induction" text="title" />, it holds for all positive integers <m>n</m>.
         </p>
     </proof>
 
-    <p>The preceding arguments are 100<percent /> correct<ellipsis /> but some combinatorial mathematicians would argue that they may actually hide what is really going on. These folks would much prefer a combinatorial proof, as was provided in <xref ref="s_strings_comb-proof" autoname="yes" />. Our perspective is that you should prefer to give a combinatorial proof<mdash />when you can find one. But if pressed, you should be able to give a formal proof by mathematical induction.
+    <p>The preceding arguments are 100<percent /> correct<ellipsis /> but some combinatorial mathematicians would argue that they may actually hide what is really going on. These folks would much prefer a combinatorial proof, as was provided in <xref ref="s_strings_comb-proof"  />. Our perspective is that you should prefer to give a combinatorial proof<mdash />when you can find one. But if pressed, you should be able to give a formal proof by mathematical induction.
     </p>
 
     <p>Here's a second example, also quite a classic. Again, recall that we gave a combinatorial proof in the last chapter. As you read the proof, make sure you can identify the open statement <m>S_n</m>, the basis step, and the inductive step.
@@ -92,13 +92,13 @@
                 \sum_{i=1}^{k+1}(2i-1)=\left(\sum_{i=1}^k 2i-1\right)+2k+1=
                 k^2+(2k+1)=(k+1)^2.
             </me>
-            Therefore, the proposition follows by the <xref ref="princ_math-induction" autoname="title" />.
+            Therefore, the proposition follows by the <xref ref="princ_math-induction" text="title" />.
         </p>
     </proof>
     </proposition>
 
     
-    <p>Here's a more general version of the first result in this section, and again we note that we gave a combinatorial proof in <xref ref="s_strings_comb-proof" autoname="yes" />.
+    <p>Here's a more general version of the first result in this section, and again we note that we gave a combinatorial proof in <xref ref="s_strings_comb-proof"  />.
     </p>
 
     <proposition xml:id="prop_sum-bincoeffs">

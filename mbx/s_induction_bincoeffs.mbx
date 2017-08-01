@@ -7,7 +7,7 @@
     <me>
         \binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}.
     </me>
-        This recursion has a natural combinatorial interpretation. Both sides count the number of <m>k</m>-element subsets of <m>\{1,2,\dots,n\}</m>, with the right-hand side first grouping them into those which contain the element<nbsp /><m>n</m> and then those which don't. The traditional form of displaying this recursion is shown in <xref ref="fig_pascal" autoname="yes" />. This pattern is called <q>Pascal's triangle.</q> Other than the <m>1</m>s at the ends of each row, an entry of the triangle is determined by adding the entry to the left and the entry to the right in the row above.
+        This recursion has a natural combinatorial interpretation. Both sides count the number of <m>k</m>-element subsets of <m>\{1,2,\dots,n\}</m>, with the right-hand side first grouping them into those which contain the element<nbsp /><m>n</m> and then those which don't. The traditional form of displaying this recursion is shown in <xref ref="fig_pascal"  />. This pattern is called <q>Pascal's triangle.</q> Other than the <m>1</m>s at the ends of each row, an entry of the triangle is determined by adding the entry to the left and the entry to the right in the row above.
     </p>
     <table xml:id="fig_pascal" >
         <caption>Pascal's Triangle</caption>

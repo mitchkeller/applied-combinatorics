@@ -10,7 +10,7 @@
     Put another way, the capacity of the cut <m>V=L\cup U</m> is the total capacity of all edges <em>from</em> <m>L</m> <em>to</em> <m>U</m>. Note that in computing the capacity of the cut <m>V=L\cup U</m>, we only add the capacities of the edges from <m>L</m> to <m>U</m>. We do <em>not</em> include the edges from <m>U</m> to <m>L</m> in this sum.
     </p>
     <example>
-        <p>Let's again take a look at the network in <xref ref="fig_networkflow_netflow" autoname="yes" />. Let's first consider the cut <m>V=L_1\cup U_1</m> with
+        <p>Let's again take a look at the network in <xref ref="fig_networkflow_netflow"  />. Let's first consider the cut <m>V=L_1\cup U_1</m> with
         <me>
             L_1 = \{S,F,B,E,D\}\qquad\text{and} \qquad U_1= \{A,C,T\}.
         </me>
@@ -72,7 +72,7 @@
     </theorem>
     <remark>
         <title>Discussion</title>
-        <p>Bob's getting a bit of a sense of d&#xe9;j&#xe0; vu after reading <xref ref="thm_networkflow_flowleqcut" autoname="yes" />. He remembers from <xref ref="ch_graphs" autoname="yes" /> that the maximum size of a clique in a graph is always at most the minimum number of colors required to properly color the graph. However, he also remembers that there are graphs without cliques of size three but with arbitrarily large chromatic number, so he's not too hopeful that this theorem is going to help out much here. Yolanda chimes in with a reminder of <xref ref="ch_posets" autoname="yes" />, where they learned that the maximum size of an antichain in a poset is equal to the minimum number of chains into which the ground set of the poset can be partitioned. Alice points out that Yolanda's statement is still true if the words <q>chain</q> and <q>antichain</q> are swapped. This sparks some intense debate about whether the maximum value of a flow in a network must always be equal to the minimum capacity of a cut in that network. After a while, Carlos suggests that continuing to read might be the best idea for resolving their debate.
+        <p>Bob's getting a bit of a sense of d&#xe9;j&#xe0; vu after reading <xref ref="thm_networkflow_flowleqcut"  />. He remembers from <xref ref="ch_graphs"  /> that the maximum size of a clique in a graph is always at most the minimum number of colors required to properly color the graph. However, he also remembers that there are graphs without cliques of size three but with arbitrarily large chromatic number, so he's not too hopeful that this theorem is going to help out much here. Yolanda chimes in with a reminder of <xref ref="ch_posets"  />, where they learned that the maximum size of an antichain in a poset is equal to the minimum number of chains into which the ground set of the poset can be partitioned. Alice points out that Yolanda's statement is still true if the words <q>chain</q> and <q>antichain</q> are swapped. This sparks some intense debate about whether the maximum value of a flow in a network must always be equal to the minimum capacity of a cut in that network. After a while, Carlos suggests that continuing to read might be the best idea for resolving their debate.
         </p>
     </remark>
 </section>

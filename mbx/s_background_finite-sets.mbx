@@ -65,9 +65,9 @@
         </statement>
     </proposition>
 
-        <p>We note that the statement in <xref ref="prop_xy" autoname="yes" /> is an example of <q>operator overloading</q>, a technique featured in several programming languages. Specifically, the times sign <m>\times</m> is used twice but has different meanings. As part of <m>X\times Y</m>, it denotes the cartesian product, while as part of <m>|X|\times |Y|</m>, it means ordinary multiplication of positive integers. Programming languages can keep track of the data types of variables and apply the correct interpretation of an operator like <m>\times</m> depending on the variables to which it is applied.
+        <p>We note that the statement in <xref ref="prop_xy"  /> is an example of <q>operator overloading</q>, a technique featured in several programming languages. Specifically, the times sign <m>\times</m> is used twice but has different meanings. As part of <m>X\times Y</m>, it denotes the cartesian product, while as part of <m>|X|\times |Y|</m>, it means ordinary multiplication of positive integers. Programming languages can keep track of the data types of variables and apply the correct interpretation of an operator like <m>\times</m> depending on the variables to which it is applied.
         </p>
-        <p>We also have the following general form of <xref ref="prop_xy" autoname="yes" />:
+        <p>We also have the following general form of <xref ref="prop_xy"  />:
         <me>
             |X_1\times X_2\times\dots\times X_n|=
             |X_1|\times |X_2|\times\dots\times |X_n|

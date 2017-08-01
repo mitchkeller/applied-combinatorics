@@ -12,14 +12,14 @@
     Note that in this example, <m>k=2</m>, <m>c_0=1</m> and <m>c_k=-1</m>.
     </p>
 
-    <p>As a second example, the sequence in <xref ref="ex_recurrence_ternary-strings-no-20" autoname="yes" /> satisfies the homogeneous linear recurrence equation
+    <p>As a second example, the sequence in <xref ref="ex_recurrence_ternary-strings-no-20"  /> satisfies the homogeneous linear recurrence equation
     <me>
         t_{n+2} - 3t_{n+1} + t_n = 0.
     </me>
     Again, <m>k=2</m> with <m>c_0=c_k=1</m>.
     </p>
 
-    <p>On the other hand, the sequence <m>r_n</m> defined in <xref ref="s_recurrence_intro_lines" autoname="yes" /> satisfies the nonhomogeneous linear recurrence equation
+    <p>On the other hand, the sequence <m>r_n</m> defined in <xref ref="s_recurrence_intro_lines"  /> satisfies the nonhomogeneous linear recurrence equation
     <me>
         r_{n+1} - r_{n} = n+1.
     </me>

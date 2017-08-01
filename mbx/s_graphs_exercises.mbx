@@ -2,7 +2,7 @@
 <exercises xml:id="s_graphs_exercises">
     <exercise>
         <statement>
-            <p>The questions in this exercise pertain to the graph <m>\bfG</m> shown in <xref ref="fig_graphs_graph_ex" autoname="yes"/>.
+            <p>The questions in this exercise pertain to the graph <m>\bfG</m> shown in <xref ref="fig_graphs_graph_ex" />.
             </p>
             <sidebyside widths="60% 35%">
                 <ol>
@@ -39,7 +39,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For this exercise, consider the graph <m>\bfG</m> in <xref ref="fig_graphs_subgraphs_ex" autoname="yes"/>.
+            <p>For this exercise, consider the graph <m>\bfG</m> in <xref ref="fig_graphs_subgraphs_ex" />.
                   <ol>
                 <li><p>Let <m>V_1=\{g,j,c,h,e,f\}</m> and <m>E_1=\{ge,jg,ch,ef\}</m>. Is <m>(V_1,E_1)</m> a subgraph of <m>\bfG</m>?</p></li>
                 <li><p>Let <m>V_2=\{g,j,c,h,e,f\}</m> and <m>E_2=\{ge,jg,ch,ef,cj\}</m>. Is <m>(V_2,E_2)</m> a subgraph of <m>\bfG</m>?</p></li>
@@ -64,7 +64,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p><xref ref="fig_graphs_isomorphic_ex" autoname="yes"/> contains four graphs on six vertices. Determine which (if any) pairs of graphs are isomorphic. For pairs that are isomorphic, give an isomorphism between the two graphs. For pairs that are not isomorphic, explain why.</p>
+            <p><xref ref="fig_graphs_isomorphic_ex" /> contains four graphs on six vertices. Determine which (if any) pairs of graphs are isomorphic. For pairs that are isomorphic, give an isomorphism between the two graphs. For pairs that are not isomorphic, explain why.</p>
             <figure xml:id="fig_graphs_isomorphic_ex">
                 <caption>Are these graphs isomorphic?</caption>
                 <image width="55%">
@@ -88,7 +88,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Find an eulerian circuit in the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_exercise" autoname="yes"/> or explain why one does not exist.</p>
+            <p>Find an eulerian circuit in the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_exercise" /> or explain why one does not exist.</p>
             <figure xml:id="fig_graphs_euler_exercise">
                 <caption>A graph <m>\bfG</m></caption>
                 <image width="75%">
@@ -112,7 +112,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Consider the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_hamilton_ex" autoname="yes"/>. Determine if the graph is eulerian. If it is, find an eulerian circuit. If it is not, explain why it is not. Determine if the graph is hamiltonian. If it is, find a hamiltonian cycle. If it is not, explain why it is not.</p>
+            <p>Consider the graph <m>\bfG</m> in <xref ref="fig_graphs_euler_hamilton_ex" />. Determine if the graph is eulerian. If it is, find an eulerian circuit. If it is not, explain why it is not. Determine if the graph is hamiltonian. If it is, find a hamiltonian cycle. If it is not, explain why it is not.</p>
             <figure xml:id="fig_graphs_euler_hamilton_ex">
                 <caption>A graph <m>\bfG</m></caption>
                 <image width="65%" source="images/euler_hamilton_ex"/>
@@ -121,7 +121,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Explain why the graph <m>\bfG</m> in <xref ref="fig_graphs_noneuler_exercise" autoname="yes"/> does not have an eulerian circuit, but show that by adding a single edge, you can make it eulerian.</p>
+            <p>Explain why the graph <m>\bfG</m> in <xref ref="fig_graphs_noneuler_exercise" /> does not have an eulerian circuit, but show that by adding a single edge, you can make it eulerian.</p>
             <figure xml:id="fig_graphs_noneuler_exercise">
                 <caption>A graph <m>\bfG</m></caption>
                 <image width="75%">
@@ -145,7 +145,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>An <term>eulerian trail</term><idx><h>eulerian</h><h>trail</h></idx> is defined in the same manner as an eulerian circuit (see <xref ref="s_graphs_eulerham" autoname="yes"/>) except that we drop the condition that <m>x_0=x_t</m>. Prove that a graph has an eulerian trail if and only if it is connected and has at most two vertices of odd degree.</p>
+            <p>An <term>eulerian trail</term><idx><h>eulerian</h><h>trail</h></idx> is defined in the same manner as an eulerian circuit (see <xref ref="s_graphs_eulerham" />) except that we drop the condition that <m>x_0=x_t</m>. Prove that a graph has an eulerian trail if and only if it is connected and has at most two vertices of odd degree.</p>
         </statement>
     </exercise>
     <exercise>
@@ -155,7 +155,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Find the chromatic number of the graph <m>\bfG</m> in <xref ref="fig_graphs_bipartite_ex" autoname="yes"/> and a coloring using <m>\chi(\bfG)</m> colors.</p>
+            <p>Find the chromatic number of the graph <m>\bfG</m> in <xref ref="fig_graphs_bipartite_ex" /> and a coloring using <m>\chi(\bfG)</m> colors.</p>
             <figure xml:id="fig_graphs_bipartite_ex">
                 <caption>A graph <m>\bfG</m> to color</caption>
                 <image width="50%" source="images/bipartite_ex"/>
@@ -164,7 +164,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Find the chromatic number of the graph <m>\bfG</m> in <xref ref="fig_graphs_coloring_ex" autoname="yes"/> and a coloring using <m>\chi(\bfG)</m> colors.</p>
+            <p>Find the chromatic number of the graph <m>\bfG</m> in <xref ref="fig_graphs_coloring_ex" /> and a coloring using <m>\chi(\bfG)</m> colors.</p>
             <figure xml:id="fig_graphs_coloring_ex">
                 <caption>A graph <m>\bfG</m> to color</caption>
                 <image width="60%" source="images/coloring_ex"/>
@@ -214,44 +214,44 @@
     </exercise>
     <exercise xml:id="ex_color">
         <statement>
-            <p> Find a proper <m>(t+1)</m>-coloring of the graph <m>\bfG_{t+1}</m> in Mycielski's proof of <xref ref="prop_triangle-free" autoname="yes" />. This establishes that <m>\chi(\bfG_{t+1})\leq t+1</m>.</p>
+            <p> Find a proper <m>(t+1)</m>-coloring of the graph <m>\bfG_{t+1}</m> in Mycielski's proof of <xref ref="prop_triangle-free"  />. This establishes that <m>\chi(\bfG_{t+1})\leq t+1</m>.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
             <p>How many vertices does the graph <m>\bfG_4</m> from the Kelly and Kelly proof of
-            <xref ref="prop_triangle-free" autoname="yes" />
+            <xref ref="prop_triangle-free"  />
             have?</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Construct and draw the graph <m>\bfG_5</m> from Mycielski's proof of <xref ref="prop_triangle-free" autoname="yes" />.</p>
+            <p>Construct and draw the graph <m>\bfG_5</m> from Mycielski's proof of <xref ref="prop_triangle-free"  />.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Find a recursive formula for the number of vertices <m>n_t</m> in the graph <m>\bfG_t</m> from the Kelly and Kelly proof of <xref ref="prop_triangle-free" autoname="yes" />.</p>
+            <p>Find a recursive formula for the number of vertices <m>n_t</m> in the graph <m>\bfG_t</m> from the Kelly and Kelly proof of <xref ref="prop_triangle-free"  />.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Let <m>b_t</m> be the number of vertices in the graph <m>\bfG_t</m> from the Mycielski's proof of <xref ref="prop_triangle-free" autoname="yes" />. Find a recursive formula for <m>b_t</m>.</p>
+            <p>Let <m>b_t</m> be the number of vertices in the graph <m>\bfG_t</m> from the Mycielski's proof of <xref ref="prop_triangle-free"  />. Find a recursive formula for <m>b_t</m>.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>The <term>girth</term><idx><h>girth</h></idx> of a graph <m>\bfG</m> is the number of vertices in a shortest cycle of <m>\bfG</m>. Find the girth of the graph <m>\bfG_t</m> in the Kelly and Kelly proof of <xref ref="prop_triangle-free" autoname="yes" /> and prove that your answer is correct. As a challenge, see if you can modify the construction of <m>\bfG_t</m> to increase the girth. If so, how far are you able to increase it?</p>
+            <p>The <term>girth</term><idx><h>girth</h></idx> of a graph <m>\bfG</m> is the number of vertices in a shortest cycle of <m>\bfG</m>. Find the girth of the graph <m>\bfG_t</m> in the Kelly and Kelly proof of <xref ref="prop_triangle-free"  /> and prove that your answer is correct. As a challenge, see if you can modify the construction of <m>\bfG_t</m> to increase the girth. If so, how far are you able to increase it?</p>
         </statement>
     </exercise>
     <exercise xml:id="ex_graphs_first-fit-color">
         <statement>
-            <p> Use the First Fit algorithm to color the graph in <xref ref="fig_k44minus" autoname="yes"/> using the two different orderings of the vertex set shown there.</p>
+            <p> Use the First Fit algorithm to color the graph in <xref ref="fig_k44minus" /> using the two different orderings of the vertex set shown there.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Draw the interval graph corresponding to the intervals in <xref ref="fig_graphs_intervals-ex" autoname="yes"/>.</p>
+            <p>Draw the interval graph corresponding to the intervals in <xref ref="fig_graphs_intervals-ex" />.</p>
             <figure xml:id="fig_graphs_intervals-ex">
                 <caption>A collection of intervals</caption>
                 <image width="80%" source="images/firstfit-intgraph"/>
@@ -260,14 +260,14 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Use the First Fit coloring algorithm to find the chromatic number of the interval graph whose interval representation is shown in <xref ref="fig_graphs_intervals-ex" autoname="yes"/> as well as a proper coloring using as few colors as possible.</p>
+            <p>Use the First Fit coloring algorithm to find the chromatic number of the interval graph whose interval representation is shown in <xref ref="fig_graphs_intervals-ex" /> as well as a proper coloring using as few colors as possible.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
             <p>
                <ol>
-                <li><p>From <xref ref="ex_graphs_first-fit-color" autoname="yes" /> you know that choosing a bad ordering of the vertices of a graph can lead to the First Fit coloring algorithm producing a coloring that is far from optimal. However, you can use this algorithm to prove a bound on the chromatic number. Show that if every vertex of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</p></li>
+                <li><p>From <xref ref="ex_graphs_first-fit-color"  /> you know that choosing a bad ordering of the vertices of a graph can lead to the First Fit coloring algorithm producing a coloring that is far from optimal. However, you can use this algorithm to prove a bound on the chromatic number. Show that if every vertex of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</p></li>
                 <li><p>Give an example of a bipartite graph with <m>D=1000</m> to show that this bound need not be tight.</p></li>
                </ol>
             </p>
@@ -275,12 +275,12 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Is the graph in <xref ref="fig_graphs_coloring_ex" autoname="yes"/> planar? If it is, find a drawing without edges crossings. If it is not give a reason why it is not.</p>
+            <p>Is the graph in <xref ref="fig_graphs_coloring_ex" /> planar? If it is, find a drawing without edges crossings. If it is not give a reason why it is not.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Is the graph in <xref ref="fig_graphs_planar_ex" autoname="yes"/> planar? If it is, find a drawing without edge crossings. If it is not give a reason why it is not.</p>
+            <p>Is the graph in <xref ref="fig_graphs_planar_ex" /> planar? If it is, find a drawing without edge crossings. If it is not give a reason why it is not.</p>
             <figure xml:id="fig_graphs_planar_ex">
                 <caption>Is this graph planar?</caption>
                 <image width="40%" source="images/planar_ex"/>
@@ -326,7 +326,7 @@
     </exercise>
     <exercise xml:id="ex_graphs_degseq2">
         <statement>
-            <p> Below are three sequences of length <m>10</m>. One of the sequences cannot be the degree sequence (see <xref ref="ex_graphs_degseq" autoname="yes" />) of any graph. Identify it and say why. For each of the other two, say <em>why</em> (if you have enough information) a <em>connected</em> graph with that degree sequence
+            <p> Below are three sequences of length <m>10</m>. One of the sequences cannot be the degree sequence (see <xref ref="ex_graphs_degseq"  />) of any graph. Identify it and say why. For each of the other two, say <em>why</em> (if you have enough information) a <em>connected</em> graph with that degree sequence
             <ul>
                 <li>is definitely hamiltonian/cannot be hamiltonian;</li>
                 <li>is definitely eulerian/cannot be eulerian;</li>
@@ -345,7 +345,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For the two degree sequences in <xref ref="ex_graphs_degseq2" autoname="yes" /> that correspond to graphs, there were some properties for which the degree sequence was not sufficient information to determine if the graph had that property. For each of those situations, see if you can draw both a graph that has the property and a graph that does not have the property.</p>
+            <p>For the two degree sequences in <xref ref="ex_graphs_degseq2"  /> that correspond to graphs, there were some properties for which the degree sequence was not sufficient information to determine if the graph had that property. For each of those situations, see if you can draw both a graph that has the property and a graph that does not have the property.</p>
         </statement>
     </exercise>
     <exercise>
@@ -355,7 +355,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1" autoname="yes"/>.</p>
+            <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1" />.</p>
             <figure xml:id="fig_graphs_tree-10verts-ex1">
                 <caption>A <m>10</m>-vertex tree</caption>
                 <image width="75%">
@@ -378,7 +378,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2" autoname="yes"/>.</p>
+            <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2" />.</p>
             <figure xml:id="fig_graphs_tree-10verts-ex2">
                 <caption>A <m>10</m>-vertex tree</caption>
                 <image width="65%">
@@ -399,7 +399,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3" autoname="yes"/>.</p>
+            <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3" />.</p>
             <figure xml:id="fig_graphs_tree-14verts-ex3">
                 <caption>A <m>14</m>-vertex tree</caption>
                 <image width="65%">

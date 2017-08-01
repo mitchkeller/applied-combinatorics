@@ -1,6 +1,6 @@
 <section xml:id="s_posets_sorting">
     <title>Linear Extensions of Partially Ordered Sets</title>
-    <p>Let <m>\PXP</m> be a partially ordered set. A linear order <m>L</m> on <m>X</m> is called a <term>linear extension</term><idx><h>linear extension</h></idx> (also, a <term>topological sort</term>) of <m>P</m>, if <m>x\lt y</m> in <m>L</m> whenever <m>x\lt y</m> in <m>P</m>. For example, the table displayed in <xref ref="fig_posets_lin-extn" autoname="yes" /> shows that our familiar example <m>\bfP_3</m> has<nbsp />11 linear extensions.
+    <p>Let <m>\PXP</m> be a partially ordered set. A linear order <m>L</m> on <m>X</m> is called a <term>linear extension</term><idx><h>linear extension</h></idx> (also, a <term>topological sort</term>) of <m>P</m>, if <m>x\lt y</m> in <m>L</m> whenever <m>x\lt y</m> in <m>P</m>. For example, the table displayed in <xref ref="fig_posets_lin-extn"  /> shows that our familiar example <m>\bfP_3</m> has<nbsp />11 linear extensions.
     </p>
     <sidebyside xml:id="fig_posets_lin-extn" widths="18% 75%" valigns="middle middle">
         <caption>A poset and its linear extensions</caption>
@@ -44,7 +44,7 @@
     <p>Here is an important special case: determine an unknown linear extension <m>L</m> of a poset <m>\bfP</m> by asking a series of questions of the form: Is <m>x \lt y</m> in <m>L</m>?
     </p>
     <remark>
-        <p>Given the poset <m>\PXP</m> shown in <xref ref="fig_17ptposet" autoname="yes" /> and the problem of determining an unknown linear extension of <m>P</m>, how should Alice decide which question (of the form: Is <m>x\lt y</m> in <m>L</m>?) to ask?
+        <p>Given the poset <m>\PXP</m> shown in <xref ref="fig_17ptposet"  /> and the problem of determining an unknown linear extension of <m>P</m>, how should Alice decide which question (of the form: Is <m>x\lt y</m> in <m>L</m>?) to ask?
         </p>
 
         <p>How would you like to be assigned to count the number of linear extensions of this poset? In general, how hard is it to determine the number of linear extensions of a poset?  Could you (and your computer) do this count for a poset on <m>100,000</m> points?

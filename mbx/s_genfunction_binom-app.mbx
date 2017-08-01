@@ -1,6 +1,6 @@
 <section xml:id="s_genfunction_binom-app">
     <title>An Application of the Binomial Theorem</title>
-    <p>In this section, we see how <xref ref="thm_newton-binomial" autoname="title" /> can be used to derive another useful identity. We begin by establishing a different recursive formula for <m>P(p,k)</m> than was used in our definition of it.
+    <p>In this section, we see how <xref ref="thm_newton-binomial" text="title" /> can be used to derive another useful identity. We begin by establishing a different recursive formula for <m>P(p,k)</m> than was used in our definition of it.
     </p>
 
     <lemma>
@@ -24,7 +24,7 @@
             </p>
         </proof>
     </lemma>
-    <p>Our goal in this section will be to invoke <xref ref="thm_newton-binomial" autoname="title" /> with the exponent <m>p=-1/2</m>. To do so in a meaningful manner, we need a simplified expression for <m>C(-1/2,k)</m>, which the next lemma provides.
+    <p>Our goal in this section will be to invoke <xref ref="thm_newton-binomial" text="title" /> with the exponent <m>p=-1/2</m>. To do so in a meaningful manner, we need a simplified expression for <m>C(-1/2,k)</m>, which the next lemma provides.
     </p>
 
     <lemma xml:id="l_newbinom">
@@ -55,7 +55,7 @@
             </p>
         </statement>
         <proof>
-            <p>By <xref ref="thm_newton-binomial" autoname="title" /> and <xref ref="l_newbinom" autoname="yes" />, we know that
+            <p>By <xref ref="thm_newton-binomial" text="title" /> and <xref ref="l_newbinom"  />, we know that
             <md>
                 <mrow>  (1-4x)^{-1/2}\amp =\sum_{n=0}^\infty\binom{-1/2}{n}(-4x)^n</mrow>
                 <mrow>  \amp =\sum_{n=0}^\infty(-1)^n2^{2n}\binom{-1/2}{n}x^n</mrow>
@@ -64,7 +64,7 @@
             </p>
         </proof>
     </theorem>
-    <p>Now recalling <xref ref="prop_genfunction-product" autoname="yes" /> about the coefficients in the product of two generating functions, we are able to deduce the following corollary of <xref ref="t_sqrt" autoname="yes" /> by squaring the function <m>f(x) = (1-4x)^{-1/2}</m>.
+    <p>Now recalling <xref ref="prop_genfunction-product"  /> about the coefficients in the product of two generating functions, we are able to deduce the following corollary of <xref ref="t_sqrt"  /> by squaring the function <m>f(x) = (1-4x)^{-1/2}</m>.
     </p>
     
     <corollary>

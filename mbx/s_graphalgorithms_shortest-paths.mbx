@@ -57,7 +57,7 @@
 
     <subsection>
         <title>Example of Dijkstra's Algorithm</title>
-        <p>Before establishing why Dijkstra's algorithm works, it may be helpful to see an example of how it works. To do this, consider the digraph <m>\bfG</m> shown in <xref ref="fig_graphalgorithms_dijkstragraph" autoname="yes" />. For visual clarity, we have chosen a digraph which is an <term>oriented graph</term>, <ie />, for each distinct pair <m>x,y</m> of vertices, the graph contains at most one of the two possible directed edges <m>(x,y)</m> and <m>(y,x)</m>.
+        <p>Before establishing why Dijkstra's algorithm works, it may be helpful to see an example of how it works. To do this, consider the digraph <m>\bfG</m> shown in <xref ref="fig_graphalgorithms_dijkstragraph"  />. For visual clarity, we have chosen a digraph which is an <term>oriented graph</term>, <ie />, for each distinct pair <m>x,y</m> of vertices, the graph contains at most one of the two possible directed edges <m>(x,y)</m> and <m>(y,x)</m>.
         </p>
         <figure xml:id="fig_graphalgorithms_dijkstragraph" >
             <caption>A digraph with edge lengths</caption>
@@ -257,7 +257,7 @@
                 <p>The theorem holds trivially when <m>x=r</m>. So we consider the case where <m>x\neq r</m>. We argue that <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and that <m>P(x)</m> is a shortest path from <m>r</m> to <m>x</m> by induction on the minimum number <m>k</m> of edges in a shortest path from <m>r</m> to <m>x</m>. When <m>k=1</m>, the edge <m>(r,x)</m> is a shortest path from <m>r</m> to <m>x</m>. Since <m>v_1=r</m>, we will set <m>\delta(x)=w(r,x)</m> and <m>P(x)=(r,x)</m> at Step<nbsp />1.
                 </p>
 
-                <p>Now fix a positive integer <m>k</m>. Assume that if the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is at most <m>k</m>, then <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and <m>P(x)</m> is a shortest path from <m>r</m> to <m>x</m>. Let <m>x</m> be a vertex for which the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is <m>k+1</m>. Fix a shortest path <m>P=(u_0,u_1,u_2,\dots,u_{k+1})</m> from <m>r=u_0</m> to <m>x=u_{k+1}</m>. Then <m>Q=(u_0,u_1,\dots,u_k)</m> is a shortest path from <m>r</m> to <m>u_k</m>. (See <xref ref="fig_graphalgorithms_dijkstra-proof" autoname="yes" />.)
+                <p>Now fix a positive integer <m>k</m>. Assume that if the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is at most <m>k</m>, then <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and <m>P(x)</m> is a shortest path from <m>r</m> to <m>x</m>. Let <m>x</m> be a vertex for which the minimum number of edges in a shortest path from <m>r</m> to <m>x</m> is <m>k+1</m>. Fix a shortest path <m>P=(u_0,u_1,u_2,\dots,u_{k+1})</m> from <m>r=u_0</m> to <m>x=u_{k+1}</m>. Then <m>Q=(u_0,u_1,\dots,u_k)</m> is a shortest path from <m>r</m> to <m>u_k</m>. (See <xref ref="fig_graphalgorithms_dijkstra-proof"  />.)
                 </p>
                 <figure xml:id="fig_graphalgorithms_dijkstra-proof" >
                     <caption>Shortest paths</caption>
@@ -273,7 +273,7 @@
                     </image>
 
                 </figure>
-                <p>By the inductive hypothesis, <m>\delta(u_k)</m> is the distance from <m>r</m> to <m>u_k</m>, and <m>P(u_k)</m> is a shortest path from <m>r</m> to <m>u_k</m>. Note that <m>P(u_k)</m> need not be the same as path <m>Q</m>, as we suggest in <xref ref="fig_graphalgorithms_dijkstra-proof" autoname="yes" />. However, if distinct, the two paths will have the same length, namely <m>\delta(u_k)</m>.  Also, the distance from <m>r</m> to <m>x</m> is <m>\delta(u_k)+w(u_k,x)\ge \delta(u_k)</m> since <m>P</m> is a shortest path from <m>r</m> to <m>x</m> and <m>w(u_k,x)\geq 0</m>.
+                <p>By the inductive hypothesis, <m>\delta(u_k)</m> is the distance from <m>r</m> to <m>u_k</m>, and <m>P(u_k)</m> is a shortest path from <m>r</m> to <m>u_k</m>. Note that <m>P(u_k)</m> need not be the same as path <m>Q</m>, as we suggest in <xref ref="fig_graphalgorithms_dijkstra-proof"  />. However, if distinct, the two paths will have the same length, namely <m>\delta(u_k)</m>.  Also, the distance from <m>r</m> to <m>x</m> is <m>\delta(u_k)+w(u_k,x)\ge \delta(u_k)</m> since <m>P</m> is a shortest path from <m>r</m> to <m>x</m> and <m>w(u_k,x)\geq 0</m>.
                 </p>
 
                 <p>Let <m>i</m> and <m>j</m> be the unique integers for which <m>u_k=v_i</m> and <m>x=v_j</m>. If <m>j \lt i</m>, then

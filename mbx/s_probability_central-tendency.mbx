@@ -134,7 +134,7 @@
         </theorem>
 
         <example>
-            <p>Here's an example of how <xref ref="thm_chebyshev" autoname="title" /> can be applied.  Consider <m>n</m> tosses of a fair coin with <m>X</m> counting the number of heads. As noted before, <m>\mu=E(X)=n/2</m> and <m>\var(X)=n/4</m>, so <m>\sigma_X=\sqrt{n}/2</m>. When <m>n=10,000</m> and <m>\mu=5,000</m> and <m>\sigma_X=50</m>. Setting <m>k=50</m> so that <m>k\sigma_X=2500</m>, we see that the probability that <m>X</m> is within <m>2500</m> of the expected value of <m>5000</m> is at least <m>0.9996</m>.  So it seems very unlikely indeed that the number of heads is at least <m>7,500</m>.
+            <p>Here's an example of how <xref ref="thm_chebyshev" text="title" /> can be applied.  Consider <m>n</m> tosses of a fair coin with <m>X</m> counting the number of heads. As noted before, <m>\mu=E(X)=n/2</m> and <m>\var(X)=n/4</m>, so <m>\sigma_X=\sqrt{n}/2</m>. When <m>n=10,000</m> and <m>\mu=5,000</m> and <m>\sigma_X=50</m>. Setting <m>k=50</m> so that <m>k\sigma_X=2500</m>, we see that the probability that <m>X</m> is within <m>2500</m> of the expected value of <m>5000</m> is at least <m>0.9996</m>.  So it seems very unlikely indeed that the number of heads is at least <m>7,500</m>.
             </p>
 
             <p>Going back to lottery tickets, if we make the rational assumption that all ticket numbers are equally likely, then the probability that the winning number is at least <m>7,500</m> is exactly <m>2501/100001</m>, which is very close to <m>1/4</m>.

@@ -9,7 +9,7 @@
     <me>
         n!\approx \sqrt{2\pi n} \left( \frac{n}{e}\right)^n
     </me>
-    Using Stirling's approximation and the binomial coefficients from the proof of <xref ref="thm_graphramsey" autoname="title" />, we have the following upper bound:
+    Using Stirling's approximation and the binomial coefficients from the proof of <xref ref="thm_graphramsey" text="title" />, we have the following upper bound:
     <me>
         R(n,n) \le \binom{2n-2}{n-1} \approx \frac{2^{2n}}{4\sqrt{\pi n}}
     </me>

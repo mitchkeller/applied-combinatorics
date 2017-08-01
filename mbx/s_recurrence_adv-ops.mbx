@@ -29,7 +29,7 @@
                 </me>
             </p>
         </example>
-        <p>As an analogue of <xref ref="ex_recurrence_diffeq" autoname="yes" />, consider the following simple example involving the advancement operator.
+        <p>As an analogue of <xref ref="ex_recurrence_diffeq"  />, consider the following simple example involving the advancement operator.
         </p>
         <example xml:id="ex_recurrence_adveq">
             <statement>
@@ -49,7 +49,7 @@
                 </p>
             </solution>
         </example>
-        <p>Before moving on to develop general methods for solving advancement operator equations, let's say a word about why we keep talking in terms of operators and mentioned that we can view any sequence as a function with domain <m>\ints</m>. If you've studied any linear algebra, you probably remember learning that the set of all infinitely-differentiable functions on the real line form a vector space and that differentiation is a linear operator on those functions. Our analogy to differential equations holds up just fine here, and functions from <m>\ints</m> to <m>\complexes</m> form a vector space and <m>A</m> is a linear operator on that space. We won't dwell on the technical aspects of this, and no knowledge of linear algebra is required to understand our development of techniques to solve recurrence equations. However, if you're interested in more placing everything we do on rigorous footing, we discuss this further in <xref ref="s_recurrence_rigorous" autoname="yes" />.
+        <p>Before moving on to develop general methods for solving advancement operator equations, let's say a word about why we keep talking in terms of operators and mentioned that we can view any sequence as a function with domain <m>\ints</m>. If you've studied any linear algebra, you probably remember learning that the set of all infinitely-differentiable functions on the real line form a vector space and that differentiation is a linear operator on those functions. Our analogy to differential equations holds up just fine here, and functions from <m>\ints</m> to <m>\complexes</m> form a vector space and <m>A</m> is a linear operator on that space. We won't dwell on the technical aspects of this, and no knowledge of linear algebra is required to understand our development of techniques to solve recurrence equations. However, if you're interested in more placing everything we do on rigorous footing, we discuss this further in <xref ref="s_recurrence_rigorous"  />.
         </p>
     </introduction>
 

@@ -10,7 +10,7 @@
             </p>
         </statement>
         <solution>
-            <p>Although the Venn diagrams that you've probably seen drawn many times over the years aren't always the best illustrations (especially if you try to think with some sort of scale), let's use one to get started. In <xref ref="fig_venn-app-comb" autoname="yes" />, we see how the groups in the scenario might overlap.
+            <p>Although the Venn diagrams that you've probably seen drawn many times over the years aren't always the best illustrations (especially if you try to think with some sort of scale), let's use one to get started. In <xref ref="fig_venn-app-comb"  />, we see how the groups in the scenario might overlap.
             </p>
             <figure xml:id="fig_venn-app-comb" >
                 <caption>A Venn diagram for an applied combinatorics class</caption>
@@ -33,7 +33,7 @@
         
 
     <example xml:id="exa_inclusion-exclusion_int-solns">
-        <p>Another type of problem where we can readily see how such a technique is applicable is a generalization of the problem of enumerating integer solutions of equations. In <xref ref="ch_strings" autoname="yes" />, we discussed how to count the number of solutions to an equation such as
+        <p>Another type of problem where we can readily see how such a technique is applicable is a generalization of the problem of enumerating integer solutions of equations. In <xref ref="ch_strings"  />, we discussed how to count the number of solutions to an equation such as
         <me>
             x_1 + x_2 + x_3 + x_4 = 100,
         </me>
@@ -50,7 +50,7 @@
         </me>
         </p>
     </example>
-    <p>From these examples, you should start to see a pattern emerging that leads to a more general setting. In full generality, we will consider a set <m>X</m> and a family <m>\mathcal{P}=\{P_1,P_2,\dots,P_m\}</m> of <term>properties</term>. We intend that for every <m>x\in X</m> and each <m>i=1,2,\dots,m</m>, either <m>x</m> satisfies <m>P_i</m> or it does not. There is no ambiguity. Ultimately, we are interested in determining the number of elements of <m>X</m> which satisfy <em>none</em> of the properties in <m>\mathcal{P}</m>. In <xref ref="exa_inclusion-exclusion_students" autoname="yes" />, we could have made property <m>P_1</m> <q>is a computer science major</q> and property <m>P_2</m> <q>is male</q>. Then the number of students satisfying <em>neither</em> <m>P_1</m> nor <m>P_2</m> would be the number of female students majoring in something other than computer science, exactly the number we were asked to determine. What would the properties <m>P_1</m> and <m>P_2</m> be for <xref ref="exa_inclusion-exclusion_int-solns" autoname="yes" />?
+    <p>From these examples, you should start to see a pattern emerging that leads to a more general setting. In full generality, we will consider a set <m>X</m> and a family <m>\mathcal{P}=\{P_1,P_2,\dots,P_m\}</m> of <term>properties</term>. We intend that for every <m>x\in X</m> and each <m>i=1,2,\dots,m</m>, either <m>x</m> satisfies <m>P_i</m> or it does not. There is no ambiguity. Ultimately, we are interested in determining the number of elements of <m>X</m> which satisfy <em>none</em> of the properties in <m>\mathcal{P}</m>. In <xref ref="exa_inclusion-exclusion_students"  />, we could have made property <m>P_1</m> <q>is a computer science major</q> and property <m>P_2</m> <q>is male</q>. Then the number of students satisfying <em>neither</em> <m>P_1</m> nor <m>P_2</m> would be the number of female students majoring in something other than computer science, exactly the number we were asked to determine. What would the properties <m>P_1</m> and <m>P_2</m> be for <xref ref="exa_inclusion-exclusion_int-solns"  />?
     </p>
 
     <p>Let's consider three examples of larger sets of properties. These properties will come back up during the remainder of the chapter as we apply inclusion-exclusion to some more involved situations. Recall that throughout this book, we use the notation <m>[n]</m> for the set <m>\{1,2,\dots,n\}</m> when <m>n</m> is a positive integer.

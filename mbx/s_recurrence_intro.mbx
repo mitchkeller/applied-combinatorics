@@ -16,7 +16,7 @@
             f_{1000} \lt  232748383849990383201823093383773932
         </me>
         </p>
-        <p>Consider the sequence <m>\{f_{n+1}/f_n:n\ge1\}</m> of ratios of consecutive terms of the Fibonacci sequence. <xref ref="tab_fib-ratios" autoname="yes" /> shows these ratios for <m>n\leq 18</m>.
+        <p>Consider the sequence <m>\{f_{n+1}/f_n:n\ge1\}</m> of ratios of consecutive terms of the Fibonacci sequence. <xref ref="tab_fib-ratios"  /> shows these ratios for <m>n\leq 18</m>.
         </p>
         <figure xml:id="tab_fib-ratios" >
             <caption>The ratios <m>f_{n+1}/f_{n}</m> for <m>n\leq 18</m></caption>
@@ -45,7 +45,7 @@
 
     <subsection xml:id="s_recurrence_intro_strings">
         <title>Recurrences for strings</title>
-        <p>In <xref ref="ch_induction" autoname="yes" />, we saw several times how we could find recurrences that gave us the number of binary or ternary strings of length <m>n</m> when we place a restriction on certain patterns appearing in the string. Let's recall a couple of those types of questions in order to help generate more recurrences to work with.
+        <p>In <xref ref="ch_induction"  />, we saw several times how we could find recurrences that gave us the number of binary or ternary strings of length <m>n</m> when we place a restriction on certain patterns appearing in the string. Let's recall a couple of those types of questions in order to help generate more recurrences to work with.
         </p>
         <example xml:id="ex_recurrence_binary-strings-no-11">
             <idx><h>string</h><h>binary</h></idx>
@@ -70,7 +70,7 @@
 
     <subsection xml:id="s_recurrence_intro_lines">
         <title>Lines and regions in the plane</title>
-        <p>Our next example takes us back to one of the motivating problems discussed in <xref ref="ch_intro" autoname="yes" />. In <xref ref="fig_geomregions" autoname="yes" />, we show a family of <m>4</m> lines in the plane. Each pair of lines intersects and no point in the plane belongs to more than two lines.  These lines determine<nbsp /><m>11</m> regions.</p>
+        <p>Our next example takes us back to one of the motivating problems discussed in <xref ref="ch_intro"  />. In <xref ref="fig_geomregions"  />, we show a family of <m>4</m> lines in the plane. Each pair of lines intersects and no point in the plane belongs to more than two lines.  These lines determine<nbsp /><m>11</m> regions.</p>
                 <figure xml:id="fig_geomregions" >
             <caption>Lines and Regions</caption>
             <image width="65%" source="images/3012-fig9" />

@@ -3,7 +3,7 @@
 
 
     <introduction>
-        <p>We begin this section with a motivational example.  Consider the connected graph on six vertices shown in <xref provisional="fig-markovchain" autoname="yes" />.  The first move is to choose a vertex at random and move there. Afterwards, we follow the following recursive procedures. If after <m>i</m> moves, you are at a vertex <m>x</m> and <m>x</m> has <m>d</m> neighbors, choose one of the neighbors at random, with each having probability <m>1/d</m> and move there.  We then attempt to answer questions of the following flavor:
+        <p>We begin this section with a motivational example.  Consider the connected graph on six vertices shown in <xref provisional="fig-markovchain"  />.  The first move is to choose a vertex at random and move there. Afterwards, we follow the following recursive procedures. If after <m>i</m> moves, you are at a vertex <m>x</m> and <m>x</m> has <m>d</m> neighbors, choose one of the neighbors at random, with each having probability <m>1/d</m> and move there.  We then attempt to answer questions of the following flavor:
                   <ol>
             <li>
                 <p>For each vertex <m>x</m>, let <m>p_{x,m}</m> denote the probability that you are at vertex <m>x</m> after <m>m</m> moves.  Does <m>\lim_{m\rightarrow\infty}p_{x,m}</m> exist and if so, how fast does the sequence converge to this limit?</p></li>
@@ -24,7 +24,7 @@
         <p>The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m> of moving from state <m>S_j</m> to state <m>S_k</m> is called the <term>transition matrix</term><idx><h>matrix</h><h>transition</h></idx> of the Markov chain. Note that <m>P</m> is a <term>stochastic matrix</term><idx><h>matrix</h><h>stochastic</h></idx>, <ie />, all entries are non-negative and all row sums are<nbsp /><m>1</m>.  Conversely, each square stochastic matrix can be considered as the transition matrix of a Markov chain.
         </p>
 
-        <p>For example, here is the transition matrix for the graph in <xref provisional="fig-markovchain" autoname="yes" />.
+        <p>For example, here is the transition matrix for the graph in <xref provisional="fig-markovchain"  />.
         <men xml:id="eqn_transition" >
             P =\begin{pmatrix}0 \amp  1/4 \amp  1/4 \amp  1/4 \amp  1/4 \amp    0 \\
             1/2 \amp    0 \amp    0 \amp  1/2 \amp    0 \amp    0 \\
@@ -45,7 +45,7 @@
             </statement>
         </theorem>
 
-        <p>Given the statement of <xref ref="thm_regular" autoname="yes" />, the computation of the row vector <m>W</m> can be carried out by eigenvalue techniques that are part of a standard undergraduate linear algebra course. For example, the transition matrix <m>P</m> displayed in <xref ref="eqn_transition" autoname="yes" /> is regular since all entries of <m>P^3</m> are positive. Furthermore, for this matrix, the row vector <m>W=(5/13, 3/13, 2/13, 2/13, 1/13, 1/13)</m>. However, the question involving how fast the convergence of <m>P^m</m> is to this limiting vector is more subtle, as is the question as to how long it takes for us to be relatively certain we have made every possible transition.
+        <p>Given the statement of <xref ref="thm_regular"  />, the computation of the row vector <m>W</m> can be carried out by eigenvalue techniques that are part of a standard undergraduate linear algebra course. For example, the transition matrix <m>P</m> displayed in <xref ref="eqn_transition"  /> is regular since all entries of <m>P^3</m> are positive. Furthermore, for this matrix, the row vector <m>W=(5/13, 3/13, 2/13, 2/13, 1/13, 1/13)</m>. However, the question involving how fast the convergence of <m>P^m</m> is to this limiting vector is more subtle, as is the question as to how long it takes for us to be relatively certain we have made every possible transition.
         </p>
     </introduction>
 
@@ -55,7 +55,7 @@
         <p>A state <m>S_i</m> in a Markov chain with transition matrix <m>P</m> is <term>absorbing</term><idx><h>absorbing</h><h>state of a Markov chain</h></idx> if <m>p_{i,i}=1</m> and <m>p_{i,j}=0</m> for all <m>j\neq i</m>, <ie />, like the infamous Hotel California, once you are in state <m>S_i</m>, <q>you can never leave.</q>
         </p>
         <example>
-            <p>We modify the transition matrix from <xref ref="eqn_transition" autoname="yes" /> by making states <m>4</m> and <m>5</m> absorbing. The revised transition matrix is now:
+            <p>We modify the transition matrix from <xref ref="eqn_transition"  /> by making states <m>4</m> and <m>5</m> absorbing. The revised transition matrix is now:
             <men xml:id="eqn_absorbing" >
                 P =\begin{pmatrix}0 \amp  1/4 \amp  1/4 \amp  1/4 \amp  1/4 \amp    0 \\
                     1/2 \amp    0 \amp    0 \amp  1/2 \amp    0 \amp    0 \\

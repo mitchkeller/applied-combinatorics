@@ -33,7 +33,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Find an explicit formula for the <m>n^\text{th}</m> Fibonacci number <m>f_n</m>. (See <xref ref="s_recurrence_intro_fib" autoname="yes"/>.)</p>
+            <p>Find an explicit formula for the <m>n^\text{th}</m> Fibonacci number <m>f_n</m>. (See <xref ref="s_recurrence_intro_fib" />.)</p>
         </statement>
     </exercise>
     <exercise>
@@ -117,7 +117,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Prove <xref ref="lem_rr" autoname="yes" /> about advancement operator equations with repeated roots.</p>
+            <p>Prove <xref ref="lem_rr"  /> about advancement operator equations with repeated roots.</p>
         </statement>
     </exercise>
     <exercise xml:id="ex_recurrence_gen-fn">
@@ -147,7 +147,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>In this chapter, we developed a generating function for the Catalan numbers. We first encountered the Catalan numbers in <xref ref="ch_strings" autoname="yes"/>, where we learned they count certain lattice paths. Develop a recurrence for the number <m>l_n</m> of lattice paths similar to the recurrence
+            <p>In this chapter, we developed a generating function for the Catalan numbers. We first encountered the Catalan numbers in <xref ref="ch_strings" />, where we learned they count certain lattice paths. Develop a recurrence for the number <m>l_n</m> of lattice paths similar to the recurrence
             <me>
                 c_n = \sum_{k=0}^n c_k c_{n-k}\qquad \text{for } n\geq 2
             </me>

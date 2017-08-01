@@ -6,7 +6,7 @@
         <p>At the outset of this chapter, we presented Erd&#337;s' original proof for the lower bound for the Ramsey number <m>R(n,n)</m> using counting.  Later, we recast the proof in a probabilistic setting. History has shown that this second perspective is the right one. To illustrate the power of this approach, we present a classic theorem, which is also due to Erd&#337;s, showing that there are graphs with large girth and large chromatic number.
         </p>
 
-        <p>The <term>girth</term><idx><h>girth</h></idx> <m>g</m> of a graph <m>G</m> is the smallest integer for which <m>G</m> contains a cycle on <m>g</m> vertices. The girth of a forest is taken to be infinite, while the girth of a graph is three if and only if it has a triangle. You can check the families of triangle-free, large chromatic number, graphs constructed in <xref ref="ch_graphs" autoname="yes" /> and see that each has girth four.
+        <p>The <term>girth</term><idx><h>girth</h></idx> <m>g</m> of a graph <m>G</m> is the smallest integer for which <m>G</m> contains a cycle on <m>g</m> vertices. The girth of a forest is taken to be infinite, while the girth of a graph is three if and only if it has a triangle. You can check the families of triangle-free, large chromatic number, graphs constructed in <xref ref="ch_graphs"  /> and see that each has girth four.
         </p>
 
         <theorem xml:id="thm_girth">
@@ -29,14 +29,14 @@
             <me>
                 E(X_1)=\binom{n}{s}(1-p)^{C(s,2)}
             </me>
-                Now we want <m>E(X_1)\lt 1/4</m>. Since <m>C(n,s)\le n^s=e^{s\ln n}</m> and <m>(1-p)^{C(s,2)}\le e^{-ps^2/2}</m>, it suffices to set <m>s=2\ln n/p</m>. By <xref ref="thm_markov" autoname="title" />, the probability that <m>X_1</m> exceeds <m>1/2\ge 2E(X_1)</m> is less than <m>1/2</m>.
+                Now we want <m>E(X_1)\lt 1/4</m>. Since <m>C(n,s)\le n^s=e^{s\ln n}</m> and <m>(1-p)^{C(s,2)}\le e^{-ps^2/2}</m>, it suffices to set <m>s=2\ln n/p</m>. By <xref ref="thm_markov" text="title" />, the probability that <m>X_1</m> exceeds <m>1/2\ge 2E(X_1)</m> is less than <m>1/2</m>.
             </p>
 
             <p>Now let <m>X_2</m> count the number of cycles in <m>G</m> of size at most <m>g</m>.  Then
             <me>
                 E(X_2)\le \sum_{i=3}^g n(n-1)(n-2)\dots(n-i+1) p^i\le g(pn)^g.
             </me>
-            Now, we want <m>E(X_2)\le n/4</m>, and an easy calculation shows that <m>g(np)^g\le n/4</m> when <m>p=n^{1/g-1}/10</m>. Again by <xref ref="thm_markov" autoname="title" />, the probability that <m>X_2</m> exceeds <m>n/2\ge 2E(X_2)</m> is less than <m>1/2</m>.
+            Now, we want <m>E(X_2)\le n/4</m>, and an easy calculation shows that <m>g(np)^g\le n/4</m> when <m>p=n^{1/g-1}/10</m>. Again by <xref ref="thm_markov" text="title" />, the probability that <m>X_2</m> exceeds <m>n/2\ge 2E(X_2)</m> is less than <m>1/2</m>.
             </p>
 
             <p>We conclude that there is a graph <m>G</m> for which <m>X_1=0</m> and <m>X_2\le n/2</m>.  Remove a vertex from each of the small cycles in <m>G</m> and let <m>H</m> be the graph that remains. Clearly, <m>H</m> has at least <m>n/2</m> vertices, no cycle of size at most<nbsp /><m>g</m> and no independent set of size <m>s</m>.  Finally, the inequality <m>n>2st</m> requires <m>n^{1/g}/(40\ln n)>t</m>.

@@ -10,7 +10,7 @@
         <p>Recall that when <m>n</m> is a positive integer, we let <m>[n]=\{1,2,\dots,n\}</m>. In this chapter, when <m>X</m> is a set and <m>k</m> is a non-negative integer with <m>k\le |X|</m>, we borrow from our in-line notation for binomial coefficients and let <m>C(X,k)</m><notation><usage>C(X,k)</usage><description>family of all <m>k</m>-element subsets of <m>X</m></description></notation> denote the family of all <m>k</m>-element subsets of <m>X</m>. So <m>|C([n],k)|=C(n,k)</m> whenever <m>0\le k\le n</m>.
         </p>
 
-        <p>Recall that the <xref ref="prop_pigeon" autoname="title" /> asserts that if <m>n+1</m> pigeons are placed in <m>n</m> holes, then there must be some hole into which two or more pigeons have been placed. More formally, if <m>n</m> and <m>k</m> are positive integers, <m>t>n(k-1)</m> and <m>f:[t]\longrightarrow[n]</m> is any function, then there is a <m>k</m>-element subset <m>H\subseteq [t]</m> and an element <m>j\in[n]</m> so that <m>f(i)=j</m> for every <m>i\in H</m>.
+        <p>Recall that the <xref ref="prop_pigeon" text="title" /> asserts that if <m>n+1</m> pigeons are placed in <m>n</m> holes, then there must be some hole into which two or more pigeons have been placed. More formally, if <m>n</m> and <m>k</m> are positive integers, <m>t>n(k-1)</m> and <m>f:[t]\longrightarrow[n]</m> is any function, then there is a <m>k</m>-element subset <m>H\subseteq [t]</m> and an element <m>j\in[n]</m> so that <m>f(i)=j</m> for every <m>i\in H</m>.
         </p>
 
         <p>We now embark on a study of an elegant extension of this basic result, one that continues to fascinate and challenge.

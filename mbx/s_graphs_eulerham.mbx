@@ -1,6 +1,6 @@
 <section xml:id="s_graphs_eulerham">
     <title>Eulerian and Hamiltonian Graphs</title>
-    <p>Graph theory is an area of mathematics that has found many applications in a variety of disciplines. Throughout this text, we will encounter a number of them. However, graph theory traces its origins to a problem in K&#xf6;nigsberg, Prussia (now Kaliningrad, Russia) nearly three centuries ago. The river Pregel passes through the city, and there are two large islands in the middle of the channel. These islands were connected to the mainland by seven bridges as indicated in <xref ref="fig_bridges" autoname="yes" />. It is said that the citizens of K&#xf6;nigsberg often wondered if it was possible for one to leave his home, walk through the city in such a way that he crossed each bridge precisely one time, and end up at home again. Leonhard Euler settled this problem in 1736 by using graph theory in the form of <xref ref="thm_eulerian" autoname="yes" />.
+    <p>Graph theory is an area of mathematics that has found many applications in a variety of disciplines. Throughout this text, we will encounter a number of them. However, graph theory traces its origins to a problem in K&#xf6;nigsberg, Prussia (now Kaliningrad, Russia) nearly three centuries ago. The river Pregel passes through the city, and there are two large islands in the middle of the channel. These islands were connected to the mainland by seven bridges as indicated in <xref ref="fig_bridges"  />. It is said that the citizens of K&#xf6;nigsberg often wondered if it was possible for one to leave his home, walk through the city in such a way that he crossed each bridge precisely one time, and end up at home again. Leonhard Euler settled this problem in 1736 by using graph theory in the form of <xref ref="thm_eulerian"  />.
     </p>
     <figure xml:id="fig_bridges" >
         <caption>The bridges of K&#xf6;nigsberg</caption>
@@ -77,7 +77,7 @@ g.show()
         </proof>
     </theorem>
 
-    <p>As an example, consider the graph <m>\bfG</m> shown in <xref ref="fig_graphs_eulerexample" autoname="yes" />.  Evidently, this graph is connected and all vertices have even degree.  Here is the sequence of circuits starting with the trivial circuit <m>C</m> consisting only of the vertex<nbsp /><m>1</m>.
+    <p>As an example, consider the graph <m>\bfG</m> shown in <xref ref="fig_graphs_eulerexample"  />.  Evidently, this graph is connected and all vertices have even degree.  Here is the sequence of circuits starting with the trivial circuit <m>C</m> consisting only of the vertex<nbsp /><m>1</m>.
     <md>
         <mrow>  C \amp =(1)</mrow>
         <mrow>  \amp =(1,2,4,3,1)\quad \text{start next from }2</mrow>
@@ -90,7 +90,7 @@ g.show()
         <caption>An Eulerian Graph</caption>
         <image width="55%" source="images/eulerian_graph" />
     </figure>
-    <p>You should note that <xref ref="thm_eulerian" autoname="yes" /> holds for loopless graphs in which multiple edges are allowed. Euler used his theorem to show that the multigraph of K&#xf6;nigsberg shown in <xref ref="fig_bridges-graph" autoname="yes" />, in which each land mass is a vertex and each bridge is an edge, is <em>not</em> eulerian, and thus the citizens could not find the route they desired. (Note that in <xref ref="fig_bridges-graph" autoname="yes" /> there are multiple edges between the same pair of vertices.)
+    <p>You should note that <xref ref="thm_eulerian"  /> holds for loopless graphs in which multiple edges are allowed. Euler used his theorem to show that the multigraph of K&#xf6;nigsberg shown in <xref ref="fig_bridges-graph"  />, in which each land mass is a vertex and each bridge is an edge, is <em>not</em> eulerian, and thus the citizens could not find the route they desired. (Note that in <xref ref="fig_bridges-graph"  /> there are multiple edges between the same pair of vertices.)
     </p>
     <figure xml:id="fig_bridges-graph" >
         <caption>The multigraph of K&#xf6;nigsberg's bridges</caption>
@@ -105,13 +105,13 @@ g.show()
     </ol>
     Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<idx><h>hamiltonian</h><h>cycle</h></idx>
     </p>
-    <p>The first graph shown in <xref ref="fig_eulham" autoname="yes" /> both eulerian and hamiltonian. The second is hamiltonian but not eulerian.
+    <p>The first graph shown in <xref ref="fig_eulham"  /> both eulerian and hamiltonian. The second is hamiltonian but not eulerian.
     </p>
     <figure xml:id="fig_eulham" >
         <caption>Eulerian and Hamiltonian Graphs</caption>
         <image width="80%" source="images/eulerian_hamiltonian_crop" />
     </figure>
-    <p>In <xref ref="fig_petersen" autoname="yes" />, we show a famous graph known as the Petersen graph. It is not hamiltonian.
+    <p>In <xref ref="fig_petersen"  />, we show a famous graph known as the Petersen graph. It is not hamiltonian.
     </p>
     <figure xml:id="fig_petersen" >
         <caption>The Petersen Graph</caption>

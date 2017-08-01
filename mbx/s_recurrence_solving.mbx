@@ -1,7 +1,7 @@
 <section xml:id="s_recurrence_solving">
     <title>Solving advancement operator equations</title>
     <introduction>
-        <p>In this section, we will explore some ways of solving advancement operator equations. Some we will make up just for the sake of solving, while others will be drawn from the examples we developed in <xref ref="s_recurrence_intro" autoname="yes" />. Again, readers familiar with differential equations will notice many similarities between the techniques used here and those used to solve linear differential equations with constant coefficients, but we will not give any further examples to make those parallels explicit.
+        <p>In this section, we will explore some ways of solving advancement operator equations. Some we will make up just for the sake of solving, while others will be drawn from the examples we developed in <xref ref="s_recurrence_intro"  />. Again, readers familiar with differential equations will notice many similarities between the techniques used here and those used to solve linear differential equations with constant coefficients, but we will not give any further examples to make those parallels explicit.
         </p>
     </introduction>
 
@@ -20,14 +20,14 @@
                 </p>
             </statement>
             <solution>
-                <p>Before focusing on finding <em>all</em> solutions as we've been asked to do, let's just try to find <em>some</em> solution. We start by noticing that here <m>p(A) = A^2+A-6 = (A+3)(A-2)</m>. With <m>p(A)</m> factored like this, we realize that we've already solved part of this problem in <xref ref="ex_recurrence_adveq" autoname="yes" />!  In that example, the polynomial of <m>A</m> we encountered was (while not explicitly stated as such there) <m>A-2</m>. The solutions to <m>(A-2)f_1=0</m> are of the form <m>f_1(n) = c_12^n</m>. What happens if we try such a function here? We have
+                <p>Before focusing on finding <em>all</em> solutions as we've been asked to do, let's just try to find <em>some</em> solution. We start by noticing that here <m>p(A) = A^2+A-6 = (A+3)(A-2)</m>. With <m>p(A)</m> factored like this, we realize that we've already solved part of this problem in <xref ref="ex_recurrence_adveq"  />!  In that example, the polynomial of <m>A</m> we encountered was (while not explicitly stated as such there) <m>A-2</m>. The solutions to <m>(A-2)f_1=0</m> are of the form <m>f_1(n) = c_12^n</m>. What happens if we try such a function here? We have
                 <me>
                     (A+3)(A-2)f_1(n) = (A+3)0 = 0,
                 </me>
-                so that <m>f_1</m> is a solution to our given advancement operator equation. Of course, it can't be <em>all</em> of them. However, it's not hard to see now that <m>(A+3)f_2 = 0</m> has as a solution <m>f_2(n) = c_2(-3)^n</m> by the same reasoning that we used in <xref ref="ex_recurrence_adveq" autoname="yes" />. Since <m>(A+3)(A-2) = (A-2)(A+3)</m>, we see right away that <m>f_2</m> is also a solution of <xref ref="eqn_recurrence_deg2" autoname="yes" />.
+                so that <m>f_1</m> is a solution to our given advancement operator equation. Of course, it can't be <em>all</em> of them. However, it's not hard to see now that <m>(A+3)f_2 = 0</m> has as a solution <m>f_2(n) = c_2(-3)^n</m> by the same reasoning that we used in <xref ref="ex_recurrence_adveq"  />. Since <m>(A+3)(A-2) = (A-2)(A+3)</m>, we see right away that <m>f_2</m> is also a solution of <xref ref="eqn_recurrence_deg2"  />.
                 </p>
 
-                <p>Now we've got two infinite families of solutions to <xref ref="eqn_recurrence_deg2" autoname="yes" />. Do they give us <em>all</em> the solutions? It turns out that by combining them, they do in fact give all of the solutions. Consider what happens if we take <m>f(n) = c_1 2^n + c_2 (-3)^n</m> and apply <m>p(A)</m> to it. We have
+                <p>Now we've got two infinite families of solutions to <xref ref="eqn_recurrence_deg2"  />. Do they give us <em>all</em> the solutions? It turns out that by combining them, they do in fact give all of the solutions. Consider what happens if we take <m>f(n) = c_1 2^n + c_2 (-3)^n</m> and apply <m>p(A)</m> to it. We have
                 <md>
                     <mrow>  (A+3)(A-2)f(n) \amp  = (A+3)(c_1 2^{n+1} + c_2 (-3)^{n+1} - 2(c_12^n +
                     c_2(-3)^n))</mrow>
@@ -37,7 +37,7 @@
                     <mrow>  \amp =0.</mrow>
                 </md>
                 </p>
-                <p>It's not all that hard to see that since <m>f</m> gives a two-parameter family of solutions to <xref ref="eqn_recurrence_deg2" autoname="yes" />, it gives us all the solutions, as we will show in detail in <xref ref="s_recurrence_rigorous" autoname="yes" />.
+                <p>It's not all that hard to see that since <m>f</m> gives a two-parameter family of solutions to <xref ref="eqn_recurrence_deg2"  />, it gives us all the solutions, as we will show in detail in <xref ref="s_recurrence_rigorous"  />.
                 </p>
             </solution>
         </example>
@@ -45,7 +45,7 @@
         </p>
         <example xml:id="ex_recurrence_ternary-strings-no-20-solved">
             <idx><h>string</h><h>ternary</h></idx>
-            <p>Let's revisit the problem of enumerating ternary strings of length <m>n</m> that do have <m>(2,0)</m> occurring as a substring in two consecutive positions that we encountered in <xref ref="ex_recurrence_ternary-strings-no-20" autoname="yes" />. There we saw that this number satisfies the recurrence equation
+            <p>Let's revisit the problem of enumerating ternary strings of length <m>n</m> that do have <m>(2,0)</m> occurring as a substring in two consecutive positions that we encountered in <xref ref="ex_recurrence_ternary-strings-no-20"  />. There we saw that this number satisfies the recurrence equation
             <me>
                 t_{n+2} = 3t_{n+1} - t_n,\qquad n\geq 1
             </me>
@@ -59,7 +59,7 @@
                 t(n) = c_1\left(\frac{3+\sqrt{5}}{2}\right)^n +
                 c_2\left(\frac{3-\sqrt{5}}{2}\right)^n.
             </me>
-            This probably looks suspicious; we're <em>counting strings</em> here, so <m>t(n)</m> needs to be a nonnegative integer, but the form we've given includes not just fractions but also square roots! However, if you look carefully, you'll see that using the binomial theorem to expand the terms in our expression for <m>t(n)</m> would get rid of all the square roots, so everything is good. (A faster way to convince yourself that this really satisfies <xref ref="eqn_recurrence_ternary" autoname="yes" /> is to mimic the verification we used in the previous example.)  Because we have initial values for <m>t(n)</m>, we are able to solve for <m>c_1</m> and <m>c_2</m> here. Evaluating at <m>n=0</m> and <m>n=1</m> we get
+            This probably looks suspicious; we're <em>counting strings</em> here, so <m>t(n)</m> needs to be a nonnegative integer, but the form we've given includes not just fractions but also square roots! However, if you look carefully, you'll see that using the binomial theorem to expand the terms in our expression for <m>t(n)</m> would get rid of all the square roots, so everything is good. (A faster way to convince yourself that this really satisfies <xref ref="eqn_recurrence_ternary"  /> is to mimic the verification we used in the previous example.)  Because we have initial values for <m>t(n)</m>, we are able to solve for <m>c_1</m> and <m>c_2</m> here. Evaluating at <m>n=0</m> and <m>n=1</m> we get
             <md>
                 <mrow>  3 \amp = c_1 + c_2</mrow>
                 <mrow>  8 \amp  = c_1\frac{3+\sqrt{5}}{2} + c_2 \frac{3-\sqrt{5}}{2}.</mrow>
@@ -187,7 +187,7 @@
             Let's try to find the general solution to this, since once we have that, we could find the specific solution corresponding to any given set of initial conditions.
             </p>
 
-            <p>When dealing with nonhomogeneous equations, we proceed in two steps. The reason for this will be made clear in <xref ref="lem_particular" autoname="yes" />, but let's focus on the method for the moment. Our first step is to find the general solution of the homogeneous equation corresponding to the given nonhomogeneous equation. In this case, the homogeneous equation we want to solve is
+            <p>When dealing with nonhomogeneous equations, we proceed in two steps. The reason for this will be made clear in <xref ref="lem_particular"  />, but let's focus on the method for the moment. Our first step is to find the general solution of the homogeneous equation corresponding to the given nonhomogeneous equation. In this case, the homogeneous equation we want to solve is
             <me>
                 (A+2)(A-6)f=0,
             </me>
@@ -256,7 +256,7 @@
         <p>What's the lesson we should take away from this example? When making a guess at a particular solution of a nonhomogeneous advancement operator equation, it does us no good to use any terms that are also solutions of the corresponding homogeneous equation, as they will be annihilated by the advancement operator polynomial. Let's see how this comes into play when finally resolving one of our longstanding examples.
         </p>
         <example xml:id="ex_recurrence_lines-solved">
-            <p>We're now ready to answer the question of how many regions are determined by <m>n</m> lines in the plane in general position as we discussed in <xref ref="s_recurrence_intro_lines" autoname="yes" />. We have the recurrence equation
+            <p>We're now ready to answer the question of how many regions are determined by <m>n</m> lines in the plane in general position as we discussed in <xref ref="s_recurrence_intro_lines"  />. We have the recurrence equation
             <me>
                 r_{n+1} = r_n + n+1,
             </me>

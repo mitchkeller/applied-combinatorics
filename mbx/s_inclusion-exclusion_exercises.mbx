@@ -62,9 +62,9 @@
     </exercise>
     <exercise>
         <statement>
-            <p>As in <xref ref="exa_inclusion-exclusion_prop-inject" autoname="yes" />, let <m>X</m> be the set of functions from <m>[n]</m> to <m>[m]</m> and let a function <m>f\in X</m> satisfy property <m>P_i</m> if there is no <m>j</m> such that <m>f(j)=i</m>.
+            <p>As in <xref ref="exa_inclusion-exclusion_prop-inject"  />, let <m>X</m> be the set of functions from <m>[n]</m> to <m>[m]</m> and let a function <m>f\in X</m> satisfy property <m>P_i</m> if there is no <m>j</m> such that <m>f(j)=i</m>.
                   <ol>
-                <li><p>Let the function <m>f\colon [8]\to [7]</m> be defined by <xref ref="tab_function_e-i-ex" autoname="yes" />. Does <m>f</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_3</m>? List all the properties <m>P_i</m> (with <m>i\leq 7</m>) satisfied by <m>f</m>.</p></li>
+                <li><p>Let the function <m>f\colon [8]\to [7]</m> be defined by <xref ref="tab_function_e-i-ex"  />. Does <m>f</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_3</m>? List all the properties <m>P_i</m> (with <m>i\leq 7</m>) satisfied by <m>f</m>.</p></li>
                 <li><p>Is it possible to define a function <m>g\colon [8]\to [7]</m> that satisfies no property <m>P_i</m>, <m>i\leq 7</m>? If so, give an example. If not, explain why not.</p></li>
                 <li><p>Is it possible to define a function <m>h\colon [8]\to [9]</m> that satisfies no property <m>P_i</m>, <m>i\leq 9</m>? If so, give an example. If not, explain why not.</p></li>
             
@@ -82,9 +82,9 @@
     </exercise>
     <exercise>
         <statement>
-            <p>As in <xref ref="exa_inclusion-exclusion_prop-derange" autoname="yes" />, let <m>X</m> be the set of permutations of <m>[n]</m> and say that <m>\sigma\in X</m> satisfies property <m>P_i</m> if <m>\sigma(i) = i</m>.
+            <p>As in <xref ref="exa_inclusion-exclusion_prop-derange"  />, let <m>X</m> be the set of permutations of <m>[n]</m> and say that <m>\sigma\in X</m> satisfies property <m>P_i</m> if <m>\sigma(i) = i</m>.
                   <ol>
-                <li><p>Let the permutation <m>\sigma\colon [8]\to [8]</m> be defined by <xref ref="tab_perm-e-i-ex" autoname="yes" />.  Does <m>\sigma</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_6</m>? List all the properties <m>P_i</m> (with <m>i\leq 8</m>) satisfied by <m>\sigma</m>.</p></li>
+                <li><p>Let the permutation <m>\sigma\colon [8]\to [8]</m> be defined by <xref ref="tab_perm-e-i-ex"  />.  Does <m>\sigma</m> satisfy property <m>P_2</m>? Why or why not? What about property <m>P_6</m>? List all the properties <m>P_i</m> (with <m>i\leq 8</m>) satisfied by <m>\sigma</m>.</p></li>
                 <li><p>Give an example of a permutation <m>\tau\colon[8]\to[8]</m> that satisfies properties <m>P_1</m>, <m>P_4</m>, and <m>P_8</m> and no other properties <m>P_i</m> with <m>1\leq i\leq 8</m>.</p></li>
                 <li><p>Give an example of a permutation <m>\pi\colon [8]\to[8]</m> that does not satisfy any property <m>P_i</m> with <m>1\leq i\leq 8</m>.</p></li>
             
@@ -101,7 +101,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>As in <xref ref="exa_inclusion-exclusion_prop-divis" autoname="yes" />, let <m>m</m> and <m>n</m> be positive integers and <m>X=[n]</m>. Say that <m>j\in X</m> satisfies property <m>P_i</m> for an <m>i</m> with <m>1\leq i\leq m</m> if <m>i</m> is a divisor of <m>j</m>.
+            <p>As in <xref ref="exa_inclusion-exclusion_prop-divis"  />, let <m>m</m> and <m>n</m> be positive integers and <m>X=[n]</m>. Say that <m>j\in X</m> satisfies property <m>P_i</m> for an <m>i</m> with <m>1\leq i\leq m</m> if <m>i</m> is a divisor of <m>j</m>.
                   <ol>
                 <li><p>Let <m>m=n=15</m>. Does <m>12</m> satisfy property <m>P_3</m>? Why or why not? What about property <m>P_5</m>? List the properties <m>P_i</m> with <m>1\leq i\leq 15</m> that <m>12</m> satisfies.</p></li>
                 <li><p>Give an example of an integer <m>j</m> with <m>1\leq j\leq 15</m> that satisfies exactly two properties <m>P_i</m> with <m>1\leq i\leq 15</m>.</p></li>
@@ -174,7 +174,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Determine <m>\phi(18)</m> by listing the integers it counts as well as by using the formula of <xref ref="thm_eulerphi" autoname="yes"/>.</p>
+            <p>Determine <m>\phi(18)</m> by listing the integers it counts as well as by using the formula of <xref ref="thm_eulerphi" />.</p>
         </statement>
     </exercise>
     <exercise>
@@ -193,7 +193,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Prove <xref ref="prop_num-divisible" autoname="yes" />.</p>
+            <p>Prove <xref ref="prop_num-divisible"  />.</p>
         </statement>
     </exercise>
     <exercise>

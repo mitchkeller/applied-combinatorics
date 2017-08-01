@@ -1,10 +1,10 @@
 <section xml:id="s_recurrence_genfunction">
     <title>Using generating functions to solve recurrences</title>
     <idx><h>generating function</h><h>and solving recurrences</h></idx>
-    <p>The approach we have seen thus far in this chapter is not the only way to solve recurrence equations. Additionally, it really only applies to linear recurrence equations with constant coefficients. In the remainder of the chapter, we will look at some examples of how generating functions can be used as another tool for solving recurrence equations. In this section, our focus will be on linear recurrence equations. In <xref ref="s_recurrence_rubots" autoname="yes" />, we will see how generating functions can solve a nonlinear recurrence.
+    <p>The approach we have seen thus far in this chapter is not the only way to solve recurrence equations. Additionally, it really only applies to linear recurrence equations with constant coefficients. In the remainder of the chapter, we will look at some examples of how generating functions can be used as another tool for solving recurrence equations. In this section, our focus will be on linear recurrence equations. In <xref ref="s_recurrence_rubots"  />, we will see how generating functions can solve a nonlinear recurrence.
     </p>
 
-    <p>Our first example is the homogeneous recurrence that corresponds to the advancement operator equation in <xref ref="ex_recurrence_deg2" autoname="yes" />.
+    <p>Our first example is the homogeneous recurrence that corresponds to the advancement operator equation in <xref ref="ex_recurrence_deg2"  />.
     </p>
     <example xml:id="ex_recurrence_gf-homog">
         <p>Consider the recurrence equation <m>r_{n}+r_{n-1}-6r_{n-2} = 0</m> for the sequence <m>\{r_n\colon n\geq 0\}</m> with <m>r_0=1</m> and <m>r_1=3</m>. This sequence has generating function

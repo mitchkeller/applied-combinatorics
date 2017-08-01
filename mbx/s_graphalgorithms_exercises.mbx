@@ -2,7 +2,7 @@
 <exercises xml:id="s_graphalgorithms_exercises">
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex1" autoname="yes"/>, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
+            <p>For the graph in <xref ref="fig_span_tree_ex1" />, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
             </p>
             <figure xml:id="fig_span_tree_ex1">
                 <caption>Find a minimum weight spanning tree</caption>
@@ -12,12 +12,12 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex1" autoname="yes"/>, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex1" />, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes"/>, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex2" />, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.</p>
             <figure xml:id="fig_span_tree_ex2">
                 <caption>Find a minimum weight spanning tree</caption>
                 <image width="65%" source="images/span_tree_ex2"/>
@@ -26,12 +26,12 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex2" autoname="yes"/>, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex2" />, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes"/>, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
+            <p>For the graph in <xref ref="fig_span_tree_ex3" />, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
             </p>
             <figure xml:id="fig_span_tree_ex3">
                 <caption>Find a minimum weight spanning tree</caption>
@@ -41,7 +41,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex3" autoname="yes"/>, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex3" />, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
         </statement>
     </exercise>
     <exercise>
@@ -72,7 +72,7 @@
     <exercise>
         <statement>
             <p>Prove
-            <xref ref="prop_graphalgorithms_spanforest" autoname="yes" />.</p>
+            <xref ref="prop_graphalgorithms_spanforest"  />.</p>
         </statement>
     </exercise>
     <exercise>
@@ -82,7 +82,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex1" autoname="yes"/> and a directed path of that length.
+            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex1" /> and a directed path of that length.
             </p>
             <figure xml:id="fig_graphalgorithms_dijkstra_ex1">
                 <caption>A directed graph</caption>
@@ -92,7 +92,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p><xref ref="tab_digraph1" autoname="yes" /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.
+            <p><xref ref="tab_digraph1"  /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.
             </p>
             <table xml:id="tab_digraph1">
                 <caption>A digraph represented as a table of data
@@ -169,7 +169,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex2" autoname="yes"/> and a directed path of that length.
+            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex2" /> and a directed path of that length.
             </p>
             <figure xml:id="fig_graphalgorithms_dijkstra_ex2">
                 <caption>A directed graph</caption>
@@ -179,7 +179,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p><xref ref="tab_digraph2" autoname="yes" /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.</p>
+            <p><xref ref="tab_digraph2"  /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.</p>
             <table xml:id="tab_digraph2">
                 <caption>A digraph represented as a table of data
                 </caption>

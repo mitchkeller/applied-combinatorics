@@ -7,7 +7,7 @@
         <p>Note that since we are dealing only with probability spaces <m>(S,P)</m> where <m>S</m> is a finite set, the range of the probability measure <m>P</m> is actually a finite set. Accordingly, we can rewrite the formula for <m>E(X)</m> as <m>\sum_y y\cdot \prob(X(x)=y)</m>, where the summation extends over a finite range of values for <m>y</m>.
         </p>
         <example>
-            <p>For the spinner shown in <xref ref="fig_spinner" autoname="yes" />, let <m>X(i)=i^2</m> where <m>i</m> is the number of the region. Then
+            <p>For the spinner shown in <xref ref="fig_spinner"  />, let <m>X(i)=i^2</m> where <m>i</m> is the number of the region. Then
             <me>
                 E(X)=\sum_{i\in S} i^2P(i)=1^2\frac{1}{8}+2^2\frac{2}{8}+3^2\frac{1}{8}+
                 4^2\frac{1}{8}+5^2\frac{3}{8}=\frac{109}{8}.

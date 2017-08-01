@@ -1,7 +1,7 @@
 <section xml:id="s_networkflow_example">
     <title>A Concrete Example</title>
     <introduction>
-        <p>Let's apply the Labeling Algorithm to the network flow shown in <xref ref="fig_networkflow_netflow" autoname="yes" />. Then we start with the source:
+        <p>Let's apply the Labeling Algorithm to the network flow shown in <xref ref="fig_networkflow_netflow"  />. Then we start with the source:
         <me>
             S:\quad(*,+,\infty)
         </me>
@@ -30,7 +30,7 @@
         <me>
             T:\quad(A,+,8)
         </me>
-        Now that the sink is labeled, we know there is an augmenting path. We discover this path by backtracking. The sink <m>T</m> got its label from <m>A</m>, <m>A</m> got its label from <m>B</m>, and <m>B</m> got its label from <m>S</m>.  Therefore, the augmenting path is <m>P=(S,B,A,T)</m> with <m>\delta=8</m>. All edges on this path are forward. The flow is then updated by increasing the flow on the edges of <m>P</m> by <m>8</m>. This results in the flow shown in <xref ref="fig_networkflow_updated-flow" autoname="yes" />. The value of this flow is <m>38</m>.
+        Now that the sink is labeled, we know there is an augmenting path. We discover this path by backtracking. The sink <m>T</m> got its label from <m>A</m>, <m>A</m> got its label from <m>B</m>, and <m>B</m> got its label from <m>S</m>.  Therefore, the augmenting path is <m>P=(S,B,A,T)</m> with <m>\delta=8</m>. All edges on this path are forward. The flow is then updated by increasing the flow on the edges of <m>P</m> by <m>8</m>. This results in the flow shown in <xref ref="fig_networkflow_updated-flow"  />. The value of this flow is <m>38</m>.
         </p>
         <figure xml:id="fig_networkflow_updated-flow" >
             <caption>An Updated Network Flow</caption>
@@ -53,7 +53,7 @@
 
     <subsection>
         <title>How the Labeling Algorithm Halts</title>
-        <p>Consider the network flow in <xref ref="fig_networkflow_flow4" autoname="yes" />.
+        <p>Consider the network flow in <xref ref="fig_networkflow_flow4"  />.
         </p>
         <figure xml:id="fig_networkflow_flow4" >
             <caption>Another Network Flow</caption>

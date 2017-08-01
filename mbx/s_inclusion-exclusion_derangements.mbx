@@ -1,6 +1,6 @@
 <section xml:id="s_inclusion-exclusion_derangements">
     <title>Derangements</title>
-    <p>Now let's consider a situation where we can make use of the properties defined in <xref ref="exa_inclusion-exclusion_prop-derange" autoname="yes" />. Fix a positive integer <m>n</m> and let <m>X</m> denote the set of all permutations on <m>[n]</m>. A permutation <m>\sigma\in X</m> is called a <term>derangement</term><idx><h>derangement</h></idx> if <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. For example, the permutation <m>\sigma</m> given below is a derangement, while <m>\tau</m> is not.
+    <p>Now let's consider a situation where we can make use of the properties defined in <xref ref="exa_inclusion-exclusion_prop-derange"  />. Fix a positive integer <m>n</m> and let <m>X</m> denote the set of all permutations on <m>[n]</m>. A permutation <m>\sigma\in X</m> is called a <term>derangement</term><idx><h>derangement</h></idx> if <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. For example, the permutation <m>\sigma</m> given below is a derangement, while <m>\tau</m> is not.
     </p>
     <sidebyside>
         <tabular>
@@ -54,7 +54,7 @@
         </proof>
     </lemma>
 
-    <p>As before, the principal result of this section follows immediately from the lemma and the <xref ref="thm_inclusion-exclusion" autoname="title" />.
+    <p>As before, the principal result of this section follows immediately from the lemma and the <xref ref="thm_inclusion-exclusion" text="title" />.
     </p>
 
     <theorem>

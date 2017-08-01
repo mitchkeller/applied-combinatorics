@@ -18,7 +18,7 @@
             <p>On the other hand, if Assigner <m>x</m> and <m>y</m> the same color, then in Round<nbsp />3, Builder presents a vertex <m>z</m>, with <m>z</m> adjacent to <m>x</m> but not to <m>y</m>. Assigner must use a second color on <m>z</m>, distinct from the one she gave to <m>x</m> and <m>y</m>. In Round<nbsp />4, Builder presents a vertex <m>w</m> adjacent to <m>z</m> and <m>y</m> but not to <m>x</m>. Assigner must use a third color on <m>w</m>.
             </p>
         </example>
-        <p>Note that a path is a tree and trees are forests. The next result shows that while forests are trivial to color off-line, there is a genuine challenge ahead when you have to work on-line. To assist us in keeping track of the colors used by Assigner, we will use the notation from <xref ref="ch_graphs" autoname="yes" /> and write <m>\phi(x)</m> for the color given by Assigner to vertex <m>x</m>.
+        <p>Note that a path is a tree and trees are forests. The next result shows that while forests are trivial to color off-line, there is a genuine challenge ahead when you have to work on-line. To assist us in keeping track of the colors used by Assigner, we will use the notation from <xref ref="ch_graphs"  /> and write <m>\phi(x)</m> for the color given by Assigner to vertex <m>x</m>.
         </p>
 
         <theorem xml:id="thm_olforest">
@@ -29,7 +29,7 @@
             </statement>
 
             <proof>
-                <p>When <m>n=1</m>, all Builder does is present a single vertex. When <m>n=2</m>, two adjacent vertices are enough. When <m>n=3</m>, Builder constructs a path on <m>4</m> vertices as detailed in <xref ref="exa_P4" autoname="yes" />.  Now assume that for some <m>k\ge3</m>, Builder has a strategy <m>S_i</m> for forcing Assigner to use <m>i</m> colors on a forest of at most <m>2^{i-1}</m> vertices, for each <m>i=1,2,\dots,k</m>. Here's how Builder proceeds to force <m>k+1</m> colors.
+                <p>When <m>n=1</m>, all Builder does is present a single vertex. When <m>n=2</m>, two adjacent vertices are enough. When <m>n=3</m>, Builder constructs a path on <m>4</m> vertices as detailed in <xref ref="exa_P4"  />.  Now assume that for some <m>k\ge3</m>, Builder has a strategy <m>S_i</m> for forcing Assigner to use <m>i</m> colors on a forest of at most <m>2^{i-1}</m> vertices, for each <m>i=1,2,\dots,k</m>. Here's how Builder proceeds to force <m>k+1</m> colors.
                 </p>
 
                 <p>First, for each <m>i=1,2,\dots,k</m>, Builder follows strategy <m>S_i</m> to build a forest <m>F_i</m> having at most <m>2^{i-1}</m> vertices on which assigner is forced to use <m>i</m> colors. Furthermore, when <m>1\le i\lt j\le k</m>, there are no edges between vertices in <m>F_i</m> and vertices in <m>F_j</m>.
@@ -48,7 +48,7 @@
 
     <subsection>
         <title>Doing Relatively Well in an On-Line Setting</title>
-        <p><xref ref="thm_olforest" autoname="yes" /> should be viewed as a negative result. It is hard to imagine a family of graphs easier to color than forests, yet in an on-line setting, graphs in this family are difficult to color. On the other hand, in certain settings, one can do reasonably well in an on-line setting, perhaps not as well as the true optimal off-line result but good enough to be useful. Here we present a particularly elegant example involving partially ordered sets.
+        <p><xref ref="thm_olforest"  /> should be viewed as a negative result. It is hard to imagine a family of graphs easier to color than forests, yet in an on-line setting, graphs in this family are difficult to color. On the other hand, in certain settings, one can do reasonably well in an on-line setting, perhaps not as well as the true optimal off-line result but good enough to be useful. Here we present a particularly elegant example involving partially ordered sets.
         </p>
 
         <p>Recall that a poset <m>P</m> of height <m>h</m> can be partitioned into <m>h</m> antichains<mdash />by recursively removing the set of minimal elements.  But how many antichains are required in an on-line setting?  Now Builder constructs a poset <m>P</m> one point at a time, while Assigner constructs a partition of <m>P</m> into antichains.  At each round, Builder will present a new point <m>x</m>, and list those points presented earlier that are, respectively, less than <m>x</m>, greater than <m>x</m> and incomparable with <m>x</m>. Subsequently, Assigner will assign <m>x</m> to an antichain. This will be done either by adding <m>x</m> to an antichain already containing one or more of the points presented previously, or by assigning <m>x</m> to a new antichain.
@@ -74,7 +74,7 @@
                 <p>Now suppose that <m>y>x</m> in <m>P</m>. Then we can add <m>x</m> to <m>C'</m> to form a chain of <m>r+1</m> points having <m>x</m> as its least element.  This would imply that <m>x</m> is not assigned in <m>A(r,s)</m>. Similarly, if <m>y\lt x</m> in <m>P</m>, then we may add <m>x</m> to <m>D'</m> to form a chain of <m>s+1</m> points having <m>x</m> as its greatest element. Again, this would imply that <m>x</m> is not assigned to <m>A(r,s)</m>.
                 </p>
 
-                <p>So Assigner has indeed devised a good strategy for partitioning <m>P</m> into antichains, but how many antichains has she used?  This is just asking how many ordered pairs <m>(i,j)</m> of positive integers are there subject to the restriction that <m>i+j-1\le h</m>. And we learned how to solve this kind of question in <xref ref="ch_strings" autoname="yes" />.  The answer of course is <m>\binom{h+1}{2}</m>.
+                <p>So Assigner has indeed devised a good strategy for partitioning <m>P</m> into antichains, but how many antichains has she used?  This is just asking how many ordered pairs <m>(i,j)</m> of positive integers are there subject to the restriction that <m>i+j-1\le h</m>. And we learned how to solve this kind of question in <xref ref="ch_strings"  />.  The answer of course is <m>\binom{h+1}{2}</m>.
                 </p>
             </proof>
         </theorem>

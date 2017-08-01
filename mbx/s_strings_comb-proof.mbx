@@ -6,7 +6,7 @@
     <example>
         <statement>
             <p>
-                Let <m>n</m> be a positive integer. Use <xref ref="fig_squaredots" autoname="yes" /> to explain why
+                Let <m>n</m> be a positive integer. Use <xref ref="fig_squaredots"  /> to explain why
             <me>
                 1+2+3+\dots+n=\frac{n(n+1)}{2}.
             </me>
@@ -17,7 +17,7 @@
             </figure>
         </statement>
         <solution>
-            <p>Consider an <m>(n+1)\times (n+1)</m> array of dots as depicted in <xref ref="fig_squaredots" autoname="yes" />. There are <m>(n+1)^2</m> dots altogether, with exactly <m>n+1</m> on the main diagonal.  The off-diagonal entries split naturally into two equal size parts, those above and those below the diagonal.
+            <p>Consider an <m>(n+1)\times (n+1)</m> array of dots as depicted in <xref ref="fig_squaredots"  />. There are <m>(n+1)^2</m> dots altogether, with exactly <m>n+1</m> on the main diagonal.  The off-diagonal entries split naturally into two equal size parts, those above and those below the diagonal.
             </p>
 
             <p>Furthermore, each of those two parts has <m>S(n)=1+2+3+\dots+n</m> dots.  It follows that
@@ -46,7 +46,7 @@
             <p>
                 The left hand side is just the
                 sum of the first <m>n</m> odd integers. But as suggested in
-                <xref ref="fig_oddsum2" autoname="yes" />, this is clearly equal to <m>n^2</m>.
+                <xref ref="fig_oddsum2"  />, this is clearly equal to <m>n^2</m>.
             </p>
         </solution>
     </example>

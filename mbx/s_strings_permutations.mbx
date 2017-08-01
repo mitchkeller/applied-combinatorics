@@ -38,7 +38,7 @@
         </proof>
     </proposition>
 
-    <p>Note that the answer we arrived at in <xref ref="exa_strings_perm" autoname="yes" /> is simply <m>P(26,6)</m> as we would expect in light of <xref ref="prop_strings_permutations" autoname="yes" />.
+    <p>Note that the answer we arrived at in <xref ref="exa_strings_perm"  /> is simply <m>P(26,6)</m> as we would expect in light of <xref ref="prop_strings_permutations"  />.
     </p>
     <example xml:id="exa_strings_officers">
         <statement>
@@ -52,7 +52,7 @@
     </example>
 
     <example>
-        <p>Let's return to the license plate question of <xref ref="exa_strings_ga-plate" autoname="yes" />. Suppose that Georgia required that the three letters be distinct from each other. Then, instead of having <m>26^3=17\,576</m> ways to fill the last three positions on the license plate, we'd have <m>P(26,3) = 26\times 25\times 24 = 15\,600</m> options, giving a total of <m>140\,400\,000</m> license plates.
+        <p>Let's return to the license plate question of <xref ref="exa_strings_ga-plate"  />. Suppose that Georgia required that the three letters be distinct from each other. Then, instead of having <m>26^3=17\,576</m> ways to fill the last three positions on the license plate, we'd have <m>P(26,3) = 26\times 25\times 24 = 15\,600</m> options, giving a total of <m>140\,400\,000</m> license plates.
         </p>
         <p>As another example, suppose that repetition of letters were allowed but the three digits in positions two through four must all be distinct from each other (but could repeat the first digit, which must still be nonzero). Then there are still <m>9</m> options for the first position and <m>26^3</m> options for the letters, but the three remaining digits can be completed in <m>P(10,3)</m> ways. The total number of license plates would then be <m>9\times P(10,3)\times 26^3</m>. If we want to prohibit repetition of the digit in the first position as well, we need a bit more thought. We first have <m>9</m> choices for that initial digit. Then, when filling in the next three positions with digits, we need a permutation of length <m>3</m> chosen from the remaining <m>9</m> digits. Thus, there are <m>9\times P(9,3)</m> ways to complete the digits portion, giving a total of <m>9\times P(9,3)\times 26^3</m> license plates.
             </p>

@@ -7,7 +7,7 @@
         <p>The office assistant is distributing supplies. In how many ways can he distribute 18 identical folders among four office employees: Audrey, Bart, Cecilia and Darren, with the additional restriction that each will receive at least one folder?
         </p>
 
-        <p>Imagine the folders placed in a row. Then there are 17 gaps between them. Of these gaps, choose three and place a divider in each.  Then this choice divides the folders into four non-empty sets. The first goes to Audrey, the second to Bart, <etc /> Thus the answer is <m>C(17,3)</m>. In <xref ref="fig_distrib" autoname="yes" />, we illustrate this scheme with Audrey receiving<nbsp /><m>6</m> folders, Bart getting<nbsp /><m>1</m>, Cecilia<nbsp /><m>4</m> and Darren<nbsp />7.
+        <p>Imagine the folders placed in a row. Then there are 17 gaps between them. Of these gaps, choose three and place a divider in each.  Then this choice divides the folders into four non-empty sets. The first goes to Audrey, the second to Bart, <etc /> Thus the answer is <m>C(17,3)</m>. In <xref ref="fig_distrib"  />, we illustrate this scheme with Audrey receiving<nbsp /><m>6</m> folders, Bart getting<nbsp /><m>1</m>, Cecilia<nbsp /><m>4</m> and Darren<nbsp />7.
         </p>
         <figure xml:id="fig_distrib" >
             <caption>Distributing Identical Objects into Distinct
@@ -66,7 +66,7 @@
         <li><m>m_{i+1}=m_i</m> and <m>n_{i+1}=n_{i}+1</m>.</li>
     </ol>
     </p>
-    <p>In <xref ref="fig_latticepath" autoname="yes" />, we show a lattice path from <m>(0,0)</m> to <m>(13,8)</m>.
+    <p>In <xref ref="fig_latticepath"  />, we show a lattice path from <m>(0,0)</m> to <m>(13,8)</m>.
     </p>
     <figure xml:id="fig_latticepath" >
         <caption>A Lattice Path</caption>
@@ -93,7 +93,7 @@
         <p>Let <m>\cgG</m> and <m>\cgB</m> denote the family of all good and bad paths, respectively. Of course, our goal is to determine <m>|\cgG|</m>.
         </p>
 
-        <p>Consider a path <m>s\in\cgB</m>. Then there is a least integer <m>i</m> so that <m>s</m> has more <m>V</m>'s than <m>H</m>'s in the first <m>i</m> positions. By the minimality of <m>i</m>, it is easy to see that <m>i</m> must be odd (otherwise, we can back up a step), and if we set <m>i=2j+1</m>, then in the first <m>2j+1</m> positions of <m>s</m>, there are exactly <m>j</m> <m>H</m>'s and <m>j+1</m> <m>V</m>'s. The remaining <m>2n-2j-1</m> positions (the <q>tail of <m>s</m></q>) have <m>n-j</m> <m>H</m>'s and <m>n-j-1</m> <m>V</m>'s. We now transform <m>s</m> to a new string <m>s'</m> by replacing the <m>H</m>'s in the tail of <m>s</m> by <m>V</m>'s and the <m>V</m>'s in the tail of <m>s</m> by <m>H</m>'s and leaving the initial <m>2j+1</m> positions unchanged. For example, see <xref ref="flippath" autoname="yes" />, where the path <m>s</m> is shown solid and <m>s'</m> agrees with <m>s</m> until it crosses the line <m>y=x</m> and then is the dashed path. Then <m>s'</m> is a string of length <m>2n</m> having <m>(n-j)+(j+1) = n+1</m> <m>V</m>'s and <m>(n-j-1)+j=n-1</m> <m>H</m>'s, so <m>s'</m> is a lattice path from <m>(0,0)</m> to <m>(n-1,n+1)</m>. Note that there are <m>\binom{2n}{n-1}</m> such lattice paths.
+        <p>Consider a path <m>s\in\cgB</m>. Then there is a least integer <m>i</m> so that <m>s</m> has more <m>V</m>'s than <m>H</m>'s in the first <m>i</m> positions. By the minimality of <m>i</m>, it is easy to see that <m>i</m> must be odd (otherwise, we can back up a step), and if we set <m>i=2j+1</m>, then in the first <m>2j+1</m> positions of <m>s</m>, there are exactly <m>j</m> <m>H</m>'s and <m>j+1</m> <m>V</m>'s. The remaining <m>2n-2j-1</m> positions (the <q>tail of <m>s</m></q>) have <m>n-j</m> <m>H</m>'s and <m>n-j-1</m> <m>V</m>'s. We now transform <m>s</m> to a new string <m>s'</m> by replacing the <m>H</m>'s in the tail of <m>s</m> by <m>V</m>'s and the <m>V</m>'s in the tail of <m>s</m> by <m>H</m>'s and leaving the initial <m>2j+1</m> positions unchanged. For example, see <xref ref="flippath"  />, where the path <m>s</m> is shown solid and <m>s'</m> agrees with <m>s</m> until it crosses the line <m>y=x</m> and then is the dashed path. Then <m>s'</m> is a string of length <m>2n</m> having <m>(n-j)+(j+1) = n+1</m> <m>V</m>'s and <m>(n-j-1)+j=n-1</m> <m>H</m>'s, so <m>s'</m> is a lattice path from <m>(0,0)</m> to <m>(n-1,n+1)</m>. Note that there are <m>\binom{2n}{n-1}</m> such lattice paths.
         </p>
         <figure xml:id="flippath" >
             <caption>Transforming a Lattice Path</caption>
@@ -107,6 +107,6 @@
         after a bit of algebra.
         </p>
     </example>
-    <p>It is worth observing that in <xref ref="exa_lattice-Catalan" autoname="yes" />, we made use of two common enumerative techniques: giving a bijection between two classes of objects, one of which is <q>easier</q> to count than the other, and counting the objects we do <em>not</em> wish to enumerate and deducting their number from the total.
+    <p>It is worth observing that in <xref ref="exa_lattice-Catalan"  />, we made use of two common enumerative techniques: giving a bijection between two classes of objects, one of which is <q>easier</q> to count than the other, and counting the objects we do <em>not</em> wish to enumerate and deducting their number from the total.
     </p>
 </section>

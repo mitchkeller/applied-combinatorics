@@ -278,7 +278,7 @@
             where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of <m>4</m>, and <m>1\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of the inequality subject to these restrictions. Find the generating function for the sequence <m>\{c_n\colon n\geq 0\}</m> and use it to find a closed formula for <m>c_n</m>.</p>
         </statement>
         <hint>
-            <p>Yes, this is very close to <xref ref="ex_genfunction_ineq-clean" autoname="yes" />. However, the bounds on <m>x_4</m> are different here. You might try using a computer algebra system to expedite finding the partial fractions expansion, which will have several terms whose power series you can work with quickly. For the term involving <m>1/(1+x^2)</m>, work out the series by hand. You may find that your solution to this problem has two parts<mdash />one for when <m>n</m> is even and another for when <m>n</m> is odd.</p>
+            <p>Yes, this is very close to <xref ref="ex_genfunction_ineq-clean"  />. However, the bounds on <m>x_4</m> are different here. You might try using a computer algebra system to expedite finding the partial fractions expansion, which will have several terms whose power series you can work with quickly. For the term involving <m>1/(1+x^2)</m>, work out the series by hand. You may find that your solution to this problem has two parts<mdash />one for when <m>n</m> is even and another for when <m>n</m> is odd.</p>
         </hint>
     </exercise>
 

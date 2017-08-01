@@ -49,7 +49,7 @@
         <me>
             p(A)(f+g)=p(A)f+p(A)g\quad\text{ and } \quad p(a)(\alpha f)=\alpha p(A)(f).
         </me>
-        What takes a bit of work is to show that <m>W</m> is a <m>k</m>-dimensional subspace. But once this is done, then to solve the advancement operator equation given in the form of <xref ref="thm_advance" autoname="yes" />, it suffices to find a <term>basis</term> for the vector space <m>W</m>.  Every solution is just a linear combination of basis vectors.  In the next several subsections, we outline how this goal can be achieved.
+        What takes a bit of work is to show that <m>W</m> is a <m>k</m>-dimensional subspace. But once this is done, then to solve the advancement operator equation given in the form of <xref ref="thm_advance"  />, it suffices to find a <term>basis</term> for the vector space <m>W</m>.  Every solution is just a linear combination of basis vectors.  In the next several subsections, we outline how this goal can be achieved.
         </p>
     </subsection>
 
@@ -85,19 +85,19 @@
                     <men xml:id="eqn_homogeneous" >
                         p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0.
                     </men>
-                    If <m>f_0</m> is a solution to <xref ref="eqn_nonhomogeneous" autoname="yes" />, then every solution <m>f</m> to <xref ref="eqn_nonhomogeneous" autoname="yes" /> has the form <m>f=f_0+f_1</m> where <m>f_1\in W</m>.
+                    If <m>f_0</m> is a solution to <xref ref="eqn_nonhomogeneous"  />, then every solution <m>f</m> to <xref ref="eqn_nonhomogeneous"  /> has the form <m>f=f_0+f_1</m> where <m>f_1\in W</m>.
                 </p>
             </statement>
             <proof>
-                <p>Let <m>f</m> be a solution of <xref ref="eqn_nonhomogeneous" autoname="yes" />, and let <m>f_1=f-f_0</m>.  Then
+                <p>Let <m>f</m> be a solution of <xref ref="eqn_nonhomogeneous"  />, and let <m>f_1=f-f_0</m>.  Then
                 <me>
                     p(A)f_1 = p(A)(f-f_0)=p(A)f-p(A)f_0=g-g=0.
                 </me>
-                This implies that <m>f_1\in W</m> and that <m>f=f_0+f_1</m> so that all solutions to <xref ref="eqn_nonhomogeneous" autoname="yes" /> do in fact have the desired form.
+                This implies that <m>f_1\in W</m> and that <m>f=f_0+f_1</m> so that all solutions to <xref ref="eqn_nonhomogeneous"  /> do in fact have the desired form.
                 </p>
             </proof>
         </lemma>
-        <p>Using the preceding two results, we can now provide an outline of the inductive step in the proof of <xref ref="thm_advance" autoname="yes" />, at least in the case where the polynomial in the advancement operator has distinct roots.
+        <p>Using the preceding two results, we can now provide an outline of the inductive step in the proof of <xref ref="thm_advance"  />, at least in the case where the polynomial in the advancement operator has distinct roots.
         </p>
 
         <theorem>
@@ -107,22 +107,22 @@
                     <men xml:id="eqn_distinct" >
                         p(A)f=(A-r_1)(A-r_2)\dots(A-r_k)f=0.
                     </men>
-                    with <m>r_1,r_2,\dots,r_k</m> distinct non-zero constants.  Then every solution to <xref ref="eqn_distinct" autoname="yes" /> has the form
+                    with <m>r_1,r_2,\dots,r_k</m> distinct non-zero constants.  Then every solution to <xref ref="eqn_distinct"  /> has the form
                     <me>
                         f(n)=c_1r_1^n+c_2 r_2^n+c_3r_3^n+\dots+c_kr_k^n.
                     </me>
                 </p>
             </statement>
             <proof>
-                <p>The case <m>k=1</m> is <xref ref="lem_base" autoname="yes" />. Now suppose we have established the theorem for some positive integer <m>m</m> and consider the case <m>k=m+1</m>. Rewrite <xref ref="eqn_distinct" autoname="yes" /> as
+                <p>The case <m>k=1</m> is <xref ref="lem_base"  />. Now suppose we have established the theorem for some positive integer <m>m</m> and consider the case <m>k=m+1</m>. Rewrite <xref ref="eqn_distinct"  /> as
                 <me>
                     (A-r_1)(A-r_2)\dots(A-r_m)[(A-r_{m+1})f]=0.
                 </me>
-                By the inductive hypothesis, it follows that if <m>f</m> is a solution to <xref ref="eqn_distinct" autoname="yes" />, then <m>f</m> is also a solution to the nonhomogeneous equation
+                By the inductive hypothesis, it follows that if <m>f</m> is a solution to <xref ref="eqn_distinct"  />, then <m>f</m> is also a solution to the nonhomogeneous equation
                 <men xml:id="eqn_distinct2" >
                     (A-r_{m+1})f=d_1r_1^n+d_2r_2^n+\dots+d_mr_m^n.
                 </men>
-                To find a particular solution <m>f_0</m> to <xref ref="eqn_distinct2" autoname="yes" />, we look for a solution having the form
+                To find a particular solution <m>f_0</m> to <xref ref="eqn_distinct2"  />, we look for a solution having the form
                 <men xml:id="eqn_distinct3" >
                     f_0(n)= c_1 r_1^n+c_2 r_2^n+\dots+c_m r_m^n.
                 </men>
@@ -155,7 +155,7 @@
                 <men xml:id="eqn_rr" >
                     (A-r)^kf=0.
                 </men>
-                Then the general solution to <xref ref="eqn_rr" autoname="yes" /> has the following form
+                Then the general solution to <xref ref="eqn_rr"  /> has the following form
                 <men xml:id="eqn_solutionrr" >
                     f(n)=c_1r^n+c_2nr^n+c_3n^2r^n+c_4n^3r^n+\dots+c_kn^{k-1}r^n.
                 </men>
