@@ -1,6 +1,6 @@
 <section xml:id="s_background_finite-sets">
     <title>Finite Sets</title>
-    <p>A set <m>X</m> is said to be <term>finite</term><index><main>set</main><sub>finite</sub></index> when either (1) <m>X=\emptyset</m>; or (2) there exists positive integer <m>n</m> and a bijection <m>f:[n]\bijection X</m>.  When <m>X</m> is not finite, it is called <term>infinite</term><index><main>set</main><sub>infinite</sub></index>. For example, <m>\{a,\emptyset,(3,2),\posints\}</m> is a finite set as is <m>\posints\times\emptyset</m>. On the other hand, <m>\posints\times \{\emptyset\}</m> is infinite. Of course, <m>[n]</m> and <m>\bfn</m> are finite sets for every <m>n\in\posints</m>.
+    <p>A set <m>X</m> is said to be <term>finite</term><idx><h>set</h><h>finite</h></idx> when either (1) <m>X=\emptyset</m>; or (2) there exists positive integer <m>n</m> and a bijection <m>f:[n]\bijection X</m>.  When <m>X</m> is not finite, it is called <term>infinite</term><idx><h>set</h><h>infinite</h></idx>. For example, <m>\{a,\emptyset,(3,2),\posints\}</m> is a finite set as is <m>\posints\times\emptyset</m>. On the other hand, <m>\posints\times \{\emptyset\}</m> is infinite. Of course, <m>[n]</m> and <m>\bfn</m> are finite sets for every <m>n\in\posints</m>.
     </p>
 
     <proposition>
@@ -51,7 +51,7 @@
         </statement>
     </proposition>
 
-    <p>When <m>X</m> is a finite non-empty set, the <term>cardinality</term><index><main>cardinality</main></index> of <m>X</m>, denoted <m>|X|</m> <notation><usage>|X|</usage><description>cardinality of set <m>X</m></description></notation>is the unique positive integer <m>n</m> for which there is a bijection <m>f:[n]\bijection X</m>. Intuitively, <m>|X|</m> is the number of elements in <m>X</m>. For example,
+    <p>When <m>X</m> is a finite non-empty set, the <term>cardinality</term><idx><h>cardinality</h></idx> of <m>X</m>, denoted <m>|X|</m> <notation><usage>|X|</usage><description>cardinality of set <m>X</m></description></notation>is the unique positive integer <m>n</m> for which there is a bijection <m>f:[n]\bijection X</m>. Intuitively, <m>|X|</m> is the number of elements in <m>X</m>. For example,
     <me>
         |\{(6,2), (8,(4,\emptyset)), \{3,\{5\}\}\}|=3.
     </me>

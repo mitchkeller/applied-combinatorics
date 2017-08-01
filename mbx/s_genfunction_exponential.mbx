@@ -1,6 +1,6 @@
 <section xml:id="s_genfunction_exponential">
     <title>Exponential generating functions</title>
-    <p>If we had wanted to be absolutely precise earlier in the chapter, we would have referred to the generating functions we studied as <term>ordinary generating functions</term> or even <term>ordinary power series generating functions</term>.<index><main>generating function</main><sub>ordinary</sub></index> This is because there are other types of generating functions, based on other types of power series. In this section, we briefly introduce another type of generating function, the <term>exponential generating function</term>.<index><main>generating function</main><sub>exponential</sub></index> While an ordinary generating function has the form <m>\sum_{n} a_n x^n</m>, an exponential generating function is based on the power series for the exponential function <m>e^x</m>. Thus, the exponential generating function for the sequence <m>\{a_n\colon n\geq 0\}</m> is <m>\sum_n a_n x^n/n!</m>. In this section, we will see some ways we can use exponential generating functions to solve problems that we could not tackle with ordinary generating functions. However, we will only scratch the surface of the potential of this type of generating function. We begin with the most fundamental exponential generating function, in analogy with the ordinary generating function <m>1/(1-x)</m> of <xref ref="exam_genfunction_geom-series" autoname="yes" />.
+    <p>If we had wanted to be absolutely precise earlier in the chapter, we would have referred to the generating functions we studied as <term>ordinary generating functions</term> or even <term>ordinary power series generating functions</term>.<idx><h>generating function</h><h>ordinary</h></idx> This is because there are other types of generating functions, based on other types of power series. In this section, we briefly introduce another type of generating function, the <term>exponential generating function</term>.<idx><h>generating function</h><h>exponential</h></idx> While an ordinary generating function has the form <m>\sum_{n} a_n x^n</m>, an exponential generating function is based on the power series for the exponential function <m>e^x</m>. Thus, the exponential generating function for the sequence <m>\{a_n\colon n\geq 0\}</m> is <m>\sum_n a_n x^n/n!</m>. In this section, we will see some ways we can use exponential generating functions to solve problems that we could not tackle with ordinary generating functions. However, we will only scratch the surface of the potential of this type of generating function. We begin with the most fundamental exponential generating function, in analogy with the ordinary generating function <m>1/(1-x)</m> of <xref ref="exam_genfunction_geom-series" autoname="yes" />.
     </p>
     <example>
         <p>Consider the constant sequence <m>1, 1, 1, 1, \dots</m>. Then the exponential generating function for this sequence is
@@ -17,7 +17,7 @@
     <p>In our study of ordinary generating functions earlier in this chapter, we considered examples where quantity (number of apples, <etc />)  mattered but order did not. One of the areas where exponential generating functions are preferable to ordinary generating functions is in applications where order matters, such as counting strings. For instance, although the bit strings <m>10001</m> and <m>011000</m> both contain three zeros and two ones, they are not the same strings. On the other hand, two fruit baskets containing two apples and three oranges would be considered equivalent, regardless of how you arranged the fruit. We now consider a couple of examples to illustrate this technique.
     </p>
     <example>
-        <index><main>string</main><sub>ternary</sub></index>
+        <idx><h>string</h><h>ternary</h></idx>
         <p>Suppose we wish to find the number of ternary strings in which the number of <m>0</m>s is even. (There are no restrictions on the number of <m>1</m>s and <m>2</m>s.) As with ordinary generating functions, we determine a generating function for each of the digits and multiply them. For <m>1</m>s and <m>2</m>s, since we may have any number of each of them, we introduce a factor of <m>e^x</m> for each. For an even number of <m>0</m>s, we need
         <me>
             1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots =
@@ -47,7 +47,7 @@
     <p>We can also use exponential generating functions when there are bounds on the number of times a symbol appears, such as in the following example.
     </p>
     <example>
-        <index><main>string</main><sub>ternary</sub></index>
+        <idx><h>string</h><h>ternary</h></idx>
         <statement>
             <p>How many ternary strings of length <m>n</m> have at least one <m>0</m> and at least one <m>1</m>?</p>
         </statement>

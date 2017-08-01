@@ -41,10 +41,10 @@
                 </p>
             </solution>
         </example>
-        <p>What happened in this example is far from a fluke. If you have an advancement operator equation of the form <m>p(A)f=0</m> (the constant term of <m>p</m> nonzero) and <m>p</m> has degree <m>k</m>, then the <term>general solution</term><index><main>recurrence equation</main><sub>general solution</sub></index> of <m>p(A)f=0</m> will be a <m>k</m>-parameter family (in the previous example, our parameters are the constants <m>c_1</m> and <m>c_2</m>) whose terms come from solutions to simpler equations arising from the factors of <m>p</m>. We'll return to this thought in a little bit, but first let's look at another example.
+        <p>What happened in this example is far from a fluke. If you have an advancement operator equation of the form <m>p(A)f=0</m> (the constant term of <m>p</m> nonzero) and <m>p</m> has degree <m>k</m>, then the <term>general solution</term><idx><h>recurrence equation</h><h>general solution</h></idx> of <m>p(A)f=0</m> will be a <m>k</m>-parameter family (in the previous example, our parameters are the constants <m>c_1</m> and <m>c_2</m>) whose terms come from solutions to simpler equations arising from the factors of <m>p</m>. We'll return to this thought in a little bit, but first let's look at another example.
         </p>
         <example xml:id="ex_recurrence_ternary-strings-no-20-solved">
-            <index><main>string</main><sub>ternary</sub></index>
+            <idx><h>string</h><h>ternary</h></idx>
             <p>Let's revisit the problem of enumerating ternary strings of length <m>n</m> that do have <m>(2,0)</m> occurring as a substring in two consecutive positions that we encountered in <xref ref="ex_recurrence_ternary-strings-no-20" autoname="yes" />. There we saw that this number satisfies the recurrence equation
             <me>
                 t_{n+2} = 3t_{n+1} - t_n,\qquad n\geq 1
@@ -97,7 +97,7 @@
         <p>By now, you should be able to see most of the pattern for solving homogeneous advancement operator equations. However, the examples we've considered thus far have all had one thing in common: the roots of <m>p(A)</m> were all distinct. Solving advancement operator equations in which this is not the case is not much harder than what we've done so far, but we do need to treat it as a distinct case.
         </p>
         <example xml:id="ex_recurrence_deg2-repeated">
-            <index><main>recurrence equation</main><sub>repeated roots</sub></index>
+            <idx><h>recurrence equation</h><h>repeated roots</h></idx>
             <statement>
                 <p>
                     Find the general solution of the advancement operator equation
@@ -173,10 +173,10 @@
 
     <subsection xml:id="s_recurrence_solving_nonhomogeneous">
         <title>Nonhomogeneous equations</title>
-        <index>
-            <main>recurrence equations</main>
-            <sub>nonhomogeneous</sub>
-        </index>
+        <idx>
+            <h>recurrence equations</h>
+            <h>nonhomogeneous</h>
+        </idx>
         <p>As we mentioned earlier, nonhomogeneous equations are a bit trickier than solving homogeneous equations, and sometimes our first attempt at a solution will not be successful but will suggest a better function to try. Before we're done, we'll revisit the problem of lines in the plane that we've considered a couple of times, but let's start with a more illustrative example.
         </p>
         <example>
@@ -196,7 +196,7 @@
                 f_1(n) = c_1 (-2)^n + c_2 6^n.
             </me>
             </p>
-            <p>Now for the process of actually dealing with the nonhomogeneity of the advancement operator equation. It actually suffices to find <em>any</em> solution of the nonhomogeneous equation, which we will call a <term>particular solution</term>.<index><main>recurrence equation</main><sub>particular solution</sub></index> Once we have a particular solution <m>f_0</m> to the equation, the general solution is simply <m>f=f_0 + f_1</m>, where <m>f_1</m> is the general solution to the homogeneous equation.
+            <p>Now for the process of actually dealing with the nonhomogeneity of the advancement operator equation. It actually suffices to find <em>any</em> solution of the nonhomogeneous equation, which we will call a <term>particular solution</term>.<idx><h>recurrence equation</h><h>particular solution</h></idx> Once we have a particular solution <m>f_0</m> to the equation, the general solution is simply <m>f=f_0 + f_1</m>, where <m>f_1</m> is the general solution to the homogeneous equation.
             </p>
 
             <p>Finding a particular solution <m>f_0</m> is a bit trickier than finding the general solution of the homogeneous equation. It's something for which you can develop an intuition by solving lots of problems, but even with a good intuition for what to try, you'll still likely find yourself having to try more than one thing on occasion in order to get a particular solution. What's the best starting point for this intuition? It turns out that the best thing to try is usually (and not terribly surprisingly) something that looks a lot like the right hand side of the equation, but we will want to include one or more new constants to help us actually get a solution. Thus, here we try <m>f_0(n) = d 3^n</m>. We have

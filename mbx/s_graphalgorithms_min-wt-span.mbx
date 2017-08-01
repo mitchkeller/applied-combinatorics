@@ -3,7 +3,7 @@
 
 
     <introduction>
-        <p>In this section, we consider pairs <m>(\bfG,w)</m> where <m>\GVE</m> is a connected graph and <m>w\colon E\rightarrow\nonnegints</m>. For each edge <m>e\in E</m>, the quantity <m>w(e)</m> is called the <term>weight</term><index><main>weight</main></index> of <m>e</m>. Given a set <m>S</m> of edges, we define the <term>weight</term> of <m>S</m>, denoted <m>w(S)</m>, by setting <m>w(S)=\sum_{e\in S} w(e)</m>. In particular, the weight of a spanning tree <m>T</m> is just the sum of the weights of the edges in <m>T</m>.<index><main>tree</main><sub>spanning</sub></index>
+        <p>In this section, we consider pairs <m>(\bfG,w)</m> where <m>\GVE</m> is a connected graph and <m>w\colon E\rightarrow\nonnegints</m>. For each edge <m>e\in E</m>, the quantity <m>w(e)</m> is called the <term>weight</term><idx><h>weight</h></idx> of <m>e</m>. Given a set <m>S</m> of edges, we define the <term>weight</term> of <m>S</m>, denoted <m>w(S)</m>, by setting <m>w(S)=\sum_{e\in S} w(e)</m>. In particular, the weight of a spanning tree <m>T</m> is just the sum of the weights of the edges in <m>T</m>.<idx><h>tree</h><h>spanning</h></idx>
         </p>
 
         <p>Weighted graphs arise in many contexts. One of the most natural is when the weights on the edges are distances or costs. For example, consider the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph" autoname="yes" />. Suppose the vertices represent nodes of a network and the edges represent the ability to establish direct physical connections between those nodes. The weights associated to the edges represent the cost (let's say in thousands of dollars) of building those connections. The company establishing the network among the nodes only cares that there is a way to get data between each pair of nodes. Any additional links would create redundancy in which they are not interested at this time. A spanning tree of the graph ensures that each node can communicate with each of the others and has no redundancy, since removing any edge disconnects it. Thus, to minimize the cost of building the network, we want to find a minimum weight (or cost) spanning tree.
@@ -107,8 +107,8 @@
 
         <algorithm xml:id="alg_kruskal">
             <title>Kruskal's Algorithm</title>
-            <index><main>minimum weight spanning tree</main><sub>Kruskal's algorithm for</sub></index>
-            <index><main>Kruskal's algorithm</main></index>
+            <idx><h>minimum weight spanning tree</h><h>Kruskal's algorithm for</h></idx>
+            <idx><h>Kruskal's algorithm</h></idx>
         <statement>
             <p>
                <dl>
@@ -159,8 +159,8 @@ c h 79</pre>
         </p>
         <algorithm>
             <title>Prim's Algorithm</title>
-            <index><main>minimum weight spanning trees</main><sub>Prim's algorithm for</sub></index>
-            <index><main>Prim's algorithm</main></index>
+            <idx><h>minimum weight spanning trees</h><h>Prim's algorithm for</h></idx>
+            <idx><h>Prim's algorithm</h></idx>
         <statement>
             <p>
                <dl>

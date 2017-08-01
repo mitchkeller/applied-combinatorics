@@ -1,6 +1,6 @@
 <section xml:id="s_networkflow_labeling-algorithm">
     <title>The Ford-Fulkerson Labeling Algorithm</title>
-    <p>In this section, we outline the classic Ford-Fulkerson labeling algorithm for finding a maximum flow in a network. The algorithm begins with a linear order on the vertex set which establishes a notion of <term>precedence</term>. Typically, the first vertex in this linear order is the source while the second is the sink. After that, the vertices can be listed in any order. In this book, we will use the following convention: the vertices will be labeled with capital letters of the English alphabet and the linear order will be <m>(S,T,A,B,C,D,E,F,G,\dots)</m>, which we will refer to as the <term>pseudo-alphabetic order</term><index><main>pseudo-alphabetic order</main></index>. Of course, this convention only makes sense for networks with at most <m>26</m> vertices, but this limitation will not cramp our style. For real world problems, we take comfort in the fact that computers can deal quite easily with integer keys of just about any size.
+    <p>In this section, we outline the classic Ford-Fulkerson labeling algorithm for finding a maximum flow in a network. The algorithm begins with a linear order on the vertex set which establishes a notion of <term>precedence</term>. Typically, the first vertex in this linear order is the source while the second is the sink. After that, the vertices can be listed in any order. In this book, we will use the following convention: the vertices will be labeled with capital letters of the English alphabet and the linear order will be <m>(S,T,A,B,C,D,E,F,G,\dots)</m>, which we will refer to as the <term>pseudo-alphabetic order</term><idx><h>pseudo-alphabetic order</h></idx>. Of course, this convention only makes sense for networks with at most <m>26</m> vertices, but this limitation will not cramp our style. For real world problems, we take comfort in the fact that computers can deal quite easily with integer keys of just about any size.
     </p>
 
     <p>Before providing a precise description of the algorithm, let's take a minute to consider a general overview. In carrying out the labeling algorithm, vertices will be classified as either <term>labeled</term> or <term>unlabeled</term>. At first, we will start with only the source being labeled while all other vertices will be unlabeled. By criteria yet to be spelled out, we will systematically consider unlabeled vertices and determine which should be labeled. If we ever label the sink, then we will have discovered an augmenting path, and the flow will be suitably updated. After updating the flow, we start over again with just the source being labeled.
@@ -22,8 +22,8 @@
 
     <algorithm xml:id="alg_labeling">
         <title>Ford-Fulkerson Labeling Algorithm</title>
-        <index><main>labeling algorithm</main></index>
-        <index><main>Ford-Fulkerson labeling algorithm</main></index>
+        <idx><h>labeling algorithm</h></idx>
+        <idx><h>Ford-Fulkerson labeling algorithm</h></idx>
         <statement>
             <p>
                <dl>
@@ -33,7 +33,7 @@
                 </li>
                 <li>
                     <title>Potential on a Labeled Vertex</title>
-                    <p>Let <m>u</m> be a labeled vertex.  The third coordinate of the label given to <m>u</m> will be positive real number<mdash />although it may be infinite.  We call this quantity the <term>potential</term><index><main>potential</main></index> on <m>u</m> and denote it by <m>p(u)</m>. (The potential will serve as the amount that the flow can be updated by.) Note that the potential on the source is infinite.</p>
+                    <p>Let <m>u</m> be a labeled vertex.  The third coordinate of the label given to <m>u</m> will be positive real number<mdash />although it may be infinite.  We call this quantity the <term>potential</term><idx><h>potential</h></idx> on <m>u</m> and denote it by <m>p(u)</m>. (The potential will serve as the amount that the flow can be updated by.) Note that the potential on the source is infinite.</p>
                 </li>
                 <li>
                     <title>First Labeled, First Scanned</title>

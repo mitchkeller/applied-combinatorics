@@ -5,7 +5,7 @@
         \binom{n}{k_1}\binom{n-k_1}{k_2} = \frac{n!}{k_1!(n-k_1)!}
         \frac{(n-k_1)!}{k_2!(n-(k_1+k_2))!} = \frac{n!}{k_1!k_2!k_3!}
     </me>
-    Numbers of this form are called <term>multinomial coefficients</term><index><main>multinomial coefficient</main></index>; they are an obvious generalization of the binomial coefficients.  The general notation is:
+    Numbers of this form are called <term>multinomial coefficients</term><idx><h>multinomial coefficient</h></idx>; they are an obvious generalization of the binomial coefficients.  The general notation is:
     <me>
         \binom{n}{k_1,k_2,k_3,\dots,k_r}=\frac{n!}{k_1!k_2!k_3!\dots k_r!}.
     </me>
@@ -44,7 +44,7 @@
 
     <theorem>
         <title>Multinomial Theorem</title>
-        <index><main>multinomial theorem</main></index>
+        <idx><h>multinomial theorem</h></idx>
         <statement>
             <p>Let <m>x_1, x_2, \dots, x_r</m> be nonzero real numbers with <m>\sum_{i=1}^r x_i\neq 0</m>. Then for every <m>n\in \nni</m>,
             <me>

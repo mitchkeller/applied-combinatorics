@@ -1,6 +1,6 @@
 <section xml:id="s_kitchensink_online">
     <title>On-line algorithms</title>
-    <index><main>algorithm</main><sub>on-line</sub></index>
+    <idx><h>algorithm</h><h>on-line</h></idx>
 
     <introduction>
         <p>Many applications of combinatorics occur in a dynamic, on-line manner. It is rare that one has all the information about the challenges a problem presents before circumstances compel that decisions be made. As examples, a decision to proceed with a major construction project must be made several years before ground is broken; investment decisions are made on the basis of today's information and may look particularly unwise when tomorrow's news is available; and deciding to exit a plane with a parachute is rarely reversible.
@@ -22,7 +22,7 @@
         </p>
 
         <theorem xml:id="thm_olforest">
-            <index><main>forest</main></index>
+            <idx><h>forest</h></idx>
             <statement>
                 <p>Let <m>n</m> be a positive integer. Then there is a strategy for Builder that will enable Builder to construct a forest having at most <m>2^{n-1}</m> vertices while forcing Assigner to use <m>n</m> colors.
                 </p>
@@ -55,7 +55,7 @@
         </p>
 
         <theorem>
-            <index><main>partition</main><sub>antichain</sub></index>
+            <idx><h>partition</h><h>antichain</h></idx>
             <statement>
                 <p>For each <m>h\ge1</m>, there is a on-line strategy for Assigner that will enable her to partition a poset <m>P</m> into at most <m>\binom{h+1}{2}</m> antichains, provided the height of <m>P</m> is at most <m>h</m>.
                 </p>
@@ -83,7 +83,7 @@
 
         <theorem>
             <title>Szemer&#xe9;di</title>
-            <index><main>partition</main><sub>antichain</sub></index>
+            <idx><h>partition</h><h>antichain</h></idx>
             <statement>
                 <p>For every <m>h\ge1</m>, there is a strategy <m>S_h</m> for builder that will enable him to build a poset <m>P</m> of height <m>h</m> so that assigner is forced to (1)<nbsp />use at least <m>\binom{h+1}{2}</m> antichains in partitioning <m>P</m>, and (2)<nbsp />use at least <m>h</m> different antichains on the set of maximal elements.
                 </p>

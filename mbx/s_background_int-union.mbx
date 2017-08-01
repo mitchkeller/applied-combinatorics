@@ -3,7 +3,7 @@
 
 
     <introduction>
-        <p>When <m>X</m> and <m>Y</m> are sets, the <term>intersection</term><index><main>intersection</main></index> of <m>X</m> and <m>Y</m>, denoted <m>X\cap Y</m><notation><usage>X\cap Y</usage><description>intersection of <m>X</m> and <m>Y</m></description></notation>, is defined by
+        <p>When <m>X</m> and <m>Y</m> are sets, the <term>intersection</term><idx><h>intersection</h></idx> of <m>X</m> and <m>Y</m>, denoted <m>X\cap Y</m><notation><usage>X\cap Y</usage><description>intersection of <m>X</m> and <m>Y</m></description></notation>, is defined by
         <me>
             X\cap Y = \{x: x\in X, x\in Y\}
         </me>
@@ -23,10 +23,10 @@
                   </ol>
                 </p>
 
-        <p>In the first and third statement, it is clear that there are two options but that <em>only</em> one of them is allowed. However, in the second statement, the interpretation is that admission will be granted to students who satisfy <em>at least one</em> of the two requirements. These interpretations are called respectively the <term>exclusive</term> and <term>inclusive</term> versions of <term>or</term>.<index><main>or</main><sub>exclusive</sub></index> <index><main>or</main><sub>inclusive</sub></index> In this class, we will assume that whenever the word <q>or</q> is used, the inclusive interpretation is intended<mdash />unless otherwise stated.
+        <p>In the first and third statement, it is clear that there are two options but that <em>only</em> one of them is allowed. However, in the second statement, the interpretation is that admission will be granted to students who satisfy <em>at least one</em> of the two requirements. These interpretations are called respectively the <term>exclusive</term> and <term>inclusive</term> versions of <term>or</term>.<idx><h>or</h><h>exclusive</h></idx> <idx><h>or</h><h>inclusive</h></idx> In this class, we will assume that whenever the word <q>or</q> is used, the inclusive interpretation is intended<mdash />unless otherwise stated.
         </p>
 
-        <p>For example, when <m>X</m> and <m>Y</m> are sets, the <term>union</term><index><main>union</main></index> of <m>X</m> and <m>Y</m>, denoted <m>X\cup Y</m>,<notation><usage>X\cup Y</usage><description>union of <m>X</m> and <m>Y</m></description></notation> is defined by
+        <p>For example, when <m>X</m> and <m>Y</m> are sets, the <term>union</term><idx><h>union</h></idx> of <m>X</m> and <m>Y</m>, denoted <m>X\cup Y</m>,<notation><usage>X\cup Y</usage><description>union of <m>X</m> and <m>Y</m></description></notation> is defined by
         <me>
             X\cup Y = \{x: x\in x \text{ or }  x\in Y\}.
         </me>
@@ -55,7 +55,7 @@
     <subsection>
         <title>The Empty Set: Much To Do About Nothing</title>
         <p>
-            The <term>empty set</term><index><main>set</main><sub>empty</sub></index>, denoted <m>\emptyset</m><notation><usage>\emptyset</usage><description>empty set</description></notation> is the set for which <m>x\notin \emptyset</m> for every element <m>x</m>. Note that <m>X\cap \emptyset =\emptyset</m> and <m>X\cup \emptyset=X</m>, for every set <m>X</m>.
+            The <term>empty set</term><idx><h>set</h><h>empty</h></idx>, denoted <m>\emptyset</m><notation><usage>\emptyset</usage><description>empty set</description></notation> is the set for which <m>x\notin \emptyset</m> for every element <m>x</m>. Note that <m>X\cap \emptyset =\emptyset</m> and <m>X\cup \emptyset=X</m>, for every set <m>X</m>.
         </p>
 
         <p>The empty set is unique in the sense that if <m>x\notin X</m> for every element <m>x</m>, then <m>X=\emptyset</m>.
@@ -78,7 +78,7 @@
 
     <subsection>
         <title>Subsets, Proper Subsets and Equal Sets</title>
-        <p>When <m>X</m> and <m>Y</m> are sets, we say <m>X</m> is a <term>subset</term><index><main>subset</main></index> of <m>Y</m> and write <m>X\subseteq Y</m> <notation><usage>X\subseteq Y</usage><description><m>X</m> is a subset of <m>Y</m></description></notation>when <m>x\in Y</m> for every <m>x\in X</m>. When <m>X</m> is a subset of <m>Y</m> and there exists at least one element <m>y\in Y</m> with <m>y\notin X</m>, we say <m>X</m> is a <term>proper subset</term><index><main>subset</main><sub>proper</sub></index> of <m>Y</m> and write <m>X\subsetneq Y</m><notation><usage>X\subsetneq Y</usage><description><m>X</m> is a proper subset of <m>Y</m></description></notation>. For example, the <m>P</m> of primes is a proper subset of the set <m>\posints</m> of positive integers.
+        <p>When <m>X</m> and <m>Y</m> are sets, we say <m>X</m> is a <term>subset</term><idx><h>subset</h></idx> of <m>Y</m> and write <m>X\subseteq Y</m> <notation><usage>X\subseteq Y</usage><description><m>X</m> is a subset of <m>Y</m></description></notation>when <m>x\in Y</m> for every <m>x\in X</m>. When <m>X</m> is a subset of <m>Y</m> and there exists at least one element <m>y\in Y</m> with <m>y\notin X</m>, we say <m>X</m> is a <term>proper subset</term><idx><h>subset</h><h>proper</h></idx> of <m>Y</m> and write <m>X\subsetneq Y</m><notation><usage>X\subsetneq Y</usage><description><m>X</m> is a proper subset of <m>Y</m></description></notation>. For example, the <m>P</m> of primes is a proper subset of the set <m>\posints</m> of positive integers.
         </p>
 
         <p>Surprisingly often, we will encounter a situation where sets <m>X</m> and <m>Y</m> have different rules for membership yet both are in fact the same set. For example, let <m>X=\{0,2\}</m> and <m>Y=\{z\in\ints: z+z=z\times z\}</m>. Then <m>X=Y</m>.  For this reason, it is useful to have a test when sets are equal. If <m>X</m> and <m>Y</m> are sets, then

@@ -1,6 +1,6 @@
 <section xml:id="s_inclusion-exclusion_euler-phi">
     <title>The Euler <m>\phi</m> Function</title>
-    <index><main>greatest common divisor</main><sub>Euler <m>\phi</m> function</sub></index>
+    <idx><h>greatest common divisor</h><h>Euler <m>\phi</m> function</h></idx>
     <p>After reading the two previous sections, you're probably wondering why we stated the <xref ref="thm_inclusion-exclusion" autoname="title" /> in such an abstract way, as in those examples <m>N(S)</m> depended only on the size of <m>S</m> and not its contents. In this section, we produce an important example where the value of <m>N(S)</m> <em>does</em> depend on <m>S</m>.  Nevertheless, we are able to make a reduction to obtain a useful end result. In what follows, let <m>\posints</m> denote the set of positive integers.
     </p>
 
@@ -8,7 +8,7 @@
     <me>
         \phi(n)=|\{m\in \posints: m\le n, \gcd(m,n)=1\}|.
     </me>
-    This function is usually called the <term>Euler <m>\phi</m> function</term> or the <term>Euler totient function</term>    <index><main>Euler <m>\phi</m> function</main></index> and has many connections to number theory. We won't focus on the number-theoretic aspects here, only being able to compute <m>\phi(n)</m> efficiently for any <m>n</m>.<notation><usage>\phi(n)</usage><description>Euler <m>\phi</m> function</description></notation>
+    This function is usually called the <term>Euler <m>\phi</m> function</term> or the <term>Euler totient function</term>    <idx><h>Euler <m>\phi</m> function</h></idx> and has many connections to number theory. We won't focus on the number-theoretic aspects here, only being able to compute <m>\phi(n)</m> efficiently for any <m>n</m>.<notation><usage>\phi(n)</usage><description>Euler <m>\phi</m> function</description></notation>
     </p>
 
     <p>For example, <m>\phi(12)=4</m> since the only numbers from <m>\{1,2,\dots,12\}</m> that are relatively prime to <m>12</m> are <m>1</m>, <m>5</m>, <m>7</m> and <m>11</m>. As a second example, <m>\phi(9)=6</m> since <m>1</m>, <m>2</m>, <m>4</m>, <m>5</m>, <m>7</m> and <m>8</m> are relatively prime to <m>9</m>. On the other hand, <m>\phi(p)=p-1</m> when <m>p</m> is a prime. Suppose you were asked to compute <m>\phi(321974)</m>. How would you proceed?

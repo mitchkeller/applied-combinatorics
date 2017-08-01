@@ -1,10 +1,10 @@
 <section xml:id="s_background_rationals">
     <title>Obtaining the Rationals from the Integers</title>
     <introduction>
-        <p>We consider the set <m>\rats</m> of all ordered pairs in <m>\ints\times \ints</m> of the form <m>(x,y)</m> with <m>y\neq 0</m>. Elements of <m>\rats</m> are called <term>rational numbers</term><index><main>rational numbers</main></index>, or <term>fractions</term>. Define an equivalence relation, denoted <m>=</m>, on <m>\rats</m> by setting <m>(x,y)=(z,w)</m> if and only if <m>xw=yz</m>. Here we should point out that the symbol <m>=</m> can be used (and often is) to denote an equivalence relation. It is not constrained to mean <q>identically the same.</q>
+        <p>We consider the set <m>\rats</m> of all ordered pairs in <m>\ints\times \ints</m> of the form <m>(x,y)</m> with <m>y\neq 0</m>. Elements of <m>\rats</m> are called <term>rational numbers</term><idx><h>rational numbers</h></idx>, or <term>fractions</term>. Define an equivalence relation, denoted <m>=</m>, on <m>\rats</m> by setting <m>(x,y)=(z,w)</m> if and only if <m>xw=yz</m>. Here we should point out that the symbol <m>=</m> can be used (and often is) to denote an equivalence relation. It is not constrained to mean <q>identically the same.</q>
         </p>
 
-        <p>When <m>q=(x,y)</m> is a fraction, <m>x</m> is called the <term>numerator</term><index><main>numerator</main></index> and <m>y</m> is called the <term>denominator</term><index><main>denominator</main></index> of <m>q</m>.  Remember that the denominator of a fraction is never zero.
+        <p>When <m>q=(x,y)</m> is a fraction, <m>x</m> is called the <term>numerator</term><idx><h>numerator</h></idx> and <m>y</m> is called the <term>denominator</term><idx><h>denominator</h></idx> of <m>q</m>.  Remember that the denominator of a fraction is never zero.
         </p>
 
         <p>
@@ -46,7 +46,7 @@
         <p>The additive inverse of a fraction <m>(a,b)</m> is just <m>(-a,b)</m>.  Using this, we define subtraction for fractions: <m>(a,b)-(c,d)=(a,b)+(-c,d)</m>.
         </p>
 
-        <p>When <m>(a,b)</m> is a fraction, and <m>a\neq 0</m>, the fraction <m>(b,a)</m> is the <term>reciprocal</term><index><main>reciprocal</main></index> of <m>(a,b)</m>. The reciprocal is also called the <term>multiplicative inverse</term><index><main>multiplicative inverse</main></index>, and the reciprocal of <m>x</m> is denoted <m>x^{-1}</m>. When <m>y\neq0</m>, we can then define <term>division</term> by setting <m>x/y=xy^{-1}</m>, <ie />, <m>(a,b)/(c,d)=(ad, bc)</m>. Of course, division by zero is not defined, a fact that you probably already knew!
+        <p>When <m>(a,b)</m> is a fraction, and <m>a\neq 0</m>, the fraction <m>(b,a)</m> is the <term>reciprocal</term><idx><h>reciprocal</h></idx> of <m>(a,b)</m>. The reciprocal is also called the <term>multiplicative inverse</term><idx><h>multiplicative inverse</h></idx>, and the reciprocal of <m>x</m> is denoted <m>x^{-1}</m>. When <m>y\neq0</m>, we can then define <term>division</term> by setting <m>x/y=xy^{-1}</m>, <ie />, <m>(a,b)/(c,d)=(ad, bc)</m>. Of course, division by zero is not defined, a fact that you probably already knew!
         </p>
 
         <p>As was the case for both <m>\nonnegints</m> and <m>\ints</m>, when <m>n</m> is a positive integer, and <m>0</m> is the zero in <m>\rats</m>, we define <m>0^n=0</m>. When <m>x=(a,b)</m> is a fraction with <m>x\neq0</m> and <m>n</m> is a non-negative integer, we define <m>x^n</m> inductively by (i)<nbsp /><m>x^0=1</m> and (ii)<nbsp /><m>x^{n+1}=xx^n</m>.

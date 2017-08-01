@@ -51,7 +51,7 @@
 
     <subsection>
         <title>Alternate Versions of Induction</title>
-        <p>Many authors prefer to start the development of number systems with the set of <term>positive integers</term><index><main>integers</main><sub>positive</sub></index> and defer the introduction of the concept of zero. In this setting, you have a non-empty set <m>\posints</m>, a one-to-one <term>successor</term> function <m>s:\posints\injection\posints</m> and a positive integer called <term>one</term> and denoted<nbsp /><m>1</m> that is not the successor of any positive integer. The Principle of Induction then becomes: If <m>\mathbb{M}\subseteq\posints</m>, then <m>\mathbb{M} =\posints</m> if and only if
+        <p>Many authors prefer to start the development of number systems with the set of <term>positive integers</term><idx><h>integers</h><h>positive</h></idx> and defer the introduction of the concept of zero. In this setting, you have a non-empty set <m>\posints</m>, a one-to-one <term>successor</term> function <m>s:\posints\injection\posints</m> and a positive integer called <term>one</term> and denoted<nbsp /><m>1</m> that is not the successor of any positive integer. The Principle of Induction then becomes: If <m>\mathbb{M}\subseteq\posints</m>, then <m>\mathbb{M} =\posints</m> if and only if
         <ol label="a">
             <li><m>1\in \mathbb{M}</m>; and</li>
             <li><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 

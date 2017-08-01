@@ -9,7 +9,7 @@
         <p>Our presentation of the labeling algorithm makes use of some natural and quite descriptive terminology. Suppose we have a network <m>\GVE</m> with a flow <m>\phi</m> of value <m>v</m>. We call <m>\phi</m> the <term>current flow</term> and look for ways to <term>augment</term> <m>\phi</m> by making a relatively small number of changes. An edge <m>(x,y)</m> with <m>\phi(x,y)>0</m> is said to be <term>used</term>, and when <m>\phi(x,y)=c(x,y)>0</m>, we say the edge is <term>full</term>. When <m>\phi(x,y)\lt c(x,y)</m>, we say the edge <m>(x,y)</m> has <term>spare capacity</term>, and when <m>0=\phi(x,y)\lt c(x,y)</m>, we say the edge <m>(x,y)</m> is <term>empty</term>. Note that we simply ignore edges with zero capacity.
         </p>
 
-        <p>The key tool in modifying a network flow is a special type of path, and these paths are not necessarily directed paths. An <term>augmenting path</term><index><main>path</main><sub>augmenting</sub></index> is a sequence <m>P=(x_0,x_1,\dots,x_m)</m> of distinct vertices in the network such that <m>x_0=S</m>, <m>x_m=T</m>, and for each <m>i=1,2,\dots,m</m>, either
+        <p>The key tool in modifying a network flow is a special type of path, and these paths are not necessarily directed paths. An <term>augmenting path</term><idx><h>path</h><h>augmenting</h></idx> is a sequence <m>P=(x_0,x_1,\dots,x_m)</m> of distinct vertices in the network such that <m>x_0=S</m>, <m>x_m=T</m>, and for each <m>i=1,2,\dots,m</m>, either
         <ol label="a">
             <li xml:id="networkflow_spare" ><m>(x_{i-1},x_i)</m> has spare capacity or </li>
             <li xml:id="networkflow_used" ><m>(x_i,x_{i-1})</m> is used. </li>

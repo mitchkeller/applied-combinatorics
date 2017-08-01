@@ -39,7 +39,7 @@
 
         <theorem xml:id="thm_division">
             <title>Division Theorem</title>
-            <index><main>division theorem</main></index>
+            <idx><h>division theorem</h></idx>
             <statement>
                 <p>Let <m>m</m> and <m>n</m> be positive integers. Then there exist unique integers <m>q</m> and <m>r</m> so that
                 <me>
@@ -70,7 +70,7 @@
             </proof>
         </theorem>
 
-        <p>Recall that an integer <m>n</m> is a <term>divisor</term><index><main>divisor</main></index> of an integer <m>m</m> if there is an integer <m>q</m> such that <m>m=qn</m>. (We write <m>n\mid m</m> and read <q><m>n</m> <term>divides</term> <m>m</m></q>.<index><main>divides</main></index>) An integer <m>d</m> is a <term>common divisor</term><index><main>divisor</main><sub>common</sub></index> of integers <m>m</m> and <m>n</m> if <m>d</m> is a divisor of both <m>m</m> and <m>n</m>. The <term>greatest common divisor</term><index><main>divisor</main><sub>greatest common</sub></index><index><main>greatest common divisor</main><see>divisor, greatest common</see></index> of <m>m</m> and <m>n</m>, written <m>\gcd(m,n)</m>, is the largest of all the common divisors of <m>m</m> and <m>n</m>.
+        <p>Recall that an integer <m>n</m> is a <term>divisor</term><idx><h>divisor</h></idx> of an integer <m>m</m> if there is an integer <m>q</m> such that <m>m=qn</m>. (We write <m>n\mid m</m> and read <q><m>n</m> <term>divides</term> <m>m</m></q>.<idx><h>divides</h></idx>) An integer <m>d</m> is a <term>common divisor</term><idx><h>divisor</h><h>common</h></idx> of integers <m>m</m> and <m>n</m> if <m>d</m> is a divisor of both <m>m</m> and <m>n</m>. The <term>greatest common divisor</term><idx><h>divisor</h><h>greatest common</h></idx><idx><h>greatest common divisor</h><see>divisor, greatest common</see></idx> of <m>m</m> and <m>n</m>, written <m>\gcd(m,n)</m>, is the largest of all the common divisors of <m>m</m> and <m>n</m>.
         </p>
 
         <p>Here's a particularly elegant application of the preceding basic theorem:
@@ -78,7 +78,7 @@
 
         <theorem xml:id="thm_euclideanalg">
             <title>Euclidean Algorithm</title>
-            <index><main>Euclidean algorithm</main></index>
+            <idx><h>Euclidean algorithm</h></idx>
             <statement>
                 <p>Let <m>m,n</m> be positive integers with <m>m\gt n</m> and let <m>q</m> and <m>r</m> be the unique integers for which
                 <me>
@@ -113,7 +113,7 @@ gcd(12,5)
         </p>
 
         <theorem xml:id="thm_gcd-dioph">
-            <index><main>linear diophantine equation</main></index>
+            <idx><h>linear diophantine equation</h></idx>
             <statement>
                 <p>Let <m>m</m>, <m>n</m>, and <m>c</m> be positive integers. Then there exist integers <m>a</m> and <m>b</m>, not necessarily non-negative, solving the linear diophantine equation <m>am+bn=c</m> if and only if <m>c</m> is a multiple of the greatest common divisor of <m>m</m> and <m>n</m>.
                 </p>
@@ -162,10 +162,10 @@ gcd(12,5)
 
     <subsection xml:id="s_induction_recursion_sorting">
         <title>Sorting</title>
-        <p>One of the most common and most basic computing problems is sorting: Given a sequence <m>a_1,a_2,\dots,a_n</m> of <m>n</m> distinct integers, rearrange them so that they are in increasing order. We describe here an easy recursive strategy for accomplishing this task. This strategy is known as <term>Merge Sort</term><index><main>merge sort</main></index><index><main>sorting</main></index>, and it is one of several optimal algorithms for sorting. Introductory computer science courses treat this topic in greater depth. In our course, we simply need some good strategy and merge sort works fine for our purposes.
+        <p>One of the most common and most basic computing problems is sorting: Given a sequence <m>a_1,a_2,\dots,a_n</m> of <m>n</m> distinct integers, rearrange them so that they are in increasing order. We describe here an easy recursive strategy for accomplishing this task. This strategy is known as <term>Merge Sort</term><idx><h>merge sort</h></idx><idx><h>sorting</h></idx>, and it is one of several optimal algorithms for sorting. Introductory computer science courses treat this topic in greater depth. In our course, we simply need some good strategy and merge sort works fine for our purposes.
         </p>
         
-        <p>To present merge sort<index><main>merge sort</main></index>, must first develop a strategy for solving a special case of the sorting problem.  Suppose we have <m>s+t</m> distinct integers <me>\{u_0,u_1,\dots,u_{s-1},v_0,v_1,\dots,v_{t-1}\}</me> arranged as two lists with <m>u_0\lt u_1\lt \dots\lt u_{s-1}</m> and <m>v_0\lt v_1\lt \dots\lt v_{t-1}</m>. How do we <em>merge</em> these two sequences into a single increasing sequence of length <m>s+t</m>.  Imagine the two sequences placed on two horizontal lines, one immediately under the other. Then let <m>u</m> be the least integer in the first sequence and <m>v</m> the least integer in the second. At the moment, this implies that <m>u=u_0</m> and <m>v=v_0</m>, but integers will be deleted from the two sequences as the process is carried out. Regardless, the meaning of <m>u</m> and <m>v</m> will be preserved. Also, set <m>i=0</m>.  Then take <m>a_i</m> as the minimum of <m>u</m> and <m>v</m> and delete <m>a_i</m> from the sequence in which it occurs. Then increase <m>i</m> by <m>1</m> and repeat. Here is a code snippet for accomplishing a merge operation, with <m>u_p</m> now written as <c>u[p]</c> and <m>v_q</m> now written as <c>v[q]</c>.
+        <p>To present merge sort<idx><h>merge sort</h></idx>, must first develop a strategy for solving a special case of the sorting problem.  Suppose we have <m>s+t</m> distinct integers <me>\{u_0,u_1,\dots,u_{s-1},v_0,v_1,\dots,v_{t-1}\}</me> arranged as two lists with <m>u_0\lt u_1\lt \dots\lt u_{s-1}</m> and <m>v_0\lt v_1\lt \dots\lt v_{t-1}</m>. How do we <em>merge</em> these two sequences into a single increasing sequence of length <m>s+t</m>.  Imagine the two sequences placed on two horizontal lines, one immediately under the other. Then let <m>u</m> be the least integer in the first sequence and <m>v</m> the least integer in the second. At the moment, this implies that <m>u=u_0</m> and <m>v=v_0</m>, but integers will be deleted from the two sequences as the process is carried out. Regardless, the meaning of <m>u</m> and <m>v</m> will be preserved. Also, set <m>i=0</m>.  Then take <m>a_i</m> as the minimum of <m>u</m> and <m>v</m> and delete <m>a_i</m> from the sequence in which it occurs. Then increase <m>i</m> by <m>1</m> and repeat. Here is a code snippet for accomplishing a merge operation, with <m>u_p</m> now written as <c>u[p]</c> and <m>v_q</m> now written as <c>v[q]</c>.
         </p>
         
         <sage>

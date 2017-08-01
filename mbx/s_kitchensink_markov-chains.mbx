@@ -12,7 +12,7 @@
                   </ol>
                 </p>
 
-        <p>This example illustrates the characteristics of an important class of computational and combinatorial problems, which are collectively referred to as <term>Markov Chains</term><index><main>Markov chain</main></index>:
+        <p>This example illustrates the characteristics of an important class of computational and combinatorial problems, which are collectively referred to as <term>Markov Chains</term><idx><h>Markov chain</h></idx>:
                   <ol>
             <li><p>There is a finite set of states <m>S_1</m>, <m>S_2,\dots,S_n</m>, and at time <m>i</m>, you are in one of these states.</p></li>
             <li><p>If you are in state <m>S_j</m> at time <m>i</m>, then for each
@@ -21,7 +21,7 @@
                   </ol>
                 </p>
 
-        <p>The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m> of moving from state <m>S_j</m> to state <m>S_k</m> is called the <term>transition matrix</term><index><main>matrix</main><sub>transition</sub></index> of the Markov chain. Note that <m>P</m> is a <term>stochastic matrix</term><index><main>matrix</main><sub>stochastic</sub></index>, <ie />, all entries are non-negative and all row sums are<nbsp /><m>1</m>.  Conversely, each square stochastic matrix can be considered as the transition matrix of a Markov chain.
+        <p>The <m>n\times n</m> matrix <m>P</m> whose <m>j,k</m> entry is the probability <m>p(j,k)</m> of moving from state <m>S_j</m> to state <m>S_k</m> is called the <term>transition matrix</term><idx><h>matrix</h><h>transition</h></idx> of the Markov chain. Note that <m>P</m> is a <term>stochastic matrix</term><idx><h>matrix</h><h>stochastic</h></idx>, <ie />, all entries are non-negative and all row sums are<nbsp /><m>1</m>.  Conversely, each square stochastic matrix can be considered as the transition matrix of a Markov chain.
         </p>
 
         <p>For example, here is the transition matrix for the graph in <xref provisional="fig-markovchain" autoname="yes" />.
@@ -35,7 +35,7 @@
             \end{pmatrix}
         </men>
         </p>
-        <p>A transition matrix <m>P</m> is <term>regular</term><index><main>regular</main><sub>transition matrix</sub></index> if there is some integer <m>m</m> for which the matrix <m>P^m</m> has only positive entries. Here is a fundamental result from this subject, one that is easy to understand but a bit too complex to prove given our space constraints.
+        <p>A transition matrix <m>P</m> is <term>regular</term><idx><h>regular</h><h>transition matrix</h></idx> if there is some integer <m>m</m> for which the matrix <m>P^m</m> has only positive entries. Here is a fundamental result from this subject, one that is easy to understand but a bit too complex to prove given our space constraints.
         </p>
 
         <theorem xml:id="thm_regular">
@@ -52,7 +52,7 @@
 
     <subsection>
         <title>Absorbing Markov Chains</title>
-        <p>A state <m>S_i</m> in a Markov chain with transition matrix <m>P</m> is <term>absorbing</term><index><main>absorbing</main><sub>state of a Markov chain</sub></index> if <m>p_{i,i}=1</m> and <m>p_{i,j}=0</m> for all <m>j\neq i</m>, <ie />, like the infamous Hotel California, once you are in state <m>S_i</m>, <q>you can never leave.</q>
+        <p>A state <m>S_i</m> in a Markov chain with transition matrix <m>P</m> is <term>absorbing</term><idx><h>absorbing</h><h>state of a Markov chain</h></idx> if <m>p_{i,i}=1</m> and <m>p_{i,j}=0</m> for all <m>j\neq i</m>, <ie />, like the infamous Hotel California, once you are in state <m>S_i</m>, <q>you can never leave.</q>
         </p>
         <example>
             <p>We modify the transition matrix from <xref ref="eqn_transition" autoname="yes" /> by making states <m>4</m> and <m>5</m> absorbing. The revised transition matrix is now:
@@ -70,7 +70,7 @@
         <p>Now we might consider the following game. Start at one of the four vertices in <m>\{1,2,3,4\}</m> and proceed as before, making moves by choosing a neighbor at random. Vertex <m>4</m> might be considered as an <q>escape</q> point, a safe harbor that once reached is never left. On the other hand, vertex <m>5</m> might be somewhere one meets a hungry tiger and be absorbed in a way not to be detailed here.
         </p>
 
-        <p>We say the Markov chain is <term>absorbing</term><index><main>absorbing</main><sub>Markov chain</sub></index> if there is at least one absorbing state and for each state <m>S_j</m> that is not absorbing, it is possible to reach an absorbing state<mdash />although it may take many steps to do so.  Now the kinds of questions we would like to answer are:
+        <p>We say the Markov chain is <term>absorbing</term><idx><h>absorbing</h><h>Markov chain</h></idx> if there is at least one absorbing state and for each state <m>S_j</m> that is not absorbing, it is possible to reach an absorbing state<mdash />although it may take many steps to do so.  Now the kinds of questions we would like to answer are:
                   <ol>
             <li><p>If we start in non-absorbing state <m>S_i</m>, what is the probability of reaching absorbing state <m>S_j</m> (and then being absorbed in that state, a question which takes on genuine unpleasantness relative to tigers)?</p></li>
             <li><p>If we are absorbed in state <m>S_j</m>, what is the probability that we started in non-absorbing state <m>S_i</m>?</p></li>

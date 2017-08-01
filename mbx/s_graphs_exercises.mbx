@@ -145,7 +145,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>An <term>eulerian trail</term><index><main>eulerian</main><sub>trail</sub></index> is defined in the same manner as an eulerian circuit (see <xref ref="s_graphs_eulerham" autoname="yes"/>) except that we drop the condition that <m>x_0=x_t</m>. Prove that a graph has an eulerian trail if and only if it is connected and has at most two vertices of odd degree.</p>
+            <p>An <term>eulerian trail</term><idx><h>eulerian</h><h>trail</h></idx> is defined in the same manner as an eulerian circuit (see <xref ref="s_graphs_eulerham" autoname="yes"/>) except that we drop the condition that <m>x_0=x_t</m>. Prove that a graph has an eulerian trail if and only if it is connected and has at most two vertices of odd degree.</p>
         </statement>
     </exercise>
     <exercise>
@@ -241,7 +241,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>The <term>girth</term><index><main>girth</main></index> of a graph <m>\bfG</m> is the number of vertices in a shortest cycle of <m>\bfG</m>. Find the girth of the graph <m>\bfG_t</m> in the Kelly and Kelly proof of <xref ref="prop_triangle-free" autoname="yes" /> and prove that your answer is correct. As a challenge, see if you can modify the construction of <m>\bfG_t</m> to increase the girth. If so, how far are you able to increase it?</p>
+            <p>The <term>girth</term><idx><h>girth</h></idx> of a graph <m>\bfG</m> is the number of vertices in a shortest cycle of <m>\bfG</m>. Find the girth of the graph <m>\bfG_t</m> in the Kelly and Kelly proof of <xref ref="prop_triangle-free" autoname="yes" /> and prove that your answer is correct. As a challenge, see if you can modify the construction of <m>\bfG_t</m> to increase the girth. If so, how far are you able to increase it?</p>
         </statement>
     </exercise>
     <exercise xml:id="ex_graphs_first-fit-color">

@@ -50,7 +50,7 @@
 
     <subsection>
         <title>Variance and Standard Deviation</title>
-        <p>Again, let <m>(S,P)</m> be a probability space and let <m>X</m> be a random variable.  The quantity <m>E((X-E(X))^2)</m> is called the <term>variance</term><index><main>variance</main></index> of <m>X</m> and is denoted <m>\var(X)</m>. Evidently, the variance of <m>X</m> is a non-negative number. The <term>standard deviation</term><index><main>standard deviation</main></index> of <m>X</m>, denoted <m>\sigma_X</m> is then defined as the quantity <m>\sqrt{\var(x)}</m>, <ie />, <m>\sigma_X^2 =\var(X)</m>.
+        <p>Again, let <m>(S,P)</m> be a probability space and let <m>X</m> be a random variable.  The quantity <m>E((X-E(X))^2)</m> is called the <term>variance</term><idx><h>variance</h></idx> of <m>X</m> and is denoted <m>\var(X)</m>. Evidently, the variance of <m>X</m> is a non-negative number. The <term>standard deviation</term><idx><h>standard deviation</h></idx> of <m>X</m>, denoted <m>\sigma_X</m> is then defined as the quantity <m>\sqrt{\var(x)}</m>, <ie />, <m>\sigma_X^2 =\var(X)</m>.
         </p>
         <example>
             <p>For the spinner shown at the beginning of the chapter, let <m>X(i)=i^2</m> when the pointer stops in region<nbsp /><m>i</m>. Then we have already noted that the expectation <m>E(X)</m> of the random variable <m>X</m> is <m>109/8</m>. It follows that the variance <m>\var(X)</m> is:
@@ -73,7 +73,7 @@
             </me>
             There are several ways to establish this claim. One way is to proceed directly from the definition, using the same method we used previously to obtain the expectation. But now you need also to calculate the second derivative. Here is a second approach, one that capitalizes on the fact that separate trials in a Bernoulli series are independent.
             </p>
-            <p>Let <m>\cgF=\{X_1,X_2,\dots,X_n\}</m> be a family of random variables in a probability space <m>(S,P)</m>. We say the family <m>\cgF</m> is <term>independent</term><index><main>independent</main><sub>random variables</sub></index> if for each <m>i</m> and <m>j</m> with <m>1\le i\lt j\le n</m>, and for each pair <m>a,b</m> of real numbers with <m>0\le a,b\le 1</m>, the following two events are independent: <m>\{x\in S: X_i(x)\le a\}</m> and <m>\{x\in S:X_j(x)\le b\}</m>. When the family is independent, it is straightforward to verify that
+            <p>Let <m>\cgF=\{X_1,X_2,\dots,X_n\}</m> be a family of random variables in a probability space <m>(S,P)</m>. We say the family <m>\cgF</m> is <term>independent</term><idx><h>independent</h><h>random variables</h></idx> if for each <m>i</m> and <m>j</m> with <m>1\le i\lt j\le n</m>, and for each pair <m>a,b</m> of real numbers with <m>0\le a,b\le 1</m>, the following two events are independent: <m>\{x\in S: X_i(x)\le a\}</m> and <m>\{x\in S:X_j(x)\le b\}</m>. When the family is independent, it is straightforward to verify that
             <me>
                 \var(X_1+X_2+\dots+X_n)=\var(X_1)+\var(X_2)+\dots+\var(X_n).
             </me>

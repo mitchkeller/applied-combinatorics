@@ -7,7 +7,7 @@
     The word <q>function</q> is put in quotes as we do not necessarily care about substituting a value of <m>x</m> and obtaining a specific value for <m>F(x)</m>. In other words, we consider <m>F(x)</m> as a formal power series and frequently ignore issues of convergence.
     </p>
 
-    <p>It is customary to refer to <m>F(x)</m> as the <term>generating function</term><index><main>generating function</main></index> of the sequence <m>\sigma</m>. As we have already remarked, we are not necessarily interested in calculating <m>F(x)</m> for specific values of <m>x</m>. However, by convention, we take <m>F(0)=a_0</m>.
+    <p>It is customary to refer to <m>F(x)</m> as the <term>generating function</term><idx><h>generating function</h></idx> of the sequence <m>\sigma</m>. As we have already remarked, we are not necessarily interested in calculating <m>F(x)</m> for specific values of <m>x</m>. However, by convention, we take <m>F(0)=a_0</m>.
     </p>
     <example xml:id="exam_genfunction_geom-series">
         <p>Consider the constant sequence <m>\sigma=\{a_n:n\ge0\}</m> with <m>a_n=1</m> for every <m>n\ge0</m>. Then the generating function <m>F(x)</m> of <m>\sigma</m> is given by

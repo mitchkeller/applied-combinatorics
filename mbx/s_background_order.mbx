@@ -3,21 +3,21 @@
     <p>A binary relation <m>R</m> on a set <m>X</m> is just a subset of the cartesian product <m>X\times X</m>. In discussions of binary relations, the notation <m>(x,y)\in R</m> is sometimes written as <m>xRy</m>.
     </p>
 
-    <p>A binary relation<index><main>relation</main><sub>binary</sub></index> <m>R</m> is:
+    <p>A binary relation<idx><h>relation</h><h>binary</h></idx> <m>R</m> is:
     <ol label="i">
         <li><term>reflexive</term> if <m>(x,x)\in R</m> for
-        all <m>x\in X</m>.<index><main>reflexive</main></index></li>
-        <li><term>antisymmetric</term> if <m>x=y</m> whenever <m>(x,y)\in R</m> and <m>(y,x)\in R</m>, for all <m>x,y\in X</m>. <index><main>antisymmetric</main></index></li>
-        <li><term>transitive</term> if <m>(x,y)\in R</m> and <m>(y,z)\in R</m> imply <m>(x,z)\in R</m>, for all <m>x,y,z\in X</m>.<index><main>transitive</main></index></li>
+        all <m>x\in X</m>.<idx><h>reflexive</h></idx></li>
+        <li><term>antisymmetric</term> if <m>x=y</m> whenever <m>(x,y)\in R</m> and <m>(y,x)\in R</m>, for all <m>x,y\in X</m>. <idx><h>antisymmetric</h></idx></li>
+        <li><term>transitive</term> if <m>(x,y)\in R</m> and <m>(y,z)\in R</m> imply <m>(x,z)\in R</m>, for all <m>x,y,z\in X</m>.<idx><h>transitive</h></idx></li>
     </ol>
     </p>
-    <p>A binary relation <m>R</m> on a set <m>X</m> is called a <term>partial order</term><index><main>order</main><sub>partial</sub></index> on <m>X</m> when it is reflexive, antisymmetric, and transitive.  Traditionally, symbols like <m>\le</m> and <m>\subseteq</m> are used to denote partial orders. As an example, recall that if <m>X</m> is a family of sets, we write <m>A\subseteq B</m> when <m>A</m> is a subset of <m>B</m>.
+    <p>A binary relation <m>R</m> on a set <m>X</m> is called a <term>partial order</term><idx><h>order</h><h>partial</h></idx> on <m>X</m> when it is reflexive, antisymmetric, and transitive.  Traditionally, symbols like <m>\le</m> and <m>\subseteq</m> are used to denote partial orders. As an example, recall that if <m>X</m> is a family of sets, we write <m>A\subseteq B</m> when <m>A</m> is a subset of <m>B</m>.
     </p>
 
     <p>When using the ordered pair notation for binary relations, to indicate that a pair <m>(x,y)</m> is not in the relation, we simply write <m>(x,y)\notin R</m>. When using the alternate notation, this is usually denoted by using the negation symbol from logic and writing <m>\lnot (xRy)</m>. Most of the special symbols used to denote partial orders come with negative versions, <eg />, <m>x\not\le y</m>, <m>x\nsubseteq y</m>.
     </p>
 
-    <p>A partial order is called a <term>total order</term><index><main>order</main><sub>total</sub></index> on <m>X</m> when for all <m>x,y\in X</m>, <m>(x,y)\in R</m> or <m>(y,x)\in R</m>. For example, if
+    <p>A partial order is called a <term>total order</term><idx><h>order</h><h>total</h></idx> on <m>X</m> when for all <m>x,y\in X</m>, <m>(x,y)\in R</m> or <m>(y,x)\in R</m>. For example, if
     <me>
         X=\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}
     </me>

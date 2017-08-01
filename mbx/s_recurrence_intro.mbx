@@ -2,11 +2,11 @@
     <title>Introduction</title>
     <subsection xml:id="s_recurrence_intro_fib">
         <title>Fibonacci numbers</title>
-        <index><main>Fibonacci</main><sub>numbers</sub></index>
+        <idx><h>Fibonacci</h><h>numbers</h></idx>
         <p>One of the most well-known recurrences arises from a simple story. Suppose that a scientist introduces a pair of newborn rabbits to an isolated island. This species of rabbits is unable to reproduce until their third month of life, but after that produces a new pair of rabbits each month. Thus, in the first and second months, there is one pair of rabbits on the island, but in the third month, there are two pairs of rabbits, as the first pair has a pair of offspring. In the fourth month, the original pair of rabbits is still there, as is their first pair of offspring, which are not yet mature enough to reproduce. However, the original pair gives birth to another pair of rabbits, meaning that the island now has three pairs of rabbits. Assuming that there are no rabbit-killing predators on the island and the rabbits have an indefinite lifespan, how many pairs of rabbits are on the island in the tenth month?
         </p>
 
-        <p>Let's see how we can get a recurrence from this story. Let <m>f_n</m> denote the number of pairs rabbits on the island in month <m>n</m>. Thus, <m>f_1 = 1</m>, <m>f_2 = 1</m>, <m>f_3=2</m>, and <m>f_4=3</m> from our account above. How can we compute <m>f_n</m>? Well, in the <m>n^\text{th}</m> month we have all the pairs of rabbits that were there during the previous month, which is <m>f_{n-1}</m>; however, some of those pairs of rabbits also reproduce during this month. Only the ones who were born prior to the previous month are able to reproduce during month <m>n</m>, so there are <m>f_{n-2}</m> pairs of rabbits who are able to reproduce, and each produces a new pair of rabbits. Thus, we have that the number of rabbits in month <m>n</m> is <m>f_n = f_{n-1} + f_{n-2}</m> for <m>n\geq 3</m> with <m>f_1=f_2=1</m>. The sequence of numbers <m>\{f_n\colon n\geq 0\}</m> (we take <m>f_0=0</m>, which satisfies our recurrence) is known as the <term>Fibonacci sequence</term><index><main>Fibonacci</main><sub>sequence</sub></index> after Leonardo of Pisa, better known as Fibonacci, an Italian mathematician who lived from about 1170 until about 1250. The terms <m>f_0,f_1,\dots,f_{20}</m> of the Fibonacci sequence are
+        <p>Let's see how we can get a recurrence from this story. Let <m>f_n</m> denote the number of pairs rabbits on the island in month <m>n</m>. Thus, <m>f_1 = 1</m>, <m>f_2 = 1</m>, <m>f_3=2</m>, and <m>f_4=3</m> from our account above. How can we compute <m>f_n</m>? Well, in the <m>n^\text{th}</m> month we have all the pairs of rabbits that were there during the previous month, which is <m>f_{n-1}</m>; however, some of those pairs of rabbits also reproduce during this month. Only the ones who were born prior to the previous month are able to reproduce during month <m>n</m>, so there are <m>f_{n-2}</m> pairs of rabbits who are able to reproduce, and each produces a new pair of rabbits. Thus, we have that the number of rabbits in month <m>n</m> is <m>f_n = f_{n-1} + f_{n-2}</m> for <m>n\geq 3</m> with <m>f_1=f_2=1</m>. The sequence of numbers <m>\{f_n\colon n\geq 0\}</m> (we take <m>f_0=0</m>, which satisfies our recurrence) is known as the <term>Fibonacci sequence</term><idx><h>Fibonacci</h><h>sequence</h></idx> after Leonardo of Pisa, better known as Fibonacci, an Italian mathematician who lived from about 1170 until about 1250. The terms <m>f_0,f_1,\dots,f_{20}</m> of the Fibonacci sequence are
         <me>
             0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987, 1597,2584,4181,6765.
         </me>
@@ -48,7 +48,7 @@
         <p>In <xref ref="ch_induction" autoname="yes" />, we saw several times how we could find recurrences that gave us the number of binary or ternary strings of length <m>n</m> when we place a restriction on certain patterns appearing in the string. Let's recall a couple of those types of questions in order to help generate more recurrences to work with.
         </p>
         <example xml:id="ex_recurrence_binary-strings-no-11">
-            <index><main>string</main><sub>binary</sub></index>
+            <idx><h>string</h><h>binary</h></idx>
             <p>Let <m>a_{n}</m> count the number of binary strings of length <m>n</m> in which no two consecutive characters are<nbsp /><m>1</m>'s. Evidently, <m>a_1=2</m> since both binary strings of length<nbsp /><m>1</m> are <q>good.</q> Also, <m>a_2=3</m> since only one of the four binary strings of length<nbsp /><m>2</m> is <q>bad,</q>, namely <m>(1,1)</m>. And <m>a_3= 5</m>, since of the <m>8</m> binary strings of length<nbsp /><m>3</m>, the following three strings are <q>bad</q>:
             <me>
                 (1,1,0), (0,1,1), (1,1,1).
@@ -61,7 +61,7 @@
         </example>
 
         <example xml:id="ex_recurrence_ternary-strings-no-20">
-            <index><main>string</main><sub>ternary</sub></index>
+            <idx><h>string</h><h>ternary</h></idx>
             <p>Let <m>t_n</m> count the number of ternary strings in which we never have <m>(2,0)</m> occurring as a substring in two consecutive positions. Now <m>t_1=3</m> and <m>t_2=8</m>, as of the <m>9</m> ternary strings of length<nbsp /><m>2</m>, exactly one of them is <q>bad.</q> Now consider the set of all good strings grouped according to the last character. If this character is a <m>2</m> or a <m>1</m>, then the preceding <m>n+1</m> characters can be any <q>good</q> string of length<nbsp /><m>n+1</m>. However, if the last character is a <m>0</m>, then the first <m>n+1</m> characters form a good string of length <nbsp /><m>n+1</m> which does not end in a<nbsp /><m>2</m>. The number of such strings is <m>t_{n+1} - t_n</m>. Accordingly, the recurrence is <m>t_{n+2} = 3t_{n+1} - t_n</m>. In particular, <m>t_3 = 21</m>.
             </p>
         </example>

@@ -22,7 +22,7 @@
 
     <lemma xml:id="lem_LLL">
         <title>Lov&#xe1;sz Local Lemma (Asymmetric)</title>
-        <index><main>Lov&#xe1;sz Local Lemma</main><sub>asymmetric</sub></index>
+        <idx><h>Lov&#xe1;sz Local Lemma</h><h>asymmetric</h></idx>
         <statement>
             <p>Let <m>\cgF</m> be a finite family of events in a probability space and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote a subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of any event not in <m>\cgN(E)</m>. Suppose that for each event <m>E\in\cgF</m>, there is a real number <m>x(E)</m> with <m>0\lt x(E)\lt 1</m> such that
             <me>
@@ -89,7 +89,7 @@
 
     <lemma xml:id="lem_LLL-sym">
         <title>Lov&#xe1;sz Local Lemma (Symmetric)</title>
-        <index><main>Lov&#xe1;sz Local Lemma</main><sub>symmetric</sub></index>
+        <idx><h>Lov&#xe1;sz Local Lemma</h><h>symmetric</h></idx>
 
         <statement>
             <p>Let <m>p</m> and <m>d</m> be numbers with <m>0\lt p\lt 1</m> and <m>d\ge 1</m>. Also, let <m>\cgF</m> be a finite family of events in a probability space and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote the subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of any event not in <m>\cgN(E)</m>. Suppose that <m>P(E)\le p</m>, <m>|\cgN(E)|\le d</m> for every event <m>E\in\cgF</m> and that <m>ep(d+1)\lt 1</m>, where <m>e=2.71828\dots</m> is the base for natural logarithms. Then 

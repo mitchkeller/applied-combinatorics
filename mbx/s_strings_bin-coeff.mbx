@@ -1,6 +1,6 @@
 <section xml:id="s_strings_bin-coeff">
     <title>The Ubiquitous Nature of Binomial Coefficients</title>
-    <index><main>binomial coefficient</main></index>
+    <idx><h>binomial coefficient</h></idx>
     <p>In this section, we present several combinatorial problems that can be solved by appeal to binomial coefficients, even though at first glance, they do not appear to have anything to do with sets.
     </p>
     <example>
@@ -56,7 +56,7 @@
             </ol>
             </p>
     </example>
-    <p>A classical enumeration problem (with connections to several problems) involves counting lattice paths. A <term>lattice path</term><index><main>lattice path</main></index> in the plane is a sequence of ordered pairs of integers:
+    <p>A classical enumeration problem (with connections to several problems) involves counting lattice paths. A <term>lattice path</term><idx><h>lattice path</h></idx> in the plane is a sequence of ordered pairs of integers:
     <me>
         (m_1,n_1), (m_2,n_2), (m_3,n_3),\dots,(m_t,n_t)
     </me>
@@ -73,7 +73,7 @@
         <image width="51%" source="images/3012-fig22" />
     </figure>
     <example>
-        <index><main>lattice path</main><sub>counting</sub></index>
+        <idx><h>lattice path</h><h>counting</h></idx>
         <p>The number of lattice paths from <m>(m,n)</m> to <m>(p,q)</m> is <m>C((p-m)+(q-n),p-m)</m>.
         </p>
 
@@ -82,7 +82,7 @@
     </example>
 
     <example xml:id="exa_lattice-Catalan">
-        <p>Let <m>n</m> be a non-negative integer. Then the number of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> which never go above the diagonal line <m>y=x</m> is the <term>Catalan number</term><index><main>Catalan number</main></index><index><main>lattice path</main><sub>number not crossing <m>y=x</m></sub></index>
+        <p>Let <m>n</m> be a non-negative integer. Then the number of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> which never go above the diagonal line <m>y=x</m> is the <term>Catalan number</term><idx><h>Catalan number</h></idx><idx><h>lattice path</h><h>number not crossing <m>y=x</m></h></idx>
         <me>
             C(n) =\frac{1}{n+1}\binom{2n}{n}.
         </me>

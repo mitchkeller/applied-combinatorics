@@ -3,7 +3,7 @@
     <p>The binomial coefficient <m>\binom{n}{k}</m> was originally defined in terms of the factorial notation, and with our recursive definitions of the factorial notation, we also have a complete and legally-correct definition of binomial coefficients. The following recursive formula provides an efficient computational scheme.
     </p>
 
-    <p>Let <m>n</m> and <m>k</m> be integers with <m>0\le k\le n</m>. If <m>k=0</m> or <m>k=n</m>, set <m>\binom{n}{k}=1</m>. If <m>0\lt k\lt n</m>, set<index><main>binomial coefficient</main><sub>recursive formula for</sub></index>
+    <p>Let <m>n</m> and <m>k</m> be integers with <m>0\le k\le n</m>. If <m>k=0</m> or <m>k=n</m>, set <m>\binom{n}{k}=1</m>. If <m>0\lt k\lt n</m>, set<idx><h>binomial coefficient</h><h>recursive formula for</h></idx>
     <me>
         \binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}.
     </me>

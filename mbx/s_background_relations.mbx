@@ -1,6 +1,6 @@
 <section xml:id="s_background_relations">
     <title>Binary Relations and Functions</title>
-    <p>A subset <m>R\subseteq X\times Y</m> is called a <term>binary relation</term><index><main>relation</main><sub>binary</sub></index> on <m>X\times Y</m>, and a binary relation <m>R</m> on <m>X\times Y</m> is called a <term>function from <m>X</m> to <m>Y</m></term><index><main>function</main></index> when for every <m>x\in X</m>, there is <em>exactly one</em>
+    <p>A subset <m>R\subseteq X\times Y</m> is called a <term>binary relation</term><idx><h>relation</h><h>binary</h></idx> on <m>X\times Y</m>, and a binary relation <m>R</m> on <m>X\times Y</m> is called a <term>function from <m>X</m> to <m>Y</m></term><idx><h>function</h></idx> when for every <m>x\in X</m>, there is <em>exactly one</em>
         element <m>y\in Y</m> for which <m>(x,y)\in R</m>.
     </p>
 
@@ -44,23 +44,23 @@
         In combinatorics, we sometimes study functions defined algebraically, just like in calculus, but we will frequently describe functions by other kinds of rules. For example, let <m>f:\posints\rightarrow\posints</m> be defined by <m>f(n) = |n/2|</m> if <m>n</m> is even and <m>f(n)=3|n|+1</m> when <m>n</m> is odd.
     </p>
 
-    <p>A function <m>f:X\rightarrow Y</m> is called an <term>injection</term> <index><main>injection</main></index> from <m>X</m> to <m>Y</m> when
+    <p>A function <m>f:X\rightarrow Y</m> is called an <term>injection</term> <idx><h>injection</h></idx> from <m>X</m> to <m>Y</m> when
 for every <m>y\in Y</m>, there is <em>at most</em> one element
         <m>x\in X</m> with <m>y=f(x)</m>.
     </p>
 
     <p>When the meaning of <m>X</m> and <m>Y</m> is clear, we just say <m>f</m> is an <term>injection</term>. An injection is also called a <m>1</m><ndash /><m>1</m> function (read this as <q>one to one</q>) and this is sometimes denoted as <m>f:X\injection Y</m>.<notation><usage>f:X\injection Y</usage><description><m>f</m> is an injection from <m>X</m> to <m>Y</m></description></notation>
-    <index><main>function</main><sub>one-to-one</sub></index>
+    <idx><h>function</h><h>one-to-one</h></idx>
     </p>
 
     <p>
-        A function <m>f:X\rightarrow Y</m> is called a <term>surjection</term><index><main>surjection</main></index> from <m>X</m> to <m>Y</m> when for every <m>y\in Y</m>, there is <em>at least</em> one <m>x\in X</m> with <m>y=f(x)</m>.
+        A function <m>f:X\rightarrow Y</m> is called a <term>surjection</term><idx><h>surjection</h></idx> from <m>X</m> to <m>Y</m> when for every <m>y\in Y</m>, there is <em>at least</em> one <m>x\in X</m> with <m>y=f(x)</m>.
     </p>
 
-    <p>Again, when the meaning of <m>X</m> and <m>Y</m> is clear, we just say <m>f</m> is a <term>surjection</term>. A surjection is also called an <term>onto function</term><index><main>function</main><sub>onto</sub></index> and this is sometimes denoted as <m>f:X\surjection Y</m>.<notation><usage>f\colon X\surjection Y</usage><description><m>f</m> is a surjection from <m>X</m> to <m>Y</m></description></notation>
+    <p>Again, when the meaning of <m>X</m> and <m>Y</m> is clear, we just say <m>f</m> is a <term>surjection</term>. A surjection is also called an <term>onto function</term><idx><h>function</h><h>onto</h></idx> and this is sometimes denoted as <m>f:X\surjection Y</m>.<notation><usage>f\colon X\surjection Y</usage><description><m>f</m> is a surjection from <m>X</m> to <m>Y</m></description></notation>
     </p>
 
-    <p>A function <m>f</m> from <m>X</m> to <m>Y</m> which is both an injection and a surjection is called a <term>bijection</term><index><main>bijection</main></index>. Alternatively, a bijection is referred to as a <m>1</m><ndash /><m>1</m>, onto function, and this is sometimes denoted as <m>f:X \bijection Y</m><notation><usage>f\colon X\bijection Y</usage><description><m>f</m> is a bijection from <m>X</m> to <m>Y</m></description></notation>. A bijection is also called a <term><m>1</m><ndash /><m>1</m>-correspondence</term>.
+    <p>A function <m>f</m> from <m>X</m> to <m>Y</m> which is both an injection and a surjection is called a <term>bijection</term><idx><h>bijection</h></idx>. Alternatively, a bijection is referred to as a <m>1</m><ndash /><m>1</m>, onto function, and this is sometimes denoted as <m>f:X \bijection Y</m><notation><usage>f\colon X\bijection Y</usage><description><m>f</m> is a bijection from <m>X</m> to <m>Y</m></description></notation>. A bijection is also called a <term><m>1</m><ndash /><m>1</m>-correspondence</term>.
     </p>
     <example>
         <p>Let <m>X=Y=\reals</m>. Then let <m>f</m>, <m>g</m> and <m>h</m> be the functions defined by

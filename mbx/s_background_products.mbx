@@ -1,10 +1,10 @@
 <section xml:id="s_background_products">
     <title>Cartesian Products</title>
-    <p>When <m>X</m> and <m>Y</m> are sets, the <term>cartesian product</term><index><main>cartesian product</main></index> of <m>X</m> and <m>Y</m>, denoted <m>X\times Y</m><notation><usage>X\times Y</usage><description>cartesian product of <m>X</m> and <m>Y</m></description></notation>, is defined by
+    <p>When <m>X</m> and <m>Y</m> are sets, the <term>cartesian product</term><idx><h>cartesian product</h></idx> of <m>X</m> and <m>Y</m>, denoted <m>X\times Y</m><notation><usage>X\times Y</usage><description>cartesian product of <m>X</m> and <m>Y</m></description></notation>, is defined by
     <me>
         X\times Y=\{(x,y): x\in X \text{ and }  y\in Y\}
     </me>
-    For example, if <m>X=\{a,b\}</m> and <m>Y=[3]</m>, then <me>X\times Y=\{(a,1),(b,1),(a,2),(b,2),(a,3),(b,3)\}.</me>  Elements of <m>X\times Y</m> are called <term>ordered pairs</term><index><main>ordered pairs</main></index>.  When <m>p=(x,y)</m> is an ordered pair, the element <m>x</m> is referred to as the <term>first coordinate</term> of <m>p</m> while <m>y</m> is the <term>second coordinate</term> of <m>p</m>.  Note that if either <m>X</m> or <m>Y</m> is the empty set, then <m>X\times Y=\emptyset</m>.
+    For example, if <m>X=\{a,b\}</m> and <m>Y=[3]</m>, then <me>X\times Y=\{(a,1),(b,1),(a,2),(b,2),(a,3),(b,3)\}.</me>  Elements of <m>X\times Y</m> are called <term>ordered pairs</term><idx><h>ordered pairs</h></idx>.  When <m>p=(x,y)</m> is an ordered pair, the element <m>x</m> is referred to as the <term>first coordinate</term> of <m>p</m> while <m>y</m> is the <term>second coordinate</term> of <m>p</m>.  Note that if either <m>X</m> or <m>Y</m> is the empty set, then <m>X\times Y=\emptyset</m>.
     </p>
     <example>
         <p>Let <m>X=\{\emptyset,(1,0),\{\emptyset\}\}</m> and <m>Y=\{(\emptyset,0)\}</m>.  Is <m>((1,0),\emptyset)</m> a member of <m>X\times Y</m>?

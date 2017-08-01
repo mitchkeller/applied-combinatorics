@@ -6,7 +6,7 @@
         <p>Each female linearly orders the males in the order of her preference, <ie />, for each <m>i=1,2,\dots,n</m>, there is a permutation <m>\sigma_i</m> of <m>[n]</m> so that if <m>g_i</m> prefers <m>b_j</m> to <m>b_k</m>, then <m>\sigma_i(j)> \sigma_i(k)</m>. Different females may have quite different preference orders. Also, each male linearly orders the females in order of his preference, <ie />, for each <m>i=1,2,\dots,n</m>, there is a permutation <m>\tau_i</m> of <m>[n]</m> so that if <m>b_i</m> prefers <m>g_j</m> to <m>g_k</m>, then <m>\tau_i(j)>\tau(k)</m>.
         </p>
 
-        <p>A <m>1</m><ndash /><m>1</m> matching of the <m>n</m> males to the <m>n</m> females is <term>stable</term><index><main>matching</main><sub>stable</sub></index> if there do not exist two males <m>b</m> and <m>b'</m> and two females <m>g</m> and <m>g'</m> so that
+        <p>A <m>1</m><ndash /><m>1</m> matching of the <m>n</m> males to the <m>n</m> females is <term>stable</term><idx><h>matching</h><h>stable</h></idx> if there do not exist two males <m>b</m> and <m>b'</m> and two females <m>g</m> and <m>g'</m> so that
         <ol>
             <li><m>b</m> is matched to <m>g</m>;</li>
             <li><m>b</m> prefers <m>g'</m> to <m>g</m>; and</li>

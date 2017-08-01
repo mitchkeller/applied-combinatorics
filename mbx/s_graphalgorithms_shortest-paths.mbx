@@ -1,7 +1,7 @@
 <section xml:id="s_graphalgorithms_shortest-paths">
     <title>Dijkstra's Algorithm for Shortest Paths</title>
     <introduction>
-        <p>Just as with graphs, it is useful to assign weights to the directed edges of a digraph. Specifically, in this section we consider a pair <m>(\bfG,w)</m> where <m>\GVE</m> is a digraph and <m>w\colon E\rightarrow\nonnegints</m> is a function assigning to each directed edge <m>(x,y)</m> a non-negative weight <m>w(x,y)</m>. However, in this section, we interpret weight as <term>distance</term><index><main>distance</main></index> so that <m>w(x,y)</m> is now called the <term>length</term><index><main>length</main></index> of the edge <m>(x,y)</m>. If <m>P=(r=u_0,u_1,\dots,u_t=x)</m> is a directed path from <m>r</m> to <m>x</m>, then the <term>length</term> of the path <m>P</m> is just the sum of the lengths of the edges in the path, <m>\sum_{i=0}^{t-1} w(u_iu_{i+1})</m>. The <term>distance</term> from <m>r</m> to <m>x</m> is then defined to be the minimum length of a directed path from <m>r</m> to <m>x</m>. Our goal in this section is to solve the following natural problem, which has many applications:
+        <p>Just as with graphs, it is useful to assign weights to the directed edges of a digraph. Specifically, in this section we consider a pair <m>(\bfG,w)</m> where <m>\GVE</m> is a digraph and <m>w\colon E\rightarrow\nonnegints</m> is a function assigning to each directed edge <m>(x,y)</m> a non-negative weight <m>w(x,y)</m>. However, in this section, we interpret weight as <term>distance</term><idx><h>distance</h></idx> so that <m>w(x,y)</m> is now called the <term>length</term><idx><h>length</h></idx> of the edge <m>(x,y)</m>. If <m>P=(r=u_0,u_1,\dots,u_t=x)</m> is a directed path from <m>r</m> to <m>x</m>, then the <term>length</term> of the path <m>P</m> is just the sum of the lengths of the edges in the path, <m>\sum_{i=0}^{t-1} w(u_iu_{i+1})</m>. The <term>distance</term> from <m>r</m> to <m>x</m> is then defined to be the minimum length of a directed path from <m>r</m> to <m>x</m>. Our goal in this section is to solve the following natural problem, which has many applications:
         </p>
 
         <problem>
@@ -21,8 +21,8 @@
         <p>We are now prepared to describe Dijkstra's Algorithm.</p>
         <algorithm xml:id="alg_dijkstra">
             <title>Dijkstra's Algorithm</title>
-            <index><main>Dijkstra's algorithm</main></index>
-            <index><main>graph</main><sub>shortest path in</sub></index>
+            <idx><h>Dijkstra's algorithm</h></idx>
+            <idx><h>graph</h><h>shortest path in</h></idx>
             <statement>
                 <p>Let <m>n=|V|</m>. At Step<nbsp /><m>i</m>, where <m>1\le i\le n</m>, we will have determined:
                   <ol>

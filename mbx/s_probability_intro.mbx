@@ -16,7 +16,7 @@
     <p>We will now develop a more formal framework that will enable us to make such discussions far more precise. We will also see whether Alice is being entirely fair to Bob in her proposed game to one hundred.
     </p>
 
-    <p>We begin by defining a <term>probability space</term><index><main>probability</main><sub>space</sub></index> as a pair <m>(S,P)</m> where <m>S</m> is a finite set and <m>P</m> is a function that whose domain is the family of all subsets of <m>S</m> and whose range is the set <m>[0,1]</m> of all real numbers which are non-negative and at most one. Furthermore, the following two key properties must be satisfied:
+    <p>We begin by defining a <term>probability space</term><idx><h>probability</h><h>space</h></idx> as a pair <m>(S,P)</m> where <m>S</m> is a finite set and <m>P</m> is a function that whose domain is the family of all subsets of <m>S</m> and whose range is the set <m>[0,1]</m> of all real numbers which are non-negative and at most one. Furthermore, the following two key properties must be satisfied:
                   <ol>
         <li><p><m>P(\emptyset)=0</m> and <m>P(S)=1</m>.</p></li>
         <li><p>If <m>A</m> and <m>B</m> are subsets of <m>S</m>, and <m>A\cap B=\emptyset</m>,
@@ -26,10 +26,10 @@
                 </p>
 
     <p>
-        When <m>(S,P)</m> is a probability space, the function <m>P</m> is called a <term>probability measure</term><index><main>probability</main><sub>measure</sub></index>, the subsets of <m>S</m> are called <term>events</term><index><main>event</main></index>, and when <m>E\subseteq S</m>, the quantity <m>P(E)</m> is referred to as the <term>probability</term><index><main>probability</main></index> of the event <m>E</m>.
+        When <m>(S,P)</m> is a probability space, the function <m>P</m> is called a <term>probability measure</term><idx><h>probability</h><h>measure</h></idx>, the subsets of <m>S</m> are called <term>events</term><idx><h>event</h></idx>, and when <m>E\subseteq S</m>, the quantity <m>P(E)</m> is referred to as the <term>probability</term><idx><h>probability</h></idx> of the event <m>E</m>.
     </p>
 
-    <p>Note that we can consider <m>P</m> to be extended to a mapping from <m>S</m> to <m>[0,1]</m> by setting <m>P(x)=P(\{x\})</m> for each element <m>x\in S</m>.  We call the elements of <m>S</m> <term>outcomes</term><index><main>outcomes</main></index> (some people prefer to say the elements are <term>elementary outcomes</term>) and the quantity <m>P(x)</m> is called the <term>probability</term> of <m>x</m>. It is important to realize that if you know <m>P(x)</m> for each <m>x\in S</m>, then you can calculate <m>P(E)</m> for any event <m>E</m>, since (by the second property), <m>P(E)=\sum_{x\in X}P(x)</m>.
+    <p>Note that we can consider <m>P</m> to be extended to a mapping from <m>S</m> to <m>[0,1]</m> by setting <m>P(x)=P(\{x\})</m> for each element <m>x\in S</m>.  We call the elements of <m>S</m> <term>outcomes</term><idx><h>outcomes</h></idx> (some people prefer to say the elements are <term>elementary outcomes</term>) and the quantity <m>P(x)</m> is called the <term>probability</term> of <m>x</m>. It is important to realize that if you know <m>P(x)</m> for each <m>x\in S</m>, then you can calculate <m>P(E)</m> for any event <m>E</m>, since (by the second property), <m>P(E)=\sum_{x\in X}P(x)</m>.
     </p>
     <example>
         <p>For the spinner, we can take <m>S=\{1,2,3,4,5\}</m>, with <m>P(1)=P(3)=P(4)=1/8</m>, <m>P(2)=2/8=1/4</m> and <m>P(5)=3/8</m>. So <m>P(\{2,3\})=1/8+2/8=3/8</m>.
@@ -52,12 +52,12 @@
     </example>
 
     <example>
-        <p>A jar contains twenty marbles, of which six are red, nine are blue and the remaining five are green. Three of the twenty marbles are selected at random.<fn>This is sometimes called <term>sampling without replacement</term>.  You should imagine a jar with opaque sides<mdash />so you can't see through them.  The marbles are stirred/shaken, and you reach into the jar blind folded and draw out three marbles.</fn><index><main>sampling</main><sub>without replacement</sub></index> Let <m>X=\{0,1,2,3,4,5\}</m>, and for each <m>x\in X</m>, let <m>P(x)</m> denote the probability that the number of blue marbles among the three marbles selected is <m>x</m>. Then <m>P(i)=C(9,i)C(11,3-i)/C(20,3)</m> for <m>i=0,1,2,3</m>, while <m>P(4)=P(5)=0</m>.  Bob says that it doesn't make sense to have outcomes with probability zero, but Carlos says that it does.
+        <p>A jar contains twenty marbles, of which six are red, nine are blue and the remaining five are green. Three of the twenty marbles are selected at random.<fn>This is sometimes called <term>sampling without replacement</term>.  You should imagine a jar with opaque sides<mdash />so you can't see through them.  The marbles are stirred/shaken, and you reach into the jar blind folded and draw out three marbles.</fn><idx><h>sampling</h><h>without replacement</h></idx> Let <m>X=\{0,1,2,3,4,5\}</m>, and for each <m>x\in X</m>, let <m>P(x)</m> denote the probability that the number of blue marbles among the three marbles selected is <m>x</m>. Then <m>P(i)=C(9,i)C(11,3-i)/C(20,3)</m> for <m>i=0,1,2,3</m>, while <m>P(4)=P(5)=0</m>.  Bob says that it doesn't make sense to have outcomes with probability zero, but Carlos says that it does.
         </p>
     </example>
 
     <example>
-        <p>In some cards games, each player receives five cards from a standard deck of<nbsp /><m>52</m> cards<mdash />four suits (spades, hearts, diamonds and clubs) with<nbsp /><m>13</m> cards, ace though king in each suit. A player has a <term>full house</term><index><main>full house (poker hand)</main></index> if there are two values <m>x</m> and <m>y</m> for which he has three of the four <m>x</m>'s and two of the four <m>y</m>'s, <eg />  three kings and two eights. If five cards are drawn at random from a standard deck, the probability of a full house is
+        <p>In some cards games, each player receives five cards from a standard deck of<nbsp /><m>52</m> cards<mdash />four suits (spades, hearts, diamonds and clubs) with<nbsp /><m>13</m> cards, ace though king in each suit. A player has a <term>full house</term><idx><h>full house (poker hand)</h></idx> if there are two values <m>x</m> and <m>y</m> for which he has three of the four <m>x</m>'s and two of the four <m>y</m>'s, <eg />  three kings and two eights. If five cards are drawn at random from a standard deck, the probability of a full house is
         <me>            \frac{\binom{13}{1}\binom{12}{1}\binom{4}{3}\binom{4}{2}}{\binom{52}{5}}\approx 0.00144.
         </me>
         </p>

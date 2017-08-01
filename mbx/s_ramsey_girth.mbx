@@ -6,13 +6,13 @@
         <p>At the outset of this chapter, we presented Erd&#337;s' original proof for the lower bound for the Ramsey number <m>R(n,n)</m> using counting.  Later, we recast the proof in a probabilistic setting. History has shown that this second perspective is the right one. To illustrate the power of this approach, we present a classic theorem, which is also due to Erd&#337;s, showing that there are graphs with large girth and large chromatic number.
         </p>
 
-        <p>The <term>girth</term><index><main>girth</main></index> <m>g</m> of a graph <m>G</m> is the smallest integer for which <m>G</m> contains a cycle on <m>g</m> vertices. The girth of a forest is taken to be infinite, while the girth of a graph is three if and only if it has a triangle. You can check the families of triangle-free, large chromatic number, graphs constructed in <xref ref="ch_graphs" autoname="yes" /> and see that each has girth four.
+        <p>The <term>girth</term><idx><h>girth</h></idx> <m>g</m> of a graph <m>G</m> is the smallest integer for which <m>G</m> contains a cycle on <m>g</m> vertices. The girth of a forest is taken to be infinite, while the girth of a graph is three if and only if it has a triangle. You can check the families of triangle-free, large chromatic number, graphs constructed in <xref ref="ch_graphs" autoname="yes" /> and see that each has girth four.
         </p>
 
         <theorem xml:id="thm_girth">
             <title>Erd&#337;s</title>
-            <index><main>girth</main></index>
-            <index><main>chromatic number</main></index>
+            <idx><h>girth</h></idx>
+            <idx><h>chromatic number</h></idx>
             <statement>
                 <p>For every pair <m>g,t</m> of integers with <m>g\ge3</m>, there exists a graph <m>G</m> with <m>\chi(G)>t</m> and the girth of <m>G</m> greater than <m>g</m>.
                 </p>

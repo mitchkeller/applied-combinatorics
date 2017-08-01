@@ -2,12 +2,12 @@
 <exercises xml:id="s_posets_exercises">
     <exercise>
         <statement>
-            <p>We say that a relation <m>R</m> on a set <m>X</m> is <term>symmetric</term><index><main>relation</main><sub>symmetric</sub></index> if <m>(x,y)\in R</m> implies <m>(y,x)\in R</m> for all <m>x,y\in X</m>. If <m>X=\{a,b,c,d,e,f\}</m>, how many symmetric relations are there on <m>X</m>?  How many of these are reflexive?</p>
+            <p>We say that a relation <m>R</m> on a set <m>X</m> is <term>symmetric</term><idx><h>relation</h><h>symmetric</h></idx> if <m>(x,y)\in R</m> implies <m>(y,x)\in R</m> for all <m>x,y\in X</m>. If <m>X=\{a,b,c,d,e,f\}</m>, how many symmetric relations are there on <m>X</m>?  How many of these are reflexive?</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>A relation <m>R</m> on a set <m>X</m> is an <term>equivalence relation</term><index><main>relation</main><sub>equivalence</sub></index> if <m>R</m> is reflexive, symmetric, and transitive. Fix an integer <m>m\geq 2</m>. Show that the relation defined on the set <m>\ints</m> of integers by <m>aRb</m> (<m>a,b\in\ints</m>) if and only if <m>a\equiv b\pmod{m}</m> is an equivalence relation. (Recall that <m>a\equiv b\pmod{m}</m> means that when dividing <m>a</m> by <m>m</m> and <m>b</m> by <m>m</m> you get the same remainder.)</p>
+            <p>A relation <m>R</m> on a set <m>X</m> is an <term>equivalence relation</term><idx><h>relation</h><h>equivalence</h></idx> if <m>R</m> is reflexive, symmetric, and transitive. Fix an integer <m>m\geq 2</m>. Show that the relation defined on the set <m>\ints</m> of integers by <m>aRb</m> (<m>a,b\in\ints</m>) if and only if <m>a\equiv b\pmod{m}</m> is an equivalence relation. (Recall that <m>a\equiv b\pmod{m}</m> means that when dividing <m>a</m> by <m>m</m> and <m>b</m> by <m>m</m> you get the same remainder.)</p>
         </statement>
     </exercise>
     <exercise>
@@ -38,7 +38,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>A <term>linear extension</term><index><main>linear extension</main></index> of a poset <m>\bfP=(X,P)</m> is a total order <m>L</m> on <m>X</m> such that if <m>x\leq y</m> in <m>P</m>, then <m>x\leq y</m> in <m>L</m>. Give linear extension of the three posets shown in <xref ref="fig_constructposets" autoname="yes"/>.  If you feel very ambitious, try to count the number of linear extensions of the poset on the left side of the figure.  Don't list them.  Just provide an integer as your answer.</p>
+            <p>A <term>linear extension</term><idx><h>linear extension</h></idx> of a poset <m>\bfP=(X,P)</m> is a total order <m>L</m> on <m>X</m> such that if <m>x\leq y</m> in <m>P</m>, then <m>x\leq y</m> in <m>L</m>. Give linear extension of the three posets shown in <xref ref="fig_constructposets" autoname="yes"/>.  If you feel very ambitious, try to count the number of linear extensions of the poset on the left side of the figure.  Don't list them.  Just provide an integer as your answer.</p>
         </statement>
     </exercise>
     <exercise>
@@ -170,7 +170,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>The <term>dimension</term><index><main>dimension</main></index> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for which <m>P</m> is the intersection of <m>t</m> linear orders on <m>X</m>.
+            <p>The <term>dimension</term><idx><h>dimension</h></idx> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for which <m>P</m> is the intersection of <m>t</m> linear orders on <m>X</m>.
                   <ol>
                 <li><p>Show that the dimension of a poset <m>\bfP</m> is the same as the dimension of its dual.</p></li>
                 <li><p>Show that <m>\bfP</m> is a subposet of <m>\bfQ</m>, then <m>\dim(\bfP)\le \dim(\bfQ)</m>.</p></li>

@@ -6,7 +6,7 @@
         <caption>The bridges of K&#xf6;nigsberg</caption>
         <image width="65%" source="images/konigsberg_bridges" />
     </figure>
-    <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><index><main>graph</main><sub>eulerian</sub></index> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
+    <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><idx><h>graph</h><h>eulerian</h></idx> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
     <ol>
         <li><m>x_0=x_t</m>;</li>
         <li>for every <m>i=0,1,\dots t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
@@ -14,7 +14,7 @@
     </ol>
     </p>
 
-    <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian circuit</term><index><main>eulerian</main><sub>circuit</sub></index>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>circuit</term><index><main>circuit</main></index> when it satisfies only the first two of these conditions. Note that a sequence consisting of a single vertex is a circuit. Before proceeding to Euler's elegant characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are not eulerian.</p>
+    <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian circuit</term><idx><h>eulerian</h><h>circuit</h></idx>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>circuit</term><idx><h>circuit</h></idx> when it satisfies only the first two of these conditions. Note that a sequence consisting of a single vertex is a circuit. Before proceeding to Euler's elegant characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are not eulerian.</p>
 
     <p>Run the code below. It will execute until it finds a graph <m>\bfG</m> that is eulerian. The output that will be produced is a list of the degrees of the vertices of the graph <m>\bfG</m> followed by a drawing of <m>\bfG</m>.</p>
     <sage>
@@ -97,13 +97,13 @@ g.show()
         <image width="13%" source="images/konigsberg_graph" />
     </figure>
 
-    <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><index><main>graph</main><sub>hamiltonian</sub></index> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that
+    <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><idx><h>graph</h><h>hamiltonian</h></idx> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that
     <ol>
         <li>every vertex of <m>\bfG</m> appears exactly once in the sequence;</li>
         <li><m>x_1x_n</m> is an edge of <m>\bfG</m>; and</li>
         <li>for each <m>i=1,2,\dots,n-1</m>, <m>x_ix_{i+1}</m> is an edge in <m>\bfG</m>.</li>
     </ol>
-    Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<index><main>hamiltonian</main><sub>cycle</sub></index>
+    Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<idx><h>hamiltonian</h><h>cycle</h></idx>
     </p>
     <p>The first graph shown in <xref ref="fig_eulham" autoname="yes" /> both eulerian and hamiltonian. The second is hamiltonian but not eulerian.
     </p>

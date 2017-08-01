@@ -1,11 +1,11 @@
 <section xml:id="s_basics_pigeonhole">
     <title>The Pigeon Hole Principle</title>
-    <p>A function <m>f:X\longrightarrow Y</m> is said to be <m>1</m><ndash /><m>1</m> (read <term>one-to-one</term><index><main>function</main><sub>one-to-one</sub></index>) when <m>f(x)\neq f(x')</m> for all <m>x,x'\in X</m> with <m>x\neq x'</m>. A <m>1</m><ndash /><m>1</m> function is also called an <term>injection</term> or we say that <m>f</m> is <term>injective</term><index><main>function</main><sub>injective</sub></index><index><main>injection</main></index>. When <m>f:X\longrightarrow Y</m> is <m>1</m><ndash /><m>1</m>, we note that <m>|X|\le |Y|</m>.  Conversely, we have the following self-evident statement, which is popularly called the <q>Pigeon Hole</q> principle.
+    <p>A function <m>f:X\longrightarrow Y</m> is said to be <m>1</m><ndash /><m>1</m> (read <term>one-to-one</term><idx><h>function</h><h>one-to-one</h></idx>) when <m>f(x)\neq f(x')</m> for all <m>x,x'\in X</m> with <m>x\neq x'</m>. A <m>1</m><ndash /><m>1</m> function is also called an <term>injection</term> or we say that <m>f</m> is <term>injective</term><idx><h>function</h><h>injective</h></idx><idx><h>injection</h></idx>. When <m>f:X\longrightarrow Y</m> is <m>1</m><ndash /><m>1</m>, we note that <m>|X|\le |Y|</m>.  Conversely, we have the following self-evident statement, which is popularly called the <q>Pigeon Hole</q> principle.
     </p>
 
     <proposition xml:id="prop_pigeon">
         <title>Pigeon Hole Principle</title>
-        <index><main>pigeon hole principle</main></index>
+        <idx><h>pigeon hole principle</h></idx>
         <statement>
             <p>If <m>f:X\longrightarrow Y</m> is a function and <m>|X|>|Y|</m>, then there exists an element <m>y\in Y</m> and distinct elements <m>x,x'\in X</m> so that <m>f(x)=f(x')=y</m>.
             </p>

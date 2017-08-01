@@ -3,13 +3,13 @@
     <p>To motivate the topic of this section, we consider another variant on the officer election problem from <xref ref="exa_strings_officers" autoname="yes" />. Suppose that instead of electing students to specific offices, the class is to elect an executive council of four students from the pool of <m>80</m> students. Each position on the executive council is equal, so there would be no difference between Alice winning the <q>first</q> seat on the executive council and her winning the <q>fourth</q> seat. In other words, we just want to pick four of the <m>80</m> students without any regard to order. We'll return to this question after introducing our next concept.
     </p>
     
-    <p>Let <m>X</m> be a finite set and let <m>k</m> be an integer with <m>0\le k\le |X|</m>. Then a <m>k</m>-element subset of <m>X</m> is also called a <term>combination</term><index><main>combination</main></index><index><main>binomial coefficient</main></index> of size<nbsp /><m>k</m>. When <m>|X| =n</m>, the number of <m>k</m>-element subsets of <m>X</m> is denoted <m>\binom{n}{k}</m>.<notation><usage>\binom{n}{k}</usage><description>binomial coefficient</description></notation> Numbers of the form <m>\binom{n}{k}</m> are called <term>binomial coefficients</term>, and many combinatorists read <m>\binom{n}{k}</m> as <q><m>n</m> <term>choose</term> <m>k</m>.</q> When we need an in-line version, the preferred notation is <m>C(n,k)</m><notation><usage>C(n,k)</usage><description>binomial coefficient (inline)</description></notation>.  Also, the quantity <m>C(n,k)</m> is referred to as the number of combinations of <m>n</m> things, taken <m>k</m> at a time.
+    <p>Let <m>X</m> be a finite set and let <m>k</m> be an integer with <m>0\le k\le |X|</m>. Then a <m>k</m>-element subset of <m>X</m> is also called a <term>combination</term><idx><h>combination</h></idx><idx><h>binomial coefficient</h></idx> of size<nbsp /><m>k</m>. When <m>|X| =n</m>, the number of <m>k</m>-element subsets of <m>X</m> is denoted <m>\binom{n}{k}</m>.<notation><usage>\binom{n}{k}</usage><description>binomial coefficient</description></notation> Numbers of the form <m>\binom{n}{k}</m> are called <term>binomial coefficients</term>, and many combinatorists read <m>\binom{n}{k}</m> as <q><m>n</m> <term>choose</term> <m>k</m>.</q> When we need an in-line version, the preferred notation is <m>C(n,k)</m><notation><usage>C(n,k)</usage><description>binomial coefficient (inline)</description></notation>.  Also, the quantity <m>C(n,k)</m> is referred to as the number of combinations of <m>n</m> things, taken <m>k</m> at a time.
     </p>
 
     <p>Bob notes that with this notation, the number of ways a four-member executive council can be elected from the <m>80</m> interested students is <m>C(80,4)</m>. However, he's puzzled about how to compute the value of <m>C(80,4)</m>. Alice points out that it must be less than <m>P(80,4)</m>, since each executive council could be turned into <m>4!</m> different slates of officers. Carlos agrees and says that Alice has really hit upon the key idea in finding a formula to compute <m>C(n,k)</m> in general.
     </p>
 
-    <proposition xml:id="prop_strings_binomraw"><index><main>binomial coefficient</main><sub>formula for</sub></index><index><main>combination</main><sub>number of</sub><sub>formula for</sub></index>
+    <proposition xml:id="prop_strings_binomraw"><idx><h>binomial coefficient</h><h>formula for</h></idx><idx><h>combination</h><h>number of</h><h>formula for</h></idx>
         <statement>
             <p>If <m>n</m> and <m>k</m> are integers with <m>0\le k\le n</m>, then
             <me>
@@ -49,7 +49,7 @@
     </example>
     <p>Our next example introduces an important correspondence between sets and bit strings that we will repeatedly exploit in this text.
     </p>
-    <example><index><main>string</main><sub>binary</sub></index>
+    <example><idx><h>string</h><h>binary</h></idx>
         <p>Let <m>n</m> be a positive integer and let <m>X</m> be an <m>n</m>-element set.  Then there is a natural one-to-one correspondence between subsets of <m>X</m> and bit strings of length<nbsp /><m>n</m>. To be precise, let <m>X=\{x_1,x_2,\dots,x_n\}</m>. Then a subset <m>A\subseteq X</m> corresponds to the string <m>s</m> where <m>s(i) = 1</m> if and only if <m>i\in A</m>. For example, if <m>X=\{a,b,c,d,e,f,g,h\}</m>, then the subset <m>\{b,c,g\}</m> corresponds to the bit string <m>01100010</m>. There are <m>C(8,3)=56</m> bit strings of length eight with precisely three <m>1</m>'s. Thinking about this correspondence, what is the total number of subsets of an <m>n</m>-element set?
         </p>
     </example>

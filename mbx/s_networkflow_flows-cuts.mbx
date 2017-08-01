@@ -3,7 +3,7 @@
     <p>Considering the applications suggested at the beginning of the chapter, it is natural to ask for the maximum value of a flow in a given network. Put another way, we want to find the largest number <m>v_0</m> so that there exists a flow <m>\phi</m> of value <m>v_0</m> in the network. Of course, we not only want to find the maximum value <m>v_0</m>, but we also want to find a flow <m>\phi</m> having this value. Although it may seem a bit surprising, we will develop an efficient algorithm which both finds a flow of maximum value <em>and</em> finds a certificate verifying the claim of optimality. This certificate makes use of the following important concept.
     </p>
 
-    <p>A partition <m>V=L\cup U</m> of the vertex set <m>V</m> of a network with <m>S\in L</m> and <m>T\in U</m> is called a <term>cut</term><index><main>cut</main></index>.<fn>Our choice of <m>L</m> and <m>U</m> for the names of the two parts of the partition will make more sense later in the chapter.</fn> The <term>capacity</term><index><main>capacity</main><sub>of a cut</sub></index> of a cut <m>V=L\cup U</m>, denoted <m>c(L,U)</m>, is defined by
+    <p>A partition <m>V=L\cup U</m> of the vertex set <m>V</m> of a network with <m>S\in L</m> and <m>T\in U</m> is called a <term>cut</term><idx><h>cut</h></idx>.<fn>Our choice of <m>L</m> and <m>U</m> for the names of the two parts of the partition will make more sense later in the chapter.</fn> The <term>capacity</term><idx><h>capacity</h><h>of a cut</h></idx> of a cut <m>V=L\cup U</m>, denoted <m>c(L,U)</m>, is defined by
     <me>
         c(L,U) = \sum_{x\in L,y\in U} c(x,y).
     </me>

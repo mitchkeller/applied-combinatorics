@@ -21,7 +21,7 @@
                   </ol>
                 </p>
 
-        <p>When <m>V</m> is a vector space, a function <m>\phi\colon V\rightarrow V</m> is called an <term>linear operator</term><index><main>operator</main><sub>linear</sub></index>, or just <term>operator</term> for short, when <m>\phi(x+y)=\phi(x)+\phi(y)</m> and <m>\phi(\alpha x)=\alpha\phi(x)</m>. When <m>\phi\colon V\rightarrow V</m> is an operator, it is customary to write <m>\phi x</m> rather than <m>\phi(x)</m>, saving a set of parentheses. The set of all operators over a vector space <m>V</m> is itself a vector space with addition defined by <m>(\phi+\rho)x = \phi x +\rho x</m> and scalar multiplication by <m>(\alpha\phi)x=\alpha(\phi x)</m>.
+        <p>When <m>V</m> is a vector space, a function <m>\phi\colon V\rightarrow V</m> is called an <term>linear operator</term><idx><h>operator</h><h>linear</h></idx>, or just <term>operator</term> for short, when <m>\phi(x+y)=\phi(x)+\phi(y)</m> and <m>\phi(\alpha x)=\alpha\phi(x)</m>. When <m>\phi\colon V\rightarrow V</m> is an operator, it is customary to write <m>\phi x</m> rather than <m>\phi(x)</m>, saving a set of parentheses. The set of all operators over a vector space <m>V</m> is itself a vector space with addition defined by <m>(\phi+\rho)x = \phi x +\rho x</m> and scalar multiplication by <m>(\alpha\phi)x=\alpha(\phi x)</m>.
         </p>
 
         <p>In this chapter, we focus on the real vector space <m>V</m> consisting of all functions of the form <m>f\colon\ints\rightarrow\reals</m>. Addition is defined by <m>(f+g)(n)= f(n)+g(n)</m> and scalar multiplication is defined by <m>(\alpha f)(n)=\alpha(f(n))</m>.
