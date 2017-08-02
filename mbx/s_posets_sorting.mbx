@@ -2,9 +2,9 @@
     <title>Linear Extensions of Partially Ordered Sets</title>
     <p>Let <m>\PXP</m> be a partially ordered set. A linear order <m>L</m> on <m>X</m> is called a <term>linear extension</term><idx><h>linear extension</h></idx> (also, a <term>topological sort</term>) of <m>P</m>, if <m>x\lt y</m> in <m>L</m> whenever <m>x\lt y</m> in <m>P</m>. For example, the table displayed in <xref ref="fig_posets_lin-extn"  /> shows that our familiar example <m>\bfP_3</m> has<nbsp />11 linear extensions.
     </p>
-    <sidebyside xml:id="fig_posets_lin-extn" widths="18% 75%" valigns="middle middle">
+    <figure  xml:id="fig_posets_lin-extn" >
         <caption>A poset and its linear extensions</caption>
-        <figure>
+        <sidebyside widths="18% 75%" valigns="middle middle">
         <image>
             <latex-image-code><![CDATA[\begin{overpic}[scale=.4]{images/wttfig-9}
             \put(-3,2){\(z\)}
@@ -15,7 +15,6 @@
             \put(48,93){\(d\)}
             \end{overpic}]]></latex-image-code>
         </image>
-        </figure>
         <p>
             <me>
                 \begin{array}{ccccccccccc}
@@ -30,7 +29,7 @@
             </me>
         </p>
     </sidebyside>
-
+    </figure>
     <remark>
         <p>Bob says that he is not convinced that every finite poset has a linear extension. Alice says that it is easy to show that they do. Is she right?
         </p>

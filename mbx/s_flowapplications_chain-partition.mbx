@@ -8,15 +8,16 @@
 
     <p>Our running example in this section will be the poset in <xref ref="fig_flowapplications-poset"  />. We'll discuss the points of the poset as <m>x_i</m> where <m>i</m> is the number printed next to the point in the diagram.
     </p>
-    <sidebyside widths="27% 60%" valign="middle">
+    <figure>
         <caption>A partially ordered set <xref ref="fig_flowapplications-poset" /> and the associated network <xref ref="fig_flowapplications-network" />.</caption>
-        <figure xml:id="fig_flowapplications-poset" >
-            <caption>A small poset</caption>
-            <image source="images/poset" />
-        </figure>
-        <figure xml:id="fig_flowapplications-network" >
-            <caption>The associated network</caption>
-            <image> <latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{images/poset_network}
+        <sidebyside widths="27% 60%" valign="middle">
+            <figure xml:id="fig_flowapplications-poset" >
+                <caption>A small poset</caption>
+                <image source="images/poset" />
+            </figure>
+            <figure xml:id="fig_flowapplications-network" >
+                <caption>The associated network</caption>
+                <image> <latex-image-code><![CDATA[\begin{overpic}[angle=90,width=2.37in]{images/poset_network}
             \put(48,-5){\(S\)}
             \put(48,93){\(T\)}
             \put(1,20){\(x_1'\)}
@@ -24,10 +25,11 @@
             \put(1,71){\(x_1''\)}
             \put(94,71){\(x_{10}''\)}
             \end{overpic}]]></latex-image-code>
-            </image>
-        </figure>
-    </sidebyside>
-
+                </image>
+            </figure>
+        </sidebyside>
+    </figure>
+    
     <p>The first step is to create the network, which we show in <xref ref="fig_flowapplications-network"  />.  In this network, all capacities are <m>1</m>, edges are directed from bottom to top, the first row of ten vertices is the <m>x'_i</m> arranged consecutively with <m>x'_1</m> at the left and <m>x'_{10}</m> at the right, and the second row of ten vertices is the <m>x''_i</m> in increasing order of index. To see how this network is constructed, notice that <m>x_1\lt x_3</m> in the poset, so we have the directed edge <m>(x_1',x_3'')</m>. Similarly, <m>x_4</m> is less than <m>x_3</m>, <m>x_5</m>, and <m>x_9</m> in the poset, leading to three directed edges leaving <m>x_4'</m> in the network. As a third example, since <m>x_9</m> is maximal in the poset, there are no directed edges leaving <m>x_9'</m>.
     </p>
 

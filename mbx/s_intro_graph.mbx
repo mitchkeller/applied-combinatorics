@@ -10,8 +10,9 @@
 
   <p>We illustrate this convention in <xref ref="fig_graphdata"  /> with a text file and the diagram for the graph<nbsp /><m>G</m> it defines.</p>
 
-  <sidebyside xml:id="fig_graphdata" widths="20% 45%" margins="15%">
+  <figure xml:id="fig_graphdata">
     <caption>A graph defined by data</caption>
+      <sidebyside widths="20% 45%" margins="15%">
         <pre>graph1.txt
 9
 6 2
@@ -24,11 +25,9 @@
 1 3
 5 9
 7 9</pre>
-    <figure>
       <image source="images/3012-fig15" />
-    </figure>
   </sidebyside>
-  
+  </figure>
   <p>Much of the notation and terminology for graphs is quite natural. See if you can make sense out of the following statements which apply to the graph <m>G</m> defined above:
                   <ol>
     <li><p><m>G</m> has <m>9</m> vertices and <m>10</m> edges.</p></li>

@@ -57,15 +57,13 @@
             <proof>
                 <p>For the first fact, it suffices to note that if there were more than one distinct path from <m>x</m> to <m>y</m> in <m>\bfT</m>, we would be able to find a cycle in <m>\bfT</m>. This is impossible since it is a tree. For the second, we refer to <xref ref="fig_graphalgorithms_exchange"  />. The black and green edges in the graph shown at the left represent the spanning tree <m>\bfT</m>. Thus, <m>f</m> lies on the unique path from <m>x</m> to <m>y</m> in <m>\bfT</m> and <m>e=xy</m> is an edge of <m>\bfG</m> <em>not</em> in <m>\bfT</m>. Adding <m>e</m> to <m>\bfT</m> creates a graph with a unique cycle, since <m>\bfT</m> had a unique path from <m>x</m> to <m>y</m>. Removing <m>f</m> (which could be any edge <m>f_i</m> of the path, as stated in the proposition) destroys this cycle. Thus <m>\bfT_i</m> is a connected acyclic subgraph of <m>\bfG</m> with <m>n-1+1-1=n-1</m> edges, so it is a spanning tree.
                 </p>
-                <sidebyside xml:id="fig_graphalgorithms_exchange" widths="48% 48%">
+                <figure  xml:id="fig_graphalgorithms_exchange">
                     <caption>The exchange principle</caption>
-                    <figure>
+                    <sidebyside widths="48% 48%">
                         <image width="95%" source="images/exchange1" />
-                    </figure>
-                    <figure>
                         <image width="95%" source="images/exchange2" />
-                    </figure>
-                </sidebyside>
+                    </sidebyside>
+                </figure>
             </proof>
         </proposition>
         <p>For both of the algorithms we develop, the argument to show that the algorithm is optimal rests on the following technical lemma. To avoid trivialities, we assume <m>n\ge3</m>.
