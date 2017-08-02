@@ -87,11 +87,22 @@ a*b</input>
         In <xref ref="fig_intro_partsof8"  />, we show the integer partitions
         of<nbsp /><m>8</m>.
       </p>
-      <table xml:id="fig_intro_partsof8" >
-        <caption>The partitions of <m>8</m>, noting those into distinct parts
-        and those into odd parts.</caption>
-        <xi:include href="tab_parts_of_8.mbx" />
-      </table>
+      <figure xml:id="fig_intro_partsof8" >
+          <caption>The partitions of <m>8</m>, noting those into distinct parts
+          and those into odd parts.</caption>
+          <sidebyside>
+              <ul label="" cols="2">
+                  <li>8 distinct parts</li><li>7+1 distinct parts, odd parts</li><li>6+2 distinct parts</li>
+                  <li>6+1+1</li><li>5+3 distinct parts, odd parts</li><li>5+2+1 distinct parts</li>
+                  <li>5+1+1+1 odd parts</li><li>4+4</li><li>4+3+1 distinct parts</li>
+                  <li>4+2+2</li><li>4+2+1+1</li><li>4+1+1+1+1</li>
+                  <li>3+3+2</li><li>3+3+1+1 odd parts</li><li>3+2+2+1</li>
+                  <li>3+2+1+1+1</li><li>3+1+1+1+1+1 odd parts</li><li>2+2+2+2</li>
+                  <li>2+2+2+1+1</li><li>2+2+1+1+1+1</li><li>2+1+1+1+1+1+1</li>
+                  <li></li><li>1+1+1+1+1+1+1+1 odd parts</li>
+              </ul>
+          </sidebyside>
+      </figure>
       <p>
         There are<nbsp /><m>22</m> partitions altogether, and as noted, exactly<nbsp /><m>6</m>
         of them are partitions of<nbsp /><m>8</m> into odd parts. Also, exactly<nbsp /><m>6</m> of them

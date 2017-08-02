@@ -5,11 +5,22 @@
 
     <p>By a <term>partition</term> <m>P</m> of an integer<idx><h>partition</h><h>of an integer</h></idx>, we mean a collection of (not necessarily distinct) positive integers such that <m>\sum_{i\in P} i = n</m>. (By convention, we will write the elements of <m>P</m> from largest to smallest.) For example, <m>2+2+1</m> is a partition of <m>5</m>. For each <m>n\ge0</m>, let <m>p_n</m> denote the number of partitions of the integer <m>n</m> (with <m>p_0=1</m> by convention). Note that <m>p_8=22</m> as evidenced by the list in <xref ref="fig_genfunction_partsof8"  />.
     </p>
-    <table xml:id="fig_genfunction_partsof8" >
-        <caption>The partitions of <m>8</m>, noting those into distinct parts
-        and those into odd parts.</caption>
-        <xi:include href="tab_parts_of_8.mbx" />
-    </table>
+      <figure xml:id="fig_genfunction_partsof8" >
+          <caption>The partitions of <m>8</m>, noting those into distinct parts
+          and those into odd parts.</caption>
+          <sidebyside>
+              <ul label="" cols="2">
+                  <li>8 distinct parts</li><li>7+1 distinct parts, odd parts</li><li>6+2 distinct parts</li>
+                  <li>6+1+1</li><li>5+3 distinct parts, odd parts</li><li>5+2+1 distinct parts</li>
+                  <li>5+1+1+1 odd parts</li><li>4+4</li><li>4+3+1 distinct parts</li>
+                  <li>4+2+2</li><li>4+2+1+1</li><li>4+1+1+1+1</li>
+                  <li>3+3+2</li><li>3+3+1+1 odd parts</li><li>3+2+2+1</li>
+                  <li>3+2+1+1+1</li><li>3+1+1+1+1+1 odd parts</li><li>2+2+2+2</li>
+                  <li>2+2+2+1+1</li><li>2+2+1+1+1+1</li><li>2+1+1+1+1+1+1</li>
+                  <li></li><li>1+1+1+1+1+1+1+1 odd parts</li>
+              </ul>
+          </sidebyside>
+      </figure>
     <p>Note that there are <m>6</m> partitions of <m>8</m> into <em>distinct</em> parts. Also there are <m>6</m> partitions of <m>8</m> into <em>odd</em> parts. While it might seem that this is a coincidence, it in fact is always the case as <xref ref="thm_partition"  /> states. Before looking at that theorem and its proof, let's think about what a generating function for <m>p_n</m>, the number of partitions of <m>n</m>, would look like. Given a partition of <m>n</m>, we can count how many <m>1</m>'s appear, how many <m>2</m>'s appear, and so on. This suggests a similarity with our fruit basket problems earlier in the chapter, leading to the generating function
     <me>
         P(x) = \left(\sum_{m=0}^\infty x^{m}\right)\left(\sum_{m=0}^\infty x^{2m}\right)         \left(\sum_{m=0}^\infty x^{3m}\right)\cdots         \left(\sum_{m=0}^\infty x^{km}\right)\cdots = \prod_{m=1}^\infty\frac{1}{1-x^m}.
