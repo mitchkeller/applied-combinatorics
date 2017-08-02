@@ -20,6 +20,7 @@
         </p>
         <figure xml:id="tab_fib-ratios" >
             <caption>The ratios <m>f_{n+1}/f_{n}</m> for <m>n\leq 18</m></caption>
+            <sidebyside>
             <p>
                 <md>
                     <mrow>  1/1 \amp = 1.0000000000 \amp  89/55 \amp = 1.6181818182</mrow>
@@ -33,6 +34,7 @@
                     <mrow>  55/34 \amp = 1.6176470588 \amp 4181/2584 \amp = 1.6180340557 </mrow>
                 </md>
             </p>
+            </sidebyside>
         </figure>
         <p>The ratios seem to be converging to a number. Can we determine this number? Does this number have anything to do with an explicit formula for <m>f_n</m> (if one even exists)?
         </p>
