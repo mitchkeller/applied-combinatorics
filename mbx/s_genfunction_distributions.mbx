@@ -104,15 +104,29 @@
         </solution>
     </example>
 
-    <p>The invocation of partial fractions in <xref ref="exa_genfunction_partial-fracs" /> is powerful, but solving the necessary system of equations and then hoping that the resulting formal power series have expansions we immediately recognize can be a challenge. If <xref ref="exa_genfunction_partial-fracs" /> had not asked about the general case with <m>n</m> on the right-hand side of the equation but instead asked specifically about <m>n=30</m>, you might be wondering if it would just be faster to write some Python code to generate all the solutions or more interesting to huddle up and devise some clever strategy to count them. Fortunately, technology can help us out when working with generating functions. In SageMath, we can use the <c>series()</c> method to get the power series expansion of a given function. The two arguments to <c>series</c> are the variable and the degree of the terms you want to truncate. In the cell below, we ask SageMath to expand the generating function from <xref ref="exa_genfunction_partial-fracs" /> by giving us all the terms of degree at most 30 and then collapsing the rest of the series into its form of big-Oh notation.
+    <p>The invocation of partial fractions in <xref ref="exa_genfunction_partial-fracs" /> is powerful, but solving the necessary system of equations and then hoping that the resulting formal power series have expansions we immediately recognize can be a challenge. If <xref ref="exa_genfunction_partial-fracs" /> had not asked about the general case with <m>n</m> on the right-hand side of the equation but instead asked specifically about <m>n=30</m>, you might be wondering if it would just be faster to write some Python code to generate all the solutions or more interesting to huddle up and devise some clever strategy to count them. Fortunately, technology can help us out when working with generating functions. In SageMath, we can use the <c>series()</c> method to get the power series expansion of a given function. The two arguments to <c>series</c> are the variable and the degree of the terms you want to truncate. In the cell below, we ask SageMath to expand the generating function from <xref ref="exa_genfunction_partial-fracs" /> by giving us all the terms of degree at most 30 and then collapsing the rest of the series into its form of big-Oh notation, which we discard by storing the output from <c>series()</c> in a polynomial <c>f(x)</c>.
     </p>
     <sage>
         <input>
             # Note that SageMath doesn't do well with implied 
             # multiplication, so use lots of *'s in addition to lots
             # of parentheses.
-            ((1+x+x^2)/((1+x)*(1-x)^2)).series(x,31)
+            f(x)= ((1+x+x^2)/((1+x)*(1-x)^2)).series(x,31)
+            f(x)
         </input>
+        <output>
+46*x^30 + 44*x^29 + 43*x^28 + 41*x^27 + 40*x^26 + 38*x^25 + 37*x^24 + 35*x^23 + 34*x^22 + 32*x^21 + 31*x^20 + 29*x^19 + 28*x^18 + 26*x^17 + 25*x^16 + 23*x^15 + 22*x^14 + 20*x^13 + 19*x^12 + 17*x^11 + 16*x^10 + 14*x^9 + 13*x^8 + 11*x^7 + 10*x^6 + 8*x^5 + 7*x^4 + 5*x^3 + 4*x^2 + 2*x + 1
+        </output>
+    </sage>
+    <p>If all we really want is the coefficient on a specific term, we can use the <c>list()</c> method to turn the polyomial into a list of its coefficients and then index into that list using standard SageMath or Python syntax:</p>
+    <sage>
+        <input>
+            coeffs=f(x).list()
+            coeffs[30]
+        </input>
+        <output>
+            46
+        </output>
     </sage>
     <p>Let's see that the answer agrees with what our formula in the solution to <xref ref="exa_genfunction_partial-fracs" /> gives us for <m>n=30</m>:</p>
     <sage>
@@ -120,12 +134,18 @@
             n=30
             (-1)^n/4 - (3/4) + 3*(n+1)/2
         </input>
+        <output>
+            46
+        </output>
     </sage>
     <p>That's a relief, and so long as we only need a single coefficient, we're now in good shape. But what if we really need a formula for the coefficient on <m>x^n</m> in general? Let's see how we can use SageMath to help us with some of the other steps in <xref ref="exa_genfunction_partial-fracs" />. The first thing we'll want is the <c>partial_fraction()</c> method:</p>
     <sage>
         <input>
             ((1+x+x^2)/((1+x)*(1-x)^2)).partial_fraction()
         </input>
+        <output>
+            1/4/(x + 1) + 3/4/(x - 1) + 3/2/(x - 1)^2
+        </output>
     </sage>
     <p>If you don't like the way that looks, the <c>pretty_print()</c> function can make it easier to read:</p>
         <sage>
