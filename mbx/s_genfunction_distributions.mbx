@@ -134,7 +134,7 @@
         </input>
     </sage>
     <p>Up to the location of a minus sign, this is what we got by hand, but we get it much faster! From this stage, it's frequently possible to use our knowledge of certain fundamental power series that appear when doing the partial fractions expansion to come up with the general form for the coefficient on an arbitrary term of the power series. To facilitate this, we close this section with an example that illustrates how we can use solutions to counting problems we have already studied in order to figure out the coefficients on generating functions.</p>
-    <example>
+    <example xml:id="exa_genfunction_multisets">
         <statement>
             <p>
                 Let <m>n</m> be a positive integer. What is the coefficient on <m>x^k</m> in the generating function

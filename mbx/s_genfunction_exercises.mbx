@@ -128,10 +128,10 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Using generating functions, find the number of ways to make change for a <dollar/><nbsp /><m>100</m> bill using only dollar coins and <dollar/><nbsp /><m>1</m>, <dollar/><nbsp /><m>2</m>, and <dollar/><nbsp /><m>5</m> bills. </p>
+            <p>Using generating functions, find the number of ways to make change for a <m>100</m> dollar bill using only dollar coins and <dollar/><m>1</m>, <dollar/><m>2</m>, and <dollar/><m>5</m> bills. </p>
             <sage>
                 <input>
-                    f(x) = x # Replace the x right of = here with your generating function
+                    f(x) = x # Generating function on right here
                     pretty_print((f(x)).partial_fraction())
                 </input>
             </sage>
@@ -332,5 +332,10 @@
             <p>Yes, this is very close to <xref ref="ex_genfunction_ineq-clean"  />. However, the bounds on <m>x_4</m> are different here. You might try using a computer algebra system to expedite finding the partial fractions expansion, which will have several terms whose power series you can work with quickly. For the term involving <m>1/(1+x^2)</m>, work out the series by hand. You may find that your solution to this problem has two parts<mdash />one for when <m>n</m> is even and another for when <m>n</m> is odd.</p>
         </hint>
     </exercise>
-
+    <exercise>
+        <statement>
+            <p>Prove <xref ref="prop_genfunction-product" /> about the coefficients in the product of two ordinary generating functions.
+            </p>
+        </statement>
+    </exercise>
 </exercises>

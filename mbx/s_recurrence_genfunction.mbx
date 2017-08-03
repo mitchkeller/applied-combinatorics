@@ -25,13 +25,24 @@
         <me>
             f(x)(1+x-6x^2)= 1+4x,
         </me>
-        or <m>f(x) = (1+4x)/(1+x-6x^2)</m>. This is a generating function that we can attack using partial fractions, and we find that
-        <me>
-            f(x) = \frac{6}{5}\frac{1}{1-2x}-\frac{1}{5}\frac{1}{1+3 x} =
-            \frac{6}{5}\sum_{n=0}^\infty 2^n x^n -\frac{1}{5} \sum_{n=0}^\infty
-            (-3)^n x^n.
-        </me>
-        From here, we read off <m>r_n</m> as the coefficient on <m>x^n</m> and have <m>r_n = (6/5) 2^n -(1/5)(-3)^n</m>.
+        or <m>f(x) = (1+4x)/(1+x-6x^2)</m>. This is a generating function that we can attack using partial fractions in SageMath:
+        </p>
+        <sage>
+            <input>
+                f(x) = (1+4*x)/(1+x-6*x^2)
+                pretty_print(f(x).partial_fraction())
+            </input>
+        </sage>
+        <p>
+            This shows us that
+            <me>
+                f(x) =
+                \frac{6}{5}\frac{1}{1-2x}-\frac{1}{5}\frac{1}{1+3 x} =
+                \frac{6}{5}\sum_{n=0}^\infty 2^n x^n -\frac{1}{5}
+                \sum_{n=0}^\infty (-3)^n x^n </me>.
+                From here, we
+                read off <m>r_n</m> as the coefficient on <m>x^n</m>
+                and have <m>r_n = (6/5) 2^n -(1/5)(-3)^n</m>.
         </p>
     </example>
     <p>Although there's a bit more work involved, this method can be used to solve nonhomogeneous recurrence equations as well, as the next example illustrates.
@@ -55,23 +66,32 @@
         </me>
         A little bit of algebra then gets us to the generating function
         <me>
-            R(x) = \frac{6x^2-5x+2}{2(1-2x)(1-x-2x^2)}.
+            R(x) = \frac{6x^2-5x+2}{(1-2x)(1-x-2x^2)}.
         </me>
-        This generating function can be expanded using partial fractions, so we have
+        This generating function can be expanded using partial fractions in SageMath:</p>
+        <sage>
+            <input>
+                f(x) = (6*x^2-5*x+2)/((1-2*x)*(1-x-2*x^2))
+                pretty_print(f(x).partial_fraction())
+            </input>
+        </sage>
+        
+        <p>Therefore, using <xref ref="exa_genfunction_multisets" /> for the second rational function, we have
         <md>
             <mrow>  R(x) \amp = -\frac{1}{9(1-2x)} + \frac{2}{3(1-2x)^2} +
             \frac{13}{9(1+x)}</mrow>
             <mrow>  \amp = -\frac{1}{9} \sum_{n=0}^\infty 2^nx^n +
-            \frac{2}{3}\sum_{n=0}^\infty n2^{n-1} x^{n-1} +
-            \frac{13}{9}\sum_{n=0}^\infty (-1)^n.</mrow>
-        </md>
-        From this generating function, we can now read off that
+            \frac{2}{3}\sum_{n=0}^\infty \binom{n+2-1}{1}2^n x^n +
+            \frac{13}{9}\sum_{n=0}^\infty (-1)^nx^n</mrow>
+        </md>.
+        From this generating function, we can read off that
         <me>
             r_n = -\frac{1}{9}2^n + \frac{2(n+1)}{3}2^{n} + \frac{13}{9}(-1)^n =
-            \frac{5}{9} 2^n + \frac{2}{3}n2^n + \frac{13}{9}(-1)^n.
-        </me>
+            \frac{5}{9} 2^n + \frac{2}{3}n2^n + \frac{13}{9}(-1)^n
+        </me>.
         </p>
     </example>
     <p>The recurrence equations of the two examples in this section can both be solved using the techniques we studied earlier in the chapter. One potential benefit to the generating function approach for nonhomogeneous equations is that it does not require determining an appropriate form for the particular solution. However, the method of generating functions often requires that the resulting generating function be expanded using partial fractions. Both approaches have positives and negatives, so unless instructed to use a specific method, you should choose whichever seems most appropriate for a given situation. In the next section, we will see a recurrence equation that is most easily solved using generating functions because it is nonlinear.
     </p>
+
 </section>
