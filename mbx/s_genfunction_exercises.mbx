@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_genfunction_exercises">
     <introduction>
-        <p>Computer algebra systems can be powerful tools for working with generating functions. In addition to stand-alone applications that run on your computer, the website <url href="http://www.wolframalpha.com">WolframAlpha</url> is capable of finding general forms of some power series representations and specific coefficients for many more. However, unless an exercise specifically suggests that you use a computer algebra system, we strongly encourage you to solve the problem by hand. This will help you develop a better understanding of how generating functions can be used.</p>
+        <p>Computer algebra systems can be powerful tools for working with generating functions. However, unless an exercise specifically suggests that you use a computer algebra system, we strongly encourage you to solve the problem by hand. This will help you develop a better understanding of how generating functions can be used. You might consider editing the content of the SageMathCells in <xref ref="s_genfunction_distributions" /> to assist with solving problems here where a computer algebra system is suggested, and in some cases, we have included a SageMathCell within the exercise for you to use.</p>
         <p>For all exercises in this section, <q>generating function</q> should be taken to mean <q>ordinary generating function.</q> Exponential generating functions are only required in exercises specifically mentioning them.</p>
     </introduction>
     <exercise>
@@ -86,6 +86,12 @@
     <exercise>
         <statement>
             <p>A volunteer coordinator has <m>30</m> identical chocolate chip cookies to distribute to six volunteers. Use a generating function (and computer algebra system) to determine the number of ways she can distribute the cookies so that each volunteer receives at least two cookies and no more than seven cookies.</p>
+            <sage>
+                <input>
+                    f(x) = x # Generating function on right here
+                    f(x).series(x,n) # Replace n with suitable value
+                </input>
+            </sage>
         </statement>
     </exercise>
     <exercise xml:id="ex_genfunction_ineq-clean">
@@ -122,17 +128,23 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Using generating functions, find the number of ways to make change for a <dollar/><m>100</m> bill using only dollar coins and <dollar/><m>1</m>, <dollar/><m>2</m>, and <dollar/><m>5</m> bills. </p>
+            <p>Using generating functions, find the number of ways to make change for a <dollar/><nbsp /><m>100</m> bill using only dollar coins and <dollar/><nbsp /><m>1</m>, <dollar/><nbsp /><m>2</m>, and <dollar/><nbsp /><m>5</m> bills. </p>
+            <sage>
+                <input>
+                    f(x) = x # Replace the x right of = here with your generating function
+                    pretty_print((f(x)).partial_fraction())
+                </input>
+            </sage>
         </statement>
         <hint>
-            <p>Find the partial fractions expansion for your generating function. Be careful here, as you want a partial fraction expansion in which all coefficients for your denominator polynomials have integer coefficients. If a computer algebra system gives you two denominators with irrational coefficients in them, combine them into a single term before proceeding. (<em>Mathematica</em><registered /> has the <c>Apart</c> command, which produces the type of partial fractions expansion you want. WolframAlpha buries the <q>good one</q> far down the page.) Once you have the right partial fractions expansion, you may find the following identity helpful
+            <p>Find the partial fractions expansion for your generating function. Be careful here, as you want a partial fraction expansion in which all coefficients for your denominator polynomials have integer coefficients. The <c>partial_fraction()</c> method in SageMath should be useful here, and <c>pretty_print</c> will make it easier to read. Once you have the right partial fractions expansion, you may find the following identity helpful
             <me>
                 \frac{p(x)}{1+x+x^2+\cdots + x^k} = \frac{p(x)(1-x)}{1-x^{k+1}},
             </me>
             where <m>p(x)</m> will be a polynomial in this instance.
             </p>
         </hint>
-    </exercise>
+    </exercise>    
     <exercise>
         <statement>
             <p>A businesswoman is traveling in Belgium and wants to buy chocolates for herself, her husband, and their two daughters. A store has dark chocolate truffles (€ 10/box), milk chocolate truffles (€ 8/box), nougat-filled chocolates (€ 5/box), milk chocolate bars (€ 7/bar), and 75<percent/> cacao chocolate bars (€ 11/bar). Her purchase is to be subject to the following:
@@ -144,6 +156,12 @@
                 <li><p>There are no restrictions on the number of 75<percent/> cacao chocolate bars.</p></li>
             </ul>
             Let <m>s_n</m> be the number of ways the businesswoman can spend exactly € <m>n</m> (<alert>not</alert> buy <m>n</m> items!) at this chocolate shop. Find the generating function for the sequence <m>\{s_n\colon n\geq 0\}</m>. In how many ways can she spend exactly € 100 at the chocolate shop? (A computer algebra system will be helpful for finding coefficients.)</p>
+            <sage>
+                <input>
+                    f(x) = x # Generating function on right here
+                    f(x).series(x,n) # Replace n with suitable value
+                </input>
+            </sage>
         </statement>
     </exercise>
     <exercise>
@@ -168,14 +186,47 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for <dollar/><m>0.95</m> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you're not asked for the coefficient on <m>x^n</m>.)
+            <p>Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for <dollar/><nbsp /><m>0.95</m> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you're not asked for the coefficient on <m>x^n</m>.)
                   <ol>
-                <li><p>Use a generating function and computer algebra system to determine the number of ways Carlos could pay his <dollar/><m>0.95</m> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)</p></li>
-                <li><p>Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the <dollar/><m>0.95</m> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <m>10=C(5,2)</m> ways to insert this combination. Use a generating function and computer algebra system to determine the number of ways that Carlos could pay the <dollar/><m>0.95</m> toll when considering the order the coins are inserted.</p></li>
+                <li><p>Use a generating function and computer algebra system to determine the number of ways Carlos could pay his <dollar/><nbsp /><m>0.95</m> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)</p></li>
+                <li xml:id="exer_genfunction_coin-toll"><p>Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the <dollar/><nbsp /><m>0.95</m> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <m>10=C(5,2)</m> ways to insert this combination. Use a generating function and computer algebra system to determine the number of ways that Carlos could pay the <dollar/><nbsp /><m>0.95</m> toll when considering the order the coins are inserted.</p></li>
             
                   </ol>
-                </p>
+            </p>
+            <sage>
+                <input>
+                    f(x) = x # Generating function on right here
+                    f(x).series(x,n) # Replace n with suitable value
+                </input>
+            </sage>            
         </statement>
+        <hint>
+            <p>For <xref ref="exer_genfunction_coin-toll" text="local">part</xref>, you really want an ordinary generating function and not an exponential generating function, despite the fact that order matters. Once you think you have a generating function that works, you might check the coefficients on <m>x^5,\dots,x^{10}</m> by hand to make sure that you're on the right track.
+            </p>
+        </hint>
+        <answer>
+            <p>
+                <ol>
+                    <li>To be inserted.</li>
+                    <li>1856250874024</li>
+                </ol>
+            </p>
+        </answer>
+        <solution>
+            <p>
+                <ol>
+                    <li>To be inserted
+                    </li>
+                    <li>We are seeking the number of solutions to the equation <m>a_1 +
+\cdots + a_k = n</m> (where <m>k</m> is allowed to vary) subject to
+<m>a_i\in\{1,5,10,25\}</m>. Therefore, the ordinary generating function is
+<me>
+\sum_{k=0}^\infty (x+x^5+x^{10}+x^{25})^k=\frac{1}{1-x-x^5-x^{10}-x^{25}}
+</me>. A computer algebra system gives 1856250874024 as the coefficient on <m>x^{95}</m>.
+</li>
+                </ol>
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>

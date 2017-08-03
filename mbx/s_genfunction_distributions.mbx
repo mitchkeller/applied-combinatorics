@@ -2,7 +2,7 @@
     <title>Another look at distributing apples or folders</title>
     <p>A recurring problem so far in this book has been to consider problems that ask about distributing indistinguishable objects (say apples) to distinct entities (say children). We started in <xref ref="ch_strings"  /> by asking how many ways there were to distribute <m>40</m> apples to <m>5</m> children so that each child is guaranteed to get at least one apple and saw that the answer was <m>C(39,4)</m>. We even saw how to restrict the situation so that one of the children was limited and could receive at most <m>10</m> apples. In <xref ref="ch_inclusion-exclusion"  />, we learned how to extend the restrictions so that more than one child had restrictions on the number of apples allowed by taking advantage of the <xref ref="thm_inclusion-exclusion" text="title" />. Before moving on to see how generating functions can allow us to get even more creative with our restrictions, let's take a moment to see how generating functions would allow us to solve the most basic problem at hand.
     </p>
-    <example>
+    <example xml:id="exa_genfunction_apples">
         <p>We already know that the number of ways to distribute <m>n</m> apples to <m>5</m> children so that each child gets at least one apple is <m>C(n-1,4)</m>, but it will be instructive to see how we can derive this result using generating functions. Let's start with an even simpler problem: how many ways are there to distribute <m>n</m> apples to <em>one</em> child so that each child receives at least one apple?  Well, this isn't too hard, there's only one way to do it<mdash />give all the apples to the lucky kid! Thus the <em>sequence</em> that enumerates the number of ways to do this is <m>\{a_n\colon n\geq 1\}</m> with <m>a_n=1</m> for all <m>n\geq 1</m>. Then the generating function for this sequence is
         <me>
             x+x^2+x^3+\cdots = x(1+x+x^2+x^3+\cdots) = \frac{x}{1-x}.
@@ -29,7 +29,7 @@
 
     <p>We could revisit an example from <xref ref="ch_inclusion-exclusion"  /> to see that if we wanted to limit a child to receive at most <m>4</m> apples, we would use <m>(x+x^2+x^3+x^4)</m> as its generating function instead of <m>x/(1-x)</m>, but rather than belabor that here, let's try something a bit more exotic.
     </p>
-    <example>
+    <example xml:id="exa_genfunction_fruit">
         <statement>
             <p>A grocery store is preparing holiday fruit baskets for sale. Each fruit basket will have <m>20</m> pieces of fruit in it, chosen from apples, pears, oranges, and grapefruit. How many different ways can such a basket be prepared if there must be at least one apple in a basket, a basket cannot contain more than three pears, and the number of oranges must be a multiple of four?
             </p>
@@ -40,19 +40,19 @@
                 \frac{x}{1-x} (1+x+x^2+x^3) \frac{1}{1-x^4} \frac{1}{1-x} =
                 \frac{x}{(1-x)^2(1-x^4)} (1+x+x^2+x^3).
             </me>
-            Now we want to make use of the fact that <m>(1+x+x^2+x^3) =(1-x^4)/(1-x)</m> to see that our generating function is
-            <me>
-                \frac{x}{(1-x)^3} = \frac{x}{2}\sum_{n=0}^\infty n(n-1)x^{n-2} =
-                \sum_{n=0}^\infty\frac{n(n-1)}{2} x^{n-1} =
-                \sum_{n=0}^\infty\binom{n}{2} x^{n-1} =
-                \sum_{n=0}^\infty\binom{n+1}{2} x^n.
-            </me>
+            Now we want to make use of the fact that <m>(1+x+x^2+x^3) =(1-x^4)/(1-x)</m> (by <xref ref="eq_genfunction_finite-geom" />) to see that our generating function is
+            <md>
+                <mrow>\frac{x}{(1-x)^3} \amp= \frac{x}{2}\sum_{n=0}^\infty n(n-1)x^{n-2} =
+                \sum_{n=0}^\infty\frac{n(n-1)}{2} x^{n-1} </mrow>
+                <mrow>\amp=\sum_{n=0}^\infty\binom{n}{2} x^{n-1} =
+                \sum_{n=0}^\infty\binom{n+1}{2} x^n.</mrow>
+            </md>
                 Thus, there are <m>C(n+1,2)</m> possible fruit baskets containing <m>n</m> pieces of fruit, meaning that the answer to the question we originally asked is <m>C(21,2) = 210</m>.
             </p>
         </solution>
     </example>
-
-    <example>
+    <p>The compact form of the solution to <xref ref="exa_genfunction_fruit" /> suggests that perhaps there is a way to come up with this answer without the use of generating functions. Thinking about such an approach would be a good way to solidify your understanding of a variety of the enumerative topics we have already covered.</p>
+    <example xml:id="exa_genfunction_partial-fracs">
         <statement>
             <p>
                 Find the number of integer solutions to the equation
@@ -84,12 +84,15 @@
                 <mrow>  1 \amp = A - B</mrow>
             </md>
                 Solving the system, we find <m>A=1/4</m>, <m>B=-3/4</m>, and <m>C=3/2</m>. Therefore, our generating function is
-            <me>
-                \frac{1}{4}\frac{1}{1+x} -\frac{3}{4} \frac{1}{1-x} +\frac{3}{2}
-                \frac{1}{(1-x)^2} = \frac{1}{4}\sum_{n=0}^\infty (-1)^n x^n -
+                <md>
+                    <mrow>
+                        \amp\frac{1}{4}\frac{1}{1+x} -\frac{3}{4} \frac{1}{1-x} +\frac{3}{2}
+                \frac{1}{(1-x)^2}
+                    </mrow>
+                    <mrow>=\amp \frac{1}{4}\sum_{n=0}^\infty (-1)^n x^n -
                 \frac{3}{4} \sum_{n=0}^\infty x^n + \frac{3}{2}\sum_{n=0}^\infty n
-                x^{n-1}.
-            </me>
+                x^{n-1}</mrow>
+                </md>.
             </p>
             <p>The solution to our question is thus the coefficient on <m>x^n</m> in the above generating function, which is
             <me>
@@ -100,4 +103,50 @@
             </p>
         </solution>
     </example>
+
+    <p>The invocation of partial fractions in <xref ref="exa_genfunction_partial-fracs" /> is powerful, but solving the necessary system of equations and then hoping that the resulting formal power series have expansions we immediately recognize can be a challenge. If <xref ref="exa_genfunction_partial-fracs" /> had not asked about the general case with <m>n</m> on the right-hand side of the equation but instead asked specifically about <m>n=30</m>, you might be wondering if it would just be faster to write some Python code to generate all the solutions or more interesting to huddle up and devise some clever strategy to count them. Fortunately, technology can help us out when working with generating functions. In SageMath, we can use the <c>series()</c> method to get the power series expansion of a given function. The two arguments to <c>series</c> are the variable and the degree of the terms you want to truncate. In the cell below, we ask SageMath to expand the generating function from <xref ref="exa_genfunction_partial-fracs" /> by giving us all the terms of degree at most 30 and then collapsing the rest of the series into its form of big-Oh notation.
+    </p>
+    <sage>
+        <input>
+            # Note that SageMath doesn't do well with implied 
+            # multiplication, so use lots of *'s in addition to lots
+            # of parentheses.
+            ((1+x+x^2)/((1+x)*(1-x)^2)).series(x,31)
+        </input>
+    </sage>
+    <p>Let's see that the answer agrees with what our formula in the solution to <xref ref="exa_genfunction_partial-fracs" /> gives us for <m>n=30</m>:</p>
+    <sage>
+        <input>
+            n=30
+            (-1)^n/4 - (3/4) + 3*(n+1)/2
+        </input>
+    </sage>
+    <p>That's a relief, and so long as we only need a single coefficient, we're now in good shape. But what if we really need a formula for the coefficient on <m>x^n</m> in general? Let's see how we can use SageMath to help us with some of the other steps in <xref ref="exa_genfunction_partial-fracs" />. The first thing we'll want is the <c>partial_fraction()</c> method:</p>
+    <sage>
+        <input>
+            ((1+x+x^2)/((1+x)*(1-x)^2)).partial_fraction()
+        </input>
+    </sage>
+    <p>If you don't like the way that looks, the <c>pretty_print()</c> function can make it easier to read:</p>
+        <sage>
+        <input>
+            pretty_print(((1+x+x^2)/((1+x)*(1-x)^2)).partial_fraction())
+        </input>
+    </sage>
+    <p>Up to the location of a minus sign, this is what we got by hand, but we get it much faster! From this stage, it's frequently possible to use our knowledge of certain fundamental power series that appear when doing the partial fractions expansion to come up with the general form for the coefficient on an arbitrary term of the power series. To facilitate this, we close this section with an example that illustrates how we can use solutions to counting problems we have already studied in order to figure out the coefficients on generating functions.</p>
+    <example>
+        <statement>
+            <p>
+                Let <m>n</m> be a positive integer. What is the coefficient on <m>x^k</m> in the generating function
+                <me>\frac{1}{(1-x)^n}</me>?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We have already encountered the case <m>n=5</m> in the midst of working on <xref ref="exa_genfunction_apples" />, but there we appealed to calculus. Let's take a look at this from the perspective of just counting. The generating function <m>1/(1-x) = 1+x+x^2+\cdots</m> encodes the sequence for the number of ways to distribute <m>n</m> apples to <em>one</em> child. There's only one way to do that task: give the lucky kid all the apples. Multiplying together a bunch of copies of <m>1/(1-x)</m> then serves to increase the number of children to whom the apples are being distributed, and since each power series being multiplied starts with <m>1</m>, we are in the situation where the number of apples each child receives must be <em>nonnegative</em>. This is therefore a problem from <xref ref="s_strings_bin-coeff" />. We have <m>n</m> children and the coefficient on <m>x^k</m> is the number of ways of distributing <m>k</m> apples to them. This requires <m>n</m> artificial apples, so we distribute <m>k+n</m> apples, which determine <m>k+n-1</m> gaps and we must choose <m>k-1</m> of them as the locations for dividers. Therefore, we can conclude that
+                <me>\frac{1}{(1-x)^n} = \sum_{k=0}^\infty \binom{k+n-1}{k-1}x^k = \sum_{k=0}^\infty \binom{k+n-1}{n}x^k</me>.
+            It's possible to arrive at this conclusion using techniques from calculus, but there are a lot of factorials and <m>-1</m>s to monitor, so this combinatorial approach may be less error prone!</p>
+        </solution>
+    </example>
+    
 </section>

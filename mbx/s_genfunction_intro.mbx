@@ -10,12 +10,14 @@
     <p>It is customary to refer to <m>F(x)</m> as the <term>generating function</term><idx><h>generating function</h></idx> of the sequence <m>\sigma</m>. As we have already remarked, we are not necessarily interested in calculating <m>F(x)</m> for specific values of <m>x</m>. However, by convention, we take <m>F(0)=a_0</m>.
     </p>
     <example xml:id="exam_genfunction_geom-series">
+        <idx><h>series</h><h>infinite geometric</h></idx>
+        <idx><h>series</h><h>infinite geometric</h><h>sum of</h></idx>
         <p>Consider the constant sequence <m>\sigma=\{a_n:n\ge0\}</m> with <m>a_n=1</m> for every <m>n\ge0</m>. Then the generating function <m>F(x)</m> of <m>\sigma</m> is given by
         <me>
-            F(x)=1+x+x^2+x^3+x^4+x^5+x^6+\cdots.
-        </me>
+            F(x)=1+x+x^2+x^3+x^4+x^5+x^6+\cdots
+            </me>, which is called the <term>infinite geometric series</term>.
         </p>
-        <p>You probably remember that this last expression is the Maclaurin series for the function <m>F(x)=1/(1-x)</m> and that the series converges when <m>|x|\lt 1</m>. Since we want to think in terms of formal power series, let's see that we can justify the expression
+        <p>You may remember that this last expression is the Maclaurin series for the function <m>F(x)=1/(1-x)</m> and that the series converges when <m>|x|\lt 1</m>. Since we want to think in terms of formal power series, let's see that we can justify the expression
         <me>
             \frac{1}{1-x}=1+x+x^2+x^3+x^4+x^5+x^6+\cdots=\sum_{n=0}^\infty x^n
         </me>
@@ -24,8 +26,7 @@
             (1-x)(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
         </me>
         and notice that, since we multiply formal power series just like we multiply polynomials (power series are pretty much polynomials that go on forever), we have that this product is
-        <me>
-            (1+x+x^2+x^3+x^4+x^5+x^6+\cdots)-x(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
+        <me>            (1+x+x^2+x^3+x^4+x^5+x^6+\cdots)-x(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
             = 1.
         </me>
         Now we have that
@@ -35,10 +36,21 @@
         or, more usefully, after dividing through by <m>1-x</m>,
         <me>
             \frac{1}{1-x} = \sum_{n=0}^\infty x^n.
-        </me>
+        </me><idx><h>series</h><h>infinite geometric</h><h>sum of</h></idx>
         </p>
     </example>
 
+    <p>
+        The method of <xref ref="exam_genfunction_geom-series" /> can be adapted to address the <term>finite geometric series</term><idx><h>series</h><h>finite geometric</h></idx> <m>\sum_{j=0}^n x^j</m>. In that case, we look at
+        <md>
+            <mrow>(1-x) \sum_{j=0}^nx^j \amp= \sum_{j=0}^n x^j - \sum_{j=0}^n x^{j+1}</mrow>
+            <mrow>\amp= (1+x+\cdots + x^n) - (x+x^2+\cdots x^n + x^{n+1}</mrow>
+            </md>.
+            Looking carefully, we see that everying cancels in the final expression except <m>1-x^{n+1}</m>. Dividing both sides by <m>1-x</m> gives us
+            <men xml:id="eq_genfunction_finite-geom">1+x+\cdots + x^n = \frac{1-x^{n+1}}{1-x}</men><idx><h>series</h><h>finite geometric</h><h>sum of</h></idx>
+            as the formula for the sum of a finite geometric series.
+    </p>
+    
     <example>
         <p>Just like you learned in calculus for Maclaurin series, formal power series can be differentiated and integrated term by term. The rigorous mathematical framework that underlies such operations is not our focus here, so take us at our word that this can be done for formal power series without concern about issues of convergence.
         </p>
