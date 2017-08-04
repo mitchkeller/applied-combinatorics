@@ -14,14 +14,13 @@
             </p>
         </remark>
         <example xml:id="exa_twojars">
-            <p>Consider the jar of twenty marbles from the preceding example. A second jar of marbles is introduced. This jar has eighteen marbles: nine red, five blue and four green. A jar is selected at random and from this jar, two marbles are chosen at random. What is the probability that both are green? Bob is on a roll. He says <q>Let <m>G</m> be the event that both marbles are green, and let <m>J_1</m> and <m>J_2</m> be the event that the marbles come from the first jar and the second jar, respectively. Then <m>G= (G\cap J_1)\cup (G\cap J_2)</m>, and <m>(G\cap J_1)+(G\cap J_2)=\emptyset</m>. Furthermore, <m>P(G|J_1)=\binom{5}{2}/\binom{20}{2}</m> and <m>P(G|J_2)=\binom{4}{2}/\binom{18}{2}</m>, while <m>P(J_1)=P(J_2)=1/2</m>.  Also <m>P(G\cap J_i)=P(J_i)P(G|J_i)</m> for each <m>i=1,2</m>. Therefore,
+            <p>Consider the jar of twenty marbles from the preceding example. A second jar of marbles is introduced. This jar has eighteen marbles: nine red, five blue and four green. A jar is selected at random and from this jar, two marbles are chosen at random. What is the probability that both are green? Bob is on a roll. He says, <lq />Let <m>G</m> be the event that both marbles are green, and let <m>J_1</m> and <m>J_2</m> be the event that the marbles come from the first jar and the second jar, respectively. Then <m>G= (G\cap J_1)\cup (G\cap J_2)</m>, and <m>(G\cap J_1)+(G\cap J_2)=\emptyset</m>. Furthermore, <m>P(G|J_1)=\binom{5}{2}/\binom{20}{2}</m> and <m>P(G|J_2)=\binom{4}{2}/\binom{18}{2}</m>, while <m>P(J_1)=P(J_2)=1/2</m>.  Also <m>P(G\cap J_i)=P(J_i)P(G|J_i)</m> for each <m>i=1,2</m>. Therefore,
             <me>
                 P(G)=\frac{1}{2}\frac{\binom{5}{2}}{\binom{20}{2}}+
                     \frac{1}{2}\frac{\binom{4}{2}}{\binom{18}{2}}=\frac{1}{2}\left(\frac{20}{380}+
                     \frac{12}{306}\right).
             </me>
-            That's about <m>4.6</m><percent />.</q>
-            </p>
+            That's about <m>4.6</m><percent />.<rq /></p>
             <p>Now Alice is speechless.
             </p>
         </example>
