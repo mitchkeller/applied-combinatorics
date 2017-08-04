@@ -118,13 +118,13 @@
       </titlepage>
 
       <colophon>
-        <edition>2016.1 Edition</edition>
+        <edition>2017 Edition</edition>
         <website>
             <name>http://rellek.net/appcomb/</name>
             <address>http://rellek.net/appcomb/</address>
         </website>
         <copyright>
-            <year>2006<ndash />2016</year>
+            <year>2006<ndash />2017</year>
             <holder>Mitchel T. Keller, William T. Trotter</holder>
             <minilicense>CC-BY-SA</minilicense>
             <shortlicense>This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" /> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
@@ -156,11 +156,11 @@
       <acknowledgement>
           <p>We are grateful to our colleagues Alan Diaz, Thang Le, Noah Streib, Prasad Tetali and Carl Yerger, who have taught Applied Combinatorics from preliminary versions and have given valuable feedback. As this text is freely available on the internet, we welcome comments, criticisms, suggestions and corrections from anyone who takes a look at our work.</p>
 
-          <p>For the 2016 Edition, we are grateful to Robert A. Beezer, David Farmer, and Kent Morrison for organizing the American Institute of Mathematics workshop on MathBook <init>XML</init> that enabled the new formats to be released. David Farmer's work on the initial conversion to MathBook <init>XML</init> was invaluable. The MathBook <init>XML</init> Google Group was an important resource in resolving challenges along the way, and Rob Beezer is a wonderfully-responsive developer who gladly put up with any number of feature requests in order to make everything we wanted possible in the MathBook <init>XML</init> edition.</p>
+          <p>For the 2016 and subsequent editions, we are grateful to Robert A. Beezer, David Farmer, and Kent Morrison for organizing the American Institute of Mathematics workshop on MathBook <init>XML</init> (now <pretext />) that enabled the new formats to be released. David Farmer's work on the initial conversion from <latex /> to <pretext />. The <pretext /> Google Group was an important resource in resolving challenges along the way, and Rob Beezer is a wonderfully-responsive developer who gladly put up with any number of feature requests in order to make everything we wanted possible in the <pretext /> edition</p>
       </acknowledgement>
 
       <preface>
-        <p>At Georgia Tech, MATH 3012: Applied Combinatorics, is a junior-level course targeted primarily at students pursuing the B.S. in Computer Science. The purpose of the course is to give students a broad exposure to combinatorial mathematics, using applications to emphasize fundamental concepts and techniques. Applied Combinatorics is also required of students seeking the B.S. in Applied Mathematics or the B.S in Discrete Mathematics, and it is one of two discrete mathematics courses that computer engineering students may select to fulfill a breadth requirement. The course will also often contain a selection of other engineering and science majors who are interested in learning more mathematics. As a consequence, in a typical semester, some 250 Georgia Tech students are enrolled in Applied Combinatorics. Students enrolled in Applied Combinatorics at Georgia Tech have already completed the three semester calculus sequence<mdash />with many students bypassing one or more of the these courses on the basis of advanced placement scores. Also, the students will know some linear algebra and can at least have a reasonable discussion about vector spaces, bases and dimension.</p>
+        <p>At Georgia Tech, MATH 3012: Applied Combinatorics, is a junior-level course targeted primarily at students pursuing the B.S. in Computer Science. The purpose of the course is to give students a broad exposure to combinatorial mathematics, using applications to emphasize fundamental concepts and techniques. Applied Combinatorics is also required of students seeking the B.S. in Mathematics, and it is one of two discrete mathematics courses that computer engineering students may select to fulfill a breadth requirement. The course will also often contain a selection of other engineering and science majors who are interested in learning more mathematics. As a consequence, in a typical semester, some 250 Georgia Tech students are enrolled in Applied Combinatorics. Students enrolled in Applied Combinatorics at Georgia Tech have already completed the three semester calculus sequence<mdash />with many students bypassing one or more of the these courses on the basis of advanced placement scores. Also, the students will know some linear algebra and can at least have a reasonable discussion about vector spaces, bases and dimension.</p>
 
         <p>Our approach to the course is to show students the beauty of combinatorics and how combinatorial problems naturally arise in many settings, particularly in computer science. While proofs are periodically presented in class, the course is not intended to teach students how to write proofs; there are other required courses in our curriculum that meet this need. Students may occasionally be asked to prove small facts, but these arguments are closer to the kind we expect from students in second or third semester calculus as contrasted with proofs we expect from a mathematics major in an upper-division course. Regardless, we cut very few corners, and our text can readily be used by instructors who elect to be even more rigorous in their approach.</p>
 
@@ -193,7 +193,7 @@
                 <line>Lexington, Virginia</line>
             </attribution>
         </preface>
-
+        
     <xi:include href="./ch_prologue.mbx" />
     </frontmatter>
 
