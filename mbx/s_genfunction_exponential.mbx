@@ -82,7 +82,8 @@
         <p>Dave sees this mess written on the whiteboard and groans. He figures they'll be there all day multiplying and making algebra mistakes in trying to find the desired coefficient. Alice points out that they don't really need to find the coefficient on <m>x^n/n!</m> for all <m>n</m>. Instead, she suggests they use SageMath to just find the coefficient on <m>x^8/8!</m>.</p>
         <sage>
             <input>
-                f(x) = (exp(7*x)*((exp(x)+exp(-1*x))/(2))*(exp(x)-1)*(1+x+x^2/2+x^3/factorial(3))).series(x,9)
+                f(x) = (exp(7*x)*((exp(x)+exp(-1*x))/(2))*(exp(x)-1)*\
+                (1+x+x^2/2+x^3/factorial(3))).series(x,9)
                 f(x).list()[8]
             </input>
             <output>33847837/40320</output>
