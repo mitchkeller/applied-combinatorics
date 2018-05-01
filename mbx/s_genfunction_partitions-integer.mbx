@@ -39,7 +39,7 @@
     <me>
         P(x) = \left(\sum_{m=0}^\infty x^{m}\right)\left(\sum_{m=0}^\infty x^{2m}\right)         \left(\sum_{m=0}^\infty x^{3m}\right)\cdots         \left(\sum_{m=0}^\infty x^{km}\right)\cdots = \prod_{m=1}^\infty\frac{1}{1-x^m}.
     </me>
-    Here the factor whose sum contains terms <m>x^{km}</m> is accounting for the number of <m>k</m>'s in the partition. While <m>P(x)</m> has a quite elegant form, that doesn't mean that it's terribly useful for computing <m>p_n</m>. In fact, providing an asymptotic estimate for <m>p_n</m> was a notoriously difficult problem, finally addressed by Hardy and Ramanujan in 1918. A popular account of this can be found in Robert Kanigel's 1991 book <booktitle>The Man who Knew Infinity</booktitle> or the 2016 film with the same title.
+    Here the factor whose sum contains terms <m>x^{km}</m> is accounting for the number of <m>k</m>'s in the partition. While <m>P(x)</m> has a quite elegant form, that doesn't mean that it's terribly useful for computing <m>p_n</m>. In fact, providing an asymptotic estimate for <m>p_n</m> was a notoriously difficult problem, finally addressed by Hardy and Ramanujan in 1918. A popular account of this can be found in Robert Kanigel's 1991 book <pubtitle>The Man who Knew Infinity</pubtitle> or the 2016 film with the same title.
     </p>
 
     <p>Proving the relationship between the number of partitions into distinct parts and the number of partitions into odd parts will involve restricted versions of the generating function <m>P(x)</m> from above.</p>
