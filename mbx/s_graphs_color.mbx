@@ -130,7 +130,7 @@
         <figure xml:id="fig_k44minus" >
             <caption>Two orderings of the vertices of a bipartite graph.</caption>
             <image width="70%">
-                <latex-image-code><![CDATA[
+                <latex-image><![CDATA[
 \begin{picture}(0,0)
     \put(0,76){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
     \put(0,52){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
@@ -150,7 +150,7 @@
     \put(178,7){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_8$}}}%
   \end{picture}
 \includegraphics{images/k44-M_crop}\hspace{.75in}\includegraphics{images/k44-M_crop}]]>
-                </latex-image-code>
+                </latex-image>
             </image>
         </figure>
         <p><xref ref="fig_k44minus"  /> shows two different orderings of the same graph. <xref ref="ex_graphs_first-fit-color"  /> demonstrates that the ordering of <m>V</m> is vital to the ability of the First Fit algorithm to color <m>\bfG</m> using <m>\chi(\bfG)</m> colors. In general, finding an optimal ordering is just as difficult as coloring <m>\bfG</m>. Thus, this very simple algorithm does not work well in general. However, for some classes of graphs, there is a <q>natural</q> ordering that leads to optimal performance of First Fit. Here is one such example<mdash />one that we will study again in the next chapter in a different context.

@@ -27,13 +27,13 @@
     <figure xml:id="fig_flowapplications_bipmatch_network" >
         <caption>The network corresponding to a bipartite graph</caption>
         <image width="40%">
-<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network}
+<latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network}
             \put(48,-6){\(S\)} \put(48,70){\(T\)}
             \put(9,13){\(x_1\)} 
             \put(85,13){\(x_6\)}
             \put(3,56){\(y_1\)}
             \put(92,56){\(y_7\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>Now that we have translated a bipartite graph into a network, we need to address the correspondence between matchings and network flows. To turn a matching <m>M</m> into a network flow, we start by placing one unit of flow on the edges of the matching. To have a valid flow, we must also place one unit of flow on the edges from <m>S</m> to the vertices of <m>V_1</m> saturated by <m>M</m>. Since each of these vertices is incident with a single edge of <m>M</m>, the flow out of each of them is <m>1</m>, matching the flow in. Similarly, routing one unit of flow to <m>T</m> from each of the vertices of <m>V_2</m> saturated by <m>M</m> takes care of the conservation laws for the remaining vertices. To go the other direction, simply note that the full edges from <m>V_1</m> to <m>V_2</m> in an integer-valued flow is a matching. Thus, we can find a maximum matching from <m>V_1</m> to <m>V_2</m> by simply running the labeling algorithm on the associated network in order to find a maximum flow.
@@ -44,13 +44,13 @@
     <figure xml:id="fig_flowapplications_initial_flow" >
         <caption>The flow corresponding to a matching</caption>
         <image width="40%">
-<latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network_flow}
+<latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network_flow}
             \put(48,-6){\(S\)} \put(48,70){\(T\)}
             \put(9,13){\(x_1\)} 
             \put(85,13){\(x_6\)}
             \put(3,56){\(y_1\)}
             \put(92,56){\(y_7\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>With priority sequence <m>S,T,x_1,x_2,\dots,x_6,y_1,y_2,\dots,y_7</m> replacing our usual pseudo-alphabetic order, the labeling algorithm produces the labels shown below.
@@ -68,13 +68,13 @@
     <figure xml:id="fig_flowapplications_bipmatch_maxflow" >
         <caption>The augmented flow</caption>
         <image width="40%">
-            <latex-image-code><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network_flow2}
+            <latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network_flow2}
             \put(48,-6){\(S\)} \put(48,70){\(T\)}
             \put(9,13){\(x_1\)} 
             \put(85,13){\(x_6\)}
             \put(3,56){\(y_1\)}
             \put(92,56){\(y_7\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>Is this a maximum flow? Another run of the labeling algorithm produces

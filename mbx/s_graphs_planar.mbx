@@ -5,14 +5,14 @@
     <figure xml:id="fig_graphs_utils" >
         <caption>A graph of connecting homes to utilities</caption>
         <image width="55%">
-            <latex-image-code><![CDATA[\begin{overpic}{images/k33}
+            <latex-image><![CDATA[\begin{overpic}{images/k33}
             \put(-38,92){ Water}
             \put(-67,50){ Electricity}
             \put(-78,5){ Natural gas}
             \put(92,92){ Home 1}
             \put(92,50){ Home 2}
             \put(92,5){ Home 3}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>While this example of utility lines might seem a bit contrived, since there's really no good reason that the providers can't bury their lines at different depths, the question of whether a graph can be drawn in the plane such that edges intersect only at vertices is a long-studied question in mathematics that does have useful applications. One area where it arises is in the design of microchips and circuit boards. In those contexts, the material is so thin that the option of placing connections at different depths either does not exist or is severely restricted. There is much deep mathematics that underlies this area, and this section is intended to introduce a few of the key concepts.

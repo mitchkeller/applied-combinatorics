@@ -8,13 +8,13 @@
     <figure xml:id="fig_small_graph" >
         <caption>A graph on <m>5</m> vertices</caption>
         <image width="30%">
-            <latex-image-code><![CDATA[\begin{overpic}{images/small_graph}
+            <latex-image><![CDATA[\begin{overpic}{images/small_graph}
             \put(58,100){\(a\)}
             \put(100,48){\(b\)}
             \put(-7,10){\(c\)}
             \put(15,50,){\(d\)}
             \put(70,11){\(e\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
 
     </figure>
@@ -32,13 +32,13 @@
     <figure xml:id="fig_complete_graphs" >
         <caption>Small complete graphs</caption>
         <image width="70%">
-<latex-image-code><![CDATA[\begin{overpic}[width=0.7\textwidth]{images/complete_graphs}
+<latex-image><![CDATA[\begin{overpic}[width=0.7\textwidth]{images/complete_graphs}
             \put(2.5,2){\(\bfK_1\)}
             \put(16.5,2){\(\bfK_2\)}
             \put(36.5,2){\(\bfK_3\)}
             \put(60.5,2){\(\bfK_4\)}
             \put(86,2){\(\bfK_5\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>A sequence <m>(x_1,x_2,\dots,x_n)</m> of vertices in a graph <m>\GVE</m> is called a <term>walk</term><idx><h>walk</h></idx> when <m>x_ix_{i+1}</m> is an edge for each <m>i=1,2,\dots,n-1</m>. Note that the vertices in a walk need not be distinct. On the other hand, if the vertices are distinct, then the sequence is called a <term>path</term><idx><h>path</h></idx>, and often to emphasize where a path starts and ends, we will say that a sequence <m>(x_1,x_2,\dots,x_n)</m> of distinct vertices is a path from <m>x_1</m> to <m>x_n</m> in <m>\bfG</m>. Similarly, when <m>n\ge3</m>, a path <m>(x_1,x_2,\dots,x_n)</m> of <m>n</m> distinct vertices is called a <term>cycle</term><idx><h>cycle</h></idx> when <m>x_1x_n</m> is also an edge in <m>\bfG</m>. It is customary to denote a path on <m>n</m> vertices by <m>\bfP_n</m><notation><usage>\bfP_n</usage><description>path with <m>n</m> vertices</description></notation>, while <m>\bfC_n</m><notation><usage>\bfC_n</usage><description>path with <m>n</m> vertices</description></notation> denotes a cycle on <m>n</m> vertices. The <term>length</term><idx><h>length</h><h>of path or cycle</h></idx> of a path or a cycle is the number of edges it contains. Therefore, the length of <m>\bfP_n</m> is <m>n-1</m> and the length of <m>\bfC_n</m> is <m>n</m>. In <xref ref="fig_paths"  />, we show the paths of length at most <m>4</m>, and in <xref ref="fig_cycles"  />, we show the cycles of length at most <m>5</m>.
@@ -46,24 +46,24 @@
     <figure xml:id="fig_paths" >
         <caption>Short paths</caption>
         <image width="70%">
-            <latex-image-code><![CDATA[\begin{overpic}[width=0.7\textwidth]{images/paths}
+            <latex-image><![CDATA[\begin{overpic}[width=0.7\textwidth]{images/paths}
             \put(8,-2){\(\bfP_1\)}
             \put(24,-2){\(\bfP_2\)}
             \put(39.5,-2){\(\bfP_3\)}
             \put(59.5,-2){\(\bfP_4\)}
             \put(85,-2){\(\bfP_5\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
 
     </figure>
     <figure xml:id="fig_cycles" >
         <caption>Small cycles</caption>
         <image width="60%">
-            <latex-image-code><![CDATA[\begin{overpic}[width=0.6\textwidth]{images/cycles}
+            <latex-image><![CDATA[\begin{overpic}[width=0.6\textwidth]{images/cycles}
             \put(24,1){\(\bfC_3\)}
             \put(47.5,1){\(\bfC_4\)}
             \put(73,1){\(\bfC_5\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>If <m>\GVE</m> and <m>\HWF</m> are graphs, we say <m>\bfG</m> is <term>isomorphic</term><idx><h>isomorphism</h><h>of graphs</h></idx> to <m>\bfH</m> and write <m>\bfG\cong\bfH</m> when there exists a bijection <m>f:V\bijection W</m> so that <m>x</m> is adjacent to <m>y</m> in <m>\bfG</m> if and only if <m>f(x)</m> is adjacent to <m>f(y)</m> in <m>\bfH</m>. Often writers will say that <m>\bfG</m> <q>contains</q> <m>\bfH</m> when there is a subgraph of <m>\bfG</m> which is isomorphic to <m>\bfH</m>. In particular, it is customary to say that <m>\bfG</m> contains the cycle <m>\bfC_n</m> (same for <m>\bfP_n</m> and <m>\bfK_n</m>) when <m>\bfG</m> contains a subgraph isomorphic to <m>\bfC_n</m>. The graphs in <xref ref="fig_isomorphic"  /> are isomorphic. An isomorphism between these graphs is given by
@@ -74,7 +74,7 @@
     <figure xml:id="fig_isomorphic" >
         <caption>A pair of isomorphic graphs</caption>
         <image width="70%">
-<latex-image-code><![CDATA[\begin{overpic}[width=0.70\textwidth]{images/isomorphic_graphs}
+<latex-image><![CDATA[\begin{overpic}[width=0.70\textwidth]{images/isomorphic_graphs}
             \put(6,13){\(a\)}
             \put(20.5,1){\(b\)}
             \put(36,14){\(c\)}
@@ -88,7 +88,7 @@
             \put(67.5,21.5){\(4\)}
             \put(53,13){\(5\)}
             \put(68,1){\(6\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>On the other hand, the graphs shown in <xref ref="fig_nonisomorphic"  /> are <em>not</em> isomorphic, even though they have the same number of vertices and the same number of edges. Can you tell why?
@@ -96,7 +96,7 @@
     <figure xml:id="fig_nonisomorphic" >
         <caption>A pair of nonisomorphic graphs</caption>
         <image width="70%">
-<latex-image-code><![CDATA[\begin{overpic}[width=0.75\textwidth]{images/nonisomorphic_graphs}
+<latex-image><![CDATA[\begin{overpic}[width=0.75\textwidth]{images/nonisomorphic_graphs}
             \put(6,13){\(a\)}
             \put(20.5,1){\(b\)}
             \put(36,14){\(c\)}
@@ -110,7 +110,7 @@
             \put(67.5,21.5){\(4\)}
             \put(53,13){\(5\)}
             \put(68,1){\(6\)}
-            \end{overpic}]]></latex-image-code>
+            \end{overpic}]]></latex-image>
         </image>
     </figure>
     <p>A graph <m>\bfG</m> is <term>connected</term><idx><h>graph</h><h>connected</h></idx> when there is a path from <m>x</m> to <m>y</m> in <m>\bfG</m>, for every <m>x,y\in V</m>; otherwise, we say <m>\bfG</m> is <term>disconnected</term><idx><h>graph</h><h>disconnected</h></idx>. The graph of <xref ref="fig_small_graph"  /> is disconnected (a sufficient justification for this is that there is no path from <m>e</m> to <m>c</m>), while those in <xref ref="fig_isomorphic"  /> are connected. If <m>\bfG</m> is disconnected, we call a maximal connected subgraph of <m>\bfG</m> a <term>component</term><idx><h>component</h></idx>. By this we mean that a subgraph <m>\bfH</m> of <m>\bfG</m> is a component of <m>\bfG</m> provided that there does not exist a connected subgraph <m>\bfH'</m> of <m>\bfG</m> such that <m>\bfH</m> is a subgraph of <m>\bfH'</m>.
