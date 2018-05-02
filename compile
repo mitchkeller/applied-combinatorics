@@ -1,4 +1,4 @@
-xsltproc --xinclude --stringparam exercise.text.answer "no" --stringparam exercise.text.solution "no" --stringparam html.knowl.example "no" --stringparam html.css.file "mathbook-4.css" --stringparam numbering.theorems.level "1" ~/Documents/github/mathbook/xsl/mathbook-html.xsl ~/Documents/github/applied-combinatorics/mbx/index.mbx
-xsltproc --xinclude --stringparam exercise.text.answer "no" --stringparam exercise.text.solution "no" --stringparam numbering.theorems.level "1" ~/Documents/github/mathbook/xsl/mathbook-latex.xsl ~/Documents/github/applied-combinatorics/mbx/index.mbx
-xmllint --xinclude --postvalid --noout --dtdvalid ~/Documents/github/mathbook/schema/dtd/mathbook.dtd ~/Documents/github/applied-combinatorics/mbx/index.mbx 2> dtdinfo.txt
+xsltproc --xinclude --stringparam exercise.text.answer "no" --stringparam exercise.text.solution "no" --stringparam html.knowl.example "no" --stringparam html.css.file "mathbook-4.css" --stringparam numbering.theorems.level "1" ~/Documents/github/mathbook/xsl/mathbook-html.xsl ~/Documents/github/applied-combinatorics/src/index.ptx
+xsltproc --xinclude --stringparam exercise.text.answer "no" --stringparam exercise.text.solution "no" --stringparam numbering.theorems.level "1" ~/Documents/github/mathbook/xsl/mathbook-latex.xsl ~/Documents/github/applied-combinatorics/ptx/index.ptx
+
 
