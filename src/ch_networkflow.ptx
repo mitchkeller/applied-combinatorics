@@ -6,11 +6,11 @@
         <p>This chapter continues our look at the topics of algorithms and optimization. On an intuitive level, networks and network flows are fairly simple. We want to move something (merchandise, water, data) from an initial point to a destination. We have a set of intermediate points (freight terminals, valves, routers) and connections between them (roads, pipes, cables) with each connection able to carry a limited amount. The natural goal is to move as much as possible from the initial point to the destination while respecting each connection's limit. Rather than just guessing at how to perform this maximization, we will develop an algorithm that does it. We'll also see how to easily justify the optimality of our solution though the classic Max Flow-Min Cut Theorem.
         </p>
     </introduction>
-    <xi:include  href="s_networkflow_intro.mbx" />
-    <xi:include  href="s_networkflow_flows-cuts.mbx" />
-    <xi:include  href="s_networkflow_augmenting.mbx" />
-    <xi:include  href="s_networkflow_labeling-algorithm.mbx" />
-    <xi:include  href="s_networkflow_example.mbx" />
-    <xi:include  href="s_networkflow_integer-programming.mbx" />
-    <xi:include  href="s_networkflow_exercises.mbx" />
+    <xi:include  href="s_networkflow_intro.ptx" />
+    <xi:include  href="s_networkflow_flows-cuts.ptx" />
+    <xi:include  href="s_networkflow_augmenting.ptx" />
+    <xi:include  href="s_networkflow_labeling-algorithm.ptx" />
+    <xi:include  href="s_networkflow_example.ptx" />
+    <xi:include  href="s_networkflow_integer-programming.ptx" />
+    <xi:include  href="s_networkflow_exercises.ptx" />
 </chapter>
