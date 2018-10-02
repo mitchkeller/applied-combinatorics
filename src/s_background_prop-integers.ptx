@@ -1,128 +1,264 @@
-<section xml:id="s_background_prop-integers">
-    <title>Properties of the Integers</title>
-    <p>For the remainder of this chapter, most statements will be given without proof. Students are encouraged to fill in the details.
-    </p>
 
-    <p>We define a binary operation <m>+</m> on <m>\ints</m> by the following rule:
-    <me>
-        \langle(a,b)\rangle+\langle(c,d)\rangle = \langle(a+c,b+d)\rangle.
-    </me>
-    Note that the definition of addition is made in terms of representatives of the class, so we must pause to make sure that <m>+</m> is <term>well defined</term>, <ie />, independent of the particular representatives.
-    </p>
 
-    <lemma>
-        <statement>
-            <p>If <m>\langle(a,b)\rangle =\langle(c,d)\rangle</m> and <m>\langle(e,f)\rangle=\langle(g,h)\rangle</m>, then <m>\langle(a,b)\rangle+\langle(e,f)\rangle= \langle(c,d)\rangle+\langle(g,h)\rangle</m>.
+<section permid="olP" xml:id="s_background_prop-integers">
+  <title>Properties of the Integers</title>
+  <p permid="ewE">
+    For the remainder of this chapter,
+    most statements will be given without proof.
+    Students are encouraged to fill in the details.
+  </p>
+
+  <p permid="KDN">
+    We define a binary operation <m>+</m> on <m>\ints</m> by the following rule:
+    <me permid="AeI">
+      \langle(a,b)\rangle+\langle(c,d)\rangle = \langle(a+c,b+d)\rangle
+    </me>.
+    Note that the definition of addition is made in terms of representatives of the class,
+    so we must pause to make sure that <m>+</m> is
+    <term>well defined</term>,
+    <ie />, independent of the particular representatives.
+  </p>
+
+  <lemma permid="Fka">
+    <statement>
+      <p permid="ypv">
+        If <m>\langle(a,b)\rangle =\langle(c,d)\rangle</m> and <m>\langle(e,f)\rangle=\langle(g,h)\rangle</m>,
+        then <m>\langle(a,b)\rangle+\langle(e,f)\rangle= \langle(c,d)\rangle+\langle(g,h)\rangle</m>.
+      </p>
+    </statement>
+
+    <proof permid="lrj">
+      <p permid="hrk">
+        Since <m>(a,b)\cong(c,d)</m>, we know <m>a+d=b+c</m>.
+        Since <m>(e,f)\cong(g,h)</m>, we know <m>e+h=f+g</m>.
+        It follows that <m>(a+d)+(e+h) = (b+c)+ (f+g)</m>.
+        Thus <m>(a+e)+(d+h)= (b+f)+(c+g)</m>,
+        which implies that <m>\langle(a,b)\rangle+\langle(e,f)\rangle= \langle(c,d)\rangle+\langle(g,h)\rangle</m>.
+      </p>
+    </proof>
+  </lemma>
+
+  <p permid="qKW">
+    In what follows, we use a single symbol,
+    like <m>x</m>, <m>y</m> or <m>z</m> to denote an integer,
+    but remember that each integer is in fact an entire equivalence class whose elements are ordered pairs of natural numbers.
+  </p>
+
+  <theorem permid="UsY">
+    <statement>
+      <p permid="Nyt">
+        For all <m>x,y,z\in\ints</m>,
+
+        <ol permid="Rys">
+          <li permid="qbc">
+            <p permid="LJg">
+              <m>x+y=y+x</m>;
             </p>
-        </statement>
+          </li>
 
-        <proof>
-            <p>Since <m>(a,b)\cong(c,d)</m>, we know <m>a+d=b+c</m>. Since <m>(e,f)\cong(g,h)</m>, we know <m>e+h=f+g</m>. It follows that <m>(a+d)+(e+h) = (b+c)+ (f+g)</m>.  Thus <m>(a+e)+(d+h)= (b+f)+(c+g)</m>, which implies that <m>\langle(a,b)\rangle+\langle(e,f)\rangle= \langle(c,d)\rangle+\langle(g,h)\rangle</m>.
+          <li permid="Wil">
+            <p permid="rQp">
+              <m>x+(y+z)= (x+y)+z</m>; and
             </p>
-        </proof>
-    </lemma>
+          </li>
 
-    <p>In what follows, we use a single symbol, like <m>x</m>, <m>y</m> or <m>z</m> to denote an integer, but remember that each integer is in fact an entire equivalence class whose elements are ordered pairs of natural numbers.
-    </p>
-
-    <theorem>
-        <statement>
-            <p>
-                For all <m>x,y,z\in\ints</m>,
-                  <ol>
-                <li><p><m>x+y=y+x</m>;</p></li>
-                <li><p><m>x+(y+z)= (x+y)+z</m>; and</p></li>
-                <li><p><m>x+y= x+z</m> implies <m>y=z</m>.</p></li>
-            
-                  </ol>
-                </p>
-        </statement>
-    </theorem>
-
-    <p>Next, we define a second binary operation called <term>multiplication</term>, and denoted <m>x\times y</m>, <m>x*y</m> or just <m>xy</m>. When <m>x=\langle(a,b)\rangle</m> and <m>y=\langle(c,d)\rangle</m>, we define:
-    <me>
-        xy =\langle(a,b)\rangle\langle(c,d)\rangle= \langle(ac+bd, ad+bc)\rangle.
-    </me>
-    </p>
-    <theorem>
-        <statement>
-            <p>
-                Multiplication is well defined. Furthermore,
-                  <ol>
-                <li><p><m>xy=yx</m>,  for every <m>x,y\in \ints</m>.</p></li>
-                <li><p><m>x(yz)=(xy)z</m>, for every <m>x,y,z\in \ints</m>.</p></li>
-                <li><p><m>x(y+z)=xy+xz</m>, for every <m>x,y,z\in \ints</m>.</p></li>
-            
-                  </ol>
-                </p>
-        </statement>
-    </theorem>
-
-    <p>The integer <m>\langle(0,0)\rangle</m> has a number of special properties.  Note that for all <m>x\in\ints</m>, <m>x+\langle(0,0)\rangle= x</m> and <m>x\langle(0,0)\rangle=\langle(0,0)\rangle</m>.  So most folks call <m>\langle(0,0)\rangle</m> <term>zero</term> and denote it by<nbsp /><m>0</m>. This is a terrible abuse of notation, since we have already used the word zero and the symbol <m>0</m> to denote a particular natural number.
-    </p>
-
-    <p>But mathematicians, computer scientists and even real people do this all the time. We use the same word and even the same phrase in many different settings expecting that the listener will make the correct interpretation. For example, how many different meanings do you know for <em>You're so bad</em>?
-    </p>
-
-    <p>If <m>x=\langle(a,b)\rangle</m> is an integer and <m>y= \langle(b,a)\rangle</m>, then <m>x+y=\langle(a+b,a+b)\rangle=0</m>.  The integer <m>y</m> is then called the <term>additive inverse</term> of <m>x</m> and is denoted <m>-x</m>. The additive inverse of <m>x</m> is also called <term>minus <m>x</m></term>.  The basic property is that <m>x + (-x) = 0</m>, for every <m>x\in \ints</m>.
-    </p>
-
-    <p>We can now define a new binary operation, called <term>subtraction</term> and denoted <m>-</m>, on <m>\ints</m> by setting <m>x-y= x+(-y)</m>. In general, subtraction is neither commutative nor associative. However, we do have the following basic properties.
-    </p>
-
-    <theorem>
-        <statement>
-            <p>
-                For all <m>x,y,z\in\ints</m>,
-                  <ol>
-                <li><p><m>x(-y)=-xy</m>;</p></li>
-                <li><p><m>x(y-z)= xy-xz</m>; and</p></li>
-                <li><p><m>-(x-y)=y-x</m>.</p></li>
-            
-                  </ol>
-                </p>
-        </statement>
-    </theorem>
-
-    <p>Next, we define a total order on <m>\ints</m> by setting <m>x\le y</m> in <m>\ints</m> when <m>x=\langle(a,b)\rangle</m>, <m>y=\langle(c,d) \rangle</m> and <m>a+d \le b+c</m> in <m>\nonnegints</m>.
-    </p>
-
-    <theorem>
-        <title>Monotonic Law for Addition</title>
-        <statement>
-            <p>Let <m>x,y,z\in \ints</m>. If <m>x\le y</m>, then <m>x+z\le y+z</m>. Furthermore, if <m>x\lt y</m>, then <m>x+z\lt y+z</m>.
+          <li permid="Cpu">
+            <p permid="XXy">
+              <m>x+y= x+z</m> implies <m>y=z</m>.
             </p>
-        </statement>
-    </theorem>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
 
-    <p>
-        For multiplication, the situation is more complicated.
-    </p>
+  <p permid="WSf">
+    Next, we define a second binary operation called
+    <term>multiplication</term>,
+    and denoted <m>x\times y</m>,
+    <m>x*y</m> or just <m>xy</m>.
+    When <m>x=\langle(a,b)\rangle</m> and <m>y=\langle(c,d)\rangle</m>,
+    we define:
+    <me permid="glR">
+      xy =\langle(a,b)\rangle\langle(c,d)\rangle= \langle(ac+bd, ad+bc)\rangle
+    </me>.
+  </p>
 
-    <theorem>
-        <title>Monotonic Law for Multiplication</title>
-        <statement>
-            <p>Let <m>x,y,z\in \ints</m>. If <m>x\lt y</m>, then
-                  <ol>
-                <li><p><m>xz\lt yz</m>, if <m>z>0</m>,</p></li>
-                <li><p><m>xz=yz=0</m>, if <m>z=0</m>, and</p></li>
-                <li><p><m>xz>yz</m>, if <m>z\lt 0</m>.</p></li>
-            
-                  </ol>
-                </p>
-        </statement>
-    </theorem>
+  <theorem permid="AAh">
+    <statement>
+      <p permid="tFC">
+        Multiplication is well defined.
+        Furthermore,
 
-    <p>Now consider the function <m>f:\nonnegints\longrightarrow \ints</m> defined by <m>f(n) = \langle(n,0)\rangle</m>. It is easy to show that <m>f</m> is an injection. Furthermore, it respects addition and multiplication, <ie />, <m>f(n+m)=f(n)+f(m)</m> and <m>f(nm)=f(n)f(m)</m>. Also, note that if <m>x\in \ints</m>, then <m>x>0</m> if and only if <m>x=f(n)</m> for some <m>n\in \nonnegints</m>. So, it is customary to abuse notation slightly and say that <m>\nonnegints</m> is a <q>subset</q> of <m>\ints</m>. Similarly, we can either consider the set <m>\posints</m> of positive integers as the set of natural numbers that are successors, or as the set of integers that are greater than<nbsp /><m>0</m>.
-    </p>
-
-    <p>When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\ints</m>, we define <m>0^n=0</m>. When <m>x\in\ints</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>, we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>.
-    </p>
-
-    <theorem>
-        <statement>
-            <p>If <m>x\in\ints</m>, <m>x\neq0</m>, and <m>m,n\in\nonnegints</m>, then <m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
+        <ol permid="xFB">
+          <li permid="iwD">
+            <p permid="EeH">
+              <m>xy=yx</m>, for every <m>x,y\in \ints</m>.
             </p>
-        </statement>
-    </theorem>
+          </li>
+
+          <li permid="ODM">
+            <p permid="klQ">
+              <m>x(yz)=(xy)z</m>, for every <m>x,y,z\in \ints</m>.
+            </p>
+          </li>
+
+          <li permid="uKV">
+            <p permid="QsZ">
+              <m>x(y+z)=xy+xz</m>, for every <m>x,y,z\in \ints</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p permid="CZo">
+    The integer <m>\langle(0,0)\rangle</m> has a number of special properties.
+    Note that for all <m>x\in\ints</m>,
+    <m>x+\langle(0,0)\rangle= x</m> and <m>x\langle(0,0)\rangle=\langle(0,0)\rangle</m>.
+    So most folks call <m>\langle(0,0)\rangle</m> <term>zero</term>
+    and denote it by<nbsp /><m>0</m>.
+    This is a terrible abuse of notation,
+    since we have already used the word zero and the symbol <m>0</m> to denote a particular natural number.
+  </p>
+
+  <p permid="jgx">
+    But mathematicians,
+    computer scientists and even real people do this all the time.
+    We use the same word and even the same phrase in many different settings expecting that the listener will make the correct interpretation.
+    For example,
+    how many different meanings do you know for <em>You're so bad</em>?
+  </p>
+
+  <p permid="PnG">
+    If <m>x=\langle(a,b)\rangle</m> is an integer and <m>y= \langle(b,a)\rangle</m>,
+    then <m>x+y=\langle(a+b,a+b)\rangle=0</m>.
+    The integer <m>y</m> is then called the
+    <term>additive inverse</term>
+    of <m>x</m> and is denoted <m>-x</m>.
+    The additive inverse of <m>x</m> is also called
+    <term>minus <m>x</m></term>.
+    The basic property is that <m>x + (-x) = 0</m>,
+    for every <m>x\in \ints</m>.
+  </p>
+
+  <p permid="vuP">
+    We can now define a new binary operation,
+    called <term>subtraction</term> and denoted <m>-</m>,
+    on <m>\ints</m> by setting <m>x-y= x+(-y)</m>.
+    In general, subtraction is neither commutative nor associative.
+    However, we do have the following basic properties.
+  </p>
+
+  <theorem permid="gHq">
+    <statement>
+      <p permid="ZML">
+        For all <m>x,y,z\in\ints</m>,
+
+        <ol permid="dMK">
+          <li permid="aSe">
+            <p permid="wAi">
+              <m>x(-y)=-xy</m>;
+            </p>
+          </li>
+
+          <li permid="GZn">
+            <p permid="cHr">
+              <m>x(y-z)= xy-xz</m>; and
+            </p>
+          </li>
+
+          <li permid="ngw">
+            <p permid="IOA">
+              <m>-(x-y)=y-x</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p permid="bBY">
+    Next, we define a total order on <m>\ints</m> by setting <m>x\le y</m> in <m>\ints</m> when <m>x=\langle(a,b)\rangle</m>,
+    <m>y=\langle(c,d) \rangle</m> and
+    <m>a+d \le b+c</m> in <m>\nonnegints</m>.
+  </p>
+
+  <theorem permid="MOz">
+    <title>Monotonic Law for Addition</title>
+    <statement>
+      <p permid="FTU">
+        Let <m>x,y,z\in \ints</m>.
+        If <m>x\le y</m>, then <m>x+z\le y+z</m>.
+        Furthermore, if <m>x\lt y</m>, then <m>x+z\lt y+z</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p permid="HJh">
+    For multiplication, the situation is more complicated.
+  </p>
+
+  <theorem permid="sVI">
+    <title>Monotonic Law for Multiplication</title>
+    <statement>
+      <p permid="mbd">
+        Let <m>x,y,z\in \ints</m>.
+        If <m>x\lt y</m>, then
+
+        <ol permid="JTT">
+          <li permid="TnF">
+            <p permid="oVJ">
+              <m>xz\lt yz</m>, if <m>z>0</m>,
+            </p>
+          </li>
+
+          <li permid="zuO">
+            <p permid="VcS">
+              <m>xz=yz=0</m>, if <m>z=0</m>, and
+            </p>
+          </li>
+
+          <li permid="fBX">
+            <p permid="Bkb">
+              <m>xz>yz</m>, if <m>z\lt 0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p permid="nQq">
+    Now consider the function <m>f:\nonnegints\longrightarrow \ints</m> defined by <m>f(n) = \langle(n,0)\rangle</m>.
+    It is easy to show that <m>f</m> is an injection.
+    Furthermore, it respects addition and multiplication,
+    <ie />, <m>f(n+m)=f(n)+f(m)</m> and <m>f(nm)=f(n)f(m)</m>.
+    Also, note that if <m>x\in \ints</m>,
+    then <m>x>0</m> if and only if <m>x=f(n)</m> for some <m>n\in \nonnegints</m>.
+    So, it is customary to abuse notation slightly and say that <m>\nonnegints</m> is a
+    <q>subset</q> of <m>\ints</m>.
+    Similarly, we can either consider the set
+    <m>\posints</m> of positive integers as the set of natural numbers that are successors,
+    or as the set of integers that are greater than<nbsp /><m>0</m>.
+  </p>
+
+  <p permid="TXz">
+    When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\ints</m>,
+    we define <m>0^n=0</m>.
+    When <m>x\in\ints</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>,
+    we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>.
+  </p>
+
+  <theorem permid="ZcR">
+    <statement>
+      <p permid="Sim">
+        If <m>x\in\ints</m>, <m>x\neq0</m>,
+        and <m>m,n\in\nonnegints</m>,
+        then <m>x^mx^n=x^{m+m}</m> and <m>(x^m)^n=x^{mn}</m>.
+      </p>
+    </statement>
+  </theorem>
 </section>
+

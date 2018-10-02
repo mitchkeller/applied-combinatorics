@@ -1,21 +1,61 @@
-<section xml:id="s_inclusion-exclusion_euler-phi">
-    <title>The Euler <m>\phi</m> Function</title>
-    <idx><h>greatest common divisor</h><h>Euler <m>\phi</m> function</h></idx>
-    <p>After reading the two previous sections, you're probably wondering why we stated the <xref ref="thm_inclusion-exclusion" text="title" /> in such an abstract way, as in those examples <m>N(S)</m> depended only on the size of <m>S</m> and not its contents. In this section, we produce an important example where the value of <m>N(S)</m> <em>does</em> depend on <m>S</m>.  Nevertheless, we are able to make a reduction to obtain a useful end result. In what follows, let <m>\posints</m> denote the set of positive integers.
-    </p>
 
-    <p>For a positive integer <m>n\ge2</m>, let
-    <me>
-        \phi(n)=|\{m\in \posints: m\le n, \gcd(m,n)=1\}|.
-    </me>
-    This function is usually called the <term>Euler <m>\phi</m> function</term> or the <term>Euler totient function</term>    <idx><h>Euler <m>\phi</m> function</h></idx> and has many connections to number theory. We won't focus on the number-theoretic aspects here, only being able to compute <m>\phi(n)</m> efficiently for any <m>n</m>.<notation><usage>\phi(n)</usage><description>Euler <m>\phi</m> function</description></notation>
-    </p>
 
-    <p>For example, <m>\phi(12)=4</m> since the only numbers from <m>\{1,2,\dots,12\}</m> that are relatively prime to <m>12</m> are <m>1</m>, <m>5</m>, <m>7</m> and <m>11</m>. As a second example, <m>\phi(9)=6</m> since <m>1</m>, <m>2</m>, <m>4</m>, <m>5</m>, <m>7</m> and <m>8</m> are relatively prime to <m>9</m>. On the other hand, <m>\phi(p)=p-1</m> when <m>p</m> is a prime. Suppose you were asked to compute <m>\phi(321974)</m>. How would you proceed?
-    </p>
+<section permid="kIp" xml:id="s_inclusion-exclusion_euler-phi">
+  <title>The Euler <m>\phi</m> Function</title>
+  <idx><h>greatest common divisor</h><h>Euler <m>\phi</m> function</h></idx>
 
-    <p>In <xref ref="ch_induction"  /> we discussed a recursive procedure for determining the greatest common divisor of two integers, and we wrote code for accomplishing this task. Let's assume that we have a function <c>gcd(m,n)</c> that returns the greatest common divisor of the integers <c>m</c> and <c>n</c>.  (Conveniently enough, SageMath comes such a function built in.) Then we can calculate <m>\phi(n)</m> with this code snippet:
-    </p>
+  <p permid="Gqt">
+    After reading the two previous sections,
+    you're probably wondering why we stated the <xref ref="thm_inclusion-exclusion" text="title" /> in such an abstract way,
+    as in those examples <m>N(S)</m> depended only on the size of <m>S</m> and not its contents.
+    In this section,
+    we produce an important example where the value of <m>N(S)</m>
+    <em>does</em> depend on <m>S</m>.
+    Nevertheless,
+    we are able to make a reduction to obtain a useful end result.
+    In what follows,
+    let <m>\posints</m> denote the set of positive integers.
+  </p>
+
+  <p permid="mxC">
+    For a positive integer <m>n\ge2</m>, let
+    <me permid="DvN">
+      \phi(n)=|\{m\in \posints: m\le n, \gcd(m,n)=1\}|
+    </me>.
+    This function is usually called the
+    <term>Euler <m>\phi</m> function</term>
+    or the <term>Euler totient function</term>
+        <idx><h>Euler <m>\phi</m> function</h></idx>
+    and has many connections to number theory.
+    We won't focus on the number-theoretic aspects here,
+    only being able to compute <m>\phi(n)</m> efficiently for any <m>n</m>.
+
+    <notation>
+      <usage>\phi(n)</usage>
+      <description>Euler <m>\phi</m> function</description>
+    </notation>
+
+  </p>
+
+  <p permid="SEL">
+    For example, <m>\phi(12)=4</m> since the only numbers from
+    <m>\{1,2,\dots,12\}</m> that are relatively prime to <m>12</m> are <m>1</m>,
+    <m>5</m>, <m>7</m> and <m>11</m>.
+    As a second example, <m>\phi(9)=6</m> since <m>1</m>,
+    <m>2</m>, <m>4</m>, <m>5</m>,
+    <m>7</m> and <m>8</m> are relatively prime to <m>9</m>.
+    On the other hand, <m>\phi(p)=p-1</m> when <m>p</m> is a prime.
+    Suppose you were asked to compute <m>\phi(321974)</m>.
+    How would you proceed?
+  </p>
+
+  <p permid="yLU">
+    In <xref ref="ch_induction" /> we discussed a recursive procedure for determining the greatest common divisor of two integers,
+    and we wrote code for accomplishing this task.
+    Let's assume that we have a function <c>gcd(m,n)</c> that returns the greatest common divisor of the integers <c>m</c> and <c>n</c>.
+    (Conveniently enough, SageMath comes such a function built in.)
+    Then we can calculate <m>\phi(n)</m> with this code snippet:
+  </p>
 
     <sage>
         <input>def phi(n):
@@ -30,86 +70,121 @@ phi(321974)
         <output>147744</output>
     </sage>
 
+  <p permid="eTd">
+    Running the code above answers almost immediately that <m>\phi(321974) = 147744</m>. (As usual,
+    in the web version of the text,
+    you can change the value <c>321974</c> to calculate the value of <m>\phi</m> for other integers.
+    However, if you try to increase the value of <c>n</c> to be too large,
+    you may run into memory issues imposed by the Sage Cell Server used by the text.
+    For instance, attempting to calculate
+    <m>\phi(319572943)</m> results in an error at the time of writing.
+    (You may have better luck running the code directly in the
+    <url href="http://cloud.sagemath.com/">SageMath Cloud</url>
+    or a local installation of SageMath.)
+  </p>
 
-    <p>Running the code above answers almost immediately that <m>\phi(321974) = 147744</m>. (As usual, in the web version of the text, you can change the value <c>321974</c> to calculate the value of <m>\phi</m> for other integers. However, if you try to increase the value of <c>n</c> to be too large, you may run into memory issues imposed by the Sage Cell Server used by the text. For instance, attempting to calculate <m>\phi(319572943)</m> results in an error at the time of writing. (You may have better luck running the code directly in the <url href="http://cloud.sagemath.com/">SageMath Cloud</url> or a local installation of SageMath.)
+  <p permid="Lam">
+    Given these difficulties,
+    how could we find <m>\phi(1369122257328767073)</m>?
+  </p>
+
+  <p permid="rhv">
+    Clearly, the program is useless to tackle this beast!
+    It not only iterates <m>n-2</m> times but also invokes a recursion during each iteration.
+    Fortunately, Inclusion-Exclusion comes to the rescue.
+  </p>
+
+  <theorem permid="QPy" xml:id="thm_eulerphi">
+    <statement>
+      <p permid="hNJ">
+        Let <m>n\ge2</m> be a positive integer and suppose that <m>n</m> has <m>m</m> distinct prime factors:
+        <m>p_1</m>, <m>p_2,\dots,p_m</m>.
+        Then
+        <men permid="jCW" xml:id="eq_eulerphi">
+          \phi(n) = n\prod_{i = 1}^{m}\frac{p_i-1}{p_i}
+        </men>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p permid="XoE">
+    Our proof of <xref ref="thm_eulerphi" /> requires the following elementary proposition whose proof we leave as an exercise.
+  </p>
+
+  <proposition permid="wWH" xml:id="prop_num-divisible">
+    <statement>
+      <p permid="NUS">
+        Let <m>n\ge2</m>, <m>k\ge1</m>,
+        and let <m>p_1,p_2,\dots,p_k</m> be distinct primes each of which divide <m>n</m> evenly
+        (without remainder).
+        Then the number of integers from
+        <m>\{1,2,\dots,n\}</m> which are divisible by each of these <m>k</m> primes is
+        <me permid="PKf">
+          \frac{n}{p_1p_2\dots p_k}
+        </me>.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof permid="psi">
+    <p permid="Vzr">
+      We present the argument when <m>m=3</m>.
+      The full result is an easy extension.
     </p>
-    <p>Given these difficulties, how could we find <m>\phi(1369122257328767073)</m>?
+
+    <p permid="BGA">
+      In light of <xref ref="prop_num-divisible"  />, the Principle of Inclusion-Exclusion yields:
+      <md permid="vRo">
+        <mrow>\phi(n) \amp = n-\left(\frac{n}{p_1}+\frac{n}{p_2}+
+        \frac{n}{p_3}\right) +\left(\frac{n}{p_1p_2}+\frac{n}{p_1p_3}+
+        \frac{n}{p_2p_3}\right)-\frac{n}{p_1p_2p_3}</mrow>
+        <mrow>\amp = n \frac{p_1p_2p_3 -(p_2p_3+p_1p_3+p_1p_2)+
+        (p_3+p_2+p_1) - 1}{p_1p_2p_3}</mrow>
+        <mrow>\amp =n \frac{p_1-1}{p_1}\frac{p_2-1}{p_2}
+        \frac{p_3-1}{p_3}</mrow>
+      </md>.
     </p>
+  </proof>
 
-    <p>Clearly, the program is useless to tackle this beast! It not only iterates <m>n-2</m> times but also invokes a recursion during each iteration. Fortunately, Inclusion-Exclusion comes to the rescue.
+  <example permid="ddQ">
+    <p permid="ucb">
+      SageMath reports that
+      <me permid="bYx">
+        1369122257328767073 = (3)^3(11)(19)^4(31)^2(6067)^2
+      </me>
+      is the factorization of <m>1369122257328767073</m> into primes.
+      It follows that
+      <me permid="IfG">
+        \phi(1369122257328767073) = 1369122257328767073
+        \,\,\frac{2}{3}\,\frac{10}{11}\,\frac{18}{19}\,\frac{30}{31}\,\frac{6066}{6067}
+      </me>.
+      Thus SageMath quickly reports that
+      <me permid="omP">
+        \phi(1369122257328767073) =760615484618973600
+      </me>.
     </p>
+  </example>
 
-    <theorem xml:id="thm_eulerphi">
-        <statement>
-            <p>Let <m>n\ge2</m> be a positive integer and suppose that <m>n</m> has <m>m</m> distinct prime factors: <m>p_1</m>, <m>p_2,\dots,p_m</m>.  Then
-            <men xml:id="eq_eulerphi" >
-                \phi(n) = n\prod_{i = 1}^{m}\frac{p_i-1}{p_i}.
-            </men>
-            </p>
-        </statement>
-    </theorem>
-
-    <p>Our proof of <xref ref="thm_eulerphi"  /> requires the following elementary proposition whose proof we leave as an exercise.
+  <example permid="JkZ">
+    <p permid="ajk">
+      Amanda and Bruce receive the same challenge from their professor,
+      namely to find <m>\phi(n)</m> when
+      <md permid="UtY">
+        <mrow>n  = \amp 31484972786199768889479107860964368171543984609017931</mrow>
+        <mrow>\amp   39001922159851668531040708539722329324902813359241016</mrow>
+        <mrow>\amp   93211209710523</mrow>
+      </md>.
+      However the Professor also tells Amanda that
+      <m>n=p_1p_2</m> is the product of two large primes where
+      <md permid="ABh">
+        <mrow>p_1 \amp = 470287785858076441566723507866751092927015824834881906763507</mrow>
+        <intertext>and</intertext>
+        <mrow>p_2 \amp = 669483106578092405936560831017556154622901950048903016651289</mrow>
+      </md>.
+      Is this information of any special value to Amanda?
+      Does it really make her job any easier than Bruce's?
+      Would it level the playing field if the professor told Bruce that <m>n</m> was the product of two primes?
     </p>
-
-    <proposition xml:id="prop_num-divisible">
-        <statement>
-            <p>Let <m>n\ge2</m>, <m>k\ge1</m>, and let <m>p_1,p_2,\dots,p_k</m> be distinct primes each of which divide <m>n</m> evenly (without remainder).  Then the number of integers from <m>\{1,2,\dots,n\}</m> which are divisible by each of these <m>k</m> primes is
-                <me>
-                    \frac{n}{p_1p_2\dots p_k}.
-                </me>
-            </p>
-        </statement>
-    </proposition>
-    
-    <proof>
-        <p>We present the argument when <m>m=3</m>. The full result is an easy extension.
-        </p>
-        <p>In light of <xref ref="prop_num-divisible"  />, the Principle of Inclusion-Exclusion yields:
-        <md>
-            <mrow>  \phi(n) \amp = n-\left(\frac{n}{p_1}+\frac{n}{p_2}+
-            \frac{n}{p_3}\right) +\left(\frac{n}{p_1p_2}+\frac{n}{p_1p_3}+
-            \frac{n}{p_2p_3}\right)-\frac{n}{p_1p_2p_3}</mrow>
-            <mrow>  \amp = n \frac{p_1p_2p_3 -(p_2p_3+p_1p_3+p_1p_2)+
-            (p_3+p_2+p_1) - 1}{p_1p_2p_3}</mrow>
-            <mrow>  \amp =n \frac{p_1-1}{p_1}\frac{p_2-1}{p_2}
-            \frac{p_3-1}{p_3}.</mrow>
-            </md>
-        </p>
-    </proof>
-
-    <example>
-        <p>SageMath reports that
-            <me>
-                1369122257328767073 = (3)^3(11)(19)^4(31)^2(6067)^2
-            </me>
-            is the factorization of <m>1369122257328767073</m> into primes.
-            It follows that
-            <me>
-                \phi(1369122257328767073) = 1369122257328767073
-                \,\,\frac{2}{3}\,\frac{10}{11}\,\frac{18}{19}\,\frac{30}{31}\,\frac{6066}{6067}.
-            </me>
-            Thus SageMath quickly reports that
-            <me>
-                \phi(1369122257328767073) =760615484618973600.
-            </me>
-        </p>
-    </example>
-
-    <example>
-        <p>Amanda and Bruce receive the same challenge from their professor, namely to find <m>\phi(n)</m> when
-        <md>
-            <mrow>  n  = \amp 31484972786199768889479107860964368171543984609017931</mrow>
-            <mrow>  \amp   39001922159851668531040708539722329324902813359241016</mrow>
-            <mrow>  \amp   93211209710523.</mrow>
-        </md>
-        However the Professor also tells Amanda that <m>n=p_1p_2</m> is the product of two large primes where
-        <md>
-            <mrow>p_1 \amp = 470287785858076441566723507866751092927015824834881906763507</mrow>
-            <intertext>and</intertext>
-            <mrow>p_2 \amp = 669483106578092405936560831017556154622901950048903016651289.</mrow>
-        </md>
-        Is this information of any special value to Amanda? Does it really make her job any easier than Bruce's? Would it level the playing field if the professor told Bruce that <m>n</m> was the product of two primes?
-        </p>
-    </example>
+  </example>
 </section>
+

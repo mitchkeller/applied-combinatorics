@@ -1,31 +1,63 @@
-<section xml:id="s_recurrence_linear">
-    <title>Linear Recurrence Equations</title>
-    
-    <p>What do all of the examples of the previous section have in common?  The end result that we were able to achieve is a <term>linear recurrence</term><idx><h>recurrence equation</h><h>linear</h></idx>, which tells us how we can compute the <m>n^\text{th}</m> term of a sequence given some number of previous values (and perhaps also depending nonrecursively on <m>n</m> as well, as in the last example).  More precisely a recurrence equation is said to be <term>linear</term> when it has the following form
-    <me>
-        c_0a_{n+k}+ c_1a_{n+k-1} + c_2a_{n+k-2} + \dots+c_ka_{n} = g(n),
-    </me>
-    where <m>k\ge1</m> is an integer, <m>c_0,c_1,\dots,c_k</m> are constants with <m>c_0,c_k\neq0</m>, and <m>g:\ints\rightarrow\reals</m> is a function. (What we have just defined may more properly be called a linear recurrence equation with <term>constant coefficients</term><idx><h>recurrence equation</h><h>constant coefficients</h></idx>, since we require the <m>c_i</m> to be constants and prohibit them from depending on <m>n</m>. We will avoid this additional descriptor, instead choosing to speak of linear recurrence equations with <term>nonconstant coefficients</term><idx><h>recurrence equation</h><h>nonconstant coefficients</h></idx> in case we allow the <m>c_i</m> to be functions of <m>n</m>.) A linear equation is <term>homogeneous</term><idx><h>recurrence equation</h><h>homogeneous</h></idx> if the function <m>g(n)</m> on the right hand side is the zero function. For example, the Fibonacci sequence<idx><h>Fibonacci</h><h>sequence</h></idx> satisfies the homogeneous linear recurrence equation
-    <me>
-        a_{n+2} - a_{n+1} - a_n = 0.
-    </me>
-    Note that in this example, <m>k=2</m>, <m>c_0=1</m> and <m>c_k=-1</m>.
-    </p>
 
-    <p>As a second example, the sequence in <xref ref="ex_recurrence_ternary-strings-no-20"  /> satisfies the homogeneous linear recurrence equation
-    <me>
-        t_{n+2} - 3t_{n+1} + t_n = 0.
-    </me>
+
+<section permid="qdp" xml:id="s_recurrence_linear">
+  <title>Linear Recurrence Equations</title>
+  <p permid="Wky">
+    What do all of the examples of the previous section have in common?
+    The end result that we were able to achieve is a
+    <term>linear recurrence</term>,
+        <idx><h>recurrence equation</h><h>linear</h></idx>
+    which tells us how we can compute the
+    <m>n^\text{th}</m> term of a sequence given some number of previous values
+    (and perhaps also depending nonrecursively on <m>n</m> as well,
+    as in the last example).
+    More precisely a recurrence equation is said to be <term>linear</term>
+    when it has the following form
+    <me permid="uNi">
+      c_0a_{n+k}+ c_1a_{n+k-1} + c_2a_{n+k-2} + \dots+c_ka_{n} = g(n)
+    </me>,
+    where <m>k\ge1</m> is an integer,
+    <m>c_0,c_1,\dots,c_k</m> are constants with <m>c_0,c_k\neq0</m>,
+    and <m>g:\ints\rightarrow\reals</m> is a function.
+    (What we have just defined may more properly be called a linear recurrence equation with
+    <term>constant coefficients</term>,
+        <idx><h>recurrence equation</h><h>constant coefficients</h></idx>
+    since we require the <m>c_i</m> to be constants and prohibit them from depending on <m>n</m>.
+    We will avoid this additional descriptor,
+    instead choosing to speak of linear recurrence equations with
+    <term>nonconstant coefficients</term><idx><h>recurrence equation</h><h>nonconstant coefficients</h></idx> in case we allow the <m>c_i</m> to be functions of <m>n</m>.)
+    A linear equation is <term>homogeneous</term><idx><h>recurrence equation</h><h>homogeneous</h></idx> if the function <m>g(n)</m> on the right hand side is the zero function.
+    For example,
+    the Fibonacci sequence<idx><h>Fibonacci</h><h>sequence</h></idx> satisfies the homogeneous linear recurrence equation
+    <me permid="aUr">
+      a_{n+2} - a_{n+1} - a_n = 0
+    </me>.
+    Note that in this example, <m>k=2</m>,
+    <m>c_0=1</m> and <m>c_k=-1</m>.
+  </p>
+
+  <p permid="CrH">
+    As a second example,
+    the sequence in <xref ref="ex_recurrence_ternary-strings-no-20"  /> satisfies the homogeneous linear recurrence equation
+    <me permid="HbA">
+      t_{n+2} - 3t_{n+1} + t_n = 0
+    </me>.
     Again, <m>k=2</m> with <m>c_0=c_k=1</m>.
-    </p>
+  </p>
 
-    <p>On the other hand, the sequence <m>r_n</m> defined in <xref ref="s_recurrence_intro_lines"  /> satisfies the nonhomogeneous linear recurrence equation
-    <me>
-        r_{n+1} - r_{n} = n+1.
-    </me>
+  <p permid="iyQ">
+    On the other hand,
+    the sequence <m>r_n</m> defined in <xref ref="s_recurrence_intro_lines"  /> satisfies the nonhomogeneous linear recurrence equation
+    <me permid="niJ">
+      r_{n+1} - r_{n} = n+1
+    </me>.
     In this case, <m>k=1</m>, <m>c_0=1</m> and <m>c_k=-1</m>.
-    </p>
+  </p>
 
-    <p>Our immediate goal is to develop techniques for solving linear recurrence equations of both homogeneous and nonhomogeneous types. We will be able to fully resolve the question of solving homogeneous linear recurrence equations and discuss a sort of <q>guess-and-test</q> method that can be used to tackle the more tricky nonhomogeneous type.
-    </p>
+  <p permid="OFZ">
+    Our immediate goal is to develop techniques for solving linear recurrence equations of both homogeneous and nonhomogeneous types.
+    We will be able to fully resolve the question of solving homogeneous linear recurrence equations and discuss a sort of <q>guess-and-test</q>
+    method that can be used to tackle the more tricky nonhomogeneous type.
+  </p>
 </section>
+

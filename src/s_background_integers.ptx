@@ -1,63 +1,84 @@
-<section xml:id="s_background_integers">
-    <title>The Integers as Equivalence Classes of Ordered Pairs</title>
-    <p>Define a binary relation <m>\cong</m> on the set <m>Z=\nonnegints \times\nonnegints</m> by
-    <me>
-        (a,b)\cong (c,d)\quad\textit{iff}\quad a+d=b+c.
-    </me>
-    </p>
-    <lemma>
-        <statement>
-            <p>
-                <m>\cong</m> is reflexive.
-            </p>
-        </statement>
 
-        <proof>
-            <p>Let <m>(a,b)\in Z</m>. Then <m>a+b=b+a</m>, so <m>(a,b)\cong(b,a)</m>.
-            </p>
-        </proof>
-    </lemma>
-    <lemma>
-        <statement>
-            <p>
-                <m>\cong</m> is symmetric.
-            </p>
-        </statement>
 
-        <proof>
-            <p>Let <m>(a,b),(c,d)\in Z</m> and suppose that <m>(a,b)\cong (c,d)</m>. Then <m>a+d=b+c</m>, so that <m>c+b=d+a</m>. Thus <m>(c,d)\cong (a,b)</m>.
-            </p>
-        </proof>
-    </lemma>
-    <lemma>
-        <statement>
-            <p>
-                <m>\cong</m> is transitive.
-            </p>
-        </statement>
+<section permid="LQk" xml:id="s_background_integers">
+  <title>The Integers as Equivalence Classes of Ordered Pairs</title>
+  <p permid="NFx">
+    Define a binary relation <m>\cong</m> on the set <m>Z=\nonnegints \times\nonnegints</m> by
+    <me permid="mih">
+      (a,b)\cong (c,d)\quad\textit{iff}\quad a+d=b+c
+    </me>.
+  </p>
 
-        <proof>
-            <p>
-                Let <m>(a,b), (c,d), (e,f)\in Z</m>. Suppose that
-                <me>
-                    (a,b)\cong(c,d)\quad\text{and} \quad (c,d)\cong (e,f).
-                </me>
-                Then <m>a+d=b+c</m> and <m>c+f=d+e</m>. Therefore,
+  <lemma permid="rXt">
+    <statement>
+      <p permid="VjW">
+        <m>\cong</m> is reflexive.
+      </p>
+    </statement>
 
-                <me>
-                    (a+d)+(c+f) =(b+c)+(d+e).
-                </me>
-                It follows that
-                <me>
-                    (a+f)+(c+d) =(b+e)+(c+d).
-                </me>
-                Thus <m>a+f = b+e</m> so that <m>(a,b)\cong(e,f)</m>.
-            </p>
-        </proof>
-    </lemma>
-    <p>Now that we know that <m>\cong</m> is an equivalence relation on <m>Z</m>, we know that <m>\cong</m> partitions <m>Z</m> into equivalence classes.  For an element <m>(a,b)\in Z</m>, we denote the equivalence class of <m>(a,b)</m> by <m>\langle (a,b)\rangle</m>.
-    </p>
+    <proof permid="ksU">
+      <p permid="cOv">
+        Let <m>(a,b)\in Z</m>.
+        Then <m>a+b=b+a</m>, so <m>(a,b)\cong(b,a)</m>.
+      </p>
+    </proof>
+  </lemma>
 
-    <p>Let <m>\ints</m> denote the set of all equivalence classes of <m>Z</m> determined by the equivalence relation <m>\cong</m>. The elements of <m>\ints</m> are called <term>integers</term>.<idx><h>integers</h><h>formal definition of</h></idx>
-    </p>
+  <lemma permid="YeC">
+    <statement>
+      <p permid="Brf">
+        <m>\cong</m> is symmetric.
+      </p>
+    </statement>
+
+    <proof permid="QAd">
+      <p permid="IVE">
+        Let <m>(a,b),(c,d)\in Z</m> and suppose that <m>(a,b)\cong (c,d)</m>.
+        Then <m>a+d=b+c</m>, so that <m>c+b=d+a</m>.
+        Thus <m>(c,d)\cong (a,b)</m>.
+      </p>
+    </proof>
+  </lemma>
+
+  <lemma permid="ElL">
+    <statement>
+      <p permid="hyo">
+        <m>\cong</m> is transitive.
+      </p>
+    </statement>
+
+    <proof permid="wHm">
+      <p permid="pcN">
+        Let <m>(a,b), (c,d), (e,f)\in Z</m>.
+        Suppose that
+        <me permid="Spq">
+          (a,b)\cong(c,d)\quad\text{and} \quad (c,d)\cong (e,f)
+        </me>.
+        Then <m>a+d=b+c</m> and <m>c+f=d+e</m>.
+        Therefore,
+        <me permid="ywz">
+          (a+d)+(c+f) =(b+c)+(d+e)
+        </me>.
+        It follows that
+        <me permid="eDI">
+          (a+f)+(c+d) =(b+e)+(c+d)
+        </me>.
+        Thus <m>a+f = b+e</m> so that <m>(a,b)\cong(e,f)</m>.
+      </p>
+    </proof>
+  </lemma>
+
+  <p permid="tMG">
+    Now that we know that <m>\cong</m> is an equivalence relation on <m>Z</m>,
+    we know that <m>\cong</m> partitions <m>Z</m> into equivalence classes.
+    For an element <m>(a,b)\in Z</m>,
+    we denote the equivalence class of <m>(a,b)</m> by <m>\langle (a,b)\rangle</m>.
+  </p>
+
+  <p permid="ZTP">
+    Let <m>\ints</m> denote the set of all equivalence classes of <m>Z</m> determined by the equivalence relation <m>\cong</m>.
+    The elements of <m>\ints</m> are called <term>integers</term>.
+        <idx><h>integers</h><h>formal definition of</h></idx>
+  </p>
 </section>
+

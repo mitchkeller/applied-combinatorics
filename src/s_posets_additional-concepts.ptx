@@ -1,59 +1,185 @@
-<section xml:id="s_posets_additional-concepts">
-    <title>Additional Concepts for Posets</title>
-    <p>We say <m>(X,P)</m> and <m>(Y,Q)</m> are <term>isomorphic</term>, and write <m>(X,P) \cong(Y,Q)</m> if there exists a bijection (1<ndash />1 and onto map) <m>f:X\to Y</m> so that <m>x_1\le x_2</m> in <m>P</m> if and only if <m>f(x_1)\le f(x_2)</m> in <m>Q</m>. In this definition, the map <m>f</m> is called an <term>isomorphism</term><idx><h>isomorphism</h><h>of posets</h></idx> from <m>\bfP</m> to <m>\bfQ</m>. In <xref ref="fig_constructposets"  />, the first two posets are isomorphic.
+
+
+<section permid="SjZ" xml:id="s_posets_additional-concepts">
+  <title>Additional Concepts for Posets</title>
+  <p permid="bDL">
+    We say <m>(X,P)</m> and <m>(Y,Q)</m> are <term>isomorphic</term>,
+    and write <m>(X,P) \cong(Y,Q)</m> if there exists a bijection (1<ndash />1 and onto map) <m>f:X\to Y</m> so that
+    <m>x_1\le x_2</m> in <m>P</m> if and only if <m>f(x_1)\le f(x_2)</m> in <m>Q</m>.
+    In this definition, the map <m>f</m> is called an
+    <term>isomorphism</term><idx><h>isomorphism</h><h>of posets</h></idx> from <m>\bfP</m> to <m>\bfQ</m>.
+    In <xref ref="fig_constructposets" />, the first two posets are isomorphic.
+  </p>
+
+  <remark>
+    <p permid="HKU">
+      Bob sees a pattern linking the first two posets shown in <xref ref="fig_constructposets"  /> and asserts that any poset of one of these two types is isomorphic to a poset of the other type.
+      Alice admits that Bob is right<mdash />but even more is true.
+      The four constructions given in <xref ref="exa_construct"  /> are universal in the sense that <em>every</em>
+      poset is isomorphic to a poset of each of the four types.
+      Do you see why?
+      If you get stuck answering this,
+      we will revisit the question at the end of the chapter,
+      and we will give you a hint.
     </p>
-    <remark>
-        <p>Bob sees a pattern linking the first two posets shown in <xref ref="fig_constructposets"  /> and asserts that any poset of one of these two types is isomorphic to a poset of the other type. Alice admits that Bob is right<mdash />but even more is true. The four constructions given in <xref ref="exa_construct"  /> are universal in the sense that <em>every</em> poset is isomorphic to a poset of each of the four types. Do you see why?  If you get stuck answering this, we will revisit the question at the end of the chapter, and we will give you a hint.
-        </p>
-    </remark>
-    <p>An isomorphism from <m>\bfP</m> to <m>\bfP</m> is called an <term>automorphism</term><idx><h>automorphism</h><h>of poset</h></idx> of <m>\bfP</m>. An isomorphism from <m>\bfP</m> to a subposet of <m>\bfQ</m> is called an <term>embedding</term><idx><h>embedding</h></idx> of <m>\bfP</m> in <m>\bfQ</m>. In most settings, we will not distinguish between isomorphic posets, and we will say that a poset <m>\PXP</m> is <term>contained</term> in <m>\QYQ</m> (also <m>\bfQ</m> <term>contains</term> <m>\bfP</m>) when there is an embedding of <m>\bfP</m> in <m>\bfQ</m>. Also, we will say that <m>\bfP</m> <term>excludes</term> <m>\bfQ</m> when no subposet of <m>\bfP</m> is isomorphic to <m>\bfQ</m>, and we will frequently say <m>\bfP=\bfQ</m> when <m>\bfP</m> and <m>\bfQ</m> are isomorphic.
+  </remark>
+
+  <p permid="nSd">
+    An isomorphism from <m>\bfP</m> to <m>\bfP</m> is called an
+    <term>automorphism</term><idx><h>automorphism</h><h>of poset</h></idx> of <m>\bfP</m>.
+    An isomorphism from <m>\bfP</m> to a subposet of <m>\bfQ</m> is called an <term>embedding</term>
+        <idx><h>embedding</h></idx>
+    of <m>\bfP</m> in <m>\bfQ</m>.
+    In most settings, we will not distinguish between isomorphic posets,
+    and we will say that a poset <m>\PXP</m> is
+    <term>contained</term> in <m>\QYQ</m>
+    (also <m>\bfQ</m> <term>contains</term> <m>\bfP</m>)
+    when there is an embedding of <m>\bfP</m> in <m>\bfQ</m>.
+    Also, we will say that <m>\bfP</m> <term>excludes</term>
+    <m>\bfQ</m> when no subposet of <m>\bfP</m> is isomorphic to <m>\bfQ</m>,
+    and we will frequently say
+    <m>\bfP=\bfQ</m> when <m>\bfP</m> and <m>\bfQ</m> are isomorphic.
+  </p>
+
+  <p permid="TZm">
+    With the notion of isomorphism,
+    we are lead naturally to the notion of an
+    <q>unlabeled</q> posets,
+    and in <xref ref="f_unlabeled" />, we show a diagram for such a poset.
+  </p>
+
+  <figure permid="JAh" xml:id="f_unlabeled">
+    <caption>An Unlabeled Partially Ordered Set</caption>
+    <image width="30%" source="images/wttfig-5" />
+  </figure>
+
+  <remark>
+    <p permid="Agv">
+      How hard is it to tell whether two posets are isomorphic?
+      Bob thinks it's not too difficult.
+      Bob says that if you give him a bijection between the ground sets,
+      then he can quickly determine whether you have established that the two posets are isomorphic.
+      Alice senses that Bob is confusing the issue of testing whether two posets are isomorphic with simply verifying that a particular bijection can be certified to be an isomorphism.
+      The first problem seems much harder to her.
+      Carlos says that he thinks it's actually very hard and that in fact,
+      no one knows whether there is a good algorithm.
+    </p>
+  </remark>
+
+  <p permid="gnE">
+    Note that the poset shown in <xref ref="f_unlabeled" /> has the property that there is only one maximal point.
+    Such a point is sometimes called a <term>one</term>,
+    denoted not surprisingly as<nbsp /><m>1</m>.
+    Also, there is only one minimal point,
+    and it is called a <term>zero</term>, denoted<nbsp /><m>0</m>.
+  </p>
+
+  <p permid="MuN">
+    The <term>dual of a partial order</term>
+        <idx><h>dual</h></idx>
+    <m>P</m> on a set <m>X</m> is denoted by <m>P^d</m> and is defined by <m>P^d=\{(y,x):(x,y)\in P\}</m>.
+    The <term>dual of a poset</term> <m>\PXP</m> is denoted by <m>\bfP^d</m> and is defined by <m>\bfP^d=(X,P^d)</m>.
+    A poset <m>\bfP</m> is <term>self-dual</term> if <m>\bfP=\bfP^d</m>.
+  </p>
+
+  <p permid="sBW">
+    A poset <m>\PXP</m> is <term>connected</term>
+        <idx><h>connected</h><h>poset</h></idx>
+    if its comparability graph is connected,
+    <ie />, for every <m>x,y\in X</m> with <m>x\ne y</m>,
+    there is a finite sequence
+    <m>x=x_0,x_1,\dots,x_n=y</m> of points from <m>X</m> so that <m>x_i</m> is comparable to <m>x_{i+1}</m> in <m>P</m> for <m>i=0,1,2,\dots,n-1</m>.
+    A subposet <m>(Y,P(Y))</m> of <m>(X,P)</m> is called a
+    <term>component</term><idx><h>component</h><h>of poset</h></idx> of <m>\bfP</m> if
+    <m>(Y,P(Y))</m> is connected and there is no subset
+    <m>Z\subseteq X</m> containing <m>Y</m> as a proper subset for which <m>(Z,P(Z))</m> is connected.
+    A one-point component is <term>trivial</term> (also,
+    a <term>loose point</term> or <term>isolated point</term>);
+    components of two or more points are <term>nontrivial</term>.
+    Note that a loose point is both a minimal element and a maximal element.
+    Returning to the poset shown in <xref ref="fig_17ptposet" />, we see that it has two components.
+  </p>
+
+  <p permid="YJf">
+    It is natural to say that a graph <m>\bfG</m> is a
+    <term>comparability graph</term><idx><h>graph</h><h>comparability</h></idx> when there is a poset <m>\PXP</m> whose comparability graph is isomorphic to <m>\bfG</m>.
+    For example,
+    we show in <xref ref="fig_noncompgraph" /> a graph on <m>6</m> vertices which is not a comparability graph.
+    (We leave the task of establishing this claim as an exercise.)
+  </p>
+
+  <figure permid="pHq" xml:id="fig_noncompgraph">
+    <caption>A Graph Which is Not a Comparability Graph</caption>
+    <image width="25%" source="images/noncompgraph" />
+  </figure>
+
+  <p permid="EQo">
+    Similarly, we say that a graph <m>\bfG</m> is a <term>cover graph</term>
+        <idx><h>graph</h><h>cover</h></idx>
+    when there exists a poset <m>\PXP</m> whose cover graph is isomorphic to <m>\bfG</m>.
+    Not every graph is a cover graph.
+    In particular,
+    any graph which contains a triangle is not a cover graph.
+    In the exercises at the end of the chapter,
+    you will be asked to construct triangle-free graphs which are not cover graphs<mdash />with some hints given as to how to proceed.
+  </p>
+
+  <remark>
+    <p permid="kXx">
+      Bob is quite taken with graphs associated with posets.
+      He makes the following claims.
+
+      <ol permid="yri">
+        <li permid="eyr">
+          <p permid="Dbb">
+            Only linear orders have paths as cover graphs.
+          </p>
+        </li>
+
+        <li permid="KFA">
+          <p permid="jik">
+            A poset and its dual have the same cover graph and the same comparability graph.
+          </p>
+        </li>
+
+        <li permid="qMJ">
+          <p permid="Ppt">
+            Any two posets with the same cover graph have the same height and the same width.
+          </p>
+        </li>
+
+        <li permid="WTS">
+          <p permid="vwC">
+            Any two posets with the same comparability graph have the same height and the same width.
+          </p>
+        </li>
+      </ol>
     </p>
 
-    <p>With the notion of isomorphism, we are lead naturally to the notion of an <q>unlabeled</q> posets, and in <xref ref="f_unlabeled"  />, we show a diagram for such a poset.
-    </p>
-    <figure xml:id="f_unlabeled" >
-        <caption>An Unlabeled Partially Ordered Set</caption>
-        <image width="30%" source="images/wttfig-5" />
-    </figure>
-    <remark>
-        <p>How hard is it to tell whether two posets are isomorphic? Bob thinks it's not too difficult. Bob says that if you give him a bijection between the ground sets, then he can quickly determine whether you have established that the two posets are isomorphic. Alice senses that Bob is confusing the issue of testing whether two posets are isomorphic with simply verifying that a particular bijection can be certified to be an isomorphism. The first problem seems much harder to her. Carlos says that he thinks it's actually very hard and that in fact, no one knows whether there is a good algorithm.
-        </p>
-    </remark>
-    <p>Note that the poset shown in <xref ref="f_unlabeled"  /> has the property that there is only one maximal point. Such a point is sometimes called a <term>one</term>, denoted not surprisingly as<nbsp /><m>1</m>. Also, there is only one minimal point, and it is called a <term>zero</term>, denoted<nbsp /><m>0</m>.
+    <p permid="ReG">
+      Alice shrugs and says that Bob is right half the time.
+      Which two assertions are correct?
     </p>
 
-    <p>The <term>dual of a partial order</term><idx><h>dual</h></idx> <m>P</m> on a set <m>X</m> is denoted by <m>P^d</m> and is defined by <m>P^d=\{(y,x):(x,y)\in P\}</m>. The <term>dual of a poset</term> <m>\PXP</m> is denoted by <m>\bfP^d</m> and is defined by <m>\bfP^d=(X,P^d)</m>. A poset <m>\bfP</m> is <term>self-dual</term> if <m>\bfP=\bfP^d</m>.
+    <p permid="xlP">
+      Undeterred, Bob notes that the comparability graph shown in <xref ref="fig_compincomp" /> is also an incomparability graph
+      (for another poset).
+      He goes on to posit that this is always true, <ie />,
+      whenever <m>\bfG</m> is the comparability graph of a poset <m>\bfP</m>,
+      there is another poset <m>\bfQ</m> for which <m>\bfG</m> is the incomparability graph of <m>\bfQ</m>.
+      Alice says that Bob is right on the first count but she is not so sure about the second.
+      Dave mumbles that they should take a look at the comparability graph of the third poset in <xref ref="fig_constructposets" />.
+      This graph is not an incomparability graph.
+      But in his typical befuddled manner, Dave doesn't offer any justification for this statement.
+      Can you help Alice and Bob to see why Dave is correct?
     </p>
 
-    <p>A poset <m>\PXP</m> is <term>connected</term><idx><h>connected</h><h>poset</h></idx> if its comparability graph is connected, <ie />, for every <m>x,y\in X</m> with <m>x\ne y</m>, there is a finite sequence <m>x=x_0,x_1,\dots,x_n=y</m> of points from <m>X</m> so that <m>x_i</m> is comparable to <m>x_{i+1}</m> in <m>P</m> for <m>i=0,1,2,\dots,n-1</m>. A subposet <m>(Y,P(Y))</m> of <m>(X,P)</m> is called a <term>component</term><idx><h>component</h><h>of poset</h></idx> of <m>\bfP</m> if <m>(Y,P(Y))</m> is connected and there is no subset <m>Z\subseteq X</m> containing <m>Y</m> as a proper subset for which <m>(Z,P(Z))</m> is connected. A one-point component is <term>trivial</term> (also, a <term>loose point</term> or <term>isolated point</term>); components of two or more points are <term>nontrivial</term>. Note that a loose point is both a minimal element and a maximal element. Returning to the poset shown in <xref ref="fig_17ptposet"  />, we see that it has two components.
+    <p permid="dsY">
+      Bob is on a roll and he goes on to suggest that it is relatively easy to determine whether a graph is a comparability graph
+      (he read it on the web),
+      but he has a sense that determining whether a graph is a cover graph might be difficult.
+      Do you think he is right<mdash />on either count?
     </p>
-
-    <p>It is natural to say that a graph <m>\bfG</m> is a <term>comparability graph</term><idx><h>graph</h><h>comparability</h></idx> when there is a poset <m>\PXP</m> whose comparability graph is isomorphic to <m>\bfG</m>. For example, we show in <xref ref="fig_noncompgraph"  /> a graph on <m>6</m> vertices which is not a comparability graph. (We leave the task of establishing this claim as an exercise.)
-    </p>
-    <figure xml:id="fig_noncompgraph" >
-        <caption>A Graph Which is Not a Comparability Graph</caption>
-        <image width="25%" source="images/noncompgraph" />
-    </figure>
-    <p>Similarly, we say that a graph <m>\bfG</m> is a <term>cover graph</term><idx><h>graph</h><h>cover</h></idx> when there exists a poset <m>\PXP</m> whose cover graph is isomorphic to <m>\bfG</m>. Not every graph is a cover graph. In particular, any graph which contains a triangle is not a cover graph. In the exercises at the end of the chapter, you will be asked to construct triangle-free graphs which are not cover graphs<mdash />with some hints given as to how to proceed.
-    </p>
-    <remark>
-        <p>Bob is quite taken with graphs associated with posets. He makes the following claims.
-                  <ol>
-            <li><p>Only linear orders have paths as cover graphs.</p></li>
-            <li><p>A poset and its dual have the same cover graph and the same comparability graph.</p></li>
-            <li><p>Any two posets with the same cover graph have the same height and the same width.</p></li>
-            <li><p>Any two posets with the same comparability graph have the same height and the same width.</p></li>
-        
-                  </ol>
-                </p>
-
-        <p>Alice shrugs and says that Bob is right half the time. Which two assertions are correct?
-        </p>
-
-        <p>Undeterred, Bob notes that the comparability graph shown in <xref ref="fig_compincomp"  /> is also an incomparability graph (for another poset). He goes on to posit that this is always true, <ie />, whenever <m>\bfG</m> is the comparability graph of a poset <m>\bfP</m>, there is another poset <m>\bfQ</m> for which <m>\bfG</m> is the incomparability graph of <m>\bfQ</m>. Alice says that Bob is right on the first count but she is not so sure about the second. Dave mumbles that they should take a look at the comparability graph of the third poset in <xref ref="fig_constructposets"  />. This graph is not an incomparability graph. But in his typical befuddled manner, Dave doesn't offer any justification for this statement. Can you help Alice and Bob to see why Dave is correct?
-        </p>
-
-        <p>Bob is on a roll and he goes on to suggest that it is relatively easy to determine whether a graph is a comparability graph (he read it on the web), but he has a sense that determining whether a graph is a cover graph might be difficult.  Do you think he is right<mdash />on either count?
-        </p>
-    </remark>
+  </remark>
 </section>
+

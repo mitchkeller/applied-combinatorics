@@ -1,119 +1,281 @@
-<section xml:id="s_polya_polya">
-    <title>P&#xf3;lya's Theorem</title>
 
 
-    <introduction>
-        <p>Before getting to the full version of P&#xf3;lya's formula, we must develop a generating function as promised at the beginning of the chapter. To do this, we will return to our example of <xref ref="s_polya_square"  />.
+<section permid="UuL" xml:id="s_polya_polya">
+  <title>P&#xf3;lya's Theorem</title>
+  <introduction permid="sXv">
+    <p permid="FlN">
+      Before getting to the full version of P&#xf3;lya's formula,
+      we must develop a generating function as promised at the beginning of the chapter.
+      To do this, we will return to our example of <xref ref="s_polya_square" />.
+    </p>
+  </introduction>
+
+  <subsection permid="ABU" xml:id="ss_polya_polya_cycle-index">
+    <title>The cycle index</title>
+    <p permid="lsW">
+      Unlike the generating functions we encountered in <xref ref="ch_genfunction" />,
+      the generating functions we will develop in this chapter will have more than one variable.
+      We begin by associating a monomial with each element of the permutation group involved.
+      In this case, it is <m>D_8</m>,
+      the dihedral group of the square.
+      To determine the monomial associated to a permutation,
+      we need to write the permutation in cycle notation and then determine the monomial based on the number of cycles of each length.
+      Specifically,
+      if <m>\pi</m> is a permutation of <m>[n]</m> with <m>j_k</m> cycles of length <m>k</m> for <m>1\leq k\leq n</m>,
+      then the monomial associated to <m>\pi</m> is <m>x_1^{j_1}x_2^{j_2}\cdots x_n^{j_n}</m>.
+      Note that <m>j_1 + 2j_2 + 3j_3 + \cdots + nj_n = n</m>.
+      For example, the permutation
+      <m>r_1=(1234)</m> is associated with the monomial <m>x_4^1</m> since it consists of a single cycle of length <m>4</m>.
+      The permutation <m>r_2=(13)(24)</m> has two cycles of length <m>2</m>,
+      and thus its monomial is <m>x_2^2</m>.
+      For <m>p=(14)(2)(3)</m>,
+      we have two <m>1</m>-cycles and one <m>2</m>-cycle,
+      yielding the monomial <m>x_1^2x_2^1</m>.
+      In <xref ref="tab_polya_square-cycles" />,
+      we show all eight permutations in <m>D_8</m> along with their associated monomials.
+    </p>
+
+    <table permid="Egu" xml:id="tab_polya_square-cycles">
+      <caption>Monomials arising from the dihedral group of the square</caption>
+      <tabular permid="knD">
+        <col />
+        <col halign="center" />
+        <col halign="center" />
+        <row bottom="minor">
+          <cell>Transformation</cell>
+          <cell>Monomial</cell>
+          <cell>Fixed colorings</cell>
+        </row>
+        <row>
+          <cell><m>\iota = (1)(2)(3)(4)</m></cell>
+          <cell><m>x_1^4</m></cell>
+          <cell><m>16</m></cell>
+        </row>
+        <row>
+          <cell><m>r_1 = (1234)</m></cell>
+          <cell><m>x_4^1</m></cell>
+          <cell><m>2</m></cell>
+        </row>
+        <row>
+          <cell><m>r_2=(13)(24)</m></cell>
+          <cell><m>x_2^2</m></cell>
+          <cell><m>4</m></cell>
+        </row>
+        <row>
+          <cell><m>r_3=(1432)</m></cell>
+          <cell><m>x_4^1</m></cell>
+          <cell><m>2</m></cell>
+        </row>
+        <row>
+          <cell><m>v=(12)(34)</m></cell>
+          <cell><m>x_2^2</m></cell>
+          <cell><m>4</m></cell>
+        </row>
+        <row>
+          <cell><m>h=(14)(23)</m></cell>
+          <cell><m>x_2^2</m></cell>
+          <cell><m>4</m></cell>
+        </row>
+        <row>
+          <cell><m>p=(14)(2)(3)</m></cell>
+          <cell><m>x_1^2x_2^1</m></cell>
+          <cell><m>8</m></cell>
+        </row>
+        <row>
+          <cell><m>n=(1)(24)(3)</m></cell>
+          <cell><m>x_1^2x_2^1</m></cell>
+          <cell><m>8</m></cell>
+        </row>
+      </tabular>
+
+    </table>
+
+    <p permid="RAf">
+      Now let's see how the number of <m>2</m>-colorings of the square fixed by a permutation can be determined from its cycle structure and associated monomial.
+      If <m>\pi(i)=j</m>,
+      then we know that for <m>\pi</m> to fix a coloring <m>C</m>,
+      vertices <m>i</m> and <m>j</m> must be colored the same in <m>C</m>.
+      Thus, the second vertex in a cycle must have the same color as the first.
+      But then the third vertex must have the same color as the second,
+      which is the same color as the first.
+      In fact, all vertices appearing in a cycle of <m>\pi</m> must have the same color in <m>C</m> if <m>\pi</m> fixes <m>C</m>!
+      Since we are coloring with the two colors white and gold,
+      we can choose to color the points of each cycle uniformly white or gold.
+      For example, for the permutation
+      <m>v=(12)(34)</m> to fix a coloring of the square,
+      vertices <m>1</m> and <m>2</m> must be colored the same color (<m>2</m> choices) and vertices <m>3</m> and <m>4</m> must be colored the same color
+      (<m>2</m> choices).
+      Thus, there are <m>2\cdot 2=4</m> colorings fixed by <m>v</m>.
+      Since there are two choices for how to uniformly color the elements of a cycle,
+      letting <m>x_i=2</m> for all <m>i</m> in the monomial associated with <m>\pi</m> gives the number of colorings fixed by <m>\pi</m>.
+      In <xref ref="tab_polya_square-cycles" />,
+      the <q>Fixed colorings</q> column gives the number of <m>2</m>-colorings of the square fixed by each permutation.
+      Before, we obtained this manually by considering the action of <m>D_8</m> on the set of all <m>16</m> colorings.
+      Now we only need the cycle notation and the monomials that result from it to derive this!
+    </p>
+
+    <p permid="xHo">
+      Recall that <xref ref="lem_polya_burnside" text="title" /> states that the number of colorings fixed by the action of a group can be obtained by adding up the number fixed by each permutation and dividing by the number of permutations in the group.
+      If we do that instead for the monomials arising from the permutations in a permutation group <m>G</m> in which every cycle of every permutation has at most <m>n</m> entries,
+      we obtain a polynomial known as the <term>cycle index</term>
+          <idx><h>cycle index</h></idx>
+      <m>P_G(x_1,x_2,\dots,x_n)</m>.
+      For our running example, we find
+      <me permid="aTR">
+        P_{D_8}(x_1,x_2,x_3,x_4) = \frac{1}{8}\left(x_1^4 + 2x_1^2x_2^1 +
+        3x_2^2 + 2x_4^1\right)
+      </me>.
+      To find the number of distinct <m>2</m>-colorings of the square,
+      we thus let <m>x_i=2</m> for all <m>i</m> and obtain <m>P_{D_8}(2,2,2,2) = 6</m> as before.
+      Notice, however,
+      that we have something more powerful than Burnside's lemma here.
+      We may substitute <em>any</em> positive integer <m>m</m> for each <m>x_i</m> to find out how many nonequivalent <m>m</m>-colorings of the square exist.
+      We no longer have to analyze how many colorings each permutation fixes.
+      For instance, <m>P_{D_8}(3,3,3,3) = 21</m>,
+      meaning that <m>21</m> of the <m>81</m> colorings of the vertices of the square using three colors are distinct.
+    </p>
+  </subsection>
+
+  <subsection permid="gJd" xml:id="ss_polya_polya_full">
+    <title>The full enumeration formula</title>
+    <p permid="dOx">
+      Hopefully the power of the cycle index to count colorings that are distinct when symmetries are considered is becoming apparent.
+      In the next section,
+      we will provide additional examples of how it can be used.
+      However, we still haven't seen the full power of P&#xf3;lya's technique.
+      From the cycle index alone,
+      we can determine how many colorings of the vertices of the square are distinct.
+      However, what if we want to know how many of them have two white vertices and two gold vertices?
+      This is where P&#xf3;lya's enumeration formula truly plays the role of a generating function.
+    </p>
+
+    <p permid="JVG">
+      Let's again consider the cycle index for the dihedral group <m>D_8</m>:
+      <me permid="Hba">
+        P_{D_8}(x_1,x_2,x_3,x_4) = \frac{1}{8}\left(x_1^4 + 2x_1^2x_2^1 +
+        3x_2^2 + 2x_4^1\right)
+      </me>.
+      Instead of substituting integers for the <m>x_i</m>,
+      let's consider what happens if we substitute something that allows us to track the colors used.
+      Since <m>x_1</m> represents a cycle of length <m>1</m> in a permutation,
+      the choice of white or gold for the vertex in such a cycle amounts to a single vertex receiving that color.
+      What happens if we substitute <m>w+g</m> for <m>x_1</m>?
+      The first term in <m>P_{D_8}</m> corresponds to the identity permutation <m>\iota</m>,
+      which fixes all colorings of the square.
+      Letting <m>x_1=w+g</m> in this term gives
+      <me permid="nij">
+        (w+g)^4 = g^4+4 g^3 w+6 g^2 w^2+4 g w^3+w^4
+      </me>,
+      which tells us that <m>\iota</m> fixes one coloring with four gold vertices,
+      four colorings with three gold vertices and one white vertex,
+      six colorings with two gold vertices and two white vertices,
+      four colorings with one gold vertex and three white vertices,
+      and one coloring with four white vertices.
+    </p>
+
+    <p permid="qcP">
+      Let's continue establishing a pattern here by considering the variable <m>x_2</m>.
+      It represents the cycles of length <m>2</m> in a permutation.
+      Such a cycle must be colored uniformly white or gold to be fixed by the permutation.
+      Thus, choosing white or gold for the vertices in that cycle results in two white vertices or two gold vertices in the coloring.
+      Since this happens for every cycle of length <m>2</m>,
+      we want to substitute <m>w^2+g^2</m> for <m>x_2</m> in the cycle index.
+      The <m>x_1^2x_2^1</m> terms in <m>P_{D_8}</m> are associated with the flips <m>p</m> and <m>n</m>.
+      Letting <m>x_1=w+g</m> and <m>x_2 = w^2+g^2</m>, we find
+      <me permid="Tps">
+        x_1^2x_2^1 = g^4+2 g^3 w+2 g^2 w^2+2 g w^3+w^4
+      </me>,
+      from which we are able to deduce that <m>p</m> and <m>n</m> each fix one coloring with four gold vertices,
+      two colorings with three gold vertices and one white vertex,
+      and so on.
+      Comparing this with <xref ref="tab_polya_fixed-square"  /> shows that the generating function is right on.
+    </p>
+
+    <p permid="WjY">
+      By now the pattern is becoming apparent.
+      If we substitute <m>w^i+g^i</m> for <m>x_i</m> in the cycle index for each <m>i</m>,
+      we then keep track of how many vertices are colored white and how many are colored gold.
+      The simplification of the cycle index in this case is then a generating function in which the coefficient on <m>g^s w^t</m> is the number of distinct colorings of the vertices of the square with <m>s</m> vertices colored gold and <m>t</m> vertices colored white.
+      Doing this and simplifying gives
+      <me permid="zwB">
+        P_{D_8}(w+g,w^2+g^2,w^3+g^3,w^4+g^4) = g^4+g^3 w+2 g^2 w^2+g
+        w^3+w^4
+      </me>.
+      From this we find one coloring with all vertices gold,
+      one coloring with all vertices white,
+      one coloring with three gold vertices and one white vertex,
+      one coloring with one gold vertex and three white vertices,
+      and two colorings with two vertices of each color.
+    </p>
+
+    <p permid="Crh">
+      As with the other results we've discovered in this chapter,
+      this property of the cycle index holds up beyond the case of coloring the vertices of the square with two colors.
+      The full version is P&#xf3;lya's enumeration theorem:
+    </p>
+
+    <theorem permid="MQm" xml:id="thm_polya_polya">
+      <title>P&#xf3;lya's Enumeration Theorem</title>
+      <statement>
+        <p permid="ZeE">
+          Let <m>S</m> be a set with <m>|S|=r</m> and <m>\cgC</m> the set of colorings of <m>S</m> using the colors <m>c_1,\dots,c_m</m>.
+          If a permutation group <m>G</m> acts on <m>S</m> to induce an equivalence relation on <m>\cgC</m>, then
+          <me permid="fDK">
+            P_G\left(\sum_{i=1}^m c_i, \sum_{i=1}^m c_i^2, \dots,\sum_{i=1}^m
+            c_i^r\right)
+          </me>
+          is the generating function for the number of nonequivalent colorings of <m>S</m> in <m>\cgC</m>.
         </p>
-    </introduction>
+      </statement>
+    </theorem>
 
+    <p permid="iyq">
+      If we return to coloring the vertices of the square but now allow the color blue as well, we find
+      <me permid="LKT">
+        P_{D_8}(w+g+b,w^2+g^2+b^2,w^3+g^3+b^3,w^4+g^4+b^4) = b^4+b^3 g+2 b^2 g^2\\+b g^3+g^4+b^3 w+2 b^2 g w+2 b g^2 w+g^3 w+2 b^2 w^2+2 b g w^2+2 g^2 w^2\\+b w^3+g w^3+w^4
+      </me>.
+      From this generating function,
+      we can readily determine the number of nonequivalent colorings with two blue vertices,
+      one gold vertex, and one white vertex to be <m>2</m>.
+      Because the generating function of <xref ref="thm_polya_polya " text="title" /> records the number of nonequivalent patterns,
+      it is sometimes called the <term>pattern inventory</term>.
+          <idx><h>pattern inventory</h></idx>
+    </p>
 
-    <subsection xml:id="ss_polya_polya_cycle-index">
-        <title>The cycle index</title>
-        <p>Unlike the generating functions we encountered in <xref ref="ch_genfunction"  />, the generating functions we will develop in this chapter will have more than one variable. We begin by associating a monomial with each element of the permutation group involved. In this case, it is <m>D_8</m>, the dihedral group of the square. To determine the monomial associated to a permutation, we need to write the permutation in cycle notation and then determine the monomial based on the number of cycles of each length. Specifically, if <m>\pi</m> is a permutation of <m>[n]</m> with <m>j_k</m> cycles of length <m>k</m> for <m>1\leq k\leq n</m>, then the monomial associated to <m>\pi</m> is <m>x_1^{j_1}x_2^{j_2}\cdots x_n^{j_n}</m>. Note that <m>j_1 + 2j_2 + 3j_3 + \cdots + nj_n = n</m>. For example, the permutation <m>r_1=(1234)</m> is associated with the monomial <m>x_4^1</m> since it consists of a single cycle of length <m>4</m>. The permutation <m>r_2=(13)(24)</m> has two cycles of length <m>2</m>, and thus its monomial is <m>x_2^2</m>. For <m>p=(14)(2)(3)</m>, we have two <m>1</m>-cycles and one <m>2</m>-cycle, yielding the monomial <m>x_1^2x_2^1</m>. In <xref ref="tab_polya_square-cycles"  />, we show all eight permutations in <m>D_8</m> along with their associated monomials.
-        </p>
-        <table xml:id="tab_polya_square-cycles" >
-            <caption>Monomials arising from the dihedral group of the square</caption>
-            <tabular>
-                <col /> <col halign="center" /> <col halign="center" />
-                <row bottom="minor"><cell>Transformation</cell><cell>Monomial</cell><cell>Fixed colorings</cell></row>
-                <row><cell><m>\iota = (1)(2)(3)(4)</m></cell><cell><m>x_1^4</m></cell><cell><m>16</m></cell></row>
-                <row><cell><m>r_1 = (1234)</m></cell><cell><m>x_4^1</m></cell><cell><m>2</m></cell></row>
-                <row><cell><m>r_2=(13)(24)</m></cell><cell><m>x_2^2</m></cell><cell><m>4</m></cell></row>
-                <row><cell><m>r_3=(1432)</m></cell><cell><m>x_4^1</m></cell><cell><m>2</m></cell></row>
-                <row><cell><m>v=(12)(34)</m></cell><cell><m>x_2^2</m></cell><cell><m>4</m></cell></row>
-                <row><cell><m>h=(14)(23)</m></cell><cell><m>x_2^2</m></cell><cell><m>4</m></cell></row>
-                <row><cell><m>p=(14)(2)(3)</m></cell><cell><m>x_1^2x_2^1</m></cell><cell><m>8</m></cell></row>
-                <row><cell><m>n=(1)(24)(3)</m></cell><cell><m>x_1^2x_2^1</m></cell><cell><m>8</m></cell></row>
-            </tabular>
-        </table>
-        <p>Now let's see how the number of <m>2</m>-colorings of the square fixed by a permutation can be determined from its cycle structure and associated monomial. If <m>\pi(i)=j</m>, then we know that for <m>\pi</m> to fix a coloring <m>C</m>, vertices <m>i</m> and <m>j</m> must be colored the same in <m>C</m>. Thus, the second vertex in a cycle must have the same color as the first. But then the third vertex must have the same color as the second, which is the same color as the first. In fact, all vertices appearing in a cycle of <m>\pi</m> must have the same color in <m>C</m> if <m>\pi</m> fixes <m>C</m>!  Since we are coloring with the two colors white and gold, we can choose to color the points of each cycle uniformly white or gold. For example, for the permutation <m>v=(12)(34)</m> to fix a coloring of the square, vertices <m>1</m> and <m>2</m> must be colored the same color (<m>2</m> choices) and vertices <m>3</m> and <m>4</m> must be colored the same color (<m>2</m> choices). Thus, there are <m>2\cdot 2=4</m> colorings fixed by <m>v</m>. Since there are two choices for how to uniformly color the elements of a cycle, letting <m>x_i=2</m> for all <m>i</m> in the monomial associated with <m>\pi</m> gives the number of colorings fixed by <m>\pi</m>. In <xref ref="tab_polya_square-cycles"  />, the <q>Fixed colorings</q> column gives the number of <m>2</m>-colorings of the square fixed by each permutation. Before, we obtained this manually by considering the action of <m>D_8</m> on the set of all <m>16</m> colorings. Now we only need the cycle notation and the monomials that result from it to derive this!
-        </p>
+    <p permid="OFz">
+      What if we were interested in making necklaces with <m>500</m>
+      (very small)
+      beads colored white, gold, and blue?
+      This would be equivalent to coloring the vertices of a regular <m>500</m>-gon,
+      and the dihedral group <m>D_{1000}</m> would give the appropriate transformations.
+      With a computer algebra system<fn>
+      With some more experience in group theory,
+      it is possible to give a general formula for the cycle index of the dihedral group <m>D_{2n}</m>,
+      so the computer algebra system is a nice tool, but not required.
+      </fn> such as <em>Mathematica</em><registered />,
+      it is possible to quickly produce the pattern inventory for such a problem.
+      In doing so, we find that there are
+      <md permid="rSc">
+        <mrow>\amp 3636029179586993684238526707954331911802338502600162304034603583</mrow>
+        <mrow>\amp 2580600191583895484198508262979388783308179702534404046627287796</mrow>
+        <mrow>\amp 4304252714992703135653472347417085467453334179308247819807028526</mrow>
+        <mrow>\amp 92187253642441292279756575936040804567103229 \approx 3.6\times 10^{235}</mrow>
+      </md>
+      possible necklaces.
+      Of them,
+      <md permid="XZl">
+        <mrow>\amp 2529491842340460773490413186201010487791417294078808662803638965</mrow>
+        <mrow>\amp 6782447138833704326875393229442323085905838200071479575905731776</mrow>
+        <mrow>\amp 6605088026968640797415175535033372572682057214340157297357996</mrow>
+        <mrow>\amp 345021733060\approx
+        2.5\times 10^{200}</mrow>
+      </md>
+      have <m>225</m> white beads, <m>225</m> gold beads, and <m>50</m> blue beads.
+    </p>
 
-        <p>Recall that <xref ref="lem_polya_burnside" text="title" /> states that the number of colorings fixed by the action of a group can be obtained by adding up the number fixed by each permutation and dividing by the number of permutations in the group. If we do that instead for the monomials arising from the permutations in a permutation group <m>G</m> in which every cycle of every permutation has at most <m>n</m> entries, we obtain a polynomial known as the <term>cycle index</term><idx><h>cycle index</h></idx> <m>P_G(x_1,x_2,\dots,x_n)</m>. For our running example, we find
-        <me>
-            P_{D_8}(x_1,x_2,x_3,x_4) = \frac{1}{8}\left(x_1^4 + 2x_1^2x_2^1 +
-            3x_2^2 + 2x_4^1\right).
-        </me>
-        To find the number of distinct <m>2</m>-colorings of the square, we thus let <m>x_i=2</m> for all <m>i</m> and obtain <m>P_{D_8}(2,2,2,2) = 6</m> as before. Notice, however, that we have something more powerful than Burnside's lemma here. We may substitute <em>any</em> positive integer <m>m</m> for each <m>x_i</m> to find out how many nonequivalent <m>m</m>-colorings of the square exist. We no longer have to analyze how many colorings each permutation fixes. For instance, <m>P_{D_8}(3,3,3,3) = 21</m>, meaning that <m>21</m> of the <m>81</m> colorings of the vertices of the square using three colors are distinct.
-        </p>
-    </subsection>
-
-
-    <subsection xml:id="ss_polya_polya_full">
-        <title>The full enumeration formula</title>
-        <p>Hopefully the power of the cycle index to count colorings that are distinct when symmetries are considered is becoming apparent. In the next section, we will provide additional examples of how it can be used. However, we still haven't seen the full power of P&#xf3;lya's technique. From the cycle index alone, we can determine how many colorings of the vertices of the square are distinct. However, what if we want to know how many of them have two white vertices and two gold vertices? This is where P&#xf3;lya's enumeration formula truly plays the role of a generating function.
-        </p>
-
-        <p>Let's again consider the cycle index for the dihedral group <m>D_8</m>:
-        <me>
-            P_{D_8}(x_1,x_2,x_3,x_4) = \frac{1}{8}\left(x_1^4 + 2x_1^2x_2^1 +
-            3x_2^2 + 2x_4^1\right).
-        </me>
-        Instead of substituting integers for the <m>x_i</m>, let's consider what happens if we substitute something that allows us to track the colors used. Since <m>x_1</m> represents a cycle of length <m>1</m> in a permutation, the choice of white or gold for the vertex in such a cycle amounts to a single vertex receiving that color. What happens if we substitute <m>w+g</m> for <m>x_1</m>? The first term in <m>P_{D_8}</m> corresponds to the identity permutation <m>\iota</m>, which fixes all colorings of the square. Letting <m>x_1=w+g</m> in this term gives
-        <me>
-            (w+g)^4 = g^4+4 g^3 w+6 g^2 w^2+4 g w^3+w^4,
-        </me>
-        which tells us that <m>\iota</m> fixes one coloring with four gold vertices, four colorings with three gold vertices and one white vertex, six colorings with two gold vertices and two white vertices, four colorings with one gold vertex and three white vertices, and one coloring with four white vertices.
-        </p>
-
-        <p>Let's continue establishing a pattern here by considering the variable <m>x_2</m>. It represents the cycles of length <m>2</m> in a permutation. Such a cycle must be colored uniformly white or gold to be fixed by the permutation. Thus, choosing white or gold for the vertices in that cycle results in two white vertices or two gold vertices in the coloring. Since this happens for every cycle of length <m>2</m>, we want to substitute <m>w^2+g^2</m> for <m>x_2</m> in the cycle index. The <m>x_1^2x_2^1</m> terms in <m>P_{D_8}</m> are associated with the flips <m>p</m> and <m>n</m>. Letting <m>x_1=w+g</m> and <m>x_2 = w^2+g^2</m>, we find
-        <me>
-            x_1^2x_2^1 = g^4+2 g^3 w+2 g^2 w^2+2 g w^3+w^4,
-        </me>
-            from which we are able to deduce that <m>p</m> and <m>n</m> each fix one coloring with four gold vertices, two colorings with three gold vertices and one white vertex, and so on. Comparing this with <xref ref="tab_polya_fixed-square"  /> shows that the generating function is right on.
-        </p>
-
-        <p>By now the pattern is becoming apparent. If we substitute <m>w^i+g^i</m> for <m>x_i</m> in the cycle index for each <m>i</m>, we then keep track of how many vertices are colored white and how many are colored gold. The simplification of the cycle index in this case is then a generating function in which the coefficient on <m>g^s w^t</m> is the number of distinct colorings of the vertices of the square with <m>s</m> vertices colored gold and <m>t</m> vertices colored white. Doing this and simplifying gives
-        <me>
-            P_{D_8}(w+g,w^2+g^2,w^3+g^3,w^4+g^4) = g^4+g^3 w+2 g^2 w^2+g
-            w^3+w^4.
-        </me>
-            From this we find one coloring with all vertices gold, one coloring with all vertices white, one coloring with three gold vertices and one white vertex, one coloring with one gold vertex and three white vertices, and two colorings with two vertices of each color.
-        </p>
-
-        <p>As with the other results we've discovered in this chapter, this property of the cycle index holds up beyond the case of coloring the vertices of the square with two colors. The full version is P&#xf3;lya's enumeration theorem:
-        </p>
-
-        <theorem xml:id="thm_polya_polya">
-            <title>P&#xf3;lya's Enumeration Theorem</title>
-            <statement>
-                <p>Let <m>S</m> be a set with <m>|S|=r</m> and <m>\cgC</m> the set of colorings of <m>S</m> using the colors <m>c_1,\dots,c_m</m>. If a permutation group <m>G</m> acts on <m>S</m> to induce an equivalence relation on <m>\cgC</m>, then
-                <me>
-                    P_G\left(\sum_{i=1}^m c_i, \sum_{i=1}^m c_i^2, \dots,\sum_{i=1}^m
-                    c_i^r\right)
-                </me>
-                    is the generating function for the number of nonequivalent colorings of <m>S</m> in <m>\cgC</m>.
-                </p>
-            </statement>
-        </theorem>
-
-        <p>If we return to coloring the vertices of the square but now allow the color blue as well, we find
-        <me>P_{D_8}(w+g+b,w^2+g^2+b^2,w^3+g^3+b^3,w^4+g^4+b^4) = b^4+b^3 g+2 b^2 g^2\\+b g^3+g^4+b^3 w+2 b^2 g w+2 b g^2 w+g^3 w+2 b^2 w^2+2 b g w^2+2 g^2 w^2\\+b w^3+g w^3+w^4.
-        </me>
-            From this generating function, we can readily determine the number of nonequivalent colorings with two blue vertices, one gold vertex, and one white vertex to be <m>2</m>. Because the generating function of <xref ref="thm_polya_polya " text="title" /> records the number of nonequivalent patterns, it is sometimes called the <term>pattern inventory</term>.<idx><h>pattern inventory</h></idx>
-        </p>
-
-        <p>What if we were interested in making necklaces with <m>500</m> (very small) beads colored white, gold, and blue? This would be equivalent to coloring the vertices of a regular <m>500</m>-gon, and the dihedral group <m>D_{1000}</m> would give the appropriate transformations. With a computer algebra system<fn>With some more experience in group theory, it is possible to give a general formula for the cycle index of the dihedral group <m>D_{2n}</m>, so the computer algebra system is a nice tool, but not required.</fn> such as <em>Mathematica</em><registered />, it is possible to quickly produce the pattern inventory for such a problem. In doing so, we find that there are
-        <md>
-            <mrow>  \amp 3636029179586993684238526707954331911802338502600162304034603583</mrow>
-            <mrow>  \amp 2580600191583895484198508262979388783308179702534404046627287796</mrow>
-            <mrow>  \amp 4304252714992703135653472347417085467453334179308247819807028526</mrow>
-            <mrow>  \amp 92187253642441292279756575936040804567103229 \approx 3.6\times 10^{235}</mrow>
-        </md>
-            possible necklaces. Of them,
-        <md>
-            <mrow>  \amp 2529491842340460773490413186201010487791417294078808662803638965</mrow>
-            <mrow>  \amp 6782447138833704326875393229442323085905838200071479575905731776</mrow>
-            <mrow>  \amp 6605088026968640797415175535033372572682057214340157297357996</mrow>
-            <mrow>\amp 345021733060\approx
-            2.5\times 10^{200}</mrow>
-        </md>
-            have <m>225</m> white beads, <m>225</m> gold beads, and <m>50</m> blue beads.
-        </p>
-
-        <p>The remainder of this chapter will focus on applications of <xref ref="thm_polya_polya" text="title" /> and the pattern inventory in a variety of settings.
-        </p>
-    </subsection>
-
+    <p permid="uMI">
+      The remainder of this chapter will focus on applications of <xref ref="thm_polya_polya" text="title" /> and the pattern inventory in a variety of settings.
+    </p>
+  </subsection>
 </section>
+

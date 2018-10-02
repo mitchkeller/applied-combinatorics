@@ -1,33 +1,90 @@
-<section xml:id="s_background_notation">
-    <title>Notation from Set Theory and Logic</title>
-    <p>In set theory, it is common to deal with statements involving one or more elements from the universe as variables. Here are some examples:
-                  <ol>
-        <li><p>For <m>n\in\posints</m>, <m>n^2-6n+8=0</m>.</p></li>
-        <li><p>For <m>A\subseteq[100]</m>, <m>\{2,8,25,58,99\}\subseteq A</m>.</p></li>
-        <li><p>For <m>n\in \ints</m>, <m>|n|</m> is even.</p></li>
-        <li><p>For <m>x\in \reals</m>, <m>1+1=2</m>.</p></li>
-        <li><p>For <m>m,n\in \posints</m>, <m>m(m+1)+2n</m> is even.</p></li>
-        <li><p>For <m>n\in \posints</m>, <m>2n+1</m> is even.</p></li>
-        <li><p>For <m>n\in \posints</m> and <m>x\in\reals</m>, <m>n+x</m> is
-        irrational.</p></li>
-    
-                  </ol>
-                </p>
 
-    <p>These statements may be true for some values of the variables and false for others. The fourth and fifth statements are true for <em>all</em> values of the variables, while the sixth is false for all values.
-    </p>
 
-    <p>Implications are frequently abbreviated using with a double arrow <m>\Longrightarrow</m>; the quantifier <m>\forall</m> means <q>for all</q> (or <q>for every</q>); and the quantifier <m>\exists</m> means <q>there exists</q> (or <q>there is</q>). Some writers use <m>\wedge</m> and <m>\vee</m> for logical <q>and</q> and <q>or</q>, respectively. For example,
-    <me>
-        \forall A,B\subseteq[4]\quad \bigl((1,2\in A) \wedge |B|\ge 3)\bigr)
-        \Longrightarrow\bigl((A\subseteq B)\vee (\exists n\in A\cup B, 
-        n^2=16)\bigr)
+<section permid="WDK" xml:id="s_background_notation">
+  <title>Notation from Set Theory and Logic</title>
+  <p permid="QOy">
+    In set theory,
+    it is common to deal with statements involving one or more elements from the universe as variables.
+    Here are some examples:
+
+    <ol permid="CKT">
+      <li permid="iSc">
+        <p permid="zQn">
+          For <m>n\in\posints</m>, <m>n^2-6n+8=0</m>.
+        </p>
+      </li>
+
+      <li permid="OZl">
+        <p permid="fXw">
+          For <m>A\subseteq[100]</m>, <m>\{2,8,25,58,99\}\subseteq A</m>.
+        </p>
+      </li>
+
+      <li permid="vgu">
+        <p permid="MeF">
+          For <m>n\in \ints</m>, <m>|n|</m> is even.
+        </p>
+      </li>
+
+      <li permid="bnD">
+        <p permid="slO">
+          For <m>x\in \reals</m>, <m>1+1=2</m>.
+        </p>
+      </li>
+
+      <li permid="HuM">
+        <p permid="YsX">
+          For <m>m,n\in \posints</m>, <m>m(m+1)+2n</m> is even.
+        </p>
+      </li>
+
+      <li permid="nBV">
+        <p permid="EAg">
+          For <m>n\in \posints</m>, <m>2n+1</m> is even.
+        </p>
+      </li>
+
+      <li permid="TJe">
+        <p permid="kHp">
+          For <m>n\in \posints</m> and <m>x\in\reals</m>, <m>n+x</m> is
+          irrational.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p permid="wVH">
+    These statements may be true for some values of the variables and false for others.
+    The fourth and fifth statements are true for
+    <em>all</em> values of the variables,
+    while the sixth is false for all values.
+  </p>
+
+  <p permid="dcQ">
+    Implications are frequently abbreviated using with a double arrow <m>\Longrightarrow</m>;
+    the quantifier <m>\forall</m> means
+    <q>for all</q> (or <q>for every</q>);
+    and the quantifier <m>\exists</m> means <q>there exists</q>
+    (or <q>there is</q>).
+    Some writers use <m>\wedge</m> and <m>\vee</m> for logical <q>and</q>
+    and <q>or</q>, respectively.
+    For example,
+    <me permid="JjZ">
+      \forall A,B\subseteq[4]\quad \bigl((1,2\in A) \wedge |B|\ge 3)\bigr)
+      \Longrightarrow\bigl((A\subseteq B)\vee (\exists n\in A\cup B, 
+      n^2=16)\bigr)
     </me>
-        The double arrow <m>\iff</m> is used to denote logical equivalence of statements (also <q>if and only if</q>). For example
-    <me>
-        \forall A\subseteq[7]\quad A\cap\{1,3,6\}\neq\emptyset\iff
-        A\nsubseteq\{2,4,5,7\}
+    The double arrow <m>\iff</m> is used to denote logical equivalence of statements
+    (also <q>if and only if</q>).
+    For example
+    <me permid="pri">
+      \forall A\subseteq[7]\quad A\cap\{1,3,6\}\neq\emptyset\iff
+      A\nsubseteq\{2,4,5,7\}
     </me>
-        We will use these notational shortcuts <em>except</em> for the use of <m>\wedge</m> and <m>\vee</m>, as we will use these two symbols in another context: binary operators in lattices.
-    </p>
+    We will use these notational shortcuts <em>except</em>
+    for the use of <m>\wedge</m> and <m>\vee</m>,
+    as we will use these two symbols in another context:
+    binary operators in lattices.
+  </p>
 </section>
+

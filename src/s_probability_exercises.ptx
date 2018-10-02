@@ -1,62 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<exercises xml:id="s_probability_exercises">
-    <exercise>
-        <statement>
-            <p>Our gang of seven (Alice, Bob, Carlos, Dave, Xing, Yolanda and Zori) are students in a class with a total enrollment of 35.  The professor chooses three students at random to go to the board to work challenge problems.
-                  <ol>
-                <li><p>What is the probability that Yolanda is chosen?</p></li>
-                <li><p>What is the probability that Yolanda is chosen and Zori is not?</p></li>
-                <li><p>What is the probability that exactly two members of the club are chosen?</p></li>
-                <li><p>What is the probability that none of the seven members of club are chosen?</p></li>
-            
-                  </ol>
-                </p>
-        </statement>
-    </exercise>
-    <exercise>
-        <statement>
-            <p>Bob says to no one in particular, <q>Did you know that the probability that you will get at least one <sq>7</sq> in three rolls of a pair of dice is slightly less than <m>1/2</m>.  On the other hand, the probability that you'll get at least one <sq>5</sq> in six rolls of the dice is just over <m>1/2</m>.</q>  Is Bob on target, or out to lunch?</p>
-        </statement>
-    </exercise>
-    <exercise>
-        <statement>
-            <p>Consider the spinner shown in <xref ref="fig_spinner" /> at the beginning of the chapter.
-                  <ol>
-                <li><p>What is the probability of getting at least one <q>5</q> in three spins?</p></li>
-                <li><p>What is the probability of getting at least one <q>3</q> in three spins?</p></li>
-                <li><p>If you keep spinning until you get either a <q>2</q> or a <q>5</q>, what is the probability that you get a <q>2</q> first?</p></li>
-                <li><p>If you receive <m>i</m> dollars when the spinner halts in region<nbsp/><m>i</m>, what is the expected value?  Since three is right in the middle of the possible outcomes, is it reasonable to pay three dollars to play this game?</p></li>
-            
-                  </ol>
-                </p>
-        </statement>
-    </exercise>
-    <exercise>
-        <statement>
-            <p>Alice proposes to Bob the following game.  Bob pays one dollar to play.  Fifty balls marked <m>1,2,\dots,50</m> are placed in a big jar, stirred around, and then drawn out one by one by Zori, who is wearing a blindfold.  The result is a random permutation <m>\sigma</m> of the integers <m>1</m>, <m>2,\dots,50</m>.  Bob wins with a payout of two dollars and fifty cents if the permutation <m>\sigma</m> is a derangement, <ie />, <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. Is this a fair game for Bob?  If not how should the payoff be adjusted to make it fair?</p>
-        </statement>
-    </exercise>
-    <exercise>
-        <statement>
-            <p>A random graph with vertex set <m>\{1,2,\dots,10\}</m> is constructed using the following method.  For each two element subset <m>\{i,j\}</m> from <m>\{1,2,\dots,10\}</m>, a fair coin is tossed and the edge <m>\{i,j\}</m> then belongs to the graph when the result is <q>heads.</q> For each <m>3</m>-element subset <m>S\subseteq\{1,2,\dots,n\}</m>, let <m>E_S</m> be the event that <m>S</m> is a complete subgraph in our random graph.
-                  <ol>
-                <li><p>Explain why <m>P(E_S)= 1/8</m> for each <m>3</m>-element subset <m>S</m>.</p></li>
-                <li><p>Explain why <m>E_S</m> and <m>E_T</m> are independent when <m>|S\cap T|\le 1</m>.</p></li>
-                <li><p>Let <m>S=\{1,2,3\}</m>, <m>T=\{2,3,4\}</m> and <m>U=\{3,4,5\}</m>.  Show that <me>P(E_S|E_T)= P(E_S|E_TE_U).</me></p></li>
-            
-                  </ol>
-                </p>
-        </statement>
-    </exercise>
-    <exercise>
-        <statement>
-            <p>Ten marbles labeled <m>1,2,\dots,10</m> are placed in a big jar and then stirred up.  Zori, wearing a blindfold, pulls them out of the jar two at a time.  Players are allowed to place bets as to whether the sum of the two marbles in a pair is <m>11</m>.  There are <m>C(10,2)= 45</m> different pairs and exactly <m>5</m> of these pairs sums to eleven.</p>
+<exercises permid="zbp" xml:id="s_probability_exercises">
 
-<p> Suppose Zori draws out a pair; the results are observed; then she returns the two balls to the jar and all ten balls are stirred before the next sample is taken.  Since the probability that the sum is an <q>11</q> is <m>5/45=1/9</m>, then it would be fair to pay one dollar to play the game if the payoff for an <q>11</q> is nine dollars.  Similarly, the payoff for a wager of one hundred dollars should be nine hundred dollars.</p>
+  <exercise permid="htk">
+    <statement>
+      <p permid="pHD">
+        Our gang of seven (Alice, Bob, Carlos, Dave, Xing, Yolanda and Zori) are students in a class with a total enrollment of 35.
+        The professor chooses three students at random to go to the board to work challenge problems.
 
-            <p>Now consider an alternative way to play the game.  Now Zori draws out a pair; the results are observed; and the marbles are set aside.  Next, she draws another pair from the remaining eight marbles, followed by a pair selected from the remaining six, <etc />  Finally, the fifth pair is just the pair that remains after the fourth pair has been selected.  Now players may be free to wager on the outcome of any or all or just some of the five rounds.  Explain why either everyone should or no one should wager on the fifth round.  Accordingly, the last round is skipped and all marbles are returned to the jar and we start over again.</p>
+        <ol permid="Skm">
+          <li permid="KFN">
+            <p permid="AgI">
+              What is the probability that Yolanda is chosen?
+            </p>
+          </li>
 
-            <p>Also explain why an observant player can make lots of money with a payout ratio of nine to one.  Now for a more challenging problem, what is the minimum payout ratio above which a player has a winning strategy?</p>
-        </statement>
-    </exercise>
+          <li permid="qMW">
+            <p permid="gnR">
+              What is the probability that Yolanda is chosen and Zori is not?
+            </p>
+          </li>
+
+          <li permid="WUf">
+            <p permid="Mva">
+              What is the probability that exactly two members of the club are chosen?
+            </p>
+          </li>
+
+          <li permid="Dbo">
+            <p permid="sCj">
+              What is the probability that none of the seven members of club are chosen?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise permid="NAt">
+    <statement>
+      <p permid="VOM">
+        Bob says to no one in particular,
+        <q>Did you know that the probability that you will get at least one <sq>7</sq> in three rolls of a pair of dice is slightly less than <m>1/2</m>.
+        On the other hand,
+        the probability that you'll get at least one <sq>5</sq> in six rolls of the dice is just over <m>1/2</m>.</q>
+        Is Bob on target, or out to lunch?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise permid="tHC">
+    <statement>
+      <p permid="BVV">
+        Consider the spinner shown in <xref ref="fig_spinner" /> at the beginning of the chapter.
+
+        <ol permid="yrv">
+          <li permid="jix">
+            <p permid="YJs">
+              What is the probability of getting at least one
+              <q>5</q> in three spins?
+            </p>
+          </li>
+
+          <li permid="PpG">
+            <p permid="EQB">
+              What is the probability of getting at least one
+              <q>3</q> in three spins?
+            </p>
+          </li>
+
+          <li permid="vwP">
+            <p permid="kXK">
+              If you keep spinning until you get either a
+              <q>2</q> or a <q>5</q>,
+              what is the probability that you get a <q>2</q> first?
+            </p>
+          </li>
+
+          <li permid="bDY">
+            <p permid="ReT">
+              If you receive <m>i</m> dollars when the spinner halts in region<nbsp/><m>i</m>,
+              what is the expected value?
+              Since three is right in the middle of the possible outcomes,
+              is it reasonable to pay three dollars to play this game?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise permid="ZOL">
+    <statement>
+      <p permid="ide">
+        Alice proposes to Bob the following game.
+        Bob pays one dollar to play.
+        Fifty balls marked <m>1,2,\dots,50</m> are placed in a big jar,
+        stirred around,
+        and then drawn out one by one by Zori,
+        who is wearing a blindfold.
+        The result is a random permutation <m>\sigma</m> of the integers <m>1</m>,
+        <m>2,\dots,50</m>.
+        Bob wins with a payout of two dollars and fifty cents if the permutation <m>\sigma</m> is a derangement,
+        <ie />, <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>.
+        Is this a fair game for Bob?
+        If not how should the payoff be adjusted to make it fair?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise permid="FVU">
+    <statement>
+      <p permid="Okn">
+        A random graph with vertex set
+        <m>\{1,2,\dots,10\}</m> is constructed using the following method.
+        For each two element subset <m>\{i,j\}</m> from <m>\{1,2,\dots,10\}</m>,
+        a fair coin is tossed and the edge <m>\{i,j\}</m> then belongs to the graph when the result is <q>heads.</q>
+        For each <m>3</m>-element subset <m>S\subseteq\{1,2,\dots,n\}</m>,
+        let <m>E_S</m> be the event that <m>S</m> is a complete subgraph in our random graph.
+
+        <ol permid="eyE">
+          <li permid="HLh">
+            <p permid="xmc">
+              Explain why <m>P(E_S)= 1/8</m> for each <m>3</m>-element subset <m>S</m>.
+            </p>
+          </li>
+
+          <li permid="nSq">
+            <p permid="dtl">
+              Explain why <m>E_S</m> and <m>E_T</m> are independent when <m>|S\cap T|\le 1</m>.
+            </p>
+          </li>
+
+          <li permid="TZz">
+            <p permid="JAu">
+              Let <m>S=\{1,2,3\}</m>, <m>T=\{2,3,4\}</m> and <m>U=\{3,4,5\}</m>.
+              Show that
+              <me permid="SUg">
+                P(E_S|E_T)= P(E_S|E_TE_U)
+              </me>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise permid="mdd">
+    <statement>
+      <p permid="urw">
+        Ten marbles labeled <m>1,2,\dots,10</m> are placed in a big jar and then stirred up.
+        Zori, wearing a blindfold, pulls them out of the jar two at a time.
+        Players are allowed to place bets as to whether the sum of the two marbles in a pair is <m>11</m>.
+        There are <m>C(10,2)= 45</m> different pairs and exactly <m>5</m> of these pairs sums to eleven.
+      </p>
+
+      <p permid="ayF">
+        Suppose Zori draws out a pair;
+        the results are observed;
+        then she returns the two balls to the jar and all ten balls are stirred before the next sample is taken.
+        Since the probability that the sum is an
+        <q>11</q> is <m>5/45=1/9</m>,
+        then it would be fair to pay one dollar to play the game if the payoff for an
+        <q>11</q> is nine dollars.
+        Similarly, the payoff for a wager of one hundred dollars should be nine hundred dollars.
+      </p>
+
+      <p permid="GFO">
+        Now consider an alternative way to play the game.
+        Now Zori draws out a pair; the results are observed;
+        and the marbles are set aside.
+        Next, she draws another pair from the remaining eight marbles,
+        followed by a pair selected from the remaining six, <etc /> Finally,
+        the fifth pair is just the pair that remains after the fourth pair has been selected.
+        Now players may be free to wager on the outcome of any or all or just some of the five rounds.
+        Explain why either everyone should or no one should wager on the fifth round.
+        Accordingly,
+        the last round is skipped and all marbles are returned to the jar and we start over again.
+      </p>
+
+      <p permid="mMX">
+        Also explain why an observant player can make lots of money with a payout ratio of nine to one.
+        Now for a more challenging problem,
+        what is the minimum payout ratio above which a player has a winning strategy?
+      </p>
+    </statement>
+  </exercise>
+
 </exercises>

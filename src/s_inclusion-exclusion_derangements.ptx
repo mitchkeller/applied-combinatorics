@@ -1,122 +1,178 @@
-<section xml:id="s_inclusion-exclusion_derangements">
-    <title>Derangements</title>
-    <p>Now let's consider a situation where we can make use of the properties defined in <xref ref="exa_inclusion-exclusion_prop-derange"  />. Fix a positive integer <m>n</m> and let <m>X</m> denote the set of all permutations on <m>[n]</m>. A permutation <m>\sigma\in X</m> is called a <term>derangement</term><idx><h>derangement</h></idx> if <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. For example, the permutation <m>\sigma</m> given below is a derangement, while <m>\tau</m> is not.
-    </p>
-    <sidebyside>
-        <tabular>
-            <row bottom="minor">
-                <cell><m>i</m></cell>
-                <cell>1</cell>
-                <cell>2</cell>
-                <cell>3</cell>
-                <cell>4</cell>
-            </row>
-            <row>
-                <cell><m>\sigma(i)</m></cell>
-                <cell>2</cell>
-                <cell>4</cell>
-                <cell>1</cell>
-                <cell>3</cell>
-            </row>
-        </tabular>
-        <tabular>
-            <row bottom="minor">
-                <cell><m>i</m></cell>
-                <cell>1</cell>
-                <cell>2</cell>
-                <cell>3</cell>
-                <cell>4</cell>
-            </row>
-            <row>
-                <cell><m>\tau(i)</m></cell>
-                <cell>2</cell>
-                <cell>4</cell>
-                <cell>3</cell>
-                <cell>1</cell>
-            </row>
-        </tabular>
-    </sidebyside>
-    <p>If we again let <m>P_i</m> be the property that <m>\sigma(i)=i</m>, then the derangements are precisely those permutations which do not satisfy <m>P_i</m> for any <m>i=1,2,\dots,n</m>.
-    </p>
 
-    <lemma>
-        <statement>
-            <p>For each subset <m>S\subseteq [n]</m>, <m>N(S)</m> depends only on <m>|S|</m>. In fact, if <m>|S|=k</m>, then
-            <me>
-                N(S) = (n-k)!
-            </me>
-            </p>
-        </statement>
 
-        <proof>
-            <p>For each <m>i\in S</m>, the value <m>\sigma(i)=i</m> is fixed. The other values of <m>\sigma</m> are a permutation among the remaining <m>n-k</m> positions, and there are <m>(n-k)!</m> of these.
-            </p>
-        </proof>
-    </lemma>
+<section permid="jYv" xml:id="s_inclusion-exclusion_derangements">
+  <title>Derangements</title>
+  <p permid="yca">
+    Now let's consider a situation where we can make use of the properties defined in <xref ref="exa_inclusion-exclusion_prop-derange" />.
+    Fix a positive integer <m>n</m> and let <m>X</m> denote the set of all permutations on <m>[n]</m>.
+    A permutation <m>\sigma\in X</m> is called a <term>derangement</term>
+        <idx><h>derangement</h></idx>
+    if <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>.
+    For example,
+    the permutation <m>\sigma</m> given below is a derangement,
+    while <m>\tau</m> is not.
+  </p>
 
-    <p>As before, the principal result of this section follows immediately from the lemma and the <xref ref="thm_inclusion-exclusion" text="title" />.
-    </p>
+  <sidebyside permid="oIo">
 
-    <theorem>
-        <statement>
-            <p>For each positive integer <m>n</m>, the number <m>d_n</m> of derangements of <m>[n]</m> satisfies
-            <me>
-                d_n=\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!.
-            </me>
-            </p>
-        </statement>
-    </theorem>
+    <tabular permid="zRn">
+      <row bottom="minor">
+        <cell><m>i</m></cell>
+        <cell>1</cell>
+        <cell>2</cell>
+        <cell>3</cell>
+        <cell>4</cell>
+      </row>
+      <row>
+        <cell><m>\sigma(i)</m></cell>
+        <cell>2</cell>
+        <cell>4</cell>
+        <cell>1</cell>
+        <cell>3</cell>
+      </row>
+    </tabular>
 
-    <p>For example,
-    <md>
-        <mrow>  d_5 \amp  =\binom{5}{0}5!-\binom{5}{1}4!+\binom{5}{2}3!-\binom{5}{3}2!+
-        \binom{5}{4}1!-\binom{5}{5}0!</mrow>
-        <mrow>  \amp =120-120+60-20+5-1</mrow>
-        <mrow>  \amp =44.</mrow>
-    </md>
-    </p>
-    <p>It has been traditional to cast the subject of derangements as a story, called the Hat Check problem<idx><h>hat check problem</h></idx>. The story belongs to the period of time when men wore top hats. For a fancy ball, <m>100</m> men check their top hats with the Hat Check person before entering the ballroom floor. Later in the evening, the mischievous hat check person decides to return hats at random. What is the probability that all <m>100</m> men receive a hat other than their own? It turns out that the answer is very close to <m>1/e</m>, as the following result shows.
-    </p>
+    <tabular permid="fYw">
+      <row bottom="minor">
+        <cell><m>i</m></cell>
+        <cell>1</cell>
+        <cell>2</cell>
+        <cell>3</cell>
+        <cell>4</cell>
+      </row>
+      <row>
+        <cell><m>\tau(i)</m></cell>
+        <cell>2</cell>
+        <cell>4</cell>
+        <cell>3</cell>
+        <cell>1</cell>
+      </row>
+    </tabular>
 
-    <theorem>
-        <statement>
-            <p>For a positive integer <m>n</m>, let <m>d_n</m> denote the number of derangements of <m>[n]</m>. Then
-            <me>
-                \lim_{n\rightarrow\infty}\frac{d_n}{n!} = \frac{1}{e}.
-            </me>
-            Equivalently, the fraction of all permutations of <m>[n]</m> that are derangements approaches <m>1/e</m> as <m>n</m> increases.
-            </p>
-        </statement>
+  </sidebyside>
 
-        <proof>
-            <p>It is easy to see that
-            <md>
-                <mrow>  \frac{d_n}{n!} \amp = \frac{\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!}{n!}</mrow>
-                <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{n!}{k!(n-k)!}\frac{(n-k)!}{n!}</mrow>
-                <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{1}{k!}.</mrow>
-            </md>
-            Recall from Calculus that the Taylor series expansion of <m>e^x</m> is given by
-        <me>
-            e^x = \sum_{k=0}^{\infty} \frac{x^k}{k!},
+  <p permid="ejj">
+    If we again let <m>P_i</m> be the property that <m>\sigma(i)=i</m>,
+    then the derangements are precisely those permutations which do not satisfy <m>P_i</m> for any <m>i=1,2,\dots,n</m>.
+  </p>
+
+  <lemma permid="ctW">
+    <statement>
+      <p permid="FGz">
+        For each subset <m>S\subseteq [n]</m>,
+        <m>N(S)</m> depends only on <m>|S|</m>.
+        In fact, if <m>|S|=k</m>, then
+        <me permid="iTc">
+          N(S) = (n-k)!
         </me>
+      </p>
+    </statement>
+
+    <proof permid="AWG">
+      <p permid="hdP">
+        For each <m>i\in S</m>, the value <m>\sigma(i)=i</m> is fixed.
+        The other values of <m>\sigma</m> are a permutation among the remaining <m>n-k</m> positions,
+        and there are <m>(n-k)!</m> of these.
+      </p>
+    </proof>
+  </lemma>
+
+  <p permid="Kqs">
+    As before, the principal result of this section follows immediately from the lemma and the <xref ref="thm_inclusion-exclusion" text="title" />.
+  </p>
+
+  <theorem permid="QfE">
+    <statement>
+      <p permid="tsh">
+        For each positive integer <m>n</m>,
+        the number <m>d_n</m> of derangements of <m>[n]</m> satisfies
+        <me permid="Pal">
+          d_n=\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p permid="qxB">
+    For example,
+    <md permid="vhu">
+      <mrow>d_5 \amp  =\binom{5}{0}5!-\binom{5}{1}4!+\binom{5}{2}3!-\binom{5}{3}2!+
+      \binom{5}{4}1!-\binom{5}{5}0!</mrow>
+      <mrow>\amp =120-120+60-20+5-1</mrow>
+      <mrow>\amp =44</mrow>
+    </md>.
+  </p>
+
+  <p permid="WEK">
+    It has been traditional to cast the subject of derangements as a story,
+    called the Hat Check problem.
+        <idx><h>hat check problem</h></idx>
+    The story belongs to the period of time when men wore top hats.
+    For a fancy ball,
+    <m>100</m> men check their top hats with the Hat Check person before entering the ballroom floor.
+    Later in the evening,
+    the mischievous hat check person decides to return hats at random.
+    What is the probability that all <m>100</m> men receive a hat other than their own?
+    It turns out that the answer is very close to <m>1/e</m>,
+    as the following result shows.
+  </p>
+
+  <theorem permid="wmN">
+    <statement>
+      <p permid="Zzq">
+        For a positive integer <m>n</m>,
+        let <m>d_n</m> denote the number of derangements of <m>[n]</m>.
+        Then
+        <me permid="boD">
+          \lim_{n\rightarrow\infty}\frac{d_n}{n!} = \frac{1}{e}
+        </me>.
+        Equivalently,
+        the fraction of all permutations of <m>[n]</m> that are derangements approaches <m>1/e</m> as <m>n</m> increases.
+      </p>
+    </statement>
+
+    <proof permid="UPx">
+      <p permid="NkY">
+        It is easy to see that
+        <md permid="nCV">
+          <mrow>\frac{d_n}{n!} \amp = \frac{\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!}{n!}</mrow>
+          <mrow>\amp = \sum_{k=0}^n (-1)^k \frac{n!}{k!(n-k)!}\frac{(n-k)!}{n!}</mrow>
+          <mrow>\amp = \sum_{k=0}^n (-1)^k \frac{1}{k!}</mrow>
+        </md>.
+        Recall from Calculus that the Taylor series expansion of <m>e^x</m> is given by
+        <me permid="HvM">
+          e^x = \sum_{k=0}^{\infty} \frac{x^k}{k!}
+        </me>,
         and thus the result then follows by substituting <m>x=-1</m>.
-            </p>
-        </proof>
-    </theorem>
+      </p>
+    </proof>
+  </theorem>
 
-    <p>Usually we're not as interested in <m>d_n</m> itself as we are in enumerating permutations with certain restrictions, as the following example illustrates.
+  <p permid="CLT">
+    Usually we're not as interested in <m>d_n</m> itself as we are in enumerating permutations with certain restrictions,
+    as the following example illustrates.
+  </p>
+
+  <example permid="IBf">
+    <p permid="lNI">
+      Consider the Hat Check problem,
+      but suppose instead of wanting no man to leave with his own hat,
+      we are interested in the number of ways to distribute the <m>100</m> hats so that precisely <m>40</m> of the men leave with their own hats.
     </p>
-    <example>
-        <p>Consider the Hat Check problem, but suppose instead of wanting no man to leave with his own hat, we are interested in the number of ways to distribute the <m>100</m> hats so that precisely <m>40</m> of the men leave with their own hats.
-        </p>
 
-        <p>If <m>40</m> men leave with their own hats, then there are <m>60</m> men who do not receive their own hats. There are <m>C(100,60)</m> ways to choose the <m>60</m> men who will not receive their own hats and <m>d_{60}</m> ways to distribute those hats so that no man receives his own. There's only one way to distribute the <m>40</m> hats to the men who must receive their own hats, meaning that there are
-        <md>
-            <mrow>  \binom{100}{60}d_{60} =
-                \amp 420788734922281721283274628333913452107738151595140722182899444</mrow>
-                <mrow>  \amp 67852500232068048628965153767728913178940196920</mrow>
-            </md>
-            such ways to return the hats.
-        </p>
-    </example>
+    <p permid="RUR">
+      If <m>40</m> men leave with their own hats,
+      then there are <m>60</m> men who do not receive their own hats.
+      There are <m>C(100,60)</m> ways to choose the <m>60</m> men who will not receive their own hats and <m>d_{60}</m> ways to distribute those hats so that no man receives his own.
+      There's only one way to distribute the <m>40</m> hats to the men who must receive their own hats,
+      meaning that there are
+      <md permid="TKe">
+        <mrow>\binom{100}{60}d_{60} =
+        \amp 420788734922281721283274628333913452107738151595140722182899444</mrow>
+        <mrow>\amp 67852500232068048628965153767728913178940196920</mrow>
+      </md>
+      such ways to return the hats.
+    </p>
+  </example>
 </section>
+

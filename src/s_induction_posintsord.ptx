@@ -1,17 +1,40 @@
-<section xml:id="s_induction_posintsord">
-    <title>The Positive Integers are Well Ordered</title>
-    <p>Most likely, you answered the questions posed in <xref ref="s_induction_intro"  /> with an enthusiastic <q>yes</q>, in part because you wanted the shot at the money, but more concretely because it seems so natural. But you may be surprised to learn that this is really a much more complex subject than you might think at first. In <xref ref="app_background"  />, we discuss the development of the number systems starting from the Peano Postulates. Although we will not devote much space in this chapter to this topic, it is important to know that the positive integers come with <q>some assembly required.</q> In particular, the basic operations of addition and multiplication don't come for free; instead they have to be defined.
-    </p>
 
-    <p>As a by-product of this development, we get the following fundamentally important property of the set <m>\posints</m> of positive integers:
-    </p>
 
-    <principle xml:id="princ_well-order">
-        <title>Well Ordered Property of the Positive Integers</title>
-        <idx><h>well ordered property</h></idx>
-        <statement><p>Every non-empty set of positive integers has a least element.</p></statement>
-    </principle>
+<section permid="yxM" xml:id="s_induction_posintsord">
+  <title>The Positive Integers are Well Ordered</title>
+  <p permid="qTn">
+    Most likely,
+    you answered the questions posed in <xref ref="s_induction_intro" /> with an enthusiastic <q>yes</q>,
+    in part because you wanted the shot at the money,
+    but more concretely because it seems so natural.
+    But you may be surprised to learn that this is really a much more complex subject than you might think at first.
+    In <xref ref="app_background" />,
+    we discuss the development of the number systems starting from the Peano Postulates.
+    Although we will not devote much space in this chapter to this topic,
+    it is important to know that the positive integers come with
+    <q>some assembly required.</q> In particular,
+    the basic operations of addition and multiplication don't come for free;
+    instead they have to be defined.
+  </p>
 
-    <p>An immediate consequence of the well ordered property is that the professor will indeed have to pay someone a dollar<mdash />even if there are infinitely many students in the class.
-    </p>
+  <p permid="Xaw">
+    As a by-product of this development,
+    we get the following fundamentally important property of the set
+    <m>\posints</m> of positive integers:
+  </p>
+
+  <principle permid="eEV" xml:id="princ_well-order">
+    <title>Well Ordered Property of the Positive Integers</title>
+    <idx><h>well ordered property</h></idx>
+    <statement>
+      <p permid="KMe">
+        Every non-empty set of positive integers has a least element.
+      </p>
+    </statement>
+  </principle>
+
+  <p permid="DhF">
+    An immediate consequence of the well ordered property is that the professor will indeed have to pay someone a dollar<mdash />even if there are infinitely many students in the class.
+  </p>
 </section>
+

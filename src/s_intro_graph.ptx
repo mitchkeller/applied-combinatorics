@@ -1,18 +1,41 @@
-<section xml:id="s_intro_graph">
+
+
+<section permid="oBx" xml:id="s_intro_graph">
   <title>Combinatorics and Graph Theory</title>
-  <p>A <term>graph</term> <m>G</m> consists of a <term>vertex</term> set   <m>V</m> and a collection <m>E</m> of <m>2</m>-element subsets of   <m>V</m>. Elements of <m>E</m> are called <term>edges</term>. In our course, we will (almost always) use the convention that <m>V=\{1,2,3,\dots,n\}</m> for some positive integer <m>n</m>. With this convention, graphs can be described <em>precisely</em> with a text file:
-                  <ol>
-    <li><p>The first line of the file contains a single integer <m>n</m>, the number of vertices in the graph.</p></li>
-    <li><p>Each of the remaining lines of the file contains a pair of  distinct integers and specifies an edge of the graph.</p></li>
-  
-                  </ol>
-                </p>
+  <p permid="HYP">
+    A <term>graph</term> <m>G</m> consists of a <term>vertex</term>
+    set <m>V</m> and a collection <m>E</m> of <m>2</m>-element subsets of <m>V</m>.
+    Elements of <m>E</m> are called <term>edges</term>.
+    In our course, we will
+    (almost always)
+    use the convention that <m>V=\{1,2,3,\dots,n\}</m> for some positive integer <m>n</m>.
+    With this convention, graphs can be described
+    <em>precisely</em> with a text file:
 
-  <p>We illustrate this convention in <xref ref="fig_graphdata"  /> with a text file and the diagram for the graph<nbsp /><m>G</m> it defines.</p>
+    <ol permid="Zsz">
+      <li permid="lGR">
+        <p permid="sfX">
+          The first line of the file contains a single integer <m>n</m>,
+          the number of vertices in the graph.
+        </p>
+      </li>
 
-  <figure xml:id="fig_graphdata">
+      <li permid="ROa">
+        <p permid="Yng">
+          Each of the remaining lines of the file contains a pair of distinct integers and specifies an edge of the graph.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p permid="ofY">
+    We illustrate this convention in <xref ref="fig_graphdata" /> with a text file and the diagram for the graph<nbsp /><m>G</m> it defines.
+  </p>
+
+  <figure permid="MII" xml:id="fig_graphdata">
     <caption>A graph defined by data</caption>
-      <sidebyside widths="20% 45%" margins="15%">
+    <sidebyside permid="Neh" widths="20% 45%" margins="15%">
+
         <pre>graph1.txt
 9
 6 2
@@ -26,109 +49,213 @@
 5 9
 7 9</pre>
       <image source="images/3012-fig15" />
-  </sidebyside>
+    </sidebyside>
+
   </figure>
-  <p>Much of the notation and terminology for graphs is quite natural. See if you can make sense out of the following statements which apply to the graph <m>G</m> defined above:
-                  <ol>
-    <li><p><m>G</m> has <m>9</m> vertices and <m>10</m> edges.</p></li>
-    <li><p><m>\{2,6\}</m> is an edge.</p></li>
-    <li><p>Vertices <m>5</m> and <m>9</m> are adjacent.</p></li>
-    <li><p><m>\{5,4\}</m> is not an edge.</p></li>
-    <li><p>Vertices <m>3</m> and <m>7</m> are not adjacent.</p></li>
-    <li><p><m>P = (4, 3,1, 7,9,5)</m> is a path 
-    of length<nbsp /><m>5</m> from vertex <m>4</m> to vertex<nbsp /><m>5</m>.</p></li>
-    <li><p><m>C=(5,9,7,1)</m> is cycle of length<nbsp /><m>4</m>.</p></li>
-    <li><p><m>G</m> is disconnected and has two components.
-    One of the components has vertex set <m>\{2,6,8\}</m>.</p></li>
-    <li><p><m>\{1,5,7\}</m> is a triangle.</p></li>
-    <li><p><m>\{1,7,5,9\}</m> is a clique of size<nbsp /><m>4</m>.</p></li>
-    <li><p><m>\{4,2,8,5\}</m> is an independent set of
-    size<nbsp /><m>4</m>.</p></li>
-  
-                  </ol>
-                </p>
-  
-  <p>Equipped only with this little bit of background material, we are already able to pose a number of interesting and challenging problems.</p>
-<example>
-<statement>
-<p>
-Consider the graph <m>G</m> shown in <xref ref="fig_connectedgraph"  />.
-</p>
-<figure xml:id="fig_connectedgraph" >
-<caption>A connected graph</caption>
-<image width="81%" source="images/3012-fig17" />
-</figure>
-<p>
-    <ol>
-        <li><p>What is the largest <m>k</m> for which <m>G</m> has a path
-        of length<nbsp /><m>k</m>?</p></li>
-        <li><p>What is the largest <m>k</m> for which <m>G</m> has a cycle 
-        of length<nbsp /><m>k</m>?</p></li>
-        <li><p>What is the largest <m>k</m> for which <m>G</m> has a clique
-        of size<nbsp /><m>k</m>?</p></li>
-        <li><p>What is the largest <m>k</m> for which <m>G</m> has an
-        independent set of size<nbsp /><m>k</m>?</p></li>
-        <li><p>What is the shortest path from vertex<nbsp /><m>7</m> to
-        vertex<nbsp /><m>6</m>?</p></li>
+
+  <p permid="Unh">
+    Much of the notation and terminology for graphs is quite natural.
+    See if you can make sense out of the following statements which apply to the graph <m>G</m> defined above:
+
+    <ol permid="FzI">
+      <li permid="xVj">
+        <p permid="Eup">
+          <m>G</m> has <m>9</m> vertices and <m>10</m> edges.
+        </p>
+      </li>
+
+      <li permid="ecs">
+        <p permid="kBy">
+          <m>\{2,6\}</m> is an edge.
+        </p>
+      </li>
+
+      <li permid="KjB">
+        <p permid="QIH">
+          Vertices <m>5</m> and <m>9</m> are adjacent.
+        </p>
+      </li>
+
+      <li permid="qqK">
+        <p permid="wPQ">
+          <m>\{5,4\}</m> is not an edge.
+        </p>
+      </li>
+
+      <li permid="WxT">
+        <p permid="cWZ">
+          Vertices <m>3</m> and <m>7</m> are not adjacent.
+        </p>
+      </li>
+
+      <li permid="CFc">
+        <p permid="Jei">
+          <m>P = (4, 3,1, 7,9,5)</m> is a path 
+          of length<nbsp /><m>5</m> from vertex <m>4</m> to vertex<nbsp /><m>5</m>.
+        </p>
+      </li>
+
+      <li permid="iMl">
+        <p permid="plr">
+          <m>C=(5,9,7,1)</m> is cycle of length<nbsp /><m>4</m>.
+        </p>
+      </li>
+
+      <li permid="OTu">
+        <p permid="VsA">
+          <m>G</m> is disconnected and has two components.
+          One of the components has vertex set <m>\{2,6,8\}</m>.
+        </p>
+      </li>
+
+      <li permid="vaD">
+        <p permid="BzJ">
+          <m>\{1,5,7\}</m> is a triangle.
+        </p>
+      </li>
+
+      <li permid="bhM">
+        <p permid="hGS">
+          <m>\{1,7,5,9\}</m> is a clique of size<nbsp /><m>4</m>.
+        </p>
+      </li>
+
+      <li permid="HoV">
+        <p permid="NOb">
+          <m>\{4,2,8,5\}</m> is an independent set of
+          size<nbsp /><m>4</m>.
+        </p>
+      </li>
     </ol>
-</p>
-<p>
-Suppose we gave the class a text data file for a graph
-on <m>1500</m> vertices and asked whether the graph contains
-a cycle of length at least <m>500</m>. Raoul says yes and
-Carla says no. How do we decide who is right?
-</p>
+  </p>
 
-<p>
-Suppose instead we asked whether the graph has a clique of
-size<nbsp /><m>500</m>. Helene says that she doesn't think so, but isn't
-certain. Is it reasonable that her classmates insist that
-she make up her mind, one way or the other? Is determining whether
-this graph has a clique of size<nbsp /><m>500</m> harder, easier or
-more or less the same as determining whether
-it has a cycle of size<nbsp /><m>500</m>.
-</p>
-</statement>
-</example>
-<p>
-We will frequently study problems in which graphs
-arise in a very natural manner. Here's an example.
-</p>
-<example xml:id="ex_radiostations">
-<statement>
-<p>
-In <xref ref="fig_radiostations"  />, we show the location of some radio stations in the
-plane, together with a scale indicating a distance of<nbsp /><m>200</m> miles.
-Radio stations that are closer than<nbsp /><m>200</m> miles apart must broadcast
-on different frequencies to avoid interference.
-</p>
-<figure xml:id="fig_radiostations" >
-<caption>Radio Stations</caption>
-<image width="79%" source="images/3012-fig4" />
-</figure>
-<p>
-We've shown that<nbsp /><m>6</m> different frequencies are enough.
-Can you do better?
-</p>
+  <p permid="Auq">
+    Equipped only with this little bit of background material,
+    we are already able to pose a number of interesting and challenging problems.
+  </p>
 
-<p>
-Can you find<nbsp /><m>4</m> stations each of which is within
-<m>200</m> miles of the other<nbsp /><m>3</m>? Can you find <m>8</m> stations each of is more
-than <m>200</m> miles away from the other<nbsp /><m>7</m>? Is there a natural
-way to define a graph associated with this problem?
-</p>
-</statement>
-</example>
+  <example permid="UIG">
+    <statement>
+      <p permid="yFd">
+        Consider the graph <m>G</m> shown in <xref ref="fig_connectedgraph" />.
+      </p>
 
-<example>
-<statement>
-<p>
-How big must an applied combinatorics class be so that there are
-either (a)<nbsp />six students with each pair having taken at least one
-other class together, or (b)<nbsp />six students with each pair together
-in a class for the first time. Is this really a hard problem or
-can we figure it out in just a few minutes, scribbling on a napkin?
-</p>
-</statement>
-</example>
+      <figure permid="XhN" xml:id="fig_connectedgraph">
+        <caption>A connected graph</caption>
+        <image width="81%" source="images/3012-fig17" />
+      </figure>
+
+      <p permid="eMm">
+        <ol permid="tlq">
+          <li permid="nwe">
+            <p permid="tVk">
+              What is the largest <m>k</m> for which <m>G</m> has a path
+              of length<nbsp /><m>k</m>?
+            </p>
+          </li>
+
+          <li permid="TDn">
+            <p permid="act">
+              What is the largest <m>k</m> for which <m>G</m> has a cycle 
+              of length<nbsp /><m>k</m>?
+            </p>
+          </li>
+
+          <li permid="zKw">
+            <p permid="GjC">
+              What is the largest <m>k</m> for which <m>G</m> has a clique
+              of size<nbsp /><m>k</m>?
+            </p>
+          </li>
+
+          <li permid="fRF">
+            <p permid="mqL">
+              What is the largest <m>k</m> for which <m>G</m> has an
+              independent set of size<nbsp /><m>k</m>?
+            </p>
+          </li>
+
+          <li permid="LYO">
+            <p permid="SxU">
+              What is the shortest path from vertex<nbsp /><m>7</m> to
+              vertex<nbsp /><m>6</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p permid="KTv">
+        Suppose we gave the class a text data file for a graph
+        on <m>1500</m> vertices and asked whether the graph contains
+        a cycle of length at least <m>500</m>.
+        Raoul says yes and
+        Carla says no.
+        How do we decide who is right?
+      </p>
+
+      <p permid="raE">
+        Suppose instead we asked whether the graph has a clique of
+        size<nbsp /><m>500</m>.
+        Helene says that she doesn't think so, but isn't
+        certain.
+        Is it reasonable that her classmates insist that
+        she make up her mind, one way or the other?
+        Is determining whether
+        this graph has a clique of size<nbsp /><m>500</m> harder,
+        easier or
+        more or less the same as determining whether
+        it has a cycle of size<nbsp /><m>500</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p permid="gBz">
+    We will frequently study problems in which graphs
+    arise in a very natural manner.
+    Here's an example.
+  </p>
+
+  <example permid="APP" xml:id="ex_radiostations">
+    <statement>
+      <p permid="DoW">
+        In <xref ref="fig_radiostations" />, we show the location of some radio stations in the
+        plane, together with a scale indicating a distance of<nbsp /><m>200</m> miles.
+        Radio stations that are closer than<nbsp /><m>200</m> miles apart must broadcast
+        on different frequencies to avoid interference.
+      </p>
+
+      <figure permid="vKx" xml:id="fig_radiostations">
+        <caption>Radio Stations</caption>
+        <image width="79%" source="images/3012-fig4" />
+      </figure>
+
+      <p permid="jwf">
+        We've shown that<nbsp /><m>6</m> different frequencies are enough.
+        Can you do better?
+      </p>
+
+      <p permid="PDo">
+        Can you find<nbsp /><m>4</m> stations each of which is within
+        <m>200</m> miles of the other<nbsp /><m>3</m>?
+        Can you find <m>8</m> stations each of is more
+        than <m>200</m> miles away from the other<nbsp /><m>7</m>?
+        Is there a natural
+        way to define a graph associated with this problem?
+      </p>
+    </statement>
+  </example>
+
+  <example permid="gWY">
+    <statement>
+      <p permid="bRG">
+        How big must an applied combinatorics class be so that there are
+        either (a)<nbsp />six students with each pair having taken at least one
+        other class together, or (b)<nbsp />six students with each pair together
+        in a class for the first time.
+        Is this really a hard problem or
+        can we figure it out in just a few minutes, scribbling on a napkin?
+      </p>
+    </statement>
+  </example>
 </section>
+

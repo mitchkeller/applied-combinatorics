@@ -1,117 +1,155 @@
-<section xml:id="s_ramsey_small">
-    <title>Small Ramsey Numbers</title>
-    <p>Actually determining the <term>Ramsey numbers</term><idx><h>Ramsey number</h></idx><notation><usage>R(m,n)</usage><description>Ramsey number</description></notation> <m>R(m,n)</m> referenced in <xref ref="thm_graphramsey"  /> seems to be a notoriously difficult problem, and only a handful of these values are known precisely. In particular, <m>R(3,3)=6</m> and <m>R(4,4)=18</m>, while <m>43\le R(5,5)\le 49</m>. The distinguished Hungarian mathematician Paul Erd&#337;s said on many occasions that it might be possible to determine <m>R(5,5)</m> exactly, if all the world's mathematical talent were to be focused on the problem. But he also said that finding the exact value of <m>R(6,6)</m> might be beyond our collective abilities.
-    </p>
 
-    <p>In the following table, we provide information about the Ramsey numbers <m>R(m,n)</m> when <m>m</m> and <m>n</m> are at least <m>3</m> and at most <m>9</m>. When a cell contains a single number, that is the precise answer. When there are two numbers, they represent lower and upper bounds.
-    </p>
-    <table xml:id="tab_ramsey_small">
-        <caption>Small Ramsey numbers <m>R(m,n)</m></caption>
-        <idx><h>Ramsey number</h><h>small</h></idx>
-        <tabular top="medium">
-            <col /><col /><col halign="center" /><col halign="center" /><col halign="center" /><col halign="center" /><col halign="center" /><col halign="center" /><col halign="center" />
-            <row >
-                <cell  ></cell>
-                <cell halign="right"><m>n</m></cell>
-                <cell>3</cell>
-                <cell>4</cell>
-                <cell>5</cell>
-                <cell>6</cell>
-                <cell>7</cell>
-                <cell>8</cell>
-                <cell>9</cell>
-            </row>
-            <row bottom="medium">
-                <cell><m>m</m></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-            </row>
 
-            <row>
-                <cell>3</cell>
-                <cell></cell>
-                <cell>6</cell>
-                <cell>9</cell>
-                <cell>14</cell>
-                <cell>18</cell>
-                <cell>23</cell>
-                <cell>36</cell>
-                <cell>39</cell>
-            </row>
-            <row>
-                <cell>4</cell>
-                <cell></cell>
-                <cell></cell>
-                <cell>18</cell>
-                <cell>25</cell>
-                <cell>36, 41</cell>
-                <cell>49, 61</cell>
-                <cell>58, 84</cell>
-                <cell>73, 115</cell>
-            </row>
-            <row>
-                <cell>5</cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell>43, 49</cell>
-                <cell>58, 87</cell>
-                <cell>80, 143</cell>
-                <cell>101, 216</cell>
-                <cell>126, 316</cell>
-            </row>
-            <row>
-                <cell>6</cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell>102, 165</cell>
-                <cell>113, 298</cell>
-                <cell>127, 495</cell>
-                <cell>169, 780</cell>
-            </row>
-            <row>
-                <cell>7</cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell>205, 540</cell>
-                <cell>217, 1031</cell>
-                <cell>241, 1713</cell>
-            </row>
-            <row>
-                <cell>8</cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell>282, 1870</cell>
-                <cell>317, 3583</cell>
-            </row>
-            <row bottom="medium">
-                <cell>9</cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell>565, 6588</cell>
-            </row>
-        </tabular>
-    </table>
-    <p>For additional (or more current) data, see <url href="http://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1">Dynamic Survey <hash />DS1: <q>Small Ramsey Numbers</q></url> by Stanisław Radziszowski in the <pubtitle>Electronic Journal of Combinatorics</pubtitle>. (<xref ref="tab_ramsey_small"  /> was last updated using the 12 January 2014 version of that article.)
-    </p>
+<section permid="Sdi" xml:id="s_ramsey_small">
+  <title>Small Ramsey Numbers</title>
+  <p permid="ykr">
+    Actually determining the <term>Ramsey numbers</term>
+        <idx><h>Ramsey number</h></idx>
+    <notation>
+      <usage>R(m,n)</usage>
+      <description>Ramsey number</description>
+    </notation>
+
+    <m>R(m,n)</m> referenced in <xref ref="thm_graphramsey" /> seems to be a notoriously difficult problem,
+    and only a handful of these values are known precisely.
+    In particular, <m>R(3,3)=6</m> and <m>R(4,4)=18</m>,
+    while <m>43\le R(5,5)\le 49</m>.
+    The distinguished Hungarian mathematician Paul Erd&#337;s said on many occasions that it might be possible to determine <m>R(5,5)</m> exactly,
+    if all the world's mathematical talent were to be focused on the problem.
+    But he also said that finding the exact value of <m>R(6,6)</m> might be beyond our collective abilities.
+  </p>
+
+  <p permid="erA">
+    In the following table,
+    we provide information about the Ramsey numbers <m>R(m,n)</m> when <m>m</m> and <m>n</m> are at least <m>3</m> and at most <m>9</m>.
+    When a cell contains a single number,
+    that is the precise answer.
+    When there are two numbers, they represent lower and upper bounds.
+  </p>
+
+  <table permid="qFS" xml:id="tab_ramsey_small">
+    <caption>Small Ramsey numbers <m>R(m,n)</m></caption>
+    <idx><h>Ramsey number</h><h>small</h></idx>
+
+    <tabular permid="WNb" top="medium">
+      <col />
+      <col />
+      <col halign="center" />
+      <col halign="center" />
+      <col halign="center" />
+      <col halign="center" />
+      <col halign="center" />
+      <col halign="center" />
+      <col halign="center" />
+      <row >
+      <cell  ></cell>
+      <cell halign="right"><m>n</m></cell>
+      <cell>3</cell>
+      <cell>4</cell>
+      <cell>5</cell>
+      <cell>6</cell>
+      <cell>7</cell>
+      <cell>8</cell>
+      <cell>9</cell>
+      </row>
+      <row bottom="medium">
+        <cell><m>m</m></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>3</cell>
+        <cell></cell>
+        <cell>6</cell>
+        <cell>9</cell>
+        <cell>14</cell>
+        <cell>18</cell>
+        <cell>23</cell>
+        <cell>36</cell>
+        <cell>39</cell>
+      </row>
+      <row>
+        <cell>4</cell>
+        <cell></cell>
+        <cell></cell>
+        <cell>18</cell>
+        <cell>25</cell>
+        <cell>36, 41</cell>
+        <cell>49, 61</cell>
+        <cell>58, 84</cell>
+        <cell>73, 115</cell>
+      </row>
+      <row>
+        <cell>5</cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell>43, 49</cell>
+        <cell>58, 87</cell>
+        <cell>80, 143</cell>
+        <cell>101, 216</cell>
+        <cell>126, 316</cell>
+      </row>
+      <row>
+        <cell>6</cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell>102, 165</cell>
+        <cell>113, 298</cell>
+        <cell>127, 495</cell>
+        <cell>169, 780</cell>
+      </row>
+      <row>
+        <cell>7</cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell>205, 540</cell>
+        <cell>217, 1031</cell>
+        <cell>241, 1713</cell>
+      </row>
+      <row>
+        <cell>8</cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell>282, 1870</cell>
+        <cell>317, 3583</cell>
+      </row>
+      <row bottom="medium">
+        <cell>9</cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell>565, 6588</cell>
+      </row>
+    </tabular>
+
+  </table>
+
+  <p permid="KyJ">
+    For additional
+    (or more current)
+    data, see <url href="http://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1">Dynamic Survey <hash />DS1:
+    <q>Small Ramsey Numbers</q></url> by Stanisław Radziszowski in the <pubtitle>Electronic Journal of Combinatorics</pubtitle>.
+    (<xref ref="tab_ramsey_small" /> was last updated using the 12 January 2014 version of that article.)
+  </p>
 </section>
+

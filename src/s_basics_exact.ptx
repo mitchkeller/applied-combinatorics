@@ -1,62 +1,176 @@
-<section xml:id="s_basics_exact">
-    <title>Exact Versus Approximate</title>
 
 
-    <introduction>
-        <p>Many combinatorial problems admit <q>exact</q> solutions, and in these cases, we will usually try hard to find them. The <xref ref="thm_ErdosSzekeres" text="title">Erd&#337;s/Szekeres Theorem</xref> from earlier in this chapter is a good example of an <q>exact</q> result<fn>Exact results are also called <q>best possible</q>, <q>sharp</q> or <q>tight.</q></fn>. By this statement, we mean that for each pair <m>m</m> and <m>n</m> of positive integers, there is a sequence of <m>mn</m> distinct real numbers that has neither an increasing subsequence of size <m>m+1</m> nor a decreasing subsequence of size<nbsp /><m>n+1</m>. To see this, consider the sequence <m>\sigma</m> defined as follows: For each <m>i=1,2,\dots,m</m>, let <m>B_i=\{j+(m-1)i:1\le j\le n\}</m>. Note that each <m>B_i</m> is a block of <m>n</m> consecutive integers. Then define a permutation <m>\sigma</m> of the first <m>mn</m> integers by setting <m>\alpha\lt \beta</m> if there exist distinct integers <m>i_1</m> and <m>i_2</m> so that <m>\alpha\in B_{i_1}</m> and <m>\beta\in B_{i_2}</m>. Also, for each <m>i=1,2,\dots,m</m>, set <m>\alpha\lt \beta</m> in <m>\sigma</m> when <m>1+(m-1)i\le \beta\lt \alpha\le n+(m-1)i</m>. Clearly, any increasing subsequence of <m>\sigma</m> contains at most one member from each block, so <m>\sigma</m> has no increasing sequence of size<nbsp /><m>m=1</m>.  On the other hand, any decreasing sequence in <m>\sigma</m> is contained in a single block, so <m>\sigma</m> has no decreasing sequence of size <m>n+1</m>.
-        </p>
+<section permid="xMS" xml:id="s_basics_exact">
+  <title>Exact Versus Approximate</title>
+  <introduction permid="WpC">
+    <p permid="CwL">
+      Many combinatorial problems admit
+      <q>exact</q> solutions,
+      and in these cases, we will usually try hard to find them.
+      The <xref ref="thm_ErdosSzekeres" text="title">Erd&#337;s/Szekeres Theorem</xref>
+      from earlier in this chapter is a good example of an
+      <q>exact</q> result<fn>
+      Exact results are also called <q>best possible</q>,
+      <q>sharp</q> or <q>tight.</q>
+      </fn>.
+      By this statement,
+      we mean that for each pair <m>m</m> and <m>n</m> of positive integers,
+      there is a sequence of <m>mn</m> distinct real numbers that has neither an increasing subsequence of size <m>m+1</m> nor a decreasing subsequence of size<nbsp /><m>n+1</m>.
+      To see this,
+      consider the sequence <m>\sigma</m> defined as follows: For each <m>i=1,2,\dots,m</m>,
+      let <m>B_i=\{j+(m-1)i:1\le j\le n\}</m>.
+      Note that each <m>B_i</m> is a block of <m>n</m> consecutive integers.
+      Then define a permutation <m>\sigma</m> of the first <m>mn</m> integers by setting
+      <m>\alpha\lt \beta</m> if there exist distinct integers <m>i_1</m> and <m>i_2</m> so that
+      <m>\alpha\in B_{i_1}</m> and <m>\beta\in B_{i_2}</m>.
+      Also, for each <m>i=1,2,\dots,m</m>,
+      set <m>\alpha\lt \beta</m> in <m>\sigma</m> when <m>1+(m-1)i\le \beta\lt \alpha\le n+(m-1)i</m>.
+      Clearly, any increasing subsequence of <m>\sigma</m> contains at most one member from each block,
+      so <m>\sigma</m> has no increasing sequence of size<nbsp /><m>m=1</m>.
+      On the other hand,
+      any decreasing sequence in <m>\sigma</m> is contained in a single block,
+      so <m>\sigma</m> has no decreasing sequence of size <m>n+1</m>.
+    </p>
 
-        <p>As another example of an exact solution, the number of integer solutions to <m>x_1+x_2+\dots x_r=n</m> with <m>x_i>0</m> for <m>i-1,2,\dots,r</m> is exactly <m>C(n-1,r-1)</m>.  On the other hand, nothing we have discussed thus far allows us to provide an exact solution for the number of partitions of an integer<nbsp /><m>n</m>.
-        </p>
-    </introduction>
+    <p permid="iDU">
+      As another example of an exact solution,
+      the number of integer solutions to
+      <m>x_1+x_2+\dots x_r=n</m> with <m>x_i>0</m> for
+      <m>i-1,2,\dots,r</m> is exactly <m>C(n-1,r-1)</m>.
+      On the other hand,
+      nothing we have discussed thus far allows us to provide an exact solution for the number of partitions of an integer<nbsp /><m>n</m>.
+    </p>
+  </introduction>
 
+  <subsection permid="dUb">
+    <title>Approximate and Asymptotic Solutions</title>
+    <p permid="OLd">
+      Here's an example of a famous problem that we can only discuss in terms of approximate solutions,
+      at least when the input size is suitably large.
+      For an integer <m>n</m>,
+      let <m>\pi(n)</m> denote the number of primes among the first <m>n</m> positive integers.
+      For example, <m>\pi(12)=5</m> since <m>2</m>,
+      <m>3</m>, <m>5</m>, <m>7</m> and <m>11</m> are primes.
+      The exact value of <m>\pi(n)</m> is known when <m>n\le 10^{23}</m>,
+      and in fact:
+      <me permid="YeP">
+        \pi(10^{23}) = 1,925,320,391,606,803,968,923
+      </me>
+    </p>
 
-    <subsection>
-        <title>Approximate and Asymptotic Solutions</title>
-        <p>Here's an example of a famous problem that we can only discuss in terms of approximate solutions, at least when the input size is suitably large.  For an integer <m>n</m>, let <m>\pi(n)</m> denote the number of primes among the first <m>n</m> positive integers. For example, <m>\pi(12)=5</m> since <m>2</m>, <m>3</m>, <m>5</m>, <m>7</m> and <m>11</m> are primes.  The exact value of <m>\pi(n)</m> is known when <m>n\le 10^{23}</m>, and in fact:
-        <me>
-            \pi(10^{23}) = 1,925,320,391,606,803,968,923
-        </me>
-        </p>
-        <p>On the other hand, you might ask whether <m>\pi(n)</m> tends to infinity as <m>n</m> grows larger and larger. The answer is yes, and here's a simple and quite classic argument. Suppose to the contrary that there were only <m>k</m> primes, where <m>k</m> is a positive integer. Suppose these <m>k</m> primes are listed in increasing order as <m>p_1\lt p_2\lt \dots\lt p_k</m>, and consider the number <m>n=1+p_1p_2\cdots p_k</m>.  Then <m>n</m> is not divisible by any of these primes, and it is larger than <m>p_k</m>, which implies that <m>n</m> is either a prime number larger than <m>p_k</m> or divisible by a prime number larger than <m>p_k</m>.
-        </p>
+    <p permid="uSm">
+      On the other hand,
+      you might ask whether <m>\pi(n)</m> tends to infinity as <m>n</m> grows larger and larger.
+      The answer is yes, and here's a simple and quite classic argument.
+      Suppose to the contrary that there were only <m>k</m> primes,
+      where <m>k</m> is a positive integer.
+      Suppose these <m>k</m> primes are listed in increasing order as <m>p_1\lt p_2\lt \dots\lt p_k</m>,
+      and consider the number <m>n=1+p_1p_2\cdots p_k</m>.
+      Then <m>n</m> is not divisible by any of these primes,
+      and it is larger than <m>p_k</m>,
+      which implies that <m>n</m> is either a prime number larger than <m>p_k</m> or divisible by a prime number larger than <m>p_k</m>.
+    </p>
 
-        <p>So we know that <m>\lim_{n\rightarrow\infty}\pi(n)=\infty</m>.  In a situation like this, mathematicians typically want to know more about how fast <m>\pi(n)</m> goes to infinity. Some functions go to infinity <q>slowly</q>, such as <m>\log n</m> or <m>\log\log n</m>. Some go to infinity quickly, like <m>2^n</m>, <m>n!</m> or <m>2^{2^n}</m>. Since <m>\pi(n)\le n</m>, it can't go to infinity as fast as these last three functions, but it might go infinity like <m>\log n</m> or maybe <m>\sqrt{n}</m>.
-        </p>
+    <p permid="aZv">
+      So we know that <m>\lim_{n\rightarrow\infty}\pi(n)=\infty</m>.
+      In a situation like this,
+      mathematicians typically want to know more about how fast <m>\pi(n)</m> goes to infinity.
+      Some functions go to infinity <q>slowly</q>,
+      such as <m>\log n</m> or <m>\log\log n</m>.
+      Some go to infinity quickly, like <m>2^n</m>,
+      <m>n!</m> or <m>2^{2^n}</m>.
+      Since <m>\pi(n)\le n</m>,
+      it can't go to infinity as fast as these last three functions,
+      but it might go infinity like <m>\log n</m> or maybe <m>\sqrt{n}</m>.
+    </p>
 
-        <p>On the basis of computational results (done by hand, long before there were computers), Legendre conjectured in 1796 that <m>\pi(n)</m> goes to infinity like <m>n/\ln n</m>. To be more precise, he conjectured that
-        <me>
-            \lim_{n\rightarrow\infty}\frac{\pi(n)\ln n}{n}=1.
-        </me>
-            In 1896, exactly one hundred years after Legendre's conjecture, Hadamard and de la Vall&#xe9;e-Poussin independently published proofs of the conjecture, using techniques whose roots are in the Riemann's pioneering work in complex analysis. This result, now known simply as the <em>Prime Number Theorem</em>, continues to this day to be much studied topic at the boundary of analysis and number theory.
-        </p>
-    </subsection>
+    <p permid="HgE">
+      On the basis of computational results
+      (done by hand, long before there were computers),
+      Legendre conjectured in 1796 that <m>\pi(n)</m> goes to infinity like <m>n/\ln n</m>.
+      To be more precise, he conjectured that
+      <me permid="ElY">
+        \lim_{n\rightarrow\infty}\frac{\pi(n)\ln n}{n}=1
+      </me>.
+      In 1896, exactly one hundred years after Legendre's conjecture, Hadamard and de la Vall&#xe9;e-Poussin independently published proofs of the conjecture,
+      using techniques whose roots are in the Riemann's pioneering work in complex analysis.
+      This result, now known simply as the
+      <em>Prime Number Theorem</em>,
+      continues to this day to be much studied topic at the boundary of analysis and number theory.
+    </p>
+  </subsection>
 
+  <subsection permid="Kbk">
+    <title>Polynomial Time Algorithms</title>
+    <idx><h>algorithm</h><h>polynomial time</h></idx>
 
-    <subsection>
-        <title>Polynomial Time Algorithms</title>
-        <idx><h>algorithm</h><h>polynomial time</h></idx>
-        <p>Throughout this text, we will place considerable emphasis on problems for which a certificate can be found in polynomial time. This refers to problems for which there is some constant <m>c>0</m> so that there is an algorithm <m>\cgA</m> for solving the problem which has running time <m>O(n^c)</m> where <m>n</m> is the input size.  The symbol <m>\cgP</m> is suggestive of <em>polynomial</em>.<notation><usage>\cgP</usage><description>polynomial time problems</description></notation>
-        </p>
-    </subsection>
+    <p permid="nnN">
+      Throughout this text,
+      we will place considerable emphasis on problems for which a certificate can be found in polynomial time.
+      This refers to problems for which there is some constant <m>c>0</m> so that there is an algorithm <m>\cgA</m> for solving the problem which has running time <m>O(n^c)</m> where <m>n</m> is the input size.
+      The symbol <m>\cgP</m> is suggestive of <em>polynomial</em>.
 
+      <notation>
+        <usage>\cgP</usage>
+        <description>polynomial time problems</description>
+      </notation>
 
-    <subsection>
-        <title><m>\cgP=\cgN\cgP</m>?</title>
-        <p>Perhaps the most famous question at the boundary of combinatorial mathematics, theoretical computer science and mathematical logic is the notoriously challenging question of deciding whether <m>\cgP</m> is the same as <m>\cgN\cgP</m>. This problem has the shorthand form: <m>\cgP=\cgN\cgP</m>? Here, we present a brief informal discussion of this problem.
-        </p>
+    </p>
+  </subsection>
 
-        <p>First, we have already introduced the class <m>\cgP</m> consisting of all yes-no combinatorial problems which admit polynomial time algorithms.  The first two problems discussed in this chapter belong to <m>\cgP</m> since they can be solved with algorithms that have running time <m>O(n)</m> and <m>O(n^3)</m>, respectively.  Also, determining whether a graph is <m>2</m>-colorable and whether it is connected both admit polynomial time algorithms.
-        </p>
+  <subsection permid="qit">
+    <title><m>\cgP=\cgN\cgP</m>?</title>
+    <p permid="TuW">
+      Perhaps the most famous question at the boundary of combinatorial mathematics,
+      theoretical computer science and mathematical logic is the notoriously challenging question of deciding whether <m>\cgP</m> is the same as <m>\cgN\cgP</m>.
+      This problem has the shorthand form:
+      <m>\cgP=\cgN\cgP</m>?
+      Here, we present a brief informal discussion of this problem.
+    </p>
 
-        <p>We should emphasize that it may be very difficult to determine whether a problem belongs to class <m>\cgP</m> or not.  For example, we don't see how to give a fast algorithm for solving the third problem (subset sum), but that doesn't mean that there isn't one. Maybe we all need to study harder!
-        </p>
+    <p permid="zCf">
+      First, we have already introduced the class <m>\cgP</m> consisting of all yes-no combinatorial problems which admit polynomial time algorithms.
+      The first two problems discussed in this chapter belong to <m>\cgP</m> since they can be solved with algorithms that have running time <m>O(n)</m> and <m>O(n^3)</m>,
+      respectively.
+      Also, determining whether a graph is <m>2</m>-colorable and whether it is connected both admit polynomial time algorithms.
+    </p>
 
-        <p>Setting that issue aside for the moment, the class <m>\cgN\cgP</m><notation><usage>\cgN\cgP</usage><description>nondeterministic polynomial time problems</description></notation> consists of yes<ndash />no problems for which there is a certificate for a yes answer whose correctness can be verified in polynomial time. More formally, this is called the class of <term>nondeterministic polynomial time</term> problems. Our third problem definitely belongs to this class.<idx><h>nondeterministic polynomial time</h></idx>
-        </p>
+    <p permid="fJo">
+      We should emphasize that it may be very difficult to determine whether a problem belongs to class <m>\cgP</m> or not.
+      For example,
+      we don't see how to give a fast algorithm for solving the third problem
+      (subset sum),
+      but that doesn't mean that there isn't one.
+      Maybe we all need to study harder!
+    </p>
 
-        <p>The famous question is to determine whether the two classes are the same. Evidently, any problem belonging to <m>\cgP</m> also belongs to <m>\cgN\cgP</m>, i.e, <m>\cgP\subseteq\cgN\cgP</m>, but are they equal?  It seems difficult to believe that there is a polynomial time algorithm for settling the third problem (the subset sum problem), and no one has come close to settling this issue. But if you get a good idea, be sure to discuss it with one or both authors of this text before you go public with your news. If it turns out that you are right, you are certain to treasure a photo opportunity with yours truly.
-        </p>
-    </subsection>
+    <p permid="LQx">
+      Setting that issue aside for the moment, the class <m>\cgN\cgP</m>
 
+      <notation>
+        <usage>\cgN\cgP</usage>
+        <description>nondeterministic polynomial time problems</description>
+      </notation>
+
+      consists of yes<ndash />no problems for which there is a certificate for a yes answer whose correctness can be verified in polynomial time.
+      More formally, this is called the class of
+      <term>nondeterministic polynomial time</term> problems.
+      Our third problem definitely belongs to this class.
+          <idx><h>nondeterministic polynomial time</h></idx>
+    </p>
+
+    <p permid="rXG">
+      The famous question is to determine whether the two classes are the same.
+      Evidently, any problem belonging to <m>\cgP</m> also belongs to <m>\cgN\cgP</m>,
+      i.e, <m>\cgP\subseteq\cgN\cgP</m>, but are they equal?
+      It seems difficult to believe that there is a polynomial time algorithm for settling the third problem
+      (the subset sum problem),
+      and no one has come close to settling this issue.
+      But if you get a good idea,
+      be sure to discuss it with one or both authors of this text before you go public with your news.
+      If it turns out that you are right,
+      you are certain to treasure a photo opportunity with yours truly.
+    </p>
+  </subsection>
 </section>
+

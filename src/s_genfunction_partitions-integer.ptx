@@ -1,73 +1,149 @@
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_genfunction_partitions-integer">
-    <title>Partitions of an Integer</title>
-    <p>A recurring theme in this course has been to count the number of integer solutions to an equation of the form <m>x_1+x_2+\cdots + x_k = n</m>. What if we wanted to count the number of such solutions but didn't care what <m>k</m> was? How about if we took this new question and required that the <m>x_i</m> be <term>distinct</term> (<ie />, <m>x_i\neq x_j</m> for <m>i\neq j</m>)? What about if we required that each <m>x_i</m> be odd? These certainly don't seem like easy questions to answer at first, but generating functions will allow us to say something very interesting about the answers to the last two questions.
-    </p>
 
-    <p>By a <term>partition</term> <m>P</m> of an integer<idx><h>partition</h><h>of an integer</h></idx>, we mean a collection of (not necessarily distinct) positive integers such that <m>\sum_{i\in P} i = n</m>. (By convention, we will write the elements of <m>P</m> from largest to smallest.) For example, <m>2+2+1</m> is a partition of <m>5</m>. For each <m>n\ge0</m>, let <m>p_n</m> denote the number of partitions of the integer <m>n</m> (with <m>p_0=1</m> by convention). Note that <m>p_8=22</m> as evidenced by the list in <xref ref="fig_genfunction_partsof8"  />.
-    </p>
-      <figure xml:id="fig_genfunction_partsof8" >
-          <caption>The partitions of <m>8</m>, noting those into distinct parts
-          and those into odd parts.</caption>
-          <sidebyside>
-              <ul label="" cols="2">
-                  <li>8 distinct parts</li>
-                  <li>7+1 distinct parts, odd parts</li>
-                  <li>6+2 distinct parts</li>
-                  <li>6+1+1</li>
-                  <li>5+3 distinct parts, odd parts</li>
-                  <li>5+2+1 distinct parts</li>
-                  <li>5+1+1+1 odd parts</li>
-                  <li>4+4</li>
-                  <li>4+3+1 distinct parts</li>
-                  <li>4+2+2</li>
-                  <li>4+2+1+1</li>
-                  <li>4+1+1+1+1</li>
-                  <li>3+3+2</li>
-                  <li>3+3+1+1 odd parts</li>
-                  <li>3+2+2+1</li>
-                  <li>3+2+1+1+1</li>
-                  <li>3+1+1+1+1+1 odd parts</li>
-                  <li>2+2+2+2</li>
-                  <li>2+2+2+1+1</li>
-                  <li>2+2+1+1+1+1</li>
-                  <li>2+1+1+1+1+1+1</li>
-                  <li>1+1+1+1+1+1+1+1 odd parts</li>
-              </ul>
-          </sidebyside>
-      </figure>
-    <p>Note that there are <m>6</m> partitions of <m>8</m> into <em>distinct</em> parts. Also there are <m>6</m> partitions of <m>8</m> into <em>odd</em> parts. While it might seem that this is a coincidence, it in fact is always the case as <xref ref="thm_partition"  /> states. Before looking at that theorem and its proof, let's think about what a generating function for <m>p_n</m>, the number of partitions of <m>n</m>, would look like. Given a partition of <m>n</m>, we can count how many <m>1</m>'s appear, how many <m>2</m>'s appear, and so on. This suggests a similarity with our fruit basket problems earlier in the chapter, leading to the generating function
-    <me>
-        P(x) = \left(\sum_{m=0}^\infty x^{m}\right)\left(\sum_{m=0}^\infty x^{2m}\right)         \left(\sum_{m=0}^\infty x^{3m}\right)\cdots         \left(\sum_{m=0}^\infty x^{km}\right)\cdots = \prod_{m=1}^\infty\frac{1}{1-x^m}.
-    </me>
-    Here the factor whose sum contains terms <m>x^{km}</m> is accounting for the number of <m>k</m>'s in the partition. While <m>P(x)</m> has a quite elegant form, that doesn't mean that it's terribly useful for computing <m>p_n</m>. In fact, providing an asymptotic estimate for <m>p_n</m> was a notoriously difficult problem, finally addressed by Hardy and Ramanujan in 1918. A popular account of this can be found in Robert Kanigel's 1991 book <pubtitle>The Man who Knew Infinity</pubtitle> or the 2016 film with the same title.
-    </p>
 
-    <p>Proving the relationship between the number of partitions into distinct parts and the number of partitions into odd parts will involve restricted versions of the generating function <m>P(x)</m> from above.</p>
-    <theorem xml:id="thm_partition">
-        <statement>
-            <p>For each <m>n\ge1</m>, the number of partitions of <m>n</m> into distinct parts is equal to the number of partitions of <m>n</m> into odd parts.
-            </p>
-        </statement>
-        <proof>
-            <p>The generating function <m>D(x)</m> for the number of partitions of <m>n</m> into distinct parts is
-            <me>
-                D(x)=\prod_{n=1}^\infty (1+x^n).
-            </me>
-            On the other hand, the generating function <m>O(x)</m> for the number of partitions of <m>n</m> into odd parts is
-            <me>
-                O(x)=\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}.
-            </me>
-            </p>
-            <p>To see that <m>D(x)=O(x)</m>, we note that <m>1-x^{2n}=(1-x^n)(1+x^n)</m> for all <m>n\ge1</m>. Therefore,
-            <md>
-                <mrow>  D(x)\amp =\prod_{n=1}^\infty
-                (1+x^n)=\prod_{n=1}^\infty\frac{1-x^{2n}}{1-x^n} =\frac{\prod_{n=1}^\infty(1-x^{2n})}{\prod_{n=1}^\infty(1-x^n)}</mrow>
-                <mrow>  \amp =\frac{\prod_{n=1}^\infty(1-x^{2n})}{
-                \prod_{n=1}^\infty(1-x^{2n-1})\prod_{n=1}^\infty(1-x^{2n})}
-                =\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}</mrow>
-                <mrow>  \amp = O(x).</mrow>
-            </md>
-            </p>
-        </proof>
-    </theorem>
+<section permid="BkB" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_genfunction_partitions-integer">
+  <title>Partitions of an Integer</title>
+  <p permid="drL">
+    A recurring theme in this course has been to count the number of integer solutions to an equation of the form <m>x_1+x_2+\cdots + x_k = n</m>.
+    What if we wanted to count the number of such solutions but didn't care what <m>k</m> was?
+    How about if we took this new question and required that the <m>x_i</m> be <term>distinct</term>
+    (<ie />, <m>x_i\neq x_j</m> for <m>i\neq j</m>)?
+    What about if we required that each <m>x_i</m> be odd?
+    These certainly don't seem like easy questions to answer at first,
+    but generating functions will allow us to say something very interesting about the answers to the last two questions.
+  </p>
+
+  <p permid="JyU">
+    By a <term>partition</term> <m>P</m> of an integer,
+        <idx><h>partition</h><h>of an integer</h></idx>
+    we mean a collection of
+    (not necessarily distinct)
+    positive integers such that <m>\sum_{i\in P} i = n</m>.
+    (By convention,
+    we will write the elements of <m>P</m> from largest to smallest.)
+    For example, <m>2+2+1</m> is a partition of <m>5</m>.
+    For each <m>n\ge0</m>,
+    let <m>p_n</m> denote the number of partitions of the integer <m>n</m>
+    (with <m>p_0=1</m> by convention).
+    Note that <m>p_8=22</m> as evidenced by the list in <xref ref="fig_genfunction_partsof8" />.
+  </p>
+
+  <figure permid="BUv" xml:id="fig_genfunction_partsof8">
+    <caption>The partitions of <m>8</m>, noting those into distinct parts
+    and those into odd parts.</caption>
+    <sidebyside permid="NyT">
+      <ul permid="ZNl" label="" cols="2">
+        <li permid="FUu">8 distinct parts</li>
+
+        <li permid="mbD">7+1 distinct parts, odd parts</li>
+
+        <li permid="SiM">6+2 distinct parts</li>
+
+        <li permid="ypV">6+1+1</li>
+
+        <li permid="exe">5+3 distinct parts, odd parts</li>
+
+        <li permid="KEn">5+2+1 distinct parts</li>
+
+        <li permid="qLw">5+1+1+1 odd parts</li>
+
+        <li permid="WSF">4+4</li>
+
+        <li permid="CZO">4+3+1 distinct parts</li>
+
+        <li permid="jgX">4+2+2</li>
+
+        <li permid="Pog">4+2+1+1</li>
+
+        <li permid="vvp">4+1+1+1+1</li>
+
+        <li permid="bCy">3+3+2</li>
+
+        <li permid="HJH">3+3+1+1 odd parts</li>
+
+        <li permid="nQQ">3+2+2+1</li>
+
+        <li permid="TXZ">3+2+1+1+1</li>
+
+        <li permid="Afi">3+1+1+1+1+1 odd parts</li>
+
+        <li permid="gmr">2+2+2+2</li>
+
+        <li permid="MtA">2+2+2+1+1</li>
+
+        <li permid="sAJ">2+2+1+1+1+1</li>
+
+        <li permid="YHS">2+1+1+1+1+1+1</li>
+
+        <li permid="EPb">1+1+1+1+1+1+1+1 odd parts</li>
+      </ul>
+    </sidebyside>
+
+  </figure>
+
+  <p permid="pGd">
+    Note that there are <m>6</m> partitions of <m>8</m> into
+    <em>distinct</em> parts.
+    Also there are <m>6</m> partitions of <m>8</m> into <em>odd</em> parts.
+    While it might seem that this is a coincidence,
+    it in fact is always the case as <xref ref="thm_partition"  /> states.
+    Before looking at that theorem and its proof,
+    let's think about what a generating function for <m>p_n</m>,
+    the number of partitions of <m>n</m>, would look like.
+    Given a partition of <m>n</m>,
+    we can count how many <m>1</m>'s appear,
+    how many <m>2</m>'s appear, and so on.
+    This suggests a similarity with our fruit basket problems earlier in the chapter,
+    leading to the generating function
+    <me permid="ibE">
+      P(x) = \left(\sum_{m=0}^\infty x^{m}\right)\left(\sum_{m=0}^\infty x^{2m}\right)         \left(\sum_{m=0}^\infty x^{3m}\right)\cdots         \left(\sum_{m=0}^\infty x^{km}\right)\cdots = \prod_{m=1}^\infty\frac{1}{1-x^m}
+    </me>.
+    Here the factor whose sum contains terms <m>x^{km}</m> is accounting for the number of <m>k</m>'s in the partition.
+    While <m>P(x)</m> has a quite elegant form,
+    that doesn't mean that it's terribly useful for computing <m>p_n</m>.
+    In fact, providing an asymptotic estimate for <m>p_n</m> was a notoriously difficult problem,
+    finally addressed by Hardy and Ramanujan in 1918.
+    A popular account of this can be found in Robert Kanigel's 1991 book <pubtitle>The Man who Knew Infinity</pubtitle> or the 2016 film with the same title.
+  </p>
+
+  <p permid="VNm">
+    Proving the relationship between the number of partitions into distinct parts and the number of partitions into odd parts will involve restricted versions of the generating function <m>P(x)</m> from above.
+  </p>
+
+  <theorem permid="hrK" xml:id="thm_partition">
+    <statement>
+      <p permid="xkC">
+        For each <m>n\ge1</m>,
+        the number of partitions of <m>n</m> into distinct parts is equal to the number of partitions of <m>n</m> into odd parts.
+      </p>
+    </statement>
+
+    <proof permid="tGc">
+      <p permid="kWk">
+        The generating function <m>D(x)</m> for the number of partitions of <m>n</m> into distinct parts is
+        <me permid="OiN">
+          D(x)=\prod_{n=1}^\infty (1+x^n)
+        </me>.
+        On the other hand,
+        the generating function <m>O(x)</m> for the number of partitions of <m>n</m> into odd parts is
+        <me permid="upW">
+          O(x)=\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}
+        </me>.
+      </p>
+
+      <p permid="Rdt">
+        To see that <m>D(x)=O(x)</m>,
+        we note that <m>1-x^{2n}=(1-x^n)(1+x^n)</m> for all <m>n\ge1</m>.
+        Therefore,
+        <md permid="axf">
+          <mrow>D(x)\amp =\prod_{n=1}^\infty
+          (1+x^n)=\prod_{n=1}^\infty\frac{1-x^{2n}}{1-x^n} =\frac{\prod_{n=1}^\infty(1-x^{2n})}{\prod_{n=1}^\infty(1-x^n)}</mrow>
+          <mrow>\amp =\frac{\prod_{n=1}^\infty(1-x^{2n})}{
+          \prod_{n=1}^\infty(1-x^{2n-1})\prod_{n=1}^\infty(1-x^{2n})}
+          =\prod_{n=1}^\infty\frac{1}{1-x^{2n-1}}</mrow>
+          <mrow>\amp = O(x)</mrow>
+        </md>.
+      </p>
+    </proof>
+  </theorem>
 </section>
+

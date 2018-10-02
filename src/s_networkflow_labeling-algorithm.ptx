@@ -1,66 +1,212 @@
-<section xml:id="s_networkflow_labeling-algorithm">
-    <title>The Ford-Fulkerson Labeling Algorithm</title>
-    <p>In this section, we outline the classic Ford-Fulkerson labeling algorithm for finding a maximum flow in a network. The algorithm begins with a linear order on the vertex set which establishes a notion of <term>precedence</term>. Typically, the first vertex in this linear order is the source while the second is the sink. After that, the vertices can be listed in any order. In this book, we will use the following convention: the vertices will be labeled with capital letters of the English alphabet and the linear order will be <m>(S,T,A,B,C,D,E,F,G,\dots)</m>, which we will refer to as the <term>pseudo-alphabetic order</term><idx><h>pseudo-alphabetic order</h></idx>. Of course, this convention only makes sense for networks with at most <m>26</m> vertices, but this limitation will not cramp our style. For real world problems, we take comfort in the fact that computers can deal quite easily with integer keys of just about any size.
-    </p>
 
-    <p>Before providing a precise description of the algorithm, let's take a minute to consider a general overview. In carrying out the labeling algorithm, vertices will be classified as either <term>labeled</term> or <term>unlabeled</term>. At first, we will start with only the source being labeled while all other vertices will be unlabeled. By criteria yet to be spelled out, we will systematically consider unlabeled vertices and determine which should be labeled. If we ever label the sink, then we will have discovered an augmenting path, and the flow will be suitably updated. After updating the flow, we start over again with just the source being labeled.
-    </p>
 
-    <p>This process will be repeated until (and we will see that this always occurs) we reach a point where the labeling halts with some vertices labeled (one of these is the source) and some vertices unlabeled (one of these is the sink). We will then note that the partition <m>V= L\cup U</m> into labeled and unlabeled vertices (hence our choice of <m>L</m> and <m>U</m> as names) is a cut whose capacity is exactly equal to the value of the current flow. This resolves the debate from earlier in the chapter and says that the maximum flow/minimum cut question is more like antichains and partitioning into chains than clique number and chromatic number. In particular, the labeling algorithm will provide a proof of the following theorem:
-    </p>
+<section permid="zZe" xml:id="s_networkflow_labeling-algorithm">
+  <title>The Ford-Fulkerson Labeling Algorithm</title>
+  <p permid="Lid">
+    In this section,
+    we outline the classic Ford-Fulkerson labeling algorithm for finding a maximum flow in a network.
+    The algorithm begins with a linear order on the vertex set which establishes a notion of <term>precedence</term>.
+    Typically, the first vertex in this linear order is the source while the second is the sink.
+    After that, the vertices can be listed in any order.
+    In this book, we will use the following convention:
+    the vertices will be labeled with capital letters of the English alphabet and the linear order will be <m>(S,T,A,B,C,D,E,F,G,\dots)</m>,
+    which we will refer to as the <term>pseudo-alphabetic order</term>.
+        <idx><h>pseudo-alphabetic order</h></idx>
+    Of course, this convention only makes sense for networks with at most <m>26</m> vertices,
+    but this limitation will not cramp our style.
+    For real world problems,
+    we take comfort in the fact that computers can deal quite easily with integer keys of just about any size.
+  </p>
 
-    <theorem>
-        <title>The Max Flow<ndash />Min Cut Theorem</title>
-        <statement>
-            <p>Let <m>G=(V,E)</m> be a network. If <m>v_0</m> is the maximum value of a flow and <m>c_0</m> is the minimum capacity <m>c_0</m> of a cut, then <m>v_0=c_0</m>.
+  <p permid="rpm">
+    Before providing a precise description of the algorithm,
+    let's take a minute to consider a general overview.
+    In carrying out the labeling algorithm,
+    vertices will be classified as either <term>labeled</term>
+    or <term>unlabeled</term>.
+    At first, we will start with only the source being labeled while all other vertices will be unlabeled.
+    By criteria yet to be spelled out,
+    we will systematically consider unlabeled vertices and determine which should be labeled.
+    If we ever label the sink,
+    then we will have discovered an augmenting path,
+    and the flow will be suitably updated.
+    After updating the flow,
+    we start over again with just the source being labeled.
+  </p>
+
+  <p permid="Xwv">
+    This process will be repeated until
+    (and we will see that this always occurs)
+    we reach a point where the labeling halts with some vertices labeled
+    (one of these is the source)
+    and some vertices unlabeled
+    (one of these is the sink).
+    We will then note that the partition
+    <m>V= L\cup U</m> into labeled and unlabeled vertices
+    (hence our choice of <m>L</m> and <m>U</m> as names)
+    is a cut whose capacity is exactly equal to the value of the current flow.
+    This resolves the debate from earlier in the chapter and says that the maximum flow/minimum cut question is more like antichains and partitioning into chains than clique number and chromatic number.
+    In particular,
+    the labeling algorithm will provide a proof of the following theorem:
+  </p>
+
+  <theorem permid="ggn">
+    <title>The Max Flow<ndash />Min Cut Theorem</title>
+    <statement>
+      <p permid="yTL">
+        Let <m>G=(V,E)</m> be a network.
+        If <m>v_0</m> is the maximum value of a flow and <m>c_0</m> is the minimum capacity <m>c_0</m> of a cut,
+        then <m>v_0=c_0</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p permid="DDE">
+    We're now ready to describe the
+    <term>Ford-Fulkerson labeling algorithm</term> in detail.
+  </p>
+
+  <algorithm permid="Mnw" xml:id="alg_labeling">
+    <title>Ford-Fulkerson Labeling Algorithm</title>
+    <idx><h>labeling algorithm</h></idx>
+    <idx><h>Ford-Fulkerson labeling algorithm</h></idx>
+    <statement>
+      <p permid="faU">
+        <dl permid="suF">
+          <li permid="YBO">
+            <title>Labeling the Vertices</title>
+            <p permid="VHi">
+              Vertices will be labeled with ordered triples of symbols.
+              Each time we start the labeling process,
+              we begin by labeling the source with the triple <m>(*,+,\infty)</m>.
+              The rules by which we label vertices will be explicit.
             </p>
-        </statement>
-    </theorem>
+          </li>
 
-    <p>We're now ready to describe the <term>Ford-Fulkerson labeling algorithm</term> in detail.
-    </p>
-
-    <algorithm xml:id="alg_labeling">
-        <title>Ford-Fulkerson Labeling Algorithm</title>
-        <idx><h>labeling algorithm</h></idx>
-        <idx><h>Ford-Fulkerson labeling algorithm</h></idx>
-        <statement>
-            <p>
-               <dl>
-                <li>
-                    <title>Labeling the Vertices</title>
-                    <p>Vertices will be labeled with ordered triples of symbols.  Each time we start the labeling process, we begin by labeling the source with the triple <m>(*,+,\infty)</m>.  The rules by which we label vertices will be explicit.</p>
-                </li>
-                <li>
-                    <title>Potential on a Labeled Vertex</title>
-                    <p>Let <m>u</m> be a labeled vertex.  The third coordinate of the label given to <m>u</m> will be positive real number<mdash />although it may be infinite.  We call this quantity the <term>potential</term><idx><h>potential</h></idx> on <m>u</m> and denote it by <m>p(u)</m>. (The potential will serve as the amount that the flow can be updated by.) Note that the potential on the source is infinite.</p>
-                </li>
-                <li>
-                    <title>First Labeled, First Scanned</title>
-                    <p>The labeling algorithm involves a scan from a <em>labeled</em> vertex <m>u</m>.  As the vertices are labeled, they determine another linear order.  The source will always be the first vertex in this order.  After that, the order in which vertices are labeled will change with time.  But the important rule is that we scan vertices in the order that they are labeled<mdash />until we label the sink.  If for example, the initial scan<mdash />always done from the source<mdash />results in labels being applied to vertices <m>D</m>, <m>G</m> and <m>M</m>, then we next scan from vertex <m>D</m>.  If that scan results in vertices <m>B</m>, <m>F</m>, <m>G</m> and <m>Q</m> being labeled, then we next scan from <m>G</m>, as it was labeled before <m>B</m>, even though <m>B</m> precedes <m>G</m> in the pseudo-alphabetic order.  This aspect of the algorithm results in a <em>breadth-first</em> search of the vertices looking for ways to label previously unlabeled vertices.</p>
-                </li>
-                <li><title>Never Relabel a Vertex</title>
-                <p>Once a vertex is labeled, we do not change its label.  We are content to label previously unlabeled vertices<mdash />up until the time where we label the sink.  Then, after updating the flow and increasing the value, all labels, except of course the special label on the source, are discarded and we start all over again.</p>
-                </li>
-                <li>
-                    <title>Labeling Vertices Using Forward Edges</title>
-                    <p>Suppose we are scanning from a labeled vertex <m>u</m> with potential <m>p(u)>0</m>.  From <m>u</m>, we consider the unlabeled neighbors of <m>u</m> in pseudo-alphabetic order.  Now suppose that we are looking at a neighbor <m>v</m> of <m>u</m> with the edge <m>(u,v)</m> belonging to the network.  This means that the edge is directed from <m>u</m> to <m>v</m>.  If <m>e=(u,v)</m> is not full, then we label the vertex <m>v</m> with the triple <m>(u,+,p(v))</m> where <m>p(v)=\min\{p(u),c(e)-\phi(e)\}</m>. We use this definition since the flow cannot be increased by more than the prior potential or the spare capacity on <m>e</m>. Note that the potential <m>p(v)</m> is positive since <m>a</m> is the minimum of two positive numbers.</p>
-                </li>
-                <li>
-                    <title>Labeling Vertices Using Backward Edges</title>
-                    <p>Now suppose that we are looking at a neighbor <m>v</m> of <m>u</m> with the edge <m>(v,u)</m> belonging to the network.  This means that the edge is directed from <m>v</m> to <m>u</m>.  If <m>e=(v,u)</m> is used, then we label the vertex <m>v</m> with the triple <m>(u,-,p(v))</m> where <m>p(v)=\min\{p(u),\phi(e)\}</m>. Here <m>p(v)</m> is defined this way since the flow on <m>e</m> cannot be decreased by more than <m>\phi(e)</m> or <m>p(u)</m>.  Again, note that the potential <m>p(v)</m> is positive since <m>a</m> is the minimum of two positive numbers.</p>
-                </li>
-                <li>
-                    <title>What Happens When the Sink is Labeled?</title>
-                    <p>The labeling algorithm halts if the sink is ever labeled.  Note that we are always trying our best to label the sink, since in each scan the sink is the very first vertex to be considered.  Now suppose that the sink is labeled with the triple <m>(u,+,a)</m>.  Note that the second coordinate on the label must be <m>+</m> since all edges incident with the sink are oriented towards the sink.</p>
-
-                <p>We claim that we can find an augmenting path <m>P</m> which results in an increased flow with <m>\delta=a</m>, the potential on the sink.  To see this, we merely back-track.  The sink <m>T</m> got its label from <m>u=u_1</m>, <m>u_1</m> got its label from <m>u_2</m>, and so forth.  Eventually, we discover a vertex <m>u_m</m> which got its label from the source.  The augmenting path is then <me>P=(S,u_m,u_{m-1},\dots,u_1,T).</me> The value of <m>\delta</m> for this path is the potential <m>p(T)</m> on the sink since we've carefully ensured that <m>p(u_m)\geq p(u_{m-1})\geq\cdots\geq p(u_1)\geq p(T)</m>.</p></li>
-                <li>
-                    <title>And if the Sink is Not Labeled?</title>
-                    <p>On the other hand, suppose we have scanned from every labeled vertex and there are still unlabeled vertices remaining, one of which is the sink.  Now we claim victory.  To see that we have won, we simply observe that if <m>L</m> is the set of labeled vertices, and <m>U</m> is the set of unlabeled vertices, then every edge <m>e=(x,y)</m> with <m>x\in L</m> and <m>y\in U</m> is full, <ie />, <m>\phi(e)=c(e)</m>.  If this were not the case, then <m>y</m> would qualify for a label with <m>x</m> as the first coordinate.  Also, note that <m>\phi(y,x)=0</m> for every edge <m>e</m> with <m>x\in L</m> and <m>y\in U</m>.  Regardless, we see that the capacity of the cut <m>V=L\cup U</m> is exactly equal to the value of the current flow, so we have both a maximum flow and minimum cut providing a certificate of optimality.</p>
-                </li>
-               </dl>
+          <li permid="EIX">
+            <title>Potential on a Labeled Vertex</title>
+            <p permid="BOr">
+              Let <m>u</m> be a labeled vertex.
+              The third coordinate of the label given to <m>u</m> will be positive real number<mdash />although it may be infinite.
+              We call this quantity the <term>potential</term>
+                <idx><h>potential</h></idx>
+              on <m>u</m> and denote it by <m>p(u)</m>.
+              (The potential will serve as the amount that the flow can be updated by.)
+              Note that the potential on the source is infinite.
             </p>
-        </statement>
-    </algorithm>
+          </li>
+
+          <li permid="kQg">
+            <title>First Labeled, First Scanned</title>
+            <p permid="hVA">
+              The labeling algorithm involves a scan from a
+              <em>labeled</em> vertex <m>u</m>.
+              As the vertices are labeled, they determine another linear order.
+              The source will always be the first vertex in this order.
+              After that, the order in which vertices are labeled will change with time.
+              But the important rule is that we scan vertices in the order that they are labeled<mdash />until we label the sink.
+              If for example,
+              the initial scan<mdash />always done from the source<mdash />results in labels being applied to vertices <m>D</m>,
+              <m>G</m> and <m>M</m>, then we next scan from vertex <m>D</m>.
+              If that scan results in vertices <m>B</m>, <m>F</m>,
+              <m>G</m> and <m>Q</m> being labeled,
+              then we next scan from <m>G</m>,
+              as it was labeled before <m>B</m>,
+              even though <m>B</m> precedes <m>G</m> in the pseudo-alphabetic order.
+              This aspect of the algorithm results in a <em>breadth-first</em>
+              search of the vertices looking for ways to label previously unlabeled vertices.
+            </p>
+          </li>
+
+          <li permid="QXp">
+            <title>Never Relabel a Vertex</title>
+            <p permid="OcJ">
+              Once a vertex is labeled, we do not change its label.
+              We are content to label previously unlabeled vertices<mdash />up until the time where we label the sink.
+              Then, after updating the flow and increasing the value,
+              all labels,
+              except of course the special label on the source,
+              are discarded and we start all over again.
+            </p>
+          </li>
+
+          <li permid="xey">
+            <title>Labeling Vertices Using Forward Edges</title>
+            <p permid="ujS">
+              Suppose we are scanning from a labeled vertex <m>u</m> with potential <m>p(u)>0</m>.
+              From <m>u</m>,
+              we consider the unlabeled neighbors of <m>u</m> in pseudo-alphabetic order.
+              Now suppose that we are looking at a neighbor <m>v</m> of <m>u</m> with the edge <m>(u,v)</m> belonging to the network.
+              This means that the edge is directed from <m>u</m> to <m>v</m>.
+              If <m>e=(u,v)</m> is not full,
+              then we label the vertex <m>v</m> with the triple
+              <m>(u,+,p(v))</m> where <m>p(v)=\min\{p(u),c(e)-\phi(e)\}</m>.
+              We use this definition since the flow cannot be increased by more than the prior potential or the spare capacity on <m>e</m>.
+              Note that the potential <m>p(v)</m> is positive since <m>a</m> is the minimum of two positive numbers.
+            </p>
+          </li>
+
+          <li permid="dlH">
+            <title>Labeling Vertices Using Backward Edges</title>
+            <p permid="arb">
+              Now suppose that we are looking at a neighbor <m>v</m> of <m>u</m> with the edge <m>(v,u)</m> belonging to the network.
+              This means that the edge is directed from <m>v</m> to <m>u</m>.
+              If <m>e=(v,u)</m> is used,
+              then we label the vertex <m>v</m> with the triple
+              <m>(u,-,p(v))</m> where <m>p(v)=\min\{p(u),\phi(e)\}</m>.
+              Here <m>p(v)</m> is defined this way since the flow on <m>e</m> cannot be decreased by more than <m>\phi(e)</m> or <m>p(u)</m>.
+              Again, note that the potential <m>p(v)</m> is positive since <m>a</m> is the minimum of two positive numbers.
+            </p>
+          </li>
+
+          <li permid="JsQ">
+            <title>What Happens When the Sink is Labeled?</title>
+            <p permid="Gyk">
+              The labeling algorithm halts if the sink is ever labeled.
+              Note that we are always trying our best to label the sink,
+              since in each scan the sink is the very first vertex to be considered.
+              Now suppose that the sink is labeled with the triple <m>(u,+,a)</m>.
+              Note that the second coordinate on the label must be <m>+</m> since all edges incident with the sink are oriented towards the sink.
+            </p>
+
+            <p permid="mFt">
+              We claim that we can find an augmenting path <m>P</m> which results in an increased flow with <m>\delta=a</m>,
+              the potential on the sink.
+              To see this, we merely back-track.
+              The sink <m>T</m> got its label from <m>u=u_1</m>,
+              <m>u_1</m> got its label from <m>u_2</m>, and so forth.
+              Eventually, we discover a vertex <m>u_m</m> which got its label from the source.
+              The augmenting path is then
+              <me permid="jKN">
+                P=(S,u_m,u_{m-1},\dots,u_1,T)
+              </me>.
+              The value of <m>\delta</m> for this path is the potential <m>p(T)</m> on the sink since we've carefully ensured that <m>p(u_m)\geq p(u_{m-1})\geq\cdots\geq p(u_1)\geq p(T)</m>.
+            </p>
+          </li>
+
+          <li permid="pzZ">
+            <title>And if the Sink is Not Labeled?</title>
+            <p permid="SMC">
+              On the other hand,
+              suppose we have scanned from every labeled vertex and there are still unlabeled vertices remaining,
+              one of which is the sink.
+              Now we claim victory.
+              To see that we have won,
+              we simply observe that if <m>L</m> is the set of labeled vertices,
+              and <m>U</m> is the set of unlabeled vertices,
+              then every edge <m>e=(x,y)</m> with <m>x\in L</m> and <m>y\in U</m> is full,
+              <ie />, <m>\phi(e)=c(e)</m>.
+              If this were not the case,
+              then <m>y</m> would qualify for a label with <m>x</m> as the first coordinate.
+              Also, note that <m>\phi(y,x)=0</m> for every edge <m>e</m> with <m>x\in L</m> and <m>y\in U</m>.
+              Regardless, we see that the capacity of the cut
+              <m>V=L\cup U</m> is exactly equal to the value of the current flow,
+              so we have both a maximum flow and minimum cut providing a certificate of optimality.
+            </p>
+          </li>
+        </dl>
+      </p>
+    </statement>
+  </algorithm>
 </section>
+

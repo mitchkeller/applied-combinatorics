@@ -1,49 +1,108 @@
-<section xml:id="s_intro_opt">
-    <title>Combinatorics and Optimization</title>
-    <p>You likely have already been introduced to optimization problems, as calculus students around the world are familiar with the plight of farmers trying to fence the largest area of land given a certain amount of fence or people needing to cross rivers downstream from their current location who must decide where they should cross based on the speed at which they can run and swim. However, these problems are inherently continuous. In theory, you can cross the river at any point you want, even if it were irrational. (OK, so not exactly irrational, but a good decimal approximation.) In this course, we will examine a few optimization problems that are not continuous, as only integer values for the variables will make sense. It turns out that many of these problems are very hard to solve in general.
-    </p>
-    <example>
-        <p>In <xref ref="fig_wgraph-1"  />, we use letters for the labels on the vertices to help distinguish visually from the integer weights on the edges.
-        </p>
-        <figure xml:id="fig_wgraph-1" >
-            <caption>A labeled graph with weighted edges</caption>
-            <image width="55%" source="images/3012-fig12" />
-        </figure>
-        <p>Suppose the vertices are cities, the edges are highways and the weights on the edges represent <term>distance</term>.
-                  <ol>
-            <li>
-                <p>What is the shortest path from vertex<nbsp /><m>E</m> to vertex<nbsp /><m>B</m>?
-                </p>
-            </li>
-            <li>
-                <p>Suppose Ariel is a salesperson whose home base is city<nbsp /><m>A</m>. In what order should Ariel visit the other cities so that she goes through each of them at least once and returns home at the end<mdash />while keeping the total distance traveled to a minimum?  Can Ariel accomplish such a tour visiting each city <em>exactly</em> once?
-                </p>
-            </li>
-            <li>
-                <p>Sanjay is a highway inspection engineer and must traverse every highway each month. Sanjay's homebase is City<nbsp /><m>E</m>. In what order should Sanjay traverse the highways to minimize the total distance traveled? Can Sanjay make such a tour traveling along each highway exactly once?
-                </p>
-            </li>
-        
-                  </ol>
-                </p>
-    </example>
 
-    <example>
-        <p>Now suppose that the vertices are locations of branch banks in Atlanta and that the weights on an edge represents the cost, in millions of dollars, of building a high capacity data link between the branch banks at it two end points. In this model, if there is no edge between two branch banks, it means that the cost of building a data link between this particular pair is prohibitively high (here we might be tempted to say the cost is infinite, but the authors don't admit to knowing the meaning of this word).
-        </p>
-        <p>Our challenge is to decide which data links should be constructed to form a network in which any branch bank can communicate with any other branch. We assume that data can flow in either direction on a link, should it be built, and that data can be relayed through any number of data links. So to allow full communication, we should construct a <term>spanning tree</term> in this network. In <xref ref="fig_spantree-1"  />, we show a graph <m>G</m> on the left and one of its many spanning trees on the right.
-        </p>
-        <figure xml:id="fig_spantree-1" >
-            <caption>A weighted graph and spanning tree</caption>
-            <image width="80%" source="images/3012-fig19" />
-        </figure>
-        <p>The weight of the spanning tree is the sum of the weights on the edges. In our model, this represents the costs, again in millions of dollars, of building the data links associated with the edges in the spanning tree. For the spanning tree shown in <xref ref="fig_spantree-1"  />, this total is
-        <me>
-            12+25+19+18+23+19 = 116.
-        </me>
-        Of all spanning trees, the bank would naturally like to find one having minimum weight.
-        </p>
-        <p>How many spanning trees does this graph have? For a large graph, say one with <m>2875</m> vertices, does it make sense to find all spanning trees and simply take the one with minimum cost? In particular, for a positive integer<nbsp /><m>n</m>, how many trees have vertex set <m>\{1,2,3,\dots,n\}</m>?
-        </p>
-    </example>
+
+<section permid="JsD" xml:id="s_intro_opt">
+  <title>Combinatorics and Optimization</title>
+  <p permid="PRJ">
+    You likely have already been introduced to optimization problems,
+    as calculus students around the world are familiar with the plight of farmers trying to fence the largest area of land given a certain amount of fence or people needing to cross rivers downstream from their current location who must decide where they should cross based on the speed at which they can run and swim.
+    However, these problems are inherently continuous.
+    In theory, you can cross the river at any point you want,
+    even if it were irrational. (OK, so not exactly irrational,
+    but a good decimal approximation.) In this course,
+    we will examine a few optimization problems that are not continuous,
+    as only integer values for the variables will make sense.
+    It turns out that many of these problems are very hard to solve in general.
+  </p>
+
+  <example permid="pzM">
+    <p permid="SMp">
+      In <xref ref="fig_wgraph-1" />,
+      we use letters for the labels on the vertices to help distinguish visually from the integer weights on the edges.
+    </p>
+
+    <figure permid="faH" xml:id="fig_wgraph-1">
+      <caption>A labeled graph with weighted edges</caption>
+      <image width="55%" source="images/3012-fig12" />
+    </figure>
+
+    <p permid="yTy">
+      Suppose the vertices are cities,
+      the edges are highways and the weights on the edges represent <term>distance</term>.
+
+      <ol permid="BOe">
+        <li permid="hVn">
+          <p permid="aqO">
+            What is the shortest path from vertex<nbsp /><m>E</m> to vertex<nbsp /><m>B</m>?
+          </p>
+        </li>
+
+        <li permid="Ocw">
+          <p permid="GxX">
+            Suppose Ariel is a salesperson whose home base is city<nbsp /><m>A</m>.
+            In what order should Ariel visit the other cities so that she goes through each of them at least once and returns home at the end<mdash />while keeping the total distance traveled to a minimum?
+            Can Ariel accomplish such a tour visiting each city <em>exactly</em> once?
+          </p>
+        </li>
+
+        <li permid="ujF">
+          <p permid="mFg">
+            Sanjay is a highway inspection engineer and must traverse every highway each month.
+            Sanjay's homebase is City<nbsp /><m>E</m>.
+            In what order should Sanjay traverse the highways to minimize the total distance traveled?
+            Can Sanjay make such a tour traveling along each highway exactly once?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </example>
+
+  <example permid="VGV">
+    <p permid="LhQ">
+      Now suppose that the vertices are locations of branch banks in Atlanta and that the weights on an edge represents the cost,
+      in millions of dollars,
+      of building a high capacity data link between the branch banks at it two end points.
+      In this model, if there is no edge between two branch banks,
+      it means that the cost of building a data link between this particular pair is prohibitively high
+      (here we might be tempted to say the cost is infinite,
+      but the authors don't admit to knowing the meaning of this word).
+    </p>
+
+    <p permid="roZ">
+      Our challenge is to decide which data links should be constructed to form a network in which any branch bank can communicate with any other branch.
+      We assume that data can flow in either direction on a link,
+      should it be built,
+      and that data can be relayed through any number of data links.
+      So to allow full communication,
+      we should construct a <term>spanning tree</term> in this network.
+      In <xref ref="fig_spantree-1" />,
+      we show a graph <m>G</m> on the left and one of its many spanning trees on the right.
+    </p>
+
+    <figure permid="jKA" xml:id="fig_spantree-1">
+      <caption>A weighted graph and spanning tree</caption>
+      <image width="80%" source="images/3012-fig19" />
+    </figure>
+
+    <p permid="Xwi">
+      The weight of the spanning tree is the sum of the weights on the edges.
+      In our model, this represents the costs,
+      again in millions of dollars,
+      of building the data links associated with the edges in the spanning tree.
+      For the spanning tree shown in <xref ref="fig_spantree-1"  />, this total is
+      <me permid="vYS">
+        12+25+19+18+23+19 = 116
+      </me>.
+      Of all spanning trees,
+      the bank would naturally like to find one having minimum weight.
+    </p>
+
+    <p permid="DDr">
+      How many spanning trees does this graph have?
+      For a large graph, say one with <m>2875</m> vertices,
+      does it make sense to find all spanning trees and simply take the one with minimum cost?
+      In particular, for a positive integer<nbsp /><m>n</m>,
+      how many trees have vertex set <m>\{1,2,3,\dots,n\}</m>?
+    </p>
+  </example>
 </section>
+

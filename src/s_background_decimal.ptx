@@ -1,75 +1,190 @@
-<section xml:id="s_background_decimal">
-    <title>Notation for Natural Numbers</title>
-    <introduction>
-        <p>In some sense, we already have a workable notation for natural numbers.  In fact, we really didn't need a special symbol for <m>s(0)</m>.  The natural number <m>0</m> and the sucessor function <m>s</m> are enough.  For example, the positive integer associated with the number of fingers (including the thumb) on one hand is <m>s(s(s(s(s(0)))))</m>, our net worth is <m>0</m>, and the age of Professor Trotter's son in years when this section was first written was
-        <me>
-            s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(0)))))))))))))))))).
-        </me>
-        Admittedly, this is not very practical, especially if some day we win the lottery or want to discuss the federal deficit.  So it is natural (ugh!) to consider alternative notations.
+
+
+<section permid="mKK" xml:id="s_background_decimal">
+  <title>Notation for Natural Numbers</title>
+  <introduction permid="Lnu">
+    <p permid="UHg">
+      In some sense,
+      we already have a workable notation for natural numbers.
+      In fact, we really didn't need a special symbol for <m>s(0)</m>.
+      The natural number <m>0</m> and the sucessor function <m>s</m> are enough.
+      For example,
+      the positive integer associated with the number of fingers
+      (including the thumb)
+      on one hand is <m>s(s(s(s(s(0)))))</m>,
+      our net worth is <m>0</m>,
+      and the age of Professor Trotter's son in years when this section was first written was
+      <me permid="eaS">
+        s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(0))))))))))))))))))
+      </me>.
+      Admittedly, this is not very practical,
+      especially if some day we win the lottery or want to discuss the federal deficit.
+      So it is natural (ugh!) to consider alternative notations.
+    </p>
+
+    <p permid="AOp">
+      Here is one such scheme.
+      First, let's decide on a natural <m>b>s(0)</m> as <term>base</term>.
+      We will then develop a notation which is called the
+      <term>base <m>b</m> notation</term>.
+      We already have a special symbol for zero, namely <m>0</m>,
+      but we need additional symbols for each natural number <m>n</m> with <m>0\lt n\lt b</m>.
+      These symbols are called <term>digits</term>.
+      For example, the positive integer
+      <m>b=s(s(s(s(s(s(s(s(0))))))))</m> is called <term>eight</term>,
+      and it makes a popular choice as a base.
+      Here are the symbols (digits) customarily chosen for this base:
+      <m>1=s(0)</m>, <m>2=s(1)</m>; <m>3=s(2)</m>;
+      <m>4=s(3)</m>; <m>5=s(4)</m>;
+      <m>6=s(5)</m>; and <m>7=s(6)</m>.
+      Technically speaking,
+      it is not necessary to have a separate symbol for <m>b</m>,
+      but it might be handy regardless.
+      In this case, most people prefer the symbol <m>8</m>.
+      We like this symbol,
+      unless and until it gets lazy and lays down sideways.
+    </p>
+
+    <p permid="gVy">
+      So the first <m>8</m> natural numbers are then <m>0</m>,
+      <m>1</m>,
+      <m>2</m>,
+      <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m> and <m>7</m>.
+      To continue with our representation,
+      we want to use the following basic theorem.
+    </p>
+
+    <theorem permid="fgl">
+      <statement>
+        <p permid="IsO">
+          Let <m>n,d\in \nonnegints</m> with <m>d>0</m>.
+          Then there exist unique natural numbers <m>q</m> and <m>r</m> so that <m>n=qd+r</m> and <m>0\le r \lt d</m>.
+        </p>
+      </statement>
+
+      <proof permid="ruD">
+        <p permid="PXn">
+          Let <m>d\in \nonnegints</m> with <m>d>0</m>.
+          We first show that for each <m>n\in\nonnegints</m>,
+          there exists <m>q,r\in\nonnegints</m> so that <m>n=qd+r</m> and <m>0\le r\lt d</m>.
+          If <m>n=0</m>, we can take <m>q=0</m> and <m>r=0</m>.
+          Now suppose that <m>k=qd+r</m> and
+          <m>0\le r\lt m</m> for some <m>k\in \nonnegints</m>.
         </p>
 
-        <p>Here is one such scheme. First, let's decide on a natural <m>b>s(0)</m> as <term>base</term>. We will then develop a notation which is called the <term>base <m>b</m> notation</term>. We already have a special symbol for zero, namely <m>0</m>, but we need additional symbols for each natural number <m>n</m> with <m>0\lt n\lt b</m>. These symbols are called <term>digits</term>. For example, the positive integer <m>b=s(s(s(s(s(s(s(s(0))))))))</m> is called <term>eight</term>, and it makes a popular choice as a base.  Here are the symbols (digits) customarily chosen for this base: <m>1=s(0)</m>, <m>2=s(1)</m>; <m>3=s(2)</m>; <m>4=s(3)</m>; <m>5=s(4)</m>; <m>6=s(5)</m>; and <m>7=s(6)</m>. Technically speaking, it is not necessary to have a separate symbol for <m>b</m>, but it might be handy regardless. In this case, most people prefer the symbol <m>8</m>. We like this symbol, unless and until it gets lazy and lays down sideways.
+        <p permid="wew">
+          Note that <m>r\lt d</m> implies <m>r+1\le d</m>.
+          If <m>r+1\lt d</m>, then <m>k+1=qd+(r+1)</m>.
+          On the other hand, if <m>r+1=d</m>, then <m>k+1=(q+1)d+0</m>.
         </p>
 
-        <p>So the first <m>8</m> natural numbers are then <m>0</m>, <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m> and <m>7</m>. To continue with our representation, we want to use the following basic theorem.
+        <p permid="clF">
+          Now that existence has been settled,
+          we note that the uniqueness of <m>q</m> and <m>r</m> follow immediately from the cancellation properties.
         </p>
+      </proof>
+    </theorem>
 
-        <theorem>
-            <statement>
-                <p>Let <m>n,d\in \nonnegints</m> with <m>d>0</m>. Then there exist unique natural numbers <m>q</m> and <m>r</m> so that <m>n=qd+r</m> and <m>0\le r \lt d</m>.
-                </p>
-            </statement>
+    <p permid="NcH">
+      Now suppose that for some <m>k\in \nonnegints</m>, with <m>k\ge 7</m>,
+      we have defined a base eight notation for the representation of <m>k</m>,
+      for all <m>n</m> with <m>0\le n\le k</m>,
+      and that in each case,
+      this representation consists of a string of digits,
+      written left to right, and selected from <m>\{0,1,2,3,4,5,6,7\}</m>.
+      Write <m>k+1=qb+r</m> where <m>0\le r\lt b</m>.
+      Note that <m>q\le k</m>,
+      so that we already have a representation for <m>q</m>.
+      To obtain a representation of <m>k+1</m>,
+      we simply append <m>r</m> at the (right) end.
+    </p>
 
-            <proof>
-                <p>Let <m>d\in \nonnegints</m> with <m>d>0</m>. We first show that for each <m>n\in\nonnegints</m>, there exists <m>q,r\in\nonnegints</m> so that <m>n=qd+r</m> and <m>0\le r\lt d</m>. If <m>n=0</m>, we can take <m>q=0</m> and <m>r=0</m>. Now suppose that <m>k=qd+r</m> and <m>0\le r\lt m</m> for some <m>k\in \nonnegints</m>.
-                </p>
+    <p permid="tjQ">
+      For example, consider the age of Professor Trotter's son.
+      It is then written as<nbsp />22.
+      And to emphasize the base eight notation,
+      most people would say <m>22</m>,
+      base<nbsp /><m>8</m> and write <m>(22)_8</m>.
+    </p>
 
-                <p>Note that <m>r\lt d</m> implies <m>r+1\le d</m>.  If <m>r+1\lt d</m>, then <m>k+1=qd+(r+1)</m>. On the other hand, if <m>r+1=d</m>, then <m>k+1=(q+1)d+0</m>.
-                </p>
+    <p permid="ZqZ">
+      Among the more popular bases are base<nbsp />2,
+      where only the digits<nbsp />0 and<nbsp />1 are used, and base<nbsp />sixteen,
+      where sixteen is the popular word for <m>(20)_8</m>.
+      Here the digit symbols are
+      <me permid="Kib">
+        0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+      </me>
+      Another popular choice, in fact the one in most widespread use in banks,
+      shopping centers and movie theatres, is base <term>ten</term>.
+      Ten is the natural number<nbsp />A, base sixteen.
+      Also, ten is <m>(12)_8</m>.
+      Most folks use the digits <m>0,1,2,3,4,5,6,7,8,9</m> for base ten notation.
+      And when no other designation is made,
+      then it is assumed that the natural number is written base ten.
+      So of course, Professor Trotter's son is 18 and is a freshman at Georgia Tech.
+      Which explains why his hair is as white as it is.
+    </p>
 
-                <p>Now that existence has been settled, we note that the uniqueness of <m>q</m> and <m>r</m> follow immediately from the cancellation properties.
-                </p>
-            </proof>
-        </theorem>
-        <p>Now suppose that for some <m>k\in \nonnegints</m>, with <m>k\ge 7</m>, we have defined a base eight notation for the representation of <m>k</m>, for all <m>n</m> with <m>0\le n\le k</m>, and that in each case, this representation consists of a string of digits, written left to right, and selected from <m>\{0,1,2,3,4,5,6,7\}</m>.  Write <m>k+1=qb+r</m> where <m>0\le r\lt b</m>. Note that <m>q\le k</m>, so that we already have a representation for <m>q</m>. To obtain a representation of <m>k+1</m>, we simply append <m>r</m> at the (right) end.
+    <p permid="Fyi">
+      For any base <m>b>1</m>,
+      caution must be exercised when discussing multiplication,
+      since writing the product <m>m\times n</m> in the abbreviated form <m>mn</m> causes us some grief.
+      For example, if <m>b = 8</m>,
+      then writing the product <m>372\times4885</m> as <m>3724885</m> is ambiguous.
+      For this reason, when using base<nbsp /><m>b</m> notation,
+      the product symbol <m>\times</m>
+      (or some variation of <m>\times</m>)
+      is always used.
+    </p>
+  </introduction>
+
+  <subsection permid="SRT">
+    <title>Alternate Versions of Induction</title>
+    <p permid="lFr">
+      Many authors prefer to start the development of number systems with the set of
+      <term>positive integers</term>
+          <idx><h>integers</h><h>positive</h></idx>
+      and defer the introduction of the concept of zero.
+      In this setting, you have a non-empty set <m>\posints</m>,
+      a one-to-one <term>successor</term>
+      function <m>s:\posints\injection\posints</m> and a positive integer called <term>one</term>
+      and denoted<nbsp /><m>1</m> that is not the successor of any positive integer.
+      The Principle of Induction then becomes: If <m>\mathbb{M}\subseteq\posints</m>,
+      then <m>\mathbb{M} =\posints</m> if and only if
+
+      <ol permid="XBM" label="a">
+        <li permid="DIV"><m>1\in \mathbb{M}</m>; and</li>
+
+        <li permid="jQe">
+          <m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
+          \Longrightarrow(s(k)\in \mathbb{M})</m>.
+        </li>
+      </ol>
+    </p>
+
+    <p permid="RMA">
+      More generally, to show that a set
+      <m>\mathbb{M}</m> contains all integers greater than or equal to an integer<nbsp /><m>n</m>,
+      it is sufficient to show that (i)<nbsp /><m>n\in\mathbb{M}</m>,
+      and (ii)<nbsp />For all <m>k\in\ints,\,(k\in\mathbb{M}\Longrightarrow(k+1\in\mathbb{M})</m>.
+    </p>
+
+    <p permid="xTJ">
+      Here is another version of induction,
+      one that is particularly useful in combinatorial arguments.
+    </p>
+
+    <theorem permid="yZc">
+      <statement>
+        <p permid="ozX">
+          Let <m>\mathbb{M}\subseteq\posints</m>.
+          If <m>\mathbb{M}\neq\posints</m>,
+          then there is a unique least positive integer <m>n</m> that does not belong to <m>\mathbb{M}</m>.
         </p>
-
-        <p>For example, consider the age of Professor Trotter's son. It is then written as<nbsp />22. And to emphasize the base eight notation, most people would say <m>22</m>, base<nbsp /><m>8</m> and write <m>(22)_8</m>.
-        </p>
-
-        <p>Among the more popular bases are base<nbsp />2, where only the digits<nbsp />0 and<nbsp />1 are used, and base<nbsp />sixteen, where sixteen is the popular word for <m>(20)_8</m>. Here the digit symbols are
-        <me>
-            0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
-        </me>
-        Another popular choice, in fact the one in most widespread use in banks, shopping centers and movie theatres, is base <term>ten</term>.  Ten is the natural number<nbsp />A, base sixteen. Also, ten is <m>(12)_8</m>.  Most folks use the digits <m>0,1,2,3,4,5,6,7,8,9</m> for base ten notation. And when no other designation is made, then it is assumed that the natural number is written base ten. So of course, Professor Trotter's son is 18 and is a freshman at Georgia Tech. Which explains why his hair is as white as it is.
-        </p>
-
-        <p>For any base <m>b>1</m>, caution must be exercised when discussing multiplication, since writing the product <m>m\times n</m> in the abbreviated form <m>mn</m> causes us some grief. For example, if <m>b = 8</m>, then writing the product <m>372\times4885</m> as <m>3724885</m> is ambiguous. For this reason, when using base<nbsp /><m>b</m> notation, the product symbol <m>\times</m> (or some variation of <m>\times</m>) is always used.
-        </p>
-    </introduction>
-
-
-    <subsection>
-        <title>Alternate Versions of Induction</title>
-        <p>Many authors prefer to start the development of number systems with the set of <term>positive integers</term><idx><h>integers</h><h>positive</h></idx> and defer the introduction of the concept of zero. In this setting, you have a non-empty set <m>\posints</m>, a one-to-one <term>successor</term> function <m>s:\posints\injection\posints</m> and a positive integer called <term>one</term> and denoted<nbsp /><m>1</m> that is not the successor of any positive integer. The Principle of Induction then becomes: If <m>\mathbb{M}\subseteq\posints</m>, then <m>\mathbb{M} =\posints</m> if and only if
-        <ol label="a">
-            <li><m>1\in \mathbb{M}</m>; and</li>
-            <li><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
-            \Longrightarrow(s(k)\in \mathbb{M})</m>.</li>
-        </ol>
-        </p>
-        <p>More generally, to show that a set <m>\mathbb{M}</m> contains all integers greater than or equal to an integer<nbsp /><m>n</m>, it is sufficient to show that (i)<nbsp /><m>n\in\mathbb{M}</m>, and (ii)<nbsp />For all <m>k\in\ints,\,(k\in\mathbb{M}\Longrightarrow(k+1\in\mathbb{M})</m>.
-        </p>
-
-        <p>Here is another version of induction, one that is particularly useful in combinatorial arguments.
-        </p>
-
-        <theorem>
-            <statement>
-                <p>Let <m>\mathbb{M}\subseteq\posints</m>. If <m>\mathbb{M}\neq\posints</m>, then there is a unique least positive integer <m>n</m> that does not belong to <m>\mathbb{M}</m>.
-                </p>
-            </statement>
-        </theorem>
-    </subsection>
+      </statement>
+    </theorem>
+  </subsection>
 
 </section>
+

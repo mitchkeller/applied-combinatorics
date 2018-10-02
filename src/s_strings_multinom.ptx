@@ -1,78 +1,129 @@
-<section xml:id="s_strings_multinom">
-    <title>Multinomial Coefficients</title>
-    <p>Let <m>X</m> be a set of <m>n</m> elements. Suppose that we have two colors of paint, say red and blue, and we are going to choose a subset of <m>k</m> elements to be painted red with the rest painted blue. Then the number of different ways this can be done is just the binomial coefficient <m>\binom{n}{k}</m>.  Now suppose that we have three different colors, say red, blue, and green. We will choose <m>k_1</m> to be colored red, <m>k_2</m> to be colored blue, and the remaining <m>k_3 = n - (k_1+k_2)</m> are to be colored green. We may compute the number of ways to do this by first choosing <m>k_1</m> of the <m>n</m> elements to paint red, then from the remaining <m>n-k_1</m> elements choosing <m>k_2</m> to paint blue, and then painting the remaining <m>k_3</m> elements green. It is easy to see that the number of ways to do this is
-    <me>
-        \binom{n}{k_1}\binom{n-k_1}{k_2} = \frac{n!}{k_1!(n-k_1)!}
-        \frac{(n-k_1)!}{k_2!(n-(k_1+k_2))!} = \frac{n!}{k_1!k_2!k_3!}
-    </me>
-    Numbers of this form are called <term>multinomial coefficients</term><idx><h>multinomial coefficient</h></idx>; they are an obvious generalization of the binomial coefficients.  The general notation is:
-    <me>
-        \binom{n}{k_1,k_2,k_3,\dots,k_r}=\frac{n!}{k_1!k_2!k_3!\dots k_r!}.
-    </me>
-    <notation><usage>\binom{n}{k_1,k_2,k_3,\dots,k_r}</usage><description>multinomial coefficient</description></notation>
-    </p>
-    <p>
-        For example,
-    <me>
-        \binom{8}{3,2,1,2}=\frac{8!}{3!2!1!2!}= 
-        \frac{40320}{6\cdot2\cdot1\cdot2}=1680.
-    </me>
-    </p>
-    <p>Note that there is some <q>overkill</q> in this notation, since the value of <m>k_r</m> is determined by <m>n</m> and the values for <m>k_1</m>, <m>k_2,\dots,k_{r-1}</m>. For example, with the ordinary binomial coefficients, we just write <m>\binom{8}{3}</m> and not <m>\binom{8}{3,5}</m>.
-    </p>
 
-    <example>
-        <statement>
-            <p>
-                How many different rearrangements of the string:
-            <me>
-                \text{MITCHELTKELLERANDWILLIAMTTROTTERAREGENIUSES!!}
-            </me>
-                are possible if all letters and characters must be used?
-            </p>
-        </statement>
-        <solution>
-            <p>To answer this question, we note that there are a total of <m>45</m> characters distributed as follows: 3<nbsp />A's, 1<nbsp />C, 1<nbsp />D, 7<nbsp />E's, 1<nbsp />G, 1<nbsp />H, 4<nbsp />I's, 1<nbsp />K, 5<nbsp />L's, 2<nbsp />M's, 2<nbsp />N's, 1<nbsp />O, 4<nbsp />R's, 2<nbsp />S's, 6<nbsp />T's, 1<nbsp />U, 1<nbsp />W, and 2<nbsp />!'s. So the number of rearrangements is
-            <me>
-                \frac{45!}{3!1!1!7!1!1!4!1!5!2!2!1!4!2!6!1!1!2!}.
-            </me>
-            </p>
-        </solution>
-    </example>
-    <p>Just as with binomial coefficients and the Binomial Theorem, the multinomial coefficients arise in the expansion of powers of a multinomial:
-    </p>
 
-    <theorem>
-        <title>Multinomial Theorem</title>
-        <idx><h>multinomial theorem</h></idx>
-        <statement>
-            <p>Let <m>x_1, x_2, \dots, x_r</m> be nonzero real numbers with <m>\sum_{i=1}^r x_i\neq 0</m>. Then for every <m>n\in \nni</m>,
-            <me>
-                (x_1+x_2+\cdots + x_r)^n =
-                \sum_{k_1+k_2+\cdots+k_r=n}\binom{n}{k_1,k_2,\dots,k_r}
-                x_1^{k_1}x_2^{k_2}\cdots x_r^{k_r}.
-            </me>
-            </p>
-        </statement>
-    </theorem>
+<section permid="KUI" xml:id="s_strings_multinom">
+  <title>Multinomial Coefficients</title>
+  <p permid="AvD">
+    Let <m>X</m> be a set of <m>n</m> elements.
+    Suppose that we have two colors of paint, say red and blue,
+    and we are going to choose a subset of <m>k</m> elements to be painted red with the rest painted blue.
+    Then the number of different ways this can be done is just the binomial coefficient <m>\binom{n}{k}</m>.
+    Now suppose that we have three different colors, say red, blue,
+    and green.
+    We will choose <m>k_1</m> to be colored red,
+    <m>k_2</m> to be colored blue,
+    and the remaining <m>k_3 = n - (k_1+k_2)</m> are to be colored green.
+    We may compute the number of ways to do this by first choosing <m>k_1</m> of the <m>n</m> elements to paint red,
+    then from the remaining <m>n-k_1</m> elements choosing <m>k_2</m> to paint blue,
+    and then painting the remaining <m>k_3</m> elements green.
+    It is easy to see that the number of ways to do this is
+    <me permid="YYn">
+      \binom{n}{k_1}\binom{n-k_1}{k_2} = \frac{n!}{k_1!(n-k_1)!}
+      \frac{(n-k_1)!}{k_2!(n-(k_1+k_2))!} = \frac{n!}{k_1!k_2!k_3!}
+    </me>
+    Numbers of this form are called
+    <term>multinomial coefficients</term>
+        <idx><h>multinomial coefficient</h></idx>
+    ; they are an obvious generalization of the binomial coefficients.
+    The general notation is:
+    <me permid="Ffw">
+      \binom{n}{k_1,k_2,k_3,\dots,k_r}=\frac{n!}{k_1!k_2!k_3!\dots k_r!}
+    </me>.
 
-    <example>
-        <statement>
-            <p>What is the coefficient of <m>x^{99}y^{60}z^{14}</m> in <m>(2x^3+y-z^2)^{100}</m>? What about <m>x^{99}y^{61}z^{13}</m>?
-            </p>
-        </statement>
-        <solution>
-            <p>By the Multinomial Theorem, the expansion of <m>(2x^3+y-z^2)^{100}</m> has terms of the form
-            <me>
-                \binom{100}{k_1,k_2,k_3} (2x^3)^{k_1}y^{k_2}(-z^2)^{k_3} =
-                \binom{100}{k_1,k_2,k_3} 2^{k_1}x^{3k_1}y^{k_2}(-1)^{k_3}z^{2k_3}.
-            </me>
-                The <m>x^{99}y^{60}z^{14}</m> arises when <m>k_1 = 33</m>, <m>k_2=60</m>, and <m>k_3=7</m>, so it must have coefficient
-            <me>
-                -\binom{100}{33,60,7}2^{33}.
-            </me>
-                For <m>x^{99}y^{61}z^{13}</m>, the exponent on <m>z</m> is odd, which cannot arise in the expansion of <m>(2x^3+y-z^2)^{100}</m>, so the coefficient is <m>0</m>.
-            </p>
-        </solution>
-    </example>
+    <notation>
+      <usage>\binom{n}{k_1,k_2,k_3,\dots,k_r}</usage>
+      <description>multinomial coefficient</description>
+    </notation>
+
+  </p>
+
+  <p permid="gCM">
+    For example,
+    <me permid="lmF">
+      \binom{8}{3,2,1,2}=\frac{8!}{3!2!1!2!}= 
+      \frac{40320}{6\cdot2\cdot1\cdot2}=1680
+    </me>.
+  </p>
+
+  <p permid="MJV">
+    Note that there is some <q>overkill</q> in this notation,
+    since the value of <m>k_r</m> is determined by <m>n</m> and the values for <m>k_1</m>,
+    <m>k_2,\dots,k_{r-1}</m>.
+    For example, with the ordinary binomial coefficients,
+    we just write <m>\binom{8}{3}</m> and not <m>\binom{8}{3,5}</m>.
+  </p>
+
+  <example permid="Xja">
+    <statement>
+      <p permid="ohl">
+        How many different rearrangements of the string:
+        <me permid="RtO">
+          \text{MITCHELTKELLERANDWILLIAMTTROTTERAREGENIUSES!!}
+        </me>
+        are possible if all letters and characters must be used?
+      </p>
+    </statement>
+    <solution permid="jxs">
+      <p permid="vLK">
+        To answer this question,
+        we note that there are a total of <m>45</m> characters distributed as follows: 3<nbsp />A's, 1<nbsp />C, 1<nbsp />D, 7<nbsp />E's, 1<nbsp />G, 1<nbsp />H, 4<nbsp />I's, 1<nbsp />K, 5<nbsp />L's, 2<nbsp />M's, 2<nbsp />N's, 1<nbsp />O, 4<nbsp />R's, 2<nbsp />S's, 6<nbsp />T's, 1<nbsp />U, 1<nbsp />W, and 2<nbsp />!'s.
+        So the number of rearrangements is
+        <me permid="xAX">
+          \frac{45!}{3!1!1!7!1!1!4!1!5!2!2!1!4!2!6!1!1!2!}
+        </me>.
+      </p>
+    </solution>
+  </example>
+
+  <p permid="sRe">
+    Just as with binomial coefficients and the Binomial Theorem,
+    the multinomial coefficients arise in the expansion of powers of a multinomial:
+  </p>
+
+  <theorem permid="rbR">
+    <title>Multinomial Theorem</title>
+    <idx><h>multinomial theorem</h></idx>
+    <statement>
+      <p permid="Iac">
+        Let <m>x_1, x_2, \dots,
+        x_r</m> be nonzero real numbers with <m>\sum_{i=1}^r x_i\neq 0</m>.
+        Then for every <m>n\in \nni</m>,
+        <me permid="dIg">
+          (x_1+x_2+\cdots + x_r)^n =
+          \sum_{k_1+k_2+\cdots+k_r=n}\binom{n}{k_1,k_2,\dots,k_r}
+          x_1^{k_1}x_2^{k_2}\cdots x_r^{k_r}
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+
+  <example permid="Dqj">
+    <statement>
+      <p permid="Uou">
+        What is the coefficient of
+        <m>x^{99}y^{60}z^{14}</m> in <m>(2x^3+y-z^2)^{100}</m>?
+        What about <m>x^{99}y^{61}z^{13}</m>?
+      </p>
+    </statement>
+    <solution permid="PEB">
+      <p permid="bST">
+        By the Multinomial Theorem,
+        the expansion of <m>(2x^3+y-z^2)^{100}</m> has terms of the form
+        <me permid="JPp">
+          \binom{100}{k_1,k_2,k_3} (2x^3)^{k_1}y^{k_2}(-z^2)^{k_3} =
+          \binom{100}{k_1,k_2,k_3} 2^{k_1}x^{3k_1}y^{k_2}(-1)^{k_3}z^{2k_3}
+        </me>.
+        The <m>x^{99}y^{60}z^{14}</m> arises when <m>k_1 = 33</m>,
+        <m>k_2=60</m>, and <m>k_3=7</m>,
+        so it must have coefficient
+        <me permid="pWy">
+          -\binom{100}{33,60,7}2^{33}
+        </me>.
+        For <m>x^{99}y^{61}z^{13}</m>,
+        the exponent on <m>z</m> is odd,
+        which cannot arise in the expansion of <m>(2x^3+y-z^2)^{100}</m>,
+        so the coefficient is <m>0</m>.
+      </p>
+    </solution>
+  </example>
 </section>
+

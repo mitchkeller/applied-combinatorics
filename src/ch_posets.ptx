@@ -1,76 +1,109 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_posets">
-    <title>Partially Ordered Sets</title>
 
 
-    <introduction>
-        <remark>
-            
-            <p>Alice was surfing the web and found a site listing top movies, grouped by categories (comedy, drama, family, etc) as well as by the decade in which they were released. Alice was intrigued by the critic's choices and his rankings, especially for the top seven dramas from the 1990's.  Alice agreed with the critic's choices as a group but not the specific rankings. She wrote the critic's rankings on the board and just to the right, she gave her own rankings, all the time insisting that she was certainly correct in her opinions.
-            </p>
-            <sidebyside>
-                <tabular>
-                    <row bottom="minor">
-                        <cell />
-                        <cell>Movie Critic's Ranking</cell>
-                        <cell>Alice's Ranking</cell>
-                    </row>
-                    <row>
-                        <cell>1</cell>
-                        <cell>Saving Private Ryan</cell>
-                        <cell>Life is Beautiful</cell>
-                    </row>
-                    <row>
-                        <cell>2</cell>
-                        <cell>Life is Beautiful</cell>
-                        <cell>Saving Private Ryan</cell>
-                    </row>
-                    <row>
-                        <cell>3</cell>
-                        <cell>Forrest Gump</cell>
-                        <cell>Good Will Hunting</cell>
-                    </row>
-                    <row>
-                        <cell>4</cell>
-                        <cell>Braveheart</cell>
-                        <cell>Titanic</cell>
-                    </row>
-                    <row>
-                        <cell>5</cell>
-                        <cell>Good Will Hunting</cell>
-                        <cell>Braveheart</cell>
-                    </row>
-                    <row>
-                        <cell>6</cell>
-                        <cell>Titanic</cell>
-                        <cell>Forrest Gump</cell>
-                    </row>
-                    <row>
-                        <cell>7</cell>
-                        <cell>Jurassic Park</cell>
-                        <cell>Jurassic Park</cell>
-                    </row>
-                </tabular>
-            </sidebyside>
-            <p>Dave studied the two rankings and listened carefully to Alice's rationale (which he felt was a bit over the top), but eventually, he held up the following diagram and offered it as a statement of those comparisons on which both Alice and the movie critic were in agreement.
-            </p>
-            <figure xml:id="fig_movies" >
-                <caption>Top Movies from the 90's</caption>
-                <image width="65%" source="images/movies" />
-            </figure>
-            <p>Do you see how Dave made up this diagram? Add your own rankings of these seven films and then draw the diagram that Dave would produce as a statement about the comparisons on which you, Alice and the movie critic were in agreement.
-            </p>
-        </remark>
-        <p>More generally, when humans are asked to express preferences among a set of options, they often report that establishing a totally ranked list is difficult if not impossible. Instead, they prefer to report a partial order<mdash />where comparisons are made between certain pairs of options but not between others. In this chapter, we make these observations more concrete by introducing the concept of a partially ordered set. Elementary examples include (1)<nbsp />a family of sets which is partially ordered by inclusion and (2)<nbsp />a set of positive integers which is partially ordered by division. From an applications standpoint, a complex construction job typically involves a large number of projects for which there is a notion of precedence between some but not all pairs.  Also, computer file systems are modeled by trees which become partially ordered sets whenever links are added.
-        </p>
-    </introduction>
-    <xi:include  href="s_posets_intro.ptx" />
-    <xi:include  href="s_posets_additional-concepts.ptx" />
-    <xi:include  href="s_posets_dilworth.ptx" />
-    <xi:include  href="s_posets_sorting.ptx" />
-    <xi:include  href="s_posets_subset-lattice.ptx" />
-    <xi:include  href="s_posets_intervalorder.ptx" />
-    <xi:include  href="s_posets_intervalorder_findrep.ptx" />
-    <xi:include  href="s_posets_dilworth-intord.ptx" />
-    <xi:include  href="s_posets_discussion.ptx" />
-    <xi:include  href="s_posets_exercises.ptx" />
+<chapter permid="WDx" xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_posets">
+  <title>Partially Ordered Sets</title>
+  <introduction permid="iRP">
+    <remark>
+      <p permid="OYY">
+        Alice was surfing the web and found a site listing top movies,
+        grouped by categories (comedy, drama, family,
+        etc) as well as by the decade in which they were released.
+        Alice was intrigued by the critic's choices and his rankings,
+        especially for the top seven dramas from the 1990's.
+        Alice agreed with the critic's choices as a group but not the specific rankings.
+        She wrote the critic's rankings on the board and just to the right,
+        she gave her own rankings,
+        all the time insisting that she was certainly correct in her opinions.
+      </p>
+
+      <sidebyside permid="CKG">
+
+        <tabular permid="TIR">
+          <row bottom="minor">
+            <cell />
+            <cell>Movie Critic's Ranking</cell>
+            <cell>Alice's Ranking</cell>
+          </row>
+          <row>
+            <cell>1</cell>
+            <cell>Saving Private Ryan</cell>
+            <cell>Life is Beautiful</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>Life is Beautiful</cell>
+            <cell>Saving Private Ryan</cell>
+          </row>
+          <row>
+            <cell>3</cell>
+            <cell>Forrest Gump</cell>
+            <cell>Good Will Hunting</cell>
+          </row>
+          <row>
+            <cell>4</cell>
+            <cell>Braveheart</cell>
+            <cell>Titanic</cell>
+          </row>
+          <row>
+            <cell>5</cell>
+            <cell>Good Will Hunting</cell>
+            <cell>Braveheart</cell>
+          </row>
+          <row>
+            <cell>6</cell>
+            <cell>Titanic</cell>
+            <cell>Forrest Gump</cell>
+          </row>
+          <row>
+            <cell>7</cell>
+            <cell>Jurassic Park</cell>
+            <cell>Jurassic Park</cell>
+          </row>
+        </tabular>
+
+      </sidebyside>
+
+      <p permid="vgh">
+        Dave studied the two rankings and listened carefully to Alice's rationale
+        (which he felt was a bit over the top),
+        but eventually,
+        he held up the following diagram and offered it as a statement of those comparisons on which both Alice and the movie critic were in agreement.
+      </p>
+
+      <figure permid="nBI" xml:id="fig_movies">
+        <caption>Top Movies from the 90's</caption>
+        <image width="65%" source="images/movies" />
+      </figure>
+
+      <p permid="bnq">
+        Do you see how Dave made up this diagram?
+        Add your own rankings of these seven films and then draw the diagram that Dave would produce as a statement about the comparisons on which you, Alice and the movie critic were in agreement.
+      </p>
+    </remark>
+
+    <p permid="Huz">
+      More generally,
+      when humans are asked to express preferences among a set of options,
+      they often report that establishing a totally ranked list is difficult if not impossible.
+      Instead, they prefer to report a partial order<mdash />where comparisons are made between certain pairs of options but not between others.
+      In this chapter,
+      we make these observations more concrete by introducing the concept of a partially ordered set.
+      Elementary examples include (1)<nbsp />a family of sets which is partially ordered by inclusion and (2)<nbsp />a set of positive integers which is partially ordered by division.
+      From an applications standpoint,
+      a complex construction job typically involves a large number of projects for which there is a notion of precedence between some but not all pairs.
+      Also, computer file systems are modeled by trees which become partially ordered sets whenever links are added.
+    </p>
+  </introduction>
+
+  <xi:include  href="s_posets_intro.ptx" />
+  <xi:include  href="s_posets_additional-concepts.ptx" />
+  <xi:include  href="s_posets_dilworth.ptx" />
+  <xi:include  href="s_posets_sorting.ptx" />
+  <xi:include  href="s_posets_subset-lattice.ptx" />
+  <xi:include  href="s_posets_intervalorder.ptx" />
+  <xi:include  href="s_posets_intervalorder_findrep.ptx" />
+  <xi:include  href="s_posets_dilworth-intord.ptx" />
+  <xi:include  href="s_posets_discussion.ptx" />
+  <xi:include  href="s_posets_exercises.ptx" />
 </chapter>
+

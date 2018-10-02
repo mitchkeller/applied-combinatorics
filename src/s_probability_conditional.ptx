@@ -1,44 +1,131 @@
-<section xml:id="s_probability_conditional">
-    <title>Conditional Probability and Independent Events</title>
-    <introduction>
-        <p>A jar contains twenty marbles of which six are red, nine are blue and the remaining five are green. While blindfolded, Xing selects two of the twenty marbles random (without replacement) and puts one in his left pocket and one in his right pocket. He then takes off the blindfold.
-        </p>
-
-        <p>The probability that the marble in his left pocket is red is <m>6/20</m>.  But Xing first reaches into his right pocket, takes this marble out and discovers that it is blue. Is the probability that the marble in his left pocket is red still <m>6/20</m>? Intuition says that it's slightly higher than that. Here's a more formal framework for answering such questions.
-        </p>
-
-        <p>Let <m>(S,P)</m> be a probability space and let <m>B</m> be an event for which <m>P(B)>0</m>. Then for every event <m>A\subseteq S</m>, we define the <term>probability of <m>A</m>, given <m>B</m></term><idx><h>probability</h><h>conditional</h></idx>, denoted <m>P(A|B)</m><notation><usage>P(A|B)</usage><description>probability of <m>A</m> given <m>B</m></description></notation>, by setting <m>P(A|B)=P(A\cap B)/P(B)</m>.
-        </p>
-        <remark>
-            <p>Returning to the question raised at the beginning of the section, Bob says that this is just conditional probability. He says let <m>B</m> be the event that the marble in the right pocket is blue and let <m>A</m> be the event that the marble in the left pocket is red. Then <m>P(B)=9/20</m>, <m>P(A) = 6/20</m> and <m>P(A\cap B)=(9\cdot6)/380</m>, so that <m>P(A|B)= \frac{54}{380}\frac{20}{9}=6/19</m>, which is of course slightly larger than <m>6/20</m>. Alice is impressed.
-            </p>
-        </remark>
-        <example xml:id="exa_twojars">
-            <p>Consider the jar of twenty marbles from the preceding example. A second jar of marbles is introduced. This jar has eighteen marbles: nine red, five blue and four green. A jar is selected at random and from this jar, two marbles are chosen at random. What is the probability that both are green? Bob is on a roll. He says, <lq />Let <m>G</m> be the event that both marbles are green, and let <m>J_1</m> and <m>J_2</m> be the event that the marbles come from the first jar and the second jar, respectively. Then <m>G= (G\cap J_1)\cup (G\cap J_2)</m>, and <m>(G\cap J_1)+(G\cap J_2)=\emptyset</m>. Furthermore, <m>P(G|J_1)=\binom{5}{2}/\binom{20}{2}</m> and <m>P(G|J_2)=\binom{4}{2}/\binom{18}{2}</m>, while <m>P(J_1)=P(J_2)=1/2</m>.  Also <m>P(G\cap J_i)=P(J_i)P(G|J_i)</m> for each <m>i=1,2</m>. Therefore,
-            <me>
-                P(G)=\frac{1}{2}\frac{\binom{5}{2}}{\binom{20}{2}}+
-                    \frac{1}{2}\frac{\binom{4}{2}}{\binom{18}{2}}=\frac{1}{2}\left(\frac{20}{380}+
-                    \frac{12}{306}\right).
-            </me>
-            That's about <m>4.6</m><percent />.<rq /></p>
-            <p>Now Alice is speechless.
-            </p>
-        </example>
-    </introduction>
 
 
-    <subsection>
-        <title>Independent Events</title>
-        <p>Let <m>A</m> and <m>B</m> be events in a probability space <m>(S,P)</m>. We say <m>A</m> and <m>B</m> are <term>independent</term><idx><h>event</h><h>independent</h></idx><idx><h>independent</h><h>event</h></idx> if <m>P(A\cap B)=P(A)P(B)</m>. Note that when <m>P(B)\neq 0</m>, <m>A</m> and <m>B</m> are independent if and only if <m>P(A)=P(A|B)</m>. Two events that are not independent are said to be <term>dependent</term><idx><h>event</h><h>dependent</h></idx>. Returning to our earlier example, the two events (<m>A</m>: the marble in Xing's left pocket is red and <m>B</m>: the marble in his right pocket is blue) are dependent.
-        </p>
-        <example>
-            <p>Consider the two jars of marbles from <xref ref="exa_twojars"  />. One of the two jars is chosen at random and a single marble is drawn from that jar.  Let <m>A</m> be the event that the second jar is chosen, and let <m>B</m> be the event that the marble chosen turns out to be green. Then <m>P(A)=1/2</m> and <m>P(B)=\frac{1}{2}\frac{5}{20}+ \frac{1}{2}\frac{4}{18}</m>. On the other hand, <m>P(A\cap B)=\frac{1}{2} \frac{4}{18}</m>, so <m>P(A\cap B)\neq P(A)P(B)</m>, and the two events are not independent. Intuitively, this should be clear, since once you know that the marble is green, it is more likely that you actually chose the first jar.
-            </p>
-        </example>
+<section permid="riv" xml:id="s_probability_conditional">
+  <title>Conditional Probability and Independent Events</title>
+  <introduction permid="vSo">
+    <p permid="ACh">
+      A jar contains twenty marbles of which six are red,
+      nine are blue and the remaining five are green.
+      While blindfolded, Xing selects two of the twenty marbles random
+      (without replacement)
+      and puts one in his left pocket and one in his right pocket.
+      He then takes off the blindfold.
+    </p>
 
-        <example xml:id="exa_twodie">
-            <p>A pair of dice are rolled, one red and one blue. Let <m>A</m> be the event that the red die shows either a <m>3</m> or a <m>5</m>, and let <m>B</m> be the event that you get doubles, <ie />, the red die and the blue die show the same number.  Then <m>P(A)=2/6</m>, <m>P(B)=6/36</m>, and <m>P(A\cap B) = 2/36</m>. So <m>A</m> and <m>B</m> are independent.
-            </p>
-        </example>
-    </subsection>
+    <p permid="gJq">
+      The probability that the marble in his left pocket is red is <m>6/20</m>.
+      But Xing first reaches into his right pocket,
+      takes this marble out and discovers that it is blue.
+      Is the probability that the marble in his left pocket is red still <m>6/20</m>?
+      Intuition says that it's slightly higher than that.
+      Here's a more formal framework for answering such questions.
+    </p>
+
+    <p permid="MQz">
+      Let <m>(S,P)</m> be a probability space and let <m>B</m> be an event for which <m>P(B)>0</m>.
+      Then for every event <m>A\subseteq S</m>,
+      we define the <term>probability of <m>A</m>, given <m>B</m></term>,
+          <idx><h>probability</h><h>conditional</h></idx>
+      denoted <m>P(A|B)</m>
+
+      <notation>
+        <usage>P(A|B)</usage>
+        <description>probability of <m>A</m> given <m>B</m></description>
+      </notation>
+
+      , by setting <m>P(A|B)=P(A\cap B)/P(B)</m>.
+    </p>
+
+    <remark>
+      <p permid="sXI">
+        Returning to the question raised at the beginning of the section, Bob says that this is just conditional probability.
+        He says let <m>B</m> be the event that the marble in the right pocket is blue and let <m>A</m> be the event that the marble in the left pocket is red.
+        Then <m>P(B)=9/20</m>,
+        <m>P(A) = 6/20</m> and <m>P(A\cap B)=(9\cdot6)/380</m>,
+        so that <m>P(A|B)= \frac{54}{380}\frac{20}{9}=6/19</m>,
+        which is of course slightly larger than <m>6/20</m>.
+        Alice is impressed.
+      </p>
+    </remark>
+
+    <example permid="PLf" xml:id="exa_twojars">
+      <p permid="bZx">
+        Consider the jar of twenty marbles from the preceding example.
+        A second jar of marbles is introduced.
+        This jar has eighteen marbles:
+        nine red, five blue and four green.
+        A jar is selected at random and from this jar,
+        two marbles are chosen at random.
+        What is the probability that both are green?
+        Bob is on a roll.
+        He says, <lq />Let <m>G</m> be the event that both marbles are green,
+        and let <m>J_1</m> and <m>J_2</m> be the event that the marbles come from the first jar and the second jar,
+        respectively.
+        Then <m>G= (G\cap J_1)\cup (G\cap J_2)</m>,
+        and <m>(G\cap J_1)+(G\cap J_2)=\emptyset</m>.
+        Furthermore,
+        <m>P(G|J_1)=\binom{5}{2}/\binom{20}{2}</m> and <m>P(G|J_2)=\binom{4}{2}/\binom{18}{2}</m>,
+        while <m>P(J_1)=P(J_2)=1/2</m>.
+        Also <m>P(G\cap J_i)=P(J_i)P(G|J_i)</m> for each <m>i=1,2</m>.
+        Therefore,
+        <me permid="Fma">
+          P(G)=\frac{1}{2}\frac{\binom{5}{2}}{\binom{20}{2}}+
+          \frac{1}{2}\frac{\binom{4}{2}}{\binom{18}{2}}=\frac{1}{2}\left(\frac{20}{380}+
+          \frac{12}{306}\right)
+        </me>.
+        That's about <m>4.6</m><percent />.<rq />
+      </p>
+
+      <p permid="IgG">
+        Now Alice is speechless.
+      </p>
+    </example>
+  </introduction>
+
+  <subsection permid="XpE">
+    <title>Independent Events</title>
+    <p permid="ZeR">
+      Let <m>A</m> and <m>B</m> be events in a probability space <m>(S,P)</m>.
+      We say <m>A</m> and <m>B</m> are <term>independent</term>
+          <idx><h>event</h><h>independent</h></idx>
+          <idx><h>independent</h><h>event</h></idx>
+      if <m>P(A\cap B)=P(A)P(B)</m>.
+      Note that when <m>P(B)\neq 0</m>,
+      <m>A</m> and <m>B</m> are independent if and only if <m>P(A)=P(A|B)</m>.
+      Two events that are not independent are said to be <term>dependent</term>.
+          <idx><h>event</h><h>dependent</h></idx>
+      Returning to our earlier example, the two events (<m>A</m>:
+      the marble in Xing's left pocket is red and <m>B</m>:
+      the marble in his right pocket is blue) are dependent.
+    </p>
+
+    <example permid="DwN">
+      <p permid="onP">
+        Consider the two jars of marbles from <xref ref="exa_twojars" />.
+        One of the two jars is chosen at random and a single marble is drawn from that jar.
+        Let <m>A</m> be the event that the second jar is chosen,
+        and let <m>B</m> be the event that the marble chosen turns out to be green.
+        Then <m>P(A)=1/2</m> and <m>P(B)=\frac{1}{2}\frac{5}{20}+ \frac{1}{2}\frac{4}{18}</m>.
+        On the other hand, <m>P(A\cap B)=\frac{1}{2} \frac{4}{18}</m>,
+        so <m>P(A\cap B)\neq P(A)P(B)</m>,
+        and the two events are not independent.
+        Intuitively, this should be clear,
+        since once you know that the marble is green,
+        it is more likely that you actually chose the first jar.
+      </p>
+    </example>
+
+    <example permid="jDW" xml:id="exa_twodie">
+      <p permid="UuY">
+        A pair of dice are rolled, one red and one blue.
+        Let <m>A</m> be the event that the red die shows either a <m>3</m> or a <m>5</m>,
+        and let <m>B</m> be the event that you get doubles,
+        <ie />, the red die and the blue die show the same number.
+        Then <m>P(A)=2/6</m>, <m>P(B)=6/36</m>,
+        and <m>P(A\cap B) = 2/36</m>.
+        So <m>A</m> and <m>B</m> are independent.
+      </p>
+    </example>
+  </subsection>
 </section>
+

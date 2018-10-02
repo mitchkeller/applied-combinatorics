@@ -1,23 +1,43 @@
-<section xml:id="s_induction_inductdefs">
-    <title>Inductive Definitions</title>
-    <p>Although it is primarily a matter of taste, recursive definitions can also be recast in an inductive setting.  As a first example, set <m>1!=1</m> and whenever <m>k!</m> has been defined, set <m>(k+1)!=(k+1)k!</m>.
-    </p>
 
-    <p>As a second example, set
-    <me>
-        \sum_{i=1}^1 f(i) = f(1)\quad\text{and} \quad
-        \sum_{i=1}^{k+1} f(i)= \sum_{i=1}^{k} f(i)+ f(k+1)
+
+<section permid="RGJ" xml:id="s_induction_inductdefs">
+  <title>Inductive Definitions</title>
+  <p permid="xNS">
+    Although it is primarily a matter of taste,
+    recursive definitions can also be recast in an inductive setting.
+    As a first example,
+    set <m>1!=1</m> and whenever <m>k!</m> has been defined,
+    set <m>(k+1)!=(k+1)k!</m>.
+  </p>
+
+  <p permid="dVb">
+    As a second example, set
+    <me permid="WqC">
+      \sum_{i=1}^1 f(i) = f(1)\quad\text{and} \quad
+      \sum_{i=1}^{k+1} f(i)= \sum_{i=1}^{k} f(i)+ f(k+1)
     </me>
-    In this second example, we are already using an abbreviated form, as we have omitted some English phrases.  But the meaning should be clear.
-    </p>
+    In this second example, we are already using an abbreviated form,
+    as we have omitted some English phrases.
+    But the meaning should be clear.
+  </p>
 
-    <p>Now let's back up and give an example which would really be part of the development of number systems. Suppose you knew everything there was to know about the <em>addition</em> of positive integers but had never heard anything about <em>multiplication</em>. Here's how this operation can be defined.
-    </p>
+  <p permid="Kck">
+    Now let's back up and give an example which would really be part of the development of number systems.
+    Suppose you knew everything there was to know about the <em>addition</em>
+    of positive integers but had never heard anything about
+    <em>multiplication</em>.
+    Here's how this operation can be defined.
+  </p>
 
-    <p>Let <m>m</m> be a positive integer. Then set
-    <me>
-        m\cdot1 = m\quad\text{and} \quad m\cdot(k+1)=m\cdot k+ m
+  <p permid="qjt">
+    Let <m>m</m> be a positive integer.
+    Then set
+    <me permid="CxL">
+      m\cdot1 = m\quad\text{and} \quad m\cdot(k+1)=m\cdot k+ m
     </me>
-    You should see that this <em>defines</em> multiplication but doesn't do anything in terms of establishing such familiar properties as the commutative and associative properties. Check out some of the details in <xref ref="app_background"  />.
-    </p>
+    You should see that this <em>defines</em>
+    multiplication but doesn't do anything in terms of establishing such familiar properties as the commutative and associative properties.
+    Check out some of the details in <xref ref="app_background"  />.
+  </p>
 </section>
+

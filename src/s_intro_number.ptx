@@ -1,69 +1,151 @@
-<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_intro_number">
-  <title>Combinatorics and Number Theory</title>
-  <p>Broadly, number theory concerns itself with the properties of the positive integers. G.H.<nbsp />Hardy was a brilliant British mathematician who lived through both World Wars and conducted a large deal of number-theoretic research. He was also a pacifist who was happy that, from his perspective, his research was not <q>useful</q>. He wrote in his 1940 essay <pubtitle>A Mathematician's Apology</pubtitle> <q>[n]o one has yet discovered any warlike purpose to be served by the theory of numbers or relativity, and it seems very unlikely that anyone will do so for many years.</q><fn>G.H.<nbsp />Hardy, <pubtitle>A Mathematician's Apology</pubtitle>, Cambridge University Press, p. 140. (1993 printing)</fn> Little did he know, the purest mathematical ideas of number theory would soon become indispensable for the cryptographic techniques that kept communications secure. Our subject here is not number theory, but we will see a few times where combinatorial techniques are of use in number theory.</p>
-  <example xml:id="ex_collatz"><idx><h>Collatz sequence</h></idx>
-      <p>Form a sequence of positive integers using the following rules. Start with a positive integer <m>n>1</m>. If <m>n</m> is odd, then the next number is <m>3n+1</m>. If <m>n</m> is even, then the next number is <m>n/2</m>. Halt if you ever reach<nbsp /><m>1</m>. For example, if we start with <m>28</m>, the sequence is
-      <me>
-        28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.
-      </me>
-      </p>
-      <p>Now suppose you start with <m>19</m>. Then the first few terms are
-      <me>
-        19, 58, 29, 88, 44, 22.
-      </me>
-        But now we note that the integer <m>22</m> appears in the first sequence,
-        so the two sequences will agree from this point on. Sequences formed
-        by this rule are called <term>Collatz sequences</term>.
-      </p>
 
-      <p>Pick a number somewhere between <m>100</m> and <m>200</m> and write down the sequence you get. Regardless of your choice, you will eventually halt with a<nbsp /><m>1</m>. However, is there some positive integer <m>n</m> (possibly quite large) so that if you start from <m>n</m>, you will never reach<nbsp /><m>1</m>?
-      </p>
+
+<section permid="CjD" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_intro_number">
+  <title>Combinatorics and Number Theory</title>
+  <p permid="gga">
+    Broadly, number theory concerns itself with the properties of the positive integers.
+    G.H.<nbsp />Hardy was a brilliant British mathematician who lived through both World Wars and conducted a large deal of number-theoretic research.
+    He was also a pacifist who was happy that,
+    from his perspective, his research was not <q>useful</q>.
+    He wrote in his 1940 essay <pubtitle>A Mathematician's Apology</pubtitle>
+    <q>[n]o one has yet discovered any warlike purpose to be served by the theory of numbers or relativity,
+    and it seems very unlikely that anyone will do so for many years.</q><fn>
+    G.H.<nbsp />Hardy,
+    <pubtitle>A Mathematician's Apology</pubtitle>, Cambridge University Press,
+    p. 140. (1993 printing)
+    </fn> Little did he know,
+    the purest mathematical ideas of number theory would soon become indispensable for the cryptographic techniques that kept communications secure.
+    Our subject here is not number theory,
+    but we will see a few times where combinatorial techniques are of use in number theory.
+  </p>
+
+  <example permid="iqM" xml:id="ex_collatz">
+    <idx><h>Collatz sequence</h></idx>
+
+    <p permid="Scv">
+      Form a sequence of positive integers using the following rules.
+      Start with a positive integer <m>n>1</m>.
+      If <m>n</m> is odd, then the next number is <m>3n+1</m>.
+      If <m>n</m> is even, then the next number is <m>n/2</m>.
+      Halt if you ever reach<nbsp /><m>1</m>.
+      For example, if we start with <m>28</m>, the sequence is
+      <me permid="sus">
+        28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1
+      </me>.
+    </p>
+
+    <p permid="yjE">
+      Now suppose you start with <m>19</m>.
+      Then the first few terms are
+      <me permid="YBB">
+        19, 58, 29, 88, 44, 22
+      </me>.
+      But now we note that the integer <m>22</m> appears in the first sequence,
+      so the two sequences will agree from this point on.
+      Sequences formed
+      by this rule are called <term>Collatz sequences</term>.
+    </p>
+
+    <p permid="eqN">
+      Pick a number somewhere between <m>100</m> and <m>200</m> and write down the sequence you get.
+      Regardless of your choice, you will eventually halt with a<nbsp /><m>1</m>.
+      However, is there some positive integer <m>n</m>
+      (possibly quite large)
+      so that if you start from <m>n</m>,
+      you will never reach<nbsp /><m>1</m>?
+    </p>
   </example>
 
-  <example>
-    <p>Students in middle school are taught to add fractions by finding least common multiples. For example, the least common multiple of <m>15</m> and <m>12</m> is <m>60</m>, so:
-    <me>
-      \frac{2}{15}+ \frac{7}{12} = \frac{8}{60}+\frac{35}{60} = \frac{43}{60}.
-    </me>
-    How hard is it to find the least common multiple of two integers?</p>
-
-    <p>It's really easy if you can factor them into primes. For example, consider the problem of finding the least common multiple of <m>351785000</m> and <m>316752027900</m> if you just happen to know that
-    <md>
-      <mrow>  351785000 \amp =  2^3\times 5^4\times 7\times19\times 23^2\quad\text{and}</mrow>
-      <mrow>  316752027900 \amp =  2^2\times3\times 5^2\times 7^3\times 11\times 23^4.</mrow>
-    </md>
-    Then the least common multiple is
-    <me>
-      300914426505000 =  2^3\times3\times 5^4\times 7^3\times 11\times 19\times 23^4.
-    </me>
+  <example permid="OxV">
+    <p permid="KxW">
+      Students in middle school are taught to add fractions by finding least common multiples.
+      For example,
+      the least common multiple of <m>15</m> and <m>12</m> is <m>60</m>, so:
+      <me permid="EIK">
+        \frac{2}{15}+ \frac{7}{12} = \frac{8}{60}+\frac{35}{60} = \frac{43}{60}
+      </me>.
+      How hard is it to find the least common multiple of two integers?
     </p>
-    <p>So to find the least common multiple of two numbers, we just have to factor them into primes. That doesn't sound too hard. For starters, can you factor <m>1961</m>? OK, how about <m>1348433</m>? Now for a real challenge.  Suppose you are told that the integer
-    <md>
+
+    <p permid="qFf">
+      It's really easy if you can factor them into primes.
+      For example,
+      consider the problem of finding the least common multiple of <m>351785000</m> and
+      <m>316752027900</m> if you just happen to know that
+      <md permid="QXc">
+        <mrow>351785000 \amp =  2^3\times 5^4\times 7\times19\times 23^2\quad\text{and}</mrow>
+        <mrow>316752027900 \amp =  2^2\times3\times 5^2\times 7^3\times 11\times 23^4</mrow>
+      </md>.
+      Then the least common multiple is
+      <me permid="kPT">
+        300914426505000 =  2^3\times3\times 5^4\times 7^3\times 11\times 19\times 23^4
+      </me>.
+    </p>
+
+    <p permid="WMo">
+      So to find the least common multiple of two numbers,
+      we just have to factor them into primes.
+      That doesn't sound too hard.
+      For starters, can you factor <m>1961</m>?
+      OK, how about <m>1348433</m>?
+      Now for a real challenge.
+      Suppose you are told that the integer
+      <md permid="xel">
         <mrow>c = \amp\,\, 5568490117077035708244283173335040521716369235589951150965</mrow>
         <mrow>\amp\,\, 2043138898236817075547572153799</mrow>
-    </md>
-    is the product of two primes <m>a</m> and <m>b</m>. Can you find them?
+      </md>
+      is the product of two primes <m>a</m> and <m>b</m>.
+      Can you find them?
     </p>
 
-    <p>What if factoring is hard? Can you find the least common multiple of two relatively large integers, say each with about<nbsp /><m>500</m> digits, by another method? How should middle school students be taught to add fractions?
-      </p>
+    <p permid="CTx">
+      What if factoring is hard?
+      Can you find the least common multiple of two relatively large integers,
+      say each with about<nbsp /><m>500</m> digits, by another method?
+      How should middle school students be taught to add fractions?
+    </p>
 
-      <p>As an aside, we note that most calculators can't add or multiply two <m>20</m> digits numbers, much less two numbers with more than<nbsp /><m>500</m> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known commercial examples are <em>Maple</em><registered /> and <em>Mathematica</em><registered />. In this text, we will from time to time, make use of the open source computer algebra system <url href="http://www.sagemath.org">SageMath</url>. We will sometimes embed interactive SageMath cells in the text, but you can also use SageMath for free online via the <url href="http://cloud.sagemath.com/">SageMath Cloud</url>. For example, the SageMath cell below will produce the factorization shown above.</p>
+    <p permid="jaG">
+      As an aside,
+      we note that most calculators can't add or multiply two <m>20</m> digits numbers,
+      much less two numbers with more than<nbsp /><m>500</m> digits.
+      But it is relatively straightforward to write a computer program that will do the job for us.
+      Also, there are some powerful mathematical software tools available.
+      Two very well known commercial examples are
+      <em>Maple</em><registered /> and
+      <em>Mathematica</em><registered />.
+      In this text, we will from time to time,
+      make use of the open source computer algebra system
+      <url href="http://www.sagemath.org">SageMath</url>.
+      We will sometimes embed interactive SageMath cells in the text,
+      but you can also use SageMath for free online via the
+      <url href="http://cloud.sagemath.com/">SageMath Cloud</url>.
+      For example,
+      the SageMath cell below will produce the factorization shown above.
+    </p>
 
       <sage>
         <input>factor(300914426505000)</input>
         <output>2^3 * 3 * 5^4 * 7^3 * 11 * 19 * 23^4</output>
       </sage>
 
-      <p>If you're reading this text in a web browser, go ahead and change the integer in the SageMath cell above to some other, perhaps larger, integer and click the button again to get the prime factorization of your new integer.</p>
-      
-      <p>Now here's how we made up the challenge problem. First, we found a site on the web that lists large primes and found these two values:
-      <md>
-        <mrow>  a \amp = 2425967623052370772757633156976982469681\quad\text{and}</mrow>
-        <mrow>  b \amp =  22953686867719691230002707821868552601124472329079.</mrow>
-      </md>
-      The SageMath code below calculates <m>a\times b</m>, and returns the result instantly.
-      </p>
+    <p permid="PhP">
+      If you're reading this text in a web browser,
+      go ahead and change the integer in the SageMath cell above to some other,
+      perhaps larger,
+      integer and click the button again to get the prime factorization of your new integer.
+    </p>
+
+    <p permid="voY">
+      Now here's how we made up the challenge problem.
+      First, we found a site on the web that lists large primes and found these two values:
+      <md permid="dlu">
+        <mrow>a \amp = 2425967623052370772757633156976982469681\quad\text{and}</mrow>
+        <mrow>b \amp =  22953686867719691230002707821868552601124472329079</mrow>
+      </md>.
+      The SageMath code below calculates <m>a\times b</m>,
+      and returns the result instantly.
+    </p>
 
       <sage>
         <input>a = 2425967623052370772757633156976982469681
@@ -71,61 +153,99 @@ b = 22953686867719691230002707821868552601124472329079
 a*b</input>
 <!--<output>55684901170770357082442831733350405217163692355899511509652043138898236817075547572153799</output>-->
       </sage>
-      
-      <p>On the other hand, if you ask SageMath to factor <m>c</m>, as in the cell below, you'll likely be waiting a long time. If you get a response in more than a couple of minutes, please email us so that we can update the text with larger primes <m>a</m> and <m>b</m>!</p>
+
+    <p permid="bwh">
+      On the other hand, if you ask SageMath to factor <m>c</m>,
+      as in the cell below, you'll likely be waiting a long time.
+      If you get a response in more than a couple of minutes,
+      please email us so that we can update the text with larger primes <m>a</m> and <m>b</m>!
+    </p>
+
       <sage> <input>factor(55684901170770357082442831733350405217163692\
 355899511509652043138898236817075547572153799)</input>
       </sage>
   </example>
-  <p>
+
+  <p permid="Mnj">
     Questions arising in number theory can also have an enumerative flair,
     as the following example shows.
   </p>
-  <example>
+
+  <example permid="uFe">
     <statement>
-      <p>
-        In <xref ref="fig_intro_partsof8"  />, we show the integer partitions
+      <p permid="HDq">
+        In <xref ref="fig_intro_partsof8" />, we show the integer partitions
         of<nbsp /><m>8</m>.
       </p>
-      <figure xml:id="fig_intro_partsof8" >
-          <caption>The partitions of <m>8</m>, noting those into distinct parts
-          and those into odd parts.</caption>
-          <sidebyside>
-              <ul label="" cols="2">
-                  <li>8 distinct parts</li>
-                  <li>7+1 distinct parts, odd parts</li>
-                  <li>6+2 distinct parts</li>
-                  <li>6+1+1</li>
-                  <li>5+3 distinct parts, odd parts</li>
-                  <li>5+2+1 distinct parts</li>
-                  <li>5+1+1+1 odd parts</li>
-                  <li>4+4</li>
-                  <li>4+3+1 distinct parts</li>
-                  <li>4+2+2</li>
-                  <li>4+2+1+1</li>
-                  <li>4+1+1+1+1</li>
-                  <li>3+3+2</li>
-                  <li>3+3+1+1 odd parts</li>
-                  <li>3+2+2+1</li>
-                  <li>3+2+1+1+1</li>
-                  <li>3+1+1+1+1+1 odd parts</li>
-                  <li>2+2+2+2</li>
-                  <li>2+2+2+1+1</li>
-                  <li>2+2+1+1+1+1</li>
-                  <li>2+1+1+1+1+1+1</li>
-                  <li>1+1+1+1+1+1+1+1 odd parts</li>
-              </ul>
-          </sidebyside>
+
+      <figure permid="zYR" xml:id="fig_intro_partsof8">
+        <caption>The partitions of <m>8</m>, noting those into distinct parts
+        and those into odd parts.</caption>
+        <sidebyside permid="aMn">
+          <ul permid="GTw" label="" cols="2">
+            <li permid="naF">8 distinct parts</li>
+
+            <li permid="ThO">7+1 distinct parts, odd parts</li>
+
+            <li permid="zoX">6+2 distinct parts</li>
+
+            <li permid="fwg">6+1+1</li>
+
+            <li permid="LDp">5+3 distinct parts, odd parts</li>
+
+            <li permid="rKy">5+2+1 distinct parts</li>
+
+            <li permid="XRH">5+1+1+1 odd parts</li>
+
+            <li permid="DYQ">4+4</li>
+
+            <li permid="kfZ">4+3+1 distinct parts</li>
+
+            <li permid="Qni">4+2+2</li>
+
+            <li permid="wur">4+2+1+1</li>
+
+            <li permid="cBA">4+1+1+1+1</li>
+
+            <li permid="IIJ">3+3+2</li>
+
+            <li permid="oPS">3+3+1+1 odd parts</li>
+
+            <li permid="UXb">3+2+2+1</li>
+
+            <li permid="Bek">3+2+1+1+1</li>
+
+            <li permid="hlt">3+1+1+1+1+1 odd parts</li>
+
+            <li permid="NsC">2+2+2+2</li>
+
+            <li permid="tzL">2+2+2+1+1</li>
+
+            <li permid="ZGU">2+2+1+1+1+1</li>
+
+            <li permid="FOd">2+1+1+1+1+1+1</li>
+
+            <li permid="lVm">1+1+1+1+1+1+1+1 odd parts</li>
+          </ul>
+        </sidebyside>
+
       </figure>
-      <p>
-        There are<nbsp /><m>22</m> partitions altogether, and as noted, exactly<nbsp /><m>6</m>
-        of them are partitions of<nbsp /><m>8</m> into odd parts. Also, exactly<nbsp /><m>6</m> of them
+
+      <p permid="nKz">
+        There are<nbsp /><m>22</m> partitions altogether,
+        and as noted, exactly<nbsp /><m>6</m>
+        of them are partitions of<nbsp /><m>8</m> into odd parts.
+        Also, exactly<nbsp /><m>6</m> of them
         are partitions of<nbsp /><m>8</m> into distinct parts.
       </p>
 
-      <p>
-        What would be your reaction if we asked you to find the number of integer partitions of <m>25892</m>? Do you think that the number of partitions of <m>25892</m> into odd parts equals the number of partitions of <m>25892</m> into distinct parts? Is there a way to answer this question <em>without</em> actually calculating the number of partitions of each type?
+      <p permid="TRI">
+        What would be your reaction if we asked you to find the number of integer partitions of <m>25892</m>?
+        Do you think that the number of partitions of <m>25892</m> into odd parts equals the number of partitions of <m>25892</m> into distinct parts?
+        Is there a way to answer this question <em>without</em>
+        actually calculating the number of partitions of each type?
       </p>
     </statement>
   </example>
 </section>
+

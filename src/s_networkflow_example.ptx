@@ -1,84 +1,141 @@
-<section xml:id="s_networkflow_example">
-    <title>A Concrete Example</title>
-    <introduction>
-        <p>Let's apply the Labeling Algorithm to the network flow shown in <xref ref="fig_networkflow_netflow"  />. Then we start with the source:
-        <me>
-            S:\quad(*,+,\infty)
-        </me>
-        Since the source <m>S</m> is the first vertex labeled, it is also the first one scanned. So we look at the neighbors of <m>S</m> using the pseudo-alphabetic order on the vertices. Thus, the first one to be considered is vertex <m>B</m> and since the edge <m>(S,B)</m> is not full, we label <m>B</m> as
-        <me>
-            B:\quad(S,+,8).
-        </me>
-        We then consider vertex <m>E</m> and label it as
-        <me>
-            E:\quad(S,+,28).
-        </me>
-        Next is vertex <m>F</m>, which is labeled as
-        <me>
-            F:\quad(S,+,15).
-        </me>
-        At this point, the scan from <m>S</m> is complete.
-        </p>
-
-        <p>The first vertex after <m>S</m> to be labeled was <m>B</m>, so we now scan from <m>B</m>. The (unlabeled) neighbors of <m>B</m> to be considered, in order, are <m>A</m>, <m>C</m>, and<nbsp /><m>D</m>. This results in the following labels:
-        <md>
-            <mrow>  A\amp:\quad(B,+,8)</mrow>
-            <mrow>  C\amp:\quad(B,+,8)</mrow>
-            <mrow>  D\amp:\quad(B,-,6)</mrow>
-        </md>
-        The next vertex to be scanned is <m>E</m>, but <m>E</m> has no unlabeled neighbors, so we then move on to <m>F</m>, which again has no unlabeled neighbors. Finally, we scan from <m>A</m>, and using the pseudo-alphabetic order, we first consider the sink <m>T</m> (which in this case is the only remaining unlabeled vertex). This results in the following label for <m>T</m>.
-        <me>
-            T:\quad(A,+,8)
-        </me>
-        Now that the sink is labeled, we know there is an augmenting path. We discover this path by backtracking. The sink <m>T</m> got its label from <m>A</m>, <m>A</m> got its label from <m>B</m>, and <m>B</m> got its label from <m>S</m>.  Therefore, the augmenting path is <m>P=(S,B,A,T)</m> with <m>\delta=8</m>. All edges on this path are forward. The flow is then updated by increasing the flow on the edges of <m>P</m> by <m>8</m>. This results in the flow shown in <xref ref="fig_networkflow_updated-flow"  />. The value of this flow is <m>38</m>.
-        </p>
-        <figure xml:id="fig_networkflow_updated-flow" >
-            <caption>An Updated Network Flow</caption>
-            <image width="65%" source="images/webfig-31c" />
-        </figure>
-        <p>Here is the sequence (reading down the columns) of labels that will be found when the labeling algorithm is applied to this updated flow. (Note that in the scan from <m>S</m>, the vertex <m>B</m> will not be labeled, since now the edge <m>(S,B)</m> is full.)
-        <md>
-            <mrow>S:\amp\quad(*,+,\infty)\amp D:\amp\quad(E,+,12)</mrow>
-            <mrow>E:\amp\quad(S,+,28)\amp A:\amp\quad(F,+,12)</mrow>
-            <mrow>F:\amp\quad(S,+,15)\amp C:\amp\quad(B,+,10)</mrow>
-            <mrow>B:\amp\quad(E,+,19)\amp T:\amp\quad(A,+,12)</mrow>
-        </md>
-        This labeling results in the augmenting path <m>P=(S,F,A,T)</m> with <m>\delta=12</m>.
-        </p>
-
-        <p>After this update, the value of the flow has been increased and is now <m>50=38+12</m>.  We start the labeling process over again and repeat until we reach a stage where some vertices (including the source) are labeled and some vertices (including the sink) are unlabeled.
-        </p>
-    </introduction>
 
 
-    <subsection>
-        <title>How the Labeling Algorithm Halts</title>
-        <p>Consider the network flow in <xref ref="fig_networkflow_flow4"  />.
-        </p>
-        <figure xml:id="fig_networkflow_flow4" >
-            <caption>Another Network Flow</caption>
-            <image width="85%" source="images/network_flow4" />
-        </figure>
-        <p>The value of the current flow is <m>172</m>. Applying the labeling algorithm using the pseudo-alphabetic order results in the following labels (reading down the columns):
-        <md>
-            <mrow>S:\amp\quad(*,+,\infty)\amp E:\amp\quad(I,-,3)</mrow>
-            <mrow>C:\amp\quad(S,+,8)\amp G:\amp\quad(E,-,3)</mrow>
-            <mrow>F:\amp\quad(S,+,23)\amp L:\amp\quad(E,+,3)</mrow>
-            <mrow>H:\amp\quad(C,+,7)\amp B:\amp\quad(G,+,3)</mrow>
-            <mrow>I:\amp\quad(H,+,7)\amp T:\amp\quad(L,+,3)</mrow>
-        </md>
-        These labels result in the augmenting path <m>P=(S,C,H,I,E,L,T)</m> with <m>\delta =3</m>. After updating the flow and increasing its value to <m>175</m>, the labeling algorithm halts with the following labels:
-        <md>
-            <mrow>S:\amp\quad(*,+,\infty)\amp H:\amp\quad(C,+,4)</mrow>
-            <mrow>C:\amp\quad(S,+,5)\amp I:\amp\quad(H,+,4)</mrow>
-            <mrow>F:\amp\quad(S,+,23)</mrow>
-        </md>
-        Now we observe that the labeled and unlabeled vertices are <m>L=\{S,C,F,H,I\}</m> and <m>U=\{T,A,B,D,E,G,J,K\}</m>. Furthermore, the capacity of the cut <m>V=L\cup U</m> is
-        <me>
-            41+8+23+8+13+29+28+25 = 175.
-        </me>
-        This shows that we have found a cut whose capacity is exactly equal to the value of the current flow. In turn, this shows that the flow is optimal.
-        </p>
-    </subsection>
+<section permid="oBK" xml:id="s_networkflow_example">
+  <title>A Concrete Example</title>
+  <introduction permid="AQc">
+    <p permid="gXl">
+      Let's apply the Labeling Algorithm to the network flow shown in <xref ref="fig_networkflow_netflow"  />.
+      Then we start with the source:
+      <me permid="ecF">
+        S:\quad(*,+,\infty)
+      </me>
+      Since the source <m>S</m> is the first vertex labeled,
+      it is also the first one scanned.
+      So we look at the neighbors of <m>S</m> using the pseudo-alphabetic order on the vertices.
+      Thus, the first one to be considered is vertex <m>B</m> and since the edge <m>(S,B)</m> is not full,
+      we label <m>B</m> as
+      <me permid="KjO">
+        B:\quad(S,+,8)
+      </me>.
+      We then consider vertex <m>E</m> and label it as
+      <me permid="qqX">
+        E:\quad(S,+,28)
+      </me>.
+      Next is vertex <m>F</m>, which is labeled as
+      <me permid="Wyg">
+        F:\quad(S,+,15)
+      </me>.
+      At this point, the scan from <m>S</m> is complete.
+    </p>
 
+    <p permid="Neu">
+      The first vertex after <m>S</m> to be labeled was <m>B</m>,
+      so we now scan from <m>B</m>.
+      The (unlabeled) neighbors of <m>B</m> to be considered,
+      in order, are <m>A</m>, <m>C</m>, and<nbsp /><m>D</m>.
+      This results in the following labels:
+      <md permid="iMy">
+        <mrow>A\amp:\quad(B,+,8)</mrow>
+        <mrow>C\amp:\quad(B,+,8)</mrow>
+        <mrow>D\amp:\quad(B,-,6)</mrow>
+      </md>
+      The next vertex to be scanned is <m>E</m>,
+      but <m>E</m> has no unlabeled neighbors,
+      so we then move on to <m>F</m>,
+      which again has no unlabeled neighbors.
+      Finally, we scan from <m>A</m>,
+      and using the pseudo-alphabetic order,
+      we first consider the sink <m>T</m>
+      (which in this case is the only remaining unlabeled vertex).
+      This results in the following label for <m>T</m>.
+      <me permid="CFp">
+        T:\quad(A,+,8)
+      </me>
+      Now that the sink is labeled,
+      we know there is an augmenting path.
+      We discover this path by backtracking.
+      The sink <m>T</m> got its label from <m>A</m>,
+      <m>A</m> got its label from <m>B</m>,
+      and <m>B</m> got its label from <m>S</m>.
+      Therefore, the augmenting path is
+      <m>P=(S,B,A,T)</m> with <m>\delta=8</m>.
+      All edges on this path are forward.
+      The flow is then updated by increasing the flow on the edges of <m>P</m> by <m>8</m>.
+      This results in the flow shown in <xref ref="fig_networkflow_updated-flow"  />.
+      The value of this flow is <m>38</m>.
+    </p>
+
+    <figure permid="FzV" xml:id="fig_networkflow_updated-flow">
+      <caption>An Updated Network Flow</caption>
+      <image width="65%" source="images/webfig-31c" />
+    </figure>
+
+    <p permid="tlD">
+      Here is the sequence
+      (reading down the columns)
+      of labels that will be found when the labeling algorithm is applied to this updated flow. (Note that in the scan from <m>S</m>,
+      the vertex <m>B</m> will not be labeled,
+      since now the edge <m>(S,B)</m> is full.)
+      <md permid="OTH">
+        <mrow>S:\amp\quad(*,+,\infty)\amp D:\amp\quad(E,+,12)</mrow>
+        <mrow>E:\amp\quad(S,+,28)\amp A:\amp\quad(F,+,12)</mrow>
+        <mrow>F:\amp\quad(S,+,15)\amp C:\amp\quad(B,+,10)</mrow>
+        <mrow>B:\amp\quad(E,+,19)\amp T:\amp\quad(A,+,12)</mrow>
+      </md>
+      This labeling results in the augmenting path
+      <m>P=(S,F,A,T)</m> with <m>\delta=12</m>.
+    </p>
+
+    <p permid="ZsM">
+      After this update,
+      the value of the flow has been increased and is now <m>50=38+12</m>.
+      We start the labeling process over again and repeat until we reach a stage where some vertices
+      (including the source)
+      are labeled and some vertices
+      (including the sink)
+      are unlabeled.
+    </p>
+  </introduction>
+
+  <subsection permid="UIT">
+    <title>How the Labeling Algorithm Halts</title>
+    <p permid="lHe">
+      Consider the network flow in <xref ref="fig_networkflow_flow4" />.
+    </p>
+
+    <figure permid="xVw" xml:id="fig_networkflow_flow4">
+      <caption>Another Network Flow</caption>
+      <image width="85%" source="images/network_flow4" />
+    </figure>
+
+    <p permid="ROn">
+      The value of the current flow is <m>172</m>.
+      Applying the labeling algorithm using the pseudo-alphabetic order results in the following labels (reading down the columns):
+      <md permid="bhZ">
+        <mrow>S:\amp\quad(*,+,\infty)\amp E:\amp\quad(I,-,3)</mrow>
+        <mrow>C:\amp\quad(S,+,8)\amp G:\amp\quad(E,-,3)</mrow>
+        <mrow>F:\amp\quad(S,+,23)\amp L:\amp\quad(E,+,3)</mrow>
+        <mrow>H:\amp\quad(C,+,7)\amp B:\amp\quad(G,+,3)</mrow>
+        <mrow>I:\amp\quad(H,+,7)\amp T:\amp\quad(L,+,3)</mrow>
+      </md>
+      These labels result in the augmenting path
+      <m>P=(S,C,H,I,E,L,T)</m> with <m>\delta =3</m>.
+      After updating the flow and increasing its value to <m>175</m>,
+      the labeling algorithm halts with the following labels:
+      <md permid="Hpi">
+        <mrow>S:\amp\quad(*,+,\infty)\amp H:\amp\quad(C,+,4)</mrow>
+        <mrow>C:\amp\quad(S,+,5)\amp I:\amp\quad(H,+,4)</mrow>
+        <mrow>F:\amp\quad(S,+,23)</mrow>
+      </md>
+      Now we observe that the labeled and unlabeled vertices are
+      <m>L=\{S,C,F,H,I\}</m> and <m>U=\{T,A,B,D,E,G,J,K\}</m>.
+      Furthermore, the capacity of the cut <m>V=L\cup U</m> is
+      <me permid="vaQ">
+        41+8+23+8+13+29+28+25 = 175
+      </me>.
+      This shows that we have found a cut whose capacity is exactly equal to the value of the current flow.
+      In turn, this shows that the flow is optimal.
+    </p>
+  </subsection>
 </section>
+

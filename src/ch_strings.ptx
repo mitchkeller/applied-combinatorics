@@ -1,25 +1,29 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_strings">
-<title>Strings, Sets, and Binomial Coefficients</title>
 
 
-<introduction>
-<p>
-Much of combinatorial mathematics can be reduced to the study of
-strings, as they form the basis of all written human communications.
-Also, strings are the way humans communicate with computers, as well
-as the way one computer communicates with another. As we shall see,
-sets and binomial coefficients are topics that fall under the string
-umbrella. So it makes sense to begin our in-depth study of
-combinatorics with strings.
-</p>
-</introduction>
-<xi:include  href="s_strings_intro.ptx" />
- <xi:include  href="s_strings_permutations.ptx" />
- <xi:include  href="s_strings_combinations.ptx" />
- <xi:include  href="s_strings_comb-proof.ptx" />
- <xi:include  href="s_strings_bin-coeff.ptx" />
- <xi:include  href="s_strings_binom-thm.ptx" />
- <xi:include  href="s_strings_multinom.ptx" />
- <xi:include  href="s_strings_discussion.ptx" />
- <xi:include  href="s_strings_exercises.ptx" />
+<chapter permid="xFo" xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_strings">
+  <title>Strings, Sets, and Binomial Coefficients</title>
+  <introduction permid="dMx">
+    <p permid="JTG">
+      Much of combinatorial mathematics can be reduced to the study of
+      strings, as they form the basis of all written human communications.
+      Also, strings are the way humans communicate with computers, as well
+      as the way one computer communicates with another.
+      As we shall see,
+      sets and binomial coefficients are topics that fall under the string
+      umbrella.
+      So it makes sense to begin our in-depth study of
+      combinatorics with strings.
+    </p>
+  </introduction>
+
+  <xi:include  href="s_strings_intro.ptx" />
+  <xi:include  href="s_strings_permutations.ptx" />
+  <xi:include  href="s_strings_combinations.ptx" />
+  <xi:include  href="s_strings_comb-proof.ptx" />
+  <xi:include  href="s_strings_bin-coeff.ptx" />
+  <xi:include  href="s_strings_binom-thm.ptx" />
+  <xi:include  href="s_strings_multinom.ptx" />
+  <xi:include  href="s_strings_discussion.ptx" />
+  <xi:include  href="s_strings_exercises.ptx" />
 </chapter>
+

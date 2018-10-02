@@ -1,138 +1,324 @@
-<section xml:id="s_graphalgorithms_min-wt-span">
-    <title>Minimum Weight Spanning Trees</title>
 
 
-    <introduction>
-        <p>In this section, we consider pairs <m>(\bfG,w)</m> where <m>\GVE</m> is a connected graph and <m>w\colon E\rightarrow\nonnegints</m>. For each edge <m>e\in E</m>, the quantity <m>w(e)</m> is called the <term>weight</term><idx><h>weight</h></idx> of <m>e</m>. Given a set <m>S</m> of edges, we define the <term>weight</term> of <m>S</m>, denoted <m>w(S)</m>, by setting <m>w(S)=\sum_{e\in S} w(e)</m>. In particular, the weight of a spanning tree <m>T</m> is just the sum of the weights of the edges in <m>T</m>.<idx><h>tree</h><h>spanning</h></idx>
+<section permid="GiP" xml:id="s_graphalgorithms_min-wt-span">
+  <title>Minimum Weight Spanning Trees</title>
+  <introduction permid="Umu">
+    <p permid="Qmv">
+      In this section, we consider pairs
+      <m>(\bfG,w)</m> where <m>\GVE</m> is a connected graph and <m>w\colon E\rightarrow\nonnegints</m>.
+      For each edge <m>e\in E</m>,
+      the quantity <m>w(e)</m> is called the <term>weight</term>
+          <idx><h>weight</h></idx>
+      of <m>e</m>.
+      Given a set <m>S</m> of edges,
+      we define the <term>weight</term> of <m>S</m>,
+      denoted <m>w(S)</m>, by setting <m>w(S)=\sum_{e\in S} w(e)</m>.
+      In particular,
+      the weight of a spanning tree <m>T</m> is just the sum of the weights of the edges in <m>T</m>.
+          <idx><h>tree</h><h>spanning</h></idx>
+    </p>
+
+    <p permid="wtE">
+      Weighted graphs arise in many contexts.
+      One of the most natural is when the weights on the edges are distances or costs.
+      For example,
+      consider the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph" />.
+      Suppose the vertices represent nodes of a network and the edges represent the ability to establish direct physical connections between those nodes.
+      The weights associated to the edges represent the cost (let's say in thousands of dollars) of building those connections.
+      The company establishing the network among the nodes only cares that there is a way to get data between each pair of nodes.
+      Any additional links would create redundancy in which they are not interested at this time.
+      A spanning tree of the graph ensures that each node can communicate with each of the others and has no redundancy,
+      since removing any edge disconnects it.
+      Thus, to minimize the cost of building the network,
+      we want to find a minimum weight
+      (or cost)
+      spanning tree.
+    </p>
+
+    <figure permid="UWo" xml:id="fig_graphalgorithms_spantreegraph">
+      <caption>A weighted graph</caption>
+      <image width="90%" source="images/spantreegraph" />
+    </figure>
+
+    <p permid="cAN">
+      To do this, this section considers the following problem:
+    </p>
+
+    <problem>
+      <p permid="IHW">
+        Find a minimum weight spanning tree <m>\bfT</m> of <m>\bfG</m>.
+      </p>
+    </problem>
+
+    <p permid="oPf">
+      To solve this problem, we will develop <em>two</em>
+      efficient graph algorithms,
+      each having certain computational advantages and disadvantages.
+      Before developing the algorithms,
+      we need to establish some preliminaries about spanning trees and forests.
+    </p>
+  </introduction>
+
+  <subsection permid="mpY">
+    <title>Preliminaries</title>
+    <p permid="Bdx">
+      The following proposition about the number of components in a spanning forest of a graph <m>\bfG</m> has an easy inductive proof.
+      You are asked to provide it in the exercises.
+    </p>
+
+    <proposition permid="KSI" xml:id="prop_graphalgorithms_spanforest">
+      <statement>
+        <p permid="zok">
+          Let <m>\GVE</m> be a graph on <m>n</m> vertices,
+          and let <m>\bfH=(V,S)</m> be a spanning forest.
+          Then <m>0\le |S|\le n-1</m>.
+          Furthermore, if <m>|S|= n-k</m>,
+          then <m>\bfH</m> has <m>k</m> components.
+          In particular,
+          <m>\bfH</m> is a spanning tree if and only if it contains <m>n-1</m> edges.
+        </p>
+      </statement>
+    </proposition>
+
+    <p permid="hkG">
+      The following proposition establishes a way to take a spanning tree of a graph,
+      remove an edge from it,
+      and add an edge of the graph that is not in the spanning tree to create a new spanning tree.
+      Effectively,
+      the process exchanges two edges to form the new spanning tree,
+      so we call this the <term>exchange principle</term>.
+    </p>
+
+    <proposition permid="qZR" xml:id="prop_graphalgorithms_exchange">
+      <title>Exchange Principle</title>
+      <statement>
+        <p permid="fvt">
+          Let <m>\bfT=(V,S)</m> be spanning tree in a graph <m>\bfG</m>,
+          and let <m>e=xy</m> be an edge of <m>\bfG</m> which does not belong to <m>\bfT</m>.
+          Then
+
+          <ol permid="MHV">
+            <li permid="Fdw">
+              <p permid="pUy">
+                There is a <em>unique</em> path
+                <m>P=(x_0,x_1,x_2,\dots,x_t)</m> with (a)<nbsp /><m>x=x_0</m>; (b)<nbsp /><m>y=x_t</m>;
+                and (c)<nbsp /><m>x_ix_{i+1}\in S</m> for each <m>i=0,1,2,\dots,t-1</m>.
+              </p>
+            </li>
+
+            <li permid="lkF">
+              <p permid="WbH">
+                For each <m>i=0,1,2,\dots,t-1</m>,
+                let <m>f_i=x_ix_{i+1}</m> and then set
+                <me permid="WLB">
+                  S_i = \{e\}\cup\{g\in S: g\neq f_i\}
+                </me>,
+                <ie />, we <term>exchange</term> edge <m>f_i</m> for edge <m>e</m>.
+                Then <m>\bfT_i=(V,S_i)</m> is a spanning tree of <m>\bfG</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof permid="AtD">
+        <p permid="aLA">
+          For the first fact,
+          it suffices to note that if there were more than one distinct path from <m>x</m> to <m>y</m> in <m>\bfT</m>,
+          we would be able to find a cycle in <m>\bfT</m>.
+          This is impossible since it is a tree.
+          For the second,
+          we refer to <xref ref="fig_graphalgorithms_exchange" />.
+          The black and green edges in the graph shown at the left represent the spanning tree <m>\bfT</m>.
+          Thus, <m>f</m> lies on the unique path from <m>x</m> to <m>y</m> in <m>\bfT</m> and <m>e=xy</m> is an edge of <m>\bfG</m>
+          <em>not</em> in <m>\bfT</m>.
+          Adding <m>e</m> to <m>\bfT</m> creates a graph with a unique cycle,
+          since <m>\bfT</m> had a unique path from <m>x</m> to <m>y</m>.
+          Removing <m>f</m>
+          (which could be any edge <m>f_i</m> of the path,
+          as stated in the proposition)
+          destroys this cycle.
+          Thus <m>\bfT_i</m> is a connected acyclic subgraph of <m>\bfG</m> with
+          <m>n-1+1-1=n-1</m> edges, so it is a spanning tree.
         </p>
 
-        <p>Weighted graphs arise in many contexts. One of the most natural is when the weights on the edges are distances or costs. For example, consider the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph"  />. Suppose the vertices represent nodes of a network and the edges represent the ability to establish direct physical connections between those nodes. The weights associated to the edges represent the cost (let's say in thousands of dollars) of building those connections. The company establishing the network among the nodes only cares that there is a way to get data between each pair of nodes. Any additional links would create redundancy in which they are not interested at this time. A spanning tree of the graph ensures that each node can communicate with each of the others and has no redundancy, since removing any edge disconnects it. Thus, to minimize the cost of building the network, we want to find a minimum weight (or cost) spanning tree.
-        </p>
-        <figure xml:id="fig_graphalgorithms_spantreegraph" >
-            <caption>A weighted graph</caption>
-            <image width="90%" source="images/spantreegraph" />
+        <figure permid="GSJ"  xml:id="fig_graphalgorithms_exchange">
+          <caption>The exchange principle</caption>
+          <sidebyside permid="Doj" widths="48% 48%">
+            <image width="95%" source="images/exchange1" />
+            <image width="95%" source="images/exchange2" />
+          </sidebyside>
+
         </figure>
-        <p>To do this, this section considers the following problem:
+      </proof>
+    </proposition>
+
+    <p permid="NrP">
+      For both of the algorithms we develop,
+      the argument to show that the algorithm is optimal rests on the following technical lemma.
+      To avoid trivialities, we assume <m>n\ge3</m>.
+    </p>
+
+    <lemma permid="Xha" xml:id="lem_graphalgorithms_tech">
+      <statement>
+        <p permid="LCC">
+          Let <m>\bfF</m> be a spanning forest of <m>\bfG</m> and let <m>C</m> be a component of <m>\bfF</m>.
+          Also, let <m>e=xy</m> be an edge of minimum weight among all edges with one endpoint in <m>C</m> and the other not in <m>C</m>.
+          Then among all spanning trees of <m>\bfG</m> that contain the forest <m>\bfF</m>,
+          there is one of minimum weight that contains the edge <m>e</m>.
         </p>
-        <problem>
-            <p>Find a minimum weight spanning tree <m>\bfT</m> of <m>\bfG</m>.
-            </p>
-        </problem>
-        <p>To solve this problem, we will develop <em>two</em> efficient graph algorithms, each having certain computational advantages and disadvantages. Before developing the algorithms, we need to establish some preliminaries about spanning trees and forests.
-        </p>
-    </introduction>
+      </statement>
 
-
-    <subsection>
-        <title>Preliminaries</title>
-        <p>The following proposition about the number of components in a spanning forest of a graph <m>\bfG</m> has an easy inductive proof. You are asked to provide it in the exercises.
-        </p>
-
-        <proposition xml:id="prop_graphalgorithms_spanforest">
-            <statement>
-                <p>Let <m>\GVE</m> be a graph on <m>n</m> vertices, and let <m>\bfH=(V,S)</m> be a spanning forest. Then <m>0\le |S|\le n-1</m>. Furthermore, if <m>|S|= n-k</m>, then <m>\bfH</m> has <m>k</m> components. In particular, <m>\bfH</m> is a spanning tree if and only if it contains <m>n-1</m> edges.
-                </p>
-            </statement>
-        </proposition>
-
-        <p>The following proposition establishes a way to take a spanning tree of a graph, remove an edge from it, and add an edge of the graph that is not in the spanning tree to create a new spanning tree. Effectively, the process exchanges two edges to form the new spanning tree, so we call this the <term>exchange principle</term>.
-        </p>
-
-        <proposition xml:id="prop_graphalgorithms_exchange">
-            <title>Exchange Principle</title>
-            <statement>
-                <p>Let <m>\bfT=(V,S)</m> be spanning tree in a graph <m>\bfG</m>, and let <m>e=xy</m> be an edge of <m>\bfG</m> which does not belong to <m>\bfT</m>. Then
-                  <ol>
-                    <li><p>There is a <em>unique</em> path <m>P=(x_0,x_1,x_2,\dots,x_t)</m> with (a)<nbsp /><m>x=x_0</m>; (b)<nbsp /><m>y=x_t</m>; and (c)<nbsp /><m>x_ix_{i+1}\in S</m> for each <m>i=0,1,2,\dots,t-1</m>.</p></li>
-                    <li><p>For each <m>i=0,1,2,\dots,t-1</m>, let <m>f_i=x_ix_{i+1}</m> and then set
-                    <me>
-                        S_i = \{e\}\cup\{g\in S: g\neq f_i\},
-                    </me>
-                    <ie />, we <term>exchange</term> edge <m>f_i</m> for edge <m>e</m>. Then <m>\bfT_i=(V,S_i)</m> is a spanning tree of <m>\bfG</m>.</p></li>
-                
-                  </ol>
-                </p>
-            </statement>
-
-            <proof>
-                <p>For the first fact, it suffices to note that if there were more than one distinct path from <m>x</m> to <m>y</m> in <m>\bfT</m>, we would be able to find a cycle in <m>\bfT</m>. This is impossible since it is a tree. For the second, we refer to <xref ref="fig_graphalgorithms_exchange"  />. The black and green edges in the graph shown at the left represent the spanning tree <m>\bfT</m>. Thus, <m>f</m> lies on the unique path from <m>x</m> to <m>y</m> in <m>\bfT</m> and <m>e=xy</m> is an edge of <m>\bfG</m> <em>not</em> in <m>\bfT</m>. Adding <m>e</m> to <m>\bfT</m> creates a graph with a unique cycle, since <m>\bfT</m> had a unique path from <m>x</m> to <m>y</m>. Removing <m>f</m> (which could be any edge <m>f_i</m> of the path, as stated in the proposition) destroys this cycle. Thus <m>\bfT_i</m> is a connected acyclic subgraph of <m>\bfG</m> with <m>n-1+1-1=n-1</m> edges, so it is a spanning tree.
-                </p>
-                <figure  xml:id="fig_graphalgorithms_exchange">
-                    <caption>The exchange principle</caption>
-                    <sidebyside widths="48% 48%">
-                        <image width="95%" source="images/exchange1" />
-                        <image width="95%" source="images/exchange2" />
-                    </sidebyside>
-                </figure>
-            </proof>
-        </proposition>
-        <p>For both of the algorithms we develop, the argument to show that the algorithm is optimal rests on the following technical lemma. To avoid trivialities, we assume <m>n\ge3</m>.
+      <proof permid="gAM">
+        <p permid="mZS">
+          Let <m>\bfT=(V,S)</m> be any spanning tree of minimum weight among all spanning trees that contain the forest <m>\bfF</m>,
+          and suppose that <m>e=xy</m> is not an edge in <m>\bfT</m>.
+          (If it were an edge in <m>\bfT</m>, we would be done.)
+          Then let <m>P=(x_0,x_1,x_2,\dots,x_t)</m> be the unique path in <m>\bfT</m> with (a)<nbsp /><m>x=x_0</m>; (b)<nbsp /><m>y=x_t</m>;
+          and (c)<nbsp /><m>x_ix_{i+1}\in S</m> for each <m>i=0,1,2,\dots,t-1</m>.
+          Without loss of generality,
+          we may assume that <m>x=x_0</m> is a vertex in <m>C</m> while <m>y=x_t</m> does not belong to <m>C</m>.
+          Then there is a least non-negative integer <m>i</m> for which <m>x_i</m> is in <m>C</m> and <m>x_{i+1}</m> is not in <m>C</m>.
+          It follows that <m>x_j</m> is in <m>C</m> for all <m>j</m> with <m>0\le j\le i</m>.
         </p>
 
-        <lemma xml:id="lem_graphalgorithms_tech">
-            <statement>
-                <p>Let <m>\bfF</m> be a spanning forest of <m>\bfG</m> and let <m>C</m> be a component of <m>\bfF</m>. Also, let <m>e=xy</m> be an edge of minimum weight among all edges with one endpoint in <m>C</m> and the other not in <m>C</m>. Then among all spanning trees of <m>\bfG</m> that contain the forest <m>\bfF</m>, there is one of minimum weight that contains the edge <m>e</m>.
-                </p>
-            </statement>
+        <p permid="Thb">
+          Let <m>f=x_ix_{i+1}</m>.
+          The edge <m>e</m> has minimum weight among all edges with one endpoint in <m>C</m> and the other not in <m>C</m>,
+          so <m>w(e)\le w(f)</m>.
+          Now let <m>\bfT_i</m> be the tree obtained by exchanging the edge <m>f</m> for edge<nbsp /><m>e</m>.
+          It follows that <m>w(\bfT_i) = w(\bfT) - w(f) +w(e)\le w(\bfT)</m>.
+          Furthermore,
+          <m>\bfT_i</m> contains the spanning forest <m>\bfF</m> as well as the edge<nbsp /><m>e</m>.
+          It is therefore the minimum weight spanning tree we seek.
+        </p>
+      </proof>
+    </lemma>
 
-            <proof>
-                <p>Let <m>\bfT=(V,S)</m> be any spanning tree of minimum weight among all spanning trees that contain the forest <m>\bfF</m>, and suppose that <m>e=xy</m> is not an edge in <m>\bfT</m>. (If it were an edge in <m>\bfT</m>, we would be done.) Then let <m>P=(x_0,x_1,x_2,\dots,x_t)</m> be the unique path in <m>\bfT</m> with (a)<nbsp /><m>x=x_0</m>; (b)<nbsp /><m>y=x_t</m>; and (c)<nbsp /><m>x_ix_{i+1}\in S</m> for each <m>i=0,1,2,\dots,t-1</m>. Without loss of generality, we may assume that <m>x=x_0</m> is a vertex in <m>C</m> while <m>y=x_t</m> does not belong to <m>C</m>. Then there is a least non-negative integer <m>i</m> for which <m>x_i</m> is in <m>C</m> and <m>x_{i+1}</m> is not in <m>C</m>. It follows that <m>x_j</m> is in <m>C</m> for all <m>j</m> with <m>0\le j\le i</m>.
-                </p>
+    <remark>
+      <p permid="tyY">
+        Although Bob's combinatorial intuition has improved over the course he doesn't quite understand why we need special algorithms to find minimum weight spanning trees.
+        He figures there can't be that many spanning trees,
+        so he wants to just write them down.
+        Alice groans as she senses that Bob must have been absent when the material from <xref ref="s_graphs_counting-trees" /> was discussed.
+        In that section,
+        we learned that a graph on <m>n</m> vertices can have as many as <m>n^{n-2}</m> spanning trees
+        (or horrors, the instructor may have left it off the syllabus).
+        Regardless, this exhaustive approach is already unusable when <m>n = 20</m>.
+        Dave mumbles something about being greedy and just adding the lightest edges one-by-one while never adding an edge that would make a cycle.
+        Zori remembers a strategy like this working for finding the height of a poset,
+        but she's worried about the nightmare situation that we learned about with using FirstFit to color graphs.
+        Alice agrees that greedy algorithms have an inconsistent track record but suggests that <xref ref="lem_graphalgorithms_tech" /> may be enough to get one to succeed here.
+      </p>
+    </remark>
+  </subsection>
 
-                <p>Let <m>f=x_ix_{i+1}</m>. The edge <m>e</m> has minimum weight among all edges with one endpoint in <m>C</m> and the other not in <m>C</m>, so <m>w(e)\le w(f)</m>. Now let <m>\bfT_i</m> be the tree obtained by exchanging the edge <m>f</m> for edge<nbsp /><m>e</m>. It follows that <m>w(\bfT_i) = w(\bfT) - w(f) +w(e)\le w(\bfT)</m>. Furthermore, <m>\bfT_i</m> contains the spanning forest <m>\bfF</m> as well as the edge<nbsp /><m>e</m>. It is therefore the minimum weight spanning tree we seek.
-                </p>
-            </proof>
-        </lemma>
-        <remark>
-            <p>Although Bob's combinatorial intuition has improved over the course he doesn't quite understand why we need special algorithms to find minimum weight spanning trees. He figures there can't be that many spanning trees, so he wants to just write them down. Alice groans as she senses that Bob must have been absent when the material from <xref ref="s_graphs_counting-trees"  /> was discussed. In that section, we learned that a graph on <m>n</m> vertices can have as many as <m>n^{n-2}</m> spanning trees (or horrors, the instructor may have left it off the syllabus). Regardless, this exhaustive approach is already unusable when <m>n = 20</m>. Dave mumbles something about being greedy and just adding the lightest edges one-by-one while never adding an edge that would make a cycle. Zori remembers a strategy like this working for finding the height of a poset, but she's worried about the nightmare situation that we learned about with using FirstFit to color graphs. Alice agrees that greedy algorithms have an inconsistent track record but suggests that <xref ref="lem_graphalgorithms_tech"  /> may be enough to get one to succeed here.
-            </p>
-        </remark>
+  <subsection permid="Sxh">
+    <title>Kruskal's Algorithm</title>
+    <p permid="ZGh">
+      In this section,
+      we develop one of the best known algorithms for finding a minimum weight spanning tree.
+      It is known as <term>Kruskal's Algorithm</term>,
+      although some prefer the descriptive label <em>Avoid Cycles</em>
+      because of the way it builds the spanning tree.
+    </p>
 
-    </subsection>
+    <p permid="FNq">
+      To start Kruskal's algorithm,
+      we sort the edges according to weight.
+      To be more precise,
+      let <m>m</m> denote the number of edges in <m>\GVE</m>.
+      Then label the edges as <m>e_1,e_2,e_3,\dots,e_m</m> so that <m>w(e_1)\le w(e_2)\le \dots \le w(e_m)</m>.
+      Any of the many available efficient sorting algorithms can be used to do this step.
+    </p>
 
+    <p permid="lUz">
+      Once the edges are sorted, Kruskal's algorithm proceeds to an initialization step and then inductively builds the spanning tree <m>\bfT=(V,S)</m>:
+    </p>
 
+    <algorithm permid="jvs" xml:id="alg_kruskal">
+      <title>Kruskal's Algorithm</title>
+      <idx><h>minimum weight spanning tree</h><h>Kruskal's algorithm for</h></idx>
+      <idx><h>Kruskal's algorithm</h></idx>
+      <statement>
+        <p permid="rJL">
+          <dl permid="sPe">
+            <li permid="RrO">
+              <title>Initialization.</title>
+              <p permid="CiQ">
+                Set <m>S=\emptyset</m> and <m>i=0</m>.
+              </p>
+            </li>
 
-    <subsection>
-        <title>Kruskal's Algorithm</title>
-        <p>In this section, we develop one of the best known algorithms for finding a minimum weight spanning tree. It is known as <term>Kruskal's Algorithm</term>, although some prefer the descriptive label <em>Avoid Cycles</em> because of the way it builds the spanning tree.
+            <li permid="xyX">
+              <title>Inductive Step.</title>
+              <p permid="ipZ">
+                While <m>|S| \lt n-1</m>,
+                let <m>j</m> be the least non-negative integer so that <m>j > i</m> and there are no cycles in <m>S\cup\{e_j\}</m>.
+                Then (using pseudo-code) set
+                <me permid="CSK">
+                  i = j\quad\text{and} \quad S= S\cup\{j\}
+                </me>.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </statement>
+    </algorithm>
+
+    <p permid="SbI">
+      The correctness of Kruskal's Algorithm follows from an inductive argument.
+      First, the set <m>S</m> is initialized as the empty set,
+      so there is certainly a minimum weight spanning tree containing all the edges in <m>S</m>.
+      Now suppose that for some <m>i</m> with <m>0\le i \lt n</m>,
+      <m>|S|=i</m> and there is a minimum weight spanning tree containing all the edges in <m>S</m>.
+      Let <m>\bfF</m> be the spanning forest determined by the edges in <m>S</m>,
+      and let <m>C_1, C_2,\dots,C_s</m> be the components of <m>\bfF</m>.
+      For each <m>k=1,2,\dots,s</m>,
+      let <m>f_k</m> be a minimum weight edge with one endpoint in <m>C_k</m> and the other not in <m>C_k</m>.
+      Then the edge <m>e</m> added to <m>S</m> by Kruskal's Algorithm is just the edge
+      <m>\{f_1,f_2,\dots,f_s\}</m> having minimum weight.
+      Applying <xref ref="lem_graphalgorithms_tech" /> and the inductive hypothesis,
+      we know that there will still be a minimum weight spanning tree of <m>\bfG</m> containing all the edges of <m>S\cup\{e\}</m>.
+    </p>
+
+    <example permid="PCB">
+      <title>Kruskal's Algorithm</title>
+      <sidebyside permid="vJK" widths="78% 17%">
+        <p permid="DYd">
+          Let's see what Kruskal's algorithm does on the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph" />.
+          It first sorts all of the edges by weight.
+          We won't reproduce the list here,
+          since we won't need all of it.
+          The edge of least weight is <m>ck</m>,
+          which has weight <m>23</m>.
+          It continues adding the edge of least weight,
+          adding <m>ag</m>, <m>fg</m>, <m>fi</m>, <m>fj</m>, and <m>bj</m>.
+          However, after doing this,
+          the edge of lowest weight is <m>fb</m>,
+          which has weight <m>38</m>.
+          This edge cannot be added, as doing so would make <m>fjb</m> a cycle.
+          Thus, the algorithm bypasses it and adds <m>bc</m>.
+          Edge <m>ai</m> is next inspected, but it, too,
+          would create a cycle and is eliminated from consideration.
+          Then <m>em</m> is added, followed by <m>dl</m>.
+          There are now <em>two</em> edges of weight <m>56</m> to be considered:
+          <m>al</m> and <m>dj</m>.
+          Our sorting algorithm has somehow decided one of them should appear first,
+          so let's say it's <m>dj</m>.
+          After adding <m>dj</m>, we cannot add <m>al</m>,
+          as <m>agfjdl</m> would form a cycle.
+          Edge <m>dk</m> is next considered,
+          but it would also form a cycle.
+          However, <m>ek</m> can be added.
+          Edges <m>km</m> and <m>dm</m> are then bypassed.
+          Finally, edge <m>ch</m> is added as the twelfth and final edge for this <m>13</m>-vertex spanning tree.
+          The full list of edges added
+          (in order)
+          is shown to the right.
+          The total weight of this spanning tree is <m>504</m>.
         </p>
 
-        <p>To start Kruskal's algorithm, we sort the edges according to weight.  To be more precise, let <m>m</m> denote the number of edges in <m>\GVE</m>.  Then label the edges as <m>e_1,e_2,e_3,\dots,e_m</m> so that <m>w(e_1)\le w(e_2)\le \dots \le w(e_m)</m>. Any of the many available efficient sorting algorithms can be used to do this step.
-        </p>
-
-        <p>Once the edges are sorted, Kruskal's algorithm proceeds to an initialization step and then inductively builds the spanning tree <m>\bfT=(V,S)</m>:
-        </p>
-
-        <algorithm xml:id="alg_kruskal">
-            <title>Kruskal's Algorithm</title>
-            <idx><h>minimum weight spanning tree</h><h>Kruskal's algorithm for</h></idx>
-            <idx><h>Kruskal's algorithm</h></idx>
-        <statement>
-            <p>
-               <dl>
-                    <li>
-                    <title>Initialization.</title><p>Set <m>S=\emptyset</m> and <m>i=0</m>.  </p></li>
-                    
-                    <li>
-                        <title>Inductive Step.</title>
-                        <p>While <m>|S| \lt n-1</m>, let <m>j</m> be the least non-negative integer so that <m>j > i</m> and there are no cycles in <m>S\cup\{e_j\}</m>. Then (using pseudo-code) set
-                        <me>
-                            i = j\quad\text{and} \quad S= S\cup\{j\}.
-                        </me>
-                        </p>
-                    </li>
-               </dl>
-            </p>
-        </statement>
-        </algorithm>
-
-        <p>The correctness of Kruskal's Algorithm follows from an inductive argument. First, the set <m>S</m> is initialized as the empty set, so there is certainly a minimum weight spanning tree containing all the edges in <m>S</m>. Now suppose that for some <m>i</m> with <m>0\le i \lt n</m>, <m>|S|=i</m> and there is a minimum weight spanning tree containing all the edges in <m>S</m>. Let <m>\bfF</m> be the spanning forest determined by the edges in <m>S</m>, and let <m>C_1, C_2,\dots,C_s</m> be the components of <m>\bfF</m>. For each <m>k=1,2,\dots,s</m>, let <m>f_k</m> be a minimum weight edge with one endpoint in <m>C_k</m> and the other not in <m>C_k</m>. Then the edge <m>e</m> added to <m>S</m> by Kruskal's Algorithm is just the edge <m>\{f_1,f_2,\dots,f_s\}</m> having minimum weight. Applying <xref ref="lem_graphalgorithms_tech"  /> and the inductive hypothesis, we know that there will still be a minimum weight spanning tree of <m>\bfG</m> containing all the edges of <m>S\cup\{e\}</m>.
-        </p>
-        <example>
-            <title>Kruskal's Algorithm</title>
-            <sidebyside widths="78% 17%">
-            <p>Let's see what Kruskal's algorithm does on the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph"  />.  It first sorts all of the edges by weight. We won't reproduce the list here, since we won't need all of it. The edge of least weight is <m>ck</m>, which has weight <m>23</m>. It continues adding the edge of least weight, adding <m>ag</m>, <m>fg</m>, <m>fi</m>, <m>fj</m>, and <m>bj</m>. However, after doing this, the edge of lowest weight is <m>fb</m>, which has weight <m>38</m>. This edge cannot be added, as doing so would make <m>fjb</m> a cycle. Thus, the algorithm bypasses it and adds <m>bc</m>. Edge <m>ai</m> is next inspected, but it, too, would create a cycle and is eliminated from consideration. Then <m>em</m> is added, followed by <m>dl</m>. There are now <em>two</em> edges of weight <m>56</m> to be considered: <m>al</m> and <m>dj</m>. Our sorting algorithm has somehow decided one of them should appear first, so let's say it's <m>dj</m>. After adding <m>dj</m>, we cannot add <m>al</m>, as <m>agfjdl</m> would form a cycle. Edge <m>dk</m> is next considered, but it would also form a cycle. However, <m>ek</m> can be added. Edges <m>km</m> and <m>dm</m> are then bypassed. Finally, edge <m>ch</m> is added as the twelfth and final edge for this <m>13</m>-vertex spanning tree. The full list of edges added (in order) is shown to the right. The total weight of this spanning tree is <m>504</m>.
-            </p>
             <pre>c k 23
 a g 25
 f g 26
@@ -145,47 +331,87 @@ d l 55
 d j 56
 e k 59
 c h 79</pre>
-            </sidebyside>
-        </example>
+      </sidebyside>
+    </example>
+  </subsection>
 
-    </subsection>
+  <subsection permid="yEq" xml:id="alg_prim">
+    <title>Prim's Algorithm</title>
+    <p permid="yiR">
+      We now develop <term>Prim's Algorithm</term>
+      for finding a minimum weight spanning tree.
+      This algorithm is also known by a more descriptive label:
+      <em>Build Tree</em>.
+      We begin by choosing a root vertex <m>r</m>.
+      Again, the algorithm proceeds with an initialization step followed by a series of inductive steps.
+    </p>
 
+    <algorithm permid="bQT">
+      <title>Prim's Algorithm</title>
+      <idx><h>minimum weight spanning trees</h><h>Prim's algorithm for</h></idx>
+      <idx><h>Prim's algorithm</h></idx>
+      <statement>
+        <p permid="XQU">
+          <dl permid="YWn">
+            <li permid="dGg">
+              <title>Initialization.</title>
+              <p permid="Oxi">
+                Set <m>W=\{r\}</m> and <m>S=\emptyset</m>.
+              </p>
+            </li>
 
-    <subsection xml:id="alg_prim">
-        <title>Prim's Algorithm</title>
-        <p>We now develop <term>Prim's Algorithm</term> for finding a minimum weight spanning tree. This algorithm is also known by a more descriptive label: <em>Build Tree</em>. We begin by choosing a root vertex <m>r</m>. Again, the algorithm proceeds with an initialization step followed by a series of inductive steps.
+            <li permid="JNp">
+              <title>Inductive Step.</title>
+              <p permid="uEr">
+                While <m>|W| \lt n</m>,
+                let <m>e</m> be an edge of minimum weight among all edges with one endpoint in <m>W</m> and the other not in <m>W</m>.
+                If <m>e=xy</m>, <m>x\in W</m> and <m>y\not\in W</m>,
+                update <m>W</m> and <m>S</m> by setting (using pseudo-code)
+                <me permid="iZT">
+                  W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}
+                </me>.
+              </p>
+            </li>
+          </dl>
         </p>
-        <algorithm>
-            <title>Prim's Algorithm</title>
-            <idx><h>minimum weight spanning trees</h><h>Prim's algorithm for</h></idx>
-            <idx><h>Prim's algorithm</h></idx>
-        <statement>
-            <p>
-               <dl>
-                    <li>
-                        <title>Initialization.</title>
-                        <p>Set <m>W=\{r\}</m> and <m>S=\emptyset</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <title>Inductive Step.</title>
-                        <p>While <m>|W| \lt n</m>, let <m>e</m> be an edge of minimum weight among all edges with one endpoint in <m>W</m> and the other not in <m>W</m>.  If <m>e=xy</m>, <m>x\in W</m> and <m>y\not\in W</m>, update <m>W</m> and <m>S</m> by setting (using pseudo-code)
-                        <me>
-                            W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
-                        </me>
-                        </p>
-                    </li>
-               </dl>
-            </p>
-        </statement>
-        </algorithm>
-        <p>The correctness of Prim's algorithm follows immediately from <xref ref="lem_graphalgorithms_tech"  />.
+      </statement>
+    </algorithm>
+
+    <p permid="eqa">
+      The correctness of Prim's algorithm follows immediately from <xref ref="lem_graphalgorithms_tech" />.
+    </p>
+
+    <example permid="HYc">
+      <title>Prim's Algorithm</title>
+      <sidebyside permid="ofl" widths="78% 17%">
+        <p permid="kfm">
+          Let's see what Prim's algorithm does on the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph" />.
+          We start with vertex <m>a</m> as the root vertex.
+          The lightest edge connecting <m>a</m>
+          (the only vertex in the tree so far)
+          to the rest of the graph is <m>ag</m>.
+          Next, <m>fg</m> is added.
+          This is followed by <m>fi</m>,
+          <m>fj</m>, <m>bj</m>, and <m>bc</m>.
+          Next, the algorithm identifies <m>ck</m> as the lightest edge connecting
+          <m>\{a,g,i,f,j,b,c\}</m> to the remaining vertices.
+          Notice that this is considerably later than Kruskal's algorithm finds the same edge.
+          The algorithm then determines that <m>al</m> and <m>jd</m>,
+          both of weight <m>56</m> are the lightest edges connecting vertices in the tree to the other vertices.
+          It picks arbitrarily, so let's say it takes <m>al</m>.
+          It next finds <m>dl</m>, then <m>ek</m>, and then <m>em</m>.
+          The final edge added is <m>ch</m>.
+          The full list of edges added
+          (in order)
+          is shown to the right.
+          The total weight of this spanning tree is <m>504</m>.
+          This (not surprisingly) the same weight we obtained using Kruskal's algorithm.
+          However, notice that the spanning tree found is different,
+          as this one contains <m>al</m> instead of <m>dj</m>.
+          This is not an issue, of course,
+          since in both cases an arbitrary choice between two edges of equal weight was made.
         </p>
-        <example>
-            <title>Prim's Algorithm</title>
-            <sidebyside widths="78% 17%">
-            <p>Let's see what Prim's algorithm does on the weighted graph in <xref ref="fig_graphalgorithms_spantreegraph"  />. We start with vertex <m>a</m> as the root vertex. The lightest edge connecting <m>a</m> (the only vertex in the tree so far) to the rest of the graph is <m>ag</m>. Next, <m>fg</m> is added. This is followed by <m>fi</m>, <m>fj</m>, <m>bj</m>, and <m>bc</m>. Next, the algorithm identifies <m>ck</m> as the lightest edge connecting <m>\{a,g,i,f,j,b,c\}</m> to the remaining vertices. Notice that this is considerably later than Kruskal's algorithm finds the same edge. The algorithm then determines that <m>al</m> and <m>jd</m>, both of weight <m>56</m> are the lightest edges connecting vertices in the tree to the other vertices. It picks arbitrarily, so let's say it takes <m>al</m>. It next finds <m>dl</m>, then <m>ek</m>, and then <m>em</m>. The final edge added is <m>ch</m>. The full list of edges added (in order) is shown to the right. The total weight of this spanning tree is <m>504</m>. This (not surprisingly) the same weight we obtained using Kruskal's algorithm. However, notice that the spanning tree found is different, as this one contains <m>al</m> instead of <m>dj</m>. This is not an issue, of course, since in both cases an arbitrary choice between two edges of equal weight was made.
-            </p>
+
             <pre>a g 25
 f g 26
 f i 29
@@ -198,18 +424,28 @@ d l 55
 e k 59
 e m 49
 c h 79</pre>
-            </sidebyside>
-        </example>
-    </subsection>
+      </sidebyside>
+    </example>
+  </subsection>
 
+  <subsection permid="eLz">
+    <title>Comments on Efficiency</title>
+    <p permid="Kxj">
+      An implementation of Kruskal's algorithm seems to require that the edges be sorted.
+      If the graph has <m>n</m> vertices and <m>m</m> edges,
+      this requires <m>m\log m</m> operations just for the sort.
+      But once the sort is done,
+      the process takes only <m>n-1</m> steps<mdash />provided you keep track of the components as the spanning forest expands.
+      Regardless, it is easy to see that at most
+      <m>O(n^2\log n)</m> operations are required.
+    </p>
 
-    <subsection>
-        <title>Comments on Efficiency</title>
-        <p>An implementation of Kruskal's algorithm seems to require that the edges be sorted. If the graph has <m>n</m> vertices and <m>m</m> edges, this requires <m>m\log m</m> operations just for the sort. But once the sort is done, the process takes only <m>n-1</m> steps<mdash />provided you keep track of the components as the spanning forest expands.  Regardless, it is easy to see that at most <m>O(n^2\log n)</m> operations are required.
-        </p>
-
-        <p>On the other hand, an implementation of Prim's algorithm requires the program to conveniently keep track of the edges incident with each vertex and always be able to identify the edge with least weight among subsets of these edges. In computer science, the data structure that enables this task to be carried out is called a <term>heap</term>.
-        </p>
-    </subsection>
-
+    <p permid="qEs">
+      On the other hand,
+      an implementation of Prim's algorithm requires the program to conveniently keep track of the edges incident with each vertex and always be able to identify the edge with least weight among subsets of these edges.
+      In computer science,
+      the data structure that enables this task to be carried out is called a <term>heap</term>.
+    </p>
+  </subsection>
 </section>
+

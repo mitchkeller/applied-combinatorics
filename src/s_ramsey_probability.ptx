@@ -1,56 +1,115 @@
-<section xml:id="s_ramsey_probability">
-    <title>Applying Probability to Ramsey Theory</title>
-    <idx><h>Ramsey number</h><h>symmetric</h></idx>
-    <p>The following theorem, due to P. Erd&#337;s, is a true classic, and is presented here in a manner that is faithful to how it was first published. As we shall see later, it was subsequently recast<mdash />but that's getting the cart ahead of the horse.
-    </p>
 
-    <theorem xml:id="thm_rnn">
-        <statement>
-            <p>If<m>n</m> is a positive integer. Then
-            <me>
-                R(n,n) \ge \frac{n}{e\sqrt2} 2^{\frac{1}{2}n}
-            </me>
-            </p>
-        </statement>
 
-        <proof>
-            <p>Let <m>t</m> be an integer with <m>t>n</m> and consider the set <m>\cgF</m> of all labeled graphs with vertex set <m>\{1,2,\dots,t\}</m>. Clearly, there are <m>2^{C(t,2)}</m> graphs in this family. Let <m>\cgF_1</m> denote the subfamily consisting of those graphs which contain a complete subgraph of size<nbsp /><m>n</m>. It is easy to see that
-            <me>
-                |\cgF_1|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}.
-            </me>
-            Similarly, let <m>\cgF_2</m> denote the subfamily consisting of those graphs which contain an independent set of size<nbsp /><m>n</m>. It follows that
-            <me>
-                |\cgF_2|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}.
-            </me>
-            </p>
-            <p>We want to take the integer <m>t</m> as large as we can while still guaranteeing that <m>|\cgF_1|+|\cgF_2|\le |\cgF|</m>. This will imply that there is a graph <m>G</m> in <m>\cgF</m> which does not contain a complete subgraph of size <m>n</m> or an independent set of size<nbsp /><m>n</m>. So consider the following inequality:
-            <men xml:id="eqn_rnn" >
-                2\binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}\lt 2^{C(t,2)}.
-            </men>
-            Now we ask how large can <m>t</m> be without violating <xref ref="eqn_rnn">inequality</xref>?  To answer this, we use the trivial inequality <m>\binom{t}{n}\le t^n/n!</m> and the use the Stirling approximation for <m>n!</m>. After some algebra and taking the <m>n^{\text{th} }</m> root of both sides, we see that we need only guarantee that
-            <me>
-                t\le \frac{n}{e\sqrt{n}}2^{\frac{1}{2}n}
-            </me>
-            </p>
-        </proof>
-    </theorem>
-    <p>Now let's take a second look at the proof of <xref ref="thm_rnn"  />.  We consider a probability space <m>(S,P)</m> where the outcomes are graphs with vertex set <m>\{1,2,\dots,t\}</m>. For each <m>i</m> and <m>j</m> with <m>1\le i \lt j\le t</m>, edge <m>ij</m> is present in the graph with probability <m>1/2</m>. Furthermore, the events for distinct pairs are independent.
-    </p>
+<section permid="LEc" xml:id="s_ramsey_probability">
+  <title>Applying Probability to Ramsey Theory</title>
+  <idx><h>Ramsey number</h><h>symmetric</h></idx>
 
-    <p>Let <m>X_1</m> denote the random variable which counts the number of <m>n</m>-element subsets of <m>\{1,2,\dots,t\}</m> for which all <m>\binom{n}{2}</m> pairs are edges in the graph. Similarly, <m>X_2</m> is the random variable which counts the number of <m>n</m>-element independent subsets of <m>\{1,2,\dots,t\}</m>.  Then set <m>X=X_1+X_2</m>.
-    </p>
+  <p permid="wve">
+    The following theorem, due to P. Erd&#337;s, is a true classic,
+    and is presented here in a manner that is faithful to how it was first published.
+    As we shall see later,
+    it was subsequently recast<mdash />but that's getting the cart ahead of the horse.
+  </p>
 
-    <p>By linearity of expectation, <m>E(X)=E(X_1)+E(X_2)</m> while
-    <me>
-        E(X_1)=E(X_2) = \binom{t}{n} \frac{1}{2^{C(n,2)}}.
-    </me>
-    If <m>E(X)\lt 1</m>, then there must exist a graph with vertex set <m>\{1,2,\dots,t\}</m> without a <m>K_n</m> or an <m>I_n</m>.  And the question of how large <m>t</m> can be while maintaining <m>E(X)\lt 1</m> leads to exactly the same calculation we had before.
-    </p>
+  <theorem permid="rLl" xml:id="thm_rnn">
+    <statement>
+      <p permid="QnV">
+        If<m>n</m> is a positive integer.
+        Then
+        <me permid="hmg">
+          R(n,n) \ge \frac{n}{e\sqrt2} 2^{\frac{1}{2}n}
+        </me>
+      </p>
+    </statement>
 
-    <p>After more than fifty years and the efforts of many very bright researchers, only marginal improvements have been made on the bounds on <m>R(n,n)</m> from <xref ref="thm_graphramsey"  /> and <xref ref="thm_rnn"  />. In particular, no one can settle whether there is some constant <m>c\lt 2</m> and an integer <m>n_0</m> so that <m>R(n,n)\lt 2^{cn}</m> when <m>n>n_0</m>. Similarly, no one has been able to answer whether there is some constant <m>d>1/2</m> and an integer <m>n_1</m> so that <m>R(n,n)>2^{dn}</m> when <m>n>n_1</m>. We would certainly give you an <m>A</m> for this course if you managed to do either.
+    <proof permid="XSu">
+      <p permid="DZD">
+        Let <m>t</m> be an integer with <m>t>n</m> and consider the set <m>\cgF</m> of all labeled graphs with vertex set <m>\{1,2,\dots,t\}</m>.
+        Clearly, there are <m>2^{C(t,2)}</m> graphs in this family.
+        Let <m>\cgF_1</m> denote the subfamily consisting of those graphs which contain a complete subgraph of size<nbsp /><m>n</m>.
+        It is easy to see that
+        <me permid="Ntp">
+          |\cgF_1|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}
+        </me>.
+        Similarly, let <m>\cgF_2</m> denote the subfamily consisting of those graphs which contain an independent set of size<nbsp /><m>n</m>.
+        It follows that
+        <me permid="tAy">
+          |\cgF_2|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}
+        </me>.
+      </p>
+
+      <p permid="kgM">
+        We want to take the integer <m>t</m> as large as we can while still guaranteeing that <m>|\cgF_1|+|\cgF_2|\le |\cgF|</m>.
+        This will imply that there is a graph <m>G</m> in <m>\cgF</m> which does not contain a complete subgraph of size <m>n</m> or an independent set of size<nbsp /><m>n</m>.
+        So consider the following inequality:
+        <men permid="FOQ" xml:id="eqn_rnn">
+          2\binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}\lt 2^{C(t,2)}
+        </men>.
+        Now we ask how large can <m>t</m> be without violating <xref ref="eqn_rnn">inequality</xref>?
+        To answer this, we use the trivial inequality
+        <m>\binom{t}{n}\le t^n/n!</m> and the use the Stirling approximation for <m>n!</m>.
+        After some algebra and taking the <m>n^{\text{th} }</m> root of both sides,
+        we see that we need only guarantee that
+        <me permid="ZHH">
+          t\le \frac{n}{e\sqrt{n}}2^{\frac{1}{2}n}
+        </me>
+      </p>
+    </proof>
+  </theorem>
+
+  <p permid="cCn">
+    Now let's take a second look at the proof of <xref ref="thm_rnn" />.
+    We consider a probability space <m>(S,P)</m> where the outcomes are graphs with vertex set <m>\{1,2,\dots,t\}</m>.
+    For each <m>i</m> and <m>j</m> with <m>1\le i \lt j\le t</m>,
+    edge <m>ij</m> is present in the graph with probability <m>1/2</m>.
+    Furthermore, the events for distinct pairs are independent.
+  </p>
+
+  <p permid="IJw">
+    Let <m>X_1</m> denote the random variable which counts the number of <m>n</m>-element subsets of <m>\{1,2,\dots,t\}</m> for which all
+    <m>\binom{n}{2}</m> pairs are edges in the graph.
+    Similarly, <m>X_2</m> is the random variable which counts the number of <m>n</m>-element independent subsets of <m>\{1,2,\dots,t\}</m>.
+    Then set <m>X=X_1+X_2</m>.
+  </p>
+
+  <p permid="oQF">
+    By linearity of expectation, <m>E(X)=E(X_1)+E(X_2)</m> while
+    <me permid="lVZ">
+      E(X_1)=E(X_2) = \binom{t}{n} \frac{1}{2^{C(n,2)}}
+    </me>.
+    If <m>E(X)\lt 1</m>, then there must exist a graph with vertex set
+    <m>\{1,2,\dots,t\}</m> without a <m>K_n</m> or an <m>I_n</m>.
+    And the question of how large <m>t</m> can be while maintaining
+    <m>E(X)\lt 1</m> leads to exactly the same calculation we had before.
+  </p>
+
+  <p permid="UXO">
+    After more than fifty years and the efforts of many very bright researchers,
+    only marginal improvements have been made on the bounds on <m>R(n,n)</m> from <xref ref="thm_graphramsey" /> and <xref ref="thm_rnn" />.
+    In particular,
+    no one can settle whether there is some constant <m>c\lt 2</m> and an integer <m>n_0</m> so that <m>R(n,n)\lt 2^{cn}</m> when <m>n>n_0</m>.
+    Similarly, no one has been able to answer whether there is some constant <m>d>1/2</m> and an integer <m>n_1</m> so that <m>R(n,n)>2^{dn}</m> when <m>n>n_1</m>.
+    We would certainly give you an <m>A</m> for this course if you managed to do either.
+  </p>
+
+  <remark>
+    <p permid="BeX">
+      Carlos said that he had been trying to prove a good lower bound on <m>R(n,n)</m> using only constructive methods,
+      <ie />, no random techniques allowed.
+      But he was having problems.
+      Anything he tried seemed only to show that
+      <m>R(n,n)\ge n^c</m> where <m>c</m> is a constant.
+      That seems so weak compared to the exponential bound which the probabilistic method gives easily.
+      Usually Alice was not very sympathetic to the complaints of others and certainly not from Carlos,
+      who seemed always to be out front.
+      But this time, Alice said to Carlos and in a manner that all could hear
+      <q>Maybe you shouldn't be so hard on yourself.
+      I read an article on the web that nobody has been able to show that there is a constant <m>c>1</m> and an integer <m>n_0</m> so that <m>R(n,n)>c^n</m> when <m>n>n_0</m>,
+      provided that only constructive methods are allowed.
+      And maybe, just maybe,
+      saying that you are unable to do something that lots of other famous people seem also unable to do is not so bad.</q>
+      Bob saw a new side of Alice and this too wasn't all bad.
     </p>
-    <remark>
-        <p>Carlos said that he had been trying to prove a good lower bound on <m>R(n,n)</m> using only constructive methods, <ie />, no random techniques allowed. But he was having problems. Anything he tried seemed only to show that <m>R(n,n)\ge n^c</m> where <m>c</m> is a constant. That seems so weak compared to the exponential bound which the probabilistic method gives easily. Usually Alice was not very sympathetic to the complaints of others and certainly not from Carlos, who seemed always to be out front.  But this time, Alice said to Carlos and in a manner that all could hear <q>Maybe you shouldn't be so hard on yourself. I read an article on the web that nobody has been able to show that there is a constant <m>c>1</m> and an integer <m>n_0</m> so that <m>R(n,n)>c^n</m> when <m>n>n_0</m>, provided that only constructive methods are allowed.  And maybe, just maybe, saying that you are unable to do something that lots of other famous people seem also unable to do is not so bad.</q> Bob saw a new side of Alice and this too wasn't all bad.
-        </p>
-    </remark>
+  </remark>
 </section>
+

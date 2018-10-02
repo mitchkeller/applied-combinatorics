@@ -1,58 +1,127 @@
-<section xml:id="s_intro_enum">
+
+
+<section permid="exR" xml:id="s_intro_enum">
   <title>Enumeration</title>
-  <p>Many basic problems in combinatorics involve counting the number of distributions of objects into cells<mdash />where we may or may not be able to distinguish between the objects and the same for the cells. Also, the cells may be arranged in patterns.  Here are concrete examples.
+  <p permid="icr">
+    Many basic problems in combinatorics involve counting the number of distributions of objects into cells<mdash />where we may or may not be able to distinguish between the objects and the same for the cells.
+    Also, the cells may be arranged in patterns.
+    Here are concrete examples.
   </p>
 
-  <p>
+  <p permid="OjA">
     Amanda has three children:   Dawn, Keesha and Seth.
-                  <ol>
-    <li>
-      <p>Amanda has ten one dollar bills and decides to give the full amount to her children.  How many ways can she do this?  For example, one way she might distribute the funds is to give Dawn and Keesha four dollars each with Seth receiving the balance<mdash />two dollars.  Another way is to give the entire amount to Keesha, an option that probably won't make Dawn and Seth very happy.  Note that hidden within this question is the assumption that Amanda does not distinguish the individual dollar bills, say by carefully examining their serial numbers.  Instead, we intend that she need only decide the <em>amount</em> each of the three children is to receive.</p>
-    </li>
-    <li>
-      <p>The amounts of money distributed to the three children form a sequence which if written in non-increasing order has the form: <m>a_1, a_2, a_3</m> with <m>a_1\ge a_2\ge a_3</m> and <m>a_1+a_2+a_3=10</m>.  How many such sequences are there?</p>
-    </li>
-    <li>
-      <p>Suppose Amanda decides to give each child at least one dollar.  How does this change the answers to the first two questions?</p>
-    </li>
-    <li>
-      <p>Now suppose that Amanda has ten books, in fact the top 10 books from the New York Times best-seller list, and decides to give them to her children.  How many ways can she do this?  Again, we note that there is a hidden assumption<mdash />the ten books are all different.</p>
-    </li>
-    <li>
-      <p>Suppose the ten books are labeled <m>B_1, B_2,\dots, B_{10}</m>.  The sets of books given to the three children are pairwise disjoint and their union is <m>\{B_1,B_2,\dots,B_{10}\}</m>.  How many different sets of the form <m>\{S_1, S_2, S_3\}</m> where <m>S_1</m>, <m>S_2</m> and <m>S_3</m> are pairwise disjoint and <m>S_1\cup S_2\cup S_3=\{B_1,B_2,\dots,B_{10}\}</m>?
-      </p>
-    </li>
-    <li>
-      <p>Suppose Amanda decides to give each child at least one book.  How does this change the answers to the preceding two questions?</p>
-    </li>
-    <li>
-      <p>How would we possibly answer these kinds of questions if ten was really ten thousand (OK, we're not talking about children any more!)  and three was three thousand?  Could you write the answer on a single page in a book?</p>
-    </li>
-  
-                  </ol>
-                </p>
-  
-  <p>A circular necklace with a total of six beads will be assembled using beads of three different colors. In <xref ref="fig_intro_necklace"  />, we show four such necklaces<mdash />however, note that the first three are actually the <em>same</em> necklace. Each has three red beads, two blues and one green. On the other hand, the fourth necklace has the same number of beads of each color but it is a <em>different</em> necklace.
+
+    <ol permid="KFa">
+      <li permid="WTs">
+        <p permid="sBw">
+          Amanda has ten one dollar bills and decides to give the full amount to her children.
+          How many ways can she do this?
+          For example,
+          one way she might distribute the funds is to give Dawn and Keesha four dollars each with Seth receiving the balance<mdash />two dollars.
+          Another way is to give the entire amount to Keesha,
+          an option that probably won't make Dawn and Seth very happy.
+          Note that hidden within this question is the assumption that Amanda does not distinguish the individual dollar bills,
+          say by carefully examining their serial numbers.
+          Instead, we intend that she need only decide the <em>amount</em>
+          each of the three children is to receive.
+        </p>
+      </li>
+
+      <li permid="DaB">
+        <p permid="YIF">
+          The amounts of money distributed to the three children form a sequence which if written in non-increasing order has the form:
+          <m>a_1, a_2, a_3</m> with <m>a_1\ge a_2\ge a_3</m> and <m>a_1+a_2+a_3=10</m>.
+          How many such sequences are there?
+        </p>
+      </li>
+
+      <li permid="jhK">
+        <p permid="EPO">
+          Suppose Amanda decides to give each child at least one dollar.
+          How does this change the answers to the first two questions?
+        </p>
+      </li>
+
+      <li permid="vwc">
+        <p permid="kWX">
+          Now suppose that Amanda has ten books,
+          in fact the top 10 books from the New York Times best-seller list,
+          and decides to give them to her children.
+          How many ways can she do this?
+          Again, we note that there is a hidden assumption<mdash />the ten books are all different.
+        </p>
+      </li>
+
+      <li permid="bDl">
+        <p permid="Reg">
+          Suppose the ten books are labeled <m>B_1, B_2,\dots, B_{10}</m>.
+          The sets of books given to the three children are pairwise disjoint and their union is <m>\{B_1,B_2,\dots,B_{10}\}</m>.
+          How many different sets of the form <m>\{S_1, S_2, S_3\}</m> where <m>S_1</m>,
+          <m>S_2</m> and <m>S_3</m> are pairwise disjoint and <m>S_1\cup S_2\cup S_3=\{B_1,B_2,\dots,B_{10}\}</m>?
+        </p>
+      </li>
+
+      <li permid="HKu">
+        <p permid="xlp">
+          Suppose Amanda decides to give each child at least one book.
+          How does this change the answers to the preceding two questions?
+        </p>
+      </li>
+
+      <li permid="nRD">
+        <p permid="dsy">
+          How would we possibly answer these kinds of questions if ten was really ten thousand (OK, we're not talking about children any more!) and three was three thousand?
+          Could you write the answer on a single page in a book?
+        </p>
+      </li>
+    </ol>
   </p>
-  <figure xml:id="fig_intro_necklace" >
+
+  <p permid="uqJ">
+    A circular necklace with a total of six beads will be assembled using beads of three different colors.
+    In <xref ref="fig_intro_necklace"  />, we show four such necklaces<mdash />however,
+    note that the first three are actually the <em>same</em> necklace.
+    Each has three red beads, two blues and one green.
+    On the other hand,
+    the fourth necklace has the same number of beads of each color but it is a
+    <em>different</em> necklace.
+  </p>
+
+  <figure permid="GFb" xml:id="fig_intro_necklace">
     <caption>Necklaces made with three colors</caption>
     <image width="75%" source="images/necklaces" />
   </figure>
-  <p>
-  <ol>
-    <li><p>How many different necklaces of six beads can be formed using three reds, two blues and one green?</p>
-    </li>
-    <li>
-      <p>How many different necklaces of six beads can be formed using red, blue and green beads (not all colors have to be used)?
-      </p>
-    </li>
-    <li>
-      <p>How many different necklaces of six beads can be formed using red, blue and green beads if all three colors have to be used?
-      </p>
-    </li>
-    <li>
-      <p>How would we possibly answer these questions for necklaces of six thousand beads made with beads from three thousand different colors?  What special software would be required to find the exact answer and how long would the computation take?</p>
-    </li>
-  </ol>
+
+  <p permid="axS">
+    <ol permid="qMj">
+      <li permid="TYM">
+        <p permid="JzH">
+          How many different necklaces of six beads can be formed using three reds,
+          two blues and one green?
+        </p>
+      </li>
+
+      <li permid="AfV">
+        <p permid="pGQ">
+          How many different necklaces of six beads can be formed using red,
+          blue and green beads (not all colors have to be used)?
+        </p>
+      </li>
+
+      <li permid="gne">
+        <p permid="VNZ">
+          How many different necklaces of six beads can be formed using red,
+          blue and green beads if all three colors have to be used?
+        </p>
+      </li>
+
+      <li permid="Mun">
+        <p permid="BVi">
+          How would we possibly answer these questions for necklaces of six thousand beads made with beads from three thousand different colors?
+          What special software would be required to find the exact answer and how long would the computation take?
+        </p>
+      </li>
+    </ol>
   </p>
 </section>
+

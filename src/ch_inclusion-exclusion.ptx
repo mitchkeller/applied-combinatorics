@@ -1,16 +1,25 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_inclusion-exclusion">
-    <title>Inclusion-Exclusion</title>
 
 
-    <introduction>
-        <p>In this chapter, we study an enumeration technique known as Inclusion-Exclusion. In its simplest case, it is absolutely intuitive.  Its power rests in the fact that in many situations, we start with an exponentially large calculation and see it reduce to a manageable size. We focus on three applications that every student of combinatorics should know: (1)<nbsp />counting surjections, (2)<nbsp />derangements, and (3)<nbsp />the Euler <m>\phi</m>-function.
-        </p>
-    </introduction>
-    <xi:include  href="s_inclusion-exclusion_intro.ptx" />
-    <xi:include  href="s_inclusion-exclusion_statement.ptx" />
-    <xi:include  href="s_inclusion-exclusion_surjections.ptx" />
-    <xi:include  href="s_inclusion-exclusion_derangements.ptx" />
-    <xi:include  href="s_inclusion-exclusion_euler-phi.ptx" />
-    <xi:include  href="s_inclusion-exclusion_discussion.ptx" />
-    <xi:include  href="s_inclusion-exclusion_exercises.ptx" />
+<chapter permid="SYX" xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_inclusion-exclusion">
+  <title>Inclusion-Exclusion</title>
+  <introduction permid="zgg">
+    <p permid="fnp">
+      In this chapter,
+      we study an enumeration technique known as Inclusion-Exclusion.
+      In its simplest case, it is absolutely intuitive.
+      Its power rests in the fact that in many situations,
+      we start with an exponentially large calculation and see it reduce to a manageable size.
+      We focus on three applications that every student of combinatorics should know: (1)<nbsp />counting surjections, (2)<nbsp />derangements,
+      and (3)<nbsp />the Euler <m>\phi</m>-function.
+    </p>
+  </introduction>
+
+  <xi:include  href="s_inclusion-exclusion_intro.ptx" />
+  <xi:include  href="s_inclusion-exclusion_statement.ptx" />
+  <xi:include  href="s_inclusion-exclusion_surjections.ptx" />
+  <xi:include  href="s_inclusion-exclusion_derangements.ptx" />
+  <xi:include  href="s_inclusion-exclusion_euler-phi.ptx" />
+  <xi:include  href="s_inclusion-exclusion_discussion.ptx" />
+  <xi:include  href="s_inclusion-exclusion_exercises.ptx" />
 </chapter>
+

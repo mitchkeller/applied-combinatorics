@@ -1,194 +1,358 @@
-<section xml:id="s_background_formal-num-sys">
-    <title>Formal Development of Number Systems</title>
 
 
-    <introduction>
-        <p>Up to this point, we have been discussing number systems in an entirely informal manner, assuming everyone knew all that needed to be known. Now let's pause and put things on a more firm foundation. So for the time being, do a memory dump and forget everything you have ever learned about numbers and arithmetic. The set of natural numbers has just been delivered on our door step in a big box with a warning label saying <alert>Assembly Required.</alert> We open the box and find a single piece of paper on which the following <q>instructions</q> are printed. These defining properties of the natural numbers are known as the <term>Peano Postulates</term><idx><h>Peano postulates</h></idx>.
-                  <ol label="i">
-            <li><p>There is a non-empty set of elements called <term>natural numbers</term><idx><h>natural numbers</h></idx>.  There is natural number called <term>zero</term> which is denoted<nbsp /><m>0</m>.  The set of all natural numbers is denoted <m>\nonnegints</m></p></li>
-            <li><p>There is a one-to-one function <m>s:\nonnegints \injection \nonnegints</m> called the <term>successor function</term>.  For each <m>n\in \nonnegints</m>, <m>s(n)</m> is called the <term>successor</term><idx><h>successor</h></idx> of <m>n</m>.</p></li>
-            <li><p>There is no natural number <m>n</m> for which <m>0=s(n)</m>.</p></li>
-            <li xml:id="peano_induction"><p>Let <m>\mathbb{M}\subseteq \nonnegints</m>.  Then <m>\mathbb{M} =\nonnegints</m> if and only if
+<section permid="xyk" xml:id="s_background_formal-num-sys">
+  <title>Formal Development of Number Systems</title>
+  <introduction permid="GRW">
+    <p permid="djU">
+      Up to this point,
+      we have been discussing number systems in an entirely informal manner,
+      assuming everyone knew all that needed to be known.
+      Now let's pause and put things on a more firm foundation.
+      So for the time being,
+      do a memory dump and forget everything you have ever learned about numbers and arithmetic.
+      The set of natural numbers has just been delivered on our door step in a big box with a warning label saying <alert>Assembly Required.</alert> We open the box and find a single piece of paper on which the following
+      <q>instructions</q> are printed.
+      These defining properties of the natural numbers are known as the
+      <term>Peano Postulates</term>.
+          <idx><h>Peano postulates</h></idx>
+      <ol permid="kez" label="i">
+        <li permid="wsR">
+          <p permid="ZFu">
+            There is a non-empty set of elements called
+            <term>natural numbers</term>.
+              <idx><h>natural numbers</h></idx>
+          There is natural number called <term>zero</term>
+            which is denoted<nbsp /><m>0</m>.
+            The set of all natural numbers is denoted <m>\nonnegints</m>
+          </p>
+        </li>
+
+        <li permid="cAa">
+          <p permid="FMD">
+            There is a one-to-one function <m>s:\nonnegints \injection \nonnegints</m> called the
+            <term>successor function</term>.
+            For each <m>n\in \nonnegints</m>,
+            <m>s(n)</m> is called the <term>successor</term>
+              <idx><h>successor</h></idx>
+            of <m>n</m>.
+          </p>
+        </li>
+
+        <li permid="IHj">
+          <p permid="lTM">
+            There is no natural number <m>n</m> for which <m>0=s(n)</m>.
+          </p>
+        </li>
+
+        <li permid="oOs" xml:id="peano_induction">
+
+          <p permid="SaV">
+            Let <m>\mathbb{M}\subseteq \nonnegints</m>.
+            Then <m>\mathbb{M} =\nonnegints</m> if and only if
+
             <ol label="a">
-                <li><p><m>0\in \mathbb{M}</m>; and</p></li>
-                <li><p><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
-                \Longrightarrow(s(k)\in \mathbb{M})</m>.</p></li>
-            
-                  </ol>
+              <li permid="DBR">
+                <p permid="XuI">
+                  <m>0\in \mathbb{M}</m>; and
                 </p>
+              </li>
+
+              <li permid="UVB">
+                <p permid="yie">
+                  <m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
+                  \Longrightarrow(s(k)\in \mathbb{M})</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p permid="Jrd">
+      Property <xref ref="peano_induction" /> in the list of Peano Postulates is called the
+      <term>Principle of Mathematical Induction</term>,
+      or just the <term>Principle of Induction</term>.
+          <idx><h>induction</h><h>principle of mathematical</h></idx>
+      As a first application of the Principle of Induction,
+      we prove the following basic property of the natural numbers.
+    </p>
+
+    <proposition permid="aKN">
+      <statement>
+        <p permid="YAb">
+          Let <m>n</m> be a natural number with <m>n\neq0</m>.
+          Then there is a natural number <m>m</m> so that <m>n=s(m)</m>.
+        </p>
+      </statement>
+
+      <proof permid="fuG">
+        <p permid="CRX">
+          Let <m>\mathbb{S}=\{n\in\nonnegints:\exists m\in\nonnegints,
+          n=s(m)\}</m>.
+          Then set <m>\mathbb{M}=\{0\}\cup\mathbb{S}</m>.
+          We show that <m>\mathbb{M}=\nonnegints</m>.
+          First, note that <m>0\in\mathbb{M}</m>.
+          Next, we will show that for all <m>k\in\nonnegints</m>,
+          if <m>k\in\mathbb{M}</m>, then <m>s(k)\in\mathbb{M}</m>.
+          However, this is trivial since for all <m>k\in\nonnegints</m>,
+          we have <m>s(k)\in\mathbb{S}\subseteq\mathbb{M}</m>.
+          We conclude that <m>\mathbb{M}=\nonnegints</m>.
+        </p>
+      </proof>
+    </proposition>
+  </introduction>
+
+  <subsection permid="dFt" xml:id="s_background_add">
+    <title>Addition as a Binary Operation</title>
+    <p permid="pym">
+      A <term>binary operation</term>
+          <idx><h>operation</h><h>binary</h></idx>
+      <m>*</m> on set <m>X</m> is just a function <m>*:X\times X\rightarrow X</m>.
+      So the image of the ordered pair <m>(x,y)</m> would normally be denoted <m>*((x,y))</m>.
+      However, this is usually abbreviated as <m>*(x,y)</m> or even more compactly as <m>x*y</m>.
+      With this convention,
+      we now define a binary operation <m>+</m> on the set <m>\nonnegints</m> of natural numbers.
+      This operation is defined as follows for every natural number <m>n\in\nonnegints</m>:
+
+      <ol permid="QlI" label="i">
+        <li permid="BcK">
+          <p permid="epn">
+            <m>n+0=n</m>.
+          </p>
+        </li>
+
+        <li permid="hjT">
+          <p permid="Kww">
+            For all <m>k\in\nonnegints</m>, <m>n+s(k) = s(n+k)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p permid="VFv">
+      We pause to make it clear why the preceding two statements define <m>+</m>.
+      Let <m>n</m> be an arbitrary natural number.
+      Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>m</m> for which <m>n+m</m> is defined.
+      Note that <m>0\in \mathbb{M}</m> by part<nbsp />(i).
+      Also note that for all <m>k\in \nonnegints</m>,
+      <m>s(k)\in \mathbb{M}</m> whenever <m>k\in \mathbb{M}</m> by part<nbsp />(ii).
+      This shows that <m>\mathbb{M}=\nonnegints</m>.
+      Since <m>n</m> was arbitrary,
+      this allows us to conclude that <m>n+m</m> is defined for all <m>n,m\in \nonnegints</m>.
+    </p>
+
+    <p permid="BME">
+      We read <m>n+m</m> as <m>n</m> <term>plus</term> <m>m</m>.
+      The operation <m>+</m> is also called <term>addition</term>.
+          <idx><h>addition</h><h>formal definition of</h></idx>
+    </p>
+
+    <p permid="hTN">
+      Among the natural numbers, the successor of zero plays a very important role,
+      so important that it deserves its own special symbol.
+      Here we follow tradition and call the natural number <m>s(0)</m> <term>one</term>
+      and denote it by<nbsp /><m>1</m>.
+      Note that for every natural number <m>n</m>,
+      we have <m>n+1=n+s(0)=s(n)</m>.
+      In particular, <m>0+1=1</m>.
+    </p>
+
+    <p permid="OaW">
+      With this notation,
+      the Principle of Induction can be restated in the following form.
+    </p>
+
+    <principle permid="uDE">
+      <title>Principle of Induction</title>
+      <statement>
+        <p permid="xcL">
+          Let <m>\mathbb{M}\subseteq \nonnegints</m>.
+          Then <m>\mathbb{M} =\nonnegints</m> if and only if
+
+          <ol permid="DXq" label="a">
+            <li permid="Nrc">
+              <p permid="qDF">
+                <m>0\in \mathbb{M}</m>; and
+              </p>
             </li>
-        </ol>
-     </p>
-        <p>Property <xref ref="peano_induction" /> in the list of Peano Postulates is called the <term>Principle of Mathematical Induction</term>, or just the <term>Principle of Induction</term><idx><h>induction</h><h>principle of mathematical</h></idx>.  As a first application of the Principle of Induction, we prove the following basic property of the natural numbers.
+
+            <li permid="tyl">
+              <p permid="WKO">
+                <m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
+                \Longrightarrow(k+1\in \mathbb{M})</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </principle>
+
+    <theorem permid="JMC">
+      <title>Associative Property of Addition</title>
+      <statement>
+        <p permid="geA">
+          <m>m+(n+p) = (m+n)+p</m>, for all <m>m,n,p\in \nonnegints</m>.
+        </p>
+      </statement>
+
+      <proof permid="mZf">
+        <p permid="iZg">
+          Let <m>m,n\in \nonnegints</m>.
+          Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>p</m> for which <m>m+(n+p)=(m+n)+p</m>.
+          We show that <m>\mathbb{M}=\nonnegints</m>.
         </p>
 
-        <proposition>
-            <statement>
-                <p>Let <m>n</m> be a natural number with <m>n\neq0</m>. Then there is a natural number <m>m</m> so that <m>n=s(m)</m>.
-                </p>
-            </statement>
-
-        <proof>
-            <p>Let <m>\mathbb{S}=\{n\in\nonnegints:\exists m\in\nonnegints, n=s(m)\}</m>. Then set <m>\mathbb{M}=\{0\}\cup\mathbb{S}</m>.  We show that <m>\mathbb{M}=\nonnegints</m>. First, note that <m>0\in\mathbb{M}</m>. Next, we will show that for all <m>k\in\nonnegints</m>, if <m>k\in\mathbb{M}</m>, then <m>s(k)\in\mathbb{M}</m>. However, this is trivial since for all <m>k\in\nonnegints</m>, we have <m>s(k)\in\mathbb{S}\subseteq\mathbb{M}</m>.  We conclude that <m>\mathbb{M}=\nonnegints</m>.
-            </p>
-        </proof>
-        </proposition>
-    </introduction>
-
-
-    <subsection xml:id="s_background_add">
-        <title>Addition as a Binary Operation</title>
-        <p>A <term>binary operation</term><idx><h>operation</h><h>binary</h></idx> <m>*</m> on set <m>X</m> is just a function <m>*:X\times X\rightarrow X</m>. So the image of the ordered pair <m>(x,y)</m> would normally be denoted <m>*((x,y))</m>.  However, this is usually abbreviated as <m>*(x,y)</m> or even more compactly as <m>x*y</m>. With this convention, we now define a binary operation <m>+</m> on the set <m>\nonnegints</m> of natural numbers.  This operation is defined as follows for every natural number <m>n\in\nonnegints</m>:
-                  <ol label="i">
-            <li><p><m>n+0=n</m>.</p></li>
-            <li><p>For all <m>k\in\nonnegints</m>, <m>n+s(k) = s(n+k)</m>.</p></li>
-        
-                  </ol>
-                </p>
-
-        <p>We pause to make it clear why the preceding two statements define <m>+</m>. Let <m>n</m> be an arbitrary natural number. Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>m</m> for which <m>n+m</m> is defined. Note that <m>0\in \mathbb{M}</m> by part<nbsp />(i). Also note that for all <m>k\in \nonnegints</m>, <m>s(k)\in \mathbb{M}</m> whenever <m>k\in \mathbb{M}</m> by part<nbsp />(ii). This shows that <m>\mathbb{M}=\nonnegints</m>. Since <m>n</m> was arbitrary, this allows us to conclude that <m>n+m</m> is defined for all <m>n,m\in \nonnegints</m>.
+        <p permid="Pgp">
+          Note that
+          <me permid="Gwx">
+            m+(n+0) = m+n = (m+n)+0
+          </me>
+          which shows that <m>0\in \mathbb{M}</m>.
         </p>
 
-        <p>We read <m>n+m</m> as <m>n</m> <term>plus</term> <m>m</m>. The operation <m>+</m> is also called <term>addition</term>.<idx><h>addition</h><h>formal definition of</h></idx>
+        <p permid="vny">
+          Now assume that <m>k\in \mathbb{M}</m>,
+          <ie />, <m>m+(n+k) = (m+n)+k</m>.
+          Then
+          <me permid="mDG">
+            m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1)
+          </me>.
+          Notice here that the first, second,
+          and fourth equalities follow from the second part of the definition of addition while the third uses our inductive assumption that <m>m+(n+k)=(m+n)+k)</m>.
+          This shows that <m>k+1\in \mathbb{M}</m>.
+          Therefore, <m>\mathbb{M}= \nonnegints</m>.
+          Since <m>m</m> and <m>n</m> were arbitrary elements of
+          <m>\nonnegints</m>, the theorem follows.
         </p>
+      </proof>
+    </theorem>
 
-        <p>Among the natural numbers, the successor of zero plays a very important role, so important that it deserves its own special symbol. Here we follow tradition and call the natural number <m>s(0)</m> <term>one</term> and denote it by<nbsp /><m>1</m>.  Note that for every natural number <m>n</m>, we have <m>n+1=n+s(0)=s(n)</m>. In particular, <m>0+1=1</m>.
+    <p permid="uif">
+      In proofs to follow,
+      we will trim out some of the wording and leave only the essential mathematical steps intact.
+      In particular,
+      we will (i)<nbsp />omit reference to the set <m>\mathbb{M}</m>,
+      and (ii)<nbsp />drop the phrase
+      <q>For all <m>k\in\nonnegints</m></q>
+      For example, to define addition,
+      we will just write (i)<nbsp /><m>n+0=n</m>,
+      and (ii)<nbsp /><m>n+(k+1) = (n+k)+1</m>.
+    </p>
+
+    <lemma permid="Cid">
+      <statement>
+        <p permid="EHk">
+          <m>m+(n+1) = (m+1)+n</m>, for all <m>m,n\in\nonnegints</m>.
         </p>
+      </statement>
 
-        <p>With this notation, the Principle of Induction can be restated in the following form.
+      <proof permid="LBP">
+        <p permid="buH">
+          Fix <m>m\in \nonnegints</m>.
+          Then
+          <me permid="SKP">
+            m+(0+1)=m+1= (m+0)+1
+          </me>.
+          Now assume that <m>m+(k+1)=(m+1)+k</m>.
+          Then
+          <me permid="yRY">
+            m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1)
+          </me>.
         </p>
+      </proof>
+    </lemma>
 
-        <principle>
-            <title>Principle of Induction</title>
-            <statement>
-                <p>Let <m>\mathbb{M}\subseteq \nonnegints</m>.  Then <m>\mathbb{M} =\nonnegints</m> if and only if
-                  <ol label="a">
-            <li><p><m>0\in \mathbb{M}</m>; and</p></li>
-            <li><p><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
-            \Longrightarrow(k+1\in \mathbb{M})</m>.</p></li>
-        
-                  </ol>
-                </p>
-            </statement>
-        </principle>
-        <theorem>
-            <title>Associative Property of Addition</title>
-            <statement>
-                <p>
-                    <m>m+(n+p) = (m+n)+p</m>, for all <m>m,n,p\in \nonnegints</m>.
-                </p>
-            </statement>
-            <proof>
-                <p>Let <m>m,n\in \nonnegints</m>. Then let <m>\mathbb{M}</m> denote the set of all natural numbers <m>p</m> for which <m>m+(n+p)=(m+n)+p</m>. We show that <m>\mathbb{M}=\nonnegints</m>.
-                </p>
+    <p permid="apo">
+      We next prove the commutative property,
+      a task that takes two steps.
+      First, we prove the following special case.
+    </p>
 
-                <p>Note that
-                <me>
-                    m+(n+0) = m+n = (m+n)+0
-                </me>
-                which shows that <m>0\in \mathbb{M}</m>.
-                </p>
-                <p>Now assume that <m>k\in \mathbb{M}</m>, <ie />, <m>m+(n+k) = (m+n)+k</m>.
-                Then
-                <me>
-                    m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1).
-                </me>
-                Notice here that the first, second, and fourth equalities follow from the second part of the definition of addition while the third uses our inductive assumption that <m>m+(n+k)=(m+n)+k)</m>. This shows that <m>k+1\in \mathbb{M}</m>. Therefore, <m>\mathbb{M}= \nonnegints</m>. Since <m>m</m> and <m>n</m> were arbitrary elements of <m>\nonnegints</m>, the theorem follows.
-                </p>
-            </proof>
-        </theorem>
-
-        <p>In proofs to follow, we will trim out some of the wording and leave only the essential mathematical steps intact.  In particular, we will (i)<nbsp />omit reference to the set <m>\mathbb{M}</m>, and (ii)<nbsp />drop the phrase <q>For all <m>k\in\nonnegints</m></q> For example, to define addition, we will just write (i)<nbsp /><m>n+0=n</m>, and (ii)<nbsp /><m>n+(k+1) = (n+k)+1</m>.
+    <lemma permid="ipm">
+      <statement>
+        <p permid="kOt">
+          <m>n+0 = 0+n=n</m>, for all <m>n\in \nonnegints</m>.
         </p>
+      </statement>
 
-        <lemma>
-            <statement>
-                <p>
-                    <m>m+(n+1) = (m+1)+n</m>, for all <m>m,n\in\nonnegints</m>.
-                </p>
-            </statement>
-
-            <proof>
-                <p>Fix <m>m\in \nonnegints</m>. Then
-                    <me>
-                        m+(0+1)=m+1= (m+0)+1.
-                    </me>
-                    Now assume that <m>m+(k+1)=(m+1)+k</m>.
-                    Then
-                    <me>
-                        m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
-                    </me>
-                </p>
-            </proof>
-        </lemma>
-
-        <p>We next prove the commutative property, a task that takes two steps. First, we prove the following special case.
+      <proof permid="rIY">
+        <p permid="HBQ">
+          The statement is trivially true when <m>n= 0</m>.
+          Now suppose that <m>k+0=0+k=k</m> for some <m>k\in \nonnegints</m>.
+          Then
+          <me permid="eZh">
+            (k+1) +0 = k+1 = (0+k)+1= 0+(k+1)
+          </me>.
         </p>
+      </proof>
+    </lemma>
 
-        <lemma>
-            <statement>
-                <p>
-                    <m>n+0 = 0+n=n</m>, for all <m>n\in \nonnegints</m>.
-                </p>
-            </statement>
+    <theorem permid="pTL">
+      <title>Commutative Law of Addition</title>
+      <statement>
+        <p permid="MlJ">
+          <m>m+n=n+m</m> for all <m>m,n\in \nonnegints</m>.
+        </p>
+      </statement>
 
-            <proof>
-                <p>The statement is trivially true when <m>n= 0</m>.  Now suppose that <m>k+0=0+k=k</m> for some <m>k\in \nonnegints</m>.  Then
-                    <me>
-                        (k+1) +0 = k+1 = (0+k)+1= 0+(k+1).
-                    </me>
-                </p>
-            </proof>
-        </lemma>
+      <proof permid="Tgo">
+        <p permid="nIZ">
+          Let <m>m\in \nonnegints</m>.
+          Then <m>m+0=0+m</m> from the preceding lemma.
+          Assume <m>m+k=k+m</m>.
+          Then
+          <me permid="Lgq">
+            m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m
+          </me>.
+        </p>
+      </proof>
+    </theorem>
 
-        <theorem>
-            <title>Commutative Law of Addition</title>
-            <statement>
-                <p>
-                    <m>m+n=n+m</m> for all <m>m,n\in \nonnegints</m>.
-                </p>
-            </statement>
+    <lemma permid="Owv" xml:id="lem_sum0">
+      <statement>
+        <p permid="QVC">
+          If <m>m,n\in\nonnegints</m> and <m>m+n=0</m>, then <m>m=n=0</m>.
+        </p>
+      </statement>
 
-            <proof>
-                <p>Let <m>m\in \nonnegints</m>. Then <m>m+0=0+m</m> from the preceding lemma.  Assume <m>m+k=k+m</m>. Then
-                    <me>
-                        m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
-                    </me>
-                </p>
-            </proof>
-        </theorem>
+      <proof permid="XQh">
+        <p permid="TQi">
+          Suppose that either of <m>m</m> and <m>n</m> is not zero.
+          Since addition is commutative,
+          we may assume without loss of generality that <m>n\neq0</m>.
+          Then there exists a natural number <m>p</m> so that <m>n=s(p)</m>.
+          This implies that <m>m+n=m+s(p)=s(m+p)=0</m>,
+          which is impossible since <m>0</m> is not the successor of any natural number.
+        </p>
+      </proof>
+    </lemma>
 
-        <lemma xml:id="lem_sum0">
-            <statement>
-                <p>
-                    If <m>m,n\in\nonnegints</m> and <m>m+n=0</m>, then <m>m=n=0</m>.
-                </p>
-            </statement>
+    <theorem permid="WaU">
+      <title>Cancellation Law of Addition</title>
+      <statement>
+        <p permid="ssS">
+          If <m>m,n,p\in \nonnegints</m> and <m>m+p=n+p</m>, then <m>m=n</m>.
+        </p>
+      </statement>
 
-            <proof>
-                <p>Suppose that either of <m>m</m> and <m>n</m> is not zero. Since addition is commutative, we may assume without loss of generality that <m>n\neq0</m>. Then there exists a natural number <m>p</m> so that <m>n=s(p)</m>. This implies that <m>m+n=m+s(p)=s(m+p)=0</m>, which is impossible since <m>0</m> is not the successor of any natural number.
-                </p>
-            </proof>
-        </lemma>
-
-        <theorem>
-            <title>Cancellation Law of Addition</title>
-            <statement>
-                <p>If <m>m,n,p\in \nonnegints</m> and <m>m+p=n+p</m>, then <m>m=n</m>.
-                </p>
-            </statement>
-
-            <proof>
-                <p>Let <m>m,n\in \nonnegints</m>. Suppose that <m>m+0=n+0</m>. Then <m>m=n</m>.  Now suppose that <m>m=n</m> whenever <m>m+k=n+k</m>.  If <m>m+(k+1)=n+(k+1)</m>, then
-                    <me>
-                        s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k).
-                    </me>
-                    Since <m>s</m> is an
-                    injection, this implies <m>m+k=n+k</m>. Thus <m>m=n</m>.
-                </p>
-            </proof>
-        </theorem>
-
-    </subsection>
+      <proof permid="znx">
+        <p permid="zXr">
+          Let <m>m,n\in \nonnegints</m>.
+          Suppose that <m>m+0=n+0</m>.
+          Then <m>m=n</m>.
+          Now suppose that <m>m=n</m> whenever <m>m+k=n+k</m>.
+          If <m>m+(k+1)=n+(k+1)</m>, then
+          <me permid="rnz">
+            s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k)
+          </me>.
+          Since <m>s</m> is an
+          injection, this implies <m>m+k=n+k</m>.
+          Thus <m>m=n</m>.
+        </p>
+      </proof>
+    </theorem>
+  </subsection>
 
 </section>
+
