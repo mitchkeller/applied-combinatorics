@@ -59,7 +59,20 @@
                 t(n) = c_1\left(\frac{3+\sqrt{5}}{2}\right)^n +
                 c_2\left(\frac{3-\sqrt{5}}{2}\right)^n.
             </me>
-            This probably looks suspicious; we're <em>counting strings</em> here, so <m>t(n)</m> needs to be a nonnegative integer, but the form we've given includes not just fractions but also square roots! However, if you look carefully, you'll see that using the binomial theorem to expand the terms in our expression for <m>t(n)</m> would get rid of all the square roots, so everything is good. (A faster way to convince yourself that this really satisfies <xref ref="eqn_recurrence_ternary"  /> is to mimic the verification we used in the previous example.)  Because we have initial values for <m>t(n)</m>, we are able to solve for <m>c_1</m> and <m>c_2</m> here. Evaluating at <m>n=0</m> and <m>n=1</m> we get
+            This probably looks suspicious; we're <em>counting
+            strings</em> here, so <m>t(n)</m> needs to be a
+            nonnegative integer, but the form we've given includes not
+            just fractions but also square roots! You can mimic the
+            verification we used in the previous example to see that
+            this does satisfy <xref ref="eqn_recurrence_ternary"
+            />. If that feels tedious, consider how you would use the
+            binomial theorem to expand the terms in this expression
+            for <m>t(n)</m>. With appropriate values for <m>c_1</m>
+            and <m>c_2</m>, it seems plausible that we could get rid
+            of the square roots and fractions. Because we have initial
+            values for <m>t(n)</m>, we are able to solve for
+            <m>c_1</m> and <m>c_2</m> here. Evaluating at <m>n=0</m>
+            and <m>n=1</m> we get
             <md>
                 <mrow>  3 \amp = c_1 + c_2</mrow>
                 <mrow>  8 \amp  = c_1\frac{3+\sqrt{5}}{2} + c_2 \frac{3-\sqrt{5}}{2}.</mrow>
