@@ -128,7 +128,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Using generating functions, find the number of ways to make change for a <m>100</m> dollar bill using only dollar coins and <dollar/><m>1</m>, <dollar/><m>2</m>, and <dollar/><m>5</m> bills. </p>
+            <p>Using generating functions, find the number of ways to make change for a <m>100</m> dollar bill using only dollar coins and $<m>1</m>, $<m>2</m>, and $<m>5</m> bills. </p>
             <sage>
                 <input>
                     f(x) = x # Generating function on right here
@@ -147,13 +147,13 @@
     </exercise>    
     <exercise>
         <statement>
-            <p>A businesswoman is traveling in Belgium and wants to buy chocolates for herself, her husband, and their two daughters. A store has dark chocolate truffles (€ 10/box), milk chocolate truffles (€ 8/box), nougat-filled chocolates (€ 5/box), milk chocolate bars (€ 7/bar), and 75<percent/> cacao chocolate bars (€ 11/bar). Her purchase is to be subject to the following:
+            <p>A businesswoman is traveling in Belgium and wants to buy chocolates for herself, her husband, and their two daughters. A store has dark chocolate truffles (€ 10/box), milk chocolate truffles (€ 8/box), nougat-filled chocolates (€ 5/box), milk chocolate bars (€ 7/bar), and 75% cacao chocolate bars (€ 11/bar). Her purchase is to be subject to the following:
             <ul>
                 <li><p>Only the daughters like dark chocolate truffles, and her purchase must ensure that each daughter gets an equal number of boxes of them (if they get any).</p></li>
                 <li><p>At least two boxes of milk chocolate truffles must be purchased.</p></li>
                 <li><p>If she buys any boxes of nougat-filled chocolates, then she buys exactly enough that each family member gets precisely one box of them.</p></li>
                 <li><p>At most three milk chocolate bars may be purchased.</p></li>
-                <li><p>There are no restrictions on the number of 75<percent/> cacao chocolate bars.</p></li>
+                <li><p>There are no restrictions on the number of 75% cacao chocolate bars.</p></li>
             </ul>
             Let <m>s_n</m> be the number of ways the businesswoman can spend exactly € <m>n</m> (<alert>not</alert> buy <m>n</m> items!) at this chocolate shop. Find the generating function for the sequence <m>\{s_n\colon n\geq 0\}</m>. In how many ways can she spend exactly € 100 at the chocolate shop? (A computer algebra system will be helpful for finding coefficients.)</p>
             <sage>
@@ -186,10 +186,10 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for <dollar/><nbsp /><m>0.95</m> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you're not asked for the coefficient on <m>x^n</m>.)
+            <p>Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for $<m>0.95</m> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you're not asked for the coefficient on <m>x^n</m>.)
                   <ol>
-                <li><p>Use a generating function and computer algebra system to determine the number of ways Carlos could pay his <dollar/><nbsp /><m>0.95</m> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)</p></li>
-                <li xml:id="exer_genfunction_coin-toll"><p>Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the <dollar/><nbsp /><m>0.95</m> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <m>10=C(5,2)</m> ways to insert this combination. Use a generating function and computer algebra system to determine the number of ways that Carlos could pay the <dollar/><nbsp /><m>0.95</m> toll when considering the order the coins are inserted.</p></li>
+                <li><p>Use a generating function and computer algebra system to determine the number of ways Carlos could pay his $<m>0.95</m> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)</p></li>
+                <li xml:id="exer_genfunction_coin-toll"><p>Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the $<m>0.95</m> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <m>10=C(5,2)</m> ways to insert this combination. Use a generating function and computer algebra system to determine the number of ways that Carlos could pay the $<m>0.95</m> toll when considering the order the coins are inserted.</p></li>
             
                   </ol>
             </p>
