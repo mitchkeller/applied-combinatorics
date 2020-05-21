@@ -28,21 +28,21 @@ case $i in
 esac
 done
 
-IBLMADIR=`pwd`
+ACDIR=`pwd`
 
 
 case $FORMAT in
     [hH]*)
-	cp ${IBLMLADIR}/xsl/ibl-modernalgebra-html.xsl ${PTX}/user
+	cp ${ACDIR}/xsl/applied-combinatorics-html.xsl ${PTX}/user
 	cd ${OUTDIR}
-	xsltproc -stringparam publisher ${PUBFILE} -xinclude ${PTX}/user/ibl-modernalgebra-html.xsl ${IBLMADIR}/ptx/index.ptx
+	xsltproc -stringparam publisher ${PUBFILE} -xinclude ${PTX}/user/applied-combinatorics-html.xsl ${ACDIR}/src/index.ptx
 	;;
     [lL]*)
 	cd ${OUTDIR}
-	xsltproc -o IBL-modernalgebra.tex -stringparam publisher ${PUBFILE} -xinclude ${PTX}/xsl/mathbook-latex.xsl ${IBLMADIR}/ptx/index.ptx
-	pdflatex IBL-modernalgebra
-	pdflatex IBL-modernalgebra
-	pdflatex IBL-modernalgebra
+	xsltproc -o IBL-modernalgebra.tex -stringparam publisher ${PUBFILE} -xinclude ${PTX}/xsl/mathbook-latex.xsl ${ACDIR}/ptx/index.ptx
+	xelatex app-comb
+	xelatex app-comb
+	xelatex app-comb
 	;;
     *)
 	echo "Invalid format: ${FORMAT}"
