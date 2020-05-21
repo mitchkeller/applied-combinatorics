@@ -93,7 +93,7 @@
             <p>
                 We close this section with an example of how to take a Pr&#xfc;fer code and use it to construct a labeled tree. Consider the string <m>\bfs=75531</m> as a Pr&#xfc;fer code. Then the tree <m>\bfT</m> corresponding to <m>\bfs</m> has <m>7</m> vertices, and its leaves are labeled <m>2</m>, <m>4</m>, and <m>6</m>. The inductive step in our proof attaches the vertex labeled <m>2</m> to the vertex labeled <m>7</m> in the tree <m>\bfT'</m> with Pr&#xfc;fer code <m>5531</m> and vertex labels <m>\{1,3,4,5,6,7\}</m>, since <m>2</m> is used to label the last vertex added. What are the leaves of <m>\bfT'</m>? The symbols in <m>\{4,6,7\}</m> do not appear in <m>5531</m>, so they must be the labels of leaves, and the construction says that we would attach the vertex labeled <m>4</m> to the vertex labeled <m>5</m> in the tree we get by induction. In <xref ref="tab_prufer-code-reverse"  />, we show how this recursive process continues.
             </p>
-            <table xml:id="tab_prufer-code-reverse" >
+            <figure xml:id="tab_prufer-code-reverse" >
                 <caption>Turning the Pr&#xfc;fer code <m>75531</m> into a labeled tree</caption>
                 <tabular>
                     <row><cell>Pr&#xfc;fer code</cell><cell>Label set</cell><cell>Edge added</cell></row>
@@ -104,7 +104,7 @@
                     <row><cell>1</cell><cell><m>\{1,3,7\}</m></cell><cell>3<ndash />1</cell></row>
                     <row><cell>(empty string)</cell><cell><m>\{1,7\}</m></cell><cell>1<ndash />7</cell></row>
                 </tabular>
-            </table>
+            </figure>
             <p>We form each row from the row above it by removing the first label used on the edge added from the label set and removing the first symbol from the Pr&#xfc;fer code. Once the Pr&#xfc;fer code becomes the empty string, we know that the two remaining labels must be the labels we place on the ends of <m>\bfK_2</m> to start building <m>\bfT</m>. We then work back up the edge added column, adding a new vertex and the edge indicated. The tree we construct in this manner is shown in <xref ref="fig_prufer-code-reverse"  />.
             </p>
             <figure xml:id="fig_prufer-code-reverse" >

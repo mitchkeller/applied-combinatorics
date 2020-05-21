@@ -94,7 +94,7 @@
         <statement>
             <p><xref ref="tab_digraph1"  /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.
             </p>
-            <table xml:id="tab_digraph1">
+            <figure xml:id="tab_digraph1">
                 <caption>A digraph represented as a table of data
                 </caption>
                 <tabular>
@@ -164,7 +164,7 @@
                         <cell>0</cell>
                     </row>
                 </tabular>
-            </table>
+            </figure>
         </statement>
     </exercise>
     <exercise>
@@ -180,7 +180,7 @@
     <exercise>
         <statement>
             <p><xref ref="tab_digraph2"  /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.</p>
-            <table xml:id="tab_digraph2">
+            <figure xml:id="tab_digraph2">
                 <caption>A digraph represented as a table of data
                 </caption>
 
@@ -250,7 +250,7 @@
                     <cell>0</cell>
                 </row>
                 </tabular>
-            </table>
+            </figure>
         </statement>
     </exercise>
     <exercise>

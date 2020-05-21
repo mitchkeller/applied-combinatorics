@@ -9,7 +9,7 @@
     </me>
         This recursion has a natural combinatorial interpretation. Both sides count the number of <m>k</m>-element subsets of <m>\{1,2,\dots,n\}</m>, with the right-hand side first grouping them into those which contain the element<nbsp /><m>n</m> and then those which don't. The traditional form of displaying this recursion is shown in <xref ref="fig_pascal"  />. This pattern is called <q>Pascal's triangle.</q> Other than the <m>1</m>s at the ends of each row, an entry of the triangle is determined by adding the entry to the left and the entry to the right in the row above.
     </p>
-    <table xml:id="fig_pascal" >
+    <figure xml:id="fig_pascal" >
         <caption>Pascal's Triangle</caption>
         <tabular>
 <row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>1</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
@@ -22,7 +22,7 @@
             <row><cell></cell><cell>1</cell><cell></cell><cell>7</cell><cell></cell><cell>21</cell><cell></cell><cell>35</cell><cell></cell><cell>35</cell><cell></cell><cell>21</cell><cell></cell><cell>7</cell><cell></cell><cell>1</cell><cell></cell></row>
             <row><cell>1</cell><cell></cell><cell>8</cell><cell></cell><cell>28</cell><cell></cell><cell>56</cell><cell></cell><cell>70</cell><cell></cell><cell>56</cell><cell></cell><cell>28</cell><cell></cell><cell>8</cell><cell></cell><cell>1</cell></row>
         </tabular>
-    </table>
+    </figure>
     <p>Xing was intrigued by the fact that he now had two fundamentally different ways to calculate binomial coefficients. One way is to write <m>\binom{n}{m}=P(n,m)/(n-m)!</m> and just carry out the specified arithmetic. The second way is to use the recursion of Pascal's triangle, so that you are just performing additions. So he experimented by writing a computer program to calculate binomial coefficients, using a library that treats big integers as strings. Which of the two ways do you think proved to be faster when <m>n</m> say was between <m>1800</m> and <m>2000</m> and <m>m</m> was around <m>800</m>?
     </p>
 </section>

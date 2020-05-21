@@ -38,7 +38,7 @@
 
     <p>Now that we've identified the eight transformations of the square, let's make a table showing which colorings from <xref ref="fig_polya_squares"  /> are left unchanged by the application of each transformation. Not surprisingly, the identity transformation leaves all of the colorings unchanged. Because <m>r_1</m> moves the vertices cyclically, we see that only <m>C_1</m> and <m>C_{16}</m> remain unchanged when it is applied. Any coloring with more than one color would have a vertex of one color moved to one of the other color. Let's consider which colorings are fixed by <m>v</m>, the flip about the vertical axis. For this to happen, the color at position <m>1</m> must be the same as the color at position <m>2</m>, and the color at position <m>3</m> must be the same as the color at position <m>4</m>. Thus, we would expect to find <m>2\cdot 2 = 4</m> colorings unchanged by <m>v</m>. Examining <xref ref="fig_polya_squares"  />, we see that these colorings are <m>C_1</m>, <m>C_6</m>, <m>C_8</m>, and <m>C_{16}</m>. Performing a similar analysis for the remaining five transformations leads to <xref ref="tab_polya_fixed-square"  />.
     </p>
-    <table xml:id="tab_polya_fixed-square" >
+    <figure xml:id="tab_polya_fixed-square" >
         <caption>Colorings fixed by transformations of the square</caption>
         <tabular>
             <col halign="center" /><col />
@@ -55,7 +55,7 @@
             <m>C_{16}</m></cell></row>
             <row><cell></cell></row>
         </tabular>
-    </table>
+    </figure>
     <p>At this point, it's natural to ask where this is going. After all, we're trying to count the number of <em>nonequivalent</em> colorings, and <xref ref="tab_polya_fixed-square"  /> makes no effort to group colorings based on how a transformation changes one coloring to another. It turns out that there is a useful connection between counting the nonequivalent colorings and determining the number of colorings fixed by each transformation. To develop this connection, we first need to discuss the equivalence relation created by the action of the transformations of the square on the set <m>\cgC</m> of all <m>2</m>-colorings of the square. (Refer to <xref ref="s_background_equivalence"  /> for a refresher on the definition of equivalence relation.) To do this, notice that applying a transformation to a square with colored vertices results in another square with colored vertices. For instance, applying the transformation <m>r_1</m> to a square colored as in <m>C_{12}</m> results in a square colored as in <m>C_{13}</m>. We say that the transformations of the square <term>act</term> on the set <m>\cgC</m> of colorings. We denote this action by adding a star to the transformation name. For instance, <m>r_1^*(C_{12})=C_{13}</m> and <m>v^*(C_{10})=C_{11}</m>.
     </p>
 

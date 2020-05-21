@@ -45,7 +45,7 @@
 
         <p>Before we get into the molecular structure of xylenol, we need to discuss the permutation group that will act on a benzene ring. Much like with our example of coloring the vertices of the square, we find that there are rotations and flips at play here. In fact, the group we require is the dihedral group of the hexagon, <m>D_{12}</m>. If we number the six carbon atoms in clockwise order as <m>1,2,\dots,6</m>, then we find that the clockwise rotation by <m>60^\circ</m> corresponds to the permutation <m>r=(123456)</m>. The other rotations are the higher powers of <m>r</m>, as shown in <xref ref="tab_polya_benzene"  />. The flip across the vertical axis is the permutation <m>f=(16)(25)(34)</m>. The remaining elements of <m>D_{12}</m> (other than the identity <m>\iota</m>) can all be realized as some rotation followed by this flip. The full list of permutations is shown in <xref ref="tab_polya_benzene"  />, where each permutation is accompanied by the monomial it contributes to the cycle index.
         </p>
-        <table xml:id="tab_polya_benzene" >
+        <figure xml:id="tab_polya_benzene" >
             <caption>Cycle representation of permutations in <m>D_{12}</m></caption>
             <tabular>
                 <col /> <col halign="center" /> <col halign="left" /><col halign="center" /> <row bottom="minor"><cell>Permutation</cell><cell>Monomial</cell><cell>Permutation</cell><cell>Monomial</cell></row>
@@ -57,7 +57,7 @@
                 <row><cell><m>r^4=(153)(264)</m></cell><cell><m>x_3^2</m></cell><cell><m>fr^4=(12)(36)(45)</m></cell><cell><m>x_2^3</m></cell></row>
                 <row><cell><m>r^5=(165432)</m></cell><cell><m>x_6^1</m></cell><cell><m>fr^5=(1)(26)(35)(4)</m></cell><cell><m>x_1^2x_2^2</m></cell></row>
             </tabular>
-        </table>
+        </figure>
         <p>With the monomials associated to the permutations in <m>D_{12}</m> identified, we are able to write down the cycle index
         <me>
             P_{D_{12}}(x_1,\dots,x_6) = \frac{1}{12}(x_1^6 + 2x_6^1 + 2x_3^2+4x_2^3 + 3x_1^2x_2^2).
