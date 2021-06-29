@@ -82,7 +82,7 @@
         </p>
         <figure xml:id="fig_networkflow_smallnet" >
             <caption>A Small Network</caption>
-            <image width="45%" source="images/smallnet" />
+            <image width="45%" source="smallnet" />
         </figure>
         <p>Since this network is really small, it was easy for Bob to find the maximum flow. However, Bob and Carlos agree that <q>eyeballing</q> is not an approach that scales well to larger networks, so they need to have an approach to finding that flow using augmenting paths. Bob tells Carlos to give him an augmenting path, and he'll do the updating. Carlos suggests the augmenting path <m>(S,A,B,T)</m>, and Bob determines that <m>\delta=1</m> for this augmenting path. He updates the network (starting from the zero flow, <ie />, with <m>\phi(e)=0</m> for every edge <m>e</m>) and it now has value <m>1</m>. Bob asks Carlos for another augmenting path, so Carlos gives him <m>(S,B,A,T)</m>. Now <m>(B,A)</m> is backward, but that doesn't phase Bob. He performs the update, obtaining a flow of value <m>2</m> with <m>(A,B)</m> empty again.
         </p>

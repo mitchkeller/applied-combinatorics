@@ -13,7 +13,7 @@
     </p>
     <figure xml:id="f_unlabeled" >
         <caption>An Unlabeled Partially Ordered Set</caption>
-        <image width="30%" source="images/wttfig-5" />
+        <image width="30%" source="wttfig-5" />
     </figure>
     <remark>
         <p>How hard is it to tell whether two posets are isomorphic? Bob thinks it's not too difficult. Bob says that if you give him a bijection between the ground sets, then he can quickly determine whether you have established that the two posets are isomorphic. Alice senses that Bob is confusing the issue of testing whether two posets are isomorphic with simply verifying that a particular bijection can be certified to be an isomorphism. The first problem seems much harder to her. Carlos says that he thinks it's actually very hard and that in fact, no one knows whether there is a good algorithm.
@@ -32,7 +32,7 @@
     </p>
     <figure xml:id="fig_noncompgraph" >
         <caption>A Graph Which is Not a Comparability Graph</caption>
-        <image width="25%" source="images/noncompgraph" />
+        <image width="25%" source="noncompgraph" />
     </figure>
     <p>Similarly, we say that a graph <m>\bfG</m> is a <term>cover graph</term><idx><h>graph</h><h>cover</h></idx> when there exists a poset <m>\PXP</m> whose cover graph is isomorphic to <m>\bfG</m>. Not every graph is a cover graph. In particular, any graph which contains a triangle is not a cover graph. In the exercises at the end of the chapter, you will be asked to construct triangle-free graphs which are not cover graphs<mdash />with some hints given as to how to proceed.
     </p>

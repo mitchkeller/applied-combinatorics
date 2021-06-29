@@ -4,7 +4,7 @@
     </p>
     <figure xml:id="fig_networkflow_network" >
         <caption>A Network</caption>
-        <image width="65%" source="images/webfig-31a" />
+        <image width="65%" source="webfig-31a" />
     </figure>
     <p>A <term>flow</term><idx><h>flow</h></idx><idx><h>network flow</h></idx> <m>\phi</m> in a network is a function which assigns to each directed edge <m>e=(x,y)</m> a non-negative value <m>\phi(e)=\phi(x,y)\leq c(x,y)</m> so that the following <term>conservation laws</term> hold:
                   <ol>
@@ -22,7 +22,7 @@
     </p>
     <figure xml:id="fig_networkflow_netflow" >
         <caption>A Network Flow</caption>
-        <image width="65%" source="images/webfig-31b" />
+        <image width="65%" source="webfig-31b" />
     </figure>
     <p>In this figure, the numbers associated with each edge are its capacity and the amount of flow that <m>\phi</m> places on that edge. For example, the edge <m>(E,D)</m> has capacity <m>20</m> and currently carries a flow of <m>8</m>. (Since <m>\phi(x,y)\leq c(x,y)</m>, it is always easy to determine which number is the capacity and which is the flow.) The value of this flow is <m>30 = \phi(S,F)+\phi(S,B)+\phi(S,E)=\phi(A,T)+\phi(C,T)</m>. To see that the second conservation law holds at, for example, vertex <m>B</m>, note that the flow into <m>B</m> is <m>\phi(S,B)+\phi(E,B)+\phi(D,B) = 20</m> and the flow out of <m>B</m> is <m>\phi(B,F)+\phi(B,A)+\phi(B,C)=20</m>.
     </p>

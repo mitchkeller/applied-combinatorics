@@ -34,7 +34,7 @@
         </p>
         <figure xml:id="fig_networkflow_updated-flow" >
             <caption>An Updated Network Flow</caption>
-            <image width="65%" source="images/webfig-31c" />
+            <image width="65%" source="webfig-31c" />
         </figure>
         <p>Here is the sequence (reading down the columns) of labels that will be found when the labeling algorithm is applied to this updated flow. (Note that in the scan from <m>S</m>, the vertex <m>B</m> will not be labeled, since now the edge <m>(S,B)</m> is full.)
         <md>
@@ -57,7 +57,7 @@
         </p>
         <figure xml:id="fig_networkflow_flow4" >
             <caption>Another Network Flow</caption>
-            <image width="85%" source="images/network_flow4" />
+            <image width="85%" source="network_flow4" />
         </figure>
         <p>The value of the current flow is <m>172</m>. Applying the labeling algorithm using the pseudo-alphabetic order results in the following labels (reading down the columns):
         <md>

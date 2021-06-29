@@ -8,7 +8,7 @@
         </p>
         <figure xml:id="fig_graphs_chi4" >
             <caption>A proper coloring using <m>5</m> colors</caption>
-            <image width="65%" source="images/chi4" />
+            <image width="65%" source="chi4" />
         </figure>
         <remark>
             <p>Everyone agrees that the graph <m>\bfG</m> in <xref ref="fig_graphs_chi4"  /> has chromatic number at most <m>5</m>. However, there's a bit of debate going on about if <m>\chi(\bfG)=5</m>. Bob figures the authors would not have used five colors if they didn't need to. Carlos says he's glad they're having the discussion, since all having a proper coloring does is provide them with an upper bound on <m>\chi(\bfG)</m>. Bob sees that the graph has a vertex of degree <m>5</m> and claims that must mean <m>\chi(\bfG)=5</m>. Alice groans and draws a graph with <m>101</m> vertices, one of which has degree <m>100</m>, but with chromatic number <m>2</m>. Bob is shocked, but agrees with her. Xing wonders if the fact that the graph does not contain a <m>\bfK_3</m> has any bearing on the chromatic number. Dave's in a hurry to get to the gym, but on his way out the door he says they can get a proper <m>4</m>-coloring pretty easily, so <m>\chi(\bfG)\leq 4</m>. The rest decide it's time to keep reading.
@@ -62,13 +62,13 @@
         </p>
         <figure xml:id="fig_graphs_languages" >
             <caption>A bipartite graph</caption>
-            <image width="60%" source="images/languages" />
+            <image width="60%" source="languages" />
         </figure>
         <p>One special class of bipartite graphs that bears mention is the class of <term>complete bipartite graphs</term>. The complete bipartite graph <m>\bfK_{m,n}</m> has vertex set <m>V=V_1\cup V_2</m> with <m>|V_1|=m</m> and <m>|V_2|=n</m>. It has an edge <m>xy</m> if and only if <m>x\in V_1</m> and <m>y\in V_2</m>. The complete bipartite graph <m>\bfK_{3,3}</m> is shown in <xref ref="fig_graphs_k33"  />.
         </p>
         <figure xml:id="fig_graphs_k33" >
             <caption>The complete bipartite graph <m>\bfK_{3,3}</m></caption>
-            <image width="25%" source="images/k33_rotated" />
+            <image width="25%" source="k33_rotated" />
         </figure>
     </subsection>
 
@@ -160,7 +160,7 @@
         </p>
         <figure xml:id="fig_graphs_interval-graph" >
             <caption>A collection of intervals and its interval graph</caption>
-            <image width="75%" source="images/interval-graph" />
+            <image width="75%" source="interval-graph" />
         </figure>
 
         <theorem xml:id="thm_intgraphcol">

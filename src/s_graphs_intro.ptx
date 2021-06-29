@@ -25,7 +25,7 @@
     </p>
     <figure xml:id="fig_subgraphs" >
         <caption>A Graph, a Subgraph and an Induced Subgraph</caption>
-        <image width="90%" source="images/subgraphs" />
+        <image width="90%" source="subgraphs" />
     </figure>
     <p>A graph <m>\GVE</m> is called a <term>complete graph</term><idx><h>graph</h><h>complete</h></idx> when <m>xy</m> is an edge in <m>\bfG</m> for every distinct pair <m>x,y\in V</m>. Conversely, <m>\bfG</m> is an <term>independent graph</term><idx><h>graph</h><h>independent</h></idx> if <m>xy\not\in E</m>, for every distinct pair <m>x,y\in V</m>. It is customary to denote a complete graph on <m>n</m> vertices by <m>\bfK_n</m> <notation><usage>\bfK_n</usage><description>complete graph on <m>n</m> vertices</description></notation> and an independent graph on <m>n</m> vertices by <m>\bfI_n</m><notation><usage>\bfI_n</usage><description>independent graph on <m>n</m> vertices</description></notation>. In <xref ref="fig_complete_graphs"  />, we show the complete graphs with at most <m>5</m> vertices.
     </p>
@@ -120,7 +120,7 @@
     </p>
     <figure xml:id="fig_spantree" >
         <caption>A Graph and a Spanning Tree</caption>
-        <image width="75%" source="images/spanning_tree" />
+        <image width="75%" source="spanning_tree" />
     </figure>
     <p>The following theorem is very elementary, and some authors refer to it as the <q>first theorem of graph theory</q>. However, this basic result can be surprisingly useful.
     </p>

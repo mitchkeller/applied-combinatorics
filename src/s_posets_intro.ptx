@@ -31,7 +31,7 @@
     </p>
     <figure xml:id="fig_covergraphs" >
         <caption>Cover Graph</caption>
-        <image width="55%" source="images/covergraphs" />
+        <image width="55%" source="covergraphs" />
     </figure>
     <p>It is convenient to illustrate a poset with a suitably drawn diagram of the cover graph in the Euclidean plane. We choose a standard horizontal/vertical coordinate system in the plane and require that the vertical coordinate of the point corresponding to <m>y</m> be larger than the vertical coordinate of the point corresponding to <m>x</m> whenever <m>y</m> covers <m>x</m> in <m>P</m>. Each edge in the cover graph is represented by a straight line segment which contains no point corresponding to any element in the poset other than those associated with its two end points. Such diagrams are called <term>Hasse diagrams</term><idx><h>Hasse diagrams</h></idx> (<term>poset diagrams, order diagrams</term>, or just <term>diagrams</term>). Now it should be clear that the drawing on the right side of <xref ref="fig_covergraphs"  /> is a diagram of the poset <m>\bfP_3</m> from <xref ref="exa_binaryrel"  />, while the diagram on the left is not.
     </p>
@@ -40,7 +40,7 @@
     </p>
     <figure xml:id="fig_17ptposet" >
         <caption>A Poset on 17 Points</caption>
-        <image width="65%" source="images/17ptposet" />
+        <image width="65%" source="17ptposet" />
     </figure>
     <remark>
         <p>Alice and Bob are talking about how you communicate with a computer in working with posets. Bob says that computers have incredible graphics capabilities these days and that you just give the computer a pdf scan of a diagram. Alice says that she doubts that anybody really does that. Carlos says that there are several effective strategies. One way is to label the points with positive integers from <m>[n]</m> where <m>n</m> is the number of points in the ground set and then define a <m>0</m><ndash /><m>1</m> <m>n\times n</m> matrix <m>A</m> with entry <m>a(i,j)=1</m> when <m>i\le j</m> in <m>P</m> and <m>a(i,j)=0</m> otherwise. Alternatively, you can just provide for each element <m>i</m> in the ground set a vector <m>U(x)</m> listing all elements which are greater than <m>x</m> in <m>P</m>. This vector can be what computer scientists call a <term>linked list</term>.
@@ -69,20 +69,20 @@
 
     <figure xml:id="fig_constructposets" >
         <caption>Constructing Posets</caption>
-        <image width="80%" source="images/constructposets" />
+        <image width="80%" source="constructposets" />
     </figure>
     <p>Distinct points <m>x</m> and <m>y</m> in a poset <m>\PXP</m> are <term>comparable</term><idx><h>comparable</h></idx> if either <m>x\lt y</m> in <m>P</m> or <m>x>y</m> in <m>P</m>; otherwise <m>x</m> and <m>y</m> are <term>incomparable</term>.<idx><h>incomparable</h></idx> If <m>x</m> and <m>y</m> are incomparable in <m>\bfP</m>, we sometimes write <m>x\| y</m> in <m>\bfP</m>.<notation><usage>x\| y</usage><description><m>x</m> and <m>y</m> are incomparable</description></notation>With a poset <m>\PXP</m>, we associate a <term>comparability graph</term><idx><h>graph</h><h>comparability</h></idx> <m>{\bfG}_1=(X,E_1)</m> and an <term>incomparability graph</term><idx><h>graph</h><h>incomparability</h></idx> <m>{\bfG}_2=(X,E_2)</m>. The edges in the comparability graph <m>{\bfG}_1</m> consist of the comparable pairs and the edges in the incomparability graph are the incomparable pairs. We illustrate these definitions in <xref ref="fig_compincomp"  /> where we show the comparability graph and the incomparability graph of the poset <m>\bfP_3</m>.
     </p>
     <figure xml:id="fig_compincomp" >
         <caption>Comparability and Incomparability Graphs</caption>
-        <image width="70%" source="images/compincomp" />
+        <image width="70%" source="compincomp" />
     </figure>
 
     <p>When <m>\PXP</m> is a poset and <m>Y\subseteq X</m>, the binary relation <m>Q=P\cap(Y\times Y)</m> is a partial order on <m>Y</m>, and we call the poset <m>(Y,Q)</m> a <term>subposet</term><idx><h>subposet</h></idx> of <m>\bfP</m>. In <xref ref="fig_subposet"  />, we show a subposet of the poset first presented in <xref ref="fig_17ptposet"  />.
     </p>
     <figure xml:id="fig_subposet" >
         <caption>A Subposet</caption>
-        <image width="40%" source="images/subposet" />
+        <image width="40%" source="subposet" />
     </figure>
     <p>When <m>\PXP</m> is a poset and <m>C</m> is a subset of <m>X</m>, we say that <m>C</m> is a <term>chain</term><idx><h>chain</h></idx> if every distinct pair of points from <m>C</m> is comparable in <m>P</m>. When <m>P</m> is a linear order, the entire ground set <m>X</m> is a chain. Dually, if <m>A</m> is a subset of <m>X</m>, we say that <m>A</m> is an <term>antichain</term><idx><h>antichain</h></idx> if every distinct pair of points from <m>A</m> is incomparable in <m>P</m>. Note that a one-element subset is both a chain and an antichain. Also, we consider the empty set as both a chain and an antichain.
     </p>
