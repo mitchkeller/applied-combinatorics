@@ -32,7 +32,7 @@
                 <p>For each <m>t\ge1</m>, the width of the subset lattice <m>\bftwo^t</m> is the maximum size of a rank, <ie />,
                 <me>
                     \width(\bftwo^t)=\binom{t}{\lfloor\frac{t}{2}\rfloor}
-                </me>
+                </me>.
                 </p>
             </statement>
 
@@ -51,8 +51,8 @@
 
                 <p>Altogether, there are exactly <m>t!</m> maximum chains in <m>\bftwo^t</m>. This implies that
                 <me>
-                    \sum_{i=1}^{w} k_i!(t-k_i)!\le t!.
-                </me>
+                    \sum_{i=1}^{w} k_i!(t-k_i)!\le t!
+                </me>.
                 This implies that
                 <me>
                     \sum_{i=1}^{w}\frac{k_i!(t-k_i)!}{t!}=
@@ -61,11 +61,11 @@
                 It follows that
                 <me>
                     \sum_{i=1}^{i=w}\frac{1}{\binom{t}{\lceil\frac{t}{2}\rceil}}\le 1
-                </me>
+                </me>.
                 Thus
                 <me>
-                    w\le \binom{t}{\lceil\frac{t}{2}\rceil}.
-                </me>
+                    w\le \binom{t}{\lceil\frac{t}{2}\rceil}
+                </me>.
                 </p>
             </proof>
         </theorem>
