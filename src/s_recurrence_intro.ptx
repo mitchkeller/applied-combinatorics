@@ -75,7 +75,7 @@
         <p>Our next example takes us back to one of the motivating problems discussed in <xref ref="ch_intro"  />. In <xref ref="fig_geomregions"  />, we show a family of <m>4</m> lines in the plane. Each pair of lines intersects and no point in the plane belongs to more than two lines.  These lines determine<nbsp /><m>11</m> regions.</p>
                 <figure xml:id="fig_geomregions" >
             <caption>Lines and Regions</caption>
-            <image width="65%" source="images/3012-fig9" />
+            <image width="65%" source="3012-fig9" />
         </figure>
         <p>We ask how many regions a family of <m>1000</m> lines would determine, given these same restrictions on how the lines intersect. More generally, let <m>r_n</m> denote the number of regions determined by <m>n</m> lines. Evidently, <m>r_1=2</m>, <m>r_2=4</m>, <m>r_3=7</m> and <m>r_4=11</m>. Now it is easy to see that we have the recurrence <m>r_{n+1} = r_n+n+1</m>. To see this, choose any one of the <m>n+1</m> lines and call it <m>l</m>. Line <m>l</m> intersects each of the other lines and since no point in the plane belongs to three or more lines, the points where <m>l</m> intersects the other lines are distinct. Label them consecutively as <m>x_1,x_2,\dots,x_n</m>. Then these points divide line <m>l</m> into <m>n+1</m> segments, two of which (first and last) are infinite. Each of these segments partitions one of the regions determined by the other <m>n</m> lines into two parts, meaning we have the <m>r_n</m> regions determined by the other <m>n</m> lines and <m>n+1</m> new regions that <m>l</m> creates.
         </p>

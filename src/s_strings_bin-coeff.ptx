@@ -12,7 +12,7 @@
         <figure xml:id="fig_distrib" >
             <caption>Distributing Identical Objects into Distinct
             Cells</caption>
-            <image width="80%" source="images/3012-fig23" />
+            <image width="80%" source="3012-fig23" />
         </figure>
     </example>
 
@@ -70,7 +70,7 @@
     </p>
     <figure xml:id="fig_latticepath" >
         <caption>A Lattice Path</caption>
-        <image width="51%" source="images/3012-fig22" />
+        <image width="51%" source="3012-fig22" />
     </figure>
     <example>
         <idx><h>lattice path</h><h>counting</h></idx>
@@ -97,7 +97,7 @@
         </p>
         <figure xml:id="flippath" >
             <caption>Transforming a Lattice Path</caption>
-            <image width="50%" source="images/3012-fig26" />
+            <image width="50%" source="3012-fig26" />
         </figure>
         <p>We can also observe that the transformation we've described is in fact a bijection between <m>\cgB</m> and <m>\cgP'</m>, the set of lattice paths from <m>(0,0)</m> to <m>(n-1,n+1)</m>. To see that this is true, note that every path <m>s'</m> in <m>\cgP'</m> must cross the line <m>y=x</m>, so there is a first time it crosses it, say in position <m>i</m>. Again, <m>i</m> must be odd, so <m>i=2j+1</m> and there are <m>j</m> <m>H</m>'s and <m>j+1</m> <m>V</m>'s in the first <m>i</m> positions of <m>s'</m>. Therefore the tail of <m>s'</m> contains <m>n+1-(j+1)=n-j</m> <m>V</m>'s and <m>(n-1)-j</m> <m>H</m>'s, so interchanging <m>H</m>'s and <m>V</m>'s in the tail of <m>s'</m> creates a new string <m>s</m> that has <m>n</m> <m>H</m>'s and <m>n</m> <m>V</m>'s and thus represents a lattice path from <m>(0,0)</m> to <m>(n,n)</m>, but it's still a bad lattice path, as we did not adjust the first part of the path, which results in crossing the line <m>y=x</m> in position <m>i</m>. Therefore, <m>|\cgB|=|\cgP'|</m> and thus
         <me>

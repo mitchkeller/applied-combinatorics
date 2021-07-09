@@ -7,7 +7,7 @@
     </p>
     <figure xml:id="fig_graphalgorithms_digraph" >
         <caption>A Digraph</caption>
-        <image width="85%" source="images/digraph" />
+        <image width="85%" source="digraph" />
     </figure>
     <p>When <m>\bfG</m> is a digraph, a sequence <m>P=(r=u_0,u_1,\dots,u_t=x)</m> of distinct vertices is called a <term>directed path</term><idx><h>path</h><h>directed</h></idx> from <m>r</m> to <m>x</m> when <m>(u_iu_{i+1})</m> is a directed edge in <m>\bfG</m> for every <m>i=0,1,\dots,t-1</m>. A directed path <m>C=(r=u_0,u_1,\dots,u_t=x)</m> is called a <term>directed cycle</term><idx><h>cycle</h><h>directed</h></idx> when <m>(u_t,u_0)</m> is a directed edge of <m>\bfG</m>.
     </p>

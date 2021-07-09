@@ -49,7 +49,7 @@
 
     <figure xml:id="fig_FirstFit" >
         <caption>How First Fit Can Go Wrong</caption>
-        <image width="50%" source="images/FirstFit" />
+        <image width="50%" source="FirstFit" />
     </figure>
     <p>In general, there is always <em>some</em> linear order on the ground set of a poset for which First Fit will find an optimal partition into antichains.  Also, there is a linear order (in general different from the first) on the ground set for which First Fit will find an optimal partition into chains.  However, there is no advantage in searching for such orders, as the algorithms we develop for finding optimal antichain and chain partitions work quite well.
     </p>

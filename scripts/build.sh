@@ -35,7 +35,7 @@ case $FORMAT in
     [hH]*)
 	cp ${ACDIR}/xsl/applied-combinatorics-html.xsl ${PTX}/user
 	cd ${OUTDIR}
-	xsltproc -stringparam publisher ${PUBFILE} -xinclude ${PTX}/user/applied-combinatorics-html.xsl ${ACDIR}/src/index.ptx
+	xsltproc -stringparam publisher ${PUBFILE} -xinclude ${PTX}/user/applied-combinatorics-html.xsl ${ACDIR}/src/min-index.ptx
 	;;
     [lL]*)
 	cd ${OUTDIR}
