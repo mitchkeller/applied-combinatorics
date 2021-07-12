@@ -9,14 +9,14 @@
     <p>To generalize the preceding example, we now introduce permutations. To do so, let <m>X</m> be a finite set and let <m>n</m> be a positive integer. An <m>X</m>-string <m>s=x_1x_2\dots x_n</m> is called a <term>permutation</term><idx><h>permutation</h></idx> if all <m>n</m> characters used in <m>s</m> are distinct. Clearly, the existence of an <m>X</m>-permutation of length<nbsp /><m>n</m> requires that <m>|X|\ge n</m>.
     </p>
 
-    <p>When <m>n</m> is a positive integer, we define <m>n!</m> (read <q><m>n</m> <term>factorial</term></q><idx><h>factorial</h><h>definition</h></idx><notation><usage>n!</usage><description><m>n</m> factorial</description></notation>) by
+    <p>When <m>n</m> is a positive integer, we define <m>n!</m> (read <q><m>n</m> <term>factorial</term></q><idx><h>factorial</h><h>definition</h></idx><notation><usage><m>n!</m></usage><description><m>n</m> factorial</description></notation>) by
         <me>
             n! = n\cdot (n-1)\cdot (n-2)\cdot \cdots\cdot 3\cdot 2\cdot 1.
         </me>
         By convention, we set <m>0!=1</m>. As an example, <m>7!=7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2 \cdot 1=5040</m>. Now for integers <m>m,n</m> with <m>m\ge n\ge0</m> define <m>P(m,n)</m> by
     <me>
         P(m,n) = \frac{m!}{(m-n)!} = m(m-1)\cdots(m-n+1).
-    </me><notation><usage>P(m,n)</usage><description>number of permutations</description></notation>
+    </me><notation><usage><m>P(m,n)</m></usage><description>number of permutations</description></notation>
     For example, <m>P(9,3)=9\cdot 8\cdot 7=504</m> and <m>P(8,4)=8\cdot 7\cdot 6\cdot5 =1680</m>. Also, a computer algebra system will quickly report that
     <me>
         P(68,23) = 20732231223375515741894286164203929600000.

@@ -6,7 +6,7 @@
     <p>Similarly, in the probabilistic proof that there exist graphs with large girth and large chromatic number (<xref ref="thm_girth"  />), we actually showed that almost all graphs have modest sized independence number and relatively few small cycles, provided that the edge probability is chosen appropriately. The small cycles can be destroyed without significantly changing the size of the graph.
     </p>
 
-    <p>By way of contrast, probabilistic techniques can, in certain circumstances, be used to find something which is exceedingly rare. We next present an elegant but elementary result, known as the Lov&#xe1;sz Local Lemma, which has proved to be very, very powerful. The treatment is simplified by the following natural notation. When <m>E</m> is an event in a probability space, we let <m>\overline{E}</m> denote the complement of <m>E</m><notation><usage>\overline{E}</usage><description>complement of event <m>E</m></description></notation>. Also, when <m>\cgF=\{E_1,E_2,\dots,E_k\}</m> we let
+    <p>By way of contrast, probabilistic techniques can, in certain circumstances, be used to find something which is exceedingly rare. We next present an elegant but elementary result, known as the Lov&#xe1;sz Local Lemma, which has proved to be very, very powerful. The treatment is simplified by the following natural notation. When <m>E</m> is an event in a probability space, we let <m>\overline{E}</m> denote the complement of <m>E</m><notation><usage><m>\overline{E}</m></usage><description>complement of event <m>E</m></description></notation>. Also, when <m>\cgF=\{E_1,E_2,\dots,E_k\}</m> we let
     <me>
         \prod_{E\in\cgF}E=\prod_{i=1}^k E_i=E_1E_2E_3\dots E_k
     </me>
