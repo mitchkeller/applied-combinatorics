@@ -35,7 +35,6 @@ ACDIR=`pwd`
 
 case $FORMAT in
     [hH]*)
-	cp ${ACDIR}/xsl/applied-combinatorics-html.xsl ${PTX}/user
 	rm -rf ${OUTDIR}
 	install -d ${OUTDIR}
 	${PTX}/pretext/pretext -c all -f html -o ${OUTDIR} -x\
