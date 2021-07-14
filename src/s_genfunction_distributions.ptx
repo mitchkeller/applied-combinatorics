@@ -118,7 +118,7 @@
 46*x^30 + 44*x^29 + 43*x^28 + 41*x^27 + 40*x^26 + 38*x^25 + 37*x^24 + 35*x^23 + 34*x^22 + 32*x^21 + 31*x^20 + 29*x^19 + 28*x^18 + 26*x^17 + 25*x^16 + 23*x^15 + 22*x^14 + 20*x^13 + 19*x^12 + 17*x^11 + 16*x^10 + 14*x^9 + 13*x^8 + 11*x^7 + 10*x^6 + 8*x^5 + 7*x^4 + 5*x^3 + 4*x^2 + 2*x + 1
         </output>
     </sage>
-    <p>If all we really want is the coefficient on a specific term, we can use the <c>list()</c> method to turn the polyomial into a list of its coefficients and then index into that list using standard SageMath or Python syntax:</p>
+    <p>If all we really want is the coefficient on a specific term, we can use the <c>list()</c> method to turn the polynomial into a list of its coefficients and then index into that list using standard SageMath or Python syntax:</p>
     <sage>
         <input>
             coeffs=f(x).list()
