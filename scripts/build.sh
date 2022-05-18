@@ -53,18 +53,12 @@ case $FORMAT in
 	;;
     [eE]*)
 	install -d ${OUTDIR}	
-	${PTX}/pretext/pretext -c all -f epub-svg -p ${PUBFILE} -x\
-	      exercise.divisional.statement yes exercise.divisional.hint yes\
-	      exercise.divisional.answer no\
-	      exercise.divisional.solution no -d ${OUTDIR} -o appcomb-svg.epub ${ACDIR}/src/index.ptx
+	${PTX}/pretext/pretext -c all -f epub-svg -p ${PUBFILE} -d ${OUTDIR} -o ${OUTDIR}/appcomb-svg.epub ${ACDIR}/source/main.ptx
 	;;
     [kK]*)
 	install -d ${OUTDIR}	
 	cd ${OUTDIR}
-	${PTX}/pretext/pretext -c all -f epub-kindle -p ${PUBFILE} -x\
-	      exercise.divisional.statement yes exercise.divisional.hint yes\
-	      exercise.divisional.answer no\
-	      exercise.divisional.solution no -d ${OUTDIR} -o appcomb-kindle.epub ${ACDIR}/src/index.ptx
+	${PTX}/pretext/pretext -c all -f epub-kindle -p ${PUBFILE} -d ${OUTDIR} -o ${OUTDIR}/appcomb-kindle.epub ${ACDIR}/source/main.ptx
 	;;
     *)
 	echo "Invalid format: ${FORMAT}"
