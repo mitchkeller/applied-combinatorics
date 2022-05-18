@@ -2,10 +2,11 @@
 
 <publication>
     <source>
-        <directories external="external" generated="generated"/>
+        <directories external="../assets" generated="../generated-assets"/>
     </source>
     <common>
       <tableofcontents level="2" />
+      <exercise-divisional statement="yes" hint="yes" answer="no" solution="no"/>
     </common>
     <numbering>
       <blocks level="1" />
@@ -20,6 +21,7 @@
         <css style="default" colors="blue_grey"/>
 	<knowl example="no" />
 	<analytics google-gst="UA-16329138-3" />
+	<search google-cx="009375931950235294692:hxgsc7lzdau" />
     </html>
-
+    <latex sides="two" />
 </publication>

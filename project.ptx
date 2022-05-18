@@ -8,11 +8,9 @@
   <targets>
     <target name="html">
       <format>html</format>
-      <source>source/acmv-index.ptx</source>
+      <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/html</output-dir>
-      <xsl>xsl/acmv-html.xsl</xsl>
-      <stringparam key="server" value="https://webwork-ptx.aimath.org"/><!-- for WebWork -->
     </target>
     <target name="latex">
       <format>latex</format>
@@ -26,17 +24,15 @@
       <publication>publication/publication.ptx</publication>
       <output-dir>output/pdf</output-dir>
     </target>
-    <target name="vector">
+    <target name="subset">
       <format>html</format>
-      <source>source/acmv-index.ptx</source>
+      <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
-      <output-dir>output/vector</output-dir>
+      <output-dir>output/subset</output-dir>
       <stringparam key="debug.skip-knowls" value="yes"/>
       <!-- edit this to change the section/chapter/etc. to include
            in your subset build -->
       <xmlid-root>C_Vector</xmlid-root>
-      <xsl>xsl/acmv-html.xsl</xsl>
-      <stringparam key="server" value="https://webwork-ptx.aimath.org"/><!-- for WebWork -->      
     </target>
   </targets>
   <executables>
