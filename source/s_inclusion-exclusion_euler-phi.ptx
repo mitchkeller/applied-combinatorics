@@ -32,7 +32,7 @@ phi(321974)
     </sage>
 
 
-    <p>Running the code above answers almost immediately that <m>\phi(321974) = 147744</m>. (As usual, in the web version of the text, you can change the value <c>321974</c> to calculate the value of <m>\phi</m> for other integers. However, if you try to increase the value of <c>n</c> to be too large, you may run into memory issues imposed by the Sage Cell Server used by the text. For instance, attempting to calculate <m>\phi(319572943)</m> results in an error at the time of writing. (You may have better luck running the code directly in the <url href="http://cloud.sagemath.com/">SageMath Cloud</url> or a local installation of SageMath.)
+    <p>Running the code above answers almost immediately that <m>\phi(321974) = 147744</m>. (As usual, in the web version of the text, you can change the value <c>321974</c> to calculate the value of <m>\phi</m> for other integers. However, if you try to increase the value of <c>n</c> to be too large, you may run into memory issues imposed by the Sage Cell Server used by the text. For instance, attempting to calculate <m>\phi(319572943)</m> results in an error at the time of writing. (You may have better luck running the code directly in the <url href="https://cocalc.com/" visual="cocalc.com">CoCalc</url> or a local installation of SageMath.)
     </p>
     <p>Given these difficulties, how could we find <m>\phi(1369122257328767073)</m>?
     </p>
