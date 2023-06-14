@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<publication>
+    <source>
+        <directories external="../assets" generated="../generated-assets"/>
+    </source>
+    <common>
+      <tableofcontents level="2" />
+      <exercise-divisional statement="yes" hint="yes" answer="no" solution="no"/>
+    </common>
+    <numbering>
+      <blocks level="1" />
+    </numbering>
+  
+    <!-- HTML-Specific Options -->
+    <html>
+        <css style="default" colors="blue_grey"/>
+	<knowl example="no" />
+	<analytics google-gst="G-DKXSTE8Z4T" />
+	<search google-cx="009375931950235294692:hxgsc7lzdau" />
+	<platform host="runestone" />
+    </html>
+    <latex sides="two" />
+</publication>
