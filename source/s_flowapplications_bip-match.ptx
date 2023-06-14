@@ -10,7 +10,7 @@
         <image width="40%" source="bipartite_graph" />
     </figure>
     <p>If <m>\GVE</m> is a graph, a set <m>M\subseteq E</m> is a <term>matching</term><idx><h>matching</h></idx> in <m>\bfG</m> if no two edges of <m>M</m> share an endpoint. If <m>v</m> is a vertex that is the endpoint of an edge in <m>M</m>, we say that <m>M</m> saturates <m>v</m> or <m>v</m> is saturated by <m>M</m>. When <m>\bfG</m> is bipartite with <m>V=V_1\cup V_2</m>, a matching is then a way to pair vertices in <m>V_1</m> with vertices in <m>V_2</m> so that no vertex is paired with more than one other vertex. We're usually interested in finding a <term>maximum matching</term><idx><h>matching</h><h>maximum</h></idx>, which is a matching that contains the largest number of edges possible, and in bipartite graphs we usually fix the sets <m>V_1</m> and <m>V_2</m> and seek a maximum matching from <m>V_1</m> to <m>V_2</m>. In our workers and jobs example, the matching problem thus becomes trying to find an assignment of workers to jobs such that
-    <ol label="i"><li>each worker is assigned to a job for which he is qualified
+    <ol marker="i"><li>each worker is assigned to a job for which he is qualified
     (meaning there's an edge),</li>
     <li>each worker is assigned to at most one job, and</li>
     <li>each job is assigned at most one worker.</li>

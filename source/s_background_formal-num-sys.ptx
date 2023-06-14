@@ -4,12 +4,12 @@
 
     <introduction>
         <p>Up to this point, we have been discussing number systems in an entirely informal manner, assuming everyone knew all that needed to be known. Now let's pause and put things on a more firm foundation. So for the time being, do a memory dump and forget everything you have ever learned about numbers and arithmetic. The set of natural numbers has just been delivered on our door step in a big box with a warning label saying <alert>Assembly Required.</alert> We open the box and find a single piece of paper on which the following <q>instructions</q> are printed. These defining properties of the natural numbers are known as the <term>Peano Postulates</term><idx><h>Peano postulates</h></idx>.
-                  <ol label="i">
+                  <ol marker="i">
             <li><p>There is a non-empty set of elements called <term>natural numbers</term><idx><h>natural numbers</h></idx>.  There is natural number called <term>zero</term> which is denoted<nbsp /><m>0</m>.  The set of all natural numbers is denoted <m>\nonnegints</m></p></li>
             <li><p>There is a one-to-one function <m>s:\nonnegints \injection \nonnegints</m> called the <term>successor function</term>.  For each <m>n\in \nonnegints</m>, <m>s(n)</m> is called the <term>successor</term><idx><h>successor</h></idx> of <m>n</m>.</p></li>
             <li><p>There is no natural number <m>n</m> for which <m>0=s(n)</m>.</p></li>
             <li xml:id="peano_induction"><p>Let <m>\mathbb{M}\subseteq \nonnegints</m>.  Then <m>\mathbb{M} =\nonnegints</m> if and only if
-            <ol label="a">
+            <ol marker="a">
                 <li><p><m>0\in \mathbb{M}</m>; and</p></li>
                 <li><p><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
                 \Longrightarrow(s(k)\in \mathbb{M})</m>.</p></li>
@@ -39,7 +39,7 @@
     <subsection xml:id="s_background_add">
         <title>Addition as a Binary Operation</title>
         <p>A <term>binary operation</term><idx><h>operation</h><h>binary</h></idx> <m>*</m> on set <m>X</m> is just a function <m>*:X\times X\rightarrow X</m>. So the image of the ordered pair <m>(x,y)</m> would normally be denoted <m>*((x,y))</m>.  However, this is usually abbreviated as <m>*(x,y)</m> or even more compactly as <m>x*y</m>. With this convention, we now define a binary operation <m>+</m> on the set <m>\nonnegints</m> of natural numbers.  This operation is defined as follows for every natural number <m>n\in\nonnegints</m>:
-                  <ol label="i">
+                  <ol marker="i">
             <li><p><m>n+0=n</m>.</p></li>
             <li><p>For all <m>k\in\nonnegints</m>, <m>n+s(k) = s(n+k)</m>.</p></li>
         
@@ -62,7 +62,7 @@
             <title>Principle of Induction</title>
             <statement>
                 <p>Let <m>\mathbb{M}\subseteq \nonnegints</m>.  Then <m>\mathbb{M} =\nonnegints</m> if and only if
-                  <ol label="a">
+                  <ol marker="a">
             <li><p><m>0\in \mathbb{M}</m>; and</p></li>
             <li><p><m>\forall k\in \nonnegints\quad(k\in \mathbb{M}) 
             \Longrightarrow(k+1\in \mathbb{M})</m>.</p></li>

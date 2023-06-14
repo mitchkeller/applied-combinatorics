@@ -10,7 +10,7 @@
         </p>
 
         <p>The key tool in modifying a network flow is a special type of path, and these paths are not necessarily directed paths. An <term>augmenting path</term><idx><h>path</h><h>augmenting</h></idx> is a sequence <m>P=(x_0,x_1,\dots,x_m)</m> of distinct vertices in the network such that <m>x_0=S</m>, <m>x_m=T</m>, and for each <m>i=1,2,\dots,m</m>, either
-        <ol label="a">
+        <ol marker="a">
             <li xml:id="networkflow_spare" ><m>(x_{i-1},x_i)</m> has spare capacity or </li>
             <li xml:id="networkflow_used" ><m>(x_i,x_{i-1})</m> is used. </li>
         </ol>

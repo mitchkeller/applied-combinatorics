@@ -15,7 +15,7 @@
     </p>
 
     <p>Bob was about to throw in the towel and ask his computer to start making the calculations recursively, when Carlos comes along and asks what he's doing. Carlos sees right away that the approach Bob was taking to prove that <m>f(n)=2n+1</m> by induction won't work<mdash />but after a moment's reflection, Carlos says that there's a stronger form of an inductive proof that will do the trick.  Carlos patiently explained to Bob a proposition which is called the <term>Strong Principle of Mathematical Induction</term><idx><h>induction</h><h>strong</h></idx>. To prove that an open statement <m>S_n</m> is valid for all <m>n\ge1</m>, it is enough to
-    <ol label="a">
+    <ol marker="a">
         <li><p>Show that <m>S_1</m> is valid, and</p></li>
         <li><p>Show that <m>S_{k+1}</m> is valid whenever <m>S_m</m> is valid for all integers <m>m</m> with <m>1\le m\le k</m>.</p></li>
     </ol>
