@@ -26,8 +26,8 @@
     </p>
     <figure xml:id="fig_flowapplications_bipmatch_network" >
         <caption>The network corresponding to a bipartite graph</caption>
-        <image width="40%">
-<latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network}
+        <image xml:id="img_flowapplications_bipmatch_network" width="40%">
+<latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{external/bipartite_network}
             \put(48,-6){\(S\)} \put(48,70){\(T\)}
             \put(9,13){\(x_1\)} 
             \put(85,13){\(x_6\)}
@@ -44,7 +44,7 @@
     <figure xml:id="fig_flowapplications_initial_flow" >
         <caption>The flow corresponding to a matching</caption>
         <image width="40%">
-<latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network_flow}
+<latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{external/bipartite_network_flow}
             \put(48,-6){\(S\)} \put(48,70){\(T\)}
             \put(9,13){\(x_1\)} 
             \put(85,13){\(x_6\)}
@@ -68,7 +68,7 @@
     <figure xml:id="fig_flowapplications_bipmatch_maxflow" >
         <caption>The augmented flow</caption>
         <image width="40%">
-            <latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{images/bipartite_network_flow2}
+            <latex-image><![CDATA[\begin{overpic}[angle=90,scale=0.65]{external/bipartite_network_flow2}
             \put(48,-6){\(S\)} \put(48,70){\(T\)}
             \put(9,13){\(x_1\)} 
             \put(85,13){\(x_6\)}
