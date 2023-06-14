@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-    <docinfo>
-        <brandlogo url="httpw://www.appliedcombinatorics.org/" source="front-cover.png" />
-        <initialism>AC</initialism>
-        <author-biographies length="long" />
+  <docinfo>
+    <brandlogo url="httpw://www.appliedcombinatorics.org/" source="front-cover.png" />
+    <initialism>AC</initialism>
+    <author-biographies length="long" />
     <macros>
       \newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
       \newcommand{\ints}{\mathbb{Z}}
@@ -79,6 +79,7 @@
       \usepackage{overpic,pict2e}
     </latex-image-preamble>
     <rename element="remark" xml:lang="en-US">Discussion</rename>
+    <document-id>appcomb</document-id>
   </docinfo>
 
 
