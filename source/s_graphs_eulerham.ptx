@@ -9,7 +9,7 @@
     <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><idx><h>graph</h><h>eulerian</h></idx> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
     <ol>
         <li><m>x_0=x_t</m>;</li>
-        <li>for every <m>i=0,1,\dots t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
+        <li>for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
         <li>for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m> for which <m>e=x_ix_{i+1}</m>.</li>
     </ol>
     </p>
@@ -24,7 +24,7 @@ edges = 28
 g = graphs.RandomGNM(vertices,edges)
 while (not g.is_eulerian() or not g.is_connected()):
     g = graphs.RandomGNM(vertices,edges)
-print g.degree_sequence()
+print(g.degree_sequence())
 g.show()
         </input>
     </sage>
@@ -39,7 +39,7 @@ edges = 25
 g = graphs.RandomGNM(vertices,edges)
 while (g.is_eulerian() or not g.is_connected()):
     g = graphs.RandomGNM(vertices,edges)
-print g.degree_sequence()
+print(g.degree_sequence())
 g.show()
         </input>
     </sage>

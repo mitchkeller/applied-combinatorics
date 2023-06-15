@@ -44,7 +44,7 @@
         The method of <xref ref="exam_genfunction_geom-series" /> can be adapted to address the <term>finite geometric series</term><idx><h>series</h><h>finite geometric</h></idx> <m>\sum_{j=0}^n x^j</m>. In that case, we look at
         <md>
             <mrow>(1-x) \sum_{j=0}^nx^j \amp= \sum_{j=0}^n x^j - \sum_{j=0}^n x^{j+1}</mrow>
-            <mrow>\amp= (1+x+\cdots + x^n) - (x+x^2+\cdots x^n + x^{n+1}</mrow>
+            <mrow>\amp= (1+x+\cdots + x^n) - (x+x^2+\cdots x^n + x^{n+1})</mrow>
             </md>.
             Looking carefully, we see that everything cancels in the final expression except <m>1-x^{n+1}</m>. Dividing both sides by <m>1-x</m> gives us
             <men xml:id="eq_genfunction_finite-geom">1+x+\cdots + x^n = \frac{1-x^{n+1}}{1-x}</men><idx><h>series</h><h>finite geometric</h><h>sum of</h></idx>

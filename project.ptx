@@ -46,6 +46,12 @@
       <publication>publication/publication.ptx</publication>
       <output-dir>output/epub</output-dir>
     </target>    
+    <target name="kindle">
+      <format>kindle</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/kindle2023</output-dir>
+    </target>    
   </targets>
   <executables>
       <latex>latex</latex>
