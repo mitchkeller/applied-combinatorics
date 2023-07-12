@@ -12,6 +12,20 @@
       <publication>publication/publication.ptx</publication>
       <output-dir>output/html</output-dir>
     </target>
+    <target name="html-hosted">
+      <format>html</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>/home/tworight/public_html/book</output-dir>
+    </target>
+    <target name="react">
+      <format>html</format>
+      <source>source/main.ptx</source>
+      <stringparam key="debug.react.global" value="yes" />
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/react</output-dir>
+    </target>
+
     <target name="runestone">
       <format>html</format>
       <source>source/main.ptx</source>
