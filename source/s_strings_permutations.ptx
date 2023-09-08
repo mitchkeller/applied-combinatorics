@@ -122,8 +122,7 @@
       </statement>
       <response />
     </exercise>
-    <exercise>
-      <task label="appcomb_strings_permutation_reading_officers">
+    <exercise label="appcomb_strings_permutation_reading_officers">
         <statement>
           <p>
             Suppose that Alice, Carlos, Dave, Xing, and Yolanda are the five candidates to serve as chair, vice chair, and treasurer of a student organization. You should be able to answer this without listing all the outcomes. However, to set the stage for things yet to come, write out all the possible outcomes somewhere for your reference. (Don't submit them all here, however! You probably also want to just write A, C, D, X, and Y rather than using everyone's full name.) How many possible outcomes are there for filling the two positions? <var width="10" />
@@ -147,8 +146,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="appcomb_strings_permutation_reading_cochairs">
+      </exercise>
+      <exercise label="appcomb_strings_permutation_reading_cochairs">
         <statement>
           <p>
             Suppose we change the election and instead of having three distinct officers, the organization is to elect three co-chairs. Group the outcomes you listed in the previous part so that all election outcomes that would lead to the same co-chairs are grouped together. For instance, ADC and CDA would be grouped together, since what matters here is simply that Alice, Carlos, and Dave were elected and not whether Alice or Carlos was elected chair.
@@ -191,15 +190,14 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="appcomb_strings_permutation_reading_cochairs">
+      </exercise>
+      <exercise label="appcomb_strings_permutation_reading_more">
         <statement>
           <p>
             Suppose we had <m>80</m> candidates and needed to elect five co-chairs. Listing out all the outcomes and grouping them would be rather challenging. Describe in a couple of sentences your thoughts on how you could generalize the ideas of the two previous tasks to get an answer to this question without writing out all the options. For this one, if you are able to come up with what the answer should be, express it either as a quotient of products or using the <m>P(m,n)</m> notation.
           </p>
         </statement>
         <response />
-      </task>
-    </exercise>
+      </exercise>
   </reading-questions>
 </section>
