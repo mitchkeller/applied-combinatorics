@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_strings_PI" component="runestone">
+  <title>Peer Instruction Questions</title>
+  <exercise label="appcomb_strings_PI_factorial">
+    <statement>
+      <p>What is <m>0!</m> defined to be?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>Undefined</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>It depends on my mood</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="appcomb_strings_PI_password">
+    <statement>
+      <p>Suppose we are making a (rather insecure) password of length <m>8</m>. The first two characters will be uppercase letters, the third and fourth will be digits, and the last four characters can be any letter or digit. How many possible passwords are there?  </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (36)^4</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (52)^4</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>26\cdot 26\cdot 10\cdot 9\cdot (52)^4</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^4</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_password_varlength">
+    <statement>
+      <p>Suppose we are making a password where the length can be either <m>7</m> or <m>8</m> characters. The first two characters will be uppercase letters, the third and fourth will be digits, and the remaining characters can be any letter or digit. How many possible passwords are there?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3\cdot (62)^4</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement correct="yes">
+          <p><m>26\cdot 26\cdot 10\cdot 10\cdot ((62)^3 + (62)^4)</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3 + (62)^4</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3 + 26\cdot 26\cdot 10\cdot 10\cdot (62)^4</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_password_distinct">
+    <statement>
+      <p>Suppose we are making a (rather insecure) password of length <m>8</m>. The first four characters will be distinct uppercase letters. The next two characters will be digits. The last two characters will be distinct lowercase letters. How many possible passwords are there?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>P(26,4)\cdot 10^2\cdot 26\cdot 25</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>26\cdot 25\cdot 24\cdot 23\cdot 22\cdot 10^2\cdot 26\cdot 25</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>26\cdot 25\cdot 24\cdot 23\cdot 10^2\cdot 22\cdot 21</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>P(26,4)\cdot 10^2\cdot P(22,2)</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>P(26,4)\cdot 10\cdot 9\cdot P(22,2)</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_bincoeff_setup">
+    <statement>
+      <p>Suppose we had <m>80</m> candidates and needed to elect five co-chairs. If order mattered, there would be <m>P(80,5)</m> possible outcomes. Suppose we group them all based on which candidates were elected. Then each group would have how many outcomes in it?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>5</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>5!</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>P(5,80)</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>P(5,4)</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_bincoeff_formula">
+    <statement>
+      <p>We define <m>\binom{n}{k}</m> to be the number of ways to choose <m>k</m> elements from a set with <m>n</m> elements. Generalizing the ideas we have already discussed leads to which identity?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>P(n,k) = \frac{1}{k!}\binom{n}{k}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement correct="yes">
+          <p><m>P(n,k) = k!\cdot \binom{n}{k}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>k! P(n,k) = \binom{n}{k}</m></p>
+        </statement>
+      </choice>  
+      <choice>
+        <statement>
+          <p><m>P(n,k) = n!\cdot \binom{n}{k}</m></p>
+        </statement>
+      </choice>          
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_bincoeff_complement">
+    <statement>
+      <p>Which is larger, <m>\binom{n}{k}</m> or <m>\binom{n}{n-k}</m>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\binom{n}{k}</m> is always larger</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\binom{n}{n-k}</m> is always larger</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>They are always equal</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>It depends on the values of <m>n</m> and <m>k</m></p>
+        </statement>
+      </choice>      
+    </choices>
+  </exercise>
+  
+</exercises>
