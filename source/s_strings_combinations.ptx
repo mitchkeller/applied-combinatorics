@@ -53,4 +53,14 @@
         <p>Let <m>n</m> be a positive integer and let <m>X</m> be an <m>n</m>-element set.  Then there is a natural one-to-one correspondence between subsets of <m>X</m> and bit strings of length<nbsp /><m>n</m>. To be precise, let <m>X=\{x_1,x_2,\dots,x_n\}</m>. Then a subset <m>A\subseteq X</m> corresponds to the string <m>s</m> where <m>s(i) = 1</m> if and only if <m>i\in A</m>. For example, if <m>X=\{a,b,c,d,e,f,g,h\}</m>, then the subset <m>\{b,c,g\}</m> corresponds to the bit string <m>01100010</m>. There are <m>C(8,3)=56</m> bit strings of length eight with precisely three <m>1</m>'s. Thinking about this correspondence, what is the total number of subsets of an <m>n</m>-element set?
         </p>
     </example>
+    <reading-questions label="rqs-strings_combinations" component="runestone">
+        <exercise label="appcomb_strings_combinations_reading">
+          <statement>
+            <p>
+              How many ways are there to form a string of length five using the alphabet A, B, C if exactly three characters in the string are to be the letter A? Write a sentence or two to explain your reasoning.
+            </p>
+          </statement>
+          <response />
+        </exercise>
+      </reading-questions>
 </section>

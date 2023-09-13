@@ -77,6 +77,8 @@
     <cross-references text="type-global" />
     <latex-image-preamble>
       \usepackage{overpic,pict2e}
+      \usepackage{tikz,ifthen}
+      \usetikzlibrary{calc}
     </latex-image-preamble>
     <rename element="remark" xml:lang="en-US">Discussion</rename>
     <document-id>appcomb</document-id>

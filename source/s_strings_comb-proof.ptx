@@ -3,7 +3,7 @@
     <idx><h>proof</h><h>combinatorial</h></idx>
     <p>Combinatorial arguments are among the most beautiful in all of mathematics. Oftentimes, statements that can be proved by other, more complicated methods (usually involving large amounts of tedious algebraic manipulations) have very short proofs once you can make a connection to counting. In this section, we introduce a new way of thinking about combinatorial problems with several examples. Our goal is to help you develop a <q>gut feeling</q> for combinatorial problems.
     </p>
-    <example>
+    <example xml:id="ex_strings_comb-proof_sum-ints">
         <statement>
             <p>
                 Let <m>n</m> be a positive integer. Use <xref ref="fig_squaredots"  /> to explain why
@@ -101,7 +101,7 @@
         </solution>
     </example>
 
-    <example>
+    <example xml:id="ex_strings_comb-proof_2n-choose-n">
         <idx><h>binomial coefficient</h><h>identity involving</h></idx>        
         <statement>
             <p>
@@ -118,4 +118,36 @@
             </p>
         </solution>
     </example>
+    <reading-questions label="rqs-strings_comb-proof" component="runestone">
+        <exercise label="appcomb_strings_comb-proof_reading_sum-ints">
+          <statement>
+            <p>
+              Consider the illustration below. Although the grid of circles is eight by seven, please treat it as if it had <m>n+1</m> rows and <m>n</m> columns. Explain how this illustration gives another way to arrive at the formula 
+              <me>
+                1 + 2 + 3+\cdots + n  = \frac{n(n+1)}{2}
+              </me>
+              from <xref ref="ex_strings_comb-proof_sum-ints" />.
+            </p>
+            <image label="img-rectangular-grid-sum-ints" width="40%">
+                <description>An array of circles. The first row is seven unfilled circles. The second row is six unfilled circles followed by a filled circle. The third row is five unfilled circles followed by two filled circles. This pattern continues until the eighth row, which consists of seven filled circles.</description>
+                <latex-image>
+                    \begin{tikzpicture}[line width=.7pt, outer sep=0pt]
+                    \foreach \x in {1,...,7}
+                      \foreach \y in {1,...,8}
+                        \ifthenelse{\x \gt \y \OR \x = \y}{\draw [fill=gray](\x,\y) circle (0.2cm);}{\draw (\x,\y) circle (0.2cm)};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+          </statement>
+          <response />
+        </exercise>
+        <exercise label="appcomb_strings_comb-proof_reading_2n-choose-n">
+            <statement>
+              <p>
+                Explain how the identity <m>C(n,k) = C(n,n-k)</m> is used in <xref ref="ex_strings_comb-proof_2n-choose-n" />.
+              </p>
+            </statement>
+            <response />
+          </exercise>
+      </reading-questions>
 </section>
