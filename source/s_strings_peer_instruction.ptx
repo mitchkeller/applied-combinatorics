@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<exercises xml:id="s_strings_PI" component="runestone">
+<exercises xml:id="s_strings_PI" component="runestone-PI">
   <title>Peer Instruction Questions</title>
   <exercise label="appcomb_strings_PI_factorial">
     <statement>
@@ -195,6 +195,108 @@
           <p>It depends on the values of <m>n</m> and <m>k</m></p>
         </statement>
       </choice>      
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_comb-proof-theme">
+    <statement>
+      <p>A recurring theme in the reading from Section 2.4 was</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a positive integer <m>n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>bit strings of length <m>n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>counting using partitioning</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>combinatorics</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>counting the same thing in different ways</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>sums</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_sum-ell">
+    <statement>
+      <p>How many dots if the grid is <m>n\times n</m>?</p>
+      <image source="3012-fig21" width="50%">
+        <description>A <m>7\times 7</m> array of dots. The top left dot is enclosed by a square. There are then nested right angles with their corners on the diagonal of the array and each right angle extending up to the top of the array and to the left side of the array.</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\displaystyle \frac{n(n+1)}{2}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>1 + 2 + \cdots + 2n-1</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>1^2 + 2^2 + 3^2 + n^2</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>1 + 3 + 5 + \cdots + 2n-1</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>1 + 3 + 5 + \cdots + 2n+1</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="appcomb_strings_PI_committee-model">
+    <statement>
+      <p>Suppose we have <m>n</m> individuals on campus eligible to serve on a
+        committee to plan a conference. The committee must have <m>r</m>
+        members, and a subcommittee of <m>k</m> must be selected to work on the
+        banquet. How many ways can we do this?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\displaystyle \binom{n}{r} + \binom{r}{k}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\displaystyle \binom{n}{r} \binom{r}{k}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\displaystyle \binom{n}{r} \binom{n}{k}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\displaystyle \binom{n}{k} \binom{n-k}{r-k}</m></p>
+        </statement>
+      </choice>
     </choices>
   </exercise>
   
