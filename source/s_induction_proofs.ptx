@@ -1,128 +1,220 @@
 <section xml:id="s_induction_proofs">
-    <title>Proofs by Induction</title>
-    <p>No discussion of recursion and induction would be complete without some obligatory examples of proofs using induction. We start with the <q>Hello World</q> example.
-    </p>
+  <title>Proofs by Induction</title>
+  <p>No discussion of recursion and induction would be complete without some obligatory examples of
+    proofs using induction. We start with the <q>Hello World</q> example. </p>
 
-    <proposition xml:id="prop_sumints">
-        <statement>
-            <p>For every positive integer <m>n</m>, the sum of the first <m>n</m> positive integers is <m>n(n+1)/2</m>, <ie />,
-            <me>
-                \sum_{i=1}^n i=\frac{n(n+1)}{2}.
-            </me>
-            </p>
-        </statement>
-    </proposition>
+  <proposition xml:id="prop_sumints">
+    <statement>
+      <p>For every positive integer <m>n</m>, the sum of the first <m>n</m> positive integers is <m>
+        n(n+1)/2</m>, <ie />, <me>
+          \sum_{i=1}^n i=\frac{n(n+1)}{2}.
+        </me>
+      </p>
+    </statement>
+  </proposition>
 
-    <p>For our first version of a proof of <xref ref="prop_sumints"  />, we clearly identify the open statement <m>S_n</m> and describe the proof carefully in terms of <m>S_n</m>. As you develop more experience with writing proofs by induction, this will become less essential, as you'll see in the second version of the proof.
-    </p>
+  <p>For our first version of a proof of <xref ref="prop_sumints" />, we clearly identify the open
+    statement <m>S_n</m> and describe the proof carefully in terms of <m>S_n</m>. As you develop
+    more experience with writing proofs by induction, this will become less essential, as you'll see
+    in the second version of the proof. </p>
+
+  <proof>
+    <p>Let <m>n</m> be a positive integer, and let <m>S_n</m> be the open statement <me>
+        \sum_{i=1}^n i = \frac{n(n+1)}{2}.
+      </me> We will prove that <m>S_n</m> is
+      true for all positive integers by induction. For the basis step, we must prove that <m>S_1</m>
+      is true. When <m>n=1</m>, the left-hand side of <m>S_n</m> is just <m>1</m>, while the
+      right-hand side evaluates to <m>1(1+1)/2=1</m>. Therefore, <m>S_1</m> is true. </p>
+
+    <p>Next we assume that for some positive integer <m>k</m>, <m>S_k</m> is true. That is, we
+      assume <me>
+        \sum_{i=1}^k i=\frac{k(k+1)}{2}.
+      </me> We now seek to prove that <m>
+      S_{k+1}</m> is true, and begin by considering the left-hand side of <m>S_{k+1}</m>. We notice
+      that <me>
+        \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
+        \frac{k(k+1)}{2}+(k+1),
+      </me>
+      since our inductive hypothesis that <m>S_k</m> is true gives us the simpler formula for the
+      summation. Now continuing with a bit of algebra, we find <me>
+      \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
+      </me>
+      Therefore, <m>S_{k+1}</m> is true. Since we have shown that <m>S_1</m> is true and that for
+      every positive integer <m>k</m>, if <m>S_k</m> is true, then <m>S_{k+1}</m> is true, we
+      conclude that <m>S_n</m> is true for all positive integers <m>n</m> by the <xref
+        ref="princ_math-induction" text="title" />. </p>
+  </proof>
+
+  <p>Before looking at a refined version of this proof, let's take a moment to discuss the key steps
+    in every proof by induction. The first step is the <term>basis step</term><idx>
+      <h>basis step</h>
+    </idx>, in which the open statement <m>S_1</m> is shown to be true. (It's
+    worth noting that there's nothing special about <m>1</m> here. If we want to prove only that <m>
+    S_n</m> is true for all integers <m>n\geq 5</m>, then proving that <m>S_5</m> is true is our
+    basis step.) When proving the basis step, if <m>S_n</m> is an equation, we do not just write
+    down <m>S_1</m> and move on. We need to <em>prove</em> that <m>S_1</m> is true. Notice how in
+    the proof above, we discussed the left-hand side of <m>S_1</m> and the right-hand side of <m>S_1</m>
+    and concluded that they were equal. </p>
+
+  <p>After the basis step comes the <term>inductive step</term><idx>
+      <h>inductive step</h>
+    </idx>, in which we assume that <m>S_k</m> is true for <em>some</em>
+    positive integer <m>k</m> and prove that <m>S_{k+1}</m> is true. When doing this, we call <m>S_k</m>
+    our <term>inductive hypothesis</term><idx>
+      <h>inductive hypothesis</h>
+    </idx>. In the inductive step, the most common mistake students
+    make is starting with the entirety of <m>S_{k+1}</m> and manipulating it until they obtain a
+    true statement. This is dangerous, as it is possible to start with something false and through
+    valid algebraic steps, obtain a true statement. Instead, the best option is to work as with the
+    basis step: if <m>S_{k+1}</m> is an equation or inequality, work on one side until you find a
+    place to apply the inductive hypothesis and then continue until you obtain the other side. If
+    the algebra gets tricky along the way, you can also work with the left-hand side of <m>S_{k+1}</m>
+    and separately work with the right-hand side of <m>S_{k+1}</m>. If you're able to manipulate
+    both sides to be in the same form, then you have shown they are equal and <m>S_{k+1}</m> is
+    true. </p>
+
+  <p>Now let's take a look at a more refined proof of <xref ref="prop_sumints" />. From here on,
+    when we give a proof by induction, we'll use this style. As you're getting started with
+    induction proofs, you may find it useful to be more explicit about the steps as we did in the
+    first proof above. </p>
+
+  <proof>
+    <p>We first prove the assertion when <m>n=1</m>. For this value of <m>n</m>, the left-hand side
+      is just<nbsp /><m>1</m>, while the right-hand side evaluates to <m>1(1+1)/2=1</m>. </p>
+
+    <p>Now assume that for some positive integer <m>k</m>, the formula holds when <m>n=k</m>, <ie />,
+      assume that <me>
+        \sum_{i=1}^k i=\frac{k(k+1)}{2}.
+      </me> Then it follows that <me>
+      \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
+      \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
+      </me>
+      Thus the formula also holds when <m>n=k+1</m>. By the <xref ref="princ_math-induction"
+        text="title" />, it holds for all positive integers <m>n</m>. </p>
+  </proof>
+
+  <p>The preceding arguments are 100% correct<ellipsis /> but some combinatorial mathematicians
+    would argue that they may actually hide what is really going on. These folks would much prefer a
+    combinatorial proof, as was provided in <xref ref="s_strings_comb-proof" />. Our perspective is
+    that you should prefer to give a combinatorial proof<mdash />when you can find one. But if
+    pressed, you should be able to give a formal proof by mathematical induction. </p>
+
+  <p>Here's a second example, also quite a classic. Again, recall that we gave a combinatorial proof
+    in the last chapter. As you read the proof, make sure you can identify the open statement <m>S_n</m>,
+    the basis step, and the inductive step. </p>
+
+  <proposition xml:id="prop_sumodd">
+    <statement>
+      <p>For each positive integer <m>n</m>, the sum of the first <m>n</m> odd positive integers is <m>
+        n^2</m>, <ie />, <me>
+          \sum_{i=1}^n (2i-1)= n^2.
+        </me>
+      </p>
+    </statement>
 
     <proof>
-        <p>Let <m>n</m> be a positive integer, and let <m>S_n</m> be the open statement
-        <me>
-            \sum_{i=1}^n i = \frac{n(n+1)}{2}.
+      <p>We will prove this by induction. First, note that the formula holds when <m>n=1</m>. Now
+        suppose that <m>k</m> is a positive integer and that the formula holds when <m>n=k</m>, <ie />,
+        assume <me>
+          \sum_{i=1}^k (2i-1)= k^2.
+        </me> Then <me>
+        \sum_{i=1}^{k+1}(2i-1)=\left(\sum_{i=1}^k 2i-1\right)+2k+1=
+          k^2+(2k+1)=(k+1)^2.
         </me>
-        We will prove that <m>S_n</m> is true for all positive integers by induction. For the basis step, we must prove that <m>S_1</m> is true. When <m>n=1</m>, the left-hand side of <m>S_n</m> is just <m>1</m>, while the right-hand side evaluates to <m>1(1+1)/2=1</m>. Therefore, <m>S_1</m> is true.
-        </p>
-
-        <p>Next we assume that for some positive integer <m>k</m>, <m>S_k</m> is true. That is, we assume
-        <me>
-            \sum_{i=1}^k i=\frac{k(k+1)}{2}.
-        </me>
-            We now seek to prove that <m>S_{k+1}</m> is true, and begin by considering the left-hand side of <m>S_{k+1}</m>. We notice that
-        <me>
-            \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
-            \frac{k(k+1)}{2}+(k+1),
-        </me>
-            since our inductive hypothesis that <m>S_k</m> is true gives us the simpler formula for the summation. Now continuing with a bit of algebra, we find
-        <me>
-            \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
-        </me>
-        Therefore, <m>S_{k+1}</m> is true. Since we have shown that <m>S_1</m> is true and that for every positive integer <m>k</m>, if <m>S_k</m> is true, then <m>S_{k+1}</m> is true, we conclude that <m>S_n</m> is true for all positive integers <m>n</m> by the <xref ref="princ_math-induction" text="title" />.
-        </p>
+        Therefore, the proposition follows by the <xref ref="princ_math-induction" text="title" />. </p>
     </proof>
+  </proposition>
 
-    <p>Before looking at a refined version of this proof, let's take a moment to discuss the key steps in every proof by induction. The first step is the <term>basis step</term><idx><h>basis step</h></idx>, in which the open statement <m>S_1</m> is shown to be true. (It's worth noting that there's nothing special about <m>1</m> here. If we want to prove only that <m>S_n</m> is true for all integers <m>n\geq 5</m>, then proving that <m>S_5</m> is true is our basis step.) When proving the basis step, if <m>S_n</m> is an equation, we do not just write down <m>S_1</m> and move on. We need to <em>prove</em> that <m>S_1</m> is true. Notice how in the proof above, we discussed the left-hand side of <m>S_1</m> and the right-hand side of <m>S_1</m> and concluded that they were equal.
-    </p>
 
-    <p>After the basis step comes the <term>inductive step</term><idx><h>inductive step</h></idx>, in which we assume that <m>S_k</m> is true for <em>some</em> positive integer <m>k</m> and prove that <m>S_{k+1}</m> is true. When doing this, we call <m>S_k</m> our <term>inductive hypothesis</term><idx><h>inductive hypothesis</h></idx>. In the inductive step, the most common mistake students make is starting with the entirety of <m>S_{k+1}</m> and manipulating it until they obtain a true statement. This is dangerous, as it is possible to start with something false and through valid algebraic steps, obtain a true statement. Instead, the best option is to work as with the basis step: if <m>S_{k+1}</m> is an equation or inequality, work on one side until you find a place to apply the inductive hypothesis and then continue until you obtain the other side. If the algebra gets tricky along the way, you can also work with the left-hand side of <m>S_{k+1}</m> and separately work with the right-hand side of <m>S_{k+1}</m>. If you're able to manipulate both sides to be in the same form, then you have shown they are equal and <m>S_{k+1}</m> is true.
-    </p>
+  <p>Here's a more general version of the first result in this section, and again we note that we
+    gave a combinatorial proof in <xref ref="s_strings_comb-proof" />. </p>
 
-    <p>Now let's take a look at a more refined proof of <xref ref="prop_sumints"  />. From here on, when we give a proof by induction, we'll use this style. As you're getting started with induction proofs, you may find it useful to be more explicit about the steps as we did in the first proof above.
-    </p>
+  <proposition xml:id="prop_sum-bincoeffs">
+    <statement>
+      <p>Let <m>n</m> and <m>k</m> be non-negative integers with <m>n\ge k</m>. Then <me>
+        \sum_{i=k}^n \binom{i}{k}=\binom{n+1}{k+1}.
+        </me>
+      </p>
+    </statement>
 
     <proof>
-        <p>We first prove the assertion when <m>n=1</m>. For this value of <m>n</m>, the left-hand side is just<nbsp /><m>1</m>, while the right-hand side evaluates to <m>1(1+1)/2=1</m>.
-        </p>
-
-        <p>Now assume that for some positive integer <m>k</m>, the formula holds when <m>n=k</m>, <ie />, assume that
-        <me>
-            \sum_{i=1}^k i=\frac{k(k+1)}{2}.
-        </me>
-        Then it follows that
-        <me>
-            \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
-            \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
-        </me>
-        Thus the formula also holds when <m>n=k+1</m>. By the <xref ref="princ_math-induction" text="title" />, it holds for all positive integers <m>n</m>.
-        </p>
+      <p>Fix a non-negative integer <m>k</m>. We then prove the formula by induction on <m>n</m>. If <m>
+        n=k</m>, note that the left hand side is just <m>\binom{k}{k}=1</m>, while the right hand
+        side is <m>\binom{k+1}{k+1}</m> which is also<nbsp /><m>1</m>. Now assume that <m>m</m> is a
+        non-negative integer, with <m>m\ge k</m>, and that the formula holds when <m>n=m</m>, <ie />,
+        assume that <me>
+          \sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
+        </me> Then <md>
+          <mrow> \sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}</mrow>
+          <mrow> \amp =\binom{m+1}{k+1}+\binom{m+1}{k}</mrow>
+          <mrow> \amp =\binom{m+2}{k+1}.</mrow>
+        </md> Therefore, the proposition follows by
+        the Principle of Mathematical Induction. </p>
     </proof>
+  </proposition>
+  <reading-questions xml:id="rqs-induction_proofs">
+    <exercise label="induction_proofs_hanoi" adaptive="yes">
+      <statement>
+        <p> Suppose that <m>t(n)</m> is a recursive function defined for <m>n\geq 1</m> such that <m>t(1)=1</m> and for <m>n\geq 2</m>, <m>t(n)=2t(n-1)+1</m>. Create a proof that for all <m>n\geq 1</m>, <m>t(n) = 2^n - 1</m>.
+              </p>
+      </statement>
+      <blocks>
+        <block order="8">
+          <p>
+            Let <m>S_n</m> be the statement that <m>t(n) = 2^n - 1.</m>
+          </p>
+        </block>
+        <block order="2">
+          <choice>
+            <p> We see that <m>t(1)=2^1 - 1 = 1</m>, so the basis step is true.</p>
+          </choice>
+          <choice correct="yes">
+            <p> Since <m>2^1 - 1 = 1</m> and <m>t(1)=1</m>, we see that the basis step is true.</p>
+          </choice>
+          <choice>
+            <p> The basis step is obvious, so we proceed onward. </p>
+          </choice>
+        </block>
 
-    <p>The preceding arguments are 100% correct<ellipsis /> but some combinatorial mathematicians would argue that they may actually hide what is really going on. These folks would much prefer a combinatorial proof, as was provided in <xref ref="s_strings_comb-proof"  />. Our perspective is that you should prefer to give a combinatorial proof<mdash />when you can find one. But if pressed, you should be able to give a formal proof by mathematical induction.
-    </p>
+        <block order="11" correct="no">
+          <p>
+            Assume that for all integers <m>k\geq 1</m> that <m>S_k</m> is true. That is, <m>t(k) = 2^k - 1</m>.
+          </p>
+        </block>
+        <block order="7">
+          <p>
+            Assume that for some integer <m>k\geq 1</m> that <m>S_k</m> is true. That is, <m>t(k) = 2^k - 1</m>.
+          </p>
+        </block>
 
-    <p>Here's a second example, also quite a classic. Again, recall that we gave a combinatorial proof in the last chapter. As you read the proof, make sure you can identify the open statement <m>S_n</m>, the basis step, and the inductive step.
-    </p>
-
-    <proposition xml:id="prop_sumodd">
-        <statement>
-            <p>For each positive integer <m>n</m>, the sum of the first <m>n</m> odd positive integers is <m>n^2</m>, <ie />,
-            <me>
-                \sum_{i=1}^n (2i-1)= n^2.
-            </me>
-            </p>
-        </statement>
-
-        <proof>
-            <p>We will prove this by induction. First, note that the formula holds when <m>n=1</m>. Now suppose that <m>k</m> is a positive integer and that the formula holds when <m>n=k</m>, <ie />, assume
-            <me>
-                \sum_{i=1}^k (2i-1)= k^2.
-            </me>
-            Then
-            <me>
-                \sum_{i=1}^{k+1}(2i-1)=\left(\sum_{i=1}^k 2i-1\right)+2k+1=
-                k^2+(2k+1)=(k+1)^2.
-            </me>
-            Therefore, the proposition follows by the <xref ref="princ_math-induction" text="title" />.
-        </p>
-    </proof>
-    </proposition>
-
-    
-    <p>Here's a more general version of the first result in this section, and again we note that we gave a combinatorial proof in <xref ref="s_strings_comb-proof"  />.
-    </p>
-
-    <proposition xml:id="prop_sum-bincoeffs">
-        <statement>
-            <p>Let <m>n</m> and <m>k</m> be non-negative integers with <m>n\ge k</m>.  Then
-            <me>
-                \sum_{i=k}^n \binom{i}{k}=\binom{n+1}{k+1}.
-            </me>
-            </p>
-        </statement>
-
-        <proof>
-            <p>Fix a non-negative integer <m>k</m>. We then prove the formula by induction on <m>n</m>. If <m>n=k</m>, note that the left hand side is just <m>\binom{k}{k}=1</m>, while the right hand side is <m>\binom{k+1}{k+1}</m> which is also<nbsp /><m>1</m>.  Now assume that <m>m</m> is a non-negative integer, with <m>m\ge k</m>, and that the formula holds when <m>n=m</m>, <ie />, assume that
-            <me>
-                \sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
-            </me>
-            Then
-            <md>
-                <mrow>  \sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}</mrow>
-                <mrow>  \amp =\binom{m+1}{k+1}+\binom{m+1}{k}</mrow>
-                <mrow>  \amp =\binom{m+2}{k+1}.</mrow>
-            </md>
-            Therefore, the proposition follows by the Principle of Mathematical Induction.
-            </p>
-        </proof>
-    </proposition>
+        <block order="5">
+          <p> We must prove that <m>S_{k+1}</m> is true. That is, we will prove that <m>t(k+1)=2^{k+1}-1</m>. </p>
+        </block>
+        <block order="4" correct="no">
+          <p> Since <m>S_{k}</m> is true for all <m>k\geq 1</m>, we know that <m>S_{k+1}</m> is true. </p>
+        </block>
+        <block order="6" >
+          <p> Since <m>k\geq 1</m>, we know that <m>k+1 \geq 2</m>, and thus <m>t(k+1) = 2t(k+1-1)+1 = 2t(k)+1</m>.</p>
+        </block>
+        <block order="9" correct="no">
+          <p> We have that <m>t(k+1) = 2t(k+1-1)+1 = 2t(k)+1</m>.</p>
+        </block>
+        <block order="3">
+          <p>
+            By the induction hypothesis, since <m>S_k</m> is true, we know that <m>t(k)= 2^k-1</m>. 
+          </p>
+        </block>
+        <block order="10">
+          <p>
+            Thus, <m>t(k+1)=2t(k)+1 = 2(2^k-1)+1 = 2^{k+1}+1</m>. This proves that <m>S_{k+1}</m> is true.
+          </p>
+        </block>
+        <block order="1">
+          <p>
+            Therefore, by the Principle of Mathematical Induction, for all positive integers <m>n</m>, <m>t(n)=2^n-1</m>.
+          </p>
+        </block>
+      </blocks>
+    </exercise>
+  </reading-questions>
 </section>
