@@ -201,7 +201,7 @@
         </block>
         <block order="3">
           <p>
-            By the induction hypothesis, since <m>S_k</m> is true, we know that <m>t(k)= 2^k-1</m>. 
+            By the inductive hypothesis, since <m>S_k</m> is true, we know that <m>t(k)= 2^k-1</m>. 
           </p>
         </block>
         <block order="10">
@@ -215,6 +215,14 @@
           </p>
         </block>
       </blocks>
+    </exercise>
+    <exercise label="induction_proofs_ind-hyp">
+      <statement>
+        <p>
+          Write a couple of sentences explaining why the making the inductive hypothesis is not the same as assuming what we are trying to prove.
+        </p>
+      </statement>
+      <response />
     </exercise>
   </reading-questions>
 </section>
