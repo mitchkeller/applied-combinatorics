@@ -1,80 +1,195 @@
 <section xml:id="s_graphs_intro">
-    <title>Basic Notation and Terminology for Graphs</title>
-    <p>A <term>graph</term><idx><h>graph</h></idx> <m>\bfG</m> is a pair <m>(V,E)</m> where <m>V</m> is a set (almost always finite) and <m>E</m> is a set of <m>2</m>-element subsets of <m>V</m>.  Elements of <m>V</m> are called <term>vertices</term><idx><h>vertex</h></idx> and elements of <m>E</m> are called <term>edges</term><idx><h>edge</h></idx>. We call <m>V</m> the <term>vertex set</term> of <m>\bfG</m> and <m>E</m> is the <term>edge set</term>. For convenience, it is customary to abbreviate the edge <m>\{x,y\}</m> as just <m>xy</m>. Remember though that <m>xy\in E</m> means exactly the same as <m>yx\in E</m>. If <m>x</m> and <m>y</m> are distinct vertices from <m>V</m>, <m>x</m> and <m>y</m> are <term>adjacent</term><idx><h>adjacent vertices</h></idx> when <m>xy\in E</m>; otherwise, we say they are <term>non-adjacent</term>. We say the edge <m>xy</m> is <term>incident to</term><idx><h>incident to</h></idx> the vertices <m>x</m> and <m>y</m>.
-    </p>
+  <title>Basic Notation and Terminology for Graphs</title>
+  <p>A <term>graph</term><idx>
+      <h>graph</h>
+    </idx> <m>\bfG</m> is a pair <m>(V,E)</m> where <m>V</m> is a set (almost
+    always finite) and <m>E</m> is a set of <m>2</m>-element subsets of <m>V</m>. Elements of <m>V</m>
+    are called <term>vertices</term><idx>
+      <h>vertex</h>
+    </idx> and elements of <m>E</m> are called <term>edges</term><idx>
+      <h>edge</h>
+    </idx>. We call <m>V</m> the <term>vertex set</term> of <m>\bfG</m> and <m>E</m>
+    is the <term>edge set</term>. For convenience, it is customary to abbreviate the edge <m>\{x,y\}</m>
+    as just <m>xy</m>. Remember though that <m>xy\in E</m> means exactly the same as <m>yx\in E</m>.
+    If <m>x</m> and <m>y</m> are distinct vertices from <m>V</m>, <m>x</m> and <m>y</m> are <term>
+    adjacent</term><idx>
+      <h>adjacent vertices</h>
+    </idx> when <m>xy\in E</m>; otherwise, we say they are <term>
+    non-adjacent</term>. We say the edge <m>xy</m> is <term>incident to</term><idx>
+      <h>incident to</h>
+    </idx> the vertices <m>x</m> and <m>y</m>. </p>
 
-    <p>For example, we could define a graph <m>\GVE</m> with vertex set <m>V=\{a,b,c,d,e\}</m> and edge set <m>E=\{\{a,b\},\{c,d\},\{a,d\}\}</m>. Notice that no edge is incident to <m>e</m>, which is perfectly permissible based on our definition. It is quite common to identify a graph with a visualization in which we draw a point for each vertex and a line connecting two vertices if they are adjacent. The graph <m>\bfG</m> we've just defined is shown in <xref ref="fig_small_graph"  />. It's important to remember that while a drawing of a graph is a helpful tool, it is not the same as the graph. We could draw <m>\bfG</m> in any of several different ways without changing what it is as a graph.
-    </p>
-    <figure xml:id="fig_small_graph" >
-        <caption>A graph on <m>5</m> vertices</caption>
-        <image width="30%">
-            <latex-image><![CDATA[\begin{overpic}{external/small_graph}
+  <p>For example, we could define a graph <m>\GVE</m> with vertex set <m>V=\{a,b,c,d,e\}</m> and
+    edge set <m>E=\{\{a,b\},\{c,d\},\{a,d\}\}</m>. Notice that no edge is incident to <m>e</m>,
+    which is perfectly permissible based on our definition. It is quite common to identify a graph
+    with a visualization in which we draw a point for each vertex and a line connecting two vertices
+    if they are adjacent. The graph <m>\bfG</m> we've just defined is shown in <xref
+      ref="fig_small_graph" />. It's important to remember that while a drawing of a graph is a
+    helpful tool, it is not the same as the graph. We could draw <m>\bfG</m> in any of several
+    different ways without changing what it is as a graph. </p>
+  <figure xml:id="fig_small_graph">
+    <caption>A graph on <m>5</m> vertices</caption>
+    <image width="30%">
+      <latex-image><![CDATA[\begin{overpic}{external/small_graph}
             \put(58,100){\(a\)}
             \put(100,48){\(b\)}
             \put(-7,10){\(c\)}
             \put(15,50,){\(d\)}
             \put(70,11){\(e\)}
             \end{overpic}]]></latex-image>
-        </image>
+    </image>
 
-    </figure>
-    <p>As is often the case in science and mathematics, different authors use slightly different notation and terminology for graphs. As an example, some use <term>nodes</term> and <term>arcs</term> rather than vertices and edges. Others refer to vertices as <term>points</term> and in this case, they often refer to <term>lines</term> rather than edges.  We will try to stick to vertices and edges but confess that we may occasionally lapse into referring to vertices as points. Also, following the patterns of many others, we will also say that adjacent vertices are <term>neighbors</term><idx><h>neighbor</h></idx>. And we will use the more or less standard terminology that the <term>neighborhood</term><idx><h>neighborhood (of a vertex)</h></idx> of a vertex <m>x</m> is the set of vertices adjacent to <m>x</m>. Thus, using the graph <m>\bfG</m> we have depicted in <xref ref="fig_small_graph"  />, vertices <m>d</m> and <m>a</m> are neighbors, and the neighborhood of <m>d</m> is <m>\{a,c\}</m> while the neighborhood of <m>e</m> is the empty set. Also, the <term>degree</term><idx><h>degree of a vertex</h></idx> of a vertex <m>v</m> in a graph <m>\bfG</m>, denoted <m>\deg_\bfG(v)</m>, is then the number of vertices in its neighborhood, or equivalently, the number of edges incident to it. For example, we have <m>\deg_\bfG(d)=\deg_\bfG(a)=2</m>, <m>\deg_\bfG(c)=\deg_\bfG(b)=1</m>, and <m>\deg_\bfG(e)=0</m>. If the graph being discussed is clear from context, it is not uncommon to omit the subscript and simply write <m>\deg(v)</m><notation><usage><m>\deg_\bfG(v)</m></usage><description>degree of vertex <m>v</m> in graph <m>\bfG</m></description></notation> for the degree of <m>v</m>.
-    </p>
+  </figure>
+  <p>As is often the case in science and mathematics, different authors use slightly different
+    notation and terminology for graphs. As an example, some use <term>nodes</term> and <term>arcs</term>
+    rather than vertices and edges. Others refer to vertices as <term>points</term> and in this
+    case, they often refer to <term>lines</term> rather than edges. We will try to stick to vertices
+    and edges but confess that we may occasionally lapse into referring to vertices as points. Also,
+    following the patterns of many others, we will also say that adjacent vertices are <term>
+    neighbors</term><idx>
+      <h>neighbor</h>
+    </idx>. And we will use the more or less standard terminology that the <term>
+    neighborhood</term><idx>
+      <h>neighborhood (of a vertex)</h>
+    </idx> of a vertex <m>x</m> is the set of vertices
+    adjacent to <m>x</m>. Thus, using the graph <m>\bfG</m> we have depicted in <xref
+      ref="fig_small_graph" />, vertices <m>d</m> and <m>a</m> are neighbors, and the neighborhood
+    of <m>d</m> is <m>\{a,c\}</m> while the neighborhood of <m>e</m> is the empty set. Also, the <term>
+    degree</term><idx>
+      <h>degree of a vertex</h>
+    </idx> of a vertex <m>v</m> in a graph <m>\bfG</m>, denoted <m>
+    \deg_\bfG(v)</m>, is then the number of vertices in its neighborhood, or equivalently, the
+    number of edges incident to it. For example, we have <m>\deg_\bfG(d)=\deg_\bfG(a)=2</m>, <m>
+    \deg_\bfG(c)=\deg_\bfG(b)=1</m>, and <m>\deg_\bfG(e)=0</m>. If the graph being discussed is
+    clear from context, it is not uncommon to omit the subscript and simply write <m>\deg(v)</m><notation>
+      <usage>
+        <m>\deg_\bfG(v)</m>
+      </usage>
+      <description>degree of vertex <m>v</m> in graph <m>\bfG</m></description>
+    </notation> for
+    the degree of <m>v</m>. </p>
 
-    <p>When <m>\GVE</m> and <m>\HWF</m> are graphs, we say <m>\bfH</m> is a <term>subgraph</term><idx><h>subgraph</h></idx> of <m>\bfG</m> when <m>W\subseteq V</m> and <m>F\subseteq E</m>.  We say <m>\bfH</m> is an <term>induced subgraph</term><idx><h>subgraph</h><h>induced</h></idx> when <m>W\subseteq V</m> and <m>F=\{xy\in E: x,y\in W\}</m>. In other words, an induced subgraph is defined completely by its vertex set and the original graph <m>\bfG</m>. We say <m>\bfH</m> is a <term>spanning subgraph</term><idx><h>subgraph</h><h>spanning</h></idx> when <m>W=V</m>. In <xref ref="fig_subgraphs"  />, we show a graph, a subgraph and an induced subgraph. Neither of these subgraphs is a spanning subgraph.
-    </p>
-    <figure xml:id="fig_subgraphs" >
-        <caption>A Graph, a Subgraph and an Induced Subgraph</caption>
-        <image width="90%" source="subgraphs" />
-    </figure>
-    <p>A graph <m>\GVE</m> is called a <term>complete graph</term><idx><h>graph</h><h>complete</h></idx> when <m>xy</m> is an edge in <m>\bfG</m> for every distinct pair <m>x,y\in V</m>. Conversely, <m>\bfG</m> is an <term>independent graph</term><idx><h>graph</h><h>independent</h></idx> if <m>xy\not\in E</m>, for every distinct pair <m>x,y\in V</m>. It is customary to denote a complete graph on <m>n</m> vertices by <m>\bfK_n</m> <notation><usage><m>\bfK_n</m></usage><description>complete graph on <m>n</m> vertices</description></notation> and an independent graph on <m>n</m> vertices by <m>\bfI_n</m><notation><usage><m>\bfI_n</m></usage><description>independent graph on <m>n</m> vertices</description></notation>. In <xref ref="fig_complete_graphs"  />, we show the complete graphs with at most <m>5</m> vertices.
-    </p>
-    <figure xml:id="fig_complete_graphs" >
-        <caption>Small complete graphs</caption>
-        <image width="70%">
-<latex-image><![CDATA[\begin{overpic}[width=0.7\textwidth]{external/complete_graphs}
+  <p>When <m>\GVE</m> and <m>\HWF</m> are graphs, we say <m>\bfH</m> is a <term>subgraph</term><idx>
+      <h>subgraph</h>
+    </idx> of <m>\bfG</m> when <m>W\subseteq V</m> and <m>F\subseteq E</m>. We
+    say <m>\bfH</m> is an <term>induced subgraph</term><idx>
+      <h>subgraph</h>
+      <h>induced</h>
+    </idx> when <m>W\subseteq V</m> and <m>F=\{xy\in E: x,y\in W\}</m>. In other
+    words, an induced subgraph is defined completely by its vertex set and the original graph <m>
+    \bfG</m>. We say <m>\bfH</m> is a <term>spanning subgraph</term><idx>
+      <h>subgraph</h>
+      <h>spanning</h>
+    </idx> when <m>W=V</m>. In <xref ref="fig_subgraphs" />, we show a graph, a
+    subgraph and an induced subgraph. Neither of these subgraphs is a spanning subgraph. </p>
+  <figure xml:id="fig_subgraphs">
+    <caption>A Graph, a Subgraph and an Induced Subgraph</caption>
+    <image width="90%" source="subgraphs" />
+  </figure>
+  <p>A graph <m>\GVE</m> is called a <term>complete graph</term><idx>
+      <h>graph</h>
+      <h>complete</h>
+    </idx> when <m>xy</m> is an edge in <m>\bfG</m> for every distinct pair <m>x,y\in
+    V</m>. Conversely, <m>\bfG</m> is an <term>independent graph</term><idx>
+      <h>graph</h>
+      <h>independent</h>
+    </idx> if <m>xy\not\in E</m>, for every distinct pair <m>x,y\in V</m>.
+    It is customary to denote a complete graph on <m>n</m> vertices by <m>\bfK_n</m> <notation>
+      <usage>
+        <m>\bfK_n</m>
+      </usage>
+      <description>complete graph on <m>n</m> vertices</description>
+    </notation> and an
+    independent graph on <m>n</m> vertices by <m>\bfI_n</m><notation>
+      <usage>
+        <m>\bfI_n</m>
+      </usage>
+      <description>independent graph on <m>n</m> vertices</description>
+    </notation>. In <xref
+      ref="fig_complete_graphs" />, we show the complete graphs with at most <m>5</m> vertices. </p>
+  <figure xml:id="fig_complete_graphs">
+    <caption>Small complete graphs</caption>
+    <image width="70%">
+      <latex-image><![CDATA[\begin{overpic}[width=0.7\textwidth]{external/complete_graphs}
             \put(2.5,2){\(\bfK_1\)}
             \put(16.5,2){\(\bfK_2\)}
             \put(36.5,2){\(\bfK_3\)}
             \put(60.5,2){\(\bfK_4\)}
             \put(86,2){\(\bfK_5\)}
             \end{overpic}]]></latex-image>
-        </image>
-    </figure>
-    <p>A sequence <m>(x_1,x_2,\dots,x_n)</m> of vertices in a graph <m>\GVE</m> is called a <term>walk</term><idx><h>walk</h></idx> when <m>x_ix_{i+1}</m> is an edge for each <m>i=1,2,\dots,n-1</m>. Note that the vertices in a walk need not be distinct. On the other hand, if the vertices are distinct, then the sequence is called a <term>path</term><idx><h>path</h></idx>, and often to emphasize where a path starts and ends, we will say that a sequence <m>(x_1,x_2,\dots,x_n)</m> of distinct vertices is a path from <m>x_1</m> to <m>x_n</m> in <m>\bfG</m>. Similarly, when <m>n\ge3</m>, a path <m>(x_1,x_2,\dots,x_n)</m> of <m>n</m> distinct vertices is called a <term>cycle</term><idx><h>cycle</h></idx> when <m>x_1x_n</m> is also an edge in <m>\bfG</m>. It is customary to denote a path on <m>n</m> vertices by <m>\bfP_n</m><notation><usage><m>\bfP_n</m></usage><description>path with <m>n</m> vertices</description></notation>, while <m>\bfC_n</m><notation><usage><m>\bfC_n</m></usage><description>path with <m>n</m> vertices</description></notation> denotes a cycle on <m>n</m> vertices. The <term>length</term><idx><h>length</h><h>of path or cycle</h></idx> of a path or a cycle is the number of edges it contains. Therefore, the length of <m>\bfP_n</m> is <m>n-1</m> and the length of <m>\bfC_n</m> is <m>n</m>. In <xref ref="fig_paths"  />, we show the paths of length at most <m>4</m>, and in <xref ref="fig_cycles"  />, we show the cycles of length at most <m>5</m>.
-    </p>
-    <figure xml:id="fig_paths" >
-        <caption>Short paths</caption>
-        <image width="70%">
-            <latex-image><![CDATA[\begin{overpic}[width=0.7\textwidth]{external/paths}
+    </image>
+  </figure>
+  <p>A sequence <m>(x_1,x_2,\dots,x_n)</m> of vertices in a graph <m>\GVE</m> is called a <term>walk</term><idx>
+      <h>walk</h>
+    </idx> when <m>x_ix_{i+1}</m> is an edge for each <m>i=1,2,\dots,n-1</m>. Note
+    that the vertices in a walk need not be distinct. On the other hand, if the vertices are
+    distinct, then the sequence is called a <term>path</term><idx>
+      <h>path</h>
+    </idx>, and often to emphasize where a path starts and ends, we will say that a
+    sequence <m>(x_1,x_2,\dots,x_n)</m> of distinct vertices is a path from <m>x_1</m> to <m>x_n</m>
+    in <m>\bfG</m>. Similarly, when <m>n\ge3</m>, a path <m>(x_1,x_2,\dots,x_n)</m> of <m>n</m>
+    distinct vertices is called a <term>cycle</term><idx>
+      <h>cycle</h>
+    </idx> when <m>x_1x_n</m> is also an edge in <m>\bfG</m>. It is customary to
+    denote a path on <m>n</m> vertices by <m>\bfP_n</m><notation>
+      <usage>
+        <m>\bfP_n</m>
+      </usage>
+      <description>path with <m>n</m> vertices</description>
+    </notation>, while <m>\bfC_n</m><notation>
+      <usage>
+        <m>\bfC_n</m>
+      </usage>
+      <description>path with <m>n</m> vertices</description>
+    </notation> denotes a cycle on <m>n</m>
+    vertices. The <term>length</term><idx>
+      <h>length</h>
+      <h>of path or cycle</h>
+    </idx> of a path or a cycle is the number of edges it contains.
+    Therefore, the length of <m>\bfP_n</m> is <m>n-1</m> and the length of <m>\bfC_n</m> is <m>n</m>.
+    In <xref ref="fig_paths" />, we show the paths of length at most <m>4</m>, and in <xref
+      ref="fig_cycles" />, we show the cycles of length at most <m>5</m>. </p>
+  <figure xml:id="fig_paths">
+    <caption>Short paths</caption>
+    <image width="70%">
+      <latex-image><![CDATA[\begin{overpic}[width=0.7\textwidth]{external/paths}
             \put(8,-2){\(\bfP_1\)}
             \put(24,-2){\(\bfP_2\)}
             \put(39.5,-2){\(\bfP_3\)}
             \put(59.5,-2){\(\bfP_4\)}
             \put(85,-2){\(\bfP_5\)}
             \end{overpic}]]></latex-image>
-        </image>
+    </image>
 
-    </figure>
-    <figure xml:id="fig_cycles" >
-        <caption>Small cycles</caption>
-        <image width="60%">
-            <latex-image><![CDATA[\begin{overpic}[width=0.6\textwidth]{external/cycles}
+  </figure>
+  <figure xml:id="fig_cycles">
+    <caption>Small cycles</caption>
+    <image width="60%">
+      <latex-image><![CDATA[\begin{overpic}[width=0.6\textwidth]{external/cycles}
             \put(24,1){\(\bfC_3\)}
             \put(47.5,1){\(\bfC_4\)}
             \put(73,1){\(\bfC_5\)}
             \end{overpic}]]></latex-image>
-        </image>
-    </figure>
-    <p>If <m>\GVE</m> and <m>\HWF</m> are graphs, we say <m>\bfG</m> is <term>isomorphic</term><idx><h>isomorphism</h><h>of graphs</h></idx> to <m>\bfH</m> and write <m>\bfG\cong\bfH</m> when there exists a bijection <m>f:V\bijection W</m> so that <m>x</m> is adjacent to <m>y</m> in <m>\bfG</m> if and only if <m>f(x)</m> is adjacent to <m>f(y)</m> in <m>\bfH</m>. Often writers will say that <m>\bfG</m> <q>contains</q> <m>\bfH</m> when there is a subgraph of <m>\bfG</m> which is isomorphic to <m>\bfH</m>. In particular, it is customary to say that <m>\bfG</m> contains the cycle <m>\bfC_n</m> (same for <m>\bfP_n</m> and <m>\bfK_n</m>) when <m>\bfG</m> contains a subgraph isomorphic to <m>\bfC_n</m>. The graphs in <xref ref="fig_isomorphic"  /> are isomorphic. An isomorphism between these graphs is given by
-    <me>
-        f(a)=5,\quad f(b) = 3, \quad f(c) = 1,\quad f(d) = 6,\quad f(e)=2,\quad f(h)=4.
+    </image>
+  </figure>
+  <p>If <m>\GVE</m> and <m>\HWF</m> are graphs, we say <m>\bfG</m> is <term>isomorphic</term><idx>
+      <h>isomorphism</h>
+      <h>of graphs</h>
+    </idx> to <m>\bfH</m> and write <m>\bfG\cong\bfH</m> when there exists a
+    bijection <m>f:V\bijection W</m> so that <m>x</m> is adjacent to <m>y</m> in <m>\bfG</m> if and
+    only if <m>f(x)</m> is adjacent to <m>f(y)</m> in <m>\bfH</m>. Often writers will say that <m>
+    \bfG</m> <q>contains</q> <m>\bfH</m> when there is a subgraph of <m>\bfG</m> which is isomorphic
+    to <m>\bfH</m>. In particular, it is customary to say that <m>\bfG</m> contains the cycle <m>
+    \bfC_n</m> (same for <m>\bfP_n</m> and <m>\bfK_n</m>) when <m>\bfG</m> contains a subgraph
+    isomorphic to <m>\bfC_n</m>. The graphs in <xref ref="fig_isomorphic" /> are isomorphic. An
+    isomorphism between these graphs is given by <me>
+      f(a)=5,\quad f(b) = 3, \quad f(c) = 1,\quad f(d) = 6,\quad f(e)=2,\quad f(h)=4.
     </me>
-    </p>
-    <figure xml:id="fig_isomorphic" >
-        <caption>A pair of isomorphic graphs</caption>
-        <image width="70%">
-<latex-image><![CDATA[\begin{overpic}[width=0.70\textwidth]{external/isomorphic_graphs}
+  </p>
+  <figure xml:id="fig_isomorphic">
+    <caption>A pair of isomorphic graphs</caption>
+    <image width="70%">
+      <latex-image><![CDATA[\begin{overpic}[width=0.70\textwidth]{external/isomorphic_graphs}
             \put(6,13){\(a\)}
             \put(20.5,1){\(b\)}
             \put(36,14){\(c\)}
@@ -89,14 +204,15 @@
             \put(53,13){\(5\)}
             \put(68,1){\(6\)}
             \end{overpic}]]></latex-image>
-        </image>
-    </figure>
-    <p>On the other hand, the graphs shown in <xref ref="fig_nonisomorphic"  /> are <em>not</em> isomorphic, even though they have the same number of vertices and the same number of edges. Can you tell why?
-    </p>
-    <figure xml:id="fig_nonisomorphic" >
-        <caption>A pair of nonisomorphic graphs</caption>
-        <image width="70%">
-<latex-image><![CDATA[\begin{overpic}[width=0.75\textwidth]{external/nonisomorphic_graphs}
+    </image>
+  </figure>
+  <p>On the other hand, the graphs shown in <xref ref="fig_nonisomorphic" /> are <em>not</em>
+    isomorphic, even though they have the same number of vertices and the same number of edges. Can
+    you tell why? </p>
+  <figure xml:id="fig_nonisomorphic">
+    <caption>A pair of nonisomorphic graphs</caption>
+    <image width="70%">
+      <latex-image><![CDATA[\begin{overpic}[width=0.75\textwidth]{external/nonisomorphic_graphs}
             \put(6,13){\(a\)}
             \put(20.5,1){\(b\)}
             \put(36,14){\(c\)}
@@ -111,55 +227,170 @@
             \put(53,13){\(5\)}
             \put(68,1){\(6\)}
             \end{overpic}]]></latex-image>
-        </image>
-    </figure>
-    <p>A graph <m>\bfG</m> is <term>connected</term><idx><h>graph</h><h>connected</h></idx> when there is a path from <m>x</m> to <m>y</m> in <m>\bfG</m>, for every <m>x,y\in V</m>; otherwise, we say <m>\bfG</m> is <term>disconnected</term><idx><h>graph</h><h>disconnected</h></idx>. The graph of <xref ref="fig_small_graph"  /> is disconnected (a sufficient justification for this is that there is no path from <m>e</m> to <m>c</m>), while those in <xref ref="fig_isomorphic"  /> are connected. If <m>\bfG</m> is disconnected, we call a maximal connected subgraph of <m>\bfG</m> a <term>component</term><idx><h>component</h></idx>. By this we mean that a subgraph <m>\bfH</m> of <m>\bfG</m> is a component of <m>\bfG</m> provided that there does not exist a connected subgraph <m>\bfH'</m> of <m>\bfG</m> such that <m>\bfH</m> is a subgraph of <m>\bfH'</m>.
-    </p>
+    </image>
+  </figure>
+  <p>A graph <m>\bfG</m> is <term>connected</term><idx>
+      <h>graph</h>
+      <h>connected</h>
+    </idx> when there is a path from <m>x</m> to <m>y</m> in <m>\bfG</m>, for
+    every <m>x,y\in V</m>; otherwise, we say <m>\bfG</m> is <term>disconnected</term><idx>
+      <h>graph</h>
+      <h>disconnected</h>
+    </idx>. The graph of <xref ref="fig_small_graph" /> is disconnected (a
+    sufficient justification for this is that there is no path from <m>e</m> to <m>c</m>), while
+    those in <xref ref="fig_isomorphic" /> are connected. If <m>\bfG</m> is disconnected, we call a
+    maximal connected subgraph of <m>\bfG</m> a <term>component</term><idx>
+      <h>component</h>
+    </idx>. By this we mean that a subgraph <m>\bfH</m> of <m>\bfG</m> is a
+    component of <m>\bfG</m> provided that there does not exist a connected subgraph <m>\bfH'</m> of <m>
+    \bfG</m> such that <m>\bfH</m> is a subgraph of <m>\bfH'</m>. </p>
 
-    <p>A graph is <term>acyclic</term><idx><h>graph</h><h>acyclic</h></idx> when it does not contain any cycle on three or more vertices. Acyclic graphs are also called <term>forests</term><idx><h>forest</h></idx>. A connected acyclic graph is called a <term>tree</term><idx><h>tree</h></idx>. When <m>\GVE</m> is a connected graph, a subgraph <m>\HWF</m> of <m>\bfG</m> is called a <term>spanning tree</term><idx><h>tree</h><h>spanning</h></idx> if <m>\bfH</m> is both a spanning subgraph of <m>\bfG</m> and a tree. In <xref ref="fig_spantree"  />, we show a graph and one of its spanning trees. We will return to the subject of spanning trees in <xref ref="ch_graphalgorithms"  />.
-    </p>
-    <figure xml:id="fig_spantree" >
-        <caption>A Graph and a Spanning Tree</caption>
-        <image width="75%" source="spanning_tree" />
-    </figure>
-    <p>The following theorem is very elementary, and some authors refer to it as the <q>first theorem of graph theory</q>. However, this basic result can be surprisingly useful.
-    </p>
+  <p>A graph is <term>acyclic</term><idx>
+      <h>graph</h>
+      <h>acyclic</h>
+    </idx> when it does not contain any cycle on three or more vertices. Acyclic
+    graphs are also called <term>forests</term><idx>
+      <h>forest</h>
+    </idx>. A connected acyclic graph is called a <term>tree</term><idx>
+      <h>tree</h>
+    </idx>. When <m>\GVE</m> is a connected graph, a subgraph <m>\HWF</m> of <m>
+    \bfG</m> is called a <term>spanning tree</term><idx>
+      <h>tree</h>
+      <h>spanning</h>
+    </idx> if <m>\bfH</m> is both a spanning subgraph of <m>\bfG</m> and a
+    tree. In <xref ref="fig_spantree" />, we show a graph and one of its spanning trees. We will
+    return to the subject of spanning trees in <xref ref="ch_graphalgorithms" />. </p>
+  <figure xml:id="fig_spantree">
+    <caption>A Graph and a Spanning Tree</caption>
+    <image width="75%" source="spanning_tree" />
+  </figure>
+  <p>The following theorem is very elementary, and some authors refer to it as the <q>first theorem
+    of graph theory</q>. However, this basic result can be surprisingly useful. </p>
 
-    <theorem>
-        <statement>
-            <p>
-                Let <m>\deg_\bfG(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then
-            <men xml:id="eq_graphs_degsum">
-                \sum_{v\in V}\deg_\bfG(v) = 2|E|.
-            </men>
-            </p>
-        </statement>
+  <theorem>
+    <statement>
+      <p> Let <m>\deg_\bfG(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then <men
+          xml:id="eq_graphs_degsum">
+          \sum_{v\in V}\deg_\bfG(v) = 2|E|.
+        </men>
+      </p>
+    </statement>
 
-        <proof>
-            <p>We consider how many times an edge <m>e=vw\in E</m> contributes to each side of <xref ref="eq_graphs_degsum" />. The <m>\deg_\bfG(x)</m> and <m>\deg_\bfG(y)</m> terms on the left hand side each count <m>e</m> once, so <m>e</m> is counted twice on that side. On the right hand side, <m>e</m> is clearly counted twice. Therefore, we have the equality claimed.
-            </p>
-        </proof>
-    </theorem>
+    <proof>
+      <p>We consider how many times an edge <m>e=vw\in E</m> contributes to each side of <xref
+          ref="eq_graphs_degsum" />. The <m>\deg_\bfG(x)</m> and <m>\deg_\bfG(y)</m> terms on the
+        left hand side each count <m>e</m> once, so <m>e</m> is counted twice on that side. On the
+        right hand side, <m>e</m> is clearly counted twice. Therefore, we have the equality claimed. </p>
+    </proof>
+  </theorem>
 
-    <corollary>
-        <statement>
-            <p>For any graph, the number of vertices of odd degree is even.
-            </p>
-        </statement>
-    </corollary>
+  <corollary>
+    <statement>
+      <p>For any graph, the number of vertices of odd degree is even.
+      </p>
+    </statement>
+  </corollary>
 
-    <p>We will return to the topic of trees later, but before moving on, let us prove one elementary proposition about trees. First, a <term>leaf</term><idx><h>leaf</h></idx> in a tree <m>\bfT</m> is a vertex <m>v</m> with <m>\deg_\bfT(v)=1</m>.
-    </p>
+  <p>We will return to the topic of trees later, but before moving on, let us prove one elementary
+    proposition about trees. First, a <term>leaf</term><idx>
+      <h>leaf</h>
+    </idx> in a tree <m>\bfT</m> is a vertex <m>v</m> with <m>\deg_\bfT(v)=1</m>. </p>
 
-    <proposition xml:id="prop_tree-leaves">
-        <statement>
-            <p>Every tree on <m>n\geq 2</m> vertices has at least two leaves.
-            </p>
-        </statement>
-        <proof>
-            <p>
-            Our proof is by induction on <m>n</m>. For <m>n=2</m>, there is precisely one tree, which is isomorphic to <m>\bfK_2</m>. Both vertices in this graph are leaves, so the proposition holds for <m>n=2</m>. Now suppose that for some integer <m>m\geq 2</m>, every tree on at most <m>m</m> vertices has at least two leaves and let <m>\bfT=(V,E)</m> be a tree on <m>m+1</m> vertices.  Pick an edge <m>e\in E</m> and form a new graph <m>\bfT'=(V',E')</m> by deleting <m>e</m> from <m>\bfT</m>. That is, <m>V'=V</m> and <m>E'=E-\{e\}</m>. Now since <m>\bfT'</m> does not contain a path from one endpoint of <m>e</m> to its other endpoint, <m>\bfT'</m> is not connected. However, deleting an edge cannot create a cycle, so <m>\bfT'</m> is a forest. Furthermore, it has precisely two components, each of which is a tree with at most <m>m</m> vertices. If each component has at least two vertices, then by induction, each has at least two leaves. In the worst case scenario, two of these leaves are the endpoints of <m>e</m>, so at least two of the vertices are leaves in <m>\bfT</m>, too. If each component of <m>\bfT'</m> has only one vertex, then <m>\bfT\cong \bfK_2</m>, which has two leaves. If exactly one of the components has only one vertex, then it must be a leaf in <m>\bfT</m>. Thus, applying the inductive hypothesis to the other component ensures that there is a second leaf in <m>\bfT</m>.
-            </p>
-        </proof>
-    </proposition>
+  <proposition xml:id="prop_tree-leaves">
+    <statement>
+      <p>Every tree on <m>n\geq 2</m> vertices has at least two leaves. </p>
+    </statement>
+    <proof>
+      <p> Our proof is by induction on <m>n</m>. For <m>n=2</m>, there is precisely one tree, which
+        is isomorphic to <m>\bfK_2</m>. Both vertices in this graph are leaves, so the proposition
+        holds for <m>n=2</m>. Now suppose that for some integer <m>m\geq 2</m>, every tree on at
+        most <m>m</m> vertices has at least two leaves and let <m>\bfT=(V,E)</m> be a tree on <m>m+1</m>
+        vertices. Pick an edge <m>e\in E</m> and form a new graph <m>\bfT'=(V',E')</m> by deleting <m>
+        e</m> from <m>\bfT</m>. That is, <m>V'=V</m> and <m>E'=E-\{e\}</m>. Now since <m>\bfT'</m>
+        does not contain a path from one endpoint of <m>e</m> to its other endpoint, <m>\bfT'</m> is
+        not connected. However, deleting an edge cannot create a cycle, so <m>\bfT'</m> is a forest.
+        Furthermore, it has precisely two components, each of which is a tree with at most <m>m</m>
+        vertices. If each component has at least two vertices, then by induction, each has at least
+        two leaves. In the worst case scenario, two of these leaves are the endpoints of <m>e</m>,
+        so at least two of the vertices are leaves in <m>\bfT</m>, too. If each component of <m>
+        \bfT'</m> has only one vertex, then <m>\bfT\cong \bfK_2</m>, which has two leaves. If
+        exactly one of the components has only one vertex, then it must be a leaf in <m>\bfT</m>.
+        Thus, applying the inductive hypothesis to the other component ensures that there is a
+        second leaf in <m>\bfT</m>. </p>
+    </proof>
+  </proposition>
+  <reading-questions xml:id="rqs-graphs_intro">
+    <exercise label="rq-graphs_intro_degree">
+      <statement>
+        <p>
+          In this problem, refer to the graph at the left in <xref ref="fig_subgraphs"/>. The degree of vertext <m>d</m> is <var width="10" />. The degree of vertex <m>i</m> is <var width="10" />. The vertex of degree <m>2</m> that comes first alphabetically in the English alphabet is <var width="10" />
+        </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="6">
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Incorrect. 
+              </p>
+            </feedback>
+          </condition>
+        </var>
+        <var>
+          <condition number="3">
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Incorrect. 
+              </p>
+            </feedback>
+          </condition>
+        </var>
+        <var>
+          <condition string="f">
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </condition>
+          <condition string="j">
+            <feedback>
+              <p>
+                Vertex <m>j</m> does have degree <m>2</m>, but is there another one that comes earlier in the alphabet?
+              </p>
+            </feedback>
+          </condition>
+          <condition string=".*">
+            <feedback>
+              <p>
+                Incorrect. 
+              </p>
+            </feedback>
+          </condition>
+        </var>
+      </setup>
+    </exercise>
+    <exercise label="rq-graphs_intro_subgraph">
+      <statement>
+        <p>
+          In this problem, refer to the graphs in <xref ref="fig_subgraphs"/>. Explain why the middle graph is not an induced subgraph of the graph at the left. Suppose we wanted to add the vertex <m>l</m> to the graph at the right. What edges would need to be added to ensure that the resulting graph is an induced subgraph of the graph at the left?
+        </p>
+      </statement>
+      <response />
+    </exercise>
+  </reading-questions>
 </section>
