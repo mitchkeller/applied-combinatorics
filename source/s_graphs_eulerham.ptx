@@ -1,141 +1,235 @@
 <section xml:id="s_graphs_eulerham">
-    <title>Eulerian and Hamiltonian Graphs</title>
-    <p>Graph theory is an area of mathematics that has found many applications in a variety of disciplines. Throughout this text, we will encounter a number of them. However, graph theory traces its origins to a problem in K&#xf6;nigsberg, Prussia (now Kaliningrad, Russia) nearly three centuries ago. The river Pregel passes through the city, and there are two large islands in the middle of the channel. These islands were connected to the mainland by seven bridges as indicated in <xref ref="fig_bridges"  />. It is said that the citizens of K&#xf6;nigsberg often wondered if it was possible for one to leave his home, walk through the city in such a way that he crossed each bridge precisely one time, and end up at home again. Leonhard Euler settled this problem in 1736 by using graph theory in the form of <xref ref="thm_eulerian"  />.
-    </p>
-    <figure xml:id="fig_bridges" >
-        <caption>The bridges of K&#xf6;nigsberg</caption>
-        <image width="65%" source="konigsberg_bridges" />
-    </figure>
-    <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><idx><h>graph</h><h>eulerian</h></idx> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of vertices from <m>\bfG</m>, with repetition allowed, so that
-    <ol>
-        <li><m>x_0=x_t</m>;</li>
-        <li>for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
-        <li>for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m> for which <m>e=x_ix_{i+1}</m>.</li>
+  <title>Eulerian and Hamiltonian Graphs</title>
+  <p>Graph theory is an area of mathematics that has found many applications in a variety of
+    disciplines. Throughout this text, we will encounter a number of them. However, graph theory
+    traces its origins to a problem in K&#xf6;nigsberg, Prussia (now Kaliningrad, Russia) nearly
+    three centuries ago. The river Pregel passes through the city, and there are two large islands
+    in the middle of the channel. These islands were connected to the mainland by seven bridges as
+    indicated in <xref ref="fig_bridges" />. It is said that the citizens of K&#xf6;nigsberg often
+    wondered if it was possible for one to leave his home, walk through the city in such a way that
+    he crossed each bridge precisely one time, and end up at home again. Leonhard Euler settled this
+    problem in 1736 by using graph theory in the form of <xref ref="thm_eulerian" />. </p>
+  <figure xml:id="fig_bridges">
+    <caption>The bridges of K&#xf6;nigsberg</caption>
+    <image width="65%" source="konigsberg_bridges" />
+  </figure>
+  <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><idx>
+      <h>graph</h>
+      <h>eulerian</h>
+    </idx> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of
+    vertices from <m>\bfG</m>, with repetition allowed, so that <ol>
+      <li><m>x_0=x_t</m>;</li>
+      <li>for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
+      <li>for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m>
+    for which <m>e=x_ix_{i+1}</m>.</li>
     </ol>
-    </p>
+  </p>
 
-    <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian circuit</term><idx><h>eulerian</h><h>circuit</h></idx>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>circuit</term><idx><h>circuit</h></idx> when it satisfies only the first two of these conditions. Note that a sequence consisting of a single vertex is a circuit. Before proceeding to Euler's elegant characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are not eulerian.</p>
+  <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian
+    circuit</term><idx>
+      <h>eulerian</h>
+      <h>circuit</h>
+    </idx>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>
+    circuit</term><idx>
+      <h>circuit</h>
+    </idx> when it satisfies only the first two of these conditions. Note that a
+    sequence consisting of a single vertex is a circuit. Before proceeding to Euler's elegant
+    characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are
+    not eulerian.</p>
 
-    <p>Run the code below. It will execute until it finds a graph <m>\bfG</m> that is eulerian. The output that will be produced is a list of the degrees of the vertices of the graph <m>\bfG</m> followed by a drawing of <m>\bfG</m>.</p>
-    <sage>
-        <input>
-vertices = 13
-edges = 28
-g = graphs.RandomGNM(vertices,edges)
-while (not g.is_eulerian() or not g.is_connected()):
-    g = graphs.RandomGNM(vertices,edges)
-print(g.degree_sequence())
-g.show()
-        </input>
-    </sage>
+  <p>Run the code below. It will execute until it finds a graph <m>\bfG</m> that is eulerian. The
+    output that will be produced is a list of the degrees of the vertices of the graph <m>\bfG</m>
+    followed by a drawing of <m>\bfG</m>.</p>
+  <sage>
+    <input>
+      vertices = 13
+      edges = 28
+      g = graphs.RandomGNM(vertices,edges)
+      while (not g.is_eulerian() or not g.is_connected()):
+      g = graphs.RandomGNM(vertices,edges)
+      print(g.degree_sequence())
+      g.show()
+    </input>
+  </sage>
 
-    <p>We encourage you to evaluate the run the code above multiple times, even changing the number of vertices and edges. If it seems to be running a log time, it may be that you have made the number of edges too small, so try increasing it a bit. Do you notice anything about the degrees of the vertices in the graphs produced?</p>
-            
-    <p>Now let's try to find a graph <m>\bfH</m> that is <em>not</em> eulerian. Again, the output is the list of degrees of <m>\bfH</m> followed by a drawing of <m>\bfH</m>.</p>
-    <sage>
-        <input>
-vertices = 15
-edges = 25
-g = graphs.RandomGNM(vertices,edges)
-while (g.is_eulerian() or not g.is_connected()):
-    g = graphs.RandomGNM(vertices,edges)
-print(g.degree_sequence())
-g.show()
-        </input>
-    </sage>
+  <p>We encourage you to evaluate the run the code above multiple times, even changing the number of
+    vertices and edges. If it seems to be running a log time, it may be that you have made the
+    number of edges too small, so try increasing it a bit. Do you notice anything about the degrees
+    of the vertices in the graphs produced?</p>
 
-    <p>One thing you probably noticed in running this second block of code is that it tended to come back much faster than the first. That would suggest that the non-eulerian graphs outnumber the eulerian graphs. Did you notice anything different about the degrees of the vertices in these graphs compared to the ones that were eulerian?
-    </p>
-    <p>The following elementary theorem completely characterizes eulerian graphs. Its proof gives an algorithm that is easily implemented.
-    </p>
-            
-    <theorem xml:id="thm_eulerian">
-        <statement>
-            <p>A graph <m>\bfG</m> is eulerian if and only if it is connected and every vertex has even degree.
-            </p>
-        </statement>
+  <p>Now let's try to find a graph <m>\bfH</m> that is <em>not</em> eulerian. Again, the output is
+    the list of degrees of <m>\bfH</m> followed by a drawing of <m>\bfH</m>.</p>
+  <sage>
+    <input>
+      vertices = 15
+      edges = 25
+      g = graphs.RandomGNM(vertices,edges)
+      while (g.is_eulerian() or not g.is_connected()):
+      g = graphs.RandomGNM(vertices,edges)
+      print(g.degree_sequence())
+      g.show()
+    </input>
+  </sage>
 
-        <proof>
-            <p>Clearly, an eulerian graph must be connected. Also, if <m>(x_0,x_1,\dots,x_t)</m> is an eulerian circuit in <m>\bfG</m>, then for each <m>i=0,1,\dots,t-1</m>, we can view the edge <m>x_ix_{i+1}</m> as exiting <m>x_i</m> and entering <m>x_{i+1}</m>.  The degree of every vertex must be even, since for each vertex <m>x</m>, the number of edges exiting <m>x</m> equals the number of edges entering <m>x</m>.  Furthermore, each edge incident with <m>x</m> either exits from <m>x</m> or enters<nbsp /><m>x</m>.
-            </p>
+  <p>One thing you probably noticed in running this second block of code is that it tended to come
+    back much faster than the first. That would suggest that the non-eulerian graphs outnumber the
+    eulerian graphs. Did you notice anything different about the degrees of the vertices in these
+    graphs compared to the ones that were eulerian?
+  </p>
+  <p>The following elementary theorem completely characterizes eulerian graphs. Its proof gives an
+    algorithm that is easily implemented.
+  </p>
 
-            <p>We now describe a deterministic process that will either (a)<nbsp />find an eulerian circuit, (b)<nbsp />show that the graph is disconnected, or (c)<nbsp />find a vertex of odd degree.  The description is simplified by assuming that the vertices in <m>\bfG</m> have been labelled with the positive integers <m>1,2,\dots,n</m>, where <m>n</m> is the number of vertices in <m>\bfG</m>. Furthermore, we take <m>x_0=1</m>.
-            </p>
-
-            <p>We launch our algorithm with a trivial circuit <m>C</m> consisting of the vertex <m>x_0=(1)</m>. Thereafter suppose that we have a partial circuit <m>C</m> defined by <m>(x_0, x_1,\dots,x_t)</m> with <m>x_0=x_t=1</m>. The edges of the form <m>x_ix_{i+1}</m> have been <term>traversed</term>, while the remaining edges in <m>\bfG</m> (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.
-            </p>
-
-            <p>We then choose the least integer <m>i</m> for which there is an edge incident with <m>x_i</m> that has not already been traversed. If there is no such integer, since there are edges that have not yet been traversed, then we have discovered that the graph is disconnected.  So we may assume that the integer <m>i</m> exists. Set <m>u_0=x_i</m>. We define a sequence <m>(u_0,u_1,\dots,u_s)</m> recursively. If <m>j\ge 0</m>, set
-            <me>
-                N_j=\{y: u_jy\text{ is an edge in }\bfG\text{ and has not yet been traversed.} \}
-            </me>
-                If <m>N_j\neq\emptyset</m>, we take <m>u_{j+1}</m> as the least positive integer in <m>N_j</m>. If <m>N_j=\emptyset</m>, then <m>j\ge1</m> and we take <m>s=j</m> and halt this subroutine.
-            </p>
-
-            <p>When the subroutine halts, we consider two cases. If <m>u_0\neq u_s</m>, then <m>u_0</m> and <m>u_s</m> are vertices of odd degree in <m>\bfG</m>. So we are left to consider the case where <m>u_0=u_s=x_i</m>. In this case, we simply expand our original sequence <m>(x_0,x_1,\dots,x_t)</m> by replacing the integer <m>x_i</m> by the sequence <m>(u_0,u_1,\dots,u_s)</m>.
-            </p>
-        </proof>
-    </theorem>
-
-    <p>As an example, consider the graph <m>\bfG</m> shown in <xref ref="fig_graphs_eulerexample"  />.  Evidently, this graph is connected and all vertices have even degree.  Here is the sequence of circuits starting with the trivial circuit <m>C</m> consisting only of the vertex<nbsp /><m>1</m>.
-    <md>
-        <mrow>  C \amp =(1)</mrow>
-        <mrow>  \amp =(1,2,4,3,1)\quad \text{start next from }2</mrow>
-        <mrow>  \amp =(1,2,5,8,2,4,3,1)\quad\text{start next from } 4</mrow>
-        <mrow>  \amp =(1,2,5,8,2,4,6,7,4,9,6,10,4,3,1)\quad\text{start next from } 7</mrow>
-        <mrow>  \amp =(1,2,5,8,2,4,6,7,9,11,7,4,9,6,10,4,3,1)\quad\text{Done!!}</mrow>
-    </md>
-    </p>
-    <figure xml:id="fig_graphs_eulerexample" >
-        <caption>An Eulerian Graph</caption>
-        <image width="55%" source="eulerian_graph" />
-    </figure>
-    <p>You should note that <xref ref="thm_eulerian"  /> holds for loopless graphs in which multiple edges are allowed. Euler used his theorem to show that the multigraph of K&#xf6;nigsberg shown in <xref ref="fig_bridges-graph"  />, in which each land mass is a vertex and each bridge is an edge, is <em>not</em> eulerian, and thus the citizens could not find the route they desired. (Note that in <xref ref="fig_bridges-graph"  /> there are multiple edges between the same pair of vertices.)
-    </p>
-    <figure xml:id="fig_bridges-graph" >
-        <caption>The multigraph of K&#xf6;nigsberg's bridges</caption>
-        <image width="13%" source="konigsberg_graph" />
-    </figure>
-
-    <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><idx><h>graph</h><h>hamiltonian</h></idx> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that
-    <ol>
-        <li>every vertex of <m>\bfG</m> appears exactly once in the sequence;</li>
-        <li><m>x_1x_n</m> is an edge of <m>\bfG</m>; and</li>
-        <li>for each <m>i=1,2,\dots,n-1</m>, <m>x_ix_{i+1}</m> is an edge in <m>\bfG</m>.</li>
-    </ol>
-    Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<idx><h>hamiltonian</h><h>cycle</h></idx>
-    </p>
-    <p>The first graph shown in <xref ref="fig_eulham"  /> both eulerian and hamiltonian. The second is hamiltonian but not eulerian.
-    </p>
-    <figure xml:id="fig_eulham" >
-        <caption>Eulerian and Hamiltonian Graphs</caption>
-        <image width="80%" source="eulerian_hamiltonian_crop" />
-    </figure>
-    <p>In <xref ref="fig_petersen"  />, we show a famous graph known as the Petersen graph. It is not hamiltonian.
-    </p>
-    <figure xml:id="fig_petersen" >
-        <caption>The Petersen Graph</caption>
-        <image width="50%" source="petersen_graph" />
-    </figure>
-    <p>Unlike the situation with eulerian circuits, there is no known method for quickly determining whether a graph is hamiltonian. However, there are a number of interesting conditions which are sufficient. Here is one quite well known example, due to Dirac.
-    </p>
-
-    <theorem xml:id="thm_graphs_dirac">
-        <statement>
-            <p>If <m>\bfG</m> is a graph on <m>n</m> vertices and each vertex in <m>\bfG</m> has at least <m>\lceil \frac{n}{2}\rceil</m> neighbors, then <m>\bfG</m> is hamiltonian.
-            </p>
-        </statement>
+  <theorem xml:id="thm_eulerian">
+    <statement>
+      <p>A graph <m>\bfG</m> is eulerian if and only if it is connected and every vertex has even
+        degree. </p>
+    </statement>
 
     <proof>
-        <p>Suppose the theorem fails and let <m>n</m> be the least positive integer for which there exists a graph <m>\bfG</m> on <m>n</m> vertices so that each vertex in <m>\bfG</m> has at least <m>\lceil n/2\rceil</m> neighbors, yet there is no hamiltonian cycle in <m>\bfG</m>. Clearly, <m>n\ge4</m>.
-        </p>
+      <p>Clearly, an eulerian graph must be connected. Also, if <m>(x_0,x_1,\dots,x_t)</m> is an
+        eulerian circuit in <m>\bfG</m>, then for each <m>i=0,1,\dots,t-1</m>, we can view the edge <m>
+        x_ix_{i+1}</m> as exiting <m>x_i</m> and entering <m>x_{i+1}</m>. The degree of every vertex
+        must be even, since for each vertex <m>x</m>, the number of edges exiting <m>x</m> equals
+        the number of edges entering <m>x</m>. Furthermore, each edge incident with <m>x</m> either
+        exits from <m>x</m> or enters<nbsp /><m>x</m>. </p>
 
-        <p>Now let <m>t</m> be the largest integer for which <m>\bfG</m> has a path <m>P=(x_1,x_2,\dots,x_t)</m> on <m>t</m> vertices. Clearly all neighbors of both <m>x_1</m> and <m>x_t</m> appear on this path. By the pigeon hole principle, there is some integer <m>i</m> with <m>1\le i\lt t</m> so that <m>x_1x_{i+1}</m> and <m>x_{i}x_t</m> are edges in <m>\bfG</m>. However, this implies that
-        <me>
-            C=(x_1,x_2,x_3,\dots,x_i,x_t,x_{t-1},x_{t-2},\dots,x_{i+1})
+      <p>We now describe a deterministic process that will either (a)<nbsp />find an eulerian
+        circuit, (b)<nbsp />show that the graph is disconnected, or (c)<nbsp />find a vertex of odd
+        degree. The description is simplified by assuming that the vertices in <m>\bfG</m> have been
+        labelled with the positive integers <m>1,2,\dots,n</m>, where <m>n</m> is the number of
+        vertices in <m>\bfG</m>. Furthermore, we take <m>x_0=1</m>. </p>
+
+      <p>We launch our algorithm with a trivial circuit <m>C</m> consisting of the vertex <m>x_0=(1)</m>.
+        Thereafter suppose that we have a partial circuit <m>C</m> defined by <m>(x_0,
+        x_1,\dots,x_t)</m> with <m>x_0=x_t=1</m>. The edges of the form <m>x_ix_{i+1}</m> have been <term>
+        traversed</term>, while the remaining edges in <m>\bfG</m> (if any) have not. If the third
+        condition for an euler circuit is satisfied, we are done, so we assume it does not hold. </p>
+
+      <p>We then choose the least integer <m>i</m> for which there is an edge incident with <m>x_i</m>
+        that has not already been traversed. If there is no such integer, since there are edges that
+        have not yet been traversed, then we have discovered that the graph is disconnected. So we
+        may assume that the integer <m>i</m> exists. Set <m>u_0=x_i</m>. We define a sequence <m>
+        (u_0,u_1,\dots,u_s)</m> recursively. If <m>j\ge 0</m>, set <me>
+          N_j=\{y: u_jy\text{ is an edge in }\bfG\text{ and has not yet been traversed.} \}
         </me>
-            is a cycle of length <m>t</m> in <m>\bfG</m>. In turn, this requires <m>\lceil n/2\rceil \lt t\lt n</m>. But if <m>y</m> is any vertex not on the cycle, then <m>y</m> must have a neighbor on <m>C</m>, which implies that <m>\bfG</m> has a path on <m>t+1</m> vertices. The contradiction completes the proof.
-        </p>
+        If <m>N_j\neq\emptyset</m>, we take <m>u_{j+1}</m> as the least positive integer in <m>N_j</m>.
+        If <m>N_j=\emptyset</m>, then <m>j\ge1</m> and we take <m>s=j</m> and halt this subroutine. </p>
+
+      <p>When the subroutine halts, we consider two cases. If <m>u_0\neq u_s</m>, then <m>u_0</m>
+        and <m>u_s</m> are vertices of odd degree in <m>\bfG</m>. So we are left to consider the
+        case where <m>u_0=u_s=x_i</m>. In this case, we simply expand our original sequence <m>
+        (x_0,x_1,\dots,x_t)</m> by replacing the integer <m>x_i</m> by the sequence <m>
+        (u_0,u_1,\dots,u_s)</m>. </p>
     </proof>
-    </theorem>
+  </theorem>
+
+  <p>As an example, consider the graph <m>\bfG</m> shown in <xref ref="fig_graphs_eulerexample" />.
+    Evidently, this graph is connected and all vertices have even degree. Here is the sequence of
+    circuits starting with the trivial circuit <m>C</m> consisting only of the vertex<nbsp /><m>1</m>
+    .
+    <md>
+      <mrow> C \amp =(1)</mrow>
+      <mrow> \amp =(1,2,4,3,1)\quad \text{start next from }2</mrow>
+      <mrow> \amp =(1,2,5,8,2,4,3,1)\quad\text{start next from } 4</mrow>
+      <mrow> \amp =(1,2,5,8,2,4,6,7,4,9,6,10,4,3,1)\quad\text{start next from } 7</mrow>
+      <mrow> \amp =(1,2,5,8,2,4,6,7,9,11,7,4,9,6,10,4,3,1)\quad\text{Done!!}</mrow>
+    </md>
+  </p>
+  <figure xml:id="fig_graphs_eulerexample">
+    <caption>An Eulerian Graph</caption>
+    <image width="55%" source="eulerian_graph" />
+  </figure>
+  <p>You should note that <xref ref="thm_eulerian" /> holds for loopless graphs in which multiple
+    edges are allowed. Euler used his theorem to show that the multigraph of K&#xf6;nigsberg shown
+    in <xref ref="fig_bridges-graph" />, in which each land mass is a vertex and each bridge is an
+    edge, is <em>not</em> eulerian, and thus the citizens could not find the route they desired.
+    (Note that in <xref ref="fig_bridges-graph" /> there are multiple edges between the same pair of
+    vertices.) </p>
+  <figure xml:id="fig_bridges-graph">
+    <caption>The multigraph of K&#xf6;nigsberg's bridges</caption>
+    <image width="13%" source="konigsberg_graph" />
+  </figure>
+
+  <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><idx>
+      <h>graph</h>
+      <h>hamiltonian</h>
+    </idx> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that <ol>
+      <li>every vertex of <m>\bfG</m> appears exactly once in the sequence;</li>
+      <li><m>x_1x_n</m> is an edge of <m>\bfG</m>; and</li>
+      <li>for each <m>i=1,2,\dots,n-1</m>, <m>x_ix_{i+1}</m> is an edge in <m>\bfG</m>.</li>
+    </ol>
+    Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<idx>
+      <h>hamiltonian</h>
+      <h>cycle</h>
+    </idx>
+  </p>
+  <p>The first graph shown in <xref ref="fig_eulham" /> both eulerian and hamiltonian. The second is
+    hamiltonian but not eulerian. </p>
+  <figure xml:id="fig_eulham">
+    <caption>Eulerian and Hamiltonian Graphs</caption>
+    <image width="80%" source="eulerian_hamiltonian_crop" />
+  </figure>
+  <p>In <xref ref="fig_petersen" />, we show a famous graph known as the Petersen graph. It is not
+    hamiltonian. </p>
+  <figure xml:id="fig_petersen">
+    <caption>The Petersen Graph</caption>
+    <image width="50%" source="petersen_graph" />
+  </figure>
+  <p>Unlike the situation with eulerian circuits, there is no known method for quickly determining
+    whether a graph is hamiltonian. However, there are a number of interesting conditions which are
+    sufficient. Here is one quite well known example, due to Dirac.
+  </p>
+
+  <theorem xml:id="thm_graphs_dirac">
+    <statement>
+      <p>If <m>\bfG</m> is a graph on <m>n</m> vertices and each vertex in <m>\bfG</m> has at least <m>\lceil
+        \frac{n}{2}\rceil</m> neighbors, then <m>\bfG</m> is hamiltonian. </p>
+    </statement>
+
+    <proof>
+      <p>Suppose the theorem fails and let <m>n</m> be the least positive integer for which there
+        exists a graph <m>\bfG</m> on <m>n</m> vertices so that each vertex in <m>\bfG</m> has at
+        least <m>\lceil n/2\rceil</m> neighbors, yet there is no hamiltonian cycle in <m>\bfG</m>.
+        Clearly, <m>n\ge4</m>. </p>
+
+      <p>Now let <m>t</m> be the largest integer for which <m>\bfG</m> has a path <m>
+        P=(x_1,x_2,\dots,x_t)</m> on <m>t</m> vertices. Clearly all neighbors of both <m>x_1</m> and <m>
+        x_t</m> appear on this path. By the pigeon hole principle, there is some integer <m>i</m>
+        with <m>1\le i\lt t</m> so that <m>x_1x_{i+1}</m> and <m>x_{i}x_t</m> are edges in <m>\bfG</m>.
+        However, this implies that <me>
+          C=(x_1,x_2,x_3,\dots,x_i,x_t,x_{t-1},x_{t-2},\dots,x_{i+1})
+        </me> is a
+        cycle of length <m>t</m> in <m>\bfG</m>. In turn, this requires <m>\lceil n/2\rceil \lt t\lt
+        n</m>. But if <m>y</m> is any vertex not on the cycle, then <m>y</m> must have a neighbor on <m>
+        C</m>, which implies that <m>\bfG</m> has a path on <m>t+1</m> vertices. The contradiction
+        completes the proof. </p>
+    </proof>
+  </theorem>
+  <reading-questions xml:id="rqs-graphs_eulerham">
+    <exercise label="graphs_eulerham_reading_compare">
+      <statement>
+        <p>
+          Write a couple of sentences to explain informally the difference between a graph being eulerian and a graph being hamiltonian. if possible, give an example (other than the rather silly bridge problem in the text) where each concept would be useful.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+    <exercise label="graphs_eulerham_reading_noneuler">
+      <statement>
+        <p>
+          Briefly but specifically explain why the graph <m>\bfH</m> in <xref ref="fig_eulham" /> is not eulerian.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+    <exercise label="graphs_eulerham_reading_euler">
+      <statement>
+        <p>
+          Try your hand at finding the eulerian circuit in <m>\bfG</m> in <xref ref="fig_eulham" /> by following the method illustrated in the text. Instead of giving all the steps or the final circuit here, just give the circuit that you come up with after the initial trivial circuit <m>(1)</m>.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+  </reading-questions>
 </section>
