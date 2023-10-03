@@ -152,7 +152,7 @@
         the Principle of Mathematical Induction. </p>
     </proof>
   </proposition>
-  <reading-questions xml:id="rqs-induction_proofs">
+  <reading-questions xml:id="rqs-induction_proofs" component="runestone">
     <exercise label="induction_proofs_hanoi" adaptive="yes">
       <statement>
         <p> Suppose that <m>t(n)</m> is a recursive function defined for <m>n\geq 1</m> such that <m>t(1)=1</m> and for <m>n\geq 2</m>, <m>t(n)=2t(n-1)+1</m>. Create a proof that for all <m>n\geq 1</m>, <m>t(n) = 2^n - 1</m>.

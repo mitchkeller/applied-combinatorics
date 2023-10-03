@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_strings_PI" component="runestone">
+  <title>Peer Instruction Questions</title>
+  <exercise label="graphs_PI_subgraph1">
+    <statement>
+      <p>Choose the best response.
+      </p>
+      <image source="spanning_subgraph" width="85%">
+        <description>Two graphs</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\bfH</m> is a subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p><m>\bfH</m> is an induced subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>\bfH</m> is a spanning subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="graphs_PI_subgraph2">
+    <statement>
+      <p>Choose the best response.
+      </p>
+      <image source="non_subgraph" width="85%">
+        <description>Two graphs</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\bfH</m> is a subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p><m>\bfH</m> is an induced subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p><m>\bfH</m> is a spanning subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>  
+  <exercise label="graphs_PI_subgraph3">
+    <statement>
+      <p>Choose the best response.
+      </p>
+      <image source="induced_subgraph" width="85%">
+        <description>Two graphs</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\bfH</m> is a subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>\bfH</m> is an induced subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p><m>\bfH</m> is a spanning subgraph of <m>\bfG</m></p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>    
+  <exercise label="graphs_PI_isomorphic1">
+    <statement>
+      <p>
+        Graphs <m>\bfG</m> and <m>\bfH</m> are isomorphic.
+      </p>
+      <image source="isomorphic_graphs" width="85%">
+        <description>Two graphs</description>
+      </image>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>True, high confidence</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>True, low confidence</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>False, low confidence</p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p>False, high confidence</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="graphs_PI_isomorphic2">
+    <statement>
+      <p>
+        Graphs <m>\bfG</m> and <m>\bfH</m> are isomorphic.
+      </p>
+      <image source="nonisomorphic_graphs" width="85%">
+        <description>Two graphs</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True, high confidence</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>True, low confidence</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>False, low confidence</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False, high confidence</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+
+</exercises>
