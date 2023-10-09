@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<exercises xml:id="s_strings_PI" component="runestone">
+<exercises xml:id="s_graphs_PI" component="runestone-PI">
   <title>Peer Instruction Questions</title>
   <exercise label="graphs_PI_subgraph1">
     <statement>
@@ -158,5 +158,143 @@
       </choice>
     </choices>
   </exercise>
-
+  <exercise label="graphs_PI_coloring-defn">
+    <statement>
+      <p>
+        Let <m>\bfG=(V,E)</m> be a graph. Then <m>\phi\colon V\to C</m> is a proper coloring of <m>\bfG</m> if
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\phi</m> is one-to-one</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>xy\in E</m> implies <m>\phi(x)\neq \phi(y)</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\phi</m> uses as few colors from <m>C</m> as possible</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of A, B, and C</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>A and B only</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>A and C only</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>B and C only</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>A, B, and C</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="graphs_PI_coloring-subgraph">
+    <statement>
+      <p>
+        Let <m>\bfG=(V,E)</m> be a graph and <m>\phi\colon V\to C</m> be a proper coloring of <m>\bfG</m>. Let <m>S</m> be all vertices colored <m>1\in C</m>. How many edges does the subgraph of <m>\bfG</m> induced by <m>S</m> contain?
+      </p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>0</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>1</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>|S|</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>Any number is possible</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="graphs_PI_coloring-Kn">
+    <statement>
+      <p>
+        What is the chromatic number of the complete graph on <m>n</m> vertices <m>\bfK_n</m>?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>n-1</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>n+1</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>There is no fixed formula depending on <m>n</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="graphs_PI_bipartite">
+    <statement>
+      <p>
+        The graph below is bipartite.
+      </p>
+      <image source="bipartite_or_not" width="85%">
+        <description>A graph</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>True, high confidence</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>True, low confidence</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>False, low confidence</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>False, high confidence</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
 </exercises>
