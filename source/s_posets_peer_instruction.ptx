@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_posets_PI" component="runestone-PI">
+  <title>Peer Instruction Questions</title>
+  <exercise label="posets_PI_movie-poset">
+    <statement correct="yes">
+      <p>I understood how Bob constructed his picture in the class preparation assignment.
+      </p>
+      <image width="65%" source="movies">
+        <description>A poset ranking seven movies</description>
+      </image>
+    </statement>
+  </exercise>
+  <exercise label="posets_PI_antichains">
+    <statement>
+      <p>Which of the following sets are antichains?
+      </p>
+      <image source="big-poset" width="65%">
+        <description>A large poset</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement correct="yes">
+          <p><m>\{20,7,32,15\}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\{9,7,32,6\}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\{19,27,6,35\}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement correct="yes">
+          <p><m>\{9,25,26,7,12\}</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>  
+  <exercise label="posets_PI_chains">
+    <statement>
+      <p>Which of the following sets are chains?
+      </p>
+      <image source="big-poset" width="65%">
+        <description>A large poset</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement correct="yes">
+          <p><m>\{8,4,35\}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\{8,4,31,2,22\}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement correct="yes">
+          <p><m>\{19,27,6,35\}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement correct="yes">
+          <p><m>\{29,24,26,4,31,6,35\}</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>  
+  <exercise label="posets_PI_antichain-type">
+    <statement>
+      <p>The set <m>\{12,13,30,16\}</m> is
+      </p>
+      <image source="big-poset" width="65%">
+        <description>A large poset</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a maximal antichain (not maximum).</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>a maximum antichain.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement correct="yes">
+          <p>an antichain, but neither maximal nor maximum.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>not an antichain.</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>  
+  <exercise label="posets_PI_chain-type1">
+    <statement>
+      <p>The set <m>\{3,25,10\}</m> is
+      </p>
+      <image source="big-poset" width="65%">
+        <description>A large poset</description>
+      </image>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>a maximal chain (not maximum).</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>a maximum chain.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>a chain, but neither maximal nor maximum.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>not a chain.</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>  
+  <exercise label="posets_PI_chain-type2">
+    <statement>
+      <p>The set <m>\{8,7,13,4,31,6,35\}</m> is
+      </p>
+      <image source="big-poset" width="65%">
+        <description>A large poset</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>a maximal chain (not maximum).</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>a maximum chain.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>a chain, but neither maximal nor maximum.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>not a chain.</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>  
+
+
+  <exercise label="posets_PI_17-pt-chain">
+    <statement>
+      <p>If we find a chain <m>C</m> with 17 points in a poset <m>\bfP</m>, then we know
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\height(\bfP) = 17</m>.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\height(\bfP) \leq 17</m>.</p>
+        </statement>
+      </choice>
+      <choice >
+        <statement correct="yes">
+          <p><m>\height(\bfP) \geq 17</m>.</p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p>Absolutely nothing about <m>\height(\bfP)</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>    
+</exercises>
