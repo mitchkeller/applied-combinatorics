@@ -195,4 +195,60 @@
       </choice>
     </choices>
   </exercise>    
+  <exercise label="posets_PI_points-subset-lattice">
+    <statement>
+      <p>How many points are there in <m>\mathbf{2}^n</m>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>n</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>2^n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>n!</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="posets_PI_subset-lattice-minimal">
+    <statement>
+      <p>How many minimal elements does <m>\mathbf{2}^n</m> have?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>n/2</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>2^n</m></p>
+        </statement>
+      </choice>
+
+    </choices>
+  </exercise>
+  
 </exercises>
