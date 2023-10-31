@@ -79,6 +79,8 @@
       \usepackage{overpic,pict2e}
       \usepackage{tikz,ifthen}
       \usetikzlibrary{calc,graphs,shapes.geometric}
+      \usetikzlibrary{arrows}
+      \tikzset{vtx/.style={circle, inner sep=0pt, minimum size=0.22cm,fill=black}}
     </latex-image-preamble>
     <rename element="remark" xml:lang="en-US">Discussion</rename>
     <document-id>appcomb</document-id>
