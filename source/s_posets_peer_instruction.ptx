@@ -250,5 +250,203 @@
 
     </choices>
   </exercise>
+  <exercise label="posets_PI_intord-less">
+    <statement>
+      <p>Consider the intervals below as an interval order. Which intervals are less than <m>k</m> in the interal order?</p>
+      <image source="intervals" width="80%">
+        <description>A collection of intervals</description>
+      </image>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>c</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>g</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>d</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>i</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="posets_PI_intord-incomp">
+    <statement>
+      <p>Consider the intervals below as an interval order. Which intervals are incomparable to <m>d</m> in the interal order?</p>
+      <image source="intervals" width="80%">
+        <description>A collection of intervals</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>e</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>j</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>g</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>f</m></p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p><m>i</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>  
+  <exercise label="posets_PI_find-two-plus-two">
+    <statement>
+      <p>Which set forms a <m>\mathbf{2}+\mathbf{2}</m> in the poset below?</p>
+      <image source="find_2plus2" width="30%">
+        <description>A poset</description>
+      </image>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>\{k,j,e,c\}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\{j,l,e,c\}</m></p>
+        </statement>
+      </choice>      
+      <choice>
+        <statement>
+          <p><m>\{e,c,f,i\}</m></p>
+        </statement>
+      </choice>        
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>  
+    </choices>
+  </exercise>
+  <exercise label="posets_PI_find-intrep-interval">
+    <statement>
+      <p>  You've run the first four steps of the algorithm for an interval
+        representation and have down-sets
+        <me>\{\}\subsetneq
+        \{e\}\subsetneq\{a,e\}\subsetneq\{a,b,e\}\subsetneq \{a,b,e,f\}</me>
+        and up-sets
+        <me>\{b,c,d,f\}\supsetneq \{b,c,d\}\supsetneq \{c,d\}\supsetneq
+        \{d\}\supsetneq \{\}</me>. You know that <m>D(f) = \{e\}</m> and <m>U(f) =
+        \{d\}</m>. Then <m>I(f)=</m></p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>[2,4]</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>[1,3]</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>[4,2]</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>[3,1]</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>[2,2]</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="posets_PI_intord-findrep-nocontain">
+    <statement>
+      <p>  You're trying to find an interval representation for a poset and
+        determine <m>D(x)\not\subseteq D(z)</m> and <m>D(z)\not\subseteq D(x)</m>. You</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>start over since that's impossible.</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>find a <m>\mathbf{2}+\mathbf{2}</m>.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>keep going since it will fix itself.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>are still uncertain what <m>D(x)</m> means.</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="posets_PI_intord-findrep-small-downset">
+    <statement>
+      <p>  Suppose that you're finding an interval representation for an
+        interval order <m>\mathbf{P}</m> and determine that <m>D(x) = D_1</m>, the smallest
+        downset. Then you know</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>x</m> is maximal in <m>\mathbf{P}</m>.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>I(x)</m> has the smallest right end point.</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>x</m> is minimal in <m>\mathbf{P}</m>.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>I(x)</m> has the largest left end point.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            none of the above.
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
   
 </exercises>
