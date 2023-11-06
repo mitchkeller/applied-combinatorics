@@ -308,7 +308,7 @@
           <p><m>f</m></p>
         </statement>
       </choice>
-      <choice >
+      <choice correct="yes">
         <statement>
           <p><m>i</m></p>
         </statement>
@@ -444,6 +444,68 @@
           <p>
             none of the above.
           </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="posets_PI_intord-firstfit-chains">
+    <statement>
+      <p>Consider the intervals in the order <m>h,e,a,b,d,j,i,c,f,g</m>. How many chains does First Fit use?</p>
+      <image source="intord_for_firstfit" width="75%">
+        <description>An interval representation</description>
+      </image>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>6</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>7</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="posets_PI_intord-firstfit-already-assigned">
+    <statement>
+      <p>  You're chain partitioning this interval order using First Fit, ordering them by
+        left endpoint with ties broken by smallest label. When you encounter <m>h</m>, which points have you already
+        assigned to chains?</p>
+      <image source="intord_for_firstfit" width="75%">
+        <description>An interval representation</description>
+      </image>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>g</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>j</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>a</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>d</m></p>
         </statement>
       </choice>
     </choices>
