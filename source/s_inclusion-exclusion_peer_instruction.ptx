@@ -137,7 +137,7 @@
   </exercise>
   <exercise label="inclusion-exclusion_PI_functions-count">
     <statement>
-      <p>Let <m>X</m> be the set of all functions from <m>[m]</m> to <m>[n]</m>. What is the size of <m>X</m>?</p>
+      <p>Let <m>X</m> be the set of all functions from <m>[n]</m> to <m>[m]</m>. What is the size of <m>X</m>?</p>
     </statement>
     <choices>
       <choice>
@@ -220,6 +220,132 @@
       <choice>
         <statement>
           <p><m>P_5</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="inclusion-exclusion_PI_perms-count">
+    <statement>
+      <p>Consider the set <m>X</m> of all permutations of <m>[n]</m>. What is the size of <m>X</m>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>n^2</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\displaystyle \binom{n}{\left\lfloor \frac{n}{2}\right\rfloor}</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>n!</m></p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="inclusion-exclusion_PI_perm-prop">
+    <statement>
+      <p>Define <m>\sigma\colon [6]\to [6]</m> as shown in the table below. Which properties does <m>\sigma</m> satisfy?</p>
+      <tabular>
+        <row bottom="minor">
+          <cell><m>x</m></cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+          <cell>6</cell>
+        </row>
+        <row>
+          <cell><m>\sigma(x)</m></cell>
+          <cell>2</cell>
+          <cell>5</cell>
+          <cell>3</cell>
+          <cell>1</cell>
+          <cell>4</cell>
+          <cell>6</cell>
+        </row>
+      </tabular>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>P_1</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>P_2</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>P_3</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>P_4</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>P_5</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>P_6</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="inclusion-exclusion_PI_rel-prime">
+    <statement>
+      <p>Of the following integers, which are relatively prime to <m>10</m>?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>3</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>5</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>6</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>9</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>15</m></p>
         </statement>
       </choice>
       <choice>
