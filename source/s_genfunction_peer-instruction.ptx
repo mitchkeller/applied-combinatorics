@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_genfunction_PI" component="runestone-PI">
+  <title>Peer Instruction Questions</title>
+  <exercise label="genfunction_PI_apples-one">
+    <statement>
+      <p>In how many ways (the apples are identical!) can you make a single fruit basket with one
+        apple?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>6</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>Infinitely many</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="genfunction_PI_apples-five">
+    <statement>
+      <p>In how many ways (the apples are identical!) can you make a single fruit basket with five
+        apples?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>\displaystyle \binom{6}{5}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>Infinitely many</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="genfunction_PI_apples-oranges-bananas">
+    <statement>
+      <p>We already know that if we are making a fruit basket with 1, 3, or 4 apples and at most 6
+        oranges, the generating function would be <me>
+        \underbrace{(x+x^3+x^4)}_\text{Apples}\underbrace{(1+x+x^2+x^3+x^4+x^5+x^6)}_\text{Oranges}</me>.
+        Suppose we now have bananas to add and that we must place at least one banana in a fruit
+        basket. This introduces which factor?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            <m>x</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>x+x^2+x^3+x^4</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>1+x+x^2+x^3+x^4 + \cdots</m>
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>x+x^2+x^3+x^4 + \cdots</m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="genfunction_PI_polynomial">
+    <statement>
+      <p> If a fruit basket generating function contains a factor
+        that is a
+        polynomial, you know</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>some fruit is constrained by a nonzero minimum.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p> some fruit is constrained by a maximum.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p> the quantity of some
+            fruit must be a multiple
+            of some integer greater than 1.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            none of the above.
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+</exercises>
