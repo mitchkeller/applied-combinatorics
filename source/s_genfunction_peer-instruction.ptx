@@ -143,5 +143,109 @@
       </choice>
     </choices>
   </exercise>
+  <exercise label="genfunction_PI_exponential-vs-ordinary">
+    <statement>
+      <p>Based on the class prep, which of the following statements do you think are reasonably accurate?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Exponential generating functions tend to be used when order matters.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>Exponential generating functions tend to be used when order does not matter.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>Ordinary generating functions tend to be used used when the number of occurrences of something is a multiple of an integer greater than <m>1</m>.</p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Ordinary generating functions tend to be used when order does not matter.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>Ordinary generating functions tend to be used when order matters.</p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="genfunction_PI_string-restrict-4">
+    <statement>
+      <p>Suppose we are making strings using the alphabet <m>\{0,1,2,3,4\}</m>. If the number of times <m>4</m> appears in the string is at least one and at most four, what factor would be included in a generating function to account for this restriction?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>x+x^2+x^3+x^4</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>\displaystyle x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>\displaystyle 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>This problem should not be solved using generating functions.</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="genfunction_PI_string-restrict-2">
+    <statement>
+      <p>Suppose we are making strings using the alphabet <m>\{0,1,2,3,4\}</m>. If the number of times <m>2</m> appears in the string is a positive even number, what factor would be included in a generating function to account for this restriction?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\displaystyle{1}{1-x^2}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>\displaystyle{x^2}{1-x^2}</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>\displaystyle \sum_{\infty}^{n=1} \frac{x^{2n}}{(2n)!}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>\displaystyle \frac{e^x+e^{-x}}{2}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>This problem should not be solved using generating functions.</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
   
 </exercises>
