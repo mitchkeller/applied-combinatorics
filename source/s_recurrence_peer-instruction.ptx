@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_recurrence_PI" component="runestone-PI">
+  <title>Peer Instruction Questions</title>
+  <exercise label="recurrence_PI_linear">
+    <statement>
+      <p>Which of the following recurrence equations are linear?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>f_{n} = f_{n-1}+f_{n-2}</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>r_{n+1} = r_n + (n+1)</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>t_{n} = \displaystyle\sum_{k=0}^n t_k t_{n-k}</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>s_{n+3} = n^2 s_{n+1} - s_n + 2^n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="recurrence_PI_homogeneous">
+    <statement>
+      <p>Which of the following recurrence equations are homogeneous?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p><m>f_{n} = f_{n-1}+f_{n-2}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>r_{n+1} = r_n + (n+1)</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p><m>t_{n+2} = 3t_{n+1}-t_{n}</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>s_{n+3} = n^2 s_{n+1} - s_n + 2^n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="recurrence_PI_solve-deg-one">
+    <statement>
+      <p>Which of the following funtions satisfy the advancement operator
+        equation
+        <m>(A-3)f=0</m>?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>f(n) = (-3)^n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>f(n) = 3^n</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p><m>f(n) = 7\cdot(3^n)</m></p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+</exercises>
