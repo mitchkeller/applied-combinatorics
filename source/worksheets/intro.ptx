@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ws-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>An Introduction to Combinatorics</title>
+
+  <worksheet xml:id="ws-day_one">
+    <title>Course Overview</title>
+    <introduction>
+      <p>
+        For the rest of today's class, we will get an overview of the types of problems we will consider under the umbrella of <q>combinatorics</q> this semester. You should access the online textbook using the link from Canvas. We will look at several sections from Chapter 1. Note that our goal today is <em>not</em> to solve every problem presented in the text! We are getting an overview of the <em>type</em> of questions, so even if you have some prior experience with combinatorics and could answer the questions today, you do not need to.
+      </p>
+    </introduction>
+    <page>
+    <exercise workspace="0.75in">
+      <introduction>
+        <p>
+          Read over the list of seven questions involving Amanda, Dawn, Keesha, and Seth in Section 1.2 Enumeration with your group. As you read the problems, discuss them to ensure that you understand what the question is asking (but most likely not how to solve the problem). The discuss each of the questions below with your group. We will discuss some of these at the end of our time together today.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Compare the first two questions. Do you think one of these must have a bigger answer, or are they asking the same question? Explain your reasoning.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Discuss the third question with your group. Do you have a consensus on how this would change the answer(s)?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is the scenario in question 4 different to that in questions 1 and 2? Explain your reasoning.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Compare the first fourth and fifth questions. Do you think one of these must have a bigger answer, or are they asking the same question? Explain your reasoning.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Discuss the sixth question with your group. Do you have a consensus on how this would change the answer(s)?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Discuss the seventh question with your group. You might think in terms of growth factor here: If we increase the number of people by multiplying by <m>1000 = 10^3</m>, how (approximately) might you expect the answers to increase? Can we even make a reasonable guess?
+          </p>
+        </statement>
+      </task>
+      <conclusion>
+        <p>
+          We will not have time in this course to discuss the necklace-type counting problems introduced at the end of the section. You're welcome to read those questions and discuss them today if you're interested, but you'll have to do some extra reading after the semester to study this topic.
+        </p>
+      </conclusion>
+    </exercise>
+  </page>
+  <page>
+    <exercise>
+      <introduction>
+        <p>
+          In Section 1.3 Combinatorics and Graph Theory, we endeavor to show how intuitive many of the ideas in combinatorics can be. We will define the terms of this section precisely in Chapter 5, so don't worry when we move on today without a careful understanding of things!
+        </p>
+      </introduction>
+      <task workspace="1.25in">
+        <statement>
+          <p>
+            Discuss the 11 items after Figure 1.2 with your group. Which of these can you understand from the context given? What things remain unclear or unambiguous in a way that suggests we will want more precise definitions later on?
+          </p>
+        </statement>
+      </task>
+      <task workspace="1in">
+        <statement>
+          <p>
+            Discuss the five questions of Example 1.3 with your group. Are there any you can confidently answer today? What does your gut tell you about how easy or hard it would be for a computer algorithm to answer these questions efficiently?
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.25in">
+        <statement>
+          <p>
+            For Example 1.5, spend a few minutes trying to answer the questions presented after Figure 1.6, which is reproduced below so you can draw on it if you'd like.
+          </p>
+          <image source="3012-fig4" width="65%">
+            <description>24 points, each labled with an integer from 1 through 6. There is a line segment below the points to indicate a scale distance of 200 miles.</description>
+          </image>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Discuss Example 1.7 with your group briefly. Does this seem to be a hard problem or an easy one?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </page>
+  <page>
+    <exercise>
+      <introduction>
+        <p>
+          In Section 1.4 Combinatorics and Number Theory, you get to experience a preview of some of the integrated interactivity our textbook provides. Code in our text uses SageMath, an open source computer algebra system that uses Python as its underlying syntax.
+        </p>
+      </introduction>
+      <task workspace="0.5in">
+        <statement>
+          <p>
+            Discuss Example 1.8 <em>very</em> briefly and resist the siren song of the Collatz conjecture.
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.5in">
+        <statement>
+          <p>
+            What do you notice when running the SageMath code in Example 1.9? What do you wonder about?
+          </p>
+        </statement>
+      </task>
+      <task workspace="1in">
+        <statement>
+          <p>
+            Look over the partitions in Figure 1.11. What do you notice? What do you wonder? If time permits after you complete the other questions on this worksheet, come back and start making a list of the partitions of <m>9</m>, identifying those into distinct parts and those into odd parts.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise >
+      <introduction>
+        <p>
+          We conclude our course overview with Section 1.5 Combinatorics and Geometry, which includes some topics we will sample from throughout the course.
+        </p>
+      </introduction>
+      <task workspace="2in">
+        <statement>
+          <p>
+            In Example 1.12, I suggest starting with <em>fewer</em> lines. How many regions would be determined by one, two, or three lines? Can you draw five lines that meet the criteria given in this example?
+          </p>
+        </statement>
+      </task>
+      <task workspace="1in">
+        <statement>
+          <p>
+            For Example 1.15, grab one of the huddleboards in the room and work with your group to try to redraw the graph in such a way that no edges cross. If you can't redraw it with no crossing edges, do you think that this is simply an impossible task? What do you think about the question the text asks about Sam and Deborah's discussion?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <conclusion>
+      <p>
+        In this course, we will not get into the topics discussed in Section 1.6 Combinatorics and Optimization. These sorts of topics appear in I SY E/COMP SCI/MATH 425 (Introduction to Combinatorial Optimization) and MATH 444 (Graphs and Networks in Data Science). I'd encourage you to consider taking one or both of these courses in the future!
+      </p>
+    </conclusion>
+  </page>
+  </worksheet>
+
+</chapter>

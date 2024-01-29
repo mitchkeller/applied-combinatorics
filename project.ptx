@@ -44,6 +44,12 @@
       <publication>publication/publication.ptx</publication>
       <output-dir>output/pdf</output-dir>
     </target>
+    <target name="workbook-pdf" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/workbook.ptx</source>
+      <publication>publication/publication-workbook.ptx</publication>
+      <output-dir>output/workbook-pdf</output-dir>
+    </target>
     <target name="subset">
       <format>html</format>
       <source>source/main.ptx</source>
