@@ -3,28 +3,37 @@
   <title>Peer Instruction Questions</title>
   <exercise label="appcomb_strings_PI_factorial">
     <statement>
-      <p>What is <m>0!</m> defined to be?
+      <p>
+        What is <m>0!</m> defined to be?
       </p>
     </statement>
     <choices>
       <choice>
         <statement>
-          <p>0</p>
+          <p>
+            0
+          </p>
         </statement>
       </choice>
       <choice correct="yes">
         <statement>
-          <p>1</p>
+          <p>
+            1
+          </p>
         </statement>
       </choice>
       <choice>
         <statement>
-          <p>Undefined</p>
+          <p>
+            Undefined
+          </p>
         </statement>
       </choice>
       <choice>
         <statement>
-          <p>It depends on my mood</p>
+          <p>
+            It depends on my mood
+          </p>
         </statement>
       </choice>
     </choices>
@@ -32,272 +41,686 @@
   
   <exercise label="appcomb_strings_PI_password">
     <statement>
-      <p>Suppose we are making a (rather insecure) password of length <m>8</m>. The first two characters will be uppercase letters, the third and fourth will be digits, and the last four characters can be any letter or digit. How many possible passwords are there?  </p>
+      <p>
+        Suppose we are making a (rather insecure) password of length <m>8</m>.
+        The first two characters will be uppercase letters, the third and fourth will be digits, and the last four characters can be any letter or digit.
+        How many possible passwords are there?
+      </p>
     </statement>
     <choices>
       <choice>
         <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (36)^4</m></p>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 10\cdot (36)^4</m>
+          </p>
         </statement>
       </choice>
       <choice>
         <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (52)^4</m></p>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 10\cdot (52)^4</m>
+          </p>
         </statement>
       </choice>
       <choice>
         <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 9\cdot (52)^4</m></p>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 9\cdot (52)^4</m>
+          </p>
         </statement>
       </choice>
       <choice correct="yes">
         <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^4</m></p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_password_varlength">
-    <statement>
-      <p>Suppose we are making a password where the length can be either <m>7</m> or <m>8</m> characters. The first two characters will be uppercase letters, the third and fourth will be digits, and the remaining characters can be any letter or digit. How many possible passwords are there?</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3\cdot (62)^4</m></p>
-        </statement>
-      </choice>
-      <choice correct="yes">
-        <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 10\cdot ((62)^3 + (62)^4)</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3 + (62)^4</m></p>
-        </statement>
-      </choice>
-      <choice correct="yes">
-        <statement>
-          <p><m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3 + 26\cdot 26\cdot 10\cdot 10\cdot (62)^4</m></p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_password_distinct">
-    <statement>
-      <p>Suppose we are making a (rather insecure) password of length <m>8</m>. The first four characters will be distinct uppercase letters. The next two characters will be digits. The last two characters will be distinct lowercase letters. How many possible passwords are there?</p>
-    </statement>
-    <choices>
-      <choice correct="yes">
-        <statement>
-          <p><m>P(26,4)\cdot 10^2\cdot 26\cdot 25</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>26\cdot 25\cdot 24\cdot 23\cdot 22\cdot 10^2\cdot 26\cdot 25</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>26\cdot 25\cdot 24\cdot 23\cdot 10^2\cdot 22\cdot 21</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>P(26,4)\cdot 10^2\cdot P(22,2)</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>P(26,4)\cdot 10\cdot 9\cdot P(22,2)</m></p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_bincoeff_setup">
-    <statement>
-      <p>Suppose we had <m>80</m> candidates and needed to elect five co-chairs. If order mattered, there would be <m>P(80,5)</m> possible outcomes. Suppose we group them all based on which candidates were elected. Then each group would have how many outcomes in it?</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p><m>5</m></p>
-        </statement>
-      </choice>
-      <choice correct="yes">
-        <statement>
-          <p><m>5!</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>P(5,80)</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>P(5,4)</m></p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_bincoeff_formula">
-    <statement>
-      <p>We define <m>\binom{n}{k}</m> to be the number of ways to choose <m>k</m> elements from a set with <m>n</m> elements. Generalizing the ideas we have already discussed leads to which identity?</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p><m>P(n,k) = \frac{1}{k!}\binom{n}{k}</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement correct="yes">
-          <p><m>P(n,k) = k!\cdot \binom{n}{k}</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>k! P(n,k) = \binom{n}{k}</m></p>
-        </statement>
-      </choice>  
-      <choice>
-        <statement>
-          <p><m>P(n,k) = n!\cdot \binom{n}{k}</m></p>
-        </statement>
-      </choice>          
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_bincoeff_complement">
-    <statement>
-      <p>Which is larger, <m>\binom{n}{k}</m> or <m>\binom{n}{n-k}</m>?</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p><m>\binom{n}{k}</m> is always larger</p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>\binom{n}{n-k}</m> is always larger</p>
-        </statement>
-      </choice>
-      <choice correct="yes">
-        <statement>
-          <p>They are always equal</p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p>It depends on the values of <m>n</m> and <m>k</m></p>
-        </statement>
-      </choice>      
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_comb-proof-theme">
-    <statement>
-      <p>A recurring theme in the reading from Section 2.4 was</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p>a positive integer <m>n</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p>bit strings of length <m>n</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p>counting using partitioning</p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p>combinatorics</p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p>counting the same thing in different ways</p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p>sums</p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_sum-ell">
-    <statement>
-      <p>How many dots if the grid is <m>n\times n</m>?</p>
-      <image source="3012-fig21" width="50%">
-        <description>A <m>7\times 7</m> array of dots. The top left dot is enclosed by a square. There are then nested right angles with their corners on the diagonal of the array and each right angle extending up to the top of the array and to the left side of the array.</description>
-      </image>
-    </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p><m>\displaystyle \frac{n(n+1)}{2}</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>1 + 2 + \cdots + 2n-1</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>1^2 + 2^2 + 3^2 + n^2</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>1 + 3 + 5 + \cdots + 2n-1</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>1 + 3 + 5 + \cdots + 2n+1</m></p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-  <exercise label="appcomb_strings_PI_committee-model">
-    <statement>
-      <p>Suppose we have <m>n</m> individuals on campus eligible to serve on a
-        committee to plan a conference. The committee must have <m>r</m>
-        members, and a subcommittee of <m>k</m> must be selected to work on the
-        banquet. How many ways can we do this?</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement>
-          <p><m>\displaystyle \binom{n}{r} + \binom{r}{k}</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>\displaystyle \binom{n}{r} \binom{r}{k}</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>\displaystyle \binom{n}{r} \binom{n}{k}</m></p>
-        </statement>
-      </choice>
-      <choice>
-        <statement>
-          <p><m>\displaystyle \binom{n}{k} \binom{n-k}{r-k}</m></p>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 10\cdot (62)^4</m>
+          </p>
         </statement>
       </choice>
     </choices>
   </exercise>
   
-</exercises>
+  <exercise label="appcomb_strings_PI_password_varlength">
+    <statement>
+      <p>
+        Suppose we are making a password where the length can be either <m>7</m> or <m>8</m> characters.
+        The first two characters will be uppercase letters, the third and fourth will be digits, and the remaining characters can be any letter or digit.
+        How many possible passwords are there?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3\cdot (62)^4</m>
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 10\cdot ((62)^3 + (62)^4)</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3 + (62)^4</m>
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>26\cdot 26\cdot 10\cdot 10\cdot (62)^3 + 26\cdot 26\cdot 10\cdot 10\cdot (62)^4</m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="appcomb_strings_PI_password_distinct">
+    <statement>
+      <p>
+        Suppose we are making a (rather insecure) password of length <m>8</m>.
+        The first four characters will be distinct uppercase letters.
+        The next two characters will be digits.
+        The last two characters will be distinct lowercase letters.
+        How many possible passwords are there?
+      </p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>P(26,4)\cdot 10^2\cdot 26\cdot 25</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>26\cdot 25\cdot 24\cdot 23\cdot 22\cdot 10^2\cdot 26\cdot 25</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>26\cdot 25\cdot 24\cdot 23\cdot 10^2\cdot 22\cdot 21</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>P(26,4)\cdot 10^2\cdot P(22,2)</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>P(26,4)\cdot 10\cdot 9\cdot P(22,2)</m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="appcomb_strings_PI_bincoeff_setup">
+    <statement>
+      <p>
+        Suppose we had <m>80</m> candidates and needed to elect five co-chairs.
+        If order mattered, there would be <m>P(80,5)</m> possible outcomes.
+        Suppose we group them all based on which candidates were elected.
+        Then each group would have how many outcomes in it?
+      </p>
+    </statement>
+    <choices multiple-correct="yes">
+      <choice>
+        <statement>
+          <p>
+            <m>5</m>
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>5!</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>P(5,80)</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>P(5,4)</m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="appcomb_strings_PI_bincoeff_formula">
+    <statement>
+      <p>
+        We define <m>\binom{n}{k}</m> to be the number of ways to choose <m>k</m> elements from a set with <m>n</m> elements.
+        Generalizing the ideas we have already discussed leads to which identity?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            <m>P(n,k) = \frac{1}{k!}\binom{n}{k}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>P(n,k) = k!\cdot \binom{n}{k}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>k! P(n,k) = \binom{n}{k}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>P(n,k) = n!\cdot \binom{n}{k}</m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="appcomb_strings_PI_bincoeff_complement">
+    <statement>
+      <p>
+        Which is larger, <m>\binom{n}{k}</m> or <m>\binom{n}{n-k}</m>?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            <m>\binom{n}{k}</m> is always larger
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>\binom{n}{n-k}</m> is always larger
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            They are always equal
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            It depends on the values of <m>n</m> and <m>k</m>
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="appcomb_strings_PI_comb-proof-theme">
+    <statement>
+      <p>
+        A recurring theme in the reading from Section 2.4 was
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            a positive integer <m>n</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            bit strings of length <m>n</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            counting using partitioning
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            combinatorics
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            counting the same thing in different ways
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            sums
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="appcomb_strings_PI_sum-ell">
+    <statement>
+      <p>
+        How many dots if the grid is <m>n\times n</m>?
+      </p>
+      
+      <image source="3012-fig21" width="50%">
+        <description>A <m>7\times 7</m> array of dots.
+          The top left dot is enclosed by a square.
+          There are then nested right angles with their corners on the diagonal of the array and each right angle extending up to the top of the array and to the left side of the array.</description>
+        </image>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              <m>\displaystyle \frac{n(n+1)}{2}</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>1 + 2 + \cdots + 2n-1</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>1^2 + 2^2 + 3^2 + n^2</m>
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>1 + 3 + 5 + \cdots + 2n-1</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>1 + 3 + 5 + \cdots + 2n+1</m>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_sum-bincoeff-square">
+      <statement>
+        <p>
+          <m>\displaystyle \binom{n}{0}^2 + \binom{n}{1}^2 + \binom{n}{2}^2 + \cdots +\binom{n}{n-1}^2 + \binom{n}{n}^2</m> counts
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              all bit strings of length <m>n</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              bit strings of length <m>n</m> with exactly half the digits <m>1</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              bit strings of length <m>n</m> with at least half the digits <m>1</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              all bit strings of length <m>2n</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              bit strings of length <m>2n</m> with exactly half the digits <m>1</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              bit strings of length <m>2n</m> with at least half the digits <m>1</m>.
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="appcomb_strings_PI_committee-model">
+      <statement>
+        <p>
+          Suppose we have <m>n</m> individuals on campus eligible to serve on a
+          committee to plan a conference.
+          The committee must have <m>r</m>
+          members, and a subcommittee of <m>k</m> must be selected to work on the
+          banquet.
+          How many ways can we do this?
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              <m>\displaystyle \binom{n}{r} + \binom{r}{k}</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>\displaystyle \binom{n}{r} \binom{r}{k}</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>\displaystyle \binom{n}{r} \binom{n}{k}</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>\displaystyle \binom{n}{k} \binom{n-k}{r-k}</m>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_folders-dividers-PTX">
+      <statement>
+        <p>
+          If we're dividing up a bunch of folders to give to seven people, we
+          need seven dividers.
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              True, high confidence
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              True, low confidence
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              False, low confidence
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              False, high confidence
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_folders-zero-one-PTX">
+      <statement>
+        <p>
+          Suppose we want to distribute 20 folders to Alice, Bob, Carlos,
+          and Dave.
+          Alice and Bob must get at least one folder each, but
+          Carlos and Dave could get zero folders.
+          Here the book would have us
+        </p>
+      </statement>
+      <choices multiple-correct="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              use artificial folder(s)
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              set aside folder(s)
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              use an extra divider
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              None of the above
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_folders-ge-four-PTX">
+      <statement>
+        <p>
+          Suppose we want to distribute 20 folders to Alice, Bob, Carlos
+          and Dave.
+          Alice must get at least four folders, Bob and Carlos
+          must get at least one folder each, and Dave could get zero
+          folders.
+          Here the book would have us
+        </p>
+      </statement>
+      <choices multiple-correct="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              use artificial folder(s)
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              set aside folder(s)
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              use an extra divider
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              None of the above
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_folders-save-some-PTX">
+      <statement>
+        <p>
+          Suppose we want to distribute folders to Alice, Bob, and Carlos from a collection of <m>20</m> folders.
+          Each person must get at least one folder, but it's possible that some folders are not distributed to any person.
+          Here the book would have us
+        </p>
+      </statement>
+      <choices multiple-correct="yes">
+        <choice>
+          <statement>
+            <p>
+              use artificial folder(s)
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              set aside folder(s)
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              use an extra divider
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              None of the above
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_lattice-path-good-bad-PTX">
+      <statement>
+        <p>
+          The bad lattice path <m>HHVVHVVHHVVH</m> from <m>(0,0)</m> to <m>(6,6)</m> is transformed to which of the following lattice paths from <m>(0,0)</m> to <m>(5,7)</m>?
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              5
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              7
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              11
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              This is a good lattice path
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_lattice-path-transform-PTX">
+      <statement>
+        <p>
+          The bad lattice path <m>HHVVHVVHHVVH</m> from <m>(0,0)</m> to <m>(6,6)</m> is transformed to which of the following lattice paths from <m>(0,0)</m> to <m>(5,7)</m>?
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              <m>HHVVHVHVVHHV</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>HHVVHVVHHVVV</m>
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>HHVVHVVVVHHV</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>VVHHVHHVVHHV</m>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+  </exercises>
