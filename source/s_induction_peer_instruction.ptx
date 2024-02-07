@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises xml:id="s_induction_PI" component="runestone-PI">
+  <title>Peer Instruction Questions</title>
+  <exercise label="induction_PI_subsets-contain-1">
+    <statement>
+      <p>
+      	How many <m>k</m>-element subsets of <m>[n]</m> <term>contain</term> the number <m>1</m>?
+      </p>  
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p><m>\displaystyle\binom{n}{k-1}</m></p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>\displaystyle\binom{n-1}{k-1}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            <m>\displaystyle\binom{n-1}{k}</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Can't say without more information
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="induction_PI_recursive-eval">
+    <statement>
+      <p>
+        Suppose that <m>f</m> is a function on the <em>positive</em> integers.  You know
+        <me>f(n) = 3 f(n-1) + 2f(n-2) - f(n-3)</me>
+	      as well as <m>f(1) = 3</m>, <m>f(2) = 7</m>, and <m>f(4) = 8</m>. Then <m>f(6)</m>
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            equals <m>-1</m>
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            equals <m>15</m>
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            equals <m>62</m>
+          </p>
+        </statement>
+      </choice>
+      <choice >
+        <statement>
+          <p>
+            cannot be determined because we do not have enough information.
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="induction_PI_proof-step-1">
+    <statement>
+      <p>
+	      To prove that <m>\displaystyle \sum_{i=1}^n (4i-3) = n(2n-1)</m> for all positive integers <m>n</m>, the best first step is which of the following?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            Let <m>n</m> be an integer.
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            Verify for <m>n=1</m>.
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Fix an integer <m>k\geq 1</m>.
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Assume the statement is true for all <m>k\geq 1</m>.
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="induction_PI_proof-step-2">
+    <statement>
+      <p>
+        To prove that <m>\displaystyle \sum_{i=1}^n (4i-3) = n(2n-1)</m> for all positive integers <m>n</m>, the best next step is which of the following?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            Fix an integer <m>k\geq n</m>.
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Assume <m>n(2n-1)</m>.
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Let <m>k\geq 1</m> be an integer.
+          </p>
+        </statement>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            Assume that for some integer <m>k\geq 1</m>, <m>$\displaystyle\sum_{i=1}^k (4i-3) = k(2k-1)</m>.
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  
+  <exercise label="induction_PI_proof-step-3">
+    <statement>
+      <p>
+        To prove that <m>\displaystyle \sum_{i=1}^n (4i-3) = n(2n-1)</m> for all positive integers <m>n</m>, the best next step is which of the following?
+      </p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>
+	          Use the inductive hypothesis to conclude 
+            <me>\sum_{i=1}^{k+1}(4i-3)= k(2k-1) + 4(k+1)-3</me>.
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Conclude that <m>\displaystyle \sum_{i=1}^{k+1} (4i-3)=(k+1)(2(k+1)-1)</m>.
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            We're done, so there is no next step.
+          </p>
+        </statement>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Something not listed above.
+          </p>
+        </statement>
+      </choice>
+    </choices>
+  </exercise>
+  </exercises>
