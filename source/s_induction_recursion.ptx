@@ -135,6 +135,18 @@
           </statement>
           <response />
         </exercise>
+        <exercise label="induction_recursion_avoid-12">
+          <statement>
+            <p>
+              Recall that a ternary string is a string in which the allowed symbols are <m>0</m>, <m>1</m>, and <m>2</m>. Call a ternary string <q>good</q> if it does not contain a <m>1</m> followed immediately by a <m>2</m>. Let <m>g(n)</m> be the number of good strings of length <m>n</m>. Find <m>g(1)</m> and <m>g(2)</m> and explain why for all <m>n\geq 3</m>, <m>g(n)=3g(n-1) - g(n-2)</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              It may be helpful to think of <m>3g(n-1) - g(n-2)</m> as <m>2g(n-1) + (g(n-1)- g(n-2))</m>. 
+            </p>
+          </hint>
+        </exercise>
       </reading-questions>
     </subsection>
 
