@@ -46,7 +46,7 @@
       edges = 28
       g = graphs.RandomGNM(vertices,edges)
       while (not g.is_eulerian() or not g.is_connected()):
-      g = graphs.RandomGNM(vertices,edges)
+        g = graphs.RandomGNM(vertices,edges)
       print(g.degree_sequence())
       g.show()
     </input>
@@ -65,7 +65,7 @@
       edges = 25
       g = graphs.RandomGNM(vertices,edges)
       while (g.is_eulerian() or not g.is_connected()):
-      g = graphs.RandomGNM(vertices,edges)
+        g = graphs.RandomGNM(vertices,edges)
       print(g.degree_sequence())
       g.show()
     </input>
