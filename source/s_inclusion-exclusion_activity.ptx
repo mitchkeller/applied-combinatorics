@@ -2,7 +2,7 @@
     <title>An Activity to Enumerate Surjections</title>
 
     <p>
-      To start this activity activity, let's first ensure we're on the same page of the number of terms in the inclusion-exclusion sum. 
+      To start this activity, let's first ensure we're on the same page of the number of terms in the inclusion-exclusion sum. 
     </p>
     <exercise label="inclusion-exclusion_activity_IE-sum-terms-8">
       <statement>
@@ -263,13 +263,10 @@
         </choice>
       </choices>
     </exercise>
-    <activity label="act_inclusion-exclusion_surjections-8-5">
-      <introduction>
         <p>
           Let's first focus on the case of counting surjections from <m>[8]</m> to <m>[5]</m>.
         </p>
-      </introduction>
-      <task label="act_inclusion-exclusion_surjections-8-5_properties">
+      <exercise label="act_inclusion-exclusion_surjections-8-5_properties">
         <statement>
           <p>
             The set <m>\mathcal{P}</m> contains <var width="10" /> properties.
@@ -300,8 +297,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-8-5_one-prop">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-8-5_one-prop">
         <statement>
           <p>
             There are <var width="10" /> functions that satisfy <m>P_1</m> and <var width="10" /> functions that satisfy <m>P_3</m>.
@@ -355,8 +352,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-8-5_two-prop">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-8-5_two-prop">
         <statement>
           <p>
             There are <var width="10" /> functions that satisfy both <m>P_1</m> and <m>P_3</m> (at the same time).
@@ -387,8 +384,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-8-5_two-prop-2-5">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-8-5_two-prop-2-5">
         <statement>
           <p>
             There are <var width="10" /> functions that satisfy both <m>P_2</m> and <m>P_5</m> (at the same time).
@@ -419,8 +416,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-8-5_three-prop">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-8-5_three-prop">
         <statement>
           <p>
             Let <m>S\subseteq [5]</m> with <m>|S| = 3</m>. (That is, <m>S</m> is a set of three elements.) There are <var width="10" /> functions that satisfy all the properties with subscripts in <m>S</m> (at the same time).
@@ -451,8 +448,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-8-5_conclusion">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-8-5_conclusion">
         <statement>
           <p>
             Using the inclusion-exclusion formula and an online calculator such as <url href="https://www.desmos.com/" visual="desmos.com">Desmos</url>, we can determine that the number of surjections from <m>[8]</m> to <m>[5]</m> is <var width="10" />
@@ -483,16 +480,13 @@
             </condition>
           </var>
         </setup>
-      </task>
+      </exercise>
 
-    </activity>
-    <activity label="act_inclusion-exclusion_surjections-formula">
-      <introduction>
+  
         <p>
-          Let's first focus on the case of counting surjections from <m>[n]</m> to <m>[m]</m> with <m>n\gt m</m>. Your answers to the previous activity will be a good guide, as the <q>eightness</q> of <m>8</m> and the <q>fiveness</q> of <m>5</m> weren't critical.
+          Let's now think about counting surjections from <m>[n]</m> to <m>[m]</m> with <m>n\gt m</m>. Your answers to the previous activity will be a good guide, as the <q>eightness</q> of <m>8</m> and the <q>fiveness</q> of <m>5</m> weren't critical.
         </p>
-      </introduction>
-      <task label="act_inclusion-exclusion_surjections-formula-properties">
+      <exercise label="act_inclusion-exclusion_surjections-formula-properties">
         <statement>
           <p>
             The set <m>\mathcal{P}</m> contains <var width="10" /> properties.
@@ -523,8 +517,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-formula_one-prop">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-formula_one-prop">
         <statement>
           <p>
             There are <var width="10" /> functions that satisfy <m>P_1</m> and <var width="10" /> functions that satisfy <m>P_3</m>.
@@ -564,8 +558,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-formula_two-prop">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-formula_two-prop">
         <statement>
           <p>
             There are <var width="10" /> functions that satisfy both <m>P_1</m> and <m>P_3</m> (at the same time).
@@ -589,8 +583,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-formula_four-prop">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-formula_four-prop">
         <statement>
           <p>
             Let <m>S\subseteq [m]</m> with <m>|S| = 4</m>. (That is, <m>S</m> is a set of four elements.) There are <var width="10" /> functions that satisfy all the properties with subscripts in <m>S</m> (at the same time).
@@ -614,8 +608,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-formula_j-prop">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-formula_j-prop">
         <statement>
           <p>
             Let <m>S\subseteq [m]</m> with <m>|S| = j</m>. (That is, <m>S</m> is a set of <m>j</m> elements.) There are <var width="10" /> functions that satisfy all the properties with subscripts in <m>S</m> (at the same time).
@@ -639,8 +633,8 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-formula_j-subsets">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-formula_j-subsets">
         <statement>
           <p>
             Let <m>S\subseteq [m]</m> with <m>|S| = j</m>. (That is, <m>S</m> is a set of <m>j</m> elements.) There are <var width="10" /> subsets of <m>[m]</m> of size <m>j</m>.
@@ -664,45 +658,18 @@
             </condition>
           </var>
         </setup>
-      </task>
-      <task label="act_inclusion-exclusion_surjections-formula_conclusion">
+      </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-formula_conclusion">
         <statement>
           <p>
             Using the inclusion-exclusion formula, we can determine that the formula for the number of surjections from <m>[n]</m> to <m>[m]</m> is given as a summation. Do your best to express that summation in the box below.
           </p>
         </statement>
         <response />  
-      </task>
-    </activity>
+      </exercise>
 
 
     <p>Returning to our lottery ticket distribution problem at the start of the section, we see that there are <m>S(15,4)=1016542800</m> ways for the grandfather to distribute his <m>15</m> lottery tickets so that each of the <m>4</m> grandchildren receives at least one ticket.
     </p>
-    <exercise label="true-false-exercise-with-tasks">
-      <title>True/False and Explain</title>
-      <introduction>
-          <p>Structured with task, we can have an introduction, but this does not migrate with the interactive portions.</p>
-      </introduction>
 
-      <task label="true-false-task">
-          <title>True/False</title>
-          <idx>vector space</idx>
-          <statement correct="no">
-              <p>Every vector space has finite dimension.</p>
-          </statement>
-          <feedback>
-              <p>The vector space of all polynomials with finite degree has a basis, <m>B = \{1,x,x^2,x^3,\dots\}</m>, which is infinte.</p>
-          </feedback>
-          <hint>
-              <p><m>P_n</m>, the vector space of polynomials with degree at most <m>n</m>, has dimension <m>n+1</m> by <xref ref="theorem-exponent-laws"/>.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter <m>n</m>?</p>
-          </hint>
-      </task>
-
-      <task label="short-answer-task">
-          <statement>
-              <p>Explain your reasoning in the previous question.</p>
-          </statement>
-          <response/>
-      </task>
-  </exercise>
 </section>
