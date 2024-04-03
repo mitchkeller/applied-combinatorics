@@ -1,0 +1,681 @@
+<section xml:id="s_inclusion-exclusion_surjections_activity" component="runestone">
+    <title>An Activity to Enumerate Surjections</title>
+
+    <p>
+      To start this activity activity, let's first ensure we're on the same page of the number of terms in the inclusion-exclusion sum. 
+    </p>
+    <exercise label="inclusion-exclusion_activity_IE-sum-terms-8">
+      <statement>
+        <p>Suppose that <m>m=8</m>. How many terms are there in the sum <me>\displaystyle
+          \sum_{S\subseteq [m]} (-1)^{|S|}N(S)</me>?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              <m>2^{8-1} = 128 </m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>2^{8}-1 = 255 </m>
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>2^{8} = 256 </m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>(8-1)! </m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>8!</m>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+  
+    <p>As our first example of the power of inclusion-exclusion, consider the following situation: A grandfather has <m>15</m> distinct lottery tickets and wants to distribute them to his four grandchildren so that each child gets at least one ticket. In how many ways can he make such a distribution? At first, this looks a lot like the problem of enumerating integer solutions of equations, except here the lottery tickets are not identical! A ticket bearing the numbers <m>1</m>, <m>3</m>, <m>10</m>, <m>23</m>, <m>47</m>, and <m>50</m> will almost surely not pay out the same amount as one with the numbers <m>2</m>, <m>7</m>, <m>10</m>, <m>30</m>, <m>31</m>, and <m>48</m>, so who gets which ticket really makes a difference. Hopefully, you have already recognized that the fact that we're dealing with lottery tickets and grandchildren isn't so important here. Rather, the important fact is that we want to distribute distinguishable objects to distinct entities, which calls for counting functions from one set (lottery tickets) to another (grandchildren). In our example, we don't simply want the total number of functions, but instead we want the number of surjections, so that we can ensure that every grandchild gets a ticket.
+    </p>
+
+    <p>
+      To get everyone on the same page, let's recall what a surjection is.
+    </p>
+    <definition xml:id="def-surjection">
+      <statement>
+        <p>
+        	A function <m>f\colon X\to Y</m> is called a <term>surjection</term> provided that for every <m>y\in Y</m>, there is at least one <m>x\in X</m> such that <m>f(x) = y</m>. Surjections are also called <term>onto functions</term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Another way of defining a surjection is by thinking about what the image of the function is, so let's define this as well.
+    </p>
+    <definition xml:id="def-image">
+      <statement>
+        <p>
+        The <em>image</em> of a function <m>f\colon X\to Y</m> is the set
+        <me>
+      \{y\in Y\colon \text{ there is }x\in X\text{ such that }f(x) = y\}</me>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Sometimes the image is also called the <term>range</term> of the function, but different authors use <q>range</q> in different ways, so we will use <q>image</q>, which is likely consistent with what you might have seen in a linear algebra class. In this way, a function <m>f\colon X\to Y</m> is a surjection provided that the image of <m>f</m> is equal to the set <m>Y</m>.
+    </p>
+    <exercise label="inclusion-exclusion_activity_surjection">
+      <statement>
+        <p>Which of the following functions from <m>[6]</m> to <m>[4]</m> are
+          surjections?</p>
+          <sidebyside>
+            <tabular>
+              <row bottom="minor">
+                <cell><m>x</m></cell>
+                <cell>1</cell>
+                <cell>2</cell>
+                <cell>3</cell>
+                <cell>4</cell>
+                <cell>5</cell>
+                <cell>6</cell>
+              </row>
+              <row>
+                <cell><m>f(x)</m></cell>
+                <cell>3</cell>
+                <cell>3</cell>
+                <cell>3</cell>
+                <cell>2</cell>
+                <cell>4</cell>
+                <cell>2</cell>
+              </row>
+            </tabular>
+            <tabular>
+              <row bottom="minor">
+                <cell><m>x</m></cell>
+                <cell>1</cell>
+                <cell>2</cell>
+                <cell>3</cell>
+                <cell>4</cell>
+                <cell>5</cell>
+                <cell>6</cell>
+              </row>
+              <row>
+                <cell><m>g(x)</m></cell>
+                <cell>1</cell>
+                <cell>3</cell>
+                <cell>3</cell>
+                <cell>2</cell>
+                <cell>4</cell>
+                <cell>2</cell>
+              </row>
+            </tabular>
+  
+          </sidebyside>
+          <tabular>
+            <row bottom="minor">
+              <cell><m>x</m></cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+              <cell>5</cell>
+              <cell>6</cell>
+            </row>
+            <row>
+              <cell><m>h(x)</m></cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>4</cell>
+            </row>
+          </tabular>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p><m>f</m></p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><m>g</m></p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><m>h</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>None of the above</p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="inclusion-exclusion_activity_functions-count">
+      <statement>
+        <p>Let <m>X</m> be the set of all functions from <m>[n]</m> to <m>[m]</m>. How many elements does the set <m>X</m> contain?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p><m>n^m</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p><m>n\cdot m</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p><m>P(n,m)</m></p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><m>m^n</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p><m>P(m,n)</m></p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    <p>For positive integers <m>n</m> and <m>m</m>, let <m>S(n,m)</m> denote the number of surjections from <m>[n]</m> to <m>[m]</m>. Note that <m>S(n,m)=0</m> when <m>n\lt m</m>. In this activity, we apply the Inclusion-Exclusion formula to determine a formula for <m>S(n,m)</m>. We start by setting <m>X</m> to be the set of all functions from <m>[n]</m> to <m>[m]</m>. Then for each <m>f\in X</m> and each <m>i=1,2,\dots,m</m>, we say that <m>f</m> satisfies property <m>P_i</m> if <m>i</m> is not in the image of <m>f</m>.
+    </p>
+    <exercise label="inclusion-exclusion_activity_function-property">
+      <statement>
+        <p>Define <m>f\colon [8] \to [5]</m> as shown below. Which properties does <m>f</m> satisfy?</p>
+        <tabular>
+          <row bottom="minor">
+            <cell><m>x</m></cell>
+            <cell>1</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+            <cell>4</cell>
+            <cell>5</cell>
+            <cell>6</cell>
+            <cell>7</cell>
+            <cell>8</cell>
+  
+          </row>
+          <row>
+            <cell><m>f(x)</m></cell>
+            <cell>5</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+            <cell>3</cell>
+            <cell>2</cell>
+            <cell>5</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+          </row>
+        </tabular>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p><m>P_1</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p><m>P_2</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p><m>P_3</m></p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p><m>P_4</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p><m>P_5</m></p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>None of the above</p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    <activity label="act_inclusion-exclusion_surjections-8-5">
+      <introduction>
+        <p>
+          Let's first focus on the case of counting surjections from <m>[8]</m> to <m>[5]</m>.
+        </p>
+      </introduction>
+      <task label="act_inclusion-exclusion_surjections-8-5_properties">
+        <statement>
+          <p>
+            The set <m>\mathcal{P}</m> contains <var width="10" /> properties.
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition number="5">
+              <feedback>
+                <p>
+                  Correct! There is one property in <m>\mathcal{P}</m> for each element of the set the function maps to, which is <m>[5]</m> in this case.
+                </p>
+              </feedback>
+            </condition>
+            <condition number="8">
+              <feedback>
+                <p>
+                  Try again. Think about which of the sets involved determines the properties.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-8-5_one-prop">
+        <statement>
+          <p>
+            There are <var width="10" /> functions that satisfy <m>P_1</m> and <var width="10" /> functions that satisfy <m>P_3</m>.
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition number="65536">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string="4^8">
+              <feedback>
+                <p>
+                  Please use a calculator to find the value of your answer and enter that.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+          <var>
+            <condition number="65536">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string="4^8">
+              <feedback>
+                <p>
+                  Please use a calculator to find the value of your answer and enter that.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-8-5_two-prop">
+        <statement>
+          <p>
+            There are <var width="10" /> functions that satisfy both <m>P_1</m> and <m>P_3</m> (at the same time).
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition number="6561">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string="3^8">
+              <feedback>
+                <p>
+                  Please use a calculator to find the value of your answer and enter that.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-8-5_two-prop-2-5">
+        <statement>
+          <p>
+            There are <var width="10" /> functions that satisfy both <m>P_2</m> and <m>P_5</m> (at the same time).
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition number="6561">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string="3^8">
+              <feedback>
+                <p>
+                  Please use a calculator to find the value of your answer and enter that.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-8-5_three-prop">
+        <statement>
+          <p>
+            Let <m>S\subseteq [5]</m> with <m>|S| = 3</m>. (That is, <m>S</m> is a set of three elements.) There are <var width="10" /> functions that satisfy all the properties with subscripts in <m>S</m> (at the same time).
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition number="256">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string="2^8">
+              <feedback>
+                <p>
+                  Please use a calculator to find the value of your answer and enter that.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-8-5_conclusion">
+        <statement>
+          <p>
+            Using the inclusion-exclusion formula and an online calculator such as <url href="https://www.desmos.com/" visual="desmos.com">Desmos</url>, we can determine that the number of surjections from <m>[8]</m> to <m>[5]</m> is <var width="10" />
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition number="126000">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition number="331395">
+              <feedback>
+                <p>
+                  You're on the right track, but you seem to have not accounted for the number of <m>2</m>-element sets, the number of <m>3</m>-element sets, etc. in your computation.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+
+    </activity>
+    <activity label="act_inclusion-exclusion_surjections-formula">
+      <introduction>
+        <p>
+          Let's first focus on the case of counting surjections from <m>[n]</m> to <m>[m]</m> with <m>n\gt m</m>. Your answers to the previous activity will be a good guide, as the <q>eightness</q> of <m>8</m> and the <q>fiveness</q> of <m>5</m> weren't critical.
+        </p>
+      </introduction>
+      <task label="act_inclusion-exclusion_surjections-formula-properties">
+        <statement>
+          <p>
+            The set <m>\mathcal{P}</m> contains <var width="10" /> properties.
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="m">
+              <feedback>
+                <p>
+                  Correct! There is one property in <m>\mathcal{P}</m> for each element of the set the function maps to, which is <m>[m]</m> in this case.
+                </p>
+              </feedback>
+            </condition>
+            <condition number="n">
+              <feedback>
+                <p>
+                  Try again. Think about which of the sets involved determines the properties.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-formula_one-prop">
+        <statement>
+          <p>
+            There are <var width="10" /> functions that satisfy <m>P_1</m> and <var width="10" /> functions that satisfy <m>P_3</m>.
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="(m-1)^n">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+          <var>
+            <condition number="(m-1)^n">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-formula_two-prop">
+        <statement>
+          <p>
+            There are <var width="10" /> functions that satisfy both <m>P_1</m> and <m>P_3</m> (at the same time).
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="(m-2)^n">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-formula_four-prop">
+        <statement>
+          <p>
+            Let <m>S\subseteq [m]</m> with <m>|S| = 4</m>. (That is, <m>S</m> is a set of four elements.) There are <var width="10" /> functions that satisfy all the properties with subscripts in <m>S</m> (at the same time).
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="(m-4)^n">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-formula_j-prop">
+        <statement>
+          <p>
+            Let <m>S\subseteq [m]</m> with <m>|S| = j</m>. (That is, <m>S</m> is a set of <m>j</m> elements.) There are <var width="10" /> functions that satisfy all the properties with subscripts in <m>S</m> (at the same time).
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="(m-j)^n">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-formula_j-subsets">
+        <statement>
+          <p>
+            Let <m>S\subseteq [m]</m> with <m>|S| = j</m>. (That is, <m>S</m> is a set of <m>j</m> elements.) There are <var width="10" /> subsets of <m>[m]</m> of size <m>j</m>.
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition string="C(m,j)">
+              <feedback>
+                <p>
+                  Correct! 
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect. Think about binomial coefficients from Chapter 2 and use the <m>C(n,k)</m> notation.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </task>
+      <task label="act_inclusion-exclusion_surjections-formula_conclusion">
+        <statement>
+          <p>
+            Using the inclusion-exclusion formula, we can determine that the formula for the number of surjections from <m>[n]</m> to <m>[m]</m> is given as a summation. Do your best to express that summation in the box below.
+          </p>
+        </statement>
+        <response />  
+      </task>
+    </activity>
+
+
+    <p>Returning to our lottery ticket distribution problem at the start of the section, we see that there are <m>S(15,4)=1016542800</m> ways for the grandfather to distribute his <m>15</m> lottery tickets so that each of the <m>4</m> grandchildren receives at least one ticket.
+    </p>
+</section>
