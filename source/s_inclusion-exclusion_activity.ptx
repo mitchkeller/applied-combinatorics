@@ -678,4 +678,31 @@
 
     <p>Returning to our lottery ticket distribution problem at the start of the section, we see that there are <m>S(15,4)=1016542800</m> ways for the grandfather to distribute his <m>15</m> lottery tickets so that each of the <m>4</m> grandchildren receives at least one ticket.
     </p>
+    <exercise label="true-false-exercise-with-tasks">
+      <title>True/False and Explain</title>
+      <introduction>
+          <p>Structured with task, we can have an introduction, but this does not migrate with the interactive portions.</p>
+      </introduction>
+
+      <task label="true-false-task">
+          <title>True/False</title>
+          <idx>vector space</idx>
+          <statement correct="no">
+              <p>Every vector space has finite dimension.</p>
+          </statement>
+          <feedback>
+              <p>The vector space of all polynomials with finite degree has a basis, <m>B = \{1,x,x^2,x^3,\dots\}</m>, which is infinte.</p>
+          </feedback>
+          <hint>
+              <p><m>P_n</m>, the vector space of polynomials with degree at most <m>n</m>, has dimension <m>n+1</m> by <xref ref="theorem-exponent-laws"/>.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter <m>n</m>?</p>
+          </hint>
+      </task>
+
+      <task label="short-answer-task">
+          <statement>
+              <p>Explain your reasoning in the previous question.</p>
+          </statement>
+          <response/>
+      </task>
+  </exercise>
 </section>
