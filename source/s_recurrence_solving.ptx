@@ -384,18 +384,18 @@
     </example>
   </subsection>
   <reading-questions xml:id="rqs-recurrence_solving">
-    <exercise label="rq-recurrence_solving-solve-plus-4" attachment="yes">
+    <exercise label="rq-recurrence_solving-solve-plus-4">
       <statement>
         <p>
-          Solve the advancement operator equation <m>(A+4)f(n) = 0</m> with the initial condition <m>f(0)=2</m>. In the box below, type your answer in the form <m>f(n) = \text{blah}</m> and then upload a photo or screenshot of your work that led to this as well.
+          Solve the advancement operator equation <m>(A+4)f(n) = 0</m> with the initial condition <m>f(0)=2</m>. In the box below, type your answer in the form <m>f(n) = \text{blah}</m> and briefly explain in couple of sentences how you arrived at this solution.
         </p>
       </statement>
       <response />
     </exercise>
-    <exercise label="rq-recurrence_solving-solve-plus-deg-two" attachment="yes">
+    <exercise label="rq-recurrence_solving-solve-plus-deg-two">
       <statement>
         <p>
-          Verify that for all constants <m>c_1</m> and <m>c_2</m> that the function <m>f(n) = c_1 3^n + c_2 (-4)^n</m> is a solution of <me>(A+4)(A-3)f(n) = 0</me>. In the box below write a sentence or two about why this makes sense in light of things you've already seen and then upload a photo or screenshot of your work to verify that this is a solution.
+          Let <m>c_1</m> and <m>c_2</m> be constants and define <m>f(n) = c_1 3^n + c_2 (-4)^n</m>. Compute <me>(A+4)(A-3)f(n)</me> in two steps: First, compute <m>(A-3)f(n)</m> and in the box below tell me what you get for this first step after simplifying. (Please do not put all your work in the box!) Second, take your answer from the first step and apply <m>(A-4)</m> to it. In the box below, tell me what you get for this second step after simplifying.
         </p>
       </statement>
       <response />
