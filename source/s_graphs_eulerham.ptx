@@ -183,7 +183,7 @@
 
   <theorem xml:id="thm_graphs_dirac">
     <statement>
-      <p>If <m>\bfG</m> is a graph on <m>n</m> vertices and each vertex in <m>\bfG</m> has at least <m>\lceil
+      <p>If <m>\bfG</m> is a graph on <m>n\geq 3</m> vertices and each vertex in <m>\bfG</m> has at least <m>\lceil
         \frac{n}{2}\rceil</m> neighbors, then <m>\bfG</m> is hamiltonian. </p>
     </statement>
 

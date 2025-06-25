@@ -94,7 +94,7 @@
           Then without loss of generality, there are vertices <m>x,y\in A</m> such that <m>xy\in E</m>.
           Since <m>x,y\in A</m>, <m>d(v_0,x)</m> and <m>d(v_0,y)</m> are both even. Let <me>
           v_0,x_1,x_2,\dots,x_n=x</me> and <me>v_0,y_1,y_2,\dots,y_m= y</me> be shortest paths from <m>
-          v_0</m> to <m>x</m> and <m>y</m>, respectively. If <m>x_1\neq y_j</m> for all <m>1\leq
+          v_0</m> to <m>x</m> and <m>y</m>, respectively. If <m>x_i\neq y_j</m> for all <m>1\leq
           i\leq n</m> and <m>1\leq j\leq m</m>, then since <m>m</m> and <m>n</m> are both even, <me>
           v_0,x_1,x_2,\dots,x_n=x,y=y_m,y_{m-1},\dots,y_2,y_1,v_0</me> is an odd cycle in <m>\bfG</m>,
           which is a contradiction. Thus, there must be <m>i,j</m> such that <m>x_i=y_j</m>, and we
