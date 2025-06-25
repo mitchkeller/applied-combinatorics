@@ -58,38 +58,38 @@
           Match each recurrence equation below with the correct classification.
         </p>
       </statement>
-      <matches>
-        <match order="3">
-          <premise><m>a_{n+1}a_{n} - 3n^2 = 0</m>
+      <cardsort>
+        <match>
+          <premise order="3"><m>a_{n+1}a_{n} - 3n^2 = 0</m>
           </premise>
           <response>nonlinear
           </response>
         </match>
-        <match order="1">
-          <premise><m>a_{n+3} - 2^n a_{n+1} + a_n = 0</m>
+        <match>
+          <premise order="1"><m>a_{n+3} - 2^n a_{n+1} + a_n = 0</m>
           </premise>
           <response>linear, homogeneous, nonconstant coefficients
           </response>
         </match>
-        <match order="5">
-          <premise><m>a_{n+5} + 3a_{n+3} - 5a_{n+1} + a_n = 0</m>
+        <match>
+          <premise order="5"><m>a_{n+5} + 3a_{n+3} - 5a_{n+1} + a_n = 0</m>
           </premise>
           <response>linear, homogeneous, constant coefficients
           </response>
         </match>
-        <match order="4">
-          <premise><m>a_{n+5} -5a_{n+4} + 3a_n = n^2</m>
+        <match>
+          <premise order="4"><m>a_{n+5} -5a_{n+4} + 3a_n = n^2</m>
           </premise>
           <response>linear, nonhomogeneous, constant coefficients
           </response>
         </match>
-        <match order="2">
-          <premise><m>a_{n+3} - 2n a_{n+1} + 5a_n = 3^n</m>
+        <match>
+          <premise order="2"><m>a_{n+3} - 2n a_{n+1} + 5a_n = 3^n</m>
           </premise>
           <response>linear, nonhomogeneous, nonconstant coefficients
           </response>
         </match>
-      </matches>
+      </cardsort>
     </exercise>
   </reading-questions>
 </section>

@@ -9,6 +9,7 @@
     <target name="html">
       <format>html</format>
       <source>source/main.ptx</source>
+      <!-- <stringparam key="author.deprecations.all" value="yes" /> -->
       <publication>publication/publication.ptx</publication>
       <output-dir>output/html</output-dir>
     </target>
