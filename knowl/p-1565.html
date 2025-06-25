@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">The first vertex after <span class="process-math">\(S\)</span> to be labeled was <span class="process-math">\(B\text{,}\)</span> so we now scan from <span class="process-math">\(B\text{.}\)</span> The (unlabeled) neighbors of <span class="process-math">\(B\)</span> to be considered, in order, are <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(C\text{,}\)</span> and <span class="process-math">\(D\text{.}\)</span> This results in the following labels:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig_networkflow_updated-flow.html">
+\begin{align*}
+A\amp:\quad(B,+,8)\\
+C\amp:\quad(B,+,8)\\
+D\amp:\quad(B,-,6)
+\end{align*}
+</div>
+<div class="para">The next vertex to be scanned is <span class="process-math">\(E\text{,}\)</span> but <span class="process-math">\(E\)</span> has no unlabeled neighbors, so we then move on to <span class="process-math">\(F\text{,}\)</span> which again has no unlabeled neighbors. Finally, we scan from <span class="process-math">\(A\text{,}\)</span> and using the pseudo-alphabetic order, we first consider the sink <span class="process-math">\(T\)</span> (which in this case is the only remaining unlabeled vertex). This results in the following label for <span class="process-math">\(T\text{.}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig_networkflow_updated-flow.html">
+\begin{equation*}
+T:\quad(A,+,8)
+\end{equation*}
+</div>
+<div class="para">Now that the sink is labeled, we know there is an augmenting path. We discover this path by backtracking. The sink <span class="process-math">\(T\)</span> got its label from <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(A\)</span> got its label from <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(B\)</span> got its label from <span class="process-math">\(S\text{.}\)</span>  Therefore, the augmenting path is <span class="process-math">\(P=(S,B,A,T)\)</span> with <span class="process-math">\(\delta=8\text{.}\)</span> All edges on this path are forward. The flow is then updated by increasing the flow on the edges of <span class="process-math">\(P\)</span> by <span class="process-math">\(8\text{.}\)</span> This results in the flow shown in <a href="" class="xref" data-knowl="./knowl/fig_networkflow_updated-flow.html" title="Figure 13.12">Figure 13.12</a>. The value of this flow is <span class="process-math">\(38\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_networkflow_example.html#p-1565" class="internal">in-context</a></span>
+</body>
+</html>

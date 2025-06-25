@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Let <span class="process-math">\(t\)</span> be an integer with <span class="process-math">\(t&gt;n\)</span> and consider the set <span class="process-math">\(\cgF\)</span> of all labeled graphs with vertex set <span class="process-math">\(\{1,2,\dots,t\}\text{.}\)</span> Clearly, there are <span class="process-math">\(2^{C(t,2)}\)</span> graphs in this family. Let <span class="process-math">\(\cgF_1\)</span> denote the subfamily consisting of those graphs which contain a complete subgraph of size <span class="process-math">\(n\text{.}\)</span> It is easy to see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\cgF_1|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}.
+\end{equation*}
+</div>
+<div class="para">Similarly, let <span class="process-math">\(\cgF_2\)</span> denote the subfamily consisting of those graphs which contain an independent set of size <span class="process-math">\(n\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\cgF_2|\le \binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">We want to take the integer <span class="process-math">\(t\)</span> as large as we can while still guaranteeing that <span class="process-math">\(|\cgF_1|+|\cgF_2|\le |\cgF|\text{.}\)</span> This will imply that there is a graph <span class="process-math">\(G\)</span> in <span class="process-math">\(\cgF\)</span> which does not contain a complete subgraph of size <span class="process-math">\(n\)</span> or an independent set of size <span class="process-math">\(n\text{.}\)</span> So consider the following inequality:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_rnn.html">
+\begin{equation}
+2\binom{t}{n}2^{n(t-n)}2^{C(t-n,2)}\lt 2^{C(t,2)}.\tag{11.4.1}
+\end{equation}
+</div>
+<div class="para">Now we ask how large can <span class="process-math">\(t\)</span> be without violating <a href="" class="xref" data-knowl="./knowl/eqn_rnn.html" title="Equation 11.4.1">inequality (11.4.1)</a>?  To answer this, we use the trivial inequality <span class="process-math">\(\binom{t}{n}\le t^n/n!\)</span> and the use the Stirling approximation for <span class="process-math">\(n!\text{.}\)</span> After some algebra and taking the <span class="process-math">\(n^{\text{th} }\)</span> root of both sides, we see that we need only guarantee that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_rnn.html">
+\begin{equation*}
+t\le \frac{n}{e\sqrt{n}}2^{\frac{1}{2}n}
+\end{equation*}
+</div>
+</div></article></body>
+</html>

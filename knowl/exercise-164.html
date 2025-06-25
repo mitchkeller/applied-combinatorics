@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">15<span class="period">.</span></span>
+</h3>
+<div class="para logical">
+<div class="para">Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for $<span class="process-math">\(0.95\)</span> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you’re not asked for the coefficient on <span class="process-math">\(x^n\text{.}\)</span>)</div>
+<ol class="lower-alpha">
+<li><div class="para">Use a generating function and computer algebra system to determine the number of ways Carlos could pay his $<span class="process-math">\(0.95\)</span> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)</div></li>
+<li><div class="para">Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the $<span class="process-math">\(0.95\)</span> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <span class="process-math">\(10=C(5,2)\)</span> ways to insert this combination. Use a generating function and computer algebra system to determine the number of ways that Carlos could pay the $<span class="process-math">\(0.95\)</span> toll when considering the order the coins are inserted.</div></li>
+</ol>
+</div> <pre class="ptx-sagecell sagecell-sage" id="sage-19"><script type="text/x-sage">f(x) = x # Generating function on right here
+f(x).series(x,n) # Replace n with suitable value
+</script></pre>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-10-hidden.html" title="Hint 8.8.15.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><span class="incontext"><a href="s_genfunction_exercises.html#exercise-164" class="internal">in-context</a></span>
+</body>
+</html>

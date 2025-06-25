@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">For the lower bound, consider the family <span class="process-math">\(\cgF\)</span> of all <span class="process-math">\(k\)</span> element subset of <span class="process-math">\([n]\)</span> that contain <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para">For the upper bound, let <span class="process-math">\(\cgF\)</span> be a family of subsets of <span class="process-math">\([n]\)</span> satisfying the two constraints. We show that <span class="process-math">\(|\cgF|\le\binom{n-1}{k-1}\text{.}\)</span>  To accomplish this, we consider a circle in the Euclidean plane with <span class="process-math">\(n\)</span> points <span class="process-math">\(p_1\text{,}\)</span> <span class="process-math">\(p_2,\dots,p_n\)</span> equally spaced points around its circumference. Then there are <span class="process-math">\(n!\)</span> different ways (one for each permutation <span class="process-math">\(\sigma\)</span> of <span class="process-math">\([n]\)</span>) to place the integers in <span class="process-math">\([n]\)</span> at the points in <span class="process-math">\(\{p_1,p_2,\dots,p_n\}\)</span> in one to one manner.</div> <div class="para">For each permutation <span class="process-math">\(\sigma\)</span> of <span class="process-math">\([n]\text{,}\)</span> let <span class="process-math">\(\cgF(\sigma)\)</span> denote the subfamily of <span class="process-math">\(\cgF\)</span> consisting of all sets <span class="process-math">\(S\)</span> from <span class="process-math">\(\cgF\)</span> whose elements occur in a consecutive block around the circle. Then let <span class="process-math">\(t=\sum_\sigma|\cgF(\sigma)|\text{.}\)</span>
+</div> <div class="para">Our first claim is that <span class="process-math">\(t\le kn!\text{.}\)</span> To prove this, let <span class="process-math">\(\sigma\)</span> be a permutation and suppose that <span class="process-math">\(|\cgF(\sigma)|=s \ge 1\text{.}\)</span> Then the union of the sets from <span class="process-math">\(\cgF(\sigma)\)</span> is a set of points that form a consecutive block of points on the circle. Note that since <span class="process-math">\(n\ge 2k\text{,}\)</span> this block does not encompass the entire circle. Accordingly there is a set <span class="process-math">\(S\)</span> whose elements are the first <span class="process-math">\(k\)</span> in a clockwise sense within this block.  Since each other set in <span class="process-math">\(\cgF\)</span> represents a clockwise shift of one of more positions, it follows immediately that <span class="process-math">\(|\cgF|\le k\text{.}\)</span> Since there are <span class="process-math">\(n!\)</span> permutations, the claim follows.</div> <div class="para">We now claim that for each set <span class="process-math">\(S\in\cgF\text{,}\)</span> there are exactly <span class="process-math">\(n k!(n-k)!\)</span> permutations <span class="process-math">\(\sigma\)</span> for which <span class="process-math">\(S\in\cgF(\sigma)\text{.}\)</span> Note that there are <span class="process-math">\(n\)</span> positions around the circle and each can be used as the first point in a block of <span class="process-math">\(k\)</span> consecutive positions in which the elements of <span class="process-math">\(S\)</span> can be placed. Then there are <span class="process-math">\(k!\)</span> ways to order the elements of <span class="process-math">\(S\)</span> and <span class="process-math">\((n-k)!\)</span> ways to order the remaining elements. This proves our claim.</div> <div class="para logical">
+<div class="para">To complete the proof of the theorem, we note that we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\cgF| n k! (n-k)!\le t\le k n!,
+\end{equation*}
+</div>
+<div class="para">and this implies that <span class="process-math">\(|\cgF|le\binom{n-1}{k-1}\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="s_kitchensink_extremal-set-theory.html#proof-52" class="internal">in-context</a></span>
+</body>
+</html>

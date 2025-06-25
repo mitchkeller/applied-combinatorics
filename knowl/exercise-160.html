@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11<span class="period">.</span></span>
+</h3>
+<div class="para">Using generating functions, find the number of ways to make change for a <span class="process-math">\(100\)</span> dollar bill using only dollar coins and $<span class="process-math">\(1\text{,}\)</span> $<span class="process-math">\(2\text{,}\)</span> and $<span class="process-math">\(5\)</span> bills.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-17"><script type="text/x-sage">f(x) = x # Generating function on right here
+pretty_print((f(x)).partial_fraction())
+</script></pre>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-9-hidden.html" title="Hint 8.8.11.1"><span class="type">Hint</span><span class="period">.</span></a></div></article><span class="incontext"><a href="s_genfunction_exercises.html#exercise-160" class="internal">in-context</a></span>
+</body>
+</html>

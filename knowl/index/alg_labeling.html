@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Algorithm</span><span class="space"> </span><span class="codenumber">13.11</span><span class="period">.</span><span class="space"> </span><span class="title">Ford-Fulkerson Labeling Algorithm.</span>
+</h3>
+<div class="para logical">
+<dl class="description-list">
+<dt>Labeling the Vertices<div class="autopermalink" data-description="Item: Labeling the Vertices"><a href="#alg_labeling-4-1-1-1" title="Copy heading and permalink for Item: Labeling the Vertices">🔗</a></div>
+</dt>
+<dd><div class="para">Vertices will be labeled with ordered triples of symbols.  Each time we start the labeling process, we begin by labeling the source with the triple <span class="process-math">\((*,+,\infty)\text{.}\)</span>  The rules by which we label vertices will be explicit.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt>Potential on a Labeled Vertex<div class="autopermalink" data-description="Item: Potential on a Labeled Vertex"><a href="#alg_labeling-4-1-1-2" title="Copy heading and permalink for Item: Potential on a Labeled Vertex">🔗</a></div>
+</dt>
+<dd><div class="para">Let <span class="process-math">\(u\)</span> be a labeled vertex.  The third coordinate of the label given to <span class="process-math">\(u\)</span> will be positive real number—although it may be infinite.  We call this quantity the <dfn class="terminology">potential</dfn> on <span class="process-math">\(u\)</span> and denote it by <span class="process-math">\(p(u)\text{.}\)</span> (The potential will serve as the amount that the flow can be updated by.) Note that the potential on the source is infinite.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt>First Labeled, First Scanned<div class="autopermalink" data-description="Item: First Labeled, First Scanned"><a href="#alg_labeling-4-1-1-3" title="Copy heading and permalink for Item: First Labeled, First Scanned">🔗</a></div>
+</dt>
+<dd><div class="para">The labeling algorithm involves a scan from a <em class="emphasis">labeled</em> vertex <span class="process-math">\(u\text{.}\)</span>  As the vertices are labeled, they determine another linear order.  The source will always be the first vertex in this order.  After that, the order in which vertices are labeled will change with time.  But the important rule is that we scan vertices in the order that they are labeled—until we label the sink.  If for example, the initial scan—always done from the source—results in labels being applied to vertices <span class="process-math">\(D\text{,}\)</span> <span class="process-math">\(G\)</span> and <span class="process-math">\(M\text{,}\)</span> then we next scan from vertex <span class="process-math">\(D\text{.}\)</span>  If that scan results in vertices <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(F\text{,}\)</span> and <span class="process-math">\(Q\)</span> being labeled, then we next scan from <span class="process-math">\(G\text{,}\)</span> as it was labeled before <span class="process-math">\(B\text{,}\)</span> even though <span class="process-math">\(B\)</span> precedes <span class="process-math">\(G\)</span> in the pseudo-alphabetic order.  This aspect of the algorithm results in a <em class="emphasis">breadth-first</em> search of the vertices looking for ways to label previously unlabeled vertices.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt>Never Relabel a Vertex<div class="autopermalink" data-description="Item: Never Relabel a Vertex"><a href="#alg_labeling-4-1-1-4" title="Copy heading and permalink for Item: Never Relabel a Vertex">🔗</a></div>
+</dt>
+<dd><div class="para">Once a vertex is labeled, we do not change its label.  We are content to label previously unlabeled vertices—up until the time where we label the sink.  Then, after updating the flow and increasing the value, all labels, except of course the special label on the source, are discarded and we start all over again.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt>Labeling Vertices Using Forward Edges<div class="autopermalink" data-description="Item: Labeling Vertices Using Forward Edges"><a href="#alg_labeling-4-1-1-5" title="Copy heading and permalink for Item: Labeling Vertices Using Forward Edges">🔗</a></div>
+</dt>
+<dd><div class="para">Suppose we are scanning from a labeled vertex <span class="process-math">\(u\)</span> with potential <span class="process-math">\(p(u)&gt;0\text{.}\)</span>  From <span class="process-math">\(u\text{,}\)</span> we consider the unlabeled neighbors of <span class="process-math">\(u\)</span> in pseudo-alphabetic order.  Now suppose that we are looking at a neighbor <span class="process-math">\(v\)</span> of <span class="process-math">\(u\)</span> with the edge <span class="process-math">\((u,v)\)</span> belonging to the network.  This means that the edge is directed from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\text{.}\)</span>  If <span class="process-math">\(e=(u,v)\)</span> is not full, then we label the vertex <span class="process-math">\(v\)</span> with the triple <span class="process-math">\((u,+,p(v))\)</span> where <span class="process-math">\(p(v)=\min\{p(u),c(e)-\phi(e)\}\text{.}\)</span> We use this definition since the flow cannot be increased by more than the prior potential or the spare capacity on <span class="process-math">\(e\text{.}\)</span> Note that the potential <span class="process-math">\(p(v)\)</span> is positive since <span class="process-math">\(a\)</span> is the minimum of two positive numbers.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt>Labeling Vertices Using Backward Edges<div class="autopermalink" data-description="Item: Labeling Vertices Using Backward Edges"><a href="#alg_labeling-4-1-1-6" title="Copy heading and permalink for Item: Labeling Vertices Using Backward Edges">🔗</a></div>
+</dt>
+<dd><div class="para">Now suppose that we are looking at a neighbor <span class="process-math">\(v\)</span> of <span class="process-math">\(u\)</span> with the edge <span class="process-math">\((v,u)\)</span> belonging to the network.  This means that the edge is directed from <span class="process-math">\(v\)</span> to <span class="process-math">\(u\text{.}\)</span>  If <span class="process-math">\(e=(v,u)\)</span> is used, then we label the vertex <span class="process-math">\(v\)</span> with the triple <span class="process-math">\((u,-,p(v))\)</span> where <span class="process-math">\(p(v)=\min\{p(u),\phi(e)\}\text{.}\)</span> Here <span class="process-math">\(p(v)\)</span> is defined this way since the flow on <span class="process-math">\(e\)</span> cannot be decreased by more than <span class="process-math">\(\phi(e)\)</span> or <span class="process-math">\(p(u)\text{.}\)</span>  Again, note that the potential <span class="process-math">\(p(v)\)</span> is positive since <span class="process-math">\(a\)</span> is the minimum of two positive numbers.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-6-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+<dt>What Happens When the Sink is Labeled?<div class="autopermalink" data-description="Item: What Happens When the Sink is Labeled?"><a href="#alg_labeling-4-1-1-7" title="Copy heading and permalink for Item: What Happens When the Sink is Labeled?">🔗</a></div>
+</dt>
+<dd>
+<div class="para">The labeling algorithm halts if the sink is ever labeled.  Note that we are always trying our best to label the sink, since in each scan the sink is the very first vertex to be considered.  Now suppose that the sink is labeled with the triple <span class="process-math">\((u,+,a)\text{.}\)</span>  Note that the second coordinate on the label must be <span class="process-math">\(+\)</span> since all edges incident with the sink are oriented towards the sink.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-7-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We claim that we can find an augmenting path <span class="process-math">\(P\)</span> which results in an increased flow with <span class="process-math">\(\delta=a\text{,}\)</span> the potential on the sink.  To see this, we merely back-track.  The sink <span class="process-math">\(T\)</span> got its label from <span class="process-math">\(u=u_1\text{,}\)</span> <span class="process-math">\(u_1\)</span> got its label from <span class="process-math">\(u_2\text{,}\)</span> and so forth.  Eventually, we discover a vertex <span class="process-math">\(u_m\)</span> which got its label from the source.  The augmenting path is then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P=(S,u_m,u_{m-1},\dots,u_1,T).
+\end{equation*}
+</div>
+<div class="para">The value of <span class="process-math">\(\delta\)</span> for this path is the potential <span class="process-math">\(p(T)\)</span> on the sink since we’ve carefully ensured that <span class="process-math">\(p(u_m)\geq p(u_{m-1})\geq\cdots\geq p(u_1)\geq p(T)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-7-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt>And if the Sink is Not Labeled?<div class="autopermalink" data-description="Item: And if the Sink is Not Labeled?"><a href="#alg_labeling-4-1-1-8" title="Copy heading and permalink for Item: And if the Sink is Not Labeled?">🔗</a></div>
+</dt>
+<dd><div class="para">On the other hand, suppose we have scanned from every labeled vertex and there are still unlabeled vertices remaining, one of which is the sink.  Now we claim victory.  To see that we have won, we simply observe that if <span class="process-math">\(L\)</span> is the set of labeled vertices, and <span class="process-math">\(U\)</span> is the set of unlabeled vertices, then every edge <span class="process-math">\(e=(x,y)\)</span> with <span class="process-math">\(x\in L\)</span> and <span class="process-math">\(y\in U\)</span> is full, i.e., <span class="process-math">\(\phi(e)=c(e)\text{.}\)</span>  If this were not the case, then <span class="process-math">\(y\)</span> would qualify for a label with <span class="process-math">\(x\)</span> as the first coordinate.  Also, note that <span class="process-math">\(\phi(y,x)=0\)</span> for every edge <span class="process-math">\(e\)</span> with <span class="process-math">\(x\in L\)</span> and <span class="process-math">\(y\in U\text{.}\)</span>  Regardless, we see that the capacity of the cut <span class="process-math">\(V=L\cup U\)</span> is exactly equal to the value of the current flow, so we have both a maximum flow and minimum cut providing a certificate of optimality.<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1-1-8-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#alg_labeling-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Algorithm 13.11: Ford-Fulkerson Labeling Algorithm"><a href="#alg_labeling" title="Copy heading and permalink for Algorithm 13.11: Ford-Fulkerson Labeling Algorithm">🔗</a></div></article><span class="incontext"><a class="internal" href="s_networkflow_labeling-algorithm.html#alg_labeling">in-context</a></span>
+</body>
+</html>

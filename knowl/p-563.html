@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Taken by itself, Euler’s formula doesn’t seem that useful, since it requires counting the number of faces in a planar embedding. However, we can use this formula to get a quick way to determine that a graph is not planar. Consider a drawing without edge crossings of a graph on <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(m\)</span> edges, with <span class="process-math">\(n\ge3\text{.}\)</span>  We consider pairs <span class="process-math">\((e,F)\)</span> where <span class="process-math">\(e\)</span> is an edge of <span class="process-math">\(\bfG\)</span> and <span class="process-math">\(F\)</span> is a face that has <span class="process-math">\(e\)</span> as part of its boundary. How many such pairs are there? Let’s call the number of pairs <span class="process-math">\(p\text{.}\)</span> Each edge can bound either one or two faces, so we have that <span class="process-math">\(p\leq 2m\text{.}\)</span> We can also bound <span class="process-math">\(p\)</span> by counting the number of pairs in which a face <span class="process-math">\(F\)</span> appears. Each face is bounded by at least <span class="process-math">\(3\)</span> edges, so it appears in at least <span class="process-math">\(3\)</span> pairs, and so <span class="process-math">\(p\geq 3f\text{.}\)</span> Thus <span class="process-math">\(3f\leq 2m\)</span> or <span class="process-math">\(f\leq 2m/3\text{.}\)</span> Now, utilizing Euler’s formula, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m = n+f-2 \leq n + \frac{2m}{3} - 2 \iff \frac{m}{3} \leq n-2.
+\end{equation*}
+</div>
+<div class="para">Thus, we’ve proven the following theorem.</div>
+</div>
+<span class="incontext"><a href="s_graphs_planar.html#p-563" class="internal">in-context</a></span>
+</body>
+</html>

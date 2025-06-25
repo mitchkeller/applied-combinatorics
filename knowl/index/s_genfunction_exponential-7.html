@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.19</span><span class="period">.</span>
+</h3>
+<div class="para">How many ternary strings of length <span class="process-math">\(n\)</span> have at least one <span class="process-math">\(0\)</span> and at least one <span class="process-math">\(1\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_exponential-7-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">To ensure that a symbol appears at least once, we need the following exponential generating function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x+\frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=1}^\infty
+\frac{x^n}{n!}.
+\end{equation*}
+</div>
+<div class="para">You should notice that this is almost the series for <span class="process-math">\(e^x\text{,}\)</span> except it’s missing the first term. Thus, <span class="process-math">\(\sum_{n=1}^\infty x^n/n! = e^x-1\text{.}\)</span> Using this, we now have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(e^x-1)(e^x-1)e^x=e^{3x}-2e^{2x}+e^x
+\end{equation*}
+</div>
+<div class="para">as the exponential generating function for this problem. Finding the series expansion, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{3^nx^n}{n!} - 2\sum_{n=0}^\infty
+\frac{2^nx^n}{n!} + \sum_{n=0}^\infty \frac{x^n}{n!}.
+\end{equation*}
+</div>
+<div class="para">Now we can answer the question by reading off the coefficient on <span class="process-math">\(x^n/n!\text{,}\)</span> which is <span class="process-math">\(3^n
+- 2\cdot 2^n + 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_exponential-7-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.19.1"><a href="#s_genfunction_exponential-7-3" title="Copy heading and permalink for Solution 8.19.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 8.19"><a href="#s_genfunction_exponential-7" title="Copy heading and permalink for Example 8.19">🔗</a></div></article><span class="incontext"><a class="internal" href="s_genfunction_exponential.html#s_genfunction_exponential-7">in-context</a></span>
+</body>
+</html>

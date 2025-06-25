@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a set of <span class="process-math">\(n\)</span> elements. Suppose that we have two colors of paint, say red and blue, and we are going to choose a subset of <span class="process-math">\(k\)</span> elements to be painted red with the rest painted blue. Then the number of different ways this can be done is just the binomial coefficient <span class="process-math">\(\binom{n}{k}\text{.}\)</span> Now suppose that we have three different colors, say red, blue, and green. We will choose <span class="process-math">\(k_1\)</span> to be colored red, <span class="process-math">\(k_2\)</span> to be colored blue, and the remaining <span class="process-math">\(k_3 = n - (k_1+k_2)\)</span> are to be colored green. We may compute the number of ways to do this by first choosing <span class="process-math">\(k_1\)</span> of the <span class="process-math">\(n\)</span> elements to paint red, then from the remaining <span class="process-math">\(n-k_1\)</span> elements choosing <span class="process-math">\(k_2\)</span> to paint blue, and then painting the remaining <span class="process-math">\(k_3\)</span> elements green. It is easy to see that the number of ways to do this is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k_1}\binom{n-k_1}{k_2} = \frac{n!}{k_1!(n-k_1)!}
+\frac{(n-k_1)!}{k_2!(n-(k_1+k_2))!} = \frac{n!}{k_1!k_2!k_3!}
+\end{equation*}
+</div>
+<div class="para">Numbers of this form are called <dfn class="terminology">multinomial coefficients</dfn>; they are an obvious generalization of the binomial coefficients. The general notation is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k_1,k_2,k_3,\dots,k_r}=\frac{n!}{k_1!k_2!k_3!\dots k_r!}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_strings_multinom-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="s_strings_multinom.html#s_strings_multinom-2">in-context</a></span>
+</body>
+</html>

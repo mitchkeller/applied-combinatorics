@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">The width of the poset <span class="process-math">\(\bftwo^t\)</span> is at least <span class="process-math">\(C(t,\lfloor\frac{t}{2}\rfloor)\)</span> since the set of all <span class="process-math">\(\lfloor\frac{t}{2}\rfloor\)</span>-element subsets of <span class="process-math">\(\{1,2,\dots,t\}\)</span> is an antichain. We now show that the width of <span class="process-math">\(\bftwo^t\)</span> is at most <span class="process-math">\(C(t,\lfloor\frac{t}{2}\rfloor)\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(w\)</span> be the width of <span class="process-math">\(\bftwo^t\)</span> and let <span class="process-math">\(\{S_1,S_2,\dots, S_w\}\)</span> be an antichain of size <span class="process-math">\(w\)</span> in this poset, i.e., each <span class="process-math">\(S_i\)</span> is a subset of <span class="process-math">\(\{1,2,\dots,t\}\)</span> and if <span class="process-math">\(1\le i\lt j\le w\text{,}\)</span> then <span class="process-math">\(S_i\nsubseteq S_j\)</span> and <span class="process-math">\(S_j\nsubseteq S_i\text{.}\)</span>
+</div> <div class="para">For each <span class="process-math">\(i\text{,}\)</span> consider the set <span class="process-math">\(\cgS_i\)</span> of all maximal chains which pass through <span class="process-math">\(S_i\text{.}\)</span> It is easy to see that if <span class="process-math">\(|S_i|=k_i\text{,}\)</span> then <span class="process-math">\(|\cgS_i|=k_i!(t-k_i)!\text{.}\)</span> This follows from the observation that to form such a maximum chain beginning with <span class="process-math">\(S_i\)</span> as an intermediate point, you delete the elements of <span class="process-math">\(S_i\)</span> one at a time to form the sets of the lower part of the chain. Also, to form the upper part of the chain, you add the elements not in <span class="process-math">\(S_i\)</span> one at a time.</div> <div class="para">Note further that if <span class="process-math">\(1\le i \lt j\le w\text{,}\)</span> then <span class="process-math">\(\cgS_i\cap \cgS_j =\emptyset\text{,}\)</span> for if there was a maximum chain belonging to both <span class="process-math">\(\cgS_i\)</span> and <span class="process-math">\(\cgS_j\text{,}\)</span> then it would imply that one of <span class="process-math">\(S_i\)</span> and <span class="process-math">\(S_j\)</span> is a subset of the other.</div> <div class="para logical">
+<div class="para">Altogether, there are exactly <span class="process-math">\(t!\)</span> maximum chains in <span class="process-math">\(\bftwo^t\text{.}\)</span> This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^{w} k_i!(t-k_i)!\le t!\text{.}
+\end{equation*}
+</div>
+<div class="para">This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^{w}\frac{k_i!(t-k_i)!}{t!}=
+\sum_{i=1}^{w}\frac{1}{\binom{t}{k_i}}\le 1.
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^{i=w}\frac{1}{\binom{t}{\lceil\frac{t}{2}\rceil}}\le 1\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w\le \binom{t}{\lceil\frac{t}{2}\rceil}\text{.}
+\end{equation*}
+</div>
+</div></article></body>
+</html>

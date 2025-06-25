@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(a_{n}\)</span> count the number of binary strings of length <span class="process-math">\(n\)</span> in which no two consecutive characters are <span class="process-math">\(1\)</span>’s. Evidently, <span class="process-math">\(a_1=2\)</span> since both binary strings of length <span class="process-math">\(1\)</span> are “good.” Also, <span class="process-math">\(a_2=3\)</span> since only one of the four binary strings of length <span class="process-math">\(2\)</span> is “bad,”, namely <span class="process-math">\((1,1)\text{.}\)</span> And <span class="process-math">\(a_3= 5\text{,}\)</span> since of the <span class="process-math">\(8\)</span> binary strings of length <span class="process-math">\(3\text{,}\)</span> the following three strings are “bad”:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(1,1,0), (0,1,1), (1,1,1).
+\end{equation*}
+</div>
+<div class="para">More generally, it is easy to see that the sequence satisfies the recurrence <span class="process-math">\(a_{n+2} = a_{n+1}+a_n\text{,}\)</span> since we can partition the set of all “good” strings into two sets, those ending in <span class="process-math">\(0\)</span> and those ending in <span class="process-math">\(1\text{.}\)</span> If the last bit is <span class="process-math">\(0\text{,}\)</span> then in the first <span class="process-math">\(n+1\)</span> positions, we can have any “good” string of length <span class="process-math">\(n+1\text{.}\)</span> However, if the last bit is <span class="process-math">\(1\text{,}\)</span> then the preceding bit must be <span class="process-math">\(0\text{,}\)</span> and then in the first <span class="process-math">\(n\)</span> positions we can have any “good” string of length <span class="process-math">\(n\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_recurrence_intro.html#p-1109" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h4 class="heading">
+<span class="type">Algorithm</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Prim’s Algorithm.</span>
+</h4>
+<div class="para logical"><dl class="description-list">
+<dt>Initialization.</dt>
+<dd><div class="para">Set <span class="process-math">\(W=\{r\}\)</span> and <span class="process-math">\(S=\emptyset\text{.}\)</span>
+</div></dd>
+<dt>Inductive Step.</dt>
+<dd><div class="para logical">
+<div class="para">While <span class="process-math">\(|W| \lt n\text{,}\)</span> let <span class="process-math">\(e\)</span> be an edge of minimum weight among all edges with one endpoint in <span class="process-math">\(W\)</span> and the other not in <span class="process-math">\(W\text{.}\)</span>  If <span class="process-math">\(e=xy\text{,}\)</span> <span class="process-math">\(x\in W\)</span> and <span class="process-math">\(y\not\in W\text{,}\)</span> update <span class="process-math">\(W\)</span> and <span class="process-math">\(S\)</span> by setting (using pseudo-code)</div>
+<div class="displaymath process-math">
+\begin{equation*}
+W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
+\end{equation*}
+</div>
+</div></dd>
+</dl></div></article><span class="incontext"><a href="s_graphalgorithms_min-wt-span.html#algorithm-2" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.13</span><span class="period">.</span>
+</h3>
+<div class="para">A graph <span class="process-math">\(\bfG\)</span> is eulerian if and only if it is connected and every vertex has even degree.<div class="autopermalink" data-description="Paragraph"><a href="#thm_eulerian-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.13"><a href="#thm_eulerian" title="Copy heading and permalink for Theorem 5.13">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para">Clearly, an eulerian graph must be connected. Also, if <span class="process-math">\((x_0,x_1,\dots,x_t)\)</span> is an eulerian circuit in <span class="process-math">\(\bfG\text{,}\)</span> then for each <span class="process-math">\(i=0,1,\dots,t-1\text{,}\)</span> we can view the edge <span class="process-math">\(x_ix_{i+1}\)</span> as exiting <span class="process-math">\(x_i\)</span> and entering <span class="process-math">\(x_{i+1}\text{.}\)</span> The degree of every vertex must be even, since for each vertex <span class="process-math">\(x\text{,}\)</span> the number of edges exiting <span class="process-math">\(x\)</span> equals the number of edges entering <span class="process-math">\(x\text{.}\)</span> Furthermore, each edge incident with <span class="process-math">\(x\)</span> either exits from <span class="process-math">\(x\)</span> or enters <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_eulerian-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">We now describe a deterministic process that will either (a) find an eulerian circuit, (b) show that the graph is disconnected, or (c) find a vertex of odd degree. The description is simplified by assuming that the vertices in <span class="process-math">\(\bfG\)</span> have been labelled with the positive integers <span class="process-math">\(1,2,\dots,n\text{,}\)</span> where <span class="process-math">\(n\)</span> is the number of vertices in <span class="process-math">\(\bfG\text{.}\)</span> Furthermore, we take <span class="process-math">\(x_0=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_eulerian-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">We launch our algorithm with a trivial circuit <span class="process-math">\(C\)</span> consisting of the vertex <span class="process-math">\(x_0=(1)\text{.}\)</span> Thereafter suppose that we have a partial circuit <span class="process-math">\(C\)</span> defined by <span class="process-math">\((x_0,
+x_1,\dots,x_t)\)</span> with <span class="process-math">\(x_0=x_t=1\text{.}\)</span> The edges of the form <span class="process-math">\(x_ix_{i+1}\)</span> have been <dfn class="terminology">traversed</dfn>, while the remaining edges in <span class="process-math">\(\bfG\)</span> (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.<div class="autopermalink" data-description="Paragraph"><a href="#thm_eulerian-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We then choose the least integer <span class="process-math">\(i\)</span> for which there is an edge incident with <span class="process-math">\(x_i\)</span> that has not already been traversed. If there is no such integer, since there are edges that have not yet been traversed, then we have discovered that the graph is disconnected. So we may assume that the integer <span class="process-math">\(i\)</span> exists. Set <span class="process-math">\(u_0=x_i\text{.}\)</span> We define a sequence <span class="process-math">\((u_0,u_1,\dots,u_s)\)</span> recursively. If <span class="process-math">\(j\ge 0\text{,}\)</span> set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N_j=\{y: u_jy\text{ is an edge in }\bfG\text{ and has not yet been traversed.} \}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(N_j\neq\emptyset\text{,}\)</span> we take <span class="process-math">\(u_{j+1}\)</span> as the least positive integer in <span class="process-math">\(N_j\text{.}\)</span> If <span class="process-math">\(N_j=\emptyset\text{,}\)</span> then <span class="process-math">\(j\ge1\)</span> and we take <span class="process-math">\(s=j\)</span> and halt this subroutine.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_eulerian-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">When the subroutine halts, we consider two cases. If <span class="process-math">\(u_0\neq u_s\text{,}\)</span> then <span class="process-math">\(u_0\)</span> and <span class="process-math">\(u_s\)</span> are vertices of odd degree in <span class="process-math">\(\bfG\text{.}\)</span> So we are left to consider the case where <span class="process-math">\(u_0=u_s=x_i\text{.}\)</span> In this case, we simply expand our original sequence <span class="process-math">\((x_0,x_1,\dots,x_t)\)</span> by replacing the integer <span class="process-math">\(x_i\)</span> by the sequence <span class="process-math">\((u_0,u_1,\dots,u_s)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_eulerian-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.13.1"><a href="#thm_eulerian-2" title="Copy heading and permalink for Proof 5.13.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_graphs_eulerham.html#thm_eulerian">in-context</a></span>
+</body>
+</html>

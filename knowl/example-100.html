@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.27</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Consider the following game. Nancy rolls a single die. She wins if she rolls a six. If she rolls any other number, she then rolls again and again until the first time that one of the following two situations occurs: (1) she rolls a six, which now this results in a loss or (2) she rolls the same number as she got on her first roll, which results in a win. As an example, here are some sequences of rolls that this game might take:</div>
+<ol class="decimal">
+<li><div class="para">
+<span class="process-math">\((4,2,3,5,1,1,1,4)\text{.}\)</span>  Nancy wins!</div></li>
+<li><div class="para">
+<span class="process-math">\((6)\text{.}\)</span>  Nancy wins!</div></li>
+<li><div class="para">
+<span class="process-math">\((5,2, 3,2,1,6)\text{.}\)</span> Nancy loses. Ouch.</div></li>
+</ol>
+</div> <div class="para">So what is the probability that Nancy will win this game?</div> <div class="para logical">
+<div class="para">Nancy can win with a six on the first roll. That has probability <span class="process-math">\(1/6\text{.}\)</span>  Then she might win on round <span class="process-math">\(n\)</span> where <span class="process-math">\(n\ge2\text{.}\)</span> To accomplish this, she has a <span class="process-math">\(5/6\)</span> chance of rolling a number other than six on the first roll; a <span class="process-math">\(4/6\)</span> chance of rolling something that avoids a win/loss decision on each of the rolls, <span class="process-math">\(2\)</span> through <span class="process-math">\(n-1\)</span> and then a <span class="process-math">\(1/6\)</span> chance of rolling the matching number on round <span class="process-math">\(n\text{.}\)</span>  So the probability of a win is given by:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{6}+\sum_{n\ge 2}\frac{5}{6}\left(\frac{4}{6}\right)^{n-2}\frac{1}{6} = \frac{7}{12}.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="s_probability_infinite-outcomes.html#example-100" class="internal">in-context</a></span>
+</body>
+</html>

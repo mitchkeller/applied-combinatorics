@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Suppose the theorem fails and let <span class="process-math">\(n\)</span> be the least positive integer for which there exists a graph <span class="process-math">\(\bfG\)</span> on <span class="process-math">\(n\)</span> vertices so that each vertex in <span class="process-math">\(\bfG\)</span> has at least <span class="process-math">\(\lceil n/2\rceil\)</span> neighbors, yet there is no hamiltonian cycle in <span class="process-math">\(\bfG\text{.}\)</span> Clearly, <span class="process-math">\(n\ge4\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Now let <span class="process-math">\(t\)</span> be the largest integer for which <span class="process-math">\(\bfG\)</span> has a path <span class="process-math">\(P=(x_1,x_2,\dots,x_t)\)</span> on <span class="process-math">\(t\)</span> vertices. Clearly all neighbors of both <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_t\)</span> appear on this path. By the pigeon hole principle, there is some integer <span class="process-math">\(i\)</span> with <span class="process-math">\(1\le i\lt t\)</span> so that <span class="process-math">\(x_1x_{i+1}\)</span> and <span class="process-math">\(x_{i}x_t\)</span> are edges in <span class="process-math">\(\bfG\text{.}\)</span> However, this implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=(x_1,x_2,x_3,\dots,x_i,x_t,x_{t-1},x_{t-2},\dots,x_{i+1})
+\end{equation*}
+</div>
+<div class="para">is a cycle of length <span class="process-math">\(t\)</span> in <span class="process-math">\(\bfG\text{.}\)</span> In turn, this requires <span class="process-math">\(\lceil n/2\rceil \lt t\lt n\text{.}\)</span> But if <span class="process-math">\(y\)</span> is any vertex not on the cycle, then <span class="process-math">\(y\)</span> must have a neighbor on <span class="process-math">\(C\text{,}\)</span> which implies that <span class="process-math">\(\bfG\)</span> has a path on <span class="process-math">\(t+1\)</span> vertices. The contradiction completes the proof.</div>
+</div></article></body>
+</html>

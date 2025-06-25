@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Our proof is by induction on <span class="process-math">\(n\text{.}\)</span> For <span class="process-math">\(n=2\text{,}\)</span> there is precisely one tree, which is isomorphic to <span class="process-math">\(\bfK_2\text{.}\)</span> Both vertices in this graph are leaves, so the proposition holds for <span class="process-math">\(n=2\text{.}\)</span> Now suppose that for some integer <span class="process-math">\(m\geq 2\text{,}\)</span> every tree on at most <span class="process-math">\(m\)</span> vertices has at least two leaves and let <span class="process-math">\(\bfT=(V,E)\)</span> be a tree on <span class="process-math">\(m+1\)</span> vertices.  Pick an edge <span class="process-math">\(e\in E\)</span> and form a new graph <span class="process-math">\(\bfT'=(V',E')\)</span> by deleting <span class="process-math">\(e\)</span> from <span class="process-math">\(\bfT\text{.}\)</span> That is, <span class="process-math">\(V'=V\)</span> and <span class="process-math">\(E'=E-\{e\}\text{.}\)</span> Now since <span class="process-math">\(\bfT'\)</span> does not contain a path from one endpoint of <span class="process-math">\(e\)</span> to its other endpoint, <span class="process-math">\(\bfT'\)</span> is not connected. However, deleting an edge cannot create a cycle, so <span class="process-math">\(\bfT'\)</span> is a forest. Furthermore, it has precisely two components, each of which is a tree with at most <span class="process-math">\(m\)</span> vertices. If each component has at least two vertices, then by induction, each has at least two leaves. In the worst case scenario, two of these leaves are the endpoints of <span class="process-math">\(e\text{,}\)</span> so at least two of the vertices are leaves in <span class="process-math">\(\bfT\text{,}\)</span> too. If each component of <span class="process-math">\(\bfT'\)</span> has only one vertex, then <span class="process-math">\(\bfT\cong \bfK_2\text{,}\)</span> which has two leaves. If exactly one of the components has only one vertex, then it must be a leaf in <span class="process-math">\(\bfT\text{.}\)</span> Thus, applying the inductive hypothesis to the other component ensures that there is a second leaf in <span class="process-math">\(\bfT\text{.}\)</span>
+</div>
+<span class="incontext"><a href="s_graphs_intro.html#p-494" class="internal">in-context</a></span>
+</body>
+</html>

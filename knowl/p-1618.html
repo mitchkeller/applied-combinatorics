@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Even once we see that the above process does in fact generate a chain partition, it is not immediately clear that it’s a minimum chain partition. For this, we need to find an antichain of as many points as there are chains in our partition. (In the example we’ve been using, we need to find a three-element antichain.) This is where tracking the labeled vertices comes in handy. Suppose we have determined a chain <span class="process-math">\(C=\{x_1\lt x_2\lt \cdots \lt x_k\}\)</span> using the network flow. Since <span class="process-math">\(x_1\)</span> is the minimal element of this chain, there is no flow into <span class="process-math">\(x_1''\)</span> and hence no flow out of <span class="process-math">\(x_1''\text{.}\)</span> Since <span class="process-math">\(T\)</span> is unlabeled, this must mean that <span class="process-math">\(x_1''\)</span> is unlabeled. Similarly, <span class="process-math">\(x_k\)</span> is the maximal element of <span class="process-math">\(C\text{,}\)</span> so there is no flow out of <span class="process-math">\(x_k'\text{.}\)</span> Thus, <span class="process-math">\(x_k'\)</span> is labeled. Now considering the sequence of vertices</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_k',x_k'',x_{k-1}',x_{k-1}'',\dots,x_2',x_2'',x_1',x_1'',
+\end{equation*}
+</div>
+<div class="para">there must be a place where the vertices switch from being labeled to unlabeled. This must happen with <span class="process-math">\(x_i'\)</span> labeled and <span class="process-math">\(x_i''\)</span> unlabeled. To see why, suppose that <span class="process-math">\(x_i'\)</span> and <span class="process-math">\(x_i''\)</span> are both unlabeled while <span class="process-math">\(x_{i+1}'\)</span> and <span class="process-math">\(x_{i+1}''\)</span> are both labeled. Because <span class="process-math">\(x_i\)</span> and <span class="process-math">\(x_{i+1}\)</span> are consecutive in <span class="process-math">\(C\text{,}\)</span> there is flow on <span class="process-math">\((x_i',x_{i+1}'')\text{.}\)</span> Therefore, when scanning from <span class="process-math">\(x_{i+1}''\text{,}\)</span> the vertex <span class="process-math">\(x_i'\)</span> would be labeled. For each chain of the chain partition, we then take the first element <span class="process-math">\(y\)</span> for which <span class="process-math">\(y'\)</span> is labeled and <span class="process-math">\(y''\)</span> is unlabeled to form an antichain <span class="process-math">\(A=\{y_1,\dots,y_w\}\text{.}\)</span> To see that <span class="process-math">\(A\)</span> is an antichain, notice that if <span class="process-math">\(y_i\lt y_j\text{,}\)</span> then <span class="process-math">\((y_i',y_j'')\)</span> is an edge in the network. Therefore, the scan from <span class="process-math">\(y_i'\)</span> would label <span class="process-math">\(y_j''\text{.}\)</span> Using this process, we find that a maximum antichain in our example is <span class="process-math">\(\{x_1,x_5,x_8\}\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_flowapplications_chain-partition.html#p-1618" class="internal">in-context</a></span>
+</body>
+</html>

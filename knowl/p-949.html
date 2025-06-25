@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">The invocation of partial fractions in <a href="" class="xref" data-knowl="./knowl/exa_genfunction_partial-fracs.html" title="Example 8.6">Example 8.6</a> is powerful, but solving the necessary system of equations and then hoping that the resulting formal power series have expansions we immediately recognize can be a challenge. If <a href="" class="xref" data-knowl="./knowl/exa_genfunction_partial-fracs.html" title="Example 8.6">Example 8.6</a> had not asked about the general case with <span class="process-math">\(n\)</span> on the right-hand side of the equation but instead asked specifically about <span class="process-math">\(n=30\text{,}\)</span> you might be wondering if it would just be faster to write some Python code to generate all the solutions or more interesting to huddle up and devise some clever strategy to count them. Fortunately, technology can help us out when working with generating functions. In SageMath, we can use the <code class="code-inline tex2jax_ignore">series()</code> method to get the power series expansion of a given function. The two arguments to <code class="code-inline tex2jax_ignore">series</code> are the variable and the degree of the terms you want to truncate. In the cell below, we ask SageMath to expand the generating function from <a href="" class="xref" data-knowl="./knowl/exa_genfunction_partial-fracs.html" title="Example 8.6">Example 8.6</a> by giving us all the terms of degree at most 30 and then collapsing the rest of the series into its form of big-Oh notation, which we discard by storing the output from <code class="code-inline tex2jax_ignore">series()</code> in a polynomial <code class="code-inline tex2jax_ignore">f(x)</code>.</div>
+<span class="incontext"><a href="s_genfunction_distributions.html#p-949" class="internal">in-context</a></span>
+</body>
+</html>

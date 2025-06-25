@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Here we have the repeated root problem that we mentioned a moment ago. We see immediately that <span class="process-math">\(f_1(n) = c_12^n\)</span> is a solution to this equation, but that can’t be all, as we mentioned earlier that we must have a <span class="process-math">\(2\)</span>-parameter family of solutions to such an equation. You might be tempted to try <span class="process-math">\(f_2(n) = c_2 2^n\)</span> and <span class="process-math">\(f(n) = f_1(n) + f_2(n)\text{,}\)</span> but then this is just <span class="process-math">\((c_1+c_2)2^n\text{,}\)</span> which is really just a single parameter, <span class="process-math">\(c=c_1+c_2\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">What can we do to resolve this conundrum? What if we tried <span class="process-math">\(f_2(n) = c_2 n2^n\text{?}\)</span> Again, if you’re familiar with differential equations, this would be the analogous thing to try, so let’s give it a shot. Let’s apply <span class="process-math">\((A-2)^2\)</span> to this <span class="process-math">\(f_2\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(A-2)^2 f_2(n) \amp = (A-2)(c_2(n+1)2^{n+1} - 2c_2 n2^n)\\
+\amp  = (A-2)(c_2 2^{n+1})\\
+\amp  = c_22^{n+2} - 2c_2 2^{n+1}\\
+\amp  = 0.
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(f_2\)</span> satisfies our advancement operator equation, we have that the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(n) = c_1 2^n + c_2 n2^n.
+\end{equation*}
+</div>
+</div>
+</div></body>
+</html>

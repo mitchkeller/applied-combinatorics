@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">The value of the current flow is <span class="process-math">\(172\text{.}\)</span> Applying the labeling algorithm using the pseudo-alphabetic order results in the following labels (reading down the columns):</div>
+<div class="displaymath process-math">
+\begin{align*}
+S:\amp\quad(*,+,\infty)\amp E:\amp\quad(I,-,3)\\
+C:\amp\quad(S,+,8)\amp G:\amp\quad(E,-,3)\\
+F:\amp\quad(S,+,23)\amp L:\amp\quad(E,+,3)\\
+H:\amp\quad(C,+,7)\amp B:\amp\quad(G,+,3)\\
+I:\amp\quad(H,+,7)\amp T:\amp\quad(L,+,3)
+\end{align*}
+</div>
+<div class="para">These labels result in the augmenting path <span class="process-math">\(P=(S,C,H,I,E,L,T)\)</span> with <span class="process-math">\(\delta =3\text{.}\)</span> After updating the flow and increasing its value to <span class="process-math">\(175\text{,}\)</span> the labeling algorithm halts with the following labels:</div>
+<div class="displaymath process-math">
+\begin{align*}
+S:\amp\quad(*,+,\infty)\amp H:\amp\quad(C,+,4)\\
+C:\amp\quad(S,+,5)\amp I:\amp\quad(H,+,4)\\
+F:\amp\quad(S,+,23)
+\end{align*}
+</div>
+<div class="para">Now we observe that the labeled and unlabeled vertices are <span class="process-math">\(L=\{S,C,F,H,I\}\)</span> and <span class="process-math">\(U=\{T,A,B,D,E,G,J,K\}\text{.}\)</span> Furthermore, the capacity of the cut <span class="process-math">\(V=L\cup U\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+41+8+23+8+13+29+28+25 = 175.
+\end{equation*}
+</div>
+<div class="para">This shows that we have found a cut whose capacity is exactly equal to the value of the current flow. In turn, this shows that the flow is optimal.</div>
+</div>
+<span class="incontext"><a href="s_networkflow_example.html#p-1569" class="internal">in-context</a></span>
+</body>
+</html>

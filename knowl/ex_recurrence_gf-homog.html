@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.24</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Consider the recurrence equation <span class="process-math">\(r_{n}+r_{n-1}-6r_{n-2} = 0\)</span> for the sequence <span class="process-math">\(\{r_n\colon n\geq 0\}\)</span> with <span class="process-math">\(r_0=1\)</span> and <span class="process-math">\(r_1=3\text{.}\)</span> This sequence has generating function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = \sum_{n=0}^\infty r_n x^n = r_0+r_1
+x+r_2x^2+r_3x^3+\cdots.
+\end{equation*}
+</div>
+<div class="para">Now consider for a moment what the function <span class="process-math">\(xf(x)\)</span> looks like. It has <span class="process-math">\(r_{n-1}\)</span> as the coefficient on <span class="process-math">\(x_n\text{.}\)</span> Similarly, in the function <span class="process-math">\(-6x^2 f(x)\text{,}\)</span> the coefficient on <span class="process-math">\(x^n\)</span> is <span class="process-math">\(-6r_{n-2}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">What is our point in all of this? Well, if we add them all up, notice what happens. The coefficient on <span class="process-math">\(x_n\)</span> becomes <span class="process-math">\(r_n+r_{n-1}-6r_{n-2}\text{,}\)</span> which is <span class="process-math">\(0\)</span> because of the recurrence equation! Now let’s see how this all lines up:</div>
+<div class="displaymath process-math">
+\begin{align*}
+f(x) \amp = r_0 + r_1 x + r_2x^2 + r_3 x^3 + \cdots + r_nx^n + \cdots\\
+xf(x) \amp = 0 + r_0 x + r_1x^2 + r_2 x^3 + \cdots r_{n-1}x^n + \cdots\\
+-6x^2f(x) \amp  = 0 + 0 -6r_0x^2 - 6r_1 x^3 + \cdots - 6r_{n-2}x^n + \cdots
+\end{align*}
+</div>
+<div class="para">When we add the left-hand side, we get <span class="process-math">\(f(x)(1+x-6x^2)\text{.}\)</span> On the right-hand side, the coefficient on <span class="process-math">\(x^n\)</span> for <span class="process-math">\(n\geq 2\)</span> is <span class="process-math">\(0\)</span> because of the recurrence equation. However, we are left with <span class="process-math">\(r_0 + (r_0+r_1)x = 1 + 4x\text{,}\)</span> using the initial conditions. Thus, we have the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)(1+x-6x^2)= 1+4x,
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(f(x) = (1+4x)/(1+x-6x^2)\text{.}\)</span> This is a generating function that we can attack using partial fractions in SageMath:</div>
+</div> <pre class="ptx-sagecell sagecell-sage" id="sage-20"><script type="text/x-sage">f(x) = (1+4*x)/(1+x-6*x^2)
+pretty_print(f(x).partial_fraction())
+</script></pre> <div class="para logical">
+<div class="para">This shows us that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) =
+\frac{6}{5}\frac{1}{1-2x}-\frac{1}{5}\frac{1}{1+3 x} =
+\frac{6}{5}\sum_{n=0}^\infty 2^n x^n -\frac{1}{5}
+\sum_{n=0}^\infty (-3)^n x^n \text{.}
+\end{equation*}
+</div>
+<div class="para">From here, we read off <span class="process-math">\(r_n\)</span> as the coefficient on <span class="process-math">\(x^n\)</span> and have <span class="process-math">\(r_n = (6/5) 2^n -(1/5)(-3)^n\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="s_recurrence_genfunction.html#ex_recurrence_gf-homog" class="internal">in-context</a></span>
+</body>
+</html>

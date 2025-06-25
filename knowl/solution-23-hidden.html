@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Before focusing on finding <em class="emphasis">all</em> solutions as we’ve been asked to do, let’s just try to find <em class="emphasis">some</em> solution. We start by noticing that here <span class="process-math">\(p(A) = A^2+A-6 = (A+3)(A-2)\text{.}\)</span> With <span class="process-math">\(p(A)\)</span> factored like this, we realize that we’ve already solved part of this problem in <a href="" class="xref" data-knowl="./knowl/ex_recurrence_adveq.html" title="Example 9.8">Example 9.8</a>!  In that example, the polynomial of <span class="process-math">\(A\)</span> we encountered was (while not explicitly stated as such there) <span class="process-math">\(A-2\text{.}\)</span> The solutions to <span class="process-math">\((A-2)f_1=0\)</span> are of the form <span class="process-math">\(f_1(n) = c_12^n\text{.}\)</span> What happens if we try such a function here? We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_recurrence_adveq.html ./knowl/ex_recurrence_adveq.html ./knowl/eqn_recurrence_deg2.html">
+\begin{equation*}
+(A+3)(A-2)f_1(n) = (A+3)0 = 0,
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(f_1\)</span> is a solution to our given advancement operator equation. Of course, it can’t be <em class="emphasis">all</em> of them. However, it’s not hard to see now that <span class="process-math">\((A+3)f_2 = 0\)</span> has as a solution <span class="process-math">\(f_2(n) = c_2(-3)^n\)</span> by the same reasoning that we used in <a href="" class="xref" data-knowl="./knowl/ex_recurrence_adveq.html" title="Example 9.8">Example 9.8</a>. Since <span class="process-math">\((A+3)(A-2) = (A-2)(A+3)\text{,}\)</span> we see right away that <span class="process-math">\(f_2\)</span> is also a solution of <a href="" class="xref" data-knowl="./knowl/eqn_recurrence_deg2.html" title="Equation 9.4.1">(9.4.1)</a>.</div>
+</div> <div class="para logical">
+<div class="para">Now we’ve got two infinite families of solutions to <a href="" class="xref" data-knowl="./knowl/eqn_recurrence_deg2.html" title="Equation 9.4.1">(9.4.1)</a>. Do they give us <em class="emphasis">all</em> the solutions? It turns out that by combining them, they do in fact give all of the solutions. Consider what happens if we take <span class="process-math">\(f(n) = c_1 2^n + c_2 (-3)^n\)</span> and apply <span class="process-math">\(p(A)\)</span> to it. We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_recurrence_deg2.html">
+\begin{align*}
+(A+3)(A-2)f(n) \amp  = (A+3)(c_1 2^{n+1} + c_2 (-3)^{n+1} - 2(c_12^n +
+c_2(-3)^n))\\
+\amp  = (A+3)(-5c_2(-3)^{n})\\
+\amp  = -5c_2(-3)^{n+1}-15c_2(-3)^n\\
+\amp  = 15c_2(-3)^n - 15c_2(-3)^n\\
+\amp =0.
+\end{align*}
+</div>
+</div> <div class="para">It’s not all that hard to see that since <span class="process-math">\(f\)</span> gives a two-parameter family of solutions to <a href="" class="xref" data-knowl="./knowl/eqn_recurrence_deg2.html" title="Equation 9.4.1">(9.4.1)</a>, it gives us all the solutions, as we will show in detail in <a href="s_recurrence_rigorous.html" class="internal" title="Section 9.5: Formalizing our approach to recurrence equations">Section 9.5</a>.</div>
+</div></body>
+</html>

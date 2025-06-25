@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">Before proceeding with the details of the argument, let’s pause to get the general idea behind the proof. We choose integers <span class="process-math">\(n\)</span> and <span class="process-math">\(s\)</span> with <span class="process-math">\(n&gt;s\text{,}\)</span> and it will eventually be clear how large they need to be in terms of <span class="process-math">\(g\)</span> and <span class="process-math">\(t\text{.}\)</span> We will then consider a random graph on vertex set <span class="process-math">\(\{1,2,\dots,n\}\text{,}\)</span> and just as before, for each <span class="process-math">\(i\)</span> and <span class="process-math">\(j\)</span> with <span class="process-math">\(1\le i\lt j\le n\text{,}\)</span> the probability that the pair <span class="process-math">\(ij\)</span> is an edge is <span class="process-math">\(p\text{,}\)</span> but now <span class="process-math">\(p\)</span> will depend on <span class="process-math">\(n\text{.}\)</span> Of course, the probability that any given pair is an edge is completely independent of all other pairs.</div> <div class="para">Our first goal is to choose the values of <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(s\)</span> and <span class="process-math">\(p\)</span> so that with high probability, a random graph does not have an independent set of size <span class="process-math">\(s\text{.}\)</span> You might think as a second goal, we would try to get a random graph without small cycles. But this goal is too restrictive. Instead, we just try to get a graph in which there are relatively few small cycles. In fact, we want the number of small cycles to be less than <span class="process-math">\(n/2\text{.}\)</span> Then we will remove one vertex from each small cycles, resulting in a graph with at least <span class="process-math">\(n/2\)</span> vertices, having no small cycles and no independent set of size <span class="process-math">\(s\text{.}\)</span> The chromatic number of this graph is at least <span class="process-math">\(n/2s\text{,}\)</span> so we will want to have the inequality <span class="process-math">\(n&gt;2st\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Now for some details. Let <span class="process-math">\(X_1\)</span> be the random variable that counts the number of <span class="process-math">\(s\)</span>-element independent sets. Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_markov.html">
+\begin{equation*}
+E(X_1)=\binom{n}{s}(1-p)^{C(s,2)}
+\end{equation*}
+</div>
+<div class="para">Now we want <span class="process-math">\(E(X_1)\lt 1/4\text{.}\)</span> Since <span class="process-math">\(C(n,s)\le n^s=e^{s\ln n}\)</span> and <span class="process-math">\((1-p)^{C(s,2)}\le e^{-ps^2/2}\text{,}\)</span> it suffices to set <span class="process-math">\(s=2\ln n/p\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm_markov.html" title="Theorem 10.20: Markov’s Inequality">Markov’s Inequality</a>, the probability that <span class="process-math">\(X_1\)</span> exceeds <span class="process-math">\(1/2\ge 2E(X_1)\)</span> is less than <span class="process-math">\(1/2\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Now let <span class="process-math">\(X_2\)</span> count the number of cycles in <span class="process-math">\(G\)</span> of size at most <span class="process-math">\(g\text{.}\)</span>  Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_markov.html">
+\begin{equation*}
+E(X_2)\le \sum_{i=3}^g n(n-1)(n-2)\dots(n-i+1) p^i\le g(pn)^g.
+\end{equation*}
+</div>
+<div class="para">Now, we want <span class="process-math">\(E(X_2)\le n/4\text{,}\)</span> and an easy calculation shows that <span class="process-math">\(g(np)^g\le n/4\)</span> when <span class="process-math">\(p=n^{1/g-1}/10\text{.}\)</span> Again by <a href="" class="xref" data-knowl="./knowl/thm_markov.html" title="Theorem 10.20: Markov’s Inequality">Markov’s Inequality</a>, the probability that <span class="process-math">\(X_2\)</span> exceeds <span class="process-math">\(n/2\ge 2E(X_2)\)</span> is less than <span class="process-math">\(1/2\text{.}\)</span>
+</div>
+</div> <div class="para">We conclude that there is a graph <span class="process-math">\(G\)</span> for which <span class="process-math">\(X_1=0\)</span> and <span class="process-math">\(X_2\le n/2\text{.}\)</span>  Remove a vertex from each of the small cycles in <span class="process-math">\(G\)</span> and let <span class="process-math">\(H\)</span> be the graph that remains. Clearly, <span class="process-math">\(H\)</span> has at least <span class="process-math">\(n/2\)</span> vertices, no cycle of size at most <span class="process-math">\(g\)</span> and no independent set of size <span class="process-math">\(s\text{.}\)</span>  Finally, the inequality <span class="process-math">\(n&gt;2st\)</span> requires <span class="process-math">\(n^{1/g}/(40\ln n)&gt;t\text{.}\)</span>
+</div></article><span class="incontext"><a href="s_ramsey_girth.html#proof-42" class="internal">in-context</a></span>
+</body>
+</html>

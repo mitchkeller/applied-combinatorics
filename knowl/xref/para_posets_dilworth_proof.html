@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Proof of Dilworth’s Theorem.</span></h3>
+<div class="para">The argument for Dilworth’s theorem is simplified by the following notation. When <span class="process-math">\(\PXP\)</span> is a poset and <span class="process-math">\(x\in X\text{,}\)</span> we let <span class="process-math">\(D(x)=\{y\in X:y\lt x \text{ in } P\}\text{;}\)</span> <span class="process-math">\(D[x]=\{y\in
+X:y\le x\text{ in } P\}\text{;}\)</span> <span class="process-math">\(U(x)=\{y\in X:y&gt;x \text{ in } P\}\text{;}\)</span> <span class="process-math">\(U[x]=\{y\in X:y\ge
+x\}\text{;}\)</span> and <span class="process-math">\(I(x)=\{y\in X-\{x\}:x\Vert y \text{ in } P\}\text{.}\)</span> When <span class="process-math">\(S\subseteq X\text{,}\)</span> we let <span class="process-math">\(D(S)= \{y\in X:y\lt x\)</span> in <span class="process-math">\(P\text{,}\)</span> for some <span class="process-math">\(x\in S\}\)</span> and <span class="process-math">\(D[S]=S\cup D(S)\text{.}\)</span> The subsets <span class="process-math">\(U(S)\)</span> and <span class="process-math">\(U[S]\)</span> are defined dually. We call <span class="process-math">\(D(x)\text{,}\)</span> <span class="process-math">\(D[x]\text{,}\)</span> <span class="process-math">\(D(S)\text{,}\)</span> and <span class="process-math">\(D[S]\)</span> <dfn class="terminology">down sets</dfn>, while <span class="process-math">\(U(x)\text{,}\)</span> <span class="process-math">\(U[x]\text{,}\)</span> <span class="process-math">\(U(S)\text{,}\)</span> and <span class="process-math">\(U[S]\)</span> are <dfn class="terminology">up sets</dfn>. Note that when <span class="process-math">\(A\)</span> is a maximal antichain in <span class="process-math">\(\bfP\text{,}\)</span> the ground set <span class="process-math">\(X\)</span> can be partitioned into pairwise disjoint sets as <span class="process-math">\(X=A\cup D(A)\cup U(A)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">We are now ready for the proof. Let <span class="process-math">\(\PXP\)</span> be a poset and let <span class="process-math">\(w\)</span> denote the width of <span class="process-math">\(\bfP\text{.}\)</span> As in <a href="s_posets_dilworth.html#thm_dualdilworth" class="xref" data-knowl="./knowl/xref/thm_dualdilworth.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.18: Dual of Dilworth’s Theorem">Theorem 6.18</a>, the Pigeon Hole Principle implies that we require at least <span class="process-math">\(w\)</span> chains in any chain partition of <span class="process-math">\(\bfP\text{.}\)</span> To prove that <span class="process-math">\(w\)</span> suffice, we proceed by induction on <span class="process-math">\(|X|\text{,}\)</span> the result being trivial if <span class="process-math">\(|X|=1\text{.}\)</span> Assume validity for all posets with <span class="process-math">\(|X|\le k\)</span> and suppose that <span class="process-math">\(\PXP\)</span> is a poset with <span class="process-math">\(|X|=k+1\text{.}\)</span> Without loss of generality, <span class="process-math">\(w&gt;1\text{;}\)</span> otherwise, the trivial partition <span class="process-math">\(X=C_1\)</span> satisfies the conclusion of the theorem. Furthermore, we observe that if <span class="process-math">\(C\)</span> is a (nonempty) chain in <span class="process-math">\((X,P)\text{,}\)</span> then we may assume that the subposet <span class="process-math">\((X-C,P(X-C))\)</span> also has width <span class="process-math">\(w\text{.}\)</span> To see this, observe that the theorem holds for the subposet, so that if <span class="process-math">\(\width(X-C,P(X-C))=w'\lt w\text{,}\)</span> then we can partition <span class="process-math">\(X-C\)</span> as <span class="process-math">\(X-C=C_1\cup
+C_2\cup\dots\cup C_{w'}\text{,}\)</span> so that <span class="process-math">\(X=C\cup C_1\cup\dots\cup C_{w'}\)</span> is a partition into <span class="process-math">\(w'+1\)</span> chains. Since <span class="process-math">\(w'\lt w\text{,}\)</span> we know <span class="process-math">\(w'+1\le w\text{,}\)</span> so we have a partition of <span class="process-math">\(X\)</span> into at most <span class="process-math">\(w\)</span> chains. Since any partition of <span class="process-math">\(X\)</span> into chains must use at least <span class="process-math">\(w\)</span> chains, this is exactly the partition we seek.<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Choose a maximal point <span class="process-math">\(x\)</span> and a minimal point <span class="process-math">\(y\)</span> with <span class="process-math">\(y\le x\)</span> in <span class="process-math">\(P\text{.}\)</span> Then let <span class="process-math">\(C\)</span> be the chain containing only the points <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> Note that <span class="process-math">\(C\)</span> contains either one or two elements depending on whether <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are distinct.<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Let <span class="process-math">\(Y=X-C\)</span> and <span class="process-math">\(Q=P(Y)\)</span> and let <span class="process-math">\(A\)</span> be a <span class="process-math">\(w\)</span>-element antichain in the subposet <span class="process-math">\((Y,Q)\text{.}\)</span> In the partition <span class="process-math">\(X=A\cup D(A)\cup U(A)\text{,}\)</span> the fact that <span class="process-math">\(y\)</span> is a minimal point while <span class="process-math">\(A\)</span> is a maximal antichain imply that <span class="process-math">\(y\in D(A)\text{.}\)</span> Similarly, <span class="process-math">\(x\in U(A)\text{.}\)</span> In particular, this shows that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are distinct.<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Label the elements of <span class="process-math">\(A\)</span> as <span class="process-math">\(\{a_1,a_2,\dots,a_w\}\text{.}\)</span> Note that <span class="process-math">\(U[A]\ne X\)</span> since <span class="process-math">\(y\notin U[A]\text{,}\)</span> and <span class="process-math">\(D[A]\ne X\)</span> since <span class="process-math">\(x\notin D[A]\text{.}\)</span> Therefore, we may apply the inductive hypothesis to the subposets of <span class="process-math">\(\bfP\)</span> determined by <span class="process-math">\(D[A]\)</span> and <span class="process-math">\(U[A]\text{,}\)</span> respectively, and partition each of these two subposets into <span class="process-math">\(w\)</span> chains:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U[A]= C_1\cup C_2\cup\dots\cup C_w\quad\text{and} \quad
+D[A]=D_1\cup D_2\cup\dots\cup D_w.
+\end{equation*}
+</div>
+<div class="para">Without loss of generality, we may assume these chains have been labeled so that <span class="process-math">\(a_i\in
+C_i\cap D_i\)</span> for each <span class="process-math">\(i=1,2,\dots,w\text{.}\)</span> However, this implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X=(C_1\cup D_1)\cup (C_2\cup D_2)\cup\dots\cup(C_w\cup D_w)
+\end{equation*}
+</div>
+<div class="para">is the desired partition which in turn completes the proof.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">In <a href="s_posets_dilworth.html#fig_width7" class="xref" data-knowl="./knowl/xref/fig_width7.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.21">Figure 6.21</a>, we illustrate Dilworth’s chain covering theorem for the poset first introduced in <a href="s_posets_intro.html#fig_17ptposet" class="xref" data-knowl="./knowl/xref/fig_17ptposet.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.5">Figure 6.5</a>. The darkened points form a <span class="process-math">\(7\)</span>-element antichain, while the labels provide a partition into <span class="process-math">\(7\)</span> chains.<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/width7.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.21<span class="period">.</span></span><span class="space"> </span>A Poset of Width 7<div class="autopermalink" data-description="Figure 6.21"><a href="#fig_width7" title="Copy heading and permalink for Figure 6.21">🔗</a></div></figcaption></figure><article class="remark remark-like"><h4 class="heading">
+<span class="type">Discussion</span><span class="space"> </span><span class="codenumber">6.22</span><span class="period">.</span>
+</h4>
+<div class="para">The ever alert Alice notes that the proof given above for Dilworth’s theorem does not seem to provide an efficient algorithm for finding the width <span class="process-math">\(w\)</span> of a poset, much less a partition of the poset into <span class="process-math">\(w\)</span> chains. Bob has yet to figure out why listing all the subsets of <span class="process-math">\(X\)</span> is a bad idea. Carlos is sitting quietly listening to their bickering, but finally, he says that a skilled programmer can devise an algorithm from the proof. Students are encouraged to discuss this dilemma—but rest assured that we will return to this issue later in the text.<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-9-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Discussion 6.22"><a href="#para_posets_dilworth_proof-9" title="Copy heading and permalink for Discussion 6.22">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Proof of Dilworth’s Theorem"><a href="#para_posets_dilworth_proof" title="Copy heading and permalink for Paragraphs: Proof of Dilworth’s Theorem">🔗</a></div></section><span class="incontext"><a class="internal" href="s_posets_dilworth.html#para_posets_dilworth_proof">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">16.14</span><span class="period">.</span><span class="space"> </span><span class="title">Lovász Local Lemma (Asymmetric).</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\cgF\)</span> be a finite family of events in a probability space and for each event <span class="process-math">\(E\in\cgF\text{,}\)</span> let <span class="process-math">\(\cgN(E)\)</span> denote a subfamily of events from <span class="process-math">\(\cgF-\{E\}\)</span> so that <span class="process-math">\(E\)</span> is independent of any event not in <span class="process-math">\(\cgN(E)\text{.}\)</span> Suppose that for each event <span class="process-math">\(E\in\cgF\text{,}\)</span> there is a real number <span class="process-math">\(x(E)\)</span> with <span class="process-math">\(0\lt x(E)\lt 1\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(E)\le x(E)\prod_{F\in\cgN(E)}(1-x(F)).
+\end{equation*}
+</div>
+<div class="para">Then for every non-empty subfamily <span class="process-math">\(\cgG\subseteq\cgF\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(\prod_{E\in\cgG}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)).
+\end{equation*}
+</div>
+<div class="para">In particular, the probability that all events in <span class="process-math">\(\cgF\)</span> fail is positive.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lem_LLL-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 16.14: Lovász Local Lemma (Asymmetric)"><a href="#lem_LLL" title="Copy heading and permalink for Lemma 16.14: Lovász Local Lemma (Asymmetric)">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We proceed by induction on <span class="process-math">\(\cgG\text{.}\)</span> If <span class="process-math">\(|\cgG|=1\)</span> and <span class="process-math">\(\cgG=\{E\}\text{,}\)</span> we are simply asserting that <span class="process-math">\(P(\overline{E})\ge 1-x(E)\text{,}\)</span> which is true since <span class="process-math">\(P(E)\le x(E)\text{.}\)</span> Now suppose that <span class="process-math">\(|\cgG|=k\ge2\)</span> and that the lemma holds whenever <span class="process-math">\(1\le |\cgG|\lt k\text{.}\)</span> Let <span class="process-math">\(\cgG =\{E_1,E_2,\dots,E_k\}\text{.}\)</span>  Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(\prod_{i\ge1}^k \overline{E_i})=P(\overline{E_1}|\prod_{i=2}^k\overline{E_i})
+P(\overline{E_2}|\prod_{i=3}^k\overline{E_i})P(E_3|\prod_{i=4}^k\overline{E_i})\dots
+\end{equation*}
+</div>
+<div class="para">Now each term in the product on the right has the following form:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(\overline{E}|\prod_{F\in\cgF_E}\overline{F})
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(|\cgF_E|\lt k\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lem_LLL-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">So, we done if we can show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(\overline{E}|\prod_{F\in\cgF_E}\overline{F})\ge 1- x(E)
+\end{equation*}
+</div>
+<div class="para">This is equivalent to showing that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(E|\prod_{F\in\cgF_E}\overline{F})\le x(E)
+\end{equation*}
+</div>
+<div class="para">Suppose first that <span class="process-math">\(\cgF_E\cap\cgN(E)=\emptyset\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(E|\prod_{F\in\cgF_E}\overline{F})=P(E)\le x(E).
+\end{equation*}
+</div>
+<div class="para">So we may assume that <span class="process-math">\(\cgF_E\cap\cgN(E)\neq\emptyset\text{.}\)</span> Let <span class="process-math">\(\cgF_E=\{F_1,F_2,F_r,F_{r+1},F_{r+2},\dots, F_t\}\text{,}\)</span> with <span class="process-math">\(F_i\in\cgN_E\)</span> if and only if <span class="process-math">\(r+1\le i\le t\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+PE|\prod_{F\in\cgF_E}\overline{F})=
+\frac{P(E\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F}|\prod_{F\in\cgF_E-\cgN(E)}\overline{F})}
+{P(\prod_{F\in\cgF_E\cap \cgN(E)}\overline{F})}
+\end{equation*}
+</div>
+<div class="para">Consider first the numerator in this last expression. Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(E\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F}|\prod_{F\in\cgF_E-\cgN(E)}\overline{F})\le
+P(E|\prod_{F\in\cgF_E\cap\cgN(E)}\overline{F})\le x(E)\prod_{F\in\cgF_E\cap\cgN(E)}(1-x(F))
+\end{equation*}
+</div>
+<div class="para">Next, consider the denominator. By the inductive hypothesis, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(\prod_F\in\cgF_E\cap\cgN(E)\overline{F}\ge \prod_{F\in\cgF_E\cap\cgN(E)}(1-x(F)).
+\end{equation*}
+</div>
+<div class="para">Combining these last two inequalities, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(E|\prod_{F\in\cgF_E}\overline{F})\le x(E)\prod_{\cgN(E)-\cgF_E}(1-x(F))\le x(E),
+\end{equation*}
+</div>
+<div class="para">and the proof is complete.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lem_LLL-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 16.14.1"><a href="#lem_LLL-4" title="Copy heading and permalink for Proof 16.14.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_kitchensink_lovasz-local.html#lem_LLL">in-context</a></span>
+</body>
+</html>

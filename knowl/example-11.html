@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
+</h3>
+<div class="para">Now suppose that the vertices are locations of branch banks in Atlanta and that the weights on an edge represents the cost, in millions of dollars, of building a high capacity data link between the branch banks at it two end points. In this model, if there is no edge between two branch banks, it means that the cost of building a data link between this particular pair is prohibitively high (here we might be tempted to say the cost is infinite, but the authors don’t admit to knowing the meaning of this word).</div> <div class="para">Our challenge is to decide which data links should be constructed to form a network in which any branch bank can communicate with any other branch. We assume that data can flow in either direction on a link, should it be built, and that data can be relayed through any number of data links. So to allow full communication, we should construct a <dfn class="terminology">spanning tree</dfn> in this network. In <a href="" class="xref" data-knowl="./knowl/fig_spantree-1.html" title="Figure 1.20">Figure 1.20</a>, we show a graph <span class="process-math">\(G\)</span> on the left and one of its many spanning trees on the right.</div> <figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/3012-fig19.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.20<span class="period">.</span></span><span class="space"> </span>A weighted graph and spanning tree</figcaption></figure> <div class="para logical">
+<div class="para">The weight of the spanning tree is the sum of the weights on the edges. In our model, this represents the costs, again in millions of dollars, of building the data links associated with the edges in the spanning tree. For the spanning tree shown in <a href="" class="xref" data-knowl="./knowl/fig_spantree-1.html" title="Figure 1.20">Figure 1.20</a>, this total is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig_spantree-1.html">
+\begin{equation*}
+12+25+19+18+23+19 = 116.
+\end{equation*}
+</div>
+<div class="para">Of all spanning trees, the bank would naturally like to find one having minimum weight.</div>
+</div> <div class="para">How many spanning trees does this graph have? For a large graph, say one with <span class="process-math">\(2875\)</span> vertices, does it make sense to find all spanning trees and simply take the one with minimum cost? In particular, for a positive integer <span class="process-math">\(n\text{,}\)</span> how many trees have vertex set <span class="process-math">\(\{1,2,3,\dots,n\}\text{?}\)</span>
+</div></article><span class="incontext"><a href="s_intro_opt.html#example-11" class="internal">in-context</a></span>
+</body>
+</html>

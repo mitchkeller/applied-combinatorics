@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para">Let’s see what Prim’s algorithm does on the weighted graph in <a href="" class="xref" data-knowl="./knowl/fig_graphalgorithms_spantreegraph.html" title="Figure 12.1">Figure 12.1</a>. We start with vertex <span class="process-math">\(a\)</span> as the root vertex. The lightest edge connecting <span class="process-math">\(a\)</span> (the only vertex in the tree so far) to the rest of the graph is <span class="process-math">\(ag\text{.}\)</span> Next, <span class="process-math">\(fg\)</span> is added. This is followed by <span class="process-math">\(fi\text{,}\)</span> <span class="process-math">\(fj\text{,}\)</span> <span class="process-math">\(bj\text{,}\)</span> and <span class="process-math">\(bc\text{.}\)</span> Next, the algorithm identifies <span class="process-math">\(ck\)</span> as the lightest edge connecting <span class="process-math">\(\{a,g,i,f,j,b,c\}\)</span> to the remaining vertices. Notice that this is considerably later than Kruskal’s algorithm finds the same edge. The algorithm then determines that <span class="process-math">\(al\)</span> and <span class="process-math">\(jd\text{,}\)</span> both of weight <span class="process-math">\(56\)</span> are the lightest edges connecting vertices in the tree to the other vertices. It picks arbitrarily, so let’s say it takes <span class="process-math">\(al\text{.}\)</span> It next finds <span class="process-math">\(dl\text{,}\)</span> then <span class="process-math">\(ek\text{,}\)</span> and then <span class="process-math">\(em\text{.}\)</span> The final edge added is <span class="process-math">\(ch\text{.}\)</span> The full list of edges added (in order) is shown to the right. The total weight of this spanning tree is <span class="process-math">\(504\text{.}\)</span> This (not surprisingly) the same weight we obtained using Kruskal’s algorithm. However, notice that the spanning tree found is different, as this one contains <span class="process-math">\(al\)</span> instead of <span class="process-math">\(dj\text{.}\)</span> This is not an issue, of course, since in both cases an arbitrary choice between two edges of equal weight was made.</div>
+<span class="incontext"><a href="s_graphalgorithms_min-wt-span.html#p-1449" class="internal">in-context</a></span>
+</body>
+</html>

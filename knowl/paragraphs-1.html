@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h4 class="heading"><span class="title">Step 1. Initialization.</span></h4> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\sigma\amp=(a)\amp\amp\\
+\delta(a)\amp=0; \amp P(a)\amp=(a)\\
+\delta(b) \amp=\infty; \amp P(b)\amp=(a,b)\\
+\delta(c) \amp=47; \amp P(c)\amp=(a,c)\\
+\delta(d) \amp=\infty; \amp P(d)\amp=(a,d)\\
+\delta(e) \amp=70; \amp P(e)\amp=(a,e)\\
+\delta(f) \amp=24; \amp P(f)\amp=(a,f)\\
+\delta(g) \amp=\infty; \amp P(g)\amp=(a,g)\\
+\delta(h) \amp=\infty; \amp P(h)\amp=(a,h)
+\end{align*}
+</div></div> <div class="para">Before finishing Step 1, the algorithm identifies vertex <span class="process-math">\(f\)</span> as closest to <span class="process-math">\(a\)</span> and appends it to <span class="process-math">\(\sigma\text{,}\)</span> making <span class="process-math">\(a\)</span> permanent. When entering Step 2, Dijkstra’s algorithm attempts to find shorter paths from <span class="process-math">\(a\)</span> to each of the temporary vertices by going through <span class="process-math">\(f\text{.}\)</span> We call this process “scanning from vertex <span class="process-math">\(f\text{.}\)</span>” In this scan, the path to vertex <span class="process-math">\(d\)</span> is updated, since <span class="process-math">\(\delta(f) + w(f,d)=24+120=144\lt \infty=w(a,d)\text{.}\)</span>
+</div></section><span class="incontext"><a href="s_graphalgorithms_shortest-paths.html#paragraphs-1" class="internal">in-context</a></span>
+</body>
+</html>

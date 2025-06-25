@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
+<div class="para">To ensure that a symbol appears at least once, we need the following exponential generating function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x+\frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=1}^\infty
+\frac{x^n}{n!}.
+\end{equation*}
+</div>
+<div class="para">You should notice that this is almost the series for <span class="process-math">\(e^x\text{,}\)</span> except it’s missing the first term. Thus, <span class="process-math">\(\sum_{n=1}^\infty x^n/n! = e^x-1\text{.}\)</span> Using this, we now have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(e^x-1)(e^x-1)e^x=e^{3x}-2e^{2x}+e^x
+\end{equation*}
+</div>
+<div class="para">as the exponential generating function for this problem. Finding the series expansion, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{3^nx^n}{n!} - 2\sum_{n=0}^\infty
+\frac{2^nx^n}{n!} + \sum_{n=0}^\infty \frac{x^n}{n!}.
+\end{equation*}
+</div>
+<div class="para">Now we can answer the question by reading off the coefficient on <span class="process-math">\(x^n/n!\text{,}\)</span> which is <span class="process-math">\(3^n - 2\cdot 2^n + 1\text{.}\)</span>
+</div>
+</div></div></body>
+</html>

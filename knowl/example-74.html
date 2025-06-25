@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.14</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Consider the advancement operator equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A+2)(A-6)f=3^n.
+\end{equation*}
+</div>
+<div class="para">Let’s try to find the general solution to this, since once we have that, we could find the specific solution corresponding to any given set of initial conditions.</div>
+</div> <div class="para logical">
+<div class="para">When dealing with nonhomogeneous equations, we proceed in two steps. The reason for this will be made clear in <a href="" class="xref" data-knowl="./knowl/lem_particular.html" title="Lemma 9.20">Lemma 9.20</a>, but let’s focus on the method for the moment. Our first step is to find the general solution of the homogeneous equation corresponding to the given nonhomogeneous equation. In this case, the homogeneous equation we want to solve is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_particular.html">
+\begin{equation*}
+(A+2)(A-6)f=0,
+\end{equation*}
+</div>
+<div class="para">for which by now you should be quite comfortable in rattling off a general solution of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_particular.html">
+\begin{equation*}
+f_1(n) = c_1 (-2)^n + c_2 6^n.
+\end{equation*}
+</div>
+</div> <div class="para">Now for the process of actually dealing with the nonhomogeneity of the advancement operator equation. It actually suffices to find <em class="emphasis">any</em> solution of the nonhomogeneous equation, which we will call a <dfn class="terminology">particular solution</dfn>. Once we have a particular solution <span class="process-math">\(f_0\)</span> to the equation, the general solution is simply <span class="process-math">\(f=f_0 + f_1\text{,}\)</span> where <span class="process-math">\(f_1\)</span> is the general solution to the homogeneous equation.</div> <div class="para logical">
+<div class="para">Finding a particular solution <span class="process-math">\(f_0\)</span> is a bit trickier than finding the general solution of the homogeneous equation. It’s something for which you can develop an intuition by solving lots of problems, but even with a good intuition for what to try, you’ll still likely find yourself having to try more than one thing on occasion in order to get a particular solution. What’s the best starting point for this intuition? It turns out that the best thing to try is usually (and not terribly surprisingly) something that looks a lot like the right hand side of the equation, but we will want to include one or more new constants to help us actually get a solution. Thus, here we try <span class="process-math">\(f_0(n) = d 3^n\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(A+2)(A-6)f_0(n) \amp = (A+2)(d3^{n+1}-6d3^n)\\
+\amp  = (A+2)(-d3^{n+1})\\
+\amp  = -d3^{n+2} -2d3^{n+1}\\
+\amp  = -5d 3^{n+1}.
+\end{align*}
+</div>
+<div class="para">We want <span class="process-math">\(f_0\)</span> to be a solution to the nonhomogeneous equation, meaning that <span class="process-math">\((A+2)(A-6)f_0 = 3^n\text{.}\)</span> This implies that we need to take <span class="process-math">\(d=-1/15\text{.}\)</span> Now, as we mentioned earlier, the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(n) = f_0(n) + f_1(n) = -\frac{1}{15}3^n + c_1 (-2)^n + c_2
+6^n.
+\end{equation*}
+</div>
+</div> <div class="para">We leave it to you to verify that this does satisfy the given equation.</div></article><span class="incontext"><a href="s_recurrence_solving.html#example-74" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Finding a particular solution <span class="process-math">\(f_0\)</span> is a bit trickier than finding the general solution of the homogeneous equation. It’s something for which you can develop an intuition by solving lots of problems, but even with a good intuition for what to try, you’ll still likely find yourself having to try more than one thing on occasion in order to get a particular solution. What’s the best starting point for this intuition? It turns out that the best thing to try is usually (and not terribly surprisingly) something that looks a lot like the right hand side of the equation, but we will want to include one or more new constants to help us actually get a solution. Thus, here we try <span class="process-math">\(f_0(n) = d 3^n\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(A+2)(A-6)f_0(n) \amp = (A+2)(d3^{n+1}-6d3^n)\\
+\amp  = (A+2)(-d3^{n+1})\\
+\amp  = -d3^{n+2} -2d3^{n+1}\\
+\amp  = -5d 3^{n+1}.
+\end{align*}
+</div>
+<div class="para">We want <span class="process-math">\(f_0\)</span> to be a solution to the nonhomogeneous equation, meaning that <span class="process-math">\((A+2)(A-6)f_0 = 3^n\text{.}\)</span> This implies that we need to take <span class="process-math">\(d=-1/15\text{.}\)</span> Now, as we mentioned earlier, the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(n) = f_0(n) + f_1(n) = -\frac{1}{15}3^n + c_1 (-2)^n + c_2
+6^n.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="s_recurrence_solving.html#p-1153" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical">
+<div class="para">Fix a non-negative integer <span class="process-math">\(k\text{.}\)</span> We then prove the formula by induction on <span class="process-math">\(n\text{.}\)</span> If <span class="process-math">\(n=k\text{,}\)</span> note that the left hand side is just <span class="process-math">\(\binom{k}{k}=1\text{,}\)</span> while the right hand side is <span class="process-math">\(\binom{k+1}{k+1}\)</span> which is also <span class="process-math">\(1\text{.}\)</span>  Now assume that <span class="process-math">\(m\)</span> is a non-negative integer, with <span class="process-math">\(m\ge k\text{,}\)</span> and that the formula holds when <span class="process-math">\(n=m\text{,}\)</span> i.e., assume that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}\\
+\amp =\binom{m+1}{k+1}+\binom{m+1}{k}\\
+\amp =\binom{m+2}{k+1}.
+\end{align*}
+</div>
+<div class="para">Therefore, the proposition follows by the Principle of Mathematical Induction.</div>
+</div></article><span class="incontext"><a href="s_induction_proofs.html#proof-9" class="internal">in-context</a></span>
+</body>
+</html>

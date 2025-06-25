@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h3 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.6.1</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Again, we want to look at the generating function we would have if each variable existed individually and take their product. For <span class="process-math">\(x_1\text{,}\)</span> we get a factor of <span class="process-math">\(1/(1-x^2)\text{;}\)</span> for <span class="process-math">\(x_2\text{,}\)</span> we have <span class="process-math">\(1/(1-x)\text{;}\)</span> and for <span class="process-math">\(x_3\)</span> our factor is <span class="process-math">\((1+x+x^2)\text{.}\)</span> Therefore, the generating function for the number of solutions to the equation above is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1+x+x^2}{(1-x)(1-x^2)} = \frac{1+x+x^2}{(1+x)(1-x)^2}.
+\end{equation*}
+</div>
+<div class="para">In calculus, when we wanted to integrate a rational function of this form, we would use the method of partial fractions to write it as a sum of “simpler” rational functions whose antiderivatives we recognized. Here, our technique is the same, as we can readily recognize the formal power series for many rational functions. Our goal is to write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1+x+x^2}{(1+x)(1-x)^2} = \frac{A}{1+x} + \frac{B}{1-x} +
+\frac{C}{(1-x)^2}
+\end{equation*}
+</div>
+<div class="para">for appropriate constants, <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{.}\)</span> To find the constants, we clear the denominators, giving</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1+x+x^2 = A(1-x)^2 + B(1-x^2) + C(1+x).
+\end{equation*}
+</div>
+<div class="para">Equating coefficients on terms of equal degree, we have:</div>
+<div class="displaymath process-math">
+\begin{align*}
+1 \amp = A+B+C\\
+1 \amp = -2A + C\\
+1 \amp = A - B
+\end{align*}
+</div>
+<div class="para">Solving the system, we find <span class="process-math">\(A=1/4\text{,}\)</span> <span class="process-math">\(B=-3/4\text{,}\)</span> and <span class="process-math">\(C=3/2\text{.}\)</span> Therefore, our generating function is</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp\frac{1}{4}\frac{1}{1+x} -\frac{3}{4} \frac{1}{1-x} +\frac{3}{2}
+\frac{1}{(1-x)^2}\\
+=\amp \frac{1}{4}\sum_{n=0}^\infty (-1)^n x^n -
+\frac{3}{4} \sum_{n=0}^\infty x^n + \frac{3}{2}\sum_{n=0}^\infty n
+x^{n-1}\text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">The solution to our question is thus the coefficient on <span class="process-math">\(x^n\)</span> in the above generating function, which is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{(-1)^n}{4} - \frac{3}{4} + \frac{3(n+1)}{2},
+\end{equation*}
+</div>
+<div class="para">a surprising answer that would not be too easy to come up with via other methods!</div>
+</div>
+</div>
+<span class="incontext"><a href="s_genfunction_distributions.html#solution-17" class="internal">in-context</a></span>
+</body>
+</html>

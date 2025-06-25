@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.24</span><span class="period">.</span><span class="space"> </span><span class="title">Chebyshev’s Inequality.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a random variable in a probability space <span class="process-math">\((S,P)\text{,}\)</span> and let <span class="process-math">\(k&gt;0\)</span> be a positive real number. If the expectation <span class="process-math">\(E(X)\)</span> of <span class="process-math">\(X\)</span> is <span class="process-math">\(\mu\)</span> and the standard deviation is <span class="process-math">\(\sigma_X\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\prob(|X- E(X)|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_chebyshev-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10.24: Chebyshev’s Inequality"><a href="#thm_chebyshev" title="Copy heading and permalink for Theorem 10.24: Chebyshev’s Inequality">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para">Let <span class="process-math">\(A=\{r\in \reals:|r-\mu|&gt;k\sigma_X\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_chebyshev-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Then we have:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\var(X) \amp = E((X-\mu)^2)\\
+\amp = \sum_{r\in \reals}(r-\mu)^2\prob(X=r)\\
+\amp \ge \sum_{r\in A}(r-\mu)^2\prob(X=r)\\
+\amp \ge k^2\sigma_X^2\sum_{r\in A}\prob(X=r)\\
+\amp \ge k^2\sigma_X^2\prob(|X-\mu|&gt;k\sigma_X).
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\var(X)=\sigma_X^2\text{,}\)</span> we may now deduce that <span class="process-math">\(1/k^2\geq \prob(|X-\mu|)&gt;k\sigma_X)\text{.}\)</span> Therefore, since <span class="process-math">\(\prob(|X-\mu|\le k\sigma_X)=1-\prob(|X-\mu|&gt; k\sigma_X)\text{,}\)</span> we conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\prob(|X- \mu|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_chebyshev-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 10.24.1"><a href="#thm_chebyshev-3" title="Copy heading and permalink for Proof 10.24.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_probability_central-tendency.html#thm_chebyshev">in-context</a></span>
+</body>
+</html>

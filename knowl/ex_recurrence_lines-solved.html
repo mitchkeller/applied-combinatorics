@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.16</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">We’re now ready to answer the question of how many regions are determined by <span class="process-math">\(n\)</span> lines in the plane in general position as we discussed in <a href="s_recurrence_intro.html#s_recurrence_intro_lines" class="internal" title="Subsection 9.1.3: Lines and regions in the plane">Subsection 9.1.3</a>. We have the recurrence equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/s_recurrence_intro_lines.html">
+\begin{equation*}
+r_{n+1} = r_n + n+1,
+\end{equation*}
+</div>
+<div class="para">which yields the nonhomogeneous advancement operator equation <span class="process-math">\((A-1)r = n+1\text{.}\)</span> As usual, we need to start with the general solution to the corresponding homogeneous equation. This solution is <span class="process-math">\(f_1(n) = c_1\text{.}\)</span> Now our temptation is to try <span class="process-math">\(f_0(n)=d_1n+d_2\)</span> as a particular solution. However since the constant term there is a solution to the homogeneous equation, we need a bit more. Let’s try increasing the powers of <span class="process-math">\(n\)</span> by <span class="process-math">\(1\text{,}\)</span> giving <span class="process-math">\(f_0(n) = d_1n^2 + d_2n\text{.}\)</span> Now we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/s_recurrence_intro_lines.html">
+\begin{align*}
+(A-1)(d_1n^2+d_2n) \amp  = d_1(n+1)^2+d_2(n+1) - d_1n^2 -d_2n\\
+\amp  = 2d_1n+d_1+d_2.
+\end{align*}
+</div>
+<div class="para">This tells us that we need <span class="process-math">\(d_1=1/2\)</span> and <span class="process-math">\(d_2=1/2\text{,}\)</span> giving <span class="process-math">\(f_0(n) = n^2/2 + n/2\text{.}\)</span> The general solution is then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/s_recurrence_intro_lines.html">
+\begin{equation*}
+f(n) = c_1 + \frac{n^2+n}{2}.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">What is our initial condition here? Well, one line divides the plane into two regions, so <span class="process-math">\(f(1) = 2\text{.}\)</span> On the other hand, <span class="process-math">\(f(1) = c_1 + 1\text{,}\)</span> so <span class="process-math">\(c_1=1\)</span> and thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(n) = 1 + \frac{n^2+n}{2} = \binom{n+1}{2} + 1
+\end{equation*}
+</div>
+<div class="para">is the number of regions into which the plane is divided by <span class="process-math">\(n\)</span> lines in general position.</div>
+</div></article><span class="incontext"><a href="s_recurrence_solving.html#ex_recurrence_lines-solved" class="internal">in-context</a></span>
+</body>
+</html>

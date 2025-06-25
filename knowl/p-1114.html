@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">What do all of the examples of the previous section have in common?  The end result that we were able to achieve is a <dfn class="terminology">linear recurrence</dfn>, which tells us how we can compute the <span class="process-math">\(n^\text{th}\)</span> term of a sequence given some number of previous values (and perhaps also depending nonrecursively on <span class="process-math">\(n\)</span> as well, as in the last example).  More precisely a recurrence equation is said to be <dfn class="terminology">linear</dfn> when it has the following form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_0a_{n+k}+ c_1a_{n+k-1} + c_2a_{n+k-2} + \dots+c_ka_{n} = g(n),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(k\ge1\)</span> is an integer, <span class="process-math">\(c_0,c_1,\dots,c_k\)</span> are constants with <span class="process-math">\(c_0,c_k\neq0\text{,}\)</span> and <span class="process-math">\(g:\ints\rightarrow\reals\)</span> is a function. (What we have just defined may more properly be called a linear recurrence equation with <dfn class="terminology">constant coefficients</dfn>, since we require the <span class="process-math">\(c_i\)</span> to be constants and prohibit them from depending on <span class="process-math">\(n\text{.}\)</span> We will avoid this additional descriptor, instead choosing to speak of linear recurrence equations with <dfn class="terminology">nonconstant coefficients</dfn> in case we allow the <span class="process-math">\(c_i\)</span> to be functions of <span class="process-math">\(n\text{.}\)</span>) A linear equation is <dfn class="terminology">homogeneous</dfn> if the function <span class="process-math">\(g(n)\)</span> on the right hand side is the zero function. For example, the Fibonacci sequence satisfies the homogeneous linear recurrence equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_{n+2} - a_{n+1} - a_n = 0.
+\end{equation*}
+</div>
+<div class="para">Note that in this example, <span class="process-math">\(k=2\text{,}\)</span> <span class="process-math">\(c_0=1\)</span> and <span class="process-math">\(c_k=-1\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_recurrence_linear.html#p-1114" class="internal">in-context</a></span>
+</body>
+</html>

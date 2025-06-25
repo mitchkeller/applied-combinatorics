@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.10</span><span class="period">.</span>
+</h4> <div class="para logical">
+<div class="para">Let’s revisit the problem of enumerating ternary strings of length <span class="process-math">\(n\)</span> that do have <span class="process-math">\((2,0)\)</span> occurring as a substring in two consecutive positions that we encountered in <a href="" class="xref" data-knowl="./knowl/ex_recurrence_ternary-strings-no-20.html" title="Example 9.4">Example 9.4</a>. There we saw that this number satisfies the recurrence equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_recurrence_ternary-strings-no-20.html">
+\begin{equation*}
+t_{n+2} = 3t_{n+1} - t_n,\qquad n\geq 1
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(t_1 = 3\)</span> and <span class="process-math">\(t_2=8\text{.}\)</span> Before endeavoring to solve this, let’s rewrite our recurrence equation as an advancement operator equation. This gives us</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_recurrence_ternary-strings-no-20.html">
+\begin{equation}
+p(A)t=(A^2-3A+1)t=0.\tag{9.4.2}
+\end{equation}
+</div>
+</div> <div class="para logical">
+<div class="para">The roots of <span class="process-math">\(p(A)\)</span> are <span class="process-math">\((3\pm\sqrt{5})/2\text{.}\)</span> Following the approach of the previous example, our general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_recurrence_ternary.html">
+\begin{equation*}
+t(n) = c_1\left(\frac{3+\sqrt{5}}{2}\right)^n +
+c_2\left(\frac{3-\sqrt{5}}{2}\right)^n.
+\end{equation*}
+</div>
+<div class="para">This probably looks suspicious; we’re <em class="emphasis">counting strings</em> here, so <span class="process-math">\(t(n)\)</span> needs to be a nonnegative integer, but the form we’ve given includes not just fractions but also square roots! You can mimic the verification we used in the previous example to see that this does satisfy <a href="" class="xref" data-knowl="./knowl/eqn_recurrence_ternary.html" title="Equation 9.4.2">(9.4.2)</a>. If that feels tedious, consider how you would use the binomial theorem to expand the terms in this expression for <span class="process-math">\(t(n)\text{.}\)</span> With appropriate values for <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{,}\)</span> it seems plausible that we could get rid of the square roots and fractions. Because we have initial values for <span class="process-math">\(t(n)\text{,}\)</span> we are able to solve for <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> here. Evaluating at <span class="process-math">\(n=0\)</span> and <span class="process-math">\(n=1\)</span> we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_recurrence_ternary.html">
+\begin{align*}
+3 \amp = c_1 + c_2\\
+8 \amp  = c_1\frac{3+\sqrt{5}}{2} + c_2 \frac{3-\sqrt{5}}{2}.
+\end{align*}
+</div>
+<div class="para">A little bit of computation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_recurrence_ternary.html">
+\begin{equation*}
+c_1 = \frac{7\sqrt{5}}{10} + \frac{3}{2} \quad\text{and} \quad c_2 =
+-\frac{7\sqrt{5}}{10} +\frac{3}{2}
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn_recurrence_ternary.html">
+\begin{equation*}
+t(n) = \left(\frac{7\sqrt{5}}{10} + \frac{3}{2}\right)
+\left(\frac{3+\sqrt{5}}{2}\right)^n+ \left(-\frac{7\sqrt{5}}{10}
++\frac{3}{2}\right) \left(\frac{3-\sqrt{5}}{2}\right)^n.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="s_recurrence_solving.html#ex_recurrence_ternary-strings-no-20-solved" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">For each <span class="process-math">\(v\in V\text{,}\)</span> let <span class="process-math">\(I(v)=[a_v,b_v]\)</span> be a closed interval of the real line so that <span class="process-math">\(uv\)</span> is an edge in <span class="process-math">\(\bfG\)</span> if and only if <span class="process-math">\(I(u)\cap I(v)\neq\emptyset\text{.}\)</span> Order the vertex set <span class="process-math">\(V\)</span> as <span class="process-math">\(\{v_1,v_2,\dots v_n\}\)</span> such that <span class="process-math">\(a_1\leq a_2\leq \cdots \leq a_n\text{.}\)</span> (Ties may be broken arbitrarily.) Apply the First Fit coloring algorithm to <span class="process-math">\(\bfG\)</span> with this ordering on <span class="process-math">\(V\text{.}\)</span> Now when the First Fit coloring algorithm colors <span class="process-math">\(v_i\text{,}\)</span> all of its neighbors have left end point at most <span class="process-math">\(a_i\text{.}\)</span> Since they are neighbors of <span class="process-math">\(v_i\text{,}\)</span> however, we know that their right endpoints are all at least <span class="process-math">\(a_i\text{.}\)</span> Thus, <span class="process-math">\(v_i\)</span> and its previously-colored neighbors form a clique. Hence, <span class="process-math">\(v_i\)</span> is adjacent to at most <span class="process-math">\(\omega(\bfG)-1\)</span> other vertices that have already been colored, so when the algorithm colors <span class="process-math">\(v_i\text{,}\)</span> there will be a color from <span class="process-math">\(\{1,2,\dots,\omega(\bfG)\}\)</span> not already in use on its neighbors. The algorithm will assign <span class="process-math">\(v_i\)</span> the smallest such color. Thus, we never need to use more than <span class="process-math">\(\omega(\bfG)\)</span> colors, so <span class="process-math">\(\chi(\bfG)=\omega(\bfG)\text{.}\)</span>
+</div></article></body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Another type of problem where we can readily see how such a technique is applicable is a generalization of the problem of enumerating integer solutions of equations. In <a href="ch_strings.html" class="internal" title="Chapter 2: Strings, Sets, and Binomial Coefficients">Chapter 2</a>, we discussed how to count the number of solutions to an equation such as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ch_strings.html">
+\begin{equation*}
+x_1 + x_2 + x_3 + x_4 = 100,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x_1&gt;0\text{,}\)</span> <span class="process-math">\(x_2, x_3 \geq 0\)</span> and <span class="process-math">\(2\leq x_4\leq 10\text{.}\)</span> However, we steered clear of the situation where we add the further restriction that <span class="process-math">\(x_3\leq 7\text{.}\)</span> The previous example suggests a way of approaching this modified problem.</div>
+</div> <div class="para logical">
+<div class="para">First, let’s set up the problem so that the lower bound on each variable is of the form <span class="process-math">\(x_i\geq 0\text{.}\)</span> This leads us to the revised problem of enumerating the integer solutions to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_1' + x_2 + x_3 + x_4' = 97
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(x_1',x_2,x_3,x_4'\geq 0\text{,}\)</span> <span class="process-math">\(x_3\leq 7\text{,}\)</span> and <span class="process-math">\(x_4'\leq 8\text{.}\)</span> (We’ll then have <span class="process-math">\(x_1 = x_1'+1\)</span> and <span class="process-math">\(x_4 = x_4' + 2\)</span> to get our desired solution.) To count the number of integer solutions to this equation with <span class="process-math">\(x_3\leq 7\)</span> and <span class="process-math">\(x_4'\leq 8\text{,}\)</span> we must exclude any solution in which <span class="process-math">\(x_3 \gt 7\)</span> <em class="emphasis">or</em> <span class="process-math">\(x_4' \gt 8\text{.}\)</span> There are <span class="process-math">\(C(92,3)\)</span> solutions with <span class="process-math">\(x_3 \gt 7\text{,}\)</span> and the number of solutions in which <span class="process-math">\(x_4'\gt 8\)</span> is <span class="process-math">\(C(91,3)\text{.}\)</span> At this point, it might be tempting to just subtract <span class="process-math">\(C(92,3)\)</span> and <span class="process-math">\(C(91,3)\)</span> from <span class="process-math">\(C(100,3)\text{,}\)</span> the total number of solutions with all variables nonnegative. However, care is required. If we did that, we would eliminate the solutions with both <span class="process-math">\(x_3\gt 7\)</span> <em class="emphasis">and</em> <span class="process-math">\(x_4'\gt 8\)</span> <em class="emphasis">twice</em>. To account for this, we notice that there are <span class="process-math">\(C(83,3)\)</span> solutions with both <span class="process-math">\(x_3\gt 7\)</span> and <span class="process-math">\(x_4'\gt 8\text{.}\)</span> If we add this number back in after subtracting, we’ve ensured that the solutions with both <span class="process-math">\(x_3\gt 7\)</span> and <span class="process-math">\(x_4'\gt 8\)</span> are not included in the total count and are not excluded more than once. Thus, the total number of solutions is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{100}{3} - \binom{92}{3} - \binom{91}{3} + \binom{83}{3} = 6516.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="s_inclusion-exclusion_intro.html#exa_inclusion-exclusion_int-solns" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.18</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Suppose we wish to find the number of ternary strings in which the number of <span class="process-math">\(0\)</span>s is even. (There are no restrictions on the number of <span class="process-math">\(1\)</span>s and <span class="process-math">\(2\)</span>s.) As with ordinary generating functions, we determine a generating function for each of the digits and multiply them. For <span class="process-math">\(1\)</span>s and <span class="process-math">\(2\)</span>s, since we may have any number of each of them, we introduce a factor of <span class="process-math">\(e^x\)</span> for each. For an even number of <span class="process-math">\(0\)</span>s, we need</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots =
+\sum_{n=0}^\infty \frac{x^{2n}}{(2n)!}.
+\end{equation*}
+</div>
+<div class="para">Unlike with ordinary generating functions, we cannot represent this series in a more compact form by simply substituting a function of <span class="process-math">\(x\)</span> into the series for <span class="process-math">\(e^y\text{.}\)</span> However, with a small amount of cleverness, we are able to achieve the desired result. To do this, first notice that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots =
+\sum_{n=0}^\infty \frac{(-1)^nx^n}{n!}.
+\end{equation*}
+</div>
+<div class="para">Thus, when we add the series for <span class="process-math">\(e^{-x}\)</span> to the series for <span class="process-math">\(e^x\)</span> all of the terms with odd powers of <span class="process-math">\(x\)</span> will cancel! We thus find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^x+e^{-x} = 2+2\frac{x^2}{2!} + 2\frac{x^4}{4!} + \cdots,
+\end{equation*}
+</div>
+<div class="para">which is exactly twice what we need. Therefore, the factor we introduce for <span class="process-math">\(0\)</span>s is <span class="process-math">\((e^x+e^{-x})/2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_exponential-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now we have an exponential generating function of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{e^x+e^{-x}}{2}e^x e^x = \frac{e^{3x} + e^x}{2} =
+\frac{1}{2}\left(\sum_{n=0}^\infty \frac{3^nx^n}{n!} +
+\sum_{n=0}^\infty \frac{x^n}{n!}\right).
+\end{equation*}
+</div>
+<div class="para">To find the number of ternary strings in which the number of <span class="process-math">\(0\)</span>s is even, we thus need to look at the coefficient on <span class="process-math">\(x^n/n!\)</span> in the series expansion. In doing this, we find that the number of ternary strings with an even number of <span class="process-math">\(0\)</span>s is <span class="process-math">\((3^n+1)/2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_exponential-5-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.18"><a href="#s_genfunction_exponential-5" title="Copy heading and permalink for Example 8.18">🔗</a></div></article><span class="incontext"><a class="internal" href="s_genfunction_exponential.html#s_genfunction_exponential-5">in-context</a></span>
+</body>
+</html>

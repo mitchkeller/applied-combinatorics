@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Partition the set of good strings of length <span class="process-math">\(n\)</span> into three parts, according to the last character. Good strings ending in <span class="process-math">\(1\)</span> can be preceded by any good string of length <span class="process-math">\(n-1\text{,}\)</span> so there are <span class="process-math">\(g(n-1)\)</span> such strings. The same applies for good strings ending in <span class="process-math">\(2\text{.}\)</span> For good strings ending in <span class="process-math">\(0\text{,}\)</span> however, we have to be more careful. We can precede the <span class="process-math">\(0\)</span> by a good string of length <span class="process-math">\(n-1\)</span> provided that the string does not end in <span class="process-math">\(2\text{.}\)</span> There are <span class="process-math">\(g(n-1)\)</span> good strings of length <span class="process-math">\(n-1\)</span> and of these, exactly <span class="process-math">\(g(n-2)\)</span> end in a <span class="process-math">\(2\text{.}\)</span> Therefore there are <span class="process-math">\(g(n-1)-g(n-2)\)</span> good strings of length <span class="process-math">\(n\)</span> that end in a <span class="process-math">\(0\text{.}\)</span> Hence the total number of good strings of length <span class="process-math">\(n\)</span> satisfies the recursive formula <span class="process-math">\(g(n) = 3g(n-1) - g(n-2)\text{.}\)</span> Thus <span class="process-math">\(g(3) = 3\cdot8 -3= 21\)</span> and <span class="process-math">\(g(4)= 3\cdot21-8= 55\text{.}\)</span>
+</div>
+<span class="incontext"><a href="s_induction_recursion.html#p-320" class="internal">in-context</a></span>
+</body>
+</html>

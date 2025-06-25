@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5</span><span class="period">.</span>
+</h3>
+<div class="para">A grocery store is preparing holiday fruit baskets for sale. Each fruit basket will have <span class="process-math">\(20\)</span> pieces of fruit in it, chosen from apples, pears, oranges, and grapefruit. How many different ways can such a basket be prepared if there must be at least one apple in a basket, a basket cannot contain more than three pears, and the number of oranges must be a multiple of four?<div class="autopermalink" data-description="Paragraph"><a href="#exa_genfunction_fruit-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">In order to get at the number of baskets consisting of <span class="process-math">\(20\)</span> pieces of fruit, let’s solve the more general problem where each basket has <span class="process-math">\(n\)</span> pieces of fruit. Our method is simple: find the generating function for how to do this with each type of fruit individually and then multiply them. As in the previous example, the product will contain the term <span class="process-math">\(x^n\)</span> for every way of assembling a basket of <span class="process-math">\(n\)</span> pieces of fruit subject to our restrictions. The apple generating function is <span class="process-math">\(x/(1-x)\text{,}\)</span> since we only want positive powers of <span class="process-math">\(x\)</span> (corresponding to ensuring at least one apple). The generating function for pears is <span class="process-math">\((1+x+x^2+x^3)\text{,}\)</span> since we can have only zero, one, two, or three pears in basket. For oranges we have <span class="process-math">\(1/(1-x^4) = 1+x^4+x^8+\cdots\text{,}\)</span> and the unrestricted grapefruit give us a factor of <span class="process-math">\(1/(1-x)\text{.}\)</span> Multiplying, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_genfunction_finite-geom.html">
+\begin{equation*}
+\frac{x}{1-x} (1+x+x^2+x^3) \frac{1}{1-x^4} \frac{1}{1-x} =
+\frac{x}{(1-x)^2(1-x^4)} (1+x+x^2+x^3).
+\end{equation*}
+</div>
+<div class="para">Now we want to make use of the fact that <span class="process-math">\((1+x+x^2+x^3) =(1-x^4)/(1-x)\)</span> (by <a href="s_genfunction_intro.html#eq_genfunction_finite-geom" class="xref" data-knowl="./knowl/xref/eq_genfunction_finite-geom.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.1">(8.1.1)</a>) to see that our generating function is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_genfunction_finite-geom.html">
+\begin{align*}
+\frac{x}{(1-x)^3} \amp= \frac{x}{2}\sum_{n=0}^\infty n(n-1)x^{n-2} =
+\sum_{n=0}^\infty\frac{n(n-1)}{2} x^{n-1} \\
+\amp=\sum_{n=0}^\infty\binom{n}{2} x^{n-1} =
+\sum_{n=0}^\infty\binom{n+1}{2} x^n.
+\end{align*}
+</div>
+<div class="para">Thus, there are <span class="process-math">\(C(n+1,2)\)</span> possible fruit baskets containing <span class="process-math">\(n\)</span> pieces of fruit, meaning that the answer to the question we originally asked is <span class="process-math">\(C(21,2) = 210\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exa_genfunction_fruit-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.5.1"><a href="#exa_genfunction_fruit-2" title="Copy heading and permalink for Solution 8.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 8.5"><a href="#exa_genfunction_fruit" title="Copy heading and permalink for Example 8.5">🔗</a></div></article><span class="incontext"><a class="internal" href="s_genfunction_distributions.html#exa_genfunction_fruit">in-context</a></span>
+</body>
+</html>

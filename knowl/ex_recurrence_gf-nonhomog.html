@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.25</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">The recurrence equation <span class="process-math">\(r_n - r_{n-1}-2r_{n-2} = 2^n\)</span> is nonhomogeneous. Let <span class="process-math">\(r_0=2\)</span> and <span class="process-math">\(r_1=1\text{.}\)</span> This time, to solve the recurrence, we start by multiplying both sides by <span class="process-math">\(x^n\text{.}\)</span> This gives the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r_nx^n - r_{n-1}x^n-2r_{n-2}x^n = 2^nx^n.
+\end{equation*}
+</div>
+<div class="para">If we sum this over all values of <span class="process-math">\(n\geq 2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=2}^\infty r_nx^n - \sum_{n=2}^\infty r_{n-1}x^n-2
+\sum_{n=2}^\infty r_{n-2}x^n = \sum_{n=2}^\infty 2^nx^n.
+\end{equation*}
+</div>
+<div class="para">The right-hand side you should readily recognize as being almost equal to <span class="process-math">\(1/(1-2x)\text{.}\)</span> We are missing the <span class="process-math">\(1\)</span> and <span class="process-math">\(2x\)</span> terms, however, so must subtract them from the rational function form of the series. On the left-hand side, however, we need to do a bit more work.</div>
+</div> <div class="para logical">
+<div class="para">The first sum is just missing the first two terms of the series, so we can replace it by <span class="process-math">\(R(x) - (2+x)\text{,}\)</span> where <span class="process-math">\(R(x)=\sum_{n=0}^\infty r_n x^n\text{.}\)</span> The second sum is almost <span class="process-math">\(xR(x)\text{,}\)</span> except it’s missing the first term. Thus, it’s equal to <span class="process-math">\(xR(x) - 2x\text{.}\)</span> The sum in the final term is simply <span class="process-math">\(x^2 R(x)\text{.}\)</span> Thus, the equation can be rewritten as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R(x) - (2+x) -(xR(x)-2x)-2x^2R(x) = \frac{1}{1-2x} - 1- 2x.
+\end{equation*}
+</div>
+<div class="para">A little bit of algebra then gets us to the generating function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R(x) = \frac{6x^2-5x+2}{(1-2x)(1-x-2x^2)}.
+\end{equation*}
+</div>
+<div class="para">This generating function can be expanded using partial fractions in SageMath:</div>
+</div> <pre class="ptx-sagecell sagecell-sage" id="sage-21"><script type="text/x-sage">f(x) = (6*x^2-5*x+2)/((1-2*x)*(1-x-2*x^2))
+pretty_print(f(x).partial_fraction())
+</script></pre> <div class="para logical">
+<div class="para">Therefore, using <a href="" class="xref" data-knowl="./knowl/exa_genfunction_multisets.html" title="Example 8.7">Example 8.7</a> for the second rational function, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exa_genfunction_multisets.html">
+\begin{align*}
+R(x) \amp = -\frac{1}{9(1-2x)} + \frac{2}{3(1-2x)^2} +
+\frac{13}{9(1+x)}\\
+\amp = -\frac{1}{9} \sum_{n=0}^\infty 2^nx^n +
+\frac{2}{3}\sum_{n=0}^\infty \binom{n+2-1}{1}2^n x^n +
+\frac{13}{9}\sum_{n=0}^\infty (-1)^nx^n\text{.}
+\end{align*}
+</div>
+<div class="para">From this generating function, we can read off that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exa_genfunction_multisets.html">
+\begin{equation*}
+r_n = -\frac{1}{9}2^n + \frac{2(n+1)}{3}2^{n} + \frac{13}{9}(-1)^n =
+\frac{5}{9} 2^n + \frac{2}{3}n2^n + \frac{13}{9}(-1)^n\text{.}
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="s_recurrence_genfunction.html#ex_recurrence_gf-nonhomog" class="internal">in-context</a></span>
+</body>
+</html>

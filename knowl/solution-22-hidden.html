@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
+<div class="para">First, let’s write the question in terms of the advancement operator. We can define a function <span class="process-math">\(f(n) = s_n\)</span> for <span class="process-math">\(n\geq 0\text{,}\)</span> and then the information given becomes that <span class="process-math">\(f(0)=3\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Af(n) = 2f(n),\qquad n\geq 0.
+\end{equation*}
+</div>
+<div class="para">What function has the property that when we advance it, i.e., evaluate it at <span class="process-math">\(n+1\text{,}\)</span> it gives twice the value that it takes at <span class="process-math">\(n\text{?}\)</span>  The first function that comes into your mind should be <span class="process-math">\(2^n\text{.}\)</span> Of course, just like with our differential equation, for any constant <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(c2^n\)</span> also has this property. This suggests that if we take <span class="process-math">\(f(n) = c2^n\text{,}\)</span> we’re well on our way to solving our problem. Since we know that <span class="process-math">\(f(0) = 3\text{,}\)</span> we have <span class="process-math">\(f(0) = c2^0 = c\text{,}\)</span> so <span class="process-math">\(c= 3\text{.}\)</span> Therefore, <span class="process-math">\(s_n = f(n) = 3\cdot 2^n\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span> This clearly satisfies our initial condition, and now we can check that it also satisfies our advancement operator equation:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Af(n) = 3\cdot 2^{n+1} = 3\cdot 2\cdot 2^n = 2\cdot (3\cdot 2^n) =
+2\cdot f(n).
+\end{equation*}
+</div>
+</div></div></body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We have now mathematically modeled musical scales as discrete structures in a way that we can use <a href="" class="xref" data-knowl="./knowl/thm_polya_polya.html" title="Theorem 15.11: Pólya’s Enumeration Theorem">Pólya’s Enumeration Theorem</a>. What is the group acting on our black/white colorings of the vertices of a regular <span class="process-math">\(12\)</span>-gon? One permutation in the group is <span class="process-math">\(\tau = (0\ 1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11)\text{,}\)</span> which corresponds to the transposition by one note. In fact, every element of the group can be realized as some power of <span class="process-math">\(\tau\)</span> since only rotations are allowed and <span class="process-math">\(\tau\)</span> is the smallest possible rotation. Thus, the group acting on the colorings is the <dfn class="terminology">cyclic group of order <span class="process-math">\(12\)</span></dfn>, denoted <span class="process-math">\(C_{12} = \{\iota,\tau,\tau^2,\dots,\tau^{11}\}\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/ex_polya_cyclic12.html" title="Exercise 15.6.5">Exercise 15.6.5</a> asks you to write all the elements of this group in cycle notation. The best way to do this is by multiplying <span class="process-math">\(\tau^{i-1}\)</span> by <span class="process-math">\(\tau\)</span> (i.e., compute <span class="process-math">\(\tau\tau^{i-1}\)</span>) to find <span class="process-math">\(\tau\text{.}\)</span> Once you’ve done this, you will be able to easily verify that the cycle index is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_polya_polya.html ./knowl/ex_polya_cyclic12.html ./knowl/ch_genfunction.html">
+\begin{equation*}
+P_{C_{12}}(x_1,\dots,x_{12}) = \frac{x_1^{12}}{12}+\frac{x_2^6}{12}+\frac{x_3^4}{6}+\frac{x_4^3}{6}+\frac{x_6^2}{6}+\frac{x_{12}}{3}.
+\end{equation*}
+</div>
+<div class="para">Since we’ve chosen colorings using black and white, it would make sense to substitute <span class="process-math">\(x_i = b^i +w^i\)</span> for all <span class="process-math">\(i\)</span> in <span class="process-math">\(P_{C_{12}}\)</span> now to find the number of <span class="process-math">\(k\)</span>-note scales. However, there is a convenient shortcut we may take to make the resulting generating function look more like those to which we grew accustomed in <a href="ch_genfunction.html" class="internal" title="Chapter 8: Generating Functions">Chapter 8</a>. The information about how many notes are <em class="emphasis">not</em> included in our scale (the number colored white) can be deduced from the number that are included. Thus, we may eliminate the use of the variable <span class="process-math">\(w\text{,}\)</span> replacing it by <span class="process-math">\(1\text{.}\)</span> We now find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_polya_polya.html ./knowl/ex_polya_cyclic12.html ./knowl/ch_genfunction.html">
+\begin{equation*}
+P_{C_{12}}(1+b,1+b^2,\dots,1+b^{12}) = b^{12}+b^{11}+6 b^{10}+19 b^9+43 b^8\\+66 b^7+80 b^6+66 b^5+43 b^4+19 b^3+6 b^2+b+1.
+\end{equation*}
+</div>
+<div class="para">From this, we are able to deduce that the number of scales with <span class="process-math">\(k\)</span> notes is the coefficient on <span class="process-math">\(b^k\text{.}\)</span> Therefore, the answer to our question at the beginning of the chapter about the number of <span class="process-math">\(6\)</span>-note scales is <span class="process-math">\(80\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="s_polya_apps.html#p-1685" class="internal">in-context</a></span>
+</body>
+</html>

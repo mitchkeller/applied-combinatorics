@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para logical">
+<div class="para">The case <span class="process-math">\(k=1\)</span> is <a href="" class="xref" data-knowl="./knowl/lem_base.html" title="Lemma 9.19">Lemma 9.19</a>. Now suppose we have established the theorem for some positive integer <span class="process-math">\(m\)</span> and consider the case <span class="process-math">\(k=m+1\text{.}\)</span> Rewrite <a href="" class="xref" data-knowl="./knowl/eqn_distinct.html" title="Equation 9.5.4">(9.5.4)</a> as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_base.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct2.html">
+\begin{equation*}
+(A-r_1)(A-r_2)\dots(A-r_m)[(A-r_{m+1})f]=0.
+\end{equation*}
+</div>
+<div class="para">By the inductive hypothesis, it follows that if <span class="process-math">\(f\)</span> is a solution to <a href="" class="xref" data-knowl="./knowl/eqn_distinct.html" title="Equation 9.5.4">(9.5.4)</a>, then <span class="process-math">\(f\)</span> is also a solution to the nonhomogeneous equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_base.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct2.html">
+\begin{equation}
+(A-r_{m+1})f=d_1r_1^n+d_2r_2^n+\dots+d_mr_m^n.\tag{9.5.5}
+\end{equation}
+</div>
+<div class="para">To find a particular solution <span class="process-math">\(f_0\)</span> to <a href="" class="xref" data-knowl="./knowl/eqn_distinct2.html" title="Equation 9.5.5">(9.5.5)</a>, we look for a solution having the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_base.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct2.html">
+\begin{equation}
+f_0(n)= c_1 r_1^n+c_2 r_2^n+\dots+c_m r_m^n.\tag{9.5.6}
+\end{equation}
+</div>
+<div class="para">On the other hand, a simple calculation shows that for each <span class="process-math">\(i=1,2,\dots,m\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem_base.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct.html ./knowl/eqn_distinct2.html">
+\begin{equation*}
+(A-r_{m+1})c_i r_i^n=c_i r_i^{n+1}-r_{m+1}c_i r_i^n=c_i (r_i-r_{m+1})r_i^n,
+\end{equation*}
+</div>
+<div class="para">so it suffices to choose <span class="process-math">\(c_i\)</span> so that <span class="process-math">\(c_i(r_i-r_{m+1})=d_i\text{,}\)</span> for each <span class="process-math">\(i=1,2,\dots,m\text{.}\)</span> This can be done since <span class="process-math">\(r_{m+1}\)</span> is distinct from <span class="process-math">\(r_i\)</span> for <span class="process-math">\(i=1,2,\dots m\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Now we have a particular solution <span class="process-math">\(f_0(n)=\sum_{i=1}^{m} c_i r_i^n\text{.}\)</span> Next we consider the corresponding homogeneous equation <span class="process-math">\((A-r_{m+1})f=0\text{.}\)</span> The general solution to this equation has the form <span class="process-math">\(f_1(n)=c_{m+1}r_{m+1}^n\text{.}\)</span> It follows that every solution to the original equation has the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(n)=f_0(n)+f_1(n) = c_1r_1^n+c_2r_2^n+\dots+c_m r_m^n+cr_{m+1}^n,
+\end{equation*}
+</div>
+<div class="para">which is exactly what we want!</div>
+</div></article><span class="incontext"><a href="s_recurrence_rigorous.html#proof-35" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">We define a recursive algorithm that takes a tree <span class="process-math">\(\bfT\)</span> on <span class="process-math">\(k\geq 2\)</span> vertices labeled by elements of a set <span class="process-math">\(S\)</span> of positive integers of size <span class="process-math">\(k\)</span> and returns a string of length <span class="process-math">\(k-2\)</span> whose symbols are elements of <span class="process-math">\(S\text{.}\)</span> (The set <span class="process-math">\(S\)</span> will usually be <span class="process-math">\([k]\text{,}\)</span> but in order to define a recursive procedure, we need to allow that it be an arbitrary set of <span class="process-math">\(k\)</span> positive integers.) This string is called the <dfn class="terminology">Prüfer code</dfn> of the tree <span class="process-math">\(\bfT\text{.}\)</span> Let <span class="process-math">\(\prufer(\bfT)\)</span> denote the Prüfer code of the tree <span class="process-math">\(\bfT\text{,}\)</span> and if <span class="process-math">\(v\)</span> is a leaf of <span class="process-math">\(\bfT\text{,}\)</span> let <span class="process-math">\(\bfT-v\)</span> denote the tree obtained from <span class="process-math">\(\bfT\)</span> by removing <span class="process-math">\(v\)</span> (i.e., the subgraph induced by all the other vertices). We can then define <span class="process-math">\(\prufer(\bfT)\)</span> recursively by the following procedure.</div>
+<ol class="decimal">
+<li><div class="para">If <span class="process-math">\(\bfT\cong \bfK_2\text{,}\)</span> return the empty string.</div></li>
+<li><div class="para">Else, let <span class="process-math">\(v\)</span> be the leaf of <span class="process-math">\(\bfT\)</span> with the smallest label and let <span class="process-math">\(u\)</span> be its unique neighbor. Let <span class="process-math">\(i\)</span> be the label of <span class="process-math">\(u\text{.}\)</span> Return <span class="process-math">\((i,\prufer(\bfT-v))\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="s_graphs_counting-trees.html#p-584" class="internal">in-context</a></span>
+</body>
+</html>

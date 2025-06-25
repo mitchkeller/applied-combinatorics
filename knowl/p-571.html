@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Kuratowski’s Theorem gives a useful way for checking if a graph is planar. Although it’s not always easy to find a subgraph homeomorphic to <span class="process-math">\(\bfK_5\)</span> or <span class="process-math">\(\bfK_{3,3}\)</span> by hand, there are efficient algorithms for planarity testing that make use of this characterization. To see this theorem at work, let’s consider the Petersen graph shown in <a href="" class="xref" data-knowl="./knowl/fig_petersen.html" title="Figure 5.17">Figure 5.17</a>. The Petersen graph has <span class="process-math">\(10\)</span> vertices and <span class="process-math">\(15\)</span> edges, so it passes the test of <a href="" class="xref" data-knowl="./knowl/thm_max-edge-planar.html" title="Theorem 5.33">Theorem 5.33</a>, and our argument using Euler’s formula to prove that <span class="process-math">\(\bfK_{3,3}\)</span> is nonplanar was complex enough, we probably don’t want to try it for the Petersen graph. To use Kuratowski’s Theorem here, we need to decide if we would rather find a subgraph homeomorphic to <span class="process-math">\(\bfK_5\)</span> or to <span class="process-math">\(\bfK_{3,3}\text{.}\)</span> Although the Petersen graph looks very similar to <span class="process-math">\(\bfK_5\text{,}\)</span> it’s actually simultaneously <em class="emphasis">too</em> similar and too different for us to be able to find a subgraph homeomorphic to <span class="process-math">\(\bfK_5\text{,}\)</span> since each vertex has degree <span class="process-math">\(3\text{.}\)</span> Thus, we set out to find a subgraph of the Petersen graph homeomorphic to <span class="process-math">\(\bfK_{3,3}\text{.}\)</span> To do so, note that <span class="process-math">\(\bfK_{3,3}\)</span> contains a cycle of length <span class="process-math">\(6\)</span> and three edges that are in place between vertices opposite each other on the cycle. We identify a six-cycle in the Petersen graph and draw it as a hexagon and place the remaining four vertices inside the cycle. Such a drawing is shown in <a href="" class="xref" data-knowl="./knowl/fig_petersen-graph-k33.html" title="Figure 5.35">Figure 5.35</a>. The subgraph homeomorphic to <span class="process-math">\(\bfK_{3,3}\)</span> is found by deleting the black vertex, as then the white vertices have degree two, and we can replace each of them and their two incident edges (shown in bold) by a single edge.</div>
+<span class="incontext"><a href="s_graphs_planar.html#p-571" class="internal">in-context</a></span>
+</body>
+</html>

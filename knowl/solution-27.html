@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.15.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">The corresponding homogeneous equation here is the same as in the previous example, so its general solution is again <span class="process-math">\(f_1(n) = c_1(-2)^n + c_2 6^n\text{.}\)</span> Thus, the real work here is finding a particular solution <span class="process-math">\(f_0\)</span> to the given advancement operator equation. Let’s just try what our work on the previous example would suggest here, namely <span class="process-math">\(f_0(n) = d6^n\text{.}\)</span> Applying the advancement operator polynomial <span class="process-math">\((A+2)(A-6)\)</span> to <span class="process-math">\(f_0\)</span> then gives, uh, well, zero, since <span class="process-math">\((A-6)(d6^n) = d6^{n+1}-6d6^n =0\text{.}\)</span> Huh, that didn’t work out so well. However, we can take a cue from how we tackled homogeneous advancement operator equations with repeated roots and introduce a factor of <span class="process-math">\(n\text{.}\)</span> Let’s try <span class="process-math">\(f_0(n) = dn6^n\text{.}\)</span> Now we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+(A+2)(A-6)(dn6^n) \amp = (A+2)(d(n+1)6^{n+1}-6dn6^n)\\
+\amp = (A+2)d6^{n+1}\\
+\amp = d6^{n+2} + 2d 6^{n+1}\\
+\amp = 6^n(36d+12d) = 48d6^n.
+\end{align*}
+</div>
+<div class="para">We want this to be equal to <span class="process-math">\(6^n\text{,}\)</span> so we have <span class="process-math">\(d = 1/48\text{.}\)</span> Therefore, the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(n) = \frac{1}{48}n6^n + c_1 (-2)^n + c_2 6^n.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">All that remains is to use our initial conditions to find the constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{.}\)</span> We have that they satisfy the following pair of equations:</div>
+<div class="displaymath process-math">
+\begin{align*}
+1 \amp  = c_1 + c_2\\
+5 \amp  = \frac{1}{8} -2c_1+6c_2
+\end{align*}
+</div>
+<div class="para">Solving these, we arrive at the desired solution, which is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(n) = \frac{1}{48}n6^n + \frac{9}{64} (-2)^n + \frac{55}{64} 6^n.
+\end{equation*}
+</div>
+</div>
+</div>
+<span class="incontext"><a href="s_recurrence_solving.html#solution-27" class="internal">in-context</a></span>
+</body>
+</html>

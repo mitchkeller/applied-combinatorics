@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">The theorem holds trivially when <span class="process-math">\(x=r\text{.}\)</span> So we consider the case where <span class="process-math">\(x\neq r\text{.}\)</span> We argue that <span class="process-math">\(\delta(x)\)</span> is the distance from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> and that <span class="process-math">\(P(x)\)</span> is a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> by induction on the minimum number <span class="process-math">\(k\)</span> of edges in a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\text{.}\)</span> When <span class="process-math">\(k=1\text{,}\)</span> the edge <span class="process-math">\((r,x)\)</span> is a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\text{.}\)</span> Since <span class="process-math">\(v_1=r\text{,}\)</span> we will set <span class="process-math">\(\delta(x)=w(r,x)\)</span> and <span class="process-math">\(P(x)=(r,x)\)</span> at Step 1.</div> <div class="para">Now fix a positive integer <span class="process-math">\(k\text{.}\)</span> Assume that if the minimum number of edges in a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> is at most <span class="process-math">\(k\text{,}\)</span> then <span class="process-math">\(\delta(x)\)</span> is the distance from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> and <span class="process-math">\(P(x)\)</span> is a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\text{.}\)</span> Let <span class="process-math">\(x\)</span> be a vertex for which the minimum number of edges in a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> is <span class="process-math">\(k+1\text{.}\)</span> Fix a shortest path <span class="process-math">\(P=(u_0,u_1,u_2,\dots,u_{k+1})\)</span> from <span class="process-math">\(r=u_0\)</span> to <span class="process-math">\(x=u_{k+1}\text{.}\)</span> Then <span class="process-math">\(Q=(u_0,u_1,\dots,u_k)\)</span> is a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(u_k\text{.}\)</span> (See <a href="" class="xref" data-knowl="./knowl/fig_graphalgorithms_dijkstra-proof.html" title="Figure 12.19">Figure 12.19</a>.)</div> <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/image-88.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.19<span class="period">.</span></span><span class="space"> </span>Shortest paths</figcaption></figure> <div class="para">By the inductive hypothesis, <span class="process-math">\(\delta(u_k)\)</span> is the distance from <span class="process-math">\(r\)</span> to <span class="process-math">\(u_k\text{,}\)</span> and <span class="process-math">\(P(u_k)\)</span> is a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(u_k\text{.}\)</span> Note that <span class="process-math">\(P(u_k)\)</span> need not be the same as path <span class="process-math">\(Q\text{,}\)</span> as we suggest in <a href="" class="xref" data-knowl="./knowl/fig_graphalgorithms_dijkstra-proof.html" title="Figure 12.19">Figure 12.19</a>. However, if distinct, the two paths will have the same length, namely <span class="process-math">\(\delta(u_k)\text{.}\)</span>  Also, the distance from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> is <span class="process-math">\(\delta(u_k)+w(u_k,x)\ge \delta(u_k)\)</span> since <span class="process-math">\(P\)</span> is a shortest path from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> and <span class="process-math">\(w(u_k,x)\geq 0\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(i\)</span> and <span class="process-math">\(j\)</span> be the unique integers for which <span class="process-math">\(u_k=v_i\)</span> and <span class="process-math">\(x=v_j\text{.}\)</span> If <span class="process-math">\(j \lt i\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\delta(x)= \delta(v_j)\le \delta(v_i)= \delta(u_k)\le
+\delta(u_k)+w(u_k).
+\end{equation*}
+</div>
+<div class="para">Therefore the algorithm has found a path <span class="process-math">\(P(x)\)</span> from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> having length <span class="process-math">\(\delta(x)\)</span> which is at most the distance from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\text{.}\)</span> Clearly, this implies that <span class="process-math">\(\delta(x)\)</span> is the distance from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> and that <span class="process-math">\(P(x)\)</span> is a shortest path.</div>
+</div> <div class="para logical">
+<div class="para">On the other hand, if <span class="process-math">\(j&gt;i\text{,}\)</span> then the inductive step at Step <span class="process-math">\(i\)</span> results in</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\delta(x)\le \delta(v_i)+w(v_i,y)=\delta(u_k)+w(u_k,x).
+\end{equation*}
+</div>
+<div class="para">As before, this implies that <span class="process-math">\(\delta(x)\)</span> is the distance from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> and that <span class="process-math">\(P(x)\)</span> is a shortest path.</div>
+</div></article><span class="incontext"><a href="s_graphalgorithms_shortest-paths.html#proof-45" class="internal">in-context</a></span>
+</body>
+</html>

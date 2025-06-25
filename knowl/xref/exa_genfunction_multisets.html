@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.7</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(n\)</span> be a positive integer. What is the coefficient on <span class="process-math">\(x^k\)</span> in the generating function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{(1-x)^n}\text{?}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exa_genfunction_multisets-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We have already encountered the case <span class="process-math">\(n=5\)</span> in the midst of working on <a href="s_genfunction_distributions.html#exa_genfunction_apples" class="xref" data-knowl="./knowl/xref/exa_genfunction_apples.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.4">Example 8.4</a>, but there we appealed to calculus. Let’s take a look at this from the perspective of just counting. The generating function <span class="process-math">\(1/(1-x) =
+1+x+x^2+\cdots\)</span> encodes the sequence for the number of ways to distribute <span class="process-math">\(n\)</span> apples to <em class="emphasis">one</em> child. There’s only one way to do that task: give the lucky kid all the apples. Multiplying together a bunch of copies of <span class="process-math">\(1/(1-x)\)</span> then serves to increase the number of children to whom the apples are being distributed, and since each power series being multiplied starts with <span class="process-math">\(1\text{,}\)</span> we are in the situation where the number of apples each child receives must be <em class="emphasis">nonnegative</em>. This is therefore a problem from <a href="s_strings_bin-coeff.html" class="internal" title="Section 2.5: The Ubiquitous Nature of Binomial Coefficients">Section 2.5</a>. We have <span class="process-math">\(n\)</span> children and the coefficient on <span class="process-math">\(x^k\)</span> is the number of ways of distributing <span class="process-math">\(k\)</span> apples to them. This requires <span class="process-math">\(n\)</span> artificial apples, so we distribute <span class="process-math">\(k+n\)</span> apples, which determine <span class="process-math">\(k+n-1\)</span> gaps and we must choose <span class="process-math">\(n-1\)</span> of them as the locations for dividers. Therefore, we can conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exa_genfunction_apples.html ./knowl/xref/s_strings_bin-coeff.html">
+\begin{equation*}
+\frac{1}{(1-x)^n} = \sum_{k=0}^\infty \binom{k+n-1}{n-1}x^k = \sum_{k=0}^\infty
+\binom{k+n-1}{k}x^k\text{.}
+\end{equation*}
+</div>
+<div class="para">It’s possible to arrive at this conclusion using techniques from calculus, but there are a lot of factorials and <span class="process-math">\(-1\)</span>s to monitor, so this combinatorial approach may be less error prone!</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exa_genfunction_multisets-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.7.1"><a href="#exa_genfunction_multisets-2" title="Copy heading and permalink for Solution 8.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 8.7"><a href="#exa_genfunction_multisets" title="Copy heading and permalink for Example 8.7">🔗</a></div></article><span class="incontext"><a class="internal" href="s_genfunction_distributions.html#exa_genfunction_multisets">in-context</a></span>
+</body>
+</html>

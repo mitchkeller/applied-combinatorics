@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">To present merge sort, must first develop a strategy for solving a special case of the sorting problem.  Suppose we have <span class="process-math">\(s+t\)</span> distinct integers</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{u_0,u_1,\dots,u_{s-1},v_0,v_1,\dots,v_{t-1}\}
+\end{equation*}
+</div>
+<div class="para">arranged as two lists with <span class="process-math">\(u_0\lt u_1\lt \dots\lt u_{s-1}\)</span> and <span class="process-math">\(v_0\lt v_1\lt \dots\lt v_{t-1}\text{.}\)</span> How do we <em class="emphasis">merge</em> these two sequences into a single increasing sequence of length <span class="process-math">\(s+t\text{.}\)</span>  Imagine the two sequences placed on two horizontal lines, one immediately under the other. Then let <span class="process-math">\(u\)</span> be the least integer in the first sequence and <span class="process-math">\(v\)</span> the least integer in the second. At the moment, this implies that <span class="process-math">\(u=u_0\)</span> and <span class="process-math">\(v=v_0\text{,}\)</span> but integers will be deleted from the two sequences as the process is carried out. Regardless, the meaning of <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> will be preserved. Also, set <span class="process-math">\(i=0\text{.}\)</span>  Then take <span class="process-math">\(a_i\)</span> as the minimum of <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> and delete <span class="process-math">\(a_i\)</span> from the sequence in which it occurs. Then increase <span class="process-math">\(i\)</span> by <span class="process-math">\(1\)</span> and repeat. Here is a code snippet for accomplishing a merge operation, with <span class="process-math">\(u_p\)</span> now written as <code class="code-inline tex2jax_ignore">u[p]</code> and <span class="process-math">\(v_q\)</span> now written as <code class="code-inline tex2jax_ignore">v[q]</code>.</div>
+</div>
+<span class="incontext"><a href="s_induction_recursion.html#p-339" class="internal">in-context</a></span>
+</body>
+</html>

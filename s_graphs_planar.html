@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AC Planar Graphs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Applied Combinatorics">
+<meta property="book:author" content="Mitchel T. Keller">
+<meta property="book:author" content="William T. Trotter">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.8e4157bd77a28b29.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="appcomb" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="httpw://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="app-comb.html"><span class="title">Applied Combinatorics</span></a></h1>
+<p class="byline">Mitchel T. Keller, William T. Trotter</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="s_graphs_color.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_graphs.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_graphs_counting-trees.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\posints}{\mathbb{N}}
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexes}{\mathbb{C}}
+\newcommand{\twospace}{\mathbb{R}^2}
+\newcommand{\threepace}{\mathbb{R}^3}
+\newcommand{\dspace}{\mathbb{R}^d}
+\newcommand{\nni}{\mathbb{N}_0}
+\newcommand{\nonnegints}{\mathbb{N}_0}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\prob}{\operatorname{prob}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\height}{\operatorname{height}}
+\newcommand{\width}{\operatorname{width}}
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\crit}{\operatorname{crit}}
+\newcommand{\inc}{\operatorname{inc}}
+\newcommand{\HP}{\mathbf{H_P}}
+\newcommand{\HCP}{\mathbf{H^c_P}}
+\newcommand{\GP}{\mathbf{G_P}}
+\newcommand{\GQ}{\mathbf{G_Q}}
+\newcommand{\AG}{\mathbf{A_G}}
+\newcommand{\GCP}{\mathbf{G^c_P}}
+\newcommand{\PXP}{\mathbf{P}=(X,P)}
+\newcommand{\QYQ}{\mathbf{Q}=(Y,Q)}
+\newcommand{\GVE}{\mathbf{G}=(V,E)}
+\newcommand{\HWF}{\mathbf{H}=(W,F)}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfQ}{\mathbf{Q}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfNP}{\mathbf{NP}}
+\newcommand{\bftwo}{\mathbf{2}}
+\newcommand{\cgA}{\mathcal{A}}
+\newcommand{\cgB}{\mathcal{B}}
+\newcommand{\cgC}{\mathcal{C}}
+\newcommand{\cgD}{\mathcal{D}}
+\newcommand{\cgE}{\mathcal{E}}
+\newcommand{\cgF}{\mathcal{F}}
+\newcommand{\cgG}{\mathcal{G}}
+\newcommand{\cgM}{\mathcal{M}}
+\newcommand{\cgN}{\mathcal{N}}
+\newcommand{\cgP}{\mathcal{P}}
+\newcommand{\cgR}{\mathcal{R}}
+\newcommand{\cgS}{\mathcal{S}}
+\newcommand{\bfn}{\mathbf{n}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfk}{\mathbf{k}}
+\newcommand{\bfs}{\mathbf{s}}
+\newcommand{\bijection}{\xrightarrow[\text{onto}]{\text{$1$--$1$}}}
+\newcommand{\injection}{\xrightarrow[]{\text{$1$--$1$}}}
+\newcommand{\surjection}{\xrightarrow[\text{onto}]{}}
+\newcommand{\nin}{\not\in}
+\newcommand{\prufer}{\text{prüfer}}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\var}{var}
+\newcommand{\inv}{^{-1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="app-comb-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="app-comb-2-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="app-comb-2-4.html" class="internal"><span class="title">About William T. Trotter</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="app-comb-2-5.html" class="internal"><span class="title">About Mitchel T. Keller</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="app-comb-2-6.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="app-comb-2-7.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="app-comb-2-8.html" class="internal"><span class="title">Preface to 2017 Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-2016.html" class="internal"><span class="title">Preface to 2016 Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="ch_prologue.html" class="internal"><span class="title">Prologue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">An Introduction to Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_enum.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Enumeration</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_graph.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Combinatorics and Graph Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_number.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Combinatorics and Number Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_geom.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Combinatorics and Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_opt.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Combinatorics and Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_sudoku.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Sudoku Puzzles</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_discussion.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Discussion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_intro.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Strings: A First Look</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_permutations.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_combinations.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Combinations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_comb-proof.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Combinatorial Proofs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_bin-coeff.html" class="internal"><span class="codenumber">2.5</span> <span class="title">The Ubiquitous Nature of Binomial Coefficients</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_binom-thm.html" class="internal"><span class="codenumber">2.6</span> <span class="title">The Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_multinom.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Multinomial Coefficients</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_discussion.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_strings_exercises.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_intro.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_posintsord.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Positive Integers are Well Ordered</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_statements.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Meaning of Statements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_bincoeffs.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Binomial Coefficients Revisited</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_induction_recursion.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Solving Combinatorial Problems Recursively</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_induction_recursion.html#s_induction_gcd" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Finding Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_induction_recursion.html#s_induction_recursion_sorting" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Sorting</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_induction.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_inductdefs.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Inductive Definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_proofs.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Proofs by Induction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_strong-induction.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Strong Induction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_discussion.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_induction_exercises.html" class="internal"><span class="codenumber">3.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_basics.html" class="internal"><span class="codenumber">4</span> <span class="title">Combinatorial Basics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_basics_pigeonhole.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The Pigeon Hole Principle</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_basics_complexity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">An Introduction to Complexity Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_questions" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Three Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_complexity-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Certificates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_complexity-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_complexity-6" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Input Size</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_basics_big-oh.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Big “Oh” and Little “Oh” Notations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_basics_exact.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exact Versus Approximate</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_exact.html#s_basics_exact-3" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Approximate and Asymptotic Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_exact.html#s_basics_exact-4" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Polynomial Time Algorithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_exact.html#s_basics_exact-5" class="internal"><span class="codenumber">4.4.3</span> <span class="title"><span class="process-math">\(\cgP=\cgN\cgP\text{?}\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_basics_discussion.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_basics_exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_graphs.html" class="internal"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_intro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Basic Notation and Terminology for Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_multigraphs.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Multigraphs:  Loops and Multiple Edges</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphs_eulerham.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_graphs_eulerham.html#rqs-graphs_eulerham" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphs_color.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Graph Coloring</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphs_color.html#s_graphs_color-3" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Bipartite Graphs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphs_color.html#s_graphs_color-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Cliques and Chromatic Number</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphs_color.html#s_graphs_color-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Can We Determine Chromatic Number?</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_graphs_color.html#rqs-graphs_color" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_graphs_planar.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Planar Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_counting-trees.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Counting Labeled Trees</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_complexity.html" class="internal"><span class="codenumber">5.7</span> <span class="title">A Digression into Complexity Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_discussion.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_graphs_exercises.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_posets.html" class="internal"><span class="codenumber">6</span> <span class="title">Partially Ordered Sets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_intro.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Basic Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_additional-concepts.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Additional Concepts for Posets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_additional-concepts.html#rqs-posets_additional-concepts" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_dilworth.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Dilworth’s Chain Covering Theorem and its Dual</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_dilworth.html#rqs-posets_dilworth" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_sorting.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Linear Extensions of Partially Ordered Sets</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_subset-lattice.html" class="internal"><span class="codenumber">6.5</span> <span class="title">The Subset Lattice</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_posets_subset-lattice.html#ss_posets_subset-lattice_sperner" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Sperner’s Theorem</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_intervalorder.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Interval Orders</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_intervalorder_findrep.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Finding a Representation of an Interval Order</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_intervalorder_findrep.html#rqs-posets_intervalorder_findrep" class="internal"><span class="codenumber">6.7</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_dilworth-intord.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Dilworth’s Theorem for Interval Orders</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_dilworth-intord.html#rqs-posets_dilworth-intord" class="internal"><span class="codenumber">6.8</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_discussion.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_posets_exercises.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_inclusion-exclusion.html" class="internal"><span class="codenumber">7</span> <span class="title">Inclusion-Exclusion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_inclusion-exclusion_intro.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_inclusion-exclusion_intro.html#rqs-inclusion-exclusion_intro" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_statement.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Inclusion-Exclusion Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_surjections.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Enumerating Surjections</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_derangements.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Derangements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_euler-phi.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Euler phi-Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_discussion.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_inclusion-exclusion_exercises.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_genfunction.html" class="internal"><span class="codenumber">8</span> <span class="title">Generating Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_intro.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Basic Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_genfunction_distributions.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Another look at distributing apples or folders</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_genfunction_distributions.html#rqs-genfunction_distributions" class="internal"><span class="codenumber">8.2</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_gen-bin-thm.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Newton’s Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_binom-app.html" class="internal"><span class="codenumber">8.4</span> <span class="title">An Application of the Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_partitions-integer.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Partitions of an Integer</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_genfunction_exponential.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential generating functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_genfunction_exponential.html#rqs-genfunction_exponential" class="internal"><span class="codenumber">8.6</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_discussion.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_genfunction_exercises.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_intro.html#s_recurrence_intro_fib" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Fibonacci numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_intro.html#s_recurrence_intro_strings" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Recurrences for strings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_intro.html#s_recurrence_intro_lines" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Lines and regions in the plane</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_linear.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Linear Recurrence Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_recurrence_linear.html#rqs-recurrence_linear" class="internal"><span class="codenumber">9.2</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_adv-ops.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Advancement Operators</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#s_recurrence_adv-ops_const-coeff" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Constant Coefficient Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#s_recurrence_adv-ops_roots-factors" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Roots and Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#s_recurrence_adv-ops_zero" class="internal"><span class="codenumber">9.3.3</span> <span class="title">What’s Special About Zero?</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#rqs-recurrence_adv-ops" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_solving.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Solving advancement operator equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_solving.html#s_recurrence_solving_homogeneous" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Homogeneous equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_solving.html#s_recurrence_solving_nonhomogeneous" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Nonhomogeneous equations</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_recurrence_solving.html#rqs-recurrence_solving" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_rigorous.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Formalizing our approach to recurrence equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_principal" class="internal"><span class="codenumber">9.5.1</span> <span class="title">The Principal Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_start" class="internal"><span class="codenumber">9.5.2</span> <span class="title">The Starting Case</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_repeated" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Repeated Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_general" class="internal"><span class="codenumber">9.5.4</span> <span class="title">The General Case</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_recurrence_genfunction.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Using generating functions to solve recurrences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_recurrence_rubots.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Solving a nonlinear recurrence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_recurrence_discussion.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_recurrence_exercises.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_probability.html" class="internal"><span class="codenumber">10</span> <span class="title">Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_intro.html" class="internal"><span class="codenumber">10.1</span> <span class="title">An Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_probability_conditional.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Conditional Probability and Independent Events</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_conditional.html#s_probability_conditional-3" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Independent Events</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_bernoulli-trials.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Bernoulli Trials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_probability_discrete-random-variables.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Discrete Random Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_discrete-random-variables.html#s_probability_discrete-random-variables-3" class="internal"><span class="codenumber">10.4.1</span> <span class="title">The Linearity of Expectation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_discrete-random-variables.html#s_probability_discrete-random-variables-4" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Implications for Bernoulli Trials</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_probability_central-tendency.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Central Tendency</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_central-tendency.html#s_probability_central-tendency-3" class="internal"><span class="codenumber">10.5.1</span> <span class="title">Variance and Standard Deviation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_infinite-outcomes.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Probability Spaces with Infinitely Many Outcomes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_discussion.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_probability_exercises.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_probmeth.html" class="internal"><span class="codenumber">11</span> <span class="title">Applying Probability to Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probmeth_graph-ramsey.html" class="internal"><span class="codenumber">11.1</span> <span class="title">A First Taste of Ramsey Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_small.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Small Ramsey Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_estimatesize.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Estimating Ramsey Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_probability.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Applying Probability to Ramsey Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_theorem.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Ramsey’s Theorem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_ramsey_girth.html" class="internal"><span class="codenumber">11.6</span> <span class="title">The Probabilistic Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_ramsey_girth.html#s_ramsey_girth-3" class="internal"><span class="codenumber">11.6.1</span> <span class="title">Gaining Intuition with the Probabilistic Method</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_discussion.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_ramsey_exercises.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_graphalgorithms.html" class="internal"><span class="codenumber">12</span> <span class="title">Graph Algorithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Minimum Weight Spanning Trees</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#s_graphalgorithms_min-wt-span-3" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Preliminaries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#s_graphalgorithms_min-wt-span-4" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Kruskal’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#alg_prim" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Prim’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#s_graphalgorithms_min-wt-span-6" class="internal"><span class="codenumber">12.1.4</span> <span class="title">Comments on Efficiency</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphalgorithms_digraphs.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Digraphs</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Dijkstra’s Algorithm for Shortest Paths</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html#s_graphalgorithms_shortest-paths-3" class="internal"><span class="codenumber">12.3.1</span> <span class="title">Description of the Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html#s_graphalgorithms_shortest-paths-4" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Example of Dijkstra’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html#s_graphalgorithms_shortest-paths-5" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Correctness of Dijkstra’s Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphalgorithms_historical-notes.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Historical Notes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_graphalgorithms_exercises.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_networkflow.html" class="internal"><span class="codenumber">13</span> <span class="title">Network Flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_intro.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Basic Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_flows-cuts.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Flows and Cuts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_networkflow_augmenting.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Augmenting Paths</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_networkflow_augmenting.html#s_networkflow_augmenting-3" class="internal"><span class="codenumber">13.3.1</span> <span class="title">Caution on Augmenting Paths</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_labeling-algorithm.html" class="internal"><span class="codenumber">13.4</span> <span class="title">The Ford-Fulkerson Labeling Algorithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_networkflow_example.html" class="internal"><span class="codenumber">13.5</span> <span class="title">A Concrete Example</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_networkflow_example.html#s_networkflow_example-3" class="internal"><span class="codenumber">13.5.1</span> <span class="title">How the Labeling Algorithm Halts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_integer-programming.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Integer Solutions of Linear Programming Problems</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_networkflow_exercises.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_flowapplications.html" class="internal"><span class="codenumber">14</span> <span class="title">Combinatorial Applications of Network Flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_flowapplications_intro.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_flowapplications_bip-match.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Matchings in Bipartite Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_flowapplications_chain-partition.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Chain partitioning</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_flowapplications_exercises.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_polya.html" class="internal"><span class="codenumber">15</span> <span class="title">Pólya’s Enumeration Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_polya_square.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Coloring the Vertices of a Square</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_polya_perm-groups.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Permutation Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_perm-groups.html#ss_polya_perm-groups_rep" class="internal"><span class="codenumber">15.2.1</span> <span class="title">Representing permutations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_perm-groups.html#ss_polya_perm-groups_mult" class="internal"><span class="codenumber">15.2.2</span> <span class="title">Multiplying permutations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_polya_burnside.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Burnside’s Lemma</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_polya_polya.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Pólya’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_polya.html#ss_polya_polya_cycle-index" class="internal"><span class="codenumber">15.4.1</span> <span class="title">The cycle index</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_polya.html#ss_polya_polya_full" class="internal"><span class="codenumber">15.4.2</span> <span class="title">The full enumeration formula</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_polya_apps.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Applications of Pólya’s Enumeration Formula</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_apps.html#ss_polya_scales" class="internal"><span class="codenumber">15.5.1</span> <span class="title">Counting musical scales</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_apps.html#ss_polya_isomers" class="internal"><span class="codenumber">15.5.2</span> <span class="title">Enumerating isomers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_apps.html#ss_polya_graphs" class="internal"><span class="codenumber">15.5.3</span> <span class="title">Counting nonisomorphic graphs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_polya_exercises.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_kitchensink.html" class="internal"><span class="codenumber">16</span> <span class="title">The Many Faces of Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_kitchensink_online.html" class="internal"><span class="codenumber">16.1</span> <span class="title">On-line algorithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_kitchensink_online.html#s_kitchensink_online-4" class="internal"><span class="codenumber">16.1.1</span> <span class="title">Doing Relatively Well in an On-Line Setting</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_extremal-set-theory.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Extremal Set Theory</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_kitchensink_markov-chains.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Markov Chains</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_kitchensink_markov-chains.html#s_kitchensink_markov-chains-3" class="internal"><span class="codenumber">16.3.1</span> <span class="title">Absorbing Markov Chains</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_stable-match.html" class="internal"><span class="codenumber">16.4</span> <span class="title">The Stable Matching Theorem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_kitchensink_zero-one-matrices.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Zero–One Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_kitchensink_zero-one-matrices.html#s_kitchensink_zero-one-matrices-3" class="internal"><span class="codenumber">16.5.1</span> <span class="title">The Obvious Necessary Condition</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_arithmetic-combinatorics.html" class="internal"><span class="codenumber">16.6</span> <span class="title">Arithmetic Combinatorics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_lovasz-local.html" class="internal"><span class="codenumber">16.7</span> <span class="title">The Lovász Local Lemma</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_applying-local-lemma.html" class="internal"><span class="codenumber">16.8</span> <span class="title">Applying the Local Lemma</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="ch_epilogue.html" class="internal"><span class="codenumber">A</span> <span class="title">Epilogue</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="app_background.html" class="internal"><span class="codenumber">B</span> <span class="title">Background Material for Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_intro.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_int-union.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Intersections and Unions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-3" class="internal"><span class="codenumber">B.2.1</span> <span class="title">The Meaning of <span class="process-math">\(2\)</span>-Letter Words</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-4" class="internal"><span class="codenumber">B.2.2</span> <span class="title">The Empty Set: Much To Do About Nothing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-5" class="internal"><span class="codenumber">B.2.3</span> <span class="title">The First So Many Positive Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-6" class="internal"><span class="codenumber">B.2.4</span> <span class="title">Subsets, Proper Subsets and Equal Sets</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_products.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Cartesian Products</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_relations.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Binary Relations and Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_finite-sets.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Finite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_notation.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Notation from Set Theory and Logic</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_formal-num-sys.html" class="internal"><span class="codenumber">B.7</span> <span class="title">Formal Development of Number Systems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_formal-num-sys.html#s_background_add" class="internal"><span class="codenumber">B.7.1</span> <span class="title">Addition as a Binary Operation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_mult.html" class="internal"><span class="codenumber">B.8</span> <span class="title">Multiplication as a Binary Operation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_exp.html" class="internal"><span class="codenumber">B.9</span> <span class="title">Exponentiation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_order.html" class="internal"><span class="codenumber">B.10</span> <span class="title">Partial Orders and Total Orders</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_total-order-N.html" class="internal"><span class="codenumber">B.11</span> <span class="title">A Total Order on Natural Numbers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_decimal.html" class="internal"><span class="codenumber">B.12</span> <span class="title">Notation for Natural Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_decimal.html#s_background_decimal-3" class="internal"><span class="codenumber">B.12.1</span> <span class="title">Alternate Versions of Induction</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_equivalence.html" class="internal"><span class="codenumber">B.13</span> <span class="title">Equivalence Relations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_integers.html" class="internal"><span class="codenumber">B.14</span> <span class="title">The Integers as Equivalence Classes of Ordered Pairs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_prop-integers.html" class="internal"><span class="codenumber">B.15</span> <span class="title">Properties of the Integers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_rationals.html" class="internal"><span class="codenumber">B.16</span> <span class="title">Obtaining the Rationals from the Integers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_rationals.html#s_background_rationals-3" class="internal"><span class="codenumber">B.16.1</span> <span class="title">Integer Exponents</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_reals.html" class="internal"><span class="codenumber">B.17</span> <span class="title">Obtaining the Reals from the Rationals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_complex.html" class="internal"><span class="codenumber">B.18</span> <span class="title">Obtaining the Complex Numbers from the Reals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_complex.html#s_background_complex-3" class="internal"><span class="codenumber">B.18.1</span> <span class="title">Decimal Representation of Real Numbers</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_ZFC.html" class="internal"><span class="codenumber">B.19</span> <span class="title">The Zermelo-Fraenkel Axioms of Set Theory</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_graphs_planar"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.5</span><span class="space"> </span><span class="title">Planar Graphs</span>
+</h2>
+<div class="para" id="s_graphs_planar-2">Let’s return to the problem of providing lines for water, electricity, and natural gas to three homes which we discussed in the introduction to this chapter. How can we model this problem using a graph? The best way is to have a vertex for each utility and a vertex for each of the three homes. Then what we’re asking is if we can draw the graph that has an edge from each utility to each home so that none of the edges cross. This graph is shown in <a href="s_graphs_planar.html#fig_graphs_utils" class="xref" data-knowl="./knowl/xref/fig_graphs_utils.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.29">Figure 5.29</a>. You should recognize it as the complete bipartite graph <span class="process-math">\(\bfK_{3,3}\)</span> we introduced earlier in the chapter.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_graphs_utils"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="generated/latex-image/fig_graphs_utils-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.29<span class="period">.</span></span><span class="space"> </span>A graph of connecting homes to utilities<div class="autopermalink" data-description="Figure 5.29"><a href="#fig_graphs_utils" title="Copy heading and permalink for Figure 5.29">🔗</a></div></figcaption></figure><div class="para" id="s_graphs_planar-4">While this example of utility lines might seem a bit contrived, since there’s really no good reason that the providers can’t bury their lines at different depths, the question of whether a graph can be drawn in the plane such that edges intersect only at vertices is a long-studied question in mathematics that does have useful applications. One area where it arises is in the design of microchips and circuit boards. In those contexts, the material is so thin that the option of placing connections at different depths either does not exist or is severely restricted. There is much deep mathematics that underlies this area, and this section is intended to introduce a few of the key concepts.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-5">By a <dfn class="terminology">drawing</dfn> of a graph, we mean a way of associating its vertices with points in the Cartesian plane <span class="process-math">\(\reals^2\)</span> and its edges with simple polygonal arcs whose endpoints are the points associated to the vertices that are the endpoints of the edge. You can think of a polygonal arc as just a finite sequence of line segments such that the endpoint of one line segment is the starting point of the next line segment, and a simple polygonal arc is one that does not cross itself. (Our choice of polygonal arcs rather than arbitrary curves actually doesn’t cause an impediment, since by taking very, very, very short line segments we can approximate any curve.) A <dfn class="terminology">planar drawing</dfn> of a graph is one in which the polygonal arcs corresponding to two edges intersect only at a point corresponding to a vertex to which they are both incident. A graph is <dfn class="terminology">planar</dfn> if it has a planar drawing. A <dfn class="terminology">face</dfn> of a planar drawing of a graph is a region bounded by edges and vertices and not containing any other vertices or edges.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-6">
+<a href="s_graphs_planar.html#fig_planar" class="xref" data-knowl="./knowl/xref/fig_planar.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.30">Figure 5.30</a> shows a planar drawing of a graph with <span class="process-math">\(6\)</span> vertices and <span class="process-math">\(9\)</span> edges. Notice how one of the edges is drawn as a true polygonal arc rather than a straight line segment. This drawing determines <span class="process-math">\(5\)</span> regions, since we also count the unbounded region that surrounds the drawing.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_planar"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/planar_graph.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.30<span class="period">.</span></span><span class="space"> </span>A planar drawing of a graph<div class="autopermalink" data-description="Figure 5.30"><a href="#fig_planar" title="Copy heading and permalink for Figure 5.30">🔗</a></div></figcaption></figure><div class="para" id="s_graphs_planar-8">
+<a href="s_graphs_planar.html#fig_k4-planar" class="xref" data-knowl="./knowl/xref/fig_k4-planar.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.31">Figure 5.31</a> shows a planar drawing of the complete graph <span class="process-math">\(\bfK_4\text{.}\)</span> There are <span class="process-math">\(4\)</span> vertices, <span class="process-math">\(6\)</span> edges, and <span class="process-math">\(4\)</span> faces in the drawing.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_k4-planar"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/k4_planar.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.31<span class="period">.</span></span><span class="space"> </span>A planar drawing of <span class="process-math">\(\bfK_4\)</span><div class="autopermalink" data-description="Figure 5.31"><a href="#fig_k4-planar" title="Copy heading and permalink for Figure 5.31">🔗</a></div></figcaption></figure><div class="para logical" id="s_graphs_planar-10">
+<div class="para">What happens if we compute the number of vertices minus the number of edges plus the number of faces for these drawings? We have</div>
+<div class="displaymath process-math" id="s_graphs_planar-10-1">
+\begin{align*}
+6-9+5 \amp = 2\\
+4-6+4 \amp =2
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-11">While it might seem like a coincidence that this computation results in <span class="process-math">\(2\)</span> for these planar drawings, there’s a more general principle at work here, and in fact it holds for <em class="emphasis">any</em> planar drawing of <em class="emphasis">any</em> planar graph.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-12">In fact, the number <span class="process-math">\(2\)</span> here actually results from a fundamental property of the plane, and there are a corresponding theorems for other surfaces. However, we only need the result as stated above.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="s_graphs_planar-13"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.32</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s Formula.</span>
+</h3>
+<div class="para logical" id="s_graphs_planar-13-3-1">
+<div class="para">Let <span class="process-math">\(\bfG\)</span> be a connected planar graph with <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(m\)</span> edges. Every planar drawing of <span class="process-math">\(\bfG\)</span> has <span class="process-math">\(f\)</span> faces, where <span class="process-math">\(f\)</span> satisfies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n-m+f=2.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-13-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.32: Euler’s Formula"><a href="#s_graphs_planar-13" title="Copy heading and permalink for Theorem 5.32: Euler’s Formula">🔗</a></div></article><details id="s_graphs_planar-13-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_graphs_planar-13-4-1">
+<div class="para">Our proof is by induction on the number <span class="process-math">\(m\)</span> of edges. If <span class="process-math">\(m=0\text{,}\)</span> then since <span class="process-math">\(\bfG\)</span> is connected, our graph has a single vertex, and so there is one face. Thus <span class="process-math">\(n-m+f = 1-0+1=2\)</span> as needed. Now suppose that we have proven Euler’s formula for all graphs with less than <span class="process-math">\(m\)</span> edges and let <span class="process-math">\(\bfG\)</span> have <span class="process-math">\(m\)</span> edges. Pick an edge <span class="process-math">\(e\)</span> of <span class="process-math">\(\bfG\text{.}\)</span> What happens if we form a new graph <span class="process-math">\(\bfG'\)</span> by deleting <span class="process-math">\(e\)</span> from <span class="process-math">\(\bfG\text{?}\)</span> If <span class="process-math">\(\bfG'\)</span> is connected, our inductive hypothesis applies. Say that <span class="process-math">\(\bfG'\)</span> has <span class="process-math">\(n'\)</span> vertices, <span class="process-math">\(m'\)</span> edges, and <span class="process-math">\(f'\)</span> faces. Then by induction, these numbers satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n'-m'+f'=2.
+\end{equation*}
+</div>
+<div class="para">Since we only deleted one edge, <span class="process-math">\(n'=n\)</span> and <span class="process-math">\(m'=m-1\text{.}\)</span> What did the removal of <span class="process-math">\(e\)</span> do to the number of faces? In <span class="process-math">\(\bfG'\)</span> there’s a new face that was formerly two faces divided by <span class="process-math">\(e\)</span> in <span class="process-math">\(\bfG\text{.}\)</span> Thus, <span class="process-math">\(f'=f-1\text{.}\)</span> Substituting these into <span class="process-math">\(n'-m'+f'=2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n-(m-1)+(f-1)=2 \iff n-m+f=2.
+\end{equation*}
+</div>
+<div class="para">Thus, if <span class="process-math">\(\bfG'\)</span> is connected, we are done. If <span class="process-math">\(\bfG'\)</span> is disconnected, however, we cannot apply the inductive assumption to <span class="process-math">\(\bfG'\)</span> directly. Fortunately, since we removed only one edge, <span class="process-math">\(\bfG'\)</span> has two components, which we can view as two connected graphs <span class="process-math">\(\bfG'_1\)</span> and <span class="process-math">\(\bfG'_2\text{.}\)</span> Each of these has fewer than <span class="process-math">\(m\)</span> edges, so we may apply the inductive hypothesis to them. For <span class="process-math">\(i=1,2\text{,}\)</span> let <span class="process-math">\(n'_i\)</span> be the number of vertices of <span class="process-math">\(\bfG'_i\text{,}\)</span> <span class="process-math">\(m'_i\)</span> the number of edges of <span class="process-math">\(\bfG'_i\text{,}\)</span> and <span class="process-math">\(f'_i\)</span> the number of faces of <span class="process-math">\(\bfG'_i\text{.}\)</span> Then by induction we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n'_1 - m'_1 + f'_1 = 2 \quad \text{and} \quad n'_2-m'_2+f'_2 =2.
+\end{equation*}
+</div>
+<div class="para">Adding these together, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(n'_1 + n'_2) - (m'_1 + m'_2) + (f'_1 + f'_2) = 4.
+\end{equation*}
+</div>
+<div class="para">But now <span class="process-math">\(n=n'_1 + n'_2\text{,}\)</span> and <span class="process-math">\(m'_1 + m'_2 = m-1\text{,}\)</span> so the equality becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n - (m-1) + (f'_1+f'_2) = 4 \iff n-m + (f'_1 + f'_2) = 3.
+\end{equation*}
+</div>
+<div class="para">The only thing we have yet to figure out is how <span class="process-math">\(f'_1+f'_2\)</span> relates to <span class="process-math">\(f\text{,}\)</span> and we have to hope that it will allow us to knock the <span class="process-math">\(3\)</span> down to a <span class="process-math">\(2\text{.}\)</span> Every face of <span class="process-math">\(\bfG'_1\)</span> and <span class="process-math">\(\bfG'_2\)</span> is a face of <span class="process-math">\(\bfG\text{,}\)</span> since the fact that removing <span class="process-math">\(e\)</span> disconnects <span class="process-math">\(\bfG\)</span> means that <span class="process-math">\(e\)</span> must be part of the boundary of the unbounded face. Further, the unbounded face is counted twice in the sum <span class="process-math">\(f'_1 + f'_2\text{,}\)</span> so <span class="process-math">\(f=f'_1 + f'_2 -1\text{.}\)</span> This gives exactly what we need to complete the proof.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-13-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.32.1"><a href="#s_graphs_planar-13-4" title="Copy heading and permalink for Proof 5.32.1">🔗</a></div></article></details><div class="para logical" id="s_graphs_planar-14">
+<div class="para">Taken by itself, Euler’s formula doesn’t seem that useful, since it requires counting the number of faces in a planar embedding. However, we can use this formula to get a quick way to determine that a graph is not planar. Consider a drawing without edge crossings of a graph on <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(m\)</span> edges, with <span class="process-math">\(n\ge3\text{.}\)</span>  We consider pairs <span class="process-math">\((e,F)\)</span> where <span class="process-math">\(e\)</span> is an edge of <span class="process-math">\(\bfG\)</span> and <span class="process-math">\(F\)</span> is a face that has <span class="process-math">\(e\)</span> as part of its boundary. How many such pairs are there? Let’s call the number of pairs <span class="process-math">\(p\text{.}\)</span> Each edge can bound either one or two faces, so we have that <span class="process-math">\(p\leq 2m\text{.}\)</span> We can also bound <span class="process-math">\(p\)</span> by counting the number of pairs in which a face <span class="process-math">\(F\)</span> appears. Each face is bounded by at least <span class="process-math">\(3\)</span> edges, so it appears in at least <span class="process-math">\(3\)</span> pairs, and so <span class="process-math">\(p\geq 3f\text{.}\)</span> Thus <span class="process-math">\(3f\leq 2m\)</span> or <span class="process-math">\(f\leq 2m/3\text{.}\)</span> Now, utilizing Euler’s formula, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m = n+f-2 \leq n + \frac{2m}{3} - 2 \iff \frac{m}{3} \leq n-2.
+\end{equation*}
+</div>
+<div class="para">Thus, we’ve proven the following theorem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-14" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_max-edge-planar"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.33</span><span class="period">.</span>
+</h3>
+<div class="para" id="thm_max-edge-planar-1-1">A planar graph on <span class="process-math">\(n\)</span> vertices has at most <span class="process-math">\(3n-6\)</span> edges when <span class="process-math">\(n\ge 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_max-edge-planar-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.33"><a href="#thm_max-edge-planar" title="Copy heading and permalink for Theorem 5.33">🔗</a></div></article><div class="para" id="s_graphs_planar-16">The contrapositive of this theorem, namely that an <span class="process-math">\(n\)</span>-vertex graph with more than <span class="process-math">\(3n-6\)</span> edges is not planar, is usually the most useful formulation of this result. For instance, we’ve seen (<a href="s_graphs_planar.html#fig_k4-planar" class="xref" data-knowl="./knowl/xref/fig_k4-planar.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.31">Figure 5.31</a>) that <span class="process-math">\(\bfK_4\)</span> is planar. What about <span class="process-math">\(\bfK_5\text{?}\)</span> It has <span class="process-math">\(5\)</span> vertices and <span class="process-math">\(C(5,2)=10 &gt; 9 = 3\cdot 5-6\)</span> edges, so it is not planar, and thus for <span class="process-math">\(n\geq 5\text{,}\)</span> <span class="process-math">\(\bfK_n\)</span> is not planar, since it contains <span class="process-math">\(\bfK_5\text{.}\)</span> It’s important to note that <a href="s_graphs_planar.html#thm_max-edge-planar" class="xref" data-knowl="./knowl/xref/thm_max-edge-planar.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.33">Theorem 5.33</a> is not the be-all, end-all of determining if a graph is planar. To see this, let’s return to the subject of drawing <span class="process-math">\(\bfK_{3,3}\)</span> in the plane. This graph has <span class="process-math">\(6\)</span> vertices and <span class="process-math">\(9\)</span> edges, so it passes the test of <a href="s_graphs_planar.html#thm_max-edge-planar" class="xref" data-knowl="./knowl/xref/thm_max-edge-planar.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.33">Theorem 5.33</a>. However, if you spend a couple minutes trying to find a way to draw <span class="process-math">\(\bfK_{3,3}\)</span> in the plane without any crossing edges, you’ll pretty quickly begin to believe that it can’t be done—and you’d be right!<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-16" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-17">To see why <span class="process-math">\(\bfK_{3,3}\)</span> is not planar, we’ll have to return to Euler’s formula, and we again work with edge-face pairs. For <span class="process-math">\(\bfK_{3,3}\text{,}\)</span> we see that every edge would have to be part of the boundary of two faces, and faces are bounded by cycles. Also, since the graph is bipartite, there are no odd cycles. Thus, counting edge-face pairs from the edge perspective, we see that there are <span class="process-math">\(2m = 18\)</span> pairs. If we let <span class="process-math">\(f_k\)</span> be the number of faces bounded by a cycle of length <span class="process-math">\(k\text{,}\)</span> then <span class="process-math">\(f= f_4 + f_6\text{.}\)</span> Thus, counting edge-face pairs from the face perspective, there are <span class="process-math">\(4f_4 + 6f_6\)</span> pairs. From Euler’s formula, we see that the number of faces <span class="process-math">\(f\)</span> must be <span class="process-math">\(5\text{,}\)</span> so then <span class="process-math">\(4f_4+6f_6\geq 20\text{.}\)</span> But from our count of edge-face pairs, we have <span class="process-math">\(2m=4f_4+6f_6\text{,}\)</span> giving <span class="process-math">\(18\geq 20\text{,}\)</span> which is clearly absurd. Thus, <span class="process-math">\(\bfK_{3,3}\)</span> is not planar.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-17" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-18">At this point, you’re probably asking yourself “So what?” We’ve invested a fair amount of effort to establish that <span class="process-math">\(\bfK_5\)</span> and <span class="process-math">\(\bfK_{3,3}\)</span> are nonplanar. Clearly any graph that contains them is also nonplanar, but there are a lot of graphs, so you might think that we could be at this forever. Fortunately, we won’t be, since at its core, planarity really comes down to just these two graphs, as we shall soon see.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-18" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-19">If <span class="process-math">\(\GVE\)</span> is a graph and <span class="process-math">\(uv\in E\text{,}\)</span> then we may form a new graph <span class="process-math">\(\bfG'\)</span> called an <dfn class="terminology">elementary subdivision</dfn> of <span class="process-math">\(\bfG\)</span> by adding a new vertex <span class="process-math">\(v'\)</span> and replacing the edge <span class="process-math">\(uv\)</span> by edges <span class="process-math">\(uv'\)</span> and <span class="process-math">\(v'v\text{.}\)</span> In other words, <span class="process-math">\(\bfG'\)</span> has vertex set <span class="process-math">\(V'=V\cup\{v'\}\)</span> and edge set <span class="process-math">\(E'=(E-\{uv\})\cup \{uv',v'v\}\text{.}\)</span> Two graphs <span class="process-math">\(\bfG_1\)</span> and <span class="process-math">\(\bfG_2\)</span> are <dfn class="terminology">homeomorphic</dfn> if they can be obtained from the same graph by a (potentially trivial) sequence of elementary subdivisions.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-19" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-20">The purpose of discussing homeomorphic graphs is that two homeomorphic graphs have the same properties when it comes to being drawn in the plane. To see this, think about what happens to <span class="process-math">\(\bfK_5\)</span> if we form an elementary subdivision of it via any one of its edges. Clearly it remains nonplanar. In fact, if you take any nonplanar graph and form the elementary subdivision using any one of its edges, the resulting graph is nonplanar. The following very deep theorem was proved by the Polish mathematician Kazimierz Kuratowski in 1930. Its proof is beyond the scope of this text.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-20" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_kuratowski"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.34</span><span class="period">.</span><span class="space"> </span><span class="title">Kuratowski’s Theorem.</span>
+</h3>
+<div class="para" id="thm_kuratowski-2-1">A graph is planar if and only if it does not contain a subgraph homeomorphic to either <span class="process-math">\(\bfK_5\)</span> or <span class="process-math">\(\bfK_{3,3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_kuratowski-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.34: Kuratowski’s Theorem"><a href="#thm_kuratowski" title="Copy heading and permalink for Theorem 5.34: Kuratowski’s Theorem">🔗</a></div></article><div class="para" id="s_graphs_planar-22">Kuratowski’s Theorem gives a useful way for checking if a graph is planar. Although it’s not always easy to find a subgraph homeomorphic to <span class="process-math">\(\bfK_5\)</span> or <span class="process-math">\(\bfK_{3,3}\)</span> by hand, there are efficient algorithms for planarity testing that make use of this characterization. To see this theorem at work, let’s consider the Petersen graph shown in <a href="s_graphs_eulerham.html#fig_petersen" class="xref" data-knowl="./knowl/xref/fig_petersen.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.17">Figure 5.17</a>. The Petersen graph has <span class="process-math">\(10\)</span> vertices and <span class="process-math">\(15\)</span> edges, so it passes the test of <a href="s_graphs_planar.html#thm_max-edge-planar" class="xref" data-knowl="./knowl/xref/thm_max-edge-planar.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.33">Theorem 5.33</a>, and our argument using Euler’s formula to prove that <span class="process-math">\(\bfK_{3,3}\)</span> is nonplanar was complex enough, we probably don’t want to try it for the Petersen graph. To use Kuratowski’s Theorem here, we need to decide if we would rather find a subgraph homeomorphic to <span class="process-math">\(\bfK_5\)</span> or to <span class="process-math">\(\bfK_{3,3}\text{.}\)</span> Although the Petersen graph looks very similar to <span class="process-math">\(\bfK_5\text{,}\)</span> it’s actually simultaneously <em class="emphasis">too</em> similar and too different for us to be able to find a subgraph homeomorphic to <span class="process-math">\(\bfK_5\text{,}\)</span> since each vertex has degree <span class="process-math">\(3\text{.}\)</span> Thus, we set out to find a subgraph of the Petersen graph homeomorphic to <span class="process-math">\(\bfK_{3,3}\text{.}\)</span> To do so, note that <span class="process-math">\(\bfK_{3,3}\)</span> contains a cycle of length <span class="process-math">\(6\)</span> and three edges that are in place between vertices opposite each other on the cycle. We identify a six-cycle in the Petersen graph and draw it as a hexagon and place the remaining four vertices inside the cycle. Such a drawing is shown in <a href="s_graphs_planar.html#fig_petersen-graph-k33" class="xref" data-knowl="./knowl/xref/fig_petersen-graph-k33.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.35">Figure 5.35</a>. The subgraph homeomorphic to <span class="process-math">\(\bfK_{3,3}\)</span> is found by deleting the black vertex, as then the white vertices have degree two, and we can replace each of them and their two incident edges (shown in bold) by a single edge.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-22" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_petersen-graph-k33"><div class="image-box" style="width: 52%; margin-left: 24%; margin-right: 24%;"><img src="external/petersen_graph_k33.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.35<span class="period">.</span></span><span class="space"> </span>A more illustrative drawing of the Petersen graph<div class="autopermalink" data-description="Figure 5.35"><a href="#fig_petersen-graph-k33" title="Copy heading and permalink for Figure 5.35">🔗</a></div></figcaption></figure><div class="para" id="s_graphs_planar-24">We close this section with a problem that brings the current section together with the topic of graph coloring. In 1852 Francis Guthrie, an Englishman who was at the time studying to be lawyer but subsequently became a professor of mathematics in South Africa, was trying to color a map of the counties of England so that any two counties that shared a boundary segment (meaning they touched in more than a single point) were colored with different colors. He noticed that he only needed four colors to do this, and was unable to draw any sort of map that would require five colors. (He was able to find a map that required four colors, an example of which is shown in <a href="s_graphs_planar.html#fig_needs-four-colors" class="xref" data-knowl="./knowl/xref/fig_needs-four-colors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.36">Figure 5.36</a>.)<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-24" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_needs-four-colors"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="external/needs_four_colors.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.36<span class="period">.</span></span><span class="space"> </span>A map that requires four colors<div class="autopermalink" data-description="Figure 5.36"><a href="#fig_needs-four-colors" title="Copy heading and permalink for Figure 5.36">🔗</a></div></figcaption></figure><div class="para" id="s_graphs_planar-26">Could it possibly be true that <em class="emphasis">every</em> map could be colored with only four colors? He asked his brother Frederick Guthrie, who was a mathematics student at University College, London, about the problem, and Frederick eventually communicated the problem to Augustus de Morgan (of de Morgan’s laws fame), one of his teachers. It was in this way that one of the most famous (or infamous) problems, known for a century as the Four Color Problem and now the Four Color Theorem, in graph theory was born. De Morgan was very interested in the Four Color Problem, and communicated it to Sir William Rowan Hamilton, a prominent Irish mathematician and the one for whom hamiltonian cycles are named, but Hamilton did not find the problem interesting. Hamilton is one of the few people who considered the Four Color Problem but did not become captivated by it.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-26" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-27">We’ll continue our discussion of the history of the Four Color Theorem in a moment, but first, we must consider how we can turn the problem of coloring a map into a graph theory question. Well, it seems natural that each region should be assigned a corresponding vertex. We want to force regions that share a boundary to have different colors, so this suggests that we should place an edge between two vertices if and only if their corresponding regions have a common boundary. (As an example, the map in <a href="s_graphs_planar.html#fig_needs-four-colors" class="xref" data-knowl="./knowl/xref/fig_needs-four-colors.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.36">Figure 5.36</a> corresponds to the graph <span class="process-math">\(\bfK_4\text{.}\)</span>) It is not difficult to see that this produces a planar graph, since we may draw the edges through the common boundary segment. Furthermore, with a little bit of thought, you should see that given a planar drawing of a graph, you can create a map in which each vertex leads to a region and edges lead to common boundary segments. Thus, the Four Color Problem could be stated as “Does every planar graph have chromatic number at most four?”<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-27" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-28">Interest in the Four Color Problem languished until 1877, when the British mathematician Arthur Cayley wrote a letter to the Royal Society asking if the problem had been resolved. This brought the problem to the attention of many more people, and the first “proof” of the Four Color Theorem, due to Alfred Bray Kempe, was completed in 1878 and published a year later. It took <span class="process-math">\(11\)</span> years before Percy John Heawood found a flaw in the proof but was able to salvage enough of it to show that every planar graph has chromatic number at most five. In 1880, Peter Guthrie Tait, a British physicist best known for his book <span class="booktitle">Treatise on Natural Philosophy</span> with Sir William Thomson (Lord Kelvin), made an announcement that suggested he had a proof of the Four Color Theorem utilizing hamiltonian cycles in certain planar graphs. However, consistent with the way Tait approached some conjectures in the mathematical theory of knots, it appears that he subsequently realized around 1883 that he could not prove that the hamiltonian cycles he was using actually existed and so Tait likely only believed he had a proof of the Four Color Theorem for a short time, if at all. However, it would take until 1946 to find a counterexample to the conjecture Tait had used in his attempt to prove the Four Color Theorem.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-28" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="s_graphs_planar-29">In the first half of the twentieth century, some incremental progress toward resolving the Four Color Problem was made, but few prominent mathematicians took a serious interest in it. The final push to prove the Four Color Theorem came with about at the same time that the first electronic computers were coming into widespread use in industry and research. In 1976, two mathematicians at the University of Illinois announced their computer-assisted proof of the Four Color Theorem. The proof by Kenneth Appel and Wolfgang Haken led the University of Illinois to add the phrase “FOUR COLORS SUFFICE” to its postage meter’s imprint.<details class="ptx-footnote" aria-live="polite" id="s_graphs_planar-29-2"><summary class="ptx-footnote__number" title="Footnote 5.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="s_graphs_planar-29-2">A photograph of an envelope with such a meter mark on it can be found in the book <span class="booktitle">The Four-Color Theorem: History, Topological Foundations, and Idea of Proof</span> by Rudolf and Gerda Fritsch. (Springer, 1998)</div></details><div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-29" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_4ct"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.37</span><span class="period">.</span><span class="space"> </span><span class="title">Four Color Theorem.</span>
+</h3>
+<div class="para" id="thm_4ct-2-1">Every planar graph has chromatic number at most four.<div class="autopermalink" data-description="Paragraph"><a href="#thm_4ct-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.37: Four Color Theorem"><a href="#thm_4ct" title="Copy heading and permalink for Theorem 5.37: Four Color Theorem">🔗</a></div></article><div class="para" id="s_graphs_planar-31">Appel and Haken’s proof of the Four Color Theorem was at a minimum unsatisfactory for many mathematicians, and to some it simply wasn’t a proof. These mathematicians felt that the using a computer to check various cases was simply too uncertain; how could you be certain that the code that checked the 1,482 “unavoidable configurations” didn’t contain any logic errors? In fact, there were several mistakes found in the cases analyzed, but none were found to be fatal flaws. In 1989, Appel and Haken published a 741-page tome entitled <span class="booktitle">Every Planar Map is Four Colorable</span> which provided corrections to all known flaws in their original argument. This still didn’t satisfy many, and in the early 1990’s a team consisting of Neil Robertson from The Ohio State University; Daniel P. Sanders, a graduate student at the Georgia Institute of Technology; Paul Seymour of Bellcore; and Robin Thomas from Georgia Tech announced a new proof of the Four Color Theorem. However, it still required the use of computers. The proof did gain more widespread acceptance than that of Appel and Haken, in part because the new proof used fewer than half (<span class="process-math">\(633\)</span>) of the number of configurations the Appel-Haken proof used and the computer code was provided online for anyone to verify. While still unsatisfactory to many, the proof by Robertson, et al. was generally accepted, and today the issue of the Four Color Theorem has largely been put to rest. However, many still wonder if anyone will ever find a proof of this simple statement that does not require the assistance of a computer.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphs_planar-31" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 5.5: Planar Graphs"><a href="#s_graphs_planar" title="Copy heading and permalink for Section 5.5: Planar Graphs">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="s_graphs_color.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_graphs_counting-trees.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DKXSTE8Z4T"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DKXSTE8Z4T');
+</script><!--End: Google Global Site Tag code-->
+</body>
+</html>

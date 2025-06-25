@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para">Let’s see what Kruskal’s algorithm does on the weighted graph in <a href="" class="xref" data-knowl="./knowl/fig_graphalgorithms_spantreegraph.html" title="Figure 12.1">Figure 12.1</a>.  It first sorts all of the edges by weight. We won’t reproduce the list here, since we won’t need all of it. The edge of least weight is <span class="process-math">\(ck\text{,}\)</span> which has weight <span class="process-math">\(23\text{.}\)</span> It continues adding the edge of least weight, adding <span class="process-math">\(ag\text{,}\)</span> <span class="process-math">\(fg\text{,}\)</span> <span class="process-math">\(fi\text{,}\)</span> <span class="process-math">\(fj\text{,}\)</span> and <span class="process-math">\(bj\text{.}\)</span> However, after doing this, the edge of lowest weight is <span class="process-math">\(fb\text{,}\)</span> which has weight <span class="process-math">\(38\text{.}\)</span> This edge cannot be added, as doing so would make <span class="process-math">\(fjb\)</span> a cycle. Thus, the algorithm bypasses it and adds <span class="process-math">\(bc\text{.}\)</span> Edge <span class="process-math">\(ai\)</span> is next inspected, but it, too, would create a cycle and is eliminated from consideration. Then <span class="process-math">\(em\)</span> is added, followed by <span class="process-math">\(dl\text{.}\)</span> There are now <em class="emphasis">two</em> edges of weight <span class="process-math">\(56\)</span> to be considered: <span class="process-math">\(al\)</span> and <span class="process-math">\(dj\text{.}\)</span> Our sorting algorithm has somehow decided one of them should appear first, so let’s say it’s <span class="process-math">\(dj\text{.}\)</span> After adding <span class="process-math">\(dj\text{,}\)</span> we cannot add <span class="process-math">\(al\text{,}\)</span> as <span class="process-math">\(agfjdl\)</span> would form a cycle. Edge <span class="process-math">\(dk\)</span> is next considered, but it would also form a cycle. However, <span class="process-math">\(ek\)</span> can be added. Edges <span class="process-math">\(km\)</span> and <span class="process-math">\(dm\)</span> are then bypassed. Finally, edge <span class="process-math">\(ch\)</span> is added as the twelfth and final edge for this <span class="process-math">\(13\)</span>-vertex spanning tree. The full list of edges added (in order) is shown to the right. The total weight of this spanning tree is <span class="process-math">\(504\text{.}\)</span>
+</div>
+<span class="incontext"><a href="s_graphalgorithms_min-wt-span.html#p-1443" class="internal">in-context</a></span>
+</body>
+</html>

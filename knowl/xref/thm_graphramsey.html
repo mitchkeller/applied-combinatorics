@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2</span><span class="period">.</span><span class="space"> </span><span class="title">Ramsey’s Theorem for Graphs.</span>
+</h3>
+<div class="para">If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are positive integers, then there exists a least positive integer <span class="process-math">\(R(m,n)\)</span> so that if <span class="process-math">\(G\)</span> is a graph and <span class="process-math">\(G\)</span> has at least <span class="process-math">\(R(m,n)\)</span> vertices, then either <span class="process-math">\(G\)</span> contains a complete subgraph on <span class="process-math">\(m\)</span> vertices, or <span class="process-math">\(G\)</span> contains an independent set of size <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_graphramsey-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 11.2: Ramsey’s Theorem for Graphs"><a href="#thm_graphramsey" title="Copy heading and permalink for Theorem 11.2: Ramsey’s Theorem for Graphs">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para">We show that <span class="process-math">\(R(m,n)\)</span> exists and is at most <span class="process-math">\(\binom{m+n-2}{m-1}\text{.}\)</span>  This claim is trivial when either <span class="process-math">\(m\le 2\)</span> or <span class="process-math">\(n\le2\text{,}\)</span> so we may assume that <span class="process-math">\(m,n\ge3\text{.}\)</span> From this point, we proceed by induction on <span class="process-math">\(t=m+n\)</span> assuming that the result holds when <span class="process-math">\(t\le 5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_graphramsey-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now let <span class="process-math">\(x\)</span> be any vertex in <span class="process-math">\(G\text{.}\)</span> Then there are at least <span class="process-math">\(\binom{m+n-2}{m-1}-1\)</span> other vertices, which we partition as <span class="process-math">\(S_1\cup S_2\text{,}\)</span> where <span class="process-math">\(S_1\)</span> are those vertices adjacent to <span class="process-math">\(x\)</span> in <span class="process-math">\(G\)</span> and <span class="process-math">\(S_2\)</span> are those vertices which are not adjacent to <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_graphramsey-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We recall that the binomial coefficients satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{m+n-2}{m-1}=\binom{m+n-3}{m-2}+\binom{m+n-3}{m-1} =
+\binom{m+n-3}{m-2}+\binom{m+n-3}{n-2}
+\end{equation*}
+</div>
+<div class="para">So either <span class="process-math">\(|S_1|\ge \binom{m+n-3}{m-2}\)</span> or <span class="process-math">\(|S_1|\ge\binom{m+n-3}{m-1}\text{.}\)</span>  If the first option holds, and <span class="process-math">\(S_1\)</span> does not have an independent set of size <span class="process-math">\(n\text{,}\)</span> then it contains a complete subgraph of size <span class="process-math">\(m-1\text{.}\)</span> It follows that we may add <span class="process-math">\(x\)</span> to this set to obtain a complete subgraph of size <span class="process-math">\(m\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_graphramsey-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Similarly, if the second option holds, and <span class="process-math">\(S_2\)</span> does not contain a complete subgraph of size <span class="process-math">\(m\text{,}\)</span> then <span class="process-math">\(S_2\)</span> contains an independent set of size <span class="process-math">\(n-1\text{,}\)</span> and we may add <span class="process-math">\(x\)</span> to this set to obtain an independent set of size <span class="process-math">\(n\)</span> in <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_graphramsey-4-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 11.2.1"><a href="#thm_graphramsey-4" title="Copy heading and permalink for Proof 11.2.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_probmeth_graph-ramsey.html#thm_graphramsey">in-context</a></span>
+</body>
+</html>

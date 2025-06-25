@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">The first sum is just missing the first two terms of the series, so we can replace it by <span class="process-math">\(R(x) - (2+x)\text{,}\)</span> where <span class="process-math">\(R(x)=\sum_{n=0}^\infty r_n x^n\text{.}\)</span> The second sum is almost <span class="process-math">\(xR(x)\text{,}\)</span> except it’s missing the first term. Thus, it’s equal to <span class="process-math">\(xR(x) - 2x\text{.}\)</span> The sum in the final term is simply <span class="process-math">\(x^2 R(x)\text{.}\)</span> Thus, the equation can be rewritten as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R(x) - (2+x) -(xR(x)-2x)-2x^2R(x) = \frac{1}{1-2x} - 1- 2x.
+\end{equation*}
+</div>
+<div class="para">A little bit of algebra then gets us to the generating function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R(x) = \frac{6x^2-5x+2}{(1-2x)(1-x-2x^2)}.
+\end{equation*}
+</div>
+<div class="para">This generating function can be expanded using partial fractions in SageMath:</div>
+</div>
+<span class="incontext"><a href="s_recurrence_genfunction.html#p-1202" class="internal">in-context</a></span>
+</body>
+</html>

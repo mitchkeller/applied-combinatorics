@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Our proof is by induction on the number <span class="process-math">\(m\)</span> of edges. If <span class="process-math">\(m=0\text{,}\)</span> then since <span class="process-math">\(\bfG\)</span> is connected, our graph has a single vertex, and so there is one face. Thus <span class="process-math">\(n-m+f = 1-0+1=2\)</span> as needed. Now suppose that we have proven Euler’s formula for all graphs with less than <span class="process-math">\(m\)</span> edges and let <span class="process-math">\(\bfG\)</span> have <span class="process-math">\(m\)</span> edges. Pick an edge <span class="process-math">\(e\)</span> of <span class="process-math">\(\bfG\text{.}\)</span> What happens if we form a new graph <span class="process-math">\(\bfG'\)</span> by deleting <span class="process-math">\(e\)</span> from <span class="process-math">\(\bfG\text{?}\)</span> If <span class="process-math">\(\bfG'\)</span> is connected, our inductive hypothesis applies. Say that <span class="process-math">\(\bfG'\)</span> has <span class="process-math">\(n'\)</span> vertices, <span class="process-math">\(m'\)</span> edges, and <span class="process-math">\(f'\)</span> faces. Then by induction, these numbers satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n'-m'+f'=2.
+\end{equation*}
+</div>
+<div class="para">Since we only deleted one edge, <span class="process-math">\(n'=n\)</span> and <span class="process-math">\(m'=m-1\text{.}\)</span> What did the removal of <span class="process-math">\(e\)</span> do to the number of faces? In <span class="process-math">\(\bfG'\)</span> there’s a new face that was formerly two faces divided by <span class="process-math">\(e\)</span> in <span class="process-math">\(\bfG\text{.}\)</span> Thus, <span class="process-math">\(f'=f-1\text{.}\)</span> Substituting these into <span class="process-math">\(n'-m'+f'=2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n-(m-1)+(f-1)=2 \iff n-m+f=2.
+\end{equation*}
+</div>
+<div class="para">Thus, if <span class="process-math">\(\bfG'\)</span> is connected, we are done. If <span class="process-math">\(\bfG'\)</span> is disconnected, however, we cannot apply the inductive assumption to <span class="process-math">\(\bfG'\)</span> directly. Fortunately, since we removed only one edge, <span class="process-math">\(\bfG'\)</span> has two components, which we can view as two connected graphs <span class="process-math">\(\bfG'_1\)</span> and <span class="process-math">\(\bfG'_2\text{.}\)</span> Each of these has fewer than <span class="process-math">\(m\)</span> edges, so we may apply the inductive hypothesis to them. For <span class="process-math">\(i=1,2\text{,}\)</span> let <span class="process-math">\(n'_i\)</span> be the number of vertices of <span class="process-math">\(\bfG'_i\text{,}\)</span> <span class="process-math">\(m'_i\)</span> the number of edges of <span class="process-math">\(\bfG'_i\text{,}\)</span> and <span class="process-math">\(f'_i\)</span> the number of faces of <span class="process-math">\(\bfG'_i\text{.}\)</span> Then by induction we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n'_1 - m'_1 + f'_1 = 2 \quad \text{and} \quad n'_2-m'_2+f'_2 =2.
+\end{equation*}
+</div>
+<div class="para">Adding these together, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(n'_1 + n'_2) - (m'_1 + m'_2) + (f'_1 + f'_2) = 4.
+\end{equation*}
+</div>
+<div class="para">But now <span class="process-math">\(n=n'_1 + n'_2\text{,}\)</span> and <span class="process-math">\(m'_1 + m'_2 = m-1\text{,}\)</span> so the equality becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n - (m-1) + (f'_1+f'_2) = 4 \iff n-m + (f'_1 + f'_2) = 3.
+\end{equation*}
+</div>
+<div class="para">The only thing we have yet to figure out is how <span class="process-math">\(f'_1+f'_2\)</span> relates to <span class="process-math">\(f\text{,}\)</span> and we have to hope that it will allow us to knock the <span class="process-math">\(3\)</span> down to a <span class="process-math">\(2\text{.}\)</span> Every face of <span class="process-math">\(\bfG'_1\)</span> and <span class="process-math">\(\bfG'_2\)</span> is a face of <span class="process-math">\(\bfG\text{,}\)</span> since the fact that removing <span class="process-math">\(e\)</span> disconnects <span class="process-math">\(\bfG\)</span> means that <span class="process-math">\(e\)</span> must be part of the boundary of the unbounded face. Further, the unbounded face is counted twice in the sum <span class="process-math">\(f'_1 + f'_2\text{,}\)</span> so <span class="process-math">\(f=f'_1 + f'_2 -1\text{.}\)</span> This gives exactly what we need to complete the proof.</div>
+</div>
+<span class="incontext"><a href="s_graphs_planar.html#p-562" class="internal">in-context</a></span>
+</body>
+</html>

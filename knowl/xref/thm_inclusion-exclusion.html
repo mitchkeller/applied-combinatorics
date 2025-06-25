@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Principle of Inclusion-Exclusion.</span>
+</h3>
+<div class="para logical">
+<div class="para">The number of elements of <span class="process-math">\(X\)</span> which satisfy none of the properties in <span class="process-math">\(\mathcal{P}\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation}
+\sum_{S\subseteq [m]} (-1)^{|S|}N(S).\tag{7.2.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_inclusion-exclusion-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 7.7: Principle of Inclusion-Exclusion"><a href="#thm_inclusion-exclusion" title="Copy heading and permalink for Theorem 7.7: Principle of Inclusion-Exclusion">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para">We proceed by induction on the number <span class="process-math">\(m\)</span> of properties. If <span class="process-math">\(m=1\text{,}\)</span> then the formula reduces to <span class="process-math">\(N(\emptyset)-N(\{1\})\text{.}\)</span> This is correct since it says just that the number of elements which do not satisfy property <span class="process-math">\(P_1\)</span> is the total number of elements minus the number which do satisfy property <span class="process-math">\(P_1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_inclusion-exclusion-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now assume validity when <span class="process-math">\(m\le k\)</span> for some <span class="process-math">\(k\ge1\)</span> and consider the case where <span class="process-math">\(m=k+1\text{.}\)</span> Let <span class="process-math">\(X'=\{x\in X: x\)</span> satisfies <span class="process-math">\(P_{k+1}\}\)</span> and <span class="process-math">\(X''=X-X'\)</span> (i.e., <span class="process-math">\(X''\)</span> is the set of elements that do not satisfy <span class="process-math">\(P_{k+1}\)</span>). Also, let <span class="process-math">\(\mathcal{Q}=\{P_1,P_2,\dots,P_k\}\text{.}\)</span> Then for each subset <span class="process-math">\(S\subseteq [k]\text{,}\)</span> let <span class="process-math">\(N'(S)\)</span> count the number of elements of <span class="process-math">\(X'\)</span> satisfying property <span class="process-math">\(P_i\)</span> for all <span class="process-math">\(i\in
+S\text{.}\)</span> Also, let <span class="process-math">\(N''(S)\)</span> count the number of elements of <span class="process-math">\(X''\)</span> satisfying property <span class="process-math">\(P_i\)</span> for each <span class="process-math">\(i\in S\text{.}\)</span> Note that <span class="process-math">\(N(S)=N'(S)+N''(S)\)</span> for every <span class="process-math">\(S\subseteq
+[k]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_inclusion-exclusion-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Let <span class="process-math">\(X'_0\)</span> denote the set of elements in <span class="process-math">\(X'\)</span> which satisfy none of the properties in <span class="process-math">\(\mathcal{Q}\)</span> (in other words, those that satisfy only <span class="process-math">\(P_{k+1}\)</span> from <span class="process-math">\(\mathcal{P}\)</span>), and let <span class="process-math">\(X''_0\)</span> denote the set of elements of <span class="process-math">\(X''\)</span> which satisfy none of the properties in <span class="process-math">\(\mathcal{Q}\text{,}\)</span> and therefore none of the properties in <span class="process-math">\(\mathcal{P}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_inclusion-exclusion-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now by the inductive hypothesis, we know</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|X'_0| = \sum_{S\subseteq [k]} (-1)^{|S|}N'(S)\qquad \text{and} \qquad
+|X''_0| = \sum_{S\subseteq [k]} (-1)^{|S|}N''(S).
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math">
+\begin{align*}
+|X''_0| \amp = \sum_{S\subseteq [k]} (-1)^{|S|}N''(S) = \sum_{S\subseteq [k]}
+(-1)^{|S|}\left(N(S)-N'(S)\right)\\
+\amp = \sum_{S\subseteq [k]} (-1)^{|S|}N(S)+
+\sum_{S\subseteq [k]} (-1)^{|S|+1}N(S\cup\{k+1\})\\
+\amp = \sum_{S\subseteq [k+1]} (-1)^{|S|}N(S).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_inclusion-exclusion-4-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 7.7.1"><a href="#thm_inclusion-exclusion-4" title="Copy heading and permalink for Proof 7.7.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_inclusion-exclusion_statement.html#thm_inclusion-exclusion">in-context</a></span>
+</body>
+</html>

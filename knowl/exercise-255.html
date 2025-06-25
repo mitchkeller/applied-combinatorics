@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11<span class="period">.</span></span>
+</h3>
+<div class="para">Tic-tac-toe is a two-player game played on a <span class="process-math">\(9\times 9\)</span> grid. The players mark the squares of the grid with the symbols X and O. This exercise uses Pólya’s enumeration theorem to investigate the number of different tic-tac-toe boards. (The analysis of <em class="emphasis">games</em> is more complex, since it requires attention to the order the squares are marked and stopping when one player has won the game.)</div> <figure class="figure figure-like"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/image-123.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.16<span class="period">.</span></span><span class="space"> </span>Numbered squares of a tic-tac-toe board</figcaption></figure> <div class="para logical"><ol class="lower-alpha">
+<li>
+<div class="para">Two tic-tac-toe boards are equivalent if one may be obtained from the other by rotating the board or flipping it over. (Imagine that it is drawn on a clear piece of plastic.) Since the <span class="process-math">\(9\times 9\)</span> grid is a square, the group that acts on it in this manner is the dihedral group <span class="process-math">\(D_8\)</span> that we have studied in this chapter. However, as with counting nonisomorphic graphs, we have to be careful to choose the way this group is represented in terms of cycles. Here we are interested in how permutations rearrange the nine squares of the tic-tac-toe board as numbered in <a href="" class="xref" data-knowl="./knowl/fig_polya_TTT.html" title="Figure 15.16">Figure 15.16</a>. For example, the effect of the transformation <span class="process-math">\(r_1\text{,}\)</span> which rotates the board <span class="process-math">\(90^\circ\)</span> clockwise, can be represented as a permutation of the nine squares as <span class="process-math">\((13971)(2684)(5)\text{.}\)</span>
+</div>
+<div class="para">Write each of the eight elements of <span class="process-math">\(D_8\)</span> as permutations of the nine squares of a tic-tac-toe board.</div>
+</li>
+<li><div class="para">Find the cycle index of <span class="process-math">\(D_8\)</span> in terms of these permutations.</div></li>
+<li><div class="para">Make an appropriate substitution for <span class="process-math">\(x_i\)</span> in the cycle index to find a generating function <span class="process-math">\(t(X,O)\)</span> in which the coefficient on <span class="process-math">\(X^iO^j\)</span> is the number of nonequivalent tic-tac-toe boards having <span class="process-math">\(i\)</span> squares filled by symbol X and <span class="process-math">\(j\)</span> squares filled by symbol O. (Notice that some squares might be blank!)</div></li>
+<li><div class="para">How many nonequivalent tic-tac-toe boards are there?</div></li>
+<li><div class="para">How many nonequivalent tic-tac-toe boards have three X’s and three O’s?</div></li>
+<li><div class="para">When playing tic-tac-toe, the players alternate turns, each drawing their symbol in a single unoccupied square during a turn. Assuming the first player marks her squares with X and the second marks his with O, then at each stage of the game there are either the same number of X’s and O’s or one more X than there are O’s. Use this fact and <span class="process-math">\(t(X,O)\)</span> to determine the number of nonequivalent tic-tac-toe boards that can actually be obtained in playing a game, assuming the players continue until the board is full, regardless of whether one of them has won the game.</div></li>
+</ol></div></article><span class="incontext"><a href="s_polya_exercises.html#exercise-255" class="internal">in-context</a></span>
+</body>
+</html>

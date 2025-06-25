@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.22</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(0\lt p\lt 1\)</span> and consider a series of <span class="process-math">\(n\)</span> Bernoulli trials with the probability of success being <span class="process-math">\(p\text{,}\)</span> and let <span class="process-math">\(X\)</span> count the number of successes. We have already noted that <span class="process-math">\(E(X)=np\text{.}\)</span> Now we claim the variance of <span class="process-math">\(X\)</span> is given by:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\var(X)=\sum_{i=0}^n (i-np)^2\binom{n}{i}p^i(1-p)^{n-i} = np(1-p)
+\end{equation*}
+</div>
+<div class="para">There are several ways to establish this claim. One way is to proceed directly from the definition, using the same method we used previously to obtain the expectation. But now you need also to calculate the second derivative. Here is a second approach, one that capitalizes on the fact that separate trials in a Bernoulli series are independent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\cgF=\{X_1,X_2,\dots,X_n\}\)</span> be a family of random variables in a probability space <span class="process-math">\((S,P)\text{.}\)</span> We say the family <span class="process-math">\(\cgF\)</span> is <dfn class="terminology">independent</dfn> if for each <span class="process-math">\(i\)</span> and <span class="process-math">\(j\)</span> with <span class="process-math">\(1\le i\lt j\le n\text{,}\)</span> and for each pair <span class="process-math">\(a,b\)</span> of real numbers with <span class="process-math">\(0\le a,b\le 1\text{,}\)</span> the following two events are independent: <span class="process-math">\(\{x\in S: X_i(x)\le a\}\)</span> and <span class="process-math">\(\{x\in S:X_j(x)\le b\}\text{.}\)</span> When the family is independent, it is straightforward to verify that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\var(X_1+X_2+\dots+X_n)=\var(X_1)+\var(X_2)+\dots+\var(X_n).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">With the aid of this observation, the calculation of the variance of the random variable <span class="process-math">\(X\)</span> which counts the number of successes becomes a trivial calculation. But in fact, the entire treatment we have outlined here is just a small part of a more complex subject which can be treated more elegantly and ultimately much more compactly—provided you first develop additional background material on families of random variables. For this we will refer you to suitable probability and statistics texts, such as those given in our references.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 10.22"><a href="#s_probability_central-tendency-3-4" title="Copy heading and permalink for Example 10.22">🔗</a></div></article><span class="incontext"><a class="internal" href="s_probability_central-tendency.html#s_probability_central-tendency-3-4">in-context</a></span>
+</body>
+</html>

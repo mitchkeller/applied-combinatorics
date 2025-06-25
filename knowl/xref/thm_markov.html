@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.20</span><span class="period">.</span><span class="space"> </span><span class="title">Markov’s Inequality.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(X\)</span> be a random variable in a probability space <span class="process-math">\((S,P)\text{.}\)</span> Then for every <span class="process-math">\(k&gt;0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(|X|\ge k) \le E(|X|)/k.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_markov-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10.20: Markov’s Inequality"><a href="#thm_markov" title="Copy heading and permalink for Theorem 10.20: Markov’s Inequality">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Of course, the inequality holds trivially unless <span class="process-math">\(k&gt; E(|X|)\text{.}\)</span> For <span class="process-math">\(k\)</span> in this range, we establish the equivalent inequality: <span class="process-math">\(k P(|X|\ge k)\le E(|X|)\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
+\amp  \le \sum_{r \ge k} r P(|X|=r)\\
+\amp  \le \sum_{r&gt; 0} r P(|X|=r)\\
+\amp = E(|X|).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_markov-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 10.20.1"><a href="#thm_markov-3" title="Copy heading and permalink for Proof 10.20.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="s_probability_central-tendency.html#thm_markov">in-context</a></span>
+</body>
+</html>

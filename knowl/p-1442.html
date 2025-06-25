@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">The correctness of Kruskal’s Algorithm follows from an inductive argument. First, the set <span class="process-math">\(S\)</span> is initialized as the empty set, so there is certainly a minimum weight spanning tree containing all the edges in <span class="process-math">\(S\text{.}\)</span> Now suppose that for some <span class="process-math">\(i\)</span> with <span class="process-math">\(0\le i \lt n\text{,}\)</span> <span class="process-math">\(|S|=i\)</span> and there is a minimum weight spanning tree containing all the edges in <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(\bfF\)</span> be the spanning forest determined by the edges in <span class="process-math">\(S\text{,}\)</span> and let <span class="process-math">\(C_1, C_2,\dots,C_s\)</span> be the components of <span class="process-math">\(\bfF\text{.}\)</span> For each <span class="process-math">\(k=1,2,\dots,s\text{,}\)</span> let <span class="process-math">\(f_k\)</span> be a minimum weight edge with one endpoint in <span class="process-math">\(C_k\)</span> and the other not in <span class="process-math">\(C_k\text{.}\)</span> Then the edge <span class="process-math">\(e\)</span> added to <span class="process-math">\(S\)</span> by Kruskal’s Algorithm is just the edge <span class="process-math">\(\{f_1,f_2,\dots,f_s\}\)</span> having minimum weight. Applying <a href="" class="xref" data-knowl="./knowl/lem_graphalgorithms_tech.html" title="Lemma 12.6">Lemma 12.6</a> and the inductive hypothesis, we know that there will still be a minimum weight spanning tree of <span class="process-math">\(\bfG\)</span> containing all the edges of <span class="process-math">\(S\cup\{e\}\text{.}\)</span>
+</div>
+<span class="incontext"><a href="s_graphalgorithms_min-wt-span.html#p-1442" class="internal">in-context</a></span>
+</body>
+</html>

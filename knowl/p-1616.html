@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">Now that we’ve gone over the part you already knew how to do, we need to discuss how to translate this network flow and cut into a chain partition and an antichain. If there is a unit of flow on an edge <span class="process-math">\((x_i',x_j'')\text{,}\)</span> then a good first instinct is to place <span class="process-math">\(x_i\)</span> and <span class="process-math">\(x_j\)</span> in the same chain of a chain partition. To be able to do this successfully, of course, we need to ensure that this won’t result in two incomparable points being placed in a chain. A way to see that everything works as desired is to think of starting with <span class="process-math">\((x_i',x_j'')\)</span> and then looking for flow leaving <span class="process-math">\(x_j'\text{.}\)</span> If there is, it goes to a vertex <span class="process-math">\(x_k''\text{,}\)</span> so we may add <span class="process-math">\(x_k\)</span> to the chain since <span class="process-math">\(x_i\lt x_j\lt x_k\text{.}\)</span> Continue in this manner until reaching a vertex in the network that does not have any flow leaving it. Then see if <span class="process-math">\(x_i''\)</span> has flow coming into it. If it does, it’s from a vertex <span class="process-math">\(x_m'\)</span> that can be added since <span class="process-math">\(x_m\lt x_i\lt x_j\text{.}\)</span>
+</div>
+<span class="incontext"><a href="s_flowapplications_chain-partition.html#p-1616" class="internal">in-context</a></span>
+</body>
+</html>

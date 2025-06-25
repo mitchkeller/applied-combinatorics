@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Let’s see how we can get a recurrence from this story. Let <span class="process-math">\(f_n\)</span> denote the number of pairs rabbits on the island in month <span class="process-math">\(n\text{.}\)</span> Thus, <span class="process-math">\(f_1 = 1\text{,}\)</span> <span class="process-math">\(f_2 = 1\text{,}\)</span> <span class="process-math">\(f_3=2\text{,}\)</span> and <span class="process-math">\(f_4=3\)</span> from our account above. How can we compute <span class="process-math">\(f_n\text{?}\)</span> Well, in the <span class="process-math">\(n^\text{th}\)</span> month we have all the pairs of rabbits that were there during the previous month, which is <span class="process-math">\(f_{n-1}\text{;}\)</span> however, some of those pairs of rabbits also reproduce during this month. Only the ones who were born prior to the previous month are able to reproduce during month <span class="process-math">\(n\text{,}\)</span> so there are <span class="process-math">\(f_{n-2}\)</span> pairs of rabbits who are able to reproduce, and each produces a new pair of rabbits. Thus, we have that the number of rabbits in month <span class="process-math">\(n\)</span> is <span class="process-math">\(f_n = f_{n-1} + f_{n-2}\)</span> for <span class="process-math">\(n\geq 3\)</span> with <span class="process-math">\(f_1=f_2=1\text{.}\)</span> The sequence of numbers <span class="process-math">\(\{f_n\colon n\geq 0\}\)</span> (we take <span class="process-math">\(f_0=0\text{,}\)</span> which satisfies our recurrence) is known as the <dfn class="terminology">Fibonacci sequence</dfn> after Leonardo of Pisa, better known as Fibonacci, an Italian mathematician who lived from about 1170 until about 1250. The terms <span class="process-math">\(f_0,f_1,\dots,f_{20}\)</span> of the Fibonacci sequence are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987, 1597,2584,4181,6765.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_fib-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="s_recurrence_intro.html#s_recurrence_intro_fib-4">in-context</a></span>
+</body>
+</html>

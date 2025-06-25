@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.43</span><span class="period">.</span>
+</h3>
+<div class="para">We close this section with an example of how to take a Prüfer code and use it to construct a labeled tree. Consider the string <span class="process-math">\(\bfs=75531\)</span> as a Prüfer code. Then the tree <span class="process-math">\(\bfT\)</span> corresponding to <span class="process-math">\(\bfs\)</span> has <span class="process-math">\(7\)</span> vertices, and its leaves are labeled <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> and <span class="process-math">\(6\text{.}\)</span> The inductive step in our proof attaches the vertex labeled <span class="process-math">\(2\)</span> to the vertex labeled <span class="process-math">\(7\)</span> in the tree <span class="process-math">\(\bfT'\)</span> with Prüfer code <span class="process-math">\(5531\)</span> and vertex labels <span class="process-math">\(\{1,3,4,5,6,7\}\text{,}\)</span> since <span class="process-math">\(2\)</span> is used to label the last vertex added. What are the leaves of <span class="process-math">\(\bfT'\text{?}\)</span> The symbols in <span class="process-math">\(\{4,6,7\}\)</span> do not appear in <span class="process-math">\(5531\text{,}\)</span> so they must be the labels of leaves, and the construction says that we would attach the vertex labeled <span class="process-math">\(4\)</span> to the vertex labeled <span class="process-math">\(5\)</span> in the tree we get by induction. In <a href="" class="xref" data-knowl="./knowl/tab_prufer-code-reverse.html" title="Figure 5.44">Figure 5.44</a>, we show how this recursive process continues.</div> <figure class="figure figure-like"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Prüfer code</td>
+<td class="l m b0 r0 l0 t0 lines">Label set</td>
+<td class="l m b0 r0 l0 t0 lines">Edge added</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">75531</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\{1,2,3,4,5,6,7\}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">2–7</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5531</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\{1,3,4,5,6,7\}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">4–5</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">531</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\{1,3,5,6,7\}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">6–5</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\{1,3,5,7\}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">5–3</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\{1,3,7\}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">3–1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">(empty string)</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\{1,7\}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">1–7</td>
+</tr>
+</table></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.44<span class="period">.</span></span><span class="space"> </span>Turning the Prüfer code <span class="process-math">\(75531\)</span> into a labeled tree</figcaption></figure> <div class="para">We form each row from the row above it by removing the first label used on the edge added from the label set and removing the first symbol from the Prüfer code. Once the Prüfer code becomes the empty string, we know that the two remaining labels must be the labels we place on the ends of <span class="process-math">\(\bfK_2\)</span> to start building <span class="process-math">\(\bfT\text{.}\)</span> We then work back up the edge added column, adding a new vertex and the edge indicated. The tree we construct in this manner is shown in <a href="" class="xref" data-knowl="./knowl/fig_prufer-code-reverse.html" title="Figure 5.45">Figure 5.45</a>.</div> <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-42.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.45<span class="period">.</span></span><span class="space"> </span>The labeled tree with Prüfer code <span class="process-math">\(75531\)</span></figcaption></figure></article><span class="incontext"><a href="s_graphs_counting-trees.html#ex_prufer-code-reverse" class="internal">in-context</a></span>
+</body>
+</html>

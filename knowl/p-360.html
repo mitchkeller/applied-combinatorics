@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Next we assume that for some positive integer <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(S_k\)</span> is true. That is, we assume</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/princ_math-induction.html">
+\begin{equation*}
+\sum_{i=1}^k i=\frac{k(k+1)}{2}.
+\end{equation*}
+</div>
+<div class="para">We now seek to prove that <span class="process-math">\(S_{k+1}\)</span> is true, and begin by considering the left-hand side of <span class="process-math">\(S_{k+1}\text{.}\)</span> We notice that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/princ_math-induction.html">
+\begin{equation*}
+\sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
+\frac{k(k+1)}{2}+(k+1),
+\end{equation*}
+</div>
+<div class="para">since our inductive hypothesis that <span class="process-math">\(S_k\)</span> is true gives us the simpler formula for the summation. Now continuing with a bit of algebra, we find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/princ_math-induction.html">
+\begin{equation*}
+\frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
+\end{equation*}
+</div>
+<div class="para">Therefore, <span class="process-math">\(S_{k+1}\)</span> is true. Since we have shown that <span class="process-math">\(S_1\)</span> is true and that for every positive integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(S_k\)</span> is true, then <span class="process-math">\(S_{k+1}\)</span> is true, we conclude that <span class="process-math">\(S_n\)</span> is true for all positive integers <span class="process-math">\(n\)</span> by the <a href="" class="xref" data-knowl="./knowl/princ_math-induction.html" title="Principle 3.11: Principle of Mathematical Induction">Principle of Mathematical Induction</a>.</div>
+</div>
+<span class="incontext"><a href="s_induction_proofs.html#p-360" class="internal">in-context</a></span>
+</body>
+</html>

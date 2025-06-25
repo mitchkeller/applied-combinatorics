@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Students in middle school are taught to add fractions by finding least common multiples. For example, the least common multiple of <span class="process-math">\(15\)</span> and <span class="process-math">\(12\)</span> is <span class="process-math">\(60\text{,}\)</span> so:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{2}{15}+ \frac{7}{12} = \frac{8}{60}+\frac{35}{60} = \frac{43}{60}.
+\end{equation*}
+</div>
+<div class="para">How hard is it to find the least common multiple of two integers?</div>
+</div> <div class="para logical">
+<div class="para">It’s really easy if you can factor them into primes. For example, consider the problem of finding the least common multiple of <span class="process-math">\(351785000\)</span> and <span class="process-math">\(316752027900\)</span> if you just happen to know that</div>
+<div class="displaymath process-math">
+\begin{align*}
+351785000 \amp =  2^3\times 5^4\times 7\times19\times 23^2\quad\text{and}\\
+316752027900 \amp =  2^2\times3\times 5^2\times 7^3\times 11\times 23^4.
+\end{align*}
+</div>
+<div class="para">Then the least common multiple is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+300914426505000 =  2^3\times3\times 5^4\times 7^3\times 11\times 19\times 23^4.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">So to find the least common multiple of two numbers, we just have to factor them into primes. That doesn’t sound too hard. For starters, can you factor <span class="process-math">\(1961\text{?}\)</span> OK, how about <span class="process-math">\(1348433\text{?}\)</span> Now for a real challenge.  Suppose you are told that the integer</div>
+<div class="displaymath process-math">
+\begin{align*}
+c = \amp\,\, 5568490117077035708244283173335040521716369235589951150965\\
+\amp\,\, 2043138898236817075547572153799
+\end{align*}
+</div>
+<div class="para">is the product of two primes <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Can you find them?</div>
+</div> <div class="para">What if factoring is hard? Can you find the least common multiple of two relatively large integers, say each with about <span class="process-math">\(500\)</span> digits, by another method? How should middle school students be taught to add fractions?</div> <div class="para">As an aside, we note that most calculators can’t add or multiply two <span class="process-math">\(20\)</span> digits numbers, much less two numbers with more than <span class="process-math">\(500\)</span> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known commercial examples are <em class="emphasis">Maple</em>® and <em class="emphasis">Mathematica</em>®. In this text, we will from time to time, make use of the open source computer algebra system <a class="external" href="http://www.sagemath.org" target="_blank">SageMath</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-5-hidden.html" title="Footnote 1.4.2"><sup> 2 </sup></a>. We will sometimes embed interactive SageMath cells in the text, but you can also use SageMath for free online via <a class="external" href="http://cocalc.com/" target="_blank">CoCalc</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-6-hidden.html" title="Footnote 1.4.3"><sup> 3 </sup></a>. For example, the SageMath cell below will produce the factorization shown above.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">factor(300914426505000)
+</script></pre> <div class="para">If you’re reading this text in a web browser, go ahead and change the integer in the SageMath cell above to some other, perhaps larger, integer and click the button again to get the prime factorization of your new integer.</div> <div class="para logical">
+<div class="para">Now here’s how we made up the challenge problem. First, we found a site on the web that lists large primes and found these two values:</div>
+<div class="displaymath process-math">
+\begin{align*}
+a \amp = 2425967623052370772757633156976982469681\quad\text{and}\\
+b \amp =  22953686867719691230002707821868552601124472329079.
+\end{align*}
+</div>
+<div class="para">The SageMath code below calculates <span class="process-math">\(a\times b\text{,}\)</span> and returns the result instantly.</div>
+</div> <pre class="ptx-sagecell sagecell-sage" id="sage-2"><script type="text/x-sage">a = 2425967623052370772757633156976982469681
+b = 22953686867719691230002707821868552601124472329079
+a*b
+</script></pre> <div class="para">On the other hand, if you ask SageMath to factor <span class="process-math">\(c\text{,}\)</span> as in the cell below, you’ll likely be waiting a long time. If you get a response in more than a couple of minutes, please email us so that we can update the text with larger primes <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{!}\)</span>
+</div> <pre class="ptx-sagecell sagecell-sage" id="sage-3"><script type="text/x-sage">factor(55684901170770357082442831733350405217163692\
+355899511509652043138898236817075547572153799)
+</script></pre></article><span class="incontext"><a href="s_intro_number.html#example-5" class="internal">in-context</a></span>
+</body>
+</html>
