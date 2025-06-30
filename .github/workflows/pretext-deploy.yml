@@ -1,4 +1,4 @@
-# This file was automatically generated with PreTeXt 2.20.0.
+# This file was automatically generated with PreTeXt 2.21.0.
 # If you modify this file, PreTeXt will no longer automatically update it.
 #
 
@@ -28,7 +28,7 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    container: oscarlevin/pretext:full
+    container: oscarlevin/pretext-full
 
     steps:
       - name: Checkout source
