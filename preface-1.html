@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>AC Preface</title>
@@ -15,38 +15,20 @@
 <meta property="book:title" content="Applied Combinatorics">
 <meta property="book:author" content="Mitchel T. Keller">
 <meta property="book:author" content="William T. Trotter">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -56,38 +38,27 @@ window.MathJax = {
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        },
-        ""
-      ]
-    }
+        }, '']
+    },
   },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
   },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
-    }
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
   },
-  "startup": {
+  startup: {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  }
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.8/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -95,17 +66,16 @@ window.MathJax = {
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.8/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.8/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body id="appcomb" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -119,11 +89,7 @@ window.MathJax = {
 <div id="searchempty" class="searchempty"><span>No results.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="acknowledgement-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter-1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="preface-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
-<div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
-</div></div>
-<span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
 <li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
 <ol class="hidden avatar">
 <li data-val="You!" tabindex="-1">
@@ -225,7 +191,10 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="acknowledgement-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="preface-2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
 \newcommand{\ints}{\mathbb{Z}}
 \newcommand{\posints}{\mathbb{N}}
 \newcommand{\rats}{\mathbb{Q}}
@@ -698,7 +667,7 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="preface" id="preface-1"><h2 class="heading hide-type">
-<span class="type">Preface</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Preface</span>
+<span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Preface</span>
 </h2>
 <div class="para" id="p-11">At Georgia Tech, MATH 3012: Applied Combinatorics, is a junior-level course targeted primarily at students pursuing the B.S. in Computer Science. The purpose of the course is to give students a broad exposure to combinatorial mathematics, using applications to emphasize fundamental concepts and techniques. Applied Combinatorics is also required of students seeking the B.S. in Mathematics, and it is one of two discrete mathematics courses that computer engineering students may select to fulfill a breadth requirement. The course will also often contain a selection of other engineering and science majors who are interested in learning more mathematics. As a consequence, in a typical semester, some 250 Georgia Tech students are enrolled in Applied Combinatorics. Students enrolled in Applied Combinatorics at Georgia Tech have already completed the three semester calculus sequence—with many students bypassing one or more of the these courses on the basis of advanced placement scores. Also, the students will know some linear algebra and can at least have a reasonable discussion about vector spaces, bases and dimension.</div>
 <div class="para" id="p-12">Our approach to the course is to show students the beauty of combinatorics and how combinatorial problems naturally arise in many settings, particularly in computer science. While proofs are periodically presented in class, the course is not intended to teach students how to write proofs; there are other required courses in our curriculum that meet this need. Students may occasionally be asked to prove small facts, but these arguments are closer to the kind we expect from students in second or third semester calculus as contrasted with proofs we expect from a mathematics major in an upper-division course. Regardless, we cut very few corners, and our text can readily be used by instructors who elect to be even more rigorous in their approach.</div>
@@ -706,7 +675,7 @@ window.MathJax = {
 <div class="para" id="p-14">The materials included in this book have evolved over time. Early versions of a few chapters date from 2004, but the pace quickened in 2006 when the authors team taught a large section of Applied Combinatorics. In the last five years, existing chapters have been updated and expanded, while new chapters have been added. As matters now stand, our book includes more material than we can cover in a single semester. We feel that the topics of Chapters 1–9 plus Chapters 12, 13 and 14 are the core of a one semester course in Applied Combinatorics. Additional topics can then be selected from the remaining chapters based on the interests of the instructor and students.</div>
 <cite class="attribution">Mitchel T. Keller and William T. Trotter<br>Lexington, Virginia, and Atlanta, Georgia</cite></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="acknowledgement-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="preface-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="acknowledgement-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="preface-2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

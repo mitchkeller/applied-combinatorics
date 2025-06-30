@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,16 +11,10 @@
 <meta name="robots" content="noindex, nofollow">
 <script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
 </script>
 </head>
 <body class="ignore-math">
@@ -58,7 +52,7 @@ c = \amp\,\, 5568490117077035708244283173335040521716369235589951150965\\
 \end{align*}
 </div>
 <div class="para">is the product of two primes <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Can you find them?</div>
-</div> <div class="para">What if factoring is hard? Can you find the least common multiple of two relatively large integers, say each with about <span class="process-math">\(500\)</span> digits, by another method? How should middle school students be taught to add fractions?</div> <div class="para">As an aside, we note that most calculators can’t add or multiply two <span class="process-math">\(20\)</span> digits numbers, much less two numbers with more than <span class="process-math">\(500\)</span> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known commercial examples are <em class="emphasis">Maple</em>® and <em class="emphasis">Mathematica</em>®. In this text, we will from time to time, make use of the open source computer algebra system <a class="external" href="http://www.sagemath.org" target="_blank">SageMath</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-5-hidden.html" title="Footnote 1.4.2"><sup> 2 </sup></a>. We will sometimes embed interactive SageMath cells in the text, but you can also use SageMath for free online via <a class="external" href="http://cocalc.com/" target="_blank">CoCalc</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-6-hidden.html" title="Footnote 1.4.3"><sup> 3 </sup></a>. For example, the SageMath cell below will produce the factorization shown above.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">factor(300914426505000)
+</div> <div class="para">What if factoring is hard? Can you find the least common multiple of two relatively large integers, say each with about <span class="process-math">\(500\)</span> digits, by another method? How should middle school students be taught to add fractions?</div> <div class="para">As an aside, we note that most calculators can’t add or multiply two <span class="process-math">\(20\)</span> digits numbers, much less two numbers with more than <span class="process-math">\(500\)</span> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known commercial examples are <em class="emphasis">Maple</em>® and <em class="emphasis">Mathematica</em>®. In this text, we will from time to time, make use of the open source computer algebra system <a class="external" href="http://www.sagemath.org" target="_blank">SageMath</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-4-hidden.html" title="Footnote 1.4.2"><sup> 2 </sup></a>. We will sometimes embed interactive SageMath cells in the text, but you can also use SageMath for free online via <a class="external" href="http://cocalc.com/" target="_blank">CoCalc</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-5-hidden.html" title="Footnote 1.4.3"><sup> 3 </sup></a>. For example, the SageMath cell below will produce the factorization shown above.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">factor(300914426505000)
 </script></pre> <div class="para">If you’re reading this text in a web browser, go ahead and change the integer in the SageMath cell above to some other, perhaps larger, integer and click the button again to get the prime factorization of your new integer.</div> <div class="para logical">
 <div class="para">Now here’s how we made up the challenge problem. First, we found a site on the web that lists large primes and found these two values:</div>
 <div class="displaymath process-math">
