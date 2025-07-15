@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_grey">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AC Colophon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Applied Combinatorics">
+<meta property="book:author" content="Mitchel T. Keller">
+<meta property="book:author" content="William T. Trotter">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.8e4157bd77a28b29.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="appcomb" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="httpw://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="app-comb.html"><span class="title">Applied Combinatorics</span></a></h1>
+<p class="byline">Mitchel T. Keller, William T. Trotter</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="app-comb-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="app-comb-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="app-comb-2-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{1,2,\dotsc,#1\,\}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\posints}{\mathbb{N}}
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexes}{\mathbb{C}}
+\newcommand{\twospace}{\mathbb{R}^2}
+\newcommand{\threepace}{\mathbb{R}^3}
+\newcommand{\dspace}{\mathbb{R}^d}
+\newcommand{\nni}{\mathbb{N}_0}
+\newcommand{\nonnegints}{\mathbb{N}_0}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\prob}{\operatorname{prob}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\height}{\operatorname{height}}
+\newcommand{\width}{\operatorname{width}}
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\crit}{\operatorname{crit}}
+\newcommand{\inc}{\operatorname{inc}}
+\newcommand{\HP}{\mathbf{H_P}}
+\newcommand{\HCP}{\mathbf{H^c_P}}
+\newcommand{\GP}{\mathbf{G_P}}
+\newcommand{\GQ}{\mathbf{G_Q}}
+\newcommand{\AG}{\mathbf{A_G}}
+\newcommand{\GCP}{\mathbf{G^c_P}}
+\newcommand{\PXP}{\mathbf{P}=(X,P)}
+\newcommand{\QYQ}{\mathbf{Q}=(Y,Q)}
+\newcommand{\GVE}{\mathbf{G}=(V,E)}
+\newcommand{\HWF}{\mathbf{H}=(W,F)}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfQ}{\mathbf{Q}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfNP}{\mathbf{NP}}
+\newcommand{\bftwo}{\mathbf{2}}
+\newcommand{\cgA}{\mathcal{A}}
+\newcommand{\cgB}{\mathcal{B}}
+\newcommand{\cgC}{\mathcal{C}}
+\newcommand{\cgD}{\mathcal{D}}
+\newcommand{\cgE}{\mathcal{E}}
+\newcommand{\cgF}{\mathcal{F}}
+\newcommand{\cgG}{\mathcal{G}}
+\newcommand{\cgM}{\mathcal{M}}
+\newcommand{\cgN}{\mathcal{N}}
+\newcommand{\cgP}{\mathcal{P}}
+\newcommand{\cgR}{\mathcal{R}}
+\newcommand{\cgS}{\mathcal{S}}
+\newcommand{\bfn}{\mathbf{n}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfk}{\mathbf{k}}
+\newcommand{\bfs}{\mathbf{s}}
+\newcommand{\bijection}{\xrightarrow[\text{onto}]{\text{$1$--$1$}}}
+\newcommand{\injection}{\xrightarrow[]{\text{$1$--$1$}}}
+\newcommand{\surjection}{\xrightarrow[\text{onto}]{}}
+\newcommand{\nin}{\not\in}
+\newcommand{\prufer}{\text{prüfer}}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\var}{var}
+\newcommand{\inv}{^{-1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter contains-active">
+<div class="toc-title-box"><a href="app-comb-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-colophon active"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="app-comb-2-4.html" class="internal"><span class="title">About William T. Trotter</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="app-comb-2-5.html" class="internal"><span class="title">About Mitchel T. Keller</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="app-comb-2-6.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="app-comb-2-7.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="app-comb-2-8.html" class="internal"><span class="title">Preface to 2017 Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-2016.html" class="internal"><span class="title">Preface to 2016 Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="ch_prologue.html" class="internal"><span class="title">Prologue</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">An Introduction to Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_enum.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Enumeration</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_graph.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Combinatorics and Graph Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_number.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Combinatorics and Number Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_geom.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Combinatorics and Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_opt.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Combinatorics and Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_sudoku.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Sudoku Puzzles</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_intro_discussion.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Discussion</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_intro.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Strings: A First Look</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_permutations.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Permutations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_combinations.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Combinations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_comb-proof.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Combinatorial Proofs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_bin-coeff.html" class="internal"><span class="codenumber">2.5</span> <span class="title">The Ubiquitous Nature of Binomial Coefficients</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_binom-thm.html" class="internal"><span class="codenumber">2.6</span> <span class="title">The Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_multinom.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Multinomial Coefficients</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_strings_discussion.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_strings_exercises.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_intro.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_posintsord.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The Positive Integers are Well Ordered</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_statements.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Meaning of Statements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_bincoeffs.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Binomial Coefficients Revisited</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_induction_recursion.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Solving Combinatorial Problems Recursively</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_induction_recursion.html#s_induction_gcd" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Finding Greatest Common Divisors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_induction_recursion.html#s_induction_recursion_sorting" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Sorting</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_induction.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_inductdefs.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Inductive Definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_proofs.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Proofs by Induction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_strong-induction.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Strong Induction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_induction_discussion.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_induction_exercises.html" class="internal"><span class="codenumber">3.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_basics.html" class="internal"><span class="codenumber">4</span> <span class="title">Combinatorial Basics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_basics_pigeonhole.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The Pigeon Hole Principle</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_basics_complexity.html" class="internal"><span class="codenumber">4.2</span> <span class="title">An Introduction to Complexity Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_questions" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Three Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_complexity-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Certificates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_complexity-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_complexity.html#s_basics_complexity-6" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Input Size</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_basics_big-oh.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Big “Oh” and Little “Oh” Notations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_basics_exact.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Exact Versus Approximate</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_exact.html#s_basics_exact-3" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Approximate and Asymptotic Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_exact.html#s_basics_exact-4" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Polynomial Time Algorithms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_basics_exact.html#s_basics_exact-5" class="internal"><span class="codenumber">4.4.3</span> <span class="title"><span class="process-math">\(\cgP=\cgN\cgP\text{?}\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_basics_discussion.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_basics_exercises.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_graphs.html" class="internal"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_intro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Basic Notation and Terminology for Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_multigraphs.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Multigraphs:  Loops and Multiple Edges</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphs_eulerham.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_graphs_eulerham.html#rqs-graphs_eulerham" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphs_color.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Graph Coloring</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphs_color.html#s_graphs_color-3" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Bipartite Graphs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphs_color.html#s_graphs_color-4" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Cliques and Chromatic Number</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphs_color.html#s_graphs_color-5" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Can We Determine Chromatic Number?</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_graphs_color.html#rqs-graphs_color" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_planar.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Planar Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_counting-trees.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Counting Labeled Trees</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_complexity.html" class="internal"><span class="codenumber">5.7</span> <span class="title">A Digression into Complexity Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphs_discussion.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_graphs_exercises.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_posets.html" class="internal"><span class="codenumber">6</span> <span class="title">Partially Ordered Sets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_intro.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Basic Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_additional-concepts.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Additional Concepts for Posets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_additional-concepts.html#rqs-posets_additional-concepts" class="internal"><span class="codenumber">6.2</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_dilworth.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Dilworth’s Chain Covering Theorem and its Dual</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_dilworth.html#rqs-posets_dilworth" class="internal"><span class="codenumber">6.3</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_sorting.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Linear Extensions of Partially Ordered Sets</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_subset-lattice.html" class="internal"><span class="codenumber">6.5</span> <span class="title">The Subset Lattice</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_posets_subset-lattice.html#ss_posets_subset-lattice_sperner" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Sperner’s Theorem</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_intervalorder.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Interval Orders</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_intervalorder_findrep.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Finding a Representation of an Interval Order</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_intervalorder_findrep.html#rqs-posets_intervalorder_findrep" class="internal"><span class="codenumber">6.7</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_posets_dilworth-intord.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Dilworth’s Theorem for Interval Orders</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_posets_dilworth-intord.html#rqs-posets_dilworth-intord" class="internal"><span class="codenumber">6.8</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_posets_discussion.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_posets_exercises.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_inclusion-exclusion.html" class="internal"><span class="codenumber">7</span> <span class="title">Inclusion-Exclusion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_inclusion-exclusion_intro.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_inclusion-exclusion_intro.html#rqs-inclusion-exclusion_intro" class="internal"><span class="codenumber">7.1</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_statement.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Inclusion-Exclusion Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_surjections.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Enumerating Surjections</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_derangements.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Derangements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_euler-phi.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Euler phi-Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inclusion-exclusion_discussion.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_inclusion-exclusion_exercises.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_genfunction.html" class="internal"><span class="codenumber">8</span> <span class="title">Generating Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_intro.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Basic Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_genfunction_distributions.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Another look at distributing apples or folders</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_genfunction_distributions.html#rqs-genfunction_distributions" class="internal"><span class="codenumber">8.2</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_gen-bin-thm.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Newton’s Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_binom-app.html" class="internal"><span class="codenumber">8.4</span> <span class="title">An Application of the Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_partitions-integer.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Partitions of an Integer</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_genfunction_exponential.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Exponential generating functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_genfunction_exponential.html#rqs-genfunction_exponential" class="internal"><span class="codenumber">8.6</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_genfunction_discussion.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_genfunction_exercises.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_intro.html#s_recurrence_intro_fib" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Fibonacci numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_intro.html#s_recurrence_intro_strings" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Recurrences for strings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_intro.html#s_recurrence_intro_lines" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Lines and regions in the plane</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_linear.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Linear Recurrence Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_recurrence_linear.html#rqs-recurrence_linear" class="internal"><span class="codenumber">9.2</span> <span class="title">Reading Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_adv-ops.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Advancement Operators</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#s_recurrence_adv-ops_const-coeff" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Constant Coefficient Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#s_recurrence_adv-ops_roots-factors" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Roots and Factors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#s_recurrence_adv-ops_zero" class="internal"><span class="codenumber">9.3.3</span> <span class="title">What’s Special About Zero?</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_recurrence_adv-ops.html#rqs-recurrence_adv-ops" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_solving.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Solving advancement operator equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_solving.html#s_recurrence_solving_homogeneous" class="internal"><span class="codenumber">9.4.1</span> <span class="title">Homogeneous equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_solving.html#s_recurrence_solving_nonhomogeneous" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Nonhomogeneous equations</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="s_recurrence_solving.html#rqs-recurrence_solving" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Reading Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_recurrence_rigorous.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Formalizing our approach to recurrence equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_principal" class="internal"><span class="codenumber">9.5.1</span> <span class="title">The Principal Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_start" class="internal"><span class="codenumber">9.5.2</span> <span class="title">The Starting Case</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_repeated" class="internal"><span class="codenumber">9.5.3</span> <span class="title">Repeated Roots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_recurrence_rigorous.html#s_recurrence_rigorous_general" class="internal"><span class="codenumber">9.5.4</span> <span class="title">The General Case</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_recurrence_genfunction.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Using generating functions to solve recurrences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_recurrence_rubots.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Solving a nonlinear recurrence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_recurrence_discussion.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_recurrence_exercises.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_probability.html" class="internal"><span class="codenumber">10</span> <span class="title">Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_intro.html" class="internal"><span class="codenumber">10.1</span> <span class="title">An Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_probability_conditional.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Conditional Probability and Independent Events</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_conditional.html#s_probability_conditional-3" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Independent Events</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_bernoulli-trials.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Bernoulli Trials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_probability_discrete-random-variables.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Discrete Random Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_discrete-random-variables.html#s_probability_discrete-random-variables-3" class="internal"><span class="codenumber">10.4.1</span> <span class="title">The Linearity of Expectation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_discrete-random-variables.html#s_probability_discrete-random-variables-4" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Implications for Bernoulli Trials</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_probability_central-tendency.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Central Tendency</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_probability_central-tendency.html#s_probability_central-tendency-3" class="internal"><span class="codenumber">10.5.1</span> <span class="title">Variance and Standard Deviation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_infinite-outcomes.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Probability Spaces with Infinitely Many Outcomes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probability_discussion.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_probability_exercises.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_probmeth.html" class="internal"><span class="codenumber">11</span> <span class="title">Applying Probability to Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_probmeth_graph-ramsey.html" class="internal"><span class="codenumber">11.1</span> <span class="title">A First Taste of Ramsey Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_small.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Small Ramsey Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_estimatesize.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Estimating Ramsey Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_probability.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Applying Probability to Ramsey Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_theorem.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Ramsey’s Theorem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_ramsey_girth.html" class="internal"><span class="codenumber">11.6</span> <span class="title">The Probabilistic Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_ramsey_girth.html#s_ramsey_girth-3" class="internal"><span class="codenumber">11.6.1</span> <span class="title">Gaining Intuition with the Probabilistic Method</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_ramsey_discussion.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Discussion</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_ramsey_exercises.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_graphalgorithms.html" class="internal"><span class="codenumber">12</span> <span class="title">Graph Algorithms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Minimum Weight Spanning Trees</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#s_graphalgorithms_min-wt-span-3" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Preliminaries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#s_graphalgorithms_min-wt-span-4" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Kruskal’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#alg_prim" class="internal"><span class="codenumber">12.1.3</span> <span class="title">Prim’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_min-wt-span.html#s_graphalgorithms_min-wt-span-6" class="internal"><span class="codenumber">12.1.4</span> <span class="title">Comments on Efficiency</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphalgorithms_digraphs.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Digraphs</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Dijkstra’s Algorithm for Shortest Paths</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html#s_graphalgorithms_shortest-paths-3" class="internal"><span class="codenumber">12.3.1</span> <span class="title">Description of the Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html#s_graphalgorithms_shortest-paths-4" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Example of Dijkstra’s Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_graphalgorithms_shortest-paths.html#s_graphalgorithms_shortest-paths-5" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Correctness of Dijkstra’s Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_graphalgorithms_historical-notes.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Historical Notes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_graphalgorithms_exercises.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_networkflow.html" class="internal"><span class="codenumber">13</span> <span class="title">Network Flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_intro.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Basic Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_flows-cuts.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Flows and Cuts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_networkflow_augmenting.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Augmenting Paths</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_networkflow_augmenting.html#s_networkflow_augmenting-3" class="internal"><span class="codenumber">13.3.1</span> <span class="title">Caution on Augmenting Paths</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_labeling-algorithm.html" class="internal"><span class="codenumber">13.4</span> <span class="title">The Ford-Fulkerson Labeling Algorithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_networkflow_example.html" class="internal"><span class="codenumber">13.5</span> <span class="title">A Concrete Example</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_networkflow_example.html#s_networkflow_example-3" class="internal"><span class="codenumber">13.5.1</span> <span class="title">How the Labeling Algorithm Halts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_networkflow_integer-programming.html" class="internal"><span class="codenumber">13.6</span> <span class="title">Integer Solutions of Linear Programming Problems</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_networkflow_exercises.html" class="internal"><span class="codenumber">13.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_flowapplications.html" class="internal"><span class="codenumber">14</span> <span class="title">Combinatorial Applications of Network Flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_flowapplications_intro.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_flowapplications_bip-match.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Matchings in Bipartite Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_flowapplications_chain-partition.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Chain partitioning</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_flowapplications_exercises.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_polya.html" class="internal"><span class="codenumber">15</span> <span class="title">Pólya’s Enumeration Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_polya_square.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Coloring the Vertices of a Square</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_polya_perm-groups.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Permutation Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_perm-groups.html#ss_polya_perm-groups_rep" class="internal"><span class="codenumber">15.2.1</span> <span class="title">Representing permutations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_perm-groups.html#ss_polya_perm-groups_mult" class="internal"><span class="codenumber">15.2.2</span> <span class="title">Multiplying permutations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_polya_burnside.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Burnside’s Lemma</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_polya_polya.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Pólya’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_polya.html#ss_polya_polya_cycle-index" class="internal"><span class="codenumber">15.4.1</span> <span class="title">The cycle index</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_polya.html#ss_polya_polya_full" class="internal"><span class="codenumber">15.4.2</span> <span class="title">The full enumeration formula</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_polya_apps.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Applications of Pólya’s Enumeration Formula</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_apps.html#ss_polya_scales" class="internal"><span class="codenumber">15.5.1</span> <span class="title">Counting musical scales</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_apps.html#ss_polya_isomers" class="internal"><span class="codenumber">15.5.2</span> <span class="title">Enumerating isomers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_polya_apps.html#ss_polya_graphs" class="internal"><span class="codenumber">15.5.3</span> <span class="title">Counting nonisomorphic graphs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_polya_exercises.html" class="internal"><span class="codenumber">15.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_kitchensink.html" class="internal"><span class="codenumber">16</span> <span class="title">The Many Faces of Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_kitchensink_online.html" class="internal"><span class="codenumber">16.1</span> <span class="title">On-line algorithms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_kitchensink_online.html#s_kitchensink_online-4" class="internal"><span class="codenumber">16.1.1</span> <span class="title">Doing Relatively Well in an On-Line Setting</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_extremal-set-theory.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Extremal Set Theory</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_kitchensink_markov-chains.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Markov Chains</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_kitchensink_markov-chains.html#s_kitchensink_markov-chains-3" class="internal"><span class="codenumber">16.3.1</span> <span class="title">Absorbing Markov Chains</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_stable-match.html" class="internal"><span class="codenumber">16.4</span> <span class="title">The Stable Matching Theorem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_kitchensink_zero-one-matrices.html" class="internal"><span class="codenumber">16.5</span> <span class="title">Zero–One Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_kitchensink_zero-one-matrices.html#s_kitchensink_zero-one-matrices-3" class="internal"><span class="codenumber">16.5.1</span> <span class="title">The Obvious Necessary Condition</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_arithmetic-combinatorics.html" class="internal"><span class="codenumber">16.6</span> <span class="title">Arithmetic Combinatorics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_lovasz-local.html" class="internal"><span class="codenumber">16.7</span> <span class="title">The Lovász Local Lemma</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_kitchensink_applying-local-lemma.html" class="internal"><span class="codenumber">16.8</span> <span class="title">Applying the Local Lemma</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="ch_epilogue.html" class="internal"><span class="codenumber">A</span> <span class="title">Epilogue</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="app_background.html" class="internal"><span class="codenumber">B</span> <span class="title">Background Material for Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_intro.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_int-union.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Intersections and Unions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-3" class="internal"><span class="codenumber">B.2.1</span> <span class="title">The Meaning of <span class="process-math">\(2\)</span>-Letter Words</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-4" class="internal"><span class="codenumber">B.2.2</span> <span class="title">The Empty Set: Much To Do About Nothing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-5" class="internal"><span class="codenumber">B.2.3</span> <span class="title">The First So Many Positive Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_int-union.html#s_background_int-union-6" class="internal"><span class="codenumber">B.2.4</span> <span class="title">Subsets, Proper Subsets and Equal Sets</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_products.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Cartesian Products</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_relations.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Binary Relations and Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_finite-sets.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Finite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_notation.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Notation from Set Theory and Logic</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_formal-num-sys.html" class="internal"><span class="codenumber">B.7</span> <span class="title">Formal Development of Number Systems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_formal-num-sys.html#s_background_add" class="internal"><span class="codenumber">B.7.1</span> <span class="title">Addition as a Binary Operation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_mult.html" class="internal"><span class="codenumber">B.8</span> <span class="title">Multiplication as a Binary Operation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_exp.html" class="internal"><span class="codenumber">B.9</span> <span class="title">Exponentiation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_order.html" class="internal"><span class="codenumber">B.10</span> <span class="title">Partial Orders and Total Orders</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_total-order-N.html" class="internal"><span class="codenumber">B.11</span> <span class="title">A Total Order on Natural Numbers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_decimal.html" class="internal"><span class="codenumber">B.12</span> <span class="title">Notation for Natural Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_decimal.html#s_background_decimal-3" class="internal"><span class="codenumber">B.12.1</span> <span class="title">Alternate Versions of Induction</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_equivalence.html" class="internal"><span class="codenumber">B.13</span> <span class="title">Equivalence Relations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_integers.html" class="internal"><span class="codenumber">B.14</span> <span class="title">The Integers as Equivalence Classes of Ordered Pairs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_prop-integers.html" class="internal"><span class="codenumber">B.15</span> <span class="title">Properties of the Integers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_rationals.html" class="internal"><span class="codenumber">B.16</span> <span class="title">Obtaining the Rationals from the Integers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_rationals.html#s_background_rationals-3" class="internal"><span class="codenumber">B.16.1</span> <span class="title">Integer Exponents</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_reals.html" class="internal"><span class="codenumber">B.17</span> <span class="title">Obtaining the Reals from the Rationals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_background_complex.html" class="internal"><span class="codenumber">B.18</span> <span class="title">Obtaining the Complex Numbers from the Reals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_background_complex.html#s_background_complex-3" class="internal"><span class="codenumber">B.18.1</span> <span class="title">Decimal Representation of Real Numbers</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_background_ZFC.html" class="internal"><span class="codenumber">B.19</span> <span class="title">The Zermelo-Fraenkel Axioms of Set Theory</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="colophon" id="front-colophon"><h2 class="heading hide-type">
+<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
+</h2>
+<div class="credit">
+<b class="title">Edition</b> 2017.2 Edition</div>
+<div class="credit">
+<b class="title">Website</b> <a class="external" href="https://appliedcombinatorics.org/" target="_blank">https://appliedcombinatorics.org/</a><details class="ptx-footnote" aria-live="polite" id="app-comb-2-1-5-2"><summary class="ptx-footnote__number" title="Footnote 0.0.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="app-comb-2-1-5-2"><code class="code-inline tex2jax_ignore">appliedcombinatorics.org/</code></div></details>
+</div>
+<div class="para copyright">©2006–2021 Mitchel T. Keller, William T. Trotter</div>
+<div class="para license">This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a class="external" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><code class="code-inline tex2jax_ignore">http://creativecommons.org/licenses/by-sa/4.0/</code></a> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.</div>
+<div class="autopermalink" data-description="Colophon"><a href="#front-colophon" title="Copy heading and permalink for Colophon">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="app-comb-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="app-comb-2-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DKXSTE8Z4T"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DKXSTE8Z4T');
+</script><!--End: Google Global Site Tag code-->
+</body>
+</html>
