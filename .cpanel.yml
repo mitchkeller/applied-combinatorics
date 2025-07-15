@@ -3,5 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tworight/public_html/book
     - git switch gh-pages
+    - git pull
     - /bin/cp -R * $DEPLOYPATH
     - git switch main
