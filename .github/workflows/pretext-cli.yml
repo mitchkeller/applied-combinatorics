@@ -1,4 +1,4 @@
-# This file was automatically generated with PreTeXt 2.20.0.
+# This file was automatically generated with PreTeXt 2.23.1.
 # If you modify this file, PreTeXt will no longer automatically update it.
 #
 # This workflow file can be used to automatically build a project and create
@@ -21,7 +21,7 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        container: oscarlevin/pretext:full
+        container: oscarlevin/pretext-full
 
         steps:
             - name: Checkout source
@@ -29,6 +29,11 @@ jobs:
 
             - name: install deps
               run: pip install -r requirements.txt
+
+            - name: set up node
+              uses: actions/setup-node@v4
+              with:
+                node-version: '22'
 
             - name: install local ptx files
               run: pretext --version

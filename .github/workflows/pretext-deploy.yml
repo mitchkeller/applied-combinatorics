@@ -1,4 +1,4 @@
-# This file was automatically generated with PreTeXt 2.20.0.
+# This file was automatically generated with PreTeXt 2.23.1.
 # If you modify this file, PreTeXt will no longer automatically update it.
 #
 
@@ -28,11 +28,16 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    container: oscarlevin/pretext:full
+    container: oscarlevin/pretext-full
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: add gh-cli
         run: |
@@ -61,4 +66,3 @@ jobs:
         run: git push origin gh-pages --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
