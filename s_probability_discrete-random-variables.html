@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -120,15 +120,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.5';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a99e275a1e410b98.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.58623b9a3097f5e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -622,14 +622,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_probability_discrete-random-variables"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.4</span><span class="space"> </span><span class="title">Discrete Random Variables</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Discrete Random Variables</span>
 </h2>
 <section class="introduction" id="s_probability_discrete-random-variables-2"><div class="para" id="s_probability_discrete-random-variables-2-1">Let <span class="process-math">\((S,P)\)</span> be a probability space and let <span class="process-math">\(X:S\longrightarrow\reals\)</span> be any function that maps the outcomes in <span class="process-math">\(S\)</span> to real numbers (all values allowed, positive, negative and zero). We call<details class="ptx-footnote" aria-live="polite" id="s_probability_discrete-random-variables-2-1-4"><summary class="ptx-footnote__number" title="Footnote 10.4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="s_probability_discrete-random-variables-2-1-4">For historical reasons, capital letters, like <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are used to denote random variables.  They are just functions, so letters like <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> might more seem more natural—but maybe not.</div></details> <span class="process-math">\(X\)</span> a <dfn class="terminology">random variable</dfn>. The quantity <span class="process-math">\(\sum_{x\in S} X(x)P(x)\text{,}\)</span> denoted <span class="process-math">\(E(X)\text{,}\)</span> is called the <dfn class="terminology">expectation</dfn> (also called the <dfn class="terminology">mean</dfn> or <dfn class="terminology">expected value</dfn>) of the random variable <span class="process-math">\(X\text{.}\)</span> As the suggestive name reflects, this is what one should expect to be the average behavior of the result of repeated Bernoulli trials.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_discrete-random-variables-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_probability_discrete-random-variables-2-2">Note that since we are dealing only with probability spaces <span class="process-math">\((S,P)\)</span> where <span class="process-math">\(S\)</span> is a finite set, the range of the probability measure <span class="process-math">\(P\)</span> is actually a finite set. Accordingly, we can rewrite the formula for <span class="process-math">\(E(X)\)</span> as <span class="process-math">\(\sum_y y\cdot \prob(X(x)=y)\text{,}\)</span> where the summation extends over a finite range of values for <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_probability_discrete-random-variables-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="s_probability_discrete-random-variables-2-3"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.15</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_probability_discrete-random-variables-2-3-1">
 <div class="para">For the spinner shown in <a href="s_probability_intro.html#fig_spinner" class="xref" data-knowl="./knowl/xref/fig_spinner.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.1">Figure 10.1</a>, let <span class="process-math">\(X(i)=i^2\)</span> where <span class="process-math">\(i\)</span> is the number of the region. Then</div>
@@ -643,7 +643,7 @@ E(X)=\sum_{i\in S} i^2P(i)=1^2\frac{1}{8}+2^2\frac{2}{8}+3^2\frac{1}{8}+
 <div class="autopermalink" data-description="Paragraph"><a href="#s_probability_discrete-random-variables-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 10.15"><a href="#s_probability_discrete-random-variables-2-3" title="Copy heading and permalink for Example 10.15" aria-label="Copy heading and permalink for Example 10.15">🔗</a></div></article><article class="example example-like" id="s_probability_discrete-random-variables-2-4"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.16</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_probability_discrete-random-variables-2-4-1">
 <div class="para">For Alice’s game from the start of the chapter, <span class="process-math">\(S=\{0,1,2,3,4,5\}\text{,}\)</span> we could take <span class="process-math">\(X\)</span> to be the function defined by <span class="process-math">\(X(d)= 2-d\text{.}\)</span> Then <span class="process-math">\(X(d)\)</span> records the amount that Bob wins when the difference is <span class="process-math">\(d\)</span> (a negative win for Bob is just a win for Alice in the same amount). We calculate the expectation of <span class="process-math">\(X\)</span> as follows:</div>
@@ -657,12 +657,12 @@ E(X)=\sum_{d=0}^{5}X(d)p(d)= -2\frac{1}{6} -1\frac{10}{36}+0
 <div class="autopermalink" data-description="Paragraph"><a href="#s_probability_discrete-random-variables-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 10.16"><a href="#s_probability_discrete-random-variables-2-4" title="Copy heading and permalink for Example 10.16" aria-label="Copy heading and permalink for Example 10.16">🔗</a></div></article></section><section class="subsection" id="s_probability_discrete-random-variables-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.4.1</span><span class="space"> </span><span class="title">The Linearity of Expectation</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Linearity of Expectation</span>
 </h3>
 <div class="para" id="s_probability_discrete-random-variables-3-2">The following fundamental property of expectation is an immediate consequence of the definition, but we state it formally because it is so important to discussions to follow.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_discrete-random-variables-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop_linearexpect"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.17</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="prop_linearexpect-1-1">
 <div class="para">Let <span class="process-math">\((S,P)\)</span> be a probability space and let <span class="process-math">\(X_1,X_2,\dots,X_n\)</span> be random variables. Then</div>
@@ -674,10 +674,10 @@ E(X_1+X_2+\dots+X_t)=E(X_1)+E(X_2)+\dots+E(X_n).
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_linearexpect-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Proposition 10.17"><a href="#prop_linearexpect" title="Copy heading and permalink for Proposition 10.17" aria-label="Copy heading and permalink for Proposition 10.17">🔗</a></div></article><div class="autopermalink" data-description="Subsection 10.4.1: The Linearity of Expectation"><a href="#s_probability_discrete-random-variables-3" title="Copy heading and permalink for Subsection 10.4.1: The Linearity of Expectation" aria-label="Copy heading and permalink for Subsection 10.4.1: The Linearity of Expectation">🔗</a></div></section><section class="subsection" id="s_probability_discrete-random-variables-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.4.2</span><span class="space"> </span><span class="title">Implications for Bernoulli Trials</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Implications for Bernoulli Trials</span>
 </h3>
 <article class="example example-like" id="s_probability_discrete-random-variables-4-2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.18</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="s_probability_discrete-random-variables-4-2-1">
 <div class="para">Consider a series of <span class="process-math">\(n\)</span> Bernoulli trials with <span class="process-math">\(p\text{,}\)</span> the probability of success, and let <span class="process-math">\(X\)</span> count the number of successes. Then, we claim that</div>
@@ -708,7 +708,7 @@ f'(x)=\sum_{i=0}^n i \binom{n}{i}x^{i-}p^i(1-p)^{n-i}
 <div class="autopermalink" data-description="Paragraph"><a href="#s_probability_discrete-random-variables-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 10.18"><a href="#s_probability_discrete-random-variables-4-2" title="Copy heading and permalink for Example 10.18" aria-label="Copy heading and permalink for Example 10.18">🔗</a></div></article><article class="example example-like" id="s_probability_discrete-random-variables-4-3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.19</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="s_probability_discrete-random-variables-4-3-1">Many states have lotteries to finance college scholarships or other public enterprises judged to have value to the public at large. Although far from a scientific investigation, it seems on the basis of our investigation that many of the games have an expected value of approximately fifty cents when one dollar is invested. So the games are far from fair, and no one should play them unless they have an intrinsic desire to support the various causes for which the lottery profits are targeted.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_discrete-random-variables-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

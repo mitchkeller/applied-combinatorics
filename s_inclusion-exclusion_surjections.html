@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -120,15 +120,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.5';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a99e275a1e410b98.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.58623b9a3097f5e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -622,14 +622,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_inclusion-exclusion_surjections"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.3</span><span class="space"> </span><span class="title">Enumerating Surjections</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Enumerating Surjections</span>
 </h2>
 <div class="para" id="s_inclusion-exclusion_surjections-2">As our first example of the power of inclusion-exclusion, consider the following situation: A grandfather has <span class="process-math">\(15\)</span> distinct lottery tickets and wants to distribute them to his four grandchildren so that each child gets at least one ticket. In how many ways can he make such a distribution? At first, this looks a lot like the problem of enumerating integer solutions of equations, except here the lottery tickets are not identical! A ticket bearing the numbers <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(10\text{,}\)</span> <span class="process-math">\(23\text{,}\)</span> <span class="process-math">\(47\text{,}\)</span> and <span class="process-math">\(50\)</span> will almost surely not pay out the same amount as one with the numbers <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(10\text{,}\)</span> <span class="process-math">\(30\text{,}\)</span> <span class="process-math">\(31\text{,}\)</span> and <span class="process-math">\(48\text{,}\)</span> so who gets which ticket really makes a difference. Hopefully, you have already recognized that the fact that we’re dealing with lottery tickets and grandchildren isn’t so important here. Rather, the important fact is that we want to distribute distinguishable objects to distinct entities, which calls for counting functions from one set (lottery tickets) to another (grandchildren). In our example, we don’t simply want the total number of functions, but instead we want the number of surjections, so that we can ensure that every grandchild gets a ticket.<div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_surjections-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_inclusion-exclusion_surjections-3">For positive integers <span class="process-math">\(n\)</span> and <span class="process-math">\(m\text{,}\)</span> let <span class="process-math">\(S(n,m)\)</span> denote the number of surjections from <span class="process-math">\([n]\)</span> to <span class="process-math">\([m]\text{.}\)</span> Note that <span class="process-math">\(S(n,m)=0\)</span> when <span class="process-math">\(n\lt m\text{.}\)</span> In this section, we apply the Inclusion-Exclusion formula to determine a formula for <span class="process-math">\(S(n,m)\text{.}\)</span> We start by setting <span class="process-math">\(X\)</span> to be the set of all functions from <span class="process-math">\([n]\)</span> to <span class="process-math">\([m]\text{.}\)</span> Then for each <span class="process-math">\(f\in X\)</span> and each <span class="process-math">\(i=1,2,\dots,m\text{,}\)</span> we say that <span class="process-math">\(f\)</span> satisfies property <span class="process-math">\(P_i\)</span> if <span class="process-math">\(i\)</span> is not in the image of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_surjections-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="s_inclusion-exclusion_surjections-4"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_inclusion-exclusion_surjections-4-1-1">
 <div class="para">For each subset <span class="process-math">\(S\subseteq [m]\text{,}\)</span> <span class="process-math">\(N(S)\)</span> depends only on <span class="process-math">\(|S|\text{.}\)</span> In fact, if <span class="process-math">\(|S|=k\text{,}\)</span> then</div>
@@ -640,7 +640,7 @@ N(S)=(m-k)^n.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_surjections-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 7.8"><a href="#s_inclusion-exclusion_surjections-4" title="Copy heading and permalink for Lemma 7.8" aria-label="Copy heading and permalink for Lemma 7.8">🔗</a></div></article><details id="s_inclusion-exclusion_surjections-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_inclusion-exclusion_surjections-4-2-1">
+<div class="autopermalink" data-description="Lemma 7.8"><a href="#s_inclusion-exclusion_surjections-4" title="Copy heading and permalink for Lemma 7.8" aria-label="Copy heading and permalink for Lemma 7.8">🔗</a></div></article><details id="s_inclusion-exclusion_surjections-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_inclusion-exclusion_surjections-4-2-1">
 <div class="para">Let <span class="process-math">\(|S|=k\text{.}\)</span> Then a function <span class="process-math">\(f\)</span> satisfying property <span class="process-math">\(P_i\)</span> for each <span class="process-math">\(i\in S\)</span> is a string of length <span class="process-math">\(n\)</span> from an alphabet consisting of <span class="process-math">\(m-k\)</span> letters.  This shows that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -652,7 +652,7 @@ N(S)=(m-k)^n.
 <div class="autopermalink" data-description="Proof 7.8.1"><a href="#s_inclusion-exclusion_surjections-4-2" title="Copy heading and permalink for Proof 7.8.1" aria-label="Copy heading and permalink for Proof 7.8.1">🔗</a></div></article></details><div class="para" id="s_inclusion-exclusion_surjections-5">Now the following result follows immediately from this lemma by applying the <a href="s_inclusion-exclusion_statement.html#thm_inclusion-exclusion" class="xref" data-knowl="./knowl/xref/thm_inclusion-exclusion.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.7: Principle of Inclusion-Exclusion">Principle of Inclusion-Exclusion</a>, as there are <span class="process-math">\(C(m,k)\)</span> <span class="process-math">\(k\)</span>-element subsets of <span class="process-math">\([m]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_surjections-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="s_inclusion-exclusion_surjections-6"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.9</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_inclusion-exclusion_surjections-6-1-1">
 <div class="para">The number <span class="process-math">\(S(n,m)\)</span> of surjections from <span class="process-math">\([n]\)</span> to <span class="process-math">\([m]\)</span> is given by:</div>

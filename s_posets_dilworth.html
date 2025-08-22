@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -120,15 +120,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.5';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a99e275a1e410b98.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.58623b9a3097f5e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -622,12 +622,12 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_posets_dilworth"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.3</span><span class="space"> </span><span class="title">Dilworth’s Chain Covering Theorem and its Dual</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dilworth’s Chain Covering Theorem and its Dual</span>
 </h2>
 <div class="para" id="s_posets_dilworth-2">In this section, we prove the following theorem of R.P. Dilworth, which is truly one of the classic results of combinatorial mathematics.<div class="autopermalink" data-description="Paragraph"><a href="#s_posets_dilworth-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm_dilworth"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.17</span><span class="period">.</span><span class="space"> </span><span class="title">Dilworth’s Theorem.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dilworth’s Theorem.</span>
 </h3>
 <div class="para" id="thm_dilworth-3-1">If <span class="process-math">\(\PXP\)</span> is a poset and <span class="process-math">\(\width(P)=w\text{,}\)</span> then there exists a partition <span class="process-math">\(X=C_1\cup
 C_2\cup\dots \cup C_w\text{,}\)</span> where <span class="process-math">\(C_i\)</span> is a chain for <span class="process-math">\(i=1,2,\dots,w\text{.}\)</span> Furthermore, there is no chain partition into fewer chains.<div class="autopermalink" data-description="Paragraph"><a href="#thm_dilworth-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -635,12 +635,12 @@ C_2\cup\dots \cup C_w\text{,}\)</span> where <span class="process-math">\(C_i\)<
 <div class="autopermalink" data-description="Theorem 6.17: Dilworth’s Theorem"><a href="#thm_dilworth" title="Copy heading and permalink for Theorem 6.17: Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.17: Dilworth’s Theorem">🔗</a></div></article><div class="para" id="s_posets_dilworth-4">Before proceeding with the proof of Dilworth’s theorem <a href="s_posets_dilworth.html#para_posets_dilworth_proof" class="xref" data-knowl="./knowl/xref/para_posets_dilworth_proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraphs: Proof of Dilworth’s Theorem">later in this section</a>, we pause to discuss the dual version for partitions into antichains, as it is even easier to prove.<div class="autopermalink" data-description="Paragraph"><a href="#s_posets_dilworth-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm_dualdilworth"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.18</span><span class="period">.</span><span class="space"> </span><span class="title">Dual of Dilworth’s Theorem.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dual of Dilworth’s Theorem.</span>
 </h3>
 <div class="para" id="thm_dualdilworth-3-1">If <span class="process-math">\(\PXP\)</span> is a poset and <span class="process-math">\(\height(P)=h\text{,}\)</span> then there exists a partition <span class="process-math">\(X=A_1\cup
 A_2\cup\dots\cup A_h\text{,}\)</span> where <span class="process-math">\(A_i\)</span> is an antichain for <span class="process-math">\(i=1,2,\dots,h\text{.}\)</span> Furthermore, there is no partition using fewer antichains.<div class="autopermalink" data-description="Paragraph"><a href="#thm_dualdilworth-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 6.18: Dual of Dilworth’s Theorem"><a href="#thm_dualdilworth" title="Copy heading and permalink for Theorem 6.18: Dual of Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.18: Dual of Dilworth’s Theorem">🔗</a></div></article><details id="thm_dualdilworth-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_dualdilworth-4-1">
+<div class="autopermalink" data-description="Theorem 6.18: Dual of Dilworth’s Theorem"><a href="#thm_dualdilworth" title="Copy heading and permalink for Theorem 6.18: Dual of Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.18: Dual of Dilworth’s Theorem">🔗</a></div></article><details id="thm_dualdilworth-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_dualdilworth-4-1">
 <div class="para">For each <span class="process-math">\(x\in X\text{,}\)</span> let <span class="process-math">\(\height(x)\)</span> be the largest integer <span class="process-math">\(t\)</span> for which there exists a chain</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -658,8 +658,8 @@ x_2\lt \cdots\lt x_i=x \lt x_{i+i}=y\text{,}\)</span> so <span class="process-ma
 <div class="para" id="s_posets_dilworth-8">In <a href="s_posets_dilworth.html#fig_height5" class="xref" data-knowl="./knowl/xref/fig_height5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.19">Figure 6.19</a>, we illustrate the antichain partition provided by this algorithm for the <span class="process-math">\(17\)</span> point poset from <a href="s_posets_intro.html#fig_17ptposet" class="xref" data-knowl="./knowl/xref/fig_17ptposet.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.5">Figure 6.5</a>. The darkened points form a chain of size <span class="process-math">\(5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_posets_dilworth-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig_height5"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/height5.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.19<span class="period">.</span></span><span class="space"> </span>A Poset of Height 5<div class="autopermalink" data-description="Figure 6.19"><a href="#fig_height5" title="Copy heading and permalink for Figure 6.19" aria-label="Copy heading and permalink for Figure 6.19">🔗</a></div></figcaption></figure><article class="remark remark-like" id="s_posets_dilworth-10"><h3 class="heading">
-<span class="type">Discussion</span><span class="space"> </span><span class="codenumber">6.20</span><span class="period">.</span>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A Poset of Height 5<div class="autopermalink" data-description="Figure 6.19"><a href="#fig_height5" title="Copy heading and permalink for Figure 6.19" aria-label="Copy heading and permalink for Figure 6.19">🔗</a></div></figcaption></figure><article class="remark remark-like" id="s_posets_dilworth-10"><h3 class="heading">
+<span class="type">Discussion</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="s_posets_dilworth-10-1">Alice claims that it is very easy to find the set of minimal elements of a poset. Do you agree?<div class="autopermalink" data-description="Paragraph"><a href="#s_posets_dilworth-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -705,8 +705,8 @@ X=(C_1\cup D_1)\cup (C_2\cup D_2)\cup\dots\cup(C_w\cup D_w)
 <div class="para" id="para_posets_dilworth_proof-7">In <a href="s_posets_dilworth.html#fig_width7" class="xref" data-knowl="./knowl/xref/fig_width7.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.21">Figure 6.21</a>, we illustrate Dilworth’s chain covering theorem for the poset first introduced in <a href="s_posets_intro.html#fig_17ptposet" class="xref" data-knowl="./knowl/xref/fig_17ptposet.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.5">Figure 6.5</a>. The darkened points form a <span class="process-math">\(7\)</span>-element antichain, while the labels provide a partition into <span class="process-math">\(7\)</span> chains.<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig_width7"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/width7.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.21<span class="period">.</span></span><span class="space"> </span>A Poset of Width 7<div class="autopermalink" data-description="Figure 6.21"><a href="#fig_width7" title="Copy heading and permalink for Figure 6.21" aria-label="Copy heading and permalink for Figure 6.21">🔗</a></div></figcaption></figure><article class="remark remark-like" id="para_posets_dilworth_proof-9"><h4 class="heading">
-<span class="type">Discussion</span><span class="space"> </span><span class="codenumber">6.22</span><span class="period">.</span>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A Poset of Width 7<div class="autopermalink" data-description="Figure 6.21"><a href="#fig_width7" title="Copy heading and permalink for Figure 6.21" aria-label="Copy heading and permalink for Figure 6.21">🔗</a></div></figcaption></figure><article class="remark remark-like" id="para_posets_dilworth_proof-9"><h4 class="heading">
+<span class="type">Discussion</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="para_posets_dilworth_proof-9-1">The ever alert Alice notes that the proof given above for Dilworth’s theorem does not seem to provide an efficient algorithm for finding the width <span class="process-math">\(w\)</span> of a poset, much less a partition of the poset into <span class="process-math">\(w\)</span> chains. Bob has yet to figure out why listing all the subsets of <span class="process-math">\(X\)</span> is a bad idea. Carlos is sitting quietly listening to their bickering, but finally, he says that a skilled programmer can devise an algorithm from the proof. Students are encouraged to discuss this dilemma—but rest assured that we will return to this issue later in the text.<div class="autopermalink" data-description="Paragraph"><a href="#para_posets_dilworth_proof-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

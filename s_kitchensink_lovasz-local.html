@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -120,15 +120,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.5';
+eBookConfig.runestone_version = '7.9.8';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a99e275a1e410b98.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.58623b9a3097f5e4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -622,7 +622,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_kitchensink_lovasz-local"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">16.7</span><span class="space"> </span><span class="title">The Lovász Local Lemma</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Lovász Local Lemma</span>
 </h2>
 <div class="para" id="s_kitchensink_lovasz-local-2">Even though humans seem to have great difficulty in providing explicit constructions for exponentially large graphs which do not have complete subgraphs or independent sets of size <span class="process-math">\(n\text{,}\)</span> such graphs exist with great abundance. Just take one at random and you are almost certain to get one. And as a general rule, probabilistic techniques often provide a method for finding something that readily exists, but is hard to find.<div class="autopermalink" data-description="Paragraph"><a href="#s_kitchensink_lovasz-local-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -648,7 +648,7 @@ P(E|\prod_{F\in\cgG}\overline{F})=P(E)
 <div class="para" id="s_kitchensink_lovasz-local-5">We first state and prove the lemma in <em class="emphasis">asymmetric</em> form.  Later, we will give a simpler version which is called the <em class="emphasis">symmetric</em> version.<div class="autopermalink" data-description="Paragraph"><a href="#s_kitchensink_lovasz-local-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="lem_LLL"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">16.14</span><span class="period">.</span><span class="space"> </span><span class="title">Lovász Local Lemma (Asymmetric).</span>
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lovász Local Lemma (Asymmetric).</span>
 </h3>
 <div class="para logical" id="lem_LLL-3-1">
 <div class="para">Let <span class="process-math">\(\cgF\)</span> be a finite family of events in a probability space and for each event <span class="process-math">\(E\in\cgF\text{,}\)</span> let <span class="process-math">\(\cgN(E)\)</span> denote a subfamily of events from <span class="process-math">\(\cgF-\{E\}\)</span> so that <span class="process-math">\(E\)</span> is independent of any event not in <span class="process-math">\(\cgN(E)\text{.}\)</span> Suppose that for each event <span class="process-math">\(E\in\cgF\text{,}\)</span> there is a real number <span class="process-math">\(x(E)\)</span> with <span class="process-math">\(0\lt x(E)\lt 1\)</span> such that</div>
@@ -667,7 +667,7 @@ P(\prod_{E\in\cgG}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)).
 <div class="para">In particular, the probability that all events in <span class="process-math">\(\cgF\)</span> fail is positive.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#lem_LLL-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 16.14: Lovász Local Lemma (Asymmetric)"><a href="#lem_LLL" title="Copy heading and permalink for Lemma 16.14: Lovász Local Lemma (Asymmetric)" aria-label="Copy heading and permalink for Lemma 16.14: Lovász Local Lemma (Asymmetric)">🔗</a></div></article><details id="lem_LLL-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem_LLL-4-1">
+<div class="autopermalink" data-description="Lemma 16.14: Lovász Local Lemma (Asymmetric)"><a href="#lem_LLL" title="Copy heading and permalink for Lemma 16.14: Lovász Local Lemma (Asymmetric)" aria-label="Copy heading and permalink for Lemma 16.14: Lovász Local Lemma (Asymmetric)">🔗</a></div></article><details id="lem_LLL-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem_LLL-4-1">
 <div class="para">We proceed by induction on <span class="process-math">\(\cgG\text{.}\)</span> If <span class="process-math">\(|\cgG|=1\)</span> and <span class="process-math">\(\cgG=\{E\}\text{,}\)</span> we are simply asserting that <span class="process-math">\(P(\overline{E})\ge 1-x(E)\text{,}\)</span> which is true since <span class="process-math">\(P(E)\le x(E)\text{.}\)</span> Now suppose that <span class="process-math">\(|\cgG|=k\ge2\)</span> and that the lemma holds whenever <span class="process-math">\(1\le |\cgG|\lt k\text{.}\)</span> Let <span class="process-math">\(\cgG =\{E_1,E_2,\dots,E_k\}\text{.}\)</span>  Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -737,7 +737,7 @@ P(E|\prod_{F\in\cgF_E}\overline{F})\le x(E)\prod_{\cgN(E)-\cgF_E}(1-x(F))\le x(E
 <div class="autopermalink" data-description="Proof 16.14.1"><a href="#lem_LLL-4" title="Copy heading and permalink for Proof 16.14.1" aria-label="Copy heading and permalink for Proof 16.14.1">🔗</a></div></article></details><div class="para" id="s_kitchensink_lovasz-local-7">Now here is the symmetric version.<div class="autopermalink" data-description="Paragraph"><a href="#s_kitchensink_lovasz-local-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="lem_LLL-sym"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">16.15</span><span class="period">.</span><span class="space"> </span><span class="title">Lovász Local Lemma (Symmetric).</span>
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lovász Local Lemma (Symmetric).</span>
 </h3>
 <div class="para logical" id="lem_LLL-sym-3-1">
 <div class="para">Let <span class="process-math">\(p\)</span> and <span class="process-math">\(d\)</span> be numbers with <span class="process-math">\(0\lt p\lt 1\)</span> and <span class="process-math">\(d\ge 1\text{.}\)</span> Also, let <span class="process-math">\(\cgF\)</span> be a finite family of events in a probability space and for each event <span class="process-math">\(E\in\cgF\text{,}\)</span> let <span class="process-math">\(\cgN(E)\)</span> denote the subfamily of events from <span class="process-math">\(\cgF-\{E\}\)</span> so that <span class="process-math">\(E\)</span> is independent of any event not in <span class="process-math">\(\cgN(E)\text{.}\)</span> Suppose that <span class="process-math">\(P(E)\le p\text{,}\)</span> <span class="process-math">\(|\cgN(E)|\le d\)</span> for every event <span class="process-math">\(E\in\cgF\)</span> and that <span class="process-math">\(ep(d+1)\lt 1\text{,}\)</span> where <span class="process-math">\(e=2.71828\dots\)</span> is the base for natural logarithms. Then</div>
@@ -749,7 +749,7 @@ P(\prod_{E\in\cgF}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)),
 <div class="para">i.e., the probability that all events in <span class="process-math">\(\cgF\)</span> is positive.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#lem_LLL-sym-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 16.15: Lovász Local Lemma (Symmetric)"><a href="#lem_LLL-sym" title="Copy heading and permalink for Lemma 16.15: Lovász Local Lemma (Symmetric)" aria-label="Copy heading and permalink for Lemma 16.15: Lovász Local Lemma (Symmetric)">🔗</a></div></article><details id="lem_LLL-sym-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem_LLL-sym-4-1">
+<div class="autopermalink" data-description="Lemma 16.15: Lovász Local Lemma (Symmetric)"><a href="#lem_LLL-sym" title="Copy heading and permalink for Lemma 16.15: Lovász Local Lemma (Symmetric)" aria-label="Copy heading and permalink for Lemma 16.15: Lovász Local Lemma (Symmetric)">🔗</a></div></article><details id="lem_LLL-sym-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem_LLL-sym-4-1">
 <div class="para">Set <span class="process-math">\(x(E)=1/(d+1)\)</span> for every event <span class="process-math">\(E\in\cgF\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
