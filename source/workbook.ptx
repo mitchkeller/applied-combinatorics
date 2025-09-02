@@ -2,23 +2,21 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
 	<docinfo>
 		<brandlogo url="httpw://www.appliedcombinatorics.org/" source="front-cover.png" />
-		<initialism>ACW
+		<initialism>ACW</initialism>
 		<xi:include href="macros.ptx" />
     <xi:include href="latex-image-preamble.ptx" />
 		<cross-references text="type-global" />
 		<rename element="remark" xml:lang="en-US">Discussion</rename>
-		<document-id>appcomb-workbook</document-id>
-		</initialism>
 	</docinfo>
 
-	<book xml:id="appcomb-workbook">
+	<book xml:id="appcomb-activities">
 		<title>
-		<line>Worksheets to Accompany</line>
+		<line>Activities to Accompany</line>
 		<line><pubtitle>Applied Combinatorics</pubtitle></line>
 		</title>
 
 		<frontmatter>
-			<titlepage>
+			<bibinfo>
 				<author>
 					<personname>Mitchel T.
 					Keller</personname>
@@ -40,6 +38,9 @@
 					</institution>
 					<email>wtt.math@gmail.com</email>
 				</author>
+			</bibinfo>
+			<titlepage>
+				<titlepage-items/>
 			</titlepage>
 		</frontmatter>
     <xi:include href="worksheets/intro.ptx" />

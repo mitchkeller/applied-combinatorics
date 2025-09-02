@@ -1,67 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    This file provides the overall configuration for your PreTeXt
-    project. To edit the content of your document, open `source/main.ptx`
-    (default location).
--->
-<project>
+<project ptx-version="2">
   <targets>
-    <target name="html">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <!-- <stringparam key="author.deprecations.all" value="yes" /> -->
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/html</output-dir>
-    </target>
-    <target name="html-hosted">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>/home/tworight/public_html/book</output-dir>
-    </target>
-    <target name="react">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <stringparam key="debug.react.global" value="yes" />
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/react</output-dir>
-    </target>
+    <target name="html" format="html" source="main.ptx" publication="publication.ptx"     
+            deploy-dir="book" />
+    <target name="runestone" format="html" source="main.ptx" 
+            publication="publication_runestone.ptx"
+            platform="runestone"  />
+    <target name="latex" format="latex" source="main.ptx" publication="publication.ptx" />
+    <target name="pdf" format="pdf" source="main.ptx" publication="publication.ptx" 
+            latex-engine="xelatex" />
+    <target name="activities" format="html" source="workbook.ptx" 
+            publication="publication-workbook.ptx" deploy-dir="activities" />
+    <target name="activities-pdf" format="pdf" source="workbook.ptx" 
+            publication="publication-workbook.ptx" latex-engine="xelatex"/>
+    <target name="activities-latex" format="latex" source="workbook.ptx" 
+            publication="publication-workbook.ptx" />
 
-    <target name="runestone">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication_runestone.ptx</publication>
-      <output-dir>published/appcomb</output-dir>
-    </target>
-    <target name="latex">
-      <format>latex</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/latex</output-dir>
-    </target>
-    <target name="pdf" pdf-method="pdflatex">
-      <format>pdf</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/pdf</output-dir>
-    </target>
-    <target name="workbook-pdf" pdf-method="xelatex">
-      <format>pdf</format>
-      <source>source/workbook.ptx</source>
-      <publication>publication/publication-workbook.ptx</publication>
-      <output-dir>output/workbook-pdf</output-dir>
-    </target>
-    <target name="subset">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/subset</output-dir>
-      <stringparam key="debug.skip-knowls" value="yes"/>
-      <!-- edit this to change the section/chapter/etc. to include
-           in your subset build -->
-      <xmlid-root>C_Vector</xmlid-root>
-    </target>
-    <target name="epub">
+    <!-- <target name="epub">
       <format>epub</format>
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
@@ -72,20 +27,6 @@
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/kindle2023</output-dir>
-    </target>    
+    </target>     -->
   </targets>
-  <executables>
-      <latex>latex</latex>
-      <pdflatex>pdflatex</pdflatex>
-      <xelatex>xelatex</xelatex>
-      <pdfsvg>pdf2svg</pdfsvg>
-      <asy>asy</asy>
-      <sage>sage</sage>
-      <pdfpng>convert</pdfpng>
-      <pdfeps>pdftops</pdfeps>
-      <pdfcrop>pdf-crop-margins</pdfcrop>
-      <pageres>pageres</pageres>
-      <node>node</node>
-      <liblouis>file2brl</liblouis>
-    </executables>
 </project>
