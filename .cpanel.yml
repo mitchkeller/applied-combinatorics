@@ -4,5 +4,6 @@ deployment:
     - export DEPLOYPATH=/home/tworight/public_html/book
     - git switch gh-pages
     - git pull
+    - cd book
     - /bin/cp -R * $DEPLOYPATH
     - git switch main
