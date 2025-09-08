@@ -56,14 +56,16 @@
             </p>
 
             <p>We recall that the binomial coefficients satisfy
-            <me>
-                \binom{m+n-2}{m-1}=\binom{m+n-3}{m-2}+\binom{m+n-3}{m-1} =
-                \binom{m+n-3}{m-2}+\binom{m+n-3}{n-2}
-            </me>
-            So either <m>|S_1|\ge \binom{m+n-3}{m-2}</m> or <m>|S_1|\ge\binom{m+n-3}{m-1}</m>.  If the first option holds, and <m>S_1</m> does not have an independent set of size <m>n</m>, then it contains a complete subgraph of size <m>m-1</m>. It follows that we may add <m>x</m> to this set to obtain a complete subgraph of size <m>m</m> in <m>G</m>.
+            <md>
+                <mrow>\binom{m+n-2}{m-1} \amp=\binom{m+n-3}{m-2}+\binom{m+n-3}{m-1}</mrow>
+                <mrow> \amp = \binom{m+n-3}{m-2}+\binom{m+n-3}{n-2}</mrow>
+            </md>.
+            Thus, either <m>|S_1|\ge \binom{m+n-3}{m-2}</m> or <m>|S_2|\ge\binom{m+n-3}{m-1}</m>. 
+        </p>
+        <p>If the first option holds and <m>S_1</m> does not have an independent set of size <m>n</m>, then <m>S_1</m> contains a complete subgraph of size <m>m-1</m>. Hence, we may add <m>x</m> to this set to obtain a complete subgraph of size <m>m</m> in <m>G</m>.
             </p>
 
-            <p>Similarly, if the second option holds, and <m>S_2</m> does not contain a complete subgraph of size <m>m</m>, then <m>S_2</m> contains an independent set of size <m>n-1</m>, and we may add <m>x</m> to this set to obtain an independent set of size <m>n</m> in <m>G</m>.
+            <p>Similarly, if the second option holds and <m>S_2</m> does not contain a complete subgraph of size <m>m</m>, then <m>S_2</m> contains an independent set of size <m>n-1</m>, and we may add <m>x</m> to this set to obtain an independent set of size <m>n</m> in <m>G</m>.
             </p>
             </proof>
         </theorem>
