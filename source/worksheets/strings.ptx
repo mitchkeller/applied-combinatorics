@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ws-strings" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Strings, Sets, and Binomial Coefficients</title>
+
+  <worksheet xml:id="ws-strings-perm-comb">
+    <title>Strings, Permutations, Binomial Coefficients</title>
+
+    <exercise>
+      <introduction>
+        <p>
+          Suppose a state issues license plates that are numbered with strings of length <m>6</m> so that the first three characters must be upper-case letters in the English alphabet and the last three characters must be base <m>10</m> digits. 
+        </p>
+      </introduction>
+      <task workspace="1cm">
+        <statement>
+          <p>
+            How many license plates are possible?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>26^3\cdot 10^3</m>
+          </p>
+        </solution>
+      </task>
+      <task workspace="0.7cm">
+        <introduction>
+          <p>
+            Suppose the state starts suffering confusion between <m>O</m> and <m>0</m>.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              How many license plates are possible if they prohibit the use of the letter <m>O</m> in the alphabetic part?  
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              What if they allow <m>O</m> but prohibit <m>0</m>?
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              What about prohibiting both <m>O</m> and <m>0</m>?
+            </p>
+          </statement>
+        </task>
+      </task>
+    </exercise>
+    <exercise workspace="1cm" xml:id="wkst-digit">
+      <introduction>
+        <p>
+          How many <m>4</m>-digit positive integers are there? (Assume that we count by writing an integer using as few digits as possible so that <m>10</m> is a <m>2</m>-digit integer but not a <m>4</m>-digit integer.) Make your count in two ways: 
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            By figuring out the smallest and largest integers you want to count and determining how many there must therefore be.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            By considering <m>4</m>-digit positive integers as strings.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise workspace="0.7cm">
+      <statement>
+        <p>
+          How many <m>4</m>-digit positive integers are divisible by <m>10</m>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace=".7cm">
+      <statement>
+        <p>
+          How many <m>4</m>-digit positive integers are divisible by <m>5</m>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Let's go back to license plates allowing any three letters followed by any
+    three numbers.
+        </p>
+      </introduction>
+      <task workspace="1cm">
+        <statement>
+          <p>
+            How many license plates start with a vowel followed by a consonant?
+          </p>
+        </statement>
+      </task>
+      <task workspace="1cm">
+        <statement>
+          <p>
+            How many license plates end with a <m>3</m>-digit number divisible by <m>5</m>? (Here we allow leading zeros in <m>3</m>-digit numbers, unlike in the previous three questions.)
+          </p>
+        </statement>
+      </task>
+      <task workspace="1cm">
+        <statement>
+          <p>
+            How many license plates start with a vowel followed by a consonant <em>and</em> end with a <m>3</m>-digit number divisible by <m>5</m>?
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.5cm">
+        <statement>
+          <p>
+            How many license plates start with a vowel followed by a consonant <em>or</em> end with a <m>3</m>-digit number divisible by <m>5</m>?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise workspace="1cm" xml:id="wkst-scholarship">
+      <statement>
+        <p>
+          A scholarship selection committee has been tasked with choosing five winners from <m>250</m> applicants. The winners will receive scholarships of $10,000, $8,000, $6,000, $4,000, and $2,000. How many possible outcomes are there from the scholarship competition?
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace="0.7cm">
+      <introduction>
+        <p>
+          In this question, <q><m>4</m>-digit</q> is defined as in <xref ref="wkst-digit" text="type-local"/> above.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            How many <m>4</m>-digit positive integers are there with all distinct digits? 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            How many <m>4</m>-digit positive integers with distinct digits are divisible by <m>5</m>?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise workspace="1cm">
+      <statement>
+        <p>
+          Let's change the scholarship problem from <xref ref="wkst-scholarship" text="type-local"/>. Suppose the committee is instead tasked with choosing five winners (from <m>250</m> applicants), each of whom will receive a $6,000 scholarship. Is the number of possible outcomes here less than, the same as, or greater than the number of ways to award scholarships of $10,000, $8,000, $6,000, $4,000, and $2,000?
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace="1cm">
+      <statement>
+        <p>
+          How many binary strings of length <m>10</m> are there containing exactly three <m>1</m>s?
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Suppose a basketball team has <m>15</m> players.
+        </p>
+      </introduction>
+      <task workspace="0.7cm">
+        <statement>
+          <p>
+            How many ways are there to choose the <m>5</m> players who are on the court at any given time?
+          </p>
+        </statement>
+      </task>
+      <task workspace="2cm">
+        <statement>
+          <p>
+            To be a bit more realistic, suppose there are <m>6</m> players who play guard, <m>5</m> players who play forward, and <m>4</m> players who play center. The team's offense calls for two guards, two forwards, and one center to be on the court at all times. How many ways are there for the coach to pick the players to put in the game in this scenario?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise workspace="3cm">
+      <statement>
+        <p>
+          Alice's Diner is a meat and three restaurant at which customers order a plate consisting of one of five meats and three sides chosen from a list of <m>15</m> options. How many different plates can be ordered? What if Alice's Diner offers a <q>deluxe plate</q> offering the customer's choice of two meats (but still three sides)?
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace="1cm">
+      <introduction>
+        <p>
+          Suppose we're making six-character license plates using uppercase letters and digits.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            How many license plates are possible if we require the license plate to contain exactly two W's, which are allowed to appear in any of the six positions, and then can fill the other four positions with any digit or letter (other than W)?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            How about if we modify the scenario above by not allowing any character to be repeated when filling the other four positions?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+          Suppose we want to keep the requirement of exactly three letters and exactly three digits (repetition allowed for both) but no longer want to mandate which positions are letters and which positions are digits. How many license plates can we make now?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise workspace="5cm">
+      <statement>
+        <p>
+          Come up with a simple value for the sum
+          <me>
+            \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+\binom{n}{n}
+          </me>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Start by trying it out for small values of <m>n</m>. Maybe think about binary strings to prove your conjecture true.
+        </p>
+      </hint>
+    </exercise>
+  </worksheet>
+
+</chapter>

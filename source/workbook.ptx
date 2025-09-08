@@ -7,6 +7,7 @@
     <xi:include href="latex-image-preamble.ptx" />
 		<cross-references text="type-global" />
 		<rename element="remark" xml:lang="en-US">Discussion</rename>
+		<rename element="worksheetexercise" xml:lang="en-US">Problem</rename>
 	</docinfo>
 
 	<book xml:id="appcomb-activities">
@@ -44,5 +45,6 @@
 			</titlepage>
 		</frontmatter>
     <xi:include href="worksheets/intro.ptx" />
+		<xi:include href="worksheets/strings.ptx" />
 	</book>
 </pretext>
