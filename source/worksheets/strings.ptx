@@ -18,9 +18,9 @@
             How many license plates are possible?
           </p>
         </statement>
-        <solution>
+        <solution component="strings-soln">
           <p>
-            <m>26^3\cdot 10^3</m>
+            <m>26^3\cdot 10^3</m> because there are <m>26</m> choices for each of the first three positions and <m>10</m> choices for each of the last three positions.
           </p>
         </solution>
       </task>
@@ -36,6 +36,11 @@
               How many license plates are possible if they prohibit the use of the letter <m>O</m> in the alphabetic part?  
             </p>
           </statement>
+          <solution component="strings-soln">
+            <p>
+              <m>25^3\cdot 10^3</m> because there are <m>25</m> choices (any letter except O) for each of the first three positions and <m>10</m> choices for each of the last three positions.
+            </p>
+          </solution>
         </task>
         <task>
           <statement>
@@ -43,6 +48,11 @@
               What if they allow <m>O</m> but prohibit <m>0</m>?
             </p>
           </statement>
+          <solution component="strings-soln">
+            <p>
+              <m>26^3\cdot 9^3</m> because there are <m>26</m> choices for each of the first three positions and <m>9</m> choices (any digit except 0) for each of the last three positions.
+            </p>
+          </solution>
         </task>
         <task>
           <statement>
@@ -50,6 +60,11 @@
               What about prohibiting both <m>O</m> and <m>0</m>?
             </p>
           </statement>
+          <solution component="strings-soln">
+            <p>
+              <m>25^3\cdot 9^3</m> because there are <m>25</m> choices (any letter except O) for each of the first three positions and <m>9</m> choices (any digit except 0) for each of the last three positions.
+            </p>
+          </solution>
         </task>
       </task>
     </exercise>
@@ -65,6 +80,11 @@
             By figuring out the smallest and largest integers you want to count and determining how many there must therefore be.
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            The smallest number to count is <m>1000</m> and the largest is <m>9999</m>. This means there are <m>9000</m> four-digit numbers using this definition.
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
@@ -72,6 +92,11 @@
             By considering <m>4</m>-digit positive integers as strings.
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            There are nine choices (any digit except 0) for the first position and 10 choices for each of the remaining ones. This gives <m>9\times 10\times 10\times 10 = 9000</m> four-digit numbers using this definition.
+          </p>
+        </solution>
       </task>
     </exercise>
     <exercise workspace="0.7cm">
@@ -80,6 +105,11 @@
           How many <m>4</m>-digit positive integers are divisible by <m>10</m>?
         </p>
       </statement>
+      <solution component="strings-soln">
+        <p>
+          The last digit must be 0, so there are <m>9\cdot 10\cdot 10\cdot 1 = 900</m>.
+        </p>
+      </solution>
     </exercise>
     <exercise workspace=".7cm">
       <statement>
@@ -87,12 +117,16 @@
           How many <m>4</m>-digit positive integers are divisible by <m>5</m>?
         </p>
       </statement>
+      <statement>
+        <p>
+          The last digit must be 0 or 5, so there are <m>9\cdot 10\cdot 10\cdot 2 = 1800</m>.
+        </p>
+      </statement>
     </exercise>
     <exercise>
       <introduction>
         <p>
-          Let's go back to license plates allowing any three letters followed by any
-    three numbers.
+          Let's go back to license plates allowing any three uppercase letters followed by any three numbers.
         </p>
       </introduction>
       <task workspace="1cm">
@@ -101,6 +135,11 @@
             How many license plates start with a vowel followed by a consonant?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            For our purposes, there are 5 vowels and thus 21 consonants. There are thus <m>5\cdot 21\cdot 26\cdot 10^3</m> such license plates.
+          </p>
+        </solution>
       </task>
       <task workspace="1cm">
         <statement>
@@ -108,6 +147,11 @@
             How many license plates end with a <m>3</m>-digit number divisible by <m>5</m>? (Here we allow leading zeros in <m>3</m>-digit numbers, unlike in the previous three questions.)
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            Being divisible by 5 requires ending in 0 or 5. There are thus <m>26^3\cdot 10\cdot 10\cdot 2</m> such license plates.
+          </p>
+        </solution>
       </task>
       <task workspace="1cm">
         <statement>
@@ -115,6 +159,11 @@
             How many license plates start with a vowel followed by a consonant <em>and</em> end with a <m>3</m>-digit number divisible by <m>5</m>?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            Now we have 5 choices for the first position, 21 for the second, 26 for the third, 10 each for the fourth and fifth, and two for the last. Thus, there are <m>5\cdot 21\cdot 26\cdot 10^2\cdot 2</m> such license plates.
+          </p>
+        </solution>
       </task>
       <task workspace="1.5cm">
         <statement>
@@ -122,6 +171,14 @@
             How many license plates start with a vowel followed by a consonant <em>or</em> end with a <m>3</m>-digit number divisible by <m>5</m>?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            We have to be careful here, because if we try adding the answers to the first two parts together, then we have counted license plates such as <q>EGA105</q> twice, since this is a vowel-consonant plate and a divisible by 5 plate. We can deal with this by subtracting the answer to the third part, as the plates that are both vowel-consonant plates and divisible by 5 plates are exactly those that are counted twice. Thus, the answer is
+            <me>
+              26^3\cdot 10\cdot 10\cdot 2 + 26^3\cdot 10\cdot 10\cdot 2 - 5\cdot 21\cdot 26\cdot 10^2\cdot 2
+            </me>.
+          </p>
+        </solution>
       </task>
     </exercise>
     <exercise workspace="1cm" xml:id="wkst-scholarship">
@@ -130,6 +187,11 @@
           A scholarship selection committee has been tasked with choosing five winners from <m>250</m> applicants. The winners will receive scholarships of $10,000, $8,000, $6,000, $4,000, and $2,000. How many possible outcomes are there from the scholarship competition?
         </p>
       </statement>
+      <solution component="strings-soln">
+        <p>
+          <m>P(250,5)</m> since we must pick five different winners and the amounts of their scholarships are different.
+        </p>
+      </solution>
     </exercise>
     <exercise workspace="0.7cm">
       <introduction>
@@ -143,6 +205,11 @@
             How many <m>4</m>-digit positive integers are there with all distinct digits? 
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            We have <m>9</m> choices for the leftmost digit because we cannot use 0. The next digit can be any of the 10 digits other than the one in the first position. There are then 8 and 7 choices for the third and fourth digits. Thus, there are <m>9\cdot 9\cdot 8\cdot 7</m>.
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
@@ -150,6 +217,15 @@
             How many <m>4</m>-digit positive integers with distinct digits are divisible by <m>5</m>?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            We have to be careful here. One good way to do that is by separating into two cases: ends with 0 and ends with 5. If we know that the last digit is 0, then there are 9 choices for the first digit, 8 choices for the second digit, and 7 choices for the third digit, so there are <m>9\cdot 8\cdot 7</m> numbers ending with 0. When the final digit is 5, the first digit only has <m>8</m> choices (0 and 5 are excluded). The second digit can be any of <m>8</m> digits (not the first digit and not 5). The third digit can be any of the remaining <m>7</m> digits. Thus, there are <m>8\cdot 8\cdot 7</m> numbers ending with 5. Since these two groups are exclusive, we can add and have
+            <me>
+              9\cdot 8\cdot 7 + 8\cdot 8\cdot 7 = 17\cdot 8\cdot 7
+            </me>
+            <m>4</m>-digit numbers with distinct digits that are divisible by <m>5</m>. One way to come up with the <m>17</m> on its own would be to recognize that there are <m>18</m> choices for the first and last digits in a <m>4</m>-digit number that is divisible by <m>5</m> (9 choices for the first digit and two choices for the last digit), but this allows for numbers where the first and last digits are both <m>5</m>. We need to exclude that to get at distinct digits, so we have <m>18-1=17</m>.
+          </p>
+        </solution>
       </task>
     </exercise>
     <exercise workspace="1cm">
@@ -158,6 +234,11 @@
           Let's change the scholarship problem from <xref ref="wkst-scholarship" text="type-local"/>. Suppose the committee is instead tasked with choosing five winners (from <m>250</m> applicants), each of whom will receive a $6,000 scholarship. Is the number of possible outcomes here less than, the same as, or greater than the number of ways to award scholarships of $10,000, $8,000, $6,000, $4,000, and $2,000?
         </p>
       </statement>
+      <solution component="strings-soln">
+        <p>
+          Since the scholarships now all have the same value, all that matters is which 5 students are selected. Thus, the answer is <m>\binom{250}{5}</m>.
+        </p>
+      </solution>
     </exercise>
     <exercise workspace="1cm">
       <statement>
@@ -165,6 +246,11 @@
           How many binary strings of length <m>10</m> are there containing exactly three <m>1</m>s?
         </p>
       </statement>
+      <solution component="strings-soln">
+        <p>
+          A binary string has symbols only 0 and 1. Once we choose the 3 positions to put 1's, we must fill the rest with 0's. Thus, there are <m>\binom{10}{3}</m> such binary strings.
+        </p>
+      </solution>
     </exercise>
     <exercise>
       <introduction>
@@ -178,6 +264,11 @@
             How many ways are there to choose the <m>5</m> players who are on the court at any given time?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            At this point, order doesn't matter, so we have <m>\binom{15}{5}</m>.
+          </p>
+        </solution>
       </task>
       <task workspace="2cm">
         <statement>
@@ -185,6 +276,15 @@
             To be a bit more realistic, suppose there are <m>6</m> players who play guard, <m>5</m> players who play forward, and <m>4</m> players who play center. The team's offense calls for two guards, two forwards, and one center to be on the court at all times. How many ways are there for the coach to pick the players to put in the game in this scenario?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            Assuming that there's no reason to care about order for which two players are playing guard and which two players are playing forward, we have
+            <me>
+              \binom{6}{2}\binom{5}{2}\binom{4}{1}
+            </me>.
+            
+          </p>
+        </solution>
       </task>
     </exercise>
     <exercise workspace="3cm">
@@ -193,6 +293,14 @@
           Alice's Diner is a meat and three restaurant at which customers order a plate consisting of one of five meats and three sides chosen from a list of <m>15</m> options. How many different plates can be ordered? What if Alice's Diner offers a <q>deluxe plate</q> offering the customer's choice of two meats (but still three sides)?
         </p>
       </statement>
+      <solution component="strings-soln">
+        <p>
+          There are 5 choices for the meat and <m>\binom{15}{3}</m> ways to choose the three sides. (We assume here that you cannot, for example, declare that you really like mashed potatoes and want three portions of mashed potatoes. Allowing repeated selection of sides requires some tools we haven't discussed yet.) Thus, there are <m>5\cdot \binom{15}{3}</m> options.
+        </p>
+        <p>
+          For the deluxe plate, we now have <m>\binom{5}{2}</m> ways to choose the meats, so there are <m>\binom{5}{2}\binom{15}{3}</m> options.
+        </p>
+      </solution>
     </exercise>
     <exercise workspace="1cm">
       <introduction>
@@ -203,9 +311,14 @@
       <task>
         <statement>
           <p>
-            How many license plates are possible if we require the license plate to contain exactly two W's, which are allowed to appear in any of the six positions, and then can fill the other four positions with any digit or letter (other than W)?
+            How many license plates are possible if we require the license plate to contain exactly two W's, which are allowed to appear in any of the six positions, and then can fill the other four positions with any uppercase digit or letter (other than W)?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            We first pick the two places to put the W's. There are <m>\binom{6}{2}</m> ways to do this. We then have 25 letters and 10 digits, or a total of 35 characters that we can use in the four remaining positions. Thus, there are <m>\binom{6}{2} 35^4</m> license plates.
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
@@ -213,13 +326,27 @@
             How about if we modify the scenario above by not allowing any character to be repeated when filling the other four positions?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            Again, we have <m>\binom{6}{2}</m> ways to pick where the W's go. We have <m>P(35,4)</m> ways to fill in the remaining positions, for a total of <m>\binom{6}{2}P(35,4)</m>.
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
           <p>
-          Suppose we want to keep the requirement of exactly three letters and exactly three digits (repetition allowed for both) but no longer want to mandate which positions are letters and which positions are digits. How many license plates can we make now?
+            Suppose we want to keep the requirement of exactly three uppercase letters and exactly three digits (repetition allowed for both) but no longer want to mandate which positions are letters and which positions are digits. How many license plates can we make now?
           </p>
         </statement>
+        <solution component="strings-soln">
+          <p>
+            For this problem, we proceed in two phases. First we pick <em>where</em> the letters go (or where the digits go, as once we've made either choice, the other is forced). Then we fill in the positions. Since there are 6 positions and we need 3 letters, there are <m>\binom{6}{3}</m> ways to choose where the letters go. We then have <m>26^3</m> ways to fill in the letters. As noted, there is one way to pick where the digits now go, which we confirm by noting that <m>\binom{3}{3}=1</m>. There are <m>10^3</m> ways to fill in the digits. We must make <em>all</em> of these choices to fill out the license plate, so there are
+            <me>
+              \binom{6}{3}26^3 10^3
+            </me>
+            such license plates.
+          </p>
+        </solution>
       </task>
     </exercise>
     <exercise workspace="5cm">
@@ -236,6 +363,11 @@
           Start by trying it out for small values of <m>n</m>. Maybe think about binary strings to prove your conjecture true.
         </p>
       </hint>
+      <solution component="strings-soln">
+        <p>
+          We will talk more about this in class, so no solution provided for now.
+        </p>
+      </solution>
     </exercise>
   </worksheet>
 
