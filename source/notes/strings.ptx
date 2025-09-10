@@ -1,0 +1,168 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Strings, Sets, and Binomial Coefficients</title>
+  <handout>
+    <title>Combinatorial Proofs</title>
+      
+      <xi:include href="../worksheets/ex-plate-vowel-consonant.ptx" />
+      <exercise workspace="1in">
+        <statement>
+          <p>
+              How many ways are there to form a string of length five using the alphabet A, B, C if exactly three characters in the string are to be the letter A? Write a sentence or two to explain your reasoning.
+          </p>
+        </statement>
+      </exercise>
+    
+    
+      <p>
+        <alert>Peer instruction question 1</alert>
+      </p>
+      <p workspace="0.75in">
+        We saw this sum on the handout during our last class:
+          <me component="a">
+  \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}= 2^{n}
+</me>
+     <me component="b">
+  \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}
+</me>
+      </p>
+      <sidebyside widths="40% 55%">
+        
+      
+      <image width="50%">
+        <shortdescription>A square array of dots with box around those on the diagonal</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="dot-grid-diagonal-box">
+          <diagram dimensions="(300, 300)" margins="30">
+            <coordinates bbox="(0, 0,6, 6)">
+              <repeat parameter="x=0..6">
+                <repeat parameter="y=0..6">
+                  <point p="(x,y)" fill="#ECCA8A"/>
+                </repeat>
+              </repeat>
+              <rectangle center="(3,3)" dimensions="(0.8,9)" rotate="45"
+                        stroke="black" thickness="5"
+                        corner-radius="10"/>
+            </coordinates>
+          </diagram>
+        </prefigure>
+      </image>
+      <p>
+        <ul>
+          <li>
+            <p>
+              Dots below the box:
+            </p>
+          </li>
+          <li>
+            <p>
+              Total dots: 
+            </p>
+          </li>
+          <li>
+            <p>
+              Dots in the box: 
+            </p>
+          </li>
+          <li>
+            <p>
+              Dots outside the box: 
+            </p>
+          </li>
+          <li>
+            <p workspace="1cm">
+              Dots below the box: 
+            </p>
+          </li>
+          <li>
+            <p>
+              How do the answers to the five bullets above change when the grid is <m>(n+1)\times (n+1)</m>?
+            </p>
+          </li>
+        </ul>
+      </p>
+      </sidebyside>
+      
+      <activity workspace="1.5in">
+        <statement>
+          <p>
+            We just saw that
+            <me>
+              1 + 2 + \cdots + n = \binom{n+1}{2}
+            </me>. 
+            Can we find a proof that counts <m>2</m>-element subsets?
+          </p>
+          <p>
+            Discuss with your group: How many <m>2</m>-element subsets <m>S</m> of <m>[n+1] = \set{1,2,\dots,n+1}</m> have each number below as the smallest element of <m>S</m>?
+            <ul>
+              <li>
+                <p>
+                  1
+                </p>
+              </li>
+              <li>
+                <p>
+                  2
+                </p>
+              </li>
+              <li>
+                <p>
+                  3
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>n</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>n+1</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>i</m> for <m>1\leq i\leq n+1</m>
+                </p>
+              </li>
+            </ul>
+            How can you use this to explain the identity?
+          </p>
+        </statement>
+        
+      </activity>
+      <p workspace="0.5in">
+        <alert>Peer instruction question 2</alert>
+      </p>
+      <p workspace="0.5in">
+        <alert>Peer instruction question 3</alert>
+      </p>
+      <p workspace="0.5in">
+        <alert>Peer instruction question 4</alert>
+      </p>
+      <activity workspace="3in">
+        <statement>
+          <p>
+             Find a simple formula for <m>\ds\sum_{k=1}^{n} k\binom{n}{k}^{2}</m>. By a simple formula, I mean one without a summation in it. One way to do this is to think about something that's being counted and find a "better" way to count it.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            
+          <ul>
+            <li>
+              <p>
+                Think of a committee (or team) with a chair (or captain).
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Remember that <m>\displaystyle \binom{n}{k}= \binom{n}{n-k}</m>
+              </p>
+            </li>
+          </ul>
+                    </p>
+                  </hint>
+      </activity>
+  </handout>
+</chapter>
+  

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+	<docinfo>
+		<brandlogo url="httpw://www.appliedcombinatorics.org/" source="front-cover.png" />
+		<initialism>ACN</initialism>
+		<xi:include href="macros.ptx" />
+    <xi:include href="latex-image-preamble.ptx" />
+		<cross-references text="type-global" />
+		<rename element="remark" xml:lang="en-US">Discussion</rename>
+		<rename element="worksheetexercise" xml:lang="en-US">Problem</rename>
+    <rename element="inlineexercise" xml:lang="en-US">Problem</rename>
+	</docinfo>
+
+	<book xml:id="appcomb-notes">
+		<title>
+		<line>In-Class Notes to Accompany</line>
+		<line><pubtitle>Applied Combinatorics</pubtitle></line>
+		</title>
+
+		<frontmatter>
+			<bibinfo>
+				<author>
+					<personname>Mitchel T.
+					Keller</personname>
+					<department>Department of Mathematics</department>
+					<institution>
+					<line>University of Wisconsin-Madison</line>
+					<line>Madison, Wisconsin</line>
+					</institution>
+					<email>mitch.keller@wisc.edu</email>
+				</author>
+
+				<author>
+					<personname>William T.
+					Trotter</personname>
+					<department>School of Mathematics</department>
+					<institution>
+					<line>Georgia Institute of Technology</line>
+					<line>Atlanta, Georgia</line>
+					</institution>
+					<email>wtt.math@gmail.com</email>
+				</author>
+			</bibinfo>
+			<titlepage>
+				<titlepage-items/>
+			</titlepage>
+		</frontmatter>
+    <xi:include href="notes/strings.ptx" />
+		<!-- <xi:include href="worksheets/strings.ptx" /> -->
+		<!-- <backmatter>
+			<solutions worksheet="statement solution">
+				<title>Solutions</title>
+			</solutions>
+				
+		</backmatter> -->
+	</book>
+</pretext>

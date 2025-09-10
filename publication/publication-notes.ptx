@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<publication>
+    <source>
+        <directories external="../assets" generated="../generated-assets"/>
+        <version include="b" />
+    </source>
+    <common>
+      <tableofcontents level="2" />
+      <exercise-divisional statement="yes" hint="yes" answer="no" solution="no"/>
+      <exercise-worksheet statement="yes" hint="yes" answer="no" solution="no"/>
+      <exercise-inline statement="yes" hint="yes" answer="no" solution="no"/>
+      <worksheet margin="13mm" />
+    </common>
+    <numbering>
+      <blocks level="1" />
+      <divisions chapter-start="2"/>
+    </numbering>
+
+    <!-- HTML-Specific Options -->
+    <html embed-button="yes">
+      <css theme="default-modern" palette="blues" provide-dark-mode="no"/>
+	    <knowl example="no" exercise-inline="no" />
+    </html>
+    <latex sides="two" />
+</publication>

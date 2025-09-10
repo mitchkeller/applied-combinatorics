@@ -15,7 +15,7 @@
 {
   //"image": "oscarlevin/pretext-full:2.20.0",
   // If you don't need sagemath, you can use a smaller base image.  Comment out the line above and uncomment the line below to use a smaller image.
-   "image": "oscarlevin/pretext:latest",
+   "image": "pretextbook/pretext:latest",
   "features": {},
 
   // The pretext-full image above includes pretext, prefigure, and enough parts of latex and sagemath for most cases.  If there are errors with sage, you can install the full sagemath package through Conda by running ./.devcontainer/installSage.sh, or uncommenting that line and rebuilding the container.

@@ -10,11 +10,13 @@
     <target name="pdf" format="pdf" source="main.ptx" publication="publication.ptx" 
             latex-engine="xelatex" />
     <target name="activities" format="html" source="workbook.ptx" 
-            publication="publication-workbook.ptx" deploy-dir="activities" />
+            publication="publication-workbook.ptx" deploy-dir="activities" />        
     <target name="activities-pdf" format="pdf" source="workbook.ptx" 
             publication="publication-workbook.ptx" latex-engine="xelatex"/>
     <target name="activities-latex" format="latex" source="workbook.ptx" 
             publication="publication-workbook.ptx" />
+    <target name="notes" format="html" source="notes.ptx" 
+            publication="publication-notes.ptx" deploy-dir="notes" />
 
     <!-- <target name="epub">
       <format>epub</format>

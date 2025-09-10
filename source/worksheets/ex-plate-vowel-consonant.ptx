@@ -1,0 +1,58 @@
+<exercise xml:id="ex-plate-vowel-consonant">
+  <introduction>
+    <p>
+      Let's go back to license plates allowing any three uppercase letters followed by any three numbers.
+    </p>
+  </introduction>
+  <task workspace="1cm">
+    <statement>
+      <p>
+        How many license plates start with a vowel followed by a consonant?
+      </p>
+    </statement>
+    <solution component="strings-soln">
+      <p>
+        For our purposes, there are 5 vowels and thus 21 consonants. There are thus <m>5\cdot 21\cdot 26\cdot 10^3</m> such license plates.
+      </p>
+    </solution>
+  </task>
+  <task workspace="1cm">
+    <statement>
+      <p>
+        How many license plates end with a <m>3</m>-digit number divisible by <m>5</m>? (Here we allow leading zeros in <m>3</m>-digit numbers, unlike in the previous three questions.)
+      </p>
+    </statement>
+    <solution component="strings-soln">
+      <p>
+        Being divisible by 5 requires ending in 0 or 5. There are thus <m>26^3\cdot 10\cdot 10\cdot 2</m> such license plates.
+      </p>
+    </solution>
+  </task>
+  <task workspace="1cm">
+    <statement>
+      <p>
+        How many license plates start with a vowel followed by a consonant <em>and</em> end with a <m>3</m>-digit number divisible by <m>5</m>?
+      </p>
+    </statement>
+    <solution component="strings-soln">
+      <p>
+        Now we have 5 choices for the first position, 21 for the second, 26 for the third, 10 each for the fourth and fifth, and two for the last. Thus, there are <m>5\cdot 21\cdot 26\cdot 10^2\cdot 2</m> such license plates.
+      </p>
+    </solution>
+  </task>
+  <task workspace="1.5cm">
+    <statement>
+      <p>
+        How many license plates start with a vowel followed by a consonant <em>or</em> end with a <m>3</m>-digit number divisible by <m>5</m>?
+      </p>
+    </statement>
+    <solution component="strings-soln">
+      <p>
+        We have to be careful here, because if we try adding the answers to the first two parts together, then we have counted license plates such as <q>EGA105</q> twice, since this is a vowel-consonant plate and a divisible by 5 plate. We can deal with this by subtracting the answer to the third part, as the plates that are both vowel-consonant plates and divisible by 5 plates are exactly those that are counted twice. Thus, the answer is
+        <me>
+          26^3\cdot 10\cdot 10\cdot 2 + 26^3\cdot 10\cdot 10\cdot 2 - 5\cdot 21\cdot 26\cdot 10^2\cdot 2
+        </me>.
+      </p>
+    </solution>
+  </task>
+</exercise>
