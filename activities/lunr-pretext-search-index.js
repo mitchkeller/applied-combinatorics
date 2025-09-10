@@ -91,9 +91,9 @@ var ptx_lunr_docs = [
   "body": "  How many -digit positive integers are divisible by ?    The last digit must be 0 or 5, so there are .   "
 },
 {
-  "id": "ws-strings-perm-comb-6",
+  "id": "ex-plate-vowel-consonant",
   "level": "2",
-  "url": "ws-strings-perm-comb.html#ws-strings-perm-comb-6",
+  "url": "ws-strings-perm-comb.html#ex-plate-vowel-consonant",
   "type": "Problem",
   "number": "2.1.5",
   "title": "",
