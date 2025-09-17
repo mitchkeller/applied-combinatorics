@@ -1,0 +1,135 @@
+<section xml:id="s_strings_lattice-paths-binomial-thm_activity" component="runestone">
+    <title>An Activity on Lattice Paths, the Binomial Theorem, and the Multinomial Theorem</title>
+
+    <p>
+      Before considering the proof about the number of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> that do not go above the diagonal <m>y=x</m>, let's practice counting some lattice paths with some restrictions.
+    </p>
+    <exercise label="strings_lattice-paths_buzz-bucky">
+      <introduction>
+        <p>
+          The town of Mascotville is laid out as a grid. There are seven parallel streets (<m>1^{\text{st}}</m> through <m>7^{\text{th}}</m>) that run north-south and five parallel avenues (<m>1^{\text{st}}</m> through <m>5^{\text{th}}</m>) that run east-west.
+        </p>
+      </introduction>
+      <task label="strings_lattice-paths_buzz-bucky-all">
+        <statement>
+          <p>
+            Buzz starts at the intersection of <m>1^{\text{st}}</m> Street and <m>1^{\text{st}}</m> Avenue and wants to get to Bucky's burrow at the intersection of <m>7^{\text{th}}</m> Street and <m>5^{\text{th}}</m> Avenue traveling only on streets/avenues, and always moving toward Bucky's burrow. How many ways can he do this?
+          </p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                <m>\displaystyle\binom{12}{7}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <m>\displaystyle\binom{10}{5}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\displaystyle\binom{10}{6}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <m>2^{12}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <m>2^{10}</m>
+              </p>
+            </statement>
+          </choice>
+        </choices>
+      </task>
+      <task label="strings_lattice-paths_buzz-bucky-varsity">
+        <statement>
+          <p>
+            The Varsity is at the intersection of <m>3^{\text{rd}}</m> Street and <m>3^{\text{rd}}</m> Avenue. How many ways can Buzz get to Bucky's burrow if he insists on stopping at The Varsity?
+          </p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                <m>\displaystyle\binom{12}{7}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <m>\displaystyle\binom{10}{5}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\displaystyle\binom{10}{6}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <m>2^{12}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <m>2^{10}</m>
+              </p>
+            </statement>
+          </choice>
+        </choices>
+      </task>
+    </exercise>
+      <exercise label="act_inclusion-exclusion_surjections-8-5_propertiesb">
+        <statement>
+          <p>
+            The set <m>\mathcal{P}</m> contains <var width="10" /> properties.
+          </p>
+        </statement>
+        <setup>
+          <var>
+            <condition number="5">
+              <feedback>
+                <p>
+                  Correct! There is one property in <m>\mathcal{P}</m> for each element of the set the function maps to, which is <m>[5]</m> in this case.
+                </p>
+              </feedback>
+            </condition>
+            <condition number="8">
+              <feedback>
+                <p>
+                  Try again. Think about which of the sets involved determines the properties.
+                </p>
+              </feedback>
+            </condition>
+            <condition string=".*">
+              <feedback>
+                <p>
+                  Incorrect.
+                </p>
+              </feedback>
+            </condition>
+          </var>
+        </setup>
+      </exercise>
+      
+</section>
