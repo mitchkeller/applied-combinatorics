@@ -2,7 +2,7 @@
     <title>An Activity on Lattice Paths, the Binomial Theorem, and the Multinomial Theorem</title>
 
     <p>
-      Before considering the proof about the number of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> that do not go above the diagonal <m>y=x</m>, let's practice counting some lattice paths with some restrictions.
+      Before considering the proof about the number of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> that do not go above the diagonal <m>y=x</m> in <xref ref="exa_lattice-Catalan"/>, let's practice counting some lattice paths with some restrictions.
     </p>
     <exercise label="strings_lattice-paths_buzz-bucky">
       <introduction>
@@ -37,6 +37,11 @@
                 <m>\displaystyle\binom{10}{6}</m>
               </p>
             </statement>
+            <feedback>
+              <p>
+                Correct! It's important to remember that our starting point here is <m>(1,1)</m>.
+              </p>
+            </feedback>
           </choice>
           <choice>
             <statement>
@@ -64,18 +69,28 @@
           <choice>
             <statement>
               <p>
-                <m>\displaystyle\binom{12}{7}</m>
+                <m>\displaystyle\binom{4}{2} + \binom{6}{4}</m>
               </p>
             </statement>
-          </choice>
-          <choice>
-            <statement>
+            <feedback>
               <p>
-                <m>\displaystyle\binom{10}{5}</m>
+                Close, but remember that you need to make all the choices required in order to fully specify a lattice path.
               </p>
-            </statement>
+            </feedback>
           </choice>
           <choice correct="yes">
+            <statement>
+              <p>
+                <m>\displaystyle\binom{4}{2} \binom{6}{4}</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct! Any way from the start to The Varsity can be followed by any way from The Varsity to Bucky's burrow, so we need to multiply.
+              </p>
+            </feedback>
+          </choice>
+          <choice>
             <statement>
               <p>
                 <m>\displaystyle\binom{10}{6}</m>
@@ -85,51 +100,390 @@
           <choice>
             <statement>
               <p>
-                <m>2^{12}</m>
+                <m>2^{4} + 2^6</m>
+              </p>
+            </statement>
+          </choice>
+        </choices>
+      </task>
+      <task label="strings_lattice-paths_buzz-bucky-avoid">
+        <statement>
+          <p>
+            Suppose Buzz is put on a diet and prohibited from eating at The Varsity. He knows if he goes by it, he'll stop and eat, so he must avoid it completely. How many ways are there for him to get to Bucky's burrow that avoid The Varsity?
+          </p>
+        </statement>
+        <choices>
+          <choice>
+            <statement>
+              <p>
+                <m>\displaystyle \binom{10}{6} - \binom{4}{2} -\binom{6}{4}</m>
               </p>
             </statement>
           </choice>
           <choice>
             <statement>
               <p>
-                <m>2^{10}</m>
+                <m>\displaystyle \binom{10}{6} \binom{4}{2} \binom{6}{4}</m>
               </p>
             </statement>
+          </choice>
+          <choice>
+            <statement>
+              <p>
+                <m>\displaystyle \binom{10}{6} + \binom{4}{2} \binom{6}{4}</m>
+              </p>
+            </statement>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\displaystyle \binom{10}{6} - \binom{4}{2} \binom{6}{4}</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct! We can solve this by counting <em>all</em> the lattice paths and then subtracting those that involve the forbidden temptation of stopping at The Varstiy.
+              </p>
+            </feedback>
           </choice>
         </choices>
       </task>
     </exercise>
-      <exercise label="act_inclusion-exclusion_surjections-8-5_propertiesb">
-        <statement>
+    <p>
+      You will <em>not</em> be tested on the proof in <xref ref="exa_lattice-Catalan"/>, but you are expected to know that the number of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> that do not go above the diagonal <m>y=x</m> is counted by the Catalan numbers 
+      <me>
+        C_n = \frac{1}{n+1}\binom{2n}{n}
+      </me>.
+      We will see the Catalan numbers come up a number times through the remainder of our course, including quite likely on the very last day of the semester! There are a couple of important <em>methods</em> that come up in the proof that we will use often, and I do want to highlight those:
+      <ol marker="1.">
+        <li>
           <p>
-            The set <m>\mathcal{P}</m> contains <var width="10" /> properties.
+            Sometimes it appears hard to directly count the objects of interest (the so-called <q>good</q> lattice paths), but it is still reasonable to count all the objects in a larger set (all lattice paths from <m>(0,0)</m> to <m>(n,n)</m>) and then subtract off those we <em>don't want to count</em> (the <q>bad</q> lattice paths).
+          </p>
+        </li>
+        <li>
+          <p>
+            Sometimes on the surface, it is difficult to count the objects of interest (the <q>bad</q> lattice paths) but we can transform them in an invertible way to a collection of objects that is easier to count.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      I do think that it's worthwhile spending some time understanding how we define <q>bad</q> lattice path and the transformation in the text, here are a couple of questions on the subject:
+    </p>
+    <exercise label="strings_PI_lattice-path-good-bad-activity">
+      <statement>
+        <p>
+          The bad lattice path <m>HHVVHVVHHVVH</m> from <m>(0,0)</m> to <m>(6,6)</m> goes bad (crosses the diagonal) at position
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              5
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              7
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              11
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              This is a good lattice path
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    
+    <exercise label="strings_PI_lattice-path-transform-activity">
+      <statement>
+        <p>
+          The bad lattice path <m>HHVVHVVHHVVH</m> from <m>(0,0)</m> to <m>(6,6)</m> is transformed to which of the following lattice paths from <m>(0,0)</m> to <m>(5,7)</m>?
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              <m>HHVVHVHVVHHV</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>HHVVHVVHHVVV</m>
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>HHVVHVVVVHHV</m>
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>VVHHVHHVVHHV</m>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    <p>
+      Let's now turn to some questions involving use of the binomial and multinomial theorem.
+    </p>
+    <exercise label="strings_PI_binthm-activity">
+      <statement>
+        <p>
+           The coefficient on <m>x^{7}y^{13}</m> in the expansion of <m>(2x-4y)^{20}</m> is
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+          <p>
+            <m>\displaystyle 2^{7}4^{13}\binom{20}{7}</m>
           </p>
         </statement>
-        <setup>
-          <var>
-            <condition number="5">
-              <feedback>
-                <p>
-                  Correct! There is one property in <m>\mathcal{P}</m> for each element of the set the function maps to, which is <m>[5]</m> in this case.
-                </p>
-              </feedback>
-            </condition>
-            <condition number="8">
-              <feedback>
-                <p>
-                  Try again. Think about which of the sets involved determines the properties.
-                </p>
-              </feedback>
-            </condition>
-            <condition string=".*">
-              <feedback>
-                <p>
-                  Incorrect.
-                </p>
-              </feedback>
-            </condition>
-          </var>
-        </setup>
-      </exercise>
+        </choice>
+
+        <choice>
+          <statement>
+          <p>
+            <m>\displaystyle\binom{20}{7}</m>
+          </p>
+        </statement>
+        </choice>
+
+        <choice>
+          <statement>
+          <p>
+            <m>\displaystyle 2^{7}\binom{20}{13}</m>
+          </p>
+        </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+          <p>
+            <m>\displaystyle 2^{7}(-4)^{13}\binom{20}{13}</m>
+          </p>
+        </statement>
+        </choice>
+      </choices>
+
+    </exercise>
+    <exercise label="act-strings-rearrange">
+      <statement>
+        <p>
+           How many rearrangements of the string APPLIEDCOMBINATORICSISTHEMOSTINTERESTINGBOOKEVER are there if all letters must be used?
+        </p>
+      </statement>
+      <hint>
+        <p>
+          The length of string is 48 characters.
+        </p>
+      </hint>
+      <hint>          
+        <p>
+          You might find these frequency counts useful.
+        </p>
+          <tabular >
+            <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" > </col>
+            
+
+            <row bottom="minor">
+              <cell>A</cell>
+              <cell>P</cell>
+              <cell>L</cell>
+              <cell>I</cell>
+              <cell>E</cell>
+              <cell>D</cell>
+              <cell>C</cell>
+              <cell>O</cell>
+              <cell>M</cell>
+            </row>
+
+            <row>
+              <cell>2</cell>
+              <cell>2</cell>
+              <cell>1</cell>
+              <cell>6</cell>
+              <cell>6</cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>5</cell>
+              <cell>2</cell>
+            </row>
+
+            <row bottom="minor">
+              <cell>B</cell>
+              <cell>N</cell>
+              <cell>T</cell>
+              <cell>R</cell>
+              <cell>S</cell>
+              <cell>H</cell>
+              <cell>G</cell>
+              <cell>V</cell>
+              <cell>K</cell>
+            </row>
+
+
+            <row>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>5</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+              <cell>1</cell>
+              <cell>1</cell>
+              <cell>1</cell>
+              <cell>1</cell>
+            </row>
+          </tabular>
+      </hint>
+      <response />
+    </exercise>
+    <p>
+      One of the interesting things about understanding the <xref ref="thm-strings-multinomial" text="title"/> is figuring out how many terms are even in the summation, since the notation involves a summation that you might not be familiar with. The notation <m>\displaystyle \sum_{k_1+k_2+\cdots+k_r=n}</m> means that we sum over all <em>nonnegative</em> (i.e., greater than or equal to 0) integers <m>k_1,k_2,\dots,k_r</m> so that the sum <m>k_1+k_2 + \cdots + k_r</m> is <em>exactly</em> <m>n</m>.
+    </p>
+    <exercise label="PI_strings_multinom_terms">
+      <statement>
+        <p>
+          How many (different) terms are there in the expansion of <m>(x+y+z+w)^{17}</m>?
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              17
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              18
+            </p>
+          </statement>
+        </choice>
+        <choice >
+          <statement>
+            <p>
+              <m>\displaystyle\binom{17}{3}</m>
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>\displaystyle\binom{16}{3}</m>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Yes! This is really just folder distribution in disguise. Here we must distribute <m>17</m> folders (what the exponents must sum to) to four recipients (the number of terms). Thus, there are 16 gaps and we need 3 dividers.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              <m>\displaystyle\binom{17}{4}</m>
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+    <p>
+      To help you check yourself on the class prep assignment, the answer to the question that asked for the coefficient on <m>x^{30}y^{80}z^{10}</m> in <m>(2x^{3}+y-z^{2})^{100}</m> must be <m>0</m> because such a term cannot arise. Such a term would need an exponent of 5 on <m>-z^2</m> and an exponent of 10 on <m>2x^3</m>. The sum of the exponents would need to be 100, so this leaves 85 as the exponent on <m>y</m>. However, the term inquired about has <m>y^{80}</m>.
+    </p>
+    <exercise label="PI_strings-multinom-coeff">
+      <statement>
+        <p>
+          What is the coefficient on <m>x^{3}y^{15}z^{8}</m> in the expansion of <m>(x + 3y + 2z^{2})^{22}</m>?
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+          <p>
+            <m>\binom{22}{3, 15, 8}</m>
+          </p>
+        </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+          <p>
+            <m>3^{15}2^{4} \binom{22}{3,15,4}</m>
+          </p>
+        </statement>
+        </choice>
+
+        <choice>
+          <statement>
+          <p>
+            <m>3^{15}2^{8}\binom{26}{3, 15, 8}</m>
+          </p>
+        </statement>
+        </choice>
+
+        <choice>
+          <statement>
+          <p>
+            There is no such term (so the coefficient is <m>0</m>)
+          </p>
+        </statement>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="act-strings_multinomial_find-coeff">
+      <statement>
+        <p>
+          Consider the expansion of <m>(3+x^{5}+y+xy^{3})^{50}</m>. Find the coefficient on each of the following terms.
+          <ol marker="a.">
+  <li>
+    <p>
+      <m>x^{30}y^{4}</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>x^{3}y^{3}</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>x^{30}y^{15}</m>
+    </p>
+  </li>
+</ol>
+        </p>
+      </statement>
+      <response />
       
+    </exercise>  
+  
+
 </section>
