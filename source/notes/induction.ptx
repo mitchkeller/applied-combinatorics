@@ -1,0 +1,83 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Induction</title>
+  <handout>
+    <title>Recursive Counting</title>
+    <p workspace="2cm">
+      What do you need to know about lattice path problems?
+    </p>  
+    <p workspace="4cm">
+      Consider the expansion of <m>(3+x^{5}+y+xy^{3})^{50}</m>. Find the coefficient on each of the following terms.
+      <ol marker="a." cols="3">
+        <li>
+          <p>
+            <m>x^{30}y^{4}</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>x^{3}y^{3}</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>x^{30}y^{15}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p workspace="4cm">
+      How can we interpret the notation <m>1+2+\cdots + n^2</m>?
+    </p>
+    <p>
+      <alert>Peer instruction question 1</alert>
+    </p>
+    <p workspace="7cm">
+      <me>
+        \binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
+      </me>
+      
+    </p>
+    <p>
+      <alert>Peer instruction question 2</alert>
+    </p>
+    <p>
+      Let <m>r(n)</m> be the number of regions determined by <m>n</m> lines in the plane drawn so that each pair intersects but no three lines intersect at a single point.
+    </p>
+    <sidebyside widths="25% 75%">
+      <tabular>
+        <row bottom="minor">
+          <cell><m>n</m></cell>
+          <cell><m>r(n)</m></cell>
+        </row>
+        <row>
+          <cell>0</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell></cell>
+        </row>
+      </tabular>
+      <p>
+        <nbsp/>
+      </p>
+    </sidebyside>
+    <p workspace="10cm">
+      
+    </p>
+  </handout>
+</chapter>

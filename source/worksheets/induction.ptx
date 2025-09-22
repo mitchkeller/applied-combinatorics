@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ws-induction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Induction</title>
+
+  <worksheet xml:id="ws-induction-recursive-count">
+    <title>Recursive Counting</title>
+    <page>
+    <exercise workspace="2cm">
+      <statement>
+        <p>
+          Suppose that <m>f</m> is a function defined on the positive integers. You know that <m>f(1) = 0</m> and for all <m>n\gt 1</m>, <m>f(n) = 3f(n-1)+2</m>. What is <m>f(3)</m>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace="3cm">
+      <statement>
+        <p>
+          Suppose that <m>f</m> is a function defined on the positive integers. You know that <m>f(1) = 3</m>, <m>f(2) = 7</m>, and <m>f(4) = 8</m>. You also know that for <m>n\gt 3</m>, <m>f(n) = 3f(n-1)+2f(n-2) - f(n-3)</m>. Find <m>f(6)</m> or explain why it is impossible to do so from the given information.
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace="2cm">
+      <introduction>
+        <p>
+          Consider coloring the squares of a <m>1\times n</m> checkerboard white and gold. Let <m>h(n)</m> be the number of such colorings that do not have two adjacent squares colored gold.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Draw pictures to determine <m>h(1)</m>, <m>h(2)</m>, <m>h(3)</m>, and <m>h(4)</m>.
+
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now let's think about the full <m>1\times n</m> checkerboard. If the first square is colored white, how many squares are there left to color? Use the function <m>h</m> to describe the number of ways that you can color those squares without making two consecutive gold squares.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Continuing to think about the full <m>1\times n</m> checkerboard, what do you know about the color of the second square if the first square is colored gold? Use the function <m>h</m> to describe the number of ways that you can color the remaining squares without making two consecutive gold squares.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What recursive formula do you thus have for <m>h(n)</m>? Be sure to specify enough initial conditions to get started!
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </page>
+  <page>
+    <exercise workspace="5cm">
+      <statement>
+        <p>
+          Recall that a ternary string is a string in which the allowed symbols are <m>0</m>, <m>1</m>, and <m>2</m>. Call a ternary string <q>good</q> if it does not contain a <m>1</m> followed immediately by a <m>2</m>. Let <m>g(n)</m> be the number of good strings of length <m>n</m>. Find a recursive formula for <m>g(n)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace="4cm">
+      <statement>
+        <p>
+          The Towers of Hanoi puzzles consists of <m>n</m> discs of different sizes and three pegs lined up in a row. At the beginning, all of the discs are on the leftmost peg. The discs are arranged in order of increasing size with the largest disc on the bottom and the smallest disc on top. A <q>move</q> consists of picking one disc up and placing it on another peg. However, the rules do not allow you to ever place a larger disc on top of a smaller disc. The goal of the game is to move all the discs from the leftmost peg to a different peg while following the rules. Let <m>t(n)</m> be the smallest number of moves in which you can accomplish this goal. Find a recursive formula for <m>t(n)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise workspace="5cm">
+      <statement>
+        <p>
+          Find a recursive formula for the number of binary strings of length <m>n</m> not containing <m>101</m>.
+        </p>
+      </statement>
+    </exercise>
+  </page>
+  </worksheet>
+
+</chapter>

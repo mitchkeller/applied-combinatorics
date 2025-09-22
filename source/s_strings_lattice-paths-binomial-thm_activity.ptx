@@ -388,26 +388,26 @@
         <choice >
           <statement>
             <p>
-              <m>\displaystyle\binom{17}{3}</m>
+              <m>\displaystyle\binom{16}{3}</m>
             </p>
           </statement>
         </choice>
         <choice correct="yes">
           <statement>
             <p>
-              <m>\displaystyle\binom{16}{3}</m>
+              <m>\displaystyle\binom{20}{3}</m>
             </p>
           </statement>
           <feedback>
             <p>
-              Yes! This is really just folder distribution in disguise. Here we must distribute <m>17</m> folders (what the exponents must sum to) to four recipients (the number of terms). Thus, there are 16 gaps and we need 3 dividers.
+              Yes! This is really just folder distribution in disguise. Here we must distribute <m>17</m> folders (what the exponents must sum to) to four recipients (the number of terms). However, we need an artificial folder for each exponent to allow exponents to be zero. Therefore, we're talking about 21 folders with 20 gaps and we need 3 dividers.
             </p>
           </feedback>
         </choice>
         <choice>
           <statement>
             <p>
-              <m>\displaystyle\binom{17}{4}</m>
+              <m>\displaystyle\binom{20}{4}</m>
             </p>
           </statement>
         </choice>

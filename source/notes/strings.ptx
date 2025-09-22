@@ -138,7 +138,11 @@
       <p workspace="0.5in">
         <alert>Peer instruction question 4</alert>
       </p>
-      <activity workspace="3in">
+  </handout>
+  <handout>
+    <title>Ubiquitous Nature of Binomial Coefficients</title>
+    <page>
+    <activity workspace="2in">
         <statement>
           <p>
              Find a simple formula for <m>\ds\sum_{k=1}^{n} k\binom{n}{k}^{2}</m>. By a simple formula, I mean one without a summation in it. One way to do this is to think about something that's being counted and find a "better" way to count it.
@@ -160,9 +164,86 @@
               </p>
             </li>
           </ul>
-                    </p>
-                  </hint>
-      </activity>
+        </p>
+      </hint>
+    </activity>
+    <p workspace="2in">
+      <alert>Peer instruction questions 1<ndash/>4.</alert>
+    </p>
+  </page>
+    <page>
+    <activity workspace="0.5in">
+      <introduction>
+        <p>
+          We want to count the number of solutions to
+          <me>
+            x_1+x_2+x_3+x_4+x_5 = 37
+          </me>
+          where each <m>x_i</m> is an integer. For each of the following scenarios, determine the number of solutions.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Each <m>x_i \gt 0</m>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\binom{36}{4}</m>
+          </p>
+        </answer>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Each <m>x_i \geq 0</m>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\binom{41}{4}</m>
+          </p>
+        </answer>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Each <m>x_i \geq 0</m> and <m>x_3\gt 4</m>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\binom{36}{4}</m>
+          </p>
+        </answer>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Each <m>x_i \gt 0</m> but change <m>= 37</m> to <m>\leq 37</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\binom{37}{5}</m>
+          </p>
+        </answer>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Each <m>x_i \gt 0</m> but change <m>= 37</m> to <m>\lt 37</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\binom{41}{5}</m>
+          </p>
+        </answer>
+      </task>
+    </activity>
+  </page>
   </handout>
 </chapter>
   
