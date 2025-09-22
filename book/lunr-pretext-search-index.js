@@ -676,9 +676,9 @@ var ptx_lunr_docs = [
   "body": "  How many different rearrangements of the string: are possible if all letters and characters must be used?    To answer this question, we note that there are a total of characters distributed as follows: 3 A's, 1 C, 1 D, 7 E's, 1 G, 1 H, 4 I's, 1 K, 5 L's, 2 M's, 2 N's, 1 O, 4 R's, 2 S's, 6 T's, 1 U, 1 W, and 2 !'s. So the number of rearrangements is    "
 },
 {
-  "id": "s_strings_multinom-7",
+  "id": "thm-strings-multinomial",
   "level": "2",
-  "url": "s_strings_multinom.html#s_strings_multinom-7",
+  "url": "s_strings_multinom.html#thm-strings-multinomial",
   "type": "Theorem",
   "number": "2.33",
   "title": "Multinomial Theorem.",

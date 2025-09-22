@@ -170,6 +170,69 @@ var ptx_lunr_docs = [
   "number": "2.1.13",
   "title": "",
   "body": "  Come up with a simple value for the sum .    Start by trying it out for small values of . Maybe think about binary strings to prove your conjecture true.    We will talk more about this in class, so no solution provided for now.   "
+},
+{
+  "id": "ws-induction-recursive-count",
+  "level": "1",
+  "url": "ws-induction-recursive-count.html",
+  "type": "Worksheet",
+  "number": "3.1",
+  "title": "Recursive Counting",
+  "body": " Recursive Counting     Suppose that is a function defined on the positive integers. You know that and for all , . What is ?      Suppose that is a function defined on the positive integers. You know that , , and . You also know that for , . Find or explain why it is impossible to do so from the given information.      Consider coloring the squares of a checkerboard white and gold. Let be the number of such colorings that do not have two adjacent squares colored gold.     Draw pictures to determine , , , and .      Now let's think about the full checkerboard. If the first square is colored white, how many squares are there left to color? Use the function to describe the number of ways that you can color those squares without making two consecutive gold squares.      Continuing to think about the full checkerboard, what do you know about the color of the second square if the first square is colored gold? Use the function to describe the number of ways that you can color the remaining squares without making two consecutive gold squares.      What recursive formula do you thus have for ? Be sure to specify enough initial conditions to get started!         Recall that a ternary string is a string in which the allowed symbols are , , and . Call a ternary string good if it does not contain a followed immediately by a . Let be the number of good strings of length . Find a recursive formula for .      The Towers of Hanoi puzzles consists of discs of different sizes and three pegs lined up in a row. At the beginning, all of the discs are on the leftmost peg. The discs are arranged in order of increasing size with the largest disc on the bottom and the smallest disc on top. A move consists of picking one disc up and placing it on another peg. However, the rules do not allow you to ever place a larger disc on top of a smaller disc. The goal of the game is to move all the discs from the leftmost peg to a different peg while following the rules. Let be the smallest number of moves in which you can accomplish this goal. Find a recursive formula for .      Find a recursive formula for the number of binary strings of length not containing .     "
+},
+{
+  "id": "ws-induction-recursive-count-2-1",
+  "level": "2",
+  "url": "ws-induction-recursive-count.html#ws-induction-recursive-count-2-1",
+  "type": "Problem",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  Suppose that is a function defined on the positive integers. You know that and for all , . What is ?   "
+},
+{
+  "id": "ws-induction-recursive-count-2-2",
+  "level": "2",
+  "url": "ws-induction-recursive-count.html#ws-induction-recursive-count-2-2",
+  "type": "Problem",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Suppose that is a function defined on the positive integers. You know that , , and . You also know that for , . Find or explain why it is impossible to do so from the given information.   "
+},
+{
+  "id": "ws-induction-recursive-count-2-3",
+  "level": "2",
+  "url": "ws-induction-recursive-count.html#ws-induction-recursive-count-2-3",
+  "type": "Problem",
+  "number": "3.1.3",
+  "title": "",
+  "body": "  Consider coloring the squares of a checkerboard white and gold. Let be the number of such colorings that do not have two adjacent squares colored gold.     Draw pictures to determine , , , and .      Now let's think about the full checkerboard. If the first square is colored white, how many squares are there left to color? Use the function to describe the number of ways that you can color those squares without making two consecutive gold squares.      Continuing to think about the full checkerboard, what do you know about the color of the second square if the first square is colored gold? Use the function to describe the number of ways that you can color the remaining squares without making two consecutive gold squares.      What recursive formula do you thus have for ? Be sure to specify enough initial conditions to get started!    "
+},
+{
+  "id": "ws-induction-recursive-count-3-1",
+  "level": "2",
+  "url": "ws-induction-recursive-count.html#ws-induction-recursive-count-3-1",
+  "type": "Problem",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  Recall that a ternary string is a string in which the allowed symbols are , , and . Call a ternary string good if it does not contain a followed immediately by a . Let be the number of good strings of length . Find a recursive formula for .   "
+},
+{
+  "id": "ws-induction-recursive-count-3-2",
+  "level": "2",
+  "url": "ws-induction-recursive-count.html#ws-induction-recursive-count-3-2",
+  "type": "Problem",
+  "number": "3.1.5",
+  "title": "",
+  "body": "  The Towers of Hanoi puzzles consists of discs of different sizes and three pegs lined up in a row. At the beginning, all of the discs are on the leftmost peg. The discs are arranged in order of increasing size with the largest disc on the bottom and the smallest disc on top. A move consists of picking one disc up and placing it on another peg. However, the rules do not allow you to ever place a larger disc on top of a smaller disc. The goal of the game is to move all the discs from the leftmost peg to a different peg while following the rules. Let be the smallest number of moves in which you can accomplish this goal. Find a recursive formula for .   "
+},
+{
+  "id": "ws-induction-recursive-count-3-3",
+  "level": "2",
+  "url": "ws-induction-recursive-count.html#ws-induction-recursive-count-3-3",
+  "type": "Problem",
+  "number": "3.1.6",
+  "title": "",
+  "body": "  Find a recursive formula for the number of binary strings of length not containing .   "
 }
 ]
 
