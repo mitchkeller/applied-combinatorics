@@ -80,4 +80,80 @@
       
     </p>
   </handout>
+  <handout>
+    <title>Principle of Mathematical Induction</title>
+    
+    <axiom xml:id="axiom-induction">
+      <title>Principle of Mathematical Induction</title>
+      <statement>
+        <p workspace="2cm">
+          Let <m>S_{n}</m> be an open statement involving a positive integer <m>n</m>. If <m>S_{1}</m> is true, and for every positive integer <m>k</m>, the statement <m>S_{k+1}</m> is true whenever <m>S_{k}</m> is true, then <m>S_{n}</m> is true for every positive integer <m>n</m>.
+        </p>
+      </statement>
+    </axiom>
+    <assemblage xml:id="assemblage-ind-proof-parts">
+      <title>Key Parts of an Inductive Proof</title>
+      <p>
+        When trying to prove an open statement <m>S_{n}</m> is true for all positive integers <m>n</m> by mathematical induction, the key steps are
+        <dl>
+          <li>
+            <title>Basis Step</title>
+            <p>
+              Show that <m>S_{1}</m> is true.
+            </p>
+          </li>
+
+          <li>
+            <title>Inductive step</title>
+            <p>
+              Show that <em>if</em> for some <m>k\geq 1</m>, <m>S_{k}</m> is true, then <m>S_{k+1}</m> is true.
+            </p>
+          </li>
+        </dl>
+      </p>
+    </assemblage>
+    <p>
+      <alert>PI questions: getting started, after basis step, after IH.</alert>
+    </p>
+    <theorem xml:id="thm-ind-example">
+      <statement>
+        <p>
+          For all positive integers <m>n</m>, <m>\displaystyle \sum_{i=1}^{n} (4i-3) = n(2n-1)</m>.
+        </p>
+      </statement>
+      <proof>
+        <p workspace="5cm">
+          
+        </p>
+      </proof>
+    </theorem>
+    <activity>
+  <task>
+    <p>
+      Recall that we have defined <m>r(n)</m> to be the number of regions in the plane determined by <m>n</m> lines arranged so that (1) each pair of lines intersects and (2) no three lines intersect at a single point and argued that <m>r(1) = 2</m> and for <m>n\geq 2</m>, <m>r(n) = r(n-1) + n</m>.
+      Prove that for all positive integers <m>n</m>,
+      <me>
+        r(n) = \binom{n+1}{2}+1
+      </me>.
+    </p>
+  </task>
+
+  <task>
+    <p>
+      We say that an integer <m>a</m> <em>divides</em> an integer <m>b</m> provided that there exists an integer <m>m</m> such that <m>b=ma</m>.
+      Prove that for all integers <m>n\geq 1</m>, <m>4</m> divides <m>5^{n}-1</m>.
+    </p>
+  </task>
+
+  <task>
+    <p>
+      Let <m>f(1)=5</m>, <m>f(2) = 13</m>, and for all integers <m>n\geq 3</m>,
+      <me>
+        f(n)=5f(n-1)-6f(n-2).
+      </me>
+      Prove that an explict formula for <m>f(n)</m> is given by <m>f(n)=2^{n}+3^{n}</m>.
+    </p>
+  </task>
+    </activity>
+  </handout>
 </chapter>
