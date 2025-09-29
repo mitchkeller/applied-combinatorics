@@ -1888,7 +1888,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Eulerian and Hamiltonian Graphs",
-  "body": " Eulerian and Hamiltonian Graphs  Graph theory is an area of mathematics that has found many applications in a variety of disciplines. Throughout this text, we will encounter a number of them. However, graph theory traces its origins to a problem in Königsberg, Prussia (now Kaliningrad, Russia) nearly three centuries ago. The river Pregel passes through the city, and there are two large islands in the middle of the channel. These islands were connected to the mainland by seven bridges as indicated in . It is said that the citizens of Königsberg often wondered if it was possible for one to leave his home, walk through the city in such a way that he crossed each bridge precisely one time, and end up at home again. Leonhard Euler settled this problem in 1736 by using graph theory in the form of .   The bridges of Königsberg    Let be a graph without isolated vertices. We say that is eulerian  graph  eulerian  provided that there is a sequence of vertices from , with repetition allowed, so that  ;  for every , is an edge of ;  for every edge , there is a unique integer with for which .    When is eulerian, a sequence satisfying these three conditions is called an eulerian circuit  eulerian  circuit  . A sequence of vertices is called a circuit  circuit  when it satisfies only the first two of these conditions. Note that a sequence consisting of a single vertex is a circuit. Before proceeding to Euler's elegant characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are not eulerian.  Run the code below. It will execute until it finds a graph that is eulerian. The output that will be produced is a list of the degrees of the vertices of the graph followed by a drawing of .   We encourage you to evaluate the run the code above multiple times, even changing the number of vertices and edges. If it seems to be running a log time, it may be that you have made the number of edges too small, so try increasing it a bit. Do you notice anything about the degrees of the vertices in the graphs produced?  Now let's try to find a graph that is not eulerian. Again, the output is the list of degrees of followed by a drawing of .   One thing you probably noticed in running this second block of code is that it tended to come back much faster than the first. That would suggest that the non-eulerian graphs outnumber the eulerian graphs. Did you notice anything different about the degrees of the vertices in these graphs compared to the ones that were eulerian?  The following elementary theorem completely characterizes eulerian graphs. Its proof gives an algorithm that is easily implemented.    A graph is eulerian if and only if it is connected and every vertex has even degree.    Clearly, an eulerian graph must be connected. Also, if is an eulerian circuit in , then for each , we can view the edge as exiting and entering . The degree of every vertex must be even, since for each vertex , the number of edges exiting equals the number of edges entering . Furthermore, each edge incident with either exits from or enters .  We now describe a deterministic process that will either (a) find an eulerian circuit, (b) show that the graph is disconnected, or (c) find a vertex of odd degree. The description is simplified by assuming that the vertices in have been labelled with the positive integers , where is the number of vertices in . Furthermore, we take .  We launch our algorithm with a trivial circuit consisting of the vertex . Thereafter suppose that we have a partial circuit defined by with . The edges of the form have been traversed , while the remaining edges in (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.  We then choose the least integer for which there is an edge incident with that has not already been traversed. If there is no such integer, since there are edges that have not yet been traversed, then we have discovered that the graph is disconnected. So we may assume that the integer exists. Set . We define a sequence recursively. If , set If , we take as the least positive integer in . If , then and we take and halt this subroutine.  When the subroutine halts, we consider two cases. If , then and are vertices of odd degree in . So we are left to consider the case where . In this case, we simply expand our original sequence by replacing the integer by the sequence .    As an example, consider the graph shown in . Evidently, this graph is connected and all vertices have even degree. Here is the sequence of circuits starting with the trivial circuit consisting only of the vertex .    An Eulerian Graph    You should note that holds for loopless graphs in which multiple edges are allowed. Euler used his theorem to show that the multigraph of Königsberg shown in , in which each land mass is a vertex and each bridge is an edge, is not eulerian, and thus the citizens could not find the route they desired. (Note that in there are multiple edges between the same pair of vertices.)   The multigraph of Königsberg's bridges    A graph is said to be hamiltonian  graph  hamiltonian  if there exists a sequence so that  every vertex of appears exactly once in the sequence;  is an edge of ; and  for each , is an edge in .  Such a sequence of vertices is called a hamiltonian cycle .  hamiltonian  cycle    The first graph shown in both eulerian and hamiltonian. The second is hamiltonian but not eulerian.   Eulerian and Hamiltonian Graphs    In , we show a famous graph known as the Petersen graph. It is not hamiltonian.   The Petersen Graph    Unlike the situation with eulerian circuits, there is no known method for quickly determining whether a graph is hamiltonian. However, there are a number of interesting conditions which are sufficient. Here is one quite well known example, due to Dirac.    If is a graph on vertices and each vertex in has at least neighbors, then is hamiltonian.    Suppose the theorem fails and let be the least positive integer for which there exists a graph on vertices so that each vertex in has at least neighbors, yet there is no hamiltonian cycle in . Clearly, .  Now let be the largest integer for which has a path on vertices. Clearly all neighbors of both and appear on this path. By the pigeon hole principle, there is some integer with so that and are edges in . However, this implies that is a cycle of length in . In turn, this requires . But if is any vertex not on the cycle, then must have a neighbor on , which implies that has a path on vertices. The contradiction completes the proof.    "
+  "body": " Eulerian and Hamiltonian Graphs  Graph theory is an area of mathematics that has found many applications in a variety of disciplines. Throughout this text, we will encounter a number of them. However, graph theory traces its origins to a problem in Königsberg, Prussia (now Kaliningrad, Russia) nearly three centuries ago. The river Pregel passes through the city, and there are two large islands in the middle of the channel. These islands were connected to the mainland by seven bridges as indicated in . It is said that the citizens of Königsberg often wondered if it was possible for one to leave his home, walk through the city in such a way that he crossed each bridge precisely one time, and end up at home again. Leonhard Euler settled this problem in 1736 by using graph theory in the form of .   The bridges of Königsberg    Let be a graph without isolated vertices. We say that is eulerian  graph  eulerian  provided that there is a sequence of vertices from , with repetition allowed, so that  ;  for every , is an edge of ;  for every edge , there is a unique integer with for which .    When is eulerian, a sequence satisfying these three conditions is called an eulerian circuit  eulerian  circuit  . A sequence of vertices is called a circuit  circuit  when it satisfies only the first two of these conditions. Note that a sequence consisting of a single vertex is a circuit. Before proceeding to Euler's elegant characterization of eulerian graphs, let's use SageMath to generate some graphs that are and are not eulerian.  Run the code below. It will execute until it finds a graph that is eulerian. The output that will be produced is a list of the degrees of the vertices of the graph followed by a drawing of .   We encourage you to evaluate the run the code above multiple times, even changing the number of vertices and edges. If it seems to be running a log time, it may be that you have made the number of edges too small, so try increasing it a bit. Do you notice anything about the degrees of the vertices in the graphs produced?  Now let's try to find a graph that is not eulerian. Again, the output is the list of degrees of followed by a drawing of .   One thing you probably noticed in running this second block of code is that it tended to come back much faster than the first. That would suggest that the non-eulerian graphs outnumber the eulerian graphs. Did you notice anything different about the degrees of the vertices in these graphs compared to the ones that were eulerian?  The following elementary theorem completely characterizes eulerian graphs. Its proof gives an algorithm that is easily implemented.    A graph is eulerian if and only if it is connected and every vertex has even degree.    Clearly, an eulerian graph must be connected. Also, if is an eulerian circuit in , then for each , we can view the edge as exiting and entering . The degree of every vertex must be even, since for each vertex , the number of edges exiting equals the number of edges entering . Furthermore, each edge incident with either exits from or enters .  We now describe a deterministic process that will either (a) find an eulerian circuit, (b) show that the graph is disconnected, or (c) find a vertex of odd degree. The description is simplified by assuming that the vertices in have been labelled with the positive integers , where is the number of vertices in . Furthermore, we take .  We launch our algorithm with a trivial circuit consisting of the vertex . Thereafter suppose that we have a partial circuit defined by with . The edges of the form have been traversed , while the remaining edges in (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.  We then choose the least integer for which there is an edge incident with that has not already been traversed. If there is no such integer, since there are edges that have not yet been traversed, then we have discovered that the graph is disconnected. We may assume that the integer exists. Set . We define a sequence recursively. If , set If , we take as the least positive integer in . If , then and we take and halt this subroutine.  When the subroutine halts, we consider two cases. If , then and are vertices of odd degree in . So we are left to consider the case where . In this case, we simply expand our original sequence by replacing the integer by the sequence .    We summarize the algorithm in the proof of below. Note that here the algorithm is specified by prioritizing vertices in numerical order, assuming that . When, as in some of the exercises, the vertices are labeled using letters, you should interpret this algorithm as prioritizing vertices in alphabetical order. The algorithm is also described iteratively but produces the same eulerian circuit as the recursive method in the proof.   Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of that is not all of .        Initialize .    If not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertext . Construct a walk starting from . At each step of the walk, when you are at a vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.          As an example, consider the graph shown in . Evidently, this graph is connected and all vertices have even degree. Here is the sequence of circuits starting with the trivial circuit consisting only of the vertex .    An Eulerian Graph    You should note that holds for loopless graphs in which multiple edges are allowed. Euler used his theorem to show that the multigraph of Königsberg shown in , in which each land mass is a vertex and each bridge is an edge, is not eulerian, and thus the citizens could not find the route they desired. (Note that in there are multiple edges between the same pair of vertices.)   The multigraph of Königsberg's bridges    A graph is said to be hamiltonian  graph  hamiltonian  if there exists a sequence so that  every vertex of appears exactly once in the sequence;  is an edge of ; and  for each , is an edge in .  Such a sequence of vertices is called a hamiltonian cycle .  hamiltonian  cycle    The first graph shown in both eulerian and hamiltonian. The second is hamiltonian but not eulerian.   Eulerian and Hamiltonian Graphs    In , we show a famous graph known as the Petersen graph. It is not hamiltonian.   The Petersen Graph    Unlike the situation with eulerian circuits, there is no known method for quickly determining whether a graph is hamiltonian. However, there are a number of interesting conditions which are sufficient. Here is one quite well known example, due to Dirac.    If is a graph on vertices and each vertex in has at least neighbors, then is hamiltonian.    Suppose the theorem fails and let be the least positive integer for which there exists a graph on vertices so that each vertex in has at least neighbors, yet there is no hamiltonian cycle in . Clearly, .  Now let be the largest integer for which has a path on vertices. Clearly all neighbors of both and appear on this path. By the pigeon hole principle, there is some integer with so that and are edges in . However, this implies that is a cycle of length in . In turn, this requires . But if is any vertex not on the cycle, then must have a neighbor on , which implies that has a path on vertices. The contradiction completes the proof.    "
 },
 {
   "id": "fig_bridges",
@@ -1924,14 +1924,23 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "5.13",
   "title": "",
-  "body": "  A graph is eulerian if and only if it is connected and every vertex has even degree.    Clearly, an eulerian graph must be connected. Also, if is an eulerian circuit in , then for each , we can view the edge as exiting and entering . The degree of every vertex must be even, since for each vertex , the number of edges exiting equals the number of edges entering . Furthermore, each edge incident with either exits from or enters .  We now describe a deterministic process that will either (a) find an eulerian circuit, (b) show that the graph is disconnected, or (c) find a vertex of odd degree. The description is simplified by assuming that the vertices in have been labelled with the positive integers , where is the number of vertices in . Furthermore, we take .  We launch our algorithm with a trivial circuit consisting of the vertex . Thereafter suppose that we have a partial circuit defined by with . The edges of the form have been traversed , while the remaining edges in (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.  We then choose the least integer for which there is an edge incident with that has not already been traversed. If there is no such integer, since there are edges that have not yet been traversed, then we have discovered that the graph is disconnected. So we may assume that the integer exists. Set . We define a sequence recursively. If , set If , we take as the least positive integer in . If , then and we take and halt this subroutine.  When the subroutine halts, we consider two cases. If , then and are vertices of odd degree in . So we are left to consider the case where . In this case, we simply expand our original sequence by replacing the integer by the sequence .   "
+  "body": "  A graph is eulerian if and only if it is connected and every vertex has even degree.    Clearly, an eulerian graph must be connected. Also, if is an eulerian circuit in , then for each , we can view the edge as exiting and entering . The degree of every vertex must be even, since for each vertex , the number of edges exiting equals the number of edges entering . Furthermore, each edge incident with either exits from or enters .  We now describe a deterministic process that will either (a) find an eulerian circuit, (b) show that the graph is disconnected, or (c) find a vertex of odd degree. The description is simplified by assuming that the vertices in have been labelled with the positive integers , where is the number of vertices in . Furthermore, we take .  We launch our algorithm with a trivial circuit consisting of the vertex . Thereafter suppose that we have a partial circuit defined by with . The edges of the form have been traversed , while the remaining edges in (if any) have not. If the third condition for an euler circuit is satisfied, we are done, so we assume it does not hold.  We then choose the least integer for which there is an edge incident with that has not already been traversed. If there is no such integer, since there are edges that have not yet been traversed, then we have discovered that the graph is disconnected. We may assume that the integer exists. Set . We define a sequence recursively. If , set If , we take as the least positive integer in . If , then and we take and halt this subroutine.  When the subroutine halts, we consider two cases. If , then and are vertices of odd degree in . So we are left to consider the case where . In this case, we simply expand our original sequence by replacing the integer by the sequence .   "
+},
+{
+  "id": "alg-eulerian",
+  "level": "2",
+  "url": "s_graphs_eulerham.html#alg-eulerian",
+  "type": "Algorithm",
+  "number": "5.14",
+  "title": "Eulerian Circuit Finder.",
+  "body": " Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of that is not all of .        Initialize .    If not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertext . Construct a walk starting from . At each step of the walk, when you are at a vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.         "
 },
 {
   "id": "fig_graphs_eulerexample",
   "level": "2",
   "url": "s_graphs_eulerham.html#fig_graphs_eulerexample",
   "type": "Figure",
-  "number": "5.14",
+  "number": "5.15",
   "title": "",
   "body": " An Eulerian Graph   "
 },
@@ -1940,14 +1949,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_eulerham.html#fig_bridges-graph",
   "type": "Figure",
-  "number": "5.15",
+  "number": "5.16",
   "title": "",
   "body": " The multigraph of Königsberg's bridges   "
 },
 {
-  "id": "s_graphs_eulerham-18",
+  "id": "s_graphs_eulerham-20",
   "level": "2",
-  "url": "s_graphs_eulerham.html#s_graphs_eulerham-18",
+  "url": "s_graphs_eulerham.html#s_graphs_eulerham-20",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1958,7 +1967,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_eulerham.html#fig_eulham",
   "type": "Figure",
-  "number": "5.16",
+  "number": "5.17",
   "title": "",
   "body": " Eulerian and Hamiltonian Graphs   "
 },
@@ -1967,7 +1976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_eulerham.html#fig_petersen",
   "type": "Figure",
-  "number": "5.17",
+  "number": "5.18",
   "title": "",
   "body": " The Petersen Graph   "
 },
@@ -1976,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_eulerham.html#thm_graphs_dirac",
   "type": "Theorem",
-  "number": "5.18",
+  "number": "5.19",
   "title": "",
   "body": "  If is a graph on vertices and each vertex in has at least neighbors, then is hamiltonian.    Suppose the theorem fails and let be the least positive integer for which there exists a graph on vertices so that each vertex in has at least neighbors, yet there is no hamiltonian cycle in . Clearly, .  Now let be the largest integer for which has a path on vertices. Clearly all neighbors of both and appear on this path. By the pigeon hole principle, there is some integer with so that and are edges in . However, this implies that is a cycle of length in . In turn, this requires . But if is any vertex not on the cycle, then must have a neighbor on , which implies that has a path on vertices. The contradiction completes the proof.   "
 },
@@ -2003,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#fig_graphs_chi4",
   "type": "Figure",
-  "number": "5.19",
+  "number": "5.20",
   "title": "",
   "body": " A proper coloring using colors   "
 },
@@ -2012,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#disc-graphs_color-intro",
   "type": "Discussion",
-  "number": "5.20",
+  "number": "5.21",
   "title": "",
   "body": " Everyone agrees that the graph in has chromatic number at most . However, there's a bit of debate going on about if . Bob figures the authors would not have used five colors if they didn't need to. Carlos says he's glad they're having the discussion, since all having a proper coloring does is provide them with an upper bound on . Bob sees that the graph has a vertex of degree and claims that must mean . Alice groans and draws a graph with vertices, one of which has degree , but with chromatic number . Bob is shocked, but agrees with her. Xing wonders if the fact that the graph does not contain a has any bearing on the chromatic number. Dave's in a hurry to get to the gym, but on his way out the door he says they can get a proper -coloring pretty easily, so . The rest decide it's time to keep reading.   What graph did Alice draw that shocked Bob?    What changes did Dave make to the coloring in to get a proper coloring using four colors?     "
 },
@@ -2030,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#thm_graphs_bipartite",
   "type": "Theorem",
-  "number": "5.21",
+  "number": "5.22",
   "title": "",
   "body": "  A graph is -colorable if and only if it does not contain an odd cycle.    Let be a -colorable graph whose coloring function partitions as . Since there are no edges between vertices on the same side of the partition, any cycle in must alternate vertices between and . In order to complete the cycle, therefore, the number of vertices in the cycle from must be the same as the number from , implying that the cycle has even length.  Now suppose that does not contain an odd cycle. Note that we may assume that is connected, as each component may be colored individually. The distance  between vertices is the length of a shortest path from to , and of course . Fix a vertex and define We claim that coloring the vertices of with color and the vertices of with color is a proper coloring. suppose not. Then without loss of generality, there are vertices such that . Since , and are both even. Let and be shortest paths from to and , respectively. If for all and , then since and are both even, is an odd cycle in , which is a contradiction. Thus, there must be such that , and we may take as large as possible. (That is, after , the two paths do not intersect again.) Thus, is a cycle in . How many vertices are there in this cycle? A quick count shows that it has vertices. We know that and are even, and notice that and are either both even or both odd, since and the odd-subscripted vertices of our path belong to while those with even subscripts belong to . Thus, is even, so is odd, giving a contradiction.   "
 },
@@ -2048,7 +2057,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#fig_graphs_languages",
   "type": "Figure",
-  "number": "5.22",
+  "number": "5.23",
   "title": "",
   "body": " A bipartite graph   "
 },
@@ -2066,7 +2075,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#fig_graphs_k33",
   "type": "Figure",
-  "number": "5.23",
+  "number": "5.24",
   "title": "",
   "body": " The complete bipartite graph   "
 },
@@ -2084,7 +2093,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#prop_graphs_pigeon-general",
   "type": "Proposition",
-  "number": "5.24",
+  "number": "5.25",
   "title": "Generalized Pigeon Hole Principle.",
   "body": " Generalized Pigeon Hole Principle   pigeon hole principle  generalized    If is a function and , then there exists an element and distinct elements so that for .   "
 },
@@ -2093,7 +2102,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#prop_triangle-free",
   "type": "Proposition",
-  "number": "5.25",
+  "number": "5.26",
   "title": "",
   "body": "  For every , there exists a graph so that and .    We proceed by induction on . For , we take to be the cycle on five vertices. Now assume that for some , we have determined the graph . Suppose that has vertices. Label the vertices of as . Construct as follows. Begin with an independent set of cardinality . For every subset of with , label the elements of as . For this particular -element subset attach a copy of with adjacent to for . Vertices in copies of for distinct -element subsets of are nonadjacent, and a vertex in has at most one neighbor in a particular copy of .  To see that , it will suffice to argue that contains no triangle ( ). Since is triangle-free, any triangle in must contain a vertex of . Since none of the vertices of are adjacent, any triangle in contains only one point of . Since each vertex of is adjacent to at most one vertex of any fixed copy of , if is part of a triangle, the other two vertices must come from distinct copies of . However, vertices in different copies of are not adjacent, so . Notice that since contains . On the other hand, since we may use colors on the copies of and a new color on the independent set . To see that , observe that if we use only colors, then by the generalized Pigeon Hole Principle, there is an -element subset of in which all vertices have the same color. Then this color cannot be used in the copy of which is attached to that -element subset.    We again start with as the cycle . As before we assume that we have constructed for some a graph with and . Again, label the vertices of as . To construct , we now start with an independent set , but now has only points, which we label as . We then add a copy of with adjacent to if and only if is adjacent to . Finally, attach a new vertex adjacent to all vertices in .  Clearly, . Also, , since it contains as a subgraph. Furthermore, , since we can color with colors from , use color on the independent set , and then assign color to the new vertex . We claim that in fact . Suppose not. Then we must have . Let be a proper coloring of . Without loss of generality, uses the colors in and assigns color to . Then consider the nonempty set of vertices in the copy of to which assigns color . For each in , change the color on so that it matches the color assigned to by , which cannot be , as is colored . What results is a proper coloring of the copy of with only colors since and are adjacent to the same vertices of the copy of . The contradiction shows that , as claimed.   "
 },
@@ -2102,7 +2111,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#fig_k44minus",
   "type": "Figure",
-  "number": "5.26",
+  "number": "5.27",
   "title": "",
   "body": " Two orderings of the vertices of a bipartite graph.     "
 },
@@ -2120,7 +2129,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#fig_graphs_interval-graph",
   "type": "Figure",
-  "number": "5.27",
+  "number": "5.28",
   "title": "",
   "body": " A collection of intervals and its interval graph   "
 },
@@ -2129,7 +2138,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_color.html#thm_intgraphcol",
   "type": "Theorem",
-  "number": "5.28",
+  "number": "5.29",
   "title": "",
   "body": "  If is an interval graph, then .    For each , let be a closed interval of the real line so that is an edge in if and only if . Order the vertex set as such that . (Ties may be broken arbitrarily.) Apply the First Fit coloring algorithm to with this ordering on . Now when the First Fit coloring algorithm colors , all of its neighbors have left end point at most . Since they are neighbors of , however, we know that their right endpoints are all at least . Thus, and its previously-colored neighbors form a clique. Hence, is adjacent to at most other vertices that have already been colored, so when the algorithm colors , there will be a color from not already in use on its neighbors. The algorithm will assign the smallest such color. Thus, we never need to use more than colors, so .   "
 },
@@ -2156,7 +2165,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#fig_graphs_utils",
   "type": "Figure",
-  "number": "5.29",
+  "number": "5.30",
   "title": "",
   "body": " A graph of connecting homes to utilities     "
 },
@@ -2174,7 +2183,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#fig_planar",
   "type": "Figure",
-  "number": "5.30",
+  "number": "5.31",
   "title": "",
   "body": " A planar drawing of a graph   "
 },
@@ -2183,7 +2192,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#fig_k4-planar",
   "type": "Figure",
-  "number": "5.31",
+  "number": "5.32",
   "title": "",
   "body": " A planar drawing of   "
 },
@@ -2192,7 +2201,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#s_graphs_planar-13",
   "type": "Theorem",
-  "number": "5.32",
+  "number": "5.33",
   "title": "Euler’s Formula.",
   "body": " Euler's Formula  Euler's formula   Let be a connected planar graph with vertices and edges. Every planar drawing of has faces, where satisfies     Our proof is by induction on the number of edges. If , then since is connected, our graph has a single vertex, and so there is one face. Thus as needed. Now suppose that we have proven Euler's formula for all graphs with less than edges and let have edges. Pick an edge of . What happens if we form a new graph by deleting from ? If is connected, our inductive hypothesis applies. Say that has vertices, edges, and faces. Then by induction, these numbers satisfy Since we only deleted one edge, and . What did the removal of do to the number of faces? In there's a new face that was formerly two faces divided by in . Thus, . Substituting these into , we have Thus, if is connected, we are done. If is disconnected, however, we cannot apply the inductive assumption to directly. Fortunately, since we removed only one edge, has two components, which we can view as two connected graphs and . Each of these has fewer than edges, so we may apply the inductive hypothesis to them. For , let be the number of vertices of , the number of edges of , and the number of faces of . Then by induction we have Adding these together, we have But now , and , so the equality becomes The only thing we have yet to figure out is how relates to , and we have to hope that it will allow us to knock the down to a . Every face of and is a face of , since the fact that removing disconnects means that must be part of the boundary of the unbounded face. Further, the unbounded face is counted twice in the sum , so . This gives exactly what we need to complete the proof.   "
 },
@@ -2201,7 +2210,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#thm_max-edge-planar",
   "type": "Theorem",
-  "number": "5.33",
+  "number": "5.34",
   "title": "",
   "body": "  A planar graph on vertices has at most edges when .   "
 },
@@ -2219,7 +2228,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#thm_kuratowski",
   "type": "Theorem",
-  "number": "5.34",
+  "number": "5.35",
   "title": "Kuratowski’s Theorem.",
   "body": " Kuratowski's Theorem   A graph is planar if and only if it does not contain a subgraph homeomorphic to either or .   "
 },
@@ -2228,7 +2237,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#fig_petersen-graph-k33",
   "type": "Figure",
-  "number": "5.35",
+  "number": "5.36",
   "title": "",
   "body": " A more illustrative drawing of the Petersen graph   "
 },
@@ -2237,7 +2246,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#fig_needs-four-colors",
   "type": "Figure",
-  "number": "5.36",
+  "number": "5.37",
   "title": "",
   "body": " A map that requires four colors   "
 },
@@ -2246,7 +2255,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_planar.html#thm_4ct",
   "type": "Theorem",
-  "number": "5.37",
+  "number": "5.38",
   "title": "Four Color Theorem.",
   "body": " Four Color Theorem   Every planar graph has chromatic number at most four.   "
 },
@@ -2273,7 +2282,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_counting-trees.html#fig_trees-5verts",
   "type": "Figure",
-  "number": "5.38",
+  "number": "5.39",
   "title": "",
   "body": " The nonisomorphic trees on vertices   "
 },
@@ -2282,7 +2291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_counting-trees.html#thm_cayley",
   "type": "Theorem",
-  "number": "5.39",
+  "number": "5.40",
   "title": "Cayley’s Formula.",
   "body": " Cayley's Formula   Cayley's formula    The number of labeled trees on vertices is .   "
 },
@@ -2300,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_counting-trees.html#ex_prufer-code",
   "type": "Example",
-  "number": "5.40",
+  "number": "5.41",
   "title": "",
   "body": " Before using Prüfer codes to prove Cayley's Formula, let's take a moment to make sure we understand how they are computed given a tree. Consider the -vertex tree in .   A labeled -vertex tree      How do we compute ? Since has more than two vertices, we use the second step and find that is the vertex with label and is the vertex with label , so . The graph is shown in .   The tree      The recursive call returns , where is the vertex labeled . Continuing recursively, the next vertex deleted is , which appends a to the string. Then is deleted, appending . Next is deleted, appending . This is followed by the deletion of , appending . Finally is deleted, appending , and the final recursive call has the subtree isomorphic to with vertices labeled and , and an empty string is returned. Thus, .  "
 },
@@ -2318,7 +2327,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_graphs_counting-trees.html#ex_prufer-code-reverse",
   "type": "Example",
-  "number": "5.43",
+  "number": "5.44",
   "title": "",
   "body": " We close this section with an example of how to take a Prüfer code and use it to construct a labeled tree. Consider the string as a Prüfer code. Then the tree corresponding to has vertices, and its leaves are labeled , , and . The inductive step in our proof attaches the vertex labeled to the vertex labeled in the tree with Prüfer code and vertex labels , since is used to label the last vertex added. What are the leaves of ? The symbols in do not appear in , so they must be the labels of leaves, and the construction says that we would attach the vertex labeled to the vertex labeled in the tree we get by induction. In , we show how this recursive process continues.   Turning the Prüfer code into a labeled tree    Prüfer code  Label set  Edge added    75531     2 7    5531     4 5    531     6 5    31     5 3    1     3 1    (empty string)     1 7     We form each row from the row above it by removing the first label used on the edge added from the label set and removing the first symbol from the Prüfer code. Once the Prüfer code becomes the empty string, we know that the two remaining labels must be the labels we place on the ends of to start building . We then work back up the edge added column, adding a new vertex and the edge indicated. The tree we construct in this manner is shown in .   The labeled tree with Prüfer code      "
 },
