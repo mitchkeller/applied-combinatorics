@@ -1,0 +1,120 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Graph Theory</title>
+  <handout>
+    <title>Notation and Terminology</title>
+    <page>
+    <p>
+      <alert>Peer instruction questions 1<ndash/>3.</alert>
+    </p>
+    <image source="spanning_subgraph" width="60%">
+      <description>Two graphs</description>
+    </image>
+    <image source="non_subgraph" width="60%">
+      <description>Two graphs</description>
+    </image>
+    <image source="induced_subgraph" width="60%">
+      <description>Two graphs</description>
+    </image>
+  </page>
+  <page>
+    <activity workspace="3cm">
+      <statement>
+        <p>
+          Suppose <m>\bfH</m> is an induced spanning subgraph of a graph <m>\bfG</m>. Discuss with your group what this would mean.
+        </p>
+      </statement>
+    </activity>
+    <p>
+      <alert>Peer instruction questions 4<ndash/>5.</alert>
+    </p>
+    <image source="isomorphic_graphs-PI" width="65%">
+      <description>Two graphs</description>
+    </image>
+    <image source="nonisomorphic_graphs-PI" width="65%">
+      <description>Two graphs</description>
+    </image>
+  </page>
+  <page>
+    <p workspace="3cm">
+      <alert>On the Complexity of Graph Isomorphism</alert>
+    </p>
+    <theorem xml:id="thm-first-thm-gt">
+      <statement>
+        <p workspace="3cm">
+          Let <m>\deg_{\bfG}(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then
+          <me>
+            \sum_{v\in V}\deg_{\bfG}(v) = 2|E|
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+    <corollary xml:id="cor-num-odd-vts">
+      <statement>
+        <p workspace="1cm">
+          In any graph, the number of vertices of odd degree is even.
+        </p>
+      </statement>
+    </corollary>
+    <p>
+      <dl>
+        <li>
+          <title>Walk</title>
+          <p workspace="1cm">
+            
+          </p>
+        </li>
+        <li>
+          <title>Path</title>
+          <p workspace="1cm">
+            
+          </p>
+        </li>
+        <li>
+          <title>Cycle</title>
+          <p workspace="1cm">
+            
+          </p>
+        </li>
+      </dl>
+    </p>
+  </page>
+  <page>
+    <definition xml:id="def-tree">
+      <statement>
+        <p workspace="1cm">
+          A vertex <m>v</m> in a graph <m>\GVE</m> is called a <term>leaf</term> provided that
+        </p>
+      </statement>
+    </definition>
+    <theorem xml:id="thm-tree-leaves">
+      <statement>
+        <p workspace="5cm">
+          Every tree on at least two vertices has at least two leaves.
+        </p>
+      </statement>
+    </theorem>
+    <theorem xml:id="thm-tree-unique-path">
+      <statement>
+        <p workspace="7cm">
+          If <m>\bfT</m> is a tree, then for every pair of distinct vertices <m>u,v</m>, there exists a unique path from <m>u</m> to <m>v</m> in <m>\bfT</m>.
+        </p>
+      </statement>
+    </theorem>
+  </page>
+  <page>
+    <activity>
+      <statement>
+        <p workspace="6cm">
+          <ol marker="a.">
+            <li>With your neighbors, use mathematical induction to prove that every tree on <m>n</m> vertices has exactly <m>n-1</m> edges.
+            </li>
+            <li>
+              How many edges would an <m>n</m>-vertex forest consisting of <m>k</m> trees have?
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </activity>
+  </page>
+  </handout>
+</chapter>
