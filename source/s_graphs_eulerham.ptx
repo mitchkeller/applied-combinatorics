@@ -108,7 +108,7 @@
 
       <p>We then choose the least integer <m>i</m> for which there is an edge incident with <m>x_i</m>
         that has not already been traversed. If there is no such integer, since there are edges that
-        have not yet been traversed, then we have discovered that the graph is disconnected. So we
+        have not yet been traversed, then we have discovered that the graph is disconnected. We
         may assume that the integer <m>i</m> exists. Set <m>u_0=x_i</m>. We define a sequence <m>
         (u_0,u_1,\dots,u_s)</m> recursively. If <m>j\ge 0</m>, set <me>
           N_j=\{y: u_jy\text{ is an edge in }\bfG\text{ and has not yet been traversed.} \}
@@ -123,17 +123,89 @@
         (u_0,u_1,\dots,u_s)</m>. </p>
     </proof>
   </theorem>
+  <p>
+    We now summarize the algorithm in the proof of <xref ref="thm_eulerian"/>. Note that here the algorithm is specified by prioritizing vertices in numerical order, assuming that <m>V(\bfG) = [n] </m>. When, as in some of the exercises, the vertices are labeled using letters, you should interpret this algorithm as prioritizing vertices in alphabetical order. The algorithm is also described iteratively but produces the same eulerian circuit as the recursive method in the proof.
+  </p>
+  <algorithm xml:id="alg-eulerian">
+    <title>Eulerian Circuit Finder</title>
+    <statement>
+      <p>
+        <dl>
+          <li>
+            <title>Input</title>
+            <p>
+              A graph <m>\bfG=([n],E)</m>
+            </p>
+          </li>
+          <li>
+            <title>Output</title>
+            <p>
+              An eulerian circuit <m>C</m> in <m>\bfG</m>, a vertex of odd degree in <m>\bfG</m>, or a connected component of <m>\bfG</m> and an edge of <m>\bfG</m> that is not in that connected component.
+            </p>
+          </li>
+        </dl>
+      </p>
+      <p>
+        <ol marker="1.">
+          <li>
+            <p>
+              Initialize <m>C=(1)</m>.
+            </p>
+          </li>
+          <li xml:id="step-eulerian-subcircuit">
+            <p>
+              While not every edge of <m>\bfG</m> is traversed, determine if any vertex of <m>C</m> is incident with an edge that has not been traversed. 
+              <ol marker="a.">
+                <li>
+                  <p>
+                    If all vertices of <m>C</m> have all their edges traversed, then return the vertices of <m>C</m> as a connected component of <m>\bfG</m> with an edge not traversed by <m>C</m> demonstrating that <m>\bfG</m> is not connected.
+                  </p>
+                </li>
+                <li >
+                  <p>
+                    If <m>C</m> has a vertex incident with an edge that has not been traversed, call that vertex <m>u_0</m>. Construct a walk <m>W</m> starting from <m>u_0</m>. From vertex <m>u_i</m>, follow the edge traversed by neither <m>C</m> nor <m>W</m> going to the neighbor of <m>u_i</m> with smallest label.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The construction of <m>W</m> halts at a vertex <m>u_s</m> for which all edges have been traversed.
+                    <ol marker="i.">
+                      <li>
+                        <p>
+                          If <m>u_s\neq u_0</m>, then return <m>u_0</m> as a vertex of odd degree, showing that <m>\bfG</m> is not eulerian.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          If <m>u_s = u_0</m>, update the circuit <m>C</m> by replacing <m>u_0</m> in <m>C</m> with the walk <m>W</m>. Continue iterating by returning to <xref ref="step-eulerian-subcircuit">step</xref>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </li>
+
+              </ol> 
+            </p>
+          </li>
+          <li>
+            <p>
+              Return <m>C</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </algorithm>
 
   <p>As an example, consider the graph <m>\bfG</m> shown in <xref ref="fig_graphs_eulerexample" />.
     Evidently, this graph is connected and all vertices have even degree. Here is the sequence of
-    circuits starting with the trivial circuit <m>C</m> consisting only of the vertex<nbsp /><m>1</m>
-    .
+    circuits starting with the trivial circuit <m>C</m> consisting only of the vertex <m>1</m>.
     <md>
       <mrow> C \amp =(1)</mrow>
-      <mrow> \amp =(1,2,4,3,1)\quad \text{start next from }2</mrow>
-      <mrow> \amp =(1,2,5,8,2,4,3,1)\quad\text{start next from } 4</mrow>
-      <mrow> \amp =(1,2,5,8,2,4,6,7,4,9,6,10,4,3,1)\quad\text{start next from } 7</mrow>
-      <mrow> \amp =(1,2,5,8,2,4,6,7,9,11,7,4,9,6,10,4,3,1)\quad\text{Done!!}</mrow>
+      <mrow> \amp \mapsto (1,2,4,3,1)\quad \text{start next from }2</mrow>
+      <mrow> \amp \mapsto(1,2,5,8,2,4,3,1)\quad\text{start next from } 4</mrow>
+      <mrow> \amp \mapsto(1,2,5,8,2,4,6,7,4,9,6,10,4,3,1)\quad\text{start next from } 7</mrow>
+      <mrow> \amp \mapsto(1,2,5,8,2,4,6,7,9,11,7,4,9,6,10,4,3,1)\quad\text{Done!!}</mrow>
     </md>
   </p>
   <figure xml:id="fig_graphs_eulerexample">
