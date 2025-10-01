@@ -109,76 +109,148 @@ var ptx_lunr_docs = [
   "body": "   Recall that we have defined to be the number of regions in the plane determined by lines arranged so that (1) each pair of lines intersects and (2) no three lines intersect at a single point and argued that and for , . Prove that for all positive integers , .     We will prove this by induction. For the base case, let . By definition, . We also see that , which completes the verification of the base case.  Now assume that for some that . We will show that . Since , we have that . Therefore, the recursive formula for applies to , and we have . Therefore, by the Principle of Mathematical Induction, for all positive integers .       We say that an integer  divides an integer provided that there exists an integer such that . Prove that for all integers , divides .     We will prove this by induction. The basis step is , for which we have . Therefore, we can see that divides as required.  Now assume that for some positive integer , we have that divides . This means that there exists an integer so that . We can rearrange this to say that . Now we consider for the induction step. We can write as , so we have by the induction hypothesis. Using algebra, we now have that this equals . Since is an integer, is also an integer. Therefore, is four times an integer, which is what it means for to divide . Hence, by the Principle of Mathematical Induction, divides for all positive integers .       Let , , and for all integers , Prove that an explict formula for is given by .     We will prove this using strong induction. Because the recursive formula only applies for , we will need to address and as base cases. We are given that and . The formula , when considered for and , yields and , respectively. Thus, the basis step is complete.  Now assume that for some integer and all integers with that . We must prove that . Since , we have that , and thus the recursive formula for applies. Therefore, . This is what we needed to show. Therefore, by the Principle of Mathematical Induction, we have that for all integers , .     "
 },
 {
-  "id": "appcomb-notes-5-2",
+  "id": "ch-php-notes",
   "level": "1",
-  "url": "appcomb-notes-5-2.html",
+  "url": "ch-php-notes.html",
+  "type": "Chapter",
+  "number": "4",
+  "title": "Placeholder",
+  "body": " Placeholder  This is a placeholder for a chapter for which there are not currently notes.  "
+},
+{
+  "id": "appcomb-notes-6-2",
+  "level": "1",
+  "url": "appcomb-notes-6-2.html",
   "type": "Handout",
-  "number": "4.1",
+  "number": "5.1",
   "title": "Notation and Terminology",
   "body": " Notation and Terminology    Peer instruction questions 1 3.    Two graphs    Two graphs    Two graphs       Suppose is an induced spanning subgraph of a graph . Discuss with your group what this would mean.     Peer instruction questions 4 5.    Two graphs    Two graphs      On the Complexity of Graph Isomorphism     Let denote the degree of vertex in graph . Then .      In any graph, the number of vertices of odd degree is even.       Walk      Path      Cycle           A vertex in a graph is called a leaf provided that      Every tree on at least two vertices has at least two leaves.      If is a tree, then for every pair of distinct vertices , there exists a unique path from to in .          With your neighbors, use mathematical induction to prove that every tree on vertices has exactly edges.  How many edges would an -vertex forest consisting of trees have?       "
 },
 {
-  "id": "appcomb-notes-5-2-3-1",
+  "id": "appcomb-notes-6-2-3-1",
   "level": "2",
-  "url": "appcomb-notes-5-2.html#appcomb-notes-5-2-3-1",
+  "url": "appcomb-notes-6-2.html#appcomb-notes-6-2-3-1",
   "type": "Activity",
-  "number": "4.1.1",
+  "number": "5.1.1",
   "title": "",
   "body": "  Suppose is an induced spanning subgraph of a graph . Discuss with your group what this would mean.   "
 },
 {
   "id": "thm-first-thm-gt",
   "level": "2",
-  "url": "appcomb-notes-5-2.html#thm-first-thm-gt",
+  "url": "appcomb-notes-6-2.html#thm-first-thm-gt",
   "type": "Theorem",
-  "number": "4.1",
+  "number": "5.1",
   "title": "",
   "body": "  Let denote the degree of vertex in graph . Then .   "
 },
 {
   "id": "cor-num-odd-vts",
   "level": "2",
-  "url": "appcomb-notes-5-2.html#cor-num-odd-vts",
+  "url": "appcomb-notes-6-2.html#cor-num-odd-vts",
   "type": "Corollary",
-  "number": "4.2",
+  "number": "5.2",
   "title": "",
   "body": "  In any graph, the number of vertices of odd degree is even.   "
 },
 {
   "id": "def-tree",
   "level": "2",
-  "url": "appcomb-notes-5-2.html#def-tree",
+  "url": "appcomb-notes-6-2.html#def-tree",
   "type": "Definition",
-  "number": "4.3",
+  "number": "5.3",
   "title": "",
   "body": "  A vertex in a graph is called a leaf provided that   "
 },
 {
   "id": "thm-tree-leaves",
   "level": "2",
-  "url": "appcomb-notes-5-2.html#thm-tree-leaves",
+  "url": "appcomb-notes-6-2.html#thm-tree-leaves",
   "type": "Theorem",
-  "number": "4.4",
+  "number": "5.4",
   "title": "",
   "body": "  Every tree on at least two vertices has at least two leaves.   "
 },
 {
   "id": "thm-tree-unique-path",
   "level": "2",
-  "url": "appcomb-notes-5-2.html#thm-tree-unique-path",
+  "url": "appcomb-notes-6-2.html#thm-tree-unique-path",
   "type": "Theorem",
-  "number": "4.5",
+  "number": "5.5",
   "title": "",
   "body": "  If is a tree, then for every pair of distinct vertices , there exists a unique path from to in .   "
 },
 {
-  "id": "appcomb-notes-5-2-6-1",
+  "id": "appcomb-notes-6-2-6-1",
   "level": "2",
-  "url": "appcomb-notes-5-2.html#appcomb-notes-5-2-6-1",
+  "url": "appcomb-notes-6-2.html#appcomb-notes-6-2-6-1",
   "type": "Activity",
-  "number": "4.1.2",
+  "number": "5.1.2",
   "title": "",
   "body": "    With your neighbors, use mathematical induction to prove that every tree on vertices has exactly edges.  How many edges would an -vertex forest consisting of trees have?     "
+},
+{
+  "id": "notes-eulerham",
+  "level": "1",
+  "url": "notes-eulerham.html",
+  "type": "Handout",
+  "number": "5.2",
+  "title": "Eulerian and Hamiltonian Graphs",
+  "body": " Eulerian and Hamiltonian Graphs  Let be a graph without isolated vertices. We say that is eulerian  graph  eulerian  provided that there is a sequence of vertices from , with repetition allowed, so that  ;  for every , is an edge of ;  for every edge , there is a unique integer with for which .    When is eulerian, a sequence satisfying these three conditions is called an eulerian circuit  eulerian  circuit  . A sequence of vertices is called a circuit  circuit  when it satisfies only the first two of these conditions.   Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of and an edge of that is not in that connected component.        Initialize .    While not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertex . Construct a walk starting from . From vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.   If , then return as a vertex of odd degree, showing that is not eulerian.    If , update the circuit by replacing in with the walk . Continue iterating by returning to step .          Return .         A graph    graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}                 Every group should have two pieces of paper. Each group must draw at least two graphs with at least vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with letters of the alphabet.       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.       A graph is said to be hamiltonian  graph  hamiltonian  if there exists a sequence so that  every vertex of appears exactly once in the sequence;  is an edge of ; and  for each , is an edge in .  Such a sequence of vertices is called a hamiltonian cycle .  hamiltonian  cycle       Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.    Formulate an improved group explanation of the difference.    Be very careful in your use of the words circuit , cycle , and path .      Hamiltonian or Not?      Handout contains drawings of five graphs.    Find a hamiltonian cycle or explain why there isn't one.   Don't spend too much time on any one graph.           Peer instruction questions 1 5.   "
+},
+{
+  "id": "notes-eulerham-2",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "eulerian "
+},
+{
+  "id": "notes-eulerham-3",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "eulerian circuit circuit "
+},
+{
+  "id": "alg-eulerian",
+  "level": "2",
+  "url": "notes-eulerham.html#alg-eulerian",
+  "type": "Algorithm",
+  "number": "5.6",
+  "title": "Eulerian Circuit Finder.",
+  "body": " Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of and an edge of that is not in that connected component.        Initialize .    While not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertex . Construct a walk starting from . From vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.   If , then return as a vertex of odd degree, showing that is not eulerian.    If , update the circuit by replacing in with the walk . Continue iterating by returning to step .          Return .      "
+},
+{
+  "id": "notes-eulerham-6",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-6",
+  "type": "Activity",
+  "number": "5.2.1",
+  "title": "",
+  "body": "     Every group should have two pieces of paper. Each group must draw at least two graphs with at least vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with letters of the alphabet.       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.      "
+},
+{
+  "id": "notes-eulerham-7",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "hamiltonian hamiltonian cycle "
+},
+{
+  "id": "notes-eulerham-9",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-9",
+  "type": "Activity",
+  "number": "5.2.2",
+  "title": "Hamiltonian or Not?",
+  "body": " Hamiltonian or Not?      Handout contains drawings of five graphs.    Find a hamiltonian cycle or explain why there isn't one.   Don't spend too much time on any one graph.         "
 }
 ]
 

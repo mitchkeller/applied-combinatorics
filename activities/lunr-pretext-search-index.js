@@ -233,6 +233,33 @@ var ptx_lunr_docs = [
   "number": "3.1.6",
   "title": "",
   "body": "  Find a recursive formula for the number of binary strings of length not containing .    Let be the number of binary strings of length not containing 101. This means that all bit strings of length 1 and 2 satisfy the criterion, and only one bit string (101) of length 3 fails to satisfy it. This gives us initial conditions of . If the first digit of a bit string of length is 0, then the remaining positions can be filled with any of the bit strings of length that do not contain 101. If the first digit of a 101-avoiding bit string of length is a 1, then the remaining positions can be filled with any 101-avoiding bit string of length that does not start with 01. There are bit strings of length that avoid 101. Since we are only thinking now about those bit strings that we know don't contain 101, we are looking to subtract those that start with 01.  Our task now is to count the 101-avoiding bit strings of length that start 01, so we can subtract as discussed in the previous paragraph. To do this, notice that there is a one-to-one correspondence between 101-avoiding bit strings of length that start 01 and 101-avoiding bit strings of length that start with 1. (Removing the 0 from the length bit string gives a length bit string of the type required, and taking a length bit string that avoids 101 and starts with 1 and adding a 0 to the front gives a 101-avoiding bit string of length that starts 01.)  OK, so now what we really want to count (so we can subtract it!) is the number of 101-avoiding bit strings of length that start with 1. Since every 101-avoiding bit string of length either starts with a 0 or a 1, adding the number that start with 0 to the number that start with 1 yields . Alternatively, the number of 101-avoiding bit strings of length that start with 1 can be found by taking and subtracting the number of 101-avoiding bit strings of length that start with 0.  OK, so what we really need to count (and then we'll see how to use it!) is the number of 101-avoiding bit strings of length that start with 0. But as we saw before, we can turn any 101-avoiding bit string of length that starts with 0 and turn it into a 101-avoiding bit string of length by removing the leading 0. Conversely, we can take any 101-avoiding bit string of length and put a 0 on its front without creating 101, so then we have a 101-avoiding bit string of length that starts with 0. Therefore, the number of 101-avoiding bit strings of length that start with 0 is the same as the number of 101-avoiding bit strings of length , which we know to be . Progress!  Alright, so here's a summary of where we are: . Now we've got all the information we need to substitute in, so we have . Thus, for with , , and .   "
+},
+{
+  "id": "ch-php-notes",
+  "level": "1",
+  "url": "ch-php-notes.html",
+  "type": "Chapter",
+  "number": "4",
+  "title": "Placeholder",
+  "body": " Placeholder  This is a placeholder for a chapter for which there are not currently notes.  "
+},
+{
+  "id": "ws-graphs-hamiltonian",
+  "level": "1",
+  "url": "ws-graphs-hamiltonian.html",
+  "type": "Worksheet",
+  "number": "5.1",
+  "title": "Hamiltonian or Not?",
+  "body": " Hamiltonian or Not?    Find a hamiltonian cycle in each graph or explain why there is not one       A graph    graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}             A graph    graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}             A graph    graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}                 N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                         N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                        "
+},
+{
+  "id": "ws-graphs-hamiltonian-2-1",
+  "level": "2",
+  "url": "ws-graphs-hamiltonian.html#ws-graphs-hamiltonian-2-1",
+  "type": "Figure",
+  "number": "5.1",
+  "title": "",
+  "body": " Find a hamiltonian cycle in each graph or explain why there is not one       A graph    graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}             A graph    graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}             A graph    graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}                 N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                         N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                      "
 }
 ]
 
