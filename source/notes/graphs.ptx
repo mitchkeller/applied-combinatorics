@@ -117,4 +117,241 @@
     </activity>
   </page>
   </handout>
+  <handout xml:id="notes-eulerham">
+    <title>Eulerian and Hamiltonian Graphs</title>
+    <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><idx>
+      <h>graph</h>
+      <h>eulerian</h>
+    </idx> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of
+    vertices from <m>\bfG</m>, with repetition allowed, so that <ol>
+      <li><m>x_0=x_t</m>;</li>
+      <li>for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
+      <li>for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m>
+    for which <m>e=x_ix_{i+1}</m>.</li>
+    </ol>
+  </p>
+  <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian
+    circuit</term><idx>
+      <h>eulerian</h>
+      <h>circuit</h>
+    </idx>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>
+    circuit</term><idx>
+      <h>circuit</h>
+    </idx> when it satisfies only the first two of these conditions.
+  </p>
+  <algorithm xml:id="alg-eulerian">
+    <title>Eulerian Circuit Finder</title>
+    <statement>
+      <p>
+        <dl>
+          <li>
+            <title>Input</title>
+            <p>
+              A graph <m>\bfG=([n],E)</m>
+            </p>
+          </li>
+          <li>
+            <title>Output</title>
+            <p>
+              An eulerian circuit <m>C</m> in <m>\bfG</m>, a vertex of odd degree in <m>\bfG</m>, or a connected component of <m>\bfG</m> and an edge of <m>\bfG</m> that is not in that connected component.
+            </p>
+          </li>
+        </dl>
+      </p>
+      <p>
+        <ol marker="1.">
+          <li>
+            <p>
+              Initialize <m>C=(1)</m>.
+            </p>
+          </li>
+          <li xml:id="step-eulerian-subcircuit">
+            <p>
+              While not every edge of <m>\bfG</m> is traversed, determine if any vertex of <m>C</m> is incident with an edge that has not been traversed. 
+              <ol marker="a.">
+                <li>
+                  <p>
+                    If all vertices of <m>C</m> have all their edges traversed, then return the vertices of <m>C</m> as a connected component of <m>\bfG</m> with an edge not traversed by <m>C</m> demonstrating that <m>\bfG</m> is not connected.
+                  </p>
+                </li>
+                <li >
+                  <p>
+                    If <m>C</m> has a vertex incident with an edge that has not been traversed, call that vertex <m>u_0</m>. Construct a walk <m>W</m> starting from <m>u_0</m>. From vertex <m>u_i</m>, follow the edge traversed by neither <m>C</m> nor <m>W</m> going to the neighbor of <m>u_i</m> with smallest label.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The construction of <m>W</m> halts at a vertex <m>u_s</m> for which all edges have been traversed.
+                    <ol marker="i.">
+                      <li>
+                        <p>
+                          If <m>u_s\neq u_0</m>, then return <m>u_0</m> as a vertex of odd degree, showing that <m>\bfG</m> is not eulerian.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          If <m>u_s = u_0</m>, update the circuit <m>C</m> by replacing <m>u_0</m> in <m>C</m> with the walk <m>W</m>. Continue iterating by returning to <xref ref="step-eulerian-subcircuit">step</xref>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </li>
+
+              </ol> 
+            </p>
+          </li>
+          <li>
+            <p>
+              Return <m>C</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </algorithm>
+  <sidebyside widths="70% 30%">
+    <image>
+      <shortdescription>A graph</shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="euler-example-graph">
+        <diagram dimensions="(450,300)" margins="5">
+          <definition>graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}</definition>
+          <coordinates bbox="(-1,-1,1,1)">
+            <network graph="graph" scale="0.8"
+                    node-fill="#fcf" node-stroke="black"
+                    seed="1" labels="yes">
+            </network>
+          </coordinates>
+        </diagram>
+      </prefigure>
+    </image>
+    <p><nbsp/>
+    </p>
+  </sidebyside>
+  <activity>
+    <statement>
+      <p>
+          <ol>
+  <li>
+    <p>
+      Every group should have <alert>two</alert> pieces of paper.
+      Each group must draw at least two graphs with at least <m>10</m> vertices.
+      Put your two graphs on separate pieces of paper.
+      <ul>
+        <li>
+          <p>
+            One eulerian.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            One not eulerian.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Label vertices with letters of the alphabet.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Exchange graphs with another group.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Determine which graph is which. 
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use our algorithm to find an eulerian circuit in the eulerian graph.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      If finish early, draw some more graphs and swap with another group.
+    </p>
+  </li>
+</ol>
+      </p>
+    </statement>
+  </activity>
+    <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><idx>
+      <h>graph</h>
+      <h>hamiltonian</h>
+    </idx> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that <ol>
+      <li>every vertex of <m>\bfG</m> appears exactly once in the sequence;</li>
+      <li><m>x_1x_n</m> is an edge of <m>\bfG</m>; and</li>
+      <li>for each <m>i=1,2,\dots,n-1</m>, <m>x_ix_{i+1}</m> is an edge in <m>\bfG</m>.</li>
+    </ol>
+    Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<idx>
+      <h>hamiltonian</h>
+      <h>cycle</h>
+    </idx>
+  </p>
+  <p workspace="4cm">
+      <ol>
+  <li>
+    <p>
+      Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Formulate an improved group explanation of the difference.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Be very careful in your use of the words <em>circuit</em>, <em>cycle</em>, and <em>path</em>.
+    </p>
+  </li>
+</ol>
+  </p>
+  <activity>
+    <title>Hamiltonian or Not?</title>
+    <statement>
+      <p>
+          <ol>
+  <li>
+    <p>
+      Handout contains drawings of five graphs.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Find a hamiltonian cycle or explain why there isn't one.
+      <ul>
+        <li>
+          <p>
+            Don't spend too much time on any one graph.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </li>
+</ol>
+      </p>
+    </statement>
+    
+  </activity>
+  <p>
+    <alert>Peer instruction questions 1<ndash/>5.</alert>
+  </p>
+  </handout>
+  
+    
+    
 </chapter>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ws-graphs" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Graphs</title>
+
+  <worksheet xml:id="ws-graphs-hamiltonian">
+    <title>Hamiltonian or Not?</title>
+    <page>
+      <figure>
+        <caption>Find a hamiltonian cycle in each graph or explain why there is not one</caption>
+      <sbsgroup >
+      <sidebyside widths="30% 40% 30%">
+        <figure>
+          <caption><m>\bfG_1</m></caption>
+    <image>
+      <shortdescription>A graph</shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="img-hamgraph1">
+        <diagram dimensions="(200,300)" margins="5">
+          <definition>graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}</definition>
+          <coordinates bbox="(-1,-1,1,1)">
+            <network graph="graph" scale="0.8"
+                    node-fill="#fcf" node-stroke="black"
+                    seed="1" labels="yes">
+            </network>
+          </coordinates>
+        </diagram>
+      </prefigure>
+    </image>
+    </figure>
+    <figure>
+          <caption><m>\bfG_2</m></caption>
+    <image>
+      <shortdescription>A graph</shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="img-hamgraph2">
+        <diagram dimensions="(300,300)" margins="5">
+          <definition>graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}</definition>
+          <coordinates bbox="(-1,-1,1,1)">
+            <network graph="graph" scale="0.8"
+                    node-fill="#fcf" node-stroke="black"
+                    layout="circular" labels="yes">
+            </network>
+          </coordinates>
+        </diagram>
+      </prefigure>
+    </image>
+    </figure>
+    <figure>
+          <caption><m>\bfG_3</m></caption>
+    <image>
+      <shortdescription>A graph</shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="img-hamgraph3">
+        <diagram dimensions="(200,300)" margins="5">
+          <definition>graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}</definition>
+          <coordinates bbox="(-1,-1,1,1)">
+            <network graph="graph" scale="0.8"
+                    node-fill="#fcf" node-stroke="black"
+                    layout="spring" labels="yes">
+            </network>
+          </coordinates>
+        </diagram>
+      </prefigure>
+    </image>
+    </figure>
+  </sidebyside>
+  <sidebyside widths="50% 50%">
+  <figure>
+          <caption><m>\bfG_4</m></caption>
+    <image>
+      <prefigure xmlns="https://prefigure.org" label="petersen-graph">
+        <diagram dimensions="(300,300)" margins="15">
+          <definition>N=5</definition>
+          <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
+          <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
+          <coordinates bbox="(-1,-1,1,1)">
+            <network  scale="0.8"
+              node-fill="#fcf" node-stroke="black"
+              seed="1" labels="yes" 
+              tactile-node-size="40">
+              <node at="0" p="f(0)" edges="[1,4,5]"/>
+              <node at="1" p="f(1)" edges="[2,6]"/>
+              <node at="2" p="f(2)" edges="[3,7]"/>
+              <node at="3" p="f(3)" edges="[4,8]"/>
+              <node at="4" p="f(4)" edges="[9]"/>
+              <node at="5" p="g(0)" edges="[7,8]"/>
+              <node at="6" p="g(1)" edges="[8,9]"/>
+              <node at="7" p="g(2)" edges="[9]"/>
+              <node at="8" p="g(3)" edges="[]"/>
+              <node at="9" p="g(4)" edges="[]"/>
+            </network>
+          </coordinates>
+        </diagram>
+      </prefigure>
+    </image>
+    </figure>
+  <figure>
+          <caption><m>\bfG_5</m></caption>
+    <image>
+      <prefigure xmlns="https://prefigure.org" label="petersen-plus-e">
+        <diagram dimensions="(300,300)" margins="15">
+          <definition>N=5</definition>
+          <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
+          <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
+          <coordinates bbox="(-1,-1,1,1)">
+            <network  scale="0.8"
+              node-fill="#fcf" node-stroke="black"
+              seed="1" labels="yes" 
+              tactile-node-size="40">
+              <node at="0" p="f(0)" edges="[1,4,5]"/>
+              <node at="1" p="f(1)" edges="[2,6]"/>
+              <node at="2" p="f(2)" edges="[3,7]"/>
+              <node at="3" p="f(3)" edges="[4,8]"/>
+              <node at="4" p="f(4)" edges="[9]"/>
+              <node at="5" p="g(0)" edges="[7,8]"/>
+              <node at="6" p="g(1)" edges="[8,9]"/>
+              <node at="7" p="g(2)" edges="[9,8]"/>
+              <node at="8" p="g(3)" edges="[]"/>
+              <node at="9" p="g(4)" edges="[]"/>
+            </network>
+          </coordinates>
+        </diagram>
+      </prefigure>
+    </image>   
+    </figure>
+    </sidebyside>
+  </sbsgroup>
+</figure>
+  </page>
+  </worksheet>
+
+</chapter>
