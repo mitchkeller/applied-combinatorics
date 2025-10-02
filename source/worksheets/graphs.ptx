@@ -125,6 +125,78 @@
   </sbsgroup>
 </figure>
   </page>
+  <page component="ham-not-soln">
+    <p>
+      <ol>
+        <li>
+          <p>
+            The graph <m>\bfG_{1}</m> is hamiltonian.
+            One example of a hamiltonian cycle is <m>1,5,7,3,2,6,8,9,10,4</m>.
+            (There are others.)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The graph <m>\bfG_{2}</m> is not hamiltonian.
+            One reason for this is that removing the vertex <m>2</m> leaves a disconnected graph.
+            Put another way, <m>1,10,4,2</m> forms a cycle, and the only way to get from the other vertices onto that cycle is via vertex <m>2</m>.
+            Once you're onto it, there's no way off again.
+            Thus, there's no way to construct a cycle containing all <m>10</m> vertices.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The graph <m>\bfG_{3}</m> is hamiltonian.
+            One example of a hamiltonian cycle is <m>1,5,6,2,3,8,9,10,4,7</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The graph <m>\bfG_{4}</m> is not hamiltonian.
+            This is a nontrivial fact.
+            For those interested in a complete proof, see the end of this document.
+            (You will not be tested on the proof, so it's purely optional reading.)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The graph <m>\bfG_{5}</m> (formed by adding one edge to the Petersen graph <m>\bfG_{1}</m>) is hamiltonian.
+            One example of a hamiltonian cycle is <m>10,7,1,5,8,4,6,3,2,9</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+
+    <proof>
+      <title>Proof the Petersen Graph is not hamiltonian</title>
+
+      <p>
+        Consider what a hamiltonian cycle in <m>\bfG_{4}</m> would look like.
+        The graph has <m>15</m> edges, and a hamiltonian cycle would use <m>10</m> of them.
+        Thus, you'd have the cycle and five leftover edges that would connect vertices across the cycle (<q>chords</q>).
+        How would these edges fit along the cycle? If an edge connected a vertex to a vertex two steps down the cycle (for example, if the cycle contains the sequence <m>a,b,c</m> of vertices and there's an edge from <m>a</m> to <m>c</m>), then there would be a triangle (a cyle on three vertices) in the graph.
+        There is no such cycle in <m>\bfG_{4}</m>.
+        If a chord connects a vertex to another vertex at distance three along the hamiltonian cycle, then there is a cycle on four vertices.
+        However, there is no such cycle in <m>\bfG_{4}</m>.
+      </p>
+
+      <p>
+        Now suppose that a chord connects a vertex <m>v_{0}</m> to another vertex <m>v_{1}</m> at distance four along the hamiltonian cycle.
+        Let <m>v_{0}'</m> be the vertex opposite <m>v_{0}</m> along the hamiltonian cycle.
+        There is also a chord incident with <m>v_{0}'</m>, connecting it across the hamiltonian cycle to a vertex <m>v_{1}'</m>.
+        We've already explained that the distance from <m>v_{0}'</m> to <m>v_{1}'</m> along the hamiltonian cycle cannot be less than four, and it cannot be five since that would give <m>v_{0}'</m> degree four.
+        Thus the distance along the hamiltonian cycle from <m>v_{0}'</m> to <m>v_{1}'</m> must be four.
+        Now <m>v_{0},v_{1},v_{1}',v_{0}'</m> is a cycle of length four (draw a picture to convince yourself), which we don't have in <m>\bfG_{4}</m>.
+        Finally, the only option that remains is that the chords all connect vertices that are exactly opposite each other on the hamiltonian cycle.
+        However, then if <m>v_{0}</m> and <m>v_{1}</m> are adjacent along the hamiltonian cycle and <m>v_{0}'</m> and <m>v_{1}'</m> are the vertices opposite them, <m>v_{0},v_{1},v_{1}',v_{0}'</m> is a cycle of length four.
+      </p>
+    </proof>
+  </page>
   </worksheet>
 
 </chapter>
