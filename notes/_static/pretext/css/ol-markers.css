@@ -1,3 +1,4 @@
 ol.ol-marker-1 > li::marker { content: ""counter(list-item,lower-alpha)". "; }
 ol.ol-marker-2 > li::marker { content: ""counter(list-item,decimal)". "; }
 ol.ol-marker-3 > li::marker { content: ""counter(list-item,lower-roman)". "; }
+ol.ol-marker-4 > li::marker { content: ""counter(list-item,upper-alpha)". "; }

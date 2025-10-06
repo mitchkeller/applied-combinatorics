@@ -251,6 +251,33 @@ var ptx_lunr_docs = [
   "number": "5.2.2",
   "title": "Hamiltonian or Not?",
   "body": " Hamiltonian or Not?      Handout contains drawings of five graphs.    Find a hamiltonian cycle or explain why there isn't one.   Don't spend too much time on any one graph.         "
+},
+{
+  "id": "appcomb-notes-6-4",
+  "level": "1",
+  "url": "appcomb-notes-6-4.html",
+  "type": "Handout",
+  "number": "5.3",
+  "title": "Graph Coloring",
+  "body": " Graph Coloring   Peer instruction questions 1 3.   Let be a graph. Then is a proper coloring of if    is one-to-one     implies      uses as few colors from as possible    None of the above     Let be a graph and be a proper coloring of . Let be all vertices colored . How many edges does the subgraph of induced by contain?   0    1         Any number is possible.     What is the chromatic number of the complete graph on vertices ?                  There is no fixed formula depending on .       A graph with 11 vertices      z  y_1  y_2  y_3  y_4  y_5  x_1  x_2  x_3  x_4  x_5    1  2  3  4  2  5  4  1  5  3  1          A graph is bipartite provided that its chromatic number is .      A graph is bipartite if and only if it does not contain any odd cycles.     Peer instruction question 4.    First Fit    A graph with 8 vertices      v_1  v_3  v_5  v_7  v_2  v_4  v_6  v_8        A graph with 8 vertices      v_1  v_2  v_3  v_4  v_5  v_6  v_7  v_8          "
+},
+{
+  "id": "appcomb-notes-6-4-7",
+  "level": "2",
+  "url": "appcomb-notes-6-4.html#appcomb-notes-6-4-7",
+  "type": "Definition",
+  "number": "5.7",
+  "title": "",
+  "body": "  A graph is bipartite provided that its chromatic number is .   "
+},
+{
+  "id": "appcomb-notes-6-4-8",
+  "level": "2",
+  "url": "appcomb-notes-6-4.html#appcomb-notes-6-4-8",
+  "type": "Theorem",
+  "number": "5.8",
+  "title": "",
+  "body": "  A graph is bipartite if and only if it does not contain any odd cycles.   "
 }
 ]
 
