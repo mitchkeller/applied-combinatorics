@@ -88,7 +88,7 @@
           \bfG</m> is connected, as each component may be colored individually. The <term>distance</term> <m>
           d(u,v)</m> between vertices <m>u,v\in V</m> is the length of a shortest path from <m>u</m>
           to <m>v</m>, and of course <m>d(u,u) = 0</m>. Fix a vertex <m>v_0\in V</m> and define <me>A
-          = \{v\in V\colon d(u_0,v)\text{ is even}\}\qquad\text{and}\qquad B = \{v\in V\colon
+          = \{v\in V\colon d(v_0,v)\text{ is even}\}\qquad\text{and}\qquad B = \{v\in V\colon
           d(v_0,v)\text{ is odd}\}.</me> We claim that coloring the vertices of <m>A</m> with color <m>
           1</m> and the vertices of <m>B</m> with color <m>2</m> is a proper coloring. suppose not.
           Then without loss of generality, there are vertices <m>x,y\in A</m> such that <m>xy\in E</m>.
