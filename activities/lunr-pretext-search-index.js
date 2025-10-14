@@ -277,7 +277,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "5.2",
   "title": "Graphs with <span class=\"process-math\">\\(\\omega(\\bfG)=2\\)<\/span> and <span class=\"process-math\">\\(\\chi(\\bfG)\\)<\/span> large",
-  "body": " Graphs with and large   We've already seen that the chromatic number of a graph is at least its clique number . (Recall that if , then contains a subgraph isomorphic to and .) In this activity, we're going to see how to construct graphs with and for any integer . We will focus only on the construction of Mycielski, which is one of two constructions included in the text.  This construction aims to create a graph with and . The construction is inductive. It starts by creating , then uses that to make , which it uses to make , etc. As you go through, discuss the steps with your group members. The questions in italics are questions you must be able to answer to ensure you understand as you go through things.    We proceed by induction on . For , we take to be the cycle on five vertices. ( Why is ? Why is ? )      Now assume that for some , we have determined the graph . Suppose that has vertices. Label the vertices of as . Construct as follows.   Begin with an independent set of cardinality . ( What is an independent set? )    Label the points of as .    Add a copy of with adjacent to if and only if is adjacent to .    Attach a new vertex adjacent to all vertices in (but none from the copy of ).          How many vertices does contain? (Your formula will contain .) You should be able to draw by hand, and will have vertices.        To see that , it will suffice to argue that contains no triangle ( ). To do this, we consider where the vertices of a triangle would be:    Since is triangle-free, any triangle in must contain a vertex of .    Since none of the vertices of are adjacent ( Why? ), any triangle in contains only one vertex of .    A triangle cannot contain a vertex of and the vertex . ( Why not? Consider where the third vertex is.)    A triangle must thus contain a vertex and vertices and from the copy of .     Why does forming a triangle mean that there's a triangle in ?            What part of the construction ensures that ?        How can you color the vertices of using colors? (Hint: Pair vertices of with vertices of .) What color does get? How many colors have you used and what does this say about ?       Try coloring using only colors. Suppose that is a proper coloring of using the colors . It's safe to assume that (reshuffle the colors otherwise).      Let be the set of vertices in the copy of to which assigns color . Can the set be empty? Explain your reasoning.       Since , what do you know about the set (or even number) of colors used on ?        Why can you change the color of each to match the color assigns to and maintain a proper coloring?        Now how many colors have you used on the copy of ?       "
+  "body": " Graphs with and large   We've already seen that the chromatic number of a graph is at least its clique number . (Recall that if , then contains a subgraph isomorphic to and .) In this activity, we're going to see how to construct graphs with and for any integer . We will focus only on the construction of Mycielski, which is one of two constructions included in the text.  This construction aims to create a graph with and . The construction is inductive. It starts by creating , then uses that to make , which it uses to make , etc. As you go through, discuss the steps with your group members. The questions in italics are questions you must be able to answer to ensure you understand as you go through things.    We proceed by induction on . For , we take to be the cycle on five vertices. ( Why is ? Why is ? )      Now assume that for some , we have determined the graph . Suppose that has vertices. Label the vertices of as . Construct as follows.   Begin with an independent set of cardinality . ( What is an independent set? )    Label the points of as .    Add a copy of with adjacent to if and only if is adjacent to .    Attach a new vertex adjacent to all vertices in (but none from the copy of ).          How many vertices does contain? (Your formula will contain .) You should be able to draw by hand, and will have vertices.        To see that , it will suffice to argue that contains no triangle ( ). To do this, we consider where the vertices of a triangle would be:    Since is triangle-free, any triangle in must contain a vertex of .    Since none of the vertices of are adjacent ( Why? ), any triangle in contains only one vertex of .    A triangle cannot contain a vertex of and the vertex . ( Why not? Consider where the third vertex is.)    A triangle must thus contain a vertex and vertices and from the copy of .     Why does forming a triangle mean that there's a triangle in ?            What part of the construction ensures that ?        How can you color the vertices of using colors? (Hint: Pair vertices of with vertices of .) What color does get? How many colors have you used and what does this say about ?       Try coloring using only colors. Suppose that is a proper coloring of using the colors . It's safe to assume that (reshuffle the colors otherwise). Let be the set of vertices in the copy of to which assigns color . Can the set be empty? Explain your reasoning.       Since , what do you know about the set (or even number) of colors used on ?        Why can you change the color of each to match the color assigns to and maintain a proper coloring?        Now how many colors have you used on the copy of ?       "
 },
 {
   "id": "ws-triangle-free-2-3",
@@ -322,7 +322,88 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "5.2.5",
   "title": "<span class=\"process-math\">\\(\\chi(\\bfG_{t+1})=t+1\\)<\/span>.",
-  "body": "     What part of the construction ensures that ?        How can you color the vertices of using colors? (Hint: Pair vertices of with vertices of .) What color does get? How many colors have you used and what does this say about ?       Try coloring using only colors. Suppose that is a proper coloring of using the colors . It's safe to assume that (reshuffle the colors otherwise).      Let be the set of vertices in the copy of to which assigns color . Can the set be empty? Explain your reasoning.       Since , what do you know about the set (or even number) of colors used on ?        Why can you change the color of each to match the color assigns to and maintain a proper coloring?        Now how many colors have you used on the copy of ?     "
+  "body": "     What part of the construction ensures that ?        How can you color the vertices of using colors? (Hint: Pair vertices of with vertices of .) What color does get? How many colors have you used and what does this say about ?       Try coloring using only colors. Suppose that is a proper coloring of using the colors . It's safe to assume that (reshuffle the colors otherwise). Let be the set of vertices in the copy of to which assigns color . Can the set be empty? Explain your reasoning.       Since , what do you know about the set (or even number) of colors used on ?        Why can you change the color of each to match the color assigns to and maintain a proper coloring?        Now how many colors have you used on the copy of ?     "
+},
+{
+  "id": "ws-graphs-planar",
+  "level": "1",
+  "url": "ws-graphs-planar.html",
+  "type": "Worksheet",
+  "number": "5.3",
+  "title": "Planar Graphs",
+  "body": " Planar Graphs   It turns out that you could draw hundreds of connected planar graphs and keep finding the same pattern that arises in the platonic solids:   Euler's Formula   Let be a connected planar graph with vertices and edges. Then every planar drawing of has faces, where satisfies .    Let's see why this holds up in general.    Notice that Euler’s Formula requires that be a connected planar graph. Find a counterexample to show that the formula does not hold if is a planar graph that is not connected.      Since must be connected, we start by considering the minimal case in which has no cycles. What type of graph does that mean we must have? How many edges does have (in terms of )? (In future questions, I'll call this value of by the name .) Verify Euler's formula in this case.      Draw a planar drawing of a connected planar graph with more than edges. (Maybe do something with or vertices. Also, have at least one vertex of degree in your graph.)     Find , , and for your graph.      Is there an edge you can erase from your graph and leave a graph that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?      Erase an edge from to give you a planar drawing of a connected planar graph . Let , , and be the number of vertices, edges, and faces respectively of . What are for your graph?      Find equations that relate , , and to , , and ?         Now let’s suppose that is a connected planar graph with vertices and edges where . Suppose that Euler’s formula holds for any graph with fewer than edges. (What type of proof are we setting up here?)     Why is there an edge you can delete from to produce a connected planar graph ?      Let , , and be the number of vertices, edges, and faces respectively of . What are in terms of , , and ?      What equation involving , , and must hold? Why?      Prove that .       In the grand scheme of things, Euler’s formula doesn’t seem that useful for determining if a graph is planar or not. However, we can deduce something useful from it. In this problem, we’re going to imagine a fixed planar drawing of a connected planar graph and let , , and be the number of vertices, edges, and faces, respectively, in our planar drawing. We’ll assume that to avoid some annoying things.  Let .     If I pick an edge of , what is the largest possible number of faces that can be part of the boundary of? So what does that tell us about the number of ordered pairs in that have as the first coordinate?      Use the previous part to find an inequality involving and (the size of ).      If I pick a face of , what is the smallest possible number of edges that can be used to form the boundary of ?      Use the previous part to find an inequality involving and (the size of ).      Combine two previous parts to get an inequality involving and .      Using Euler’s formula and the previous part, show that .      Prove that is not planar.         Recall that the complete bipartite graph is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.     Can you make a planar drawing of ? If not, what does the restriction tell you here?      Notice that since does not contain any vertices of degree , every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces. Since is bipartite, what can you say about the length of every cycle in ?      As in the previous problem, count edge-face pairs. How many pairs must there be for ?      Let be the number of faces bounded by a cycle of length and let be the number of faces bounded by a cycle of length . Express the total number of faces in terms of and . Then express the number of edge-face pairs in terms of and .      What does Euler’s formula tell you would have to be for ? What lower bound does this give you for the number of edge-face pairs, and how does this show that is not planar?       For each graph on the next page, find a planar drawing or give a reason why the graph is not planar.     "
+},
+{
+  "id": "ws-graphs-planar-2-2",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-2-2",
+  "type": "Theorem",
+  "number": "5.2",
+  "title": "Euler’s Formula.",
+  "body": " Euler's Formula   Let be a connected planar graph with vertices and edges. Then every planar drawing of has faces, where satisfies .   "
+},
+{
+  "id": "ws-graphs-planar-2-4",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-2-4",
+  "type": "Problem",
+  "number": "5.3.1",
+  "title": "",
+  "body": "  Notice that Euler’s Formula requires that be a connected planar graph. Find a counterexample to show that the formula does not hold if is a planar graph that is not connected.   "
+},
+{
+  "id": "ws-graphs-planar-2-5",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-2-5",
+  "type": "Problem",
+  "number": "5.3.2",
+  "title": "",
+  "body": "  Since must be connected, we start by considering the minimal case in which has no cycles. What type of graph does that mean we must have? How many edges does have (in terms of )? (In future questions, I'll call this value of by the name .) Verify Euler's formula in this case.   "
+},
+{
+  "id": "ws-graphs-planar-2-6",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-2-6",
+  "type": "Problem",
+  "number": "5.3.3",
+  "title": "",
+  "body": "  Draw a planar drawing of a connected planar graph with more than edges. (Maybe do something with or vertices. Also, have at least one vertex of degree in your graph.)     Find , , and for your graph.      Is there an edge you can erase from your graph and leave a graph that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?      Erase an edge from to give you a planar drawing of a connected planar graph . Let , , and be the number of vertices, edges, and faces respectively of . What are for your graph?      Find equations that relate , , and to , , and ?    "
+},
+{
+  "id": "ws-graphs-planar-3-1",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-3-1",
+  "type": "Problem",
+  "number": "5.3.4",
+  "title": "",
+  "body": "  Now let’s suppose that is a connected planar graph with vertices and edges where . Suppose that Euler’s formula holds for any graph with fewer than edges. (What type of proof are we setting up here?)     Why is there an edge you can delete from to produce a connected planar graph ?      Let , , and be the number of vertices, edges, and faces respectively of . What are in terms of , , and ?      What equation involving , , and must hold? Why?      Prove that .    "
+},
+{
+  "id": "ws-graphs-planar-3-2",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-3-2",
+  "type": "Problem",
+  "number": "5.3.5",
+  "title": "",
+  "body": "  In the grand scheme of things, Euler’s formula doesn’t seem that useful for determining if a graph is planar or not. However, we can deduce something useful from it. In this problem, we’re going to imagine a fixed planar drawing of a connected planar graph and let , , and be the number of vertices, edges, and faces, respectively, in our planar drawing. We’ll assume that to avoid some annoying things.  Let .     If I pick an edge of , what is the largest possible number of faces that can be part of the boundary of? So what does that tell us about the number of ordered pairs in that have as the first coordinate?      Use the previous part to find an inequality involving and (the size of ).      If I pick a face of , what is the smallest possible number of edges that can be used to form the boundary of ?      Use the previous part to find an inequality involving and (the size of ).      Combine two previous parts to get an inequality involving and .      Using Euler’s formula and the previous part, show that .      Prove that is not planar.    "
+},
+{
+  "id": "ws-graphs-planar-4-1",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-4-1",
+  "type": "Problem",
+  "number": "5.3.6",
+  "title": "",
+  "body": "  Recall that the complete bipartite graph is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.     Can you make a planar drawing of ? If not, what does the restriction tell you here?      Notice that since does not contain any vertices of degree , every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces. Since is bipartite, what can you say about the length of every cycle in ?      As in the previous problem, count edge-face pairs. How many pairs must there be for ?      Let be the number of faces bounded by a cycle of length and let be the number of faces bounded by a cycle of length . Express the total number of faces in terms of and . Then express the number of edge-face pairs in terms of and .      What does Euler’s formula tell you would have to be for ? What lower bound does this give you for the number of edge-face pairs, and how does this show that is not planar?    "
+},
+{
+  "id": "ws-graphs-planar-4-2",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-4-2",
+  "type": "Problem",
+  "number": "5.3.7",
+  "title": "",
+  "body": "  For each graph on the next page, find a planar drawing or give a reason why the graph is not planar.   "
 }
 ]
 
