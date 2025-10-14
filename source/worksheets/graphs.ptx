@@ -350,4 +350,243 @@
 </exercise>
 </page>
   </worksheet>
+  <worksheet xml:id="ws-graphs-planar">
+    <title>Planar Graphs</title>
+    <page>
+      <p>It turns out that you could draw hundreds of connected planar graphs
+and keep finding the same pattern that arises in the platonic solids:</p>
+
+<theorem>
+  <title>Euler's Formula</title>
+
+  <statement>
+    <p>
+      Let <m>\bfG</m> be a connected planar graph with <m>n</m> vertices and <m>m</m> edges.
+      Then every planar drawing of <m>\bfG</m> has <m>f</m> faces, where <m>f</m> satisfies <m>n-m+f=2</m>.
+    </p>
+  </statement>
+</theorem>
+
+<p>
+  Let's see why this holds up in general.
+</p>
+
+<exercise workspace="0.75in">
+  <statement>
+    <p>
+      Notice that Euler’s Formula requires that <m>\bfG</m> be a <term>connected</term> planar graph.
+Find a counterexample to show that the formula <m>n-m+f=2</m> does not hold if <m>\bfG</m> is a planar graph that is not connected.
+    </p>
+  </statement>
+</exercise>
+<exercise workspace="0.5in">
+  <statement>
+    <p>
+      Since <m>\bfG</m> must be connected, we start by considering the minimal case in which <m>\bfG</m> has no cycles.
+What type of graph does that mean we must have? How many edges does <m>\bfG</m> have (in terms of <m>n</m>)? (In future questions, I'll call this value of <m>m</m> by the name <m>m_{0}</m>.) Verify Euler's formula in this case.
+    </p>
+  </statement>
+</exercise>
+<exercise >
+  <task workspace="1.25in">
+    <p>
+      Draw a planar drawing of a connected planar graph <m>\bfG</m> with more than <m>m_{0}</m> edges.
+(Maybe do something with <m>n=7</m> or <m>n=8</m> vertices.
+Also, have at least one vertex of degree <m>1</m> in your graph.)
+    </p>
+  </task>
+  <task workspace="0.2in">
+    <statement>
+      <p>
+        Find <m>n</m>, <m>m</m>, and <m>f</m> for your graph.
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.35in">
+    <statement>
+      <p>
+        Is there an edge <m>e</m> you can erase from your graph and leave a graph <m>\bfG'</m> that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.25in">
+    <statement>
+      <p>
+        Erase an edge <m>e</m> from <m>\bfG</m> to give you a planar drawing of a connected planar graph <m>\bfG'</m>.
+Let <m>n'</m>, <m>m'</m>, and <m>f'</m> be the number of vertices, edges, and faces respectively of <m>\bfG'</m>.
+What are <m>n',m',f'</m> for your graph?
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.25in">
+    <statement>
+      <p>
+        Find equations that relate <m>n'</m>, <m>m'</m>, and <m>f'</m> to <m>n</m>, <m>m</m>, and <m>f</m>?
+      </p>
+    </statement>
+  </task>
+</exercise>
+</page>
+<page>
+
+<exercise>
+  <introduction>
+    <p>
+       Now let’s suppose that <m>\bfG</m> is a connected planar graph with <m>n</m> vertices and <m>m</m> edges where <m>m\gt m_{0}</m>.
+Suppose that Euler’s formula holds for any graph with fewer than <m>m</m> edges.
+(What type of proof are we setting up here?)
+    </p>
+  </introduction>
+ <task workspace="0.35in">
+  <statement>
+    <p>
+      Why is there an edge <m>e</m> you can delete from <m>\bfG</m> to produce a connected planar graph <m>\bfG'</m>?
+    </p>
+  </statement>
+ </task>
+ <task workspace="0.35in">
+  <statement>
+    <p>
+      Let <m>n'</m>, <m>m'</m>, and <m>f'</m> be the number of vertices, edges, and faces respectively of <m>\bfG'</m>.
+What are <m>n',m',f'</m> in terms of <m>n</m>, <m>m</m>, and <m>f</m>?
+    </p>
+  </statement>
+ </task>
+ <task workspace="0.5in">
+  <statement>
+    <p>
+      What equation involving <m>n'</m>, <m>m'</m>, and <m>f'</m> must hold? Why?
+    </p>
+  </statement>
+ </task>
+ <task workspace="0.5in">
+  <statement>
+    <p>
+      Prove that <m>n-m+f=2</m>.
+    </p>
+  </statement>
+ </task>
+ </exercise>
+ <exercise>
+  <introduction>
+    <p>
+    In the grand scheme of things, Euler’s formula doesn’t seem that useful for determining if a graph is planar or not.
+However, we can deduce something useful from it.
+In this problem, we’re going to imagine a fixed planar drawing of a connected planar graph <m>\bfG</m> and let <m>n</m>, <m>m</m>, and <m>f</m> be the number of vertices, edges, and faces, respectively, in our planar drawing.
+We’ll assume that <m>n\geq 4</m> to avoid some annoying things.
+</p>
+
+<p>
+  Let <m>S = \set{(e,F)\mid e\text{ is an edge of }\bfG\text{ and part of the boundary of face }F}</m>.
+</p>
+    
+  </introduction>
+  <task workspace="0.15in">
+    <statement>
+      <p>
+        If I pick an edge <m>e_{1}</m> of <m>\bfG</m>, what is the largest possible number of faces that <m>e_{1}</m> can be part of the boundary of? So what does that tell us about the number of ordered pairs in <m>S</m> that have <m>e_{1}</m> as the first coordinate?
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.15in">
+    <statement>
+      <p>
+        Use the previous part to find an inequality involving <m>m</m> and <m>|S|</m> (the size of <m>S</m>).
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.15in">
+    <statement>
+      <p>
+        If I pick a face <m>F_{1}</m> of <m>\bfG</m>, what is the smallest possible number of edges that can be used to form the boundary of <m>F_{1}</m>?
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.15in">
+    <statement>
+      <p>
+        Use the previous part to find an inequality involving <m>f</m> and <m>|S|</m> (the size of <m>S</m>).
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.15in">
+    <statement>
+      <p>
+  Combine two previous parts to get an inequality involving <m>m</m> and <m>f</m>.
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.15in">
+    <statement>
+      <p>
+        Using Euler’s formula and the previous part, show that <m>m\leq 3n-6</m>.
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.15in">
+    <statement>
+      <p>
+        Prove that <m>\bfK_{5}</m> is not planar.
+      </p>
+    </statement>
+  </task>
+ </exercise>
+</page>
+<page>
+  <exercise>
+ <introduction>
+  <p>
+    Recall that the complete bipartite graph <m>\bfK_{3,3}</m> is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.
+  </p>
+  </introduction>
+  <task workspace="1.5in">
+    <statement>
+      <p>
+        Can you make a planar drawing of <m>\bfK_{3,3}</m>? If not, what does the <m>m\leq 3n-6</m> restriction tell you here?
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.5in">
+    <statement>
+      <p>
+        Notice that since <m>\bfK_{3,3}</m> does not contain any vertices of degree <m>1</m>, every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces.
+Since <m>\bfK_{3,3}</m> is bipartite, what can you say about the length of every cycle in <m>\bfK_{3,3}</m>?
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.25in">
+    <statement>
+      <p>
+        As in the previous problem, count edge-face pairs.
+How many pairs must there be for <m>\bfK_{3,3}</m>?
+      </p>
+    </statement>
+  </task>
+  <task workspace="0.35in">
+    <statement>
+      <p>
+        Let <m>f_{4}</m> be the number of faces bounded by a cycle of length <m>4</m> and let <m>f_{6}</m> be the number of faces bounded by a cycle of length <m>6</m>. Express the total number of faces <m>f</m> in terms of <m>f_{4}</m> and <m>f_{6}</m>. Then express the number of edge-face pairs in terms of <m>f_{4}</m> and <m>f_{6}</m>.
+      </p>
+    </statement>
+  </task>
+  <task workspace="1in">
+    <statement>
+      <p>
+        What does Euler’s formula tell you <m>f</m> would have to be for <m>\bfK_{3,3}</m>? What lower bound does this give you for the number of edge-face pairs, and how does this show that <m>\bfK_{3,3}</m> is not planar?
+      </p>
+    </statement>
+  </task>
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      For each graph on the next page, find a planar drawing or
+    give a reason why the graph is not planar.
+    </p>
+  </statement>
+</exercise>
+</page>
+  
+
+  </worksheet>
 </chapter>
