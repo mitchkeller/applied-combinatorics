@@ -259,7 +259,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "5.3",
   "title": "Graph Coloring",
-  "body": " Graph Coloring   Peer instruction questions 1 3.   Let be a graph. Then is a proper coloring of if    is one-to-one     implies      uses as few colors from as possible    None of the above     Let be a graph and be a proper coloring of . Let be all vertices colored . How many edges does the subgraph of induced by contain?   0    1         Any number is possible.     What is the chromatic number of the complete graph on vertices ?                  There is no fixed formula depending on .       A graph with 11 vertices      z  y_1  y_2  y_3  y_4  y_5  x_1  x_2  x_3  x_4  x_5    1  2  3  4  2  5  4  1  5  3  1          A graph is bipartite provided that its chromatic number is .      A graph is bipartite if and only if it does not contain any odd cycles.     Peer instruction question 4.    First Fit    A graph with 8 vertices      v_1  v_3  v_5  v_7  v_2  v_4  v_6  v_8        A graph with 8 vertices      v_1  v_2  v_3  v_4  v_5  v_6  v_7  v_8          "
+  "body": " Graph Coloring   Peer instruction questions 1 3.   Let be a graph. Then is a proper coloring of if    is one-to-one     implies      uses as few colors from as possible    None of the above     Let be a graph and be a proper coloring of . Let be all vertices colored . How many edges does the subgraph of induced by contain?   0    1         Any number is possible.     What is the chromatic number of the complete graph on vertices ?                  There is no fixed formula depending on .       A graph with 11 vertices      z  y_1  y_2  y_3  y_4  y_5  x_1  x_2  x_3  x_4  x_5    1  2  3  4  2  5  4  1  5  3  1          A graph is bipartite provided that its chromatic number is .      A graph is bipartite if and only if it does not contain any odd cycles.     Peer instruction question 4.    First Fit    A graph with 8 vertices      v_1  v_3  v_5  v_7  v_2  v_4  v_6  v_8        A graph with 8 vertices      v_1  v_2  v_3  v_4  v_5  v_6  v_7  v_8         "
 },
 {
   "id": "appcomb-notes-6-4-7",
@@ -278,6 +278,24 @@ var ptx_lunr_docs = [
   "number": "5.8",
   "title": "",
   "body": "  A graph is bipartite if and only if it does not contain any odd cycles.   "
+},
+{
+  "id": "appcomb-notes-6-5",
+  "level": "1",
+  "url": "appcomb-notes-6-5.html",
+  "type": "Handout",
+  "number": "5.4",
+  "title": "Counting Labeled Trees",
+  "body": " Counting Labeled Trees    Labeled vs Unlabeled Trees (and Graphs) and Counting      Big Idea    Two ellipses                   Constructing Prüfer Codes  Assume is a labeled tree with at least vertices.   is defined recursively by   If , return the empty string.    Else, let be the leaf of with the smallest label and let be its unique neighbor. Let be the label of . Return .      Peer instruction question 1 followed by activity.     Peer instruction questions 2 3.    Constructing Labeled Trees from Prüfer Codes     Keep track of three things   Prüfer code    Labels remaining    Edge added       Smallest remaining label not in code and first label of code determine edge to add    Remove first entry of Prüfer code. Remove label just used from label set.    Repeat until Prüfer code is empty (remaining labels are edge).    Build tree reading edges from bottom to top.       Complete the table (and draw the tree) for the Prüfer code .    Find the tree for the Prüfer code .    Extra time? Make up a Prüfer code and have another group find the tree.               Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)           "
+},
+{
+  "id": "appcomb-notes-6-5-3-3-3",
+  "level": "2",
+  "url": "appcomb-notes-6-5.html#appcomb-notes-6-5-3-3-3",
+  "type": "Activity",
+  "number": "5.4.1",
+  "title": "",
+  "body": "  Complete the table (and draw the tree) for the Prüfer code .    Find the tree for the Prüfer code .    Extra time? Make up a Prüfer code and have another group find the tree.   "
 }
 ]
 

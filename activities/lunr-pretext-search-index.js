@@ -404,6 +404,24 @@ var ptx_lunr_docs = [
   "number": "5.3.7",
   "title": "",
   "body": "  For each graph on the next page, find a planar drawing or give a reason why the graph is not planar.   "
+},
+{
+  "id": "ws-prufer-codes",
+  "level": "1",
+  "url": "ws-prufer-codes.html",
+  "type": "Worksheet",
+  "number": "5.4",
+  "title": "Counting Labeled Trees",
+  "body": " Counting Labeled Trees    Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?    Extra time? Draw a tree for another group to find the Prüfer code of.         A graph with six vertices    graph={1:[2,3,4,5],3:[6]}          A graph with 14 vertices    graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12], 5:[6,7,12,14],7:[13], }         "
+},
+{
+  "id": "ws-prufer-codes-2",
+  "level": "2",
+  "url": "ws-prufer-codes.html#ws-prufer-codes-2",
+  "type": "Activity",
+  "number": "5.4.1",
+  "title": "",
+  "body": "  Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?    Extra time? Draw a tree for another group to find the Prüfer code of.       "
 }
 ]
 
