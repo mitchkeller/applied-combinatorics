@@ -589,4 +589,69 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
   
 
   </worksheet>
+  <worksheet xml:id="ws-prufer-codes">
+    <title>Counting Labeled Trees</title>
+    <activity>
+      <task>
+        <p>
+          Construct <m>\prufer(\bfT)</m> for the two trees below.
+        </p>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Be prepared to answer the following questions:
+            <ol marker="i.">
+              <li>
+                <p>
+                  What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?
+                </p>
+              </li>
+              <li>
+                <p>
+                  What type(s) of vertices have labels appearing in the Prüfer code of a tree?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Extra time? Draw a tree for another group to find the Prüfer code of.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+</task>
+
+    </activity>
+<image width="50%">
+  <shortdescription>A graph with six vertices</shortdescription>
+  <prefigure label="graph-prufer-6" xmlns="https://prefigure.org">
+    <diagram dimensions="(300,200)" margins="15">
+      <definition>graph={1:[2,3,4,5],3:[6]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network graph="graph" scale="0.8"
+                        node-fill="#eee" node-stroke="black"
+                        seed="73" labels="yes" rotate="90">
+                </network>
+      </coordinates>
+    </diagram>
+  </prefigure>
+</image>    
+<image width="50%">
+  <shortdescription>A graph with 14 vertices</shortdescription>
+  <prefigure label="graph-prufer-14" xmlns="https://prefigure.org">
+    <diagram dimensions="(300,200)" margins="15">
+      <definition>graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12],
+        5:[6,7,12,14],7:[13],
+        }</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network graph="graph" scale="0.8"
+                        node-fill="#eee" node-stroke="black"
+                        seed="38" layout="spring" labels="yes" rotate="120">
+                </network>
+      </coordinates>
+    </diagram>
+  </prefigure>
+</image>
+  </worksheet>
 </chapter>
