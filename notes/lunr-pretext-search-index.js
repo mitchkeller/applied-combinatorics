@@ -286,12 +286,12 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "5.4",
   "title": "Counting Labeled Trees",
-  "body": " Counting Labeled Trees    Labeled vs Unlabeled Trees (and Graphs) and Counting      Big Idea    Two ellipses                   Constructing Prüfer Codes  Assume is a labeled tree with at least vertices.   is defined recursively by   If , return the empty string.    Else, let be the leaf of with the smallest label and let be its unique neighbor. Let be the label of . Return .      Peer instruction question 1 followed by activity.     Peer instruction questions 2 3.    Constructing Labeled Trees from Prüfer Codes     Keep track of three things   Prüfer code    Labels remaining    Edge added       Smallest remaining label not in code and first label of code determine edge to add    Remove first entry of Prüfer code. Remove label just used from label set.    Repeat until Prüfer code is empty (remaining labels are edge).    Build tree reading edges from bottom to top.       Complete the table (and draw the tree) for the Prüfer code .    Find the tree for the Prüfer code .    Extra time? Make up a Prüfer code and have another group find the tree.               Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)           "
+  "body": " Counting Labeled Trees    Labeled vs Unlabeled Trees (and Graphs) and Counting      Big Idea    Two ellipses                   Constructing Prüfer Codes  Assume is a labeled tree with at least vertices.   is defined recursively by   If , return the empty string.    Else, let be the leaf of with the smallest label and let be its unique neighbor. Let be the label of . Return .      Peer instruction question 1 followed by activity.     Peer instruction questions 2 3.    Constructing Labeled Trees from Prüfer Codes     Keep track of three things   Prüfer code    Labels remaining    Edge added       Smallest remaining label not in code and first label of code determine edge to add    Remove first entry of Prüfer code. Remove label just used from label set.    Repeat until Prüfer code is empty (remaining labels are edge).    Build tree reading edges from bottom to top.      Peer Instruction Question 4.     Complete the table (and draw the tree) for the Prüfer code .    Find the tree for the Prüfer code .    Extra time? Make up a Prüfer code and have another group find the tree.               Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)           "
 },
 {
-  "id": "appcomb-notes-6-5-3-3-3",
+  "id": "appcomb-notes-6-5-3-3-4",
   "level": "2",
-  "url": "appcomb-notes-6-5.html#appcomb-notes-6-5-3-3-3",
+  "url": "appcomb-notes-6-5.html#appcomb-notes-6-5-3-3-4",
   "type": "Activity",
   "number": "5.4.1",
   "title": "",
