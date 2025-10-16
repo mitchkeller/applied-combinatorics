@@ -87,16 +87,16 @@
         <p>Now suppose that <m>\bfG</m> does not contain an odd cycle. Note that we may assume that <m>
           \bfG</m> is connected, as each component may be colored individually. The <term>distance</term> <m>
           d(u,v)</m> between vertices <m>u,v\in V</m> is the length of a shortest path from <m>u</m>
-          to <m>v</m>, and of course <m>d(u,u) = 0</m>. Fix a vertex <m>v_0\in V</m> and define <me>A
+          to <m>v</m>, and of course <m>d(u,u) = 0</m>. Fix a vertex <m>u_0\in V</m> and define <me>A
           = \{v\in V\colon d(u_0,v)\text{ is even}\}\qquad\text{and}\qquad B = \{v\in V\colon
-          d(v_0,v)\text{ is odd}\}.</me> We claim that coloring the vertices of <m>A</m> with color <m>
+          d(u_0,v)\text{ is odd}\}.</me> We claim that coloring the vertices of <m>A</m> with color <m>
           1</m> and the vertices of <m>B</m> with color <m>2</m> is a proper coloring. suppose not.
           Then without loss of generality, there are vertices <m>x,y\in A</m> such that <m>xy\in E</m>.
-          Since <m>x,y\in A</m>, <m>d(v_0,x)</m> and <m>d(v_0,y)</m> are both even. Let <me>
-          v_0,x_1,x_2,\dots,x_n=x</me> and <me>v_0,y_1,y_2,\dots,y_m= y</me> be shortest paths from <m>
-          v_0</m> to <m>x</m> and <m>y</m>, respectively. If <m>x_i\neq y_j</m> for all <m>1\leq
+          Since <m>x,y\in A</m>, <m>d(u_0,x)</m> and <m>d(u_0,y)</m> are both even. Let <me>
+          u_0,x_1,x_2,\dots,x_n=x</me> and <me>u_0,y_1,y_2,\dots,y_m= y</me> be shortest paths from <m>
+          u_0</m> to <m>x</m> and <m>y</m>, respectively. If <m>x_i\neq y_j</m> for all <m>1\leq
           i\leq n</m> and <m>1\leq j\leq m</m>, then since <m>m</m> and <m>n</m> are both even, <me>
-          v_0,x_1,x_2,\dots,x_n=x,y=y_m,y_{m-1},\dots,y_2,y_1,v_0</me> is an odd cycle in <m>\bfG</m>,
+          u_0,x_1,x_2,\dots,x_n=x,y=y_m,y_{m-1},\dots,y_2,y_1,u_0</me> is an odd cycle in <m>\bfG</m>,
           which is a contradiction. Thus, there must be <m>i,j</m> such that <m>x_i=y_j</m>, and we
           may take <m>i,j</m> as large as possible. (That is, after <m>x_i=y_j</m>, the two paths do
           not intersect again.) Thus, <me>x_i,x_{i+1},\dots,x_n = x,y=y_m,y_{m-1},\dots,y_j=x_i</me>
