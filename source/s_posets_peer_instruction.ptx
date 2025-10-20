@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<exercises xml:id="s_posets_PI" component="runestone-PI">
+<exercises xml:id="s_posets_PI" component="runestone-PI" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Peer Instruction Questions</title>
   <exercise label="posets_PI_movie-poset">
     <statement correct="yes">
@@ -14,8 +14,11 @@
     <statement>
       <p>Which of the following sets are antichains?
       </p>
-      <image source="big-poset" width="65%">
-        <description>A large poset</description>
+      <image width="50%">
+        <shortdescription>A large poset</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="big-poset-PI1">
+          <xi:include href="prefig/big-poset.xml"/>
+        </prefigure>
       </image>
     </statement>
     <choices multiple-correct="yes">
@@ -45,8 +48,11 @@
     <statement>
       <p>Which of the following sets are chains?
       </p>
-      <image source="big-poset" width="65%">
-        <description>A large poset</description>
+      <image width="50%">
+        <shortdescription>A large poset</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="big-poset-PI2">
+          <xi:include href="prefig/big-poset.xml"/>
+        </prefigure>
       </image>
     </statement>
     <choices multiple-correct="yes">
@@ -76,8 +82,11 @@
     <statement>
       <p>The set <m>\{12,13,30,16\}</m> is
       </p>
-      <image source="big-poset" width="65%">
-        <description>A large poset</description>
+      <image width="50%">
+        <shortdescription>A large poset</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="big-poset-PI3">
+          <xi:include href="prefig/big-poset.xml"/>
+        </prefigure>
       </image>
     </statement>
     <choices>
@@ -107,8 +116,11 @@
     <statement>
       <p>The set <m>\{3,25,10\}</m> is
       </p>
-      <image source="big-poset" width="65%">
-        <description>A large poset</description>
+      <image width="50%">
+        <shortdescription>A large poset</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="big-poset-PI4">
+          <xi:include href="prefig/big-poset.xml"/>
+        </prefigure>
       </image>
     </statement>
     <choices>
@@ -138,8 +150,11 @@
     <statement>
       <p>The set <m>\{8,7,13,4,31,6,35\}</m> is
       </p>
-      <image source="big-poset" width="65%">
-        <description>A large poset</description>
+      <image width="50%">
+        <shortdescription>A large poset</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="big-poset-PI5">
+          <xi:include href="prefig/big-poset.xml"/>
+        </prefigure>
       </image>
     </statement>
     <choices>

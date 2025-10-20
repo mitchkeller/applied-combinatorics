@@ -1,0 +1,313 @@
+<chapter xml:id="notes-posets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Partially Ordered Sets</title>
+  <handout>
+    <title>Notation and Terminology</title>
+    <page>
+    <paragraphs>
+      <title>Definition Parts</title>
+      <definition>
+        <statement>
+          <p>
+            A <term>poset</term> is an ordered pair <m>\bfP=(X,P)</m> with <m>X</m> a set and <m>P</m> a binary relation on <m>X</m> that is reflexive, antisymmetric, and transitive.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        <ul>
+          <li>
+            <p>
+              Binary relation: Ordered pairs (subset of <m>X\times X</m>)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Reflexive: For all <m>x\in X</m>, <m>(x,x)\in P</m>.
+              <ul>
+                <li>
+                  <p>
+                    <m>x\leq x</m> in <m>P</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Antisymmetric: If <m>(x,y)\in P</m> and <m>(y,x)\in P</m>, then <m>x=y</m>.
+              <ul>
+                <li>
+                  <p>
+                    If <m>x\leq y</m> in <m>P</m> and <m>y\leq x</m> in <m>P</m>, then <m>x=y</m>.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Transitive: If <m>(x,y)\in P</m> and <m>(y,z)\in P</m>, then <m>(x,z)\in P</m>.
+              <ul>
+                <li>
+                  <p>
+                    If <m>x\leq y</m> in <m>P</m> and <m>y\leq z</m> in <m>P</m>, then <m>x\leq z</m> in <m>P</m>.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <alert>Peer instruction question 1</alert>
+      </p>
+      <sidebyside widths="29% 29% 42%">
+        <p>
+          The Critic:
+          <ol>
+            <li>
+              <p>
+                Saving Private Ryan
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Life is Beautiful
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Forrest Gump
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Braveheart
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Good Will Hunting
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Titanic
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Jurassic Park
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          Alice:
+          <ol>
+            <li>
+              <p>
+                Life is Beautiful
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Saving Private Ryan
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Good Will Hunting
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Titanic
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Braveheart
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Forrest Gump
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Jurassic Park
+              </p>
+            </li>
+          </ol>
+        </p>
+    
+        <p>
+          <nbsp/>
+        </p>
+    
+      </sidebyside>
+    </paragraphs>
+  </page>
+  <page>
+    <paragraphs>
+      <title>Key Concepts for Posets</title>
+      <p>
+        Let <m>\bfP=(X,P)</m> be a poset.
+        <ul>
+          <li>
+            <p>
+              If <m>x&#x3C;y</m> in <m>P</m> or <m>y&#x3C;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>comparable</em>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>x,y\in X</m> and neither <m>x&#x3C;y</m> in <m>P</m> nor <m>y&#x3C;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>incomparable</em>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A set <m>A\subseteq X</m> is an <em>antichain</em> if no pair of distinct points in <m>A</m> is comparable in <m>P</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A set <m>C\subseteq X</m> is a <em>chain</em> if every pair of distinct points in <m>C</m> is comparable in <m>P</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <alert>Peer instruction questions 2<ndash/>3.</alert>
+      </p>
+      <image width="33%">
+        <shortdescription>A large poset</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="big-poset-notes">
+          <xi:include href="../prefig/big-poset.xml"/>
+        </prefigure>
+      </image>
+    </paragraphs>
+  </page>
+  <page>
+    <paragraphs>
+      <title>Maximal vs Maximum</title>
+        <definition>
+          <statement>
+            <p>
+              A chain <m>C</m> is <em>maxim<alert>al</alert> </em> if there is no chain <m>C'</m> so that <m>C'\supsetneq C</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <definition>
+          <statement>
+            <p>
+              A chain <m>C</m> is <em>maxim<alert>um</alert> </em> if there is no chain <m>C'</m> so that <m>|C'|\gt |C|</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <p workspace="1cm">
+          <nbsp/>
+        </p>
+
+        <definition>
+          <statement>
+            <p>
+              An antichain <m>A</m> is <em>maxim<alert>al</alert> </em> if there is no antichain <m>A'</m> so that <m>A'\supsetneq A</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <definition>
+          <statement>
+            <p>
+              An antichain <m>A</m> is <em>maxim<alert>um</alert> </em> if there is no antichain <m>A'</m> so that <m>|A'|\gt |A|</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <p>
+          <alert>Peer instruction questions 4<ndash/>6.</alert>
+        </p>
+    </paragraphs>
+    <paragraphs>
+      <title>Maximal and Minimal Elements</title>
+      <definition workspace="2cm">
+        <statement>
+          <p>
+            Let <m>\bfP=(X,P)</m> be a poset.
+            An element <m>x\in X</m> is <term>maximal</term> if there is no <m>y\in X</m> with <m>y\gt x</m> in <m>P</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <definition workspace="4cm">
+        <statement>
+          <p>
+            Let <m>\bfP=(X,P)</m> be a poset.
+            An element <m>x\in X</m> is <term>minimal</term> if there is no <m>y\in X</m> with <m>y&#x3C; x</m> in <m>P</m>.
+          </p>
+        </statement>
+      </definition>
+      
+    </paragraphs>
+  </page>
+  <page>
+    <activity>
+        <statement>
+          <p>
+            With your group, list the <em>set</em> of maximal elements and the <em>set</em> of minimal elements for this poset.
+          </p>
+          <image width="33%">
+            <shortdescription>A large poset</shortdescription>
+            <prefigure xmlns="https://prefigure.org" label="big-poset-notes-max-min">
+              <xi:include href="../prefig/big-poset.xml"/>
+            </prefigure>
+          </image>
+        </statement>
+      </activity>
+    </page>
+    <page>
+    <paragraphs>
+      <title>Height and Width</title>
+      <definition>
+        <statement>
+          <p>
+            The <term>height</term> of a poset <m>\bfP</m> is the size of a maxim<alert>um</alert> chain in <m>\bfP</m>
+          </p>
+        </statement>
+      </definition>
+
+      <definition>
+        <statement>
+          <p>
+            The <term>width</term> of a poset <m>\bfP</m> is the size of a maxim<alert>um</alert> antichain in <m>\bfP</m>
+          </p>
+        </statement>
+      </definition>
+      <p>
+        <alert>Peer instruction question 7.</alert>
+      </p>
+    </paragraphs>
+  </page>
+  </handout>
+</chapter>
