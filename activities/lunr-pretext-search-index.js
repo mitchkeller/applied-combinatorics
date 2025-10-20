@@ -412,7 +412,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "5.4",
   "title": "Counting Labeled Trees",
-  "body": " Counting Labeled Trees    Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?    Extra time? Draw a tree for another group to find the Prüfer code of.         A graph with six vertices    graph={1:[2,3,4,5],3:[6]}          A graph with 14 vertices    graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12], 5:[6,7,12,14],7:[13], }         "
+  "body": " Counting Labeled Trees    Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?         Extra time? Draw a tree for another group to find the Prüfer code of.      A graph with six vertices    graph={1:[2,3,4,5],3:[6]}          A graph with 14 vertices    graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12], 5:[6,7,12,14],7:[13], }         "
 },
 {
   "id": "ws-prufer-codes-2",
@@ -421,7 +421,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "5.4.1",
   "title": "",
-  "body": "  Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?    Extra time? Draw a tree for another group to find the Prüfer code of.       "
+  "body": "  Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?         Extra time? Draw a tree for another group to find the Prüfer code of.    "
 }
 ]
 

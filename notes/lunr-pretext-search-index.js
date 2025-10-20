@@ -296,6 +296,105 @@ var ptx_lunr_docs = [
   "number": "5.4.1",
   "title": "",
   "body": "  Complete the table (and draw the tree) for the Prüfer code .    Find the tree for the Prüfer code .    Extra time? Make up a Prüfer code and have another group find the tree.   "
+},
+{
+  "id": "notes-posets-2",
+  "level": "1",
+  "url": "notes-posets-2.html",
+  "type": "Handout",
+  "number": "6.1",
+  "title": "Notation and Terminology",
+  "body": " Notation and Terminology    Definition Parts    A poset is an ordered pair with a set and a binary relation on that is reflexive, antisymmetric, and transitive.       Binary relation: Ordered pairs (subset of )    Reflexive: For all , .    in        Antisymmetric: If and , then .   If in and in , then .       Transitive: If and , then .   If in and in , then in .         Peer instruction question 1    The Critic:   Saving Private Ryan    Life is Beautiful    Forrest Gump    Braveheart    Good Will Hunting    Titanic    Jurassic Park     Alice:   Life is Beautiful    Saving Private Ryan    Good Will Hunting    Titanic    Braveheart    Forrest Gump    Jurassic Park             Key Concepts for Posets  Let be a poset.   If in or in , then and are comparable .    If and neither in nor in , then and are incomparable .    A set is an antichain if no pair of distinct points in is comparable in .    A set is a chain if every pair of distinct points in is comparable in .      Peer instruction questions 2 3.    A large poset    graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                                Maximal vs Maximum    A chain is maxim al  if there is no chain so that .      A chain is maxim um  if there is no chain so that .         An antichain is maxim al  if there is no antichain so that .      An antichain is maxim um  if there is no antichain so that .     Peer instruction questions 4 6.     Maximal and Minimal Elements    Let be a poset. An element is maximal if there is no with in .      Let be a poset. An element is minimal if there is no with in .         With your group, list the set of maximal elements and the set of minimal elements for this poset.   A large poset    graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                                 Height and Width    The height of a poset is the size of a maxim um chain in       The width of a poset is the size of a maxim um antichain in      Peer instruction question 7.     "
+},
+{
+  "id": "notes-posets-2-2-1-2",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-2-1-2",
+  "type": "Definition",
+  "number": "6.1",
+  "title": "",
+  "body": "  A poset is an ordered pair with a set and a binary relation on that is reflexive, antisymmetric, and transitive.   "
+},
+{
+  "id": "notes-posets-2-4-1-2",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-4-1-2",
+  "type": "Definition",
+  "number": "6.2",
+  "title": "",
+  "body": "  A chain is maxim al  if there is no chain so that .   "
+},
+{
+  "id": "notes-posets-2-4-1-3",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-4-1-3",
+  "type": "Definition",
+  "number": "6.3",
+  "title": "",
+  "body": "  A chain is maxim um  if there is no chain so that .   "
+},
+{
+  "id": "notes-posets-2-4-1-5",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-4-1-5",
+  "type": "Definition",
+  "number": "6.4",
+  "title": "",
+  "body": "  An antichain is maxim al  if there is no antichain so that .   "
+},
+{
+  "id": "notes-posets-2-4-1-6",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-4-1-6",
+  "type": "Definition",
+  "number": "6.5",
+  "title": "",
+  "body": "  An antichain is maxim um  if there is no antichain so that .   "
+},
+{
+  "id": "notes-posets-2-4-2-2",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-4-2-2",
+  "type": "Definition",
+  "number": "6.6",
+  "title": "",
+  "body": "  Let be a poset. An element is maximal if there is no with in .   "
+},
+{
+  "id": "notes-posets-2-4-2-3",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-4-2-3",
+  "type": "Definition",
+  "number": "6.7",
+  "title": "",
+  "body": "  Let be a poset. An element is minimal if there is no with in .   "
+},
+{
+  "id": "notes-posets-2-5-1",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-5-1",
+  "type": "Activity",
+  "number": "6.1.1",
+  "title": "",
+  "body": "  With your group, list the set of maximal elements and the set of minimal elements for this poset.   A large poset    graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                             "
+},
+{
+  "id": "notes-posets-2-6-1-2",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-6-1-2",
+  "type": "Definition",
+  "number": "6.8",
+  "title": "",
+  "body": "  The height of a poset is the size of a maxim um chain in    "
+},
+{
+  "id": "notes-posets-2-6-1-3",
+  "level": "2",
+  "url": "notes-posets-2.html#notes-posets-2-6-1-3",
+  "type": "Definition",
+  "number": "6.9",
+  "title": "",
+  "body": "  The width of a poset is the size of a maxim um antichain in    "
 }
 ]
 
