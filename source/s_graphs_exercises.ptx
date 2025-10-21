@@ -257,6 +257,26 @@
                 <image width="80%" source="firstfit-intgraph"/>
             </figure>
         </statement>
+        <solution>
+            <image>
+                <shortdescription>An interval graph</shortdescription>
+                <prefigure xmlns="https://prefigure.org" label="graphs-ex-interval-graph-soln">
+                    <diagram dimensions="(300,300)" margins="5">
+                        <definition>graph={1:[2],2:[3],3:[4,5],4:[5,6,7],5:[6,7],6:[7,10],
+                            7:[8,9,10],8:[9,10],9:[10,11],10:[11],11:[14,13,12],12:[13,14]}</definition>
+                        <definition>labels={1:'k',2:'f',3:'d',4:'h',5:'l',6:'c',
+                            7:'e',8:'i',9:'j',10:'p',11:'m',12:'o',13:'n',14:'g'}
+                        </definition>
+                        <definition>a = 1</definition>
+                        <coordinates bbox="(-4,-4,4,4)">
+                            <network graph="graph" labels="yes" label-dictionary="labels" 
+                            layout="spring" seed="4" node-fill="#ccc">
+                            </network>
+                        </coordinates>
+                        </diagram>
+                </prefigure>
+            </image>
+        </solution>
     </exercise>
     <exercise>
         <statement>
