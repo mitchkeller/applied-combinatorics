@@ -422,6 +422,24 @@ var ptx_lunr_docs = [
   "number": "5.4.1",
   "title": "",
   "body": "  Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?         Extra time? Draw a tree for another group to find the Prüfer code of.    "
+},
+{
+  "id": "ws-posets-antichain-partitioning",
+  "level": "1",
+  "url": "ws-posets-antichain-partitioning.html",
+  "type": "Worksheet",
+  "number": "6.1",
+  "title": "Antichain Partitioning",
+  "body": " Antichain Partitioning     Use the algorithm to find the height , a maximum chain, and a partition into antichains for each of the posets below.      What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?       A poset with 10 points                      A poset with 25 points                                     "
+},
+{
+  "id": "ws-posets-antichain-partitioning-2",
+  "level": "2",
+  "url": "ws-posets-antichain-partitioning.html#ws-posets-antichain-partitioning-2",
+  "type": "Activity",
+  "number": "6.1.1",
+  "title": "",
+  "body": "   Use the algorithm to find the height , a maximum chain, and a partition into antichains for each of the posets below.      What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?    "
 }
 ]
 
