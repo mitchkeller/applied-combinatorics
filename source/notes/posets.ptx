@@ -310,4 +310,158 @@
     </paragraphs>
   </page>
   </handout>
+  <handout>
+    <title>Antichain and Chain Partitioning</title>
+    <page>
+      <paragraphs>
+        <title>Duals, Cover Graphs, and Comparability Graphs</title>
+        <sbsgroup widths="50% 50%">
+          <sidebyside>
+            <p workspace="4cm">
+              Dual of <m>\bfP</m> is denoted <m>\bfP^d</m>
+            </p>
+            <p>
+              Comparability Graph
+            </p>
+          </sidebyside>
+          <sidebyside>
+            <p workspace="4cm">
+              Cover Graph
+            </p>
+            <p>
+              Incomparability Graph
+            </p>
+          </sidebyside>
+        </sbsgroup>
+        <p>Bob's Claims:
+          <ol marker="1.">
+            <li>
+              <p workspace="1cm">
+                Only linear orders have paths as cover graphs.
+              </p>
+            </li>
+
+            <li>
+              <p workspace="1cm">
+                A poset and its dual have the same cover graph and the same comparability graph.
+              </p>
+            </li>
+
+            <li>
+              <p workspace="1cm">
+                Any two posets with the same cover graph have the same height and the same width.
+              </p>
+            </li>
+
+            <li>
+              <p workspace="1cm">
+                Any two posets with the same comparability graph have the same height and the same width.
+              </p>
+            </li>
+          </ol>
+        </p>
+          <activity>
+          <statement>
+            <p>
+              Use the small pieces of paper to fill in the grid. Every row in the <q>Poset</q> column will contain exactly one poset term. You will use the rest of the pieces of paper to fill in the <q>Comparability Graph</q> and <q>Incomparability Graph</q> columns as best as you can. It is possible that some squares in those columns will be blank or that some will contain more than one piece of paper. You will use all the pieces of paper, however!
+            </p>
+          </statement>
+        </activity>
+      </paragraphs>
+    </page>
+    <page>
+      <paragraphs>
+        <title>Height and Antichain Partitioning</title>
+        <theorem xml:id="thm-dual-dilworth">
+          <title>Dual of Dilworth's Theorem</title>
+          <statement>
+            <p>
+              A poset <m>\bfP=(X,P')</m> has height <m>h</m> if and only if <m>h</m> is the smallest number so that there exist <m>h</m> disjoint antichains <m>A_{1},\dots, A_{h}</m> with
+              <me>
+                X= A_{1}\cup A_{2}\cup\cdots\cup A_{h}
+              </me>.
+            </p>
+          </statement>
+          <proof>
+            <title>Proof by algorithm</title>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    Let <m>\bfP_{1} = \bfP</m>.
+                    Place minimal elements of <m>\bfP_{1}</m> in <m>A_{1}</m>.
+                    Let <m>\bfP_{2}</m> be formed from <m>\bfP_{1}</m> by deleting the points in <m>A_{1}</m>.
+                    Place minimal elements of <m>\bfP_{2}</m> in <m>A_{2}</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    General step: Form <m>\bfP_{i+1}</m> by removing <m>A_{i}</m> from <m>\bfP_{i}</m>.
+                    Let <m>A_{i+1}</m> be the minimal elements of <m>\bfP_{i+1}</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Continue until every point is in an antichain.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </proof>
+        </theorem>
+        <sidebyside widths="25% 75%">
+        <image>
+          <shortdescription>A small poset</shortdescription>
+          <prefigure xmlns="https://prefigure.org" label="notes-antichain-part-examp">
+            <diagram dimensions="(200,300)" margins="15">
+              <coordinates bbox="(0,0,2,3)">
+                <network node-fill="#ccc" labels="yes" scale="0.8">
+                  <node at="1" p="(0,1.5)" edges="[2,5]"><m>a</m></node>
+                  <node at="2" p="(1,0)" edges="[3]"><m>b</m></node>
+                  <node at="3" p="(1,1)" edges="[4,7]"><m>c</m></node>
+                  <node at="4" p="(1,2)" edges="[5,6]"><m>d</m></node>
+                  <node at="5" p="(1,3)"><m>e</m></node>
+                  <node at="6" p="(2,1)"><m>f</m></node>
+                  <node at="7" p="(2,2)"><m>g</m></node>
+                </network>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+        <p>
+          <nbsp/>
+        </p>
+        </sidebyside>
+        <p>
+          <alert>Handout</alert>
+        </p>
+      </paragraphs>
+    </page>
+    <page>
+      <paragraphs>
+        <title>Chain Partitioning and Width</title>
+        <p workspace="5cm">
+          Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?
+        </p>
+        <theorem>
+          <title>Dilworths Theorem</title>
+
+          <statement>
+            <p>
+              Let <m>\bfP=(X,P')</m> be a poset.
+              Then <m>w</m> is the width of <m>\bfP</m> if and only if <m>w</m> is the smallest number so that there exist <m>w</m> disjoint chains <m>C_{1},C_{2},\dots C_{w}</m> with
+              <me>
+                X=C_{1}\cup C_{2}\cup \cdots\cup C_{w}.
+              </me>
+            </p>
+          </statement>
+        </theorem>
+        <p workspace="16cm">
+          <nbsp/>
+        </p>
+      </paragraphs>
+    </page>
+  </handout>
 </chapter>
