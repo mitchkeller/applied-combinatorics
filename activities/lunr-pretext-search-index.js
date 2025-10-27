@@ -424,22 +424,103 @@ var ptx_lunr_docs = [
   "body": "  Construct for the two trees below.     Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?         Extra time? Draw a tree for another group to find the Prüfer code of.    "
 },
 {
-  "id": "ws-posets-antichain-partitioning",
+  "id": "ws-posets-subset-lattice",
   "level": "1",
-  "url": "ws-posets-antichain-partitioning.html",
+  "url": "ws-posets-subset-lattice.html",
   "type": "Worksheet",
   "number": "6.1",
-  "title": "Antichain Partitioning",
-  "body": " Antichain Partitioning     Use the algorithm to find the height , a maximum chain, and a partition into antichains for each of the posets below.      What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?       A poset with 10 points                      A poset with 25 points                                     "
+  "title": "Width of the Subset Lattice",
+  "body": " Width of the Subset Lattice     Below are diagrams for and . (Without any of the points labeled with corresponding sets.) In the space provided, draw , , and . (Label the sets, too. You can just write “ ” instead of “ ”.) Label a few of the points in the diagrams provided for and to make sure you understand how to do it.     The lattice of subsets of a 4-element set    graph={0:[1,2,3,4],1:[12,13,14],2:[12,23,24],3:[13,23,34], 4:[14,24,34],12:[123,124],23:[123,234],24:[124,234],34:[134,234],13:[123,134], 14:[124,134], 1234:[123,124,134,234]}                          The lattice of subsets of a 5-element set    graph={0:[1,2,3,4,5],1:[12,13,14,15],2:[12,23,24,25],3:[13,23,34,35], 4:[14,24,34,45],12:[123,124,125],23:[123,234,235],24:[124,234,245],34:[134,234,345], 13:[123,134,135], 14:[124,134,145], 1234:[123,124,134,234,12345], 123:[1235],124:[1245],234:[2345],134:[1345], 5:[15,25,35,45],15:[125,135,145],25:[125,235,245],35:[135,235,345], 45:[145,245,345],125:[1235,1245],235:[1235,2345],245:[1245,2345],345:[1345,2345], 135:[1235,1345], 145:[1245,1345], 12345:[1235,1245,1345,2345]}                                           Let's investigate the width of the subset lattice.     For , find the width of and a partition into chains.                   1  2  3  4  5                       Develop a conjecture about the width of for general .       To be able to verify our conjecture, let’s think about a seemingly unrelated question: counting maximal chains in . How many maximal chains are there in ? Hint : Start with . Think about the number of choices of the “next” set when forming a maximal chain.       Now let’s think about maximal chains through particular sets. Look at .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?       Now think about .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?      How many maximal chains pass through a set with ?       Now let’s see how we can use counting maximal chains through a set to get an upper bound on .  Fix an antichain with . How many maximal chains pass through some set in ? Hint : Express your answer as a summation.       Can a maximal chain pass through two different sets with ? What does this tell you that the sum from the previous question must be less than or equal to?      As a result of the previous step, you should have an inequality with a summation on the small side and a factorial on the big side. Divide the factorial over (and into the summation) so that you have a summation less than or equal to . Rewrite your summation so that it is a sum of reciprocals of binomial coefficients.      We will establish a formula for by showing that is bounded above and below by the same quantity. Explain why for each possible value of . What is the largest lower bound that you get for in this way?      Let us now return to the inequality involving a summation and that you obtained earlier. To find an upper bound for , we assume that is a maximum antichain so that . Also assume that for all . We can do this since the inequality is true for any antichain. Explain how this lets you eliminate the summation from your inequality and then give an upper bound for .     "
 },
 {
-  "id": "ws-posets-antichain-partitioning-2",
+  "id": "ws-posets-subset-lattice-2",
   "level": "2",
-  "url": "ws-posets-antichain-partitioning.html#ws-posets-antichain-partitioning-2",
-  "type": "Activity",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-2",
+  "type": "Problem",
   "number": "6.1.1",
   "title": "",
-  "body": "   Use the algorithm to find the height , a maximum chain, and a partition into antichains for each of the posets below.      What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?    "
+  "body": "  Below are diagrams for and . (Without any of the points labeled with corresponding sets.) In the space provided, draw , , and . (Label the sets, too. You can just write “ ” instead of “ ”.) Label a few of the points in the diagrams provided for and to make sure you understand how to do it.   "
+},
+{
+  "id": "ws-posets-subset-lattice-5",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-5",
+  "type": "Problem",
+  "number": "6.1.2",
+  "title": "",
+  "body": "  Let's investigate the width of the subset lattice.     For , find the width of and a partition into chains.                   1  2  3  4  5                       Develop a conjecture about the width of for general .    "
+},
+{
+  "id": "ws-posets-subset-lattice-6",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-6",
+  "type": "Problem",
+  "number": "6.1.3",
+  "title": "",
+  "body": "  To be able to verify our conjecture, let’s think about a seemingly unrelated question: counting maximal chains in . How many maximal chains are there in ? Hint : Start with . Think about the number of choices of the “next” set when forming a maximal chain.    "
+},
+{
+  "id": "ws-posets-subset-lattice-7",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-7",
+  "type": "Problem",
+  "number": "6.1.4",
+  "title": "",
+  "body": "  Now let’s think about maximal chains through particular sets. Look at .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?    "
+},
+{
+  "id": "ws-posets-subset-lattice-8",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-8",
+  "type": "Problem",
+  "number": "6.1.5",
+  "title": "",
+  "body": "  Now think about .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?      How many maximal chains pass through a set with ?    "
+},
+{
+  "id": "ws-posets-subset-lattice-9",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-9",
+  "type": "Problem",
+  "number": "6.1.6",
+  "title": "",
+  "body": "  Now let’s see how we can use counting maximal chains through a set to get an upper bound on .  Fix an antichain with . How many maximal chains pass through some set in ? Hint : Express your answer as a summation.    "
+},
+{
+  "id": "ws-posets-subset-lattice-10",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-10",
+  "type": "Problem",
+  "number": "6.1.7",
+  "title": "",
+  "body": "  Can a maximal chain pass through two different sets with ? What does this tell you that the sum from the previous question must be less than or equal to?   "
+},
+{
+  "id": "ws-posets-subset-lattice-11",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-11",
+  "type": "Problem",
+  "number": "6.1.8",
+  "title": "",
+  "body": "  As a result of the previous step, you should have an inequality with a summation on the small side and a factorial on the big side. Divide the factorial over (and into the summation) so that you have a summation less than or equal to . Rewrite your summation so that it is a sum of reciprocals of binomial coefficients.   "
+},
+{
+  "id": "ws-posets-subset-lattice-12",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-12",
+  "type": "Problem",
+  "number": "6.1.9",
+  "title": "",
+  "body": "  We will establish a formula for by showing that is bounded above and below by the same quantity. Explain why for each possible value of . What is the largest lower bound that you get for in this way?   "
+},
+{
+  "id": "ws-posets-subset-lattice-13",
+  "level": "2",
+  "url": "ws-posets-subset-lattice.html#ws-posets-subset-lattice-13",
+  "type": "Problem",
+  "number": "6.1.10",
+  "title": "",
+  "body": "  Let us now return to the inequality involving a summation and that you obtained earlier. To find an upper bound for , we assume that is a maximum antichain so that . Also assume that for all . We can do this since the inequality is true for any antichain. Explain how this lets you eliminate the summation from your inequality and then give an upper bound for .   "
 }
 ]
 
