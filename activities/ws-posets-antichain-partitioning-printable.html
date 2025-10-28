@@ -14,11 +14,11 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ACN Strings, Sets, and Binomial Coefficients</title>
+<title>ACW Antichain Partitioning</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/print-worksheet.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
@@ -78,7 +78,7 @@ window.MathJax = {
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="In-Class Notes to Accompany Applied Combinatorics">
+<meta property="book:title" content="Activities to Accompany Applied Combinatorics">
 <meta property="book:author" content="Mitchel T.
 					Keller">
 <meta property="book:author" content="William T.
@@ -120,7 +120,7 @@ eBookConfig.enable_chatcodes =  false;
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="httpw://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></h1>
+<h1 class="heading"><a href="appcomb-activities.html"><span class="title">Activities to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></h1>
 <p class="byline">Mitchel T. Keller, William T. Trotter</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
@@ -140,7 +140,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="embed-code-container">
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
-</div></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="up-button button" href="appcomb-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appcomb-notes-3-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></span><span class="treebuttons"><a class="previous-button button" href="ws-posets.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ws-posets.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-posets-subset-lattice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
 \newcommand{\ints}{\mathbb{Z}}
 \newcommand{\posints}{\mathbb{N}}
@@ -220,49 +220,72 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="appcomb-notes-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="appcomb-notes-3.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
-<ul class="structural toc-item-list active">
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-3-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Combinatorial Proofs</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-3-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Ubiquitous Nature of Binomial Coefficients</span></a></div></li>
-</ul>
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="appcomb-activities-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">An Introduction to Combinatorics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-day_one.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Course Overview</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="appcomb-notes-4.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-4-2.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Recursive Counting</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-4-3.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="ws-strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-strings-perm-comb.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Strings, Permutations, Binomial Coefficients</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ws-induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-induction-recursive-count.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Recursive Counting</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-php-notes.html" class="internal"><span class="codenumber">4</span> <span class="title">Placeholder</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="appcomb-notes-6.html" class="internal"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a></div>
+<div class="toc-title-box"><a href="ws-graphs.html" class="internal"><span class="codenumber">5</span> <span class="title">Graphs</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-6-2.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Notation and Terminology</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-eulerham.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-6-4.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Graph Coloring</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-6-5.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Counting Labeled Trees</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-graphs-hamiltonian.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Hamiltonian or Not?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-triangle-free.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Graphs with <span class="process-math">\(\omega(\bfG)=2\)</span> and <span class="process-math">\(\chi(\bfG)\)</span> large</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-graphs-planar.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Planar Graphs</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-prufer-codes.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Counting Labeled Trees</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="notes-posets.html" class="internal"><span class="codenumber">6</span> <span class="title">Partially Ordered Sets</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-posets-2.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Notation and Terminology</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-posets-3.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Antichain and Chain Partitioning</span></a></div></li>
-<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-posets-4.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Linear Extensions and the Subset Lattice</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ws-posets.html" class="internal"><span class="codenumber">6</span> <span class="title">Partially Ordered Sets</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-posets-antichain-partitioning.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Antichain Partitioning</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-posets-subset-lattice.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Width of the Subset Lattice</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="appcomb-notes-3"><h2 class="heading">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Strings, Sets, and Binomial Coefficients</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="worksheet" id="ws-posets-antichain-partitioning" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antichain Partitioning</span><div class="print-links"><a href="ws-posets-antichain-partitioning-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<nav class="summary-links"><ul>
-<li><a href="appcomb-notes-3-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Combinatorial Proofs</span></a></li>
-<li><a href="appcomb-notes-3-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Ubiquitous Nature of Binomial Coefficients</span></a></li>
-</ul></nav><div class="autopermalink" data-description="Chapter 2: Strings, Sets, and Binomial Coefficients"><a href="#appcomb-notes-3" title="Copy heading and permalink for Chapter 2: Strings, Sets, and Binomial Coefficients" aria-label="Copy heading and permalink for Chapter 2: Strings, Sets, and Binomial Coefficients">🔗</a></div></section></div>
+<article class="activity project-like" id="ws-posets-antichain-partitioning-2"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<article class="task exercise-like" id="ws-posets-antichain-partitioning-2-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ws-posets-antichain-partitioning-2-1-1-1">Use the algorithm to find the height <span class="process-math">\(h\text{,}\)</span> a maximum chain, and a partition into <span class="process-math">\(h\)</span> antichains for each of the posets below.<div class="autopermalink" data-description="Paragraph"><a href="#ws-posets-antichain-partitioning-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.1.1.a"><a href="#ws-posets-antichain-partitioning-2-1" title="Copy heading and permalink for Task 6.1.1.a" aria-label="Copy heading and permalink for Task 6.1.1.a">🔗</a></div></article><article class="task exercise-like" id="ws-posets-antichain-partitioning-2-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ws-posets-antichain-partitioning-2-2-1-1">What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?<div class="autopermalink" data-description="Paragraph"><a href="#ws-posets-antichain-partitioning-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.1.1.b"><a href="#ws-posets-antichain-partitioning-2-2" title="Copy heading and permalink for Task 6.1.1.b" aria-label="Copy heading and permalink for Task 6.1.1.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 6.1.1"><a href="#ws-posets-antichain-partitioning-2" title="Copy heading and permalink for Activity 6.1.1" aria-label="Copy heading and permalink for Activity 6.1.1">🔗</a></div></article><div class="sidebyside"><div class="sbsrow" style="margin-left:6.25%;margin-right:6.25%;grid-template-columns:34.2857142857143% 51.4285714285714%;column-gap:12.5%;">
+<div class="sbspanel sbspanel--top top" style=""><img src="generated/prefigure/poset-antichain-part-10pts.svg" role="img" class="contained" alt="A poset with 10 points"></div>
+<div class="sbspanel sbspanel--top top" style=""><img src="generated/prefigure/poset-antichain-part-25pts.svg" role="img" class="contained" alt="A poset with 25 points"></div>
+</div></div>
+<div class="autopermalink" data-description="Worksheet 6.1: Antichain Partitioning"><a href="#ws-posets-antichain-partitioning" title="Copy heading and permalink for Worksheet 6.1: Antichain Partitioning" aria-label="Copy heading and permalink for Worksheet 6.1: Antichain Partitioning">🔗</a></div></section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appcomb-notes-3-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ws-posets.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-posets-subset-lattice.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

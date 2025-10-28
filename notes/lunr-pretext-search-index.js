@@ -402,24 +402,60 @@ var ptx_lunr_docs = [
   "url": "notes-posets-3.html",
   "type": "Handout",
   "number": "6.2",
+  "title": "Antichain and Chain Partitioning",
+  "body": " Antichain and Chain Partitioning    Duals, Cover Graphs, and Comparability Graphs    Dual of is denoted   Comparability Graph    Cover Graph  Incomparability Graph    Bob's Claims:   Only linear orders have paths as cover graphs.    A poset and its dual have the same cover graph and the same comparability graph.    Any two posets with the same cover graph have the same height and the same width.    Any two posets with the same comparability graph have the same height and the same width.       Use the small pieces of paper to fill in the grid. Every row in the Poset column will contain exactly one poset term. You will use the rest of the pieces of paper to fill in the Comparability Graph and Incomparability Graph columns as best as you can. It is possible that some squares in those columns will be blank or that some will contain more than one piece of paper. You will use all the pieces of paper, however!        Height and Antichain Partitioning   Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.         A small poset      a  b  c  d  e  f  g            Handout       Chain Partitioning and Width  Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?   Dilworths Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with          "
+},
+{
+  "id": "notes-posets-3-2-1-4",
+  "level": "2",
+  "url": "notes-posets-3.html#notes-posets-3-2-1-4",
+  "type": "Activity",
+  "number": "6.2.1",
+  "title": "",
+  "body": "  Use the small pieces of paper to fill in the grid. Every row in the Poset column will contain exactly one poset term. You will use the rest of the pieces of paper to fill in the Comparability Graph and Incomparability Graph columns as best as you can. It is possible that some squares in those columns will be blank or that some will contain more than one piece of paper. You will use all the pieces of paper, however!   "
+},
+{
+  "id": "thm-dual-dilworth",
+  "level": "2",
+  "url": "notes-posets-3.html#thm-dual-dilworth",
+  "type": "Theorem",
+  "number": "6.10",
+  "title": "Dual of Dilworth’s Theorem.",
+  "body": " Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.      "
+},
+{
+  "id": "notes-posets-3-4-1-3",
+  "level": "2",
+  "url": "notes-posets-3.html#notes-posets-3-4-1-3",
+  "type": "Theorem",
+  "number": "6.11",
+  "title": "Dilworths Theorem.",
+  "body": " Dilworths Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with    "
+},
+{
+  "id": "notes-posets-4",
+  "level": "1",
+  "url": "notes-posets-4.html",
+  "type": "Handout",
+  "number": "6.3",
   "title": "Linear Extensions and the Subset Lattice",
   "body": " Linear Extensions and the Subset Lattice   Linear Extensions    Let be a poset. A total order on is a linear extension of provided that if in , then in .     Intuition : A linear extension can’t change the order from , but it can put incomparable elements in either way.   Why care?     When intersecting linear orders to form a poset, the linear orders are linear extensions of the resulting poset.    Sorting problems can be viewed as trying to find a particular linear extension of a poset.    Finding a linear extension of a poset is a common need. Lots of settings require ranked lists. Can we make them fair(-ish)?      The Subset Lattice    Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .     Peer instruction questions 1 3.    "
 },
 {
-  "id": "notes-posets-3-2-2",
+  "id": "notes-posets-4-2-2",
   "level": "2",
-  "url": "notes-posets-3.html#notes-posets-3-2-2",
+  "url": "notes-posets-4.html#notes-posets-4-2-2",
   "type": "Definition",
-  "number": "6.10",
+  "number": "6.12",
   "title": "",
   "body": "  Let be a poset. A total order on is a linear extension of provided that if in , then in .   "
 },
 {
-  "id": "notes-posets-3-3-2",
+  "id": "notes-posets-4-3-2",
   "level": "2",
-  "url": "notes-posets-3.html#notes-posets-3-3-2",
+  "url": "notes-posets-4.html#notes-posets-4-3-2",
   "type": "Definition",
-  "number": "6.11",
+  "number": "6.13",
   "title": "",
   "body": "  Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .   "
 }
