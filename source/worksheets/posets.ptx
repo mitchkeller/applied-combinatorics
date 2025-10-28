@@ -1,8 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ws-posets" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Posets</title>
+  
+    <!-- </page> -->
+     
+  <title>Partially Ordered Sets</title>
 
+  <worksheet xml:id="ws-posets-antichain-partitioning">
+    <title>Antichain Partitioning</title>
+    
+    
+    <activity>
+      <task>
+        <statement>
+          <p>
+            Use the algorithm to find the height <m>h</m>, a maximum chain, and a partition into <m>h</m> antichains for each of the posets below.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?
+          </p>
+        </statement>
+      </task> 
+    </activity>
+    <sidebyside widths="30% 45%">
+      <image width="30%">
+        <shortdescription>A poset with 10 points</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="poset-antichain-part-10pts">
+          <diagram dimensions="(200,300)" margins="15">
+            <coordinates bbox="(0,0,2,4)">
+              <network node-fill="#ccc" labels="yes" scale="0.8">
+                <node at="1" p="(1.7,3)" edges="[2,3,10]"/>
+                <node at="2" p="(0.1,1.5)" edges="[7]"/>
+                <node at="3" p="(1.5,3.85)" edges="[5]"/>
+                <node at="4" p="(1.9,2.6)" edges="[5,6,7]"/>
+                <node at="5" p="(1,3)" edges="[9]"/>
+                <node at="6" p="(0.75,0.3)"/>
+                <node at="7" p="(1.75,0.3)"/>
+                <node at="8" p="(0.15,2.4)" edges="[9,10]"/>
+                <node at="9" p="(0.6,3.8)"/>
+                <node at="10" p="(1,1.8)"/>
+              </network>
+            </coordinates>
+          </diagram>        
+        </prefigure>
+      </image>
+      <image width="45%">
+        <shortdescription>A poset with 25 points</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="poset-antichain-part-25pts">
+          <diagram dimensions="(300,600)" margins="15">
+            <coordinates bbox="(0,0,4,7)">
+              <network node-fill="#ccc" labels="yes" scale="0.8">
+                <node at="1" p="(2,5.5)" edges="[4,7,14,23]"/>
+                <node at="2" p="(0.05,4.2)" edges="[3,13]"/>
+                <node at="3" p="(2.5,2)" edges="[9,18,25]"/>
+                <node at="4" p="(0.8,6.8)" edges="[10,13]"/>
+                <node at="5" p="(3.5,5.7)" edges="[6,7,15]"/>
+                <node at="6" p="(3.8,6.7)" edges="[12]"/>
+                <node at="7" p="(1.9,4.5)" edges="[10,11]"/>
+                <node at="8" p="(0.8,4.1)" edges="[13,14]"/>
+                <node at="9" p="(1.7,3.5)" edges="[11,13,14,22,17]"/>
+                <node at="10" p="(0.3,6)" edges="[23]"/>
+                <node at="11" p="(1.42,5.64)" edges="[]"/>
+                <node at="12" p="(3.8,3.5)" edges="[17]"/>
+                <node at="13" p="(0.7,4.9)" edges="[]"/>
+                <node at="14" p="(0.65,3.1)" edges="[18,24]"/>
+                <node at="15" p="(3.5,4.7)" edges="[22,23]"/>
+                <node at="16" p="(0.75,1.2)" edges="[24,25]"/>
+                <node at="17" p="(3.5,1.3)" edges="[19,20]"/>
+                <node at="18" p="(2,0.55)" edges="[20]"/>
+                <node at="19" p="(3.8,0.35)" edges="[24]"/>
+                <node at="20" p="(3.3,2.3)" edges="[21]"/>
+                <node at="21" p="(3.2,3.3)" edges="[22,24]"/>
+                <node at="22" p="(3.3,4)" edges="[]"/>
+                <node at="23" p="(2.5,6.8)" edges="[]"/>
+                <node at="24" p="(.6,2.1)" edges="[]"/>
+                <node at="25" p="(0.55,0.2)" edges="[]"/>
+              </network>
+            </coordinates>
+          </diagram>        
+        </prefigure>
+      </image>
+    </sidebyside>
+  </worksheet>
   <worksheet xml:id="ws-posets-subset-lattice">
     <title>Width of the Subset Lattice</title>
     <!-- <page> -->
@@ -361,8 +444,5 @@
             </p>
           </solution>
         </exercise>
-      
-    <!-- </page> -->
-     
-  </worksheet>
+      </worksheet>
 </chapter>

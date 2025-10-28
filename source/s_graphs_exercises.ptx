@@ -260,6 +260,7 @@
         <solution>
             <image>
                 <shortdescription>An interval graph</shortdescription>
+                <!-- TODO Change the seed to get a better layout, as right now the edge cl isn't really visible. -->
                 <prefigure xmlns="https://prefigure.org" label="graphs-ex-interval-graph-soln">
                     <diagram dimensions="(300,300)" margins="5">
                         <definition>graph={1:[2],2:[3],3:[4,5],4:[5,6,7],5:[6,7],6:[7,10],
