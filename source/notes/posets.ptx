@@ -310,4 +310,62 @@
     </paragraphs>
   </page>
   </handout>
+  <handout>
+    <title>Linear Extensions and the Subset Lattice</title>
+    <paragraphs>
+      <title>Linear Extensions</title>
+      <definition>
+        <statement>
+          <p>
+            Let <m>\mbf{P}=(X,P')</m> be a poset.
+            A total order <m>L</m> on <m>X</m> is a <em>linear extension</em> of <m>P'</m> provided that if <m>x &#x3C; y</m> in <m>P'</m>, then <m>x &#x3C; y</m> in <m>L</m>.
+          </p>
+        </statement>
+      </definition>
+      
+      <p workspace="4cm">
+        <alert>Intuition</alert>: A linear extension can’t change the order from <m>P'</m>, but it can put incomparable elements in either way.
+      </p>
+      
+      <p>
+        <alert>Why care?</alert>
+      </p>
+      
+      <ul>
+        <li>
+          <p>
+            When intersecting linear orders to form a poset, the linear orders are linear extensions of the resulting poset.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Sorting problems can be viewed as trying to find a particular linear extension of a poset.
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Finding a linear extension of a poset is a common need.
+            Lots of settings require ranked lists.
+            Can we make them fair(-ish)?
+          </p>
+        </li>
+      </ul>
+    </paragraphs>
+    <paragraphs>
+      <title>The Subset Lattice</title>
+      <definition workspace="4cm">
+        <statement>
+          <p>
+            Let <m>n</m> be a positive integer.
+            The <em>subset lattice</em> <m>\bftwo^{n}</m> is the poset <m>(X,P')</m> where <m>X</m> is the set of all subsets of <m>\{1,2,\dots,n\}</m> and <m>S\leq T</m> in <m>P'</m> if and only if <m>S\subseteq T</m>.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        <alert>Peer instruction questions 1<ndash/>3.</alert>
+      </p>
+    </paragraphs>
+  </handout>
 </chapter>

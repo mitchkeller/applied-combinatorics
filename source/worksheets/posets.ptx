@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ws-posets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Posets</title>
+
+  <worksheet xml:id="ws-posets-subset-lattice">
+    <title>Width of the Subset Lattice</title>
+    <!-- <page> -->
+      <exercise workspace="1.5in">
+        <statement>
+          <p>
+            Below are diagrams for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m>.
+            (Without any of the points labeled with corresponding sets.) In the space provided, draw <m>\mbf{2}^{1}</m>, <m>\mbf{2}^{2}</m>, and <m>\mbf{2}^{3}</m>.
+            (Label the sets, too.
+            You can just write “<m>12</m>” instead of “<m>\{1,2\}</m>”.) Label a few of the points in the diagrams provided for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m> to make sure you understand how to do it.
+          </p>
+        </statement>
+      </exercise>
+      <image width="40%">
+        <shortdescription>The lattice of subsets of a 4-element set</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="subset-lattice-4">
+          <diagram dimensions="(300,240)" margins="15">
+            <definition>graph={0:[1,2,3,4],1:[12,13,14],2:[12,23,24],3:[13,23,34],
+              4:[14,24,34],12:[123,124],23:[123,234],24:[124,234],34:[134,234],13:[123,134],
+              14:[124,134],
+              1234:[123,124,134,234]}</definition>
+              <coordinates bbox="(1,1,6,5)">
+                <network directed="no" graph="graph" arrows="end"
+                scale="0.8" node-fill="#ccc" node-stroke="black" labels="no">
+                <node at="0" p="(2,1)"/>
+                <node at="1" p="(1,2)"/>
+                <node at="2" p="(2,2)"/>
+                <node at="3" p="(3,2)"/>
+                <node at="4" p="(5,2)"/>
+                <node at="12" p="(1,3)"/>
+                <node at="13" p="(2,3)"/>
+                <node at="14" p="(4,3)"/>
+                <node at="23" p="(3,3)"/>
+                <node at="24" p="(5,3)"/>
+                <node at="34" p="(6,3)"/>
+                <node at="123" p="(2,4)"/>
+                <node at="124" p="(4,4)"/>
+                <node at="134" p="(5,4)"/>
+                <node at="234" p="(6,4)"/>
+                <node at="1234" p="(5,5)"/>
+                
+              </network>
+            </coordinates>
+          </diagram>
+        </prefigure>
+      </image>
+      <image width="80%">
+        <shortdescription>The lattice of subsets of a 5-element set</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="subset-lattice-5">
+          <diagram dimensions="(600,280)" margins="15">
+            <definition>graph={0:[1,2,3,4,5],1:[12,13,14,15],2:[12,23,24,25],3:[13,23,34,35],
+              4:[14,24,34,45],12:[123,124,125],23:[123,234,235],24:[124,234,245],34:[134,234,345],
+              13:[123,134,135],
+              14:[124,134,145],
+              1234:[123,124,134,234,12345],
+              123:[1235],124:[1245],234:[2345],134:[1345],
+              5:[15,25,35,45],15:[125,135,145],25:[125,235,245],35:[135,235,345],
+              45:[145,245,345],125:[1235,1245],235:[1235,2345],245:[1245,2345],345:[1345,2345],
+              135:[1235,1345],
+              145:[1245,1345],
+              12345:[1235,1245,1345,2345]}</definition>
+              <coordinates bbox="(1,1,12,6)">
+                <network directed="no" graph="graph" arrows="end"
+                scale="0.8" node-fill="#ccc" node-stroke="black" labels="no">
+                <node at="0" p="(2,1)"/>
+                <node at="1" p="(1,2)"/>
+                <node at="2" p="(2,2)"/>
+                <node at="3" p="(3,2)"/>
+                <node at="4" p="(5,2)"/>
+                <node at="12" p="(1,3)"/>
+                <node at="13" p="(2,3)"/>
+                <node at="14" p="(4,3)"/>
+                <node at="23" p="(3,3)"/>
+                <node at="24" p="(5,3)"/>
+                <node at="34" p="(6,3)"/>
+                <node at="123" p="(2,4)"/>
+                <node at="124" p="(4,4)"/>
+                <node at="134" p="(5,4)"/>
+                <node at="234" p="(6,4)"/>
+                <node at="1234" p="(5,5)"/>
+                <node at="5" p="(8,2)"/>
+                <node at="15" p="(7,3)"/>
+                <node at="25" p="(8,3)"/>
+                <node at="35" p="(9,3)"/>
+                <node at="45" p="(11,3)"/>
+                <node at="125" p="(7,4)"/>
+                <node at="135" p="(8,4)"/>
+                <node at="145" p="(10,4)"/>
+                <node at="235" p="(9,4)"/>
+                <node at="245" p="(11,4)"/>
+                <node at="345" p="(12,4)"/>
+                <node at="1235" p="(8,5)"/>
+                <node at="1245" p="(10,5)"/>
+                <node at="1345" p="(11,5)"/>
+                <node at="2345" p="(12,5)"/>
+                <node at="12345" p="(11,6)"/>
+              </network>
+            </coordinates>
+          </diagram>
+        </prefigure>
+      </image>
+      <exercise>
+        <introduction>
+          <p>
+            Let's investigate the width of the subset lattice.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              For <m>n=1,2,3,4</m>, find the width <m>w</m> of <m>\mbf{2}^{n}</m> and a partition into <m>w</m> chains.
+            </p>
+              <tabular>
+                <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
+                <row bottom="minor">
+                  <cell> <m>n</m> </cell>
+                  <cell>1</cell>
+                  <cell>2</cell>
+                  <cell>3</cell>
+                  <cell>4</cell>
+                  <cell>5</cell>
+                </row>
+                <row>
+                  <cell> <m>\width(\mathbf{2}^{n})</m> </cell>
+                  <cell><nbsp/><nbsp/><nbsp/><nbsp/> </cell>
+                  <cell><nbsp/><nbsp/><nbsp/><nbsp/> </cell>
+                  <cell><nbsp/><nbsp/><nbsp/><nbsp/> </cell>
+                  <cell><nbsp/><nbsp/><nbsp/><nbsp/> </cell>
+                  <cell><nbsp/><nbsp/><nbsp/><nbsp/> </cell>
+                </row>
+              </tabular>
+            
+          </statement>
+          <solution component="sublat-width-soln">
+            <tabular>
+              <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
+              <row bottom="minor">
+                <cell> <m>n</m> </cell>
+                <cell>1</cell>
+                <cell>2</cell>
+                <cell>3</cell>
+                <cell>4</cell>
+              </row>
+              
+              <row>
+                <cell> <m>\width(\mathbf{2}^{n})</m> </cell>
+                <cell>1</cell>
+                <cell>2</cell>
+                <cell>3</cell>
+                <cell>6</cell>
+              </row>
+            </tabular>
+          </solution>
+        </task>
+        <task workspace="1.25cm">
+          <statement>
+            <p>
+              Develop a conjecture about the width of <m>\mbf{2}^{n}</m> for general <m>n</m>.
+            </p>
+          </statement>
+          <solution component="sublat-width-soln">
+            <p>
+              It looks like the width of <m>\mbf{2}^{n}</m> is the largest binomial coefficient <m>C(n,k)</m>, and it appears this happens when <m>k</m> is around <m>n/2</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+      <exercise workspace="0.5in">
+        <statement>
+          <p>
+            To be able to verify our conjecture, let’s think about a seemingly unrelated question: counting maximal chains in <m>\mbf{2}^{n}</m>. How many maximal chains are there in <m>\mbf{2}^{n}</m>? <em>Hint</em>: Start with <m>n=1,2,3</m>.
+              Think about the number of choices of the “next” set when forming a maximal chain.
+          </p>
+        </statement>
+        <!-- <hint>
+            <p>
+              Start with <m>n=1,2,3</m>.
+              Think about the number of choices of the “next” set when forming a maximal chain.
+            </p>
+          </hint> -->
+        
+          
+          <solution component="sublat-width-soln">
+            <p>
+              There are <m>n!</m> maximal chains, since you can start from the empty set and add elements one-by-one in <m>n!</m> orders until you get to <m>[n]</m>.
+            </p>
+          </solution>
+        </exercise>
+        <exercise>
+          <introduction>
+            <p>
+              Now let’s think about maximal chains through particular sets.
+              Look at <m>\mbf{2}^{5}</m>.
+            </p>
+          </introduction>
+          <task workspace="0.5in">
+            <statement>
+              <p>
+                How many maximal chains pass through the set <m>\{2,4\}</m>?
+              </p>
+            </statement>
+            <solution component="sublat-width-soln">
+              <p>
+                <m>2!3! = 12</m> since we have <m>2!</m> in which to add <m>2</m> and <m>4</m> and then <m>3!</m> orders in which to add the remaining three elements.
+              </p>
+            </solution>
+          </task>
+          <task workspace="0.5in">
+            <statement>
+              <p>
+                How many maximal chains pass through the set <m>\{1,3,4\}</m>?
+              </p>
+            </statement>
+            <solution component="sublat-width-soln">
+              <p>
+                Here we have <m>3!</m> ways to add the elements <m>1,3,4</m> and then <m>2!</m> ways to add <m>2</m> and <m>5</m>.
+                Thus, there are <m>3!2!</m> maximal chains through this set.
+              </p>
+            </solution>
+          </task>
+        </exercise>
+          <exercise>
+            <introduction>
+              <p>
+                Now think about <m>\mbf{2}^{n}</m>.
+              </p>
+            </introduction>
+            <task workspace="0.5in">
+              <statement>
+                <p>
+                  How many maximal chains pass through the set <m>\{2,4\}</m>?
+                </p>
+              </statement>
+              <solution component="sublat-width-soln">
+                <p>
+                  <m>2!(n-2)!</m> since we have <m>2!</m> in which to add <m>2</m> and <m>4</m> and then <m>(n-2)!</m> orders in which to add the remaining <m>n-2</m> elements.
+                </p>
+              </solution>
+            </task>
+            <task workspace="0.5in">
+              <statement>
+                <p>
+                  How many maximal chains pass through the set <m>\{1,3,4\}</m>?
+                </p>
+              </statement>
+              <solution component="sublat-width-soln">
+                <p>
+                  Here we have <m>3!</m> ways to add the elements <m>1,3,4</m> and then <m>(n-3)!</m> ways to add the remaining <m>n-3</m> elements.
+                  Thus, there are <m>3!(n-3)!</m> maximal chains through this set.
+                </p>
+              </solution>
+            </task>
+            <task workspace="0.5in">
+              <statement>
+                <p>
+                  How many maximal chains pass through a set <m>S</m> with <m>|S|=k</m>?
+                </p>
+              </statement>
+              <solution component="sublat-width-soln">
+                <p>
+                  Here we have <m>k!</m> ways to add the <m>k</m> elements that are in the set and then <m>(n-k)!</m> ways to add the remaining <m>n-k</m> elements.
+                  Thus, there are <m>k!(n-k)!</m> maximal chains through this set.
+                </p>
+              </solution>
+            </task>
+          </exercise>
+        
+        
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Now let’s see how we can use counting maximal chains through a set to get an upper bound on <m>\width(\mbf{2}^{n})</m>.
+          </p>
+          <p>
+              Fix an antichain <m>\mc{A}=\{S_{1},S_{2},\dots,S_{t}\}</m> with <m>|S_{i}|=s_{i}</m>.
+              How many maximal chains pass through <em>some</em> set in <m>\mc{A}</m>? <em>Hint</em>: Express your answer as a summation.
+            </p>
+        </statement>
+          <!-- <hint>
+            <p>
+              Express your answer as a summation.
+            </p>
+          </hint> -->
+          <solution component="sublat-width-soln">
+            <p>
+              We know that the number of maximal chains passing through <m>S_{i}</m> is <m>s_{i}!(n-s_{i})!</m>, so then we add up and get
+              <me>
+                \sum_{i=1}^{t} s_{i}!(n-s_{i})!.
+              </me>
+            </p>
+          </solution>
+        </exercise>
+        <exercise workspace="0.5in">
+          <statement>
+            <p>
+              Can a maximal chain <m>\mc{C}</m> pass through two different sets <m>S_{i},S_{j}\in\mc{A}</m> with <m>i\neq j</m>? What does this tell you that the sum from the previous question must be less than or equal to?
+            </p>
+          </statement>
+          <solution component="sublat-width-soln">
+            <p>
+              <m>n!</m>
+            </p>
+          </solution>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            <p>
+              As a result of the previous step, you should have an inequality with a summation on the small side and a factorial on the big side.
+              Divide the factorial over (and into the summation) so that you have a summation less than or equal to <m>1</m>.
+              Rewrite your summation so that it is a sum of reciprocals of binomial coefficients.
+            </p>
+          </statement>
+          <solution component="sublat-width-soln">
+            <p>
+              <me>
+                \sum_{i=1}^{t} \frac{1}{\binom{n}{s_i}}\leq 1
+              </me>
+            </p>
+          </solution>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            <p>
+              We will establish a formula for <m>w=\width(\mbf{2}^{n})</m> by showing that <m>w</m> is bounded above and below by the same quantity.
+              Explain why <m>w\geq C(n,k)</m> for each possible value of <m>k</m>.
+              What is the largest lower bound that you get for <m>w</m> in this way?
+            </p>
+          </statement>
+          <solution component="sublat-width-soln">
+            <p>
+              Since the <m>k</m>-element subsets of <m>[n]</m> each form an antichain and there are <m>C(n,k)</m> <m>k</m>-element subsets of <m>[n]</m>, we know that <m>w\geq C(n,k)</m> for all <m>k</m>.
+              The largest possible bound is thus the largest binomial coefficient, which happens when <m>k=\lceil n/2\rceil</m>.
+              (Because of the symmetry of binomial coefficients, when <m>n</m> is odd, we have the same value if <m>k = \lfloor n/2\rfloor</m>.)
+            </p>
+          </solution>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            <p>
+              Let us now return to the inequality involving a summation and <m>1</m> that you obtained earlier.
+              To find an upper bound for <m>w</m>, we assume that <m>\mc{A}</m> is a maximum antichain so that <m>t = w=\width(\mbf{2}^{n})</m>.
+              Also assume that <m>s_{i} = \lceil n/2\rceil</m> for all <m>i</m>.
+              We can do this since the inequality is true for any antichain.
+              Explain how this lets you eliminate the summation from your inequality and then give an upper bound for <m>\width(\mbf{2}^{n})</m>.
+            </p>
+          </statement>
+          <solution component="sublat-width-soln">
+            <p>
+              When all the terms have the same value, the inequality can be rewritten as
+              <me>
+                \frac{w}{\binom{n}{\left\lceil \frac{n}{2}\right\rceil}}\leq 1,
+              </me>
+              which implies <m>w\leq \binom{n}{\lceil n/2\rceil}</m>.
+              We now have matching upper and lower bounds for the width, since we know there is an antichain with <m>\binom{n}{\lceil n/2\rceil}</m> elements.
+              Thus, this is the width.
+            </p>
+          </solution>
+        </exercise>
+      
+    <!-- </page> -->
+     
+  </worksheet>
+</chapter>
