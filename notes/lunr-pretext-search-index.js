@@ -458,6 +458,78 @@ var ptx_lunr_docs = [
   "number": "6.13",
   "title": "",
   "body": "  Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .   "
+},
+{
+  "id": "notes-posets-5",
+  "level": "1",
+  "url": "notes-posets-5.html",
+  "type": "Handout",
+  "number": "6.4",
+  "title": "Interval Orders",
+  "body": " Interval Orders      An interval order is a special type of poset .    Each is associated with an interval      in if and only if     ’s interval stops     ’s interval is completely       We call the collection of intervals an interval representation of .     Sketch of an example, then peer instruction questions 1 2 and handout activity .    The poset below is denoted , which we read as two plus two . Draw an interval representation for this poset or explain why it is not possible.    Two disjoint chains      x  y  z  w             There are four incomparabilities we must check when confirming a    Peer instruction question 3    Fishburn's Theorem   A poset is an interval order if and only if it does not contain as a subposet.     Screenshot of the title portion of Fishburn's paper  Intransitive Indifference with Unequal Indifference Intervals by Peter C. Fishburn of the Research Analysis Corporation, McLean, Virginia. Masthead indicates Journal of Mathematical Psychology , volume 7, pages 144 149 (1970).      Can we find a representation?    An interval order with 10 points                         For a poset , we define the following notation:   Down-set (or down set): .    Up-set (or up set): .     : the set of all down-sets.     : the set of all up-sets.       Find the down-sets and as well as the up-sets , , , and for the poset shown below.    An interval order with 10 points                             Let be a poset. Then the following are equivalent:    is an interval order.    Any two distinct sets in are ordered by inclusion.    Any two distinct sets in are ordered by inclusion.         If is an interval order, then .        Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.        Peer instruction questions 4 5.    "
+},
+{
+  "id": "notes-posets-5-2-1",
+  "level": "2",
+  "url": "notes-posets-5.html#notes-posets-5-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "interval order interval representation "
+},
+{
+  "id": "notes-posets-5-2-3",
+  "level": "2",
+  "url": "notes-posets-5.html#notes-posets-5-2-3",
+  "type": "Activity",
+  "number": "6.4.1",
+  "title": "",
+  "body": "  The poset below is denoted , which we read as two plus two . Draw an interval representation for this poset or explain why it is not possible.    Two disjoint chains      x  y  z  w            "
+},
+{
+  "id": "thm-fishburn",
+  "level": "2",
+  "url": "notes-posets-5.html#thm-fishburn",
+  "type": "Theorem",
+  "number": "6.14",
+  "title": "Fishburn’s Theorem.",
+  "body": " Fishburn's Theorem   A poset is an interval order if and only if it does not contain as a subposet.   "
+},
+{
+  "id": "notes-posets-5-3-1-4",
+  "level": "2",
+  "url": "notes-posets-5.html#notes-posets-5-3-1-4",
+  "type": "Activity",
+  "number": "6.4.2",
+  "title": "",
+  "body": "  Find the down-sets and as well as the up-sets , , , and for the poset shown below.    An interval order with 10 points                          "
+},
+{
+  "id": "notes-posets-5-3-1-5",
+  "level": "2",
+  "url": "notes-posets-5.html#notes-posets-5-3-1-5",
+  "type": "Proposition",
+  "number": "6.15",
+  "title": "",
+  "body": "  Let be a poset. Then the following are equivalent:    is an interval order.    Any two distinct sets in are ordered by inclusion.    Any two distinct sets in are ordered by inclusion.      "
+},
+{
+  "id": "notes-posets-5-3-1-6",
+  "level": "2",
+  "url": "notes-posets-5.html#notes-posets-5-3-1-6",
+  "type": "Proposition",
+  "number": "6.16",
+  "title": "",
+  "body": "  If is an interval order, then .   "
+},
+{
+  "id": "notes-posets-5-4-1",
+  "level": "2",
+  "url": "notes-posets-5.html#notes-posets-5-4-1",
+  "type": "Algorithm",
+  "number": "6.17",
+  "title": "Poset to Interval Representation.",
+  "body": " Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.      "
 }
 ]
 
