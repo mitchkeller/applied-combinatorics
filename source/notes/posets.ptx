@@ -804,5 +804,257 @@
     </p>
   </page>
   </handout>
-  
+  <handout>
+    <title>Algorithms for Interval Orders</title>
+    <page>
+    <algorithm>
+      <title>Poset to Interval Representation</title>
+      
+      
+      <statement>
+        <p>
+          Input: An interval order <m>\mbf{P}=(X,P')</m>.
+          <ol marker="1.">
+            <li>
+              <p>
+                Determine <m>D(x)</m> for each <m>x\in X</m>.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Write down <m>\mc{D}</m> as <m>\{\} = D_{1} \subsetneq D_{2}\subsetneq \cdots\subsetneq D_{d}</m>.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Determine <m>U(x)</m> for each <m>x\in X</m>.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Write down <m>\mc{U}</m> as <m>U_{1} \supsetneq U_{2}\supsetneq \cdots\supsetneq U_{d} = \{\}</m>.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                For each <m>x\in X</m>, find <m>D(x) = D_{i}</m> and <m>U(x)=U_{j}</m>.
+                Then let <m>I(x)=[i,j]</m>.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                (Optional unless instructed) Draw the interval representation.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </algorithm>
+    <p>
+      <alert>Peer instruction question 1.</alert>
+    </p>
+    <p>
+      This algorithm has benefits and drawbacks:
+      <dl>
+        <li>
+          <title>Benefit</title>
+          <p>
+            Uses the smallest number of endpoints possible (because <m>\mc{D} = \mc{U}</m>).
+          </p>
+        </li>
+        <li>
+          <title>Drawback</title>
+          <p>
+            Creates lots of degenerate intervals of the form <m>[3,3]</m>.
+          </p>
+        </li>
+      </dl>
+    </p>
+    <activity>
+      <task>
+        <statement>
+        <p>
+          Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).
+        </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are <m>d</m> down sets (and thus <m>d</m> up sets).
+            If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?
+          </p>
+        </statement>
+      </task>
+    </activity>
+  </page>
+  <page>
+    <paragraphs>
+      <title>Greedy or First Fit Algorithms</title>
+      <p>
+          <ul>
+  <li>
+    <p>
+      The simplest algorithms for many problems are “greedy” in the sense that they look at <fillin characters="15" /> in some predetermined order and assign them to something by trying to use as few <fillin characters="15" /> as possible at the moment.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      There’s usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      First Fit can often succeed if there’s a “natural” order to use.
+    </p>
+  </li>
+</ul>
+      </p>
+      <algorithm xml:id="alg-first-fit-chain">
+        <title>First Fit for Chain Partitioning Interval Orders</title>
+        
+        <statement>
+          <p>
+            <ol marker="1.">
+              <li>
+                <p>
+                  Fix an order in which intervals will be considered.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Assign intervals to chains <m>C_{1},C_{2},\dots</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  When considering a new interval, determine which chains it can be added to.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Add it to chain with smallest subscript.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  If cannot add to any existing chain, make a new one with subscript as small as possible.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </algorithm>
+      <p workspace="5cm">
+        <alert>Peer instruction question 2</alert>
+      </p>
+      </paragraphs>
+    </page>
+    <page>
+      <algorithm xml:id="alg-first-fit-optimal">
+        <title>Optimal First Fit for Chain Partitioning Interval Orders</title>
+        
+        
+        <statement>
+          <p>
+             <ol marker="1.">
+              <li>
+                <p>
+                  Consider the intervals in order by left endpoint.
+                  <ul>
+                    <li>
+                      <p>
+                        Break ties by choosing interval with smallest label.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Assign intervals to chains <m>C_{1},C_{2},\dots</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  When considering a new interval, determine which chains it can be added to.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Add it to chain with smallest subscript.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  If cannot add to any existing chain, make a new one with subscript as small as possible.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </algorithm>
+      <p>
+        <alert>Peer instruction question 3.</alert>
+      </p>
+      <example>
+        <statement>
+          <p>
+            Let's use First Fit (optimally) to find a chain partition of this interval order and the width of the interval order.
+          </p>
+          <image label="notes-posets_dilworth-intord" width="75%">
+            <description>An interval order</description>
+            <latex-image>
+              \begin{tikzpicture}
+              \draw[{[-]}, thick] (1,0.475) -- node[above] {$e$} (3,0.475);
+              \draw[{[-]}, thick] (5,0.475) -- node[above] {$f$} (6,0.475);
+              \draw[{[-]}, thick] (7,0.475) -- node[above] {$g$} (8,0.475);
+    
+              \draw[{[-]}, thick] (0,0) -- node[above] {$h$} (1.2,0);
+              \draw[{[-]}, thick] (1.85,0) -- node[above] {$i$} (3,0);
+              \draw[{[-]}, thick] (4,0) -- node[above] {$j$} (5,0);
+              \draw[{[-]}, thick] (8,0) -- node[above] {$k$} (9,0);
+    
+              \draw[{[-]}, thick] (0.25,0.95) -- node[above] {$l$} (2,0.95);
+              \draw[{[-]}, thick] (2.75,0.95) -- node[above] {$m$} (4,0.95);
+              \draw[{[-]}, thick] (6,0.95) -- node[above] {$n$} (8,0.95);
+              
+    
+              \draw[{[-]}, thick] (-0.5,1.425) -- node[above] {$o$} (3,1.425);
+              \draw[{[-]}, thick] (5,1.425) -- node[above] {$p$} (7,1.425);
+    
+              \draw[{[-]}, thick] (1.75,1.9) -- node[above] {$q$} (4,1.9);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+          <p workspace="5cm">
+            <nbsp/>
+          </p>
+        </statement>
+      </example>
+      <activity>
+        <statement>
+          <p>
+              Use First Fit to find the width of the interval representations given on your handout as well as a partition into as few chains as possible.
+          </p>
+        </statement>
+      </activity>
+    </page>
+  </handout>
+    
 </chapter>
