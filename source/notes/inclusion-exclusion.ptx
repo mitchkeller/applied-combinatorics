@@ -1,0 +1,193 @@
+<chapter xml:id="notes-inclusion-exclusion" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Principle of Inclusion-Exclusion</title>
+  <handout>
+    <title>Introduction; Counting Surjections</title>
+    <page>
+      <paragraphs>
+        <title>Overcounting. No, undercounting. Wait, overcounting! Hmm, undercounting?</title>
+        <example>
+          <title>Revisiting an Old Problem</title>
+          <statement>
+            <p workspace="5cm">
+              How many lattice paths from <m>(0,0)</m> to <m>(6,7)</m> do not pass through <m>(2,3)</m> or <m>(3,5)</m>?
+            </p>
+          </statement>
+        </example>
+        <p>
+          We need to introduce some notation:
+          <ul>
+            <li>
+              <p>
+                A <term>property</term> <m>P_{i}</m> is something that an element of a set either satisfies or does not satisfy.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                If <m>\mc{P}=\{P_{1},\dots,P_{m}\}</m> is a family of properties and <m>S\subseteq [m]</m>, then <m>N(S)</m> is the number of objects that satisfy <m>P_{i}</m> for every <m>i\in S</m>.
+                <ul>
+                  <li>
+                    <p component="b" workspace="1.5cm">
+                      If <m>S=\{1,2,5\}</m>, then <m>N(S)</m> is the number of objects satisfying 
+                    </p>
+                    <p component="a">
+                      If <m>S=\{1,2,5\}</m>, then <m>N(S)</m> is the number of objects satisfying <m>P_{1}</m>, <m>P_{2}</m>, and <m>P_{5}</m>.
+                      (We don't care about the other <m>P_{i}</m>.)
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+          </ul>
+        </p>
+        <theorem>
+          <title>Principle of Inclusion-Exclusion</title>
+          <statement>
+            <p>
+              Let <m>X</m> be a set and <m>\mathcal{P}=\{P_{1},\dots,P_{m}\}</m> a family of properties.
+              The number of elements of <m>X</m> which satisfy none of the properties in <m>\mathcal{P}</m> is given by
+              <me>
+                \sum_{S\subseteq [m]}(-1)^{|S|}N(S)
+              </me>.
+            </p>
+          </statement>
+        </theorem>     
+        <p>
+          <alert>Peer instruction question 1.</alert>
+        </p>
+        <activity>
+          <introduction>
+            <p>
+              A class of <m>50</m> students was polled to determine the programming languages in which they were proficient.
+            </p>
+            <tabular>
+              <col halign="right"> </col> <col right="minor"> </col> <col halign="right"> </col> <col right="minor"> </col> <col halign="right"> </col> <col> </col>
+              <row bottom="medium">
+                <cell> <m>\#</m> </cell>
+                <cell>Language(s)</cell>
+                <cell> <m>\#</m> </cell>
+                <cell>Language(s)</cell>
+                <cell> <m>\#</m> </cell>
+                <cell>Language(s)</cell>
+              </row>
+
+              <row>
+                <cell>32</cell>
+                <cell>ALGOL60</cell>
+                <cell>12</cell>
+                <cell>ALGOL60 + PL/I</cell>
+                <cell>2</cell>
+                <cell>All 3</cell>
+              </row>
+
+              <row>
+                <cell>17</cell>
+                <cell>PL/I</cell>
+                <cell>17</cell>
+                <cell>ALGOL60 + COBOL</cell>
+                <cell> </cell>
+                <cell> </cell>
+              </row>
+
+              <row>
+                <cell>26</cell>
+                <cell>COBOL</cell>
+                <cell>3</cell>
+                <cell>PL/I + COBOL</cell>
+                <cell> </cell>
+                <cell> </cell>
+              </row>
+            </tabular>
+            <p>
+              How many of the students are proficient in <em>none</em> of the languages? Answer this question by doing the following:
+            </p>
+          </introduction>
+          <task>
+            <statement>
+              <p>
+                Identify properties.
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                 Write out inclusion-exclusion sum.
+              </p>
+            </statement>
+          </task>
+        </activity>
+      </paragraphs>
+    </page>
+    <page>
+      <paragraphs>
+        <title>Counting Surjections</title>
+        <definition>
+          <statement>
+            <p>
+              A function <m>f\colon X\to Y</m> is called a <term>surjection</term> provided that for every <m>y\in Y</m>, there is at least one <m>x\in X</m> such that <m>f(x) = y</m>.
+              Surjections are also called <term>onto functions</term>.
+            </p>
+          </statement>
+        </definition>
+        
+        <definition>
+          <statement>
+            <p>
+              The <term>range</term> of a function <m>f\colon X\to Y</m> is the set
+              <me>
+                \{y\in Y\colon \text{ there is }x\in X\text{ such that }f(x) = y\}
+              </me>.
+            </p>
+          </statement>
+        </definition>
+        <p>
+          <alert>Peer instruction question 2.</alert>
+        </p>
+        <definition>
+          <statement>
+            <p>
+              Let <m>X</m> be the set of all functions from <m>[n]</m> to <m>[m]</m>.
+              We say <m>f\in X</m> satisfies property <m>P_{i}</m> if <m>i</m> is <alert>not</alert> in the <em>range</em> of <m>f</m>.
+            </p>
+          </statement>
+        </definition>
+        <p workspace="3cm">
+          <alert>Peer instruction questions 3<ndash/>4 followed by activity handout.</alert>
+        </p>
+        <theorem>
+          <statement>
+            <p>
+              The number <m>S(n,m)</m> of surjections from <m>[n]</m> to <m>[m]</m> is given by
+              <me>
+                S(n,m) = \sum_{k=0}^{m} (-1)^{k}\binom{m}{k}(m-k)^{n}
+              </me>.
+            </p>
+          </statement>
+        </theorem>
+        <p workspace="3cm">
+          <ul>
+            <li>
+              <p>
+                Formula will be provided to you on Test II and the Final Exam.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                You will not be expected to derive this formula.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                You will be expected to recognize when a counting problem calls for surjections and to use the formula in answers.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </paragraphs>
+    </page>
+  </handout>
+    
+</chapter>
