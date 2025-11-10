@@ -171,6 +171,8 @@
     <statement>
       <p>Define <m>f\colon [8] \to [5]</m> as shown below. Which properties does <m>f</m> satisfy?</p>
       <tabular>
+        <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col>
+        <col right="minor"> </col> <col right="minor"> </col> <col> </col>
         <row bottom="minor">
           <cell><m>x</m></cell>
           <cell>1</cell>
@@ -258,8 +260,13 @@
   </exercise>
   <exercise label="inclusion-exclusion_PI_perm-prop">
     <statement>
+      <p>
+        A permutation <m>\sigma</m> of <m>[n]</m> satisfies property <m>P_{i}</m> if <m>\sigma(i)=i</m>.
+      </p>
       <p>Define <m>\sigma\colon [6]\to [6]</m> as shown in the table below. Which properties does <m>\sigma</m> satisfy?</p>
       <tabular>
+        <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col>
+        <col right="minor"> </col> <col right="minor"> </col> <col> </col>
         <row bottom="minor">
           <cell><m>x</m></cell>
           <cell>1</cell>
