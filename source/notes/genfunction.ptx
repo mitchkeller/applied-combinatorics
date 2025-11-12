@@ -1,0 +1,259 @@
+<chapter xml:id="notes-genfunction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Generating Functions</title>
+  <handout>
+    <title>Introduction to Ordinary Generating Functions</title>
+    <page>
+      <paragraphs>
+        <title>Formal Power Series</title>
+        <p>
+          <ul>
+            <li>
+              <p>
+                Sequence <m>\sigma = \{a_{n}\colon n\geq 0\}</m>
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Formal power series <m>F(x) = \displaystyle\sum_{n=0}^{\infty} a_{n} x^{n}</m>
+              </p>
+            </li>
+            
+            <li>
+              <p component="a">
+                Convergence tests? <alert>Don't care!</alert>
+              </p>
+              <p component="b">
+                Convergence tests?
+              </p>
+            </li>
+            
+            <li>
+              <p component="a">
+                Interval and radius of convergence? <alert>Don't care!</alert>
+              </p>
+              <p component="b">
+                Interval and radius of convergence?
+              </p>
+            </li>
+            
+            <li>
+              <p component="a">
+                Representing as functions? <alert>Whenever possible!</alert>
+                <md>
+                  \sum_{n=0}^\infty x^n = \frac{1}{1-x}\qquad \qquad \sum_{n=0}^\infty x^{3n} = \sum_{n=0}^\infty \left(x^3\right)^n = \frac{1}{1-\left(x^3\right)}
+                </md>
+                <md>
+                  \sum_{n=0}^\infty \frac{x^n}{n!} = e^x
+                </md>
+              </p>
+              <p component="b" workspace="3cm">
+                Representing as functions?
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                In combinatorics, we call formal power series <term>generating functions</term>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <proposition>
+          <statement>
+            <p>
+              Let <m>A(x)=\sum_{n=0}^{\infty} a_{n}x^{n}</m> and <m>B(x)=\sum_{n=0}^{\infty} b_{n}x^{n}</m> be generating functions.
+              Then <m>A(x)B(x)</m> is the generating function of the sequence whose coefficient on <m>x^{n}</m> is given by
+              <me>
+                a_{0}b_{n}+a_{1}b_{n-1}+a_{2}b_{n-2}+\dots+a_{n}b_{0}=\sum_{k=0}^{n} a_{k}b_{n-k}.
+              </me>
+            </p>
+          </statement>
+        </proposition>
+        <p workspace="1cm">
+          <alert>PAINFUL!</alert>
+        </p>
+      </paragraphs>
+      <paragraphs>
+        <title>Handing stuff out again</title>
+        <p>
+          Suppose you wanted to make a really boring “fruit” basket that contains only apples.
+          Let’s also say that you have only <m>6</m> (identical) apples available.
+          For aesthetic reasons, you insist that the basket contain exactly <m>1</m>, <m>3</m>, or <m>4</m> apples.
+        </p>
+        <p>
+          <alert>Peer instruction questions 1<ndash/>2.</alert>
+        </p>
+        <p workspace="1cm">
+          The generating function for the number of fruit baskets with <m>n</m> apples subject to these rules is
+        </p>
+        <p>
+          Now we’ve got oranges, too! We have six (identical) oranges to use in fruit baskets, and we don’t care about aesthetics for oranges.
+          (Still only allow 1, 3, or 4 apples.)
+        </p>
+        
+        <p>
+          How many ways to make a fruit basket with
+          <ul>
+            <li>
+              <p>
+                <m>1</m> piece of fruit?
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                <m>3</m> pieces of fruit?
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                <m>7</m> pieces of fruit?
+              </p>
+            </li>
+          </ul>
+        </p>
+      </paragraphs>
+    </page>
+    <page>
+      <p>
+        <md>
+          <mrow>(x+x^{3}+x^{4})\amp(1+x+x^{2}+x^{3}+x^{4}+x^{5}+x^{6})\\</mrow>
+          <mrow>\amp= x + x^2 + 2 x^3 + 3 x^4 + 3 x^5 + 3 x^6 + 3 x^7 + 2 x^8 + 2 x^9 + x^{10}</mrow>
+        </md>
+      </p>
+      <p workspace="3cm">
+        Suppose we now have bananas to add and that we must place at least one banana in a fruit basket. This introduces which factor? <alert>Peer instruction question 3</alert>
+      </p>
+      <activity workspace="4cm">
+        <statement>
+          <p>
+            Find the generating function in which the coefficient on <m>x^{n}</m> is the number of fruit baskets containing <m>n</m> pieces of fruit subject to the following restrictions:
+            <ol marker="(1)">
+              <li>
+                <p>
+                  Pears: at least <m>3</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Peaches: an even number
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Kiwi: at least <m>2</m> and no more than <m>5</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Grapefruit: either none or at least <m>7</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </activity>
+      <p>
+        <alert>Peer instruction question 4.</alert>
+      </p>
+      <activity workspace="4cm">
+        <statement>
+          <p>
+            Find the generating function in which the coefficient on <m>x^{n}</m> is the number of fruit baskets containing <m>n</m> pieces of fruit subject to the following restrictions:
+            <ol marker="(1)">
+              <li>
+                <p>
+                  Apples: <m>1</m>, <m>3</m>, or <m>4</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Oranges: At most six
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Bananas: At least one
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Peaches: An odd number
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </activity>
+    </page>
+    <page>
+      <activity>
+        <statement>
+          <p>
+            Suppose in the country Combinatoria, they use coins with values 1, 2, 5, 10, 50, and 100.
+            If you would like to write a generating function in which the coefficient on <m>x^{n}</m> is the number of ways to form a collection of coins worth <m>n</m> subject to the restriction that the number of coins of value <m>5</m> is one, three, four, or five, what factor would you introduce into your generating function?
+          </p>
+        </statement>
+      </activity>
+    </page>
+    <page>
+      <paragraphs>
+        <title>My Own Journey with Generating Functions</title>
+        <theorem>
+          <title>Keller and Young 2020</title>
+          
+          <statement>
+            <p>
+              The ordinary generating function for the number of hereditary unit interval orders with <m>n</m> points, <m>h_{n}</m>, is
+              <md>
+                <mrow>
+                  H(x)\amp= \frac{x^{5} - 9x^{4} + 12x^{3} - 6x^{2} + x}{1-x^{5} + 14x^{4} - 29x^{3} + 23x^{2} - 8x}
+                </mrow>
+                <mrow>
+                  \amp= x + 2x^{2}+5x^{3}+14x^{4}+42x^{5}+132x^{6}+428x^{7}+1415x^{8}+\cdots
+                </mrow>
+              </md>
+              and <m>h_{n}</m> is asymptotically <m>0.08346\cdot 3.373133^{n}</m>.
+            </p>
+          </statement>
+        </theorem>
+        <p>
+          <url href="https://oeis.org/A293499">OEIS A293499</url> (<alert>New!</alert>)
+          <me>
+            C_{n} \sim \frac{4^{n}}{n^{3/2}\sqrt{\pi}}
+          </me>
+        </p>
+        <theorem>
+          <title>Keller and Young 2020</title>
+          
+          <statement>
+            <p>
+              The generating function for the number of unit interval orders of dimension at most <m>2</m> with <m>n</m> points, <m>d_{n}</m>, is
+            <md>
+              <mrow>
+                D(x) \amp= \frac{-(5x^{8} - 41x^{7} + 101x^{6} - 129x^{5} + 96x^{4} - 42x^{3} + 10x^{2} - x)}{7x^{8} - 66x^{7} + 197x^{6} - 311x^{5} + 294x^{4} - 172x^{3} + 61x^{2} - 12x + 1}
+              </mrow>
+              <mrow>
+                \amp= x + 2x^{2}+5x^{3}+14x^{4}+42x^{5}+132x^{6}+426x^{7}+1390x^{8}+\cdots
+              </mrow>
+            </md>
+            and <m>d_{n}</m> is asymptotically <m>0.12958\cdot 3.2148^{n}</m>.
+            </p>
+          </statement>
+        </theorem>
+        <p>
+          <url href="https://oeis.org/A293498">OEIS A293498</url> (<alert>New!</alert>)  
+        </p>
+      </paragraphs>
+    </page>
+  </handout>
+    
+</chapter>

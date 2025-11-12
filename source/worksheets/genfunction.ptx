@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ws-genfunction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  
+    <!-- </page> -->
+     
+  <title>Generating Functions</title>
+
+  <worksheet xml:id="ws-genfunction-intro">
+    <title>Intro to Ordinary Generating Functions</title>
+    <page>
+      <activity>
+        <introduction>
+          <p>
+              Our goal is to use generating functions to find the number of ways to make certain amounts of money for using coins.
+          </p>
+        </introduction>
+        <task workspace="0.5cm">
+          <statement>
+            <p>
+              If you want to find the number of ways to make $1, you should plan to look for the coefficient on <m>x^{n}</m> for what <m>n</m>?
+            </p>
+          </statement>
+          <solution component="ws-genfunction-intro-soln">
+            <p>
+              <m>n=100</m> since exponent should be number of cents.
+            </p>
+          </solution>
+        </task>
+        <task workspace="2cm">
+          <statement>
+            <p>
+              Suppose first that you only have pennies and nickels. What's the generating function? How many ways to make $1 using pennies and nickels?
+            </p>
+            <sage>
+              <input>
+                # Put your generating function after = on line 2
+                f(x) = 
+                # Replace n on line 5 with something appropriate 
+                # to get enough terms.
+                p(x) = f.series(x,n)
+                p(x)
+              </input>
+            </sage>
+          </statement>
+          <solution component="ws-genfunction-intro-soln">
+            <p>
+              <m>\frac{1}{(1-x)(1-x^{5})}</m>, 21 ways
+            </p>
+          </solution>
+        </task>
+        <task workspace="2cm">
+          <statement>
+            <p>
+              Now suppose you have pennies, nickels, dimes, and quarters. What’s the generating function? Number of ways to make $1? Number of ways to make $0.83?
+            </p>
+          </statement>
+          <solution component="ws-genfunction-intro-soln">
+            <p>
+              <m>\frac{1}{(1-x)(1-x^{5})(1-x^{10})(1-x^{25})}</m>. 242 ways for $1. 141 ways for $0.83.
+            </p>
+          </solution>
+        </task>
+        <task workspace="4cm">
+          <statement>
+            <p>
+              Suppose you have pennies, nickels, dimes, quarters, half dollars, and dollar coins. What’s the generating function? What’s the number of ways to make $1? What’s the number of ways to make $2.50?
+            </p>
+          </statement>
+          <solution component="ws-genfunction-intro-soln">
+            <p>
+              <m>\frac{1}{(1-x)(1-x^{5})(1-x^{10})(1-x^{25})(1-x^{50})(1-x^{100})}</m>. 293 ways for $1. 6148 ways for $2.50.
+            </p>
+          </solution>
+        </task>
+      </activity>
+    </page>
+  </worksheet>
+</chapter>
