@@ -584,6 +584,24 @@ var ptx_lunr_docs = [
   "number": "7.1.2",
   "title": "",
   "body": "  Now let’s count surjections from to ( ).    How many properties are in ?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Let with . How many functions satisfy all properties in ?     How many subsets of have size ?     Use inclusion-exclusion to find the number of surjections from to .   "
+},
+{
+  "id": "ws-genfunction-intro",
+  "level": "1",
+  "url": "ws-genfunction-intro.html",
+  "type": "Worksheet",
+  "number": "8.1",
+  "title": "Intro to Ordinary Generating Functions",
+  "body": " Intro to Ordinary Generating Functions     Our goal is to use generating functions to find the number of ways to make certain amounts of money for using coins.     If you want to find the number of ways to make $1, you should plan to look for the coefficient on for what ?      Suppose first that you only have pennies and nickels. What's the generating function? How many ways to make $1 using pennies and nickels?       Now suppose you have pennies, nickels, dimes, and quarters. What’s the generating function? Number of ways to make $1? Number of ways to make $0.83?      Suppose you have pennies, nickels, dimes, quarters, half dollars, and dollar coins. What’s the generating function? What’s the number of ways to make $1? What’s the number of ways to make $2.50?      "
+},
+{
+  "id": "ws-genfunction-intro-2-1",
+  "level": "2",
+  "url": "ws-genfunction-intro.html#ws-genfunction-intro-2-1",
+  "type": "Activity",
+  "number": "8.1.1",
+  "title": "",
+  "body": "  Our goal is to use generating functions to find the number of ways to make certain amounts of money for using coins.     If you want to find the number of ways to make $1, you should plan to look for the coefficient on for what ?      Suppose first that you only have pennies and nickels. What's the generating function? How many ways to make $1 using pennies and nickels?       Now suppose you have pennies, nickels, dimes, and quarters. What’s the generating function? Number of ways to make $1? Number of ways to make $0.83?      Suppose you have pennies, nickels, dimes, quarters, half dollars, and dollar coins. What’s the generating function? What’s the number of ways to make $1? What’s the number of ways to make $2.50?    "
 }
 ]
 

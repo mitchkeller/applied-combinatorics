@@ -674,6 +674,195 @@ var ptx_lunr_docs = [
   "number": "7.6",
   "title": "",
   "body": "  The number of surjections from to is given by .   "
+},
+{
+  "id": "notes-inclusion-exclusion-3",
+  "level": "1",
+  "url": "notes-inclusion-exclusion-3.html",
+  "type": "Handout",
+  "number": "7.2",
+  "title": "Counting Derangements and Euler’s <span class=\"process-math\">\\(\\phi\\)<\/span> Function",
+  "body": " Counting Derangements and Euler's Function    Counting Derangements  Suppose we randomly distributed name table tents corresponding only to students here today. How many ways can we do this in which no one gets their own table tent?  A permutation of is a bijection from to .  A derangement of is a permutation of if for all .   Peer instruction question 1.   A permutation of satisfies property provided that .  To frame your discussion, think about how to fill in this blank: With inclusion-exclusion, our goal is to count the objects that satisfy of the properties.   Peer instruction question 2.     Let's count derangements of .    How many properties are in ?    How many permutations satisfy ? What about ?    How many permutations satisfy  and  ?    Let with . How many permutations satisfy all properties in ?    Let with . How many permutations satisfy all properties in ?    How many subsets of have size ?    Use inclusion-exclusion to find , the number of derangements of            Euler function    Let and be integers. The greatest common divisor of and is an integer such that divides both and and if also divides and , then . We say that and are relatively prime provided that .     Peer instruction question 3.     If is an integer, define the Euler function (sometimes Euler totient function ) .      With your group, find the following by listing the integers counted by each:                     We can also say that two integers are relatively prime if and only if they do not have any common prime factors.    Use inclusion-exclusion to find by excluding those numbers having a common prime factor with .        2  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30    3  3, 6, 9, 12, 15, 18, 21, 24, 27, 30    5  5, 10, 15, 20, 25, 30           Let , , and let be distinct primes each of which divide . The number of integers from which are divisible by each of these primes is       Let be a positive integer and suppose that has distinct prime factors: , . Then       Use the fact that to compute .         Find for each of the following integers . (Use technology to factor!)                       Suppose you need to find where . Why might this be hard, despite the information we have learned today?      Would knowing that for primes help?       What's wrong with this exercise?   A graduate student eats lunch in the campus food court every Tuesday over the course of a 15-week semester. He is joined each week by some subset of a group of six friends from across campus. Over the course of a semester, he ate lunch with each friend 11 times, each pair 9 times, and each triple 6 times. He ate lunch with each group of four friends 4 times and each group of five friends 4 times. All seven of them ate lunch together only once that semester. Did the graduate student ever eat lunch alone? If so, how many times?      "
+},
+{
+  "id": "notes-inclusion-exclusion-3-2-1-3",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-2-1-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "permutation "
+},
+{
+  "id": "notes-inclusion-exclusion-3-2-1-4",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-2-1-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "derangement "
+},
+{
+  "id": "notes-inclusion-exclusion-3-2-1-9",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-2-1-9",
+  "type": "Activity",
+  "number": "7.2.1",
+  "title": "",
+  "body": "  Let's count derangements of .    How many properties are in ?    How many permutations satisfy ? What about ?    How many permutations satisfy  and  ?    Let with . How many permutations satisfy all properties in ?    Let with . How many permutations satisfy all properties in ?    How many subsets of have size ?    Use inclusion-exclusion to find , the number of derangements of    "
+},
+{
+  "id": "notes-inclusion-exclusion-3-3-2-2",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-3-2-2",
+  "type": "Definition",
+  "number": "7.7",
+  "title": "",
+  "body": "  Let and be integers. The greatest common divisor of and is an integer such that divides both and and if also divides and , then . We say that and are relatively prime provided that .   "
+},
+{
+  "id": "notes-inclusion-exclusion-3-3-2-4",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-3-2-4",
+  "type": "Definition",
+  "number": "7.8",
+  "title": "",
+  "body": "  If is an integer, define the Euler function (sometimes Euler totient function ) .   "
+},
+{
+  "id": "notes-inclusion-exclusion-3-3-2-5",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-3-2-5",
+  "type": "Activity",
+  "number": "7.2.2",
+  "title": "",
+  "body": "  With your group, find the following by listing the integers counted by each:                    "
+},
+{
+  "id": "notes-inclusion-exclusion-3-3-2-7",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-3-2-7",
+  "type": "Activity",
+  "number": "7.2.3",
+  "title": "",
+  "body": "  Use inclusion-exclusion to find by excluding those numbers having a common prime factor with .        2  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30    3  3, 6, 9, 12, 15, 18, 21, 24, 27, 30    5  5, 10, 15, 20, 25, 30     "
+},
+{
+  "id": "notes-inclusion-exclusion-3-4-1",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-4-1",
+  "type": "Proposition",
+  "number": "7.9",
+  "title": "",
+  "body": "  Let , , and let be distinct primes each of which divide . The number of integers from which are divisible by each of these primes is    "
+},
+{
+  "id": "notes-inclusion-exclusion-3-4-2",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-4-2",
+  "type": "Theorem",
+  "number": "7.10",
+  "title": "",
+  "body": "  Let be a positive integer and suppose that has distinct prime factors: , . Then    "
+},
+{
+  "id": "notes-inclusion-exclusion-3-4-3",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-4-3",
+  "type": "Example",
+  "number": "7.11",
+  "title": "",
+  "body": "  Use the fact that to compute .   "
+},
+{
+  "id": "notes-inclusion-exclusion-3-5-1",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-5-1",
+  "type": "Activity",
+  "number": "7.2.4",
+  "title": "",
+  "body": "   Find for each of the following integers . (Use technology to factor!)                       Suppose you need to find where . Why might this be hard, despite the information we have learned today?      Would knowing that for primes help?    "
+},
+{
+  "id": "notes-inclusion-exclusion-3-5-2",
+  "level": "2",
+  "url": "notes-inclusion-exclusion-3.html#notes-inclusion-exclusion-3-5-2",
+  "type": "Activity",
+  "number": "7.2.5",
+  "title": "",
+  "body": "  What's wrong with this exercise?   A graduate student eats lunch in the campus food court every Tuesday over the course of a 15-week semester. He is joined each week by some subset of a group of six friends from across campus. Over the course of a semester, he ate lunch with each friend 11 times, each pair 9 times, and each triple 6 times. He ate lunch with each group of four friends 4 times and each group of five friends 4 times. All seven of them ate lunch together only once that semester. Did the graduate student ever eat lunch alone? If so, how many times?    "
+},
+{
+  "id": "notes-genfunction-2",
+  "level": "1",
+  "url": "notes-genfunction-2.html",
+  "type": "Handout",
+  "number": "8.1",
+  "title": "Introduction to Ordinary Generating Functions",
+  "body": " Introduction to Ordinary Generating Functions    Formal Power Series     Sequence     Formal power series     Convergence tests?    Interval and radius of convergence?    Representing as functions?    In combinatorics, we call formal power series generating functions .       Let and be generating functions. Then is the generating function of the sequence whose coefficient on is given by      PAINFUL!     Handing stuff out again  Suppose you wanted to make a really boring “fruit” basket that contains only apples. Let’s also say that you have only (identical) apples available. For aesthetic reasons, you insist that the basket contain exactly , , or apples.   Peer instruction questions 1 2.   The generating function for the number of fruit baskets with apples subject to these rules is  Now we’ve got oranges, too! We have six (identical) oranges to use in fruit baskets, and we don’t care about aesthetics for oranges. (Still only allow 1, 3, or 4 apples.)  How many ways to make a fruit basket with    piece of fruit?     pieces of fruit?     pieces of fruit?           Suppose we now have bananas to add and that we must place at least one banana in a fruit basket. This introduces which factor? Peer instruction question 3     Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Pears: at least     Peaches: an even number    Kiwi: at least and no more than     Grapefruit: either none or at least         Peer instruction question 4.     Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Apples: , , or     Oranges: At most six    Bananas: At least one    Peaches: An odd number           Suppose in the country Combinatoria, they use coins with values 1, 2, 5, 10, 50, and 100. If you would like to write a generating function in which the coefficient on is the number of ways to form a collection of coins worth subject to the restriction that the number of coins of value is one, three, four, or five, what factor would you introduce into your generating function?       My Own Journey with Generating Functions   Keller and Young 2020   The ordinary generating function for the number of hereditary unit interval orders with points, , is and is asymptotically .     OEIS A293499 ( New! )    Keller and Young 2020   The generating function for the number of unit interval orders of dimension at most with points, , is and is asymptotically .     OEIS A293498 ( New! )    "
+},
+{
+  "id": "notes-genfunction-2-2-1-2",
+  "level": "2",
+  "url": "notes-genfunction-2.html#notes-genfunction-2-2-1-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "generating functions "
+},
+{
+  "id": "notes-genfunction-2-2-1-3",
+  "level": "2",
+  "url": "notes-genfunction-2.html#notes-genfunction-2-2-1-3",
+  "type": "Proposition",
+  "number": "8.1",
+  "title": "",
+  "body": "  Let and be generating functions. Then is the generating function of the sequence whose coefficient on is given by    "
+},
+{
+  "id": "notes-genfunction-2-3-3",
+  "level": "2",
+  "url": "notes-genfunction-2.html#notes-genfunction-2-3-3",
+  "type": "Activity",
+  "number": "8.1.1",
+  "title": "",
+  "body": "  Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Pears: at least     Peaches: an even number    Kiwi: at least and no more than     Grapefruit: either none or at least       "
+},
+{
+  "id": "notes-genfunction-2-3-5",
+  "level": "2",
+  "url": "notes-genfunction-2.html#notes-genfunction-2-3-5",
+  "type": "Activity",
+  "number": "8.1.2",
+  "title": "",
+  "body": "  Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Apples: , , or     Oranges: At most six    Bananas: At least one    Peaches: An odd number      "
+},
+{
+  "id": "notes-genfunction-2-4-1",
+  "level": "2",
+  "url": "notes-genfunction-2.html#notes-genfunction-2-4-1",
+  "type": "Activity",
+  "number": "8.1.3",
+  "title": "",
+  "body": "  Suppose in the country Combinatoria, they use coins with values 1, 2, 5, 10, 50, and 100. If you would like to write a generating function in which the coefficient on is the number of ways to form a collection of coins worth subject to the restriction that the number of coins of value is one, three, four, or five, what factor would you introduce into your generating function?   "
+},
+{
+  "id": "notes-genfunction-2-5-1-2",
+  "level": "2",
+  "url": "notes-genfunction-2.html#notes-genfunction-2-5-1-2",
+  "type": "Theorem",
+  "number": "8.2",
+  "title": "Keller and Young 2020.",
+  "body": " Keller and Young 2020   The ordinary generating function for the number of hereditary unit interval orders with points, , is and is asymptotically .   "
+},
+{
+  "id": "notes-genfunction-2-5-1-4",
+  "level": "2",
+  "url": "notes-genfunction-2.html#notes-genfunction-2-5-1-4",
+  "type": "Theorem",
+  "number": "8.3",
+  "title": "Keller and Young 2020.",
+  "body": " Keller and Young 2020   The generating function for the number of unit interval orders of dimension at most with points, , is and is asymptotically .   "
 }
 ]
 
