@@ -255,5 +255,192 @@
       </paragraphs>
     </page>
   </handout>
+  <handout>
+    <title>Partitions and Newton's Binomial Theorem</title>
+    <page>
+    <paragraphs>
+      <title>Partitions of Integers</title>
+      <definition>
+        <statement>
+          <p workspace="1cm">
+            A <term>partition</term> of the positive integer <m>n</m> is a way of writing <m>n</m> as a sum of nonincreasing positive integers.
+          </p>
+        </statement>
+      </definition>
+      
+      <definition>
+        <statement>
+          <p workspace="1cm">
+            A partition of a positive integer is said to be a <term>partition into odd parts</term> if every term (also referred to as a <term>part</term>) in the sum is odd.
+          </p>
+        </statement>
+      </definition>
+      
+      <definition>
+        <statement>
+          <p workspace="1cm">
+            A partition of a positive integer is said to be a <term>partition into distinct parts</term> if each integer appears in the sum at most once.
+          </p>
+        </statement>
+      </definition>
+      <activity workspace="10cm">
+        <statement>
+          <p>
+            List the partitions of <m>9</m>. Count the number of partitions into odd parts. Count the number of partitions into distinct parts.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Be systematic! One way to do this is by grouping partitions by their largest part.
+          </p>
+        </hint>
+      </activity>
+      
+    </paragraphs>
+  </page>
+  <page>
+    <p>
+      <md>
+        <mrow>9\amp  \amp 3\amp +3+3</mrow>
+        <mrow>8\amp +1 \amp 3\amp +3+2+1</mrow>
+        <mrow>7\amp +2 \amp 3\amp +3+1+1+1</mrow>
+        <mrow>7\amp +1+1 \amp 3\amp +2+2+2</mrow>
+        <mrow>6\amp +3 \amp 3\amp +2+2+1+1</mrow>
+        <mrow>6\amp +2+1 \amp 3\amp +2+1+1+1+1</mrow>
+        <mrow>6\amp +1+1+1 \amp 3\amp +1+1+1+1+1+1</mrow>
+        <mrow>5\amp +4 \amp 2\amp +2+2+2+1</mrow>
+        <mrow>5\amp +3+1 \amp 2\amp +2+2+1+1+1</mrow>
+        <mrow>5\amp +2+2 \amp 2\amp +2+1+1+1+1+1</mrow>
+        <mrow>5\amp +2+1+1 \amp 2\amp +1+1+1+1+1+1+1</mrow>
+        <mrow>5\amp +1+1+1+1 \amp 1\amp +1+1+1+1+1+1+1+1</mrow>
+        <mrow>4\amp +4+1 \amp </mrow>
+        <mrow>4\amp +3+2 \amp </mrow>
+        <mrow>4\amp +3+1+1 \amp </mrow>
+        <mrow>4\amp +2+2+1 \amp </mrow>
+        <mrow>4\amp +2+1+1+1 \amp </mrow>
+        <mrow>4\amp +1+1+1+1+1 \amp </mrow>
+      </md>
+    </p>
+  </page>
+  <page>
+    <activity>
+      <task>
+        <statement>
+          <p>
+            Write a generating function in which the coefficient on <m>x^{n}</m> is the number of partitions of <m>n</m> into distinct parts.
+          </p>
+        <!-- </statement> -->
+        <!-- <hint> -->
+          <p>
+            <em>Hint</em>: This is conveniently done as a product of simple generating functions.
+          </p>
+        <!-- </hint> -->
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+           Write a generating function in which the coefficient on <m>x^{n}</m> is the number of partitions of <m>n</m> into odd parts.
+          </p>
+        <!-- </statement> -->
+        <!-- <hint> -->
+          <p>
+            <em>Hint</em>: A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.
+          </p>
+        <!-- </hint> -->
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that your generating functions above are actually equal to one another.
+          </p>
+        <!-- </statement> -->
+        <!-- <hint> -->
+          <p>
+            <em>Hint</em>: <m>\displaystyle (1+x^{k})\frac{1-x^{k}}{1-x^{k}}= \frac{\text{?}}{1-x^{k}}</m>
+          </p>
+        <!-- </hint> -->
+        </statement>
+      </task>
+    </activity>
+  </page>
+  <page>
+    <paragraphs>
+      <title>Newton's Binomial Theorem</title>
+      <definition>
+        <statement>
+          <p>
+            For all real numbers <m>p</m> and nonnegative integers <m>k</m>, the number <m>P(p,k)</m> is defined by
+            <ol>
+              <li>
+                <p>
+                  <m>P(p,0)=1</m> for all real numbers <m>p</m> and
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  <m>P(p,k) = p P(p-1,k-1)</m> for all real numbers <m>p</m> and integers <m>k\gt 0</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </definition>
+      
+      <definition>
+        <statement>
+          <p>
+            For all real numbers <m>p</m> and nonnegative integers <m>k</m>,
+            <me>
+              \binom{p}{k}=\frac{P(p,k)}{k!}
+            </me>.
+          </p>
+        </statement>
+      </definition>
+      
+      <activity workspace="2cm">
+        <statement>
+          <p>
+            Compute <m>\displaystyle\binom{-9/2}{5}</m>.
+          </p>
+        </statement>
+      </activity>
+      <theorem>
+        <statement>
+          <p>
+            For all real <m>p</m> with <m>p\neq0</m>,
+            <me>
+              (1+x)^{p}=\sum_{n=0}^{\infty}\binom{p}{n}x^{n}
+            </me>.
+          </p>
+        </statement>
+      </theorem>
+        
+        <lemma>
+          <statement>
+            <p>
+              For each <m>k\geq 0</m>, <m>P(p,k+1)=P(p,k)(p-k)</m>.
+            </p>
+          </statement>
+        </lemma>
+        <activity >
+          <task>
+            <p>
+              Use mathematical induction to show that for all <m>k\geq 0</m>, <m>\displaystyle \binom{-1/2}{k}= (-1)^{k}\frac{\binom{2k}{k}}{2^{2k}}</m>.
+            </p>
+          </task>
+          <task workspace="7cm">
+            <statement>
+              <p>
+                Use Newton’s Binomial Theorem and the step above to write <m>(1-4x)^{-1/2}</m> as a formal power series in which the coefficient on <m>x^{n}</m> is a binomial coefficient in which both numbers are <alert>integers</alert>.
+              </p>
+            </statement>
+          </task>
+        </activity>
+    </paragraphs>
+  </page>
+  </handout>
     
 </chapter>
