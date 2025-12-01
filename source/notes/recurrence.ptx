@@ -1,0 +1,215 @@
+<chapter xml:id="notes-recurrence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Recurrence Equations</title>
+  <handout xml:id="notes-recurrence-intro">
+    <title>Introduction to Advancement Operators</title>
+    <page>
+      <dl>
+        <li>
+          <title>Rabbits</title>
+          
+          
+          <p>
+            <m>f_{n}= f_{n-1}+f_{n-2}</m>, <m>f_{1}=1</m>, <m>f_{2}=1</m>
+          </p>
+        </li>
+        
+        <li>
+          <title>Strings</title>
+          
+          
+          <p>
+            <m>t_{n+2}= 3t_{n+1}-t_{n}</m>, <m>t_{1}=3</m>, <m>t_{2}=8</m>
+          </p>
+        </li>
+        
+        <li>
+          <title>Regions</title>
+          
+          
+          <p>
+            <m>r_{n+1}= r_{n} + (n+1)</m>, <m>r_{1}=2</m>
+          </p>
+        </li>
+      </dl>
+      <definition xml:id="def-linear-recurrence">
+        <statement>
+          <p workspace="1cm">
+            A <term>linear recurrence equation</term> is of the form
+            <me>
+              c_{0}(n)a_{n+k}+ c_{1}(n)a_{n+k-1}+ c_{2}(n)a_{n+k-2}+ \dots+c_{k}(n)a_{n}= g(n),
+            </me>
+            where <m>k\ge1</m> is an integer and <m>g\colon\mathbb{Z}\to\mathbb{R}</m> is a function.
+          </p>
+          
+          <p workspace="1cm">
+            If each <m>c_{0}(n),c_{1}(n),\dots,c_{k}(n)</m> is a contant with <m>c_{0}(n),c_{k}(n)\neq0</m>, then we say the equation has <term>constant coefficients</term>.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        <alert>Peer instruction question 4.</alert>
+      </p>
+      <definition xml:id="def-homog-recurr">
+        <statement>
+          <p workspace="1cm">
+            The linear recurrence equation
+            <me>
+              c_{0}(n)a_{n+k}+ c_{1}(n)a_{n+k-1}+ c_{2}(n)a_{n+k-2}+ \dots+c_{k}(n)a_{n}= g(n),
+            </me>
+            is called <term>homogeneous</term> if <m>g(n)=0</m> for all <m>n</m>.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        <alert>Peer instruction question 5.</alert>
+      </p>
+      <paragraphs>
+        <title>An analogy to calculus (or differential equations)</title>
+        <p workspace="5cm">
+          Let's write <m>D</m> for the differential operator <m>d/dx</m>. Solve the equation
+          <me>
+            Df = 5f
+          </me>
+          where <m>f</m> is a differentiable function of <m>x</m> with <m>f(0)=3</m> and 
+        </p>
+      
+        <p component="a">
+          Put another way: Find a function <m>f</m> such that <m>f'(x) = 5f(x)</m> and <m>f(0)=3</m>.
+        </p>
+      </paragraphs>
+    </page>
+    <page>
+      <p>
+        <ul>
+          <li>
+            <p>
+              Let <m>f\colon \mathbb{Z}\to \mathbb{R}</m>.
+              The <term>advancement operator</term> <m>A</m> is defined so that <m>Af(n) = f(n+1)</m> for all <m>n\in \mathbb{Z}</m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              For <m>p</m> a positive integer, <m>A^{p}f(n)</m> denotes applying <m>A</m> to <m>f(n)</m> <m>p</m> times.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <activity workspace="1cm">
+        <statement>
+          <p>
+            Rewrite each of the following expressions so that it does not use the advancement operator.
+            <ol marker="a." cols="4">
+              <li>
+                <p>
+                  <m>A^2f(4)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>A^2f(n)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>A^7f(n)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>A^pf(n)</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </activity>
+      <activity>
+        <task workspace="1cm">
+          <statement>
+            <p>
+              Let <m>f(n) = 3n+4</m>. Verify that <m>(A^{3}-2A^{2}+7A+2)f(2) = 98</m>.
+            </p>
+            <p component="a">
+              <me>
+                f(5)-2f(4)+7f(3)+2f(2) = 98
+              </me>
+            </p>
+          </statement>
+        </task>
+        <task workspace="10cm">
+          <statement>
+            <p>
+              Write each of the following recurrence equations as advancement operator equations.
+              <ol cols="3">
+                <li>
+                  <p>
+                    <m>t_{n+2}= 3t_{n+1}-t_{n}</m>
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>r_{n+1}= r_{n} + (n+1)</m>
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>f_{n}= f_{n-1}+f_{n-2}</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </task>
+      </activity>
+    </page>
+  </handout>
+  <handout>
+    <title>Homogeneous Recurrence Equations</title>
+    <example>
+      <title>Solving Advancement Operator Equations</title>
+      
+      
+      <statement>
+        <p workspace="5cm">
+          Solve the advancement operator equation
+          <me>
+            (A+4)f=0
+          </me>
+          with the initial condition <m>f(0)=2</m>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <title>Applying Advancement Operator Polynomials</title>
+      <statement>
+        <p workspace="5cm">
+          Let <m>c_{1}</m> and <m>c_{2}</m> be constants and define <m>f(n) = c_{1}3^{n} +c_{2}(-4)^{n}</m>.
+          Compute <m>(A+4)(A-3)f(n)</m>.
+        </p>
+      </statement>
+      
+    </example>
+    <proposition xml:id="prop-adv-op-distinct">
+      <statement>
+        <p workspace="2cm">
+          The solution to the advancement operator equation
+          <me>
+            (A-b_{1})(A-b_{2})\cdots (A-b_{k})f(n) = 0
+          </me>
+          where <m>b_{i}\neq b_{j}</m> if <m>i\neq j</m> is
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      <alert>When solving
+        <me>
+          p(A)f(n)=g(n)
+        </me>
+        we’ll focus on <m>p(0)\neq 0</m>.
+        Any factors of <m>A</m> in <m>p(A)</m> could be dealt with by shifting solutions.</alert>
+    </p>
+  </handout>
+</chapter>

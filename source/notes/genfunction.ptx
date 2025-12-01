@@ -442,5 +442,17 @@
     </paragraphs>
   </page>
   </handout>
-    
+  <handout xml:id="notes-exp-genfn">
+    <title>Exponential Generating Functions</title>
+    <p>
+      <alert>Peer instruction questions 1<ndash/>3.</alert>
+    </p>
+    <activity>
+      <statement>
+        <p>
+           Suppose we are making strings using the alphabet <m>\{0,1,2,3,4\}</m>. If the number of times <m>4</m> appears in the string is at least one and at most four, the number of times <m>2</m> appears in the string is a positive even number, and there are at least three occurrences of <m>3</m> in the string, write an exponential generating function in which the coefficient on <m>x^{n}/n!</m> is the number of such strings of length <m>n</m>.
+        </p>
+      </statement>
+    </activity>
+  </handout>
 </chapter>

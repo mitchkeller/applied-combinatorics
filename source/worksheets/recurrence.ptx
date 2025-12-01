@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ws-recurrence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  
+    <!-- </page> -->
+     
+  <title>Recurrence Equations</title>
+
+  <worksheet xml:id="ws-recurrence-homog">
+    <title>Solving Linear, Constant Coefficient Homogeneous Recurrence Equations</title>
+    <!-- <page> -->
+      <p>
+        These activities will help you develop methods for solving advancement operator equations. Recall that these are convenient ways of writing recurrence relations. Our focus at first will be on homogeneous, linear, constant coefficient equations. This activity concludes with an initial investigation of the nonhomogeneous (linear, constant coefficient) case, which we will explore further in a future activity. Nonlinear recurrences and those with nonconstant coefficients require additional, advanced techniques.
+      </p>
+      <activity>
+        <title>Degree two, no other roots</title>
+      
+        <task workspace="1in">
+          <statement>
+          <p>
+              Verify that <m>f_{2}(n) = c_{2}n3^{n}</m> is a solution of <m>(A-3)^{2}f=0</m>. <em>Hint</em>: To do this, you need to evaluate <m>(A-3)^{2}[c_{2}n3^{n}]</m> and simplify fully. I recommend doing this by first evaluating <m>(A-3)[c_{2}n3^{n}]</m>. When you simplify that, you should get <m>3c_{2}3^{n}</m>, but do the work and make sure you get this simplified form. Then apply <m>(A-3)</m> to <m>3c_{2}3^{n}</m> and simplify. You should get <m>0</m>.
+          </p>
+          </statement>
+          <!-- <hint>
+            <p>
+              To do this, you need to evaluate <m>(A-3)^{2}[c_{2}n3^{n}]</m> and simplify fully. I recommend doing this by first evaluating <m>(A-3)[c_{2}n3^{n}]</m>. When you simplify that, you should get <m>3c_{2}3^{n}</m>, but do the work and make sure you get this simplified form. Then apply <m>(A-3)</m> to <m>3c_{2}3^{n}</m> and simplify. You should get <m>0</m>.
+            </p>
+          </hint> -->
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              <md>
+                <mrow>(A-3)^2[c_2n3^n] \amp=(A-3)[c_2(n+1)3^{n+1}-3c_2n3^n]</mrow>
+                <mrow>\amp=(A-3)[3c_23^n]</mrow>
+                <mrow>\amp=3c_23^{n+1}-3\cdot 3c_23^n = 0</mrow>
+              </md>
+            </p>
+          </solution>
+        </task>
+        <task workspace="1in">
+          <statement>
+            <p>
+              Determine if <m>f_{3}(n) = c_{3} n^{2}3^{n}</m> is a solution of <m>(A-3)^{2}f=0</m>.If it’s not, what do you get instead of <m>0</m>?
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              <md>
+                <mrow>(A-3)^2[c_3n^23^n] \amp= (A-3)[c_3(n+1)^23^{n+1}-3c_3n^23^n]</mrow>
+                <mrow>\amp=(A-3)[6c_3 n3^n+3c_33^n] = 6c_3(n+1)3^{n+1}+3c_33^{n+1} - 3\cdot 6c_3n3^n-9c_33^n</mrow>
+                <mrow>\amp= 9c_33^n</mrow>
+              </md>
+            </p>
+          </solution>
+        </task>
+        <task workspace="0.75in" xml:id="ws-recurrence-homog-repeat">
+          <statement>
+            <p>
+              Since we already know that <m>f_{1}(n) = c_{1} 3^{n}</m> is a solution of <m>(A-3)f=0</m> (and thus <m>(A-3)^{2}f=0</m>), adding it to <m>f_{2}</m> gives a two parameter family of solutions. Find <m>c_{1}</m> and <m>c_{2}</m> so that <m>f(n) = c_{1}3^{n}+c_{2}n3^{n}</m> is a solution of <m>(A-3)^{2}f=0</m> if <m>f(0)=1</m> and <m>f(1) = 4</m>.
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              We find that <m>f(0)=c_{1}</m> and <m>f(1) = 3c_{1} + 3c_{2}</m>. We know the former is <m>1</m>, so <m>c_{1}=1</m>. Since <m>f(1)=4</m> and <m>c_{1} = 1</m>, we see that <m>4=3+3c_{2}</m>. Hence <m>c_{2} = 1/3</m>.
+            </p>
+          </solution>
+        </task>
+      </activity>
+      <activity>
+        <title>Repeated root of degree two, other roots</title>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+             Now consider the advancement operator equation <m>(A+2)(A-3)^{2}f=0</m>. Use <xref ref="ws-recurrence-homog-repeat">part</xref> and what you learned in the class prep to propose a general solution to this equation.
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              <me>
+                f(n) = c_{1}(-2)^{n} + c_{2} 3^{n} + c_{3} n3^{n}
+              </me>
+            </p>
+          </solution>
+        </task>
+        <task workspace="1.25in">
+          <statement>
+            <p>
+              Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations <alert>and</alert> you can commute the factors in an advancement operator polynomial so that applying <m>(A-3)^{2}(A+2)</m> will give the same result as applying <m>(A+2)(A-3)^{2}</m>. This fact is not true of all linear transformations…matrix multiplication is not commutative, after all! However, it works here.
+            </p>
+          </statement>
+        </task>
+        
+      </activity>
+      <activity>
+        <title>Higher degrees, no other roots</title>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              Consider the advancement operator equation <m>(A-5)^{3}f=0</m>. Conjecture what terms should be in its solution.
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              <me>
+                f(n) = c_{1} 5^{n} + c_{2} n 5^{n} + c_{3} n^{2} 5^{n}
+              </me>
+            </p>
+          </solution>
+        </task>
+        <task workspace="1.25in">
+          <statement>
+            <p>
+              Verify your conjecture from the previous step.
+            </p>
+          </statement>
+        </task>
+        <task workspace="1in">
+          <statement>
+            <p>
+              Apply <m>(A-5)</m> to <m>f_{4}(n) = c_{4} n^{4} 5^{n}</m>. What’s the highest power of <m>n</m> remaining? How many more times would you need to apply <m>(A-5)</m> to finally get <m>0</m>?
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              The highest power of <m>n</m> remaining is <m>3</m>. You would need to apply <m>(A-5)</m> four more times to get <m>0</m>.
+            </p>
+          </solution>
+        </task>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              Apply <m>(A-5)</m> to <m>f_{5}(n) = c_{5} n^{5} 5^{n}</m>. What’s the highest power of <m>n</m> remaining?
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              The highest power of <m>n</m> remaining is <m>4</m>.
+            </p>
+          </solution>
+        </task>
+        <task workspace="0.2in" xml:id="ws-recurrence-homog-generalk">
+          <statement>
+            <p>
+              Conjecture what the highest power of <m>n</m> is that remains when you apply <m>(A-5)</m> to <m>f_{k}(n) = c_{k} n^{k} 5^{n}</m>.
+              (Here <m>k\geq 0</m> is an integer.)
+            </p>
+           </statement>
+           <solution component="ws-recurrence-homog-soln">
+            <p>
+              The highest power that will remain is <m>k-1</m>.
+            </p>
+           </solution>
+        </task>
+        <task workspace="1.3in">
+          <statement>
+            <p>
+              Use the Binomial Theorem to explain why your conjecture in the previous step is correct.
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              <me>
+                (A-5)[c_{k} n^{k} 5^{n}] = c_{k} (n+1)^{k}5^{n+1}- 5c_{k} n^{k} 5^{n} = 5c_{k} 5^{n} \sum_{j=0}^{k} \binom{k}{j}n^{j} - 5c_{k} n^{k} 5^{n} = 5c_{k}5^{n} \sum_{j=0}^{k-1}\binom{k}{j}n^{j}
+              </me>
+            </p>
+          </solution>
+        </task>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              What value of <m>m</m> makes <m>(A-5)^{m} f_{k}(n) =0</m> for the function <m>f_{k}</m> from <xref ref="ws-recurrence-homog-generalk">part</xref>? We say here that <m>(A-5)^{m}</m> <term>annihilates</term> <m>f_{k}(n)</m> because applying the operator to <m>f_{k}</m> yields <m>0</m>.
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              <m>m=k+1</m> annihilates <m>f_{k}(n)</m>.
+            </p>
+          </solution>
+        </task>
+      </activity>
+      <activity>
+        <title>Higher degrees, lots of roots</title>
+        
+        
+          <introduction>
+            <p>
+              Write down the general solution (i.e., with constants <m>c_{i}</m> running around) for each of the following advancement opeator eqations.
+              Do not verify that these are actually solutions, as you will have an algebraic mess on your hands!
+            </p>
+          </introduction>
+          <task workspace="0.5in">
+            <statement>
+              <p>
+                <m>(A+1)^{3}(A-3)(A-5)^{2}f=0</m>
+              </p>
+            </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              <me>
+                f(n) = c_{1} (-1)^{n} + c_{2} n(-1)^{n} + c_{3} n^{2} (-1)^{n} + c_{4} 3^{n} + c_{5} 5^{n} + c_{6} n 5^{n}
+              </me>
+            </p>
+          </solution>
+        </task>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              <m>(A^{2}+3A-2)(A+4)^{5}f=0</m>
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              This is equivalent to <m>(A-r_{1})(A-r_{2})(A+4)^{5}f=0</m> where <m>r_{1}</m> and <m>r_{2}</m> are the roots of <m>A^{2}+3A-2=0</m>.
+              Thus we have
+              <me>
+                f(n) = c_{1} \left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{2} \left(\frac{-3-\sqrt{17}}{2}\right)^{n} + c_{3} (-4)^{n} + c_{4} n (-4)^{n} + c_{5} n^{2} (-4)^{n} + c_{6} n^{3}(-4)^{n} + c_{7} n^{4}(-4)^{n}.
+              </me>
+            </p>
+          </solution>
+        </task>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              <m>(A^{2}+3A-2)^{2}(A+4)^{3}f=0</m>
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              This is equivalent to <m>(A-r_{1})^{2}(A-r_{2})^{2}(A+4)^{3}f=0</m> where <m>r_{1}</m> and <m>r_{2}</m> are the roots of <m>A^{2}+3A-2=0</m>.
+              Thus we have
+              <me>
+                f(n) = c_{1} \left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{2} n\left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{3} \left(\frac{-3-\sqrt{17}}{2}\right)^{n} + c_{4} n\left(\frac{-3-\sqrt{17}}{2}\right)^{n} + c_{5} (-4)^{n} + c_{6} n (-4)^{n} + c_{7} n^{2} (-4)^{n}.
+              </me>
+            </p>
+          </solution>
+        </task>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              <m>(A^{2}+3A+5)(A^{2}-1)(A-1)^{3}f=0</m>
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              This is equivalent to <m>(A-r_{1})(A-r_{2})(A+1)(A-1)^{4}f=0</m> (note the factor and regroup on <m>(A^{2}-1)</m>) where <m>r_{1}</m> and <m>r_{2}</m> are the <em>complex</em> roots of <m>A^{2}+3A+5</m>.
+              (Yeah, complex roots work just fine here.) Thus, we have
+              <me>
+                f(n) = c_{1} \left(\frac{-3 - i \sqrt{11}}{2}\right)^{n} + c_{2} \left(\frac{-3 + i \sqrt{11}}{2}\right)^{n} + c_{3}(-1)^{n} + c_{4} +c_{5} n + c_{6} n^{2}+c_{7} n^{3}
+              </me>
+              where <m>i^{2}=-1</m>.
+            </p>
+          </solution>
+        </task>
+      </activity>
+      <activity>
+        <title>Working toward the non-homogeneous case</title>
+        <task workspace="0.75in">
+          <statement>
+            <p>
+              What happens if you apply <m>(A-3)</m> to the function <m>f(n) = 5^{n}</m>? (Write your answer as a multiple of <m>5^{n}</m>.)
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              You get <m>2\cdot 5^{n}</m>.
+            </p>
+          </solution>
+        </task>
+        <task>
+          <introduction>
+            <p>
+              Now suppose we’re trying to solve <m>(A+2)(A-3)f=5^{n}</m>? (Look, ma, the right side isn’t zero!)
+            </p>
+          </introduction>
+          <task workspace="0.5in">
+            <statement>
+              <p>
+                What does the previous step suggest might be a function you could apply <m>(A+2)(A-3)</m> to while retaining a power of <m>5</m> afterward?
+              </p>
+            </statement>
+            <solution component="ws-recurrence-homog-soln">
+              <p>
+                We might try <m>f(n) = d 5^{n}</m>.
+              </p>
+            </solution>
+          </task>
+          <task workspace="1in">
+            <statement>
+              <p>
+                Apply <m>(A+2)(A-3)</m> to your function.
+                Write the result as a multiple of <m>5^{n}</m>.
+              </p>
+            </statement>
+            <solution component="ws-recurrence-homog-soln">
+              <p>
+                We just need to apply the advancement operator polynomial to <m>d5^{n}</m>.
+                We get <m>14d 5^{n}</m>.
+              </p>
+            </solution>
+          </task>
+          <task workspace="0.4in">
+            <statement>
+              <p>
+                You want this result to be just <m>5^{n}</m>. What do you need to do to achieve this? <em>Hint</em>: Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?
+              </p>
+            </statement>
+            <!-- <hint>
+              <p>
+                Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?
+              </p>
+            </hint> -->
+            <solution component="ws-recurrence-homog-soln">
+              <p>
+                Set <m>d = \frac{1}{14}</m>.
+              </p>
+            </solution>
+          </task>
+          <task workspace="0.4in">
+            <statement>
+              <p>
+                What can you add to your function <m>f</m> without affecting the fact that <m>(A+2)(A-3)f=5^{n}</m>?
+              </p>
+            </statement>
+            <solution component="ws-recurrence-homog-soln">
+              <p>
+                The solutions to the homogeneous equation, since we know that <m>(A+2)(A-3)</m> will transform <m>c_{1} (-2)^{n} + c_{2} 3^{n}</m> to <m>0</m>.
+              </p>
+            </solution>
+          </task>
+        </task>
+        <task workspace="0.4in">
+          <statement>
+            <p>
+              Suppose now that you’re trying to solve <m>(A+2)(A-3)f=3^{n}</m>.
+              What would you need to try in order to preserve the <m>3^{n}</m> when applying <m>(A+2)(A-3)</m>?
+            </p>
+          </statement>
+          <solution component="ws-recurrence-homog-soln">
+            <p>
+              We’d need <m>d n3^{n}</m> since <m>3^{n}</m> will be annihilated by the <m>A-3</m>, but we know that <m>A-3</m> will not annihilate <m>n3^{n}</m>.
+Constants are helpful.
+            </p>
+          </solution>
+        </task>
+      </activity>
+    <!-- </page> -->
+  </worksheet>
+</chapter>
