@@ -971,6 +971,114 @@ var ptx_lunr_docs = [
   "number": "8.2.4",
   "title": "",
   "body": "  Use mathematical induction to show that for all , .     Use Newton’s Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .    "
+},
+{
+  "id": "notes-exp-genfn",
+  "level": "1",
+  "url": "notes-exp-genfn.html",
+  "type": "Handout",
+  "number": "8.3",
+  "title": "Exponential Generating Functions",
+  "body": " Exponential Generating Functions   Peer instruction questions 1 3.     Suppose we are making strings using the alphabet . If the number of times appears in the string is at least one and at most four, the number of times appears in the string is a positive even number, and there are at least three occurrences of in the string, write an exponential generating function in which the coefficient on is the number of such strings of length .    "
+},
+{
+  "id": "notes-exp-genfn-3",
+  "level": "2",
+  "url": "notes-exp-genfn.html#notes-exp-genfn-3",
+  "type": "Activity",
+  "number": "8.3.1",
+  "title": "",
+  "body": "  Suppose we are making strings using the alphabet . If the number of times appears in the string is at least one and at most four, the number of times appears in the string is a positive even number, and there are at least three occurrences of in the string, write an exponential generating function in which the coefficient on is the number of such strings of length .   "
+},
+{
+  "id": "notes-recurrence-intro",
+  "level": "1",
+  "url": "notes-recurrence-intro.html",
+  "type": "Handout",
+  "number": "9.1",
+  "title": "Introduction to Advancement Operators",
+  "body": " Introduction to Advancement Operators     Rabbits   , ,     Strings   , ,     Regions   ,       A linear recurrence equation is of the form where is an integer and is a function.  If each is a contant with , then we say the equation has constant coefficients .     Peer instruction question 4.     The linear recurrence equation is called homogeneous if for all .     Peer instruction question 5.    An analogy to calculus (or differential equations)  Let's write for the differential operator . Solve the equation where is a differentiable function of with and        Let . The advancement operator  is defined so that for all .    For a positive integer, denotes applying to  times.       Rewrite each of the following expressions so that it does not use the advancement operator.                             Let . Verify that .      Write each of the following recurrence equations as advancement operator equations.                       "
+},
+{
+  "id": "def-linear-recurrence",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#def-linear-recurrence",
+  "type": "Definition",
+  "number": "9.1",
+  "title": "",
+  "body": "  A linear recurrence equation is of the form where is an integer and is a function.  If each is a contant with , then we say the equation has constant coefficients .   "
+},
+{
+  "id": "def-homog-recurr",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#def-homog-recurr",
+  "type": "Definition",
+  "number": "9.2",
+  "title": "",
+  "body": "  The linear recurrence equation is called homogeneous if for all .   "
+},
+{
+  "id": "notes-recurrence-intro-3-1",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#notes-recurrence-intro-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "advancement operator "
+},
+{
+  "id": "notes-recurrence-intro-3-2",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#notes-recurrence-intro-3-2",
+  "type": "Activity",
+  "number": "9.1.1",
+  "title": "",
+  "body": "  Rewrite each of the following expressions so that it does not use the advancement operator.                         "
+},
+{
+  "id": "notes-recurrence-intro-3-3",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#notes-recurrence-intro-3-3",
+  "type": "Activity",
+  "number": "9.1.2",
+  "title": "",
+  "body": "   Let . Verify that .      Write each of the following recurrence equations as advancement operator equations.                     "
+},
+{
+  "id": "notes-recurrence-3",
+  "level": "1",
+  "url": "notes-recurrence-3.html",
+  "type": "Handout",
+  "number": "9.2",
+  "title": "Homogeneous Recurrence Equations",
+  "body": " Homogeneous Recurrence Equations   Solving Advancement Operator Equations   Solve the advancement operator equation with the initial condition .     Applying Advancement Operator Polynomials   Let and be constants and define . Compute .      The solution to the advancement operator equation where if is     When solving we’ll focus on . Any factors of in could be dealt with by shifting solutions.   "
+},
+{
+  "id": "notes-recurrence-3-2",
+  "level": "2",
+  "url": "notes-recurrence-3.html#notes-recurrence-3-2",
+  "type": "Example",
+  "number": "9.3",
+  "title": "Solving Advancement Operator Equations.",
+  "body": " Solving Advancement Operator Equations   Solve the advancement operator equation with the initial condition .   "
+},
+{
+  "id": "notes-recurrence-3-3",
+  "level": "2",
+  "url": "notes-recurrence-3.html#notes-recurrence-3-3",
+  "type": "Example",
+  "number": "9.4",
+  "title": "Applying Advancement Operator Polynomials.",
+  "body": " Applying Advancement Operator Polynomials   Let and be constants and define . Compute .   "
+},
+{
+  "id": "prop-adv-op-distinct",
+  "level": "2",
+  "url": "notes-recurrence-3.html#prop-adv-op-distinct",
+  "type": "Proposition",
+  "number": "9.5",
+  "title": "",
+  "body": "  The solution to the advancement operator equation where if is   "
 }
 ]
 

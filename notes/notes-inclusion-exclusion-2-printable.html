@@ -105,14 +105,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -267,6 +267,14 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-genfunction-2.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Ordinary Generating Functions</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-genfunction-3.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Partitions and Newton’s Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-exp-genfn.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Generating Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="notes-recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction to Advancement Operators</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-3.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Homogeneous Recurrence Equations</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -325,7 +333,7 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para logical" id="notes-inclusion-exclusion-2-2-1-4-2-1">
 <div class="para">Let <span class="process-math">\(X\)</span> be a set and <span class="process-math">\(\mathcal{P}=\{P_{1},\dots,P_{m}\}\)</span> a family of properties. The number of elements of <span class="process-math">\(X\)</span> which satisfy none of the properties in <span class="process-math">\(\mathcal{P}\)</span> is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="notes-inclusion-exclusion-2-2-1-4-2-1-5">
 \begin{equation*}
 \sum_{S\subseteq [m]}(-1)^{|S|}N(S)\text{.}
 \end{equation*}
@@ -395,7 +403,7 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para logical" id="notes-inclusion-exclusion-2-3-1-3-1-1">
 <div class="para">The <dfn class="terminology">range</dfn> of a function <span class="process-math">\(f\colon X\to Y\)</span> is the set</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="notes-inclusion-exclusion-2-3-1-3-1-1-3">
 \begin{equation*}
 \{y\in Y\colon \text{ there is }x\in X\text{ such that }f(x) = y\}\text{.}
 \end{equation*}
@@ -419,7 +427,7 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para logical" id="notes-inclusion-exclusion-2-3-1-7-1-1">
 <div class="para">The number <span class="process-math">\(S(n,m)\)</span> of surjections from <span class="process-math">\([n]\)</span> to <span class="process-math">\([m]\)</span> is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="notes-inclusion-exclusion-2-3-1-7-1-1-4">
 \begin{equation*}
 S(n,m) = \sum_{k=0}^{m} (-1)^{j}\binom{m}{j}(m-j)^{n}\text{.}
 \end{equation*}

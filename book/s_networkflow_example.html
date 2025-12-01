@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -629,25 +629,25 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <section class="introduction" id="s_networkflow_example-2"><div class="para logical" id="s_networkflow_example-2-1">
 <div class="para">Let’s apply the Labeling Algorithm to the network flow shown in <a href="s_networkflow_intro.html#fig_networkflow_netflow" class="xref" data-knowl="./knowl/xref/fig_networkflow_netflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 13.2">Figure 13.2</a>. Then we start with the source:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html" id="s_networkflow_example-2-1-2">
 \begin{equation*}
 S:\quad(*,+,\infty)
 \end{equation*}
 </div>
 <div class="para">Since the source <span class="process-math">\(S\)</span> is the first vertex labeled, it is also the first one scanned. So we look at the neighbors of <span class="process-math">\(S\)</span> using the pseudo-alphabetic order on the vertices. Thus, the first one to be considered is vertex <span class="process-math">\(B\)</span> and since the edge <span class="process-math">\((S,B)\)</span> is not full, we label <span class="process-math">\(B\)</span> as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html" id="s_networkflow_example-2-1-8">
 \begin{equation*}
 B:\quad(S,+,8).
 \end{equation*}
 </div>
 <div class="para">We then consider vertex <span class="process-math">\(E\)</span> and label it as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html" id="s_networkflow_example-2-1-10">
 \begin{equation*}
 E:\quad(S,+,28).
 \end{equation*}
 </div>
 <div class="para">Next is vertex <span class="process-math">\(F\text{,}\)</span> which is labeled as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html" id="s_networkflow_example-2-1-12">
 \begin{equation*}
 F:\quad(S,+,15).
 \end{equation*}
@@ -666,7 +666,7 @@ D\amp:\quad(B,-,6)
 </div>
 <div class="para">The next vertex to be scanned is <span class="process-math">\(E\text{,}\)</span> but <span class="process-math">\(E\)</span> has no unlabeled neighbors, so we then move on to <span class="process-math">\(F\text{,}\)</span> which again has no unlabeled neighbors. Finally, we scan from <span class="process-math">\(A\text{,}\)</span> and using the pseudo-alphabetic order, we first consider the sink <span class="process-math">\(T\)</span> (which in this case is the only remaining unlabeled vertex). This results in the following label for <span class="process-math">\(T\text{.}\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_updated-flow.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_updated-flow.html" id="s_networkflow_example-2-2-16">
 \begin{equation*}
 T:\quad(A,+,8)
 \end{equation*}
@@ -717,7 +717,7 @@ F:\amp\quad(S,+,23)
 \end{align*}
 </div>
 <div class="para">Now we observe that the labeled and unlabeled vertices are <span class="process-math">\(L=\{S,C,F,H,I\}\)</span> and <span class="process-math">\(U=\{T,A,B,D,E,G,J,K\}\text{.}\)</span> Furthermore, the capacity of the cut <span class="process-math">\(V=L\cup U\)</span> is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_networkflow_example-3-4-10">
 \begin{equation*}
 41+8+23+8+13+29+28+25 = 175.
 \end{equation*}

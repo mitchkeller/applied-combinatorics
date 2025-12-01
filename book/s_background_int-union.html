@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -629,7 +629,7 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <section class="introduction" id="s_background_int-union-2"><div class="para logical" id="s_background_int-union-2-1">
 <div class="para">When <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are sets, the <dfn class="terminology">intersection</dfn> of <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\text{,}\)</span> denoted <span class="process-math">\(X\cap Y\)</span>, is defined by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_background_int-union-2-1-9">
 \begin{equation*}
 X\cap Y = \{x: x\in X, x\in Y\}
 \end{equation*}
@@ -665,13 +665,13 @@ X\cap Y = \{x: x\in X, x\in Y\}
 </div>
 <div class="para logical" id="s_background_int-union-3-4">
 <div class="para">For example, when <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are sets, the <dfn class="terminology">union</dfn> of <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\text{,}\)</span> denoted <span class="process-math">\(X\cup Y\text{,}\)</span> is defined by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_background_int-union-3-4-9">
 \begin{equation*}
 X\cup Y = \{x: x\in x \text{ or }  x\in Y\}.
 \end{equation*}
 </div>
 <div class="para">For example, if <span class="process-math">\(X=\{b,c,e,g,m\}\)</span> and <span class="process-math">\(Y=\{a,c,d,h,m,n,p\}\text{,}\)</span> then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_background_int-union-3-4-12">
 \begin{equation*}
 X\cup Y=\{a,b,c,d,e,g,h,m,n,p\}.
 \end{equation*}
@@ -680,20 +680,20 @@ X\cup Y=\{a,b,c,d,e,g,h,m,n,p\}.
 </div>
 <div class="para logical" id="s_background_int-union-3-5">
 <div class="para">Note that <span class="process-math">\(\cap\)</span> and <span class="process-math">\(\cup\)</span> are <dfn class="terminology">commutative</dfn> and <dfn class="terminology">associative</dfn> binary operations, as is the case with addition and multiplication for the set <span class="process-math">\(\posints\)</span> of positive integers, i.e., if <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(Y\)</span> and <span class="process-math">\(Z\)</span> are sets, then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_background_int-union-3-5-10">
 \begin{equation*}
 X\cap Y = Y\cap X \quad\text{ and } \quad X\cup Y = Y\cup X.
 \end{equation*}
 </div>
 <div class="para">Also,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_background_int-union-3-5-11">
 \begin{equation*}
 X\cap(Y\cap Z)= (X\cap Y)\cap Z\quad\text{ and } \quad
 X\cup(Y\cup Z)= (X\cup Y)\cup Z.
 \end{equation*}
 </div>
 <div class="para">Also, note that each of <span class="process-math">\(\cap\)</span> and <span class="process-math">\(\cup\)</span> distributes over the other, i.e.,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_background_int-union-3-5-15">
 \begin{equation*}
 X\cap(Y\cup Z)= (X\cap Y)\cup (X\cap Z)\quad\text{ and } \quad
 X\cup(Y\cap Z)= (X\cup Y)\cap (X\cup Z)
@@ -721,7 +721,7 @@ X\cup(Y\cap Z)= (X\cup Y)\cap (X\cup Z)
 </div>
 <div class="para logical" id="s_background_int-union-6-3">
 <div class="para">Surprisingly often, we will encounter a situation where sets <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> have different rules for membership yet both are in fact the same set. For example, let <span class="process-math">\(X=\{0,2\}\)</span> and <span class="process-math">\(Y=\{z\in\ints: z+z=z\times z\}\text{.}\)</span> Then <span class="process-math">\(X=Y\text{.}\)</span>  For this reason, it is useful to have a test when sets are equal. If <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are sets, then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_background_int-union-6-3-8">
 \begin{equation*}
 X = Y \quad\text{ if and only if } \quad X\subseteq Y \text{ and }  Y\subseteq X.
 \end{equation*}

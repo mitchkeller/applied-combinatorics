@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -653,7 +653,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="thm_markov-2-1">
 <div class="para">Let <span class="process-math">\(X\)</span> be a random variable in a probability space <span class="process-math">\((S,P)\text{.}\)</span> Then for every <span class="process-math">\(k&gt;0\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm_markov-2-1-4">
 \begin{equation*}
 P(|X|\ge k) \le E(|X|)/k.
 \end{equation*}
@@ -703,7 +703,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </h4>
 <div class="para logical" id="s_probability_central-tendency-3-4-1">
 <div class="para">Suppose that <span class="process-math">\(0\lt p\lt 1\)</span> and consider a series of <span class="process-math">\(n\)</span> Bernoulli trials with the probability of success being <span class="process-math">\(p\text{,}\)</span> and let <span class="process-math">\(X\)</span> count the number of successes. We have already noted that <span class="process-math">\(E(X)=np\text{.}\)</span> Now we claim the variance of <span class="process-math">\(X\)</span> is given by:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_probability_central-tendency-3-4-1-7">
 \begin{equation*}
 \var(X)=\sum_{i=0}^n (i-np)^2\binom{n}{i}p^i(1-p)^{n-i} = np(1-p)
 \end{equation*}
@@ -713,7 +713,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </div>
 <div class="para logical" id="s_probability_central-tendency-3-4-2">
 <div class="para">Let <span class="process-math">\(\cgF=\{X_1,X_2,\dots,X_n\}\)</span> be a family of random variables in a probability space <span class="process-math">\((S,P)\text{.}\)</span> We say the family <span class="process-math">\(\cgF\)</span> is <dfn class="terminology">independent</dfn> if for each <span class="process-math">\(i\)</span> and <span class="process-math">\(j\)</span> with <span class="process-math">\(1\le i\lt j\le n\text{,}\)</span> and for each pair <span class="process-math">\(a,b\)</span> of real numbers with <span class="process-math">\(0\le a,b\le 1\text{,}\)</span> the following two events are independent: <span class="process-math">\(\{x\in S: X_i(x)\le a\}\)</span> and <span class="process-math">\(\{x\in S:X_j(x)\le b\}\text{.}\)</span> When the family is independent, it is straightforward to verify that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_probability_central-tendency-3-4-2-13">
 \begin{equation*}
 \var(X_1+X_2+\dots+X_n)=\var(X_1)+\var(X_2)+\dots+\var(X_n).
 \end{equation*}
@@ -748,7 +748,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </h4>
 <div class="para logical" id="thm_chebyshev-2-1">
 <div class="para">Let <span class="process-math">\(X\)</span> be a random variable in a probability space <span class="process-math">\((S,P)\text{,}\)</span> and let <span class="process-math">\(k&gt;0\)</span> be a positive real number. If the expectation <span class="process-math">\(E(X)\)</span> of <span class="process-math">\(X\)</span> is <span class="process-math">\(\mu\)</span> and the standard deviation is <span class="process-math">\(\sigma_X\text{,}\)</span> then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm_chebyshev-2-1-8">
 \begin{equation*}
 \prob(|X- E(X)|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
 \end{equation*}
@@ -769,7 +769,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(\var(X)=\sigma_X^2\text{,}\)</span> we may now deduce that <span class="process-math">\(1/k^2\geq \prob(|X-\mu|)&gt;k\sigma_X)\text{.}\)</span> Therefore, since <span class="process-math">\(\prob(|X-\mu|\le k\sigma_X)=1-\prob(|X-\mu|&gt; k\sigma_X)\text{,}\)</span> we conclude that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm_chebyshev-3-2-5">
 \begin{equation*}
 \prob(|X- \mu|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
 \end{equation*}
@@ -788,7 +788,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </h4>
 <div class="para logical" id="s_probability_central-tendency-3-9-1">
 <div class="para">In the case of Bernoulli trials, we can use basic properties of binomial coefficients to make even more accurate estimates. Clearly, in the case of coin tossing, the probability that the number of heads in <span class="process-math">\(10,000\)</span> tosses is at least <span class="process-math">\(7,500\)</span> is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_probability_central-tendency-3-9-1-3">
 \begin{equation*}
 \sum_{i = 7,500}^{10,000} \binom{10,000}{i}/2^{10,000}
 \end{equation*}

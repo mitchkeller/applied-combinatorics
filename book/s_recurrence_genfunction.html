@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
@@ -648,7 +648,7 @@ sagecell.makeSagecell({
 </h3>
 <div class="para logical" id="ex_recurrence_gf-homog-1">
 <div class="para">Consider the recurrence equation <span class="process-math">\(r_{n}+r_{n-1}-6r_{n-2} = 0\)</span> for the sequence <span class="process-math">\(\{r_n\colon n\geq 0\}\)</span> with <span class="process-math">\(r_0=1\)</span> and <span class="process-math">\(r_1=3\text{.}\)</span> This sequence has generating function</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_gf-homog-1-5">
 \begin{equation*}
 f(x) = \sum_{n=0}^\infty r_n x^n = r_0+r_1
 x+r_2x^2+r_3x^3+\cdots.
@@ -668,7 +668,7 @@ xf(x) \amp = 0 + r_0 x + r_1x^2 + r_2 x^3 + \cdots r_{n-1}x^n + \cdots\\
 \end{align*}
 </div>
 <div class="para">When we add the left-hand side, we get <span class="process-math">\(f(x)(1+x-6x^2)\text{.}\)</span> On the right-hand side, the coefficient on <span class="process-math">\(x^n\)</span> for <span class="process-math">\(n\geq 2\)</span> is <span class="process-math">\(0\)</span> because of the recurrence equation. However, we are left with <span class="process-math">\(r_0 + (r_0+r_1)x = 1 + 4x\text{,}\)</span> using the initial conditions. Thus, we have the equation</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_gf-homog-2-10">
 \begin{equation*}
 f(x)(1+x-6x^2)= 1+4x,
 \end{equation*}
@@ -681,7 +681,7 @@ pretty_print(f(x).partial_fraction())
 </script></div>
 <div class="para logical" id="ex_recurrence_gf-homog-4">
 <div class="para">This shows us that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_gf-homog-4-1">
 \begin{equation*}
 f(x) =
 \frac{6}{5}\frac{1}{1-2x}-\frac{1}{5}\frac{1}{1+3 x} =
@@ -700,13 +700,13 @@ f(x) =
 </h3>
 <div class="para logical" id="ex_recurrence_gf-nonhomog-1">
 <div class="para">The recurrence equation <span class="process-math">\(r_n - r_{n-1}-2r_{n-2} = 2^n\)</span> is nonhomogeneous. Let <span class="process-math">\(r_0=2\)</span> and <span class="process-math">\(r_1=1\text{.}\)</span> This time, to solve the recurrence, we start by multiplying both sides by <span class="process-math">\(x^n\text{.}\)</span> This gives the equation</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_gf-nonhomog-1-5">
 \begin{equation*}
 r_nx^n - r_{n-1}x^n-2r_{n-2}x^n = 2^nx^n.
 \end{equation*}
 </div>
 <div class="para">If we sum this over all values of <span class="process-math">\(n\geq 2\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_gf-nonhomog-1-7">
 \begin{equation*}
 \sum_{n=2}^\infty r_nx^n - \sum_{n=2}^\infty r_{n-1}x^n-2
 \sum_{n=2}^\infty r_{n-2}x^n = \sum_{n=2}^\infty 2^nx^n.
@@ -717,13 +717,13 @@ r_nx^n - r_{n-1}x^n-2r_{n-2}x^n = 2^nx^n.
 </div>
 <div class="para logical" id="ex_recurrence_gf-nonhomog-2">
 <div class="para">The first sum is just missing the first two terms of the series, so we can replace it by <span class="process-math">\(R(x) - (2+x)\text{,}\)</span> where <span class="process-math">\(R(x)=\sum_{n=0}^\infty r_n x^n\text{.}\)</span> The second sum is almost <span class="process-math">\(xR(x)\text{,}\)</span> except it’s missing the first term. Thus, it’s equal to <span class="process-math">\(xR(x) - 2x\text{.}\)</span> The sum in the final term is simply <span class="process-math">\(x^2 R(x)\text{.}\)</span> Thus, the equation can be rewritten as</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_gf-nonhomog-2-6">
 \begin{equation*}
 R(x) - (2+x) -(xR(x)-2x)-2x^2R(x) = \frac{1}{1-2x} - 1- 2x.
 \end{equation*}
 </div>
 <div class="para">A little bit of algebra then gets us to the generating function</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_gf-nonhomog-2-7">
 \begin{equation*}
 R(x) = \frac{6x^2-5x+2}{(1-2x)(1-x-2x^2)}.
 \end{equation*}
@@ -746,7 +746,7 @@ R(x) \amp = -\frac{1}{9(1-2x)} + \frac{2}{3(1-2x)^2} +
 \end{align*}
 </div>
 <div class="para">From this generating function, we can read off that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exa_genfunction_multisets.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exa_genfunction_multisets.html" id="ex_recurrence_gf-nonhomog-4-3">
 \begin{equation*}
 r_n = -\frac{1}{9}2^n + \frac{2(n+1)}{3}2^{n} + \frac{13}{9}(-1)^n =
 \frac{5}{9} 2^n + \frac{2}{3}n2^n + \frac{13}{9}(-1)^n\text{.}

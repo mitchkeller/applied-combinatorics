@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -637,7 +637,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="prop_polya_sum-stabs-1-1">
 <div class="para">Let a group <span class="process-math">\(G\)</span> act on a finite set <span class="process-math">\(\cgC\text{.}\)</span> Then for all <span class="process-math">\(C\in \cgC\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_polya_sum-stabs-1-1-4">
 \begin{equation*}
 \sum_{C'\in\langle C\rangle} |\stab_G(C')| = |G|.
 \end{equation*}
@@ -647,14 +647,14 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Proposition 15.8"><a href="#prop_polya_sum-stabs" title="Copy heading and permalink for Proposition 15.8" aria-label="Copy heading and permalink for Proposition 15.8">🔗</a></div></article><details id="prop_polya_sum-stabs-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_polya_sum-stabs-2-1">
 <div class="para">Let <span class="process-math">\(\stab_G(C) = \{\pi_1,\dots,\pi_k\}\)</span> and <span class="process-math">\(T(C,C') = \{\pi\in G\colon \pi^*(C) = C'\}\text{.}\)</span> (Note that <span class="process-math">\(T(C,C) = \stab_G(C)\text{.}\)</span>) Take <span class="process-math">\(\pi\in T(C,C')\text{.}\)</span> Then <span class="process-math">\(\pi\circ \pi_i\in T(C,C')\)</span> for <span class="process-math">\(1\leq i\leq k\text{.}\)</span> Furthermore, if <span class="process-math">\(\pi\circ \pi_i = \pi\circ \pi_j\text{,}\)</span> then <span class="process-math">\(\pi^{-1}\circ\pi\circ \pi_i=\pi^{-1}\circ\pi\circ \pi_j\text{.}\)</span> Thus <span class="process-math">\(\pi_i=\pi_j\)</span> and <span class="process-math">\(i=j\text{.}\)</span> If <span class="process-math">\(\pi'\in T(C,C')\text{,}\)</span> then <span class="process-math">\(\pi\inv\circ \pi'\in T(C,C)\text{.}\)</span> Thus, <span class="process-math">\(\pi\inv\circ\pi' = \pi_i\)</span> for some <span class="process-math">\(i\text{,}\)</span> and hence <span class="process-math">\(\pi' = \pi\circ \pi_i\text{.}\)</span> Therefore <span class="process-math">\(T(C,C') = \{\pi\circ\pi_1,\dots,\pi\circ\pi_k\}\text{.}\)</span> Additionally, we observe that <span class="process-math">\(T(C',C) = \{\pi\inv\colon \pi\in T(C,C')\}\text{.}\)</span> Now for all <span class="process-math">\(C'\in\langle C\rangle\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_polya_sum-stabs-2-1-19">
 \begin{equation*}
 |\stab_G(C')|=|T(C',C')|=|T(C',C)| =
 |T(C,C')| = |T(C,C)| = |\stab_G(C)|.
 \end{equation*}
 </div>
 <div class="para">Therefore,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_polya_sum-stabs-2-1-20">
 \begin{equation*}
 \sum_{C'\in\langle C\rangle}|\stab_G(C')| =
 \sum_{C'\in\langle C\rangle} |T(C,C')|.
@@ -670,7 +670,7 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para logical" id="lem_polya_burnside-2-1">
 <div class="para">Let a group <span class="process-math">\(G\)</span> act on a finite set <span class="process-math">\(\cgC\text{.}\)</span> If <span class="process-math">\(N\)</span> is the number of equivalence classes of <span class="process-math">\(\cgC\)</span> induced by this action, then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="lem_polya_burnside-2-1-5">
 \begin{equation*}
 N = \frac{1}{|G|} \sum_{\pi\in G} |\fix_\cgC(\pi)|.
 \end{equation*}
@@ -681,7 +681,7 @@ N = \frac{1}{|G|} \sum_{\pi\in G} |\fix_\cgC(\pi)|.
 </div>
 <details id="s_polya_burnside-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_polya_burnside-8-1">
 <div class="para">Let <span class="process-math">\(X=\{(\pi,C)\in G\times \cgC\colon \pi(C) = C\}\text{.}\)</span> Notice that <span class="process-math">\(\sum_{\pi \in G} |\fix_\cgC(\pi)| = |X|\text{,}\)</span> since each term in the sum counts how many ordered pairs of <span class="process-math">\(X\)</span> have <span class="process-math">\(\pi\)</span> in their first coordinate. Similarly, <span class="process-math">\(\sum_{C\in \cgC} |\stab_G(C)| = |X|\text{,}\)</span> with each term of this sum counting how many ordered pairs of <span class="process-math">\(X\)</span> have <span class="process-math">\(C\)</span> as their second coordinate. Thus, <span class="process-math">\(\sum_{\pi \in G} |\fix_\cgC(\pi)|=\sum_{C\in \cgC} |\stab_G(C)|\text{.}\)</span> Now note that the latter sum may be rewritten as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_polya_sum-stabs.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop_polya_sum-stabs.html" id="s_polya_burnside-8-1-9">
 \begin{equation*}
 \sum_{\substack{\text{equivalence} \\\text{classes }  \langle
 C\rangle} }\left( \sum_{C'\in\langle C\rangle}

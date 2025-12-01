@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -629,7 +629,7 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <div class="para logical" id="s_genfunction_intro-2">
 <div class="para">With a sequence <span class="process-math">\(\sigma=\{a_n:n\ge0\}\)</span> of real numbers, we associate a “function” <span class="process-math">\(F(x)\)</span> defined by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_genfunction_intro-2-4">
 \begin{equation*}
 F(x)=\sum_{n=0}^\infty a_n x^n.
 \end{equation*}
@@ -644,7 +644,7 @@ F(x)=\sum_{n=0}^\infty a_n x^n.
 </h3>
 <div class="para logical" id="exam_genfunction_geom-series-3">
 <div class="para">Consider the constant sequence <span class="process-math">\(\sigma=\{a_n:n\ge0\}\)</span> with <span class="process-math">\(a_n=1\)</span> for every <span class="process-math">\(n\ge0\text{.}\)</span> Then the generating function <span class="process-math">\(F(x)\)</span> of <span class="process-math">\(\sigma\)</span> is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exam_genfunction_geom-series-3-6">
 \begin{equation*}
 F(x)=1+x+x^2+x^3+x^4+x^5+x^6+\cdots\text{,}
 \end{equation*}
@@ -654,33 +654,33 @@ F(x)=1+x+x^2+x^3+x^4+x^5+x^6+\cdots\text{,}
 </div>
 <div class="para logical" id="exam_genfunction_geom-series-4">
 <div class="para">You may remember that this last expression is the Maclaurin series for the function <span class="process-math">\(F(x)=1/(1-x)\)</span> and that the series converges when <span class="process-math">\(|x|\lt 1\text{.}\)</span> Since we want to think in terms of formal power series, let’s see that we can justify the expression</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exam_genfunction_geom-series-4-3">
 \begin{equation*}
 \frac{1}{1-x}=1+x+x^2+x^3+x^4+x^5+x^6+\cdots=\sum_{n=0}^\infty x^n
 \end{equation*}
 </div>
 <div class="para">without any calculus techniques. Consider the product</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exam_genfunction_geom-series-4-4">
 \begin{equation*}
 (1-x)(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
 \end{equation*}
 </div>
 <div class="para">and notice that, since we multiply formal power series just like we multiply polynomials (power series are pretty much polynomials that go on forever), we have that this product is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exam_genfunction_geom-series-4-5">
 \begin{equation*}
 (1+x+x^2+x^3+x^4+x^5+x^6+\cdots)-x(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
 = 1.
 \end{equation*}
 </div>
 <div class="para">Now we have that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exam_genfunction_geom-series-4-6">
 \begin{equation*}
 (1-x)(1+x+x^2+x^3+x^4+x^5+x^6+\cdots) = 1,
 \end{equation*}
 </div>
 <div class="para">or, more usefully, after dividing through by <span class="process-math">\(1-x\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exam_genfunction_geom-series-4-8">
 \begin{equation*}
 \frac{1}{1-x} = \sum_{n=0}^\infty x^n.
 \end{equation*}
@@ -711,13 +711,13 @@ F(x)=1+x+x^2+x^3+x^4+x^5+x^6+\cdots\text{,}
 </div>
 <div class="para logical" id="s_genfunction_intro-6-2">
 <div class="para">To see this in action, consider differentiating the power series of the previous example. This gives</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_genfunction_intro-6-2-1">
 \begin{equation*}
 \frac{1}{(1-x)^2}=1+2x+3x^2+4x^3+5x^4+6x^5+7x^6+\dots=\sum_{n=1}^\infty nx^{n-1}.
 \end{equation*}
 </div>
 <div class="para">Integration of the series represented by <span class="process-math">\(1/(1+x) = 1/(1-(-x))\)</span> yields (after a bit of algebraic manipulation)</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_genfunction_intro-6-2-3">
 \begin{equation*}
 \log(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-
 \frac{x^6}{6}+\dots=\sum_{n=1}^\infty (-1)^{n+1}\frac{x^n}{n}.
@@ -727,7 +727,7 @@ F(x)=1+x+x^2+x^3+x^4+x^5+x^6+\cdots\text{,}
 </div>
 <div class="autopermalink" data-description="Example 8.2"><a href="#s_genfunction_intro-6" title="Copy heading and permalink for Example 8.2" aria-label="Copy heading and permalink for Example 8.2">🔗</a></div></article><div class="para logical" id="s_genfunction_intro-7">
 <div class="para">Before you become convinced that we’re only going to concern ourselves with generating functions that actually converge, let’s see that we can talk about the formal power series</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_genfunction_intro-7-1">
 \begin{equation*}
 F(x)=\sum_{n=0}^{\infty} n! x^n,
 \end{equation*}
@@ -743,7 +743,7 @@ F(x)=\sum_{n=0}^{\infty} n! x^n,
 </h3>
 <div class="para logical" id="prop_genfunction-product-1-1">
 <div class="para">Let <span class="process-math">\(A(x)=\sum_{n=0}^\infty a_nx^n\)</span> and <span class="process-math">\(B(x)=\sum_{n=0}^\infty b_nx^n\)</span> be generating functions. Then <span class="process-math">\(A(x)B(x)\)</span> is the generating function of the sequence whose <span class="process-math">\(n^{th}\)</span> term is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop_genfunction-product-1-1-5">
 \begin{equation*}
 a_0b_n+a_1b_{n-1}+a_2b_{n-2}+\dots+a_nb_0=\sum_{k=0}^n a_kb_{n-k}.
 \end{equation*}

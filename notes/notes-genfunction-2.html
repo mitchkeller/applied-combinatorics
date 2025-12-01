@@ -105,14 +105,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -267,6 +267,14 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-handout active"><div class="toc-title-box"><a href="notes-genfunction-2.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Ordinary Generating Functions</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-genfunction-3.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Partitions and Newton’s Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-exp-genfn.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Generating Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="notes-recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction to Advancement Operators</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-3.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Homogeneous Recurrence Equations</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -315,7 +323,7 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para logical" id="notes-genfunction-2-2-1-3-1-1">
 <div class="para">Let <span class="process-math">\(A(x)=\sum_{n=0}^{\infty} a_{n}x^{n}\)</span> and <span class="process-math">\(B(x)=\sum_{n=0}^{\infty} b_{n}x^{n}\)</span> be generating functions. Then <span class="process-math">\(A(x)B(x)\)</span> is the generating function of the sequence whose coefficient on <span class="process-math">\(x^{n}\)</span> is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="notes-genfunction-2-2-1-3-1-1-5">
 \begin{equation*}
 a_{0}b_{n}+a_{1}b_{n-1}+a_{2}b_{n-2}+\dots+a_{n}b_{0}=\sum_{k=0}^{n} a_{k}b_{n-k}.
 \end{equation*}
@@ -460,7 +468,7 @@ H(x)\amp= \frac{x^{5} - 9x^{4} + 12x^{3} - 6x^{2} + x}{1-x^{5} + 14x^{4} - 29x^{
 <div class="autopermalink" data-description="Theorem 8.2: Keller and Young 2020"><a href="#notes-genfunction-2-5-1-2" title="Copy heading and permalink for Theorem 8.2: Keller and Young 2020" aria-label="Copy heading and permalink for Theorem 8.2: Keller and Young 2020">🔗</a></div></article><div class="para logical" id="notes-genfunction-2-5-1-3">
 <div class="para">
 <a class="external" href="https://oeis.org/A293499" target="_blank">OEIS A293499</a> (<em class="alert">New!</em>)</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="notes-genfunction-2-5-1-3-3">
 \begin{equation*}
 C_{n} \sim \frac{4^{n}}{n^{3/2}\sqrt{\pi}}
 \end{equation*}

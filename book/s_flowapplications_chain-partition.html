@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -677,7 +677,7 @@ x'_3:\quad \amp (S,+,1) \amp  x'_9:\quad \amp (S,+,1) \amp  x''_9:\quad \amp  (x
 </div>
 <div class="para logical" id="s_flowapplications_chain-partition-14">
 <div class="para">Even once we see that the above process does in fact generate a chain partition, it is not immediately clear that it’s a minimum chain partition. For this, we need to find an antichain of as many points as there are chains in our partition. (In the example we’ve been using, we need to find a three-element antichain.) This is where tracking the labeled vertices comes in handy. Suppose we have determined a chain <span class="process-math">\(C=\{x_1\lt x_2\lt \cdots \lt x_k\}\)</span> using the network flow. Since <span class="process-math">\(x_1\)</span> is the minimal element of this chain, there is no flow into <span class="process-math">\(x_1''\)</span> and hence no flow out of <span class="process-math">\(x_1''\text{.}\)</span> Since <span class="process-math">\(T\)</span> is unlabeled, this must mean that <span class="process-math">\(x_1''\)</span> is unlabeled. Similarly, <span class="process-math">\(x_k\)</span> is the maximal element of <span class="process-math">\(C\text{,}\)</span> so there is no flow out of <span class="process-math">\(x_k'\text{.}\)</span> Thus, <span class="process-math">\(x_k'\)</span> is labeled. Now considering the sequence of vertices</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_flowapplications_chain-partition-14-11">
 \begin{equation*}
 x_k',x_k'',x_{k-1}',x_{k-1}'',\dots,x_2',x_2'',x_1',x_1'',
 \end{equation*}

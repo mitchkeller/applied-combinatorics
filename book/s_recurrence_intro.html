@@ -120,14 +120,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -634,7 +634,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="s_recurrence_intro_fib-4">
 <div class="para">Let’s see how we can get a recurrence from this story. Let <span class="process-math">\(f_n\)</span> denote the number of pairs rabbits on the island in month <span class="process-math">\(n\text{.}\)</span> Thus, <span class="process-math">\(f_1 = 1\text{,}\)</span> <span class="process-math">\(f_2 = 1\text{,}\)</span> <span class="process-math">\(f_3=2\text{,}\)</span> and <span class="process-math">\(f_4=3\)</span> from our account above. How can we compute <span class="process-math">\(f_n\text{?}\)</span> Well, in the <span class="process-math">\(n^\text{th}\)</span> month we have all the pairs of rabbits that were there during the previous month, which is <span class="process-math">\(f_{n-1}\text{;}\)</span> however, some of those pairs of rabbits also reproduce during this month. Only the ones who were born prior to the previous month are able to reproduce during month <span class="process-math">\(n\text{,}\)</span> so there are <span class="process-math">\(f_{n-2}\)</span> pairs of rabbits who are able to reproduce, and each produces a new pair of rabbits. Thus, we have that the number of rabbits in month <span class="process-math">\(n\)</span> is <span class="process-math">\(f_n = f_{n-1} + f_{n-2}\)</span> for <span class="process-math">\(n\geq 3\)</span> with <span class="process-math">\(f_1=f_2=1\text{.}\)</span> The sequence of numbers <span class="process-math">\(\{f_n\colon n\geq 0\}\)</span> (we take <span class="process-math">\(f_0=0\text{,}\)</span> which satisfies our recurrence) is known as the <dfn class="terminology">Fibonacci sequence</dfn> after Leonardo of Pisa, better known as Fibonacci, an Italian mathematician who lived from about 1170 until about 1250. The terms <span class="process-math">\(f_0,f_1,\dots,f_{20}\)</span> of the Fibonacci sequence are</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_recurrence_intro_fib-4-21">
 \begin{equation*}
 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987, 1597,2584,4181,6765.
 \end{equation*}
@@ -644,7 +644,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="s_recurrence_intro_fib-5">
 <div class="para">Thus, the answer to our question about the number of pairs of rabbits on the island in the tenth month is <span class="process-math">\(55\text{.}\)</span> That’s really easy to compute, but what if we asked for the value of <span class="process-math">\(f_{1000}\)</span> in the Fibonacci sequence? Could you even tell whether the following inequality is true or false—without actually finding <span class="process-math">\(f_{1000}\text{?}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="s_recurrence_intro_fib-5-5">
 \begin{equation*}
 f_{1000} \lt  232748383849990383201823093383773932
 \end{equation*}
@@ -686,7 +686,7 @@ f_{1000} \lt  232748383849990383201823093383773932
 </h4>
 <div class="para logical" id="ex_recurrence_binary-strings-no-11-2">
 <div class="para">Let <span class="process-math">\(a_{n}\)</span> count the number of binary strings of length <span class="process-math">\(n\)</span> in which no two consecutive characters are <span class="process-math">\(1\)</span>’s. Evidently, <span class="process-math">\(a_1=2\)</span> since both binary strings of length <span class="process-math">\(1\)</span> are “good.” Also, <span class="process-math">\(a_2=3\)</span> since only one of the four binary strings of length <span class="process-math">\(2\)</span> is “bad,”, namely <span class="process-math">\((1,1)\text{.}\)</span> And <span class="process-math">\(a_3= 5\text{,}\)</span> since of the <span class="process-math">\(8\)</span> binary strings of length <span class="process-math">\(3\text{,}\)</span> the following three strings are “bad”:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex_recurrence_binary-strings-no-11-2-19">
 \begin{equation*}
 (1,1,0), (0,1,1), (1,1,1).
 \end{equation*}
