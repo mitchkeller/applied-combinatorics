@@ -610,7 +610,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "9.1",
   "title": "Solving Linear, Constant Coefficient Homogeneous Recurrence Equations",
-  "body": " Solving Linear, Constant Coefficient Homogeneous Recurrence Equations   These activities will help you develop methods for solving advancement operator equations. Recall that these are convenient ways of writing recurrence relations. Our focus at first will be on homogeneous, linear, constant coefficient equations. This activity concludes with an initial investigation of the nonhomogeneous (linear, constant coefficient) case, which we will explore further in a future activity. Nonlinear recurrences and those with nonconstant coefficients require additional, advanced techniques.   Degree two, no other roots    Verify that is a solution of . Hint : To do this, you need to evaluate and simplify fully. I recommend doing this by first evaluating . When you simplify that, you should get , but do the work and make sure you get this simplified form. Then apply to and simplify. You should get .            Determine if is a solution of .If it’s not, what do you get instead of ?           Since we already know that is a solution of (and thus ), adding it to gives a two parameter family of solutions. Find and so that is a solution of if and .    We find that and . We know the former is , so . Since and , we see that . Hence .      Repeated root of degree two, other roots    Now consider the advancement operator equation . Use part and what you learned in the class prep to propose a general solution to this equation.           Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations and you can commute the factors in an advancement operator polynomial so that applying will give the same result as applying . This fact is not true of all linear transformations…matrix multiplication is not commutative, after all! However, it works here.      Higher degrees, no other roots    Consider the advancement operator equation . Conjecture what terms should be in its solution.           Verify your conjecture from the previous step.      Apply to . What’s the highest power of remaining? How many more times would you need to apply to finally get ?    The highest power of remaining is . You would need to apply four more times to get .      Apply to . What’s the highest power of remaining?    The highest power of remaining is .      Conjecture what the highest power of is that remains when you apply to . (Here is an integer.)    The highest power that will remain is .      Use the Binomial Theorem to explain why your conjecture in the previous step is correct.           What value of makes for the function from part ? We say here that  annihilates  because applying the operator to yields .     annihilates .      Higher degrees, lots of roots   Write down the general solution (i.e., with constants running around) for each of the following advancement opeator eqations. Do not verify that these are actually solutions, as you will have an algebraic mess on your hands!                      This is equivalent to where and are the roots of . Thus we have .           This is equivalent to where and are the roots of . Thus we have .           This is equivalent to (note the factor and regroup on ) where and are the complex roots of . (Yeah, complex roots work just fine here.) Thus, we have where .      Working toward the non-homogeneous case    What happens if you apply to the function ? (Write your answer as a multiple of .)    You get .      Now suppose we’re trying to solve ? (Look, ma, the right side isn’t zero!)     What does the previous step suggest might be a function you could apply to while retaining a power of afterward?    We might try .      Apply to your function. Write the result as a multiple of .    We just need to apply the advancement operator polynomial to . We get .      You want this result to be just . What do you need to do to achieve this? Hint : Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?     Set .      What can you add to your function without affecting the fact that ?    The solutions to the homogeneous equation, since we know that will transform to .       Suppose now that you’re trying to solve . What would you need to try in order to preserve the when applying ?    We’d need since will be annihilated by the , but we know that will not annihilate . Constants are helpful.      "
+  "body": " Solving Linear, Constant Coefficient Homogeneous Recurrence Equations   These activities will help you develop methods for solving advancement operator equations. Recall that these are convenient ways of writing recurrence relations. Our focus at first will be on homogeneous, linear, constant coefficient equations. This activity concludes with an initial investigation of the nonhomogeneous (linear, constant coefficient) case, which we will explore further in a future activity. Nonlinear recurrences and those with nonconstant coefficients require additional, advanced techniques.   Degree two, no other roots    Verify that is a solution of . Hint : To do this, you need to evaluate and simplify fully. I recommend doing this by first evaluating . When you simplify that, you should get , but do the work and make sure you get this simplified form. Then apply to and simplify. You should get .            Determine if is a solution of . If it’s not, what do you get instead of ?           Since we already know that is a solution of (and thus ), adding it to gives a two parameter family of solutions. Find and so that is a solution of if and .    We find that and . We know the former is , so . Since and , we see that . Hence .      Repeated root of degree two, other roots    Now consider the advancement operator equation . Use part and what you learned in the class prep to propose a general solution to this equation.           Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations and you can commute the factors in an advancement operator polynomial so that applying will give the same result as applying . This fact is not true of all linear transformations…matrix multiplication is not commutative, after all! However, it works here.      Higher degrees, no other roots    Consider the advancement operator equation . Conjecture what terms should be in its solution.           Verify your conjecture from the previous step.      Apply to . What’s the highest power of remaining? How many more times would you need to apply to finally get ?    The highest power of remaining is . You would need to apply four more times to get .      Apply to . What’s the highest power of remaining?    The highest power of remaining is .      Conjecture what the highest power of is that remains when you apply to . (Here is an integer.)    The highest power that will remain is .      Use the Binomial Theorem to explain why your conjecture in the previous step is correct.           What value of makes for the function from part ? We say here that  annihilates  because applying the operator to yields .     annihilates .      Higher degrees, lots of roots   Write down the general solution (i.e., with constants running around) for each of the following advancement opeator eqations. Do not verify that these are actually solutions, as you will have an algebraic mess on your hands!                      This is equivalent to where and are the roots of . Thus we have .           This is equivalent to where and are the roots of . Thus we have .           This is equivalent to (note the factor and regroup on ) where and are the complex roots of . (Yeah, complex roots work just fine here.) Thus, we have where .      Working toward the non-homogeneous case    What happens if you apply to the function ? (Write your answer as a multiple of .)    You get .      Now suppose we’re trying to solve ? (Look, ma, the right side isn’t zero!)     What does the previous step suggest might be a function you could apply to while retaining a power of afterward?    We might try .      Apply to your function. Write the result as a multiple of .    We just need to apply the advancement operator polynomial to . We get .      You want this result to be just . What do you need to do to achieve this? Hint : Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?     Set .      What can you add to your function without affecting the fact that ?    The solutions to the homogeneous equation, since we know that will transform to .       Suppose now that you’re trying to solve . What would you need to try in order to preserve the when applying ?    We’d need since will be annihilated by the , but we know that will not annihilate . Constants are helpful.      "
 },
 {
   "id": "ws-recurrence-homog-3",
@@ -619,7 +619,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "9.1.1",
   "title": "Degree two, no other roots.",
-  "body": " Degree two, no other roots    Verify that is a solution of . Hint : To do this, you need to evaluate and simplify fully. I recommend doing this by first evaluating . When you simplify that, you should get , but do the work and make sure you get this simplified form. Then apply to and simplify. You should get .            Determine if is a solution of .If it’s not, what do you get instead of ?           Since we already know that is a solution of (and thus ), adding it to gives a two parameter family of solutions. Find and so that is a solution of if and .    We find that and . We know the former is , so . Since and , we see that . Hence .    "
+  "body": " Degree two, no other roots    Verify that is a solution of . Hint : To do this, you need to evaluate and simplify fully. I recommend doing this by first evaluating . When you simplify that, you should get , but do the work and make sure you get this simplified form. Then apply to and simplify. You should get .            Determine if is a solution of . If it’s not, what do you get instead of ?           Since we already know that is a solution of (and thus ), adding it to gives a two parameter family of solutions. Find and so that is a solution of if and .    We find that and . We know the former is , so . Since and , we see that . Hence .    "
 },
 {
   "id": "ws-recurrence-homog-4",
@@ -656,6 +656,132 @@ var ptx_lunr_docs = [
   "number": "9.1.5",
   "title": "Working toward the non-homogeneous case.",
   "body": " Working toward the non-homogeneous case    What happens if you apply to the function ? (Write your answer as a multiple of .)    You get .      Now suppose we’re trying to solve ? (Look, ma, the right side isn’t zero!)     What does the previous step suggest might be a function you could apply to while retaining a power of afterward?    We might try .      Apply to your function. Write the result as a multiple of .    We just need to apply the advancement operator polynomial to . We get .      You want this result to be just . What do you need to do to achieve this? Hint : Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?     Set .      What can you add to your function without affecting the fact that ?    The solutions to the homogeneous equation, since we know that will transform to .       Suppose now that you’re trying to solve . What would you need to try in order to preserve the when applying ?    We’d need since will be annihilated by the , but we know that will not annihilate . Constants are helpful.    "
+},
+{
+  "id": "ws-recurrence-nonhomog",
+  "level": "1",
+  "url": "ws-recurrence-nonhomog.html",
+  "type": "Worksheet",
+  "number": "9.2",
+  "title": "Nonhomogeneous Advancedment Operator Equations",
+  "body": " Nonhomogeneous Advancedment Operator Equations  We want to solve an advancement operator equation of the form where is not identically . To do this, we seek any solution to the equation. We call this a particular solution . We then solve the homogeneous equation (Yes, the same .) and call its general solution . The general solution of the nonhomogeneous equation is then .  We first consider when does not “interfere” with and recap the last portion of our previous class's activity. If you apply to the function , then you have . Thus, we really would like to have a constant in . We try and compute . The output from this needs to be , so we set and solve for to find and . To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation and find . Thus the general solution of the nonhomogeneous equation is     If we try using as a particular solution of , we find the following: . Why is this an issue?      Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)      Find the general solution of .    Let’s make a bit more complicated.    Find a particular solution of .      Write the general solution of .      Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)    Now for interference between and .    Predict what will happen if you try as a particular solution of . Why is this the case?      Find a particular solution of .      Find a particular solution of . (Think about what’s on the left-hand side and what it will do to your proposed before trying to find constant(s).)      Find a particular solution of .      Find a particular solution of .      Find the general solution of .    "
+},
+{
+  "id": "ws-recurrence-nonhomog-2",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "particular solution general solution of the nonhomogeneous equation "
+},
+{
+  "id": "ws-recurrence-nonhomog-stuck",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-stuck",
+  "type": "Problem",
+  "number": "9.2.1",
+  "title": "",
+  "body": "  If we try using as a particular solution of , we find the following: . Why is this an issue?   "
+},
+{
+  "id": "ws-recurrence-nonhomog-5",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-5",
+  "type": "Problem",
+  "number": "9.2.2",
+  "title": "",
+  "body": "  Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)   "
+},
+{
+  "id": "ws-recurrence-nonhomog-6",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-6",
+  "type": "Problem",
+  "number": "9.2.3",
+  "title": "",
+  "body": "  Find the general solution of .   "
+},
+{
+  "id": "ws-recurrence-nonhomog-multiterm",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-multiterm",
+  "type": "Problem",
+  "number": "9.2.4",
+  "title": "",
+  "body": "  Find a particular solution of .   "
+},
+{
+  "id": "ws-recurrence-nonhomog-9",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-9",
+  "type": "Problem",
+  "number": "9.2.5",
+  "title": "",
+  "body": "  Write the general solution of .   "
+},
+{
+  "id": "ws-recurrence-nonhomog-10",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-10",
+  "type": "Problem",
+  "number": "9.2.6",
+  "title": "",
+  "body": "  Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)   "
+},
+{
+  "id": "ws-recurrence-nonhomog-12",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-12",
+  "type": "Problem",
+  "number": "9.2.7",
+  "title": "",
+  "body": "  Predict what will happen if you try as a particular solution of . Why is this the case?   "
+},
+{
+  "id": "ws-recurrence-nonhomog-13",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-13",
+  "type": "Problem",
+  "number": "9.2.8",
+  "title": "",
+  "body": "  Find a particular solution of .   "
+},
+{
+  "id": "ws-recurrence-nonhomog-14",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-14",
+  "type": "Problem",
+  "number": "9.2.9",
+  "title": "",
+  "body": "  Find a particular solution of . (Think about what’s on the left-hand side and what it will do to your proposed before trying to find constant(s).)   "
+},
+{
+  "id": "ws-recurrence-nonhomog-15",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-15",
+  "type": "Problem",
+  "number": "9.2.10",
+  "title": "",
+  "body": "  Find a particular solution of .   "
+},
+{
+  "id": "ws-recurrence-nonhomog-16",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-16",
+  "type": "Problem",
+  "number": "9.2.11",
+  "title": "",
+  "body": "  Find a particular solution of .   "
+},
+{
+  "id": "ws-recurrence-nonhomog-17",
+  "level": "2",
+  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-17",
+  "type": "Problem",
+  "number": "9.2.12",
+  "title": "",
+  "body": "  Find the general solution of .   "
 }
 ]
 

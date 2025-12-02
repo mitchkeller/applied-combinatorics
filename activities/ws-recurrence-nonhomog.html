@@ -14,11 +14,11 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ACW Intro to Ordinary Generating Functions</title>
+<title>ACW Nonhomogeneous Advancedment Operator Equations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/print-worksheet.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
@@ -132,18 +132,6 @@ eBookConfig.enable_chatcodes =  false;
 <script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -169,7 +157,7 @@ sagecell.makeSagecell({
 <div class="embed-code-container">
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
-</div></span><span class="treebuttons"><a class="previous-button button" href="ws-genfunction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ws-genfunction.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-recurrence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></span><span class="treebuttons"><a class="previous-button button" href="ws-recurrence-homog.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ws-recurrence.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
 \newcommand{\ints}{\mathbb{Z}}
 \newcommand{\posints}{\mathbb{N}}
@@ -284,67 +272,119 @@ sagecell.makeSagecell({
 <div class="toc-title-box"><a href="ws-inclusion-exclusion.html" class="internal"><span class="codenumber">7</span> <span class="title">Principle of Inclusion-Exclusion</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-inclusion-exclusion-surjections.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Counting Surjections</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ws-genfunction.html" class="internal"><span class="codenumber">8</span> <span class="title">Generating Functions</span></a></div>
-<ul class="structural toc-item-list contains-active"><li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-genfunction-intro.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Intro to Ordinary Generating Functions</span></a></div></li></ul>
-</li>
 <li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ws-genfunction.html" class="internal"><span class="codenumber">8</span> <span class="title">Generating Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-genfunction-intro.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Intro to Ordinary Generating Functions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ws-recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-recurrence-homog.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Solving Linear, Constant Coefficient Homogeneous Recurrence Equations</span></a></div></li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-recurrence-nonhomog.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Nonhomogeneous Advancedment Operator Equations</span></a></div></li>
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-recurrence-nonhomog.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Nonhomogeneous Advancedment Operator Equations</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<div class="print-preview-header">
-<h2 class="print-preview">Print preview</h2>
-<div class="print-controls">
-<div class="print-controls-toggles">
-<form class="papersize-select" id="papersize-select">
-<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
-        </label><label><input type="radio" name="papersize" value="letter">Letter
-        </label>
-</form>
-<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
-</div>
-<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
-</div>
-</div>
-<section class="worksheet" id="ws-genfunction-intro" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
-<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intro to Ordinary Generating Functions</span><div class="print-links"><a href="ws-genfunction-intro-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="ws-recurrence-nonhomog" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Nonhomogeneous Advancedment Operator Equations</span><div class="print-links"><a href="ws-recurrence-nonhomog-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="onepage" id="ws-genfunction-intro-2"><article class="activity project-like" id="ws-genfunction-intro-2-1"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="introduction" id="ws-genfunction-intro-2-1-1"><div class="para" id="ws-genfunction-intro-2-1-1-1">Our goal is to use generating functions to find the number of ways to make certain amounts of money for using coins.<div class="autopermalink" data-description="Paragraph"><a href="#ws-genfunction-intro-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<article class="task exercise-like" id="ws-genfunction-intro-2-1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="ws-genfunction-intro-2-1-2-1-1">If you want to find the number of ways to make $1, you should plan to look for the coefficient on <span class="process-math">\(x^{n}\)</span> for what <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-genfunction-intro-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="ws-recurrence-nonhomog-2">
+<div class="para">We want to solve an advancement operator equation of the form</div>
+<div class="displaymath process-math" id="ws-recurrence-nonhomog-2-1">
+\begin{equation*}
+p(A) f(n) = g(n)
+\end{equation*}
 </div>
-<div class="workspace" data-space="0.5cm"></div>
-<div class="autopermalink" data-description="Task 8.1.1.a"><a href="#ws-genfunction-intro-2-1-2" title="Copy heading and permalink for Task 8.1.1.a" aria-label="Copy heading and permalink for Task 8.1.1.a">🔗</a></div></article><article class="task exercise-like" id="ws-genfunction-intro-2-1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="ws-genfunction-intro-2-1-3-1-1">Suppose first that you only have pennies and nickels. What’s the generating function? How many ways to make $1 using pennies and nickels?<div class="autopermalink" data-description="Paragraph"><a href="#ws-genfunction-intro-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div id="ws-genfunction-intro-2-1-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># Put your generating function after = on line 2
-f(x) = 
-# Replace n on line 5 with something appropriate 
-# to get enough terms.
-p(x) = f.series(x,n)
-p(x)
-</script></div>
-<div class="workspace" data-space="2cm"></div>
-<div class="autopermalink" data-description="Task 8.1.1.b"><a href="#ws-genfunction-intro-2-1-3" title="Copy heading and permalink for Task 8.1.1.b" aria-label="Copy heading and permalink for Task 8.1.1.b">🔗</a></div></article><article class="task exercise-like" id="ws-genfunction-intro-2-1-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="ws-genfunction-intro-2-1-4-1-1">Now suppose you have pennies, nickels, dimes, and quarters. What’s the generating function? Number of ways to make $1? Number of ways to make $0.83?<div class="autopermalink" data-description="Paragraph"><a href="#ws-genfunction-intro-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">where <span class="process-math">\(g(n)\)</span> is not identically <span class="process-math">\(0\text{.}\)</span> To do this, we seek any solution <span class="process-math">\(f_{1}(n)\)</span> to the equation. We call this a <dfn class="terminology">particular solution</dfn>. We then solve the homogeneous equation <span class="process-math">\(p(A)f(n) = 0\)</span> (Yes, the same <span class="process-math">\(p(A)\text{.}\)</span>) and call its general solution <span class="process-math">\(f_{0}(n)\text{.}\)</span> The <dfn class="terminology">general solution of the nonhomogeneous equation</dfn> is then <span class="process-math">\(f(n)=f_{0}(n) + f_{1}(n)\text{.}\)</span>
 </div>
-<div class="workspace" data-space="2cm"></div>
-<div class="autopermalink" data-description="Task 8.1.1.c"><a href="#ws-genfunction-intro-2-1-4" title="Copy heading and permalink for Task 8.1.1.c" aria-label="Copy heading and permalink for Task 8.1.1.c">🔗</a></div></article><article class="task exercise-like" id="ws-genfunction-intro-2-1-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="ws-genfunction-intro-2-1-5-1-1">Suppose you have pennies, nickels, dimes, quarters, half dollars, and dollar coins. What’s the generating function? What’s the number of ways to make $1? What’s the number of ways to make $2.50?<div class="autopermalink" data-description="Paragraph"><a href="#ws-genfunction-intro-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="workspace" data-space="4cm"></div>
-<div class="autopermalink" data-description="Task 8.1.1.d"><a href="#ws-genfunction-intro-2-1-5" title="Copy heading and permalink for Task 8.1.1.d" aria-label="Copy heading and permalink for Task 8.1.1.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 8.1.1"><a href="#ws-genfunction-intro-2-1" title="Copy heading and permalink for Activity 8.1.1" aria-label="Copy heading and permalink for Activity 8.1.1">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet 8.1: Intro to Ordinary Generating Functions"><a href="#ws-genfunction-intro" title="Copy heading and permalink for Worksheet 8.1: Intro to Ordinary Generating Functions" aria-label="Copy heading and permalink for Worksheet 8.1: Intro to Ordinary Generating Functions">🔗</a></div></section>
+<div class="para logical" id="ws-recurrence-nonhomog-3">
+<div class="para">We first consider when <span class="process-math">\(p(A)\)</span> does not “interfere” with <span class="process-math">\(g(n)\)</span> and recap the last portion of our previous class’s activity. If you apply <span class="process-math">\((A-3)\)</span> to the function <span class="process-math">\(f(n) = 5^{n}\text{,}\)</span> then you have</div>
+<div class="displaymath process-math" id="ws-recurrence-nonhomog-3-5">
+\begin{equation*}
+(A-3)5^{n} = 5^{n+1}-3\cdot 5^{n} = 2\cdot 5^{n}\text{.}
+\end{equation*}
 </div>
+<div class="para">Thus, we really would like to have a constant in <span class="process-math">\(f\text{.}\)</span> We try <span class="process-math">\(f_{1}(n)=d5^{n}\)</span> and compute</div>
+<div class="displaymath process-math" id="ws-recurrence-nonhomog-3-8">
+\begin{align*}
+(A+2)(A-3)[d5^{n}] \amp = (A+2)[d5^{n+1}- 3d5^{n}]\\
+\amp=(A+2)[2d5^{n}] = 2d5^{n+1}+4d5^{n}\\
+\amp = 14d5^{n}\text{.}
+\end{align*}
+</div>
+<div class="para">The output from this needs to be <span class="process-math">\(5^{n}\text{,}\)</span> so we set <span class="process-math">\(14d5^{n} = 5^{n}\)</span> and solve for <span class="process-math">\(d\)</span> to find <span class="process-math">\(d=1/14\)</span> and <span class="process-math">\(f_{1}(n) = (1/14)5^{n}\text{.}\)</span> To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation <span class="process-math">\((A+2)(A-3)f=0\)</span> and find <span class="process-math">\(f_{0}(n) = c_{1}(-2)^{n} + c_{2} 3^{n}\text{.}\)</span> Thus the general solution of the nonhomogeneous equation is</div>
+<div class="displaymath process-math" id="ws-recurrence-nonhomog-3-16">
+\begin{equation*}
+f(n) = c_{1}(-2)^{n} + c_{2} 3^{n} + \frac{1}{12}5^{n}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="ws-recurrence-nonhomog-stuck"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="ws-recurrence-nonhomog-stuck-1-1">
+<div class="para">If we try using <span class="process-math">\(f_{1}(n) = dn\)</span> as a particular solution of <span class="process-math">\((A+1)(A-4)f(n) = 12n\text{,}\)</span> we find the following:</div>
+<div class="displaymath process-math" id="ws-recurrence-nonhomog-stuck-1-1-3">
+\begin{align*}
+(A+1)(A-4)[dn]\amp = (A+1)[d(n+1)-4dn] = (A+1)[-3dn + d]\\
+\amp= -3d(n+1)+d-3dn+d = -6dn - d\text{.}
+\end{align*}
+</div>
+<div class="para">Why is this an issue?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-stuck-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Problem 9.2.1"><a href="#ws-recurrence-nonhomog-stuck" title="Copy heading and permalink for Problem 9.2.1" aria-label="Copy heading and permalink for Problem 9.2.1">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-5"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-5-1-1">Adjust the <span class="process-math">\(f_{1}\)</span> proposed in the previous step to find a particular solution of <span class="process-math">\((A+1)(A-4)f(n) = 12n\text{.}\)</span> (Be sure to find the constants!)<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Problem 9.2.2"><a href="#ws-recurrence-nonhomog-5" title="Copy heading and permalink for Problem 9.2.2" aria-label="Copy heading and permalink for Problem 9.2.2">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-6"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-6-1-1">Find the general solution of <span class="process-math">\((A+1)(A-4)f(n) = 12n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Problem 9.2.3"><a href="#ws-recurrence-nonhomog-6" title="Copy heading and permalink for Problem 9.2.3" aria-label="Copy heading and permalink for Problem 9.2.3">🔗</a></div></article><div class="para" id="ws-recurrence-nonhomog-7">Let’s make <span class="process-math">\(g(n)\)</span> a bit more complicated.<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="ws-recurrence-nonhomog-multiterm"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-multiterm-1-1">Find a particular solution <span class="process-math">\(f_{1}\)</span> of <span class="process-math">\((A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} -15 n+2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-multiterm-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Problem 9.2.4"><a href="#ws-recurrence-nonhomog-multiterm" title="Copy heading and permalink for Problem 9.2.4" aria-label="Copy heading and permalink for Problem 9.2.4">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-9"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-9-1-1">Write the general solution of <span class="process-math">\((A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} + n+2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Problem 9.2.5"><a href="#ws-recurrence-nonhomog-9" title="Copy heading and permalink for Problem 9.2.5" aria-label="Copy heading and permalink for Problem 9.2.5">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-10"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-10-1-1">Describe how you would change your work in <a href="ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-multiterm" class="xref" data-knowl="./knowl/xref/ws-recurrence-nonhomog-multiterm.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 9.2.4">Problem 9.2.4</a> if the advancement operator equation were <span class="process-math">\((A+1)(A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} + n+2\text{.}\)</span> (You don’t have to go through all the steps.)<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.75in"></div>
+<div class="autopermalink" data-description="Problem 9.2.6"><a href="#ws-recurrence-nonhomog-10" title="Copy heading and permalink for Problem 9.2.6" aria-label="Copy heading and permalink for Problem 9.2.6">🔗</a></div></article><div class="para" id="ws-recurrence-nonhomog-11">Now for interference between <span class="process-math">\(p(A)\)</span> and <span class="process-math">\(g(n)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="ws-recurrence-nonhomog-12"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-12-1-1">Predict what will happen if you try <span class="process-math">\(f_{1}(n) = d 3^{n}\)</span> as a particular solution of <span class="process-math">\((A-3)(A+2)f=2\cdot 3^{n}\text{.}\)</span> Why is this the case?<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.75in"></div>
+<div class="autopermalink" data-description="Problem 9.2.7"><a href="#ws-recurrence-nonhomog-12" title="Copy heading and permalink for Problem 9.2.7" aria-label="Copy heading and permalink for Problem 9.2.7">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-13"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-13-1-1">Find a particular solution <span class="process-math">\(f_{1}(n)\)</span> of <span class="process-math">\((A-3)(A+2)f=2\cdot 3^{n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Problem 9.2.8"><a href="#ws-recurrence-nonhomog-13" title="Copy heading and permalink for Problem 9.2.8" aria-label="Copy heading and permalink for Problem 9.2.8">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-14"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-14-1-1">Find a particular solution <span class="process-math">\(f_{1}(n)\)</span> of <span class="process-math">\((A-3)(A+2)f=60\cdot n3^{n}\text{.}\)</span> (Think about what’s on the left-hand side and what it will do to your proposed <span class="process-math">\(f_{1}\)</span> before trying to find constant(s).)<div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" data-description="Problem 9.2.9"><a href="#ws-recurrence-nonhomog-14" title="Copy heading and permalink for Problem 9.2.9" aria-label="Copy heading and permalink for Problem 9.2.9">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-15"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-15-1-1">Find a particular solution <span class="process-math">\(f_{1}(n)\)</span> of <span class="process-math">\((A-3)(A+2)f=150\cdot n3^{n} + 2^{n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" data-description="Problem 9.2.10"><a href="#ws-recurrence-nonhomog-15" title="Copy heading and permalink for Problem 9.2.10" aria-label="Copy heading and permalink for Problem 9.2.10">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-16"><h3 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-16-1-1">Find a particular solution <span class="process-math">\(f_{1}(n)\)</span> of <span class="process-math">\((A-1)^{2}(A-2)f = 24n^{2} + 6n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" data-description="Problem 9.2.11"><a href="#ws-recurrence-nonhomog-16" title="Copy heading and permalink for Problem 9.2.11" aria-label="Copy heading and permalink for Problem 9.2.11">🔗</a></div></article><article class="exercise exercise-like" id="ws-recurrence-nonhomog-17"><h3 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ws-recurrence-nonhomog-17-1-1">Find the general solution of <span class="process-math">\((A-1)^{2}(A-2)f = 24n^{2} + 6n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-recurrence-nonhomog-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" data-description="Problem 9.2.12"><a href="#ws-recurrence-nonhomog-17" title="Copy heading and permalink for Problem 9.2.12" aria-label="Copy heading and permalink for Problem 9.2.12">🔗</a></div></article><div class="autopermalink" data-description="Worksheet 9.2: Nonhomogeneous Advancedment Operator Equations"><a href="#ws-recurrence-nonhomog" title="Copy heading and permalink for Worksheet 9.2: Nonhomogeneous Advancedment Operator Equations" aria-label="Copy heading and permalink for Worksheet 9.2: Nonhomogeneous Advancedment Operator Equations">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ws-genfunction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-recurrence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ws-recurrence-homog.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
