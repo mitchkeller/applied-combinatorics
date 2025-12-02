@@ -39,7 +39,7 @@
         <task workspace="1in">
           <statement>
             <p>
-              Determine if <m>f_{3}(n) = c_{3} n^{2}3^{n}</m> is a solution of <m>(A-3)^{2}f=0</m>.If it’s not, what do you get instead of <m>0</m>?
+              Determine if <m>f_{3}(n) = c_{3} n^{2}3^{n}</m> is a solution of <m>(A-3)^{2}f=0</m>. If it’s not, what do you get instead of <m>0</m>?
             </p>
           </statement>
           <solution component="ws-recurrence-homog-soln">
@@ -349,5 +349,255 @@ Constants are helpful.
         </task>
       </activity>
     <!-- </page> -->
+  </worksheet>
+  <worksheet xml:id="ws-recurrence-nonhomog">
+    <title>Nonhomogeneous Advancedment Operator Equations</title>
+    
+    <p>
+      We want to solve an advancement operator equation of the form
+      <me>
+        p(A) f(n) = g(n)
+      </me>
+      where <m>g(n)</m> is not identically <m>0</m>.
+      To do this, we seek any solution <m>f_{1}(n)</m> to the equation.
+      We call this a <term>particular solution</term>.
+      We then solve the homogeneous equation <m>p(A)f(n) = 0</m> (Yes, the same <m>p(A)</m>.) and call its general solution <m>f_{0}(n)</m>.
+      The <term>general solution of the nonhomogeneous equation</term> is then <m>f(n)=f_{0}(n) + f_{1}(n)</m>.
+    </p>
+    <p>
+      We first consider when <m>p(A)</m> does not “interfere” with <m>g(n)</m> and recap the last portion of our previous class's activity. If you apply <m>(A-3)</m> to the function <m>f(n) = 5^{n}</m>, then you have
+      <me>
+        (A-3)5^{n} = 5^{n+1}-3\cdot 5^{n} = 2\cdot 5^{n}
+      </me>.
+      Thus, we really would like to have a constant in <m>f</m>.
+      We try <m>f_{1}(n)=d5^{n}</m> and compute
+      <md>
+        <mrow>(A+2)(A-3)[d5^{n}] \amp = (A+2)[d5^{n+1}- 3d5^{n}]</mrow>
+        <mrow>\amp=(A+2)[2d5^{n}] = 2d5^{n+1}+4d5^{n}</mrow>
+        <mrow>\amp = 14d5^{n}</mrow>
+      </md>.
+      The output from this needs to be <m>5^{n}</m>, so we set <m>14d5^{n} = 5^{n}</m> and solve for <m>d</m> to find <m>d=1/14</m> and <m>f_{1}(n) = (1/14)5^{n}</m>.
+      To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation <m>(A+2)(A-3)f=0</m> and find <m>f_{0}(n) = c_{1}(-2)^{n} + c_{2} 3^{n}</m>.
+      Thus the general solution of the nonhomogeneous equation is
+      <me>
+        f(n) = c_{1}(-2)^{n} + c_{2} 3^{n} + \frac{1}{12}5^{n}.
+      </me>
+    </p>
+
+    <exercise workspace="0.5in" xml:id="ws-recurrence-nonhomog-stuck">
+      <statement>
+        <p>
+          If we try using <m>f_{1}(n) = dn</m> as a particular solution of <m>(A+1)(A-4)f(n) = 12n</m>, we find the following:
+          <md>
+            <mrow>(A+1)(A-4)[dn]\amp = (A+1)[d(n+1)-4dn] = (A+1)[-3dn + d]</mrow>
+            <mrow>\amp= -3d(n+1)+d-3dn+d = -6dn - d</mrow>
+          </md>.
+          Why is this an issue?
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          If we want this to be <m>3n</m>, then we simultaneously need <m>d=-2</m> and <m>d=0</m>.
+          Last time I checked, that’s not going to work.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="1in">
+      <statement>
+        <p>
+          Adjust the <m>f_{1}</m> proposed in the previous step to find a particular solution of <m>(A+1)(A-4)f(n) = 12n</m>.
+          (Be sure to find the constants!)
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          Throw in an extra constant, trying <m>f_{1}(n) = d_{1} n+d_{2}</m>. Hence
+          <md>
+            <mrow>(A+1)(A-4)[d_1n+d_2] \amp = (A+1)[d_1(n+1)+d_2 - 4d_1 n -4d_2</mrow>
+            <mrow> \amp = (A+1)[-3d_1n-3d_2]</mrow>
+            <mrow> \amp = -3d_1(n+1)-3d_2 + (-3d_1n-3d_2)</mrow>
+            <mrow> \amp = -6d_1 n - 3d_1-6d_2</mrow>
+          </md>.
+          Hence, we need <m>d_1 = -2</m>. We also need <m>-3d_1-6d_2 = 0</m>, so we have <m>d_2 = 1</m>. Thus, we have <m>f_1(n) = -2n + 1</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="0.5in">
+      <statement>
+        <p>
+          Find the general solution of <m>(A+1)(A-4)f(n) = 12n</m>.
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          The general solution of the homogeneous equation <m>(A+1)(A-4)f(n) = 0</m> is <m>f_{0}(n) = c_{1}(-1)^{n} + c_{2} 4^{n}</m>.
+          Add that to your solution from the previous step, so you have
+          <me>
+            f(n) = c_{1}(-1)^{n} + c_{2} 4^{n} -2n +1.
+          </me>
+        </p>
+      </solution>
+    </exercise>
+    <p>
+      Let’s make <m>g(n)</m> a bit more complicated.
+    </p>
+    <exercise workspace="1in" xml:id="ws-recurrence-nonhomog-multiterm">
+      <statement>
+        <p>
+          Find a particular solution <m>f_{1}</m> of <m>(A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} -15 n+2</m>.
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          Try <m>f_{1}(n) = d_{1} 3^{n} + d_{2} n3^{n} + d_{3}n + d_{4}</m>.
+          We then find
+          <me>
+            (A-4)f_{1}(n) = (3d_{2}-d_{1}) 3^{n}+ -d_{2} n 3^{n} -3d_{3} n + d_{3}-3d_{4}.
+          </me>
+          From this we see that we need <m>-d_{2}=5</m>, or <m>d_{2} = -5</m>.
+          We also need <m>3d_{2}-d_{1} = 2</m>, so <m>d_{1}=-17</m>.
+          Continuing to match coefficients, we find <m>-3d_{3} = -15</m> or <m>d_{3}=5</m>.
+          We also have <m>d_{3} - 3d_{4} = 2</m>, so <m>5-3d_{4} = 2</m> and <m>d_{4} = 1</m>.
+          Thus,
+          <me>
+            f_{1}(n) = -17\cdot 3^{n} -5n3^{n} +5n +1
+          </me>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="0.5in">
+      <statement>
+        <p>
+          Write the general solution of <m>(A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} + n+2</m>.
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          The homogeneous solution is <m>f_{0}(n) = c_{1} 4^{n}</m>.
+          Adding that to <m>f_{1}</m> from the previous exercise gives
+          <me>
+            f(n) = c_{1} 4^{n} + -17\cdot 3^{n} -5n3^{n} +5n +1
+          </me>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="0.75in">
+      <statement>
+        <p>
+          Describe how you would change your work in <xref ref="ws-recurrence-nonhomog-multiterm"/> if the advancement operator equation were <m>(A+1)(A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} + n+2</m>.
+          (You don’t have to go through all the steps.)
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          You’d have to apply the advancement operator <m>(A+1)</m> before finding the <m>d_{i}</m> constants.
+        </p>
+      </solution>
+    </exercise>
+    <p>
+      Now for interference between <m>p(A)</m> and <m>g(n)</m>.
+    </p>
+    <exercise workspace="0.75in">
+      <statement>
+        <p>
+          Predict what will happen if you try <m>f_{1}(n) = d 3^{n}</m> as a particular solution of <m>(A-3)(A+2)f=2\cdot 3^{n}</m>.
+          Why is this the case?
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          You’ll not have any success, since when you apply <m>(A-3)</m> to <m>d3^{n}</m>, you’re going to get <m>0</m> instead of <m>2\cdot 3^{n}</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="1in">
+      <statement>
+        <p>
+          Find a particular solution <m>f_{1}(n)</m> of <m>(A-3)(A+2)f=2\cdot 3^{n}</m>.
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          We saw last time that applying <m>(A-3)</m> to <m>n3^{n}</m> will leave us with a <m>3^{n}</m> term.
+          Let’s try <m>f_{1}(n) = dn3^{n}</m>.
+          We have
+          <me>
+            (A-3)(A+2)[dn3^{n}] = (A-3)[3d3^{n}+5dn3^{n}]=15d3^{n}.
+          </me>
+          Thus, we take <m>d=2/15</m> and have <m>f_{1}(n) = (2/15)n3^{n}</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="1.5in">
+      <statement>
+        <p>
+          Find a particular solution <m>f_{1}(n)</m> of <m>(A-3)(A+2)f=60\cdot n3^{n}</m>.
+          (Think about what’s on the left-hand side and what it will do to your proposed <m>f_{1}</m> before trying to find constant(s).)
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          Trying <m>f_{1}(n) = dn3^{n}</m> is not going to work, since the <m>(A-3)</m> in <m>p(A)</m> will turn it into a <m>3^{n}</m> term with no factor of <m>n</m>.
+          Starting with an <m>n^{2}3^{n}</m> term is good, but we have to be careful.
+          If we just do <m>f_{1}(n) =d_{1}n^{2}3^{n}</m>, we’re going to be stuck like we were in <xref ref="ws-recurrence-nonhomog-stuck"/>
+          Thus, let’s go with <m>f_{1}(n) = d_{1}n^{2}3^{n} + d_{2} n3^{n}</m>.
+          <me>
+            (A-3)(A+2)f_{1}(n) = 30d_{1} n3^{n}+(33d_{1} + 15 d_{2})3^{n}
+          </me>.
+          We thus need <m>30d_{1} = 60</m>, so <m>d_{1} = 2</m>.
+          We need <m>33d_{1}+15d_{2} = 0</m>, so <m>d_{2} = -22/5</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="1.5in">
+      <statement>
+        <p>
+          Find a particular solution <m>f_{1}(n)</m> of <m>(A-3)(A+2)f=150\cdot n3^{n} + 2^{n}</m>.
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          We try <m>f_{1}(n) = d_{1} n^{2} 3^{n} + d_{2} n3^{n} + d_{3} 2^{n}</m>.
+          Applying the advancement operator polynomial to this, we get <m>30d_{1}n3^{n} + 33d_{1} 3^{n} + 15d_{2} 3^{n} - 4d_{3} 2^{n}</m>.
+          We need this to equal <m>150n3^{n} + 2^{n}</m>, which leads us to the equations <m>30d_{1} = 150</m>, <m>33d_{1} + 15d_{2} = 0</m> and <m>-4d_{3} = 1</m>.
+          Thus, we have
+          <me>
+            f_{1}(n) = 5n^{2} 3^{n} -11n3^{n} + \frac{-1}{4}2^{n}
+          </me>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="1.5in">
+      <statement>
+        <p>
+          Find a particular solution <m>f_{1}(n)</m> of <m>(A-1)^{2}(A-2)f = 24n^{2} + 6n</m>.
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          We try <m>f_{1}(n) = d_{1} n^{4} + d_{2} n^{3} + d_{3}n^{2}</m>, since lower powers of <m>n</m> will be annihilated by <m>p(A) = (A-1)^{2}(A-2)</m> here and we need an <m>n^{4}</m> term to be able to reduce to having <m>n^{2}</m> after applying <m>A-1</m> twice.
+          Applying <m>p(A)</m>, we have <m>-12d_{1}n^{2}-6d_{2}n + 22d_{1}-2d_{3}</m>, so we need <m>d_{1} = -2</m>, <m>d_{2} = -1</m>, and <m>d_{3} = -22</m>.
+          Thus, we have
+          <me>
+            f_{1}(n) = -2 n^{4} -n^{3} -22n^{2}
+          </me>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise workspace="1.5in">
+      <statement>
+        <p>
+          Find the general solution of <m>(A-1)^{2}(A-2)f = 24n^{2} + 6n</m>.
+        </p>
+      </statement>
+      <solution component="ws-recurrence-nonhomog-soln">
+        <p>
+          The corresponding homogeneous solution is <m>f_{0}(n) = c_{1} n + c_{2} + c_{3} 2^{n}</m>, which gives us
+          <me>
+            f(n) = c_{1} n + c_{2} + c_{3} 2^{n}-2n^{4} -n^{3} -22n^{2}
+          </me>.
+        </p>
+      </solution>
+    </exercise>
   </worksheet>
 </chapter>
