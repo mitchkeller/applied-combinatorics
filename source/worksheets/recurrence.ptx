@@ -46,7 +46,8 @@
             <p>
               <md>
                 <mrow>(A-3)^2[c_3n^23^n] \amp= (A-3)[c_3(n+1)^23^{n+1}-3c_3n^23^n]</mrow>
-                <mrow>\amp=(A-3)[6c_3 n3^n+3c_33^n] = 6c_3(n+1)3^{n+1}+3c_33^{n+1} - 3\cdot 6c_3n3^n-9c_33^n</mrow>
+                <mrow>\amp=(A-3)[6c_3 n3^n+3c_33^n]</mrow>
+                <mrow>\amp= 6c_3(n+1)3^{n+1}+3c_33^{n+1} - 3\cdot 6c_3n3^n-9c_33^n</mrow>
                 <mrow>\amp= 9c_33^n</mrow>
               </md>
             </p>
@@ -158,9 +159,11 @@
           </statement>
           <solution component="ws-recurrence-homog-soln">
             <p>
-              <me>
-                (A-5)[c_{k} n^{k} 5^{n}] = c_{k} (n+1)^{k}5^{n+1}- 5c_{k} n^{k} 5^{n} = 5c_{k} 5^{n} \sum_{j=0}^{k} \binom{k}{j}n^{j} - 5c_{k} n^{k} 5^{n} = 5c_{k}5^{n} \sum_{j=0}^{k-1}\binom{k}{j}n^{j}
-              </me>
+              <md>
+                <mrow>(A-5)[c_{k} n^{k} 5^{n}] \amp= c_{k} (n+1)^{k}5^{n+1}- 5c_{k} n^{k} 5^{n}</mrow>
+                <mrow>\amp = 5c_{k} 5^{n} \sum_{j=0}^{k} \binom{k}{j}n^{j} - 5c_{k} n^{k} 5^{n}</mrow>
+                <mrow>\amp = 5c_{k}5^{n} \sum_{j=0}^{k-1}\binom{k}{j}n^{j}</mrow>
+              </md>
             </p>
           </solution>
         </task>
@@ -211,9 +214,10 @@
             <p>
               This is equivalent to <m>(A-r_{1})(A-r_{2})(A+4)^{5}f=0</m> where <m>r_{1}</m> and <m>r_{2}</m> are the roots of <m>A^{2}+3A-2=0</m>.
               Thus we have
-              <me>
-                f(n) = c_{1} \left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{2} \left(\frac{-3-\sqrt{17}}{2}\right)^{n} + c_{3} (-4)^{n} + c_{4} n (-4)^{n} + c_{5} n^{2} (-4)^{n} + c_{6} n^{3}(-4)^{n} + c_{7} n^{4}(-4)^{n}.
-              </me>
+              <md>
+                <mrow>f(n) = \amp c_{1} \left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{2} \left(\frac{-3-\sqrt{17}}{2}\right)^{n} +</mrow>
+                <mrow> \amp c_{3} (-4)^{n} + c_{4} n (-4)^{n} + c_{5} n^{2} (-4)^{n} + c_{6} n^{3}(-4)^{n} + c_{7} n^{4}(-4)^{n}</mrow>
+              </md>.
             </p>
           </solution>
         </task>
@@ -227,9 +231,10 @@
             <p>
               This is equivalent to <m>(A-r_{1})^{2}(A-r_{2})^{2}(A+4)^{3}f=0</m> where <m>r_{1}</m> and <m>r_{2}</m> are the roots of <m>A^{2}+3A-2=0</m>.
               Thus we have
-              <me>
-                f(n) = c_{1} \left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{2} n\left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{3} \left(\frac{-3-\sqrt{17}}{2}\right)^{n} + c_{4} n\left(\frac{-3-\sqrt{17}}{2}\right)^{n} + c_{5} (-4)^{n} + c_{6} n (-4)^{n} + c_{7} n^{2} (-4)^{n}.
-              </me>
+              <md>
+                <mrow>f(n) = \amp c_{1} \left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{2} n\left(\frac{-3+\sqrt{17}}{2}\right)^{n} + c_{3} \left(\frac{-3-\sqrt{17}}{2}\right)^{n}</mrow>
+                <mrow> + \amp c_{4} n\left(\frac{-3-\sqrt{17}}{2}\right)^{n} + c_{5} (-4)^{n} + c_{6} n (-4)^{n} + c_{7} n^{2} (-4)^{n}</mrow>
+              </md>.
             </p>
           </solution>
         </task>
@@ -243,9 +248,10 @@
             <p>
               This is equivalent to <m>(A-r_{1})(A-r_{2})(A+1)(A-1)^{4}f=0</m> (note the factor and regroup on <m>(A^{2}-1)</m>) where <m>r_{1}</m> and <m>r_{2}</m> are the <em>complex</em> roots of <m>A^{2}+3A+5</m>.
               (Yeah, complex roots work just fine here.) Thus, we have
-              <me>
-                f(n) = c_{1} \left(\frac{-3 - i \sqrt{11}}{2}\right)^{n} + c_{2} \left(\frac{-3 + i \sqrt{11}}{2}\right)^{n} + c_{3}(-1)^{n} + c_{4} +c_{5} n + c_{6} n^{2}+c_{7} n^{3}
-              </me>
+              <md>
+                <mrow>f(n) = \amp c_{1} \left(\frac{-3 - i \sqrt{11}}{2}\right)^{n} + c_{2} \left(\frac{-3 + i \sqrt{11}}{2}\right)^{n} + c_{3}(-1)^{n} </mrow>
+                <mrow>+ \amp c_{4} +c_{5} n + c_{6} n^{2}+c_{7} n^{3}</mrow>
+              </md>
               where <m>i^{2}=-1</m>.
             </p>
           </solution>
