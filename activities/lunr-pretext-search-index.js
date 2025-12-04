@@ -664,7 +664,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "9.2",
   "title": "Nonhomogeneous Advancedment Operator Equations",
-  "body": " Nonhomogeneous Advancedment Operator Equations  We want to solve an advancement operator equation of the form where is not identically . To do this, we seek any solution to the equation. We call this a particular solution . We then solve the homogeneous equation (Yes, the same .) and call its general solution . The general solution of the nonhomogeneous equation is then .  We first consider when does not “interfere” with and recap the last portion of our previous class's activity. If you apply to the function , then you have . Thus, we really would like to have a constant in . We try and compute . The output from this needs to be , so we set and solve for to find and . To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation and find . Thus the general solution of the nonhomogeneous equation is     If we try using as a particular solution of , we find the following: . Why is this an issue?      Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)      Find the general solution of .    Let’s make a bit more complicated.    Find a particular solution of .      Write the general solution of .      Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)    Now for interference between and .    Predict what will happen if you try as a particular solution of . Why is this the case?      Find a particular solution of .      Find a particular solution of . (Think about what’s on the left-hand side and what it will do to your proposed before trying to find constant(s).)      Find a particular solution of .      Find a particular solution of .      Find the general solution of .    "
+  "body": " Nonhomogeneous Advancedment Operator Equations  We want to solve an advancement operator equation of the form where is not identically . To do this, we seek any solution to the equation. We call this a particular solution . We then solve the homogeneous equation (Yes, the same .) and call its general solution . The general solution of the nonhomogeneous equation is then .  We first consider when does not “interfere” with and recap the last portion of our previous class's activity. We want to solve . If you apply to the function , then you have . Thus, we really would like to have a constant in . We try and compute . The output from this needs to be , so we set and solve for to find and . To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation and find . Thus the general solution of the nonhomogeneous equation is     If we try using as a particular solution of , we find the following: . Why is this an issue?    If we want this to be , then we simultaneously need and . Last time I checked, that’s not going to work.      Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)    Throw in an extra constant, trying . Hence . Hence, we need . We also need , so we have . Thus, we have .      Find the general solution of .    The general solution of the homogeneous equation is . Add that to your solution from the previous step, so you have     Let’s make a bit more complicated.    Find a particular solution of .    Try . We then find From this we see that we need , or . We also need , so . Continuing to match coefficients, we find or . We also have , so and . Thus, .      Write the general solution of .    The homogeneous solution is . Adding that to from the previous exercise gives .      Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)    You’d have to apply the advancement operator before finding the constants.    Now for interference between and .    Predict what will happen if you try as a particular solution of . Why is this the case?    You’ll not have any success, since when you apply to , you’re going to get instead of .      Find a particular solution of .    We saw last time that applying to will leave us with a term. Let’s try . We have Thus, we take and have .      Find a particular solution of . (Think about what’s on the left-hand side and what it will do to your proposed before trying to find constant(s).)    Trying is not going to work, since the in will turn it into a term with no factor of . Starting with an term is good, but we have to be careful. If we just do , we’re going to be stuck like we were in Thus, let’s go with . . We thus need , so . We need , so .      Find a particular solution of .    We try . Applying the advancement operator polynomial to this, we get . We need this to equal , which leads us to the equations , and . Thus, we have .      Find a particular solution of .    We try , since lower powers of will be annihilated by here and we need an term to be able to reduce to having after applying twice. Applying , we have , so we need , , and . Thus, we have .      Find the general solution of .    The corresponding homogeneous solution is , which gives us .    "
 },
 {
   "id": "ws-recurrence-nonhomog-2",
@@ -682,7 +682,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.1",
   "title": "",
-  "body": "  If we try using as a particular solution of , we find the following: . Why is this an issue?   "
+  "body": "  If we try using as a particular solution of , we find the following: . Why is this an issue?    If we want this to be , then we simultaneously need and . Last time I checked, that’s not going to work.   "
 },
 {
   "id": "ws-recurrence-nonhomog-5",
@@ -691,7 +691,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.2",
   "title": "",
-  "body": "  Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)   "
+  "body": "  Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)    Throw in an extra constant, trying . Hence . Hence, we need . We also need , so we have . Thus, we have .   "
 },
 {
   "id": "ws-recurrence-nonhomog-6",
@@ -700,7 +700,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.3",
   "title": "",
-  "body": "  Find the general solution of .   "
+  "body": "  Find the general solution of .    The general solution of the homogeneous equation is . Add that to your solution from the previous step, so you have    "
 },
 {
   "id": "ws-recurrence-nonhomog-multiterm",
@@ -709,7 +709,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.4",
   "title": "",
-  "body": "  Find a particular solution of .   "
+  "body": "  Find a particular solution of .    Try . We then find From this we see that we need , or . We also need , so . Continuing to match coefficients, we find or . We also have , so and . Thus, .   "
 },
 {
   "id": "ws-recurrence-nonhomog-9",
@@ -718,7 +718,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.5",
   "title": "",
-  "body": "  Write the general solution of .   "
+  "body": "  Write the general solution of .    The homogeneous solution is . Adding that to from the previous exercise gives .   "
 },
 {
   "id": "ws-recurrence-nonhomog-10",
@@ -727,7 +727,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.6",
   "title": "",
-  "body": "  Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)   "
+  "body": "  Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)    You’d have to apply the advancement operator before finding the constants.   "
 },
 {
   "id": "ws-recurrence-nonhomog-12",
@@ -736,7 +736,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.7",
   "title": "",
-  "body": "  Predict what will happen if you try as a particular solution of . Why is this the case?   "
+  "body": "  Predict what will happen if you try as a particular solution of . Why is this the case?    You’ll not have any success, since when you apply to , you’re going to get instead of .   "
 },
 {
   "id": "ws-recurrence-nonhomog-13",
@@ -745,7 +745,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.8",
   "title": "",
-  "body": "  Find a particular solution of .   "
+  "body": "  Find a particular solution of .    We saw last time that applying to will leave us with a term. Let’s try . We have Thus, we take and have .   "
 },
 {
   "id": "ws-recurrence-nonhomog-14",
@@ -754,7 +754,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.9",
   "title": "",
-  "body": "  Find a particular solution of . (Think about what’s on the left-hand side and what it will do to your proposed before trying to find constant(s).)   "
+  "body": "  Find a particular solution of . (Think about what’s on the left-hand side and what it will do to your proposed before trying to find constant(s).)    Trying is not going to work, since the in will turn it into a term with no factor of . Starting with an term is good, but we have to be careful. If we just do , we’re going to be stuck like we were in Thus, let’s go with . . We thus need , so . We need , so .   "
 },
 {
   "id": "ws-recurrence-nonhomog-15",
@@ -763,7 +763,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.10",
   "title": "",
-  "body": "  Find a particular solution of .   "
+  "body": "  Find a particular solution of .    We try . Applying the advancement operator polynomial to this, we get . We need this to equal , which leads us to the equations , and . Thus, we have .   "
 },
 {
   "id": "ws-recurrence-nonhomog-16",
@@ -772,7 +772,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.11",
   "title": "",
-  "body": "  Find a particular solution of .   "
+  "body": "  Find a particular solution of .    We try , since lower powers of will be annihilated by here and we need an term to be able to reduce to having after applying twice. Applying , we have , so we need , , and . Thus, we have .   "
 },
 {
   "id": "ws-recurrence-nonhomog-17",
@@ -781,7 +781,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.2.12",
   "title": "",
-  "body": "  Find the general solution of .   "
+  "body": "  Find the general solution of .    The corresponding homogeneous solution is , which gives us .   "
 }
 ]
 
