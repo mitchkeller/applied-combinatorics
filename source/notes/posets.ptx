@@ -199,10 +199,15 @@
           <alert>Peer instruction questions 2<ndash/>3.</alert>
         </p>
         <image width="33%">
+          <description>
+            <p>
+              The order diagram of a poset with 34 points. The points are labeled from 1 to 34.
+            </p>
+          </description>
           <prefigure xmlns="https://prefigure.org" label="big-poset-notes">
             <xi:include href="../prefig/big-poset.xml"/>
           </prefigure>
-        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+        </image>
       </paragraphs>
     </page>
     <page>
@@ -277,10 +282,15 @@
             With your group, list the <em>set</em> of maximal elements and the <em>set</em> of minimal elements for this poset.
           </p>
           <image width="33%">
+            <description>
+              <p>
+                The order diagram of a poset with 34 points. The points are labeled from 1 to 34.
+              </p>
+            </description>
             <prefigure xmlns="https://prefigure.org" label="big-poset-notes-max-min">
               <xi:include href="../prefig/big-poset.xml"/>
             </prefigure>
-          <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+          </image>
         </statement>
       </activity>
     </page>
@@ -411,6 +421,11 @@
         </theorem>
         <sidebyside widths="25% 75%">
           <image>
+            <description>
+              <p>
+                The order diagram of a poset with 7 points. The points are labeled with letters from <m>a</m> to <m>f</m>.
+              </p>
+            </description>
             <prefigure xmlns="https://prefigure.org" label="notes-antichain-part-examp">
               <diagram dimensions="(200,300)" margins="15">
                 <coordinates bbox="(0,0,2,3)">
@@ -426,7 +441,7 @@
                 </coordinates>
               </diagram>
             </prefigure>
-          <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+          </image>
           <p>
             <nbsp/>
           </p>
@@ -579,6 +594,9 @@
         </p>
         <sidebyside widths="15% 85%">
         <image>
+          <description>
+            <p>The order diagram of a poset with four points. The points are labeled <m>x,y,z,w</m>. There are two cover relations: <m>y\lt x</m> and <m>w\lt z</m>.</p>
+          </description>
           <prefigure xmlns="https://prefigure.org" label="two-plus-two">
             <diagram dimensions="(100,100)" margins="15">
               <coordinates bbox="(0,0,1,1)">
@@ -591,7 +609,7 @@
               </coordinates>
             </diagram>            
           </prefigure>
-        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+        </image>
         <p component="b">
           <nbsp/>
         </p>
@@ -624,6 +642,11 @@
       <title>Can we find a representation?</title>
       <sidebyside widths="40% 60%">
         <image>
+          <description>
+            <p>
+              The order diagram of a poset with 10 points. The points are labeled from 1 to 10.
+            </p>
+          </description>
           <prefigure xmlns="https://prefigure.org" label="intord-find-rep-motivate">
             <diagram dimensions="(350,200)" margins="15">
               <coordinates bbox="(0.5,0,4,2)">
@@ -642,7 +665,7 @@
               </coordinates>
             </diagram>
           </prefigure>
-        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+        </image>
         <p>
           <nbsp/>
         </p>
@@ -682,6 +705,11 @@
           </p>
           <sidebyside widths="40% 60%">
             <image>
+              <description>
+                <p>
+                  The order diagram of a poset with 10 points. The points are labeled from 1 to 10.
+                </p>
+              </description>
               <prefigure xmlns="https://prefigure.org" label="intord-find-rep-updown-sets">
                 <diagram dimensions="(350,200)" margins="15">
                   <coordinates bbox="(0.5,0,4,2)">
@@ -700,7 +728,7 @@
                   </coordinates>
                 </diagram>
               </prefigure>
-            <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+            </image>
             <p>
               <nbsp/>
             </p>

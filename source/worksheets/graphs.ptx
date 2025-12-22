@@ -11,8 +11,58 @@
         <figure>
           <caption><m>\bfG_1</m></caption>
     <image>
-      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_1</m></p>
-    </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph1">
+      <description>
+        <p>
+          A graph with 10 vertices. The neighbors of each vertex are given in the table below.
+        </p>
+        <tabular>
+          <row>
+            <cell>Vertex</cell>
+            <cell>Neighbors</cell>
+          </row>
+          <row>
+            <cell><m>1</m></cell>
+            <cell><m>4</m>, <m>5</m></cell>
+          </row>
+          <row>
+            <cell><m>2</m></cell>
+            <cell><m>3</m>, <m>6</m>, <m>9</m></cell>
+          </row>
+          <row>
+            <cell><m>3</m></cell>
+            <cell><m>2</m>, <m>7</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>4</m></cell>
+            <cell><m>1</m>, <m>7</m>, <m>8</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>5</m></cell>
+            <cell><m>1</m>, <m>6</m>, <m>7</m></cell>
+          </row>
+          <row>
+            <cell><m>6</m></cell>
+            <cell><m>2</m>, <m>5</m>, <m>8</m></cell>
+          </row>
+          <row>
+            <cell><m>7</m></cell>
+            <cell><m>3</m>, <m>4</m>, <m>5</m></cell>
+          </row>
+          <row>
+            <cell><m>8</m></cell>
+            <cell><m>4</m>, <m>6</m>, <m>9</m></cell>
+          </row>
+          <row>
+            <cell><m>9</m></cell>
+            <cell><m>2</m>, <m>8</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>10</m></cell>
+            <cell><m>3</m>, <m>4</m>, <m>9</m></cell>
+          </row>
+        </tabular>
+      </description>
+      <prefigure xmlns="https://prefigure.org" label="img-hamgraph1">
         <diagram dimensions="(200,300)" margins="5">
           <definition>graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}</definition>
           <coordinates bbox="(-1,-1,1,1)">
@@ -26,8 +76,58 @@
     <figure>
           <caption><m>\bfG_2</m></caption>
     <image>
-      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_2</m></p>
-    </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph2">
+      <description>
+        <p>
+          A graph with 10 vertices. The neighbors of each vertex are given in the table below.
+        </p>
+        <tabular>
+          <row>
+            <cell>Vertex</cell>
+            <cell>Neighbors</cell>
+          </row>
+          <row>
+            <cell><m>1</m></cell>
+            <cell><m>2</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>2</m></cell>
+            <cell><m>1</m>, <m>4</m>, <m>5</m>, <m>7</m>, <m>9</m></cell>
+          </row>
+          <row>
+            <cell><m>3</m></cell>
+            <cell><m>7</m>, <m>8</m>, <m>9</m></cell>
+          </row>
+          <row>
+            <cell><m>4</m></cell>
+            <cell><m>2</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>5</m></cell>
+            <cell><m>2</m>, <m>6</m></cell>
+          </row>
+          <row>
+            <cell><m>6</m></cell>
+            <cell><m>5</m>, <m>8</m>, <m>9</m></cell>
+          </row>
+          <row>
+            <cell><m>7</m></cell>
+            <cell><m>2</m>, <m>3</m></cell>
+          </row>
+          <row>
+            <cell><m>8</m></cell>
+            <cell><m>3</m>, <m>6</m></cell>
+          </row>
+          <row>
+            <cell><m>9</m></cell>
+            <cell><m>2</m>, <m>3</m>, <m>6</m></cell>
+          </row>
+          <row>
+            <cell><m>10</m></cell>
+            <cell><m>1</m>, <m>4</m></cell>
+          </row>
+        </tabular>
+      </description>
+      <prefigure xmlns="https://prefigure.org" label="img-hamgraph2">
         <diagram dimensions="(300,300)" margins="5">
           <definition>graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}</definition>
           <coordinates bbox="(-1,-1,1,1)">
@@ -41,7 +141,56 @@
     <figure>
           <caption><m>\bfG_3</m></caption>
     <image>
-      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_3</m></p>
+      <description>
+        <p>
+          A graph with 10 vertices. The neighbors of each vertex are given in the table below.
+        </p>
+        <tabular>
+          <row>
+            <cell>Vertex</cell>
+            <cell>Neighbors</cell>
+          </row>
+          <row>
+            <cell><m>1</m></cell>
+            <cell><m>5</m>, <m>7</m></cell>
+          </row>
+          <row>
+            <cell><m>2</m></cell>
+            <cell><m>3</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
+          </row>
+          <row>
+            <cell><m>3</m></cell>
+            <cell><m>2</m>, <m>8</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>4</m></cell>
+            <cell><m>7</m>, <m>9</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>5</m></cell>
+            <cell><m>1</m>, <m>2</m>, <m>6</m></cell>
+          </row>
+          <row>
+            <cell><m>6</m></cell>
+            <cell><m>2</m>, <m>5</m></cell>
+          </row>
+          <row>
+            <cell><m>7</m></cell>
+            <cell><m>1</m>, <m>2</m>, <m>4</m></cell>
+          </row>
+          <row>
+            <cell><m>8</m></cell>
+            <cell><m>3</m>, <m>9</m></cell>
+          </row>
+          <row>
+            <cell><m>9</m></cell>
+            <cell><m>4</m>, <m>8</m>, <m>10</m></cell>
+          </row>
+          <row>
+            <cell><m>10</m></cell>
+            <cell><m>3</m>, <m>4</m>, <m>9</m></cell>
+          </row>
+        </tabular>
     </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph3">
         <diagram dimensions="(200,300)" margins="5">
           <definition>graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}</definition>
@@ -58,8 +207,12 @@
   <figure>
           <caption><m>\bfG_4</m></caption>
     <image>
-      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_4</m></p>
-    </description><prefigure xmlns="https://prefigure.org" label="petersen-graph">
+      <description>
+        <p>
+          A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <m>i</m> has neighbors <m>i-1</m>, <m>i+1</m>, and <m>i+5</m>. The first two adjacencies are interpreted cyclically so that, for instance, <m>4</m> has neighbors <m>3</m> and <m>0</m>. For the vertices with labels 5 through 9, the vertex with label <m>i</m> has neighbors <m>i-5</m>, <m>i+2</m>, and <m>i+3</m>. The second and third adjacencies are interpeted cyclically so that, for instance, <m>9</m> has neighbors <m>6</m> and <m>7</m>.
+        </p>
+      </description>
+      <prefigure xmlns="https://prefigure.org" label="petersen-graph">
         <diagram dimensions="(300,300)" margins="15">
           <definition>N=5</definition>
           <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
@@ -85,8 +238,12 @@
   <figure>
           <caption><m>\bfG_5</m></caption>
     <image>
-      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_5</m></p>
-    </description><prefigure xmlns="https://prefigure.org" label="petersen-plus-e">
+      <description>
+        <p>
+          A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <m>i</m> has neighbors <m>i-1</m>, <m>i+1</m>, and <m>i+5</m>. The first two adjacencies are interpreted cyclically so that, for instance, <m>4</m> has neighbors <m>3</m> and <m>0</m>. For the vertices with labels 5 through 9, the vertex with label <m>i</m> has neighbors <m>i-5</m>, <m>i+2</m>, and <m>i+3</m>. The second and third adjacencies are interpeted cyclically so that, for instance, <m>9</m> has neighbors <m>6</m> and <m>7</m>. There is also an edge between the vertices with labels <m>7</m> and <m>8</m>.
+        </p>
+      </description>
+      <prefigure xmlns="https://prefigure.org" label="petersen-plus-e">
         <diagram dimensions="(300,300)" margins="15">
           <definition>N=5</definition>
           <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
@@ -615,6 +772,41 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
 
     </activity>
 <image width="50%">
+  <description>
+    <p>
+      A tree with 6 vertices. The neighbors of each vertex are given in the table below.
+    </p>
+    <tabular>
+      <row>
+        <cell>Vertex</cell>
+        <cell>Neighbors</cell>
+      </row>
+      <row>
+        <cell><m>1</m></cell>
+        <cell><m>2</m>, <m>3</m>, <m>4</m>, <m>5</m></cell>
+      </row>
+      <row>
+        <cell><m>2</m></cell>
+        <cell><m>1</m></cell>
+      </row>
+      <row>
+        <cell><m>3</m></cell>
+        <cell><m>1</m>, <m>6</m></cell>
+      </row>
+      <row>
+        <cell><m>4</m></cell>
+        <cell><m>1</m></cell>
+      </row>
+      <row>
+        <cell><m>5</m></cell>
+        <cell><m>1</m></cell>
+      </row>
+      <row>
+        <cell><m>6</m></cell>
+        <cell><m>3</m></cell>
+      </row>
+    </tabular>
+  </description>
   <prefigure xmlns="https://prefigure.org" label="graph-prufer-6">
     <diagram dimensions="(300,200)" margins="15">
       <definition>graph={1:[2,3,4,5],3:[6]}</definition>
@@ -624,8 +816,75 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
       </coordinates>
     </diagram>
   </prefigure>
-<description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>    
+</image>    
 <image width="50%">
+  <description>
+    <p>
+      A tree with 14 vertices. The neighbors of each vertex are given in the table below.
+    </p>
+    <tabular>
+      <row>
+        <cell>Vertex</cell>
+        <cell>Neighbors</cell>
+      </row>
+      <row>
+        <cell><m>1</m></cell>
+        <cell><m>9</m></cell>
+      </row>
+      <row>
+        <cell><m>2</m></cell>
+        <cell><m>8</m>, <m>9</m>, <m>10</m>, <m>11</m>, <m>14</m></cell>
+      </row>
+      <row>
+        <cell><m>3</m></cell>
+        <cell><m>11</m></cell>
+      </row>
+      <row>
+        <cell><m>4</m></cell>
+        <cell><m>12</m></cell>
+      </row>
+      <row>
+        <cell><m>5</m></cell>
+        <cell><m>6</m>, <m>7</m>, <m>12</m>, <m>14</m></cell>
+      </row>
+      <row>
+        <cell><m>6</m></cell>
+        <cell><m>5</m></cell>
+      </row>
+      <row>
+        <cell><m>7</m></cell>
+        <cell><m>5</m>, <m>13</m></cell>
+      </row>
+      <row>
+        <cell><m>8</m></cell>
+        <cell><m>2</m></cell>
+      </row>
+      <row>
+        <cell><m>9</m></cell>
+        <cell><m>1</m>, <m>2</m></cell>
+      </row>
+      <row>
+        <cell><m>10</m></cell>
+        <cell><m>2</m></cell>
+      </row>
+      <row>
+        <cell><m>11</m></cell>
+        <cell><m>2</m>, <m>3</m></cell>
+      </row>
+      <row>
+        <cell><m>12</m></cell>
+        <cell><m>4</m>, <m>5</m></cell>
+      </row>
+      <row>
+        <cell><m>13</m></cell>
+        <cell><m>7</m></cell>
+      </row>
+      <row>
+        <cell><m>14</m></cell>
+        <cell><m>2</m>, <m>5</m></cell>
+      </row>
+    </tabular>
+  </description>
   <prefigure xmlns="https://prefigure.org" label="graph-prufer-14">
     <diagram dimensions="(300,200)" margins="15">
       <definition>graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12],
@@ -637,6 +896,6 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
       </coordinates>
     </diagram>
   </prefigure>
-<description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+</image>
   </worksheet>
 </chapter>
