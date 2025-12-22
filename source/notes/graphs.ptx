@@ -211,6 +211,72 @@
   </algorithm>
   <sidebyside widths="60% 35%">
     <image>
+      <description>
+        <p>A graph with 14 vertices. The vertices are labeled with integers from 0 to 13. The neighbors of each vertex are specified in the table below.
+        </p>
+        <tabular>
+          <row>
+            <cell>Vertex</cell>
+            <cell>Neighbors</cell>
+          </row>
+          <row>
+            <cell><m>0</m></cell>
+            <cell><m>6</m>, <m>9</m></cell>
+            </row>
+            <row>
+            <cell><m>1</m></cell>
+            <cell><m>4</m>, <m>5</m>, <m>9</m>, <m>13</m></cell>
+            </row>
+            <row>
+            <cell><m>2</m></cell>
+            <cell><m>7</m>, <m>11</m></cell>
+            </row>
+            <row>
+            <cell><m>3</m></cell>
+            <cell><m>4</m>, <m>5</m></cell>
+            </row>
+            <row>
+            <cell><m>4</m></cell>
+            <cell><m>1</m>, <m>3</m></cell>
+            </row>
+            <row>
+            <cell><m>5</m></cell>
+            <cell><m>1</m>, <m>3</m>, <m>6</m>, <m>8</m></cell>
+            </row>
+            <row>
+            <cell><m>6</m></cell>
+            <cell><m>0</m>, <m>5</m>, <m>10</m>, <m>11</m></cell>
+            </row>
+            <row>
+            <cell><m>7</m></cell>
+            <cell><m>2</m>, <m>8</m>, <m>11</m>, <m>13</m></cell>
+            </row>
+            <row>
+            <cell><m>8</m></cell>
+            <cell><m>5</m>, <m>7</m>, <m>11</m>, <m>12</m></cell>
+            </row>
+            <row>
+            <cell><m>9</m></cell>
+            <cell><m>0</m>, <m>1</m>, <m>11</m>, <m>12</m></cell>
+            </row>
+            <row>
+            <cell><m>10</m></cell>
+            <cell><m>6</m>, <m>11</m></cell>
+            </row>
+            <row>
+            <cell><m>11</m></cell>
+            <cell><m>2</m>, <m>6</m>, <m>7</m>, <m>8</m>, <m>9</m>, <m>10</m></cell>
+            </row>
+            <row>
+            <cell><m>12</m></cell>
+            <cell><m>8</m>, <m>9</m></cell>
+            </row>
+            <row>
+            <cell><m>13</m></cell>
+            <cell><m>1</m>, <m>7</m></cell>
+            </row>
+        </tabular>
+      </description>
       <prefigure xmlns="https://prefigure.org" label="euler-example-graph">
         <diagram dimensions="(450,300)" margins="5">
           <definition>graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}</definition>
@@ -220,7 +286,7 @@
           </coordinates>
         </diagram>
       </prefigure>
-    <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+    </image>
     <p><nbsp/>
     </p>
   </sidebyside>
@@ -441,6 +507,11 @@
       </p>
       <sidebyside widths="60% 40%">
       <image>
+        <description>
+          <p>
+            A graph with 11 vertices. There is a vertex at the top with label <m>z</m>. Next to this vertex is the number <m>1</m>. There are five edges from <m>z</m>. The neighbors of <m>z</m> each have a label inside the node as well as an integer next to the node. The labels and associated integers are <m>y_1</m> (2), <m>y_2</m> (3), <m>y_3</m> (4), <m>y_4</m> (2), and <m>y_5</m> (5). In addition to the edge to <m>z</m>, each <m>y_i</m> has an edge to two vertices labeled <m>x_{i-1}</m> and <m>x_{i+1}</m>, with subscripts interpreted cyclically so that <m>y_1</m> has an edge to <m>x_5</m> and <m>y_5</m> has an edge to <m>x_1</m>. The <m>x_i</m> also have associated integers, given in order of increasing vertex subscript as <m>4,1,5,3,1</m>. Each <m>x_i</m> has an edge to <m>x_{i+1}</m>, interpreted cyclically so that <m>x_5</m> has an edge to <m>x_1</m>.
+          </p>
+        </description>
         <prefigure xmlns="https://prefigure.org" label="mycielski-bad-coloring">
           <diagram dimensions="(400,300)" margins="20">
             <coordinates bbox="(0,-0.3,4.2,2)">
@@ -472,7 +543,7 @@
             </coordinates>
           </diagram>
         </prefigure>
-      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+      </image>
       <p><nbsp/></p>
     </sidebyside>
 <definition workspace="4cm">
@@ -497,6 +568,11 @@
   <title>First Fit</title>
   <sidebyside widths="20% 20%">
     <image>
+      <description>
+        <p>
+          A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_3,v_5,v_7</m>. The vertices in the right column are labeled from top to bottom as <m>v_2,v_4,v_6,v_8</m>.
+        </p>
+      </description>
       <prefigure xmlns="https://prefigure.org" label="K44-M-bad-order">
         <diagram dimensions="(100,150)" margins="15">
           <coordinates bbox="(0,0,1,3)">
@@ -513,8 +589,13 @@
           </coordinates>
         </diagram>
       </prefigure>
-    <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+    </image>
     <image>
+      <description>
+        <p>
+          A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_2,v_3,v_4</m>. The vertices in the right column are labeled from top to bottom as <m>v_5,v_6,v_7,v_8</m>.
+        </p>
+      </description>
       <prefigure xmlns="https://prefigure.org" label="K44-M-good-order">
         <diagram dimensions="(100,150)" margins="15">
           <coordinates bbox="(0,0,1,3)">
@@ -531,7 +612,7 @@
           </coordinates>
         </diagram>
       </prefigure>
-    <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>    
+    </image>    
   </sidebyside>
 </paragraphs>
 
@@ -551,6 +632,11 @@
       
     
       <image>
+        <description>
+          <p>
+            A diagram containing two transparent ellipses, stacked vertically.   
+          </p>
+          </description>
         <prefigure xmlns="https://prefigure.org" label="ellipses-prufer">
           <diagram dimensions="(300,300)" margins="5">
             <coordinates bbox="(-4,-4,4,4)">
@@ -559,7 +645,7 @@
             </coordinates>
           </diagram>
         </prefigure>
-      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+      </image>
       <p>
         <nbsp/>
       </p>
