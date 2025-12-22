@@ -46,10 +46,10 @@
         <p>The additive inverse of a fraction <m>(a,b)</m> is just <m>(-a,b)</m>.  Using this, we define subtraction for fractions: <m>(a,b)-(c,d)=(a,b)+(-c,d)</m>.
         </p>
 
-        <p>When <m>(a,b)</m> is a fraction, and <m>a\neq 0</m>, the fraction <m>(b,a)</m> is the <term>reciprocal</term><idx><h>reciprocal</h></idx> of <m>(a,b)</m>. The reciprocal is also called the <term>multiplicative inverse</term><idx><h>multiplicative inverse</h></idx>, and the reciprocal of <m>x</m> is denoted <m>x^{-1}</m>. When <m>y\neq0</m>, we can then define <term>division</term> by setting <m>x/y=xy^{-1}</m>, <ie />, <m>(a,b)/(c,d)=(ad, bc)</m>. Of course, division by zero is not defined, a fact that you probably already knew!
+        <p>When <m>(a,b)</m> is a fraction, and <m>a\neq 0</m>, the fraction <m>(b,a)</m> is the <term>reciprocal</term><idx><h>reciprocal</h></idx> of <m>(a,b)</m>. The reciprocal is also called the <term>multiplicative inverse</term><idx><h>multiplicative inverse</h></idx>, and the reciprocal of <m>x</m> is denoted <m>x^{-1}</m>. When <m>y\neq0</m>, we can then define <term>division</term> by setting <m>x/y=xy^{-1}</m>, <ie/>, <m>(a,b)/(c,d)=(ad, bc)</m>. Of course, division by zero is not defined, a fact that you probably already knew!
         </p>
 
-        <p>As was the case for both <m>\nonnegints</m> and <m>\ints</m>, when <m>n</m> is a positive integer, and <m>0</m> is the zero in <m>\rats</m>, we define <m>0^n=0</m>. When <m>x=(a,b)</m> is a fraction with <m>x\neq0</m> and <m>n</m> is a non-negative integer, we define <m>x^n</m> inductively by (i)<nbsp /><m>x^0=1</m> and (ii)<nbsp /><m>x^{n+1}=xx^n</m>.
+        <p>As was the case for both <m>\nonnegints</m> and <m>\ints</m>, when <m>n</m> is a positive integer, and <m>0</m> is the zero in <m>\rats</m>, we define <m>0^n=0</m>. When <m>x=(a,b)</m> is a fraction with <m>x\neq0</m> and <m>n</m> is a non-negative integer, we define <m>x^n</m> inductively by (i)<nbsp/><m>x^0=1</m> and (ii)<nbsp/><m>x^{n+1}=xx^n</m>.
         </p>
 
         <theorem>
@@ -73,14 +73,14 @@
             \frac{1}{2} =\langle(\langle(s(s(0)),s(0))\rangle,
             \langle(s(s(0)),0)\rangle)\rangle
         </me>
-        We can also define a total order on <m>\rats</m>. To do this, we assume that <m>(a,b),(c,d)\in\rats</m> have <m>b,d>0</m>. (If <m>b\lt 0</m>, for example, we would replace it by <m>(a',b')=(-a,-b)</m>, which is in the same equivalence class as <m>(a,b)</m> and has <m>b'>0</m>.) Then we set <m>(a,b)\leq (c,d)</m> in <m>\rats</m> if <m>ad\leq bc</m> in <m>\ints</m>.
+        We can also define a total order on <m>\rats</m>. To do this, we assume that <m>(a,b),(c,d)\in\rats</m> have <m>b,d&gt;0</m>. (If <m>b\lt 0</m>, for example, we would replace it by <m>(a',b')=(-a,-b)</m>, which is in the same equivalence class as <m>(a,b)</m> and has <m>b'&gt;0</m>.) Then we set <m>(a,b)\leq (c,d)</m> in <m>\rats</m> if <m>ad\leq bc</m> in <m>\ints</m>.
         </p>
     </introduction>
 
 
     <subsection>
         <title>Integer Exponents</title>
-        <p>When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\rats</m>, we define <m>0^n=0</m>. When <m>x\in\rats</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>, we define <m>x^n</m> inductively by<nbsp />(i)<nbsp /><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>. When <m>n\in\ints</m> and <m>n\lt 0</m>, we set <m>x^n=1/x^{-n}</m>.
+        <p>When <m>n</m> is a positive integer and <m>0</m> is the zero in <m>\rats</m>, we define <m>0^n=0</m>. When <m>x\in\rats</m>, <m>x\neq 0</m> and <m>n\in\nonnegints</m>, we define <m>x^n</m> inductively by<nbsp/>(i)<nbsp/><m>x^0=1</m> and <m>x^{k+1}=xx^k</m>. When <m>n\in\ints</m> and <m>n\lt 0</m>, we set <m>x^n=1/x^{-n}</m>.
         </p>
 
         <theorem>

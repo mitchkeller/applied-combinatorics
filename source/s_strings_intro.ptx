@@ -13,7 +13,7 @@
     s=</m><q>
       <m>x_1x_2x_3\dots x_n</m>
     </q>, rather than the more cumbersome notation <m>
-      s(1)=x_1</m>, <m>s(2)=x_2</m>, <ellipsis />, <m>s(n)=x_n</m>. </p>
+      s(1)=x_1</m>, <m>s(2)=x_2</m>, <ellipsis/>, <m>s(n)=x_n</m>. </p>
 
   <p>There are a number of alternatives for the notation and terminology associated with strings.
     First, the characters in a string <m>s</m> are frequently written using subscripts as <m>
@@ -44,7 +44,7 @@
   <example xml:id="exa_strings_ga-plate">
     <statement>
       <p>In the state of Georgia, license plates consist of four digits followed by a space followed
-        by three capital letters. The first digit cannot be a<nbsp /><m>0</m>. How many license
+        by three capital letters. The first digit cannot be a<nbsp/><m>0</m>. How many license
         plates are possible? </p>
     </statement>
     <solution>
@@ -68,7 +68,7 @@
         total of <m>9\,000 = 9\times 10^3</m>. </p>
     </solution>
   </example>
-  <p>In the case that <m>X=\{0,1\}</m>, an <m>X</m>-string is called a <m>0</m><ndash /><m>1</m>
+  <p>In the case that <m>X=\{0,1\}</m>, an <m>X</m>-string is called a <m>0</m><ndash/><m>1</m>
     string (also a <term>binary string</term><idx>
       <h>string</h>
       <h>binary</h>
@@ -81,10 +81,10 @@
       <h>ternary</h>
     </idx> string. </p>
   <example>
-    <p>A machine instruction in a <m>32</m>-bit operating system is just a bit string of length<nbsp /><m>
+    <p>A machine instruction in a <m>32</m>-bit operating system is just a bit string of length<nbsp/><m>
       32</m>. Thus, there are <m>2</m> options for each of <m>32</m> positions to fill, making the
       number of such strings <m>2^{32} = 4\,294\,967\,296</m>. In general, the number of bit strings
-      of length<nbsp /><m>n</m> is <m>2^n</m>. </p>
+      of length<nbsp/><m>n</m> is <m>2^n</m>. </p>
   </example>
 
   <example>
@@ -92,7 +92,7 @@
       <p>Suppose that a website allows its users to pick their own usernames for accounts, but
         imposes some restrictions. The first character must be an upper-case letter in the English
         alphabet. The second through sixth characters can be letters (both upper-case and lower-case
-        allowed) in the English alphabet or decimal digits (<m>0</m><ndash /><m>
+        allowed) in the English alphabet or decimal digits (<m>0</m><ndash/><m>
           9</m>). The seventh position must be <sq>@</sq> or <sq>.</sq>. The eighth through twelfth
         positions allow lower-case English letters, <sq>*</sq>, <sq>%</sq>, and <sq>
           #</sq>. The thirteenth position must be a digit. How many users can the website accept
@@ -100,44 +100,43 @@
     </statement>
     <solution>
       <p>We can visualize the options by thinking of the <m>13</m> positions in the string as blanks
-        that need to be filled in and putting the options for that blank above. In <xref
-          ref="fig_string-template" />, we've used U to denote the set of upper-case letters, L for
+        that need to be filled in and putting the options for that blank above. In <xref ref="fig_string-template"/>, we've used U to denote the set of upper-case letters, L for
         the set of lower-case letters, and D for the set of digits. </p>
       <figure xml:id="fig_string-template">
         <caption>String Template</caption>
         <tabular>
           <row>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
             <cell>#</cell>
             <cell>#</cell>
             <cell>#</cell>
             <cell>#</cell>
             <cell>#</cell>
-            <cell></cell>
+            <cell/>
           </row>
           <row>
-            <cell></cell>
+            <cell/>
             <cell>D</cell>
             <cell>D</cell>
             <cell>D</cell>
             <cell>D</cell>
             <cell>D</cell>
-            <cell></cell>
+            <cell/>
             <cell>%</cell>
             <cell>%</cell>
             <cell>%</cell>
             <cell>%</cell>
             <cell>%</cell>
-            <cell></cell>
+            <cell/>
           </row>
           <row>
-            <cell></cell>
+            <cell/>
             <cell>L</cell>
             <cell>L</cell>
             <cell>L</cell>
@@ -149,7 +148,7 @@
             <cell>*</cell>
             <cell>*</cell>
             <cell>*</cell>
-            <cell></cell>
+            <cell/>
           </row>
           <row>
             <cell>U</cell>
@@ -167,19 +166,19 @@
             <cell>D</cell>
           </row>
           <row bottom="minor">
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
-            <cell></cell>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
           </row>
           <row>
             <cell>26</cell>
@@ -212,10 +211,10 @@
     <exercise label="appcomb_strings_intro_reading">
       <statement>
         <p>
-          Suppose we are forming strings of length four. The first and second characters in the string will be uppercase English letters. The third character in the string will be a digit (<m>0</m><ndash /><m>9</m>), and the fourth character in the string will be a lowercase English consonant. How many strings meet these criteria? Explain your reasoning, and it would be better if you expressed your answer as a product of numbers rather than giving only a final numerical answer.
+          Suppose we are forming strings of length four. The first and second characters in the string will be uppercase English letters. The third character in the string will be a digit (<m>0</m><ndash/><m>9</m>), and the fourth character in the string will be a lowercase English consonant. How many strings meet these criteria? Explain your reasoning, and it would be better if you expressed your answer as a product of numbers rather than giving only a final numerical answer.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

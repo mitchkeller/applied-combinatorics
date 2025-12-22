@@ -27,7 +27,7 @@
     <me>
         1+2+3+\dots+6
     </me>
-    Are we talking about the sum of the first six positive integers, or are we talking about the sum of the first<nbsp /><m>19</m> terms from the more complicated challenge sequence given above?  You are supposed to answer that you don't know, and that's the correct answer.
+    Are we talking about the sum of the first six positive integers, or are we talking about the sum of the first<nbsp/><m>19</m> terms from the more complicated challenge sequence given above?  You are supposed to answer that you don't know, and that's the correct answer.
     </p>
 
     <p>The point here is that without a clarifying comment or two, the notation <m>1+2+3+\dots+6</m> isn't precisely defined.  Let's see how to make things right.</p>
@@ -36,7 +36,7 @@
     <me>
         \sum_{i=1}^1 f(i) = f(1)
     </me>
-    and if <m>n>1</m>, define
+    and if <m>n&gt;1</m>, define
     <me>
         \sum_{i=1}^n f(i) = f(n)+\sum_{i=1}^{n-1}f(i)
     </me>
@@ -47,17 +47,17 @@
     <me>
         \sum_{i=1}^6 i
     </me>
-    Now it is clear that we are talking about a computation that yields<nbsp /><m>21</m> as an answer.
+    Now it is clear that we are talking about a computation that yields<nbsp/><m>21</m> as an answer.
     </p>
   
     <p>A second example: previously, we defined <m>n!</m> by writing
     <me>
         n! = n\times (n-1)\times (n-2)\times\dots\times3\times2\times 1
     </me>
-    By this point, you should realize that there's a problem here.  Multiplication, like addition, is a binary operation. And what do those dots mean? Here's a way to do the job more precisely. Define <m>n!</m> to be <m>1</m> if <m>n=1</m>. And when <m>n>1</m>, set <m>n! = n(n-1)!</m>.<idx><h>factorial</h><h>recursive definition</h></idx>
+    By this point, you should realize that there's a problem here.  Multiplication, like addition, is a binary operation. And what do those dots mean? Here's a way to do the job more precisely. Define <m>n!</m> to be <m>1</m> if <m>n=1</m>. And when <m>n&gt;1</m>, set <m>n! = n(n-1)!</m>.<idx><h>factorial</h><h>recursive definition</h></idx>
     </p>
 
-    <p>Definitions like these are called <term>recursive definitions</term><idx><h>recursive definition</h></idx>. They can be made with different starting points. For example, we could have set <m>n!=1</m> when <m>n=0</m>, and when <m>n>0</m>, set <m>n!=n(n-1)!</m>.
+    <p>Definitions like these are called <term>recursive definitions</term><idx><h>recursive definition</h></idx>. They can be made with different starting points. For example, we could have set <m>n!=1</m> when <m>n=0</m>, and when <m>n&gt;0</m>, set <m>n!=n(n-1)!</m>.
     </p>
 
     <p>Here's a code snippet in SageMath, which is based on Python, so this also works as Python code.

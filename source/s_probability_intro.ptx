@@ -1,16 +1,17 @@
 <section xml:id="s_probability_intro">
     <title>An Introduction to Probability</title>
-    <p>We continue with an informal discussion intended to motivate the more structured development that will follow. Consider the <q>spinner</q> shown in <xref ref="fig_spinner"  />. Suppose we give it a good thwack so that the arrow goes round and round. We then record the number of the region in which the pointer comes to rest.  Then observers, none of whom have studied combinatorics, might make the following comments:
+    <p>We continue with an informal discussion intended to motivate the more structured development that will follow. Consider the <q>spinner</q> shown in <xref ref="fig_spinner"/>. Suppose we give it a good thwack so that the arrow goes round and round. We then record the number of the region in which the pointer comes to rest.  Then observers, none of whom have studied combinatorics, might make the following comments:
     </p>
-    <figure xml:id="fig_spinner" >
+    <figure xml:id="fig_spinner">
         <caption>A Spinner for Games of Chance</caption>
-        <image width="33%" source="spinner" />
+        <image width="33%" source="spinner"><description><p>A Spinner for Games of Chance</p>
+        </description></image>
     </figure>
     <p>
         <ol>
-            <li><p>The odds of landing in region<nbsp /><m>1</m> are the same as those for landing in region<nbsp /><m>3</m>.</p></li>
-            <li><p>You are twice as likely to land in region<nbsp /><m>2</m> as in region<nbsp /><m>4</m>.</p></li>
-            <li><p>When you land in an odd numbered region, then 60% of the time, it will be in region<nbsp /><m>5</m>.</p></li>
+            <li><p>The odds of landing in region<nbsp/><m>1</m> are the same as those for landing in region<nbsp/><m>3</m>.</p></li>
+            <li><p>You are twice as likely to land in region<nbsp/><m>2</m> as in region<nbsp/><m>4</m>.</p></li>
+            <li><p>When you land in an odd numbered region, then 60% of the time, it will be in region<nbsp/><m>5</m>.</p></li>
         </ol>
     </p>
     <p>We will now develop a more formal framework that will enable us to make such discussions far more precise. We will also see whether Alice is being entirely fair to Bob in her proposed game to one hundred.
@@ -47,17 +48,17 @@
     </example>
 
     <example>
-        <p>In Alice's game as described above, the set <m>S</m> can be <m>\{0,1,2,3,4,5\}</m>, the set of possible differences when a pair of dice are rolled. In this game, we will see that the correct definition of the function <m>P</m> will set <m>P(0)=6/36</m>; <m>P(1)=10/36</m>; <m>P(2)=8/36</m>; <m>P(3)=6/36</m>; <m>P(4)=4/36</m>; and <m>P(5)=2/36</m>. Using Xing's more compact notation, we could say that <m>P(0)=1/6</m> and <m>P(d)= 2(6-d)/36</m> when <m>d>0</m>.
+        <p>In Alice's game as described above, the set <m>S</m> can be <m>\{0,1,2,3,4,5\}</m>, the set of possible differences when a pair of dice are rolled. In this game, we will see that the correct definition of the function <m>P</m> will set <m>P(0)=6/36</m>; <m>P(1)=10/36</m>; <m>P(2)=8/36</m>; <m>P(3)=6/36</m>; <m>P(4)=4/36</m>; and <m>P(5)=2/36</m>. Using Xing's more compact notation, we could say that <m>P(0)=1/6</m> and <m>P(d)= 2(6-d)/36</m> when <m>d&gt;0</m>.
         </p>
     </example>
 
     <example>
-        <p>A jar contains twenty marbles, of which six are red, nine are blue and the remaining five are green. Three of the twenty marbles are selected at random.<fn>This is sometimes called <term>sampling without replacement</term>.  You should imagine a jar with opaque sides<mdash />so you can't see through them.  The marbles are stirred/shaken, and you reach into the jar blind folded and draw out three marbles.</fn><idx><h>sampling</h><h>without replacement</h></idx> Let <m>X=\{0,1,2,3,4,5\}</m>, and for each <m>x\in X</m>, let <m>P(x)</m> denote the probability that the number of blue marbles among the three marbles selected is <m>x</m>. Then <m>P(i)=C(9,i)C(11,3-i)/C(20,3)</m> for <m>i=0,1,2,3</m>, while <m>P(4)=P(5)=0</m>.  Bob says that it doesn't make sense to have outcomes with probability zero, but Carlos says that it does.
+        <p>A jar contains twenty marbles, of which six are red, nine are blue and the remaining five are green. Three of the twenty marbles are selected at random.<fn>This is sometimes called <term>sampling without replacement</term>.  You should imagine a jar with opaque sides<mdash/>so you can't see through them.  The marbles are stirred/shaken, and you reach into the jar blind folded and draw out three marbles.</fn><idx><h>sampling</h><h>without replacement</h></idx> Let <m>X=\{0,1,2,3,4,5\}</m>, and for each <m>x\in X</m>, let <m>P(x)</m> denote the probability that the number of blue marbles among the three marbles selected is <m>x</m>. Then <m>P(i)=C(9,i)C(11,3-i)/C(20,3)</m> for <m>i=0,1,2,3</m>, while <m>P(4)=P(5)=0</m>.  Bob says that it doesn't make sense to have outcomes with probability zero, but Carlos says that it does.
         </p>
     </example>
 
     <example>
-        <p>In some cards games, each player receives five cards from a standard deck of<nbsp /><m>52</m> cards<mdash />four suits (spades, hearts, diamonds and clubs) with<nbsp /><m>13</m> cards, ace though king in each suit. A player has a <term>full house</term><idx><h>full house (poker hand)</h></idx> if there are two values <m>x</m> and <m>y</m> for which he has three of the four <m>x</m>'s and two of the four <m>y</m>'s, <eg />  three kings and two eights. If five cards are drawn at random from a standard deck, the probability of a full house is
+        <p>In some cards games, each player receives five cards from a standard deck of<nbsp/><m>52</m> cards<mdash/>four suits (spades, hearts, diamonds and clubs) with<nbsp/><m>13</m> cards, ace though king in each suit. A player has a <term>full house</term><idx><h>full house (poker hand)</h></idx> if there are two values <m>x</m> and <m>y</m> for which he has three of the four <m>x</m>'s and two of the four <m>y</m>'s, <eg/>  three kings and two eights. If five cards are drawn at random from a standard deck, the probability of a full house is
         <me>            \frac{\binom{13}{1}\binom{12}{1}\binom{4}{3}\binom{4}{2}}{\binom{52}{5}}\approx 0.00144.
         </me>
         </p>

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
 	<docinfo>
-		<brandlogo url="httpw://www.appliedcombinatorics.org/" source="front-cover.png" />
+		<brandlogo url="httpw://www.appliedcombinatorics.org/" source="front-cover.png"/>
 		<initialism>ACW</initialism>
-		<xi:include href="macros.ptx" />
-    <xi:include href="latex-image-preamble.ptx" />
-		<cross-references text="type-global" />
+		<xi:include href="macros.ptx"/>
+    <xi:include href="latex-image-preamble.ptx"/>
+		<cross-references text="type-global"/>
 		<rename element="remark" xml:lang="en-US">Discussion</rename>
 		<rename element="worksheetexercise" xml:lang="en-US">Problem</rename>
 	</docinfo>
@@ -44,20 +43,20 @@
 				<titlepage-items/>
 			</titlepage>
 		</frontmatter>
-    <xi:include href="worksheets/intro.ptx" />
-		<xi:include href="worksheets/strings.ptx" />
-		<xi:include href="worksheets/induction.ptx" />
+    <xi:include href="worksheets/intro.ptx"/>
+		<xi:include href="worksheets/strings.ptx"/>
+		<xi:include href="worksheets/induction.ptx"/>
 		<chapter xml:id="ch-php-notes">
 			<title>Placeholder</title>
 			<p>
 				This is a placeholder for a chapter for which there are not currently notes.
 			</p>
 		</chapter>
-		<xi:include href="worksheets/graphs.ptx" />
-		<xi:include href="worksheets/posets.ptx" />
-		<xi:include href="worksheets/inclusion-exclusion.ptx" />
-		<xi:include href="worksheets/genfunction.ptx" />
-		<xi:include href="worksheets/recurrence.ptx" />
+		<xi:include href="worksheets/graphs.ptx"/>
+		<xi:include href="worksheets/posets.ptx"/>
+		<xi:include href="worksheets/inclusion-exclusion.ptx"/>
+		<xi:include href="worksheets/genfunction.ptx"/>
+		<xi:include href="worksheets/recurrence.ptx"/>
 		<!-- <backmatter>
 			<solutions worksheet="statement solution">
 				<title>Solutions</title>

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<chapter xml:id="ws-graphs" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-graphs">
   <title>Graphs</title>
 
   <worksheet xml:id="ws-graphs-hamiltonian">
@@ -8,19 +6,17 @@
     <page>
       <figure>
         <caption>Find a hamiltonian cycle in each graph or explain why there is not one</caption>
-      <sbsgroup >
+      <sbsgroup>
       <sidebyside widths="30% 40% 30%">
         <figure>
           <caption><m>\bfG_1</m></caption>
     <image>
-      <shortdescription>A graph</shortdescription>
-      <prefigure xmlns="https://prefigure.org" label="img-hamgraph1">
+      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_1</m></p>
+    </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph1">
         <diagram dimensions="(200,300)" margins="5">
           <definition>graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}</definition>
           <coordinates bbox="(-1,-1,1,1)">
-            <network graph="graph" scale="0.8"
-                    node-fill="#fcf" node-stroke="black"
-                    seed="1" labels="yes">
+            <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes">
             </network>
           </coordinates>
         </diagram>
@@ -30,14 +26,12 @@
     <figure>
           <caption><m>\bfG_2</m></caption>
     <image>
-      <shortdescription>A graph</shortdescription>
-      <prefigure xmlns="https://prefigure.org" label="img-hamgraph2">
+      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_2</m></p>
+    </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph2">
         <diagram dimensions="(300,300)" margins="5">
           <definition>graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}</definition>
           <coordinates bbox="(-1,-1,1,1)">
-            <network graph="graph" scale="0.8"
-                    node-fill="#fcf" node-stroke="black"
-                    layout="circular" labels="yes">
+            <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" layout="circular" labels="yes">
             </network>
           </coordinates>
         </diagram>
@@ -47,14 +41,12 @@
     <figure>
           <caption><m>\bfG_3</m></caption>
     <image>
-      <shortdescription>A graph</shortdescription>
-      <prefigure xmlns="https://prefigure.org" label="img-hamgraph3">
+      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_3</m></p>
+    </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph3">
         <diagram dimensions="(200,300)" margins="5">
           <definition>graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}</definition>
           <coordinates bbox="(-1,-1,1,1)">
-            <network graph="graph" scale="0.8"
-                    node-fill="#fcf" node-stroke="black"
-                    layout="spring" labels="yes">
+            <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" layout="spring" labels="yes">
             </network>
           </coordinates>
         </diagram>
@@ -66,16 +58,14 @@
   <figure>
           <caption><m>\bfG_4</m></caption>
     <image>
-      <prefigure xmlns="https://prefigure.org" label="petersen-graph">
+      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_4</m></p>
+    </description><prefigure xmlns="https://prefigure.org" label="petersen-graph">
         <diagram dimensions="(300,300)" margins="15">
           <definition>N=5</definition>
           <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
           <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
           <coordinates bbox="(-1,-1,1,1)">
-            <network  scale="0.8"
-              node-fill="#fcf" node-stroke="black"
-              seed="1" labels="yes" 
-              tactile-node-size="40">
+            <network scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
               <node at="0" p="f(0)" edges="[1,4,5]"/>
               <node at="1" p="f(1)" edges="[2,6]"/>
               <node at="2" p="f(2)" edges="[3,7]"/>
@@ -95,16 +85,14 @@
   <figure>
           <caption><m>\bfG_5</m></caption>
     <image>
-      <prefigure xmlns="https://prefigure.org" label="petersen-plus-e">
+      <description><p>ADD ALT TEXT TO THIS IMAGE<m>\bfG_5</m></p>
+    </description><prefigure xmlns="https://prefigure.org" label="petersen-plus-e">
         <diagram dimensions="(300,300)" margins="15">
           <definition>N=5</definition>
           <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
           <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
           <coordinates bbox="(-1,-1,1,1)">
-            <network  scale="0.8"
-              node-fill="#fcf" node-stroke="black"
-              seed="1" labels="yes" 
-              tactile-node-size="40">
+            <network scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
               <node at="0" p="f(0)" edges="[1,4,5]"/>
               <node at="1" p="f(1)" edges="[2,6]"/>
               <node at="2" p="f(2)" edges="[3,7]"/>
@@ -374,7 +362,7 @@ and keep finding the same pattern that arises in the platonic solids:</p>
 <exercise workspace="0.75in">
   <statement>
     <p>
-      Notice that Euler’s Formula requires that <m>\bfG</m> be a <term>connected</term> planar graph.
+      Notice that Euler&#8217;s Formula requires that <m>\bfG</m> be a <term>connected</term> planar graph.
 Find a counterexample to show that the formula <m>n-m+f=2</m> does not hold if <m>\bfG</m> is a planar graph that is not connected.
     </p>
   </statement>
@@ -387,7 +375,7 @@ What type of graph does that mean we must have? How many edges does <m>\bfG</m> 
     </p>
   </statement>
 </exercise>
-<exercise >
+<exercise>
   <task workspace="1.25in">
     <p>
       Draw a planar drawing of a connected planar graph <m>\bfG</m> with more than <m>m_{0}</m> edges.
@@ -432,8 +420,8 @@ What are <m>n',m',f'</m> for your graph?
 <exercise>
   <introduction>
     <p>
-       Now let’s suppose that <m>\bfG</m> is a connected planar graph with <m>n</m> vertices and <m>m</m> edges where <m>m\gt m_{0}</m>.
-Suppose that Euler’s formula holds for any graph with fewer than <m>m</m> edges.
+       Now let&#8217;s suppose that <m>\bfG</m> is a connected planar graph with <m>n</m> vertices and <m>m</m> edges where <m>m\gt m_{0}</m>.
+Suppose that Euler&#8217;s formula holds for any graph with fewer than <m>m</m> edges.
 (What type of proof are we setting up here?)
     </p>
   </introduction>
@@ -470,10 +458,10 @@ What are <m>n',m',f'</m> in terms of <m>n</m>, <m>m</m>, and <m>f</m>?
  <exercise>
   <introduction>
     <p>
-    In the grand scheme of things, Euler’s formula doesn’t seem that useful for determining if a graph is planar or not.
+    In the grand scheme of things, Euler&#8217;s formula doesn&#8217;t seem that useful for determining if a graph is planar or not.
 However, we can deduce something useful from it.
-In this problem, we’re going to imagine a fixed planar drawing of a connected planar graph <m>\bfG</m> and let <m>n</m>, <m>m</m>, and <m>f</m> be the number of vertices, edges, and faces, respectively, in our planar drawing.
-We’ll assume that <m>n\geq 4</m> to avoid some annoying things.
+In this problem, we&#8217;re going to imagine a fixed planar drawing of a connected planar graph <m>\bfG</m> and let <m>n</m>, <m>m</m>, and <m>f</m> be the number of vertices, edges, and faces, respectively, in our planar drawing.
+We&#8217;ll assume that <m>n\geq 4</m> to avoid some annoying things.
 </p>
 
 <p>
@@ -519,7 +507,7 @@ We’ll assume that <m>n\geq 4</m> to avoid some annoying things.
   <task workspace="0.15in">
     <statement>
       <p>
-        Using Euler’s formula and the previous part, show that <m>m\leq 3n-6</m>.
+        Using Euler&#8217;s formula and the previous part, show that <m>m\leq 3n-6</m>.
       </p>
     </statement>
   </task>
@@ -572,7 +560,7 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
   <task workspace="1in">
     <statement>
       <p>
-        What does Euler’s formula tell you <m>f</m> would have to be for <m>\bfK_{3,3}</m>? What lower bound does this give you for the number of edge-face pairs, and how does this show that <m>\bfK_{3,3}</m> is not planar?
+        What does Euler&#8217;s formula tell you <m>f</m> would have to be for <m>\bfK_{3,3}</m>? What lower bound does this give you for the number of edge-face pairs, and how does this show that <m>\bfK_{3,3}</m> is not planar?
       </p>
     </statement>
   </task>
@@ -604,12 +592,12 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
             <ol marker="i.">
               <li>
                 <p>
-                  What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?
+                  What is the relationship between the length of the Pr&#252;fer code of a tree and the number of vertices of the tree?
                 </p>
               </li>
               <li>
                 <p>
-                  What type(s) of vertices have labels appearing in the Prüfer code of a tree?
+                  What type(s) of vertices have labels appearing in the Pr&#252;fer code of a tree?
                 </p>
               </li>
               
@@ -620,41 +608,35 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
 <task workspace="0cm">
   <statement>
     <p>
-      Extra time? Draw a tree for another group to find the Prüfer code of.
+      Extra time? Draw a tree for another group to find the Pr&#252;fer code of.
     </p>
   </statement>
 </task>
 
     </activity>
 <image width="50%">
-  <shortdescription>A graph with six vertices</shortdescription>
-  <prefigure label="graph-prufer-6" xmlns="https://prefigure.org">
+  <prefigure xmlns="https://prefigure.org" label="graph-prufer-6">
     <diagram dimensions="(300,200)" margins="15">
       <definition>graph={1:[2,3,4,5],3:[6]}</definition>
               <coordinates bbox="(-1,-1,1,1)">
-                <network graph="graph" scale="0.8"
-                        node-fill="#eee" node-stroke="black"
-                        seed="73" labels="yes" rotate="90">
+                <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="73" labels="yes" rotate="90">
                 </network>
       </coordinates>
     </diagram>
   </prefigure>
-</image>    
+<description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>    
 <image width="50%">
-  <shortdescription>A graph with 14 vertices</shortdescription>
-  <prefigure label="graph-prufer-14" xmlns="https://prefigure.org">
+  <prefigure xmlns="https://prefigure.org" label="graph-prufer-14">
     <diagram dimensions="(300,200)" margins="15">
       <definition>graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12],
         5:[6,7,12,14],7:[13],
         }</definition>
               <coordinates bbox="(-1,-1,1,1)">
-                <network graph="graph" scale="0.8"
-                        node-fill="#eee" node-stroke="black"
-                        seed="38" layout="spring" labels="yes" rotate="120">
+                <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="38" layout="spring" labels="yes" rotate="120">
                 </network>
       </coordinates>
     </diagram>
   </prefigure>
-</image>
+<description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
   </worksheet>
 </chapter>

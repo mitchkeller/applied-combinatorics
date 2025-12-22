@@ -3,18 +3,18 @@
   <p>In this section, we develop an algorithm for finding an interval representation of an interval
     order. In fact, this algorithm can be applied to any poset. Either it will find an interval
     representation or it will find a subposet isomorphic to <m>\bftwo+\bftwo</m>. As a consequence,
-    we establish the other half of <xref ref="thm_fishburn" text="title" />. </p>
+    we establish the other half of <xref ref="thm_fishburn" text="title"/>. </p>
 
   <p>When <m>\PXP</m> is an interval order and <m>n</m> is a positive integer, there may be many
     different ways to represent <m>\bfP</m> using intervals with integer end points in <m>[n]</m>.
     But there is certainly a least <m>n</m> for which a representation can be found, and here we see
     that the representation is unique. The discussion will again make use of the notation for down
-    sets and up sets that we introduced prior to the proof of <xref ref="thm_dilworth" text="title" />.
+    sets and up sets that we introduced prior to the proof of <xref ref="thm_dilworth" text="title"/>.
     As a reminder, we repeat it here. For a poset <m>\PXP</m> and a subset <m>S\subset X</m>, let <m>D(S)
     = \{y\in X:</m> there exists some <m>x\in S</m> with <m>y\lt x</m> in <m>P\}</m>. Also, let <m>D[S]=D(S)\cup
     S</m>. When <m>|S|=1</m>, say <m>S=\{x\}</m>, we write <m>D(x)</m> and <m>D[x]</m> rather than <m>
     D(\{x\})</m> and <m>D[\{x\}]</m>. Dually, for a subset <m>S\subseteq X</m>, we define <m>U(S) =
-    \{y\in X:</m> there exists some <m>x\in X</m> with <m>y>x</m> in <m>P\}</m>. As before, set <m>U[S]=U(S)\cup
+    \{y\in X:</m> there exists some <m>x\in X</m> with <m>y&gt;x</m> in <m>P\}</m>. As before, set <m>U[S]=U(S)\cup
     S</m>. And when <m>S=\{x\}</m>, we just write <m>U(x)</m> for <m>\{y\in X:x\lt y</m> in <m>P\}</m>
     .
     </p>
@@ -45,7 +45,7 @@
     </me>
     We form an interval representation <m>I</m> of <m>\bfP</m> by the following rule: For each <m>x\in
     X</m>, set <m>I(x)=[i,j]</m>, where <m>D(x)=D_i</m> and <m>U(x)=U_j</m>. It is not immediately
-    clear that this rule is legal, <ie />, it might happen that applying the rule results in values
+    clear that this rule is legal, <ie/>, it might happen that applying the rule results in values
     of <m>i</m> and <m>j</m> for which <m>j\lt i</m>. But again, as a result of the exercises, we
     will see that this never happens. This collection of exercises is summarized in the following
     theorem. </p>
@@ -76,10 +76,11 @@
     </statement>
   </theorem>
 
-  <p>Consider the poset shown in <xref ref="fig_10ptintorder" />. </p>
+  <p>Consider the poset shown in <xref ref="fig_10ptintorder"/>. </p>
   <figure xml:id="fig_10ptintorder">
     <caption>An interval order on 10 Points</caption>
-    <image width="35%" source="10ptintorder" />
+    <image width="35%" source="10ptintorder"><description><p>An interval order on 10 Points</p>
+    </description></image>
   </figure>
   <p> Then <m>d= 5</m> with <m>D_1=\emptyset</m>, <m>D_2=\{c\}</m>, <m>D_3=\{c,f,g\}</m>, <m>
     D_4=\{c,f,g,h\}</m>, and <m>D_5=\{a,c,f,g,h,j\}</m>. Also <m>U_1=\{a,b,d,e,h,i,j\}</m>, <m>
@@ -90,7 +91,7 @@
         I(g) \amp = [1,2] \amp I(h) \amp = [3,3]\amp I(i) \amp = [4,5]\amp I(j) \amp = [3,4]</mrow>
     </md>
     To illustrate the situation where this process can be used to determine when a poset is not an
-    interval order, consider again the poset shown in <xref ref="fig_10ptintorder" />. Erase the
+    interval order, consider again the poset shown in <xref ref="fig_10ptintorder"/>. Erase the
     line joining points <m>c</m> and <m>j</m>. For the resulting poset, you will then find that <m>
     D(j)=\{f,g\}</m> and <m>D(d)=\{c\}</m>. Therefore, the four points <m>c</m>, <m>d</m>, <m>f</m>
     and <m>j</m> form a copy of <m>\bftwo+\bftwo</m> in this modified poset. </p>
@@ -101,7 +102,7 @@
             Suppose you run the algorithm for finding an interval representation and learn that the down sets and up sets are totally ordered by inclusion and that there are <m>d</m> down sets (and thus <m>d</m> up sets). If the poset has a point that is incomparable to every other point, what would the interval be that the algorithm assigns? Explain why this makes sense. 
           </p>
         </statement>
-        <response />
+        <response/>
       </exercise>
     </reading-questions>
 </section>

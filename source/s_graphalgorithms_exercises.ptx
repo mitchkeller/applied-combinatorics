@@ -1,47 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_graphalgorithms_exercises">
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex1" />, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
+            <p>For the graph in <xref ref="fig_span_tree_ex1"/>, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
             </p>
             <figure xml:id="fig_span_tree_ex1">
                 <caption>Find a minimum weight spanning tree</caption>
-                <image width="65%" source="span_tree_ex1"/>
+                <image width="65%" source="span_tree_ex1"><description><p>Find a minimum weight spanning tree</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex1" />, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex1"/>, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex2" />, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex2"/>, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.</p>
             <figure xml:id="fig_span_tree_ex2">
                 <caption>Find a minimum weight spanning tree</caption>
-                <image width="65%" source="span_tree_ex2"/>
+                <image width="65%" source="span_tree_ex2"><description><p>Find a minimum weight spanning tree</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex2" />, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex2"/>, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex3" />, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
+            <p>For the graph in <xref ref="fig_span_tree_ex3"/>, use Kruskal's algorithm (<q>avoid cycles</q>) to find a minimum weight spanning tree. Your answer should include a complete list of the edges, indicating which edges you take for your tree and which (if any) you reject in the course of running the algorithm.
             </p>
             <figure xml:id="fig_span_tree_ex3">
                 <caption>Find a minimum weight spanning tree</caption>
-                <image width="45%" source="span_tree_ex3"/>
+                <image width="45%" source="span_tree_ex3"><description><p>Find a minimum weight spanning tree</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For the graph in <xref ref="fig_span_tree_ex3" />, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
+            <p>For the graph in <xref ref="fig_span_tree_ex3"/>, use Prim's algorithm (<q>build tree</q>) to find a minimum weight spanning tree. Your answer should list the edges selected by the algorithm in the order they were selected.</p>
         </statement>
     </exercise>
     <exercise>
@@ -72,7 +74,7 @@
     <exercise>
         <statement>
             <p>Prove
-            <xref ref="prop_graphalgorithms_spanforest"  />.</p>
+            <xref ref="prop_graphalgorithms_spanforest"/>.</p>
         </statement>
     </exercise>
     <exercise>
@@ -82,23 +84,24 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex1" /> and a directed path of that length.
+            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex1"/> and a directed path of that length.
             </p>
             <figure xml:id="fig_graphalgorithms_dijkstra_ex1">
                 <caption>A directed graph</caption>
-                <image width="65%" source="dijkstra_ex1"/>
+                <image width="65%" source="dijkstra_ex1"><description><p>A directed graph</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p><xref ref="tab_digraph1"  /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.
+            <p><xref ref="tab_digraph1"/> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=21</m>. (On the other hand, <m>w(d,b)=10</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.
             </p>
             <figure xml:id="tab_digraph1">
                 <caption>A digraph represented as a table of data
                 </caption>
                 <tabular>
-                   <col right="minor" /> <col /> <col /><col /><col /><col /><col />
+                   <col right="minor"/> <col/> <col/><col/><col/><col/><col/>
                     <row bottom="minor">
                         <cell><m>w</m></cell>
                         <cell><m>a</m></cell>
@@ -169,23 +172,24 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex2" /> and a directed path of that length.
+            <p>Use Dijkstra's algorithm to find the distance from <m>a</m> to each other vertex in the digraph shown in <xref ref="fig_graphalgorithms_dijkstra_ex2"/> and a directed path of that length.
             </p>
             <figure xml:id="fig_graphalgorithms_dijkstra_ex2">
                 <caption>A directed graph</caption>
-                <image width="65%" source="dijkstra_ex2"/>
+                <image width="65%" source="dijkstra_ex2"><description><p>A directed graph</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p><xref ref="tab_digraph2"  /> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.</p>
+            <p><xref ref="tab_digraph2"/> contains the length of the directed edge <m>(x,y)</m> in the intersection of <em>row</em> <m>x</m> and <em>column</em> <m>y</m> in a digraph with vertex set <m>\{a,b,c,d,e,f\}</m>. For example, <m>w(b,d)=47</m>. (On the other hand, <m>w(d,b)=6</m>.) Use this data and Dijkstra's algorithm to find the distance from <m>a</m> to each of the other vertices and a directed path of that length from <m>a</m>.</p>
             <figure xml:id="tab_digraph2">
                 <caption>A digraph represented as a table of data
                 </caption>
 
                 <tabular>
-                    <col right="minor" /><col /> <col /> <col /><col /><col /><col />
+                    <col right="minor"/><col/> <col/> <col/><col/><col/><col/>
                     <row bottom="minor">
                         <cell><m>w</m></cell>
                     <cell><m>a</m></cell>
@@ -263,7 +267,7 @@
             <p>Notice that in our discussion of Dijkstra's algorithm, we required that the edge weights be nonnegative. If the edge weights are lengths and meant to model distance, this makes perfect sense. However, in some cases, it might be reasonable to allow negative edge weights. For example, suppose that a positive weight means there is a cost to travel along the directed edge while a negative edge weight means that you make money for traveling along the directed edge. In this case, a directed path with positive total weight results in paying out to travel it, while one with negative total weight results in a profit.
                   <ol>
                 <li><p>Give an example to show that Dijkstra's algorithm does not always find the path of minimum total weight when negative edge weights are allowed.</p></li>
-                <li><p>Bob and Xing are considering this situation, and Bob suggests that a little modification to the algorithm should solve the problem. He says that if there are negative weights, they just have to find the smallest (<ie />, most negative weight) and add the absolute value of that weight to every directed edge. For example, if <m>w(x,y)\geq -10</m> for every directed edge <m>(x,y)</m>, Bob is suggesting that they add <m>10</m> to every edge weight. Xing is skeptical, and for good reason. Give an example to show why Bob's modification won't work.</p></li>
+                <li><p>Bob and Xing are considering this situation, and Bob suggests that a little modification to the algorithm should solve the problem. He says that if there are negative weights, they just have to find the smallest (<ie/>, most negative weight) and add the absolute value of that weight to every directed edge. For example, if <m>w(x,y)\geq -10</m> for every directed edge <m>(x,y)</m>, Bob is suggesting that they add <m>10</m> to every edge weight. Xing is skeptical, and for good reason. Give an example to show why Bob's modification won't work.</p></li>
             
                   </ol>
                 </p>

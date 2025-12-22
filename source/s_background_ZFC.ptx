@@ -16,7 +16,7 @@
     <p>If <m>X</m> and <m>Y</m> are finite sets, these statements are equivalent, and it is perhaps natural to surmise that the same is true when <m>X</m> and <m>Y</m> are infinite. But that is not the case.
     </p>
 
-    <p>Here is the system of axioms popularly known as ZFC, which is an abbreviation for Zermelo-Fraenkel plus the Axiom of Choice.  In this system, the notion of <term>set</term> and the membership operator <m>\in</m> are undefined. However, if <m>A</m> and <m>B</m> are sets, then exactly one of the following statements is true: (i)<nbsp /><m>A\in B</m> is <em>true</em>; (ii)<nbsp /><m>A\in B</m> is <em>false</em>.  When <m>A\in B</m> is false, we write <m>A\notin B</m>. Also, there is an equivalence relation <m>=</m> defined on sets.
+    <p>Here is the system of axioms popularly known as ZFC, which is an abbreviation for Zermelo-Fraenkel plus the Axiom of Choice.  In this system, the notion of <term>set</term> and the membership operator <m>\in</m> are undefined. However, if <m>A</m> and <m>B</m> are sets, then exactly one of the following statements is true: (i)<nbsp/><m>A\in B</m> is <em>true</em>; (ii)<nbsp/><m>A\in B</m> is <em>false</em>.  When <m>A\in B</m> is false, we write <m>A\notin B</m>. Also, there is an equivalence relation <m>=</m> defined on sets.
     </p>
     <axiom xml:id="axiom_ZFC">
         <title>Zermelo-Fraenkel Axioms with Axiom of Choice</title>
@@ -50,7 +50,7 @@
 
                 <li>
                     <title>Axiom of power set</title>
-                    <p>Every set has a power set. That is, for any set <m>x</m>, there exists a set <m>y</m>, such that the elements of <m>y</m> are precisely the subsets of<nbsp /><m>x</m>.</p>
+                    <p>Every set has a power set. That is, for any set <m>x</m>, there exists a set <m>y</m>, such that the elements of <m>y</m> are precisely the subsets of<nbsp/><m>x</m>.</p>
                 </li>
 
                 <li>
@@ -83,7 +83,7 @@
         <li><p>Axiom of Choice.</p></li>
         <li><p>Peano postulates.</p></li>
         <li><p>Georg Cantor, Augustus De Morgan, George Boole, Bertrand Russell
-        and Kurt G&#xf6;del.</p></li>
+        and Kurt G&#246;del.</p></li>
     
                   </ol>
                 </p>

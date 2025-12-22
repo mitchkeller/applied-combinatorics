@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_polya_exercises">
     <exercise xml:id="ex_polya_perm-rep">
         <statement>
@@ -34,22 +33,23 @@
         <statement>
             <p>Compute <m>\pi_1\pi_2</m>, <m>\pi_2\pi_1</m>, <m>\pi_3\pi_4</m>, and
             <m>\pi_4\pi_3</m> for the permutations <m>\pi_i</m> in
-            <xref ref="ex_polya_perm-rep"  />.</p>
+            <xref ref="ex_polya_perm-rep"/>.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Find <m>\stab_{D_8}(C_3)</m> and <m>\stab_{D_8}(C_{16})</m> for the colorings of the vertices of the square shown in <xref ref="fig_polya_squares" /> by referring to <xref ref="tab_polya_fixed-square" />.</p>
+            <p>Find <m>\stab_{D_8}(C_3)</m> and <m>\stab_{D_8}(C_{16})</m> for the colorings of the vertices of the square shown in <xref ref="fig_polya_squares"/> by referring to <xref ref="tab_polya_fixed-square"/>.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>In <xref ref="fig_polya_pentagon" />, we show a regular pentagon with its vertices labeled. Use this labeling to complete this exercise.
+            <p>In <xref ref="fig_polya_pentagon"/>, we show a regular pentagon with its vertices labeled. Use this labeling to complete this exercise.
             </p>
             <figure xml:id="fig_polya_pentagon">
                 <caption>A pentagon with labeled vertices</caption>
                 <image width="25%">
-                    <latex-image>\begin{overpic}[scale=0.65]{external/pentagon}
+                    <description><p>A pentagon with labeled vertices</p>
+                </description><latex-image>\begin{overpic}[scale=0.65]{external/pentagon}
                     \put(9,2){\(4\)}
                     \put(84,4){\(3\)}
                     \put(102,53){\(2\)}
@@ -100,19 +100,20 @@
         <statement>
             <p>
                <ol>
-                    <li xml:id="ex_polya_graphs5-pt1"><p>Use the method of <xref ref="ss_polya_graphs" /> to find the cycle index of the pair group <m>S_5^{(2)}</m> of the symmetric group on five elements.</p></li>
-                    <li><p>Use the cycle index from <xref ref="ex_polya_graphs5-pt1"  /> to determine the number of nonisomorphic graphs on five vertices. How many of them have <m>6</m> edges?</p></li>
+                    <li xml:id="ex_polya_graphs5-pt1"><p>Use the method of <xref ref="ss_polya_graphs"/> to find the cycle index of the pair group <m>S_5^{(2)}</m> of the symmetric group on five elements.</p></li>
+                    <li><p>Use the cycle index from <xref ref="ex_polya_graphs5-pt1"/> to determine the number of nonisomorphic graphs on five vertices. How many of them have <m>6</m> edges?</p></li>
                </ol>
             </p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Tic-tac-toe is a two-player game played on a <m>9\times 9</m> grid. The players mark the squares of the grid with the symbols X and O. This exercise uses Pólya's enumeration theorem to investigate the number of different tic-tac-toe boards. (The analysis of <em>games</em> is more complex, since it requires attention to the order the squares are marked and stopping when one player has won the game.)</p>
+            <p>Tic-tac-toe is a two-player game played on a <m>9\times 9</m> grid. The players mark the squares of the grid with the symbols X and O. This exercise uses P&#243;lya's enumeration theorem to investigate the number of different tic-tac-toe boards. (The analysis of <em>games</em> is more complex, since it requires attention to the order the squares are marked and stopping when one player has won the game.)</p>
                         <figure xml:id="fig_polya_TTT">
                     <caption>Numbered squares of a tic-tac-toe board</caption>
                     <image width="35%">
-                    <latex-image>
+                    <description><p>Numbered squares of a tic-tac-toe board</p>
+                    </description><latex-image>
                         \begin{picture}(100,100)
                         \thicklines
                         \Line(33,0)(33,100)
@@ -134,7 +135,7 @@
                 </figure>
                 <p>
                     <ol>
-                        <li><p>Two tic-tac-toe boards are equivalent if one may be obtained from the other by rotating the board or flipping it over. (Imagine that it is drawn on a clear piece of plastic.) Since the <m>9\times 9</m> grid is a square, the group that acts on it in this manner is the dihedral group <m>D_8</m> that we have studied in this chapter. However, as with counting nonisomorphic graphs, we have to be careful to choose the way this group is represented in terms of cycles. Here we are interested in how permutations rearrange the nine squares of the tic-tac-toe board as numbered in <xref ref="fig_polya_TTT" />. For example, the effect of the transformation <m>r_1</m>, which rotates the board <m>90^\circ</m> clockwise, can be represented as a permutation of the nine squares as <m>(13971)(2684)(5)</m>.</p>
+                        <li><p>Two tic-tac-toe boards are equivalent if one may be obtained from the other by rotating the board or flipping it over. (Imagine that it is drawn on a clear piece of plastic.) Since the <m>9\times 9</m> grid is a square, the group that acts on it in this manner is the dihedral group <m>D_8</m> that we have studied in this chapter. However, as with counting nonisomorphic graphs, we have to be careful to choose the way this group is represented in terms of cycles. Here we are interested in how permutations rearrange the nine squares of the tic-tac-toe board as numbered in <xref ref="fig_polya_TTT"/>. For example, the effect of the transformation <m>r_1</m>, which rotates the board <m>90^\circ</m> clockwise, can be represented as a permutation of the nine squares as <m>(13971)(2684)(5)</m>.</p>
                         <p>Write each of the eight elements of <m>D_8</m> as permutations of the nine squares of a tic-tac-toe board.</p></li>
                         <li><p>Find the cycle index of <m>D_8</m> in terms of these permutations.</p></li>
                         <li><p>Make an appropriate substitution for <m>x_i</m> in the cycle index to find a generating function <m>t(X,O)</m> in which the coefficient on <m>X^iO^j</m> is the number of nonequivalent tic-tac-toe boards having <m>i</m> squares filled by symbol X and <m>j</m> squares filled by symbol O. (Notice that some squares might be blank!)</p></li>

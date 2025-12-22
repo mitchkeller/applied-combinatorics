@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_probability_exercises">
     <exercise>
         <statement>
@@ -20,7 +19,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Consider the spinner shown in <xref ref="fig_spinner" /> at the beginning of the chapter.
+            <p>Consider the spinner shown in <xref ref="fig_spinner"/> at the beginning of the chapter.
                   <ol>
                 <li><p>What is the probability of getting at least one <q>5</q> in three spins?</p></li>
                 <li><p>What is the probability of getting at least one <q>3</q> in three spins?</p></li>
@@ -33,7 +32,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Alice proposes to Bob the following game.  Bob pays one dollar to play.  Fifty balls marked <m>1,2,\dots,50</m> are placed in a big jar, stirred around, and then drawn out one by one by Zori, who is wearing a blindfold.  The result is a random permutation <m>\sigma</m> of the integers <m>1</m>, <m>2,\dots,50</m>.  Bob wins with a payout of two dollars and fifty cents if the permutation <m>\sigma</m> is a derangement, <ie />, <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. Is this a fair game for Bob?  If not how should the payoff be adjusted to make it fair?</p>
+            <p>Alice proposes to Bob the following game.  Bob pays one dollar to play.  Fifty balls marked <m>1,2,\dots,50</m> are placed in a big jar, stirred around, and then drawn out one by one by Zori, who is wearing a blindfold.  The result is a random permutation <m>\sigma</m> of the integers <m>1</m>, <m>2,\dots,50</m>.  Bob wins with a payout of two dollars and fifty cents if the permutation <m>\sigma</m> is a derangement, <ie/>, <m>\sigma(i)\neq i</m> for all <m>i=1,2,\dots,n</m>. Is this a fair game for Bob?  If not how should the payoff be adjusted to make it fair?</p>
         </statement>
     </exercise>
     <exercise>
@@ -54,7 +53,7 @@
 
 <p> Suppose Zori draws out a pair; the results are observed; then she returns the two balls to the jar and all ten balls are stirred before the next sample is taken.  Since the probability that the sum is an <q>11</q> is <m>5/45=1/9</m>, then it would be fair to pay one dollar to play the game if the payoff for an <q>11</q> is nine dollars.  Similarly, the payoff for a wager of one hundred dollars should be nine hundred dollars.</p>
 
-            <p>Now consider an alternative way to play the game.  Now Zori draws out a pair; the results are observed; and the marbles are set aside.  Next, she draws another pair from the remaining eight marbles, followed by a pair selected from the remaining six, <etc />  Finally, the fifth pair is just the pair that remains after the fourth pair has been selected.  Now players may be free to wager on the outcome of any or all or just some of the five rounds.  Explain why either everyone should or no one should wager on the fifth round.  Accordingly, the last round is skipped and all marbles are returned to the jar and we start over again.</p>
+            <p>Now consider an alternative way to play the game.  Now Zori draws out a pair; the results are observed; and the marbles are set aside.  Next, she draws another pair from the remaining eight marbles, followed by a pair selected from the remaining six, <etc/>  Finally, the fifth pair is just the pair that remains after the fourth pair has been selected.  Now players may be free to wager on the outcome of any or all or just some of the five rounds.  Explain why either everyone should or no one should wager on the fifth round.  Accordingly, the last round is skipped and all marbles are returned to the jar and we start over again.</p>
 
             <p>Also explain why an observant player can make lots of money with a payout ratio of nine to one.  Now for a more challenging problem, what is the minimum payout ratio above which a player has a winning strategy?</p>
         </statement>

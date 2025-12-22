@@ -15,182 +15,182 @@
     </me> This recursion has a natural
     combinatorial interpretation. Both sides count the number of <m>k</m>-element subsets of <m>
     \{1,2,\dots,n\}</m>, with the right-hand side first grouping them into those which contain the
-    element<nbsp /><m>n</m> and then those which don't. The traditional form of displaying this
-    recursion is shown in <xref ref="fig_pascal" />. This pattern is called <q>Pascal's triangle.</q>
+    element<nbsp/><m>n</m> and then those which don't. The traditional form of displaying this
+    recursion is shown in <xref ref="fig_pascal"/>. This pattern is called <q>Pascal's triangle.</q>
     Other than the <m>1</m>s at the ends of each row, an entry of the triangle is determined by
     adding the entry to the left and the entry to the right in the row above. </p>
   <figure xml:id="fig_pascal">
     <caption>Pascal's Triangle</caption>
     <tabular>
       <row>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
       </row>
       <row>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
       </row>
       <row>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>2</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
       </row>
       <row>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>3</cell>
-        <cell></cell>
+        <cell/>
         <cell>3</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
       </row>
       <row>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>4</cell>
-        <cell></cell>
+        <cell/>
         <cell>6</cell>
-        <cell></cell>
+        <cell/>
         <cell>4</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
+        <cell/>
       </row>
       <row>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>5</cell>
-        <cell></cell>
+        <cell/>
         <cell>10</cell>
-        <cell></cell>
+        <cell/>
         <cell>10</cell>
-        <cell></cell>
+        <cell/>
         <cell>5</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
+        <cell/>
       </row>
       <row>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>6</cell>
-        <cell></cell>
+        <cell/>
         <cell>15</cell>
-        <cell></cell>
+        <cell/>
         <cell>20</cell>
-        <cell></cell>
+        <cell/>
         <cell>15</cell>
-        <cell></cell>
+        <cell/>
         <cell>6</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
-        <cell></cell>
+        <cell/>
+        <cell/>
       </row>
       <row>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>7</cell>
-        <cell></cell>
+        <cell/>
         <cell>21</cell>
-        <cell></cell>
+        <cell/>
         <cell>35</cell>
-        <cell></cell>
+        <cell/>
         <cell>35</cell>
-        <cell></cell>
+        <cell/>
         <cell>21</cell>
-        <cell></cell>
+        <cell/>
         <cell>7</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
       </row>
       <row>
         <cell>1</cell>
-        <cell></cell>
+        <cell/>
         <cell>8</cell>
-        <cell></cell>
+        <cell/>
         <cell>28</cell>
-        <cell></cell>
+        <cell/>
         <cell>56</cell>
-        <cell></cell>
+        <cell/>
         <cell>70</cell>
-        <cell></cell>
+        <cell/>
         <cell>56</cell>
-        <cell></cell>
+        <cell/>
         <cell>28</cell>
-        <cell></cell>
+        <cell/>
         <cell>8</cell>
-        <cell></cell>
+        <cell/>
         <cell>1</cell>
       </row>
     </tabular>
@@ -209,7 +209,7 @@
           Write a couple of sentences to explain why <m>C(n-1,k-1)</m> counts the number of <m>k</m>-element subsets of <m>\{1,2,\dots,n\}</m> that contain the element <m>n</m>.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

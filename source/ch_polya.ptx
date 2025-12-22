@@ -1,9 +1,9 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch_polya">
-    <title>P&#xf3;lya's Enumeration Theorem</title>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch_polya">
+    <title>P&#243;lya's Enumeration Theorem</title>
 
 
     <introduction>
-        <p>In this chapter, we introduce a powerful enumeration technique generally referred to as P&#xf3;lya's enumeration theorem<fn>Like so many results of mathematics, the crux of the result was originally discovered by someone other than the mathematician whose name is associated with it. J.H. Redfield published this result in 1927, 10 years prior to P&#xf3;lya's work. It would take until 1960 for Redfield's work to be discovered, by which time P&#xf3;lya's name was firmly attached to the technique.</fn>. P&#xf3;lya's approach to counting allows us to use symmetries (such as those of geometric objects like polygons) to form generating functions. These generating functions can then be used to answer combinatorial questions such as
+        <p>In this chapter, we introduce a powerful enumeration technique generally referred to as P&#243;lya's enumeration theorem<fn>Like so many results of mathematics, the crux of the result was originally discovered by someone other than the mathematician whose name is associated with it. J.H. Redfield published this result in 1927, 10 years prior to P&#243;lya's work. It would take until 1960 for Redfield's work to be discovered, by which time P&#243;lya's name was firmly attached to the technique.</fn>. P&#243;lya's approach to counting allows us to use symmetries (such as those of geometric objects like polygons) to form generating functions. These generating functions can then be used to answer combinatorial questions such as
                   <ol>
             <li>
                 <p>How many different necklaces of six beads can be formed using red, blue and green beads? What about <m>500</m>-bead necklaces?</p>
@@ -21,13 +21,13 @@
                   </ol>
                 </p>
 
-        <p>To use P&#xf3;lya's techniques, we will require the idea of a permutation group. However, our treatment will be self-contained and driven by examples. We begin with a simplified version of the first question above.
+        <p>To use P&#243;lya's techniques, we will require the idea of a permutation group. However, our treatment will be self-contained and driven by examples. We begin with a simplified version of the first question above.
         </p>
     </introduction>
-    <xi:include  href="s_polya_square.ptx" />
-    <xi:include  href="s_polya_perm-groups.ptx" />
-    <xi:include  href="s_polya_burnside.ptx" />
-    <xi:include  href="s_polya_polya.ptx" />
-    <xi:include  href="s_polya_apps.ptx" />
-    <xi:include  href="s_polya_exercises.ptx" />
+    <xi:include href="s_polya_square.ptx"/>
+    <xi:include href="s_polya_perm-groups.ptx"/>
+    <xi:include href="s_polya_burnside.ptx"/>
+    <xi:include href="s_polya_polya.ptx"/>
+    <xi:include href="s_polya_apps.ptx"/>
+    <xi:include href="s_polya_exercises.ptx"/>
 </chapter>

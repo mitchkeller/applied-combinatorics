@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_genfunction_exercises">
     <introduction>
-        <p>Computer algebra systems can be powerful tools for working with generating functions. However, unless an exercise specifically suggests that you use a computer algebra system, we strongly encourage you to solve the problem by hand. This will help you develop a better understanding of how generating functions can be used. You might consider editing the content of the SageMathCells in <xref ref="s_genfunction_distributions" /> to assist with solving problems here where a computer algebra system is suggested, and in some cases, we have included a SageMathCell within the exercise for you to use.</p>
+        <p>Computer algebra systems can be powerful tools for working with generating functions. However, unless an exercise specifically suggests that you use a computer algebra system, we strongly encourage you to solve the problem by hand. This will help you develop a better understanding of how generating functions can be used. You might consider editing the content of the SageMathCells in <xref ref="s_genfunction_distributions"/> to assist with solving problems here where a computer algebra system is suggested, and in some cases, we have included a SageMathCell within the exercise for you to use.</p>
         <p>For all exercises in this section, <q>generating function</q> should be taken to mean <q>ordinary generating function.</q> Exponential generating functions are only required in exercises specifically mentioning them.</p>
     </introduction>
     <exercise>
@@ -21,7 +20,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For each <em>infinite</em> sequence suggested below, give its generating function in closed form, <ie />, <em>not</em> as an infinite sum. (Use the most obvious choice of form for the general term of each sequence.)
+            <p>For each <em>infinite</em> sequence suggested below, give its generating function in closed form, <ie/>, <em>not</em> as an infinite sum. (Use the most obvious choice of form for the general term of each sequence.)
                   <ol cols="2">
                 <li><p><m>0,1,1,1,1,1,\dots</m></p></li>
                 <li><p><m>1,0,0,1,0,0,1,0,0,1,0,0,1,\dots</m></p></li>
@@ -147,7 +146,7 @@
     </exercise>    
     <exercise>
         <statement>
-            <p>A businesswoman is traveling in Belgium and wants to buy chocolates for herself, her husband, and their two daughters. A store has dark chocolate truffles (€ 10/box), milk chocolate truffles (€ 8/box), nougat-filled chocolates (€ 5/box), milk chocolate bars (€ 7/bar), and 75% cacao chocolate bars (€ 11/bar). Her purchase is to be subject to the following:
+            <p>A businesswoman is traveling in Belgium and wants to buy chocolates for herself, her husband, and their two daughters. A store has dark chocolate truffles (&#8364; 10/box), milk chocolate truffles (&#8364; 8/box), nougat-filled chocolates (&#8364; 5/box), milk chocolate bars (&#8364; 7/bar), and 75% cacao chocolate bars (&#8364; 11/bar). Her purchase is to be subject to the following:
             <ul>
                 <li><p>Only the daughters like dark chocolate truffles, and her purchase must ensure that each daughter gets an equal number of boxes of them (if they get any).</p></li>
                 <li><p>At least two boxes of milk chocolate truffles must be purchased.</p></li>
@@ -155,7 +154,7 @@
                 <li><p>At most three milk chocolate bars may be purchased.</p></li>
                 <li><p>There are no restrictions on the number of 75% cacao chocolate bars.</p></li>
             </ul>
-            Let <m>s_n</m> be the number of ways the businesswoman can spend exactly € <m>n</m> (<alert>not</alert> buy <m>n</m> items!) at this chocolate shop. Find the generating function for the sequence <m>\{s_n\colon n\geq 0\}</m>. In how many ways can she spend exactly € 100 at the chocolate shop? (A computer algebra system will be helpful for finding coefficients.)</p>
+            Let <m>s_n</m> be the number of ways the businesswoman can spend exactly &#8364; <m>n</m> (<alert>not</alert> buy <m>n</m> items!) at this chocolate shop. Find the generating function for the sequence <m>\{s_n\colon n\geq 0\}</m>. In how many ways can she spend exactly &#8364; 100 at the chocolate shop? (A computer algebra system will be helpful for finding coefficients.)</p>
             <sage>
                 <input>
                     f(x) = x # Generating function on right here
@@ -329,12 +328,12 @@
             where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of <m>4</m>, and <m>1\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of the inequality subject to these restrictions. Find the generating function for the sequence <m>\{c_n\colon n\geq 0\}</m> and use it to find a closed formula for <m>c_n</m>.</p>
         </statement>
         <hint>
-            <p>Yes, this is very close to <xref ref="ex_genfunction_ineq-clean"  />. However, the bounds on <m>x_4</m> are different here. You might try using a computer algebra system to expedite finding the partial fractions expansion, which will have several terms whose power series you can work with quickly. For the term involving <m>1/(1+x^2)</m>, work out the series by hand. You may find that your solution to this problem has two parts<mdash />one for when <m>n</m> is even and another for when <m>n</m> is odd.</p>
+            <p>Yes, this is very close to <xref ref="ex_genfunction_ineq-clean"/>. However, the bounds on <m>x_4</m> are different here. You might try using a computer algebra system to expedite finding the partial fractions expansion, which will have several terms whose power series you can work with quickly. For the term involving <m>1/(1+x^2)</m>, work out the series by hand. You may find that your solution to this problem has two parts<mdash/>one for when <m>n</m> is even and another for when <m>n</m> is odd.</p>
         </hint>
     </exercise>
     <exercise>
         <statement>
-            <p>Prove <xref ref="prop_genfunction-product" /> about the coefficients in the product of two ordinary generating functions.
+            <p>Prove <xref ref="prop_genfunction-product"/> about the coefficients in the product of two ordinary generating functions.
             </p>
         </statement>
     </exercise>

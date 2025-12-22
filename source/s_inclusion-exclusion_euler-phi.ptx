@@ -2,7 +2,7 @@
   <title>The Euler <m>\phi</m> Function</title>
   <shorttitle>The Euler phi-Function</shorttitle>
     <idx><h>greatest common divisor</h><h>Euler <m>\phi</m> function</h></idx>
-    <p>After reading the two previous sections, you're probably wondering why we stated the <xref ref="thm_inclusion-exclusion" text="title" /> in such an abstract way, as in those examples <m>N(S)</m> depended only on the size of <m>S</m> and not its contents. In this section, we produce an important example where the value of <m>N(S)</m> <em>does</em> depend on <m>S</m>.  Nevertheless, we are able to make a reduction to obtain a useful end result. In what follows, let <m>\posints</m> denote the set of positive integers.
+    <p>After reading the two previous sections, you're probably wondering why we stated the <xref ref="thm_inclusion-exclusion" text="title"/> in such an abstract way, as in those examples <m>N(S)</m> depended only on the size of <m>S</m> and not its contents. In this section, we produce an important example where the value of <m>N(S)</m> <em>does</em> depend on <m>S</m>.  Nevertheless, we are able to make a reduction to obtain a useful end result. In what follows, let <m>\posints</m> denote the set of positive integers.
     </p>
 
     <p>For a positive integer <m>n\ge2</m>, let
@@ -15,7 +15,7 @@
     <p>For example, <m>\phi(12)=4</m> since the only numbers from <m>\{1,2,\dots,12\}</m> that are relatively prime to <m>12</m> are <m>1</m>, <m>5</m>, <m>7</m> and <m>11</m>. As a second example, <m>\phi(9)=6</m> since <m>1</m>, <m>2</m>, <m>4</m>, <m>5</m>, <m>7</m> and <m>8</m> are relatively prime to <m>9</m>. On the other hand, <m>\phi(p)=p-1</m> when <m>p</m> is a prime. Suppose you were asked to compute <m>\phi(321974)</m>. How would you proceed?
     </p>
 
-    <p>In <xref ref="ch_induction"  /> we discussed a recursive procedure for determining the greatest common divisor of two integers, and we wrote code for accomplishing this task. Let's assume that we have a function <c>gcd(m,n)</c> that returns the greatest common divisor of the integers <c>m</c> and <c>n</c>.  (Conveniently enough, SageMath comes such a function built in.) Then we can calculate <m>\phi(n)</m> with this code snippet:
+    <p>In <xref ref="ch_induction"/> we discussed a recursive procedure for determining the greatest common divisor of two integers, and we wrote code for accomplishing this task. Let's assume that we have a function <c>gcd(m,n)</c> that returns the greatest common divisor of the integers <c>m</c> and <c>n</c>.  (Conveniently enough, SageMath comes such a function built in.) Then we can calculate <m>\phi(n)</m> with this code snippet:
     </p>
 
     <sage>
@@ -43,14 +43,14 @@ phi(321974)
     <theorem xml:id="thm_eulerphi">
         <statement>
             <p>Let <m>n\ge2</m> be a positive integer and suppose that <m>n</m> has <m>m</m> distinct prime factors: <m>p_1</m>, <m>p_2,\dots,p_m</m>.  Then
-            <men xml:id="eq_eulerphi" >
+            <men xml:id="eq_eulerphi">
                 \phi(n) = n\prod_{i = 1}^{m}\frac{p_i-1}{p_i}.
             </men>
             </p>
         </statement>
     </theorem>
 
-    <p>Our proof of <xref ref="thm_eulerphi"  /> requires the following elementary proposition whose proof we leave as an exercise.
+    <p>Our proof of <xref ref="thm_eulerphi"/> requires the following elementary proposition whose proof we leave as an exercise.
     </p>
 
     <proposition xml:id="prop_num-divisible">
@@ -66,7 +66,7 @@ phi(321974)
     <proof>
         <p>We present the argument when <m>m=3</m>. The full result is an easy extension.
         </p>
-        <p>In light of <xref ref="prop_num-divisible"  />, the Principle of Inclusion-Exclusion yields:
+        <p>In light of <xref ref="prop_num-divisible"/>, the Principle of Inclusion-Exclusion yields:
         <md>
             <mrow>  \phi(n) \amp = n-\left(\frac{n}{p_1}+\frac{n}{p_2}+
             \frac{n}{p_3}\right) +\left(\frac{n}{p_1p_2}+\frac{n}{p_1p_3}+

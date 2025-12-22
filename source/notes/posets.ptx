@@ -1,4 +1,4 @@
-<chapter xml:id="notes-posets" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-posets">
   <title>Partially Ordered Sets</title>
   <handout>
     <title>Notation and Terminology</title>
@@ -172,13 +172,13 @@
           <ul>
             <li>
               <p>
-                If <m>x&#x3C;y</m> in <m>P</m> or <m>y&#x3C;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>comparable</em>.
+                If <m>x&lt;y</m> in <m>P</m> or <m>y&lt;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>comparable</em>.
               </p>
             </li>
             
             <li>
               <p>
-                If <m>x,y\in X</m> and neither <m>x&#x3C;y</m> in <m>P</m> nor <m>y&#x3C;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>incomparable</em>.
+                If <m>x,y\in X</m> and neither <m>x&lt;y</m> in <m>P</m> nor <m>y&lt;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>incomparable</em>.
               </p>
             </li>
             
@@ -199,11 +199,10 @@
           <alert>Peer instruction questions 2<ndash/>3.</alert>
         </p>
         <image width="33%">
-          <shortdescription>A large poset</shortdescription>
           <prefigure xmlns="https://prefigure.org" label="big-poset-notes">
             <xi:include href="../prefig/big-poset.xml"/>
           </prefigure>
-        </image>
+        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
       </paragraphs>
     </page>
     <page>
@@ -264,7 +263,7 @@
           <statement>
             <p>
               Let <m>\bfP=(X,P)</m> be a poset.
-              An element <m>x\in X</m> is <term>minimal</term> if there is no <m>y\in X</m> with <m>y&#x3C; x</m> in <m>P</m>.
+              An element <m>x\in X</m> is <term>minimal</term> if there is no <m>y\in X</m> with <m>y&lt; x</m> in <m>P</m>.
             </p>
           </statement>
         </definition>
@@ -278,11 +277,10 @@
             With your group, list the <em>set</em> of maximal elements and the <em>set</em> of minimal elements for this poset.
           </p>
           <image width="33%">
-            <shortdescription>A large poset</shortdescription>
             <prefigure xmlns="https://prefigure.org" label="big-poset-notes-max-min">
               <xi:include href="../prefig/big-poset.xml"/>
             </prefigure>
-          </image>
+          <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
         </statement>
       </activity>
     </page>
@@ -413,7 +411,6 @@
         </theorem>
         <sidebyside widths="25% 75%">
           <image>
-            <shortdescription>A small poset</shortdescription>
             <prefigure xmlns="https://prefigure.org" label="notes-antichain-part-examp">
               <diagram dimensions="(200,300)" margins="15">
                 <coordinates bbox="(0,0,2,3)">
@@ -429,7 +426,7 @@
                 </coordinates>
               </diagram>
             </prefigure>
-          </image>
+          <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
           <p>
             <nbsp/>
           </p>
@@ -473,13 +470,13 @@
         <statement>
           <p>
             Let <m>\mbf{P}=(X,P')</m> be a poset.
-            A total order <m>L</m> on <m>X</m> is a <em>linear extension</em> of <m>P'</m> provided that if <m>x &#x3C; y</m> in <m>P'</m>, then <m>x &#x3C; y</m> in <m>L</m>.
+            A total order <m>L</m> on <m>X</m> is a <em>linear extension</em> of <m>P'</m> provided that if <m>x &lt; y</m> in <m>P'</m>, then <m>x &lt; y</m> in <m>L</m>.
           </p>
         </statement>
       </definition>
       
       <p workspace="4cm">
-        <alert>Intuition</alert>: A linear extension can’t change the order from <m>P'</m>, but it can put incomparable elements in either way.
+        <alert>Intuition</alert>: A linear extension can&#8217;t change the order from <m>P'</m>, but it can put incomparable elements in either way.
       </p>
       
       <p>
@@ -542,23 +539,23 @@
         
         <li>
           <p>
-            <m>x&#x3C; y</m> in <m>P'</m> if and only if <m>b_{x} &#x3C; a_{y}</m>
+            <m>x&lt; y</m> in <m>P'</m> if and only if <m>b_{x} &lt; a_{y}</m>
             <ul>
               <li>
                 <p component="b">
-                  <m>x</m>’s interval stops
+                  <m>x</m>&#8217;s interval stops
                 </p>
                 <p component="a">
-                  <m>x</m>’s interval stops before <m>y</m>’s interval starts
+                  <m>x</m>&#8217;s interval stops before <m>y</m>&#8217;s interval starts
                 </p>
               </li>
               
               <li>
                 <p component="b">
-                  <m>x</m>’s interval is completely
+                  <m>x</m>&#8217;s interval is completely
                 </p>
                 <p component="a">
-                  <m>x</m>’s interval is completely to the left of <m>y</m>’s interval
+                  <m>x</m>&#8217;s interval is completely to the left of <m>y</m>&#8217;s interval
                 </p>
               </li>
             </ul>
@@ -582,11 +579,10 @@
         </p>
         <sidebyside widths="15% 85%">
         <image>
-          <shortdescription>Two disjoint chains</shortdescription>
           <prefigure xmlns="https://prefigure.org" label="two-plus-two">
             <diagram dimensions="(100,100)" margins="15">
               <coordinates bbox="(0,0,1,1)">
-                <network node-fill="#ccc" labels="yes" scale="0.8" >
+                <network node-fill="#ccc" labels="yes" scale="0.8">
                   <node at="1" p="(0,1)" edges="[2]"><m>x</m></node>
                   <node at="2" p="(0,0)"><m>y</m></node>
                   <node at="3" p="(1,1)" edges="[4]"><m>z</m></node>
@@ -595,7 +591,7 @@
               </coordinates>
             </diagram>            
           </prefigure>
-        </image>
+        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
         <p component="b">
           <nbsp/>
         </p>
@@ -620,7 +616,6 @@
       </statement>
     </theorem>
     <image width="65%" source="notes/fishburn_title.png">
-      <shortdescription>Screenshot of the title portion of Fishburn's paper</shortdescription>
       <description><pubtitle>Intransitive Indifference with Unequal Indifference Intervals</pubtitle> by Peter C. Fishburn of the Research Analysis Corporation, McLean, Virginia. Masthead indicates <pubtitle>Journal of Mathematical Psychology</pubtitle>, volume 7, pages 144<ndash/>149 (1970).</description>
     </image>
   </page>
@@ -629,11 +624,10 @@
       <title>Can we find a representation?</title>
       <sidebyside widths="40% 60%">
         <image>
-          <shortdescription>An interval order with 10 points</shortdescription>
           <prefigure xmlns="https://prefigure.org" label="intord-find-rep-motivate">
             <diagram dimensions="(350,200)" margins="15">
               <coordinates bbox="(0.5,0,4,2)">
-                <network node-fill="#ccc" labels="yes" scale="0.8" >
+                <network node-fill="#ccc" labels="yes" scale="0.8">
                   <node at="1" p="(2,1)" edges="[5,3,6,7]"/>
                   <node at="2" p="(0.5,2)" edges="[8]"/>
                   <node at="3" p="(2,0)" edges="[8,10,4]"/>
@@ -648,7 +642,7 @@
               </coordinates>
             </diagram>
           </prefigure>
-        </image>
+        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
         <p>
           <nbsp/>
         </p>
@@ -658,13 +652,13 @@
           <ul>
             <li>
               <p workspace="0.5cm">
-                Down-set (or down set): <m>D(x) = \{y\in X\colon y &#x3C; x\text{ in }P'\}</m>.
+                Down-set (or down set): <m>D(x) = \{y\in X\colon y &lt; x\text{ in }P'\}</m>.
               </p>
             </li>
 
             <li>
               <p workspace="0.5cm">
-                Up-set (or up set): <m>U(x) = \{y\in X\colon y > x\text{ in }P'\}</m>.
+                Up-set (or up set): <m>U(x) = \{y\in X\colon y &gt; x\text{ in }P'\}</m>.
               </p>
             </li>
 
@@ -688,11 +682,10 @@
           </p>
           <sidebyside widths="40% 60%">
             <image>
-              <shortdescription>An interval order with 10 points</shortdescription>
               <prefigure xmlns="https://prefigure.org" label="intord-find-rep-updown-sets">
                 <diagram dimensions="(350,200)" margins="15">
                   <coordinates bbox="(0.5,0,4,2)">
-                    <network node-fill="#ccc" labels="yes" scale="0.8" >
+                    <network node-fill="#ccc" labels="yes" scale="0.8">
                       <node at="1" p="(2,1)" edges="[5,3,6,7]"/>
                       <node at="2" p="(0.5,2)" edges="[8]"/>
                       <node at="3" p="(2,0)" edges="[8,10,4]"/>
@@ -707,7 +700,7 @@
                   </coordinates>
                 </diagram>
               </prefigure>
-            </image>
+            <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
             <p>
               <nbsp/>
             </p>
@@ -741,7 +734,7 @@
             </p>
           </statement>
         </proposition>
-        <proposition >
+        <proposition>
           <statement>
             <p>
               If <m>\mbf{P}</m> is an interval order, then <m>|\mc{D}|=|\mc{U}|</m>.
@@ -900,19 +893,19 @@
           <ul>
   <li>
     <p>
-      The simplest algorithms for many problems are “greedy” in the sense that they look at <fillin characters="15" /> in some predetermined order and assign them to something by trying to use as few <fillin characters="15" /> as possible at the moment.
+      The simplest algorithms for many problems are &#8220;greedy&#8221; in the sense that they look at <fillin characters="15"/> in some predetermined order and assign them to something by trying to use as few <fillin characters="15"/> as possible at the moment.
     </p>
   </li>
 
   <li>
     <p>
-      There’s usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.
+      There&#8217;s usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.
     </p>
   </li>
 
   <li>
     <p>
-      First Fit can often succeed if there’s a “natural” order to use.
+      First Fit can often succeed if there&#8217;s a &#8220;natural&#8221; order to use.
     </p>
   </li>
 </ul>
