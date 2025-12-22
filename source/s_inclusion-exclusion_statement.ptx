@@ -10,7 +10,7 @@
     S=\emptyset</m>, then <m>N(S)=|X|</m>, as every element of <m>X</m> satisfies every property in <m>
     S</m> (which contains no actual properties). </p>
 
-  <p>Returning for a moment to <xref ref="exa_inclusion-exclusion_students" /> with <m>P_1</m> being <q>is
+  <p>Returning for a moment to <xref ref="exa_inclusion-exclusion_students"/> with <m>P_1</m> being <q>is
     a computer science major</q> and <m>P_2</m> being <q>is male,</q> we note that <m>N(\{1\})=47</m>,
     since there are <m>47</m> computer science majors in the class. Also, <m>N(\{2\})=51</m> since <m>
     51</m> of the students are male. Finally, <m>N(\{1,2\})=45</m> since there are <m>45</m> male
@@ -19,7 +19,7 @@
   <p>In the examples of the previous section, we subtracted off <m>N(S)</m> for the sets <m>S</m> of
     size <m>1</m> and then added back <m>N(S)</m> for the set of properties of size <m>2</m>, since
     we'd subtracted the number of things with both properties (male computer science majors or
-    solutions with both <m>x_3>7</m> and <m>x_4'>8</m>) twice. Symbolically, we determined that the
+    solutions with both <m>x_3&gt;7</m> and <m>x_4'&gt;8</m>) twice. Symbolically, we determined that the
     number of objects satisfying none of the properties was <me>
       N(\emptyset) - N(\{1\}) - N(\{2\}) + N(\{1,2\}).
     </me>
@@ -57,7 +57,7 @@
         minus the number which do satisfy property <m>P_1</m>. </p>
 
       <p>Now assume validity when <m>m\le k</m> for some <m>k\ge1</m> and consider the case where <m>
-        m=k+1</m>. Let <m>X'=\{x\in X: x</m> satisfies <m>P_{k+1}\}</m> and <m>X''=X-X'</m> (<ie />, <m>
+        m=k+1</m>. Let <m>X'=\{x\in X: x</m> satisfies <m>P_{k+1}\}</m> and <m>X''=X-X'</m> (<ie/>, <m>
         X''</m> is the set of elements that do not satisfy <m>P_{k+1}</m>). Also, let <m>
         \mathcal{Q}=\{P_1,P_2,\dots,P_k\}</m>. Then for each subset <m>S\subseteq [k]</m>, let <m>
         N'(S)</m> count the number of elements of <m>X'</m> satisfying property <m>P_i</m> for all <m>i\in
@@ -89,10 +89,10 @@
     <exercise label="inclusion-exclusion_statement_rq-terms">
       <statement>
         <p>
-          How many terms are there in the sum of <xref ref="eq_inclusion-exclusion" /> if <m>m=10</m>? Explain your reasoning.
+          How many terms are there in the sum of <xref ref="eq_inclusion-exclusion"/> if <m>m=10</m>? Explain your reasoning.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

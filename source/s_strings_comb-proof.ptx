@@ -6,18 +6,19 @@
     <example xml:id="ex_strings_comb-proof_sum-ints">
         <statement>
             <p>
-                Let <m>n</m> be a positive integer. Use <xref ref="fig_squaredots"  /> to explain why
+                Let <m>n</m> be a positive integer. Use <xref ref="fig_squaredots"/> to explain why
             <me>
                 1+2+3+\dots+n=\frac{n(n+1)}{2}.
             </me>
             </p>
-            <figure xml:id="fig_squaredots" >
+            <figure xml:id="fig_squaredots">
                 <caption>The sum of the first <m>n</m> integers</caption>
-                <image width="40%" source="3012-fig25" />
+                <image width="40%" source="3012-fig25"><description><p>The sum of the first <m>n</m> integers</p>
+                </description></image>
             </figure>
         </statement>
         <solution>
-            <p>Consider an <m>(n+1)\times (n+1)</m> array of dots as depicted in <xref ref="fig_squaredots"  />. There are <m>(n+1)^2</m> dots altogether, with exactly <m>n+1</m> on the main diagonal.  The off-diagonal entries split naturally into two equal size parts, those above and those below the diagonal.
+            <p>Consider an <m>(n+1)\times (n+1)</m> array of dots as depicted in <xref ref="fig_squaredots"/>. There are <m>(n+1)^2</m> dots altogether, with exactly <m>n+1</m> on the main diagonal.  The off-diagonal entries split naturally into two equal size parts, those above and those below the diagonal.
             </p>
 
             <p>Furthermore, each of those two parts has <m>S(n)=1+2+3+\dots+n</m> dots.  It follows that
@@ -37,16 +38,17 @@
                     1+3+5+\dots+2n-1=n^2.
                 </me>
             </p>
-            <figure xml:id="fig_oddsum2" >
+            <figure xml:id="fig_oddsum2">
                 <caption>The sum of the first <m>n</m> odd integers</caption>
-                <image width="40%" source="3012-fig21" />
+                <image width="40%" source="3012-fig21"><description><p>The sum of the first <m>n</m> odd integers</p>
+                </description></image>
             </figure>
         </statement>
         <solution>
             <p>
                 The left hand side is just the
                 sum of the first <m>n</m> odd integers. But as suggested in
-                <xref ref="fig_oddsum2"  />, this is clearly equal to <m>n^2</m>.
+                <xref ref="fig_oddsum2"/>, this is clearly equal to <m>n^2</m>.
             </p>
         </solution>
     </example>
@@ -79,7 +81,7 @@
             </p>
         </statement>
         <solution>
-            <p>To prove this formula, we simply observe that both sides count the number of bit strings of length<nbsp /><m>n</m> that contain <m>k+1</m> <m>1</m>'s with the right hand side first partitioning them according to the last occurence of a<nbsp /><m>1</m>. (For example, if the last <m>1</m> occurs in position <m>k+5</m>, then the remaining <m>k</m> <m>1</m>'s must appear in the preceding <m>k+4</m> positions, giving <m>C(k+4,k)</m> strings of this type.) Note that when <m>k=1</m> (so <m>k+1=2</m>), we have the same formula as developed earlier for the sum of the first <m>n</m> positive integers.
+            <p>To prove this formula, we simply observe that both sides count the number of bit strings of length<nbsp/><m>n</m> that contain <m>k+1</m> <m>1</m>'s with the right hand side first partitioning them according to the last occurence of a<nbsp/><m>1</m>. (For example, if the last <m>1</m> occurs in position <m>k+5</m>, then the remaining <m>k</m> <m>1</m>'s must appear in the preceding <m>k+4</m> positions, giving <m>C(k+4,k)</m> strings of this type.) Note that when <m>k=1</m> (so <m>k+1=2</m>), we have the same formula as developed earlier for the sum of the first <m>n</m> positive integers.
             </p>
         </solution>
     </example>
@@ -96,7 +98,7 @@
             </p>
         </statement>
         <solution>
-            <p>Both sides count the number of <m>\{0,1,2\}</m>-strings of length<nbsp /><m>n</m>, the right hand side first partitioning them according to positions in the string which are not<nbsp /><m>2</m>. (For instance, if <m>6</m> of the positions are not<nbsp /><m>2</m>, we must first choose those <m>6</m> positions in <m>C(n,6)</m> ways and then there are <m>2^6</m> ways to fill in those six positions by choosing either a <m>0</m> or a <m>1</m> for each position.)
+            <p>Both sides count the number of <m>\{0,1,2\}</m>-strings of length<nbsp/><m>n</m>, the right hand side first partitioning them according to positions in the string which are not<nbsp/><m>2</m>. (For instance, if <m>6</m> of the positions are not<nbsp/><m>2</m>, we must first choose those <m>6</m> positions in <m>C(n,6)</m> ways and then there are <m>2^6</m> ways to fill in those six positions by choosing either a <m>0</m> or a <m>1</m> for each position.)
             </p>
         </solution>
     </example>
@@ -105,7 +107,7 @@
         <idx><h>binomial coefficient</h><h>identity involving</h></idx>        
         <statement>
             <p>
-                Explain why, for each non-negative integer<nbsp /><m>n</m>, 
+                Explain why, for each non-negative integer<nbsp/><m>n</m>, 
                 <me>
                 \binom{2n}{n}=
                 {\binom{n}{0}}^2+{\binom{n}{1}}^2+{\binom{n}{2}}^2+\dots+
@@ -126,7 +128,7 @@
               <me>
                 1 + 2 + 3+\cdots + n  = \frac{n(n+1)}{2}
               </me>
-              from <xref ref="ex_strings_comb-proof_sum-ints" />.
+              from <xref ref="ex_strings_comb-proof_sum-ints"/>.
             </p>
             <image label="img-rectangular-grid-sum-ints" width="40%">
                 <description>An array of circles. The first row is seven unfilled circles. The second row is six unfilled circles followed by a filled circle. The third row is five unfilled circles followed by two filled circles. This pattern continues until the eighth row, which consists of seven filled circles.</description>
@@ -139,15 +141,15 @@
                 </latex-image>
             </image>
           </statement>
-          <response />
+          <response/>
         </exercise>
         <exercise label="appcomb_strings_comb-proof_reading_2n-choose-n">
             <statement>
               <p>
-                Explain how the identity <m>C(n,k) = C(n,n-k)</m> is used in <xref ref="ex_strings_comb-proof_2n-choose-n" />.
+                Explain how the identity <m>C(n,k) = C(n,n-k)</m> is used in <xref ref="ex_strings_comb-proof_2n-choose-n"/>.
               </p>
             </statement>
-            <response />
+            <response/>
           </exercise>
       </reading-questions>
 </section>

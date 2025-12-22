@@ -14,16 +14,17 @@
     <solution>
       <p>Although the Venn diagrams that you've probably seen drawn many times over the years aren't
         always the best illustrations (especially if you try to think with some sort of scale),
-        let's use one to get started. In <xref ref="fig_venn-app-comb" />, we see how the groups in
+        let's use one to get started. In <xref ref="fig_venn-app-comb"/>, we see how the groups in
         the scenario might overlap. </p>
       <figure xml:id="fig_venn-app-comb">
         <caption>A Venn diagram for an applied combinatorics class</caption>
         <image label="venn-diagram-students">
-          <latex-image><![CDATA[\begin{overpic}{external/Venn-diagram}
+          <description><p>A Venn diagram for an applied combinatorics class</p>
+        </description><latex-image>\begin{overpic}{external/Venn-diagram}
                     \put(15,28.5){Males}
                     \put(63,28.5){CS Majors}
                     \put(22,8){Non-CS major females}
-                    \end{overpic}]]></latex-image>
+                    \end{overpic}</latex-image>
         </image>
 
       </figure>
@@ -43,11 +44,10 @@
 
   <example xml:id="exa_inclusion-exclusion_int-solns">
     <p>Another type of problem where we can readily see how such a technique is applicable is a
-      generalization of the problem of enumerating integer solutions of equations. In <xref
-        ref="ch_strings" />, we discussed how to count the number of solutions to an equation such
+      generalization of the problem of enumerating integer solutions of equations. In <xref ref="ch_strings"/>, we discussed how to count the number of solutions to an equation such
       as <me>
         x_1 + x_2 + x_3 + x_4 = 100,
-      </me> where <m>x_1>0</m>, <m>x_2, x_3 \geq 0</m>
+      </me> where <m>x_1&gt;0</m>, <m>x_2, x_3 \geq 0</m>
       and <m>2\leq x_4\leq 10</m>. However, we steered clear of the situation where we add the
       further restriction that <m>x_3\leq 7</m>. The previous example suggests a way of approaching
       this modified problem. </p>
@@ -77,13 +77,11 @@
     \mathcal{P}=\{P_1,P_2,\dots,P_m\}</m> of <term>properties</term>. We intend that for every <m>x\in
     X</m> and each <m>i=1,2,\dots,m</m>, either <m>x</m> satisfies <m>P_i</m> or it does not. There
     is no ambiguity. Ultimately, we are interested in determining the number of elements of <m>X</m>
-    which satisfy <em>none</em> of the properties in <m>\mathcal{P}</m>. In <xref
-      ref="exa_inclusion-exclusion_students" />, we could have made property <m>P_1</m> <q>is a
+    which satisfy <em>none</em> of the properties in <m>\mathcal{P}</m>. In <xref ref="exa_inclusion-exclusion_students"/>, we could have made property <m>P_1</m> <q>is a
     computer science major</q> and property <m>P_2</m> <q>is male</q>. Then the number of students
     satisfying <em>neither</em> <m>P_1</m> nor <m>P_2</m> would be the number of female students
     majoring in something other than computer science, exactly the number we were asked to
-    determine. What would the properties <m>P_1</m> and <m>P_2</m> be for <xref
-      ref="exa_inclusion-exclusion_int-solns" />? </p>
+    determine. What would the properties <m>P_1</m> and <m>P_2</m> be for <xref ref="exa_inclusion-exclusion_int-solns"/>? </p>
 
   <p>Let's consider three examples of larger sets of properties. These properties will come back up
     during the remainder of the chapter as we apply inclusion-exclusion to some more involved
@@ -162,7 +160,7 @@
     P_i</m> if <m>\sigma(i)\neq i</m>. But remembering that our goal is to count the number of
     elements satisfying none of the properties, we would then be counting the number of permutations
     satisfying <m>\sigma(i)=i</m> for each <m>i=1,2,\dots,n</m>, and perhaps we don't need a lot of
-    theory to accomplish this task<mdash />the number is one, of course. </p>
+    theory to accomplish this task<mdash/>the number is one, of course. </p>
   <example xml:id="exa_inclusion-exclusion_prop-divis">
     <p>Let <m>m</m> and <m>n</m> be fixed positive integers and let <m>X=[n]</m>. Then for each <m>
       i=1,2,\dots,m</m>, and each <m>j\in X</m>, we say that <m>j</m> satisfies <m>P_i</m> if <m>i</m>
@@ -181,10 +179,10 @@
     <exercise label="inclusion-exclusion_intro-rq-divisor">
       <statement>
         <p>
-          Referring to the properties <m>P_i</m> as described in <xref ref="exa_inclusion-exclusion_prop-divis" />, list the integers in <m>[15]</m> that satisfy <m>P_{14}</m>. 
+          Referring to the properties <m>P_i</m> as described in <xref ref="exa_inclusion-exclusion_prop-divis"/>, list the integers in <m>[15]</m> that satisfy <m>P_{14}</m>. 
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

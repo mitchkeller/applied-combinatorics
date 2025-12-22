@@ -6,14 +6,14 @@
   <proposition xml:id="prop_sumints">
     <statement>
       <p>For every positive integer <m>n</m>, the sum of the first <m>n</m> positive integers is <m>
-        n(n+1)/2</m>, <ie />, <me>
+        n(n+1)/2</m>, <ie/>, <me>
           \sum_{i=1}^n i=\frac{n(n+1)}{2}.
         </me>
       </p>
     </statement>
   </proposition>
 
-  <p>For our first version of a proof of <xref ref="prop_sumints" />, we clearly identify the open
+  <p>For our first version of a proof of <xref ref="prop_sumints"/>, we clearly identify the open
     statement <m>S_n</m> and describe the proof carefully in terms of <m>S_n</m>. As you develop
     more experience with writing proofs by induction, this will become less essential, as you'll see
     in the second version of the proof. </p>
@@ -41,8 +41,7 @@
       </me>
       Therefore, <m>S_{k+1}</m> is true. Since we have shown that <m>S_1</m> is true and that for
       every positive integer <m>k</m>, if <m>S_k</m> is true, then <m>S_{k+1}</m> is true, we
-      conclude that <m>S_n</m> is true for all positive integers <m>n</m> by the <xref
-        ref="princ_math-induction" text="title" />. </p>
+      conclude that <m>S_n</m> is true for all positive integers <m>n</m> by the <xref ref="princ_math-induction" text="title"/>. </p>
   </proof>
 
   <p>Before looking at a refined version of this proof, let's take a moment to discuss the key steps
@@ -73,30 +72,29 @@
     both sides to be in the same form, then you have shown they are equal and <m>S_{k+1}</m> is
     true. </p>
 
-  <p>Now let's take a look at a more refined proof of <xref ref="prop_sumints" />. From here on,
+  <p>Now let's take a look at a more refined proof of <xref ref="prop_sumints"/>. From here on,
     when we give a proof by induction, we'll use this style. As you're getting started with
     induction proofs, you may find it useful to be more explicit about the steps as we did in the
     first proof above. </p>
 
   <proof>
     <p>We first prove the assertion when <m>n=1</m>. For this value of <m>n</m>, the left-hand side
-      is just<nbsp /><m>1</m>, while the right-hand side evaluates to <m>1(1+1)/2=1</m>. </p>
+      is just<nbsp/><m>1</m>, while the right-hand side evaluates to <m>1(1+1)/2=1</m>. </p>
 
-    <p>Now assume that for some positive integer <m>k</m>, the formula holds when <m>n=k</m>, <ie />,
+    <p>Now assume that for some positive integer <m>k</m>, the formula holds when <m>n=k</m>, <ie/>,
       assume that <me>
         \sum_{i=1}^k i=\frac{k(k+1)}{2}.
       </me> Then it follows that <me>
       \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
       \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
       </me>
-      Thus the formula also holds when <m>n=k+1</m>. By the <xref ref="princ_math-induction"
-        text="title" />, it holds for all positive integers <m>n</m>. </p>
+      Thus the formula also holds when <m>n=k+1</m>. By the <xref ref="princ_math-induction" text="title"/>, it holds for all positive integers <m>n</m>. </p>
   </proof>
 
-  <p>The preceding arguments are 100% correct<ellipsis /> but some combinatorial mathematicians
+  <p>The preceding arguments are 100% correct<ellipsis/> but some combinatorial mathematicians
     would argue that they may actually hide what is really going on. These folks would much prefer a
-    combinatorial proof, as was provided in <xref ref="s_strings_comb-proof" />. Our perspective is
-    that you should prefer to give a combinatorial proof<mdash />when you can find one. But if
+    combinatorial proof, as was provided in <xref ref="s_strings_comb-proof"/>. Our perspective is
+    that you should prefer to give a combinatorial proof<mdash/>when you can find one. But if
     pressed, you should be able to give a formal proof by mathematical induction. </p>
 
   <p>Here's a second example, also quite a classic. Again, recall that we gave a combinatorial proof
@@ -106,7 +104,7 @@
   <proposition xml:id="prop_sumodd">
     <statement>
       <p>For each positive integer <m>n</m>, the sum of the first <m>n</m> odd positive integers is <m>
-        n^2</m>, <ie />, <me>
+        n^2</m>, <ie/>, <me>
           \sum_{i=1}^n (2i-1)= n^2.
         </me>
       </p>
@@ -114,20 +112,20 @@
 
     <proof>
       <p>We will prove this by induction. First, note that the formula holds when <m>n=1</m>. Now
-        suppose that <m>k</m> is a positive integer and that the formula holds when <m>n=k</m>, <ie />,
+        suppose that <m>k</m> is a positive integer and that the formula holds when <m>n=k</m>, <ie/>,
         assume <me>
           \sum_{i=1}^k (2i-1)= k^2.
         </me> Then <me>
         \sum_{i=1}^{k+1}(2i-1)=\left(\sum_{i=1}^k 2i-1\right)+2k+1=
           k^2+(2k+1)=(k+1)^2.
         </me>
-        Therefore, the proposition follows by the <xref ref="princ_math-induction" text="title" />. </p>
+        Therefore, the proposition follows by the <xref ref="princ_math-induction" text="title"/>. </p>
     </proof>
   </proposition>
 
 
   <p>Here's a more general version of the first result in this section, and again we note that we
-    gave a combinatorial proof in <xref ref="s_strings_comb-proof" />. </p>
+    gave a combinatorial proof in <xref ref="s_strings_comb-proof"/>. </p>
 
   <proposition xml:id="prop_sum-bincoeffs">
     <statement>
@@ -140,8 +138,8 @@
     <proof>
       <p>Fix a non-negative integer <m>k</m>. We then prove the formula by induction on <m>n</m>. If <m>
         n=k</m>, note that the left hand side is just <m>\binom{k}{k}=1</m>, while the right hand
-        side is <m>\binom{k+1}{k+1}</m> which is also<nbsp /><m>1</m>. Now assume that <m>m</m> is a
-        non-negative integer, with <m>m\ge k</m>, and that the formula holds when <m>n=m</m>, <ie />,
+        side is <m>\binom{k+1}{k+1}</m> which is also<nbsp/><m>1</m>. Now assume that <m>m</m> is a
+        non-negative integer, with <m>m\ge k</m>, and that the formula holds when <m>n=m</m>, <ie/>,
         assume that <me>
           \sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
         </me> Then <md>
@@ -193,7 +191,7 @@
         <block order="4" correct="no">
           <p> Since <m>S_{k}</m> is true for all <m>k\geq 1</m>, we know that <m>S_{k+1}</m> is true. </p>
         </block>
-        <block order="6" >
+        <block order="6">
           <p> Since <m>k\geq 1</m>, we know that <m>k+1 \geq 2</m>, and thus <m>t(k+1) = 2t(k+1-1)+1 = 2t(k)+1</m>.</p>
         </block>
         <block order="9" correct="no">
@@ -222,7 +220,7 @@
           Write a couple of sentences explaining why the making the inductive hypothesis is not the same as assuming what we are trying to prove.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

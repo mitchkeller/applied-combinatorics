@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_posets_exercises">
     <exercise>
         <statement>
@@ -38,7 +37,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>A <term>linear extension</term><idx><h>linear extension</h></idx> of a poset <m>\bfP=(X,P)</m> is a total order <m>L</m> on <m>X</m> such that if <m>x\leq y</m> in <m>P</m>, then <m>x\leq y</m> in <m>L</m>. Give linear extension of the three posets shown in <xref ref="fig_constructposets" />.  If you feel very ambitious, try to count the number of linear extensions of the poset on the left side of the figure.  Don't list them.  Just provide an integer as your answer.</p>
+            <p>A <term>linear extension</term><idx><h>linear extension</h></idx> of a poset <m>\bfP=(X,P)</m> is a total order <m>L</m> on <m>X</m> such that if <m>x\leq y</m> in <m>P</m>, then <m>x\leq y</m> in <m>L</m>. Give linear extension of the three posets shown in <xref ref="fig_constructposets"/>.  If you feel very ambitious, try to count the number of linear extensions of the poset on the left side of the figure.  Don't list them.  Just provide an integer as your answer.</p>
         </statement>
     </exercise>
     <exercise>
@@ -48,7 +47,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>For this exercise, consider the poset <m>\bfP</m> in <xref ref="fig_17ptposet" />.
+            <p>For this exercise, consider the poset <m>\bfP</m> in <xref ref="fig_17ptposet"/>.
                   <ol>
                 <li><p>List the maximal elements of <m>\bfP</m>.</p></li>
                 <li><p>List the minimal elements of <m>\bfP</m>.</p></li>
@@ -65,13 +64,13 @@
             <p>Find the height <m>h</m> of the poset <m>\PXP</m> shown below as well as a maximum chain and a partition of <m>X</m> into <m>h</m> antichains using the algorithm from this chapter.
             </p>
             <sidebyside width="55%">
-                <image source="height_ex_poset"/>
+                <image source="height_ex_poset"><description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
             </sidebyside>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>For each of the two distinct (up to isomorphism) posets in <xref ref="fig_constructposets" />, find the width <m>w</m>, an antichain of size <m>w</m>, and a partition of the ground set into <m>w</m> chains.</p>
+            <p>For each of the two distinct (up to isomorphism) posets in <xref ref="fig_constructposets"/>, find the width <m>w</m>, an antichain of size <m>w</m>, and a partition of the ground set into <m>w</m> chains.</p>
         </statement>
     </exercise>
 
@@ -82,79 +81,86 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Draw the diagram of the interval order represented in <xref ref="fig_intord_to_diag_ex" />.
+            <p>Draw the diagram of the interval order represented in <xref ref="fig_intord_to_diag_ex"/>.
             </p>
             <figure xml:id="fig_intord_to_diag_ex">
                 <caption>An interval representation</caption>
-                <image width="73%" source="intord_to_diag_ex"/>
+                <image width="73%" source="intord_to_diag_ex"><description><p>An interval representation</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
             <p>Draw the diagram of the interval order represented in
-            <xref ref="fig_intord_to_diag_ex2" />.
+            <xref ref="fig_intord_to_diag_ex2"/>.
             </p>
             <figure xml:id="fig_intord_to_diag_ex2">
                 <caption>An interval representation</caption>
-                <image width="85%" source="intord_to_diag_ex2"/>
+                <image width="85%" source="intord_to_diag_ex2"><description><p>An interval representation</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex1" /> or give a reason why one does not exist.
+            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex1"/> or give a reason why one does not exist.
             </p>
             <figure xml:id="fig_intord_find_rep_ex1">
                 <caption>Is this poset an interval order?</caption>
-                <image width="40%" source="intord_find_rep_ex1"/>
+                <image width="40%" source="intord_find_rep_ex1"><description><p>Is this poset an interval order?</p>
+                </description></image>
             </figure>
 
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex4" /> or give a reason why one does not exist.</p>
+            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex4"/> or give a reason why one does not exist.</p>
             <figure xml:id="fig_intord_find_rep_ex4">
                 <caption>Is this poset an interval order?</caption>
-                <image width="35%" source="intord_find_rep_ex4"/>
+                <image width="35%" source="intord_find_rep_ex4"><description><p>Is this poset an interval order?</p>
+                </description></image>
             </figure>
 
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex2" /> or give a reason why one does not exist.
+            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex2"/> or give a reason why one does not exist.
             </p>
             <figure xml:id="fig_intord_find_rep_ex2">
                 <caption>Is this poset an interval order?</caption>
-                <image width="40%" source="intord_find_rep_ex2"/>
+                <image width="40%" source="intord_find_rep_ex2"><description><p>Is this poset an interval order?</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex3" /> or give a reason why one does not exist.
+            <p>Find an interval representation for the poset in <xref ref="fig_intord_find_rep_ex3"/> or give a reason why one does not exist.
             </p>
             <figure xml:id="fig_intord_find_rep_ex3">
                 <caption>Is this poset an interval order?</caption>
-                <image width="40%" source="intord_find_rep_ex3"/>
+                <image width="40%" source="intord_find_rep_ex3"><description><p>Is this poset an interval order?</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Use the First Fit algorithm (ordering by left endpoints) to find the width <m>w</m> of the interval order shown in <xref ref="fig_intord_firstfit_ex1" /> and a partition into <m>w</m> chains. Also give an antichain with <m>w</m> points.</p>
+            <p>Use the First Fit algorithm (ordering by left endpoints) to find the width <m>w</m> of the interval order shown in <xref ref="fig_intord_firstfit_ex1"/> and a partition into <m>w</m> chains. Also give an antichain with <m>w</m> points.</p>
             
             <figure xml:id="fig_intord_firstfit_ex1">
                 <caption>An interval representation</caption>
-                <image width="85%" source="intord_firstfit_ex1"/>
+                <image width="85%" source="intord_firstfit_ex1"><description><p>An interval representation</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Complete the proof of <xref ref="thm_intord-minrep"  />.  </p>
+            <p>Complete the proof of <xref ref="thm_intord-minrep"/>.  </p>
         </statement>
         <hint>
             <p>The key idea is to show that if <m>d</m> is the least positive integer for which an interval order <m>\bfP</m> has a representation using end points from <m>\{1,2,\dots,n\}</m>, then every integer <m>i</m> from this set must be both a left end point and a right end point of an interval.</p>
@@ -162,7 +168,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Show that every poset is isomorphic to a poset of each of the four types illustrated in <xref ref="exa_construct"  />.  </p>
+            <p>Show that every poset is isomorphic to a poset of each of the four types illustrated in <xref ref="exa_construct"/>.  </p>
         </statement>
         <hint>
             <p>For each element <m>x</m>, choose some unique identifying key which is an element/prime/coordinate/observer.  Then associate with <m>x</m> a structure that identifies the keys of elements from <m>D[x]</m>.</p>
@@ -175,9 +181,9 @@
                 <li><p>Show that the dimension of a poset <m>\bfP</m> is the same as the dimension of its dual.</p></li>
                 <li><p>Show that <m>\bfP</m> is a subposet of <m>\bfQ</m>, then <m>\dim(\bfP)\le \dim(\bfQ)</m>.</p></li>
                 <li><p>Show that the removal of a point can reduce the dimension by at most<nbsp/><m>1</m>.</p></li>
-                <li><p>Find the dimension of the posets in <xref ref="fig_constructposets" />.</p></li>
+                <li><p>Find the dimension of the posets in <xref ref="fig_constructposets"/>.</p></li>
                 <li><p>Use Dilworth's theorem to show that the dimension of a poset is at most its width.</p></li>
-                <li><p>Use the example on the left side of <xref ref="fig_FirstFit" /> to show that
+                <li><p>Use the example on the left side of <xref ref="fig_FirstFit"/> to show that
                 for every <m>n\ge2</m>, there exists a poset <m>\bfP_n</m> on <m>2n</m> points having width and dimension
                 equal to <m>n</m>.</p></li>
             

@@ -2,13 +2,11 @@
   <title>Another look at distributing apples or folders</title>
   <p>A recurring problem so far in this book has been to consider problems that ask about
     distributing indistinguishable objects (say apples) to distinct entities (say children). We
-    started in <xref ref="ch_strings" /> by asking how many ways there were to distribute <m>40</m>
+    started in <xref ref="ch_strings"/> by asking how many ways there were to distribute <m>40</m>
     apples to <m>5</m> children so that each child is guaranteed to get at least one apple and saw
     that the answer was <m>C(39,4)</m>. We even saw how to restrict the situation so that one of the
-    children was limited and could receive at most <m>10</m> apples. In <xref
-      ref="ch_inclusion-exclusion" />, we learned how to extend the restrictions so that more than
-    one child had restrictions on the number of apples allowed by taking advantage of the <xref
-      ref="thm_inclusion-exclusion" text="title" />. Before moving on to see how generating
+    children was limited and could receive at most <m>10</m> apples. In <xref ref="ch_inclusion-exclusion"/>, we learned how to extend the restrictions so that more than
+    one child had restrictions on the number of apples allowed by taking advantage of the <xref ref="thm_inclusion-exclusion" text="title"/>. Before moving on to see how generating
     functions can allow us to get even more creative with our restrictions, let's take a moment to
     see how generating functions would allow us to solve the most basic problem at hand. </p>
   <example xml:id="exa_genfunction_apples">
@@ -17,7 +15,7 @@
       how we can derive this result using generating functions. Let's start with an even simpler
       problem: how many ways are there to distribute <m>n</m> apples to <em>one</em> child so that
       each child receives at least one apple? Well, this isn't too hard, there's only one way to do
-      it<mdash />give all the apples to the lucky kid! Thus the <em>sequence</em> that enumerates
+      it<mdash/>give all the apples to the lucky kid! Thus the <em>sequence</em> that enumerates
       the number of ways to do this is <m>\{a_n\colon n\geq 1\}</m> with <m>a_n=1</m> for all <m>n\geq
       1</m>. Then the generating function for this sequence is <me>
         x+x^2+x^3+\cdots = x(1+x+x^2+x^3+\cdots) = \frac{x}{1-x}.
@@ -29,12 +27,12 @@
     </p>
     <p>To see what this product represents, first consider how many ways can we get an <m>x^6</m>?
       We could use the <m>x^2</m> from the first factor and <m>x</m> from each of the other four, or <m>
-      x^2</m> from the second factor and <m>x</m> from each of the other four, <etc />, meaning that
+      x^2</m> from the second factor and <m>x</m> from each of the other four, <etc/>, meaning that
       the coefficient on <m>x^6</m> is <m>5 = C(5,4)</m>. More generally, what's the coefficient on <m>
       x^n</m> in the product? In the expansion, we get an <m>x^n</m> for every product of the form <m>
       x^{k_1}x^{k_2}x^{k_3}x^{k_4}x^{k_5}</m> where <m>k_1+k_2+k_3+k_4+k_5 = n</m>. Returning to the
       general question here, we're really dealing with distributing <m>n</m> apples to <m>5</m>
-      children, and since <m>k_i> 0</m> for <m>i=1,2,\dots,5</m>, we also have the guarantee that
+      children, and since <m>k_i&gt; 0</m> for <m>i=1,2,\dots,5</m>, we also have the guarantee that
       each child receives at least one apple, so the product of the generating function for <em>one</em>
       child gives the generating function for <em>five</em> children. </p>
     <p>Let's pretend for a minute that we didn't know that the coefficients must be <m>C(n-1,4)</m>.
@@ -50,7 +48,7 @@
       this series <m>C(n-1,4)</m>, just as we expected. </p>
   </example>
 
-  <p>We could revisit an example from <xref ref="ch_inclusion-exclusion" /> to see that if we wanted
+  <p>We could revisit an example from <xref ref="ch_inclusion-exclusion"/> to see that if we wanted
     to limit a child to receive at most <m>4</m> apples, we would use <m>(x+x^2+x^3+x^4)</m> as its
     generating function instead of <m>x/(1-x)</m>, but rather than belabor that here, let's try
     something a bit more exotic. </p>
@@ -76,8 +74,7 @@
           \frac{x}{1-x} (1+x+x^2+x^3) \frac{1}{1-x^4} \frac{1}{1-x} =
           \frac{x}{(1-x)^2(1-x^4)} (1+x+x^2+x^3).
         </me>
-        Now we want to make use of the fact that <m>(1+x+x^2+x^3) =(1-x^4)/(1-x)</m> (by <xref
-          ref="eq_genfunction_finite-geom" />) to see that our generating function is <md>
+        Now we want to make use of the fact that <m>(1+x+x^2+x^3) =(1-x^4)/(1-x)</m> (by <xref ref="eq_genfunction_finite-geom"/>) to see that our generating function is <md>
           <mrow>\frac{x}{(1-x)^3} \amp= \frac{x}{2}\sum_{n=0}^\infty n(n-1)x^{n-2} =
         \sum_{n=0}^\infty\frac{n(n-1)}{2} x^{n-1} </mrow>
           <mrow>\amp=\sum_{n=0}^\infty\binom{n}{2} x^{n-1} =
@@ -87,7 +84,7 @@
         question we originally asked is <m>C(21,2) = 210</m>. </p>
     </solution>
   </example>
-  <p>The compact form of the solution to <xref ref="exa_genfunction_fruit" /> suggests that perhaps
+  <p>The compact form of the solution to <xref ref="exa_genfunction_fruit"/> suggests that perhaps
     there is a way to come up with this answer without the use of generating functions. Thinking
     about such an approach would be a good way to solidify your understanding of a variety of the
     enumerative topics we have already covered.</p>
@@ -138,17 +135,16 @@
     </solution>
   </example>
 
-  <p>The invocation of partial fractions in <xref ref="exa_genfunction_partial-fracs" /> is
+  <p>The invocation of partial fractions in <xref ref="exa_genfunction_partial-fracs"/> is
     powerful, but solving the necessary system of equations and then hoping that the resulting
-    formal power series have expansions we immediately recognize can be a challenge. If <xref
-      ref="exa_genfunction_partial-fracs" /> had not asked about the general case with <m>n</m> on
+    formal power series have expansions we immediately recognize can be a challenge. If <xref ref="exa_genfunction_partial-fracs"/> had not asked about the general case with <m>n</m> on
     the right-hand side of the equation but instead asked specifically about <m>n=30</m>, you might
     be wondering if it would just be faster to write some Python code to generate all the solutions
     or more interesting to huddle up and devise some clever strategy to count them. Fortunately,
     technology can help us out when working with generating functions. In SageMath, we can use the <c>
     series()</c> method to get the power series expansion of a given function. The two arguments to <c>
     series</c> are the variable and the degree of the terms you want to truncate. In the cell below,
-    we ask SageMath to expand the generating function from <xref ref="exa_genfunction_partial-fracs" />
+    we ask SageMath to expand the generating function from <xref ref="exa_genfunction_partial-fracs"/>
     by giving us all the terms of degree at most 30 and then collapsing the rest of the series into
     its form of big-Oh notation, which we discard by storing the output from <c>series()</c> in a
     polynomial <c>f(x)</c>. </p>
@@ -179,8 +175,7 @@
       46
     </output>
   </sage>
-  <p>Let's see that the answer agrees with what our formula in the solution to <xref
-      ref="exa_genfunction_partial-fracs" /> gives us for <m>n=30</m>:</p>
+  <p>Let's see that the answer agrees with what our formula in the solution to <xref ref="exa_genfunction_partial-fracs"/> gives us for <m>n=30</m>:</p>
   <sage>
     <input>
       n=30
@@ -192,8 +187,7 @@
   </sage>
   <p>That's a relief, and so long as we only need a single coefficient, we're now in good shape. But
     what if we really need a formula for the coefficient on <m>x^n</m> in general? Let's see how we
-    can use SageMath to help us with some of the other steps in <xref
-      ref="exa_genfunction_partial-fracs" />. The first thing we'll want is the <c>
+    can use SageMath to help us with some of the other steps in <xref ref="exa_genfunction_partial-fracs"/>. The first thing we'll want is the <c>
     partial_fraction()</c> method:</p>
   <sage>
     <input>
@@ -222,16 +216,14 @@
         generating function <me>\frac{1}{(1-x)^n}</me>? </p>
     </statement>
     <solution>
-      <p> We have already encountered the case <m>n=5</m> in the midst of working on <xref
-          ref="exa_genfunction_apples" />, but there we appealed to calculus. Let's take a look at
+      <p> We have already encountered the case <m>n=5</m> in the midst of working on <xref ref="exa_genfunction_apples"/>, but there we appealed to calculus. Let's take a look at
         this from the perspective of just counting. The generating function <m>1/(1-x) =
         1+x+x^2+\cdots</m> encodes the sequence for the number of ways to distribute <m>n</m> apples
         to <em>one</em> child. There's only one way to do that task: give the lucky kid all the
         apples. Multiplying together a bunch of copies of <m>1/(1-x)</m> then serves to increase the
         number of children to whom the apples are being distributed, and since each power series
         being multiplied starts with <m>1</m>, we are in the situation where the number of apples
-        each child receives must be <em>nonnegative</em>. This is therefore a problem from <xref
-          ref="s_strings_bin-coeff" />. We have <m>n</m> children and the coefficient on <m>x^k</m>
+        each child receives must be <em>nonnegative</em>. This is therefore a problem from <xref ref="s_strings_bin-coeff"/>. We have <m>n</m> children and the coefficient on <m>x^k</m>
         is the number of ways of distributing <m>k</m> apples to them. This requires <m>n</m>
         artificial apples, so we distribute <m>k+n</m> apples, which determine <m>k+n-1</m> gaps and
         we must choose <m>n-1</m> of them as the locations for dividers. Therefore, we can conclude
@@ -248,7 +240,7 @@
           Suppose you are making a generating function for the number of ways to distribute some type of objects, as in the examples of this section. When a recipient can get no objects, what is the constant term in the factor of the generating function that corresponds to that recipient? What is the constant term when a recipient must get at least one object? Briefly explain your reasoning.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="genfunction_distributions_rq-coins">
       <statement>
@@ -256,7 +248,7 @@
           Suppose in the country Combinatoria, they use coins with values <m>1</m>, <m>2</m>, <m>5</m>, <m>10</m>, <m>20</m>, <m>50</m>, and <m>100</m>. If you would like to write a generating function in which the coefficient on <m>x^n</m> is the number of ways to form a collection of coins worth <m>n</m> subject to the restriction that the number of coins of value <m>5</m> is one, three, four, or five, what factor would you introduce into your generating function? Briefly explain your reasoning.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

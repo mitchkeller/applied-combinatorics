@@ -2,27 +2,27 @@
   <title>Solving Combinatorial Problems Recursively</title>
   <introduction component="main">
     <p>In this section, we present examples of combinatorial problems for which solutions can be
-      computed recursively. In <xref ref="ch_recurrence" />, we return to these problems and obtain
+      computed recursively. In <xref ref="ch_recurrence"/>, we return to these problems and obtain
       even more compact solutions. Our first problem is one discussed in our introductory chapter. </p>
     <example>
-      <p>A family of <m>n</m> lines is drawn in the plane with (1)<nbsp />each pair of lines
-        crossing and (2)<nbsp />no three lines crossing in the same point. Let <m>r(n)</m> denote
+      <p>A family of <m>n</m> lines is drawn in the plane with (1)<nbsp/>each pair of lines
+        crossing and (2)<nbsp/>no three lines crossing in the same point. Let <m>r(n)</m> denote
         the number of regions into which the plane is partitioned by these lines. Evidently, <m>
         r(1)=2</m>, <m>r(2)=4</m>, <m>r(3)=7</m> and <m>r(4)=11</m>. To determine <m>r(n)</m> for
-        all positive integers, it is enough to note that <m>r(1)=2</m>, and when <m>n>1</m>, <m>
+        all positive integers, it is enough to note that <m>r(1)=2</m>, and when <m>n&gt;1</m>, <m>
         r(n)=n+r(n-1)</m>. This formula follows from the observation that if we label the lines as <m>
         L_1</m>, <m>L_2, \dots, L_n</m>, then the <m>n-1</m> points on line <m>L_n</m> where it
         crosses the other lines in the family divide <m>L_n</m> into <m>n</m> segments, two of which
         are infinite. Each of these segments is associated with a region determined by the first <m>
         n-1</m> lines that has now been subdivided into two, giving us <m>n</m> more regions than
-        were determined by <m>n-1</m> lines. This situation is illustrated in <xref
-          ref="fig_induction_lines-regions" />, where the line containing the three dots is <m>L_4</m>.
+        were determined by <m>n-1</m> lines. This situation is illustrated in <xref ref="fig_induction_lines-regions"/>, where the line containing the three dots is <m>L_4</m>.
         The other lines divide it into four segments, which then divide larger regions to create
         regions <m>1</m> and <m>5</m>, <m>2</m> and <m>6</m>, <m>7</m> and <m>8</m>, and <m>4</m>
         and <m>9</m>. </p>
       <figure xml:id="fig_induction_lines-regions">
         <caption>Lines and regions in the plane</caption>
-        <image width="50%" source="lines-regions" />
+        <image width="50%" source="lines-regions"><description><p>Lines and regions in the plane</p>
+        </description></image>
       </figure>
       <p>With the recursive formula, we thus have <m>r(5)=5+11=16</m>, <m>r(6)=6+16=22</m> and <m>
         r(7)=7+22=29</m>. Even by hand, it wouldn't be all that much trouble to calculate <m>r(100)</m>.
@@ -32,7 +32,7 @@
     <example>
       <p>A <m>2\times n</m> checkerboard will be tiled with rectangles of size <m>2\times1</m> and <m>
         1\times2</m>. Find a recursive formula for the number <m>t(n)</m> of tilings. Clearly, <m>
-        t(1)=1</m> and <m>t(2)=2</m>. When <m>n>2</m>, consider the rectangle that covers the square
+        t(1)=1</m> and <m>t(2)=2</m>. When <m>n&gt;2</m>, consider the rectangle that covers the square
         in the upper right corner. If it is vertical, then preceding it, we have a tiling of the
         first <m>n-1</m> columns. If it is horizontal, then so is the rectangle immediately
         underneath it, and proceeding them is a tiling of the first <m>n-2</m> columns. This shows
@@ -45,18 +45,18 @@
       <p>Call a ternary string <em>good</em> if it never contains a <m>2</m> followed immediately by
         a <m>0</m>; otherwise, call it <em>bad</em>. Let <m>g(n)</m> be the number of good strings
         of length <m>n</m>. Obviously <m>g(1)=3</m>, since all strings of length <m>1</m> are good.
-        Also, <m>g(2)=8</m> since the only bad string of length<nbsp /><m>2</m> is <m>(2,0)</m>. Now
-        consider a value of <m>n</m> larger than<nbsp /><m>2</m>. </p>
+        Also, <m>g(2)=8</m> since the only bad string of length<nbsp/><m>2</m> is <m>(2,0)</m>. Now
+        consider a value of <m>n</m> larger than<nbsp/><m>2</m>. </p>
 
-      <p>Partition the set of good strings of length<nbsp /><m>n</m> into three parts, according to
+      <p>Partition the set of good strings of length<nbsp/><m>n</m> into three parts, according to
         the last character. Good strings ending in <m>1</m> can be preceded by any good string of
         length <m>n-1</m>, so there are <m>g(n-1)</m> such strings. The same applies for good
         strings ending in <m>2</m>. For good strings ending in <m>0</m>, however, we have to be more
-        careful. We can precede the <m>0</m> by a good string of length<nbsp /><m>n-1</m> provided
-        that the string does not end in <m>2</m>. There are <m>g(n-1)</m> good strings of length<nbsp /><m>
-        n-1</m> and of these, exactly <m>g(n-2)</m> end in a<nbsp /><m>2</m>. Therefore there are <m>
-        g(n-1)-g(n-2)</m> good strings of length<nbsp /><m>n</m> that end in a<nbsp /><m>0</m>.
-        Hence the total number of good strings of length<nbsp /><m>n</m> satisfies the recursive
+        careful. We can precede the <m>0</m> by a good string of length<nbsp/><m>n-1</m> provided
+        that the string does not end in <m>2</m>. There are <m>g(n-1)</m> good strings of length<nbsp/><m>
+        n-1</m> and of these, exactly <m>g(n-2)</m> end in a<nbsp/><m>2</m>. Therefore there are <m>
+        g(n-1)-g(n-2)</m> good strings of length<nbsp/><m>n</m> that end in a<nbsp/><m>0</m>.
+        Hence the total number of good strings of length<nbsp/><m>n</m> satisfies the recursive
         formula <m>g(n) = 3g(n-1) - g(n-2)</m>. Thus <m>g(3) = 3\cdot8 -3= 21</m> and <m>g(4)=
         3\cdot21-8= 55</m>. </p>
     </example>
@@ -66,27 +66,27 @@
   <subsection component="runestone">
     <title>Counting recursively</title>
     <p>In this section, we present examples of combinatorial problems for which solutions can be
-      computed recursively. In <xref ref="ch_recurrence" />, we return to these problems and obtain
+      computed recursively. In <xref ref="ch_recurrence"/>, we return to these problems and obtain
       even more compact solutions. Our first problem is one discussed in our introductory chapter. </p>
     <example>
-      <p>A family of <m>n</m> lines is drawn in the plane with (1)<nbsp />each pair of lines
-        crossing and (2)<nbsp />no three lines crossing in the same point. Let <m>r(n)</m> denote
+      <p>A family of <m>n</m> lines is drawn in the plane with (1)<nbsp/>each pair of lines
+        crossing and (2)<nbsp/>no three lines crossing in the same point. Let <m>r(n)</m> denote
         the number of regions into which the plane is partitioned by these lines. Evidently, <m>
         r(1)=2</m>, <m>r(2)=4</m>, <m>r(3)=7</m> and <m>r(4)=11</m>. To determine <m>r(n)</m> for
-        all positive integers, it is enough to note that <m>r(1)=2</m>, and when <m>n>1</m>, <m>
+        all positive integers, it is enough to note that <m>r(1)=2</m>, and when <m>n&gt;1</m>, <m>
         r(n)=n+r(n-1)</m>. This formula follows from the observation that if we label the lines as <m>
         L_1</m>, <m>L_2, \dots, L_n</m>, then the <m>n-1</m> points on line <m>L_n</m> where it
         crosses the other lines in the family divide <m>L_n</m> into <m>n</m> segments, two of which
         are infinite. Each of these segments is associated with a region determined by the first <m>
         n-1</m> lines that has now been subdivided into two, giving us <m>n</m> more regions than
-        were determined by <m>n-1</m> lines. This situation is illustrated in <xref
-          ref="fig_induction_lines-regions-rs" />, where the line containing the three dots is <m>L_4</m>.
+        were determined by <m>n-1</m> lines. This situation is illustrated in <xref ref="fig_induction_lines-regions-rs"/>, where the line containing the three dots is <m>L_4</m>.
         The other lines divide it into four segments, which then divide larger regions to create
         regions <m>1</m> and <m>5</m>, <m>2</m> and <m>6</m>, <m>7</m> and <m>8</m>, and <m>4</m>
         and <m>9</m>. </p>
       <figure xml:id="fig_induction_lines-regions-rs">
         <caption>Lines and regions in the plane</caption>
-        <image width="50%" source="lines-regions" />
+        <image width="50%" source="lines-regions"><description><p>Lines and regions in the plane</p>
+        </description></image>
       </figure>
       <p>With the recursive formula, we thus have <m>r(5)=5+11=16</m>, <m>r(6)=6+16=22</m> and <m>
         r(7)=7+22=29</m>. Even by hand, it wouldn't be all that much trouble to calculate <m>r(100)</m>.
@@ -96,7 +96,7 @@
     <example>
       <p>A <m>2\times n</m> checkerboard will be tiled with rectangles of size <m>2\times1</m> and <m>
         1\times2</m>. Find a recursive formula for the number <m>t(n)</m> of tilings. Clearly, <m>
-        t(1)=1</m> and <m>t(2)=2</m>. When <m>n>2</m>, consider the rectangle that covers the square
+        t(1)=1</m> and <m>t(2)=2</m>. When <m>n&gt;2</m>, consider the rectangle that covers the square
         in the upper right corner. If it is vertical, then preceding it, we have a tiling of the
         first <m>n-1</m> columns. If it is horizontal, then so is the rectangle immediately
         underneath it, and proceeding them is a tiling of the first <m>n-2</m> columns. This shows
@@ -109,18 +109,18 @@
       <p>Call a ternary string <em>good</em> if it never contains a <m>2</m> followed immediately by
         a <m>0</m>; otherwise, call it <em>bad</em>. Let <m>g(n)</m> be the number of good strings
         of length <m>n</m>. Obviously <m>g(1)=3</m>, since all strings of length <m>1</m> are good.
-        Also, <m>g(2)=8</m> since the only bad string of length<nbsp /><m>2</m> is <m>(2,0)</m>. Now
-        consider a value of <m>n</m> larger than<nbsp /><m>2</m>. </p>
+        Also, <m>g(2)=8</m> since the only bad string of length<nbsp/><m>2</m> is <m>(2,0)</m>. Now
+        consider a value of <m>n</m> larger than<nbsp/><m>2</m>. </p>
 
-      <p>Partition the set of good strings of length<nbsp /><m>n</m> into three parts, according to
+      <p>Partition the set of good strings of length<nbsp/><m>n</m> into three parts, according to
         the last character. Good strings ending in <m>1</m> can be preceded by any good string of
         length <m>n-1</m>, so there are <m>g(n-1)</m> such strings. The same applies for good
         strings ending in <m>2</m>. For good strings ending in <m>0</m>, however, we have to be more
-        careful. We can precede the <m>0</m> by a good string of length<nbsp /><m>n-1</m> provided
-        that the string does not end in <m>2</m>. There are <m>g(n-1)</m> good strings of length<nbsp /><m>
-        n-1</m> and of these, exactly <m>g(n-2)</m> end in a<nbsp /><m>2</m>. Therefore there are <m>
-        g(n-1)-g(n-2)</m> good strings of length<nbsp /><m>n</m> that end in a<nbsp /><m>0</m>.
-        Hence the total number of good strings of length<nbsp /><m>n</m> satisfies the recursive
+        careful. We can precede the <m>0</m> by a good string of length<nbsp/><m>n-1</m> provided
+        that the string does not end in <m>2</m>. There are <m>g(n-1)</m> good strings of length<nbsp/><m>
+        n-1</m> and of these, exactly <m>g(n-2)</m> end in a<nbsp/><m>2</m>. Therefore there are <m>
+        g(n-1)-g(n-2)</m> good strings of length<nbsp/><m>n</m> that end in a<nbsp/><m>0</m>.
+        Hence the total number of good strings of length<nbsp/><m>n</m> satisfies the recursive
         formula <m>g(n) = 3g(n-1) - g(n-2)</m>. Thus <m>g(3) = 3\cdot8 -3= 21</m> and <m>g(4)=
         3\cdot21-8= 55</m>. </p>
     </example>
@@ -133,7 +133,7 @@
               Suppose we are defining a function <m>f(n)</m> recursively, and we want to define it for all positive integers <m>n</m> (and that it doesn't make sense to define it for <m>n\leq 0</m>). Suppose we figure out that the recursive relation for <m>f</m> is <m>f(n) = 3f(n-3) + 2f(n-2)-f(n-1)</m>. What is the smallest value of <m>n</m> for which it would make sense to use this recursive formula? For what values of <m>n</m> do you need to know the value of <m>f(n)</m> in order to make the recursive formula work? Be sure to write a sentence or two to explain your reasoning.
             </p>
           </statement>
-          <response />
+          <response/>
         </exercise>
         <exercise label="induction_recursion_avoid-12">
           <statement>
@@ -146,7 +146,7 @@
               It may be helpful to think of <m>3g(n-1) - g(n-2)</m> as <m>2g(n-1) + (g(n-1)- g(n-2))</m>. 
             </p>
           </hint>
-          <response />
+          <response/>
         </exercise>
       </reading-questions>
     </subsection>
@@ -227,7 +227,7 @@
           the unique integers for which <me>
             m = q\cdot n+r\quad\text{and} \quad 0 \le r \lt n.
           </me>
-          If <m>r>0</m>, then <m>\gcd(m,n)=\gcd(n,r)</m>. If <m>r=0</m>, then <m>n</m> divides <m>m</m>,
+          If <m>r&gt;0</m>, then <m>\gcd(m,n)=\gcd(n,r)</m>. If <m>r=0</m>, then <m>n</m> divides <m>m</m>,
           and <m>\gcd(m,n) = n</m>. </p>
       </statement>
       <proof>
@@ -260,7 +260,7 @@
 
     <p>The disadvantage of this approach is the somewhat wasteful use of memory due to recursive
       function calls. It is not difficult to develop code for computing the greatest common divisor
-      of <m>m</m> and <m>n</m> using only a loop, <ie />, there are no recursive calls. With minimal
+      of <m>m</m> and <m>n</m> using only a loop, <ie/>, there are no recursive calls. With minimal
       extra work, such code can also be designed to solve the following diophantine equation
       problem: </p>
 
@@ -351,7 +351,7 @@
         p = p+1
         else:
         q = q+1
-        elif (p >= len(u)):
+        elif (p &gt;= len(u)):
         a.append(v[q])
         q = q+1
         else:

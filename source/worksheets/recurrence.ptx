@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<chapter xml:id="ws-recurrence" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-recurrence">
   
     <!-- </page> -->
      
@@ -39,7 +37,7 @@
         <task workspace="1in">
           <statement>
             <p>
-              Determine if <m>f_{3}(n) = c_{3} n^{2}3^{n}</m> is a solution of <m>(A-3)^{2}f=0</m>. If it’s not, what do you get instead of <m>0</m>?
+              Determine if <m>f_{3}(n) = c_{3} n^{2}3^{n}</m> is a solution of <m>(A-3)^{2}f=0</m>. If it&#8217;s not, what do you get instead of <m>0</m>?
             </p>
           </statement>
           <solution component="ws-recurrence-homog-soln">
@@ -85,7 +83,7 @@
         <task workspace="1.25in">
           <statement>
             <p>
-              Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations <alert>and</alert> you can commute the factors in an advancement operator polynomial so that applying <m>(A-3)^{2}(A+2)</m> will give the same result as applying <m>(A+2)(A-3)^{2}</m>. This fact is not true of all linear transformations…matrix multiplication is not commutative, after all! However, it works here.
+              Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations <alert>and</alert> you can commute the factors in an advancement operator polynomial so that applying <m>(A-3)^{2}(A+2)</m> will give the same result as applying <m>(A+2)(A-3)^{2}</m>. This fact is not true of all linear transformations&#8230;matrix multiplication is not commutative, after all! However, it works here.
             </p>
           </statement>
         </task>
@@ -117,7 +115,7 @@
         <task workspace="1in">
           <statement>
             <p>
-              Apply <m>(A-5)</m> to <m>f_{4}(n) = c_{4} n^{4} 5^{n}</m>. What’s the highest power of <m>n</m> remaining? How many more times would you need to apply <m>(A-5)</m> to finally get <m>0</m>?
+              Apply <m>(A-5)</m> to <m>f_{4}(n) = c_{4} n^{4} 5^{n}</m>. What&#8217;s the highest power of <m>n</m> remaining? How many more times would you need to apply <m>(A-5)</m> to finally get <m>0</m>?
             </p>
           </statement>
           <solution component="ws-recurrence-homog-soln">
@@ -129,7 +127,7 @@
         <task workspace="0.5in">
           <statement>
             <p>
-              Apply <m>(A-5)</m> to <m>f_{5}(n) = c_{5} n^{5} 5^{n}</m>. What’s the highest power of <m>n</m> remaining?
+              Apply <m>(A-5)</m> to <m>f_{5}(n) = c_{5} n^{5} 5^{n}</m>. What&#8217;s the highest power of <m>n</m> remaining?
             </p>
           </statement>
           <solution component="ws-recurrence-homog-soln">
@@ -274,7 +272,7 @@
         <task>
           <introduction>
             <p>
-              Now suppose we’re trying to solve <m>(A+2)(A-3)f=5^{n}</m>? (Look, ma, the right side isn’t zero!)
+              Now suppose we&#8217;re trying to solve <m>(A+2)(A-3)f=5^{n}</m>? (Look, ma, the right side isn&#8217;t zero!)
             </p>
           </introduction>
           <task workspace="0.5in">
@@ -336,13 +334,13 @@
         <task workspace="0.4in">
           <statement>
             <p>
-              Suppose now that you’re trying to solve <m>(A+2)(A-3)f=3^{n}</m>.
+              Suppose now that you&#8217;re trying to solve <m>(A+2)(A-3)f=3^{n}</m>.
               What would you need to try in order to preserve the <m>3^{n}</m> when applying <m>(A+2)(A-3)</m>?
             </p>
           </statement>
           <solution component="ws-recurrence-homog-soln">
             <p>
-              We’d need <m>d n3^{n}</m> since <m>3^{n}</m> will be annihilated by the <m>A-3</m>, but we know that <m>A-3</m> will not annihilate <m>n3^{n}</m>.
+              We&#8217;d need <m>d n3^{n}</m> since <m>3^{n}</m> will be annihilated by the <m>A-3</m>, but we know that <m>A-3</m> will not annihilate <m>n3^{n}</m>.
 Constants are helpful.
             </p>
           </solution>
@@ -365,7 +363,7 @@ Constants are helpful.
       The <term>general solution of the nonhomogeneous equation</term> is then <m>f(n)=f_{0}(n) + f_{1}(n)</m>.
     </p>
     <p>
-      We first consider when <m>p(A)</m> does not “interfere” with <m>g(n)</m> and recap the last portion of our previous class's activity. If you apply <m>(A-3)</m> to the function <m>f(n) = 5^{n}</m>, then you have
+      We first consider when <m>p(A)</m> does not &#8220;interfere&#8221; with <m>g(n)</m> and recap the last portion of our previous class's activity. If you apply <m>(A-3)</m> to the function <m>f(n) = 5^{n}</m>, then you have
       <me>
         (A-3)5^{n} = 5^{n+1}-3\cdot 5^{n} = 2\cdot 5^{n}
       </me>.
@@ -398,7 +396,7 @@ Constants are helpful.
       <solution component="ws-recurrence-nonhomog-soln">
         <p>
           If we want this to be <m>3n</m>, then we simultaneously need <m>d=-2</m> and <m>d=0</m>.
-          Last time I checked, that’s not going to work.
+          Last time I checked, that&#8217;s not going to work.
         </p>
       </solution>
     </exercise>
@@ -439,7 +437,7 @@ Constants are helpful.
       </solution>
     </exercise>
     <p>
-      Let’s make <m>g(n)</m> a bit more complicated.
+      Let&#8217;s make <m>g(n)</m> a bit more complicated.
     </p>
     <exercise workspace="1in" xml:id="ws-recurrence-nonhomog-multiterm">
       <statement>
@@ -485,12 +483,12 @@ Constants are helpful.
       <statement>
         <p>
           Describe how you would change your work in <xref ref="ws-recurrence-nonhomog-multiterm"/> if the advancement operator equation were <m>(A+1)(A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} + n+2</m>.
-          (You don’t have to go through all the steps.)
+          (You don&#8217;t have to go through all the steps.)
         </p>
       </statement>
       <solution component="ws-recurrence-nonhomog-soln">
         <p>
-          You’d have to apply the advancement operator <m>(A+1)</m> before finding the <m>d_{i}</m> constants.
+          You&#8217;d have to apply the advancement operator <m>(A+1)</m> before finding the <m>d_{i}</m> constants.
         </p>
       </solution>
     </exercise>
@@ -506,7 +504,7 @@ Constants are helpful.
       </statement>
       <solution component="ws-recurrence-nonhomog-soln">
         <p>
-          You’ll not have any success, since when you apply <m>(A-3)</m> to <m>d3^{n}</m>, you’re going to get <m>0</m> instead of <m>2\cdot 3^{n}</m>.
+          You&#8217;ll not have any success, since when you apply <m>(A-3)</m> to <m>d3^{n}</m>, you&#8217;re going to get <m>0</m> instead of <m>2\cdot 3^{n}</m>.
         </p>
       </solution>
     </exercise>
@@ -519,7 +517,7 @@ Constants are helpful.
       <solution component="ws-recurrence-nonhomog-soln">
         <p>
           We saw last time that applying <m>(A-3)</m> to <m>n3^{n}</m> will leave us with a <m>3^{n}</m> term.
-          Let’s try <m>f_{1}(n) = dn3^{n}</m>.
+          Let&#8217;s try <m>f_{1}(n) = dn3^{n}</m>.
           We have
           <me>
             (A-3)(A+2)[dn3^{n}] = (A-3)[3d3^{n}+5dn3^{n}]=15d3^{n}.
@@ -532,15 +530,15 @@ Constants are helpful.
       <statement>
         <p>
           Find a particular solution <m>f_{1}(n)</m> of <m>(A-3)(A+2)f=60\cdot n3^{n}</m>.
-          (Think about what’s on the left-hand side and what it will do to your proposed <m>f_{1}</m> before trying to find constant(s).)
+          (Think about what&#8217;s on the left-hand side and what it will do to your proposed <m>f_{1}</m> before trying to find constant(s).)
         </p>
       </statement>
       <solution component="ws-recurrence-nonhomog-soln">
         <p>
           Trying <m>f_{1}(n) = dn3^{n}</m> is not going to work, since the <m>(A-3)</m> in <m>p(A)</m> will turn it into a <m>3^{n}</m> term with no factor of <m>n</m>.
           Starting with an <m>n^{2}3^{n}</m> term is good, but we have to be careful.
-          If we just do <m>f_{1}(n) =d_{1}n^{2}3^{n}</m>, we’re going to be stuck like we were in <xref ref="ws-recurrence-nonhomog-stuck"/>
-          Thus, let’s go with <m>f_{1}(n) = d_{1}n^{2}3^{n} + d_{2} n3^{n}</m>.
+          If we just do <m>f_{1}(n) =d_{1}n^{2}3^{n}</m>, we&#8217;re going to be stuck like we were in <xref ref="ws-recurrence-nonhomog-stuck"/>
+          Thus, let&#8217;s go with <m>f_{1}(n) = d_{1}n^{2}3^{n} + d_{2} n3^{n}</m>.
           <me>
             (A-3)(A+2)f_{1}(n) = 30d_{1} n3^{n}+(33d_{1} + 15 d_{2})3^{n}
           </me>.

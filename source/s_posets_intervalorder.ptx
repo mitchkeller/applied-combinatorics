@@ -1,6 +1,6 @@
 <section xml:id="s_posets_intervalorder">
   <title>Interval Orders</title>
-  <p>When we discussed <xref ref="thm_dilworth" text="title" />, we commented that the algorithmic
+  <p>When we discussed <xref ref="thm_dilworth" text="title"/>, we commented that the algorithmic
     aspects would be deferred until later in the text. But there is one important class of orders
     for which the full solution is easy to obtain. </p>
 
@@ -14,16 +14,16 @@
     </idx> of <m>\bfP</m>, or just a <term>representation</term>
     for short. For brevity, whenever we say that <m>I</m> is a representation of an interval order <m>
     \PXP</m>, we will use the alternate notation <m>[a_x,b_x]</m> for the closed interval <m>I(x)</m>.
-    Also, we let <m>|I(x)|</m> denote the <term>length</term> of the interval, <ie />, <m>
-    |I(x)|=b_x-a_x</m>. Returning to the poset <m>\bfP_3</m>, the representation shown in <xref
-      ref="fig_6ptintorder" /> shows that it is an interval order. </p>
+    Also, we let <m>|I(x)|</m> denote the <term>length</term> of the interval, <ie/>, <m>
+    |I(x)|=b_x-a_x</m>. Returning to the poset <m>\bfP_3</m>, the representation shown in <xref ref="fig_6ptintorder"/> shows that it is an interval order. </p>
   <figure xml:id="fig_6ptintorder">
     <caption>An interval order and its representation</caption>
-    <image width="70%" source="6ptintorder" />
+    <image width="70%" source="6ptintorder"><description><p>An interval order and its representation</p>
+    </description></image>
   </figure>
   <p>Note that end points of intervals used in a representation need not be distinct. In fact,
     distinct points <m>x</m> and <m>y</m> from <m>X</m> may satisfy <m>I(x)=I(y)</m>. We even allow
-    degenerate intervals, <ie />, those of the form <m>[a,a]</m>. On the other hand, a
+    degenerate intervals, <ie/>, those of the form <m>[a,a]</m>. On the other hand, a
     representation is said to be <term>distinguishing</term><idx>
       <h>interval representation</h>
       <h>distinguishing</h>
@@ -106,7 +106,7 @@
         </latex-image>
       </image>
     </statement>
-    <response />
+    <response/>
     </exercise>
     <exercise label="posets-rq_intervalorder_list-incomp">
       <statement>
@@ -142,7 +142,7 @@
         </latex-image>
       </image>
     </statement>
-    <response />
+    <response/>
     </exercise>
     <exercise label="posets-rq_intervalorder_not-intord">
       <statement>
@@ -178,7 +178,7 @@
           </latex-image>
         </image>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

@@ -3,7 +3,7 @@
   <handout>
     <title>Combinatorial Proofs</title>
       
-      <xi:include href="../worksheets/ex-plate-vowel-consonant.ptx" />
+      <xi:include href="../worksheets/ex-plate-vowel-consonant.ptx"/>
       <exercise workspace="1in">
         <statement>
           <p>
@@ -29,7 +29,6 @@
         
       
       <image width="50%">
-        <shortdescription>A square array of dots with box around those on the diagonal</shortdescription>
         <prefigure xmlns="https://prefigure.org" label="dot-grid-diagonal-box">
           <diagram dimensions="(300, 300)" margins="30">
             <coordinates bbox="(0, 0,6, 6)">
@@ -38,13 +37,11 @@
                   <point p="(x,y)" fill="#ECCA8A"/>
                 </repeat>
               </repeat>
-              <rectangle center="(3,3)" dimensions="(0.8,9)" rotate="45"
-                        stroke="black" thickness="5"
-                        corner-radius="10"/>
+              <rectangle center="(3,3)" dimensions="(0.8,9)" rotate="45" stroke="black" thickness="5" corner-radius="10"/>
             </coordinates>
           </diagram>
         </prefigure>
-      </image>
+      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
       <p>
         <ul>
           <li>
@@ -246,4 +243,3 @@
   </page>
   </handout>
 </chapter>
-  

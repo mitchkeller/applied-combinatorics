@@ -1,7 +1,7 @@
 <section xml:id="s_graphs_color">
   <title>Graph Coloring</title>
   <introduction>
-    <p>Let's return now to the subject of <xref ref="ex_radiostations" />, assigning frequencies to
+    <p>Let's return now to the subject of <xref ref="ex_radiostations"/>, assigning frequencies to
       radio stations so that they don't interfere. The first thing that we will need to do is to
       turn the map of radio stations into a suitable graph, which should be pretty natural at this
       juncture. We define a graph <m>\GVE</m> in which <m>V</m> is the set of radio stations and <m>xy\in
@@ -24,16 +24,16 @@
           <m>\chi(\bfG)</m>
         </usage>
         <description>chromatic number of a graph <m>\bfG</m></description>
-      </notation>. In <xref
-        ref="fig_graphs_chi4" />, we show a proper coloring of a graph using <m>5</m> colors. Now we
+      </notation>. In <xref ref="fig_graphs_chi4"/>, we show a proper coloring of a graph using <m>5</m> colors. Now we
       can see that our radio frequency assignment problem is the much-studied question of finding
       the chromatic number of an appropriate graph. </p>
     <figure xml:id="fig_graphs_chi4">
       <caption>A proper coloring using <m>5</m> colors</caption>
-      <image width="65%" source="chi4" />
+      <image width="65%" source="chi4"><description><p>A proper coloring using <m>5</m> colors</p>
+      </description></image>
     </figure>
     <remark xml:id="disc-graphs_color-intro">
-      <p>Everyone agrees that the graph <m>\bfG</m> in <xref ref="fig_graphs_chi4" /> has chromatic
+      <p>Everyone agrees that the graph <m>\bfG</m> in <xref ref="fig_graphs_chi4"/> has chromatic
         number at most <m>5</m>. However, there's a bit of debate going on about if <m>\chi(\bfG)=5</m>.
         Bob figures the authors would not have used five colors if they didn't need to. Carlos says
         he's glad they're having the discussion, since all having a proper coloring does is provide
@@ -48,7 +48,7 @@
             <p>What graph did Alice draw that shocked Bob?</p>
           </li>
           <li>
-            <p>What changes did Dave make to the coloring in <xref ref="fig_graphs_chi4" /> to get a
+            <p>What changes did Dave make to the coloring in <xref ref="fig_graphs_chi4"/> to get a
         proper coloring using four colors?</p>
           </li>
 
@@ -113,7 +113,7 @@
         <h>bipartite</h>
       </idx> when there is a partition of the vertex set <m>V</m> into two
       sets <m>A</m> and <m>B</m> so that the subgraphs induced by <m>A</m> and <m>B</m> are
-      independent graphs, <ie />, no edge of <m>\bfG</m> has both of its endpoints in <m>A</m> or in <m>
+      independent graphs, <ie/>, no edge of <m>\bfG</m> has both of its endpoints in <m>A</m> or in <m>
       B</m>. Evidently, bipartite graphs are <m>2</m>-colorable. On the other hand, when a <m>2</m>-colorable
       graph is disconnected, there is more than one way to define a suitable partition of the vertex
       set into two independent sets. </p>
@@ -128,21 +128,21 @@
     <p>As a second example, a bipartite graph could be used to visualize the languages spoken by a
       group of students. The vertices on one side would be the students with the languages listed on
       the other side. We would then have an edge <m>xy</m> when student <m>x</m> spoke language <m>y</m>.
-      A concrete example of this graph for our favorite group of students is shown in <xref
-        ref="fig_graphs_languages" />, although Alice isn't so certain there should be an edge
+      A concrete example of this graph for our favorite group of students is shown in <xref ref="fig_graphs_languages"/>, although Alice isn't so certain there should be an edge
       connecting Dave and English. </p>
     <figure xml:id="fig_graphs_languages">
       <caption>A bipartite graph</caption>
-      <image width="60%" source="languages" />
+      <image width="60%" source="languages"><description><p>A bipartite graph</p>
+      </description></image>
     </figure>
     <p>One special class of bipartite graphs that bears mention is the class of <term>complete
       bipartite graphs</term>. The complete bipartite graph <m>\bfK_{m,n}</m> has vertex set <m>V=V_1\cup
       V_2</m> with <m>|V_1|=m</m> and <m>|V_2|=n</m>. It has an edge <m>xy</m> if and only if <m>x\in
-      V_1</m> and <m>y\in V_2</m>. The complete bipartite graph <m>\bfK_{3,3}</m> is shown in <xref
-        ref="fig_graphs_k33" />. </p>
+      V_1</m> and <m>y\in V_2</m>. The complete bipartite graph <m>\bfK_{3,3}</m> is shown in <xref ref="fig_graphs_k33"/>. </p>
     <figure xml:id="fig_graphs_k33">
       <caption>The complete bipartite graph <m>\bfK_{3,3}</m></caption>
-      <image width="25%" source="k33_rotated" />
+      <image width="25%" source="k33_rotated"><description><p>The complete bipartite graph <m>\bfK_{3,3}</m></p>
+      </description></image>
     </figure>
   </subsection>
 
@@ -165,15 +165,13 @@
         </usage>
         <description>clique number of <m>\bfG</m></description>
       </notation>, is the largest <m>
-      t</m> for which there exists a clique <m>K</m> with <m>|K|=t</m>. For example, the graph in <xref
-        ref="fig_graphs_eulerexample" /> has clique number <m>4</m> while the graph in <xref
-        ref="fig_graphs_chi4" /> has maximum clique size<nbsp /><m>2</m>. </p>
+      t</m> for which there exists a clique <m>K</m> with <m>|K|=t</m>. For example, the graph in <xref ref="fig_graphs_eulerexample"/> has clique number <m>4</m> while the graph in <xref ref="fig_graphs_chi4"/> has maximum clique size<nbsp/><m>2</m>. </p>
 
     <p>For every graph <m>\bfG</m>, it is obvious that <m>\chi(\bfG)\ge \omega(\bfG)</m>. On the
       other hand, the inequality may be far from tight. Before showing how bad it can be, we need to
-      introduce a more general version of the <xref ref="prop_pigeon" text="title" />. Consider a
-      function <m>f\colon X\to Y</m> with <m>|X| = 2|Y|+1</m>. Since <m>|X|>|Y|</m>, the Pigeon Hole
-      Principle as stated in <xref ref="prop_pigeon" /> only tells us that there are distinct <m>x,x'\in
+      introduce a more general version of the <xref ref="prop_pigeon" text="title"/>. Consider a
+      function <m>f\colon X\to Y</m> with <m>|X| = 2|Y|+1</m>. Since <m>|X|&gt;|Y|</m>, the Pigeon Hole
+      Principle as stated in <xref ref="prop_pigeon"/> only tells us that there are distinct <m>x,x'\in
       X</m> with <m>f(x)=f(x')</m>. However, we can say more here. Suppose that each element of <m>Y</m>
       has at most two elements of <m>X</m> mapped to it. Then adding up the number of elements of <m>
       X</m> based on how many are mapped to each element of <m>Y</m> would only allow <m>X</m> to
@@ -246,11 +244,11 @@
         <p>Clearly, <m>\omega(\bfG_{t+1})=2</m>. Also, <m>\chi(\bfG_{t+1})\ge t</m>, since it
           contains <m>\bfG_t</m> as a subgraph. Furthermore, <m>\chi(\bfG_{t+1})\leq t+1</m>, since
           we can color <m>\bfG_t</m> with colors from <m>\{1,2,\dots,t\}</m>, use color <m>t+1</m>
-          on the independent set <m>I</m>, and then assign color<nbsp /><m>1</m> to the new vertex <m>
+          on the independent set <m>I</m>, and then assign color<nbsp/><m>1</m> to the new vertex <m>
           z</m>. We claim that in fact <m>\chi(\bfG_{t+1})=t+1</m>. Suppose not. Then we must have <m>
           \chi(\bfG_{t+1})=t</m>. Let <m>\phi</m> be a proper coloring of <m>\bfG_{t+1}</m>. Without
           loss of generality, <m>\phi</m> uses the colors in <m>\{1,2,\dots,t\}</m> and <m>\phi</m>
-          assigns color<nbsp /><m>t</m> to <m>z</m>. Then consider the nonempty set <m>S</m> of
+          assigns color<nbsp/><m>t</m> to <m>z</m>. Then consider the nonempty set <m>S</m> of
           vertices in the copy of <m>\bfG_t</m> to which <m>\phi</m> assigns color <m>t</m>. For
           each <m>x_i</m> in <m>S</m>, change the color on <m>x_i</m> so that it matches the color
           assigned to <m>y_i</m> by <m>\phi</m>, which cannot be <m>t</m>, as <m>z</m> is colored <m>
@@ -260,11 +258,10 @@
       </proof>
     </proposition>
 
-    <p>Since a <m>3</m>-clique looks like a triangle, <xref ref="prop_triangle-free" /> is often
+    <p>Since a <m>3</m>-clique looks like a triangle, <xref ref="prop_triangle-free"/> is often
       stated as <q>There exist triangle-free graphs with large chromatic number.</q> As an
-      illustration of the construction in the proof of Mycielski, we again refer to <xref
-        ref="fig_graphs_chi4" />. The graph shown is <m>\bfG_4</m>. We will return to the topic of
-      graphs with large chromatic number in <xref ref="s_ramsey_girth" /> where we show that there
+      illustration of the construction in the proof of Mycielski, we again refer to <xref ref="fig_graphs_chi4"/>. The graph shown is <m>\bfG_4</m>. We will return to the topic of
+      graphs with large chromatic number in <xref ref="s_ramsey_girth"/> where we show that there
       are graphs with large chromatic number which lack not only cliques of more than two vertices
       but also <em>cycles</em> of fewer than <m>g</m> vertices for <em>any</em> value of <m>g</m>.
       In other words, there is a graph <m>\bfG</m> with <m>\chi(\bfG)=10^6</m> but no cycle with
@@ -286,7 +283,7 @@
       subsection, we look at one approach to finding chromatic number and see a case where it does
       work efficiently. </p>
 
-    <p>A very na&#xef;ve algorithmic way to approach graph coloring is the First Fit, or <q>greedy</q>,
+    <p>A very na&#239;ve algorithmic way to approach graph coloring is the First Fit, or <q>greedy</q>,
       algorithm. For this algorithm, fix an ordering of the vertex set <m>V=\{v_1,v_2,\dots v_n\}</m>.
       We define the coloring function <m>\phi</m> one vertex at a time in increasing order of
       subscript. We begin with <m>\phi(v_1)=1</m> and then we define <m>\phi(v_{i+1})</m> (assuming
@@ -295,7 +292,8 @@
     <figure xml:id="fig_k44minus">
       <caption>Two orderings of the vertices of a bipartite graph.</caption>
       <image width="70%" label="img_k44minus">
-        <latex-image>
+        <description><p>Two orderings of the vertices of a bipartite graph.</p>
+      </description><latex-image>
 \begin{picture}(0,0)
     \put(0,76){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_1$}}}%
     \put(0,52){\raisebox{0mm}[0mm][0mm]{\makebox[0mm]{$v_3$}}}%
@@ -318,13 +316,12 @@
         </latex-image>
       </image>
     </figure>
-    <p><xref ref="fig_k44minus" /> shows two different orderings of the same graph. <xref
-        ref="ex_graphs_first-fit-color" /> demonstrates that the ordering of <m>V</m> is vital to
+    <p><xref ref="fig_k44minus"/> shows two different orderings of the same graph. <xref ref="ex_graphs_first-fit-color"/> demonstrates that the ordering of <m>V</m> is vital to
       the ability of the First Fit algorithm to color <m>\bfG</m> using <m>\chi(\bfG)</m> colors. In
       general, finding an optimal ordering is just as difficult as coloring <m>\bfG</m>. Thus, this
       very simple algorithm does not work well in general. However, for some classes of graphs,
       there is a <q>natural</q> ordering that leads to optimal performance of First Fit. Here is one
-      such example<mdash />one that we will study again in the next chapter in a different context. </p>
+      such example<mdash/>one that we will study again in the next chapter in a different context. </p>
 
     <p>Given an indexed family of sets <m>\cgF=\{S_\alpha:\alpha\in V\}</m>, we associate with <m>
       \cgF</m> a graph <m>\bfG</m> defined as follows. The vertex set of <m>\bfG</m> is the set <m>V</m>
@@ -338,13 +335,14 @@
         <h>graph</h>
         <h>interval</h>
       </idx> if it is the intersection graph of a family of closed intervals
-      of the real line <m>\reals</m>. For example, in <xref ref="fig_graphs_interval-graph" />, we
+      of the real line <m>\reals</m>. For example, in <xref ref="fig_graphs_interval-graph"/>, we
       show a collection of six intervals of the real line on the left. On the right, we show the
       corresponding interval graph having an edge between vertices <m>x</m> and <m>y</m> if and only
       if intervals <m>x</m> and <m>y</m> overlap. </p>
     <figure xml:id="fig_graphs_interval-graph">
       <caption>A collection of intervals and its interval graph</caption>
-      <image width="75%" source="interval-graph" />
+      <image width="75%" source="interval-graph"><description><p>A collection of intervals and its interval graph</p>
+      </description></image>
     </figure>
 
     <theorem xml:id="thm_intgraphcol">
@@ -372,8 +370,7 @@
         <h>graph</h>
         <h>perfect</h>
       </idx> if <m>\chi(\bfH)=\omega(\bfH)</m> for every induced subgraph <m>
-      \bfH</m>. Since an induced subgraph of an interval graph is an interval graph, <xref
-        ref="thm_intgraphcol" /> shows interval graphs are perfect. The study of perfect graphs
+      \bfH</m>. Since an induced subgraph of an interval graph is an interval graph, <xref ref="thm_intgraphcol"/> shows interval graphs are perfect. The study of perfect graphs
       originated in connection with the theory of communications networks and has proved to be a
       major area of research in graph theory for many years now. </p>
   </subsection>
@@ -381,26 +378,26 @@
     <exercise label="graphs_color_reading_high-degree">
       <statement>
         <p>
-          Describe reasonably clearly a graph Alice could have drawn to shock Bob in <xref ref="disc-graphs_color-intro" />.
+          Describe reasonably clearly a graph Alice could have drawn to shock Bob in <xref ref="disc-graphs_color-intro"/>.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="graphs_color_reading_recolor">
       <statement>
         <p>
-          Describe a way in which Dave could have recolored the graph in <xref ref="fig_graphs_chi4" /> to get a proper coloring using four colors.
+          Describe a way in which Dave could have recolored the graph in <xref ref="fig_graphs_chi4"/> to get a proper coloring using four colors.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="graphs_color_reading_firstfit">
       <statement>
         <p>
-          Use the First Fit algorithm to color the vertices of the graph in <xref ref="fig_k44minus" /> following each of the orderings given. How many colors does First Fit use when you use the ordering shown on the left? How many colors does First Fit use when you use the ordering shown on the right? Describe a generalization of this graph to a bipartite graph on <m>2n</m> vertices and ordering of its vertices that forces First Fit to use <m>n</m> colors.
+          Use the First Fit algorithm to color the vertices of the graph in <xref ref="fig_k44minus"/> following each of the orderings given. How many colors does First Fit use when you use the ordering shown on the left? How many colors does First Fit use when you use the ordering shown on the right? Describe a generalization of this graph to a bipartite graph on <m>2n</m> vertices and ordering of its vertices that forces First Fit to use <m>n</m> colors.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>
