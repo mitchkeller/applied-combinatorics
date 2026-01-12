@@ -212,4 +212,184 @@
         Any factors of <m>A</m> in <m>p(A)</m> could be dealt with by shifting solutions.</alert>
     </p>
   </handout>
+  <handout xml:id="notes-recurrence-rubots">
+    <title>Solving a Nonlinear Recurrence</title>
+    <page>
+    <paragraphs>
+      <title>RUBOTS</title>
+      <p>
+        <dl>
+          <li>
+            <title>Rooted</title>
+            <p component="b">
+              <nbsp/>
+            </p>
+            <p component="a">
+              One special vertex, drawn at the top
+            </p>
+          </li>
+          <li>
+            <title>Unlabeled</title>
+            <p component="b">
+              <nbsp/>
+            </p>
+            <p component="a">
+              Vertices don't have <q>names</q>, unlike when we counted labeled trees.
+            </p>
+          </li>
+          <li>
+            <title>Binary</title>
+            <p component="b">
+              <nbsp/>
+            </p>
+            <p component="a">
+              Every vertex has 0 or 2 children
+            </p>
+          </li>
+          <li>
+            <title>Ordered</title>
+            <p component="b">
+              <nbsp/>
+            </p>
+            <p component="a">
+              Left child and right child so that the tree in which the left child of the root has two children and the right has none is different to the tree in which the left child of the root has no children and the right child has two.
+            </p>
+          </li>
+          <li>
+            <title>Trees</title>
+            <p component="b">
+              <nbsp/>
+            </p>
+            <p component="a">
+              Connected, acyclic graphs.
+            </p>
+          </li>
+        </dl>
+      </p>
+      <p>
+        By convention, we want the <m>1</m>-vertex graph to be a RUBOT with one leaf.
+      </p>
+      <p>
+        Let <m>c_{n}</m> denote the number of RUBOTs with <m>n</m> <em>leaves</em>.
+        (<alert>NOT</alert> vertices!) Take <m>c_{0}=0</m> by convention.
+        The generating function for the number of RUBOTs is then <md>C(x)\displaystyle = \sum_{n=0}^{\infty} c_{n}x^{n} = \phantom{0+1x+2x^3+5x^4 + \cdots}</md>
+      </p>
+      <activity>
+        <statement>
+          <p workspace="3cm">
+            Find <m>c_{1}</m>, <m>c_{2}</m>, <m>c_{3}</m>, and <m>c_{4}</m> by drawing the RUBOTs with <m>1</m>, <m>2</m>, <m>3</m>, and <m>4</m> leaves and then start writing out <m>C(x)</m>.
+          </p>
+        </statement>
+      </activity>
+      <activity>
+        <title>Decomposing RUBOTs</title>
+        <task workspace="1cm">
+          <statement>
+            <p>
+              Let <m>l</m> and <m>r</m> be the left and right children, respectively, of the root of a RUBOT. How many RUBOTs with <m>17</m> leaves have <m>12</m> of those leaves descendants of <m>l</m> and <m>5</m> descendants of <m>r</m>? 
+            </p>
+          </statement>
+        </task>
+        <task workspace="1cm">
+          <statement>
+            <p>
+              Generalize to a formula for the number of RUBOTs with <m>n</m> leaves in which the left child has <m>k</m> leaves.
+            </p>
+          </statement>
+        </task>
+        <task workspace="4cm">
+          <statement>
+            <p>
+              Give a nonlinear recurrence for <m>c_{n}</m>.
+            </p>
+          </statement>
+        </task>
+      </activity>
+      </paragraphs>
+    </page>
+    <page>
+      <p>
+        <md>
+          <mrow> C(x) \amp = 0 + x + c_1c_1 x^2 + (c_1c_2+c_2c_1)x^3 + \cdots +
+            \sum_{k=1}^{n-1}c_k c_{n-k} x^n+ \cdots </mrow>
+          <mrow> C(x)\amp= 0 + x + (c_0c_2 + c_1c_1 +c_2c_0)x^2 + \cdots + \sum_{k=0}^{n}c_k c_{n-k} x^n+ \cdots </mrow>
+          <mrow> C^2(x) \amp = c_0^2 + (c_0c_1 + c_1c_0)x + (c_0c_2 +c_1c_1 + c_2c_0)x^2 + \cdots + \sum_{k=0}^{n}c_k c_{n-k} x^n+ \cdots</mrow>
+          <mrow> C(x) \amp= x+C^2(x) </mrow>
+        </md>
+      </p>
+      <activity workspace="2cm">
+        <statement>
+          <p>
+            Use the quadratic formula to solve
+            <me>
+              C^{2}(x) -C(x) + x = 0
+            </me>
+            for <m>C(x)</m>.
+          </p>
+        </statement>
+        <solution component="a">
+          <p>
+            <me>
+              C(x) = \frac{1\pm \sqrt{1-4x}}{2}= \frac{1}{2}\pm \frac{1}{2}(1-4x)^{1/2}
+            </me>
+          </p>
+        </solution>
+      </activity>
+      <p workspace="10cm">
+        Recall that <m>\displaystyle (1-4x)^{-1/2}= \sum_{n=0}^{\infty} \binom{2n}{n}x^{n}</m>.
+      </p>
+      <theorem>
+        <statement>
+          <p>
+            The generating function for the number <m>c_{n}</m> of rooted, unlabeled, binary, ordered trees with <m>n</m> leaves is
+            <me>
+              C(x) = \frac{1-\sqrt{1-4x}}{2}= \sum_{n=1}^{\infty} \frac{1}{n}\binom{2n-2}{n-1}x^{n}.
+            </me>
+          </p>
+        </statement>
+      </theorem>
+    </page>
+    <page>
+      <paragraphs>
+        <title>Ramsey Numbers</title>
+         
+         <definition>
+          <statement>
+            <p>
+              The <term>Ramsey number</term> <m>R(m,n)</m> is the least number <m>t</m> such that every graph on at least <m>t</m> vertices contains a clique of size <m>m</m> or an independent set of size <m>n</m>.
+            </p>
+          </statement>
+        </definition>
+        <activity>
+          <task workspace="2cm">
+            <p>
+              What is a clique? What is an independent set?
+            </p>
+          </task>
+          
+          <task workspace="1cm">
+            <p>
+              Explain why <m>R(2,2) = 2</m>.
+            </p>
+          </task>
+          
+          <task workspace="2cm">
+            <p>
+              Can you draw a <m>4</m>-vertex graph that has neither a <m>3</m>-clique nor an independent set of size <m>3</m>? What about <m>5</m> vertices? <m>6</m> vertices?
+            </p>
+          </task>
+        </activity>
+        <proposition xml:id="prop-r33">
+          <statement>
+            <p workspace="10cm">
+              The Ramsey number <m>R(3,3) =6</m>.
+            </p>
+          </statement>
+        </proposition>
+        <p>
+          Paul Erdős on <m>R(5,5)</m> vs <m>R(6,6)</m> and <url href="https://www.combinatorics.org/files/Surveys/ds1/ds1v16-2021.pdf"><pubtitle>Small Ramsey Numbers</pubtitle></url> by S.P. Radziszowski
+        </p>
+      </paragraphs>
+    </page>
+  </handout>
 </chapter>
