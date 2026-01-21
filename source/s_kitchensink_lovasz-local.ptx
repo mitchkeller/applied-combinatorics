@@ -1,16 +1,16 @@
 <section xml:id="s_kitchensink_lovasz-local">
-    <title>The Lov&#xe1;sz Local Lemma</title>
-    <p>Even though humans seem to have great difficulty in providing explicit constructions for exponentially large graphs which do not have complete subgraphs or independent sets of size<nbsp /><m>n</m>, such graphs exist with great abundance. Just take one at random and you are almost certain to get one. And as a general rule, probabilistic techniques often provide a method for finding something that readily exists, but is hard to find.
+    <title>The Lov&#225;sz Local Lemma</title>
+    <p>Even though humans seem to have great difficulty in providing explicit constructions for exponentially large graphs which do not have complete subgraphs or independent sets of size<nbsp/><m>n</m>, such graphs exist with great abundance. Just take one at random and you are almost certain to get one. And as a general rule, probabilistic techniques often provide a method for finding something that readily exists, but is hard to find.
     </p>
 
-    <p>Similarly, in the probabilistic proof that there exist graphs with large girth and large chromatic number (<xref ref="thm_girth"  />), we actually showed that almost all graphs have modest sized independence number and relatively few small cycles, provided that the edge probability is chosen appropriately. The small cycles can be destroyed without significantly changing the size of the graph.
+    <p>Similarly, in the probabilistic proof that there exist graphs with large girth and large chromatic number (<xref ref="thm_girth"/>), we actually showed that almost all graphs have modest sized independence number and relatively few small cycles, provided that the edge probability is chosen appropriately. The small cycles can be destroyed without significantly changing the size of the graph.
     </p>
 
-    <p>By way of contrast, probabilistic techniques can, in certain circumstances, be used to find something which is exceedingly rare. We next present an elegant but elementary result, known as the Lov&#xe1;sz Local Lemma, which has proved to be very, very powerful. The treatment is simplified by the following natural notation. When <m>E</m> is an event in a probability space, we let <m>\overline{E}</m> denote the complement of <m>E</m><notation><usage><m>\overline{E}</m></usage><description>complement of event <m>E</m></description></notation>. Also, when <m>\cgF=\{E_1,E_2,\dots,E_k\}</m> we let
+    <p>By way of contrast, probabilistic techniques can, in certain circumstances, be used to find something which is exceedingly rare. We next present an elegant but elementary result, known as the Lov&#225;sz Local Lemma, which has proved to be very, very powerful. The treatment is simplified by the following natural notation. When <m>E</m> is an event in a probability space, we let <m>\overline{E}</m> denote the complement of <m>E</m><notation><usage><m>\overline{E}</m></usage><description>complement of event <m>E</m></description></notation>. Also, when <m>\cgF=\{E_1,E_2,\dots,E_k\}</m> we let
     <me>
         \prod_{E\in\cgF}E=\prod_{i=1}^k E_i=E_1E_2E_3\dots E_k
     </me>
-    denote the event <m>E_1\cap E_2\cap\dots\cap E_k</m>, <ie />, concatenation is short hand for intersection. These notations can be mixed, so <m>E_1\overline{E_2}\overline{E_3}</m> represents <m>E_1\cap \overline{E_2}\cap\overline{E_3}</m>. Now let <m>\cgF</m> be a finite family of events, let <m>E\in\cgF</m> and let <m>\cgN</m> be a subfamily of <m>\cgF-\{E\}</m>. In the statement of the lemma below, we will say that <m>E</m> is independent of any event not in <m>\cgN</m> when
+    denote the event <m>E_1\cap E_2\cap\dots\cap E_k</m>, <ie/>, concatenation is short hand for intersection. These notations can be mixed, so <m>E_1\overline{E_2}\overline{E_3}</m> represents <m>E_1\cap \overline{E_2}\cap\overline{E_3}</m>. Now let <m>\cgF</m> be a finite family of events, let <m>E\in\cgF</m> and let <m>\cgN</m> be a subfamily of <m>\cgF-\{E\}</m>. In the statement of the lemma below, we will say that <m>E</m> is independent of any event not in <m>\cgN</m> when
     <me>
         P(E|\prod_{F\in\cgG}\overline{F})=P(E)
     </me>
@@ -21,8 +21,8 @@
     </p>
 
     <lemma xml:id="lem_LLL">
-        <title>Lov&#xe1;sz Local Lemma (Asymmetric)</title>
-        <idx><h>Lov&#xe1;sz Local Lemma</h><h>asymmetric</h></idx>
+        <title>Lov&#225;sz Local Lemma (Asymmetric)</title>
+        <idx><h>Lov&#225;sz Local Lemma</h><h>asymmetric</h></idx>
         <statement>
             <p>Let <m>\cgF</m> be a finite family of events in a probability space and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote a subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of any event not in <m>\cgN(E)</m>. Suppose that for each event <m>E\in\cgF</m>, there is a real number <m>x(E)</m> with <m>0\lt x(E)\lt 1</m> such that
             <me>
@@ -88,15 +88,15 @@
     </p>
 
     <lemma xml:id="lem_LLL-sym">
-        <title>Lov&#xe1;sz Local Lemma (Symmetric)</title>
-        <idx><h>Lov&#xe1;sz Local Lemma</h><h>symmetric</h></idx>
+        <title>Lov&#225;sz Local Lemma (Symmetric)</title>
+        <idx><h>Lov&#225;sz Local Lemma</h><h>symmetric</h></idx>
 
         <statement>
             <p>Let <m>p</m> and <m>d</m> be numbers with <m>0\lt p\lt 1</m> and <m>d\ge 1</m>. Also, let <m>\cgF</m> be a finite family of events in a probability space and for each event <m>E\in\cgF</m>, let <m>\cgN(E)</m> denote the subfamily of events from <m>\cgF-\{E\}</m> so that <m>E</m> is independent of any event not in <m>\cgN(E)</m>. Suppose that <m>P(E)\le p</m>, <m>|\cgN(E)|\le d</m> for every event <m>E\in\cgF</m> and that <m>ep(d+1)\lt 1</m>, where <m>e=2.71828\dots</m> is the base for natural logarithms. Then 
             <me>
                 P(\prod_{E\in\cgF}\overline{E})\ge\prod_{E\in\cgG}(1-x(E)),
             </me>
-            <ie />, the probability that all events in <m>\cgF</m> is positive.
+            <ie/>, the probability that all events in <m>\cgF</m> is positive.
             </p>
         </statement>
 
@@ -109,6 +109,6 @@
             </p>
         </proof>
     </lemma>
-    <p>A number of applications of the symmetric form of the Lov&#xe1;sz Local Lemma are stated in terms of the condition that <m>4pd\lt 1</m>. The proof of this alternate form is just a trivial modification of the argument we have presented here.
+    <p>A number of applications of the symmetric form of the Lov&#225;sz Local Lemma are stated in terms of the condition that <m>4pd\lt 1</m>. The proof of this alternate form is just a trivial modification of the argument we have presented here.
     </p>
 </section>

@@ -1,8 +1,8 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="s_intro_number">
   <title>Combinatorics and Number Theory</title>
-  <p>Broadly, number theory concerns itself with the properties of the positive integers. G.H.<nbsp />Hardy was a brilliant British mathematician who lived through both World Wars and conducted a large deal of number-theoretic research. He was also a pacifist who was happy that, from his perspective, his research was not <q>useful</q>. He wrote in his 1940 essay <pubtitle>A Mathematician's Apology</pubtitle> <q>[n]o one has yet discovered any warlike purpose to be served by the theory of numbers or relativity, and it seems very unlikely that anyone will do so for many years.</q><fn>G.H.<nbsp />Hardy, <pubtitle>A Mathematician's Apology</pubtitle>, Cambridge University Press, p. 140. (1993 printing)</fn> Little did he know, the purest mathematical ideas of number theory would soon become indispensable for the cryptographic techniques that kept communications secure. Our subject here is not number theory, but we will see a few times where combinatorial techniques are of use in number theory.</p>
+  <p>Broadly, number theory concerns itself with the properties of the positive integers. G.H.<nbsp/>Hardy was a brilliant British mathematician who lived through both World Wars and conducted a large deal of number-theoretic research. He was also a pacifist who was happy that, from his perspective, his research was not <q>useful</q>. He wrote in his 1940 essay <pubtitle>A Mathematician's Apology</pubtitle> <q>[n]o one has yet discovered any warlike purpose to be served by the theory of numbers or relativity, and it seems very unlikely that anyone will do so for many years.</q><fn>G.H.<nbsp/>Hardy, <pubtitle>A Mathematician's Apology</pubtitle>, Cambridge University Press, p. 140. (1993 printing)</fn> Little did he know, the purest mathematical ideas of number theory would soon become indispensable for the cryptographic techniques that kept communications secure. Our subject here is not number theory, but we will see a few times where combinatorial techniques are of use in number theory.</p>
   <example xml:id="ex_collatz"><idx><h>Collatz sequence</h></idx>
-      <p>Form a sequence of positive integers using the following rules. Start with a positive integer <m>n>1</m>. If <m>n</m> is odd, then the next number is <m>3n+1</m>. If <m>n</m> is even, then the next number is <m>n/2</m>. Halt if you ever reach<nbsp /><m>1</m>. For example, if we start with <m>28</m>, the sequence is
+      <p>Form a sequence of positive integers using the following rules. Start with a positive integer <m>n&gt;1</m>. If <m>n</m> is odd, then the next number is <m>3n+1</m>. If <m>n</m> is even, then the next number is <m>n/2</m>. Halt if you ever reach<nbsp/><m>1</m>. For example, if we start with <m>28</m>, the sequence is
       <me>
         28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.
       </me>
@@ -16,7 +16,7 @@
         by this rule are called <term>Collatz sequences</term>.
       </p>
 
-      <p>Pick a number somewhere between <m>100</m> and <m>200</m> and write down the sequence you get. Regardless of your choice, you will eventually halt with a<nbsp /><m>1</m>. However, is there some positive integer <m>n</m> (possibly quite large) so that if you start from <m>n</m>, you will never reach<nbsp /><m>1</m>?
+      <p>Pick a number somewhere between <m>100</m> and <m>200</m> and write down the sequence you get. Regardless of your choice, you will eventually halt with a<nbsp/><m>1</m>. However, is there some positive integer <m>n</m> (possibly quite large) so that if you start from <m>n</m>, you will never reach<nbsp/><m>1</m>?
       </p>
   </example>
 
@@ -45,10 +45,10 @@
     is the product of two primes <m>a</m> and <m>b</m>. Can you find them?
     </p>
 
-    <p>What if factoring is hard? Can you find the least common multiple of two relatively large integers, say each with about<nbsp /><m>500</m> digits, by another method? How should middle school students be taught to add fractions?
+    <p>What if factoring is hard? Can you find the least common multiple of two relatively large integers, say each with about<nbsp/><m>500</m> digits, by another method? How should middle school students be taught to add fractions?
       </p>
 
-      <p>As an aside, we note that most calculators can't add or multiply two <m>20</m> digits numbers, much less two numbers with more than<nbsp /><m>500</m> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known commercial examples are <em>Maple</em><registered /> and <em>Mathematica</em><registered />. In this text, we will from time to time, make use of the open source computer algebra system <url href="http://www.sagemath.org" visual="sagemath.org">SageMath</url>. We will sometimes embed interactive SageMath cells in the text, but you can also use SageMath for free online via <url href="http://cocalc.com/" visual="cocalc.com">CoCalc</url>. For example, the SageMath cell below will produce the factorization shown above.</p>
+      <p>As an aside, we note that most calculators can't add or multiply two <m>20</m> digits numbers, much less two numbers with more than<nbsp/><m>500</m> digits. But it is relatively straightforward to write a computer program that will do the job for us. Also, there are some powerful mathematical software tools available. Two very well known commercial examples are <em>Maple</em><registered/> and <em>Mathematica</em><registered/>. In this text, we will from time to time, make use of the open source computer algebra system <url href="http://www.sagemath.org" visual="sagemath.org">SageMath</url>. We will sometimes embed interactive SageMath cells in the text, but you can also use SageMath for free online via <url href="http://cocalc.com/" visual="cocalc.com">CoCalc</url>. For example, the SageMath cell below will produce the factorization shown above.</p>
 
       <sage>
         <input>factor(300914426505000)</input>
@@ -83,14 +83,14 @@ a*b</input>
   <example>
     <statement>
       <p>
-        In <xref ref="fig_intro_partsof8"  />, we show the integer partitions
-        of<nbsp /><m>8</m>.
+        In <xref ref="fig_intro_partsof8"/>, we show the integer partitions
+        of<nbsp/><m>8</m>.
       </p>
-      <figure xml:id="fig_intro_partsof8" >
+      <figure xml:id="fig_intro_partsof8">
           <caption>The partitions of <m>8</m>, noting those into distinct parts
           and those into odd parts.</caption>
           <sidebyside>
-              <ul  cols="2">
+              <ul cols="2">
                   <li>8 distinct parts</li>
                   <li>7+1 distinct parts, odd parts</li>
                   <li>6+2 distinct parts</li>
@@ -117,9 +117,9 @@ a*b</input>
           </sidebyside>
       </figure>
       <p>
-        There are<nbsp /><m>22</m> partitions altogether, and as noted, exactly<nbsp /><m>6</m>
-        of them are partitions of<nbsp /><m>8</m> into odd parts. Also, exactly<nbsp /><m>6</m> of them
-        are partitions of<nbsp /><m>8</m> into distinct parts.
+        There are<nbsp/><m>22</m> partitions altogether, and as noted, exactly<nbsp/><m>6</m>
+        of them are partitions of<nbsp/><m>8</m> into odd parts. Also, exactly<nbsp/><m>6</m> of them
+        are partitions of<nbsp/><m>8</m> into distinct parts.
       </p>
 
       <p>

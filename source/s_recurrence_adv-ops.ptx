@@ -4,7 +4,7 @@
 
   <introduction>
     <p>Much of our motivation for solving recurrence equations comes from an analogous problem in
-      continuous mathematics<mdash />differential equations. You don't need to have studied these
+      continuous mathematics<mdash/>differential equations. You don't need to have studied these
       beasts before in order to understand what we will do in the remainder of this chapter, but if
       you have, the motivation for how we tackle the problems will be clearer. As their name
       suggests, differential equations involve derivatives, which we will denote using <q>operator</q>
@@ -55,7 +55,7 @@
         </me>
       </p>
     </example>
-    <p>As an analogue of <xref ref="ex_recurrence_diffeq" />, consider the following simple example
+    <p>As an analogue of <xref ref="ex_recurrence_diffeq"/>, consider the following simple example
       involving the advancement operator. </p>
     <example xml:id="ex_recurrence_adveq">
       <statement>
@@ -68,7 +68,7 @@
           f(0)=3</m> and <me>
             Af(n) = 2f(n),\qquad n\geq 0.
           </me> What function has
-          the property that when we advance it, <ie />, evaluate it at <m>n+1</m>, it gives twice
+          the property that when we advance it, <ie/>, evaluate it at <m>n+1</m>, it gives twice
           the value that it takes at <m>n</m>? The first function that comes into your mind should
           be <m>2^n</m>. Of course, just like with our differential equation, for any constant <m>c</m>
           , <m>c2^n</m> also has this property. This suggests that if we take <m>f(n) = c2^n</m>,
@@ -91,8 +91,7 @@
       \complexes</m> form a vector space and <m>A</m> is a linear operator on that space. We won't
       dwell on the technical aspects of this, and no knowledge of linear algebra is required to
       understand our development of techniques to solve recurrence equations. However, if you're
-      interested in more placing everything we do on rigorous footing, we discuss this further in <xref
-        ref="s_recurrence_rigorous" />. </p>
+      interested in more placing everything we do on rigorous footing, we discuss this further in <xref ref="s_recurrence_rigorous"/>. </p>
   </introduction>
 
 
@@ -105,10 +104,9 @@
     <p>It is easy to see that a linear recurrence equation can be conveniently rewritten using a
       polynomial <m>p(A)</m> of the advancement operator: <men xml:id="eqn_advance">
         p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g.
-      </men> In <xref
-        ref="eqn_advance" />, we intend that <m>k\ge1</m> is an integer, <m>g</m> is a fixed vector
+      </men> In <xref ref="eqn_advance"/>, we intend that <m>k\ge1</m> is an integer, <m>g</m> is a fixed vector
       (function) from <m>V</m>, and <m>c_0,c_1,\dots, c_k</m> are constants with <m>c_0,c_k\neq0</m>.
-      Note that since <m>c_0\neq0</m>, we can divide both sides by <m>c_0</m>, <ie />, we may in
+      Note that since <m>c_0\neq0</m>, we can divide both sides by <m>c_0</m>, <ie/>, we may in
       fact assume that <m>c_0=1</m> whenever convenient to do so. </p>
   </subsection>
 
@@ -138,14 +136,14 @@
       term, since being able to solve such problems is all we need in order to solve the larger
       class of problems. </p>
 
-    <p>As a special case, consider the equation <m>A^m f =g</m>. This requires <m>f(n+m)=g(n)</m>, <ie />
+    <p>As a special case, consider the equation <m>A^m f =g</m>. This requires <m>f(n+m)=g(n)</m>, <ie/>
       , <m>f</m> is just a translation of <m>g</m>. </p>
   </subsection>
   <reading-questions xml:id="rqs-recurrence_adv-ops" component="runestone">
     <exercise label="rq-recurrence_adv-ops_rewrite">
       <statement>
         <p>
-          For this question, we consider the recurrence equation <m>g(n+2) = 5g(n+1) -2g(n)</m>, which we have written in function notation rather than using the subscript-heavy sequence notation. Rewrite this recurrence equation as an advancement operator equation in the style of <xref ref="eqn_advance" />: <m>p(A)g = h</m>. 
+          For this question, we consider the recurrence equation <m>g(n+2) = 5g(n+1) -2g(n)</m>, which we have written in function notation rather than using the subscript-heavy sequence notation. Rewrite this recurrence equation as an advancement operator equation in the style of <xref ref="eqn_advance"/>: <m>p(A)g = h</m>. 
         </p>
       </statement>
       <hint>
@@ -153,7 +151,7 @@
           In <xref ref="ex_recurrence_adveq"/>, the form we would have arrived at by getting all copies of <m>f(n)</m> on one side would be <m>(A-2)f = 0</m>, so <m>p(A) = A-2</m> in that example.
         </p>
       </hint>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

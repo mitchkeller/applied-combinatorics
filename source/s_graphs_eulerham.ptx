@@ -2,16 +2,17 @@
   <title>Eulerian and Hamiltonian Graphs</title>
   <p>Graph theory is an area of mathematics that has found many applications in a variety of
     disciplines. Throughout this text, we will encounter a number of them. However, graph theory
-    traces its origins to a problem in K&#xf6;nigsberg, Prussia (now Kaliningrad, Russia) nearly
+    traces its origins to a problem in K&#246;nigsberg, Prussia (now Kaliningrad, Russia) nearly
     three centuries ago. The river Pregel passes through the city, and there are two large islands
     in the middle of the channel. These islands were connected to the mainland by seven bridges as
-    indicated in <xref ref="fig_bridges" />. It is said that the citizens of K&#xf6;nigsberg often
+    indicated in <xref ref="fig_bridges"/>. It is said that the citizens of K&#246;nigsberg often
     wondered if it was possible for one to leave his home, walk through the city in such a way that
     he crossed each bridge precisely one time, and end up at home again. Leonhard Euler settled this
-    problem in 1736 by using graph theory in the form of <xref ref="thm_eulerian" />. </p>
+    problem in 1736 by using graph theory in the form of <xref ref="thm_eulerian"/>. </p>
   <figure xml:id="fig_bridges">
-    <caption>The bridges of K&#xf6;nigsberg</caption>
-    <image width="65%" source="konigsberg_bridges" />
+    <caption>The bridges of K&#246;nigsberg</caption>
+    <image width="65%" source="konigsberg_bridges"><description><p>The bridges of K&#246;nigsberg</p>
+    </description></image>
   </figure>
   <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><idx>
       <h>graph</h>
@@ -92,10 +93,10 @@
         x_ix_{i+1}</m> as exiting <m>x_i</m> and entering <m>x_{i+1}</m>. The degree of every vertex
         must be even, since for each vertex <m>x</m>, the number of edges exiting <m>x</m> equals
         the number of edges entering <m>x</m>. Furthermore, each edge incident with <m>x</m> either
-        exits from <m>x</m> or enters<nbsp /><m>x</m>. </p>
+        exits from <m>x</m> or enters<nbsp/><m>x</m>. </p>
 
-      <p>We now describe a deterministic process that will either (a)<nbsp />find an eulerian
-        circuit, (b)<nbsp />show that the graph is disconnected, or (c)<nbsp />find a vertex of odd
+      <p>We now describe a deterministic process that will either (a)<nbsp/>find an eulerian
+        circuit, (b)<nbsp/>show that the graph is disconnected, or (c)<nbsp/>find a vertex of odd
         degree. The description is simplified by assuming that the vertices in <m>\bfG</m> have been
         labelled with the positive integers <m>1,2,\dots,n</m>, where <m>n</m> is the number of
         vertices in <m>\bfG</m>. Furthermore, we take <m>x_0=1</m>. </p>
@@ -161,7 +162,7 @@
                     If all vertices of <m>C</m> have all their edges traversed, then return the vertices of <m>C</m> as a connected component of <m>\bfG</m> with an edge not traversed by <m>C</m> demonstrating that <m>\bfG</m> is not connected.
                   </p>
                 </li>
-                <li >
+                <li>
                   <p>
                     If <m>C</m> has a vertex incident with an edge that has not been traversed, call that vertex <m>u_0</m>. Construct a walk <m>W</m> starting from <m>u_0</m>. From vertex <m>u_i</m>, follow the edge traversed by neither <m>C</m> nor <m>W</m> going to the neighbor of <m>u_i</m> with smallest label.
                   </p>
@@ -197,7 +198,7 @@
     </statement>
   </algorithm>
 
-  <p>As an example, consider the graph <m>\bfG</m> shown in <xref ref="fig_graphs_eulerexample" />.
+  <p>As an example, consider the graph <m>\bfG</m> shown in <xref ref="fig_graphs_eulerexample"/>.
     Evidently, this graph is connected and all vertices have even degree. Here is the sequence of
     circuits starting with the trivial circuit <m>C</m> consisting only of the vertex <m>1</m>.
     <md>
@@ -210,17 +211,19 @@
   </p>
   <figure xml:id="fig_graphs_eulerexample">
     <caption>An Eulerian Graph</caption>
-    <image width="55%" source="eulerian_graph" />
+    <image width="55%" source="eulerian_graph"><description><p>An Eulerian Graph</p>
+    </description></image>
   </figure>
-  <p>You should note that <xref ref="thm_eulerian" /> holds for loopless graphs in which multiple
-    edges are allowed. Euler used his theorem to show that the multigraph of K&#xf6;nigsberg shown
-    in <xref ref="fig_bridges-graph" />, in which each land mass is a vertex and each bridge is an
+  <p>You should note that <xref ref="thm_eulerian"/> holds for loopless graphs in which multiple
+    edges are allowed. Euler used his theorem to show that the multigraph of K&#246;nigsberg shown
+    in <xref ref="fig_bridges-graph"/>, in which each land mass is a vertex and each bridge is an
     edge, is <em>not</em> eulerian, and thus the citizens could not find the route they desired.
-    (Note that in <xref ref="fig_bridges-graph" /> there are multiple edges between the same pair of
+    (Note that in <xref ref="fig_bridges-graph"/> there are multiple edges between the same pair of
     vertices.) </p>
   <figure xml:id="fig_bridges-graph">
-    <caption>The multigraph of K&#xf6;nigsberg's bridges</caption>
-    <image width="13%" source="konigsberg_graph" />
+    <caption>The multigraph of K&#246;nigsberg's bridges</caption>
+    <image width="13%" source="konigsberg_graph"><description><p>The multigraph of K&#246;nigsberg's bridges</p>
+    </description></image>
   </figure>
 
   <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><idx>
@@ -236,17 +239,19 @@
       <h>cycle</h>
     </idx>
   </p>
-  <p>The first graph shown in <xref ref="fig_eulham" /> both eulerian and hamiltonian. The second is
+  <p>The first graph shown in <xref ref="fig_eulham"/> both eulerian and hamiltonian. The second is
     hamiltonian but not eulerian. </p>
   <figure xml:id="fig_eulham">
     <caption>Eulerian and Hamiltonian Graphs</caption>
-    <image width="80%" source="eulerian_hamiltonian_crop" />
+    <image width="80%" source="eulerian_hamiltonian_crop"><description><p>Eulerian and Hamiltonian Graphs</p>
+    </description></image>
   </figure>
-  <p>In <xref ref="fig_petersen" />, we show a famous graph known as the Petersen graph. It is not
+  <p>In <xref ref="fig_petersen"/>, we show a famous graph known as the Petersen graph. It is not
     hamiltonian. </p>
   <figure xml:id="fig_petersen">
     <caption>The Petersen Graph</caption>
-    <image width="50%" source="petersen_graph" />
+    <image width="50%" source="petersen_graph"><description><p>The Petersen Graph</p>
+    </description></image>
   </figure>
   <p>Unlike the situation with eulerian circuits, there is no known method for quickly determining
     whether a graph is hamiltonian. However, there are a number of interesting conditions which are
@@ -285,23 +290,23 @@
           Write a couple of sentences to explain informally the difference between a graph being eulerian and a graph being hamiltonian. If possible, give an example (other than the rather silly bridge problem in the text) where each concept would be useful.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="graphs_eulerham_reading_noneuler">
       <statement>
         <p>
-          Briefly but specifically explain why the graph <m>\bfH</m> in <xref ref="fig_eulham" /> is not eulerian.
+          Briefly but specifically explain why the graph <m>\bfH</m> in <xref ref="fig_eulham"/> is not eulerian.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="graphs_eulerham_reading_euler">
       <statement>
         <p>
-          Try your hand at finding the eulerian circuit in <m>\bfG</m> in <xref ref="fig_eulham" /> by following the method illustrated in the text. Instead of giving all the steps or the final circuit here, just give the circuit that you come up with after the initial trivial circuit <m>(1)</m>.
+          Try your hand at finding the eulerian circuit in <m>\bfG</m> in <xref ref="fig_eulham"/> by following the method illustrated in the text. Instead of giving all the steps or the final circuit here, just give the circuit that you come up with after the initial trivial circuit <m>(1)</m>.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

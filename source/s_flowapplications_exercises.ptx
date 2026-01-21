@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <exercises xml:id="s_flowapplications_exercises">
     <exercise>
         <statement>
-            <p>Use the techniques of this chapter to find a maximum matching from <m>V_1</m> to <m>V_2</m> in the graph shown in <xref ref="fig_flowapplications_matching_ex1" />. The vertices on the bottom are the set <m>V_1</m>, while the vertices on the top are the set <m>V_2</m>. If you cannot find a matching that saturates all of the vertices in <m>V_1</m>, explain why.
+            <p>Use the techniques of this chapter to find a maximum matching from <m>V_1</m> to <m>V_2</m> in the graph shown in <xref ref="fig_flowapplications_matching_ex1"/>. The vertices on the bottom are the set <m>V_1</m>, while the vertices on the top are the set <m>V_2</m>. If you cannot find a matching that saturates all of the vertices in <m>V_1</m>, explain why.
             </p>
             <figure xml:id="fig_flowapplications_matching_ex1">
                 <caption>Is there a matching saturating <m>V_1</m>?</caption>
-                <image width="30%" source="matching_ex1"/>
+                <image width="30%" source="matching_ex1"><description><p>Is there a matching saturating <m>V_1</m>?</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Use the techniques of this chapter to find a maximum matching from <m>V_1</m> to <m>V_2</m> in the graph shown in <xref ref="fig_flowapplications_matching_ex2" />. The vertices on the bottom are the set <m>V_1</m>, while the vertices on the top are the set <m>V_2</m>. If you cannot find a matching that saturates all of the vertices in <m>V_1</m>, explain why.</p>
+            <p>Use the techniques of this chapter to find a maximum matching from <m>V_1</m> to <m>V_2</m> in the graph shown in <xref ref="fig_flowapplications_matching_ex2"/>. The vertices on the bottom are the set <m>V_1</m>, while the vertices on the top are the set <m>V_2</m>. If you cannot find a matching that saturates all of the vertices in <m>V_1</m>, explain why.</p>
             <figure xml:id="fig_flowapplications_matching_ex2">
                 <caption>Is there a matching saturating <m>V_1</m>?</caption>
-                <image width="35%" source="matching_ex2"/>
+                <image width="35%" source="matching_ex2"><description><p>Is there a matching saturating <m>V_1</m>?</p>
+                </description></image>
             </figure>
         </statement>
     </exercise>
@@ -30,7 +31,7 @@
             </p>
             <sidebyside>
                 <tabular>
-                    <col halign="right" /> <col />
+                    <col halign="right"/> <col/>
                     <row bottom="minor"><cell>School</cell><cell>Player numbers</cell></row>
                     <row><cell>Boston College</cell><cell>1, 3, 4</cell></row>
                     <row><cell>Clemson University</cell><cell>1, 3, 4, 6</cell></row>
@@ -45,7 +46,7 @@
     </exercise>
     <exercise>
         <statement>
-            <p>The questions in this exercise refer to the network diagram in <xref ref="fig_flowapplications_poset_network_ex1" />. This network corresponds to a poset <m>\bfP</m>. As usual, all capacities are assumed to be <m>1</m>, and all edges are directed upward. Answer the following questions about <m>\bfP</m> <em>without drawing the diagram of the poset</em>.
+            <p>The questions in this exercise refer to the network diagram in <xref ref="fig_flowapplications_poset_network_ex1"/>. This network corresponds to a poset <m>\bfP</m>. As usual, all capacities are assumed to be <m>1</m>, and all edges are directed upward. Answer the following questions about <m>\bfP</m> <em>without drawing the diagram of the poset</em>.
                   <ol>
                 <li><p>Which element(s) are greater than <m>x_1</m> in <m>\bfP</m>?</p></li>
                 <li><p>Which element(s) are less than <m>x_5</m> in <m>\bfP</m>?</p></li>
@@ -58,7 +59,8 @@
             <figure xml:id="fig_flowapplications_poset_network_ex1">
                 <caption>The network corresponding to a poset</caption>
                 <image width="40%">
-                    <latex-image>\begin{overpic}[scale=0.6]{external/poset_network_ex1}
+                    <description><p>The network corresponding to a poset</p>
+                </description><latex-image>\begin{overpic}[scale=0.6]{external/poset_network_ex1}
                     \put(47,-7){\(S\)}
                     \put(47,91){\(T\)}
                     \put(3,15){\(x_1'\)}      \put(90,15){\(x_6'\)}
@@ -71,21 +73,22 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Draw the diagram of the poset that corresponds to the network in <xref ref="fig_flowapplications_poset_network_ex1" />.</p>
+            <p>Draw the diagram of the poset that corresponds to the network in <xref ref="fig_flowapplications_poset_network_ex1"/>.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>Use the methods developed in this chapter to find the width <m>w</m> of the poset corresponding to the network in <xref ref="fig_flowapplications_poset_network_ex1" />. Also find an antichain of size <m>w</m> and a partition into <m>w</m> chains.</p>
+            <p>Use the methods developed in this chapter to find the width <m>w</m> of the poset corresponding to the network in <xref ref="fig_flowapplications_poset_network_ex1"/>. Also find an antichain of size <m>w</m> and a partition into <m>w</m> chains.</p>
         </statement>
     </exercise>
     <exercise>
         <statement>
-            <p>In <xref ref="fig_flowapplications_poset_network_ex" /> we show a poset <m>\bfP</m> and a network used to find a chain partition of <m>\bfP</m>. (All edges in the network have a capacity of <m>1</m> and are directed from bottom to top. The bold edges currently carry a flow of <m>1</m>.) Using the network, find the width <m>w</m> of <m>\bfP</m>, a partition of <m>\bfP</m> into <m>w</m> chains, and an antichain with <m>w</m> elements.</p>
+            <p>In <xref ref="fig_flowapplications_poset_network_ex"/> we show a poset <m>\bfP</m> and a network used to find a chain partition of <m>\bfP</m>. (All edges in the network have a capacity of <m>1</m> and are directed from bottom to top. The bold edges currently carry a flow of <m>1</m>.) Using the network, find the width <m>w</m> of <m>\bfP</m>, a partition of <m>\bfP</m> into <m>w</m> chains, and an antichain with <m>w</m> elements.</p>
             <figure xml:id="fig_flowapplications_poset_network_ex">
                 <caption>A poset and the corresponding network diagram</caption>
                 <image width="85%">
-                    <latex-image>\begin{overpic}[scale=0.5]{external/chain-partition}
+                    <description><p>A poset and the corresponding network diagram</p>
+                </description><latex-image>\begin{overpic}[scale=0.5]{external/chain-partition}
                     \put(2,21){\(x_1\)}
                     \put(32,25){\(x_2\)}
                     \put(17,21){\(x_3\)}
@@ -106,12 +109,13 @@
     </exercise>
     <exercise>
         <statement>
-            <p>Draw the network corresponding to the poset <m>\bfP</m> shown in <xref ref="fig_flowapplications_poset_ex" />. Use the network to find the width <m>w</m> of <m>\bfP</m>, a partition into <m>w</m> chains, and an antichain of size <m>w</m>.
+            <p>Draw the network corresponding to the poset <m>\bfP</m> shown in <xref ref="fig_flowapplications_poset_ex"/>. Use the network to find the width <m>w</m> of <m>\bfP</m>, a partition into <m>w</m> chains, and an antichain of size <m>w</m>.
             </p>
             <figure xml:id="fig_flowapplications_poset_ex">
                 <caption>A poset</caption>
                 <image width="40%">
-                    <latex-image>\begin{overpic}[scale=0.5]{external/poset_ex}
+                    <description><p>A poset</p>
+                </description><latex-image>\begin{overpic}[scale=0.5]{external/poset_ex}
                     \put(55,48){\(x_1\)}
                     \put(45,-2){\(x_2\)}
                     \put(27,72){\(x_3\)}

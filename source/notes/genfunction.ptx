@@ -1,4 +1,4 @@
-<chapter xml:id="notes-genfunction" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-genfunction">
   <title>Generating Functions</title>
   <handout>
     <title>Introduction to Ordinary Generating Functions</title>
@@ -77,8 +77,8 @@
       <paragraphs>
         <title>Handing stuff out again</title>
         <p>
-          Suppose you wanted to make a really boring “fruit” basket that contains only apples.
-          Let’s also say that you have only <m>6</m> (identical) apples available.
+          Suppose you wanted to make a really boring &#8220;fruit&#8221; basket that contains only apples.
+          Let&#8217;s also say that you have only <m>6</m> (identical) apples available.
           For aesthetic reasons, you insist that the basket contain exactly <m>1</m>, <m>3</m>, or <m>4</m> apples.
         </p>
         <p>
@@ -88,7 +88,7 @@
           The generating function for the number of fruit baskets with <m>n</m> apples subject to these rules is
         </p>
         <p>
-          Now we’ve got oranges, too! We have six (identical) oranges to use in fruit baskets, and we don’t care about aesthetics for oranges.
+          Now we&#8217;ve got oranges, too! We have six (identical) oranges to use in fruit baskets, and we don&#8217;t care about aesthetics for oranges.
           (Still only allow 1, 3, or 4 apples.)
         </p>
         
@@ -425,7 +425,7 @@
             </p>
           </statement>
         </lemma>
-        <activity >
+        <activity>
           <task>
             <p>
               Use mathematical induction to show that for all <m>k\geq 0</m>, <m>\displaystyle \binom{-1/2}{k}= (-1)^{k}\frac{\binom{2k}{k}}{2^{2k}}</m>.
@@ -434,7 +434,7 @@
           <task workspace="7cm">
             <statement>
               <p>
-                Use Newton’s Binomial Theorem and the step above to write <m>(1-4x)^{-1/2}</m> as a formal power series in which the coefficient on <m>x^{n}</m> is a binomial coefficient in which both numbers are <alert>integers</alert>.
+                Use Newton&#8217;s Binomial Theorem and the step above to write <m>(1-4x)^{-1/2}</m> as a formal power series in which the coefficient on <m>x^{n}</m> is a binomial coefficient in which both numbers are <alert>integers</alert>.
               </p>
             </statement>
           </task>

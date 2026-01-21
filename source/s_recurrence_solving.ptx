@@ -3,7 +3,7 @@
   <introduction>
     <p>In this section, we will explore some ways of solving advancement operator equations. Some we
       will make up just for the sake of solving, while others will be drawn from the examples we
-      developed in <xref ref="s_recurrence_intro" />. Again, readers familiar with differential
+      developed in <xref ref="s_recurrence_intro"/>. Again, readers familiar with differential
       equations will notice many similarities between the techniques used here and those used to
       solve linear differential equations with constant coefficients, but we will not give any
       further examples to make those parallels explicit. </p>
@@ -18,8 +18,7 @@
     </p>
     <example xml:id="ex_recurrence_deg2">
       <statement>
-        <p> Find all solutions to the advancement operator equation <men
-            xml:id="eqn_recurrence_deg2">
+        <p> Find all solutions to the advancement operator equation <men xml:id="eqn_recurrence_deg2">
             (A^2+A-6)f = 0.
           </men>
         </p>
@@ -28,7 +27,7 @@
         <p>Before focusing on finding <em>all</em> solutions as we've been asked to do, let's just
           try to find <em>some</em> solution. We start by noticing that here <m>p(A) = A^2+A-6 =
           (A+3)(A-2)</m>. With <m>p(A)</m> factored like this, we realize that we've already solved
-          part of this problem in <xref ref="ex_recurrence_adveq" />! In that example, the
+          part of this problem in <xref ref="ex_recurrence_adveq"/>! In that example, the
           polynomial of <m>A</m> we encountered was (while not explicitly stated as such there) <m>
           A-2</m>. The solutions to <m>(A-2)f_1=0</m> are of the form <m>f_1(n) = c_12^n</m>. What
           happens if we try such a function here? We have <me>
@@ -36,11 +35,11 @@
           </me> so that <m>f_1</m>
           is a solution to our given advancement operator equation. Of course, it can't be <em>all</em>
           of them. However, it's not hard to see now that <m>(A+3)f_2 = 0</m> has as a solution <m>f_2(n)
-          = c_2(-3)^n</m> by the same reasoning that we used in <xref ref="ex_recurrence_adveq" />.
+          = c_2(-3)^n</m> by the same reasoning that we used in <xref ref="ex_recurrence_adveq"/>.
           Since <m>(A+3)(A-2) = (A-2)(A+3)</m>, we see right away that <m>f_2</m> is also a solution
-          of <xref ref="eqn_recurrence_deg2" />. </p>
+          of <xref ref="eqn_recurrence_deg2"/>. </p>
 
-        <p>Now we've got two infinite families of solutions to <xref ref="eqn_recurrence_deg2" />.
+        <p>Now we've got two infinite families of solutions to <xref ref="eqn_recurrence_deg2"/>.
           Do they give us <em>all</em> the solutions? It turns out that by combining them, they do
           in fact give all of the solutions. Consider what happens if we take <m>f(n) = c_1 2^n +
           c_2 (-3)^n</m> and apply <m>p(A)</m> to it. We have <md>
@@ -53,8 +52,8 @@
           </md>
         </p>
         <p>It's not all that hard to see that since <m>f</m> gives a two-parameter family of
-          solutions to <xref ref="eqn_recurrence_deg2" />, it gives us all the solutions, as we will
-          show in detail in <xref ref="s_recurrence_rigorous" />. </p>
+          solutions to <xref ref="eqn_recurrence_deg2"/>, it gives us all the solutions, as we will
+          show in detail in <xref ref="s_recurrence_rigorous"/>. </p>
       </solution>
     </example>
     <p>What happened in this example is far from a fluke. If you have an advancement operator
@@ -72,8 +71,7 @@
         <h>ternary</h>
       </idx>
       <p>Let's revisit the problem of enumerating ternary strings of length <m>n</m> that do have <m>
-        (2,0)</m> occurring as a substring in two consecutive positions that we encountered in <xref
-          ref="ex_recurrence_ternary-strings-no-20" />. There we saw that this number satisfies the
+        (2,0)</m> occurring as a substring in two consecutive positions that we encountered in <xref ref="ex_recurrence_ternary-strings-no-20"/>. There we saw that this number satisfies the
         recurrence equation <me>
           t_{n+2} = 3t_{n+1} - t_n,\qquad n\geq 1
         </me> and <m>t_1 = 3</m>
@@ -90,9 +88,7 @@
         This probably looks suspicious; we're <em>counting
           strings</em> here, so <m>t(n)</m> needs to be a nonnegative integer, but the form we've
         given includes not just fractions but also square roots! You can mimic the verification we
-        used in the previous example to see that this does satisfy <xref
-          ref="eqn_recurrence_ternary"
-        />. If that feels tedious, consider how you would use the
+        used in the previous example to see that this does satisfy <xref ref="eqn_recurrence_ternary"/>. If that feels tedious, consider how you would use the
         binomial theorem to expand the terms in this expression for <m>t(n)</m>. With appropriate
         values for <m>c_1</m> and <m>c_2</m>, it seems plausible that we could get rid of the square
         roots and fractions. Because we have initial values for <m>t(n)</m>, we are able to solve
@@ -230,7 +226,7 @@
         given set of initial conditions. </p>
 
       <p>When dealing with nonhomogeneous equations, we proceed in two steps. The reason for this
-        will be made clear in <xref ref="lem_particular" />, but let's focus on the method for the
+        will be made clear in <xref ref="lem_particular"/>, but let's focus on the method for the
         moment. Our first step is to find the general solution of the homogeneous equation
         corresponding to the given nonhomogeneous equation. In this case, the homogeneous equation
         we want to solve is <me>
@@ -322,7 +318,7 @@
     </p>
     <example xml:id="ex_recurrence_lines-solved">
       <p>We're now ready to answer the question of how many regions are determined by <m>n</m> lines
-        in the plane in general position as we discussed in <xref ref="s_recurrence_intro_lines" />.
+        in the plane in general position as we discussed in <xref ref="s_recurrence_intro_lines"/>.
         We have the recurrence equation <me>
           r_{n+1} = r_n + n+1,
         </me> which yields the nonhomogeneous
@@ -390,7 +386,7 @@
           Solve the advancement operator equation <m>(A+4)f(n) = 0</m> with the initial condition <m>f(0)=2</m>. In the box below, type your answer in the form <m>f(n) = \text{blah}</m> and briefly explain in couple of sentences how you arrived at this solution.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="rq-recurrence_solving-solve-plus-deg-two">
       <statement>
@@ -398,7 +394,7 @@
           Let <m>c_1</m> and <m>c_2</m> be constants and define <m>f(n) = c_1 3^n + c_2 (-4)^n</m>. Compute <me>(A+4)(A-3)f(n)</me> in two steps: First, compute <m>(A-3)f(n)</m> and in the box below tell me what you get for this first step after simplifying. (Please do not put all your work in the box!) Second, take your answer from the first step and apply <m>(A+4)</m> to it. In the box below, tell me what you get for this second step after simplifying.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

@@ -17,8 +17,7 @@
     exponential generating functions to solve problems that we could not tackle with ordinary
     generating functions. However, we will only scratch the surface of the potential of this type of
     generating function. We begin with the most fundamental exponential generating function, in
-    analogy with the ordinary generating function <m>1/(1-x)</m> of <xref
-      ref="exam_genfunction_geom-series" />. </p>
+    analogy with the ordinary generating function <m>1/(1-x)</m> of <xref ref="exam_genfunction_geom-series"/>. </p>
   <example>
     <p>Consider the constant sequence <m>1, 1, 1, 1, \dots</m>. Then the exponential generating
       function for this sequence is <me>
@@ -34,7 +33,7 @@
     </p>
   </example>
   <p>In our study of ordinary generating functions earlier in this chapter, we considered examples
-    where quantity (number of apples, <etc />) mattered but order did not. One of the areas where
+    where quantity (number of apples, <etc/>) mattered but order did not. One of the areas where
     exponential generating functions are preferable to ordinary generating functions is in
     applications where order matters, such as counting strings. For instance, although the bit
     strings <m>10001</m> and <m>011000</m> both contain three zeros and two ones, they are not the
@@ -155,17 +154,16 @@
     strings. For instance, they can be used to count the number of <m>n</m>-vertex, connected,
     labeled graphs. However, doing so is beyond the scope of this book. If you are interested in
     learning much more about generating functions, the book <pubtitle>generatingfunctionology</pubtitle>
-    by Herbert S. Wilf is available online at <url
-      href="http://www.math.upenn.edu/~wilf/DownldGF.html" />. 
+    by Herbert S. Wilf is available online at <url href="http://www.math.upenn.edu/~wilf/DownldGF.html"/>. 
     </p>
     <reading-questions xml:id="rqs-genfunction_exponential" component="runestone">
       <exercise label="rq-genfunction_exponential_passcode">
         <statement>
           <p>
-            Suppose Alice's mobile phone passcode restrictions in <xref ref="ex_genfunction_exponential_passcode" /> were modified so that the number of <m>3</m>s had to be at least two. Then one of the factors of <m>e^x</m> in the generating function would have to be replaced by what? You can express your answer as either a series or in terms of <m>e^x</m> with suitable adjustments.
+            Suppose Alice's mobile phone passcode restrictions in <xref ref="ex_genfunction_exponential_passcode"/> were modified so that the number of <m>3</m>s had to be at least two. Then one of the factors of <m>e^x</m> in the generating function would have to be replaced by what? You can express your answer as either a series or in terms of <m>e^x</m> with suitable adjustments.
           </p>
         </statement>
-        <response />
+        <response/>
       </exercise>
     </reading-questions>
 </section>

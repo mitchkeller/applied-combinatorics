@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<chapter xml:id="ws-posets" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-posets">
   
     <!-- </page> -->
      
@@ -28,7 +26,6 @@
     </activity>
     <sidebyside widths="30% 45%">
       <image width="30%">
-        <shortdescription>A poset with 10 points</shortdescription>
         <prefigure xmlns="https://prefigure.org" label="poset-antichain-part-10pts">
           <diagram dimensions="(200,300)" margins="15">
             <coordinates bbox="(0,0,2,4)">
@@ -47,9 +44,8 @@
             </coordinates>
           </diagram>        
         </prefigure>
-      </image>
+      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
       <image width="45%">
-        <shortdescription>A poset with 25 points</shortdescription>
         <prefigure xmlns="https://prefigure.org" label="poset-antichain-part-25pts">
           <diagram dimensions="(300,600)" margins="15">
             <coordinates bbox="(0,0,4,7)">
@@ -83,7 +79,7 @@
             </coordinates>
           </diagram>        
         </prefigure>
-      </image>
+      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
     </sidebyside>
   </worksheet>
   <worksheet xml:id="ws-posets-subset-lattice">
@@ -95,12 +91,11 @@
             Below are diagrams for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m>.
             (Without any of the points labeled with corresponding sets.) In the space provided, draw <m>\mbf{2}^{1}</m>, <m>\mbf{2}^{2}</m>, and <m>\mbf{2}^{3}</m>.
             (Label the sets, too.
-            You can just write “<m>12</m>” instead of “<m>\{1,2\}</m>”.) Label a few of the points in the diagrams provided for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m> to make sure you understand how to do it.
+            You can just write &#8220;<m>12</m>&#8221; instead of &#8220;<m>\{1,2\}</m>&#8221;.) Label a few of the points in the diagrams provided for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m> to make sure you understand how to do it.
           </p>
         </statement>
       </exercise>
       <image width="40%">
-        <shortdescription>The lattice of subsets of a 4-element set</shortdescription>
         <prefigure xmlns="https://prefigure.org" label="subset-lattice-4">
           <diagram dimensions="(300,240)" margins="15">
             <definition>graph={0:[1,2,3,4],1:[12,13,14],2:[12,23,24],3:[13,23,34],
@@ -108,8 +103,7 @@
               14:[124,134],
               1234:[123,124,134,234]}</definition>
               <coordinates bbox="(1,1,6,5)">
-                <network directed="no" graph="graph" arrows="end"
-                scale="0.8" node-fill="#ccc" node-stroke="black" labels="no">
+                <network directed="no" graph="graph" arrows="end" scale="0.8" node-fill="#ccc" node-stroke="black" labels="no">
                 <node at="0" p="(2,1)"/>
                 <node at="1" p="(1,2)"/>
                 <node at="2" p="(2,2)"/>
@@ -131,9 +125,8 @@
             </coordinates>
           </diagram>
         </prefigure>
-      </image>
+      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
       <image width="80%">
-        <shortdescription>The lattice of subsets of a 5-element set</shortdescription>
         <prefigure xmlns="https://prefigure.org" label="subset-lattice-5">
           <diagram dimensions="(600,280)" margins="15">
             <definition>graph={0:[1,2,3,4,5],1:[12,13,14,15],2:[12,23,24,25],3:[13,23,34,35],
@@ -148,8 +141,7 @@
               145:[1245,1345],
               12345:[1235,1245,1345,2345]}</definition>
               <coordinates bbox="(1,1,12,6)">
-                <network directed="no" graph="graph" arrows="end"
-                scale="0.8" node-fill="#ccc" node-stroke="black" labels="no">
+                <network directed="no" graph="graph" arrows="end" scale="0.8" node-fill="#ccc" node-stroke="black" labels="no">
                 <node at="0" p="(2,1)"/>
                 <node at="1" p="(1,2)"/>
                 <node at="2" p="(2,2)"/>
@@ -186,7 +178,7 @@
             </coordinates>
           </diagram>
         </prefigure>
-      </image>
+      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
       <exercise>
         <introduction>
           <p>
@@ -256,14 +248,14 @@
       <exercise workspace="0.5in">
         <statement>
           <p>
-            To be able to verify our conjecture, let’s think about a seemingly unrelated question: counting maximal chains in <m>\mbf{2}^{n}</m>. How many maximal chains are there in <m>\mbf{2}^{n}</m>? <em>Hint</em>: Start with <m>n=1,2,3</m>.
-              Think about the number of choices of the “next” set when forming a maximal chain.
+            To be able to verify our conjecture, let&#8217;s think about a seemingly unrelated question: counting maximal chains in <m>\mbf{2}^{n}</m>. How many maximal chains are there in <m>\mbf{2}^{n}</m>? <em>Hint</em>: Start with <m>n=1,2,3</m>.
+              Think about the number of choices of the &#8220;next&#8221; set when forming a maximal chain.
           </p>
         </statement>
         <!-- <hint>
             <p>
               Start with <m>n=1,2,3</m>.
-              Think about the number of choices of the “next” set when forming a maximal chain.
+              Think about the number of choices of the &#8220;next&#8221; set when forming a maximal chain.
             </p>
           </hint> -->
         
@@ -277,7 +269,7 @@
         <exercise>
           <introduction>
             <p>
-              Now let’s think about maximal chains through particular sets.
+              Now let&#8217;s think about maximal chains through particular sets.
               Look at <m>\mbf{2}^{5}</m>.
             </p>
           </introduction>
@@ -357,7 +349,7 @@
       <exercise workspace="1in">
         <statement>
           <p>
-            Now let’s see how we can use counting maximal chains through a set to get an upper bound on <m>\width(\mbf{2}^{n})</m>.
+            Now let&#8217;s see how we can use counting maximal chains through a set to get an upper bound on <m>\width(\mbf{2}^{n})</m>.
           </p>
           <p>
               Fix an antichain <m>\mc{A}=\{S_{1},S_{2},\dots,S_{t}\}</m> with <m>|S_{i}|=s_{i}</m>.
@@ -458,15 +450,13 @@
           <task workspace="4cm">
             <statement>
               <image width="40%" source="workbook/intrep-draw-diagram-1">
-                <shortdescription>An interval representation</shortdescription>
-              </image>
+                <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
             </statement>
           </task>
           <task workspace="8cm">
             <statement>
               <image width="65%" source="workbook/intrep-draw-diagram-2">
-                <shortdescription>An interval representation</shortdescription>
-              </image>
+                <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
             </statement>
           </task>
         </activity>

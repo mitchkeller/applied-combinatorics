@@ -25,7 +25,7 @@
             <statement>
                 <p>
                     Let <m>X</m> be a random variable in a probability
-                    space <m>(S,P)</m>. Then for every <m>k>0</m>,
+                    space <m>(S,P)</m>. Then for every <m>k&gt;0</m>,
                     <me>
                         P(|X|\ge k) \le E(|X|)/k.
                     </me>
@@ -33,11 +33,11 @@
             </statement>
 
             <proof>
-                <p>Of course, the inequality holds trivially unless <m>k> E(|X|)</m>. For <m>k</m> in this range, we establish the equivalent inequality: <m>k P(|X|\ge k)\le E(|X|)</m>.
+                <p>Of course, the inequality holds trivially unless <m>k&gt; E(|X|)</m>. For <m>k</m> in this range, we establish the equivalent inequality: <m>k P(|X|\ge k)\le E(|X|)</m>.
                 <md>
                     <mrow>  k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)</mrow>
                     <mrow>  \amp  \le \sum_{r \ge k} r P(|X|=r)</mrow>
-                    <mrow>  \amp  \le \sum_{r> 0} r P(|X|=r)</mrow>
+                    <mrow>  \amp  \le \sum_{r&gt; 0} r P(|X|=r)</mrow>
                     <mrow>  \amp = E(|X|).</mrow>
                 </md>
                 </p>
@@ -50,10 +50,10 @@
 
     <subsection>
         <title>Variance and Standard Deviation</title>
-        <p>Again, let <m>(S,P)</m> be a probability space and let <m>X</m> be a random variable.  The quantity <m>E((X-E(X))^2)</m> is called the <term>variance</term><idx><h>variance</h></idx> of <m>X</m> and is denoted <m>\var(X)</m>. Evidently, the variance of <m>X</m> is a non-negative number. The <term>standard deviation</term><idx><h>standard deviation</h></idx> of <m>X</m>, denoted <m>\sigma_X</m> is then defined as the quantity <m>\sqrt{\var(x)}</m>, <ie />, <m>\sigma_X^2 =\var(X)</m>.
+        <p>Again, let <m>(S,P)</m> be a probability space and let <m>X</m> be a random variable.  The quantity <m>E((X-E(X))^2)</m> is called the <term>variance</term><idx><h>variance</h></idx> of <m>X</m> and is denoted <m>\var(X)</m>. Evidently, the variance of <m>X</m> is a non-negative number. The <term>standard deviation</term><idx><h>standard deviation</h></idx> of <m>X</m>, denoted <m>\sigma_X</m> is then defined as the quantity <m>\sqrt{\var(x)}</m>, <ie/>, <m>\sigma_X^2 =\var(X)</m>.
         </p>
         <example>
-            <p>For the spinner shown at the beginning of the chapter, let <m>X(i)=i^2</m> when the pointer stops in region<nbsp /><m>i</m>. Then we have already noted that the expectation <m>E(X)</m> of the random variable <m>X</m> is <m>109/8</m>. It follows that the variance <m>\var(X)</m> is:
+            <p>For the spinner shown at the beginning of the chapter, let <m>X(i)=i^2</m> when the pointer stops in region<nbsp/><m>i</m>. Then we have already noted that the expectation <m>E(X)</m> of the random variable <m>X</m> is <m>109/8</m>. It follows that the variance <m>\var(X)</m> is:
             <md>
                 <mrow>  \var(X) =\amp(1^2-\frac{109}{8})^2\frac{1}{8}+(2^2-\frac{109}{8})^2\frac{1}{4}+
                 (3^2-\frac{109}{8})^2\frac{1}{8}+(4^2-\frac{109}{8})^2\frac{1}{8}</mrow>
@@ -78,7 +78,7 @@
                 \var(X_1+X_2+\dots+X_n)=\var(X_1)+\var(X_2)+\dots+\var(X_n).
             </me>
             </p>
-            <p>With the aid of this observation, the calculation of the variance of the random variable <m>X</m> which counts the number of successes becomes a trivial calculation. But in fact, the entire treatment we have outlined here is just a small part of a more complex subject which can be treated more elegantly and ultimately much more compactly<mdash />provided you first develop additional background material on families of random variables. For this we will refer you to suitable probability and statistics texts, such as those given in our references.
+            <p>With the aid of this observation, the calculation of the variance of the random variable <m>X</m> which counts the number of successes becomes a trivial calculation. But in fact, the entire treatment we have outlined here is just a small part of a more complex subject which can be treated more elegantly and ultimately much more compactly<mdash/>provided you first develop additional background material on families of random variables. For this we will refer you to suitable probability and statistics texts, such as those given in our references.
             </p>
         </example>
 
@@ -106,7 +106,7 @@
         <theorem xml:id="thm_chebyshev">
             <title>Chebyshev's Inequality</title>
             <statement>
-                <p>Let <m>X</m> be a random variable in a probability space <m>(S,P)</m>, and let <m>k>0</m> be a positive real number. If the expectation <m>E(X)</m> of <m>X</m> is <m>\mu</m> and the standard deviation is <m>\sigma_X</m>, then
+                <p>Let <m>X</m> be a random variable in a probability space <m>(S,P)</m>, and let <m>k&gt;0</m> be a positive real number. If the expectation <m>E(X)</m> of <m>X</m> is <m>\mu</m> and the standard deviation is <m>\sigma_X</m>, then
                 <me>
                     \prob(|X- E(X)|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
                 </me>
@@ -114,7 +114,7 @@
             </statement>
 
             <proof>
-                <p>Let <m>A=\{r\in \reals:|r-\mu|>k\sigma_X\}</m>.
+                <p>Let <m>A=\{r\in \reals:|r-\mu|&gt;k\sigma_X\}</m>.
             </p>
             <p>
                 Then we have:
@@ -123,9 +123,9 @@
                     <mrow>  \amp = \sum_{r\in \reals}(r-\mu)^2\prob(X=r)</mrow>
                     <mrow>  \amp \ge \sum_{r\in A}(r-\mu)^2\prob(X=r)</mrow>
                     <mrow>  \amp \ge k^2\sigma_X^2\sum_{r\in A}\prob(X=r)</mrow>
-                    <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|>k\sigma_X).</mrow>
+                    <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|&gt;k\sigma_X).</mrow>
                 </md>
-                Since <m>\var(X)=\sigma_X^2</m>, we may now deduce that <m>1/k^2\geq \prob(|X-\mu|)>k\sigma_X)</m>. Therefore, since <m>\prob(|X-\mu|\le k\sigma_X)=1-\prob(|X-\mu|> k\sigma_X)</m>, we conclude that
+                Since <m>\var(X)=\sigma_X^2</m>, we may now deduce that <m>1/k^2\geq \prob(|X-\mu|)&gt;k\sigma_X)</m>. Therefore, since <m>\prob(|X-\mu|\le k\sigma_X)=1-\prob(|X-\mu|&gt; k\sigma_X)</m>, we conclude that
                 <me>
                 \prob(|X- \mu|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
                 </me>
@@ -134,7 +134,7 @@
         </theorem>
 
         <example>
-            <p>Here's an example of how <xref ref="thm_chebyshev" text="title" /> can be applied.  Consider <m>n</m> tosses of a fair coin with <m>X</m> counting the number of heads. As noted before, <m>\mu=E(X)=n/2</m> and <m>\var(X)=n/4</m>, so <m>\sigma_X=\sqrt{n}/2</m>. When <m>n=10,000</m> and <m>\mu=5,000</m> and <m>\sigma_X=50</m>. Setting <m>k=50</m> so that <m>k\sigma_X=2500</m>, we see that the probability that <m>X</m> is within <m>2500</m> of the expected value of <m>5000</m> is at least <m>0.9996</m>.  So it seems very unlikely indeed that the number of heads is at least <m>7,500</m>.
+            <p>Here's an example of how <xref ref="thm_chebyshev" text="title"/> can be applied.  Consider <m>n</m> tosses of a fair coin with <m>X</m> counting the number of heads. As noted before, <m>\mu=E(X)=n/2</m> and <m>\var(X)=n/4</m>, so <m>\sigma_X=\sqrt{n}/2</m>. When <m>n=10,000</m> and <m>\mu=5,000</m> and <m>\sigma_X=50</m>. Setting <m>k=50</m> so that <m>k\sigma_X=2500</m>, we see that the probability that <m>X</m> is within <m>2500</m> of the expected value of <m>5000</m> is at least <m>0.9996</m>.  So it seems very unlikely indeed that the number of heads is at least <m>7,500</m>.
             </p>
 
             <p>Going back to lottery tickets, if we make the rational assumption that all ticket numbers are equally likely, then the probability that the winning number is at least <m>7,500</m> is exactly <m>2501/100001</m>, which is very close to <m>1/4</m>.

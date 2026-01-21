@@ -305,8 +305,8 @@
         <p>
           You might find these frequency counts useful.
         </p>
-          <tabular >
-            <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" > </col>
+          <tabular>
+            <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
             
 
             <row bottom="minor">
@@ -359,7 +359,7 @@
             </row>
           </tabular>
       </hint>
-      <response />
+      <response/>
     </exercise>
     <p>
       One of the interesting things about understanding the <xref ref="thm-strings-multinomial" text="title"/> is figuring out how many terms are even in the summation, since the notation involves a summation that you might not be familiar with. The notation <m>\displaystyle \sum_{k_1+k_2+\cdots+k_r=n}</m> means that we sum over all <em>nonnegative</em> (i.e., greater than or equal to 0) integers <m>k_1,k_2,\dots,k_r</m> so that the sum <m>k_1+k_2 + \cdots + k_r</m> is <em>exactly</em> <m>n</m>.
@@ -385,7 +385,7 @@
             </p>
           </statement>
         </choice>
-        <choice >
+        <choice>
           <statement>
             <p>
               <m>\displaystyle\binom{16}{3}</m>
@@ -481,7 +481,7 @@
 </ol>
         </p>
       </statement>
-      <response />
+      <response/>
       
     </exercise>  
   

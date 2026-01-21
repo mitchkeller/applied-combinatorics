@@ -11,7 +11,7 @@
             <li><p><m>x+y=y+x</m> for every <m>x,y,\in V</m>.</p></li>
             <li><p><m>x+(y+z) = (x+y)+z</m>, for every <m>x,y,z\in V</m>.</p></li>
             <li><p>There is a vector called <term>zero</term> and denoted <m>0</m> so that <m>x+0=x</m> for every <m>x\in V</m>. <em>Note:</em> We are again overloading an operator and using the symbol <m>0</m> for something other than a number.</p></li>
-            <li><p>For every element <m>x\in V</m>, there is an element <m>y\in V</m>, called the <term>additive inverse</term> of <m>x</m> and denoted <m>-x</m> so that <m>x+(-x)=0</m>.  This property enables us to define <term>subtraction</term>, <ie />, <m>x-y= x+(-y)</m>.</p></li>
+            <li><p>For every element <m>x\in V</m>, there is an element <m>y\in V</m>, called the <term>additive inverse</term> of <m>x</m> and denoted <m>-x</m> so that <m>x+(-x)=0</m>.  This property enables us to define <term>subtraction</term>, <ie/>, <m>x-y= x+(-y)</m>.</p></li>
             <li><p><m>1x=x</m> for every <m>x\in X</m>.</p></li>
             <li><p><m>\alpha(\beta x) = (\alpha\beta)x</m>, for every <m>\alpha,\beta\in\reals</m> and every <m>x\in V</m>.</p></li>
             <li><p><m>\alpha(x+y)=\alpha x + \alpha y</m> for every <m>\alpha\in\reals</m> and every <m>x,y\in V</m>.</p></li>
@@ -31,7 +31,7 @@
 
     <subsection xml:id="s_recurrence_rigorous_principal">
         <title>The Principal Theorem</title>
-        <p>Here is the basic theorem about solving recurrence equations (stated in terms of advancement operator equations)<mdash />and while we won't prove the full result, we will provide enough of an outline where it shouldn't be too difficult to fill in the missing details.
+        <p>Here is the basic theorem about solving recurrence equations (stated in terms of advancement operator equations)<mdash/>and while we won't prove the full result, we will provide enough of an outline where it shouldn't be too difficult to fill in the missing details.
         </p>
 
         <theorem xml:id="thm_advance">
@@ -49,7 +49,7 @@
         <me>
             p(A)(f+g)=p(A)f+p(A)g\quad\text{ and } \quad p(a)(\alpha f)=\alpha p(A)(f).
         </me>
-        What takes a bit of work is to show that <m>W</m> is a <m>k</m>-dimensional subspace. But once this is done, then to solve the advancement operator equation given in the form of <xref ref="thm_advance"  />, it suffices to find a <term>basis</term> for the vector space <m>W</m>.  Every solution is just a linear combination of basis vectors.  In the next several subsections, we outline how this goal can be achieved.
+        What takes a bit of work is to show that <m>W</m> is a <m>k</m>-dimensional subspace. But once this is done, then to solve the advancement operator equation given in the form of <xref ref="thm_advance"/>, it suffices to find a <term>basis</term> for the vector space <m>W</m>.  Every solution is just a linear combination of basis vectors.  In the next several subsections, we outline how this goal can be achieved.
         </p>
     </subsection>
 
@@ -66,7 +66,7 @@
             </statement>
 
             <proof>
-                <p>We first show that <m>f(n)=cr^n</m> for every <m>n\ge0</m>, by induction on <m>n</m>. The base case is trivial since <m>c=f(0) = cr^0</m>. Now suppose that <m>f(k)=cr^k</m> for some non-negative integer <m>k</m>. Then <m>(A-r)f=0</m> implies that <m>f(k+1)-rf(k)=0</m>, <ie />,
+                <p>We first show that <m>f(n)=cr^n</m> for every <m>n\ge0</m>, by induction on <m>n</m>. The base case is trivial since <m>c=f(0) = cr^0</m>. Now suppose that <m>f(k)=cr^k</m> for some non-negative integer <m>k</m>. Then <m>(A-r)f=0</m> implies that <m>f(k+1)-rf(k)=0</m>, <ie/>,
                 <me>
                     f(k+1)=rf(k)= rcr^k=cr^{k+1}.
                 </me>
@@ -78,52 +78,52 @@
             <statement>
                 <p>
                     Consider a nonhomogeneous operator equation of the form
-                    <men xml:id="eqn_nonhomogeneous" >
+                    <men xml:id="eqn_nonhomogeneous">
                         p(A)f= (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g,
                     </men>
                     with <m>c_0,c_k\neq0</m>, and let <m>W</m> be the subspace of <m>V</m> consisting of all solutions to the corresponding homogeneous equation
-                    <men xml:id="eqn_homogeneous" >
+                    <men xml:id="eqn_homogeneous">
                         p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0.
                     </men>
-                    If <m>f_0</m> is a solution to <xref ref="eqn_nonhomogeneous"  />, then every solution <m>f</m> to <xref ref="eqn_nonhomogeneous"  /> has the form <m>f=f_0+f_1</m> where <m>f_1\in W</m>.
+                    If <m>f_0</m> is a solution to <xref ref="eqn_nonhomogeneous"/>, then every solution <m>f</m> to <xref ref="eqn_nonhomogeneous"/> has the form <m>f=f_0+f_1</m> where <m>f_1\in W</m>.
                 </p>
             </statement>
             <proof>
-                <p>Let <m>f</m> be a solution of <xref ref="eqn_nonhomogeneous"  />, and let <m>f_1=f-f_0</m>.  Then
+                <p>Let <m>f</m> be a solution of <xref ref="eqn_nonhomogeneous"/>, and let <m>f_1=f-f_0</m>.  Then
                 <me>
                     p(A)f_1 = p(A)(f-f_0)=p(A)f-p(A)f_0=g-g=0.
                 </me>
-                This implies that <m>f_1\in W</m> and that <m>f=f_0+f_1</m> so that all solutions to <xref ref="eqn_nonhomogeneous"  /> do in fact have the desired form.
+                This implies that <m>f_1\in W</m> and that <m>f=f_0+f_1</m> so that all solutions to <xref ref="eqn_nonhomogeneous"/> do in fact have the desired form.
                 </p>
             </proof>
         </lemma>
-        <p>Using the preceding two results, we can now provide an outline of the inductive step in the proof of <xref ref="thm_advance"  />, at least in the case where the polynomial in the advancement operator has distinct roots.
+        <p>Using the preceding two results, we can now provide an outline of the inductive step in the proof of <xref ref="thm_advance"/>, at least in the case where the polynomial in the advancement operator has distinct roots.
         </p>
 
         <theorem>
             <statement>
                 <p>
                     Consider the following advancement operator equation
-                    <men xml:id="eqn_distinct" >
+                    <men xml:id="eqn_distinct">
                         p(A)f=(A-r_1)(A-r_2)\dots(A-r_k)f=0.
                     </men>
-                    with <m>r_1,r_2,\dots,r_k</m> distinct non-zero constants.  Then every solution to <xref ref="eqn_distinct"  /> has the form
+                    with <m>r_1,r_2,\dots,r_k</m> distinct non-zero constants.  Then every solution to <xref ref="eqn_distinct"/> has the form
                     <me>
                         f(n)=c_1r_1^n+c_2 r_2^n+c_3r_3^n+\dots+c_kr_k^n.
                     </me>
                 </p>
             </statement>
             <proof>
-                <p>The case <m>k=1</m> is <xref ref="lem_base"  />. Now suppose we have established the theorem for some positive integer <m>m</m> and consider the case <m>k=m+1</m>. Rewrite <xref ref="eqn_distinct"  /> as
+                <p>The case <m>k=1</m> is <xref ref="lem_base"/>. Now suppose we have established the theorem for some positive integer <m>m</m> and consider the case <m>k=m+1</m>. Rewrite <xref ref="eqn_distinct"/> as
                 <me>
                     (A-r_1)(A-r_2)\dots(A-r_m)[(A-r_{m+1})f]=0.
                 </me>
-                By the inductive hypothesis, it follows that if <m>f</m> is a solution to <xref ref="eqn_distinct"  />, then <m>f</m> is also a solution to the nonhomogeneous equation
-                <men xml:id="eqn_distinct2" >
+                By the inductive hypothesis, it follows that if <m>f</m> is a solution to <xref ref="eqn_distinct"/>, then <m>f</m> is also a solution to the nonhomogeneous equation
+                <men xml:id="eqn_distinct2">
                     (A-r_{m+1})f=d_1r_1^n+d_2r_2^n+\dots+d_mr_m^n.
                 </men>
-                To find a particular solution <m>f_0</m> to <xref ref="eqn_distinct2"  />, we look for a solution having the form
-                <men xml:id="eqn_distinct3" >
+                To find a particular solution <m>f_0</m> to <xref ref="eqn_distinct2"/>, we look for a solution having the form
+                <men xml:id="eqn_distinct3">
                     f_0(n)= c_1 r_1^n+c_2 r_2^n+\dots+c_m r_m^n.
                 </men>
                 On the other hand, a simple calculation shows that for each <m>i=1,2,\dots,m</m>, we have
@@ -152,11 +152,11 @@
         <lemma xml:id="lem_rr">
             <statement>
                 <p>Let <m>k\ge1</m> and consider the equation
-                <men xml:id="eqn_rr" >
+                <men xml:id="eqn_rr">
                     (A-r)^kf=0.
                 </men>
-                Then the general solution to <xref ref="eqn_rr"  /> has the following form
-                <men xml:id="eqn_solutionrr" >
+                Then the general solution to <xref ref="eqn_rr"/> has the following form
+                <men xml:id="eqn_solutionrr">
                     f(n)=c_1r^n+c_2nr^n+c_3n^2r^n+c_4n^3r^n+\dots+c_kn^{k-1}r^n.
                 </men>
                 </p>
@@ -167,7 +167,7 @@
 
     <subsection xml:id="s_recurrence_rigorous_general">
         <title>The General Case</title>
-        <p>Combining the results in the preceding sections, we can quickly write the general solution of any homogeneous equation of the form <m>p(A)f=0</m> <em>provided</em> we can factor the polynomial <m>p(A)</m>. Note that in general, this solution takes us into the field of <em>complex numbers</em>, since the roots of a polynomial with real coefficients are sometimes complex numbers<mdash />with non-zero imaginary parts.
+        <p>Combining the results in the preceding sections, we can quickly write the general solution of any homogeneous equation of the form <m>p(A)f=0</m> <em>provided</em> we can factor the polynomial <m>p(A)</m>. Note that in general, this solution takes us into the field of <em>complex numbers</em>, since the roots of a polynomial with real coefficients are sometimes complex numbers<mdash/>with non-zero imaginary parts.
         </p>
 
         <p>We close this section with one more example to illustrate how quickly we can read off the general solution of a homogeneous advancement operator equation <m>p(A)f=0</m>, provided that <m>p(A)</m> is factored.

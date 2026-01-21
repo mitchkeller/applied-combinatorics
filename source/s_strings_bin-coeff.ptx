@@ -15,13 +15,15 @@
 
     <p>Imagine the folders placed in a row. Then there are 17 gaps between them. Of these gaps,
       choose three and place a divider in each. Then this choice divides the folders into four
-      non-empty sets. The first goes to Audrey, the second to Bart, <etc /> Thus the answer is <m>
-      C(17,3)</m>. In <xref ref="fig_distrib" />, we illustrate this scheme with Audrey receiving<nbsp /><m>
-      6</m> folders, Bart getting<nbsp /><m>1</m>, Cecilia<nbsp /><m>4</m> and Darren<nbsp />7. </p>
+      non-empty sets. The first goes to Audrey, the second to Bart, <etc/> Thus the answer is <m>
+      C(17,3)</m>. In <xref ref="fig_distrib"/>, we illustrate this scheme with Audrey receiving<nbsp/><m>
+      6</m> folders, Bart getting<nbsp/><m>1</m>, Cecilia<nbsp/><m>4</m> and Darren<nbsp/>7. </p>
     <figure xml:id="fig_distrib">
       <caption>Distributing Identical Objects into Distinct
         Cells</caption>
-      <image width="80%" source="3012-fig23" />
+      <image width="80%" source="3012-fig23"><description><p>Distributing Identical Objects into Distinct
+        Cells</p>
+      </description></image>
     </figure>
   </example>
 
@@ -38,7 +40,7 @@
         he will get <m>8</m>. Also, artificially inflate the number of folders by <m>4</m>, one for
         each of the four persons. So now imagine a row of <m>22=18+4</m> folders. Again, choose <m>3</m>
         gaps. This determines a non-zero allocation for each person. The actual allocation is one
-        less<mdash />and may be zero. So the answer is <m>C(21,3)</m>. </p>
+        less<mdash/>and may be zero. So the answer is <m>C(21,3)</m>. </p>
     </solution>
   </example>
 
@@ -63,11 +65,11 @@
       require that the inequality actually be an equation. </p>
 
     <p>The number of integer solutions is: <ol>
-        <li><m>C(537,5)</m>, when all <m>x_i> 0</m> and equality holds;</li>
+        <li><m>C(537,5)</m>, when all <m>x_i&gt; 0</m> and equality holds;</li>
         <li><m>C(543,5)</m>, when all <m>x_i\ge 0</m> and equality holds;</li>
-        <li><m>C(291,3)</m>, when <m>x_1,x_2,x_4,x_6>0</m>, <m>x_3=52</m>, <m>x_5=194</m>, and
+        <li><m>C(291,3)</m>, when <m>x_1,x_2,x_4,x_6&gt;0</m>, <m>x_3=52</m>, <m>x_5=194</m>, and
       equality holds;</li>
-        <li><m>C(537,6)</m>, when all <m>x_i > 0</m> and the inequality is strict (Imagine a new
+        <li><m>C(537,6)</m>, when all <m>x_i &gt; 0</m> and the inequality is strict (Imagine a new
       variable <m>x_7</m> which is the balance. Note that <m>x_7</m> must be positive.);</li>
         <li><m>C(543,6)</m>, when all <m>x_i \ge 0</m> and the inequality is strict (Add a new
       variable <m>x_7</m> as above. Now it is the only one which is required to be positive.); and</li>
@@ -86,10 +88,11 @@
       <li><m>m_{i+1}=m_i</m> and <m>n_{i+1}=n_{i}+1</m>.</li>
     </ol>
   </p>
-  <p>In <xref ref="fig_latticepath" />, we show a lattice path from <m>(0,0)</m> to <m>(13,8)</m>. </p>
+  <p>In <xref ref="fig_latticepath"/>, we show a lattice path from <m>(0,0)</m> to <m>(13,8)</m>. </p>
   <figure xml:id="fig_latticepath">
     <caption>A Lattice Path</caption>
-    <image width="51%" source="3012-fig22" />
+    <image width="51%" source="3012-fig22"><description><p>A Lattice Path</p>
+    </description></image>
   </figure>
   <example>
     <idx>
@@ -127,8 +130,8 @@
       </q> is a good lattice path from <m>(0,0)</m> to <m>(7,7)</m>,
       while the path <q>
         <m>HVHVHHVVVHVHHV</m>
-      </q> is bad. In the second case, note that after<nbsp /><m>9</m>
-      moves, we have<nbsp /><m>5</m> <m>V</m>'s and<nbsp /><m>4</m><nbsp /><m>H</m>'s. </p>
+      </q> is bad. In the second case, note that after<nbsp/><m>9</m>
+      moves, we have<nbsp/><m>5</m> <m>V</m>'s and<nbsp/><m>4</m><nbsp/><m>H</m>'s. </p>
 
     <p>Let <m>\cgG</m> and <m>\cgB</m> denote the family of all good and bad paths, respectively. Of
       course, our goal is to determine <m>|\cgG|</m>. </p>
@@ -141,14 +144,15 @@
       have <m>n-j</m> <m>H</m>'s and <m>n-j-1</m> <m>V</m>'s. We now transform <m>s</m> to a new
       string <m>s'</m> by replacing the <m>H</m>'s in the tail of <m>s</m> by <m>V</m>'s and the <m>
       V</m>'s in the tail of <m>s</m> by <m>H</m>'s and leaving the initial <m>2j+1</m> positions
-      unchanged. For example, see <xref ref="flippath" />, where the path <m>s</m> is shown solid
+      unchanged. For example, see <xref ref="flippath"/>, where the path <m>s</m> is shown solid
       and <m>s'</m> agrees with <m>s</m> until it crosses the line <m>y=x</m> and then is the dashed
       path. Then <m>s'</m> is a string of length <m>2n</m> having <m>(n-j)+(j+1) = n+1</m> <m>V</m>'s
       and <m>(n-j-1)+j=n-1</m> <m>H</m>'s, so <m>s'</m> is a lattice path from <m>(0,0)</m> to <m>
       (n-1,n+1)</m>. Note that there are <m>\binom{2n}{n-1}</m> such lattice paths. </p>
     <figure xml:id="flippath">
       <caption>Transforming a Lattice Path</caption>
-      <image width="50%" source="3012-fig26" />
+      <image width="50%" source="3012-fig26"><description><p>Transforming a Lattice Path</p>
+      </description></image>
     </figure>
     <p>We can also observe that the transformation we've described is in fact a bijection between <m>
       \cgB</m> and <m>\cgP'</m>, the set of lattice paths from <m>(0,0)</m> to <m>(n-1,n+1)</m>. To
@@ -166,7 +170,7 @@
       </me>
       after a bit of algebra. </p>
   </example>
-  <p>It is worth observing that in <xref ref="exa_lattice-Catalan" />, we made use of two common
+  <p>It is worth observing that in <xref ref="exa_lattice-Catalan"/>, we made use of two common
     enumerative techniques: giving a bijection between two classes of objects, one of which is <q>
     easier</q> to count than the other, and counting the objects we do <em>not</em> wish to
     enumerate and deducting their number from the total. </p>
@@ -177,7 +181,7 @@
           Suppose we are distributing <m>12</m> identical candy bars to four lucky children and want to determine the number of ways in which we can do this. Write a couple of sentences to describe how you would approach this problem using the methods of this section, and include a discussion of how (if at all) the methods differ between a setting where each child must get at least one candy bar and a setting where one or more children can get no candy bars.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="appcomb_strings_bin-coeff_reading_pens">
       <statement>
@@ -194,7 +198,7 @@
           Is there a flaw in the reasoning of one (or both) of these arguments? If so, what flaws are there? If both arguments are correct, explain which way of solving the problem you prefer and why.
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
     <exercise label="appcomb_strings_bin-coeff_reading_lattice-path">
       <statement>
@@ -202,7 +206,7 @@
           Consider the lattice path <m>HHVHVHVVVHHV</m> from <m>(0,0)</m> to <m>(6,6)</m>. This lattice path is, in the language of <xref ref="exa_lattice-Catalan"/>, <q>bad</q>. Numbering the moves in the lattice path from <m>1</m> to <m>12</m>, what is the first position in which the lattice path turns bad? (In the lattice path in the first paragraph of <xref ref="exa_lattice-Catalan"/>, we would say that the lattice path there turns bad at move <m>9</m>.) Explain why the lattice path goes bad at the position you specify (and not before then).
         </p>
       </statement>
-      <response />
+      <response/>
     </exercise>
   </reading-questions>
 </section>

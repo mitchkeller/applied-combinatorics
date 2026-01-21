@@ -1,7 +1,7 @@
 <section xml:id="s_networkflow_example">
     <title>A Concrete Example</title>
     <introduction>
-        <p>Let's apply the Labeling Algorithm to the network flow shown in <xref ref="fig_networkflow_netflow"  />. Then we start with the source:
+        <p>Let's apply the Labeling Algorithm to the network flow shown in <xref ref="fig_networkflow_netflow"/>. Then we start with the source:
         <me>
             S:\quad(*,+,\infty)
         </me>
@@ -20,7 +20,7 @@
         At this point, the scan from <m>S</m> is complete.
         </p>
 
-        <p>The first vertex after <m>S</m> to be labeled was <m>B</m>, so we now scan from <m>B</m>. The (unlabeled) neighbors of <m>B</m> to be considered, in order, are <m>A</m>, <m>C</m>, and<nbsp /><m>D</m>. This results in the following labels:
+        <p>The first vertex after <m>S</m> to be labeled was <m>B</m>, so we now scan from <m>B</m>. The (unlabeled) neighbors of <m>B</m> to be considered, in order, are <m>A</m>, <m>C</m>, and<nbsp/><m>D</m>. This results in the following labels:
         <md>
             <mrow>  A\amp:\quad(B,+,8)</mrow>
             <mrow>  C\amp:\quad(B,+,8)</mrow>
@@ -30,11 +30,12 @@
         <me>
             T:\quad(A,+,8)
         </me>
-        Now that the sink is labeled, we know there is an augmenting path. We discover this path by backtracking. The sink <m>T</m> got its label from <m>A</m>, <m>A</m> got its label from <m>B</m>, and <m>B</m> got its label from <m>S</m>.  Therefore, the augmenting path is <m>P=(S,B,A,T)</m> with <m>\delta=8</m>. All edges on this path are forward. The flow is then updated by increasing the flow on the edges of <m>P</m> by <m>8</m>. This results in the flow shown in <xref ref="fig_networkflow_updated-flow"  />. The value of this flow is <m>38</m>.
+        Now that the sink is labeled, we know there is an augmenting path. We discover this path by backtracking. The sink <m>T</m> got its label from <m>A</m>, <m>A</m> got its label from <m>B</m>, and <m>B</m> got its label from <m>S</m>.  Therefore, the augmenting path is <m>P=(S,B,A,T)</m> with <m>\delta=8</m>. All edges on this path are forward. The flow is then updated by increasing the flow on the edges of <m>P</m> by <m>8</m>. This results in the flow shown in <xref ref="fig_networkflow_updated-flow"/>. The value of this flow is <m>38</m>.
         </p>
-        <figure xml:id="fig_networkflow_updated-flow" >
+        <figure xml:id="fig_networkflow_updated-flow">
             <caption>An Updated Network Flow</caption>
-            <image width="65%" source="webfig-31c" />
+            <image width="65%" source="webfig-31c"><description><p>An Updated Network Flow</p>
+            </description></image>
         </figure>
         <p>Here is the sequence (reading down the columns) of labels that will be found when the labeling algorithm is applied to this updated flow. (Note that in the scan from <m>S</m>, the vertex <m>B</m> will not be labeled, since now the edge <m>(S,B)</m> is full.)
         <md>
@@ -53,11 +54,12 @@
 
     <subsection>
         <title>How the Labeling Algorithm Halts</title>
-        <p>Consider the network flow in <xref ref="fig_networkflow_flow4"  />.
+        <p>Consider the network flow in <xref ref="fig_networkflow_flow4"/>.
         </p>
-        <figure xml:id="fig_networkflow_flow4" >
+        <figure xml:id="fig_networkflow_flow4">
             <caption>Another Network Flow</caption>
-            <image width="85%" source="network_flow4" />
+            <image width="85%" source="network_flow4"><description><p>Another Network Flow</p>
+            </description></image>
         </figure>
         <p>The value of the current flow is <m>172</m>. Applying the labeling algorithm using the pseudo-alphabetic order results in the following labels (reading down the columns):
         <md>

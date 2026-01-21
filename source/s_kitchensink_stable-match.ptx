@@ -1,12 +1,12 @@
 <section xml:id="s_kitchensink_stable-match">
     <title>The Stable Matching Theorem</title>
-    <p>Now we present a light hearted optimization problem with a quite clever solution, called the <em>Stable Matching Theorem</em>.  There are <m>n</m> eligible homebuyers <m>b_1</m>, <m>b_2,\dots,b_n</m> and <m>n</m> eligible homesellers <m>s_1</m>, <m>s_2,\dots,s_n</m>. We will arrange <m>n</m> home sales, each involving one buyer and one seller. In the process, we will try to make everyone happy<mdash />or at least we will try to keep things stable.
+    <p>Now we present a light hearted optimization problem with a quite clever solution, called the <em>Stable Matching Theorem</em>.  There are <m>n</m> eligible homebuyers <m>b_1</m>, <m>b_2,\dots,b_n</m> and <m>n</m> eligible homesellers <m>s_1</m>, <m>s_2,\dots,s_n</m>. We will arrange <m>n</m> home sales, each involving one buyer and one seller. In the process, we will try to make everyone happy<mdash/>or at least we will try to keep things stable.
         </p>
 
         <p>Each seller linearly orders the buyers in the order of their preference, i.e., for each <m>i=1,2,\dots,n</m>, there is a permutation <m>\sigma_i</m> of <m>[n]</m> so that if <m>s_i</m> prefers <m>b_j</m> to <m>b_k</m>, then <m>\sigma_i(j)\gt  \sigma_i(k)</m>. Different sellers may have quite different preference orders. Also, each buyer linearly orders the sellers (really, the homes they are selling!) in order of their preference, i.e., for each <m>i=1,2,\dots,n</m>, there is a permutation <m>\tau_i</m> of <m>[n]</m> so that if <m>b_i</m> prefers <m>s_j</m> to <m>s_k</m>, then <m>\tau_i(j)\gt\tau_i(k)</m>.
         </p>
 
-        <p>A <m>1</m><ndash /><m>1</m> matching of the <m>n</m> buyers to the <m>n</m> sellers is <term>stable</term><idx><h>matching</h><h>stable</h></idx> if there do not exist two buyers <m>b</m> and <m>b'</m> and two sellers <m>s</m> and <m>s'</m> so that
+        <p>A <m>1</m><ndash/><m>1</m> matching of the <m>n</m> buyers to the <m>n</m> sellers is <term>stable</term><idx><h>matching</h><h>stable</h></idx> if there do not exist two buyers <m>b</m> and <m>b'</m> and two sellers <m>s</m> and <m>s'</m> so that
         <ol>
             <li><m>b</m> is matched to <m>s</m>;</li>
             <li><m>b'</m> is matched to <m>s'</m>;</li>

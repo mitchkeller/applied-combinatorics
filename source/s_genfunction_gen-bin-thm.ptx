@@ -1,6 +1,6 @@
 <section xml:id="s_genfunction_gen-bin-thm">
     <title>Newton's Binomial Theorem</title>
-    <p>In <xref ref="ch_strings"  />, we discussed the binomial theorem and saw that the following formula holds for all integers <m>p\ge1</m>:
+    <p>In <xref ref="ch_strings"/>, we discussed the binomial theorem and saw that the following formula holds for all integers <m>p\ge1</m>:
     <me>
         (1+x)^p =\sum_{n=0}^{p}\binom{p}{n} x^n.
     </me>
@@ -11,14 +11,14 @@
     <me>
         \binom{p}{k}=\frac{P(p,k)}{k!},
     </me>
-    recalling that we've defined <m>P(p,k)</m> recursively as <m>P(p,0)=1</m> for all integers <m>p\geq 0</m> and <m>P(p,k)=p P(p-1,k-1)</m> when <m>p\geq k > 0</m> (<m>k</m> an integer). Notice here, however, that the expression for <m>P(p,k)</m> makes sense for any real number <m>p</m>, so long as <m>k</m> is a non-negative integer. We make this definition formal.
+    recalling that we've defined <m>P(p,k)</m> recursively as <m>P(p,0)=1</m> for all integers <m>p\geq 0</m> and <m>P(p,k)=p P(p-1,k-1)</m> when <m>p\geq k &gt; 0</m> (<m>k</m> an integer). Notice here, however, that the expression for <m>P(p,k)</m> makes sense for any real number <m>p</m>, so long as <m>k</m> is a non-negative integer. We make this definition formal.
     </p>
     <definition>
         <statement>
             <p>For all real numbers <m>p</m> and nonnegative integers <m>k</m>, the number <m>P(p,k)</m> is defined by
             <ol>
                 <li><m>P(p,0)=1</m> for all real numbers <m>p</m> and</li>
-                <li><m>P(p,k) = p P(p-1,k-1)</m> for all real numbers <m>p</m> and integers <m>k>0</m>.</li>
+                <li><m>P(p,k) = p P(p-1,k-1)</m> for all real numbers <m>p</m> and integers <m>k&gt;0</m>.</li>
             </ol>
             </p>
         </statement>
