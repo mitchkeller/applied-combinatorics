@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-strings">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-strings" component="strings">
   <title>Strings, Sets, and Binomial Coefficients</title>
 
   <worksheet xml:id="ws-strings-perm-comb">
@@ -115,11 +115,11 @@
           How many <m>4</m>-digit positive integers are divisible by <m>5</m>?
         </p>
       </statement>
-      <statement>
+      <solution component="strings-soln">
         <p>
           The last digit must be 0 or 5, so there are <m>9\cdot 10\cdot 10\cdot 2 = 1800</m>.
         </p>
-      </statement>
+      </solution>
     </exercise>
     <xi:include href="ex-plate-vowel-consonant.ptx"/>
     <exercise workspace="1cm" xml:id="wkst-scholarship">
