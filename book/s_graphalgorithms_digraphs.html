@@ -80,7 +80,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -98,7 +98,7 @@ window.MathJax = {
 <meta property="book:title" content="Applied Combinatorics">
 <meta property="book:author" content="Mitchel T. Keller">
 <meta property="book:author" content="William T. Trotter">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.10.0';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -631,7 +631,10 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="s_graphalgorithms_digraphs-3">Diagrams of digraphs use arrowheads on the edges to indicate direction.  This is illustrated in <a href="s_graphalgorithms_digraphs.html#fig_graphalgorithms_digraph" class="xref" data-knowl="./knowl/xref/fig_graphalgorithms_digraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.12">Figure 12.12</a>. For example, the digraph illustrated there contains the edge <span class="process-math">\((a,f)\)</span> but not the edge <span class="process-math">\((f,a)\text{.}\)</span> It does contain both edges <span class="process-math">\((c,d)\)</span> and <span class="process-math">\((d,c)\text{,}\)</span> however.<div class="autopermalink" data-description="Paragraph"><a href="#s_graphalgorithms_digraphs-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig_graphalgorithms_digraph"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="external/digraph.svg" role="img" class="contained"></div>
+<figure class="figure figure-like" id="fig_graphalgorithms_digraph"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;">
+<img src="external/digraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_graphalgorithms_digraph-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_graphalgorithms_digraph-2-description"><div class="para" id="fig_graphalgorithms_digraph-2-1-1">A Digraph<div class="autopermalink" data-description="Paragraph"><a href="#fig_graphalgorithms_digraph-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A Digraph<div class="autopermalink" data-description="Figure 12.12"><a href="#fig_graphalgorithms_digraph" title="Copy heading and permalink for Figure 12.12" aria-label="Copy heading and permalink for Figure 12.12">🔗</a></div></figcaption></figure><div class="para" id="s_graphalgorithms_digraphs-5">When <span class="process-math">\(\bfG\)</span> is a digraph, a sequence <span class="process-math">\(P=(r=u_0,u_1,\dots,u_t=x)\)</span> of distinct vertices is called a <dfn class="terminology">directed path</dfn> from <span class="process-math">\(r\)</span> to <span class="process-math">\(x\)</span> when <span class="process-math">\((u_iu_{i+1})\)</span> is a directed edge in <span class="process-math">\(\bfG\)</span> for every <span class="process-math">\(i=0,1,\dots,t-1\text{.}\)</span> A directed path <span class="process-math">\(C=(r=u_0,u_1,\dots,u_t=x)\)</span> is called a <dfn class="terminology">directed cycle</dfn> when <span class="process-math">\((u_t,u_0)\)</span> is a directed edge of <span class="process-math">\(\bfG\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_graphalgorithms_digraphs-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Section 12.2: Digraphs"><a href="#s_graphalgorithms_digraphs" title="Copy heading and permalink for Section 12.2: Digraphs" aria-label="Copy heading and permalink for Section 12.2: Digraphs">🔗</a></div></section></div>

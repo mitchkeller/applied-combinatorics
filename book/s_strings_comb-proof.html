@@ -80,7 +80,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -98,7 +98,7 @@ window.MathJax = {
 <meta property="book:title" content="Applied Combinatorics">
 <meta property="book:author" content="Mitchel T. Keller">
 <meta property="book:author" content="William T. Trotter">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.10.0';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -640,7 +640,10 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_strings_comb-proof_sum-ints-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <figure class="figure figure-like" id="fig_squaredots"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/3012-fig25.svg" role="img" class="contained"></div>
+</div> <figure class="figure figure-like" id="fig_squaredots"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
+<img src="external/3012-fig25.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_squaredots-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_squaredots-2-description"><div class="para" id="fig_squaredots-2-1-1">The sum of the first <span class="process-math">\(n\)</span> integers<div class="autopermalink" data-description="Paragraph"><a href="#fig_squaredots-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sum of the first <span class="process-math">\(n\)</span> integers<div class="autopermalink" data-description="Figure 2.14"><a href="#fig_squaredots" title="Copy heading and permalink for Figure 2.14" aria-label="Copy heading and permalink for Figure 2.14">🔗</a></div></figcaption></figure><div class="solutions"><details id="ex_strings_comb-proof_sum-ints-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex_strings_comb-proof_sum-ints-2-1">Consider an <span class="process-math">\((n+1)\times (n+1)\)</span> array of dots as depicted in <a href="s_strings_comb-proof.html#fig_squaredots" class="xref" data-knowl="./knowl/xref/fig_squaredots.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.14">Figure 2.14</a>. There are <span class="process-math">\((n+1)^2\)</span> dots altogether, with exactly <span class="process-math">\(n+1\)</span> on the main diagonal.  The off-diagonal entries split naturally into two equal size parts, those above and those below the diagonal.<div class="autopermalink" data-description="Paragraph"><a href="#ex_strings_comb-proof_sum-ints-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -667,7 +670,10 @@ S(n)=\frac{(n+1)^2-(n+1)}{2}
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <figure class="figure figure-like" id="fig_oddsum2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/3012-fig21.svg" role="img" class="contained"></div>
+</div> <figure class="figure figure-like" id="fig_oddsum2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
+<img src="external/3012-fig21.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_oddsum2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_oddsum2-2-description"><div class="para" id="fig_oddsum2-2-1-1">The sum of the first <span class="process-math">\(n\)</span> odd integers<div class="autopermalink" data-description="Paragraph"><a href="#fig_oddsum2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sum of the first <span class="process-math">\(n\)</span> odd integers<div class="autopermalink" data-description="Figure 2.16"><a href="#fig_oddsum2" title="Copy heading and permalink for Figure 2.16" aria-label="Copy heading and permalink for Figure 2.16">🔗</a></div></figcaption></figure><div class="solutions"><details id="s_strings_comb-proof-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="s_strings_comb-proof-5-2-1">The left hand side is just the sum of the first <span class="process-math">\(n\)</span> odd integers. But as suggested in <a href="s_strings_comb-proof.html#fig_oddsum2" class="xref" data-knowl="./knowl/xref/fig_oddsum2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.16">Figure 2.16</a>, this is clearly equal to <span class="process-math">\(n^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

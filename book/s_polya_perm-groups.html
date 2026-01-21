@@ -80,7 +80,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -98,7 +98,7 @@ window.MathJax = {
 <meta property="book:title" content="Applied Combinatorics">
 <meta property="book:author" content="Mitchel T. Keller">
 <meta property="book:author" content="William T. Trotter">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.10.0';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script async="" src="https://cse.google.com/cse.js?cx=009375931950235294692:hxgsc7lzdau"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -666,7 +666,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">is the permutation of <span class="process-math">\([5]\)</span> with <span class="process-math">\(\pi(1) =2\text{,}\)</span> <span class="process-math">\(\pi(2)=4\text{,}\)</span> <span class="process-math">\(\pi(3)=3\text{,}\)</span> <span class="process-math">\(\pi(4) = 5\text{,}\)</span> and <span class="process-math">\(\pi(5) = 1\text{.}\)</span> This notation is rather awkward and provides only the most basic information about the permutation. A more compact (and more useful for our purposes) notation is known as <dfn class="terminology">cycle notation</dfn>. One way to visualize how the cycle notation is constructed is by constructing a digraph from a permutation <span class="process-math">\(\pi\)</span> of <span class="process-math">\([n]\text{.}\)</span> The digraph has <span class="process-math">\([n]\)</span> as its vertex set and a directed edge from <span class="process-math">\(i\)</span> to <span class="process-math">\(j\)</span> if and only if <span class="process-math">\(\pi(i) = j\text{.}\)</span> (Here we allow a directed edge from a vertex to itself if <span class="process-math">\(\pi(i) = i\text{.}\)</span>) The digraph corresponding to the permutation <span class="process-math">\(\pi\)</span> from above is shown in <a href="s_polya_perm-groups.html#fig_polya_perm-digraph" class="xref" data-knowl="./knowl/xref/fig_polya_perm-digraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 15.3">Figure 15.3</a>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ss_polya_perm-groups_rep-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig_polya_perm-digraph"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="generated/latex-image/fig_polya_perm-digraph-2.svg" role="img" class="contained"></div>
+<figure class="figure figure-like" id="fig_polya_perm-digraph"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;">
+<img src="generated/latex-image/fig_polya_perm-digraph-2.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_polya_perm-digraph-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_polya_perm-digraph-2-description"><div class="para" id="fig_polya_perm-digraph-2-1-1">The digraph corresponding to permutation <span class="process-math">\(\pi=(1245)(3)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig_polya_perm-digraph-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The digraph corresponding to permutation <span class="process-math">\(\pi=(1245)(3)\)</span><div class="autopermalink" data-description="Figure 15.3"><a href="#fig_polya_perm-digraph" title="Copy heading and permalink for Figure 15.3" aria-label="Copy heading and permalink for Figure 15.3">🔗</a></div></figcaption></figure><div class="para" id="ss_polya_perm-groups_rep-4">Since <span class="process-math">\(\pi\)</span> is a permutation, every component of such a digraph is a directed cycle. We can then use these cycles to write down the permutation in a compact manner. For each cycle, we start at the vertex with smallest label and go around the cycle in the direction of the edges, writing down the vertices’ labels in order. We place this sequence of integers in parentheses. For the <span class="process-math">\(4\)</span>-cycle in <a href="s_polya_perm-groups.html#fig_polya_perm-digraph" class="xref" data-knowl="./knowl/xref/fig_polya_perm-digraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 15.3">Figure 15.3</a>, we thus obtain <span class="process-math">\((1245)\text{.}\)</span> (If <span class="process-math">\(n\geq 10\text{,}\)</span> we place spaces or commas between the integers.) The component with a single vertex is denoted simply as <span class="process-math">\((3)\text{,}\)</span> and thus we may write <span class="process-math">\(\pi=(1245)(3)\text{.}\)</span> By convention, the disjoint cycles of a permutation are listed so that their first entries are in increasing order.<div class="autopermalink" data-description="Paragraph"><a href="#ss_polya_perm-groups_rep-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="ss_polya_perm-groups_rep-5"><h4 class="heading">
