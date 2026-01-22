@@ -122,15 +122,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -284,245 +284,55 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<div class="print-preview-header">
-<h2 class="print-preview">Print preview</h2>
-<div class="print-controls">
-<div class="print-controls-toggles">
-<form class="papersize-select" id="papersize-select">
-<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
-        </label><label><input type="radio" name="papersize" value="letter">Letter
-        </label>
-</form>
-<details class="print-options"><summary>Additional printing options</summary><div class="highlight-workspace-option">
-<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
-</div></details>
-</div>
-<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
-</div>
-</div>
-<section class="worksheet" id="ws-graphs-hamiltonian" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
-<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hamiltonian or Not?</span><div class="print-links"><a href="?printpreview=ws-graphs-hamiltonian" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="ws-graphs-hamiltonian" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hamiltonian or Not?</span><div class="print-links"><a href="ws-graphs-hamiltonian-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
 <section class="onepage" id="ws-graphs-hamiltonian-2"><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1"><div class="sbsgroup">
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:30% 40% 30%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-1-1"><img src="generated/prefigure/img-hamgraph1.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="ws-graphs-hamiltonian-2-1-2-1-1-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ws-graphs-hamiltonian-2-1-2-1-1-2-description">
-<div class="para" id="ws-graphs-hamiltonian-2-1-2-1-1-2-1-1">A graph with 10 vertices. The neighbors of each vertex are given in the table below.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-2-1-2-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">Vertex</td>
-<td class="l m b0 r0 l0 t0 lines">Neighbors</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(5\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(7\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(8\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(5\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-</table>
-</div></details><figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_1\)</span><div class="autopermalink" data-description="Figure 5.(a)"><a href="#ws-graphs-hamiltonian-2-1-2-1-1" title="Copy heading and permalink for Figure 5.(a)" aria-label="Copy heading and permalink for Figure 5.(a)">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-1-2"><img src="generated/prefigure/img-hamgraph2.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="ws-graphs-hamiltonian-2-1-2-1-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ws-graphs-hamiltonian-2-1-2-1-2-2-description">
-<div class="para" id="ws-graphs-hamiltonian-2-1-2-1-2-2-1-1">A graph with 10 vertices. The neighbors of each vertex are given in the table below.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-2-1-2-1-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">Vertex</td>
-<td class="l m b0 r0 l0 t0 lines">Neighbors</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(6\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(6\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(6\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(4\)</span>
-</td>
-</tr>
-</table>
-</div></details><figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_2\)</span><div class="autopermalink" data-description="Figure 5.(b)"><a href="#ws-graphs-hamiltonian-2-1-2-1-2" title="Copy heading and permalink for Figure 5.(b)" aria-label="Copy heading and permalink for Figure 5.(b)">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-1-3"><img src="generated/prefigure/img-hamgraph3.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="ws-graphs-hamiltonian-2-1-2-1-3-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ws-graphs-hamiltonian-2-1-2-1-3-2-description">
-<div class="para" id="ws-graphs-hamiltonian-2-1-2-1-3-2-1-1">A graph with 10 vertices. The neighbors of each vertex are given in the table below.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-2-1-2-1-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">Vertex</td>
-<td class="l m b0 r0 l0 t0 lines">Neighbors</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(7\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(7\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(9\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(6\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(5\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(4\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-</table>
-</div></details><figcaption><span class="codenumber">(c)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_3\)</span><div class="autopermalink" data-description="Figure 5.(c)"><a href="#ws-graphs-hamiltonian-2-1-2-1-3" title="Copy heading and permalink for Figure 5.(c)" aria-label="Copy heading and permalink for Figure 5.(c)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-1-1"><img src="generated/prefigure/img-hamgraph1.svg" role="img" class="contained" alt="A graph"><figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_1\)</span><div class="autopermalink" data-description="Figure 5.(a)"><a href="#ws-graphs-hamiltonian-2-1-2-1-1" title="Copy heading and permalink for Figure 5.(a)" aria-label="Copy heading and permalink for Figure 5.(a)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-1-2"><img src="generated/prefigure/img-hamgraph2.svg" role="img" class="contained" alt="A graph"><figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_2\)</span><div class="autopermalink" data-description="Figure 5.(b)"><a href="#ws-graphs-hamiltonian-2-1-2-1-2" title="Copy heading and permalink for Figure 5.(b)" aria-label="Copy heading and permalink for Figure 5.(b)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-1-3"><img src="generated/prefigure/img-hamgraph3.svg" role="img" class="contained" alt="A graph"><figcaption><span class="codenumber">(c)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_3\)</span><div class="autopermalink" data-description="Figure 5.(c)"><a href="#ws-graphs-hamiltonian-2-1-2-1-3" title="Copy heading and permalink for Figure 5.(c)" aria-label="Copy heading and permalink for Figure 5.(c)">🔗</a></div></figcaption></figure></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-2-1"><img src="generated/prefigure/petersen-graph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="ws-graphs-hamiltonian-2-1-2-2-1-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ws-graphs-hamiltonian-2-1-2-2-1-2-description"><div class="para" id="ws-graphs-hamiltonian-2-1-2-2-1-2-1-1">A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <span class="process-math">\(i\)</span> has neighbors <span class="process-math">\(i-1\text{,}\)</span> <span class="process-math">\(i+1\text{,}\)</span> and <span class="process-math">\(i+5\text{.}\)</span> The first two adjacencies are interpreted cyclically so that, for instance, <span class="process-math">\(4\)</span> has neighbors <span class="process-math">\(3\)</span> and <span class="process-math">\(0\text{.}\)</span> For the vertices with labels 5 through 9, the vertex with label <span class="process-math">\(i\)</span> has neighbors <span class="process-math">\(i-5\text{,}\)</span> <span class="process-math">\(i+2\text{,}\)</span> and <span class="process-math">\(i+3\text{.}\)</span> The second and third adjacencies are interpeted cyclically so that, for instance, <span class="process-math">\(9\)</span> has neighbors <span class="process-math">\(6\)</span> and <span class="process-math">\(7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-2-1-2-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details><figcaption><span class="codenumber">(d)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_4\)</span><div class="autopermalink" data-description="Figure 5.(d)"><a href="#ws-graphs-hamiltonian-2-1-2-2-1" title="Copy heading and permalink for Figure 5.(d)" aria-label="Copy heading and permalink for Figure 5.(d)">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-2-2"><img src="generated/prefigure/petersen-plus-e.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="ws-graphs-hamiltonian-2-1-2-2-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ws-graphs-hamiltonian-2-1-2-2-2-2-description"><div class="para" id="ws-graphs-hamiltonian-2-1-2-2-2-2-1-1">A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <span class="process-math">\(i\)</span> has neighbors <span class="process-math">\(i-1\text{,}\)</span> <span class="process-math">\(i+1\text{,}\)</span> and <span class="process-math">\(i+5\text{.}\)</span> The first two adjacencies are interpreted cyclically so that, for instance, <span class="process-math">\(4\)</span> has neighbors <span class="process-math">\(3\)</span> and <span class="process-math">\(0\text{.}\)</span> For the vertices with labels 5 through 9, the vertex with label <span class="process-math">\(i\)</span> has neighbors <span class="process-math">\(i-5\text{,}\)</span> <span class="process-math">\(i+2\text{,}\)</span> and <span class="process-math">\(i+3\text{.}\)</span> The second and third adjacencies are interpeted cyclically so that, for instance, <span class="process-math">\(9\)</span> has neighbors <span class="process-math">\(6\)</span> and <span class="process-math">\(7\text{.}\)</span> There is also an edge between the vertices with labels <span class="process-math">\(7\)</span> and <span class="process-math">\(8\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-2-1-2-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details><figcaption><span class="codenumber">(e)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_5\)</span><div class="autopermalink" data-description="Figure 5.(e)"><a href="#ws-graphs-hamiltonian-2-1-2-2-2" title="Copy heading and permalink for Figure 5.(e)" aria-label="Copy heading and permalink for Figure 5.(e)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-2-1"><img src="generated/prefigure/petersen-graph.svg" role="img" class="contained"><figcaption><span class="codenumber">(d)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_4\)</span><div class="autopermalink" data-description="Figure 5.(d)"><a href="#ws-graphs-hamiltonian-2-1-2-2-1" title="Copy heading and permalink for Figure 5.(d)" aria-label="Copy heading and permalink for Figure 5.(d)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="ws-graphs-hamiltonian-2-1-2-2-2"><img src="generated/prefigure/petersen-plus-e.svg" role="img" class="contained"><figcaption><span class="codenumber">(e)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\bfG_5\)</span><div class="autopermalink" data-description="Figure 5.(e)"><a href="#ws-graphs-hamiltonian-2-1-2-2-2" title="Copy heading and permalink for Figure 5.(e)" aria-label="Copy heading and permalink for Figure 5.(e)">🔗</a></div></figcaption></figure></div>
 </div></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Find a hamiltonian cycle in each graph or explain why there is not one<div class="autopermalink" data-description="Figure 5.1"><a href="#ws-graphs-hamiltonian-2-1" title="Copy heading and permalink for Figure 5.1" aria-label="Copy heading and permalink for Figure 5.1">🔗</a></div></figcaption></figure></section><div class="autopermalink" data-description="Worksheet 5.1: Hamiltonian or Not?"><a href="#ws-graphs-hamiltonian" title="Copy heading and permalink for Worksheet 5.1: Hamiltonian or Not?" aria-label="Copy heading and permalink for Worksheet 5.1: Hamiltonian or Not?">🔗</a></div></section>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Find a hamiltonian cycle in each graph or explain why there is not one<div class="autopermalink" data-description="Figure 5.1"><a href="#ws-graphs-hamiltonian-2-1" title="Copy heading and permalink for Figure 5.1" aria-label="Copy heading and permalink for Figure 5.1">🔗</a></div></figcaption></figure></section><section class="onepage" id="ws-graphs-hamiltonian-3"><div class="para logical" id="ws-graphs-hamiltonian-3-1">
+<ol class="lower-alpha lower-alpha-level-1" id="ws-graphs-hamiltonian-3-1-1">
+<li id="ws-graphs-hamiltonian-3-1-1-1">
+<div class="para" id="ws-graphs-hamiltonian-3-1-1-1-1">The graph <span class="process-math">\(\bfG_{1}\)</span> is hamiltonian. One example of a hamiltonian cycle is <span class="process-math">\(1,5,7,3,2,6,8,9,10,4\text{.}\)</span> (There are others.)<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item a"><a href="#ws-graphs-hamiltonian-3-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ws-graphs-hamiltonian-3-1-1-2">
+<div class="para" id="ws-graphs-hamiltonian-3-1-1-2-1">The graph <span class="process-math">\(\bfG_{2}\)</span> is not hamiltonian. One reason for this is that removing the vertex <span class="process-math">\(2\)</span> leaves a disconnected graph. Put another way, <span class="process-math">\(1,10,4,2\)</span> forms a cycle, and the only way to get from the other vertices onto that cycle is via vertex <span class="process-math">\(2\text{.}\)</span> Once you’re onto it, there’s no way off again. Thus, there’s no way to construct a cycle containing all <span class="process-math">\(10\)</span> vertices.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#ws-graphs-hamiltonian-3-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="ws-graphs-hamiltonian-3-1-1-3">
+<div class="para" id="ws-graphs-hamiltonian-3-1-1-3-1">The graph <span class="process-math">\(\bfG_{3}\)</span> is hamiltonian. One example of a hamiltonian cycle is <span class="process-math">\(1,5,6,2,3,8,9,10,4,7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#ws-graphs-hamiltonian-3-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+<li id="ws-graphs-hamiltonian-3-1-1-4">
+<div class="para" id="ws-graphs-hamiltonian-3-1-1-4-1">The graph <span class="process-math">\(\bfG_{4}\)</span> is not hamiltonian. This is a nontrivial fact. For those interested in a complete proof, see the end of this document. (You will not be tested on the proof, so it’s purely optional reading.)<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item d"><a href="#ws-graphs-hamiltonian-3-1-1-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+</li>
+<li id="ws-graphs-hamiltonian-3-1-1-5">
+<div class="para" id="ws-graphs-hamiltonian-3-1-1-5-1">The graph <span class="process-math">\(\bfG_{5}\)</span> (formed by adding one edge to the Petersen graph <span class="process-math">\(\bfG_{1}\)</span>) is hamiltonian. One example of a hamiltonian cycle is <span class="process-math">\(10,7,1,5,8,4,6,3,2,9\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item e"><a href="#ws-graphs-hamiltonian-3-1-1-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ws-graphs-hamiltonian-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof the Petersen Graph is not hamiltonian.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="ws-graphs-hamiltonian-3-2-2">Consider what a hamiltonian cycle in <span class="process-math">\(\bfG_{4}\)</span> would look like. The graph has <span class="process-math">\(15\)</span> edges, and a hamiltonian cycle would use <span class="process-math">\(10\)</span> of them. Thus, you’d have the cycle and five leftover edges that would connect vertices across the cycle (“chords”). How would these edges fit along the cycle? If an edge connected a vertex to a vertex two steps down the cycle (for example, if the cycle contains the sequence <span class="process-math">\(a,b,c\)</span> of vertices and there’s an edge from <span class="process-math">\(a\)</span> to <span class="process-math">\(c\)</span>), then there would be a triangle (a cyle on three vertices) in the graph. There is no such cycle in <span class="process-math">\(\bfG_{4}\text{.}\)</span> If a chord connects a vertex to another vertex at distance three along the hamiltonian cycle, then there is a cycle on four vertices. However, there is no such cycle in <span class="process-math">\(\bfG_{4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ws-graphs-hamiltonian-3-2-3">Now suppose that a chord connects a vertex <span class="process-math">\(v_{0}\)</span> to another vertex <span class="process-math">\(v_{1}\)</span> at distance four along the hamiltonian cycle. Let <span class="process-math">\(v_{0}'\)</span> be the vertex opposite <span class="process-math">\(v_{0}\)</span> along the hamiltonian cycle. There is also a chord incident with <span class="process-math">\(v_{0}'\text{,}\)</span> connecting it across the hamiltonian cycle to a vertex <span class="process-math">\(v_{1}'\text{.}\)</span> We’ve already explained that the distance from <span class="process-math">\(v_{0}'\)</span> to <span class="process-math">\(v_{1}'\)</span> along the hamiltonian cycle cannot be less than four, and it cannot be five since that would give <span class="process-math">\(v_{0}'\)</span> degree four. Thus the distance along the hamiltonian cycle from <span class="process-math">\(v_{0}'\)</span> to <span class="process-math">\(v_{1}'\)</span> must be four. Now <span class="process-math">\(v_{0},v_{1},v_{1}',v_{0}'\)</span> is a cycle of length four (draw a picture to convince yourself), which we don’t have in <span class="process-math">\(\bfG_{4}\text{.}\)</span> Finally, the only option that remains is that the chords all connect vertices that are exactly opposite each other on the hamiltonian cycle. However, then if <span class="process-math">\(v_{0}\)</span> and <span class="process-math">\(v_{1}\)</span> are adjacent along the hamiltonian cycle and <span class="process-math">\(v_{0}'\)</span> and <span class="process-math">\(v_{1}'\)</span> are the vertices opposite them, <span class="process-math">\(v_{0},v_{1},v_{1}',v_{0}'\)</span> is a cycle of length four.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-hamiltonian-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1: Proof the Petersen Graph is not hamiltonian"><a href="#ws-graphs-hamiltonian-3-2" title="Copy heading and permalink for Proof 1: Proof the Petersen Graph is not hamiltonian" aria-label="Copy heading and permalink for Proof 1: Proof the Petersen Graph is not hamiltonian">🔗</a></div></article></details></section><div class="autopermalink" data-description="Worksheet 5.1: Hamiltonian or Not?"><a href="#ws-graphs-hamiltonian" title="Copy heading and permalink for Worksheet 5.1: Hamiltonian or Not?" aria-label="Copy heading and permalink for Worksheet 5.1: Hamiltonian or Not?">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ws-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-triangle-free.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
