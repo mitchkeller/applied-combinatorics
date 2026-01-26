@@ -133,25 +133,6 @@ window.addEventListener("DOMContentLoaded",function(event) {
     }
 });
 
-/* jump to next page if reader tries to scroll past the bottom */
-// var hitbottom = false;
-// window.onscroll = function(ev) {
-//   if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-//     // you're at the bottom of the page
-//     console.log("Bottom of page");
-//     if (hitbottom) {
-//         console.log("hit bottom again");
-//         thenextbutton = document.getElementsByClassName("next-button")[0];
-//         thenextbutton.click();
-//     } else {
-//         hitbottom = true;
-//         /* only jump to next page if hard scroll in quick succession */
-//         window.scrollBy(0, -20);
-//         setTimeout(function (){ hitbottom = false }, 1000);
-//     }
-//   }
-// };
-
 
 //-----------------------------------------------------------------------------
 // Dynamic TOC logic
@@ -246,7 +227,30 @@ window.addEventListener("DOMContentLoaded", function(event) {
                 expander.title = "Expand" + (itemType !== "" ? " " + itemType : "");
             }
         }
-      }
+    }
+
+    //Do we have a hash in the URL? If so, we need to identify up to make sure
+    // all parents of that item are expanded
+    if(window.location.hash) {
+        let hash = window.location.hash;
+        // find the link in the TOC that has an href ending in this hash
+        let hashLink = document.querySelector(`.ptx-toc a[href$="${hash}"]`);
+        if(hashLink) {
+            let parentTocItem = hashLink.closest(".toc-item");
+            while(parentTocItem && !parentTocItem.classList.contains("contains-active")) {
+                parentTocItem.classList.add("contains-active");
+                let expander = parentTocItem.querySelector(".toc-expander");
+                if(expander) {
+                    //make sure it is expanded
+                    if(!parentTocItem.classList.contains("expanded")) {
+                        toggleTOCItem(expander);
+                    }
+                }
+                parentTocItem = parentTocItem.parentElement.closest(".toc-item");
+            }
+        }
+    }
+
 });
 
 // This needs to be after the TOC's geometry is settled
