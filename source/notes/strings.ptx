@@ -1,16 +1,25 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-strings" component="strings">
   <title>Strings, Sets, and Binomial Coefficients</title>
-  <handout>
+  <handout component="comb-proof">
     <title>Combinatorial Proofs</title>
       
       <xi:include href="../worksheets/ex-plate-vowel-consonant.ptx"/>
-      <exercise workspace="1in">
-        <statement>
+      <activity>
+        <task workspace="0.75in">
+          <statement>
           <p>
-              How many ways are there to form a string of length five using the alphabet A, B, C if exactly three characters in the string are to be the letter A? Write a sentence or two to explain your reasoning.
+              How many ways are there to form a string of length 10 using symbols from the 26-letter uppercase English alphabet if exactly three characters in the string are to elements of the set <m>\set{A,B,C,D}</m>? Write a sentence or two to explain your reasoning.
           </p>
         </statement>
-      </exercise>
+        </task>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              How does your answer change if the characters from the set <m>\set{A,B,C,D}</m> must be distinct?
+            </p>
+          </statement>
+        </task>
+      </activity>
     
     
       <p>
@@ -141,7 +150,7 @@
         <alert>Peer instruction question 4</alert>
       </p>
   </handout>
-  <handout>
+  <handout component="ubiquitous">
     <title>Ubiquitous Nature of Binomial Coefficients</title>
     <page>
     <activity workspace="2in">
