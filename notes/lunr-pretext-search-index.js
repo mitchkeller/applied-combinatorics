@@ -35,6 +35,33 @@ var ptx_lunr_docs = [
   "number": "2.1.2",
   "title": "",
   "body": "  We just saw that . Can we find a proof that counts -element subsets?  Discuss with your group: How many -element subsets of have each number below as the smallest element of ?   1    2    3               for    How can you use this to explain the identity?   "
+},
+{
+  "id": "notes-strings-3",
+  "level": "1",
+  "url": "notes-strings-3.html",
+  "type": "Handout",
+  "number": "2.2",
+  "title": "Ubiquitous Nature of Binomial Coefficients",
+  "body": " Ubiquitous Nature of Binomial Coefficients     Find a simple formula for . By a simple formula, I mean one without a summation in it. One way to do this is to think about something that's being counted and find a \"better\" way to count it.       Think of a committee (or team) with a chair (or captain).    Remember that         Peer instruction questions 1 4.       We want to count the number of solutions to where each is an integer. For each of the following scenarios, determine the number of solutions.     Each       Each       Each and       Each but change to .      Each but change to .      "
+},
+{
+  "id": "notes-strings-3-2-1",
+  "level": "2",
+  "url": "notes-strings-3.html#notes-strings-3-2-1",
+  "type": "Activity",
+  "number": "2.2.1",
+  "title": "",
+  "body": "  Find a simple formula for . By a simple formula, I mean one without a summation in it. One way to do this is to think about something that's being counted and find a \"better\" way to count it.       Think of a committee (or team) with a chair (or captain).    Remember that       "
+},
+{
+  "id": "notes-strings-3-3-1",
+  "level": "2",
+  "url": "notes-strings-3.html#notes-strings-3-3-1",
+  "type": "Activity",
+  "number": "2.2.2",
+  "title": "",
+  "body": "  We want to count the number of solutions to where each is an integer. For each of the following scenarios, determine the number of solutions.     Each       Each       Each and       Each but change to .      Each but change to .    "
 }
 ]
 

@@ -15,13 +15,6 @@
 console.log("thisbrowser.userAgent", window.navigator.userAgent);
 */
 
-var minivers = "0";
-if (typeof miniversion !== 'undefined') {
-  console.log("typeof miniversion", typeof miniversion, "dddd", typeof miniversion == 'undefined');
-  minivers = miniversion.toString();
-}
-console.log("               minivers", minivers);
-
 /* scrollbar width from https://stackoverflow.com/questions/13382516/getting-scroll-bar-width-using-javascript */
 function getScrollbarWidth() {
     var outer = document.createElement("div");
@@ -289,22 +282,8 @@ function updateURLParameter(url, param, paramVal){
   return baseURL + "?" + newAdditionalURL + rows_txt;
 }
 
-function WWiframeReseed(iframe, seed) {
-  var this_problem = document.getElementsByName(iframe)[0];
-  var this_problem_url = this_problem.src;
-  if (seed === undefined){seed = Number(this_problem.getAttribute('data-seed')) + 80 + 84 + 88;}
-  this_problem.setAttribute('data-seed', seed);
-  this_problem_url = updateURLParameter(this_problem_url, "problemSeed", seed);
-  this_problem.src = this_problem_url;
-}
-
 function process_workspace() {
     console.log("processing workspace");
-// next does not work, because the cursor does back to the beginning
-// so:  need to handle the cursor
-//    the_text = document.activeElement.innerHTML;
-//    the_text = the_text.replace(/(^|\s)\$([^\$]+)\$(\s|$|[.,!?;:])/g, "\1\\(\2\\)\3")
-//    document.activeElement.innerHTML = the_text
     MathJax.typesetPromise();
 }
 /* for the GeoGebra calculator */
@@ -352,17 +331,8 @@ window.addEventListener("load",function(event) {
                  ggbscript.id = "create_ggb_calc";
                  ggbscript.innerHTML = "ggbApp.inject('geogebra-calculator')";
                  document.body.appendChild(ggbscript);
-//                 setTimeout( function() {
-//                     $("#calculator-toggle").focus();
-//                     var inputfield = $("input.gwt-SuggestBox.TextField")[0];
-//                     console.log("inputfield", inputfield);
-//                     inputfield.focus();
-//                 }, 4000);
              } else {
                  pretext_geogebra_calculator_onload();
-//                 var inputfield = $("input.gwt-SuggestBox.TextField")[0];
-//                 console.log("inputfield", inputfield);
-//                 inputfield.focus();
              }
          } else {
              $('#calculator-container').css('display', 'none');
@@ -373,16 +343,6 @@ window.addEventListener("load",function(event) {
      });
 });
 
-
-/*
-window.addEventListener("load",function(event) {
-//    setTimeout( function() {
-       console.log("changein play color");
-       $('figure > div.onclick > svg > path').attr('fill', '#0000aa');
-       $('path').attr('fill', '#0000aa')
-//    }, 5000)
-});
-*/
 
 window.addEventListener("load",function(event) {
     document.onkeyup = function(event)
@@ -402,14 +362,6 @@ window.addEventListener("load",function(event) {
                     console.log("staying in the sage cell", parent_sage_cell, document.activeElement)
                     just_hit_escape = true;
                     setTimeout(function(){ just_hit_escape = false }, 1000);
-     //           console.log("parent_sage_cell", parent_sage_cell);
-     //           if ($(parent_sage_cell).hasClass('sagecell_editor')) {
-     //              console.log("I am trapped in a sage cell", $(document.activeElement).closest(".sagecell_editor"));
-     //              console.log($(document.activeElement));
-     //              var this_sage_cell = $(document.activeElement).closest(".sagecell_editor");
-     //              this_sage_cell.next().focus;
-     //           }
-     //           else
                 } else
                 if(knowl_focus_stack.length > 0 ) {
                    most_recently_opened = knowl_focus_stack.pop();
@@ -426,144 +378,6 @@ window.addEventListener("load",function(event) {
 },
 false);
 
-// a hack for hosted tracking
-
-window.addEventListener("load",function(event) {
-       if($('body').attr('id') == "judson-AATA") {
-           console.log("            found AATA");
-           console.log(" looking for id");
-           if (typeof eBookConfig !== 'undefined') {
-             if(eBookConfig['username']) {
-                aa_id = "run" + eBookConfig['username'];
-                ut_id = eBookConfig['username'];
-             console.log(" done looking for id", ut_id);
-var newscript = document.createElement('script');
-  newscript.type = 'text/javascript';
-  newscript.async = true;
-  newscript.src = 'https://pretextbook.org/js/' + '0.13' + '/' + 'trails' + '.js';
-  var allscripts = document.getElementsByTagName('script');
-  var s = allscripts[allscripts.length - 1];
-  console.log('s',s);
-  console.log("adding a script", newscript);
-  s.parentNode.insertBefore(newscript, s.nextSibling);
-  trail = true;
-             console.log(" done adding script");
-             } else {
-             console.log(" did not find username");
-             }
-           }  else {
-             console.log(" did not find eBookConfig")
-           }
-       }
-});
-
-function loadResource(type, file) {
-  /* type should be js or css */
-  if (typeof js_version === 'undefined') { js_version = '0.2' }
-  if (typeof css_version === 'undefined') { css_version = '0.6' }
-  var newresource, allresources, s;
-  var linktype = "script";
-  if (type == "css") { linktype = "link" }
-  newresource = document.createElement(linktype);
-
-  if (type == "css") {
-      newresource.type = 'text/css';
-      newresource.rel = 'stylesheet';
-      newresource.href = 'https://pretextbook.org/css/' + css_version + '/' + file + '.css';
-      newresource.href += '?minivers=' + minivers;
-  } else if (type == "js") {
-      newresource.type = 'text/javascript';
-//  newscript.async = true;
-      newresource.src = 'https://pretextbook.org/js/' + js_version + '/' + file + '.js';
-      newresource.src += '?minivers=' + minivers;
-  } else {
-      console.log("unknown resource type", type, "for", file);
-      return
-  }
-
-  allresources = document.getElementsByTagName(linktype);
-  s = allresources[allresources.length - 1];
-  console.log('s',s);
-  console.log("adding a resource", newresource);
-  s.parentNode.insertBefore(newresource, s.nextSibling);
-}
-
-
-window.addEventListener("load",function(event) {
-       if(false && $('body').attr('id') == "pretext-SA") {
-           console.log("            found DMOI");
-           if (typeof uname === "undefined") { uname = "" }
-           console.log("aaaa", uname, "  uname");
-           if(uname == "editor") {
-                loadResource('js', 'edit');
-           } else {
-                console.log("not enabling editing")
-           }
- /*       } else if ($('body').attr('id') == "pugetsound-SW") { */
-        } else if (false && window.location.href.includes("soundwriting.pugetsound")) {
-/* a bunch of temporary exploration for a Sound Writing survey */
-            console.log("please take our survey");
-            console.log(window.location.href);
-            console.log(window.location.href.includes("soundwriting.pugetsound"));
-
-            loadResource("js", "login");
-            loadResource("css", "features");
-            setTimeout( loadResource("js", "survey"), 1000);  /* I know: sloppy */
-
-  //      } else if ((typeof online_editable !== 'undefined') &&  online_editable) {
-        } else if (false && $('body').attr('id') == "pretext-SA") {
-            loadResource('css', 'features');
-            loadResource('js', 'login')
-            loadResource('js', 'edit');
-        } else {
-            var this_source_txt;
-            var source_url = window.location.href;
-            source_url = source_url.replace(/(#|\?).*/, "");
-            source_url = source_url.replace(/html$/, "ptx");
-            if (typeof sourceeditable !== 'undefined') {
-              fetch(source_url).then(
-                  function(u){ return u.text();}
-                ).then(
-                  function(text){
-                      this_source_txt = text;
-                      if (this_source_txt.includes("404 Not")) {
-                          console.log("Editing not enabled: source unavailable")
-                      } else {
-                        loadResource('css', 'features');
-                        loadResource('css', 'edit');
-                        loadResource('js', 'login')
-                        loadResource('js', 'edit');
-                      }
-                  }
-                );
-              } else {
-                   console.log("Source file unavailable: editing not possible")
-              }
-        }
-
-});
-
-// this is to open every knowl on a page
-// (this code is not actually used anywhere)
-window.addEventListener("load",function(event) {
-   if($('body').hasClass("braillesample")) {
-       var knowl_id_counterX = 0;
-       console.log("            found braillesample");
-       var all_knowls = $('[data-knowl]');
-       console.log("found", all_knowls.length, "knowls");
-       console.log("which are", all_knowls);
-       for (var j=1; j < all_knowls.length; ++j) {
-           console.log(j, "un-knowling", all_knowls[j]);
-           console.log("attr", $(all_knowls[j]).attr("data-knowl"));
-           $knowl = $(all_knowls[j]);
-           if(!$knowl.attr("data-knowl-uid")) {
-              $knowl.attr("data-knowl-uid", knowl_id_counterX);
-              knowl_id_counterX++;
-            }
-            knowl_click_handler($knowl);
-          // knowl_click_handler($(all_knowls[j]))
-       }
-}});
 
 // when the anchor is a knowl, open it
 window.addEventListener("load",function(event) {
@@ -594,13 +408,6 @@ window.addEventListener("load",function(event) {
 });
 
 
-// What purpose does this serve?
-function urlattribute() {
-        var this_urlstub = window.location.hostname;
-        document.body.setAttribute("data-urlstub", this_urlstub);
-}
-
-
 // The new method for creating pages and adjusting workspace //
 
 // This is used multiple places to set height of workspace divs to their author-provided heights
@@ -614,6 +421,7 @@ function setInitialWorkspaceHeights() {
 
 // If a printout (worksheet or handout) includes authored pages, we only need to put content before the first page and after the last page into the first and last pages, respectively.
 function adjustPrintoutPages() {
+    console.log("*** Adjusting printout pages.");
     const printout = document.querySelector('section.worksheet, section.handout');
     if (!printout) {
         console.warn("No printout found, exiting adjustPrintoutPages.");
@@ -647,6 +455,7 @@ function adjustPrintoutPages() {
 
 // This is the main function we will call then a printout does not come from the XSL with pages already defined (for now, the XSL will keep the <page> behavior as an option).
 function createPrintoutPages(margins) {
+    console.log("*** Creating printout pages with margins:", margins);
 
     // Assumptions: needs to work for both letter (8.5in x 11in) and a4 (210mm x 297mm) paper sizes.  We will work in pixels (96/in): those are 816px x 1056px and 794px x 1122.5px respectively (1 inch = 96 px, 1 cm = 37.8 px).  We assume that the printing interface of the browser will do the right thing with these.
 
@@ -679,16 +488,6 @@ function createPrintoutPages(margins) {
                 printout.insertBefore(tasks[i], child.nextSibling);
             }
         // Skipping separate treatment of exercisegroups for now.
-        //} else if (child.classList.contains('exercisegroup')) {
-        //    for (const subChild of child.children) {
-        //        if (subChild.classList.contains('exercisegroup-exercises')){
-        //            for (const row of subChild.children){
-        //                rows.push(row);
-        //            }
-        //        } else {
-        //            rows.push(child);
-        //        }
-        //    }
         } else {
             rows.push(child);
         }
@@ -743,10 +542,90 @@ function createPrintoutPages(margins) {
     }
 }
 
+// Add headers and footers to all pages in a printout.  Start with this set to be hidden by default; a toggle later will show/hide them.
+function addHeadersAndFootersToPrintout() {
+    const printout = document.querySelector('section.worksheet, section.handout');
+    if (!printout) {
+        console.warn("No printout found, exiting addHeadersAndFootersToPrintout.");
+        return;
+    }
+    const pages = printout.querySelectorAll('.onepage');
+    // Loop through pages and add header and footer divs
+    pages.forEach((page, index) => {
+        const isFirstPage = index === 0;
+        // Add header
+        const headerDiv = document.createElement('div');
+        headerDiv.classList.add(isFirstPage ? 'first-page-header' : 'running-header', 'hidden');
+        headerDiv.innerHTML = `<div class="header-left" contenteditable="true"></div><div class="header-center" contenteditable="true"></div><div class="header-right" contenteditable="true"></div>`;
+        page.insertBefore(headerDiv, page.firstChild);
+        // Add footer
+        const footerDiv = document.createElement('div');
+        footerDiv.classList.add(isFirstPage ? 'first-page-footer' : 'running-footer', 'hidden');
+        footerDiv.innerHTML = `<div class="footer-left" contenteditable="true"></div><div class="footer-center" contenteditable="true"></div><div class="footer-right" contenteditable="true"></div>`;
+        page.appendChild(footerDiv);
+    });
+    // Add content based on local storage if available, otherwise from data-attributes on the printout
+    const headerFooterKeys = ['header-first-left', 'header-first-center', 'header-first-right', 'footer-first-left', 'footer-first-center', 'footer-first-right', 'header-running-left', 'header-running-center', 'header-running-right', 'footer-running-left', 'footer-running-center', 'footer-running-right'];
+    const headerFooterContent = {};
+    headerFooterKeys.forEach(key => {
+        headerFooterContent[key] = localStorage.getItem(key) || printout.getAttribute(`data-${key}`) || '';
+    });
+    // First page header and footer
+    document.querySelector('.first-page-header').querySelector('.header-left').innerHTML = headerFooterContent['header-first-left'];
+    document.querySelector('.first-page-header').querySelector('.header-center').innerHTML = headerFooterContent['header-first-center'];
+    document.querySelector('.first-page-header').querySelector('.header-right').innerHTML = headerFooterContent['header-first-right'];
+    document.querySelector('.first-page-footer').querySelector('.footer-left').innerHTML = headerFooterContent['footer-first-left'];
+    document.querySelector('.first-page-footer').querySelector('.footer-center').innerHTML = headerFooterContent['footer-first-center'];
+    document.querySelector('.first-page-footer').querySelector('.footer-right').innerHTML = headerFooterContent['footer-first-right'];
+    // Running headers and footers
+    document.querySelectorAll('.running-header').forEach(headerDiv => {
+        headerDiv.querySelector('.header-left').innerHTML = headerFooterContent['header-running-left'];
+        headerDiv.querySelector('.header-center').innerHTML = headerFooterContent['header-running-center'];
+        headerDiv.querySelector('.header-right').innerHTML = headerFooterContent['header-running-right'];
+    });
+    document.querySelectorAll('.running-footer').forEach(footerDiv => {
+        footerDiv.querySelector('.footer-left').innerHTML = headerFooterContent['footer-running-left'];
+        footerDiv.querySelector('.footer-center').innerHTML = headerFooterContent['footer-running-center'];
+        footerDiv.querySelector('.footer-right').innerHTML = headerFooterContent['footer-running-right'];
+    });
+    // Add event listeners to update local storage when content is edited
+    headerFooterKeys.forEach(key => {
+        const selectorMap = {
+            'header-first-left': '.first-page-header .header-left',
+            'header-first-center': '.first-page-header .header-center',
+            'header-first-right': '.first-page-header .header-right',
+            'footer-first-left': '.first-page-footer .footer-left',
+            'footer-first-center': '.first-page-footer .footer-center',
+            'footer-first-right': '.first-page-footer .footer-right',
+            'header-running-left': '.running-header .header-left',
+            'header-running-center': '.running-header .header-center',
+            'header-running-right': '.running-header .header-right',
+            'footer-running-left': '.running-footer .footer-left',
+            'footer-running-center': '.running-footer .footer-center',
+            'footer-running-right': '.running-footer .footer-right'
+        };
+        const elements = document.querySelectorAll(selectorMap[key]);
+        elements.forEach(elem => {
+            elem.addEventListener('input', () => {
+                localStorage.setItem(key, elem.innerHTML);
+            });
+        });
+    });
+}
 
-    // We look at each page and adjust the heights of the workspaces to fit it nicely into the page.
-    // The width and height of the page will now depend on the letter or a4 setting.
+
+// We look at each page and adjust the heights of the workspaces to fit it nicely into the page.
+// The width and height of the page will now depend on the letter or a4 setting.
 function adjustWorkspaceToFitPage({paperSize, margins}) {
+    console.log("*** Adjusting workspace to fit page size:", paperSize, "with margins:", margins);
+
+    // Toggle off workspace highlight if it is on, so it doesn't interfere with resizing
+    const highlightWorkspaceCheckbox = document.getElementById("highlight-workspace-checkbox");
+    const wasHighlighted = highlightWorkspaceCheckbox && highlightWorkspaceCheckbox.checked;
+    if (wasHighlighted) {
+        toggleWorkspaceHighlight(false);
+    }
+
     let paperWidth, paperHeight;
     if (paperSize === 'a4' || document.body.classList.contains('a4')) {
         console.log("Setting page size to A4");
@@ -796,6 +675,11 @@ function adjustWorkspaceToFitPage({paperSize, margins}) {
         page.style.width = "";
     });
     console.log("Set page sizes to content area of paper size.");
+
+    // Reset the highlight workspace checkbox state
+    if (wasHighlighted) {
+        toggleWorkspaceHighlight(true);
+    }
 }
 
 // Helper functions for calculating heights and workspace sizes
@@ -855,6 +739,7 @@ function getElemWorkspaceHeight(elem) {
 
 // Functions for finding the optimal page breaks
 function findPageBreaks(rows, pageHeight) {
+    console.log("*** Finding page breaks for", rows.length, "rows with page height:", pageHeight);
     // An array for the page breaks.  The nth element will be the index of the last row on page n.
     let pageBreaks = [];
     // An array for the minimum cost possible for rows i to the end.
@@ -901,7 +786,9 @@ function findPageBreaks(rows, pageHeight) {
     return pageBreaks;
 }
 
+// Function to set CSS variables and @page rules for page geometry.  This will be called whenever the paper size or margins change (in practice, only when page size changes, since margins are fixed for now).
 function setPageGeometryCSS({paperSize, margins}) {
+    console.log("*** Setting page geometry CSS for paper size:", paperSize, "with margins:", margins);
     // Remove any existing geometry CSS to avoid duplicates
     const existingStyle = document.getElementById("page-geometry-css");
     if (existingStyle) {
@@ -948,7 +835,6 @@ function toggleWorkspaceHighlight(isChecked) {
                 original.classList.add('original-workspace');
                 const originalHeight = workspace.getAttribute('data-space') || '0px';
                 original.setAttribute('title', 'Author-specified workspace height (' + originalHeight + ')');
-                console.log("setting original workspace height for", workspace);
                 // Use the data-space attribute for height of original workspace
                 original.style.height = originalHeight;
                 // insert original div before the workspace content
@@ -964,55 +850,24 @@ function toggleWorkspaceHighlight(isChecked) {
         }
     } else {
         document.body.classList.remove("highlight-workspace");
+        // Remove the original workspace divs.  We don't want to keep these in, as they interfere with changing page sizes and workspace heights.
+        document.querySelectorAll('.workspace-container').forEach(container => {
+            const workspace = container.querySelector('.workspace');
+            // Move the workspace out of the container
+            container.parentNode.insertBefore(workspace, container);
+            // Remove the container
+            container.remove();
+        });
     }
 }
 
-// Printout print preview and page setup
-window.addEventListener("load",function(event) {
-  // We condition on the existence of the papersize radio buttons, which only appear in the printout print preview.
-  if (document.querySelector('input[name="papersize"]')) {
-    // First, get the margins for pages to be passed around as needed.
-    const marginList = document.querySelector('section.worksheet, section.handout').getAttribute('data-margins').split(' ');
-    // Convert margin values to pixels if they are not already numbers
-    function toPixels(value) {
-        if (typeof value === "number") return value;
-        if (typeof value !== "string") return 0;
-        value = value.trim();
-        if (value.endsWith("px")) {
-            return parseFloat(value);
-        } else if (value.endsWith("in")) {
-            return Math.floor(parseFloat(value) * 96);
-        } else if (value.endsWith("cm")) {
-            return Math.floor(parseFloat(value) * 37.8);
-        } else if (value.endsWith("mm")) {
-            return Math.floor(parseFloat(value) * 3.78);
-        } else if (value.endsWith("pt")) {
-            return Math.floor(parseFloat(value) * (96 / 72));
-        } else {
-            // fallback: try to parse as px
-            return parseFloat(value) || 0;
-        }
-    }
-    const margins = {
-        top: toPixels(marginList[0] || "0.75in"), // Default to 0.75in if not specified
-        right: toPixels(marginList[1] || "0.75in"),
-        bottom: toPixels(marginList[2] || "0.75in"),
-        left: toPixels(marginList[3] || "0.75in")
-    }
-    // Get the papersize from localStorage or set it based on user's geographic region
+function getPaperSize() {
     let paperSize = localStorage.getItem("papersize");
     if (paperSize) {
-      const radio = document.querySelector(`input[name="papersize"][value="${paperSize}"]`);
-      if (radio) {
-        radio.checked = true;
-      }
-      // Set the papersize class on body
-      document.body.classList.remove("a4", "letter");
-      document.body.classList.add(paperSize);
-      setPageGeometryCSS({paperSize: paperSize, margins: margins});
+      return paperSize;
     } else {
-      // Try to set papersize based on user's geographic region
-      // Default to 'letter' for North and South America, 'a4' elsewhere
+        // Try to set papersize based on user's geographic region
+        // Default to 'letter' for North and South America, 'a4' elsewhere
         try {
           fetch('https://ipapi.co/json/')
             .then(response => response.json())
@@ -1037,69 +892,231 @@ window.addEventListener("load",function(event) {
           const radio = document.querySelector(`input[name="papersize"][value="letter"]`);
           if (radio) radio.checked = true;
         }
-      //NB: the default papersize is set to 'letter' in the body class list.
     }
-    const papersizeRadios = document.querySelectorAll('input[name="papersize"]');
-    papersizeRadios.forEach(radio => {
-      radio.addEventListener('change', function() {
-        if (this.checked) {
-          document.body.classList.remove("a4", "letter");
-          document.body.classList.add(this.value);
-          localStorage.setItem("papersize", this.value);
-          console.log("Setting papersize to", this.value);
+    return paperSize || "letter";
+}
 
-          // If the "highlight workspace" checkbox was already checked, then we should restart the process by reloading the page.  Specifically, we run into issues when there are .workspace-container divs already present.
-          if (document.querySelector(".workspace-container")) {
-            console.log("Reloading page to apply new papersize with workspace highlight enabled.");
-            window.location.reload();
-            return;
-          } else {
-            // Otherwise, we can just adjust the workspace heights to fit the new paper size.
-            console.log("Adjusting workspace heights to fit new papersize.");
-            adjustWorkspaceToFitPage({paperSize: this.value, margins: margins});
-            setPageGeometryCSS({paperSize: this.value, margins: margins});
-          }
-        }
-      });
-    });
+// Function to load the printout section and switch to print stylesheet.  This will run whenever a user clicks on a print preview link (which adds ?printpreview=sectionID to the URL).
+async function loadPrintout(printableSectionID) {
 
-    // Open all details elements (knowls) on the page
-    var born_hidden_knowls = document.querySelectorAll('details');
-    console.log("born_hidden_knowls", born_hidden_knowls);
-    born_hidden_knowls.forEach(function(detail) {
-        detail.open = true;
-    });
-    // If the printout has authored pages, there will be at least one .onepage element.
-    if (document.querySelector('.onepage')) {
-        adjustPrintoutPages();
-        /* not the right way:  need to figure out what this needs to wait for */
-        //window.setTimeout(adjustPrintoutPages, 1000);
-    } else {
-        createPrintoutPages(margins);
-    }
-    // After pages are set up, we adjust the workspace heights to fit the page (based on the paper size).
-    adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
-
-    console.log("finished adjusting workspace");
-
-
-    // Get the 'highlight workspace' checkbox state from localStorage or set it to false by default
-    const highlightWorkspaceCheckbox = document.getElementById("highlight-workspace-checkbox");
-    if (highlightWorkspaceCheckbox) {
-        highlightWorkspaceCheckbox.checked = localStorage.getItem("highlightWorkspace") === "true";
-        highlightWorkspaceCheckbox.addEventListener("change", function() {
-            localStorage.setItem("highlightWorkspace", this.checked);
-            toggleWorkspaceHighlight(this.checked);
+    // Switch to print-worksheet.css for print preview
+    const themeStylesheetLink = document.querySelector('link[rel="stylesheet"][href*="theme"]');
+    // get the href of the theme stylesheet link
+    const themeStylesheetHref = themeStylesheetLink ? themeStylesheetLink.getAttribute('href') : null;
+    if (themeStylesheetHref) {
+        // replace 'theme.css' with 'print-worksheet.css' in the href
+        const printStylesheetHref = themeStylesheetHref.replace(/theme.*\.css/, 'print-worksheet.css');
+        // update the href of the theme stylesheet link
+        themeStylesheetLink.setAttribute('href', printStylesheetHref);
+        // Wait for the new stylesheet to load.  This is important to ensure the styles are applied before the calling function tries to compute workspace sizes.
+        await new Promise((resolve) => {
+            themeStylesheetLink.addEventListener('load', resolve, { once: true });
         });
-        // Initial toggle to apply the highlight class if checked
-        toggleWorkspaceHighlight(highlightWorkspaceCheckbox.checked);
     }
 
+    // Find the section with this ID
+    const printableSection = document.getElementById(printableSectionID);
+    if (!printableSection) {
+        console.error("No section found with ID:", printableSectionID);
+        return;
+    }
+    // Remove any existing sections from .ptx-content and add only the printable section
+    const ptxContent = document.querySelector('.ptx-content');
+    const existingSections = ptxContent.querySelectorAll(':scope > section');
+    existingSections.forEach(sec => ptxContent.removeChild(sec));
+    ptxContent.appendChild(printableSection);
+}
 
+// Function to redo solutions details to divs with summary as title
+function rewriteSolutions() {
+    var born_hidden_knowls = document.querySelectorAll('.worksheet details, .handout details');
+    born_hidden_knowls.forEach(function(detail) {
+        const summary = detail.querySelector('summary');
+        const content = detail.innerHTML.replace(summary.outerHTML, '');
+        const div = document.createElement('div');
+        div.classList = detail.classList;
+        if (summary) {
+            const title = document.createElement('h5');
+            title.innerHTML = summary.innerHTML;
+            div.appendChild(title);
+        }
+        const body = document.createElement('div');
+        body.innerHTML = content;
+        div.appendChild(body);
+        detail.parentNode.replaceChild(div, detail);
+    });
+}
 
-        // Not sure why this is here:
-      window.setTimeout(urlattribute, 1500);
-  }
+// Utility to convert various CSS length units to pixels
+function toPixels(value) {
+    if (typeof value === "number") return value;
+    if (typeof value !== "string") return 0;
+    value = value.trim();
+    if (value.endsWith("px")) {
+        return parseFloat(value);
+    } else if (value.endsWith("in")) {
+        return Math.floor(parseFloat(value) * 96);
+    } else if (value.endsWith("cm")) {
+        return Math.floor(parseFloat(value) * 37.8);
+    } else if (value.endsWith("mm")) {
+        return Math.floor(parseFloat(value) * 3.78);
+    } else if (value.endsWith("pt")) {
+        return Math.floor(parseFloat(value) * (96 / 72));
+    } else {
+        // fallback: try to parse as px
+        return parseFloat(value) || 0;
+    }
+}
+
+// Event listener for page load to handle print preview setup
+window.addEventListener("DOMContentLoaded", async function(event) {
+    const urlParams = new URLSearchParams(window.location.search);
+    // We condition on the existence of the papersize radio buttons, which only appear in the printout print preview.
+    if (urlParams.has("printpreview")) {
+        const printableSectionID = urlParams.get("printpreview");
+        await loadPrintout(printableSectionID);
+
+        // First, get the margins for pages to be passed around as needed.
+        const marginList = document.querySelector('section.worksheet, section.handout').getAttribute('data-margins').split(' ');
+        // Convert margin values to pixels if they are not already numbers
+        const margins = {
+            top: toPixels(marginList[0] || "0.75in"), // Default to 0.75in if not specified
+            right: toPixels(marginList[1] || "0.75in"),
+            bottom: toPixels(marginList[2] || "0.75in"),
+            left: toPixels(marginList[3] || "0.75in")
+        }
+
+        // Transform all solutions details elements to divs with the summary as a title
+        rewriteSolutions();
+
+        // Get the papersize from localStorage or set it based on user's geographic region.  This will always return a value (defaulting to 'letter' if all else fails).
+        let paperSize = getPaperSize();
+        if (paperSize) {
+        const radio = document.querySelector(`input[name="papersize"][value="${paperSize}"]`);
+        if (radio) {
+            radio.checked = true;
+        }
+        // Set the papersize class on body
+        document.body.classList.remove("a4", "letter");
+        document.body.classList.add(paperSize);
+        setPageGeometryCSS({paperSize: paperSize, margins: margins});
+        } else {
+            console.warning("Bug: paperSize should always have a value here.");
+        }
+        // Add event listeners to the papersize radio buttons to handle changes
+        const papersizeRadios = document.querySelectorAll('input[name="papersize"]');
+        papersizeRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.checked) {
+                    document.body.classList.remove("a4", "letter");
+                    document.body.classList.add(this.value);
+                    localStorage.setItem("papersize", this.value);
+                    setPageGeometryCSS({paperSize: this.value, margins: margins});
+                    adjustWorkspaceToFitPage({paperSize: this.value, margins: margins});
+                }
+            });
+        });
+
+        // Add event listeners to the hide hints/answers/solutions checkboxes
+        for (const solutionType of ["hint", "answer", "solution"]) {
+            const checkbox = document.getElementById(`hide-${solutionType}-checkbox`);
+            if (checkbox) {
+                const storageKey = `hide-${solutionType}`;
+                // by default, hide answer and solution divs
+                if (solutionType === "answer" || solutionType === "solution") {
+                    if (!localStorage.getItem(storageKey)) {
+                        checkbox.checked = true;
+                        localStorage.setItem(storageKey, "true");
+                    }
+                }
+                // Now adjust based on local storage
+                // set visibility based on current checkbox state
+                checkbox.checked = localStorage.getItem(storageKey) === "true";
+                document.querySelectorAll(`div.${solutionType}`).forEach(elem => {
+                    // add hidden to class list
+                    if (checkbox.checked) {
+                        elem.classList.add("hidden");
+                    } else {
+                        elem.classList.remove("hidden");
+                    }
+                });
+                // Add event listener to toggle visibility
+                checkbox.addEventListener("change", function() {
+                    localStorage.setItem(storageKey, this.checked);
+                    // toggle visibility of solution divs
+                    document.querySelectorAll(`div.${solutionType}`).forEach(elem => {
+                        if (checkbox.checked) {
+                            elem.classList.add("hidden");
+                        } else {
+                            elem.classList.remove("hidden");
+                        }
+                        //adjustPrintoutPages();
+                        adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
+                    });
+                });
+            }
+        }
+
+        // Finally, with everything set up, we create or adjust the printout pages as needed.
+
+        // If the printout has authored pages, there will be at least one .onepage element.
+        if (document.querySelector('.onepage')) {
+            adjustPrintoutPages();
+        } else {
+            createPrintoutPages(margins);
+        }
+
+        // Add headers and footers to all pages in the printout
+        addHeadersAndFootersToPrintout();
+
+        // Add event listeners to the print header/footer checkboxes
+        for (const hf of ["first-page-header", "running-header", "first-page-footer", "running-footer"]) {
+            const checkbox = document.getElementById(`print-${hf}-checkbox`);
+            if (checkbox) {
+                // set visibility based on current checkbox state
+                checkbox.checked = localStorage.getItem(`print-${hf}`) === "true";
+                document.querySelectorAll(`.${hf}`).forEach(elem => {
+                    // add hidden to class list
+                    if (checkbox.checked) {
+                        elem.classList.remove("hidden");
+                    } else {
+                        elem.classList.add("hidden");
+                    }
+                });
+                // Add event listener to toggle visibility
+                checkbox.addEventListener("change", function() {
+                    localStorage.setItem(`print-${hf}`, this.checked);
+                    // toggle visibility of header/footer divs
+                    document.querySelectorAll(`.${hf}`).forEach(elem => {
+                        if (checkbox.checked) {
+                            elem.classList.remove("hidden");
+                        } else {
+                            elem.classList.add("hidden");
+                        }
+                        adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
+                    });
+                });
+            }
+        }
+
+        // After pages are set up, we adjust the workspace heights to fit the page (based on the paper size).
+        adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
+
+        // Get the 'highlight workspace' checkbox state from localStorage or set it to false by default
+        // NB we need to do this after the adjustment of workspace heights so that the additional original workspace divs don't throw off the calculations when the page is reloaded.
+        const highlightWorkspaceCheckbox = document.getElementById("highlight-workspace-checkbox");
+        if (highlightWorkspaceCheckbox) {
+            highlightWorkspaceCheckbox.checked = localStorage.getItem("highlightWorkspace") === "true";
+            highlightWorkspaceCheckbox.addEventListener("change", function() {
+                localStorage.setItem("highlightWorkspace", this.checked);
+                toggleWorkspaceHighlight(this.checked);
+            });
+            // Initial toggle to apply the highlight class if checked
+            toggleWorkspaceHighlight(highlightWorkspaceCheckbox.checked);
+        }
+
+        console.log("finished adjusting workspace");
+    }
 });
 
 
