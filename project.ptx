@@ -17,7 +17,8 @@
             publication="publication-workbook.ptx" />
     <target name="notes" format="html" source="notes.ptx" 
             publication="publication-notes.ptx" deploy-dir="notes" />
-
+    <target name="notes-a" format="html" source="notes.ptx" 
+            publication="publication-notes-a.ptx" deploy-dir="annotated-notes" />
     <!-- <target name="epub">
       <format>epub</format>
       <source>source/main.ptx</source>

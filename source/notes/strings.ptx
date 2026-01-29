@@ -7,10 +7,15 @@
       <activity>
         <task workspace="0.75in">
           <statement>
-          <p>
-              How many ways are there to form a string of length 10 using symbols from the 26-letter uppercase English alphabet if exactly three characters in the string are to elements of the set <m>\set{A,B,C,D}</m>? Write a sentence or two to explain your reasoning.
-          </p>
-        </statement>
+            <p>
+                How many ways are there to form a string of length 10 using symbols from the 26-letter uppercase English alphabet if exactly three characters in the string are to elements of the set <m>\set{A,B,C,D}</m>? Write a sentence or two to explain your reasoning.
+            </p>
+          </statement>
+          <solution component="comb-proof-solns">
+            <p>
+              We first choose three places for the letters from <m>\set{A,B,C,D}</m>, which can be done in <m>C(10,3)</m> ways. We then have four choices for each of those positions, so there are <m>4^3</m> ways to fill them in. Finally, we must fill in the remaining 7 positions using the other 22 letters. There are no restrictions on repetition, so there are <m>22^7</m> ways to fill in those spaces. Thus, the total number of strings is <m>C(10,3)\cdot 4^3\cdot 22^7</m>.
+            </p>
+          </solution>
         </task>
         <task workspace="0.5in">
           <statement>
@@ -18,6 +23,11 @@
               How does your answer change if the characters from the set <m>\set{A,B,C,D}</m> must be distinct?
             </p>
           </statement>
+          <solution component="comb-proof-solns">
+            <p>
+              Instead of <m>4^3</m> we have <m>P(4,3) = 4\cdot 3\cdot 2</m> since the number of options for each of those positions decreases by one after making the previous decision.
+            </p>
+          </solution>
         </task>
       </activity>
     
