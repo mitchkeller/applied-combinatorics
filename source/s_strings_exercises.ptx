@@ -13,16 +13,68 @@
         <statement>
             <p>Matt is designing a website authentication system. He knows passwords are most secure if they contain letters, numbers, and symbols. However, he doesn't quite understand that this additional security is defeated if he specifies in which positions each character type appears. He decides that valid passwords for his system will begin with three letters (uppercase and lowercase both allowed), followed by two digits, followed by one of <m>10</m> symbols, followed by two uppercase letters, followed by a digit, followed by one of <m>10</m> symbols. How many different passwords are there for his website system? How does this compare to the total number of strings of length <m>10</m> made from the alphabet of all uppercase and lowercase English letters, decimal digits, and <m>10</m> symbols?</p>
         </statement>
+        <answer>
+            <p>
+                <m>52^{3}\cdot 10^{2}\cdot 10\cdot 26^{2}\cdot 10\cdot 10 = 9,505,100,800,000</m>; <m>72^{10}= 3,743,906,242,624,487,424</m>
+            </p>
+        </answer>
+        <solution>
+            <p>
+                There are 52 choices for each of the first three positions, since both uppercase and lowercase letters are allowed.
+                There are 10 choices for each of the next two positions, since they must be digits.
+                There are 10 choices for the next position, which must be a symbol.
+                The two uppercase letters have 26 choices each.
+                The last two positions have 10 choices each, first as a digit and then as a symbol.
+                Thus, his website has <m>52^{3}\cdot 10^{2}\cdot 10\cdot 26^{2}\cdot 10\cdot 10 = 9,505,100,800,000</m> possible passwords.
+                If, on the other hand, he allowed any of the 72 characters in each of the 10 positions, he’d have <m>72^{10}= 3,743,906,242,624,487,424</m> passwords, which is several orders of magnitude more options!
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
             <p>How many ternary strings of length <m>2n</m> are there in which the zeroes appear only in odd-numbered positions?</p>
         </statement>
+        <answer>
+            <p>
+                <m>3^n\cdot 2^n</m>
+            </p>
+        </answer>
+        <solution>
+            <p>
+               For the odd-numbered positions, of which there are <m>n</m>, we have 3 choices. For the even-numbered positions, of which there are also <m>n</m>, we have only 2 choices. Thus, the number of such ternary strings is <m>3^{n}\cdot 2^{n}</m>. 
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
             <p>Suppose we are making license plates of the form <m>l_1l_2l_3-d_1d_2d_3</m> where <m>l_1,l_2,l_3</m> are capital letters in the English alphabet and <m>d_1,d_2,d_3</m> are decimal digits (<ie/>, elements of the set <m>\{0,1,2,3,4,5,6,7,8,9\}</m>) subject to the restriction that at least one digit is nonzero and at least one letter is <m>K</m>. How many license plates can we make?</p>
         </statement>
+        <answer>
+            <p>
+                <m>(26^{3}-25^{3})\cdot 999</m>
+            </p>
+        </answer>
+        <solution>
+            <p>
+                There are a couple of ways to approach this.
+                You could process <q>at least one K</q> by thinking of it as meaning <q>exactly one K or exactly two K's or exactly three K's</q> and <q>at least one digit is nonzero</q> as <q>exactly two digits are 0 or exactly one digit is 0 or no digits are 0</q>.
+                For K's, you'd have then <m>C(3,1)25^{2} + C(3,2) 25^{1} + C(3,3)</m> since you need to pick which position(s) are K and then fill in the other position(s) with one of the other 25 letters.
+                For digits, you'd have <m>C(3,1)9^{2} + C(3,2) 9^{1} + C(3,3)9^{3}</m>, and then you would multiply these to get the total number of license plates:
+                <me>
+                    \left(\binom{3}{1}25^{2} + \binom{3}{2}25^{1} + \binom{3}{3}\right)\left( \binom{3}{1}9^{2} + \binom{3}{2}9^{1} + \binom{3}{3}9^{3}\right)
+                </me>.
+            </p>
+            
+            <p>
+                Alternatively, you could realize that the only strings of letters you don't want to allow are those with no K's, so you can subtract off the strings with no K's from the total number <m>26^{3}-25^{3}</m>.
+                Similarly for digits, you can just subtract the 000 case, which is unique, so there are <m>10^{3}-1 = 999</m> digit strings.
+                Thus, you would have <m>(26^{3}-25^{3})\cdot 999</m>.
+            </p>
+            
+            <p>
+                Although these expressions might not look equal, you can check with a calculator that they are!
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
@@ -39,6 +91,44 @@
                   </ol>
                 </p>
         </statement>
+        <answer>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>10!</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(10!)^{3}</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </answer>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            There are <m>P(10,10)=10!</m> ways for the 10 students in Group 1 to line up.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We can view this as filling in 30 blanks where the first, fourth, seventh, etc.
+                            blank must come from group 1, the second, fifth, eighth, etc.
+                            must come from group 2, and the third, sixth, ninth, etc.
+                            must come from group 3.
+                            Hence, there are 10 choices for each of the first, second, and third blanks, 9 choices for each of the fourth, fifth, and sixth blanks, etc.
+                            This continues down until the 28th, 29th, and 30th blanks each have a single choice since there is only one remaining student in each group.
+                            Therefore, there are <m>(10!)^{3}</m> ways for the students to line up.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
@@ -72,6 +162,46 @@
                   </ol>
                 </p>
         </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            We have 26 choices for each of the first and last positions and 36 for the interior eight, so we have <m>26^{2}\cdot 36^{8}</m> strings.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            There are five vowels (choices for the first character), 21 consonants (choices for the second character), and 10 digits (choices for the last position).
+                            There are 36 choices for each of the remaining seven positions, so we have <m>5\cdot 21\cdot 10\cdot 36^{7}</m> strings.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We have five choices for each of the third, sixth, and eighth positions.
+                            Since vowels do not appear in other positions, we have <m>21+10 = 31</m> options for each of the remaining seven positions.
+                            Thus, we have <m>5^{3}\cdot 31^{7}</m> strings.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We first choose two positions for the vowels in <m>C(10,2)</m> ways.
+                            Since the vowels need not be distinct, we have five choices for each of those two positions.
+                            There are now <m>21+10=31</m> options for each of the remaining positions since we cannot use vowels.
+                            Thus, we have <m>C(10,2)\cdot 5^{2}\cdot 31^{8}</m> strings.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We first choose for positions for the digits in <m>C(10,4)</m> ways.
+                            Since no digit can appear more than one time, we have <m>P(10,4)=10\cdot 9\cdot 8\cdot 7</m> ways to fill in the digits.
+                            For each of the remaining six positions, we have 26 choices.
+                            Thus, we have <m>C(10,4) P(10,4) 26^{6}</m> strings.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
@@ -84,6 +214,22 @@
                   </ul>
                 </p>
         </statement>
+        <answer>
+            <p>
+                <m>P(10,3)\cdot \binom{17}{3}\cdot 5^{3} \cdot 28^{14}</m>
+            </p>
+        </answer>
+        <solution>
+            <p>
+                It makes sense to think about the choices by working from the most restrictive here.
+                Since the last three positions are digits that cannot be repeated, we have <m>P(10,3)</m> ways to fill those positions.
+                Of the remaining 17 positions, we must choose 3 of them to be vowels.
+                There are <m>\binom{17}{3}</m> ways to make this choice.
+                Once the positions for the vowels are chosen, we have five choices for each of those positions, for a total of <m>5^{3}</m> ways to fill in the vowels.
+                We now have <m>26+10 - 5 - 3= 28</m> remaining symbols (the consonants and the unused digits) that can fill each of the remaining 14 positions.
+                Therefore, the total number of record identifiers is <m>P(10,3)\cdot \binom{17}{3}\cdot 5^{3} \cdot 28^{14}</m>.
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
@@ -96,6 +242,19 @@
                   </ul>
                 </p>
         </statement>
+        <solution>
+            <p>
+                There are 10 choices for the initial digit and 9 choices for the distinct digit in the last position.
+                Next we pick where to put the t, and we have <m>C(13,4)</m> ways to do this since we cannot put a t in the first or last position.
+                We then pick three of the nine remaining positions for where to put letters from <m>V</m> in <m>C(9,3)</m> ways.
+                Since the vowels used must be distinct, there are <m>P(5,3) = 5\cdot 4\cdot 3</m> ways to fill in those positions.
+                We are now left with 20 letters and 10 digits (since we <em>can</em> reuse the digits from the first and last positions) to use in the remaining six positions.
+                Therefore, the number of strings is
+                <me>
+                    10\cdot 9\cdot \binom{13}{4}\cdot \binom{9}{3}\cdot P(5,3)\cdot 30^{6}
+                </me>.
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
@@ -113,6 +272,17 @@
         <statement>
             <p>The sport of korfball is played by teams of eight players. Each team has four men and four women on it. Halliday High School has seven men and <m>11</m> women interested in playing korfball. In how many ways can they form a korfball team from their 18 interested students?</p>
         </statement>
+        <answer>
+            <p>
+                <m>\binom{7}{4}\cdot \binom{11}{4}</m>
+            </p>
+        </answer>
+        <solution>
+            <p>
+                There are <m>\binom{7}{4}</m> ways to choose the men and <m>\binom{11}{4}</m> ways to choose the women.
+                Since each selection of men can be combined with any of the selections of women, we must multiple and thus have <m>\binom{7}{4}\cdot \binom{11}{4}</m> possible korfball teams.
+            </p>
+        </solution>
     </exercise>
     <exercise>
         <statement>
