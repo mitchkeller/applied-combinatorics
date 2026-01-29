@@ -122,15 +122,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -284,25 +284,8 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<div class="print-preview-header">
-<h2 class="print-preview">Print preview</h2>
-<div class="print-controls">
-<div class="print-controls-toggles">
-<form class="papersize-select" id="papersize-select">
-<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
-        </label><label><input type="radio" name="papersize" value="letter">Letter
-        </label>
-</form>
-<details class="print-options"><summary>Additional printing options</summary><div class="highlight-workspace-option">
-<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
-</div></details>
-</div>
-<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
-</div>
-</div>
-<section class="worksheet" id="ws-triangle-free" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
-<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphs with <span class="process-math">\(\omega(\bfG)=2\)</span> and <span class="process-math">\(\chi(\bfG)\)</span> large</span><div class="print-links"><a href="?printpreview=ws-triangle-free" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="ws-triangle-free" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphs with <span class="process-math">\(\omega(\bfG)=2\)</span> and <span class="process-math">\(\chi(\bfG)\)</span> large</span><div class="print-links"><a href="ws-triangle-free-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
 <section class="onepage" id="ws-triangle-free-2"><div class="para" id="ws-triangle-free-2-1">We’ve already seen that the chromatic number <span class="process-math">\(\chi(\bfG)\)</span> of a graph <span class="process-math">\(\bfG\)</span> is at least its clique number <span class="process-math">\(\omega(\bfG)\text{.}\)</span> (Recall that if <span class="process-math">\(\omega(\bfG)=t\text{,}\)</span> then <span class="process-math">\(\bfG\)</span> contains a subgraph isomorphic to <span class="process-math">\(\bfK_{t}\)</span> and <span class="process-math">\(\chi(\bfK_{t})=t\text{.}\)</span>) In this activity, we’re going to see how to construct graphs with <span class="process-math">\(\omega(\bfG)=2\)</span> and <span class="process-math">\(\chi(\bfG)=t\)</span> for any integer <span class="process-math">\(t\geq 2\text{.}\)</span> We will focus only on the construction of Mycielski, which is one of two constructions included in the text.<div class="autopermalink" data-description="Paragraph"><a href="#ws-triangle-free-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -400,8 +383,7 @@ eBookConfig.enable_chatcodes =  false;
 <em class="emphasis">Now how many colors have you used on the copy of <span class="process-math">\(\bfG_{t}\text{?}\)</span></em><div class="autopermalink" data-description="Paragraph"><a href="#ws-triangle-free-3-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" data-description="Task 5.2.5.f"><a href="#ws-triangle-free-3-1-7" title="Copy heading and permalink for Task 5.2.5.f" aria-label="Copy heading and permalink for Task 5.2.5.f">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.2.5: \chi(\bfG_{t+1})=t+1"><a href="#ws-triangle-free-3-1" title="Copy heading and permalink for Problem 5.2.5: \chi(\bfG_{t+1})=t+1" aria-label="Copy heading and permalink for Problem 5.2.5: \chi(\bfG_{t+1})=t+1">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large"><a href="#ws-triangle-free" title="Copy heading and permalink for Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large" aria-label="Copy heading and permalink for Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large">🔗</a></div></section>
-</div>
+<div class="autopermalink" data-description="Task 5.2.5.f"><a href="#ws-triangle-free-3-1-7" title="Copy heading and permalink for Task 5.2.5.f" aria-label="Copy heading and permalink for Task 5.2.5.f">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.2.5: \chi(\bfG_{t+1})=t+1"><a href="#ws-triangle-free-3-1" title="Copy heading and permalink for Problem 5.2.5: \chi(\bfG_{t+1})=t+1" aria-label="Copy heading and permalink for Problem 5.2.5: \chi(\bfG_{t+1})=t+1">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large"><a href="#ws-triangle-free" title="Copy heading and permalink for Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large" aria-label="Copy heading and permalink for Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ws-graphs-hamiltonian.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-graphs-planar.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
