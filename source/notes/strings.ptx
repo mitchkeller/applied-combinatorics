@@ -70,32 +70,41 @@
         <ul>
           <li>
             <p>
-              Dots below the box:
+              Dots below the box: <m component="a">1+2+3+4+5+6</m>
             </p>
           </li>
           <li>
             <p>
-              Total dots: 
+              Total dots: <m component="a">7\cdot 7</m>
             </p>
           </li>
           <li>
             <p>
-              Dots in the box: 
+              Dots in the box: <m component="a">7</m>
             </p>
           </li>
           <li>
             <p>
-              Dots outside the box: 
+              Dots outside the box: <m component="a">7\cdot 7 - 7</m>
             </p>
           </li>
           <li>
-            <p workspace="1cm">
+            <p workspace="1cm" component="b">
               Dots below the box: 
+            </p>
+            <p component="a">
+              Dots below the box: <m component="a">\frac{7\cdot 7 - 7}{2}</m> since half the dots outside the box are below it and half are above it.
             </p>
           </li>
           <li>
             <p>
               How do the answers to the five bullets above change when the grid is <m>(n+1)\times (n+1)</m>?
+            </p>
+            <p component="a">
+              Replace <m>6</m> by <m>n</m> and <m>7</m> by <m>n+1</m>. Then the number of dots below the box is <m>1+2+\cdots + n</m> as well as 
+              <md>
+                \frac{(n+1)^2-(n+1)}{2} = \frac{(n+1)n}{2}
+              </md>.
             </p>
           </li>
         </ul>
@@ -148,6 +157,11 @@
             How can you use this to explain the identity?
           </p>
         </statement>
+        <solution>
+          <p>
+            There are <m>n</m> options that can be paired with 1 to make a 2-element set with <m>1</m> as the least element since the largest option we have is <m>n+1</m>. Working through in general, we see that there are <m>n+1-i</m> 2-element subsets of <m>[n+1]</m> having <m>i</m> as the least element, and that least element can be anything from <m>1</m> to <m>n</m>. Since each 2-element subset has a unique element, if we sum <m>1+2+\cdots +n</m>, we are counting the 2-element subsets of <m>[n+1]</m> grouped by their smallest element, so the sum equals <m>C(n+1,2)</m>.
+          </p>
+        </solution>
         
       </activity>
       <p workspace="0.5in">
@@ -187,6 +201,19 @@
           </ul>
         </p>
       </hint>
+      <solution>
+        <p>
+          We start by rewriting the summation as 
+          <md>\sum_{k=1}^{n} k\binom{n}{k}^{2} =\sum_{k=1}^{n} k\binom{n}{k}\binom{n}{n-k}  = \sum_{k=1}^{n} \binom{n}{k}\binom{k}{1}\binom{n}{n-k}</md>.
+          Now we can think of this as a situation where we have <m>n</m> students from Wisconsin and <m>n</m> students from Minnesota. We need to choose a team of size <m>n</m>, and there is some obscure state law requiring that the captain of the team be from Wisconsin. The summation groups the ways of choosing such a team by the number <m>k</m> of students from Wisconsin on the team. Looking at the final formulation, we see that there are <m>C(n,k)</m> ways to choose <m>k</m> Wisconsinites for the team, then <m>C(k,1)=k</m> ways to choose one of those students to be the captain, and then we still need another <m>n-k</m> students for the team chosen from the Minnesotans in one of <m>C(n,n-k)</m> ways. An alternative way to think of this is to first choose the Wisconsinite to be captain, which can be done in <m>n=C(n,1)</m> ways, and then just choosing any <m>n-1</m> of the remaining <m>2n-1</m> students to be on the team. There are <m>C(2n-1,n-1)</m> ways to make that choice, and thus the summation must be equal to 
+          <md>
+            n\binom{2n-1}{n-1}
+          </md>.
+        </p>
+        <p>
+          If you prefer thinking about strings, we can take a different approach. Suppose we wish to make strings of length <m>2n</m> with the restriction that the string contain a single <m>2</m> that must appear in the first <m>n</m> positions of the string along with <m>n-1</m> positions that are <m>1</m> and <m>n</m> positions that are <m>0</m>. In this model, there are <m>n</m> choices for where the <m>2</m> goes and then we must choose <m>n-1</m> of the other <m>2n-1</m> positions to fill in with <m>1</m> (and then the rest get filled with <m>0</m>). That can be done in <m>n\cdot C(2n-1,n-1)</m> ways. We can connect this to the summation by having <m>k</m> represent the number of positions in the first <m>n</m> positions of the string that are nonzero. Once we choose which of those are nonzero, we have to pick one of those <m>k</m> positions to make a <m>2</m> and fill the others with <m>1</m>s. We then choose <m>n-k</m> of the positions in the second half of the string to fill with <m>1</m>s so that we have a total of <m>n-1</m> positions that are <m>1</m>.
+        </p>
+      </solution>
     </activity>
     <p workspace="2in">
       <alert>Peer instruction questions 1<ndash/>4.</alert>
