@@ -2,50 +2,50 @@
   <title>Strings, Sets, and Binomial Coefficients</title>
   <handout component="comb-proof">
     <title>Combinatorial Proofs</title>
+    
+    <xi:include href="../worksheets/ex-plate-vowel-consonant.ptx"/>
+    <activity>
+      <task workspace="0.75in">
+        <statement>
+          <p>
+            How many ways are there to form a string of length 10 using symbols from the 26-letter uppercase English alphabet if exactly three characters in the string are to elements of the set <m>\set{A,B,C,D}</m>? Write a sentence or two to explain your reasoning.
+          </p>
+        </statement>
+        <solution component="comb-proof-solns">
+          <p>
+            We first choose three places for the letters from <m>\set{A,B,C,D}</m>, which can be done in <m>C(10,3)</m> ways. We then have four choices for each of those positions, so there are <m>4^3</m> ways to fill them in. Finally, we must fill in the remaining 7 positions using the other 22 letters. There are no restrictions on repetition, so there are <m>22^7</m> ways to fill in those spaces. Thus, the total number of strings is <m>C(10,3)\cdot 4^3\cdot 22^7</m>.
+          </p>
+        </solution>
+      </task>
+      <task workspace="0.5in">
+        <statement>
+          <p>
+            How does your answer change if the characters from the set <m>\set{A,B,C,D}</m> must be distinct?
+          </p>
+        </statement>
+        <solution component="comb-proof-solns">
+          <p>
+            Instead of <m>4^3</m> we have <m>P(4,3) = 4\cdot 3\cdot 2</m> since the number of options for each of those positions decreases by one after making the previous decision.
+          </p>
+        </solution>
+      </task>
+    </activity>
+    
+    
+    <p>
+      <alert>Peer instruction question 1</alert>
+    </p>
+    <p workspace="0.75in">
+      We saw this sum on the handout during our last class:
+      <me component="a">
+        \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}= 2^{n}
+      </me>
+      <me component="b">
+        \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}
+      </me>
+    </p>
+    <sidebyside widths="40% 55%">
       
-      <xi:include href="../worksheets/ex-plate-vowel-consonant.ptx"/>
-      <activity>
-        <task workspace="0.75in">
-          <statement>
-            <p>
-                How many ways are there to form a string of length 10 using symbols from the 26-letter uppercase English alphabet if exactly three characters in the string are to elements of the set <m>\set{A,B,C,D}</m>? Write a sentence or two to explain your reasoning.
-            </p>
-          </statement>
-          <solution component="comb-proof-solns">
-            <p>
-              We first choose three places for the letters from <m>\set{A,B,C,D}</m>, which can be done in <m>C(10,3)</m> ways. We then have four choices for each of those positions, so there are <m>4^3</m> ways to fill them in. Finally, we must fill in the remaining 7 positions using the other 22 letters. There are no restrictions on repetition, so there are <m>22^7</m> ways to fill in those spaces. Thus, the total number of strings is <m>C(10,3)\cdot 4^3\cdot 22^7</m>.
-            </p>
-          </solution>
-        </task>
-        <task workspace="0.5in">
-          <statement>
-            <p>
-              How does your answer change if the characters from the set <m>\set{A,B,C,D}</m> must be distinct?
-            </p>
-          </statement>
-          <solution component="comb-proof-solns">
-            <p>
-              Instead of <m>4^3</m> we have <m>P(4,3) = 4\cdot 3\cdot 2</m> since the number of options for each of those positions decreases by one after making the previous decision.
-            </p>
-          </solution>
-        </task>
-      </activity>
-    
-    
-      <p>
-        <alert>Peer instruction question 1</alert>
-      </p>
-      <p workspace="0.75in">
-        We saw this sum on the handout during our last class:
-          <me component="a">
-  \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}= 2^{n}
-</me>
-     <me component="b">
-  \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}
-</me>
-      </p>
-      <sidebyside widths="40% 55%">
-        
       
       <image width="50%">
         <description>
@@ -109,188 +109,594 @@
           </li>
         </ul>
       </p>
-      </sidebyside>
+    </sidebyside>
+    
+    <activity workspace="1.5in">
+      <statement>
+        <p>
+          We just saw that
+          <me>
+            1 + 2 + \cdots + n = \binom{n+1}{2}
+          </me>. 
+          Can we find a proof that counts <m>2</m>-element subsets?
+        </p>
+        <p>
+          Discuss with your group: How many <m>2</m>-element subsets <m>S</m> of <m>[n+1] = \set{1,2,\dots,n+1}</m> have each number below as the smallest element of <m>S</m>?
+          <ul>
+            <li>
+              <p>
+                1
+              </p>
+            </li>
+            <li>
+              <p>
+                2
+              </p>
+            </li>
+            <li>
+              <p>
+                3
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>n</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>n+1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>i</m> for <m>1\leq i\leq n+1</m>
+              </p>
+            </li>
+          </ul>
+          How can you use this to explain the identity?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          There are <m>n</m> options that can be paired with 1 to make a 2-element set with <m>1</m> as the least element since the largest option we have is <m>n+1</m>. Working through in general, we see that there are <m>n+1-i</m> 2-element subsets of <m>[n+1]</m> having <m>i</m> as the least element, and that least element can be anything from <m>1</m> to <m>n</m>. Since each 2-element subset has a unique element, if we sum <m>1+2+\cdots +n</m>, we are counting the 2-element subsets of <m>[n+1]</m> grouped by their smallest element, so the sum equals <m>C(n+1,2)</m>.
+        </p>
+      </solution>
       
-      <activity workspace="1.5in">
-        <statement>
-          <p>
-            We just saw that
-            <me>
-              1 + 2 + \cdots + n = \binom{n+1}{2}
-            </me>. 
-            Can we find a proof that counts <m>2</m>-element subsets?
-          </p>
-          <p>
-            Discuss with your group: How many <m>2</m>-element subsets <m>S</m> of <m>[n+1] = \set{1,2,\dots,n+1}</m> have each number below as the smallest element of <m>S</m>?
-            <ul>
-              <li>
-                <p>
-                  1
-                </p>
-              </li>
-              <li>
-                <p>
-                  2
-                </p>
-              </li>
-              <li>
-                <p>
-                  3
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>n</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>n+1</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>i</m> for <m>1\leq i\leq n+1</m>
-                </p>
-              </li>
-            </ul>
-            How can you use this to explain the identity?
-          </p>
-        </statement>
-        <solution>
-          <p>
-            There are <m>n</m> options that can be paired with 1 to make a 2-element set with <m>1</m> as the least element since the largest option we have is <m>n+1</m>. Working through in general, we see that there are <m>n+1-i</m> 2-element subsets of <m>[n+1]</m> having <m>i</m> as the least element, and that least element can be anything from <m>1</m> to <m>n</m>. Since each 2-element subset has a unique element, if we sum <m>1+2+\cdots +n</m>, we are counting the 2-element subsets of <m>[n+1]</m> grouped by their smallest element, so the sum equals <m>C(n+1,2)</m>.
-          </p>
-        </solution>
-        
-      </activity>
-      <p workspace="0.5in">
-        <alert>Peer instruction question 2</alert>
-      </p>
-      <p workspace="0.5in">
-        <alert>Peer instruction question 3</alert>
-      </p>
-      <p workspace="0.5in">
-        <alert>Peer instruction question 4</alert>
-      </p>
+    </activity>
+    <p workspace="0.5in">
+      <alert>Peer instruction question 2</alert>
+    </p>
+    <p workspace="0.5in">
+      <alert>Peer instruction question 3</alert>
+    </p>
+    <p workspace="0.5in">
+      <alert>Peer instruction question 4</alert>
+    </p>
   </handout>
   <handout component="ubiquitous">
     <title>Ubiquitous Nature of Binomial Coefficients</title>
     <page>
-    <activity workspace="2in">
+      <activity workspace="2in">
         <statement>
           <p>
-             Find a simple formula for <m>\ds\sum_{k=1}^{n} k\binom{n}{k}^{2}</m>. By a simple formula, I mean one without a summation in it. One way to do this is to think about something that's being counted and find a "better" way to count it.
+            Find a simple formula for <m>\ds\sum_{k=1}^{n} k\binom{n}{k}^{2}</m>. By a simple formula, I mean one without a summation in it. One way to do this is to think about something that's being counted and find a "better" way to count it.
           </p>
         </statement>
         <hint>
           <p>
             
-          <ul>
-            <li>
-              <p>
-                Think of a committee (or team) with a chair (or captain).
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Remember that <m>\displaystyle \binom{n}{k}= \binom{n}{n-k}</m>
-              </p>
-            </li>
-          </ul>
-        </p>
-      </hint>
-      <solution>
-        <p>
-          We start by rewriting the summation as 
-          <md>\sum_{k=1}^{n} k\binom{n}{k}^{2} =\sum_{k=1}^{n} k\binom{n}{k}\binom{n}{n-k}  = \sum_{k=1}^{n} \binom{n}{k}\binom{k}{1}\binom{n}{n-k}</md>.
-          Now we can think of this as a situation where we have <m>n</m> students from Wisconsin and <m>n</m> students from Minnesota. We need to choose a team of size <m>n</m>, and there is some obscure state law requiring that the captain of the team be from Wisconsin. The summation groups the ways of choosing such a team by the number <m>k</m> of students from Wisconsin on the team. Looking at the final formulation, we see that there are <m>C(n,k)</m> ways to choose <m>k</m> Wisconsinites for the team, then <m>C(k,1)=k</m> ways to choose one of those students to be the captain, and then we still need another <m>n-k</m> students for the team chosen from the Minnesotans in one of <m>C(n,n-k)</m> ways. An alternative way to think of this is to first choose the Wisconsinite to be captain, which can be done in <m>n=C(n,1)</m> ways, and then just choosing any <m>n-1</m> of the remaining <m>2n-1</m> students to be on the team. There are <m>C(2n-1,n-1)</m> ways to make that choice, and thus the summation must be equal to 
-          <md>
-            n\binom{2n-1}{n-1}
-          </md>.
-        </p>
-        <p>
-          If you prefer thinking about strings, we can take a different approach. Suppose we wish to make strings of length <m>2n</m> with the restriction that the string contain a single <m>2</m> that must appear in the first <m>n</m> positions of the string along with <m>n-1</m> positions that are <m>1</m> and <m>n</m> positions that are <m>0</m>. In this model, there are <m>n</m> choices for where the <m>2</m> goes and then we must choose <m>n-1</m> of the other <m>2n-1</m> positions to fill in with <m>1</m> (and then the rest get filled with <m>0</m>). That can be done in <m>n\cdot C(2n-1,n-1)</m> ways. We can connect this to the summation by having <m>k</m> represent the number of positions in the first <m>n</m> positions of the string that are nonzero. Once we choose which of those are nonzero, we have to pick one of those <m>k</m> positions to make a <m>2</m> and fill the others with <m>1</m>s. We then choose <m>n-k</m> of the positions in the second half of the string to fill with <m>1</m>s so that we have a total of <m>n-1</m> positions that are <m>1</m>.
-        </p>
-      </solution>
-    </activity>
-    <p workspace="2in">
-      <alert>Peer instruction questions 1<ndash/>4.</alert>
-    </p>
-  </page>
+            <ul>
+              <li>
+                <p>
+                  Think of a committee (or team) with a chair (or captain).
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Remember that <m>\displaystyle \binom{n}{k}= \binom{n}{n-k}</m>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </hint>
+        <solution>
+          <p>
+            We start by rewriting the summation as 
+            <md>\sum_{k=1}^{n} k\binom{n}{k}^{2} =\sum_{k=1}^{n} k\binom{n}{k}\binom{n}{n-k}  = \sum_{k=1}^{n} \binom{n}{k}\binom{k}{1}\binom{n}{n-k}</md>.
+            Now we can think of this as a situation where we have <m>n</m> students from Wisconsin and <m>n</m> students from Minnesota. We need to choose a team of size <m>n</m>, and there is some obscure state law requiring that the captain of the team be from Wisconsin. The summation groups the ways of choosing such a team by the number <m>k</m> of students from Wisconsin on the team. Looking at the final formulation, we see that there are <m>C(n,k)</m> ways to choose <m>k</m> Wisconsinites for the team, then <m>C(k,1)=k</m> ways to choose one of those students to be the captain, and then we still need another <m>n-k</m> students for the team chosen from the Minnesotans in one of <m>C(n,n-k)</m> ways. An alternative way to think of this is to first choose the Wisconsinite to be captain, which can be done in <m>n=C(n,1)</m> ways, and then just choosing any <m>n-1</m> of the remaining <m>2n-1</m> students to be on the team. There are <m>C(2n-1,n-1)</m> ways to make that choice, and thus the summation must be equal to 
+            <md>
+              n\binom{2n-1}{n-1}
+            </md>.
+          </p>
+          <p>
+            If you prefer thinking about strings, we can take a different approach. Suppose we wish to make strings of length <m>2n</m> with the restriction that the string contain a single <m>2</m> that must appear in the first <m>n</m> positions of the string along with <m>n-1</m> positions that are <m>1</m> and <m>n</m> positions that are <m>0</m>. In this model, there are <m>n</m> choices for where the <m>2</m> goes and then we must choose <m>n-1</m> of the other <m>2n-1</m> positions to fill in with <m>1</m> (and then the rest get filled with <m>0</m>). That can be done in <m>n\cdot C(2n-1,n-1)</m> ways. We can connect this to the summation by having <m>k</m> represent the number of positions in the first <m>n</m> positions of the string that are nonzero. Once we choose which of those are nonzero, we have to pick one of those <m>k</m> positions to make a <m>2</m> and fill the others with <m>1</m>s. We then choose <m>n-k</m> of the positions in the second half of the string to fill with <m>1</m>s so that we have a total of <m>n-1</m> positions that are <m>1</m>.
+          </p>
+        </solution>
+      </activity>
+      <p workspace="2in">
+        <alert>Peer instruction questions 1<ndash/>4.</alert>
+      </p>
+    </page>
     <page>
-    <activity workspace="0in">
-      <introduction>
-        <p>
-          We want to count the number of solutions to
-          <me>
-            x_1+x_2+x_3+x_4+x_5 = 37
-          </me>
-          where each <m>x_i</m> is an integer. For each of the following scenarios, determine the number of solutions.
-        </p>
-      </introduction>
-      <task>
-        <statement>
+      <activity workspace="0in">
+        <introduction>
           <p>
-            Each <m>x_i \gt 0</m>
+            We want to count the number of solutions to
+            <me>
+              x_1+x_2+x_3+x_4+x_5 = 37
+            </me>
+            where each <m>x_i</m> is an integer. For each of the following scenarios, determine the number of solutions.
           </p>
-        </statement>
-        <answer component="ubiquitous-solns">
-          <p>
-            <m>\binom{36}{4}</m>
-          </p>
-        </answer>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Each <m>x_i \geq 0</m>
-          </p>
-        </statement>
-        <answer component="ubiquitous-solns">
-          <p>
-            <m>\binom{41}{4}</m>
-          </p>
-        </answer>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Each <m>x_i \geq 0</m> and <m>x_3\gt 4</m>
-          </p>
-        </statement>
-        <answer component="ubiquitous-solns">
-          <p>
-            <m>\binom{36}{4}</m>
-          </p>
-        </answer>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Each <m>x_i \gt 0</m> but change <m>= 37</m> to <m>\leq 37</m>.
-          </p>
-        </statement>
-        <answer component="ubiquitous-solns">
-          <p>
-            <m>\binom{37}{5}</m>
-          </p>
-        </answer>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Each <m>x_i \gt 0</m> but change <m>= 37</m> to <m>\lt 37</m>.
-          </p>
-        </statement>
-        <answer component="ubiquitous-solns">
-          <p>
-            <m>\binom{41}{5}</m>
-          </p>
-        </answer>
-      </task>
-    </activity>
-  </page>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Each <m>x_i \gt 0</m>
+            </p>
+          </statement>
+          <answer component="ubiquitous-solns">
+            <p>
+              <m>\binom{36}{4}</m>
+            </p>
+          </answer>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Each <m>x_i \geq 0</m>
+            </p>
+          </statement>
+          <answer component="ubiquitous-solns">
+            <p>
+              <m>\binom{41}{4}</m>
+            </p>
+          </answer>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Each <m>x_i \geq 0</m> and <m>x_3\gt 4</m>
+            </p>
+          </statement>
+          <answer component="ubiquitous-solns">
+            <p>
+              <m>\binom{36}{4}</m>
+            </p>
+          </answer>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Each <m>x_i \gt 0</m> but change <m>= 37</m> to <m>\leq 37</m>.
+            </p>
+          </statement>
+          <answer component="ubiquitous-solns">
+            <p>
+              <m>\binom{37}{5}</m>
+            </p>
+          </answer>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Each <m>x_i \gt 0</m> but change <m>= 37</m> to <m>\lt 37</m>.
+            </p>
+          </statement>
+          <answer component="ubiquitous-solns">
+            <p>
+              <m>\binom{41}{5}</m>
+            </p>
+          </answer>
+        </task>
+      </activity>
+    </page>
   </handout>
+  <handout component="lattice" xml:id="notes-lattice-binomial-multinomial">
+    <title>Lattice Paths, Binomial Theorem, Multinomial Theorem</title>
+    <page>
+      <definition xml:id="def-lattice-path">
+        <statement>
+          <p>
+            A <term>lattice path</term> is a sequence of ordered pairs of integers
+            <me>
+              (m_{1},n_{1}), (m_{2},n_{2}), (m_{3},n_{3}),\dots,(m_{t},n_{t})
+            </me>
+            so that for all <m>i=1,2,\dots,t-1</m>, either
+            <ul>
+              <li>
+                <p component="b">
+                  <m>m_{i+1}=m_{i}+1</m> and <m>n_{i+1}=n_{i}</m>, or
+                </p>
+                <p component="a">
+                  (HORIZONTAL step <q>H</q>) <m>m_{i+1}=m_{i}+1</m> and <m>n_{i+1}=n_{i}</m>, or
+                </p>
+              </li>
+              
+              <li>
+                <p component="b">
+                  <m>m_{i+1}=m_{i}</m> and <m>n_{i+1}=n_{i}+1</m>.
+                </p>
+                <p component="a">
+                  (VERTICAL step <q>V</q>) <m>m_{i+1}=m_{i}</m> and <m>n_{i+1}=n_{i}+1</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </statement>
+      </definition>
+      <image width="50%" source="3012-fig22">
+        <description>
+          <p>A grid of dots. There are 13 columns of dots and 8 rows of dots. The dot in the lower left corner is labeled <m>(0,0)</m>. The dot in the upper right corner is labeled <m>(13,8)</m>. There is a path marked on the grid between these dots. The path moves only to the right and up. It consists of three moves to the right, two moves up, one move right, one move up, one move right, three moves up, five moves right, one move up, one move right, one move up, and two moves right.</p>
+        </description>
+      </image>
+      <p component="b" workspace="2cm">
+        
+      </p>
+      <p component="a">
+        We need 13 H's and 8 V's to move from <m>(0,0)</m> to <m>(13,8)</m>. Thus, we need a string of length 21 that has exactly 13 H's and exactly 8 V's. There are <m>C(21,13)=C(21,8)</m> such strings, so this is also the number of lattice paths.
+      </p>
+    </page>
+    <page>
+      <activity workspace="0.5cm">
+        <introduction>
+          <p>
+            The town of Mascotville is laid out as a grid.
+            There are seven parallel streets (<m>1^{\text{st}}</m> through <m>7^{\text{th}}</m>) that run north-south and five parallel avenues (<m>1^{\text{st}}</m> through <m>5^{\text{th}}</m>) that run east-west.
+          </p>
+        </introduction>
+        
+        <task>
+          <statement>
+            <p>
+              Buzz starts at the intersection of <m>1^{\text{st}}</m> Street and <m>1^{\text{st}}</m> Avenue and wants to get to Bucky's burrow at the intersection of <m>7^{\text{th}}</m> Street and <m>5^{\text{th}}</m> Avenue traveling only on streets/avenues, and always moving toward Bucky's burrow.
+              How many ways can he do this?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <md>
+                \binom{10}{6}
+              </md>
+              
+            </p>
+          </answer>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              The Varsity is at the intersection of <m>3^{\text{rd}}</m> Street and <m>3^{\text{rd}}</m> Avenue.
+              How many ways can Buzz get to Bucky's burrow if he insists on stopping at The Varsity?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <md>
+                \binom{4}{2}\binom{6}{4}
+              </md>
+              
+            </p>
+          </answer>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              Suppose Buzz is put on a diet and prohibited from eating at The Varsity.
+              He knows if he goes by it, he'll stop and eat, so he must avoid it completely.
+              How many ways are there for him to get to Bucky's burrow that avoid The Varsity?
+            </p>
+          </statement>
+          <solution>
+            <p>
+              We count all the lattice paths and subtract those that go through The Varsity, so we have 
+              <md>
+                \binom{10}{6}-\binom{4}{2}\binom{6}{4}
+              </md>.
+            </p>
+          </solution>
+        </task>
+      </activity>
+      <question>
+        <p>
+          How many lattice paths are there from <m>(0,0)</m> to <m>(n,n)</m> that do not cross the line <m>y=x</m>? (Lattice paths <em>are</em> allowed to touch the line.)
+        </p>
+      </question>
+      <p component="b" workspace="1cm">
+        
+      </p>
+      <p component="a">
+        We will count the number of <q>bad</q> lattice paths (those that cross <m>y=x</m>) and subtract from the total number of lattice paths, which is <m>C(2n,n)</m>.
+      </p>
+      <p>
+        <alert>Peer instruction question 1</alert>
+      </p>
+      
+      <p component="b" workspace="9.25cm">
+        
+      </p>
+      <p component="a">
+        We establish a 1-1 correspondence between <em>all</em> lattice paths from <m>(0,0)</m> to <m>(n-1,n+1)</m> and the <em>bad</em> lattice paths from <m>(0,0)</m> to <m>(n,n)</m>.
+        <ul>
+          <li>
+            <p>
+              Take a bad lattice path from <m>(0,0)</m> to <m>(n,n)</m> and find the <em>first</em> place that it <em>crosses</em> the line <m>y=x</m>. After that point, change every H into a V (and vice versa). At this moment, there must be <m>j</m> H's and <m>j+1</m> V's for some <m>j</m> in the first part of the string and thus <m>n-j</m> H's and <m>n-(j+1)</m> V's in the second part of the string. After the swap, we thus have <m>j+(n-(j+1)) = n-1</m> H's and <m>j+1 + n-j = n+1</m> V's. Thus, this new lattice path is one from <m>(0,0)</m> to <m>(n-1,n+1)</m>.
+            </p>
+            <p>
+              <alert>Pause for Peer Instruction question 2</alert>
+            </p>
+          </li>
+          <li>
+            <p>
+              Every lattice path from <m>(0,0)</m> to <m>(n-1,n+1)</m> must cross the line <m>y=x</m> because it starts on the line and ends above it. Therefore, there is a first time such a lattice path is <em>above</em> the line. Do the H/V swap <em>after</em> that point, and now we have a lattice path that ends at <m>(n,n)</m> but that is <em>bad</em> because we preserved being above the line.
+            </p>
+          </li>
+        </ul>
+        This means there are <m>C(2n,n-1)</m> bad lattice paths, so the total number of good lattice paths is 
+        <md>
+          <mrow>\binom{2n}{n} - \binom{2n}{n-1} \amp= \frac{(2n)!}{n!n!} - \frac{(2n)!}{(n-1)!(n+1)!}</mrow>
+          <mrow>\amp= \frac{(2n)!(n+1) - (2n)!n}{n!(n+1)!}</mrow>
+          <mrow>\amp = \frac{1}{n+1}\frac{(2n)!}{n!n!} = \frac{1}{n+1}\binom{2n}{n}</mrow>
+        </md>.
+        We call this number the <term>Catalan number</term> <m>C_n</m>
+      </p>
+    </page>
+    <page>
+      <activity workspace="1.5cm">
+        <introduction>
+          <p>
+            Find a <m>1</m>-<m>1</m> correspondence between the set of good lattice paths and each of the following sets:
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Sequences of <m>n</m> <m>1</m>'s and <m>n</m> <m>-1</m>'s in which the sum of the first <m>i</m> terms is non-negative for all <m>i</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Construct a lattice path by reading the sum from left to right and writing an H when you see a 1 and writing a V when you see a <m>-1</m>.
+            </p>
+          </solution>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              Full-parenthesizations of a product of <m>n+1</m> factors as if the <q>multiplication</q> operation were not associative.
+              Examples:
+              <ul>
+                <li>
+                  <p>
+                    <m>2</m> factors: <m>(a_{1}a_{2})</m>
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>3</m> factors: <m>(a_{1}(a_{2}a_{3}))</m> and <m>((a_{1}a_{2})a_{3})</m>
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>4</m> factors: <m>(a_{1}(a_{2}(a_{3}a_{4})))</m>, <m>(a_{1}((a_{2}a_{3})a_{4}))</m>, <m>((a_{1}a_{2})(a_{3}a_{4}))</m>, <m>((a_{1}(a_{2}a_{3}))a_{4})</m>, and <m>(((a_{1}a_{2})a_{3})a_{4})</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Construct a lattice path by reading the product from left to right and writing an H whenever you encounter a left parenthesis and a V whenever you encounter a right parenthesis.
+            </p>
+          </solution>
+        </task>
+      </activity>
+      <theorem xml:id="thm-binomial">
+        <statement>
+          <p>
+            Let <m>x</m> and <m>y</m> be real numbers to that <m>x</m>, <m>y</m>, and <m>x+y</m> are all nonzero. For every nonnegative integer <m>n</m>,
+            <md component="a">
+              (x+y)^n = \sum_{k=0}^n x^{n-k}y^k
+            </md>
+            <md component="b">
+              \phantom{(x+y)^n = \sum_{k=0}^n x^{n-k}y^k}
+            </md>
+          </p>
+        </statement>
+      </theorem>
+      <p component="b" workspace="8.5cm">
+        
+      </p>
+      <p component="a">
+        There are <m>n</m> factors in the product, and we must choose either an <m>x</m> or a <m>y</m> from each. Thus, we can form <m>x^{n-k}y^k</m> in <m>C(n,k)</m> ways by choosing which <m>k</m> factors from which to use a <m>y</m>. Notice that setting <m>x=y=1</m> gives another proof of the identity <m>2^n = C(n,0)+C(n,1)+\cdots+C(n,n)</m>.
+      </p>
+      <p>
+        <alert>Peer instruction question 3.</alert>
+      </p>
+    </page>
+    <page>
+      <activity workspace="3cm">
+        <statement>
+          <p>
+            How many rearrangements of the string 
+            <md>\text{APPLIEDCOMBINATORICSISTHEMOSTINTERESTINGBOOKEVER}</md> are there if all letters must be used? 
+          </p>
+          </statement>
+          <hint>
+            <p>
+              Length of string is 48 characters.
+            </p>
+          </hint>
+          <hint>
+            
+            
+            <tabular>
+              <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /><col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" />
+              <row bottom="minor">
+                <cell>A</cell>
+                <cell>P</cell>
+                <cell>L</cell>
+                <cell>I</cell>
+                <cell>E</cell>
+                <cell>D</cell>
+                <cell>C</cell>
+                <cell>O</cell>
+                <cell>M</cell>
+                <cell>B</cell>
+                <cell>N</cell>
+                <cell>T</cell>
+                <cell>R</cell>
+                <cell>S</cell>
+                <cell>H</cell>
+                <cell>G</cell>
+                <cell>V</cell>
+                <cell>K</cell>
+              </row>
+              <row>
+                <cell>2</cell>
+                <cell>2</cell>
+                <cell>1</cell>
+                <cell>6</cell>
+                <cell>6</cell>
+                <cell>1</cell>
+                <cell>2</cell>
+                <cell>5</cell>
+                <cell>2</cell>
+                <cell>2</cell>
+                <cell>3</cell>
+                <cell>5</cell>
+                <cell>3</cell>
+                <cell>4</cell>
+                <cell>1</cell>
+                <cell>1</cell>
+                <cell>1</cell>
+                <cell>1</cell>
+              </row>
+            </tabular>
+          </hint>
+          <answer>
+            <p>
+              <md>
+                \binom{48}{2,2,1,6,6,1,2,5,2,2,3,5,3,4,1,1,1,1}
+              </md>
+              
+            </p>
+          </answer>
+      </activity>
+      <theorem xml:id="thm-multinomial">
+        <statement>
+          <p>
+            Let <m>x_{1},x_{2},\dots,x_{r}</m> be nonzero real numbers with <m>x_{1} + x_{2} + \cdots + x_{r} \neq 0</m>.
+            Then for every nonnegative integer <m>n</m>,
+            <me>
+              (x_{1}+x_{2} + \cdots + x_{r})^{n} = \sum_{k_1+k_2 + \cdots + k_r=n}\binom{n}{k_1,k_2,\dots,k_r}x_{1}^{k_1}x_{2}^{k_2}\cdots x_{r}^{k_r}.
+            </me>
+          </p>
+        </statement>
+      </theorem>
+      <p component="b" workspace="2cm">
+        
+      </p>
+      <p component="a">
+        This assumes that all <m>k_i\geq 0</m> or the sum would be infinite! As an example, if <m>r=3</m> and <m>n=48</m>, we would look at terms using <m>12+12+24</m>, <m>0+0+48</m>, <m>1+47+0</m>, etc.
+      </p>
+      <activity>
+        <statement>
+          <p>
+            How many terms are there in the summation from the multinomial theorem for <m>(x+y+z+w)^{17}</m>?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            This is a folder distribution problem! We have 17 folders and four recipients. Each recipient could get 0, so we need 4 artificial folders. Thus, we have <m>17+4=21</m> folders, which gives us 20 gaps. We need to choose 3, so there are <m>C(20,3)</m> terms in the sum.
+          </p>
+        </solution>
+      </activity>
+      <p>
+        Let's take another look at a class prep question. What is the coefficient on <m>x^{30}y^{80}z^{10}</m> in <m>(2x^3+y-z^2)^{100}</m>?
+      </p>
+      <p component="b" workspace="1cm">
+        
+      </p>
+      <p component="a">
+        The Multinomial Theorem tells us that
+        <md>
+          (2x^3+y-z^2)^{100} = \sum_{k_1+k_2+k+3 = 100} \binom{100}{k_1,k_2,k_3}(2x^3)^{k_1} y^{k_2} {-z^2}^{k_3}
+        </md>. 
+        Thus, we would need <m>2k_3=10</m>, which requires <m>k_3=5</m>. We also need <m>3k_1=30</m>, so <m>k_1 = 10</m>. We also need <m>k_2=80</m>. However, <m>10+80+5=95</m>, rather than <m>100</m>. Therefore, there is no such term and we say that the coefficient is <m>0</m>.
+      </p>
+      <p>
+        <alert>Peer instruction question 4</alert>
+      </p>
+    </page>
+    <page>
+      <activity>
+        <introduction>
+          <p>
+            Consider the expansion of <m>(3+x^{5}+y+xy^{3})^{50}</m>.
+            Find the coefficient on each of the following terms.
+          </p>
+        </introduction>
+              <task>
+                <statement>
+                <p>
+                  <m>x^{30}y^{4}</m>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  The Multinomial Theorem tells us that
+                  <md>
+                    <mrow>(3+x^{5}+y+xy^{3})^{50} \amp= 
+                    \sum_{k_1+k_2+k_3+k_4=50} \binom{50}{k_1,k_2,k_3,k_4} 3^{k_1}x^{5k_2}y^{k_3}x^{k_4}y^{3k_4} 
+                    </mrow>
+                    <mrow>\amp= 
+                    \sum_{k_1+k_2+k_3+k_4=50} \binom{50}{k_1,k_2,k_3,k_4} 3^{k_1}x^{5k_2+k_4}y^{k_3+3k_4}</mrow>
+                  </md>.
+                  Thus, we need <m>5k_2+k_4=30</m> and <m>k_3+3k_4=4</m>. Hence, the only options are <m>k_4=0</m> or <m>k_4=1</m>. When <m>k_4=1</m>, we would have <m>k_2=29/5</m>, which is not an integer. Thus, we must have <m>k_4=0</m>, which means that <m>k_2 = 6</m> and <m>k_3 = 4</m>. Since we must also have <m>k_1+k_2+k_3+k_4 = 50</m>, we thus have <m>k_1=21</m>. Therefore, the coefficient on <m>x^{30}y^4</m> is <m>\displaystyle \binom{50}{21,5,4,0}3^{21}</m>.
+                </p>
+              </solution>
+              </task>
+
+              
+              <task>
+                <statement>
+                <p>
+                  <m>x^{3}y^{3}</m>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Relying on the information from the first part of the activity, we must have <m>5k_2+k_4 = 3</m> and <m>k_3+3k_4=3</m>. The first equation requires <m>k_2=0</m> and <m>k_4=3</m>, but then the second equation would need <m>k_3=-5</m>, which is impossible. Therefore, the coefficient on <m>x^3y^3</m> is <m>0</m>.
+                </p>
+              </solution>
+              </task>
+
+              
+              <task>
+                <statement>
+                <p>
+                  <m>x^{30}y^{15}</m>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Relying on the information from the first part of the activity, we must have <m>5k_2+k_4 = 30</m> and <m>k_3+3k_4=15</m>. These equations can be rewritten as <m>k_4 = 30-5k_2</m> and <md>k_3 = 15-3k_4 = 15-3(30-5k_2)=15-90+15k_2 = 15k_2-75</md>. Since all variables must be nonnegative, we see that from the first equation <m>k_5\leq 6</m> and from the second equation <m>k_2\geq 5</m>. Thus, we need only consider <m>k_2=5</m> and <m>k_2=6</m>. When <m>k_2=5</m>, we have <m>k_3=0</m>, <m>k_4=5</m>, and thus <m>k_1=40</m>. When <m>k_2=6</m>, we have <m>k_3=15</m>, <m>k_4=0</m>, and thus <m>k_1=29</m>. Therefore, the coefficient on <m>x^{30}y^{15}</m> is
+                  <md>
+                    \binom{50}{40,5,0,5}3^{40} + \binom{50}{29,6,15,0}3^{29}
+                  </md>.
+                </p>
+              </solution>
+              </task>
+              
+
+      </activity>
+    </page>
+  </handout>
+  
 </chapter>
