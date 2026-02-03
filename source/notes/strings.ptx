@@ -458,7 +458,7 @@
           </statement>
           <solution>
             <p>
-              Construct a lattice path by reading the sum from left to right and writing an H when you see a 1 and writing a V when you see a <m>-1</m>.
+              Construct a lattice path by reading the sequence from left to right and writing an H when you see a 1 and writing a V when you see a <m>-1</m>.
             </p>
           </solution>
         </task>
@@ -497,6 +497,7 @@
         </task>
       </activity>
       <theorem xml:id="thm-binomial">
+        <title>Binomial Theorem</title>
         <statement>
           <p>
             Let <m>x</m> and <m>y</m> be real numbers to that <m>x</m>, <m>y</m>, and <m>x+y</m> are all nonzero. For every nonnegative integer <m>n</m>,
@@ -589,6 +590,7 @@
           </answer>
       </activity>
       <theorem xml:id="thm-multinomial">
+        <title>Multinomial Theorem</title>
         <statement>
           <p>
             Let <m>x_{1},x_{2},\dots,x_{r}</m> be nonzero real numbers with <m>x_{1} + x_{2} + \cdots + x_{r} \neq 0</m>.
@@ -658,7 +660,7 @@
                     <mrow>\amp= 
                     \sum_{k_1+k_2+k_3+k_4=50} \binom{50}{k_1,k_2,k_3,k_4} 3^{k_1}x^{5k_2+k_4}y^{k_3+3k_4}</mrow>
                   </md>.
-                  Thus, we need <m>5k_2+k_4=30</m> and <m>k_3+3k_4=4</m>. Hence, the only options are <m>k_4=0</m> or <m>k_4=1</m>. When <m>k_4=1</m>, we would have <m>k_2=29/5</m>, which is not an integer. Thus, we must have <m>k_4=0</m>, which means that <m>k_2 = 6</m> and <m>k_3 = 4</m>. Since we must also have <m>k_1+k_2+k_3+k_4 = 50</m>, we thus have <m>k_1=21</m>. Therefore, the coefficient on <m>x^{30}y^4</m> is <m>\displaystyle \binom{50}{21,5,4,0}3^{21}</m>.
+                  Thus, we need <m>5k_2+k_4=30</m> and <m>k_3+3k_4=4</m>. Hence, the only options are <m>k_4=0</m> or <m>k_4=1</m>. When <m>k_4=1</m>, we would have <m>k_2=29/5</m>, which is not an integer. Thus, we must have <m>k_4=0</m>, which means that <m>k_2 = 6</m> and <m>k_3 = 4</m>. Since we must also have <m>k_1+k_2+k_3+k_4 = 50</m>, we thus have <m>k_1=40</m>. Therefore, the coefficient on <m>x^{30}y^4</m> is <m>\displaystyle \binom{50}{40,6,4,0}3^{21}</m>.
                 </p>
               </solution>
               </task>
