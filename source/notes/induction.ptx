@@ -1,32 +1,8 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-induction" component="induction">
   <title>Induction</title>
-  <handout>
+  <handout component="recur-count">
     <title>Recursive Counting</title>
-    <p workspace="2cm">
-      What do you need to know about lattice path problems?
-    </p>  
-    <p workspace="4cm">
-      Consider the expansion of <m>(3+x^{5}+y+xy^{3})^{50}</m>. Find the coefficient on each of the following terms.
-      <ol marker="a." cols="3">
-        <li>
-          <p>
-            <m>x^{30}y^{4}</m>
-          </p>
-        </li>
-        
-        <li>
-          <p>
-            <m>x^{3}y^{3}</m>
-          </p>
-        </li>
-        
-        <li>
-          <p>
-            <m>x^{30}y^{15}</m>
-          </p>
-        </li>
-      </ol>
-    </p>
+    
     <p workspace="4cm">
       How can we interpret the notation <m>1+2+\cdots + n^2</m>?
     </p>
@@ -39,6 +15,21 @@
       </me>
       
     </p>
+    <activity workspace="2cm">
+      <statement>
+        <p>
+          Suppose that <m>f</m> is a function defined on the positive integers. You know that <m>f(1) = 0</m> and for all <m>n\gt 1</m>, <m>f(n) = 3f(n-1)+2</m>. What is <m>f(3)</m>?
+        </p>
+      </statement>
+      <solution component="recur-count-soln">
+        <p>
+          We have 
+          <me>
+            f(3) = 3f(2) + 2 = 3(3f(1)+2) + 2 = 9f(1) + 6+ 2= 9\cdot 0 + 8 = 8
+          </me>.
+        </p>
+      </solution>
+    </activity>
     <p>
       <alert>Peer instruction question 2</alert>
     </p>
@@ -80,7 +71,7 @@
       
     </p>
   </handout>
-  <handout>
+  <handout component="induction-principle">
     <title>Principle of Mathematical Induction</title>
     
     <axiom xml:id="axiom-induction">
