@@ -14,8 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ACW Activities to Accompany <span class="booktitle">Applied Combinatorics</span>
-</title>
+<title>ACN Recursive Counting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -78,7 +77,7 @@ window.MathJax = {
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Activities to Accompany Applied Combinatorics">
+<meta property="book:title" content="In-Class Notes to Accompany Applied Combinatorics">
 <meta property="book:author" content="Mitchel T.
 					Keller">
 <meta property="book:author" content="William T.
@@ -120,7 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="httpw://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="appcomb-activities.html"><span class="title">Activities to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></h1>
+<h1 class="heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></h1>
 <p class="byline">Mitchel T. Keller, William T. Trotter</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
@@ -140,7 +139,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="embed-code-container">
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
-</div></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><a class="next-button button" href="appcomb-activities-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></span><span class="treebuttons"><a class="previous-button button" href="notes-induction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes-induction.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
 \newcommand{\ints}{\mathbb{Z}}
 \newcommand{\posints}{\mathbb{N}}
@@ -220,28 +219,112 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="appcomb-activities-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="appcomb-notes-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">An Introduction to Combinatorics</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-day_one.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Course Overview</span></a></div></li></ul>
+<div class="toc-title-box"><a href="notes-strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-strings-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Combinatorial Proofs</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-strings-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Ubiquitous Nature of Binomial Coefficients</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-lattice-binomial-multinomial.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lattice Paths, Binomial Theorem, Multinomial Theorem</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ws-strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-strings-perm-comb.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Strings, Permutations, Binomial Coefficients</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ws-induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-induction-recursive-count.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Recursive Counting</span></a></div></li></ul>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="notes-induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-handout active"><div class="toc-title-box"><a href="notes-induction-2.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Recursive Counting</span></a></div></li></ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="appcomb-activities"><nav class="summary-links"><ul>
-<li><a href="appcomb-activities-2.html" class="internal"><span class="title">Front Matter</span></a></li>
-<li><a href="ws-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">An Introduction to Combinatorics</span></a></li>
-<li><a href="ws-strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></li>
-<li><a href="ws-induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></li>
-</ul></nav><div class="autopermalink" data-description="Book: Activities to Accompany Applied Combinatorics"><a href="#appcomb-activities" title="Copy heading and permalink for Book: Activities to Accompany Applied Combinatorics" aria-label="Copy heading and permalink for Book: Activities to Accompany Applied Combinatorics">🔗</a></div></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="handout" id="notes-induction-2" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recursive Counting</span><div class="print-links"><a href="?printpreview=notes-induction-2" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h2>
+<div class="para" id="notes-induction-2-2">How can we interpret the notation <span class="process-math">\(1+2+\cdots + n^2\text{?}\)</span><div class="workspace" data-space="4cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-induction-2-3">
+<em class="alert">Peer instruction question 1</em><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="notes-induction-2-4">
+<div class="displaymath process-math" id="notes-induction-2-4-1">
+\begin{equation*}
+\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
+\end{equation*}
+</div>
+<div class="workspace" data-space="7cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="notes-induction-2-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="notes-induction-2-5-1-1">Suppose that <span class="process-math">\(f\)</span> is a function defined on the positive integers. You know that <span class="process-math">\(f(1) = 0\)</span> and for all <span class="process-math">\(n\gt 1\text{,}\)</span> <span class="process-math">\(f(n) = 3f(n-1)+2\text{.}\)</span> What is <span class="process-math">\(f(3)\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2cm"></div>
+<div class="autopermalink" data-description="Activity 3.1.1"><a href="#notes-induction-2-5" title="Copy heading and permalink for Activity 3.1.1" aria-label="Copy heading and permalink for Activity 3.1.1">🔗</a></div></article><div class="para" id="notes-induction-2-6">
+<em class="alert">Peer instruction question 2</em><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-induction-2-7">Let <span class="process-math">\(r(n)\)</span> be the number of regions determined by <span class="process-math">\(n\)</span> lines in the plane drawn so that each pair intersects but no three lines intersect at a single point.<div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:25% 75%;column-gap:0%;">
+<div class="sbspanel fixed-width sbspanel--top top" style=""><table class="tabular">
+<tr>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(n\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(r(n)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="notes-induction-2-8-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+</div></div>
+<div class="para" id="notes-induction-2-9">
+<div class="workspace" data-space="10cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Handout 3.1: Recursive Counting"><a href="#notes-induction-2" title="Copy heading and permalink for Handout 3.1: Recursive Counting" aria-label="Copy heading and permalink for Handout 3.1: Recursive Counting">🔗</a></div></section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appcomb-activities-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="notes-induction.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

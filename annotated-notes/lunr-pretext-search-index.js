@@ -161,6 +161,24 @@ var ptx_lunr_docs = [
   "number": "2.3.5",
   "title": "",
   "body": "  Consider the expansion of . Find the coefficient on each of the following terms.          The Multinomial Theorem tells us that . Thus, we need and . Hence, the only options are or . When , we would have , which is not an integer. Thus, we must have , which means that and . Since we must also have , we thus have . Therefore, the coefficient on is .           Relying on the information from the first part of the activity, we must have and . The first equation requires and , but then the second equation would need , which is impossible. Therefore, the coefficient on is .           Relying on the information from the first part of the activity, we must have and . These equations can be rewritten as and . Since all variables must be nonnegative, we see that from the first equation and from the second equation . Thus, we need only consider and . When , we have , , and thus . When , we have , , and thus . Therefore, the coefficient on is .    "
+},
+{
+  "id": "notes-induction-2",
+  "level": "1",
+  "url": "notes-induction-2.html",
+  "type": "Handout",
+  "number": "3.1",
+  "title": "Recursive Counting",
+  "body": " Recursive Counting  How can we interpret the notation ?   Peer instruction question 1        Suppose that is a function defined on the positive integers. You know that and for all , . What is ?     Peer instruction question 2   Let be the number of regions determined by lines in the plane drawn so that each pair intersects but no three lines intersect at a single point.         0     1     2     3     4           "
+},
+{
+  "id": "notes-induction-2-5",
+  "level": "2",
+  "url": "notes-induction-2.html#notes-induction-2-5",
+  "type": "Activity",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  Suppose that is a function defined on the positive integers. You know that and for all , . What is ?   "
 }
 ]
 
