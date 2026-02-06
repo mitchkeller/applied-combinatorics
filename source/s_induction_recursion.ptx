@@ -21,8 +21,11 @@
         and <m>9</m>. </p>
       <figure xml:id="fig_induction_lines-regions">
         <caption>Lines and regions in the plane</caption>
-        <image width="50%" source="lines-regions"><description><p>Lines and regions in the plane</p>
-        </description></image>
+        <image width="50%" source="lines-regions">
+          <description>
+            <p>Four lines drawn in the plane so that each pair of lines intersects and no three lines intersect at a single point. On one of the line, the three points of intersection with the other three lines are marked with dots. The regions determined by the lines are numbered from <m>1</m> to <m>11</m>.</p>
+          </description>
+        </image>
       </figure>
       <p>With the recursive formula, we thus have <m>r(5)=5+11=16</m>, <m>r(6)=6+16=22</m> and <m>
         r(7)=7+22=29</m>. Even by hand, it wouldn't be all that much trouble to calculate <m>r(100)</m>.

@@ -6,6 +6,23 @@
     <p workspace="4cm">
       How can we interpret the notation <m>1+2+\cdots + n^2</m>?
     </p>
+    <p component="a">
+      The version above is reasonably unambiguous, but what if it were <m>1+\cdots + n^2</m>? Then you might wonder if I meant <m>1+4+9+16+\cdots+n^2</m>. This is why we introduce Sigma-notation, which we define recursively:
+      <md>
+        <mrow>\sum_{i=1}^1 f(i) \amp = f(1)</mrow>
+        <mrow>\sum_{i=1}^n f(i) \amp = f(n) + \sum_{i=1}^{n-1}f(i)\amp \text{for }n\geq 2</mrow>
+      </md>
+      Using this, we see, for instance, that
+      <md>
+        <mrow>
+        \sum_{i=1}^4 f(i) \amp = f(4) + \sum_{i=1}^3 f(i)
+        </mrow>
+        <mrow>\amp = f(4) + f(3) + \sum_{i=1}^2 f(i)</mrow>
+        <mrow>\amp = f(4) + f(3) + f(2) + \sum_{i=1}^1 f(i) </mrow>
+        <mrow>\amp= f(4)+f(3) + f(2) +f(1)</mrow>
+      </md>
+      
+    </p>
     <p>
       <alert>Peer instruction question 1</alert>
     </p>
@@ -14,6 +31,51 @@
         \binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
       </me>
       
+    </p>
+    <p component="a">
+      The first term on the right-hand side counts the <m>k</m>-element subsets of <m>[n]</m> that <em>do</em> contain 1, since once we have decided that 1 is in the subset, we still need <m>k-1</m> more elements and have <m>n-1</m> elements to pick them from. The second term on the right-hand side counts the <m>k</m>-element subsets of <m>[n]</m> that <em>do not</em> contain 1, since if we have decided that 1 is not in the subset, we have only <m>n-1</m> elements to pick from but we must pick <m>k</m> of them. Every <m>k</m>-element subset must either contain 1 or not contain 1, so this has counted all of the <m>k</m>-element subsets and therefore the sum equals <m>\binom{n}{k}</m>. We call this equation <term>Pascal's Identity</term>, which we use to construct <term>Pascal's Triangle</term>. We show this below.
+    </p>
+    		<image component="a" xml:id="pascal-large">
+			<latex-image label="pascal-large">
+			\begin{tikzpicture}
+			\def\r{.55}
+			\foreach \row in {0,...,10} {
+			\hexbox{\row}{0}{\large 1}
+			}
+			%fill in the rest of the triangle:
+			\foreach \row in {1,...,10} {
+			\pgfmathsetmacro{\entry}{1};
+			\foreach \col in {1,...,\row} {
+			% iterative formula : val = precval * (row-col+1)/col
+			% (+ 0.5 to bypass rounding errors)
+			\pgfmathtruncatemacro{\entry}{\entry*((\row-\col+1)/\col)+0.5};
+			\global\let\entry=\entry
+			\ifnum \entry&lt;100
+			\hexbox{\row}{\col}{\large \entry}
+			\else \ifnum \entry&lt;1000
+			\hexbox{\row}{\col}{\entry}
+			\else \ifnum \entry&lt;10000
+			\hexbox{\row}{\col}{\footnotesize \entry}
+			\else
+			\hexbox{\row}{\col}{\scriptsize \entry}
+			\fi
+			\fi
+			\fi
+			}
+			}
+			\end{tikzpicture}
+			</latex-image>
+			<shortdescription>The first 11 rows of Pascal's triangle.</shortdescription>
+			<description>
+			<p>
+				The first 11 rows of Pascal's triangle.
+				A triangular array of hexagons, each row containing one more hexagon that the row above it.
+				In each hexagon is an integer: 1's on the border of the triangle, and every integer inside the triangle the sum of the two integers above it.
+			</p>
+			</description>
+		</image>
+    <p component="a">
+      To illustrate the role of Pascal's identity in the triangle, note that <m>35</m> is in the seventh row (starting counting from the zeroth) and the first <m>35</m> in this row is in the third position (starting counting from the zeroth). Thus, we interpret this as <m>C(7,3) = 35</m>. Looking at the two cells above <m>35</m>, we see <m>15</m> and <m>20</m>. Notice that <m>35=15+20</m> and furthermore, <m>C(6,2)=15</m> and <m>C(6,3)=20</m>.
     </p>
     <activity workspace="2cm">
       <statement>
@@ -44,31 +106,44 @@
         </row>
         <row>
           <cell>0</cell>
-          <cell/>
+          <cell component="b"/>
+          <cell component="a">1</cell>
         </row>
         <row>
           <cell>1</cell>
-          <cell/>
+          <cell component="b"/>
+          <cell component="a">2</cell>
         </row>
         <row>
           <cell>2</cell>
-          <cell/>
+          <cell component="b"/>
+          <cell component="a">4</cell>
         </row>
         <row>
           <cell>3</cell>
-          <cell/>
+          <cell component="b"/>
+          <cell component="a">7</cell>
         </row>
         <row>
           <cell>4</cell>
-          <cell/>
+          <cell component="b"/>
+          <cell component="a">11</cell>
         </row>
       </tabular>
-      <p>
+      <p component="b">
         <nbsp/>
       </p>
+      <image width="50%" source="lines-regions" component="a">
+          <description>
+            <p>Four lines drawn in the plane so that each pair of lines intersects and no three lines intersect at a single point. On one of the line, the three points of intersection with the other three lines are marked with dots. The regions determined by the lines are numbered from <m>1</m> to <m>11</m>.</p>
+          </description>
+        </image>
     </sidebyside>
-    <p workspace="10cm">
+    <p component="b" workspace="10cm">
       
+    </p>
+    <p component="a">
+      When adding the <m>n</m>-th line, this new line is cut exactly once by each of the existing <m>n-1</m> lines. The <m>n</m>-th line is thus cut into <m>n</m> pieces. Each of these pieces takes one of the regions that the <m>n-1</m> lines determined and divides it into two regions. This nets the addition of <m>n</m> new regions, if we count one of the pieces into which an existing region was cut as counting toward the <m>r(n-1)</m> existing regions. Thus, we have <m>r(n) = r(n-1) + n</m> for <m>n\geq 1</m> and <m>r(0)=1</m>. Alternatively, you could consider that there are <m>r(n-1)-n</m> regions that are untouched by the <m>n</m>-th line and <m>2n</m> new regions formed by the cutting of the new line. But this still gives <m>r(n) = r(n-1)-n + 2n = r(n-1)+n</m>.
     </p>
   </handout>
   <handout component="induction-principle">

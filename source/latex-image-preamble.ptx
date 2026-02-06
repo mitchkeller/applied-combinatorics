@@ -1,7 +1,13 @@
 <latex-image-preamble>
   \usepackage{overpic,pict2e}
-  \usepackage{tikz,ifthen}
+  \usepackage{tikz,pgfplots,ifthen}
   \usetikzlibrary{calc,graphs,shapes.geometric}
-  \usetikzlibrary{arrows}
+  \usetikzlibrary{positioning,matrix,arrows}
   \tikzset{vtx/.style={circle, inner sep=0pt, minimum size=0.22cm,fill=black}}
+  
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \newcommand{\hexbox}[3]{
+\def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+\def\y{-\r*#1-sin{30}*\r*#1} \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle; \draw (\x,\y) node{#3}; }
 </latex-image-preamble>
