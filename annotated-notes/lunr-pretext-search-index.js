@@ -169,16 +169,25 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "3.1",
   "title": "Recursive Counting",
-  "body": " Recursive Counting  How can we interpret the notation ?   Peer instruction question 1        Suppose that is a function defined on the positive integers. You know that and for all , . What is ?     Peer instruction question 2   Let be the number of regions determined by lines in the plane drawn so that each pair intersects but no three lines intersect at a single point.         0     1     2     3     4           "
+  "body": " Recursive Counting  How can we interpret the notation ?  The version above is reasonably unambiguous, but what if it were ? Then you might wonder if I meant . This is why we introduce Sigma-notation, which we define recursively: Using this, we see, for instance, that    Peer instruction question 1      The first term on the right-hand side counts the -element subsets of that do contain 1, since once we have decided that 1 is in the subset, we still need more elements and have elements to pick them from. The second term on the right-hand side counts the -element subsets of that do not contain 1, since if we have decided that 1 is not in the subset, we have only elements to pick from but we must pick of them. Every -element subset must either contain 1 or not contain 1, so this has counted all of the -element subsets and therefore the sum equals . We call this equation Pascal's Identity , which we use to construct Pascal's Triangle . We show this below.    The first 11 rows of Pascal's triangle.   The first 11 rows of Pascal's triangle. A triangular array of hexagons, each row containing one more hexagon that the row above it. In each hexagon is an integer: 1's on the border of the triangle, and every integer inside the triangle the sum of the two integers above it.    To illustrate the role of Pascal's identity in the triangle, note that is in the seventh row (starting counting from the zeroth) and the first in this row is in the third position (starting counting from the zeroth). Thus, we interpret this as . Looking at the two cells above , we see and . Notice that and furthermore, and .    Suppose that is a function defined on the positive integers. You know that and for all , . What is ?    We have .     Peer instruction question 2   Let be the number of regions determined by lines in the plane drawn so that each pair intersects but no three lines intersect at a single point.         0  1    1  2    2  4    3  7    4  11      Four lines drawn in the plane so that each pair of lines intersects and no three lines intersect at a single point. On one of the line, the three points of intersection with the other three lines are marked with dots. The regions determined by the lines are numbered from to .     When adding the -th line, this new line is cut exactly once by each of the existing lines. The -th line is thus cut into pieces. Each of these pieces takes one of the regions that the lines determined and divides it into two regions. This nets the addition of new regions, if we count one of the pieces into which an existing region was cut as counting toward the existing regions. Thus, we have for and . Alternatively, you could consider that there are regions that are untouched by the -th line and new regions formed by the cutting of the new line. But this still gives .  "
 },
 {
-  "id": "notes-induction-2-5",
+  "id": "notes-induction-2-6",
   "level": "2",
-  "url": "notes-induction-2.html#notes-induction-2-5",
+  "url": "notes-induction-2.html#notes-induction-2-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Pascal's Identity Pascal's Triangle "
+},
+{
+  "id": "notes-induction-2-9",
+  "level": "2",
+  "url": "notes-induction-2.html#notes-induction-2-9",
   "type": "Activity",
   "number": "3.1.1",
   "title": "",
-  "body": "  Suppose that is a function defined on the positive integers. You know that and for all , . What is ?   "
+  "body": "  Suppose that is a function defined on the positive integers. You know that and for all , . What is ?    We have .   "
 }
 ]
 
