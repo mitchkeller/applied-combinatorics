@@ -152,8 +152,14 @@
     <axiom xml:id="axiom-induction">
       <title>Principle of Mathematical Induction</title>
       <statement>
-        <p workspace="2cm">
+        <p>
           Let <m>S_{n}</m> be an open statement involving a positive integer <m>n</m>. If <m>S_{1}</m> is true, and for every positive integer <m>k</m>, the statement <m>S_{k+1}</m> is true whenever <m>S_{k}</m> is true, then <m>S_{n}</m> is true for every positive integer <m>n</m>.
+        </p>
+        <p workspace="2cm" component="b">
+          
+        </p>
+        <p component="a">
+          We can rephrase <q>the statement <m>S_{k+1}</m> is true whenever <m>S_{k}</m> is true</q> as <q>if <m>S_k</m> is true, then <m>S_{k+1}</m> is true</q>.
         </p>
       </statement>
     </axiom>
@@ -167,12 +173,18 @@
             <p>
               Show that <m>S_{1}</m> is true.
             </p>
+            <p component="a">
+              We sometimes call this the <q>Base case</q>.
+            </p>
           </li>
 
           <li>
             <title>Inductive step</title>
             <p>
               Show that <em>if</em> for some <m>k\geq 1</m>, <m>S_{k}</m> is true, then <m>S_{k+1}</m> is true.
+            </p>
+            <p component="a">
+              <q>For some <m>k\geq 1</m>, <m>S_{k}</m> is true</q> is usually referred to as the <term>induction hypothesis</term> or <term>inductive hypothesis</term>.
             </p>
           </li>
         </dl>
@@ -188,8 +200,32 @@
         </p>
       </statement>
       <proof>
-        <p workspace="5cm">
+        <p component="b" workspace="5cm">
           
+        </p>
+        <p component="a">
+          We will prove this by induction. The basis step is to substitute <m>n=1</m> into each side:
+          <md>
+            <mrow>\sum_{i=1}^1 (4i-3) \amp = 4\cdot 1-3 = 1</mrow>
+            <mrow>1(2\cdot 1-1) \amp = 1(2-1) = 1\cdot 1 = 1</mrow>
+          </md>
+          These are equal, so the basis step is complete. Now assume that for <em>some</em> <m>k\geq 1</m> we have
+          <md>
+            \sum_{i=1}^k (4i-3) = k(2k-1)
+          </md>.
+          We want to prove that
+          <md>
+            \sum_{i=1}^{k+1} (4i-3) = (k+1)(2(k+1)-1)
+          </md>.
+          We can write
+          <md>
+            <mrow>\sum_{i=1}^{k+1} (4i-3) \amp = \sum_{i=1}^k(4i-3)+(4(k+1)-3)</mrow>
+            <mrow> \amp = k(2k-1)+(4(k+1)-3)\qquad\text{(By the induction hypothesis)}</mrow>
+            <mrow> \amp = 2k^2-k+4k+1 = 2k^2+3k+1</mrow>
+            <mrow> \amp = (k+1)(2k+1)</mrow>
+            <mrow> \amp = (k+1)(2(k+1)-1)</mrow>
+          </md>.
+          Thus, the formula is true for <m>k+1</m> and therefore holds for all <m>n\geq 1</m> by the Principle of Mathematical Induction.
         </p>
       </proof>
     </theorem>
