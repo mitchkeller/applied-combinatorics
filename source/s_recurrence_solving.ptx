@@ -92,18 +92,17 @@
         binomial theorem to expand the terms in this expression for <m>t(n)</m>. With appropriate
         values for <m>c_1</m> and <m>c_2</m>, it seems plausible that we could get rid of the square
         roots and fractions. Because we have initial values for <m>t(n)</m>, we are able to solve
-        for <m>c_1</m> and <m>c_2</m> here. Evaluating at <m>n=0</m> and <m>n=1</m> we get <md>
-          <mrow> 3 \amp = c_1 + c_2</mrow>
-          <mrow> 8 \amp = c_1\frac{3+\sqrt{5}}{2} + c_2 \frac{3-\sqrt{5}}{2}.</mrow>
-        </md> A
-        little bit of computation gives <me>
-          c_1 = \frac{7\sqrt{5}}{10} + \frac{3}{2} \quad\text{and} \quad c_2 =
-          -\frac{7\sqrt{5}}{10} +\frac{3}{2}
+        for <m>c_1</m> and <m>c_2</m> here. Evaluating at <m>n=1</m> and <m>n=2</m> we get <md>
+          <mrow> 3 \amp = c_1\left(\frac{3+\sqrt{5}}{2}\right) + c_2 \left(\frac{3-\sqrt{5}}{2}\right)</mrow>
+          <mrow> 8 \amp = c_1\left(\frac{3+\sqrt{5}}{2}\right)^2 + c_2 \left(\frac{3-\sqrt{5}}{2}\right)^2</mrow>
+        </md>. 
+        A little bit of computation gives <me>
+          c_1 = \frac{3\sqrt{5}}{10} + \frac{1}{2} \quad\text{and} \quad c_2 =
+          -\frac{3\sqrt{5}}{10} +\frac{1}{2}
         </me>
         so that <me>
-          t(n) = \left(\frac{7\sqrt{5}}{10} + \frac{3}{2}\right)
-          \left(\frac{3+\sqrt{5}}{2}\right)^n+ \left(-\frac{7\sqrt{5}}{10}
-          +\frac{3}{2}\right) \left(\frac{3-\sqrt{5}}{2}\right)^n.
+          t(n) = \left(\frac{3\sqrt{5}}{10} + \frac{1}{2}\right)
+          \left(\frac{3+\sqrt{5}}{2}\right)^n+ \left(-\frac{3\sqrt{5}}{10} +\frac{1}{2}\right) \left(\frac{3-\sqrt{5}}{2}\right)^n.
         </me>
       </p>
     </example>
