@@ -44,26 +44,25 @@ t(n) = c_1\left(\frac{3+\sqrt{5}}{2}\right)^n +
 c_2\left(\frac{3-\sqrt{5}}{2}\right)^n.
 \end{equation*}
 </div>
-<div class="para">This probably looks suspicious; we’re <em class="emphasis">counting strings</em> here, so <span class="process-math">\(t(n)\)</span> needs to be a nonnegative integer, but the form we’ve given includes not just fractions but also square roots! You can mimic the verification we used in the previous example to see that this does satisfy <a href="s_recurrence_solving.html#eqn_recurrence_ternary" class="xref" data-knowl="./knowl/xref/eqn_recurrence_ternary.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.4.2">(9.4.2)</a>. If that feels tedious, consider how you would use the binomial theorem to expand the terms in this expression for <span class="process-math">\(t(n)\text{.}\)</span> With appropriate values for <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{,}\)</span> it seems plausible that we could get rid of the square roots and fractions. Because we have initial values for <span class="process-math">\(t(n)\text{,}\)</span> we are able to solve for <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> here. Evaluating at <span class="process-math">\(n=0\)</span> and <span class="process-math">\(n=1\)</span> we get</div>
+<div class="para">This probably looks suspicious; we’re <em class="emphasis">counting strings</em> here, so <span class="process-math">\(t(n)\)</span> needs to be a nonnegative integer, but the form we’ve given includes not just fractions but also square roots! You can mimic the verification we used in the previous example to see that this does satisfy <a href="s_recurrence_solving.html#eqn_recurrence_ternary" class="xref" data-knowl="./knowl/xref/eqn_recurrence_ternary.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.4.2">(9.4.2)</a>. If that feels tedious, consider how you would use the binomial theorem to expand the terms in this expression for <span class="process-math">\(t(n)\text{.}\)</span> With appropriate values for <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\text{,}\)</span> it seems plausible that we could get rid of the square roots and fractions. Because we have initial values for <span class="process-math">\(t(n)\text{,}\)</span> we are able to solve for <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> here. Evaluating at <span class="process-math">\(n=1\)</span> and <span class="process-math">\(n=2\)</span> we get</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn_recurrence_ternary.html">
 \begin{align*}
-3 \amp = c_1 + c_2\\
-8 \amp = c_1\frac{3+\sqrt{5}}{2} + c_2 \frac{3-\sqrt{5}}{2}.
+3 \amp = c_1\left(\frac{3+\sqrt{5}}{2}\right) + c_2 \left(\frac{3-\sqrt{5}}{2}\right)\\
+8 \amp = c_1\left(\frac{3+\sqrt{5}}{2}\right)^2 + c_2 \left(\frac{3-\sqrt{5}}{2}\right)^2\text{.}
 \end{align*}
 </div>
 <div class="para">A little bit of computation gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn_recurrence_ternary.html">
 \begin{equation*}
-c_1 = \frac{7\sqrt{5}}{10} + \frac{3}{2} \quad\text{and} \quad c_2 =
--\frac{7\sqrt{5}}{10} +\frac{3}{2}
+c_1 = \frac{3\sqrt{5}}{10} + \frac{1}{2} \quad\text{and} \quad c_2 =
+-\frac{3\sqrt{5}}{10} +\frac{1}{2}
 \end{equation*}
 </div>
 <div class="para">so that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn_recurrence_ternary.html">
 \begin{equation*}
-t(n) = \left(\frac{7\sqrt{5}}{10} + \frac{3}{2}\right)
-\left(\frac{3+\sqrt{5}}{2}\right)^n+ \left(-\frac{7\sqrt{5}}{10}
-+\frac{3}{2}\right) \left(\frac{3-\sqrt{5}}{2}\right)^n.
+t(n) = \left(\frac{3\sqrt{5}}{10} + \frac{1}{2}\right)
+\left(\frac{3+\sqrt{5}}{2}\right)^n+ \left(-\frac{3\sqrt{5}}{10} +\frac{1}{2}\right) \left(\frac{3-\sqrt{5}}{2}\right)^n.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_ternary-strings-no-20-solved-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
