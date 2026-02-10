@@ -428,17 +428,17 @@
                         <statement><p>In how many ways can he distribute the candy?</p></statement>
                         <answer>
                           <p>
-                            <m>C(470,64)</m>
+                            <m>C(471,65)</m>
                           </p>
                         </answer>
                         <solution>
                           <p>
                             We have 450 pieces of candy.
                             We set aside 9 for the prize-winning student, who will then need to get at least one more piece.
-                            We need 30 artificial candies for the students who are willing to receive no candy.
-                            Thus, we are distributing <m>450-9+30 = 471</m> pieces of candy, which determine <m>470</m> gaps.
-                            We have <m>65</m> recipients, so we need <m>64</m> dividers.
-                            Thus, there are <m>C(470,64)</m> ways to distribute the candy.
+                            We need 30 artificial candies for the students who are willing to receive no candy. Since the instructor can keep some candy, we also need to allow for a keep pile that could possibly be empty, requiring an additional artificial candy.
+                            Thus, we are distributing <m>450-9+31 = 472</m> pieces of candy, which determine <m>471</m> gaps.
+                            We have <m>66</m> recipients, so we need <m>65</m> dividers.
+                            Thus, there are <m>C(471,65)</m> ways to distribute the candy.
                           </p>
                         </solution>
                       </task>
@@ -448,7 +448,7 @@
                         </statement>
                         <answer>
                           <p>
-                            <m>C(470,64)-C(463,64)</m>
+                            <m>C(471,65)-C(464,65)</m>
                           </p>
                         </answer>
                         <solution>
@@ -456,11 +456,11 @@
                             To answer this part, we will use the answer to the previous part and subtract those distributions in which the diabetic student receives more than <m>7</m> pieces of candy.
                             To do this, we will set aside <m>7</m> pieces of candy for that student, who then must still receive at least one more.
                             We still have to set aside <m>9</m> for the prize-winning student.
-                            Since the diabetic student was amongst those who needed at least one piece of candy, we still have <m>30</m> who can get none, and thus need <m>30</m> artificial candies.
-                            Thus, we are distributing <m>450-7-9+30=464</m> pieces of candy, which determine <m>463</m> gaps.
-                            We still need <m>64</m> dividers.
-                            Thus, there are <m>C(463,64)</m> distributions in which the diabetic student receives more than <m>7</m> candies.
-                            Combining with the previous part, this means there are <m>C(470,64)-C(463,64)</m> ways to distribute the candy so the diabetic student gets at least one and at most seven candies.
+                            Since the diabetic student was amongst those who needed at least one piece of candy, we still have <m>30</m> who can get none and the potentially empty keep pile, and thus need <m>31</m> artificial candies.
+                            Thus, we are distributing <m>450-7-9+31=465</m> pieces of candy, which determine <m>464</m> gaps.
+                            We still need <m>65</m> dividers.
+                            Thus, there are <m>C(464,65)</m> distributions in which the diabetic student receives more than <m>7</m> candies.
+                            Combining with the previous part, this means there are <m>C(471,65)-C(464,65)</m> ways to distribute the candy so the diabetic student gets at least one and at most seven candies.
                           </p>
                         </solution>
                       </task>
