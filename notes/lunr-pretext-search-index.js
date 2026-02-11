@@ -206,6 +206,87 @@ var ptx_lunr_docs = [
   "number": "3.2.1",
   "title": "",
   "body": "   Recall that we have defined to be the number of regions in the plane determined by lines arranged so that (1) each pair of lines intersects and (2) no three lines intersect at a single point and argued that and for , . Prove that for all positive integers , .     We will prove this by induction. For the base case, let . By definition, . We also see that , which completes the verification of the base case.  Now assume that for some that . We will show that . Since , we have that . Therefore, the recursive formula for applies to , and we have . Therefore, by the Principle of Mathematical Induction, for all positive integers .       We say that an integer  divides an integer provided that there exists an integer such that . Prove that for all integers , divides .     We will prove this by induction. The basis step is , for which we have . Therefore, we can see that divides as required.  Now assume that for some positive integer , we have that divides . This means that there exists an integer so that . We can rearrange this to say that . Now we consider for the induction step. We can write as , so we have by the induction hypothesis. Using algebra, we now have that this equals . Since is an integer, is also an integer. Therefore, is four times an integer, which is what it means for to divide . Hence, by the Principle of Mathematical Induction, divides for all positive integers .       Let , , and for all integers , Prove that an explict formula for is given by .     We will prove this using strong induction. Because the recursive formula only applies for , we will need to address and as base cases. We are given that and . The formula , when considered for and , yields and , respectively. Thus, the basis step is complete.  Now assume that for some integer and all integers with that . We must prove that . Since , we have that , and thus the recursive formula for applies. Therefore, . This is what we needed to show. Therefore, by the Principle of Mathematical Induction, we have that for all integers , .     "
+},
+{
+  "id": "ch-php-notes",
+  "level": "1",
+  "url": "ch-php-notes.html",
+  "type": "Chapter",
+  "number": "4",
+  "title": "Placeholder",
+  "body": " Placeholder  This is a placeholder for a chapter for which there are not currently notes.  "
+},
+{
+  "id": "graphs-notation-term",
+  "level": "1",
+  "url": "graphs-notation-term.html",
+  "type": "Handout",
+  "number": "5.1",
+  "title": "Notation and Terminology",
+  "body": " Notation and Terminology    Peer instruction questions 1 3.             Suppose is an induced spanning subgraph of a graph . Discuss with your group what this would mean.    Here we must have that and are the same graph. The spanning property implies that has all of the vertices of . Being induced then forces all of the edges of to be in since contains all edges of that have both their endpoints in , which has all of the vertices of .       Peer instruction questions 4 5.          On the Complexity of Graph Isomorphism    The First Theorem of Graph Theory   Let denote the degree of vertex in graph . Then .         In any graph, the number of vertices of odd degree is even.       Walk      Path      Cycle             A tree is  A vertex in a tree is called a leaf provided that        Every tree on at least two vertices has at least two leaves.      If is a tree, then for every pair of distinct vertices , there exists a unique path from to in .          With your neighbors, use mathematical induction to prove that every tree on vertices has exactly edges.  How many edges would an -vertex forest consisting of trees have?       For the base case, when , the tree has only one vertex and thus no edges. Since , we have the desired relationship. Now assume that for some , every tree with vertices has exactly edges. Let be a tree with vertices. The tree has a leaf . Form from by deleting and its edge. Then has vertices, so by the induction hypothesis, has edges. However, has one more edge (incident with ) than , so has edges.   Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).  A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have edges.     "
+},
+{
+  "id": "graphs-notation-term-3-1",
+  "level": "2",
+  "url": "graphs-notation-term.html#graphs-notation-term-3-1",
+  "type": "Activity",
+  "number": "5.1.1",
+  "title": "",
+  "body": "  Suppose is an induced spanning subgraph of a graph . Discuss with your group what this would mean.    Here we must have that and are the same graph. The spanning property implies that has all of the vertices of . Being induced then forces all of the edges of to be in since contains all edges of that have both their endpoints in , which has all of the vertices of .   "
+},
+{
+  "id": "thm-first-thm-gt",
+  "level": "2",
+  "url": "graphs-notation-term.html#thm-first-thm-gt",
+  "type": "Theorem",
+  "number": "5.1",
+  "title": "The First Theorem of Graph Theory.",
+  "body": " The First Theorem of Graph Theory   Let denote the degree of vertex in graph . Then .   "
+},
+{
+  "id": "cor-num-odd-vts",
+  "level": "2",
+  "url": "graphs-notation-term.html#cor-num-odd-vts",
+  "type": "Corollary",
+  "number": "5.2",
+  "title": "",
+  "body": "  In any graph, the number of vertices of odd degree is even.   "
+},
+{
+  "id": "def-tree",
+  "level": "2",
+  "url": "graphs-notation-term.html#def-tree",
+  "type": "Definition",
+  "number": "5.3",
+  "title": "",
+  "body": "    A tree is  A vertex in a tree is called a leaf provided that     "
+},
+{
+  "id": "thm-tree-leaves",
+  "level": "2",
+  "url": "graphs-notation-term.html#thm-tree-leaves",
+  "type": "Theorem",
+  "number": "5.4",
+  "title": "",
+  "body": "  Every tree on at least two vertices has at least two leaves.   "
+},
+{
+  "id": "thm-tree-unique-path",
+  "level": "2",
+  "url": "graphs-notation-term.html#thm-tree-unique-path",
+  "type": "Theorem",
+  "number": "5.5",
+  "title": "",
+  "body": "  If is a tree, then for every pair of distinct vertices , there exists a unique path from to in .   "
+},
+{
+  "id": "graphs-notation-term-7-1",
+  "level": "2",
+  "url": "graphs-notation-term.html#graphs-notation-term-7-1",
+  "type": "Activity",
+  "number": "5.1.2",
+  "title": "",
+  "body": "    With your neighbors, use mathematical induction to prove that every tree on vertices has exactly edges.  How many edges would an -vertex forest consisting of trees have?       For the base case, when , the tree has only one vertex and thus no edges. Since , we have the desired relationship. Now assume that for some , every tree with vertices has exactly edges. Let be a tree with vertices. The tree has a leaf . Form from by deleting and its edge. Then has vertices, so by the induction hypothesis, has edges. However, has one more edge (incident with ) than , so has edges.   Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).  A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have edges.   "
 }
 ]
 

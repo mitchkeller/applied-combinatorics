@@ -233,6 +233,87 @@ var ptx_lunr_docs = [
   "number": "3.2.1",
   "title": "",
   "body": "   Recall that we have defined to be the number of regions in the plane determined by lines arranged so that (1) each pair of lines intersects and (2) no three lines intersect at a single point and argued that and for , . Prove that for all positive integers , .     We will prove this by induction. For the base case, let . By definition, . We also see that , which completes the verification of the base case.  Now assume that for some that . We will show that . Since , we have that . Therefore, the recursive formula for applies to , and we have . Therefore, by the Principle of Mathematical Induction, for all positive integers .       We say that an integer  divides an integer provided that there exists an integer such that . Prove that for all integers , divides .     We will prove this by induction. The basis step is , for which we have . Therefore, we can see that divides as required.  Now assume that for some positive integer , we have that divides . This means that there exists an integer so that . We can rearrange this to say that . Now we consider for the induction step. We can write as , so we have by the induction hypothesis. Using algebra, we now have that this equals . Since is an integer, is also an integer. Therefore, is four times an integer, which is what it means for to divide . Hence, by the Principle of Mathematical Induction, divides for all positive integers .       Let , , and for all integers , Prove that an explict formula for is given by .     We will prove this using strong induction. Because the recursive formula only applies for , we will need to address and as base cases. We are given that and . The formula , when considered for and , yields and , respectively. Thus, the basis step is complete.  Now assume that for some integer and all integers with that . We must prove that . Since , we have that , and thus the recursive formula for applies. Therefore, . This is what we needed to show. Therefore, by the Principle of Mathematical Induction, we have that for all integers , .     "
+},
+{
+  "id": "ch-php-notes",
+  "level": "1",
+  "url": "ch-php-notes.html",
+  "type": "Chapter",
+  "number": "4",
+  "title": "Placeholder",
+  "body": " Placeholder  This is a placeholder for a chapter for which there are not currently notes.  "
+},
+{
+  "id": "graphs-notation-term",
+  "level": "1",
+  "url": "graphs-notation-term.html",
+  "type": "Handout",
+  "number": "5.1",
+  "title": "Notation and Terminology",
+  "body": " Notation and Terminology    Peer instruction questions 1 3.    Two graphs   We have that is a spanning subgraph of because all vertices of appear in .   Two graphs   We have that is not a subgraph of because the edge in is not an edge in .   Two graphs      We see that is an induced subgraph of because every edge of between vertices that are in is also an edge of .    The word vertex is singular. Its plural is vertices . Yeah, Latin gave this to us, much like it gave us matrix and matrices .    Formally, is an ordered pair of sets. Moreover, is a set of sets with each element of being a 2-element subset of .         Suppose is an induced spanning subgraph of a graph . Discuss with your group what this would mean.    Here we must have that and are the same graph. The spanning property implies that has all of the vertices of . Being induced then forces all of the edges of to be in since contains all edges of that have both their endpoints in , which has all of the vertices of .       Peer instruction questions 4 5.    Two graphs   These graphs are isomorphic. One possible isomorphism is shown below.                       Two graphs   These graphs are not isomorphic. To see why they are not, we try to construct an isomorphism. Since and are the only vertices of degree , any isomorphism would have to pair them. This then forces and , as the unique neighbors of the vertices of degree to be paired. However, all neighbors of have degree , while has a neighbor ( ) of degree . Another independent reason would be that and are the unique vertices of degree in these graphs, so they would have to be paired. However, has two neighbors of degree , while has a neighbor of degree . As a third independent reason, notice that in the left graph, the vertex of degree and the vertex of degree are distance 3 apart. However, in the right graph, the vertex of degree and the vertex of degree are distance 2 apart.     On the Complexity of Graph Isomorphism   The question we would like to answer algorithmically is Given two graphs and , is isomorphic to ? The two most-studied classes of computational problems are and , with a focus on -complete problems. The problems in have efficient algorithms, by which we roughly mean the number of operations an algorithm takes is polynomial in the size of the input (usually number of vertices for graphs). The -complete problems are believed to be computationally intractable but must all be of a type where a yes or no answer can be readily verified. (For instance, if I give you a function that I claim is an isomorphism, it's fast to verify this fact.) Most problems that fit this framework have been shown to be in or to be -complete. However, graph isomorphism has not shown to be either. In fact, it is often considered to be the leading candidate for a problem that is neither in nor -complete.   The First Theorem of Graph Theory aka The Handshaking Lemma   Let denote the degree of vertex in graph . Then .    The summation counts an edge twice: once when and once when .         In any graph, the number of vertices of odd degree is even.    Adding up an odd number of odd numbers gives an odd number, and the sum would remain odd no matter how many even numbers are added in.       Walk   so that for .    Path  Walk with no repeated vertices.    Cycle  Path with for which is also an edge.           A tree is a connected graph with no cycles.  A vertex in a tree is called a leaf provided that .        Every tree on at least two vertices has at least two leaves.      If is a tree, then for every pair of distinct vertices , there exists a unique path from to in .          With your neighbors, use mathematical induction to prove that every tree on vertices has exactly edges.  How many edges would an -vertex forest consisting of trees have?       For the base case, when , the tree has only one vertex and thus no edges. Since , we have the desired relationship. Now assume that for some , every tree with vertices has exactly edges. Let be a tree with vertices. The tree has a leaf . Form from by deleting and its edge. Then has vertices, so by the induction hypothesis, has edges. However, has one more edge (incident with ) than , so has edges.   Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).  A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have edges.     "
+},
+{
+  "id": "graphs-notation-term-3-1",
+  "level": "2",
+  "url": "graphs-notation-term.html#graphs-notation-term-3-1",
+  "type": "Activity",
+  "number": "5.1.1",
+  "title": "",
+  "body": "  Suppose is an induced spanning subgraph of a graph . Discuss with your group what this would mean.    Here we must have that and are the same graph. The spanning property implies that has all of the vertices of . Being induced then forces all of the edges of to be in since contains all edges of that have both their endpoints in , which has all of the vertices of .   "
+},
+{
+  "id": "thm-first-thm-gt",
+  "level": "2",
+  "url": "graphs-notation-term.html#thm-first-thm-gt",
+  "type": "Theorem",
+  "number": "5.1",
+  "title": "The First Theorem of Graph Theory aka The Handshaking Lemma.",
+  "body": " The First Theorem of Graph Theory aka The Handshaking Lemma   Let denote the degree of vertex in graph . Then .    The summation counts an edge twice: once when and once when .   "
+},
+{
+  "id": "cor-num-odd-vts",
+  "level": "2",
+  "url": "graphs-notation-term.html#cor-num-odd-vts",
+  "type": "Corollary",
+  "number": "5.2",
+  "title": "",
+  "body": "  In any graph, the number of vertices of odd degree is even.    Adding up an odd number of odd numbers gives an odd number, and the sum would remain odd no matter how many even numbers are added in.   "
+},
+{
+  "id": "def-tree",
+  "level": "2",
+  "url": "graphs-notation-term.html#def-tree",
+  "type": "Definition",
+  "number": "5.3",
+  "title": "",
+  "body": "    A tree is a connected graph with no cycles.  A vertex in a tree is called a leaf provided that .     "
+},
+{
+  "id": "thm-tree-leaves",
+  "level": "2",
+  "url": "graphs-notation-term.html#thm-tree-leaves",
+  "type": "Theorem",
+  "number": "5.4",
+  "title": "",
+  "body": "  Every tree on at least two vertices has at least two leaves.   "
+},
+{
+  "id": "thm-tree-unique-path",
+  "level": "2",
+  "url": "graphs-notation-term.html#thm-tree-unique-path",
+  "type": "Theorem",
+  "number": "5.5",
+  "title": "",
+  "body": "  If is a tree, then for every pair of distinct vertices , there exists a unique path from to in .   "
+},
+{
+  "id": "graphs-notation-term-7-1",
+  "level": "2",
+  "url": "graphs-notation-term.html#graphs-notation-term-7-1",
+  "type": "Activity",
+  "number": "5.1.2",
+  "title": "",
+  "body": "    With your neighbors, use mathematical induction to prove that every tree on vertices has exactly edges.  How many edges would an -vertex forest consisting of trees have?       For the base case, when , the tree has only one vertex and thus no edges. Since , we have the desired relationship. Now assume that for some , every tree with vertices has exactly edges. Let be a tree with vertices. The tree has a leaf . Form from by deleting and its edge. Then has vertices, so by the induction hypothesis, has edges. However, has one more edge (incident with ) than , so has edges.   Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).  A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have edges.   "
 }
 ]
 
