@@ -1,44 +1,107 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-graphs" component="notes-graphs">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-graphs" component="graphs">
   <title>Graph Theory</title>
-  <handout>
+  <handout xml:id="graphs-notation-term" component="graphs-notation-term">
     <title>Notation and Terminology</title>
     <page>
     <p>
       <alert>Peer instruction questions 1<ndash/>3.</alert>
     </p>
     <image source="spanning_subgraph" width="60%">
-      <description>Two graphs</description>
+      <description component="a"><p>Two graphs</p></description>
     </image>
+    <p component="a">
+      We have that <m>\bfH</m> is a spanning subgraph of <m>\bfG</m> because all vertices of <m>\bfG</m> appear in <m>\bfH</m>.
+    </p>
     <image source="non_subgraph" width="60%">
-      <description>Two graphs</description>
+      <description component="a"><p>Two graphs</p></description>
     </image>
+    <p component="a">
+      We have that <m>\bfH</m> is not a subgraph of <m>\bfG</m> because the edge <m>\set{8,10}</m> in <m>\bfH</m> is not an edge in <m>\bfG</m>.
+    </p>
     <image source="induced_subgraph" width="60%">
-      <description>Two graphs</description>
+      <description component="a"><p>Two graphs</p></description>
     </image>
+    <p component="a">
+      <ul>
+        <li>
+          <p>
+           We see that <m>\bfH</m> is an induced subgraph of <m>\bfG</m> because every edge of <m>\bfG</m> between vertices that are in <m>\bfH</m> is also an edge of <m>\bfH</m>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            The word <q>vertex</q> is singular. Its plural is <q>vertices</q>. Yeah, Latin gave this to us, much like it gave us <q>matrix</q> and <q>matrices</q>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Formally, <m>\bfG=(V,E)</m> is an ordered pair of sets. Moreover, <m>E</m> is a set of sets with each element of <m>E</m> being a 2-element subset of <m>V</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
   </page>
   <page>
-    <activity workspace="3cm">
+    <activity>
       <statement>
         <p>
           Suppose <m>\bfH</m> is an induced spanning subgraph of a graph <m>\bfG</m>. Discuss with your group what this would mean.
         </p>
       </statement>
+      <solution>
+        <p>
+          Here we must have that <m>\bfG</m> and <m>\bfH</m> are the same graph. The spanning property implies that <m>\bfH</m> has all of the vertices of <m>\bfG</m>. Being induced then forces all of the edges of <m>\bfG</m> to be in <m>\bfH</m> since <m>\bfH</m> contains all edges of <m>\bfG</m> that have both their endpoints in <m>\bfH</m>, which has all of the vertices of <m>\bfG</m>.
+        </p>
+      </solution>
     </activity>
+    </page>
+    <page>
     <p>
       <alert>Peer instruction questions 4<ndash/>5.</alert>
     </p>
     <image source="isomorphic_graphs-PI" width="65%">
-      <description>Two graphs</description>
+      <description component="a"><p>Two graphs</p></description>
     </image>
+    <p component="a">
+      These graphs are isomorphic. One possible isomorphism is shown below.
+    </p>
+    <tabular component="a">
+      <row bottom="minor">
+        <cell right="minor"><m>v</m></cell>
+        <cell><m>a</m></cell>
+        <cell><m>b</m></cell>
+        <cell><m>c</m></cell>
+        <cell><m>d</m></cell>
+        <cell><m>e</m></cell>
+        <cell><m>f</m></cell>
+      </row>
+      <row>
+        <cell right="minor"><m>f(v)</m></cell>
+        <cell><m>1</m></cell>
+        <cell><m>3</m></cell>
+        <cell><m>5</m></cell>
+        <cell><m>6</m></cell>
+        <cell><m>2</m></cell>
+        <cell><m>4</m></cell>
+      </row>
+    </tabular>
     <image source="nonisomorphic_graphs-PI" width="65%">
-      <description>Two graphs</description>
+      <description component="a"><p>Two graphs</p></description>
     </image>
+    <p component="a">
+      These graphs are not isomorphic. To see why they are not, we try to construct an isomorphism. Since <m>a</m> and <m>1</m> are the only vertices of degree <m>1</m>, any isomorphism would have to pair them. This then forces <m>c</m> and <m>2</m>, as the unique neighbors of the vertices of degree <m>1</m> to be paired. However, all neighbors of <m>c</m> have degree <m>3</m>, while <m>2</m> has a neighbor (<m>4</m>) of degree <m>2</m>. Another independent reason would be that <m>f</m> and <m>4</m> are the unique vertices of degree <m>2</m> in these graphs, so they would have to be paired. However, <m>f</m> has two neighbors of degree <m>3</m>, while <m>4</m> has a neighbor of degree <m>4</m>. As a third independent reason, notice that in the left graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 3 apart. However, in the right graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 2 apart.
+    </p>
   </page>
   <page>
     <p workspace="3cm">
       <alert>On the Complexity of Graph Isomorphism</alert>
     </p>
+    <p component="a">
+      The question we would like to answer algorithmically is <q>Given two graphs <m>\bfG</m> and <m>\bfH</m>, is <m>\bfG</m> isomorphic to <m>\bfH</m>?</q> The two most-studied classes of computational problems are <m>\bfP</m> and <m>\bfNP</m>, with a focus on <m>\bfNP</m>-complete problems. The problems in <m>\bfP</m> have efficient algorithms, by which we roughly mean the number of operations an algorithm takes is polynomial in the size of the input (usually number of vertices for graphs). The <m>\bfNP</m>-complete problems are believed to be computationally intractable <em>but</em> must all be of a type where a yes or no answer can be readily verified. (For instance, if I give you a function that I claim is an isomorphism, it's fast to verify this fact.) Most problems that fit this framework have been shown to be in <m>\bfP</m> or to be <m>\bfNP</m>-complete. However, graph isomorphism has not shown to be either. In fact, it is often considered to be the leading candidate for a problem that is neither in <m>\bfP</m> nor <m>\bfNP</m>-complete.
+    </p>
     <theorem xml:id="thm-first-thm-gt">
+      <title component="b">The First Theorem of Graph Theory</title>
+      <title component="a">The First Theorem of Graph Theory aka The Handshaking Lemma</title>
       <statement>
         <p workspace="3cm">
           Let <m>\deg_{\bfG}(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then
@@ -47,32 +110,56 @@
           </me>.
         </p>
       </statement>
+      <proof component="a">
+        <p>
+          The summation counts an edge <m>xy</m> twice: once when <m>v=x</m> and once when <m>v=y</m>.
+        </p>
+      </proof>
     </theorem>
+    <p compnent="a">
+      <me>
+            |E| = \frac{1}{2} \sum_{v\in V}\deg_{\bfG}(v)
+          </me>
+    </p>
     <corollary xml:id="cor-num-odd-vts">
       <statement>
         <p workspace="1cm">
           In any graph, the number of vertices of odd degree is even.
         </p>
       </statement>
+      <proof component="a">
+        <p>
+          Adding up an odd number of odd numbers gives an odd number, and the sum would remain odd no matter how many even numbers are added in.
+        </p>
+      </proof>
     </corollary>
     <p>
       <dl>
         <li>
           <title>Walk</title>
-          <p workspace="1cm">
+          <p workspace="1cm" component="b">
             
+          </p>
+          <p component="a">
+            <m>(x_1,x_2,\dots,x_t)</m> so that <m>x_ix_{i+1}\in E</m> for <m>i=1,2,\dots,t-1</m>.
           </p>
         </li>
         <li>
           <title>Path</title>
-          <p workspace="1cm">
+          <p workspace="1cm" component="b">
             
+          </p>
+          <p component="a">
+            Walk with no repeated vertices.
           </p>
         </li>
         <li>
           <title>Cycle</title>
-          <p workspace="1cm">
+          <p workspace="1cm" component="b">
             
+          </p>
+          <p component="a">
+            Path with <m>t\geq 3</m> for which <m>x_1x_t</m> is also an edge.
           </p>
         </li>
       </dl>
@@ -81,8 +168,17 @@
   <page>
     <definition xml:id="def-tree">
       <statement>
-        <p workspace="1cm">
-          A vertex <m>v</m> in a graph <m>\GVE</m> is called a <term>leaf</term> provided that
+        <p workspace="1cm" component="b">
+          <ul>
+            <li>A <term>tree</term> is </li>
+            <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that</li>
+          </ul>
+        </p>
+        <p workspace="1cm" component="a">
+          <ul>
+            <li>A <term>tree</term> is a connected graph with no cycles.</li>
+            <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that <m>\deg_\bfG(v) = 1</m>.</li>
+          </ul>
         </p>
       </statement>
     </definition>
@@ -114,10 +210,23 @@
           </ol>
         </p>
       </statement>
+      <solution>
+        <proof>
+          <p>
+            For the base case, when <m>n=1</m>, the tree has only one vertex and thus no edges. Since <m>n-1 = 1-1=0</m>, we have the desired relationship. Now assume that for some <m>k\geq 1</m>, every tree with <m>k</m> vertices has exactly <m>k-1</m> edges. Let <m>\bfT</m> be a tree with <m>k+1</m> vertices. The tree <m>\bfT</m> has a leaf <m>v</m>. Form <m>\bfT'</m> from <m>\bfT</m> by deleting <m>v</m> and its edge. Then <m>\bfT'</m> has <m>k</m> vertices, so by the induction hypothesis, <m>\bfT'</m> has <m>k-1</m> edges. However, <m>\bfT</m> has one more edge (incident with <m>v</m>) than <m>\bfT'</m>, so <m>\bfT</m> has <m>k = k+1-1</m> edges.
+          </p>
+        </proof>
+        <p>
+          Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).
+        </p>
+        <p>
+          A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have <m>n-k</m> edges.
+        </p>
+      </solution>
     </activity>
   </page>
   </handout>
-  <handout xml:id="notes-eulerham">
+  <handout xml:id="notes-eulerham" component="eulerham">
     <title>Eulerian and Hamiltonian Graphs</title>
     <p>Let <m>\bfG</m> be a graph without isolated vertices. We say that <m>\bfG</m> is <term>eulerian</term><idx>
       <h>graph</h>
@@ -211,7 +320,7 @@
   </algorithm>
   <sidebyside widths="60% 35%">
     <image>
-      <description>
+      <description component="a">
         <p>A graph with 14 vertices. The vertices are labeled with integers from 0 to 13. The neighbors of each vertex are specified in the table below.
         </p>
         <tabular>
@@ -415,7 +524,7 @@
   </p>
   </handout>
   
-    <handout>
+    <handout component="coloring">
       <title>Graph Coloring</title>
       <p>
         <alert>Peer instruction questions 1<ndash/>3.</alert>
@@ -507,7 +616,7 @@
       </p>
       <sidebyside widths="60% 40%">
       <image>
-        <description>
+        <description component="a">
           <p>
             A graph with 11 vertices. There is a vertex at the top with label <m>z</m>. Next to this vertex is the number <m>1</m>. There are five edges from <m>z</m>. The neighbors of <m>z</m> each have a label inside the node as well as an integer next to the node. The labels and associated integers are <m>y_1</m> (2), <m>y_2</m> (3), <m>y_3</m> (4), <m>y_4</m> (2), and <m>y_5</m> (5). In addition to the edge to <m>z</m>, each <m>y_i</m> has an edge to two vertices labeled <m>x_{i-1}</m> and <m>x_{i+1}</m>, with subscripts interpreted cyclically so that <m>y_1</m> has an edge to <m>x_5</m> and <m>y_5</m> has an edge to <m>x_1</m>. The <m>x_i</m> also have associated integers, given in order of increasing vertex subscript as <m>4,1,5,3,1</m>. Each <m>x_i</m> has an edge to <m>x_{i+1}</m>, interpreted cyclically so that <m>x_5</m> has an edge to <m>x_1</m>.
           </p>
@@ -568,7 +677,7 @@
   <title>First Fit</title>
   <sidebyside widths="20% 20%">
     <image>
-      <description>
+      <description component="a">
         <p>
           A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_3,v_5,v_7</m>. The vertices in the right column are labeled from top to bottom as <m>v_2,v_4,v_6,v_8</m>.
         </p>
@@ -591,7 +700,7 @@
       </prefigure>
     </image>
     <image>
-      <description>
+      <description component="a">
         <p>
           A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_2,v_3,v_4</m>. The vertices in the right column are labeled from top to bottom as <m>v_5,v_6,v_7,v_8</m>.
         </p>
@@ -617,7 +726,7 @@
 </paragraphs>
 
     </handout>
-<handout>
+<handout component="pruefer">
   <title>Counting Labeled Trees</title>
   <page>
   <paragraphs>
@@ -632,7 +741,7 @@
       
     
       <image>
-        <description>
+        <description component="a">
           <p>
             A diagram containing two transparent ellipses, stacked vertically.   
           </p>

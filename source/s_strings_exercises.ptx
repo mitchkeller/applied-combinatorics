@@ -26,7 +26,7 @@
         The two uppercase letters have 26 choices each.
         The last two positions have 10 choices each, first as a digit and then as a symbol.
         Thus, his website has <m>52^{3}\cdot 10^{2}\cdot 10\cdot 26^{2}\cdot 10\cdot 10 = 9,505,100,800,000</m> possible passwords.
-        If, on the other hand, he allowed any of the 72 characters in each of the 10 positions, he’d have <m>72^{10}= 3,743,906,242,624,487,424</m> passwords, which is several orders of magnitude more options!
+        If, on the other hand, he allowed any of the 72 characters in each of the 10 positions, he'd have <m>72^{10}= 3,743,906,242,624,487,424</m> passwords, which is several orders of magnitude more options!
       </p>
     </solution>
   </exercise>
@@ -521,6 +521,18 @@
                       <statement>
                         <p>How many lattice paths from <m>(0,0)</m> to <m>(14,73)</m> are there that do <em>not</em> pass through <m>(6,37)</m>?</p>
                       </statement>
+                      <solution>
+                        <p>
+                            We count all the lattice paths from (0,0) to (14,73) and then subtract those through (6,37).
+                            Overall, there are <m>14+73 = 87</m> moves required and 14 of them must be H.
+                            Thus, the total number of lattice paths is <m>C(87,14)</m>.
+                            When counting the lattice paths that go through (6,37), we need to count those from (0,0) to (6,37) and then count those from (6,37) to (14,73) and multiply these numbers to fully specify a lattice path.
+                            There are <m>6+37 = 43</m> moves, 6 of them H, in the first portion, so there are <m>C(43,6)</m> ways to do the first portion.
+                            There are <m>14-6=8</m> H's and <m>73-37 = 36</m> V's required for the second portion, for a total of 44 moves.
+                            Thus, there are <m>C(44,8)</m> ways to do the second portion.
+                            The final answer is therefore <m>C(87,14)-C(43,6)C(44,8)</m>.
+                        </p>
+                      </solution>
                     </exercise>
                     <exercise>
                       <statement>
@@ -531,6 +543,42 @@
                       <statement>
                         <p>The setting for this problem is the fictional town of Mascotville, which is laid out as a grid. Mascots are allowed to travel only on the streets, and not <q>as the yellow jacket flies.</q> Buzz, the Georgia Tech mascot, wants to go visit his friend Thundar, the North Dakota State University mascot, who lives <m>6</m> blocks east and <m>7</m> blocks north of Buzz's hive. However, Uga VIII has recently moved into the doghouse <m>2</m> blocks east and <m>3</m> blocks north of Buzz's hive and already has a restraining order against Buzz. There's also a pair of tigers (mother and cub) from Clemson who live <m>1</m> block east and <m>2</m> blocks north of Uga VIII, and they're known for setting traps for Buzz. Buzz wants to travel from his hive to Thundar's pen every day without encountering Uga VIII or The Tiger and The Tiger Cub. However, he wants to avoid the boredom caused by using a route he's used in the past. What is the largest number of consecutive days on which Buzz can make the trip to visit Thundar without reusing a route (you may assume the routes taken by Buzz only go east and north)?</p>
                       </statement>
+                      <solution>
+                        <p>
+                            We can view this as a lattice path problem.
+                            Buzz's hive is at (0,0), Thundar's pen is at (6,7), Uga VIII is at (2,3), and the tigers are at (3,5).
+                            Thus, we need to count the lattice paths from (0,0) to (6,7) that avoid both (2,3) and (3,5).
+                            To do this, we need to subtract the lattice paths that go through (2,3) as well as those that go through (3,5).
+                            However, when we do this, we have subtracted the lattice paths that go through both (2,3) and (3,5) twice, so we must add those back.
+                            The components are:
+                            <ul>
+                                <li>
+                                    <p>
+                                        All—13 moves, 6 H: <m>C(13,6)</m> 
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Through (2,3)—5 moves, 2 H in first portion and <m>4+4 = 8</m> moves, 4 H in second portion: <m>C(5,2)C(8,4)</m>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Through (3,5)—8 moves, 3 H in first portion and <m>3+2 = 5</m> moves, 3 H in second portion: <m>C(8,3)C(5,3)</m> 
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Through both (2,3) and (3,5)—5 moves, 2 H in first portion; 1+2 = 3 moves, 1 H in second portion; and <m>3+2=5</m> moves, 3 H in third portion: <m>C(5,2)C(3,1)C(5,3)</m>
+                                    </p>
+                                </li>
+                            </ul>
+                            Therefore, the total is
+                            <me>
+                                \binom{13}{6}-\binom{5}{2}\binom{8}{4}-\binom{8}{3}\binom{5}{3}+ \binom{5}{2}\binom{3}{1}\binom{5}{3}
+                            </me>.
+                        </p>
+                      </solution>
                     </exercise>
                     <exercise>
                       <statement>
@@ -541,6 +589,27 @@
                       <statement>
                         <p>Determine the coefficient on <m>x^{12}y^{24}</m> in <m>(x^3+2xy^2+y+3)^{18}</m>. (Be careful, as <m>x</m> and <m>y</m> now appear in multiple terms!)</p>
                       </statement>
+                      <solution>
+                        <p>
+                            The multinomial theorem tells us that
+                            <me>
+                                (x^{3}+2xy^{2}+y+3)^{18}= \sum_{k_1+k_2+k_3+k_4 = 18}\binom{18}{k_1,k_2,k_3,k_4}(x^{3})^{k_1}(2xy^{2})^{k_2}y^{k_3}\cdot 3^{k_4}= \sum_{k_1+k_2+k_3+k_4 = 18}\binom{18}{k_1,k_2,k_3,k_4}2^{k_2}3^{k_4}x^{3k_1+k_2}y^{2k_2+k_3}
+                            </me>.
+                        </p>
+                        
+                        <p>
+                            Thus, we need <m>12=3k_{1}+k_{2}</m> and <m>24 = 2k_{2}+k_{3}</m> and all variables nonnegative.
+                            These equations imply that <m>k_{3} = 6k_{1}</m>.
+                            Since the <m>k_{i}</m> must sum to <m>18</m>, this means the only options for <m>k_{1}</m> are 0, 1, and 2.
+                            When <m>k_{1} = 0</m>, we have <m>k_{2} = 12</m>, <m>k_{3} = 0</m>, and <m>k_{4} = 6</m>.
+                            When <m>k_{1} = 1</m>, we have <m>k_{2} = 9</m>, <m>k_{3} = 6</m>, and <m>k_{4} = 2</m>.
+                            When <m>k_{1} = 2</m>, we would need <m>k_{3} = 12</m> and <m>k_{2} = 6</m>, but then the variables sum to more than <m>18</m>.
+                            Thus, the coefficient on <m>x^{12}y^{24}</m> is
+                            <me>
+                                \binom{18}{0,12,0,6}2^{12}3^{6} + \binom{18}{1,9,6,2}2^{9}3^{2}
+                            </me>.
+                        </p>
+                      </solution>
                     </exercise>
                     <exercise>
                       <statement>
