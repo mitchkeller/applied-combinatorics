@@ -1,7 +1,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-graphs" component="graphs">
   <title>Graphs</title>
 
-  <worksheet xml:id="ws-graphs-hamiltonian">
+  <worksheet xml:id="ws-graphs-hamiltonian" component="graphs-eulerham">
     <title>Hamiltonian or Not?</title>
     <page>
       <figure>
@@ -343,7 +343,7 @@
     </proof>
   </page>
   </worksheet>
-  <worksheet xml:id="ws-triangle-free">
+  <worksheet xml:id="ws-triangle-free" component="graphs-triangle-free">
     <title>Graphs with <m>\omega(\bfG)=2</m> and <m>\chi(\bfG)</m> large</title>
     <page>
     <p>
@@ -495,7 +495,7 @@
 </exercise>
 </page>
   </worksheet>
-  <worksheet xml:id="ws-graphs-planar">
+  <worksheet xml:id="ws-graphs-planar" component="graphs-planar">
     <title>Planar Graphs</title>
     <page>
       <p>It turns out that you could draw hundreds of connected planar graphs
@@ -734,7 +734,7 @@ How many pairs must there be for <m>\bfK_{3,3}</m>?
   
 
   </worksheet>
-  <worksheet xml:id="ws-prufer-codes">
+  <worksheet xml:id="ws-prufer-codes" component="graphs-prufer">
     <title>Counting Labeled Trees</title>
     <activity>
       <task>

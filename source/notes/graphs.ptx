@@ -3,228 +3,228 @@
   <handout xml:id="graphs-notation-term" component="graphs-notation-term">
     <title>Notation and Terminology</title>
     <page>
-    <p>
-      <alert>Peer instruction questions 1<ndash/>3.</alert>
-    </p>
-    <image source="spanning_subgraph" width="60%">
-      <description component="a"><p>Two graphs</p></description>
-    </image>
-    <p component="a">
-      We have that <m>\bfH</m> is a spanning subgraph of <m>\bfG</m> because all vertices of <m>\bfG</m> appear in <m>\bfH</m>.
-    </p>
-    <image source="non_subgraph" width="60%">
-      <description component="a"><p>Two graphs</p></description>
-    </image>
-    <p component="a">
-      We have that <m>\bfH</m> is not a subgraph of <m>\bfG</m> because the edge <m>\set{8,10}</m> in <m>\bfH</m> is not an edge in <m>\bfG</m>.
-    </p>
-    <image source="induced_subgraph" width="60%">
-      <description component="a"><p>Two graphs</p></description>
-    </image>
-    <p component="a">
-      <ul>
-        <li>
-          <p>
-           We see that <m>\bfH</m> is an induced subgraph of <m>\bfG</m> because every edge of <m>\bfG</m> between vertices that are in <m>\bfH</m> is also an edge of <m>\bfH</m>. 
-          </p>
-        </li>
-        <li>
-          <p>
-            The word <q>vertex</q> is singular. Its plural is <q>vertices</q>. Yeah, Latin gave this to us, much like it gave us <q>matrix</q> and <q>matrices</q>. 
-          </p>
-        </li>
-        <li>
-          <p>
-            Formally, <m>\bfG=(V,E)</m> is an ordered pair of sets. Moreover, <m>E</m> is a set of sets with each element of <m>E</m> being a 2-element subset of <m>V</m>.
-          </p>
-        </li>
-      </ul>
-    </p>
-  </page>
-  <page>
-    <activity>
-      <statement>
-        <p>
-          Suppose <m>\bfH</m> is an induced spanning subgraph of a graph <m>\bfG</m>. Discuss with your group what this would mean.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Here we must have that <m>\bfG</m> and <m>\bfH</m> are the same graph. The spanning property implies that <m>\bfH</m> has all of the vertices of <m>\bfG</m>. Being induced then forces all of the edges of <m>\bfG</m> to be in <m>\bfH</m> since <m>\bfH</m> contains all edges of <m>\bfG</m> that have both their endpoints in <m>\bfH</m>, which has all of the vertices of <m>\bfG</m>.
-        </p>
-      </solution>
-    </activity>
+      <p>
+        <alert>Peer instruction questions 1<ndash/>3.</alert>
+      </p>
+      <image source="spanning_subgraph" width="60%">
+        <description component="a"><p>Two graphs</p></description>
+      </image>
+      <p component="a">
+        We have that <m>\bfH</m> is a spanning subgraph of <m>\bfG</m> because all vertices of <m>\bfG</m> appear in <m>\bfH</m>.
+      </p>
+      <image source="non_subgraph" width="60%">
+        <description component="a"><p>Two graphs</p></description>
+      </image>
+      <p component="a">
+        We have that <m>\bfH</m> is not a subgraph of <m>\bfG</m> because the edge <m>\set{8,10}</m> in <m>\bfH</m> is not an edge in <m>\bfG</m>.
+      </p>
+      <image source="induced_subgraph" width="60%">
+        <description component="a"><p>Two graphs</p></description>
+      </image>
+      <p component="a">
+        <ul>
+          <li>
+            <p>
+              We see that <m>\bfH</m> is an induced subgraph of <m>\bfG</m> because every edge of <m>\bfG</m> between vertices that are in <m>\bfH</m> is also an edge of <m>\bfH</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              The word <q>vertex</q> is singular. Its plural is <q>vertices</q>. Yeah, Latin gave this to us, much like it gave us <q>matrix</q> and <q>matrices</q>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Formally, <m>\bfG=(V,E)</m> is an ordered pair of sets. Moreover, <m>E</m> is a set of sets with each element of <m>E</m> being a 2-element subset of <m>V</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
     </page>
     <page>
-    <p>
-      <alert>Peer instruction questions 4<ndash/>5.</alert>
-    </p>
-    <image source="isomorphic_graphs-PI" width="65%">
-      <description component="a"><p>Two graphs</p></description>
-    </image>
-    <p component="a">
-      These graphs are isomorphic. One possible isomorphism is shown below.
-    </p>
-    <tabular component="a">
-      <row bottom="minor">
-        <cell right="minor"><m>v</m></cell>
-        <cell><m>a</m></cell>
-        <cell><m>b</m></cell>
-        <cell><m>c</m></cell>
-        <cell><m>d</m></cell>
-        <cell><m>e</m></cell>
-        <cell><m>f</m></cell>
-      </row>
-      <row>
-        <cell right="minor"><m>f(v)</m></cell>
-        <cell><m>1</m></cell>
-        <cell><m>3</m></cell>
-        <cell><m>5</m></cell>
-        <cell><m>6</m></cell>
-        <cell><m>2</m></cell>
-        <cell><m>4</m></cell>
-      </row>
-    </tabular>
-    <image source="nonisomorphic_graphs-PI" width="65%">
-      <description component="a"><p>Two graphs</p></description>
-    </image>
-    <p component="a">
-      These graphs are not isomorphic. To see why they are not, we try to construct an isomorphism. Since <m>a</m> and <m>1</m> are the only vertices of degree <m>1</m>, any isomorphism would have to pair them. This then forces <m>c</m> and <m>2</m>, as the unique neighbors of the vertices of degree <m>1</m> to be paired. However, all neighbors of <m>c</m> have degree <m>3</m>, while <m>2</m> has a neighbor (<m>4</m>) of degree <m>2</m>. Another independent reason would be that <m>f</m> and <m>4</m> are the unique vertices of degree <m>2</m> in these graphs, so they would have to be paired. However, <m>f</m> has two neighbors of degree <m>3</m>, while <m>4</m> has a neighbor of degree <m>4</m>. As a third independent reason, notice that in the left graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 3 apart. However, in the right graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 2 apart.
-    </p>
-  </page>
-  <page>
-    <p workspace="3cm">
-      <alert>On the Complexity of Graph Isomorphism</alert>
-    </p>
-    <p component="a">
-      The question we would like to answer algorithmically is <q>Given two graphs <m>\bfG</m> and <m>\bfH</m>, is <m>\bfG</m> isomorphic to <m>\bfH</m>?</q> The two most-studied classes of computational problems are <m>\bfP</m> and <m>\bfNP</m>, with a focus on <m>\bfNP</m>-complete problems. The problems in <m>\bfP</m> have efficient algorithms, by which we roughly mean the number of operations an algorithm takes is polynomial in the size of the input (usually number of vertices for graphs). The <m>\bfNP</m>-complete problems are believed to be computationally intractable <em>but</em> must all be of a type where a yes or no answer can be readily verified. (For instance, if I give you a function that I claim is an isomorphism, it's fast to verify this fact.) Most problems that fit this framework have been shown to be in <m>\bfP</m> or to be <m>\bfNP</m>-complete. However, graph isomorphism has not shown to be either. In fact, it is often considered to be the leading candidate for a problem that is neither in <m>\bfP</m> nor <m>\bfNP</m>-complete.
-    </p>
-    <theorem xml:id="thm-first-thm-gt">
-      <title component="b">The First Theorem of Graph Theory</title>
-      <title component="a">The First Theorem of Graph Theory aka The Handshaking Lemma</title>
-      <statement>
-        <p workspace="3cm">
-          Let <m>\deg_{\bfG}(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then
-          <me>
-            \sum_{v\in V}\deg_{\bfG}(v) = 2|E|
-          </me>.
-        </p>
-      </statement>
-      <proof component="a">
-        <p>
-          The summation counts an edge <m>xy</m> twice: once when <m>v=x</m> and once when <m>v=y</m>.
-        </p>
-      </proof>
-    </theorem>
-    <p compnent="a">
-      <me>
-            |E| = \frac{1}{2} \sum_{v\in V}\deg_{\bfG}(v)
-          </me>
-    </p>
-    <corollary xml:id="cor-num-odd-vts">
-      <statement>
-        <p workspace="1cm">
-          In any graph, the number of vertices of odd degree is even.
-        </p>
-      </statement>
-      <proof component="a">
-        <p>
-          Adding up an odd number of odd numbers gives an odd number, and the sum would remain odd no matter how many even numbers are added in.
-        </p>
-      </proof>
-    </corollary>
-    <p>
-      <dl>
-        <li>
-          <title>Walk</title>
-          <p workspace="1cm" component="b">
-            
-          </p>
-          <p component="a">
-            <m>(x_1,x_2,\dots,x_t)</m> so that <m>x_ix_{i+1}\in E</m> for <m>i=1,2,\dots,t-1</m>.
-          </p>
-        </li>
-        <li>
-          <title>Path</title>
-          <p workspace="1cm" component="b">
-            
-          </p>
-          <p component="a">
-            Walk with no repeated vertices.
-          </p>
-        </li>
-        <li>
-          <title>Cycle</title>
-          <p workspace="1cm" component="b">
-            
-          </p>
-          <p component="a">
-            Path with <m>t\geq 3</m> for which <m>x_1x_t</m> is also an edge.
-          </p>
-        </li>
-      </dl>
-    </p>
-  </page>
-  <page>
-    <definition xml:id="def-tree">
-      <statement>
-        <p workspace="1cm" component="b">
-          <ul>
-            <li>A <term>tree</term> is </li>
-            <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that</li>
-          </ul>
-        </p>
-        <p workspace="1cm" component="a">
-          <ul>
-            <li>A <term>tree</term> is a connected graph with no cycles.</li>
-            <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that <m>\deg_\bfG(v) = 1</m>.</li>
-          </ul>
-        </p>
-      </statement>
-    </definition>
-    <theorem xml:id="thm-tree-leaves">
-      <statement>
-        <p workspace="5cm">
-          Every tree on at least two vertices has at least two leaves.
-        </p>
-      </statement>
-    </theorem>
-    <theorem xml:id="thm-tree-unique-path">
-      <statement>
-        <p workspace="7cm">
-          If <m>\bfT</m> is a tree, then for every pair of distinct vertices <m>u,v</m>, there exists a unique path from <m>u</m> to <m>v</m> in <m>\bfT</m>.
-        </p>
-      </statement>
-    </theorem>
-  </page>
-  <page>
-    <activity>
-      <statement>
-        <p workspace="6cm">
-          <ol marker="a.">
-            <li>With your neighbors, use mathematical induction to prove that every tree on <m>n</m> vertices has exactly <m>n-1</m> edges.
-            </li>
-            <li>
-              How many edges would an <m>n</m>-vertex forest consisting of <m>k</m> trees have?
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <solution>
-        <proof>
+      <activity>
+        <statement>
           <p>
-            For the base case, when <m>n=1</m>, the tree has only one vertex and thus no edges. Since <m>n-1 = 1-1=0</m>, we have the desired relationship. Now assume that for some <m>k\geq 1</m>, every tree with <m>k</m> vertices has exactly <m>k-1</m> edges. Let <m>\bfT</m> be a tree with <m>k+1</m> vertices. The tree <m>\bfT</m> has a leaf <m>v</m>. Form <m>\bfT'</m> from <m>\bfT</m> by deleting <m>v</m> and its edge. Then <m>\bfT'</m> has <m>k</m> vertices, so by the induction hypothesis, <m>\bfT'</m> has <m>k-1</m> edges. However, <m>\bfT</m> has one more edge (incident with <m>v</m>) than <m>\bfT'</m>, so <m>\bfT</m> has <m>k = k+1-1</m> edges.
+            Suppose <m>\bfH</m> is an induced spanning subgraph of a graph <m>\bfG</m>. Discuss with your group what this would mean.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Here we must have that <m>\bfG</m> and <m>\bfH</m> are the same graph. The spanning property implies that <m>\bfH</m> has all of the vertices of <m>\bfG</m>. Being induced then forces all of the edges of <m>\bfG</m> to be in <m>\bfH</m> since <m>\bfH</m> contains all edges of <m>\bfG</m> that have both their endpoints in <m>\bfH</m>, which has all of the vertices of <m>\bfG</m>.
+          </p>
+        </solution>
+      </activity>
+    </page>
+    <page>
+      <p>
+        <alert>Peer instruction questions 4<ndash/>5.</alert>
+      </p>
+      <image source="isomorphic_graphs-PI" width="65%">
+        <description component="a"><p>Two graphs</p></description>
+      </image>
+      <p component="a">
+        These graphs are isomorphic. One possible isomorphism is shown below.
+      </p>
+      <tabular component="a">
+        <row bottom="minor">
+          <cell right="minor"><m>v</m></cell>
+          <cell><m>a</m></cell>
+          <cell><m>b</m></cell>
+          <cell><m>c</m></cell>
+          <cell><m>d</m></cell>
+          <cell><m>e</m></cell>
+          <cell><m>f</m></cell>
+        </row>
+        <row>
+          <cell right="minor"><m>f(v)</m></cell>
+          <cell><m>1</m></cell>
+          <cell><m>3</m></cell>
+          <cell><m>5</m></cell>
+          <cell><m>6</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>4</m></cell>
+        </row>
+      </tabular>
+      <image source="nonisomorphic_graphs-PI" width="65%">
+        <description component="a"><p>Two graphs</p></description>
+      </image>
+      <p component="a">
+        These graphs are not isomorphic. To see why they are not, we try to construct an isomorphism. Since <m>a</m> and <m>1</m> are the only vertices of degree <m>1</m>, any isomorphism would have to pair them. This then forces <m>c</m> and <m>2</m>, as the unique neighbors of the vertices of degree <m>1</m> to be paired. However, all neighbors of <m>c</m> have degree <m>3</m>, while <m>2</m> has a neighbor (<m>4</m>) of degree <m>2</m>. Another independent reason would be that <m>f</m> and <m>4</m> are the unique vertices of degree <m>2</m> in these graphs, so they would have to be paired. However, <m>f</m> has two neighbors of degree <m>3</m>, while <m>4</m> has a neighbor of degree <m>4</m>. As a third independent reason, notice that in the left graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 3 apart. However, in the right graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 2 apart.
+      </p>
+    </page>
+    <page>
+      <p workspace="3cm">
+        <alert>On the Complexity of Graph Isomorphism</alert>
+      </p>
+      <p component="a">
+        The question we would like to answer algorithmically is <q>Given two graphs <m>\bfG</m> and <m>\bfH</m>, is <m>\bfG</m> isomorphic to <m>\bfH</m>?</q> The two most-studied classes of computational problems are <m>\bfP</m> and <m>\bfNP</m>, with a focus on <m>\bfNP</m>-complete problems. The problems in <m>\bfP</m> have efficient algorithms, by which we roughly mean the number of operations an algorithm takes is polynomial in the size of the input (usually number of vertices for graphs). The <m>\bfNP</m>-complete problems are believed to be computationally intractable <em>but</em> must all be of a type where a yes or no answer can be readily verified. (For instance, if I give you a function that I claim is an isomorphism, it's fast to verify this fact.) Most problems that fit this framework have been shown to be in <m>\bfP</m> or to be <m>\bfNP</m>-complete. However, graph isomorphism has not shown to be either. In fact, it is often considered to be the leading candidate for a problem that is neither in <m>\bfP</m> nor <m>\bfNP</m>-complete.
+      </p>
+      <theorem xml:id="thm-first-thm-gt">
+        <title component="b">The First Theorem of Graph Theory</title>
+        <title component="a">The First Theorem of Graph Theory aka The Handshaking Lemma</title>
+        <statement>
+          <p workspace="3cm">
+            Let <m>\deg_{\bfG}(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then
+            <me>
+              \sum_{v\in V}\deg_{\bfG}(v) = 2|E|
+            </me>.
+          </p>
+        </statement>
+        <proof component="a">
+          <p>
+            The summation counts an edge <m>xy</m> twice: once when <m>v=x</m> and once when <m>v=y</m>.
           </p>
         </proof>
-        <p>
-          Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).
-        </p>
-        <p>
-          A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have <m>n-k</m> edges.
-        </p>
-      </solution>
-    </activity>
-  </page>
+      </theorem>
+      <p compnent="a">
+        <me>
+          |E| = \frac{1}{2} \sum_{v\in V}\deg_{\bfG}(v)
+        </me>
+      </p>
+      <corollary xml:id="cor-num-odd-vts">
+        <statement>
+          <p workspace="1cm">
+            In any graph, the number of vertices of odd degree is even.
+          </p>
+        </statement>
+        <proof component="a">
+          <p>
+            Adding up an odd number of odd numbers gives an odd number, and the sum would remain odd no matter how many even numbers are added in.
+          </p>
+        </proof>
+      </corollary>
+      <p>
+        <dl>
+          <li>
+            <title>Walk</title>
+            <p workspace="1cm" component="b">
+              
+            </p>
+            <p component="a">
+              <m>(x_1,x_2,\dots,x_t)</m> so that <m>x_ix_{i+1}\in E</m> for <m>i=1,2,\dots,t-1</m>.
+            </p>
+          </li>
+          <li>
+            <title>Path</title>
+            <p workspace="1cm" component="b">
+              
+            </p>
+            <p component="a">
+              Walk with no repeated vertices.
+            </p>
+          </li>
+          <li>
+            <title>Cycle</title>
+            <p workspace="1cm" component="b">
+              
+            </p>
+            <p component="a">
+              Path with <m>t\geq 3</m> for which <m>x_1x_t</m> is also an edge.
+            </p>
+          </li>
+        </dl>
+      </p>
+    </page>
+    <page>
+      <definition xml:id="def-tree">
+        <statement>
+          <p workspace="1cm" component="b">
+            <ul>
+              <li>A <term>tree</term> is </li>
+              <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that</li>
+            </ul>
+          </p>
+          <p workspace="1cm" component="a">
+            <ul>
+              <li>A <term>tree</term> is a connected graph with no cycles.</li>
+              <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that <m>\deg_\bfG(v) = 1</m>.</li>
+            </ul>
+          </p>
+        </statement>
+      </definition>
+      <theorem xml:id="thm-tree-leaves">
+        <statement>
+          <p workspace="5cm">
+            Every tree on at least two vertices has at least two leaves.
+          </p>
+        </statement>
+      </theorem>
+      <theorem xml:id="thm-tree-unique-path">
+        <statement>
+          <p workspace="7cm">
+            If <m>\bfT</m> is a tree, then for every pair of distinct vertices <m>u,v</m>, there exists a unique path from <m>u</m> to <m>v</m> in <m>\bfT</m>.
+          </p>
+        </statement>
+      </theorem>
+    </page>
+    <page>
+      <activity>
+        <statement>
+          <p workspace="6cm">
+            <ol marker="a.">
+              <li>With your neighbors, use mathematical induction to prove that every tree on <m>n</m> vertices has exactly <m>n-1</m> edges.
+              </li>
+              <li>
+                How many edges would an <m>n</m>-vertex forest consisting of <m>k</m> trees have?
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <proof>
+            <p>
+              For the base case, when <m>n=1</m>, the tree has only one vertex and thus no edges. Since <m>n-1 = 1-1=0</m>, we have the desired relationship. Now assume that for some <m>k\geq 1</m>, every tree with <m>k</m> vertices has exactly <m>k-1</m> edges. Let <m>\bfT</m> be a tree with <m>k+1</m> vertices. The tree <m>\bfT</m> has a leaf <m>v</m>. Form <m>\bfT'</m> from <m>\bfT</m> by deleting <m>v</m> and its edge. Then <m>\bfT'</m> has <m>k</m> vertices, so by the induction hypothesis, <m>\bfT'</m> has <m>k-1</m> edges. However, <m>\bfT</m> has one more edge (incident with <m>v</m>) than <m>\bfT'</m>, so <m>\bfT</m> has <m>k = k+1-1</m> edges.
+            </p>
+          </proof>
+          <p>
+            Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).
+          </p>
+          <p>
+            A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have <m>n-k</m> edges.
+          </p>
+        </solution>
+      </activity>
+    </page>
   </handout>
   <handout xml:id="notes-eulerham" component="eulerham">
     <title>Eulerian and Hamiltonian Graphs</title>
@@ -233,388 +233,397 @@
       <h>eulerian</h>
     </idx> provided that there is a sequence <m>(x_0,x_1,x_2,\dots,x_t)</m> of
     vertices from <m>\bfG</m>, with repetition allowed, so that <ol>
-      <li><m>x_0=x_t</m>;</li>
-      <li>for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
-      <li>for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m>
-    for which <m>e=x_ix_{i+1}</m>.</li>
-    </ol>
-  </p>
-  <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian
-    circuit</term><idx>
-      <h>eulerian</h>
-      <h>circuit</h>
-    </idx>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>
-    circuit</term><idx>
-      <h>circuit</h>
-    </idx> when it satisfies only the first two of these conditions.
-  </p>
-  <algorithm xml:id="alg-eulerian">
-    <title>Eulerian Circuit Finder</title>
-    <statement>
-      <p>
-        <dl>
-          <li>
-            <title>Input</title>
-            <p>
-              A graph <m>\bfG=([n],E)</m>
-            </p>
-          </li>
-          <li>
-            <title>Output</title>
-            <p>
-              An eulerian circuit <m>C</m> in <m>\bfG</m>, a vertex of odd degree in <m>\bfG</m>, or a connected component of <m>\bfG</m> and an edge of <m>\bfG</m> that is not in that connected component.
-            </p>
-          </li>
-        </dl>
+      <li component="b"><m>x_0=x_t</m>;</li>
+      <li component="a"><m>x_0=x_t</m>; (This means that the sequence starts and ends at the same place.)</li>
+      <li component="b">for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
+      <li component="1">for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>; (This means that the sequence is a walk.)</li>
+      <li component="b">for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m>
+        for which <m>e=x_ix_{i+1}</m>.</li>
+      <li component="a">for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m>
+        for which <m>e=x_ix_{i+1}</m>. (This means every edge is used <em>exactly</em> once.)</li>  
+      </ol>
+    </p>
+    <p>When <m>\bfG</m> is eulerian, a sequence satisfying these three conditions is called an <term>eulerian
+      circuit</term><idx>
+        <h>eulerian</h>
+        <h>circuit</h>
+      </idx>. A sequence of vertices <m>(x_0,x_1,\dots,x_t)</m> is called a <term>
+        circuit</term><idx>
+          <h>circuit</h>
+        </idx> when it satisfies only the first two of these conditions.
       </p>
-      <p>
-        <ol marker="1.">
-          <li>
-            <p>
-              Initialize <m>C=(1)</m>.
+      <algorithm xml:id="alg-eulerian">
+        <title>Eulerian Circuit Finder</title>
+        <statement>
+          <p>
+            <dl>
+              <li>
+                <title>Input</title>
+                <p>
+                  A graph <m>\bfG=([n],E)</m>
+                </p>
+              </li>
+              <li>
+                <title>Output</title>
+                <p>
+                  An eulerian circuit <m>C</m> in <m>\bfG</m>, a vertex of odd degree in <m>\bfG</m>, or a connected component of <m>\bfG</m> and an edge of <m>\bfG</m> that is not in that connected component.
+                </p>
+              </li>
+            </dl>
+          </p>
+          <p>
+            <ol marker="1.">
+              <li>
+                <p>
+                  Initialize <m>C=(1)</m>.
+                </p>
+              </li>
+              <li xml:id="step-eulerian-subcircuit">
+                <p>
+                  While not every edge of <m>\bfG</m> is traversed, determine if any vertex of <m>C</m> is incident with an edge that has not been traversed. 
+                  <ol marker="a.">
+                    <li>
+                      <p>
+                        If all vertices of <m>C</m> have all their edges traversed, then return the vertices of <m>C</m> as a connected component of <m>\bfG</m> with an edge not traversed by <m>C</m> demonstrating that <m>\bfG</m> is not connected.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        If <m>C</m> has a vertex incident with an edge that has not been traversed, call that vertex <m>u_0</m>. Construct a walk <m>W</m> starting from <m>u_0</m>. From vertex <m>u_i</m>, follow the edge traversed by neither <m>C</m> nor <m>W</m> going to the neighbor of <m>u_i</m> with smallest label.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        The construction of <m>W</m> halts at a vertex <m>u_s</m> for which all edges have been traversed.
+                        <ol marker="i.">
+                          <li>
+                            <p>
+                              If <m>u_s\neq u_0</m>, then return <m>u_0</m> as a vertex of odd degree, showing that <m>\bfG</m> is not eulerian.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              If <m>u_s = u_0</m>, update the circuit <m>C</m> by replacing <m>u_0</m> in <m>C</m> with the walk <m>W</m>. Continue iterating by returning to <xref ref="step-eulerian-subcircuit">step</xref>.
+                            </p>
+                          </li>
+                        </ol>
+                      </p>
+                    </li>
+                    
+                  </ol> 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Return <m>C</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </algorithm>
+      <sidebyside widths="60% 35%">
+        <image>
+          <description component="a">
+            <p>A graph with 14 vertices. The vertices are labeled with integers from 0 to 13. The neighbors of each vertex are specified in the table below.
             </p>
-          </li>
-          <li xml:id="step-eulerian-subcircuit">
-            <p>
-              While not every edge of <m>\bfG</m> is traversed, determine if any vertex of <m>C</m> is incident with an edge that has not been traversed. 
-              <ol marker="a.">
-                <li>
-                  <p>
-                    If all vertices of <m>C</m> have all their edges traversed, then return the vertices of <m>C</m> as a connected component of <m>\bfG</m> with an edge not traversed by <m>C</m> demonstrating that <m>\bfG</m> is not connected.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    If <m>C</m> has a vertex incident with an edge that has not been traversed, call that vertex <m>u_0</m>. Construct a walk <m>W</m> starting from <m>u_0</m>. From vertex <m>u_i</m>, follow the edge traversed by neither <m>C</m> nor <m>W</m> going to the neighbor of <m>u_i</m> with smallest label.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    The construction of <m>W</m> halts at a vertex <m>u_s</m> for which all edges have been traversed.
-                    <ol marker="i.">
-                      <li>
-                        <p>
-                          If <m>u_s\neq u_0</m>, then return <m>u_0</m> as a vertex of odd degree, showing that <m>\bfG</m> is not eulerian.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          If <m>u_s = u_0</m>, update the circuit <m>C</m> by replacing <m>u_0</m> in <m>C</m> with the walk <m>W</m>. Continue iterating by returning to <xref ref="step-eulerian-subcircuit">step</xref>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </li>
-
-              </ol> 
-            </p>
-          </li>
-          <li>
-            <p>
-              Return <m>C</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </algorithm>
-  <sidebyside widths="60% 35%">
-    <image>
-      <description component="a">
-        <p>A graph with 14 vertices. The vertices are labeled with integers from 0 to 13. The neighbors of each vertex are specified in the table below.
+            <tabular>
+              <row>
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+                <cell><m>0</m></cell>
+                <cell><m>6</m>, <m>9</m></cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>4</m>, <m>5</m>, <m>9</m>, <m>13</m></cell>
+              </row>
+              <row>
+                <cell><m>2</m></cell>
+                <cell><m>7</m>, <m>11</m></cell>
+              </row>
+              <row>
+                <cell><m>3</m></cell>
+                <cell><m>4</m>, <m>5</m></cell>
+              </row>
+              <row>
+                <cell><m>4</m></cell>
+                <cell><m>1</m>, <m>3</m></cell>
+              </row>
+              <row>
+                <cell><m>5</m></cell>
+                <cell><m>1</m>, <m>3</m>, <m>6</m>, <m>8</m></cell>
+              </row>
+              <row>
+                <cell><m>6</m></cell>
+                <cell><m>0</m>, <m>5</m>, <m>10</m>, <m>11</m></cell>
+              </row>
+              <row>
+                <cell><m>7</m></cell>
+                <cell><m>2</m>, <m>8</m>, <m>11</m>, <m>13</m></cell>
+              </row>
+              <row>
+                <cell><m>8</m></cell>
+                <cell><m>5</m>, <m>7</m>, <m>11</m>, <m>12</m></cell>
+              </row>
+              <row>
+                <cell><m>9</m></cell>
+                <cell><m>0</m>, <m>1</m>, <m>11</m>, <m>12</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>6</m>, <m>11</m></cell>
+              </row>
+              <row>
+                <cell><m>11</m></cell>
+                <cell><m>2</m>, <m>6</m>, <m>7</m>, <m>8</m>, <m>9</m>, <m>10</m></cell>
+              </row>
+              <row>
+                <cell><m>12</m></cell>
+                <cell><m>8</m>, <m>9</m></cell>
+              </row>
+              <row>
+                <cell><m>13</m></cell>
+                <cell><m>1</m>, <m>7</m></cell>
+              </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="euler-example-graph">
+            <diagram dimensions="(450,300)" margins="5">
+              <definition>graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes">
+                </network>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+        <p component="b"><nbsp/>
         </p>
-        <tabular>
-          <row>
-            <cell>Vertex</cell>
-            <cell>Neighbors</cell>
-          </row>
-          <row>
-            <cell><m>0</m></cell>
-            <cell><m>6</m>, <m>9</m></cell>
-            </row>
-            <row>
-            <cell><m>1</m></cell>
-            <cell><m>4</m>, <m>5</m>, <m>9</m>, <m>13</m></cell>
-            </row>
-            <row>
-            <cell><m>2</m></cell>
-            <cell><m>7</m>, <m>11</m></cell>
-            </row>
-            <row>
-            <cell><m>3</m></cell>
-            <cell><m>4</m>, <m>5</m></cell>
-            </row>
-            <row>
-            <cell><m>4</m></cell>
-            <cell><m>1</m>, <m>3</m></cell>
-            </row>
-            <row>
-            <cell><m>5</m></cell>
-            <cell><m>1</m>, <m>3</m>, <m>6</m>, <m>8</m></cell>
-            </row>
-            <row>
-            <cell><m>6</m></cell>
-            <cell><m>0</m>, <m>5</m>, <m>10</m>, <m>11</m></cell>
-            </row>
-            <row>
-            <cell><m>7</m></cell>
-            <cell><m>2</m>, <m>8</m>, <m>11</m>, <m>13</m></cell>
-            </row>
-            <row>
-            <cell><m>8</m></cell>
-            <cell><m>5</m>, <m>7</m>, <m>11</m>, <m>12</m></cell>
-            </row>
-            <row>
-            <cell><m>9</m></cell>
-            <cell><m>0</m>, <m>1</m>, <m>11</m>, <m>12</m></cell>
-            </row>
-            <row>
-            <cell><m>10</m></cell>
-            <cell><m>6</m>, <m>11</m></cell>
-            </row>
-            <row>
-            <cell><m>11</m></cell>
-            <cell><m>2</m>, <m>6</m>, <m>7</m>, <m>8</m>, <m>9</m>, <m>10</m></cell>
-            </row>
-            <row>
-            <cell><m>12</m></cell>
-            <cell><m>8</m>, <m>9</m></cell>
-            </row>
-            <row>
-            <cell><m>13</m></cell>
-            <cell><m>1</m>, <m>7</m></cell>
-            </row>
-        </tabular>
-      </description>
-      <prefigure xmlns="https://prefigure.org" label="euler-example-graph">
-        <diagram dimensions="(450,300)" margins="5">
-          <definition>graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}</definition>
-          <coordinates bbox="(-1,-1,1,1)">
-            <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes">
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-    <p><nbsp/>
-    </p>
-  </sidebyside>
-  <activity>
-    <statement>
-      <p>
-          <ol>
-  <li>
-    <p>
-      Every group should have <alert>two</alert> pieces of paper.
-      Each group must draw at least two graphs with at least <m>10</m> vertices.
-      Put your two graphs on separate pieces of paper.
-      <ul>
-        <li>
+        <p component="a">
+          <ul>
+            <li>
+              <p>
+                Initial circuit: <m>(0)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Expand: <m>(0,6,5,1,4,3,5,8,7,2,11,6,10,12,8,11,7,13,1,9,0)</m>
+              </p>
+              <p>
+                Now <m>11</m> is the first vertex with unused edges.
+              </p>
+            </li>
+            <li>
+              <p>
+                Walk from <m>11</m>: <m>(11,9,12,11)</m>
+              </p>
+              <p>
+                Splice in: <m>(0,6,5,1,4,3,5,8,7,2,11,9,12,11,6,10,12,8,11,7,13,1,9,0)</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </sidebyside>
+      <activity>
+        <title>Eulerian graphs</title>
+        
+        
+        
+        <task>
           <p>
-            One eulerian.
+            Every group should have <alert>two</alert> pieces of paper.
+            Each group must draw at least two graphs with at least <m>10</m> vertices.
+            Put your two graphs on separate pieces of paper.
+            <ul>
+              <li>
+                <p>
+                  One eulerian.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  One not eulerian.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Label vertices with letters of the alphabet.
+                </p>
+              </li>
+            </ul>
           </p>
-        </li>
-
-        <li>
+        </task>
+        
+        <task>
           <p>
-            One not eulerian.
+            Exchange graphs with another group.
           </p>
-        </li>
-
-        <li>
+        </task>
+        
+        <task>
           <p>
-            Label vertices with letters of the alphabet.
+            Determine which graph is which. 
           </p>
-        </li>
-      </ul>
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Exchange graphs with another group.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Determine which graph is which. 
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Use our algorithm to find an eulerian circuit in the eulerian graph.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      If finish early, draw some more graphs and swap with another group.
-    </p>
-  </li>
-</ol>
-      </p>
-    </statement>
-  </activity>
-    <p>A graph <m>\GVE</m> is said to be <term>hamiltonian</term><idx>
-      <h>graph</h>
-      <h>hamiltonian</h>
-    </idx> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that <ol>
-      <li>every vertex of <m>\bfG</m> appears exactly once in the sequence;</li>
-      <li><m>x_1x_n</m> is an edge of <m>\bfG</m>; and</li>
-      <li>for each <m>i=1,2,\dots,n-1</m>, <m>x_ix_{i+1}</m> is an edge in <m>\bfG</m>.</li>
-    </ol>
-    Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<idx>
-      <h>hamiltonian</h>
-      <h>cycle</h>
-    </idx>
-  </p>
-  <p workspace="4cm">
-      <ol>
-  <li>
-    <p>
-      Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Formulate an improved group explanation of the difference.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Be very careful in your use of the words <em>circuit</em>, <em>cycle</em>, and <em>path</em>.
-    </p>
-  </li>
-</ol>
-  </p>
-  <activity>
-    <title>Hamiltonian or Not?</title>
-    <statement>
-      <p>
-          <ol>
-  <li>
-    <p>
-      Handout contains drawings of five graphs.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Find a hamiltonian cycle or explain why there isn't one.
-      <ul>
-        <li>
+        </task>
+        
+        <task>
           <p>
-            Don't spend too much time on any one graph.
+            Use our algorithm to find an eulerian circuit in the eulerian graph.
           </p>
-        </li>
-      </ul>
+        </task>
+        
+        <task>
+          <p>
+            If finish early, draw some more graphs and swap with another group.
+          </p>
+        </task>
+        
+      </activity>
+      <p workspace="0.5cm">A graph <m>\GVE</m> is said to be <term>hamiltonian</term><idx>
+        <h>graph</h>
+        <h>hamiltonian</h>
+      </idx> if there exists a sequence <m>(x_1,x_2,\dots,x_n)</m> so that <ol>
+        <li>every vertex of <m>\bfG</m> appears exactly once in the sequence;</li>
+        <li><m>x_1x_n</m> is an edge of <m>\bfG</m>; and</li>
+        <li>for each <m>i=1,2,\dots,n-1</m>, <m>x_ix_{i+1}</m> is an edge in <m>\bfG</m>.</li>
+      </ol>
+      Such a sequence of vertices is called a <term>hamiltonian cycle</term>.<idx>
+        <h>hamiltonian</h>
+        <h>cycle</h>
+      </idx>
     </p>
-  </li>
-</ol>
-      </p>
-    </statement>
-    
-  </activity>
-  <p>
-    <alert>Peer instruction questions 1<ndash/>5.</alert>
-  </p>
+    <p component="a">
+      Notice that the restrictions on the sequence ensure that the sequence is a cycle.
+    </p>
+    <activity>
+      <title>Eulerian vs Hamiltonian</title>
+      
+      <task>
+        <p>
+          Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.
+        </p>
+      </task>
+      
+      <task workspace="4cm">
+        <p>
+          Formulate an improved group explanation of the difference.
+          <alert>Be  careful in your use of the words <em>circuit</em>, <em>cycle</em>, and <em>path</em>.</alert>
+        </p>
+      </task>
+    </activity>
+    <activity>
+      <title>Hamiltonian or Not?</title>
+      <statement>
+        <p>
+          The handout contains drawings of five graphs.
+          Find a hamiltonian cycle or explain why there isn't one.
+          Don't spend too much time on any one graph.
+        </p>
+      </statement>
+      
+    </activity>
+    <p>
+      <alert>Peer instruction questions 1<ndash/>5.</alert>
+    </p>
   </handout>
   
-    <handout component="coloring">
-      <title>Graph Coloring</title>
-      <p>
-        <alert>Peer instruction questions 1<ndash/>3.</alert>
-      </p>
-      <p>
-        Let <m>\bfG=(V,E)</m> be a graph. Then <m>\phi\colon V\to C</m> is a proper coloring of <m>\bfG</m> if
-        <ol marker="A.">
-          <li>
-            <p>
-              <m>\phi</m> is one-to-one
-            </p>
-          </li>
-
-          <li>
-            <p>
-              <m>xy\in E</m> implies <m>\phi(x)\neq \phi(y)</m>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              <m>\phi</m> uses as few colors from <m>C</m> as possible
-            </p>
-          </li>
-
-          <li>
-            <p>
-              None of the above
-            </p>
-          </li>
-        </ol>
-      </p>
-
-      <p>
-        Let <m>\bfG=(V,E)</m> be a graph and <m>\phi\colon V\to C</m> be a proper coloring of <m>\bfG</m>. Let <m>S</m> be all vertices colored <m>1\in C</m>. How many edges does the subgraph of <m>\bfG</m> induced by <m>S</m> contain?
-        <ol marker="A.">
-          <li>
-            <p>
-              0
-            </p>
-          </li>
-
-          <li>
-            <p>
-              1
-            </p>
-          </li>
-
-          <li>
-            <p>
-              <m>|S|</m>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Any number is possible.
-            </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        What is the chromatic number of the complete graph on <m>n</m> vertices <m>\bfK_{n}</m>?
-        <ol marker="A.">
-          <li>
-            <p>
-              <m>n-1</m>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              <m>n</m>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              <m>n+1</m>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              There is no fixed formula depending on <m>n</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-      <sidebyside widths="60% 40%">
+  <handout component="coloring">
+    <title>Graph Coloring</title>
+    <p>
+      <alert>Peer instruction questions 1<ndash/>3.</alert>
+    </p>
+    <p>
+      Let <m>\bfG=(V,E)</m> be a graph. Then <m>\phi\colon V\to C</m> is a proper coloring of <m>\bfG</m> if
+      <ol marker="A.">
+        <li>
+          <p>
+            <m>\phi</m> is one-to-one
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>xy\in E</m> implies <m>\phi(x)\neq \phi(y)</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>\phi</m> uses as few colors from <m>C</m> as possible
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            None of the above
+          </p>
+        </li>
+      </ol>
+    </p>
+    
+    <p>
+      Let <m>\bfG=(V,E)</m> be a graph and <m>\phi\colon V\to C</m> be a proper coloring of <m>\bfG</m>. Let <m>S</m> be all vertices colored <m>1\in C</m>. How many edges does the subgraph of <m>\bfG</m> induced by <m>S</m> contain?
+      <ol marker="A.">
+        <li>
+          <p>
+            0
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            1
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>|S|</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            Any number is possible.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      What is the chromatic number of the complete graph on <m>n</m> vertices <m>\bfK_{n}</m>?
+      <ol marker="A.">
+        <li>
+          <p>
+            <m>n-1</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>n</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>n+1</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            There is no fixed formula depending on <m>n</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <sidebyside widths="60% 40%">
       <image>
         <description component="a">
           <p>
@@ -655,280 +664,280 @@
       </image>
       <p><nbsp/></p>
     </sidebyside>
-<definition workspace="4cm">
-  <statement>
-    <p>
-      A graph is <term>bipartite</term> provided that its chromatic number is <m>2</m>.
-    </p>
-  </statement>
-</definition>
-
-<theorem workspace="4cm">
-  <statement>
-    <p>
-      A graph is bipartite if and only if it does not contain any odd cycles.
-    </p>
-  </statement>
-</theorem>  
-<p>
-  <alert>Peer instruction question 4.</alert>
-</p>
-<paragraphs>
-  <title>First Fit</title>
-  <sidebyside widths="20% 20%">
-    <image>
-      <description component="a">
+    <definition workspace="4cm">
+      <statement>
         <p>
-          A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_3,v_5,v_7</m>. The vertices in the right column are labeled from top to bottom as <m>v_2,v_4,v_6,v_8</m>.
+          A graph is <term>bipartite</term> provided that its chromatic number is <m>2</m>.
         </p>
-      </description>
-      <prefigure xmlns="https://prefigure.org" label="K44-M-bad-order">
-        <diagram dimensions="(100,150)" margins="15">
-          <coordinates bbox="(0,0,1,3)">
-            <network labels="yes">
-              <node at="1" p="(0,3)" edges="[6,7,8]"><m>v_1</m></node>
-              <node at="2" p="(0,2)" edges="[5,7,8]"><m>v_3</m></node>
-              <node at="3" p="(0,1)" edges="[5,6,8]"><m>v_5</m></node>
-              <node at="4" p="(0,0)" edges="[5,6,7]"><m>v_7</m></node>
-              <node at="5" p="(1,3)"><m>v_2</m></node>
-              <node at="6" p="(1,2)"><m>v_4</m></node>
-              <node at="7" p="(1,1)"><m>v_6</m></node>
-              <node at="8" p="(1,0)"><m>v_8</m></node>
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-    <image>
-      <description component="a">
-        <p>
-          A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_2,v_3,v_4</m>. The vertices in the right column are labeled from top to bottom as <m>v_5,v_6,v_7,v_8</m>.
-        </p>
-      </description>
-      <prefigure xmlns="https://prefigure.org" label="K44-M-good-order">
-        <diagram dimensions="(100,150)" margins="15">
-          <coordinates bbox="(0,0,1,3)">
-            <network labels="yes">
-              <node at="1" p="(0,3)" edges="[6,7,8]"><m>v_1</m></node>
-              <node at="2" p="(0,2)" edges="[5,7,8]"><m>v_2</m></node>
-              <node at="3" p="(0,1)" edges="[5,6,8]"><m>v_3</m></node>
-              <node at="4" p="(0,0)" edges="[5,6,7]"><m>v_4</m></node>
-              <node at="5" p="(1,3)"><m>v_5</m></node>
-              <node at="6" p="(1,2)"><m>v_6</m></node>
-              <node at="7" p="(1,1)"><m>v_7</m></node>
-              <node at="8" p="(1,0)"><m>v_8</m></node>
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>    
-  </sidebyside>
-</paragraphs>
-
-    </handout>
-<handout component="pruefer">
-  <title>Counting Labeled Trees</title>
-  <page>
-  <paragraphs>
-    <title>Labeled vs Unlabeled Trees (and Graphs) and Counting</title>
-    <p workspace="2in">
-      
-    </p>
-  </paragraphs>
-  <paragraphs>
-    <title>Big Idea</title>
-    <sidebyside widths="60% 40%">
-      
+      </statement>
+    </definition>
     
-      <image>
-        <description component="a">
-          <p>
-            A diagram containing two transparent ellipses, stacked vertically.   
-          </p>
+    <theorem workspace="4cm">
+      <statement>
+        <p>
+          A graph is bipartite if and only if it does not contain any odd cycles.
+        </p>
+      </statement>
+    </theorem>  
+    <p>
+      <alert>Peer instruction question 4.</alert>
+    </p>
+    <paragraphs>
+      <title>First Fit</title>
+      <sidebyside widths="20% 20%">
+        <image>
+          <description component="a">
+            <p>
+              A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_3,v_5,v_7</m>. The vertices in the right column are labeled from top to bottom as <m>v_2,v_4,v_6,v_8</m>.
+            </p>
           </description>
-        <prefigure xmlns="https://prefigure.org" label="ellipses-prufer">
-          <diagram dimensions="(300,300)" margins="5">
-            <coordinates bbox="(-4,-4,4,4)">
-              <ellipse center="(0,2.25)" axes="(3,1.25)" stroke="black" fill="#1E88E5" opacity="0.15"/>
-              <ellipse center="(0,-2.25)" axes="(3,1.25)" stroke="black" fill="#FFC107" opacity="0.15"/>
-            </coordinates>
-          </diagram>
-        </prefigure>
-      </image>
+          <prefigure xmlns="https://prefigure.org" label="K44-M-bad-order">
+            <diagram dimensions="(100,150)" margins="15">
+              <coordinates bbox="(0,0,1,3)">
+                <network labels="yes">
+                  <node at="1" p="(0,3)" edges="[6,7,8]"><m>v_1</m></node>
+                  <node at="2" p="(0,2)" edges="[5,7,8]"><m>v_3</m></node>
+                  <node at="3" p="(0,1)" edges="[5,6,8]"><m>v_5</m></node>
+                  <node at="4" p="(0,0)" edges="[5,6,7]"><m>v_7</m></node>
+                  <node at="5" p="(1,3)"><m>v_2</m></node>
+                  <node at="6" p="(1,2)"><m>v_4</m></node>
+                  <node at="7" p="(1,1)"><m>v_6</m></node>
+                  <node at="8" p="(1,0)"><m>v_8</m></node>
+                </network>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+        <image>
+          <description component="a">
+            <p>
+              A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as <m>v_1,v_2,v_3,v_4</m>. The vertices in the right column are labeled from top to bottom as <m>v_5,v_6,v_7,v_8</m>.
+            </p>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="K44-M-good-order">
+            <diagram dimensions="(100,150)" margins="15">
+              <coordinates bbox="(0,0,1,3)">
+                <network labels="yes">
+                  <node at="1" p="(0,3)" edges="[6,7,8]"><m>v_1</m></node>
+                  <node at="2" p="(0,2)" edges="[5,7,8]"><m>v_2</m></node>
+                  <node at="3" p="(0,1)" edges="[5,6,8]"><m>v_3</m></node>
+                  <node at="4" p="(0,0)" edges="[5,6,7]"><m>v_4</m></node>
+                  <node at="5" p="(1,3)"><m>v_5</m></node>
+                  <node at="6" p="(1,2)"><m>v_6</m></node>
+                  <node at="7" p="(1,1)"><m>v_7</m></node>
+                  <node at="8" p="(1,0)"><m>v_8</m></node>
+                </network>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>    
+      </sidebyside>
+    </paragraphs>
+    
+  </handout>
+  <handout component="pruefer">
+    <title>Counting Labeled Trees</title>
+    <page>
+      <paragraphs>
+        <title>Labeled vs Unlabeled Trees (and Graphs) and Counting</title>
+        <p workspace="2in">
+          
+        </p>
+      </paragraphs>
+      <paragraphs>
+        <title>Big Idea</title>
+        <sidebyside widths="60% 40%">
+          
+          
+          <image>
+            <description component="a">
+              <p>
+                A diagram containing two transparent ellipses, stacked vertically.   
+              </p>
+            </description>
+            <prefigure xmlns="https://prefigure.org" label="ellipses-prufer">
+              <diagram dimensions="(300,300)" margins="5">
+                <coordinates bbox="(-4,-4,4,4)">
+                  <ellipse center="(0,2.25)" axes="(3,1.25)" stroke="black" fill="#1E88E5" opacity="0.15"/>
+                  <ellipse center="(0,-2.25)" axes="(3,1.25)" stroke="black" fill="#FFC107" opacity="0.15"/>
+                </coordinates>
+              </diagram>
+            </prefigure>
+          </image>
+          <p>
+            <nbsp/>
+          </p>
+        </sidebyside>
+      </paragraphs>
+    </page>
+    <page>
+      <paragraphs>
+        <title>Constructing Pr&#252;fer Codes</title>
+        <p>
+          Assume <m>\bfT</m> is a labeled tree with at least <m>2</m> vertices.
+        </p>
+        <p>
+          <m>\prufer(\bfT)</m> is defined recursively by
+          <ol marker="1.">
+            <li>
+              <p>
+                If <m>\bfT\cong \bfK_{2}</m>, return the empty string.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Else, let <m>v</m> be the leaf of <m>\bfT</m> with the smallest label and let <m>u</m> be its unique neighbor.
+                Let <m>i</m> be the label of <m>u</m>.
+                Return <m>(i,\prufer(\bfT-v))</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          <alert>Peer instruction question 1 followed by activity.</alert>
+        </p>
+      </paragraphs>
       <p>
-        <nbsp/>
+        <alert>Peer instruction questions 2<ndash/>3.</alert>
       </p>
-    </sidebyside>
-  </paragraphs>
-</page>
-<page>
-  <paragraphs>
-    <title>Constructing Pr&#252;fer Codes</title>
-    <p>
-      Assume <m>\bfT</m> is a labeled tree with at least <m>2</m> vertices.
-    </p>
-    <p>
-      <m>\prufer(\bfT)</m> is defined recursively by
-      <ol marker="1.">
-        <li>
-          <p>
-            If <m>\bfT\cong \bfK_{2}</m>, return the empty string.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Else, let <m>v</m> be the leaf of <m>\bfT</m> with the smallest label and let <m>u</m> be its unique neighbor.
-            Let <m>i</m> be the label of <m>u</m>.
-            Return <m>(i,\prufer(\bfT-v))</m>.
-          </p>
-        </li>
-      </ol>
-    </p>
-    <p>
-      <alert>Peer instruction question 1 followed by activity.</alert>
-    </p>
-  </paragraphs>
-  <p>
-    <alert>Peer instruction questions 2<ndash/>3.</alert>
-  </p>
-  <paragraphs>
-    <title>Constructing Labeled Trees from Pr&#252;fer Codes</title>
-    <p>
-        <ol marker="1.">
-  <li>
-    <p>
-      Keep track of three things
-      <ul>
-        <li>
-          <p>
-            Pr&#252;fer code
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Labels remaining
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Edge added
-          </p>
-        </li>
-      </ul>
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Smallest remaining label not in code and first label of code determine edge to add
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Remove first entry of Pr&#252;fer code.
-      Remove label just used from label set.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Repeat until Pr&#252;fer code is empty (remaining labels are edge).
-    </p>
-  </li>
-
-  <li>
-    <p>
-      Build tree reading edges from bottom to top.
-    </p>
-  </li>
-</ol>
-    </p>
-    <p>
-      <alert>Peer Instruction Question 4.</alert>
-    </p>
-    <activity>
-  <task workspace="2cm">
-    <p>
-      Complete the table (and draw the tree) for the Pr&#252;fer code <m>8431875</m>.
-    </p>
-  </task>
-
-  <task workspace="0cm">
-    <p>
-      Find the tree for the Pr&#252;fer code <m>4747313</m>.
-    </p>
-  </task>
-
-  <task workspace="4cm">
-    <p>
-      Extra time? Make up a Pr&#252;fer code and have another group find the tree.
-    </p>
-  </task>
-    </activity>
-
-  </paragraphs>
-</page>
-<page>
-    <tabular>
-  <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
-  <row bottom="minor">
-    <cell>Pr&#252;fer code</cell>
-    <cell>Label set</cell>
-    <cell>Edge added</cell>
-  </row>
-
-  <row>
-    <cell>8431875</cell>
-    <cell> <m>\{1,2,3,4,5,6,7,8,9\}</m> </cell>
-    <cell> <m>2-8</m> </cell>
-  </row>
-
-  <row>
-    <cell>431875</cell>
-    <cell> <m>\{1,3,4,5,6,7,8,9\}</m> </cell>
-    <cell> <m>6-4</m> </cell>
-  </row>
-
-  <row>
-    <cell>31875</cell>
-    <cell> <m>\{1,3,4,5,7,8,9\}</m> </cell>
-    <cell> <m>4-3</m> </cell>
-  </row>
-
-  <row>
-    <cell>1875</cell>
-    <cell> <m>\{1,3,5,7,8,9\}</m> </cell>
-    <cell> <m>3-1</m> </cell>
-  </row>
-
-  <row>
-    <cell>875</cell>
-    <cell> <m>\{1,5,7,8,9\}</m> </cell>
-    <cell> <m>1-8</m> </cell>
-  </row>
-
-  <row>
-    <cell>75</cell>
-    <cell> <m>\{5,7,8,9\}</m> </cell>
-    <cell> <m>8-7</m> </cell>
-  </row>
-
-  <row>
-    <cell>5</cell>
-    <cell> <m>\{5,7,9\}</m> </cell>
-    <cell> <m>7-5</m> </cell>
-  </row>
-
-  <row>
-    <cell>(empty string)</cell>
-    <cell> <m>\{5,9\}</m> </cell>
-    <cell> <m>5-9</m> </cell>
-  </row>
-</tabular>
-</page>
-</handout>
+      <paragraphs>
+        <title>Constructing Labeled Trees from Pr&#252;fer Codes</title>
+        <p>
+          <ol marker="1.">
+            <li>
+              <p>
+                Keep track of three things
+                <ul>
+                  <li>
+                    <p>
+                      Pr&#252;fer code
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p>
+                      Labels remaining
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p>
+                      Edge added
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Smallest remaining label not in code and first label of code determine edge to add
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Remove first entry of Pr&#252;fer code.
+                Remove label just used from label set.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Repeat until Pr&#252;fer code is empty (remaining labels are edge).
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Build tree reading edges from bottom to top.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          <alert>Peer Instruction Question 4.</alert>
+        </p>
+        <activity>
+          <task workspace="2cm">
+            <p>
+              Complete the table (and draw the tree) for the Pr&#252;fer code <m>8431875</m>.
+            </p>
+          </task>
+          
+          <task workspace="0cm">
+            <p>
+              Find the tree for the Pr&#252;fer code <m>4747313</m>.
+            </p>
+          </task>
+          
+          <task workspace="4cm">
+            <p>
+              Extra time? Make up a Pr&#252;fer code and have another group find the tree.
+            </p>
+          </task>
+        </activity>
+        
+      </paragraphs>
+    </page>
+    <page>
+      <tabular>
+        <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
+        <row bottom="minor">
+          <cell>Pr&#252;fer code</cell>
+          <cell>Label set</cell>
+          <cell>Edge added</cell>
+        </row>
+        
+        <row>
+          <cell>8431875</cell>
+          <cell> <m>\{1,2,3,4,5,6,7,8,9\}</m> </cell>
+          <cell> <m>2-8</m> </cell>
+        </row>
+        
+        <row>
+          <cell>431875</cell>
+          <cell> <m>\{1,3,4,5,6,7,8,9\}</m> </cell>
+          <cell> <m>6-4</m> </cell>
+        </row>
+        
+        <row>
+          <cell>31875</cell>
+          <cell> <m>\{1,3,4,5,7,8,9\}</m> </cell>
+          <cell> <m>4-3</m> </cell>
+        </row>
+        
+        <row>
+          <cell>1875</cell>
+          <cell> <m>\{1,3,5,7,8,9\}</m> </cell>
+          <cell> <m>3-1</m> </cell>
+        </row>
+        
+        <row>
+          <cell>875</cell>
+          <cell> <m>\{1,5,7,8,9\}</m> </cell>
+          <cell> <m>1-8</m> </cell>
+        </row>
+        
+        <row>
+          <cell>75</cell>
+          <cell> <m>\{5,7,8,9\}</m> </cell>
+          <cell> <m>8-7</m> </cell>
+        </row>
+        
+        <row>
+          <cell>5</cell>
+          <cell> <m>\{5,7,9\}</m> </cell>
+          <cell> <m>7-5</m> </cell>
+        </row>
+        
+        <row>
+          <cell>(empty string)</cell>
+          <cell> <m>\{5,9\}</m> </cell>
+          <cell> <m>5-9</m> </cell>
+        </row>
+      </tabular>
+    </page>
+  </handout>
 </chapter>
