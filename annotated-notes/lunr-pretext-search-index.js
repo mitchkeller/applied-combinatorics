@@ -314,6 +314,78 @@ var ptx_lunr_docs = [
   "number": "5.1.2",
   "title": "",
   "body": "    With your neighbors, use mathematical induction to prove that every tree on vertices has exactly edges.  How many edges would an -vertex forest consisting of trees have?       For the base case, when , the tree has only one vertex and thus no edges. Since , we have the desired relationship. Now assume that for some , every tree with vertices has exactly edges. Let be a tree with vertices. The tree has a leaf . Form from by deleting and its edge. Then has vertices, so by the induction hypothesis, has edges. However, has one more edge (incident with ) than , so has edges.   Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).  A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have edges.   "
+},
+{
+  "id": "notes-eulerham",
+  "level": "1",
+  "url": "notes-eulerham.html",
+  "type": "Handout",
+  "number": "5.2",
+  "title": "Eulerian and Hamiltonian Graphs",
+  "body": " Eulerian and Hamiltonian Graphs  Let be a graph without isolated vertices. We say that is eulerian  graph  eulerian  provided that there is a sequence of vertices from , with repetition allowed, so that  ; (This means that the sequence starts and ends at the same place.)  for every edge , there is a unique integer with for which . (This means every edge is used exactly once.)    When is eulerian, a sequence satisfying these three conditions is called an eulerian circuit  eulerian  circuit  . A sequence of vertices is called a circuit  circuit  when it satisfies only the first two of these conditions.   Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of and an edge of that is not in that connected component.        Initialize .    While not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertex . Construct a walk starting from . From vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.   If , then return as a vertex of odd degree, showing that is not eulerian.    If , update the circuit by replacing in with the walk . Continue iterating by returning to step .          Return .          A graph with 14 vertices. The vertices are labeled with integers from 0 to 13. The neighbors of each vertex are specified in the table below.    Vertex  Neighbors     ,     , , ,     ,     ,     ,     , , ,     , , ,     , , ,     , , ,     , , ,     ,     , , , , ,     ,     ,       graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}            Initial circuit:     Expand:   Now is the first vertex with unused edges.    Walk from :   Splice in:        Eulerian graphs   Every group should have two pieces of paper. Each group must draw at least two graphs with at least vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with letters of the alphabet.       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.    A graph is said to be hamiltonian  graph  hamiltonian  if there exists a sequence so that  every vertex of appears exactly once in the sequence;  is an edge of ; and  for each , is an edge in .  Such a sequence of vertices is called a hamiltonian cycle .  hamiltonian  cycle    Notice that the restrictions on the sequence ensure that the sequence is a cycle.   Eulerian vs Hamiltonian   Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.    Formulate an improved group explanation of the difference. Be careful in your use of the words circuit , cycle , and path .      Hamiltonian or Not?   The handout contains drawings of five graphs. Find a hamiltonian cycle or explain why there isn't one. Don't spend too much time on any one graph.     Peer instruction questions 1 5.   "
+},
+{
+  "id": "notes-eulerham-2",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "eulerian "
+},
+{
+  "id": "notes-eulerham-3",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "eulerian circuit circuit "
+},
+{
+  "id": "alg-eulerian",
+  "level": "2",
+  "url": "notes-eulerham.html#alg-eulerian",
+  "type": "Algorithm",
+  "number": "5.6",
+  "title": "Eulerian Circuit Finder.",
+  "body": " Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of and an edge of that is not in that connected component.        Initialize .    While not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertex . Construct a walk starting from . From vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.   If , then return as a vertex of odd degree, showing that is not eulerian.    If , update the circuit by replacing in with the walk . Continue iterating by returning to step .          Return .      "
+},
+{
+  "id": "notes-eulerham-6",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-6",
+  "type": "Activity",
+  "number": "5.2.1",
+  "title": "Eulerian graphs.",
+  "body": " Eulerian graphs   Every group should have two pieces of paper. Each group must draw at least two graphs with at least vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with letters of the alphabet.       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.   "
+},
+{
+  "id": "notes-eulerham-7",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "hamiltonian hamiltonian cycle "
+},
+{
+  "id": "notes-eulerham-9",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-9",
+  "type": "Activity",
+  "number": "5.2.2",
+  "title": "Eulerian vs Hamiltonian.",
+  "body": " Eulerian vs Hamiltonian   Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.    Formulate an improved group explanation of the difference. Be careful in your use of the words circuit , cycle , and path .    "
+},
+{
+  "id": "notes-eulerham-10",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-10",
+  "type": "Activity",
+  "number": "5.2.3",
+  "title": "Hamiltonian or Not?",
+  "body": " Hamiltonian or Not?   The handout contains drawings of five graphs. Find a hamiltonian cycle or explain why there isn't one. Don't spend too much time on any one graph.   "
 }
 ]
 

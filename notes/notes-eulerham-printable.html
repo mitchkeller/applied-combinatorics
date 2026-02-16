@@ -105,15 +105,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.3';
+eBookConfig.runestone_version = '7.11.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.886636c6424f998d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f71e3729636f8aa8.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -275,6 +275,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction to Advancement Operators</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-3.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Homogeneous Recurrence Equations</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-rubots.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Solving a Nonlinear Recurrence</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -387,101 +388,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#alg-eulerian-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Algorithm 5.6: Eulerian Circuit Finder"><a href="#alg-eulerian" title="Copy heading and permalink for Algorithm 5.6: Eulerian Circuit Finder" aria-label="Copy heading and permalink for Algorithm 5.6: Eulerian Circuit Finder">🔗</a></div></article><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
-<div class="sbspanel sbspanel--top top" style="">
-<img src="generated/prefigure/euler-example-graph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="notes-eulerham-5-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="notes-eulerham-5-1-description">
-<div class="para" id="notes-eulerham-5-1-1-1">A graph with 14 vertices. The vertices are labeled with integers from 0 to 13. The neighbors of each vertex are specified in the table below.<div class="autopermalink" data-description="Paragraph"><a href="#notes-eulerham-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">Vertex</td>
-<td class="l m b0 r0 l0 t0 lines">Neighbors</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(9\text{,}\)</span> <span class="process-math">\(13\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(11\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(5\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(3\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(8\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(10\text{,}\)</span> <span class="process-math">\(11\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(11\text{,}\)</span> <span class="process-math">\(13\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(11\text{,}\)</span> <span class="process-math">\(12\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(11\text{,}\)</span> <span class="process-math">\(12\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(11\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(11\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(9\text{,}\)</span> <span class="process-math">\(10\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(12\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(9\)</span>
-</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(13\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">
-<span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(7\)</span>
-</td>
-</tr>
-</table>
-</div></details>
-</div>
+<div class="sbspanel sbspanel--top top" style=""><img src="generated/prefigure/euler-example-graph.svg" role="img" class="contained" alt="A graph"></div>
 <div class="sbspanel sbspanel--top top" style=""><div class="para" id="notes-eulerham-5-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-eulerham-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 </div></div>

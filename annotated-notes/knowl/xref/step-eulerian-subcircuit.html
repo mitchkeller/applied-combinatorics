@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">While not every edge of <span class="process-math">\(\bfG\)</span> is traversed, determine if any vertex of <span class="process-math">\(C\)</span> is incident with an edge that has not been traversed.</div>
+<ol class="lower-alpha ol-marker-1" id="step-eulerian-subcircuit-1-3">
+<li>
+<div class="para">If all vertices of <span class="process-math">\(C\)</span> have all their edges traversed, then return the vertices of <span class="process-math">\(C\)</span> as a connected component of <span class="process-math">\(\bfG\)</span> with an edge not traversed by <span class="process-math">\(C\)</span> demonstrating that <span class="process-math">\(\bfG\)</span> is not connected.<div class="autopermalink" data-description="Paragraph"><a href="#step-eulerian-subcircuit-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.a"><a href="#step-eulerian-subcircuit-1-3-1" title="Copy heading and permalink for Item 2.a" aria-label="Copy heading and permalink for Item 2.a">🔗</a></div>
+</li>
+<li>
+<div class="para">If <span class="process-math">\(C\)</span> has a vertex incident with an edge that has not been traversed, call that vertex <span class="process-math">\(u_0\text{.}\)</span> Construct a walk <span class="process-math">\(W\)</span> starting from <span class="process-math">\(u_0\text{.}\)</span> From vertex <span class="process-math">\(u_i\text{,}\)</span> follow the edge traversed by neither <span class="process-math">\(C\)</span> nor <span class="process-math">\(W\)</span> going to the neighbor of <span class="process-math">\(u_i\)</span> with smallest label.<div class="autopermalink" data-description="Paragraph"><a href="#step-eulerian-subcircuit-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.b"><a href="#step-eulerian-subcircuit-1-3-2" title="Copy heading and permalink for Item 2.b" aria-label="Copy heading and permalink for Item 2.b">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">The construction of <span class="process-math">\(W\)</span> halts at a vertex <span class="process-math">\(u_s\)</span> for which all edges have been traversed.</div>
+<ol class="lower-roman ol-marker-3" id="step-eulerian-subcircuit-1-3-3-1-3">
+<li>
+<div class="para">If <span class="process-math">\(u_s\neq u_0\text{,}\)</span> then return <span class="process-math">\(u_0\)</span> as a vertex of odd degree, showing that <span class="process-math">\(\bfG\)</span> is not eulerian.<div class="autopermalink" data-description="Paragraph"><a href="#step-eulerian-subcircuit-1-3-3-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.c.i"><a href="#step-eulerian-subcircuit-1-3-3-1-3-1" title="Copy heading and permalink for Item 2.c.i" aria-label="Copy heading and permalink for Item 2.c.i">🔗</a></div>
+</li>
+<li>
+<div class="para">If <span class="process-math">\(u_s = u_0\text{,}\)</span> update the circuit <span class="process-math">\(C\)</span> by replacing <span class="process-math">\(u_0\)</span> in <span class="process-math">\(C\)</span> with the walk <span class="process-math">\(W\text{.}\)</span> Continue iterating by returning to <a href="notes-eulerham.html#step-eulerian-subcircuit" class="xref" data-knowl="./knowl/xref/step-eulerian-subcircuit.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2">step 2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#step-eulerian-subcircuit-1-3-3-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.c.ii"><a href="#step-eulerian-subcircuit-1-3-3-1-3-2" title="Copy heading and permalink for Item 2.c.ii" aria-label="Copy heading and permalink for Item 2.c.ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#step-eulerian-subcircuit-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.c"><a href="#step-eulerian-subcircuit-1-3-3" title="Copy heading and permalink for Item 2.c" aria-label="Copy heading and permalink for Item 2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#step-eulerian-subcircuit-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></article><span class="incontext"><a class="internal" href="notes-eulerham.html#step-eulerian-subcircuit">in-context</a></span>
+</body>
+</html>
