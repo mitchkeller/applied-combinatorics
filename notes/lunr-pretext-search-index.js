@@ -295,7 +295,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "5.2",
   "title": "Eulerian and Hamiltonian Graphs",
-  "body": " Eulerian and Hamiltonian Graphs  Let be a graph without isolated vertices. We say that is eulerian  graph  eulerian  provided that there is a sequence of vertices from , with repetition allowed, so that  ;  for every , is an edge of ;  for every edge , there is a unique integer with for which .    When is eulerian, a sequence satisfying these three conditions is called an eulerian circuit  eulerian  circuit  . A sequence of vertices is called a circuit  circuit  when it satisfies only the first two of these conditions.   Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of and an edge of that is not in that connected component.        Initialize .    While not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertex . Construct a walk starting from . From vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.   If , then return as a vertex of odd degree, showing that is not eulerian.    If , update the circuit by replacing in with the walk . Continue iterating by returning to step .          Return .           graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}             Eulerian graphs   Every group should have two pieces of paper. Each group must draw at least two graphs with at least vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with letters of the alphabet.       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.    A graph is said to be hamiltonian  graph  hamiltonian  if there exists a sequence so that  every vertex of appears exactly once in the sequence;  is an edge of ; and  for each , is an edge in .  Such a sequence of vertices is called a hamiltonian cycle .  hamiltonian  cycle     Eulerian vs Hamiltonian   Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.    Formulate an improved group explanation of the difference. Be careful in your use of the words circuit , cycle , and path .      Hamiltonian or Not?   The handout contains drawings of five graphs. Find a hamiltonian cycle or explain why there isn't one. Don't spend too much time on any one graph.     Peer instruction questions 1 5.   "
+  "body": " Eulerian and Hamiltonian Graphs  Let be a graph without isolated vertices. We say that is eulerian  graph  eulerian  provided that there is a sequence of vertices from , with repetition allowed, so that  ;  for every , is an edge of ;  for every edge , there is a unique integer with for which .    When is eulerian, a sequence satisfying these three conditions is called an eulerian circuit  eulerian  circuit  . A sequence of vertices is called a circuit  circuit  when it satisfies only the first two of these conditions.    A graph is eulerian if and only if     Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of and an edge of that is not in that connected component.        Initialize .    While not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertex . Construct a walk starting from . From vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.   If , then return as a vertex of odd degree, showing that is not eulerian.    If , update the circuit by replacing in with the walk . Continue iterating by returning to step .          Return .           graph={0:[6,9],1:[4,5,9,13],2:[7,11],3:[4,5],5:[6,8],6:[10,11],7:[8,11,13],8:[11,12],9:[11,12],10:[11]}             Eulerian graphs   Every group should have two pieces of paper. Each group must draw at least two graphs with vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with the integers from to .       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.    A graph is said to be hamiltonian  graph  hamiltonian  if there exists a sequence so that  every vertex of appears exactly once in the sequence;  is an edge of ; and  for each , is an edge in .  Such a sequence of vertices is called a hamiltonian cycle .  hamiltonian  cycle     Eulerian vs Hamiltonian   Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.    Formulate an improved group explanation of the difference. Be careful in your use of the words circuit , cycle , and path .      Hamiltonian or Not?   The handout contains drawings of five graphs. Find a hamiltonian cycle or explain why there isn't one. Don't spend too much time on any one graph.     Peer instruction questions 1 5.    Dirac's Theorem   If is a graph on vertices and each vertex in has at least neighbors, then is hamiltonian.    "
 },
 {
   "id": "notes-eulerham-2",
@@ -316,49 +316,67 @@ var ptx_lunr_docs = [
   "body": "eulerian circuit circuit "
 },
 {
+  "id": "thm-eulerian",
+  "level": "2",
+  "url": "notes-eulerham.html#thm-eulerian",
+  "type": "Theorem",
+  "number": "5.6",
+  "title": "",
+  "body": "  A graph is eulerian if and only if   "
+},
+{
   "id": "alg-eulerian",
   "level": "2",
   "url": "notes-eulerham.html#alg-eulerian",
   "type": "Algorithm",
-  "number": "5.6",
+  "number": "5.7",
   "title": "Eulerian Circuit Finder.",
   "body": " Eulerian Circuit Finder      Input  A graph     Output  An eulerian circuit in , a vertex of odd degree in , or a connected component of and an edge of that is not in that connected component.        Initialize .    While not every edge of is traversed, determine if any vertex of is incident with an edge that has not been traversed.   If all vertices of have all their edges traversed, then return the vertices of as a connected component of with an edge not traversed by demonstrating that is not connected.    If has a vertex incident with an edge that has not been traversed, call that vertex . Construct a walk starting from . From vertex , follow the edge traversed by neither nor going to the neighbor of with smallest label.    The construction of halts at a vertex for which all edges have been traversed.   If , then return as a vertex of odd degree, showing that is not eulerian.    If , update the circuit by replacing in with the walk . Continue iterating by returning to step .          Return .      "
-},
-{
-  "id": "notes-eulerham-6",
-  "level": "2",
-  "url": "notes-eulerham.html#notes-eulerham-6",
-  "type": "Activity",
-  "number": "5.2.1",
-  "title": "Eulerian graphs.",
-  "body": " Eulerian graphs   Every group should have two pieces of paper. Each group must draw at least two graphs with at least vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with letters of the alphabet.       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.   "
 },
 {
   "id": "notes-eulerham-7",
   "level": "2",
   "url": "notes-eulerham.html#notes-eulerham-7",
+  "type": "Activity",
+  "number": "5.2.1",
+  "title": "Eulerian graphs.",
+  "body": " Eulerian graphs   Every group should have two pieces of paper. Each group must draw at least two graphs with vertices. Put your two graphs on separate pieces of paper.   One eulerian.    One not eulerian.    Label vertices with the integers from to .       Exchange graphs with another group.    Determine which graph is which.    Use our algorithm to find an eulerian circuit in the eulerian graph.    If finish early, draw some more graphs and swap with another group.   "
+},
+{
+  "id": "notes-eulerham-8",
+  "level": "2",
+  "url": "notes-eulerham.html#notes-eulerham-8",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "hamiltonian hamiltonian cycle "
 },
 {
-  "id": "notes-eulerham-8",
+  "id": "notes-eulerham-9",
   "level": "2",
-  "url": "notes-eulerham.html#notes-eulerham-8",
+  "url": "notes-eulerham.html#notes-eulerham-9",
   "type": "Activity",
   "number": "5.2.2",
   "title": "Eulerian vs Hamiltonian.",
   "body": " Eulerian vs Hamiltonian   Review responses on Canvas to class prep responses about difference between eulerian and hamiltonian.    Formulate an improved group explanation of the difference. Be careful in your use of the words circuit , cycle , and path .    "
 },
 {
-  "id": "notes-eulerham-9",
+  "id": "notes-eulerham-10",
   "level": "2",
-  "url": "notes-eulerham.html#notes-eulerham-9",
+  "url": "notes-eulerham.html#notes-eulerham-10",
   "type": "Activity",
   "number": "5.2.3",
   "title": "Hamiltonian or Not?",
   "body": " Hamiltonian or Not?   The handout contains drawings of five graphs. Find a hamiltonian cycle or explain why there isn't one. Don't spend too much time on any one graph.   "
+},
+{
+  "id": "thm_graphs_dirac",
+  "level": "2",
+  "url": "notes-eulerham.html#thm_graphs_dirac",
+  "type": "Theorem",
+  "number": "5.8",
+  "title": "Dirac’s Theorem.",
+  "body": " Dirac's Theorem   If is a graph on vertices and each vertex in has at least neighbors, then is hamiltonian.   "
 }
 ]
 
