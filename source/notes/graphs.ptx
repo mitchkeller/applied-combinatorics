@@ -236,7 +236,7 @@
       <li component="b"><m>x_0=x_t</m>;</li>
       <li component="a"><m>x_0=x_t</m>; (This means that the sequence starts and ends at the same place.)</li>
       <li component="b">for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>;</li>
-      <li component="1">for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>; (This means that the sequence is a walk.)</li>
+      <li component="a">for every <m>i=0,1,\dots, t-1</m>, <m>x_ix_{i+1}</m> is an edge of <m>\bfG</m>; (This means that the sequence is a walk.)</li>
       <li component="b">for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m>
         for which <m>e=x_ix_{i+1}</m>.</li>
       <li component="a">for every edge <m>e\in E</m>, there is a unique integer <m>i</m> with <m>0\le i\lt t</m>
@@ -252,6 +252,14 @@
           <h>circuit</h>
         </idx> when it satisfies only the first two of these conditions.
       </p>
+      <theorem xml:id="thm-eulerian">
+        <statement>
+          <p component="a">A graph <m>\bfG</m> is eulerian if and only if it is connected and every vertex has even
+        degree. </p>
+        <p component="b" workspace="1cm">A graph <m>\bfG</m> is eulerian if and only if </p>
+        </statement>
+      </theorem>
+      
       <algorithm xml:id="alg-eulerian">
         <title>Eulerian Circuit Finder</title>
         <statement>
@@ -436,7 +444,7 @@
         <task>
           <p>
             Every group should have <alert>two</alert> pieces of paper.
-            Each group must draw at least two graphs with at least <m>10</m> vertices.
+            Each group must draw at least two graphs with <m>n\geq 10</m> vertices.
             Put your two graphs on separate pieces of paper.
             <ul>
               <li>
@@ -453,7 +461,7 @@
               
               <li>
                 <p>
-                  Label vertices with letters of the alphabet.
+                  Label vertices with the integers from <m>1</m> to <m>n</m>.
                 </p>
               </li>
             </ul>
@@ -531,6 +539,19 @@
     <p>
       <alert>Peer instruction questions 1<ndash/>5.</alert>
     </p>
+    <theorem xml:id="thm_graphs_dirac">
+      <title>Dirac's Theorem</title>
+      
+      
+    <statement>
+      <p>If <m>\bfG</m> is a graph on <m>n\geq 3</m> vertices and each vertex in <m>\bfG</m> has at least <m>\lceil
+        \frac{n}{2}\rceil</m> neighbors, then <m>\bfG</m> is hamiltonian. </p>
+    </statement>
+    </theorem>
+    <p component="a">
+      Notice that this is <em>not</em> and if and only if theorem! Consider the graph <m>\bfC_{10}</m>, in which every vertex has degree <m>2\lt \lceil 10/2\rceil = 5</m>. However, this graph <em>is</em> hamiltonian. Thus, Dirac's theorem allows us to say that <em>some</em> graphs <em>are</em> hamiltonian, but it does not contain the power to say that a graph is <em>not</em> hamiltonian.
+    </p>
+
   </handout>
   
   <handout component="coloring">
