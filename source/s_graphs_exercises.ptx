@@ -36,6 +36,15 @@
       <statement>
         <p>For the next Olympic Winter Games, the organizers wish to expand the number of teams competing in curling. They wish to have <m>14</m> teams enter, divided into two pools of seven teams each. Right now, they're thinking of requiring that in preliminary play each team will play seven games against distinct opponents. Five of the opponents will come from their own pool and two of the opponents will come from the other pool. They're having trouble setting up such a schedule, so they've come to you. By using an appropriate graph-theoretic model, either argue that they cannot use their current plan or devise a way for them to do so.</p>
       </statement>
+      <solution>
+        <p>
+          We attempt to construct a graph in which the vertices correspond to teams and there is an edge between two teams if and only if they play a game.
+          To see why the organizers proposal is impossible, we consider just what the (sub)graph consisting of the teams in a single pool would look like.
+          This graph would have seven vertices, and since each team would play five games against teams in the same pool, each vertex would have degree five.
+          However, this would then require that the graph have an odd number (seven) of vertices of odd (five) degree, which we know is impossible.
+          You could also say that the sum of the degrees of the vertices in this subgraph would be <m>7\cdot 5 = 35</m>, which is not even as required by <xref ref="thm-graphs-first"/>.
+        </p>
+      </solution>
     </exercise>
     <exercise>
       <statement>
@@ -87,6 +96,29 @@
             </image>
           </figure>
         </statement>
+        <solution>
+          <p>
+            We first note that <m>\mathbf{G}_{4}</m> is the only graph of the four containing a vertex of degree 1.
+            Therefore, this graph is not isomorphic to any of the other three.
+            Notice next that in <m>\mathbf{G}_{2}</m>, there are two vertices of degree <m>3</m>: <m>u_{3}</m> and <m>u_{6}</m>.
+            These vertices are not adjacent in <m>\mathbf{G}_{2}</m>.
+            However, in <m>\mathbf{G}_{1}</m> and <m>\mathbf{G}_{3}</m>, there are also two vertices of degree <m>3</m> and those vertices are adjacent in those graphs.
+            This prevents <m>\mathbf{G}_{2}</m> from being isomorphic to either <m>\mathbf{G}_{1}</m> or <m>\mathbf{G}_{3}</m>.
+          </p>
+          
+          <p>
+            The graphs <m>\mathbf{G}_{1}</m> and <m>\mathbf{G}_{3}</m> are isomorphic.
+            There are two isomorphisms between them, one of which is given below:
+            <md>
+              <mrow>f(v_{1})\amp= w_{2}</mrow>
+              <mrow>f(v_{2})\amp= w_{3}</mrow>
+              <mrow>f(v_{3})\amp= w_{4}</mrow>
+              <mrow>f(v_{4})\amp= w_{1}</mrow>
+              <mrow>f(v_{5})\amp= w_{6}</mrow>
+              <mrow>f(v_{6})\amp= w_{5}</mrow>
+            </md>
+          </p>
+        </solution>
       </exercise>
       <exercise>
         <statement>

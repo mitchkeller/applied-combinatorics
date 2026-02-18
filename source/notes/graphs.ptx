@@ -554,7 +554,7 @@
 
   </handout>
   
-  <handout component="coloring">
+  <handout component="coloring" xml:id="notes-graphs-coloring">
     <title>Graph Coloring</title>
     <p>
       <alert>Peer instruction questions 1<ndash/>3.</alert>
@@ -566,17 +566,26 @@
           <p>
             <m>\phi</m> is one-to-one
           </p>
+          <p component="a">
+            This means that if <m>x\neq y</m>, then <m>\phi(x)\neq \phi(y)</m>, which would require that all vertices have different colors. This is not required for a proper coloring in most graphs.
+          </p>
         </li>
         
         <li>
           <p>
             <m>xy\in E</m> implies <m>\phi(x)\neq \phi(y)</m>
           </p>
+          <p component="a">
+            Endpoints of edges get different colors.
+          </p>
         </li>
         
         <li>
           <p>
             <m>\phi</m> uses as few colors from <m>C</m> as possible
+          </p>
+          <p component="a">
+            While this is part of determining the chromatic number, it is not a requirement for a proper coloring.
           </p>
         </li>
         
@@ -616,7 +625,10 @@
         </li>
       </ol>
     </p>
-    <p>
+    <p component="a">
+      an induced subgraph takes all edges of <m>\bfG</m> with both endpoints in <m>S</m>. Because all vertices of <m>S</m> have the same color and <m>\phi</m> is proper, there can't be any edges. We can also say that <m>S</m> is an <term>independent set</term>.
+    </p>
+    <p workspace="1cm">
       What is the chromatic number of the complete graph on <m>n</m> vertices <m>\bfK_{n}</m>?
       <ol marker="A.">
         <li>
@@ -644,6 +656,9 @@
         </li>
       </ol>
     </p>
+    <p component="a">
+      Recall that <m>\bfK_n</m> is the <m>n</m>-vertex graph with all possible edges. The <term>chromatic number</term> <m>\chi(\bfG)</m> of a graph <m>\bfG</m> is the smallest number of colors that can be used in a proper coloring of <m>\bfG</m>.
+    </p>
     <sidebyside widths="60% 40%">
       <image>
         <description component="a">
@@ -654,7 +669,7 @@
         <prefigure xmlns="https://prefigure.org" label="mycielski-bad-coloring">
           <diagram dimensions="(400,300)" margins="20">
             <coordinates bbox="(0,-0.3,4.2,2)">
-              <network labels="yes">
+              <network labels="yes" node-fill="yellow">
                 <node at="1" p="(2,2)" edges="[2,3,4,5,6]"><m>z</m></node>
                 <node at="2" p="(0,1)" edges="[8,11]"><m>y_1</m></node>
                 <node at="3" p="(1,1)" edges="[7,9]"><m>y_2</m></node>
@@ -683,7 +698,10 @@
           </diagram>
         </prefigure>
       </image>
-      <p><nbsp/></p>
+      <p component="b"><nbsp/></p>
+      <p component="a">
+        The given proper <m>5</m>-coloring shows that <m>\chi(\bfG)\leq 5</m>. However, there are several ways to recolor this graph using four colors. One example would involve changing the color of <m>y_5</m> to be <m>3</m> and then recoloring each <m>x_i</m> to have the same color as <m>y_i</m> has under the modified coloring. Notice that this graph does not contain any subgraphs isomorphic to <m>\bfK_3</m>, which we usually call a <term>triangle</term>.
+      </p>
     </sidebyside>
     <definition workspace="4cm">
       <statement>
@@ -692,7 +710,9 @@
         </p>
       </statement>
     </definition>
-    
+    <p component="a">
+      We can visualize a bipartite graph as one in which the vertex set can be partitioned into two sets <m>V=X\cup Y</m> so that every edge has one endpoint in <m>X</m> and one endpoint in <m>Y</m>. The <term>complete bipartite graph</term> <m>\bfK_{m,n}</m> is formed in this manner by placing <m>m</m> vertices in <m>X</m> and <m>n</m> vertices in <m>Y</m> and then putting all possible edges between vertices in <m>X</m> and vertices in <m>Y</m>.
+    </p>
     <theorem workspace="4cm">
       <statement>
         <p>
@@ -700,11 +720,17 @@
         </p>
       </statement>
     </theorem>  
+    <p component="a">
+      Because this is an if and only if theorem, we know that if <m>\bfG</m> contains an odd cycle, then <m>\chi(\bfG)\geq 3</m>. For efficiently finding a 2-coloring or an odd cycle, pick a vertex and start coloring it 1. Then color its neighbors 2. Then color their neighbors 1. Continue. Either you will end up with a vertex that needs to be both 1 and 2, in which you can trace back an odd cycle, or you will get a proper 2-coloring. (Proceed component-wise if the graph is not connected.)
+    </p>
     <p>
       <alert>Peer instruction question 4.</alert>
     </p>
-    <paragraphs>
-      <title>First Fit</title>
+    <p>
+      <alert component="b">First Fit</alert>
+      <alert component="a">First Fit also known as the Greedy Algorithm</alert>
+    </p>
+      
       <sidebyside widths="20% 20%">
         <image>
           <description component="a">
@@ -715,7 +741,7 @@
           <prefigure xmlns="https://prefigure.org" label="K44-M-bad-order">
             <diagram dimensions="(100,150)" margins="15">
               <coordinates bbox="(0,0,1,3)">
-                <network labels="yes">
+                <network labels="yes" node-fill="yellow">
                   <node at="1" p="(0,3)" edges="[6,7,8]"><m>v_1</m></node>
                   <node at="2" p="(0,2)" edges="[5,7,8]"><m>v_3</m></node>
                   <node at="3" p="(0,1)" edges="[5,6,8]"><m>v_5</m></node>
@@ -738,7 +764,7 @@
           <prefigure xmlns="https://prefigure.org" label="K44-M-good-order">
             <diagram dimensions="(100,150)" margins="15">
               <coordinates bbox="(0,0,1,3)">
-                <network labels="yes">
+                <network labels="yes" node-fill="yellow">
                   <node at="1" p="(0,3)" edges="[6,7,8]"><m>v_1</m></node>
                   <node at="2" p="(0,2)" edges="[5,7,8]"><m>v_2</m></node>
                   <node at="3" p="(0,1)" edges="[5,6,8]"><m>v_3</m></node>
@@ -753,8 +779,9 @@
           </prefigure>
         </image>    
       </sidebyside>
-    </paragraphs>
-    
+      <p component="a">
+        First Fit uses 4 colors on the left graph because it colors each row of vertices (in the context of the graph as drawn) with the same color. Using the ordering on the left, the vertices in the left column are all colored 1 and those in the right column are all colored 2. This generalizes quite directly to a similar graph in which there are <m>n</m> vertices in each column, requiring <m>n</m> colors with the ordering on the left but still only 2 colors with the ordering on the right.
+      </p>
   </handout>
   <handout component="pruefer">
     <title>Counting Labeled Trees</title>

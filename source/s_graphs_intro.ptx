@@ -271,7 +271,7 @@
   <p>The following theorem is very elementary, and some authors refer to it as the <q>first theorem
     of graph theory</q>. However, this basic result can be surprisingly useful. </p>
 
-  <theorem>
+  <theorem xml:id="thm-graphs-first">
     <statement>
       <p> Let <m>\deg_\bfG(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then <men xml:id="eq_graphs_degsum">
           \sum_{v\in V}\deg_\bfG(v) = 2|E|
