@@ -251,6 +251,51 @@ var ptx_lunr_docs = [
   "number": "1",
   "title": "Proof the Petersen Graph is not hamiltonian.",
   "body": " Proof the Petersen Graph is not hamiltonian  Consider what a hamiltonian cycle in would look like. The graph has edges, and a hamiltonian cycle would use of them. Thus, you'd have the cycle and five leftover edges that would connect vertices across the cycle ( chords ). How would these edges fit along the cycle? If an edge connected a vertex to a vertex two steps down the cycle (for example, if the cycle contains the sequence of vertices and there's an edge from to ), then there would be a triangle (a cyle on three vertices) in the graph. There is no such cycle in . If a chord connects a vertex to another vertex at distance three along the hamiltonian cycle, then there is a cycle on four vertices. However, there is no such cycle in .  Now suppose that a chord connects a vertex to another vertex at distance four along the hamiltonian cycle. Let be the vertex opposite along the hamiltonian cycle. There is also a chord incident with , connecting it across the hamiltonian cycle to a vertex . We've already explained that the distance from to along the hamiltonian cycle cannot be less than four, and it cannot be five since that would give degree four. Thus the distance along the hamiltonian cycle from to must be four. Now is a cycle of length four (draw a picture to convince yourself), which we don't have in . Finally, the only option that remains is that the chords all connect vertices that are exactly opposite each other on the hamiltonian cycle. However, then if and are adjacent along the hamiltonian cycle and and are the vertices opposite them, is a cycle of length four.  "
+},
+{
+  "id": "ws-triangle-free",
+  "level": "1",
+  "url": "ws-triangle-free.html",
+  "type": "Worksheet",
+  "number": "5.2",
+  "title": "Graphs with <span class=\"process-math\">\\(\\omega(\\bfG)=2\\)<\/span> and <span class=\"process-math\">\\(\\chi(\\bfG)\\)<\/span> large",
+  "body": " Graphs with and large   We've already seen that the chromatic number of a graph is at least its clique number . (Recall that if , then contains a subgraph isomorphic to and .) In this activity, we're going to see how to construct graphs with and for any integer . We will focus only on the construction of Mycielski, which is one of two constructions included in the text.  This construction aims to create a graph with and . The construction is inductive. It starts by creating , then uses that to make , which it uses to make , etc. As you go through, discuss the steps with your group members. The questions in italics are questions you must be able to answer to ensure you understand as you go through things.    We proceed by induction on . For , we take to be the cycle on five vertices. ( Why is ? Why is ? )      Now assume that for some , we have determined the graph . Suppose that has vertices. Label the vertices of as . Construct as follows.   Begin with an independent set of cardinality . ( What is an independent set? )    Label the points of as .    Add a copy of with adjacent to if and only if is adjacent to .    Attach a new vertex adjacent to all vertices in (but none from the copy of ).      How many vertices does contain? (Your formula will contain .) You should be able to draw by hand, and will have vertices.        To see that , it will suffice to argue that contains no triangle ( ). To do this, we consider where the vertices of a triangle would be:    Explain why any triangle in must contain a vertex of .    Explain why any triangle in contains only one vertex of .    Explain why a triangle cannot contain a vertex of and the vertex .    A triangle must thus contain a vertex and vertices and from the copy of . Explain why forming a triangle mean that there's a triangle in .           What part of the construction ensures that ?        How can you color the vertices of using colors? (Hint: Pair vertices of with vertices of .) What color does get? How many colors have you used and what does this say about ?       Try coloring using only colors. Suppose that is a proper coloring of using the colors . It's safe to assume that (reshuffle the colors otherwise). Let be the set of vertices in the copy of to which assigns color . Can the set be empty? Explain your reasoning.       Since , what do you know about the set (or even number) of colors used on ?        Why can you change the color of each to match the color assigns to and maintain a proper coloring?        Now how many colors have you used on the copy of ?       "
+},
+{
+  "id": "ws-triangle-free-2-3",
+  "level": "2",
+  "url": "ws-triangle-free.html#ws-triangle-free-2-3",
+  "type": "Problem",
+  "number": "5.2.1",
+  "title": "",
+  "body": "  We proceed by induction on . For , we take to be the cycle on five vertices. ( Why is ? Why is ? )   "
+},
+{
+  "id": "ws-triangle-free-2-4",
+  "level": "2",
+  "url": "ws-triangle-free.html#ws-triangle-free-2-4",
+  "type": "Problem",
+  "number": "5.2.2",
+  "title": "",
+  "body": "  Now assume that for some , we have determined the graph . Suppose that has vertices. Label the vertices of as . Construct as follows.   Begin with an independent set of cardinality . ( What is an independent set? )    Label the points of as .    Add a copy of with adjacent to if and only if is adjacent to .    Attach a new vertex adjacent to all vertices in (but none from the copy of ).      How many vertices does contain? (Your formula will contain .) You should be able to draw by hand, and will have vertices.   "
+},
+{
+  "id": "ws-triangle-free-2-5",
+  "level": "2",
+  "url": "ws-triangle-free.html#ws-triangle-free-2-5",
+  "type": "Problem",
+  "number": "5.2.3",
+  "title": "<span class=\"process-math\">\\(\\omega(\\bfG_{t+1})=2\\)<\/span>.",
+  "body": "   To see that , it will suffice to argue that contains no triangle ( ). To do this, we consider where the vertices of a triangle would be:    Explain why any triangle in must contain a vertex of .    Explain why any triangle in contains only one vertex of .    Explain why a triangle cannot contain a vertex of and the vertex .    A triangle must thus contain a vertex and vertices and from the copy of . Explain why forming a triangle mean that there's a triangle in .   "
+},
+{
+  "id": "ws-triangle-free-3-1",
+  "level": "2",
+  "url": "ws-triangle-free.html#ws-triangle-free-3-1",
+  "type": "Problem",
+  "number": "5.2.4",
+  "title": "<span class=\"process-math\">\\(\\chi(\\bfG_{t+1})=t+1\\)<\/span>.",
+  "body": "     What part of the construction ensures that ?        How can you color the vertices of using colors? (Hint: Pair vertices of with vertices of .) What color does get? How many colors have you used and what does this say about ?       Try coloring using only colors. Suppose that is a proper coloring of using the colors . It's safe to assume that (reshuffle the colors otherwise). Let be the set of vertices in the copy of to which assigns color . Can the set be empty? Explain your reasoning.       Since , what do you know about the set (or even number) of colors used on ?        Why can you change the color of each to match the color assigns to and maintain a proper coloring?        Now how many colors have you used on the copy of ?     "
 }
 ]
 

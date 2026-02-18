@@ -242,6 +242,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="graphs-notation-term.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Notation and Terminology</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-eulerham.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-graphs-coloring.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Graph Coloring</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -368,10 +369,10 @@ f(3) = 3f(2) + 2 = 3(3f(1)+2) + 2 = 9f(1) + 6+ 2= 9\cdot 0 + 8 = 8\text{.}
 <td class="l m b0 r0 l0 t0 lines">11</td>
 </tr>
 </table></div>
-<div class="sbspanel sbspanel--top top" style="">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box">
 <img src="external/lines-regions.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="notes-induction-2-12-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="notes-induction-2-12-2-description"><div class="para" id="notes-induction-2-12-2-1-1">Four lines drawn in the plane so that each pair of lines intersects and no three lines intersect at a single point. On one of the lines, the three points of intersection with the other three lines are marked with dots. The regions determined by the lines are numbered from <span class="process-math">\(1\)</span> to <span class="process-math">\(11\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-12-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div></details>
-</div>
+</div></div>
 </div></div>
 <div class="para" id="notes-induction-2-13">When adding the <span class="process-math">\(n\)</span>-th line, this new line is cut exactly once by each of the existing <span class="process-math">\(n-1\)</span> lines. The <span class="process-math">\(n\)</span>-th line is thus cut into <span class="process-math">\(n\)</span> pieces. Each of these pieces takes one of the regions that the <span class="process-math">\(n-1\)</span> lines determined and divides it into two regions. This nets the addition of <span class="process-math">\(n\)</span> new regions, if we count one of the pieces into which an existing region was cut as counting toward the <span class="process-math">\(r(n-1)\)</span> existing regions. Thus, we have <span class="process-math">\(r(n) = r(n-1) + n\)</span> for <span class="process-math">\(n\geq 1\)</span> and <span class="process-math">\(r(0)=1\text{.}\)</span> Alternatively, you could consider that there are <span class="process-math">\(r(n-1)-n\)</span> regions that are untouched by the <span class="process-math">\(n\)</span>-th line and <span class="process-math">\(2n\)</span> new regions formed by the cutting of the new line. But this still gives <span class="process-math">\(r(n) = r(n-1)-n + 2n = r(n-1)+n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

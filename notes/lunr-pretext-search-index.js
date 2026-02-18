@@ -377,6 +377,33 @@ var ptx_lunr_docs = [
   "number": "5.8",
   "title": "Dirac’s Theorem.",
   "body": " Dirac's Theorem   If is a graph on vertices and each vertex in has at least neighbors, then is hamiltonian.   "
+},
+{
+  "id": "notes-graphs-coloring",
+  "level": "1",
+  "url": "notes-graphs-coloring.html",
+  "type": "Handout",
+  "number": "5.3",
+  "title": "Graph Coloring",
+  "body": " Graph Coloring   Peer instruction questions 1 3.   Let be a graph. Then is a proper coloring of if    is one-to-one     implies      uses as few colors from as possible    None of the above     Let be a graph and be a proper coloring of . Let be all vertices colored . How many edges does the subgraph of induced by contain?   0    1         Any number is possible.     What is the chromatic number of the complete graph on vertices ?                  There is no fixed formula depending on .           z  y_1  y_2  y_3  y_4  y_5  x_1  x_2  x_3  x_4  x_5    1  2  3  4  2  5  4  1  5  3  1          A graph is bipartite provided that its chromatic number is .      A graph is bipartite if and only if it does not contain any odd cycles.     Peer instruction question 4.    First Fit         v_1  v_3  v_5  v_7  v_2  v_4  v_6  v_8            v_1  v_2  v_3  v_4  v_5  v_6  v_7  v_8        "
+},
+{
+  "id": "notes-graphs-coloring-7",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-7",
+  "type": "Definition",
+  "number": "5.9",
+  "title": "",
+  "body": "  A graph is bipartite provided that its chromatic number is .   "
+},
+{
+  "id": "notes-graphs-coloring-8",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-8",
+  "type": "Theorem",
+  "number": "5.10",
+  "title": "",
+  "body": "  A graph is bipartite if and only if it does not contain any odd cycles.   "
 }
 ]
 

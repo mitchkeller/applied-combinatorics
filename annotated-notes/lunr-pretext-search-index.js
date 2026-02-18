@@ -404,6 +404,69 @@ var ptx_lunr_docs = [
   "number": "5.8",
   "title": "Dirac’s Theorem.",
   "body": " Dirac's Theorem   If is a graph on vertices and each vertex in has at least neighbors, then is hamiltonian.   "
+},
+{
+  "id": "notes-graphs-coloring",
+  "level": "1",
+  "url": "notes-graphs-coloring.html",
+  "type": "Handout",
+  "number": "5.3",
+  "title": "Graph Coloring",
+  "body": " Graph Coloring   Peer instruction questions 1 3.   Let be a graph. Then is a proper coloring of if    is one-to-one  This means that if , then , which would require that all vertices have different colors. This is not required for a proper coloring in most graphs.     implies   Endpoints of edges get different colors.     uses as few colors from as possible  While this is part of determining the chromatic number, it is not a requirement for a proper coloring.    None of the above     Let be a graph and be a proper coloring of . Let be all vertices colored . How many edges does the subgraph of induced by contain?   0    1         Any number is possible.     an induced subgraph takes all edges of with both endpoints in . Because all vertices of have the same color and is proper, there can't be any edges. We can also say that is an independent set .  What is the chromatic number of the complete graph on vertices ?                  There is no fixed formula depending on .     Recall that is the -vertex graph with all possible edges. The chromatic number  of a graph is the smallest number of colors that can be used in a proper coloring of .     A graph with 11 vertices. There is a vertex at the top with label . Next to this vertex is the number . There are five edges from . The neighbors of each have a label inside the node as well as an integer next to the node. The labels and associated integers are (2), (3), (4), (2), and (5). In addition to the edge to , each has an edge to two vertices labeled and , with subscripts interpreted cyclically so that has an edge to and has an edge to . The also have associated integers, given in order of increasing vertex subscript as . Each has an edge to , interpreted cyclically so that has an edge to .       z  y_1  y_2  y_3  y_4  y_5  x_1  x_2  x_3  x_4  x_5    1  2  3  4  2  5  4  1  5  3  1      The given proper -coloring shows that . However, there are several ways to recolor this graph using four colors. One example would involve changing the color of to be and then recoloring each to have the same color as has under the modified coloring. Notice that this graph does not contain any subgraphs isomorphic to , which we usually call a triangle .     A graph is bipartite provided that its chromatic number is .    We can visualize a bipartite graph as one in which the vertex set can be partitioned into two sets so that every edge has one endpoint in and one endpoint in . The complete bipartite graph  is formed in this manner by placing vertices in and vertices in and then putting all possible edges between vertices in and vertices in .    A graph is bipartite if and only if it does not contain any odd cycles.    Because this is an if and only if theorem, we know that if contains an odd cycle, then . For efficiently finding a 2-coloring or an odd cycle, pick a vertex and start coloring it 1. Then color its neighbors 2. Then color their neighbors 1. Continue. Either you will end up with a vertex that needs to be both 1 and 2, in which you can trace back an odd cycle, or you will get a proper 2-coloring. (Proceed component-wise if the graph is not connected.)   Peer instruction question 4.    First Fit also known as the Greedy Algorithm      A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as . The vertices in the right column are labeled from top to bottom as .       v_1  v_3  v_5  v_7  v_2  v_4  v_6  v_8         A graph with 8 vertices. The vertices are arranged in two columns of four vertices. There are no edges between vertices in the same column. Each vertex has three edges, which go to the three vertices in the other column that are not in the same row as that vertex. The vertices in the left column are labeled from top to bottom as . The vertices in the right column are labeled from top to bottom as .       v_1  v_2  v_3  v_4  v_5  v_6  v_7  v_8        First Fit uses 4 colors on the left graph because it colors each row of vertices (in the context of the graph as drawn) with the same color. Using the ordering on the left, the vertices in the left column are all colored 1 and those in the right column are all colored 2. This generalizes quite directly to a similar graph in which there are vertices in each column, requiring colors with the ordering on the left but still only 2 colors with the ordering on the right.  "
+},
+{
+  "id": "notes-graphs-coloring-5",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "independent set "
+},
+{
+  "id": "notes-graphs-coloring-7",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "chromatic number "
+},
+{
+  "id": "notes-graphs-coloring-8-2",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-8-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "triangle "
+},
+{
+  "id": "notes-graphs-coloring-9",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-9",
+  "type": "Definition",
+  "number": "5.9",
+  "title": "",
+  "body": "  A graph is bipartite provided that its chromatic number is .   "
+},
+{
+  "id": "notes-graphs-coloring-10",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "complete bipartite graph "
+},
+{
+  "id": "notes-graphs-coloring-11",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-11",
+  "type": "Theorem",
+  "number": "5.10",
+  "title": "",
+  "body": "  A graph is bipartite if and only if it does not contain any odd cycles.   "
 }
 ]
 
