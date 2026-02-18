@@ -350,16 +350,16 @@
       We've already seen that the chromatic number <m>\chi(\bfG)</m> of a graph <m>\bfG</m> is at least its clique number <m>\omega(\bfG)</m>. (Recall that if <m>\omega(\bfG)=t</m>, then <m>\bfG</m> contains a subgraph isomorphic to <m>\bfK_{t}</m> and <m>\chi(\bfK_{t})=t</m>.) In this activity, we're going to see how to construct graphs with <m>\omega(\bfG)=2</m> and <m>\chi(\bfG)=t</m> for any integer <m>t\geq 2</m>. We will focus only on the construction of Mycielski, which is one of two constructions included in the text.
     </p>
     <p>
-      This construction aims to create a graph <m>\bfG_{t}</m> with <m>\chi(\bfG)=t</m> and <m>\omega(\bfG_{t})=2</m>. The construction is inductive. It starts by creating <m>\bfG_{3}</m>, then uses that to make <m>\bfG_{4}</m>, which it uses to make <m>\bfG_{5}</m>, etc. As you go through, discuss the steps with your group members. The questions in <em>italics</em> are questions you must be able to answer to ensure you understand as you go through things.
+      This construction aims to create a graph <m>\bfG_{t}</m> with <m>\chi(\bfG_t)=t</m> and <m>\omega(\bfG_{t})=2</m>. The construction is inductive. It starts by creating <m>\bfG_{3}</m>, then uses that to make <m>\bfG_{4}</m>, which it uses to make <m>\bfG_{5}</m>, etc. As you go through, discuss the steps with your group members. The questions in <em>italics</em> are questions you must be able to answer to ensure you understand as you go through things.
     </p>
-    <exercise workspace="1cm">
+    <exercise workspace="0.5cm">
       <statement>
         <p>
           We proceed by induction on <m>t</m>. For <m>t=3</m>, we take <m>\bfG_{3}</m> to be the cycle <m>\bfC_{5}</m> on five vertices. (<em>Why is <m>\chi(\bfG_{3})=3</m>? Why is <m>\omega(\bfG_{3})=2</m>?</em>)
         </p>
       </statement>
     </exercise>
-    <exercise workspace="1.5cm">
+    <exercise workspace="0.5cm">
       <statement>
         <p>
           Now assume that for some <m>t\ge3</m>, we have determined the graph <m>\bfG_{t}</m>. Suppose that <m>\bfG_{t}</m> has <m>n_{t}</m> vertices. Label the vertices of <m>\bfG_{t}</m> as <m>x_{1},x_{2},\dots,x_{n_t}</m>. Construct <m>\bfG_{t+1}</m> as follows.
@@ -390,10 +390,6 @@
           </li>
         </ol>
         </p>
-      </statement>
-    </exercise>
-    <exercise workspace="1cm">
-      <statement>
         <p>
           <em>How many vertices does <m>\bfG_{t+1}</m> contain?</em> (Your formula will contain <m>n_{t}</m>.) You should be able to draw <m>\bfG_{4}</m> by hand, and <m>\bfG_{5}</m> will have <m>23</m> vertices.
         </p>
@@ -414,34 +410,28 @@
 
 
 
-  <task workspace="1cm">
+  <task workspace="0.5cm">
     <p>
-      Since <m>\bfG_{t}</m> is triangle-free, any triangle in <m>\bfG_{t+1}</m> must contain a vertex of <m>I\cup\{z\}</m>.
+      Explain why any triangle in <m>\bfG_{t+1}</m> must contain a vertex of <m>I\cup\{z\}</m>.
     </p>
   </task>
 
-  <task>
+  <task workspace="0.5cm">
     <p>
-      Since none of the vertices of <m>I</m> are adjacent (<em>Why?</em>), any triangle in <m>\bfG_{t+1}</m> contains only one vertex of <m>I</m>.
+      Explain why any triangle in <m>\bfG_{t+1}</m> contains only one vertex of <m>I</m>.
     </p>
   </task>
 
-  <task workspace="1cm">
+  <task workspace="0.5cm">
     <p>
-      A triangle cannot contain a vertex of <m>I</m> and the vertex <m>z</m>.
-      (<em>Why not?</em> Consider where the third vertex is.)
+      Explain why a triangle cannot contain a vertex of <m>I</m> and the vertex <m>z</m>.
     </p>
   </task>
 
   <task>
     <p>
       A triangle must thus contain a vertex <m>y_{i}\in I</m> and vertices <m>x_{j}</m> and <m>x_{k}</m> from the copy of <m>\bfG_{t}</m>.
-    </p>
-  </task>
-
-  <task workspace="1cm">
-    <p>
-      <em>Why does <m>\{y_{i},x_{j},x_{k}\}</m> forming a triangle mean that there's a triangle in <m>\bfG_{t}</m>?</em>
+      Explain why <m>\{y_{i},x_{j},x_{k}\}</m> forming a triangle mean that there's a triangle in <m>\bfG_{t}</m>.
     </p>
   </task>
 
