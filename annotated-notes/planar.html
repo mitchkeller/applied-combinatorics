@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ACN PLanar Graphs</title>
+<title>ACN Planar Graphs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -243,7 +243,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="graphs-notation-term.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Notation and Terminology</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-eulerham.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-graphs-coloring.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Graph Coloring</span></a></div></li>
-<li class="toc-item toc-handout active"><div class="toc-title-box"><a href="planar.html" class="internal"><span class="codenumber">5.4</span> <span class="title">PLanar Graphs</span></a></div></li>
+<li class="toc-item toc-handout active"><div class="toc-title-box"><a href="planar.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Planar Graphs</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -273,9 +273,128 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <section class="handout" id="planar" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
-<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PLanar Graphs</span><div class="print-links"><a href="?printpreview=planar" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Planar Graphs</span><div class="print-links"><a href="?printpreview=planar" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<div class="autopermalink" data-description="Handout 5.4: PLanar Graphs"><a href="#planar" title="Copy heading and permalink for Handout 5.4: PLanar Graphs" aria-label="Copy heading and permalink for Handout 5.4: PLanar Graphs">🔗</a></div></section>
+<section class="onepage" id="planar-2"><div class="para logical" id="planar-2-1">
+<ul class="disc" id="planar-2-1-1">
+<li id="planar-2-1-1-1">
+<div class="para" id="planar-2-1-1-1-1">A <dfn class="terminology">drawing</dfn> of a graph is a way of associating the graph’s vertices with points in the plane and its edges with simple polygonal arcs between the points corresponding to the edge’s endpoints.<div class="autopermalink" data-description="Paragraph"><a href="#planar-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#planar-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="planar-2-1-1-2">
+<div class="para" id="planar-2-1-1-2-1">A <dfn class="terminology">planar drawing</dfn> of a graph is one in which the polygonal arcs corresponding to edges intersect only at the points corresponding to the endpoints of the appropriate edges.<div class="autopermalink" data-description="Paragraph"><a href="#planar-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#planar-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="planar-2-1-1-3">
+<div class="para" id="planar-2-1-1-3-1">A graph is <dfn class="terminology">planar</dfn> if it has a planar drawing.<div class="autopermalink" data-description="Paragraph"><a href="#planar-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#planar-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#planar-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t0 lines">Polyhedron</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Vertices <span class="process-math">\(n\)</span>
+</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Edges <span class="process-math">\(m\)</span>
+</th>
+<th scope="col" class="l m b1 r0 l0 t0 lines">Faces <span class="process-math">\(f\)</span>
+</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Tetrahedron</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Octahedron</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Cube</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Icosahedron</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Dodecahedron</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+</table></div>
+<div class="para logical" id="planar-2-3">
+<div class="para">We conjecture the formula</div>
+<div class="displaymath process-math" id="planar-2-3-1">
+\begin{equation*}
+n-m+f = 2
+\end{equation*}
+</div>
+<div class="para">and will sketch a proof through the activity.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#planar-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="planar-2-4">
+<div class="workspace" data-space="0.5cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#planar-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1%;margin-right:1%;grid-template-columns:48.9795918367347% 48.9795918367347%;column-gap:2%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/5-5_math_art_detail.jpg" class="contained" alt="Polyhedra zoomed in so that axis scales are visible"></div></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="external/5-5_math_art_expanded.jpg" class="contained" alt="The plane of polyhedra"></div></div>
+</div></div></section><section class="onepage" id="planar-3"><div class="para" id="planar-3-1">There are two common drawings of <span class="process-math">\(\bfK_4\text{,}\)</span> only one of which is planar. The existence of this planar drawing tells us that <span class="process-math">\(\bfK_4\)</span> is planar. Keep in mind that there is always an unbounded face when we count faces in a planar drawing!<div class="autopermalink" data-description="Paragraph"><a href="#planar-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="planar-3-2">
+<div class="workspace" data-space="2cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#planar-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="planar-3-3">
+<div class="para">Takeaways from the handout:</div>
+<ul class="disc" id="planar-3-3-1">
+<li id="planar-3-3-1-1">
+<div class="para" id="planar-3-3-1-1-1">If <span class="process-math">\(\bfG\)</span> is planar, then <span class="process-math">\(m\leq 3n-6\text{.}\)</span> This is more useful in the form “If <span class="process-math">\(m\gt 3n-6\text{,}\)</span> then <span class="process-math">\(\bfG\)</span> is not planar.”<div class="autopermalink" data-description="Paragraph"><a href="#planar-3-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#planar-3-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="planar-3-3-1-2">
+<div class="para" id="planar-3-3-1-2-1">Corollary: <span class="process-math">\(\bfK_5\)</span> is not planar.<div class="autopermalink" data-description="Paragraph"><a href="#planar-3-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#planar-3-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="planar-3-3-1-3">
+<div class="para" id="planar-3-3-1-3-1">
+<span class="process-math">\(\bfK_{3,3}\)</span> is not planar.<div class="autopermalink" data-description="Paragraph"><a href="#planar-3-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#planar-3-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#planar-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-kuratowski"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kuratowski’s Theorem.</span>
+</h3>
+<div class="para" id="thm-kuratowski-2-1">A graph <span class="process-math">\(\bfG\)</span> is planar if and only if it does not contain a subdivision of <span class="process-math">\(\bfK_5\)</span> or <span class="process-math">\(\bfK_{3,3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-kuratowski-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.11: Kuratowski’s Theorem"><a href="#thm-kuratowski" title="Copy heading and permalink for Theorem 5.11: Kuratowski’s Theorem" aria-label="Copy heading and permalink for Theorem 5.11: Kuratowski’s Theorem">🔗</a></div></article><div class="para" id="planar-3-5">A subdivision is formed by replacing one or more edges of <span class="process-math">\(\bfG\)</span> by <em class="emphasis">disjoint</em> paths. Morally, the only nonplanar graphs contain <span class="process-math">\(\bfK_5\)</span> and <span class="process-math">\(\bfK_{3,3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#planar-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-four-color"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Four Color Theorem.</span>
+</h3>
+<div class="para" id="thm-four-color-2-1">If <span class="process-math">\(\bfG\)</span> is a planar graph, then <span class="process-math">\(\chi(\bfG)\leq 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-four-color-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.12: The Four Color Theorem"><a href="#thm-four-color" title="Copy heading and permalink for Theorem 5.12: The Four Color Theorem" aria-label="Copy heading and permalink for Theorem 5.12: The Four Color Theorem">🔗</a></div></article><div class="para" id="planar-3-7">This theorem was “proved” many times over the years, but all the proofs were flawed until Appel and Haken provided a computer-assisted proof. This was the first computer-assisted proof that could not be readily converted to a pencil and paper proof that ended up being widely accepted. In the early 1990’s, a computer assisted proof with fewer cases was provided, but to this day, no one knows a proof that does not rely on computers.<div class="autopermalink" data-description="Paragraph"><a href="#planar-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Handout 5.4: Planar Graphs"><a href="#planar" title="Copy heading and permalink for Handout 5.4: Planar Graphs" aria-label="Copy heading and permalink for Handout 5.4: Planar Graphs">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-graphs-coloring.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>

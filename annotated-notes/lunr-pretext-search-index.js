@@ -474,8 +474,35 @@ var ptx_lunr_docs = [
   "url": "planar.html",
   "type": "Handout",
   "number": "5.4",
-  "title": "PLanar Graphs",
-  "body": " PLanar Graphs  "
+  "title": "Planar Graphs",
+  "body": " Planar Graphs      A drawing of a graph is a way of associating the graph's vertices with points in the plane and its edges with simple polygonal arcs between the points corresponding to the edge's endpoints.    A planar drawing of a graph is one in which the polygonal arcs corresponding to edges intersect only at the points corresponding to the endpoints of the appropriate edges.    A graph is planar if it has a planar drawing.       Polyhedron  Vertices  Edges  Faces    Tetrahedron  4  6  4    Octahedron  6  12  8    Cube  8  12  6    Icosahedron  12  30  20    Dodecahedron  20  30  12    We conjecture the formula and will sketch a proof through the activity.      Polyhedra zoomed in so that axis scales are visible    The plane of polyhedra      There are two common drawings of , only one of which is planar. The existence of this planar drawing tells us that is planar. Keep in mind that there is always an unbounded face when we count faces in a planar drawing!    Takeaways from the handout:   If is planar, then . This is more useful in the form If , then is not planar.     Corollary: is not planar.     is not planar.      Kuratowski's Theorem   A graph is planar if and only if it does not contain a subdivision of or .    A subdivision is formed by replacing one or more edges of by disjoint paths. Morally, the only nonplanar graphs contain and .   The Four Color Theorem   If is a planar graph, then .    This theorem was proved many times over the years, but all the proofs were flawed until Appel and Haken provided a computer-assisted proof. This was the first computer-assisted proof that could not be readily converted to a pencil and paper proof that ended up being widely accepted. In the early 1990's, a computer assisted proof with fewer cases was provided, but to this day, no one knows a proof that does not rely on computers.   "
+},
+{
+  "id": "planar-2-1",
+  "level": "2",
+  "url": "planar.html#planar-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "drawing planar drawing planar "
+},
+{
+  "id": "thm-kuratowski",
+  "level": "2",
+  "url": "planar.html#thm-kuratowski",
+  "type": "Theorem",
+  "number": "5.11",
+  "title": "Kuratowski’s Theorem.",
+  "body": " Kuratowski's Theorem   A graph is planar if and only if it does not contain a subdivision of or .   "
+},
+{
+  "id": "thm-four-color",
+  "level": "2",
+  "url": "planar.html#thm-four-color",
+  "type": "Theorem",
+  "number": "5.12",
+  "title": "The Four Color Theorem.",
+  "body": " The Four Color Theorem   If is a planar graph, then .   "
 }
 ]
 

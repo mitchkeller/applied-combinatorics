@@ -411,8 +411,35 @@ var ptx_lunr_docs = [
   "url": "planar.html",
   "type": "Handout",
   "number": "5.4",
-  "title": "PLanar Graphs",
-  "body": " PLanar Graphs  "
+  "title": "Planar Graphs",
+  "body": " Planar Graphs      A drawing of a graph is a way of associating the graph's vertices with points in the plane and its edges with simple polygonal arcs between the points corresponding to the edge's endpoints.    A planar drawing of a graph is one in which the polygonal arcs corresponding to edges intersect only at the points corresponding to the endpoints of the appropriate edges.    A graph is planar if it has a planar drawing.       Polyhedron  Vertices  Edges  Faces    Tetrahedron          Octahedron          Cube          Icosahedron          Dodecahedron              Polyhedra zoomed in so that axis scales are visible    The plane of polyhedra          Takeaways from the handout:                 Kuratowski's Theorem   A graph is planar if and only if it does not contain a subdivision of or .       The Four Color Theorem   If is a planar graph, then .     "
+},
+{
+  "id": "planar-2-1",
+  "level": "2",
+  "url": "planar.html#planar-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "drawing planar drawing planar "
+},
+{
+  "id": "thm-kuratowski",
+  "level": "2",
+  "url": "planar.html#thm-kuratowski",
+  "type": "Theorem",
+  "number": "5.11",
+  "title": "Kuratowski’s Theorem.",
+  "body": " Kuratowski's Theorem   A graph is planar if and only if it does not contain a subdivision of or .   "
+},
+{
+  "id": "thm-four-color",
+  "level": "2",
+  "url": "planar.html#thm-four-color",
+  "type": "Theorem",
+  "number": "5.12",
+  "title": "The Four Color Theorem.",
+  "body": " The Four Color Theorem   If is a planar graph, then .   "
 }
 ]
 
