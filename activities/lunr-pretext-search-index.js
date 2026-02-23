@@ -232,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "5.1",
   "title": "Hamiltonian or Not?",
-  "body": " Hamiltonian or Not?    Find a hamiltonian cycle in each graph or explain why there is not one        A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , ,     , ,     , , ,     , ,     , ,     , ,     , ,     , ,     , ,       graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , , ,     , ,     ,     ,     , ,     ,     ,     , ,     ,       graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , ,     , ,     , ,     , ,     ,     , ,     ,     , ,     , ,      graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}                A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpeted cyclically so that, for instance, has neighbors and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                        A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpeted cyclically so that, for instance, has neighbors and . There is also an edge between the vertices with labels and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                            The graph is hamiltonian. One example of a hamiltonian cycle is . (There are others.)    The graph is not hamiltonian. One reason for this is that removing the vertex leaves a disconnected graph. Put another way, forms a cycle, and the only way to get from the other vertices onto that cycle is via vertex . Once you're onto it, there's no way off again. Thus, there's no way to construct a cycle containing all vertices.    The graph is hamiltonian. One example of a hamiltonian cycle is .    The graph is not hamiltonian. This is a nontrivial fact. For those interested in a complete proof, see the end of this document. (You will not be tested on the proof, so it's purely optional reading.)    The graph (formed by adding one edge to the Petersen graph ) is hamiltonian. One example of a hamiltonian cycle is .      Proof the Petersen Graph is not hamiltonian  Consider what a hamiltonian cycle in would look like. The graph has edges, and a hamiltonian cycle would use of them. Thus, you'd have the cycle and five leftover edges that would connect vertices across the cycle ( chords ). How would these edges fit along the cycle? If an edge connected a vertex to a vertex two steps down the cycle (for example, if the cycle contains the sequence of vertices and there's an edge from to ), then there would be a triangle (a cyle on three vertices) in the graph. There is no such cycle in . If a chord connects a vertex to another vertex at distance three along the hamiltonian cycle, then there is a cycle on four vertices. However, there is no such cycle in .  Now suppose that a chord connects a vertex to another vertex at distance four along the hamiltonian cycle. Let be the vertex opposite along the hamiltonian cycle. There is also a chord incident with , connecting it across the hamiltonian cycle to a vertex . We've already explained that the distance from to along the hamiltonian cycle cannot be less than four, and it cannot be five since that would give degree four. Thus the distance along the hamiltonian cycle from to must be four. Now is a cycle of length four (draw a picture to convince yourself), which we don't have in . Finally, the only option that remains is that the chords all connect vertices that are exactly opposite each other on the hamiltonian cycle. However, then if and are adjacent along the hamiltonian cycle and and are the vertices opposite them, is a cycle of length four.    "
+  "body": " Hamiltonian or Not?    Find a hamiltonian cycle in each graph or explain why there is not one        A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , ,     , ,     , , ,     , ,     , ,     , ,     , ,     , ,     , ,       graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , , ,     , ,     ,     ,     , ,     ,     ,     , ,     ,       graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , ,     , ,     , ,     , ,     ,     , ,     ,     , ,     , ,      graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}                A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpreted cyclically so that, for instance, has neighbors and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                        A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpreted cyclically so that, for instance, has neighbors and . There is also an edge between the vertices with labels and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                            The graph is hamiltonian. One example of a hamiltonian cycle is . (There are others.)    The graph is not hamiltonian. One reason for this is that removing the vertex leaves a disconnected graph. Put another way, forms a cycle, and the only way to get from the other vertices onto that cycle is via vertex . Once you're onto it, there's no way off again. Thus, there's no way to construct a cycle containing all vertices.    The graph is hamiltonian. One example of a hamiltonian cycle is .    The graph is not hamiltonian. This is a nontrivial fact. For those interested in a complete proof, see the end of this document. (You will not be tested on the proof, so it's purely optional reading.)    The graph (formed by adding one edge to the Petersen graph ) is hamiltonian. One example of a hamiltonian cycle is .      Proof the Petersen Graph is not hamiltonian  Consider what a hamiltonian cycle in would look like. The graph has edges, and a hamiltonian cycle would use of them. Thus, you'd have the cycle and five leftover edges that would connect vertices across the cycle ( chords ). How would these edges fit along the cycle? If an edge connected a vertex to a vertex two steps down the cycle (for example, if the cycle contains the sequence of vertices and there's an edge from to ), then there would be a triangle (a cyle on three vertices) in the graph. There is no such cycle in . If a chord connects a vertex to another vertex at distance three along the hamiltonian cycle, then there is a cycle on four vertices. However, there is no such cycle in .  Now suppose that a chord connects a vertex to another vertex at distance four along the hamiltonian cycle. Let be the vertex opposite along the hamiltonian cycle. There is also a chord incident with , connecting it across the hamiltonian cycle to a vertex . We've already explained that the distance from to along the hamiltonian cycle cannot be less than four, and it cannot be five since that would give degree four. Thus the distance along the hamiltonian cycle from to must be four. Now is a cycle of length four (draw a picture to convince yourself), which we don't have in . Finally, the only option that remains is that the chords all connect vertices that are exactly opposite each other on the hamiltonian cycle. However, then if and are adjacent along the hamiltonian cycle and and are the vertices opposite them, is a cycle of length four.    "
 },
 {
   "id": "ws-graphs-hamiltonian-2-1",
@@ -241,7 +241,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "5.1",
   "title": "",
-  "body": " Find a hamiltonian cycle in each graph or explain why there is not one        A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , ,     , ,     , , ,     , ,     , ,     , ,     , ,     , ,     , ,       graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , , ,     , ,     ,     ,     , ,     ,     ,     , ,     ,       graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , ,     , ,     , ,     , ,     ,     , ,     ,     , ,     , ,      graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}                A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpeted cyclically so that, for instance, has neighbors and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                        A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpeted cyclically so that, for instance, has neighbors and . There is also an edge between the vertices with labels and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                      "
+  "body": " Find a hamiltonian cycle in each graph or explain why there is not one        A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , ,     , ,     , , ,     , ,     , ,     , ,     , ,     , ,     , ,       graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , , ,     , ,     ,     ,     , ,     ,     ,     , ,     ,       graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}              A graph with 10 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     ,     , , ,     , ,     , ,     , ,     ,     , ,     ,     , ,     , ,      graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}                A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpreted cyclically so that, for instance, has neighbors and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                        A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpreted cyclically so that, for instance, has neighbors and . There is also an edge between the vertices with labels and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                      "
 },
 {
   "id": "ws-graphs-hamiltonian-3-2",
@@ -296,6 +296,150 @@ var ptx_lunr_docs = [
   "number": "5.2.4",
   "title": "<span class=\"process-math\">\\(\\chi(\\bfG_{t+1})=t+1\\)<\/span>.",
   "body": "     What part of the construction ensures that ?        How can you color the vertices of using colors? (Hint: Pair vertices of with vertices of .) What color does get? How many colors have you used and what does this say about ?       Try coloring using only colors. Suppose that is a proper coloring of using the colors . It's safe to assume that (reshuffle the colors otherwise). Let be the set of vertices in the copy of to which assigns color . Can the set be empty? Explain your reasoning.       Since , what do you know about the set (or even number) of colors used on ?        Why can you change the color of each to match the color assigns to and maintain a proper coloring?        Now how many colors have you used on the copy of ?     "
+},
+{
+  "id": "ws-graphs-planar",
+  "level": "1",
+  "url": "ws-graphs-planar.html",
+  "type": "Worksheet",
+  "number": "5.3",
+  "title": "Euler’s Polyhedral Formula",
+  "body": " Euler's Polyhedral Formula   It turns out that you could draw hundreds of connected planar graphs and keep finding the same pattern that arises in the platonic solids:   Euler's Formula   Let be a connected planar graph with vertices and edges. Then every planar drawing of has faces, where satisfies .      Notice that Euler's Formula requires that be a connected planar graph. Find a counterexample to show that the formula does not hold if is a planar graph that is not connected.      Since must be connected, we start by considering the minimal case in which has no cycles (but for the general number of vertices). What type of graph does that mean is? How many edges does have (in terms of )? (In future questions, I'll call this value of by the name .) Verify Euler's formula in this case.      Draw a planar drawing of a connected planar graph with with or vertices and more than edges. Make sure your graph has at least one vertex of degree .     Find , , and for your graph.      Is there an edge you can erase from your graph and leave a graph that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?      Erase an edge from to give you a planar drawing of a connected planar graph . Let , , and be the number of vertices, edges, and faces respectively of . What are for your graph?      Find equations that relate , , and to , , and .        Now let's suppose that is a connected planar graph with vertices and edges where . Suppose that Euler's formula holds for any graph with fewer than edges. (What type of proof are we setting up here?)     Why is there an edge you can delete from to produce a connected planar graph ?      Let , , and be the number of vertices, edges, and faces respectively of . What are in terms of , , and ?      What equation involving , , and must hold? Why?      Prove that .       In the grand scheme of things, Euler's formula doesn't seem that useful for determining if a graph is planar or not. However, we can deduce something useful from it. In this problem, we're going to imagine a fixed planar drawing of a connected planar graph and let , , and be the number of vertices, edges, and faces, respectively, in our planar drawing. We'll assume that to avoid some annoying things.  Let .     If I pick an edge of , what is the largest possible number of faces that can be part of the boundary of? So what does that tell us about the number of ordered pairs in that have as the first coordinate?      Use the previous part to find an inequality involving and (the size of ).      If I pick a face of , what is the smallest possible number of edges that can be used to form the boundary of ?      Use the previous part to find an inequality involving and (the size of ).      Combine two previous parts to get an inequality involving and .      Using Euler's formula and the previous part, show that .      Prove that is not planar.        Recall that the complete bipartite graph is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.     Can you make a planar drawing of ? If not, what does the restriction tell you here?      Notice that since does not contain any vertices of degree , every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces. Since is bipartite, what can you say about the length of every cycle in ?      As in the previous problem, count edge-face pairs. How many pairs must there be for ?      Let be the number of faces bounded by a cycle of length and let be the number of faces bounded by a cycle of length . Express the total number of faces in terms of and . Then express the number of edge-face pairs in terms of and .      What does Euler's formula tell you would have to be for ? What lower bound does this give you for the number of edge-face pairs, and how does this show that is not planar?       For each graph on the next page, find a planar drawing or give a reason why the graph is not planar.     "
+},
+{
+  "id": "ws-graphs-planar-3",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-3",
+  "type": "Theorem",
+  "number": "5.2",
+  "title": "Euler’s Formula.",
+  "body": " Euler's Formula   Let be a connected planar graph with vertices and edges. Then every planar drawing of has faces, where satisfies .   "
+},
+{
+  "id": "ws-graphs-planar-4",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-4",
+  "type": "Problem",
+  "number": "5.3.1",
+  "title": "",
+  "body": "  Notice that Euler's Formula requires that be a connected planar graph. Find a counterexample to show that the formula does not hold if is a planar graph that is not connected.   "
+},
+{
+  "id": "ws-graphs-planar-5",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-5",
+  "type": "Problem",
+  "number": "5.3.2",
+  "title": "",
+  "body": "  Since must be connected, we start by considering the minimal case in which has no cycles (but for the general number of vertices). What type of graph does that mean is? How many edges does have (in terms of )? (In future questions, I'll call this value of by the name .) Verify Euler's formula in this case.   "
+},
+{
+  "id": "ws-graphs-planar-6",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-6",
+  "type": "Problem",
+  "number": "5.3.3",
+  "title": "",
+  "body": "  Draw a planar drawing of a connected planar graph with with or vertices and more than edges. Make sure your graph has at least one vertex of degree .     Find , , and for your graph.      Is there an edge you can erase from your graph and leave a graph that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?      Erase an edge from to give you a planar drawing of a connected planar graph . Let , , and be the number of vertices, edges, and faces respectively of . What are for your graph?      Find equations that relate , , and to , , and .    "
+},
+{
+  "id": "ws-graphs-planar-7",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-7",
+  "type": "Problem",
+  "number": "5.3.4",
+  "title": "",
+  "body": "  Now let's suppose that is a connected planar graph with vertices and edges where . Suppose that Euler's formula holds for any graph with fewer than edges. (What type of proof are we setting up here?)     Why is there an edge you can delete from to produce a connected planar graph ?      Let , , and be the number of vertices, edges, and faces respectively of . What are in terms of , , and ?      What equation involving , , and must hold? Why?      Prove that .    "
+},
+{
+  "id": "ws-graphs-planar-8",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-8",
+  "type": "Problem",
+  "number": "5.3.5",
+  "title": "",
+  "body": "  In the grand scheme of things, Euler's formula doesn't seem that useful for determining if a graph is planar or not. However, we can deduce something useful from it. In this problem, we're going to imagine a fixed planar drawing of a connected planar graph and let , , and be the number of vertices, edges, and faces, respectively, in our planar drawing. We'll assume that to avoid some annoying things.  Let .     If I pick an edge of , what is the largest possible number of faces that can be part of the boundary of? So what does that tell us about the number of ordered pairs in that have as the first coordinate?      Use the previous part to find an inequality involving and (the size of ).      If I pick a face of , what is the smallest possible number of edges that can be used to form the boundary of ?      Use the previous part to find an inequality involving and (the size of ).      Combine two previous parts to get an inequality involving and .      Using Euler's formula and the previous part, show that .      Prove that is not planar.    "
+},
+{
+  "id": "ws-graphs-planar-9",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-9",
+  "type": "Problem",
+  "number": "5.3.6",
+  "title": "",
+  "body": "  Recall that the complete bipartite graph is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.     Can you make a planar drawing of ? If not, what does the restriction tell you here?      Notice that since does not contain any vertices of degree , every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces. Since is bipartite, what can you say about the length of every cycle in ?      As in the previous problem, count edge-face pairs. How many pairs must there be for ?      Let be the number of faces bounded by a cycle of length and let be the number of faces bounded by a cycle of length . Express the total number of faces in terms of and . Then express the number of edge-face pairs in terms of and .      What does Euler's formula tell you would have to be for ? What lower bound does this give you for the number of edge-face pairs, and how does this show that is not planar?    "
+},
+{
+  "id": "ws-graphs-planar-10",
+  "level": "2",
+  "url": "ws-graphs-planar.html#ws-graphs-planar-10",
+  "type": "Problem",
+  "number": "5.3.7",
+  "title": "",
+  "body": "  For each graph on the next page, find a planar drawing or give a reason why the graph is not planar.   "
+},
+{
+  "id": "ws-planar-or-not",
+  "level": "1",
+  "url": "ws-planar-or-not.html",
+  "type": "Worksheet",
+  "number": "5.4",
+  "title": "Planar or Not?",
+  "body": " Planar or Not?       A graph with 6 vertices   A graph with vertices. The adjacencies are given below.    Vertex  Neighbors     , ,     , ,     , , ,     , , , ,     , , ,     , ,       graph={1:[3,4,5],2:[3,4,5],3:[4,6],4:[5,6],5:[6]}                    A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpreted cyclically so that, for instance, has neighbors and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                         A graph with 8 vertices   A graph with vertices. The adjacencies are given below.    Vertex  Neighbors     , , ,     , ,     , ,     , , ,     , ,     , , ,     , , ,     , ,       graph={1:[2,3,5,6],2:[4,6],3:[4,7],4:[7,8],5:[6,7],6:[8],7:[8]}                     A graph with 8 vertices   A graph with vertices. The vertices are arranged at the vertices of a regular octagon. Each vertex has degree . The five neighbors are the two immediately adjacent (on on either side) around the octagon as well as the three opposite. For example, vertex has neighbors and (adjacent on the octagon) and (opposite on the octagon).     N=8  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                     (Cube with diagonals of all six faces)   A graph with 8 vertices   A graph with vertices. The adjacencies are given below.    Vertex  Neighbors     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,       graph={1:[2,3,4,5,6,7],2:[3,4,5,6,8],3:[4,5,7,8],4:[6,7,8],5:[6,7,8],6:[7,8],7:[8]}                   (cube with interior diagonals)   A graph with 8 vertices   A graph with 8 vertices. The adjacencies are given below.    Vertex  Neighbors     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,       graph={1:[2,3,5,8],2:[4,6,7],3:[4,6,7],4:[5,8],5:[6,7],6:[8],7:[8]}                    "
+},
+{
+  "id": "ws-planar-or-not-2-1-1",
+  "level": "2",
+  "url": "ws-planar-or-not.html#ws-planar-or-not-2-1-1",
+  "type": "Figure",
+  "number": "5.3",
+  "title": "",
+  "body": "   A graph with 6 vertices   A graph with vertices. The adjacencies are given below.    Vertex  Neighbors     , ,     , ,     , , ,     , , , ,     , , ,     , ,       graph={1:[3,4,5],2:[3,4,5],3:[4,6],4:[5,6],5:[6]}               "
+},
+{
+  "id": "ws-planar-or-not-2-1-2",
+  "level": "2",
+  "url": "ws-planar-or-not.html#ws-planar-or-not-2-1-2",
+  "type": "Figure",
+  "number": "5.4",
+  "title": "",
+  "body": "    A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label has neighbors , , and . The first two adjacencies are interpreted cyclically so that, for instance, has neighbors and . For the vertices with labels 5 through 9, the vertex with label has neighbors , , and . The second and third adjacencies are interpreted cyclically so that, for instance, has neighbors and .     N=5  g(t)=(0.5*cos(2*pi*t\/N), 0.5*sin(2*pi*t\/N))  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                   "
+},
+{
+  "id": "ws-planar-or-not-2-2-1",
+  "level": "2",
+  "url": "ws-planar-or-not.html#ws-planar-or-not-2-2-1",
+  "type": "Figure",
+  "number": "5.5",
+  "title": "",
+  "body": "   A graph with 8 vertices   A graph with vertices. The adjacencies are given below.    Vertex  Neighbors     , , ,     , ,     , ,     , , ,     , ,     , , ,     , , ,     , ,       graph={1:[2,3,5,6],2:[4,6],3:[4,7],4:[7,8],5:[6,7],6:[8],7:[8]}                 "
+},
+{
+  "id": "ws-planar-or-not-2-2-2",
+  "level": "2",
+  "url": "ws-planar-or-not.html#ws-planar-or-not-2-2-2",
+  "type": "Figure",
+  "number": "5.6",
+  "title": "",
+  "body": "   A graph with 8 vertices   A graph with vertices. The vertices are arranged at the vertices of a regular octagon. Each vertex has degree . The five neighbors are the two immediately adjacent (on on either side) around the octagon as well as the three opposite. For example, vertex has neighbors and (adjacent on the octagon) and (opposite on the octagon).     N=8  f(t)=(cos(2*pi*t\/N), sin(2*pi*t\/N))                 "
+},
+{
+  "id": "ws-planar-or-not-2-3-1",
+  "level": "2",
+  "url": "ws-planar-or-not.html#ws-planar-or-not-2-3-1",
+  "type": "Figure",
+  "number": "5.7",
+  "title": "",
+  "body": " (Cube with diagonals of all six faces)   A graph with 8 vertices   A graph with vertices. The adjacencies are given below.    Vertex  Neighbors     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,     , , , , ,       graph={1:[2,3,4,5,6,7],2:[3,4,5,6,8],3:[4,5,7,8],4:[6,7,8],5:[6,7,8],6:[7,8],7:[8]}                 "
+},
+{
+  "id": "ws-planar-or-not-2-3-2",
+  "level": "2",
+  "url": "ws-planar-or-not.html#ws-planar-or-not-2-3-2",
+  "type": "Figure",
+  "number": "5.8",
+  "title": "",
+  "body": " (cube with interior diagonals)   A graph with 8 vertices   A graph with 8 vertices. The adjacencies are given below.    Vertex  Neighbors     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,       graph={1:[2,3,5,8],2:[4,6,7],3:[4,6,7],4:[5,8],5:[6,7],6:[8],7:[8]}                 "
 }
 ]
 

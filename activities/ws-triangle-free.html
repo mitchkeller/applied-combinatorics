@@ -105,14 +105,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.14';
+eBookConfig.runestone_version = '7.11.15';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.529fd9398bfbd03e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -140,7 +140,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="embed-code-container">
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
-</div></span><span class="treebuttons"><a class="previous-button button" href="ws-graphs-hamiltonian.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ws-graphs.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></span><span class="treebuttons"><a class="previous-button button" href="ws-graphs-hamiltonian.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ws-graphs.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-graphs-planar.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
 \newcommand{\ints}{\mathbb{Z}}
 \newcommand{\posints}{\mathbb{N}}
@@ -239,6 +239,8 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-graphs-hamiltonian.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Hamiltonian or Not?</span></a></div></li>
 <li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-triangle-free.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Graphs with <span class="process-math">\(\omega(\bfG)=2\)</span> and <span class="process-math">\(\chi(\bfG)\)</span> large</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-graphs-planar.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Euler’s Polyhedral Formula</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-planar-or-not.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Planar or Not?</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -362,7 +364,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Task 5.2.4.f"><a href="#ws-triangle-free-3-1-7" title="Copy heading and permalink for Task 5.2.4.f" aria-label="Copy heading and permalink for Task 5.2.4.f">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.2.4: \chi(\bfG_{t+1})=t+1"><a href="#ws-triangle-free-3-1" title="Copy heading and permalink for Problem 5.2.4: \chi(\bfG_{t+1})=t+1" aria-label="Copy heading and permalink for Problem 5.2.4: \chi(\bfG_{t+1})=t+1">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large"><a href="#ws-triangle-free" title="Copy heading and permalink for Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large" aria-label="Copy heading and permalink for Worksheet 5.2: Graphs with \omega(\bfG)=2 and \chi(\bfG) large">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ws-graphs-hamiltonian.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="ws-graphs-hamiltonian.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-graphs-planar.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

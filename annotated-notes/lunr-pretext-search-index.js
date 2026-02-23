@@ -467,6 +467,15 @@ var ptx_lunr_docs = [
   "number": "5.10",
   "title": "",
   "body": "  A graph is bipartite if and only if it does not contain any odd cycles.   "
+},
+{
+  "id": "planar",
+  "level": "1",
+  "url": "planar.html",
+  "type": "Handout",
+  "number": "5.4",
+  "title": "PLanar Graphs",
+  "body": " PLanar Graphs  "
 }
 ]
 

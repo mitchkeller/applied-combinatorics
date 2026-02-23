@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ACN Antichain and Chain Partitioning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="In-Class Notes to Accompany Applied Combinatorics">
+<meta property="book:author" content="Mitchel T.
+					Keller">
+<meta property="book:author" content="William T.
+					Trotter">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="httpw://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></h1>
+<p class="byline">Mitchel T. Keller, William T. Trotter</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div></span><span class="treebuttons"><a class="previous-button button" href="notes-posets-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes-posets.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="notes-posets-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\posints}{\mathbb{N}}
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexes}{\mathbb{C}}
+\newcommand{\twospace}{\mathbb{R}^2}
+\newcommand{\threepace}{\mathbb{R}^3}
+\newcommand{\dspace}{\mathbb{R}^d}
+\newcommand{\nni}{\mathbb{N}_0}
+\newcommand{\nonnegints}{\mathbb{N}_0}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\prob}{\operatorname{prob}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\height}{\operatorname{height}}
+\newcommand{\width}{\operatorname{width}}
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\crit}{\operatorname{crit}}
+\newcommand{\inc}{\operatorname{inc}}
+\newcommand{\HP}{\mathbf{H_P}}
+\newcommand{\HCP}{\mathbf{H^c_P}}
+\newcommand{\GP}{\mathbf{G_P}}
+\newcommand{\GQ}{\mathbf{G_Q}}
+\newcommand{\AG}{\mathbf{A_G}}
+\newcommand{\GCP}{\mathbf{G^c_P}}
+\newcommand{\PXP}{\mathbf{P}=(X,P)}
+\newcommand{\QYQ}{\mathbf{Q}=(Y,Q)}
+\newcommand{\GVE}{\mathbf{G}=(V,E)}
+\newcommand{\HWF}{\mathbf{H}=(W,F)}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfQ}{\mathbf{Q}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfNP}{\mathbf{NP}}
+\newcommand{\bftwo}{\mathbf{2}}
+\newcommand{\cgA}{\mathcal{A}}
+\newcommand{\cgB}{\mathcal{B}}
+\newcommand{\cgC}{\mathcal{C}}
+\newcommand{\cgD}{\mathcal{D}}
+\newcommand{\cgE}{\mathcal{E}}
+\newcommand{\cgF}{\mathcal{F}}
+\newcommand{\cgG}{\mathcal{G}}
+\newcommand{\cgM}{\mathcal{M}}
+\newcommand{\cgN}{\mathcal{N}}
+\newcommand{\cgP}{\mathcal{P}}
+\newcommand{\cgR}{\mathcal{R}}
+\newcommand{\cgS}{\mathcal{S}}
+\newcommand{\bfn}{\mathbf{n}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfk}{\mathbf{k}}
+\newcommand{\bfs}{\mathbf{s}}
+\newcommand{\bijection}{\xrightarrow[\text{onto}]{\text{$1$--$1$}}}
+\newcommand{\injection}{\xrightarrow[]{\text{$1$--$1$}}}
+\newcommand{\surjection}{\xrightarrow[\text{onto}]{}}
+\newcommand{\nin}{\not\in}
+\newcommand{\prufer}{\text{prüfer}}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\var}{var}
+\newcommand{\inv}{^{-1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="appcomb-notes-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="appcomb-notes-3.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-3-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Combinatorial Proofs</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-3-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Ubiquitous Nature of Binomial Coefficients</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="appcomb-notes-4.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-4-2.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Recursive Counting</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-4-3.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-php-notes.html" class="internal"><span class="codenumber">4</span> <span class="title">Placeholder</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="appcomb-notes-6.html" class="internal"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-6-2.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-eulerham.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-6-4.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Graph Coloring</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="appcomb-notes-6-5.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Counting Labeled Trees</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="notes-posets.html" class="internal"><span class="codenumber">6</span> <span class="title">Partially Ordered Sets</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-posets-2.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Notation and Terminology</span></a></div></li>
+<li class="toc-item toc-handout active"><div class="toc-title-box"><a href="notes-posets-3.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Antichain and Chain Partitioning</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-posets-4.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Linear Extensions and the Subset Lattice</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-posets-5.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Interval Orders</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-posets-6.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Algorithms for Interval Orders</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="notes-inclusion-exclusion.html" class="internal"><span class="codenumber">7</span> <span class="title">Principle of Inclusion-Exclusion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-inclusion-exclusion-2.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction; Counting Surjections</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-inclusion-exclusion-3.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Counting Derangements and Euler’s <span class="process-math">\(\phi\)</span> Function</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="notes-genfunction.html" class="internal"><span class="codenumber">8</span> <span class="title">Generating Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-genfunction-2.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Ordinary Generating Functions</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-genfunction-3.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Partitions and Newton’s Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-exp-genfn.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Generating Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="notes-recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction to Advancement Operators</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-3.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Homogeneous Recurrence Equations</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-rubots.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Solving a Nonlinear Recurrence</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="handout" id="notes-posets-3" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antichain and Chain Partitioning</span><div class="print-links"><a href="notes-posets-3-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h2>
+<section class="onepage" id="notes-posets-3-2"><section class="paragraphs" id="notes-posets-3-2-1"><h3 class="heading"><span class="title">Duals, Cover Graphs, and Comparability Graphs.</span></h3>
+<div class="sbsgroup">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="notes-posets-3-2-1-2-1-1">Dual of <span class="process-math">\(\bfP\)</span> is denoted <span class="process-math">\(\bfP^d\)</span><div class="workspace" data-space="4cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="notes-posets-3-2-1-2-1-2">Comparability Graph<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="notes-posets-3-2-1-2-2-1">Cover Graph<div class="workspace" data-space="4cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="notes-posets-3-2-1-2-2-2">Incomparability Graph<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+</div></div>
+</div>
+<div class="para logical" id="notes-posets-3-2-1-3">
+<div class="para">Bob’s Claims:</div>
+<ol class="decimal ol-marker-2" id="notes-posets-3-2-1-3-1">
+<li id="notes-posets-3-2-1-3-1-1">
+<div class="para" id="notes-posets-3-2-1-3-1-1-1">Only linear orders have paths as cover graphs.<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#notes-posets-3-2-1-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="notes-posets-3-2-1-3-1-2">
+<div class="para" id="notes-posets-3-2-1-3-1-2-1">A poset and its dual have the same cover graph and the same comparability graph.<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#notes-posets-3-2-1-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="notes-posets-3-2-1-3-1-3">
+<div class="para" id="notes-posets-3-2-1-3-1-3-1">Any two posets with the same cover graph have the same height and the same width.<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#notes-posets-3-2-1-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="notes-posets-3-2-1-3-1-4">
+<div class="para" id="notes-posets-3-2-1-3-1-4-1">Any two posets with the same comparability graph have the same height and the same width.<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#notes-posets-3-2-1-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="notes-posets-3-2-1-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="notes-posets-3-2-1-4-1-1">Use the small pieces of paper to fill in the grid. Every row in the “Poset” column will contain exactly one poset term. You will use the rest of the pieces of paper to fill in the “Comparability Graph” and “Incomparability Graph” columns as best as you can. It is possible that some squares in those columns will be blank or that some will contain more than one piece of paper. You will use all the pieces of paper, however!<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 6.2.1"><a href="#notes-posets-3-2-1-4" title="Copy heading and permalink for Activity 6.2.1" aria-label="Copy heading and permalink for Activity 6.2.1">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: Duals, Cover Graphs, and Comparability Graphs"><a href="#notes-posets-3-2-1" title="Copy heading and permalink for Paragraphs: Duals, Cover Graphs, and Comparability Graphs" aria-label="Copy heading and permalink for Paragraphs: Duals, Cover Graphs, and Comparability Graphs">🔗</a></div></section></section><section class="onepage" id="notes-posets-3-3"><section class="paragraphs" id="notes-posets-3-3-1"><h3 class="heading"><span class="title">Height and Antichain Partitioning.</span></h3>
+<article class="theorem theorem-like" id="thm-dual-dilworth"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dual of Dilworth’s Theorem.</span>
+</h4>
+<div class="para logical" id="thm-dual-dilworth-2-1">
+<div class="para">A poset <span class="process-math">\(\bfP=(X,P')\)</span> has height <span class="process-math">\(h\)</span> if and only if <span class="process-math">\(h\)</span> is the smallest number so that there exist <span class="process-math">\(h\)</span> disjoint antichains <span class="process-math">\(A_{1},\dots, A_{h}\)</span> with</div>
+<div class="displaymath process-math" id="thm-dual-dilworth-2-1-6">
+\begin{equation*}
+X= A_{1}\cup A_{2}\cup\cdots\cup A_{h}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-dual-dilworth-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.10: Dual of Dilworth’s Theorem"><a href="#thm-dual-dilworth" title="Copy heading and permalink for Theorem 6.10: Dual of Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.10: Dual of Dilworth’s Theorem">🔗</a></div></article><article class="proof" id="thm-dual-dilworth-3"><h4 class="heading"><span class="title">Proof by algorithm.</span></h4>
+<div class="para logical" id="thm-dual-dilworth-3-2">
+<ul class="disc" id="thm-dual-dilworth-3-2-1">
+<li id="thm-dual-dilworth-3-2-1-1">
+<div class="para" id="thm-dual-dilworth-3-2-1-1-1">Let <span class="process-math">\(\bfP_{1} = \bfP\text{.}\)</span> Place minimal elements of <span class="process-math">\(\bfP_{1}\)</span> in <span class="process-math">\(A_{1}\text{.}\)</span> Let <span class="process-math">\(\bfP_{2}\)</span> be formed from <span class="process-math">\(\bfP_{1}\)</span> by deleting the points in <span class="process-math">\(A_{1}\text{.}\)</span> Place minimal elements of <span class="process-math">\(\bfP_{2}\)</span> in <span class="process-math">\(A_{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-dual-dilworth-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-dual-dilworth-3-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-dual-dilworth-3-2-1-2">
+<div class="para" id="thm-dual-dilworth-3-2-1-2-1">General step: Form <span class="process-math">\(\bfP_{i+1}\)</span> by removing <span class="process-math">\(A_{i}\)</span> from <span class="process-math">\(\bfP_{i}\text{.}\)</span> Let <span class="process-math">\(A_{i+1}\)</span> be the minimal elements of <span class="process-math">\(\bfP_{i+1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-dual-dilworth-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-dual-dilworth-3-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-dual-dilworth-3-2-1-3">
+<div class="para" id="thm-dual-dilworth-3-2-1-3-1">Continue until every point is in an antichain.<div class="autopermalink" data-description="Paragraph"><a href="#thm-dual-dilworth-3-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-dual-dilworth-3-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-dual-dilworth-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.10.1: Proof by algorithm"><a href="#thm-dual-dilworth-3" title="Copy heading and permalink for Proof 6.10.1: Proof by algorithm" aria-label="Copy heading and permalink for Proof 6.10.1: Proof by algorithm">🔗</a></div></article><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:25% 75%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><img src="generated/prefigure/notes-antichain-part-examp.svg" role="img" class="contained" alt="A small poset"></div>
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="notes-posets-3-3-1-3-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-3-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+</div></div>
+<div class="para" id="notes-posets-3-3-1-4">
+<em class="alert">Handout</em><div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-3-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Height and Antichain Partitioning"><a href="#notes-posets-3-3-1" title="Copy heading and permalink for Paragraphs: Height and Antichain Partitioning" aria-label="Copy heading and permalink for Paragraphs: Height and Antichain Partitioning">🔗</a></div></section></section><section class="onepage" id="notes-posets-3-4"><section class="paragraphs" id="notes-posets-3-4-1"><h3 class="heading"><span class="title">Chain Partitioning and Width.</span></h3>
+<div class="para" id="notes-posets-3-4-1-2">Let’s look back at the Dual of Dilworth’s Theorem. What would be a similar result for width?<div class="workspace" data-space="5cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="notes-posets-3-4-1-3"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dilworths Theorem.</span>
+</h4>
+<div class="para logical" id="notes-posets-3-4-1-3-2-1">
+<div class="para">Let <span class="process-math">\(\bfP=(X,P')\)</span> be a poset. Then <span class="process-math">\(w\)</span> is the width of <span class="process-math">\(\bfP\)</span> if and only if <span class="process-math">\(w\)</span> is the smallest number so that there exist <span class="process-math">\(w\)</span> disjoint chains <span class="process-math">\(C_{1},C_{2},\dots C_{w}\)</span> with</div>
+<div class="displaymath process-math" id="notes-posets-3-4-1-3-2-1-7">
+\begin{equation*}
+X=C_{1}\cup C_{2}\cup \cdots\cup C_{w}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-4-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.11: Dilworths Theorem"><a href="#notes-posets-3-4-1-3" title="Copy heading and permalink for Theorem 6.11: Dilworths Theorem" aria-label="Copy heading and permalink for Theorem 6.11: Dilworths Theorem">🔗</a></div></article><div class="para" id="notes-posets-3-4-1-4"> <div class="workspace" data-space="16cm"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-3-4-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Chain Partitioning and Width"><a href="#notes-posets-3-4-1" title="Copy heading and permalink for Paragraphs: Chain Partitioning and Width" aria-label="Copy heading and permalink for Paragraphs: Chain Partitioning and Width">🔗</a></div></section></section><div class="autopermalink" data-description="Handout 6.2: Antichain and Chain Partitioning"><a href="#notes-posets-3" title="Copy heading and permalink for Handout 6.2: Antichain and Chain Partitioning" aria-label="Copy heading and permalink for Handout 6.2: Antichain and Chain Partitioning">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="notes-posets-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-posets-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
