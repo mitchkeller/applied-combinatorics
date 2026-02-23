@@ -1,891 +1,1218 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-graphs" component="graphs">
   <title>Graphs</title>
-
+  
   <worksheet xml:id="ws-graphs-hamiltonian" component="graphs-eulerham">
     <title>Hamiltonian or Not?</title>
     <page>
       <figure>
         <caption>Find a hamiltonian cycle in each graph or explain why there is not one</caption>
-      <sbsgroup>
-      <sidebyside widths="30% 40% 30%">
-        <figure>
-          <caption><m>\bfG_1</m></caption>
-    <image>
-      <description>
-        <p>
-          A graph with 10 vertices. The neighbors of each vertex are given in the table below.
-        </p>
-        <tabular>
-          <row>
-            <cell>Vertex</cell>
-            <cell>Neighbors</cell>
-          </row>
-          <row>
-            <cell><m>1</m></cell>
-            <cell><m>4</m>, <m>5</m></cell>
-          </row>
-          <row>
-            <cell><m>2</m></cell>
-            <cell><m>3</m>, <m>6</m>, <m>9</m></cell>
-          </row>
-          <row>
-            <cell><m>3</m></cell>
-            <cell><m>2</m>, <m>7</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>4</m></cell>
-            <cell><m>1</m>, <m>7</m>, <m>8</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>5</m></cell>
-            <cell><m>1</m>, <m>6</m>, <m>7</m></cell>
-          </row>
-          <row>
-            <cell><m>6</m></cell>
-            <cell><m>2</m>, <m>5</m>, <m>8</m></cell>
-          </row>
-          <row>
-            <cell><m>7</m></cell>
-            <cell><m>3</m>, <m>4</m>, <m>5</m></cell>
-          </row>
-          <row>
-            <cell><m>8</m></cell>
-            <cell><m>4</m>, <m>6</m>, <m>9</m></cell>
-          </row>
-          <row>
-            <cell><m>9</m></cell>
-            <cell><m>2</m>, <m>8</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>10</m></cell>
-            <cell><m>3</m>, <m>4</m>, <m>9</m></cell>
-          </row>
-        </tabular>
-      </description>
-      <prefigure xmlns="https://prefigure.org" label="img-hamgraph1">
-        <diagram dimensions="(200,300)" margins="5">
-          <definition>graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}</definition>
-          <coordinates bbox="(-1,-1,1,1)">
-            <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes">
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-    </figure>
-    <figure>
-          <caption><m>\bfG_2</m></caption>
-    <image>
-      <description>
-        <p>
-          A graph with 10 vertices. The neighbors of each vertex are given in the table below.
-        </p>
-        <tabular>
-          <row>
-            <cell>Vertex</cell>
-            <cell>Neighbors</cell>
-          </row>
-          <row>
-            <cell><m>1</m></cell>
-            <cell><m>2</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>2</m></cell>
-            <cell><m>1</m>, <m>4</m>, <m>5</m>, <m>7</m>, <m>9</m></cell>
-          </row>
-          <row>
-            <cell><m>3</m></cell>
-            <cell><m>7</m>, <m>8</m>, <m>9</m></cell>
-          </row>
-          <row>
-            <cell><m>4</m></cell>
-            <cell><m>2</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>5</m></cell>
-            <cell><m>2</m>, <m>6</m></cell>
-          </row>
-          <row>
-            <cell><m>6</m></cell>
-            <cell><m>5</m>, <m>8</m>, <m>9</m></cell>
-          </row>
-          <row>
-            <cell><m>7</m></cell>
-            <cell><m>2</m>, <m>3</m></cell>
-          </row>
-          <row>
-            <cell><m>8</m></cell>
-            <cell><m>3</m>, <m>6</m></cell>
-          </row>
-          <row>
-            <cell><m>9</m></cell>
-            <cell><m>2</m>, <m>3</m>, <m>6</m></cell>
-          </row>
-          <row>
-            <cell><m>10</m></cell>
-            <cell><m>1</m>, <m>4</m></cell>
-          </row>
-        </tabular>
-      </description>
-      <prefigure xmlns="https://prefigure.org" label="img-hamgraph2">
-        <diagram dimensions="(300,300)" margins="5">
-          <definition>graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}</definition>
-          <coordinates bbox="(-1,-1,1,1)">
-            <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" layout="circular" labels="yes">
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-    </figure>
-    <figure>
-          <caption><m>\bfG_3</m></caption>
-    <image>
-      <description>
-        <p>
-          A graph with 10 vertices. The neighbors of each vertex are given in the table below.
-        </p>
-        <tabular>
-          <row>
-            <cell>Vertex</cell>
-            <cell>Neighbors</cell>
-          </row>
-          <row>
-            <cell><m>1</m></cell>
-            <cell><m>5</m>, <m>7</m></cell>
-          </row>
-          <row>
-            <cell><m>2</m></cell>
-            <cell><m>3</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
-          </row>
-          <row>
-            <cell><m>3</m></cell>
-            <cell><m>2</m>, <m>8</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>4</m></cell>
-            <cell><m>7</m>, <m>9</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>5</m></cell>
-            <cell><m>1</m>, <m>2</m>, <m>6</m></cell>
-          </row>
-          <row>
-            <cell><m>6</m></cell>
-            <cell><m>2</m>, <m>5</m></cell>
-          </row>
-          <row>
-            <cell><m>7</m></cell>
-            <cell><m>1</m>, <m>2</m>, <m>4</m></cell>
-          </row>
-          <row>
-            <cell><m>8</m></cell>
-            <cell><m>3</m>, <m>9</m></cell>
-          </row>
-          <row>
-            <cell><m>9</m></cell>
-            <cell><m>4</m>, <m>8</m>, <m>10</m></cell>
-          </row>
-          <row>
-            <cell><m>10</m></cell>
-            <cell><m>3</m>, <m>4</m>, <m>9</m></cell>
-          </row>
-        </tabular>
-    </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph3">
-        <diagram dimensions="(200,300)" margins="5">
-          <definition>graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}</definition>
-          <coordinates bbox="(-1,-1,1,1)">
-            <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" layout="spring" labels="yes">
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-    </figure>
-  </sidebyside>
-  <sidebyside widths="50% 50%">
-  <figure>
-          <caption><m>\bfG_4</m></caption>
-    <image>
-      <description>
-        <p>
-          A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <m>i</m> has neighbors <m>i-1</m>, <m>i+1</m>, and <m>i+5</m>. The first two adjacencies are interpreted cyclically so that, for instance, <m>4</m> has neighbors <m>3</m> and <m>0</m>. For the vertices with labels 5 through 9, the vertex with label <m>i</m> has neighbors <m>i-5</m>, <m>i+2</m>, and <m>i+3</m>. The second and third adjacencies are interpeted cyclically so that, for instance, <m>9</m> has neighbors <m>6</m> and <m>7</m>.
-        </p>
-      </description>
-      <prefigure xmlns="https://prefigure.org" label="petersen-graph">
-        <diagram dimensions="(300,300)" margins="15">
-          <definition>N=5</definition>
-          <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
-          <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
-          <coordinates bbox="(-1,-1,1,1)">
-            <network scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
-              <node at="0" p="f(0)" edges="[1,4,5]"/>
-              <node at="1" p="f(1)" edges="[2,6]"/>
-              <node at="2" p="f(2)" edges="[3,7]"/>
-              <node at="3" p="f(3)" edges="[4,8]"/>
-              <node at="4" p="f(4)" edges="[9]"/>
-              <node at="5" p="g(0)" edges="[7,8]"/>
-              <node at="6" p="g(1)" edges="[8,9]"/>
-              <node at="7" p="g(2)" edges="[9]"/>
-              <node at="8" p="g(3)" edges="[]"/>
-              <node at="9" p="g(4)" edges="[]"/>
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>
-    </figure>
-  <figure>
-          <caption><m>\bfG_5</m></caption>
-    <image>
-      <description>
-        <p>
-          A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <m>i</m> has neighbors <m>i-1</m>, <m>i+1</m>, and <m>i+5</m>. The first two adjacencies are interpreted cyclically so that, for instance, <m>4</m> has neighbors <m>3</m> and <m>0</m>. For the vertices with labels 5 through 9, the vertex with label <m>i</m> has neighbors <m>i-5</m>, <m>i+2</m>, and <m>i+3</m>. The second and third adjacencies are interpeted cyclically so that, for instance, <m>9</m> has neighbors <m>6</m> and <m>7</m>. There is also an edge between the vertices with labels <m>7</m> and <m>8</m>.
-        </p>
-      </description>
-      <prefigure xmlns="https://prefigure.org" label="petersen-plus-e">
-        <diagram dimensions="(300,300)" margins="15">
-          <definition>N=5</definition>
-          <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
-          <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
-          <coordinates bbox="(-1,-1,1,1)">
-            <network scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
-              <node at="0" p="f(0)" edges="[1,4,5]"/>
-              <node at="1" p="f(1)" edges="[2,6]"/>
-              <node at="2" p="f(2)" edges="[3,7]"/>
-              <node at="3" p="f(3)" edges="[4,8]"/>
-              <node at="4" p="f(4)" edges="[9]"/>
-              <node at="5" p="g(0)" edges="[7,8]"/>
-              <node at="6" p="g(1)" edges="[8,9]"/>
-              <node at="7" p="g(2)" edges="[9,8]"/>
-              <node at="8" p="g(3)" edges="[]"/>
-              <node at="9" p="g(4)" edges="[]"/>
-            </network>
-          </coordinates>
-        </diagram>
-      </prefigure>
-    </image>   
-    </figure>
-    </sidebyside>
-  </sbsgroup>
-</figure>
-  </page>
-  <page component="ham-not-soln">
-    <p>
-      <ol>
-        <li>
-          <p>
-            The graph <m>\bfG_{1}</m> is hamiltonian.
-            One example of a hamiltonian cycle is <m>1,5,7,3,2,6,8,9,10,4</m>.
-            (There are others.)
-          </p>
-        </li>
-
-        <li>
-          <p>
-            The graph <m>\bfG_{2}</m> is not hamiltonian.
-            One reason for this is that removing the vertex <m>2</m> leaves a disconnected graph.
-            Put another way, <m>1,10,4,2</m> forms a cycle, and the only way to get from the other vertices onto that cycle is via vertex <m>2</m>.
-            Once you're onto it, there's no way off again.
-            Thus, there's no way to construct a cycle containing all <m>10</m> vertices.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            The graph <m>\bfG_{3}</m> is hamiltonian.
-            One example of a hamiltonian cycle is <m>1,5,6,2,3,8,9,10,4,7</m>.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            The graph <m>\bfG_{4}</m> is not hamiltonian.
-            This is a nontrivial fact.
-            For those interested in a complete proof, see the end of this document.
-            (You will not be tested on the proof, so it's purely optional reading.)
-          </p>
-        </li>
-
-        <li>
-          <p>
-            The graph <m>\bfG_{5}</m> (formed by adding one edge to the Petersen graph <m>\bfG_{1}</m>) is hamiltonian.
-            One example of a hamiltonian cycle is <m>10,7,1,5,8,4,6,3,2,9</m>.
-          </p>
-        </li>
-      </ol>
-    </p>
-
-
-    <proof>
-      <title>Proof the Petersen Graph is not hamiltonian</title>
-
+        <sbsgroup>
+          <sidebyside widths="30% 40% 30%">
+            <figure>
+              <caption><m>\bfG_1</m></caption>
+              <image>
+                <description>
+                  <p>
+                    A graph with 10 vertices. The neighbors of each vertex are given in the table below.
+                  </p>
+                  <tabular>
+                    <row>
+                      <cell>Vertex</cell>
+                      <cell>Neighbors</cell>
+                    </row>
+                    <row>
+                      <cell><m>1</m></cell>
+                      <cell><m>4</m>, <m>5</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>2</m></cell>
+                      <cell><m>3</m>, <m>6</m>, <m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>3</m></cell>
+                      <cell><m>2</m>, <m>7</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>4</m></cell>
+                      <cell><m>1</m>, <m>7</m>, <m>8</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>1</m>, <m>6</m>, <m>7</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>2</m>, <m>5</m>, <m>8</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>7</m></cell>
+                      <cell><m>3</m>, <m>4</m>, <m>5</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>8</m></cell>
+                      <cell><m>4</m>, <m>6</m>, <m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>9</m></cell>
+                      <cell><m>2</m>, <m>8</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>10</m></cell>
+                      <cell><m>3</m>, <m>4</m>, <m>9</m></cell>
+                    </row>
+                  </tabular>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="img-hamgraph1">
+                  <diagram dimensions="(200,300)" margins="5">
+                    <definition>graph={1:[4,5],2:[3,6,9],3:[7,10],4:[7,8,10],5:[6,7],6:[8],8:[9],9:[10]}</definition>
+                    <coordinates bbox="(-1,-1,1,1)">
+                      <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes">
+                      </network>
+                    </coordinates>
+                  </diagram>
+                </prefigure>
+              </image>
+            </figure>
+            <figure>
+              <caption><m>\bfG_2</m></caption>
+              <image>
+                <description>
+                  <p>
+                    A graph with 10 vertices. The neighbors of each vertex are given in the table below.
+                  </p>
+                  <tabular>
+                    <row>
+                      <cell>Vertex</cell>
+                      <cell>Neighbors</cell>
+                    </row>
+                    <row>
+                      <cell><m>1</m></cell>
+                      <cell><m>2</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>2</m></cell>
+                      <cell><m>1</m>, <m>4</m>, <m>5</m>, <m>7</m>, <m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>3</m></cell>
+                      <cell><m>7</m>, <m>8</m>, <m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>4</m></cell>
+                      <cell><m>2</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>2</m>, <m>6</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>5</m>, <m>8</m>, <m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>7</m></cell>
+                      <cell><m>2</m>, <m>3</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>8</m></cell>
+                      <cell><m>3</m>, <m>6</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>9</m></cell>
+                      <cell><m>2</m>, <m>3</m>, <m>6</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>10</m></cell>
+                      <cell><m>1</m>, <m>4</m></cell>
+                    </row>
+                  </tabular>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="img-hamgraph2">
+                  <diagram dimensions="(300,300)" margins="5">
+                    <definition>graph={1:[2,10],2:[5,9,4,7],3:[7,8,9],4:[10],5:[6],6:[8,9]}</definition>
+                    <coordinates bbox="(-1,-1,1,1)">
+                      <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" layout="circular" labels="yes">
+                      </network>
+                    </coordinates>
+                  </diagram>
+                </prefigure>
+              </image>
+            </figure>
+            <figure>
+              <caption><m>\bfG_3</m></caption>
+              <image>
+                <description>
+                  <p>
+                    A graph with 10 vertices. The neighbors of each vertex are given in the table below.
+                  </p>
+                  <tabular>
+                    <row>
+                      <cell>Vertex</cell>
+                      <cell>Neighbors</cell>
+                    </row>
+                    <row>
+                      <cell><m>1</m></cell>
+                      <cell><m>5</m>, <m>7</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>2</m></cell>
+                      <cell><m>3</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>3</m></cell>
+                      <cell><m>2</m>, <m>8</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>4</m></cell>
+                      <cell><m>7</m>, <m>9</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>5</m></cell>
+                      <cell><m>1</m>, <m>2</m>, <m>6</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>6</m></cell>
+                      <cell><m>2</m>, <m>5</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>7</m></cell>
+                      <cell><m>1</m>, <m>2</m>, <m>4</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>8</m></cell>
+                      <cell><m>3</m>, <m>9</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>9</m></cell>
+                      <cell><m>4</m>, <m>8</m>, <m>10</m></cell>
+                    </row>
+                    <row>
+                      <cell><m>10</m></cell>
+                      <cell><m>3</m>, <m>4</m>, <m>9</m></cell>
+                    </row>
+                  </tabular>
+                </description><prefigure xmlns="https://prefigure.org" label="img-hamgraph3">
+                  <diagram dimensions="(200,300)" margins="5">
+                    <definition>graph={1:[5,7],2:[3,5,6,7],3:[8,10],4:[7,9,10],5:[6],8:[9],9:[10]}</definition>
+                    <coordinates bbox="(-1,-1,1,1)">
+                      <network graph="graph" scale="0.8" node-fill="#fcf" node-stroke="black" layout="spring" labels="yes">
+                      </network>
+                    </coordinates>
+                  </diagram>
+                </prefigure>
+              </image>
+            </figure>
+          </sidebyside>
+          <sidebyside widths="50% 50%">
+            <figure>
+              <caption><m>\bfG_4</m></caption>
+              <image>
+                <description>
+                  <p>
+                    A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <m>i</m> has neighbors <m>i-1</m>, <m>i+1</m>, and <m>i+5</m>. The first two adjacencies are interpreted cyclically so that, for instance, <m>4</m> has neighbors <m>3</m> and <m>0</m>. For the vertices with labels 5 through 9, the vertex with label <m>i</m> has neighbors <m>i-5</m>, <m>i+2</m>, and <m>i+3</m>. The second and third adjacencies are interpreted cyclically so that, for instance, <m>9</m> has neighbors <m>6</m> and <m>7</m>.
+                  </p>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="petersen-graph">
+                  <diagram dimensions="(300,300)" margins="15">
+                    <definition>N=5</definition>
+                    <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
+                    <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
+                    <coordinates bbox="(-1,-1,1,1)">
+                      <network scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
+                        <node at="0" p="f(0)" edges="[1,4,5]"/>
+                        <node at="1" p="f(1)" edges="[2,6]"/>
+                        <node at="2" p="f(2)" edges="[3,7]"/>
+                        <node at="3" p="f(3)" edges="[4,8]"/>
+                        <node at="4" p="f(4)" edges="[9]"/>
+                        <node at="5" p="g(0)" edges="[7,8]"/>
+                        <node at="6" p="g(1)" edges="[8,9]"/>
+                        <node at="7" p="g(2)" edges="[9]"/>
+                        <node at="8" p="g(3)" edges="[]"/>
+                        <node at="9" p="g(4)" edges="[]"/>
+                      </network>
+                    </coordinates>
+                  </diagram>
+                </prefigure>
+              </image>
+            </figure>
+            <figure>
+              <caption><m>\bfG_5</m></caption>
+              <image>
+                <description>
+                  <p>
+                    A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <m>i</m> has neighbors <m>i-1</m>, <m>i+1</m>, and <m>i+5</m>. The first two adjacencies are interpreted cyclically so that, for instance, <m>4</m> has neighbors <m>3</m> and <m>0</m>. For the vertices with labels 5 through 9, the vertex with label <m>i</m> has neighbors <m>i-5</m>, <m>i+2</m>, and <m>i+3</m>. The second and third adjacencies are interpreted cyclically so that, for instance, <m>9</m> has neighbors <m>6</m> and <m>7</m>. There is also an edge between the vertices with labels <m>7</m> and <m>8</m>.
+                  </p>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="petersen-plus-e">
+                  <diagram dimensions="(300,300)" margins="15">
+                    <definition>N=5</definition>
+                    <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
+                    <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
+                    <coordinates bbox="(-1,-1,1,1)">
+                      <network scale="0.8" node-fill="#fcf" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
+                        <node at="0" p="f(0)" edges="[1,4,5]"/>
+                        <node at="1" p="f(1)" edges="[2,6]"/>
+                        <node at="2" p="f(2)" edges="[3,7]"/>
+                        <node at="3" p="f(3)" edges="[4,8]"/>
+                        <node at="4" p="f(4)" edges="[9]"/>
+                        <node at="5" p="g(0)" edges="[7,8]"/>
+                        <node at="6" p="g(1)" edges="[8,9]"/>
+                        <node at="7" p="g(2)" edges="[9,8]"/>
+                        <node at="8" p="g(3)" edges="[]"/>
+                        <node at="9" p="g(4)" edges="[]"/>
+                      </network>
+                    </coordinates>
+                  </diagram>
+                </prefigure>
+              </image>   
+            </figure>
+          </sidebyside>
+        </sbsgroup>
+      </figure>
+    </page>
+    <page component="ham-not-soln">
       <p>
-        Consider what a hamiltonian cycle in <m>\bfG_{4}</m> would look like.
-        The graph has <m>15</m> edges, and a hamiltonian cycle would use <m>10</m> of them.
-        Thus, you'd have the cycle and five leftover edges that would connect vertices across the cycle (<q>chords</q>).
-        How would these edges fit along the cycle? If an edge connected a vertex to a vertex two steps down the cycle (for example, if the cycle contains the sequence <m>a,b,c</m> of vertices and there's an edge from <m>a</m> to <m>c</m>), then there would be a triangle (a cyle on three vertices) in the graph.
-        There is no such cycle in <m>\bfG_{4}</m>.
-        If a chord connects a vertex to another vertex at distance three along the hamiltonian cycle, then there is a cycle on four vertices.
-        However, there is no such cycle in <m>\bfG_{4}</m>.
+        <ol>
+          <li>
+            <p>
+              The graph <m>\bfG_{1}</m> is hamiltonian.
+              One example of a hamiltonian cycle is <m>1,5,7,3,2,6,8,9,10,4</m>.
+              (There are others.)
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The graph <m>\bfG_{2}</m> is not hamiltonian.
+              One reason for this is that removing the vertex <m>2</m> leaves a disconnected graph.
+              Put another way, <m>1,10,4,2</m> forms a cycle, and the only way to get from the other vertices onto that cycle is via vertex <m>2</m>.
+              Once you're onto it, there's no way off again.
+              Thus, there's no way to construct a cycle containing all <m>10</m> vertices.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The graph <m>\bfG_{3}</m> is hamiltonian.
+              One example of a hamiltonian cycle is <m>1,5,6,2,3,8,9,10,4,7</m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The graph <m>\bfG_{4}</m> is not hamiltonian.
+              This is a nontrivial fact.
+              For those interested in a complete proof, see the end of this document.
+              (You will not be tested on the proof, so it's purely optional reading.)
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              The graph <m>\bfG_{5}</m> (formed by adding one edge to the Petersen graph <m>\bfG_{1}</m>) is hamiltonian.
+              One example of a hamiltonian cycle is <m>10,7,1,5,8,4,6,3,2,9</m>.
+            </p>
+          </li>
+        </ol>
       </p>
-
-      <p>
-        Now suppose that a chord connects a vertex <m>v_{0}</m> to another vertex <m>v_{1}</m> at distance four along the hamiltonian cycle.
-        Let <m>v_{0}'</m> be the vertex opposite <m>v_{0}</m> along the hamiltonian cycle.
-        There is also a chord incident with <m>v_{0}'</m>, connecting it across the hamiltonian cycle to a vertex <m>v_{1}'</m>.
-        We've already explained that the distance from <m>v_{0}'</m> to <m>v_{1}'</m> along the hamiltonian cycle cannot be less than four, and it cannot be five since that would give <m>v_{0}'</m> degree four.
-        Thus the distance along the hamiltonian cycle from <m>v_{0}'</m> to <m>v_{1}'</m> must be four.
-        Now <m>v_{0},v_{1},v_{1}',v_{0}'</m> is a cycle of length four (draw a picture to convince yourself), which we don't have in <m>\bfG_{4}</m>.
-        Finally, the only option that remains is that the chords all connect vertices that are exactly opposite each other on the hamiltonian cycle.
-        However, then if <m>v_{0}</m> and <m>v_{1}</m> are adjacent along the hamiltonian cycle and <m>v_{0}'</m> and <m>v_{1}'</m> are the vertices opposite them, <m>v_{0},v_{1},v_{1}',v_{0}'</m> is a cycle of length four.
-      </p>
-    </proof>
-  </page>
+      
+      
+      <proof>
+        <title>Proof the Petersen Graph is not hamiltonian</title>
+        
+        <p>
+          Consider what a hamiltonian cycle in <m>\bfG_{4}</m> would look like.
+          The graph has <m>15</m> edges, and a hamiltonian cycle would use <m>10</m> of them.
+          Thus, you'd have the cycle and five leftover edges that would connect vertices across the cycle (<q>chords</q>).
+          How would these edges fit along the cycle? If an edge connected a vertex to a vertex two steps down the cycle (for example, if the cycle contains the sequence <m>a,b,c</m> of vertices and there's an edge from <m>a</m> to <m>c</m>), then there would be a triangle (a cyle on three vertices) in the graph.
+          There is no such cycle in <m>\bfG_{4}</m>.
+          If a chord connects a vertex to another vertex at distance three along the hamiltonian cycle, then there is a cycle on four vertices.
+          However, there is no such cycle in <m>\bfG_{4}</m>.
+        </p>
+        
+        <p>
+          Now suppose that a chord connects a vertex <m>v_{0}</m> to another vertex <m>v_{1}</m> at distance four along the hamiltonian cycle.
+          Let <m>v_{0}'</m> be the vertex opposite <m>v_{0}</m> along the hamiltonian cycle.
+          There is also a chord incident with <m>v_{0}'</m>, connecting it across the hamiltonian cycle to a vertex <m>v_{1}'</m>.
+          We've already explained that the distance from <m>v_{0}'</m> to <m>v_{1}'</m> along the hamiltonian cycle cannot be less than four, and it cannot be five since that would give <m>v_{0}'</m> degree four.
+          Thus the distance along the hamiltonian cycle from <m>v_{0}'</m> to <m>v_{1}'</m> must be four.
+          Now <m>v_{0},v_{1},v_{1}',v_{0}'</m> is a cycle of length four (draw a picture to convince yourself), which we don't have in <m>\bfG_{4}</m>.
+          Finally, the only option that remains is that the chords all connect vertices that are exactly opposite each other on the hamiltonian cycle.
+          However, then if <m>v_{0}</m> and <m>v_{1}</m> are adjacent along the hamiltonian cycle and <m>v_{0}'</m> and <m>v_{1}'</m> are the vertices opposite them, <m>v_{0},v_{1},v_{1}',v_{0}'</m> is a cycle of length four.
+        </p>
+      </proof>
+    </page>
   </worksheet>
   <worksheet xml:id="ws-triangle-free" component="graphs-triangle-free">
     <title>Graphs with <m>\omega(\bfG)=2</m> and <m>\chi(\bfG)</m> large</title>
     <page>
-    <p>
-      We've already seen that the chromatic number <m>\chi(\bfG)</m> of a graph <m>\bfG</m> is at least its clique number <m>\omega(\bfG)</m>. (Recall that if <m>\omega(\bfG)=t</m>, then <m>\bfG</m> contains a subgraph isomorphic to <m>\bfK_{t}</m> and <m>\chi(\bfK_{t})=t</m>.) In this activity, we're going to see how to construct graphs with <m>\omega(\bfG)=2</m> and <m>\chi(\bfG)=t</m> for any integer <m>t\geq 2</m>. We will focus only on the construction of Mycielski, which is one of two constructions included in the text.
-    </p>
-    <p>
-      This construction aims to create a graph <m>\bfG_{t}</m> with <m>\chi(\bfG_t)=t</m> and <m>\omega(\bfG_{t})=2</m>. The construction is inductive. It starts by creating <m>\bfG_{3}</m>, then uses that to make <m>\bfG_{4}</m>, which it uses to make <m>\bfG_{5}</m>, etc. As you go through, discuss the steps with your group members. The questions in <em>italics</em> are questions you must be able to answer to ensure you understand as you go through things.
-    </p>
-    <exercise workspace="0.5cm">
-      <statement>
-        <p>
-          We proceed by induction on <m>t</m>. For <m>t=3</m>, we take <m>\bfG_{3}</m> to be the cycle <m>\bfC_{5}</m> on five vertices. (<em>Why is <m>\chi(\bfG_{3})=3</m>? Why is <m>\omega(\bfG_{3})=2</m>?</em>)
-        </p>
-      </statement>
-    </exercise>
-    <exercise workspace="0.5cm">
-      <statement>
-        <p>
-          Now assume that for some <m>t\ge3</m>, we have determined the graph <m>\bfG_{t}</m>. Suppose that <m>\bfG_{t}</m> has <m>n_{t}</m> vertices. Label the vertices of <m>\bfG_{t}</m> as <m>x_{1},x_{2},\dots,x_{n_t}</m>. Construct <m>\bfG_{t+1}</m> as follows.
-        <ol marker="a.">
-          <li>
-            <p>
-              Begin with an independent set <m>I</m> of cardinality <m>n_{t}</m>.
-              (<em>What is an independent set?</em>)
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Label the points of <m>I</m> as <m>y_{1},y_{2},\dots,y_{n_t}</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Add a copy of <m>\bfG_{t}</m> with <m>y_{i}</m> adjacent to <m>x_{j}</m> if and only if <m>x_{i}</m> is adjacent to <m>x_{j}</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Attach a new vertex <m>z</m> adjacent to all vertices in <m>I</m> (but none from the copy of <m>\bfG_{t}</m>).
-            </p>
-          </li>
-        </ol>
-        </p>
-        <p>
-          <em>How many vertices does <m>\bfG_{t+1}</m> contain?</em> (Your formula will contain <m>n_{t}</m>.) You should be able to draw <m>\bfG_{4}</m> by hand, and <m>\bfG_{5}</m> will have <m>23</m> vertices.
-        </p>
-      </statement>
-    </exercise>
-  <!-- </page>
-  <page> -->
-    <exercise>
-      <title><m>\omega(\bfG_{t+1})=2</m></title>
-      <introduction>
-
-      
-<p>
-  To see that <m>\omega(\bfG_{t+1})=2</m>, it will suffice to argue that <m>\bfG_{t+1}</m> contains no triangle (<m>\bfK_{3}</m>).
-  To do this, we consider where the vertices of a triangle would be:
-</p>
-</introduction>
-
-
-
-  <task workspace="0.5cm">
-    <p>
-      Explain why any triangle in <m>\bfG_{t+1}</m> must contain a vertex of <m>I\cup\{z\}</m>.
-    </p>
-  </task>
-
-  <task workspace="0.5cm">
-    <p>
-      Explain why any triangle in <m>\bfG_{t+1}</m> contains only one vertex of <m>I</m>.
-    </p>
-  </task>
-
-  <task workspace="0.5cm">
-    <p>
-      Explain why a triangle cannot contain a vertex of <m>I</m> and the vertex <m>z</m>.
-    </p>
-  </task>
-
-  <task>
-    <p>
-      A triangle must thus contain a vertex <m>y_{i}\in I</m> and vertices <m>x_{j}</m> and <m>x_{k}</m> from the copy of <m>\bfG_{t}</m>.
-      Explain why <m>\{y_{i},x_{j},x_{k}\}</m> forming a triangle mean that there's a triangle in <m>\bfG_{t}</m>.
-    </p>
-  </task>
-
-</exercise>
-</page>
-<page>
-<exercise>
-  <title><m>\chi(\bfG_{t+1})=t+1</m></title>
-  <task workspace="1cm">
-    <statement>
       <p>
-        <em>What part of the construction ensures that <m>\chi(\bfG_{t+1})\ge t</m>?</em>
+        We've already seen that the chromatic number <m>\chi(\bfG)</m> of a graph <m>\bfG</m> is at least its clique number <m>\omega(\bfG)</m>. (Recall that if <m>\omega(\bfG)=t</m>, then <m>\bfG</m> contains a subgraph isomorphic to <m>\bfK_{t}</m> and <m>\chi(\bfK_{t})=t</m>.) In this activity, we're going to see how to construct graphs with <m>\omega(\bfG)=2</m> and <m>\chi(\bfG)=t</m> for any integer <m>t\geq 2</m>. We will focus only on the construction of Mycielski, which is one of two constructions included in the text.
       </p>
-    </statement>
-  </task>
-  <task workspace="2cm">
-    <statement>
       <p>
-        <em>How can you color the vertices of <m>I</m> using <m>t</m> colors?</em> (Hint: Pair vertices of <m>I</m> with vertices of <m>\bfG_{t}</m>.) <em>What color does <m>z</m> get? How many colors have you used and what does this say about <m>\chi(\bfG_{t+1})</m>?</em>
+        This construction aims to create a graph <m>\bfG_{t}</m> with <m>\chi(\bfG_t)=t</m> and <m>\omega(\bfG_{t})=2</m>. The construction is inductive. It starts by creating <m>\bfG_{3}</m>, then uses that to make <m>\bfG_{4}</m>, which it uses to make <m>\bfG_{5}</m>, etc. As you go through, discuss the steps with your group members. The questions in <em>italics</em> are questions you must be able to answer to ensure you understand as you go through things.
       </p>
-    </statement>
-  </task>
-  <task workspace="2cm">
-    <statement>
-      <p>
-        Try coloring <m>\bfG_{t+1}</m> using only <m>t</m> colors. Suppose that <m>\phi</m> is a proper coloring of <m>\bfG_{t+1}</m> using the colors <m>\{1,2,\dots,t\}</m>. It's safe to assume that <m>\phi(z) = t</m> (reshuffle the colors otherwise). Let <m>S</m> be the set of vertices in the copy of <m>\bfG_{t}</m> to which <m>\phi</m> assigns color <m>t</m>. <em>Can the set <m>S</m> be empty? Explain your reasoning.</em>
-      </p>
-    </statement>
-  </task>
-  <task workspace="1.5cm">
-    <statement>
-      <p>
-        Since <m>\phi(z)=t</m>, <em>what do you know about the set (or even number) of colors used on <m>I</m>?</em>
-      </p>
-    </statement>
-  </task>
-  <task workspace="1.5cm">
-    <statement>
-      <p>
-        <em>Why can you change the color of each <m>x_{i}\in S</m> to match the color <m>\phi</m> assigns to <m>y_{i}</m> and maintain a proper coloring?</em>
-      </p>
-    </statement>
-  </task>
-  <task workspace="1cm">
-    <statement>
-      <p>
-        <em>Now how many colors have you used on the copy of <m>\bfG_{t}</m>?</em>
-      </p>
-    </statement>
-  </task>
-</exercise>
-</page>
-  </worksheet>
-  <worksheet xml:id="ws-graphs-planar" component="graphs-planar">
-    <title>Planar Graphs</title>
-    <page>
-      <p>It turns out that you could draw hundreds of connected planar graphs
-and keep finding the same pattern that arises in the platonic solids:</p>
-
-<theorem>
-  <title>Euler's Formula</title>
-
-  <statement>
-    <p>
-      Let <m>\bfG</m> be a connected planar graph with <m>n</m> vertices and <m>m</m> edges.
-      Then every planar drawing of <m>\bfG</m> has <m>f</m> faces, where <m>f</m> satisfies <m>n-m+f=2</m>.
-    </p>
-  </statement>
-</theorem>
-
-<p>
-  Let's see why this holds up in general.
-</p>
-
-<exercise workspace="0.75in">
-  <statement>
-    <p>
-      Notice that Euler&#8217;s Formula requires that <m>\bfG</m> be a <term>connected</term> planar graph.
-Find a counterexample to show that the formula <m>n-m+f=2</m> does not hold if <m>\bfG</m> is a planar graph that is not connected.
-    </p>
-  </statement>
-</exercise>
-<exercise workspace="0.5in">
-  <statement>
-    <p>
-      Since <m>\bfG</m> must be connected, we start by considering the minimal case in which <m>\bfG</m> has no cycles.
-What type of graph does that mean we must have? How many edges does <m>\bfG</m> have (in terms of <m>n</m>)? (In future questions, I'll call this value of <m>m</m> by the name <m>m_{0}</m>.) Verify Euler's formula in this case.
-    </p>
-  </statement>
-</exercise>
-<exercise>
-  <task workspace="1.25in">
-    <p>
-      Draw a planar drawing of a connected planar graph <m>\bfG</m> with more than <m>m_{0}</m> edges.
-(Maybe do something with <m>n=7</m> or <m>n=8</m> vertices.
-Also, have at least one vertex of degree <m>1</m> in your graph.)
-    </p>
-  </task>
-  <task workspace="0.2in">
-    <statement>
-      <p>
-        Find <m>n</m>, <m>m</m>, and <m>f</m> for your graph.
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.35in">
-    <statement>
-      <p>
-        Is there an edge <m>e</m> you can erase from your graph and leave a graph <m>\bfG'</m> that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.25in">
-    <statement>
-      <p>
-        Erase an edge <m>e</m> from <m>\bfG</m> to give you a planar drawing of a connected planar graph <m>\bfG'</m>.
-Let <m>n'</m>, <m>m'</m>, and <m>f'</m> be the number of vertices, edges, and faces respectively of <m>\bfG'</m>.
-What are <m>n',m',f'</m> for your graph?
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.25in">
-    <statement>
-      <p>
-        Find equations that relate <m>n'</m>, <m>m'</m>, and <m>f'</m> to <m>n</m>, <m>m</m>, and <m>f</m>?
-      </p>
-    </statement>
-  </task>
-</exercise>
-</page>
-<page>
-
-<exercise>
-  <introduction>
-    <p>
-       Now let&#8217;s suppose that <m>\bfG</m> is a connected planar graph with <m>n</m> vertices and <m>m</m> edges where <m>m\gt m_{0}</m>.
-Suppose that Euler&#8217;s formula holds for any graph with fewer than <m>m</m> edges.
-(What type of proof are we setting up here?)
-    </p>
-  </introduction>
- <task workspace="0.35in">
-  <statement>
-    <p>
-      Why is there an edge <m>e</m> you can delete from <m>\bfG</m> to produce a connected planar graph <m>\bfG'</m>?
-    </p>
-  </statement>
- </task>
- <task workspace="0.35in">
-  <statement>
-    <p>
-      Let <m>n'</m>, <m>m'</m>, and <m>f'</m> be the number of vertices, edges, and faces respectively of <m>\bfG'</m>.
-What are <m>n',m',f'</m> in terms of <m>n</m>, <m>m</m>, and <m>f</m>?
-    </p>
-  </statement>
- </task>
- <task workspace="0.5in">
-  <statement>
-    <p>
-      What equation involving <m>n'</m>, <m>m'</m>, and <m>f'</m> must hold? Why?
-    </p>
-  </statement>
- </task>
- <task workspace="0.5in">
-  <statement>
-    <p>
-      Prove that <m>n-m+f=2</m>.
-    </p>
-  </statement>
- </task>
- </exercise>
- <exercise>
-  <introduction>
-    <p>
-    In the grand scheme of things, Euler&#8217;s formula doesn&#8217;t seem that useful for determining if a graph is planar or not.
-However, we can deduce something useful from it.
-In this problem, we&#8217;re going to imagine a fixed planar drawing of a connected planar graph <m>\bfG</m> and let <m>n</m>, <m>m</m>, and <m>f</m> be the number of vertices, edges, and faces, respectively, in our planar drawing.
-We&#8217;ll assume that <m>n\geq 4</m> to avoid some annoying things.
-</p>
-
-<p>
-  Let <m>S = \set{(e,F)\mid e\text{ is an edge of }\bfG\text{ and part of the boundary of face }F}</m>.
-</p>
-    
-  </introduction>
-  <task workspace="0.15in">
-    <statement>
-      <p>
-        If I pick an edge <m>e_{1}</m> of <m>\bfG</m>, what is the largest possible number of faces that <m>e_{1}</m> can be part of the boundary of? So what does that tell us about the number of ordered pairs in <m>S</m> that have <m>e_{1}</m> as the first coordinate?
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.15in">
-    <statement>
-      <p>
-        Use the previous part to find an inequality involving <m>m</m> and <m>|S|</m> (the size of <m>S</m>).
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.15in">
-    <statement>
-      <p>
-        If I pick a face <m>F_{1}</m> of <m>\bfG</m>, what is the smallest possible number of edges that can be used to form the boundary of <m>F_{1}</m>?
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.15in">
-    <statement>
-      <p>
-        Use the previous part to find an inequality involving <m>f</m> and <m>|S|</m> (the size of <m>S</m>).
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.15in">
-    <statement>
-      <p>
-  Combine two previous parts to get an inequality involving <m>m</m> and <m>f</m>.
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.15in">
-    <statement>
-      <p>
-        Using Euler&#8217;s formula and the previous part, show that <m>m\leq 3n-6</m>.
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.15in">
-    <statement>
-      <p>
-        Prove that <m>\bfK_{5}</m> is not planar.
-      </p>
-    </statement>
-  </task>
- </exercise>
-</page>
-<page>
-  <exercise>
- <introduction>
-  <p>
-    Recall that the complete bipartite graph <m>\bfK_{3,3}</m> is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.
-  </p>
-  </introduction>
-  <task workspace="1.5in">
-    <statement>
-      <p>
-        Can you make a planar drawing of <m>\bfK_{3,3}</m>? If not, what does the <m>m\leq 3n-6</m> restriction tell you here?
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.5in">
-    <statement>
-      <p>
-        Notice that since <m>\bfK_{3,3}</m> does not contain any vertices of degree <m>1</m>, every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces.
-Since <m>\bfK_{3,3}</m> is bipartite, what can you say about the length of every cycle in <m>\bfK_{3,3}</m>?
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.25in">
-    <statement>
-      <p>
-        As in the previous problem, count edge-face pairs.
-How many pairs must there be for <m>\bfK_{3,3}</m>?
-      </p>
-    </statement>
-  </task>
-  <task workspace="0.35in">
-    <statement>
-      <p>
-        Let <m>f_{4}</m> be the number of faces bounded by a cycle of length <m>4</m> and let <m>f_{6}</m> be the number of faces bounded by a cycle of length <m>6</m>. Express the total number of faces <m>f</m> in terms of <m>f_{4}</m> and <m>f_{6}</m>. Then express the number of edge-face pairs in terms of <m>f_{4}</m> and <m>f_{6}</m>.
-      </p>
-    </statement>
-  </task>
-  <task workspace="1in">
-    <statement>
-      <p>
-        What does Euler&#8217;s formula tell you <m>f</m> would have to be for <m>\bfK_{3,3}</m>? What lower bound does this give you for the number of edge-face pairs, and how does this show that <m>\bfK_{3,3}</m> is not planar?
-      </p>
-    </statement>
-  </task>
-</exercise>
-<exercise>
-  <statement>
-    <p>
-      For each graph on the next page, find a planar drawing or
-    give a reason why the graph is not planar.
-    </p>
-  </statement>
-</exercise>
-</page>
-  
-
-  </worksheet>
-  <worksheet xml:id="ws-prufer-codes" component="graphs-prufer">
-    <title>Counting Labeled Trees</title>
-    <activity>
-      <task>
-        <p>
-          Construct <m>\prufer(\bfT)</m> for the two trees below.
-        </p>
-      </task>
-      <task>
+      <exercise workspace="0.5cm">
         <statement>
           <p>
-            Be prepared to answer the following questions:
-            <ol marker="i.">
+            We proceed by induction on <m>t</m>. For <m>t=3</m>, we take <m>\bfG_{3}</m> to be the cycle <m>\bfC_{5}</m> on five vertices. (<em>Why is <m>\chi(\bfG_{3})=3</m>? Why is <m>\omega(\bfG_{3})=2</m>?</em>)
+          </p>
+        </statement>
+      </exercise>
+      <exercise workspace="0.5cm">
+        <statement>
+          <p>
+            Now assume that for some <m>t\ge3</m>, we have determined the graph <m>\bfG_{t}</m>. Suppose that <m>\bfG_{t}</m> has <m>n_{t}</m> vertices. Label the vertices of <m>\bfG_{t}</m> as <m>x_{1},x_{2},\dots,x_{n_t}</m>. Construct <m>\bfG_{t+1}</m> as follows.
+            <ol marker="a.">
               <li>
                 <p>
-                  What is the relationship between the length of the Pr&#252;fer code of a tree and the number of vertices of the tree?
-                </p>
-              </li>
-              <li>
-                <p>
-                  What type(s) of vertices have labels appearing in the Pr&#252;fer code of a tree?
+                  Begin with an independent set <m>I</m> of cardinality <m>n_{t}</m>.
+                  (<em>What is an independent set?</em>)
                 </p>
               </li>
               
+              <li>
+                <p>
+                  Label the points of <m>I</m> as <m>y_{1},y_{2},\dots,y_{n_t}</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Add a copy of <m>\bfG_{t}</m> with <m>y_{i}</m> adjacent to <m>x_{j}</m> if and only if <m>x_{i}</m> is adjacent to <m>x_{j}</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Attach a new vertex <m>z</m> adjacent to all vertices in <m>I</m> (but none from the copy of <m>\bfG_{t}</m>).
+                </p>
+              </li>
             </ol>
           </p>
+          <p>
+            <em>How many vertices does <m>\bfG_{t+1}</m> contain?</em> (Your formula will contain <m>n_{t}</m>.) You should be able to draw <m>\bfG_{4}</m> by hand, and <m>\bfG_{5}</m> will have <m>23</m> vertices.
+          </p>
         </statement>
-</task>
-<task workspace="0cm">
-  <statement>
-    <p>
-      Extra time? Draw a tree for another group to find the Pr&#252;fer code of.
-    </p>
-  </statement>
-</task>
-
-    </activity>
-<image width="50%">
-  <description>
-    <p>
-      A tree with 6 vertices. The neighbors of each vertex are given in the table below.
-    </p>
-    <tabular>
-      <row>
-        <cell>Vertex</cell>
-        <cell>Neighbors</cell>
-      </row>
-      <row>
-        <cell><m>1</m></cell>
-        <cell><m>2</m>, <m>3</m>, <m>4</m>, <m>5</m></cell>
-      </row>
-      <row>
-        <cell><m>2</m></cell>
-        <cell><m>1</m></cell>
-      </row>
-      <row>
-        <cell><m>3</m></cell>
-        <cell><m>1</m>, <m>6</m></cell>
-      </row>
-      <row>
-        <cell><m>4</m></cell>
-        <cell><m>1</m></cell>
-      </row>
-      <row>
-        <cell><m>5</m></cell>
-        <cell><m>1</m></cell>
-      </row>
-      <row>
-        <cell><m>6</m></cell>
-        <cell><m>3</m></cell>
-      </row>
-    </tabular>
-  </description>
-  <prefigure xmlns="https://prefigure.org" label="graph-prufer-6">
-    <diagram dimensions="(300,200)" margins="15">
-      <definition>graph={1:[2,3,4,5],3:[6]}</definition>
-              <coordinates bbox="(-1,-1,1,1)">
-                <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="73" labels="yes" rotate="90">
-                </network>
-      </coordinates>
-    </diagram>
-  </prefigure>
-</image>    
-<image width="50%">
-  <description>
-    <p>
-      A tree with 14 vertices. The neighbors of each vertex are given in the table below.
-    </p>
-    <tabular>
-      <row>
-        <cell>Vertex</cell>
-        <cell>Neighbors</cell>
-      </row>
-      <row>
-        <cell><m>1</m></cell>
-        <cell><m>9</m></cell>
-      </row>
-      <row>
-        <cell><m>2</m></cell>
-        <cell><m>8</m>, <m>9</m>, <m>10</m>, <m>11</m>, <m>14</m></cell>
-      </row>
-      <row>
-        <cell><m>3</m></cell>
-        <cell><m>11</m></cell>
-      </row>
-      <row>
-        <cell><m>4</m></cell>
-        <cell><m>12</m></cell>
-      </row>
-      <row>
-        <cell><m>5</m></cell>
-        <cell><m>6</m>, <m>7</m>, <m>12</m>, <m>14</m></cell>
-      </row>
-      <row>
-        <cell><m>6</m></cell>
-        <cell><m>5</m></cell>
-      </row>
-      <row>
-        <cell><m>7</m></cell>
-        <cell><m>5</m>, <m>13</m></cell>
-      </row>
-      <row>
-        <cell><m>8</m></cell>
-        <cell><m>2</m></cell>
-      </row>
-      <row>
-        <cell><m>9</m></cell>
-        <cell><m>1</m>, <m>2</m></cell>
-      </row>
-      <row>
-        <cell><m>10</m></cell>
-        <cell><m>2</m></cell>
-      </row>
-      <row>
-        <cell><m>11</m></cell>
-        <cell><m>2</m>, <m>3</m></cell>
-      </row>
-      <row>
-        <cell><m>12</m></cell>
-        <cell><m>4</m>, <m>5</m></cell>
-      </row>
-      <row>
-        <cell><m>13</m></cell>
-        <cell><m>7</m></cell>
-      </row>
-      <row>
-        <cell><m>14</m></cell>
-        <cell><m>2</m>, <m>5</m></cell>
-      </row>
-    </tabular>
-  </description>
-  <prefigure xmlns="https://prefigure.org" label="graph-prufer-14">
-    <diagram dimensions="(300,200)" margins="15">
-      <definition>graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12],
-        5:[6,7,12,14],7:[13],
-        }</definition>
-              <coordinates bbox="(-1,-1,1,1)">
-                <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="38" layout="spring" labels="yes" rotate="120">
-                </network>
-      </coordinates>
-    </diagram>
-  </prefigure>
-</image>
+      </exercise>
+      <!-- </page>
+      <page> -->
+      <exercise>
+        <title><m>\omega(\bfG_{t+1})=2</m></title>
+        <introduction>
+          
+          
+          <p>
+            To see that <m>\omega(\bfG_{t+1})=2</m>, it will suffice to argue that <m>\bfG_{t+1}</m> contains no triangle (<m>\bfK_{3}</m>).
+            To do this, we consider where the vertices of a triangle would be:
+          </p>
+        </introduction>
+        
+        
+        
+        <task workspace="0.5cm">
+          <p>
+            Explain why any triangle in <m>\bfG_{t+1}</m> must contain a vertex of <m>I\cup\{z\}</m>.
+          </p>
+        </task>
+        
+        <task workspace="0.5cm">
+          <p>
+            Explain why any triangle in <m>\bfG_{t+1}</m> contains only one vertex of <m>I</m>.
+          </p>
+        </task>
+        
+        <task workspace="0.5cm">
+          <p>
+            Explain why a triangle cannot contain a vertex of <m>I</m> and the vertex <m>z</m>.
+          </p>
+        </task>
+        
+        <task>
+          <p>
+            A triangle must thus contain a vertex <m>y_{i}\in I</m> and vertices <m>x_{j}</m> and <m>x_{k}</m> from the copy of <m>\bfG_{t}</m>.
+            Explain why <m>\{y_{i},x_{j},x_{k}\}</m> forming a triangle mean that there's a triangle in <m>\bfG_{t}</m>.
+          </p>
+        </task>
+        
+      </exercise>
+    </page>
+    <page>
+      <exercise>
+        <title><m>\chi(\bfG_{t+1})=t+1</m></title>
+        <task workspace="1cm">
+          <statement>
+            <p>
+              <em>What part of the construction ensures that <m>\chi(\bfG_{t+1})\ge t</m>?</em>
+            </p>
+          </statement>
+        </task>
+        <task workspace="2cm">
+          <statement>
+            <p>
+              <em>How can you color the vertices of <m>I</m> using <m>t</m> colors?</em> (Hint: Pair vertices of <m>I</m> with vertices of <m>\bfG_{t}</m>.) <em>What color does <m>z</m> get? How many colors have you used and what does this say about <m>\chi(\bfG_{t+1})</m>?</em>
+            </p>
+          </statement>
+        </task>
+        <task workspace="2cm">
+          <statement>
+            <p>
+              Try coloring <m>\bfG_{t+1}</m> using only <m>t</m> colors. Suppose that <m>\phi</m> is a proper coloring of <m>\bfG_{t+1}</m> using the colors <m>\{1,2,\dots,t\}</m>. It's safe to assume that <m>\phi(z) = t</m> (reshuffle the colors otherwise). Let <m>S</m> be the set of vertices in the copy of <m>\bfG_{t}</m> to which <m>\phi</m> assigns color <m>t</m>. <em>Can the set <m>S</m> be empty? Explain your reasoning.</em>
+            </p>
+          </statement>
+        </task>
+        <task workspace="1.5cm">
+          <statement>
+            <p>
+              Since <m>\phi(z)=t</m>, <em>what do you know about the set (or even number) of colors used on <m>I</m>?</em>
+            </p>
+          </statement>
+        </task>
+        <task workspace="1.5cm">
+          <statement>
+            <p>
+              <em>Why can you change the color of each <m>x_{i}\in S</m> to match the color <m>\phi</m> assigns to <m>y_{i}</m> and maintain a proper coloring?</em>
+            </p>
+          </statement>
+        </task>
+        <task workspace="1cm">
+          <statement>
+            <p>
+              <em>Now how many colors have you used on the copy of <m>\bfG_{t}</m>?</em>
+            </p>
+          </statement>
+        </task>
+      </exercise>
+    </page>
   </worksheet>
-</chapter>
+  <worksheet xml:id="ws-graphs-planar" component="graphs-planar">
+    <title>Euler's Polyhedral Formula</title>
+    <!-- <page> -->
+    <p>It turns out that you could draw hundreds of connected planar graphs
+      and keep finding the same pattern that arises in the platonic solids:</p>
+      
+      <theorem>
+        <title>Euler's Formula</title>
+        
+        <statement>
+          <p>
+            Let <m>\bfG</m> be a connected planar graph with <m>n</m> vertices and <m>m</m> edges.
+            Then every planar drawing of <m>\bfG</m> has <m>f</m> faces, where <m>f</m> satisfies <m>n-m+f=2</m>.
+          </p>
+        </statement>
+      </theorem>
+      
+      <exercise workspace="0.35in">
+        <statement>
+          <p>
+            Notice that Euler's Formula requires that <m>\bfG</m> be a <term>connected</term> planar graph.
+            Find a counterexample to show that the formula <m>n-m+f=2</m> does not hold if <m>\bfG</m> is a planar graph that is not connected.
+          </p>
+        </statement>
+      </exercise>
+      <exercise workspace="0.15in">
+        <statement>
+          <p>
+            Since <m>\bfG</m> must be connected, we start by considering the minimal case in which <m>\bfG</m> has no cycles (but for the general number <m>n</m> of vertices).
+            What type of graph does that mean <m>\bfG</m> is? How many edges does <m>\bfG</m> have (in terms of <m>n</m>)? (In future questions, I'll call this value of <m>m</m> by the name <m>m_{0}</m>.) Verify Euler's formula in this case.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <task workspace="0.7in">
+          <p>
+            Draw a planar drawing of a connected planar graph <m>\bfG</m> with with <m>n=7</m> or <m>n=8</m> vertices and more than <m>m_{0}</m> edges. Make sure your graph has at least one vertex of degree <m>1</m>.
+          </p>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Find <m>n</m>, <m>m</m>, and <m>f</m> for your graph.
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.25in">
+          <statement>
+            <p>
+              Is there an edge <m>e</m> you can erase from your graph and leave a graph <m>\bfG'</m> that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              Erase an edge <m>e</m> from <m>\bfG</m> to give you a planar drawing of a connected planar graph <m>\bfG'</m>.
+              Let <m>n'</m>, <m>m'</m>, and <m>f'</m> be the number of vertices, edges, and faces respectively of <m>\bfG'</m>.
+              What are <m>n',m',f'</m> for your graph?
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Find equations that relate <m>n'</m>, <m>m'</m>, and <m>f'</m> to <m>n</m>, <m>m</m>, and <m>f</m>.
+            </p>
+          </statement>
+        </task>
+      </exercise>
+      <!-- </page>
+      <page> -->
+      
+      <exercise>
+        <introduction>
+          <p>
+            Now let's suppose that <m>\bfG</m> is a connected planar graph with <m>n</m> vertices and <m>m</m> edges where <m>m\gt m_{0}</m>.
+            Suppose that Euler's formula holds for any graph with fewer than <m>m</m> edges.
+            (What type of proof are we setting up here?)
+          </p>
+        </introduction>
+        <task workspace="0.25in">
+          <statement>
+            <p>
+              Why is there an edge <m>e</m> you can delete from <m>\bfG</m> to produce a connected planar graph <m>\bfG'</m>?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.25in">
+          <statement>
+            <p>
+              Let <m>n'</m>, <m>m'</m>, and <m>f'</m> be the number of vertices, edges, and faces respectively of <m>\bfG'</m>.
+              What are <m>n',m',f'</m> in terms of <m>n</m>, <m>m</m>, and <m>f</m>?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.35in">
+          <statement>
+            <p>
+              What equation involving <m>n'</m>, <m>m'</m>, and <m>f'</m> must hold? Why?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.35in">
+          <statement>
+            <p>
+              Prove that <m>n-m+f=2</m>.
+            </p>
+          </statement>
+        </task>
+      </exercise>
+      <exercise>
+        <introduction>
+          <p>
+            In the grand scheme of things, Euler's formula doesn't seem that useful for determining if a graph is planar or not.
+            However, we can deduce something useful from it.
+            In this problem, we're going to imagine a fixed planar drawing of a connected planar graph <m>\bfG</m> and let <m>n</m>, <m>m</m>, and <m>f</m> be the number of vertices, edges, and faces, respectively, in our planar drawing.
+            We'll assume that <m>n\geq 4</m> to avoid some annoying things.
+          </p>
+          
+          <p>
+            Let <m>S = \set{(e,F)\mid e\text{ is an edge of }\bfG\text{ and part of the boundary of face }F}</m>.
+          </p>
+          
+        </introduction>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              If I pick an edge <m>e_{1}</m> of <m>\bfG</m>, what is the largest possible number of faces that <m>e_{1}</m> can be part of the boundary of? So what does that tell us about the number of ordered pairs in <m>S</m> that have <m>e_{1}</m> as the first coordinate?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              Use the previous part to find an inequality involving <m>m</m> and <m>|S|</m> (the size of <m>S</m>).
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              If I pick a face <m>F_{1}</m> of <m>\bfG</m>, what is the smallest possible number of edges that can be used to form the boundary of <m>F_{1}</m>?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              Use the previous part to find an inequality involving <m>f</m> and <m>|S|</m> (the size of <m>S</m>).
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              Combine two previous parts to get an inequality involving <m>m</m> and <m>f</m>.
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              Using Euler's formula and the previous part, show that <m>m\leq 3n-6</m>.
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.15in">
+          <statement>
+            <p>
+              Prove that <m>\bfK_{5}</m> is not planar.
+            </p>
+          </statement>
+        </task>
+      </exercise>
+      <!-- </page>
+      <page> -->
+      <exercise>
+        <introduction>
+          <p>
+            Recall that the complete bipartite graph <m>\bfK_{3,3}</m> is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.
+          </p>
+        </introduction>
+        <task workspace="1.5in">
+          <statement>
+            <p>
+              Can you make a planar drawing of <m>\bfK_{3,3}</m>? If not, what does the <m>m\leq 3n-6</m> restriction tell you here?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.5in">
+          <statement>
+            <p>
+              Notice that since <m>\bfK_{3,3}</m> does not contain any vertices of degree <m>1</m>, every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces.
+              Since <m>\bfK_{3,3}</m> is bipartite, what can you say about the length of every cycle in <m>\bfK_{3,3}</m>?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.25in">
+          <statement>
+            <p>
+              As in the previous problem, count edge-face pairs.
+              How many pairs must there be for <m>\bfK_{3,3}</m>?
+            </p>
+          </statement>
+        </task>
+        <task workspace="0.35in">
+          <statement>
+            <p>
+              Let <m>f_{4}</m> be the number of faces bounded by a cycle of length <m>4</m> and let <m>f_{6}</m> be the number of faces bounded by a cycle of length <m>6</m>. Express the total number of faces <m>f</m> in terms of <m>f_{4}</m> and <m>f_{6}</m>. Then express the number of edge-face pairs in terms of <m>f_{4}</m> and <m>f_{6}</m>.
+            </p>
+          </statement>
+        </task>
+        <task workspace="1in">
+          <statement>
+            <p>
+              What does Euler's formula tell you <m>f</m> would have to be for <m>\bfK_{3,3}</m>? What lower bound does this give you for the number of edge-face pairs, and how does this show that <m>\bfK_{3,3}</m> is not planar?
+            </p>
+          </statement>
+        </task>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            For each graph on the next page, find a planar drawing or
+            give a reason why the graph is not planar.
+          </p>
+        </statement>
+      </exercise>
+      <!-- </page> -->
+      
+      
+    </worksheet>
+    <worksheet xml:id="ws-planar-or-not" component="graphs-planar-or-not">
+      <title>Planar or Not?</title>
+      <sbsgroup widths="32% 32%">
+        <sidebyside>
+          <figure>
+            <caption><m>\bfG_1</m></caption>
+            <image>
+              <shortdescription>A graph with 6 vertices</shortdescription>
+              <description>
+                <p>
+                  A graph with <m>6</m> vertices. The adjacencies are given below.
+                </p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell>Vertex</cell>
+                    <cell>Neighbors</cell>
+                  </row>
+                  <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>3</m>, <m>4</m>, <m>5</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m>, <m>4</m>, <m>5</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>4</m>, <m>6</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>3</m>, <m>5</m>, <m>6</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>5</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>4</m>, <m>6</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>6</m></cell>
+                    <cell><m>3</m>, <m>4</m>, <m>5</m></cell>
+                  </row>
+                </tabular>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="k33-plus-edges">
+                <diagram dimensions="(300,200)" margins="15">
+                  <definition>graph={1:[3,4,5],2:[3,4,5],3:[4,6],4:[5,6],5:[6]}</definition>
+                  <coordinates bbox="(0,0,2,2)">
+                    <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" labels="yes">
+                      <node at="1" p="(0,1.5)"/>
+                      <node at="2" p="(0,0.5)"/>
+                      <node at="3" p="(1,0)"/>
+                      <node at="4" p="(1,1)"/>
+                      <node at="5" p="(1,2)"/>
+                      <node at="6" p="(2,1)"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+              
+            </image>
+          </figure>
+          <figure>
+            <caption><m>\bfG_2</m></caption>
+            <image>
+              <description>
+                <p>
+                  A graph with 10 vertices labeled 0 to 9. For the vertices with labels 0 through 4, the vertex with label <m>i</m> has neighbors <m>i-1</m>, <m>i+1</m>, and <m>i+5</m>. The first two adjacencies are interpreted cyclically so that, for instance, <m>4</m> has neighbors <m>3</m> and <m>0</m>. For the vertices with labels 5 through 9, the vertex with label <m>i</m> has neighbors <m>i-5</m>, <m>i+2</m>, and <m>i+3</m>. The second and third adjacencies are interpreted cyclically so that, for instance, <m>9</m> has neighbors <m>6</m> and <m>7</m>.
+                </p>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="petersen-graph-planarity">
+                <diagram dimensions="(300,300)" margins="15">
+                  <definition>N=5</definition>
+                  <definition>g(t)=(0.5*cos(2*pi*t/N), 0.5*sin(2*pi*t/N))</definition>
+                  <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
+                  <coordinates bbox="(-1,-1,1,1)">
+                    <network scale="0.8" node-fill="#eee" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
+                      <node at="0" p="f(0)" edges="[1,4,5]"/>
+                      <node at="1" p="f(1)" edges="[2,6]"/>
+                      <node at="2" p="f(2)" edges="[3,7]"/>
+                      <node at="3" p="f(3)" edges="[4,8]"/>
+                      <node at="4" p="f(4)" edges="[9]"/>
+                      <node at="5" p="g(0)" edges="[7,8]"/>
+                      <node at="6" p="g(1)" edges="[8,9]"/>
+                      <node at="7" p="g(2)" edges="[9]"/>
+                      <node at="8" p="g(3)" edges="[]"/>
+                      <node at="9" p="g(4)" edges="[]"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
+          </figure>
+        </sidebyside>
+        <sidebyside>
+                    <figure>
+            <caption><m>\bfG_3</m></caption>
+            <image>
+              <shortdescription>A graph with 8 vertices</shortdescription>
+              <description>
+                <p>
+                  A graph with <m>8</m> vertices. The adjacencies are given below.
+                </p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell>Vertex</cell>
+                    <cell>Neighbors</cell>
+                  </row>
+                  <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>5</m>, <m>6</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>1</m>, <m>4</m>, <m>6</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>1</m>, <m>4</m>, <m>7</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>7</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>5</m></cell>
+                    <cell><m>1</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>6</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>5</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>7</m></cell>
+                    <cell><m>3</m>, <m>4</m>, <m>5</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>8</m></cell>
+                    <cell><m>4</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                </tabular>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="cube-plus-two">
+                <diagram dimensions="(250,300)" margins="15">
+                  <definition>graph={1:[2,3,5,6],2:[4,6],3:[4,7],4:[7,8],5:[6,7],6:[8],7:[8]}</definition>
+                  <coordinates bbox="(-1,-1,0.5,0.75)">
+                    <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" labels="yes">
+                      <node at="1" p="(-1,-1)"/>
+                      <node at="2" p="(0.25,-1)"/>
+                      <node at="3" p="(-0.7,-0.5)"/>
+                      <node at="4" p="(0.5,-0.5)"/>
+                      <node at="5" p="(-1,0.25)"/>
+                      <node at="6" p="(0.25,0.25)"/>
+                      <node at="7" p="(-0.7,0.75)"/>
+                      <node at="8" p="(0.5,0.75)"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
+          </figure>
+
+          <figure>
+            <caption><m>\bfG_4</m></caption>
+            <image>
+              <shortdescription>A graph with 8 vertices</shortdescription>
+              <description>
+                <p>
+                  A graph with <m>8</m> vertices. The vertices are arranged at the vertices of a regular octagon. Each vertex has degree <m>5</m>. The five neighbors are the two immediately adjacent (on on either side) around the octagon as well as the three opposite. For example, vertex <m>1</m> has neighbors <m>2</m> and <m>8</m> (adjacent on the octagon) and <m>4, 5, 6</m> (opposite on the octagon).
+                </p>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="octagonal-graph">
+                <diagram dimensions="(300,300)" margins="15">
+                  <definition>N=8</definition>
+                  <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
+                  <coordinates bbox="(-1,-1,1,1)">
+                    <network scale="0.8" node-fill="#eee" node-stroke="black" labels="yes">
+                      <node at="1" p="f(1)" edges="[2,4,5,6,8]"/>
+                      <node at="2" p="f(2)" edges="[3,5,6,7]"/>
+                      <node at="3" p="f(3)" edges="[4,6,7,8]"/>
+                      <node at="4" p="f(4)" edges="[5,7,8]"/>
+                      <node at="5" p="f(5)" edges="[6,8]"/>
+                      <node at="6" p="f(6)" edges="[7]"/>
+                      <node at="7" p="f(7)" edges="[8]"/>
+                      <node at="8" p="f(8)" edges="[]"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
+            
+          </figure>
+        </sidebyside>
+        <sidebyside>
+          <figure>
+            <caption><m>\bfG_5</m> (Cube with diagonals of all six faces)</caption>
+            
+            
+            <image>
+              <shortdescription>A graph with 8 vertices</shortdescription>
+              <description>
+                <p>
+                  A graph with <m>8</m> vertices. The adjacencies are given below.
+                </p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell>Vertex</cell>
+                    <cell>Neighbors</cell>
+                  </row>
+                  <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>1</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>4</m>, <m>5</m>, <m>7</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>3</m>, <m>6</m>, <m>7</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>5</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>3</m>, <m>6</m>, <m>7</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>6</m></cell>
+                    <cell><m>1</m>, <m>2</m>, <m>4</m>, <m>5</m>, <m>7</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>7</m></cell>
+                    <cell><m>1</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>8</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                </tabular>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="cube-with-face-diagonals">
+                <diagram dimensions="(250,300)" margins="15">
+                  <definition>graph={1:[2,3,4,5,6,7],2:[3,4,5,6,8],3:[4,5,7,8],4:[6,7,8],5:[6,7,8],6:[7,8],7:[8]}</definition>
+                  <coordinates bbox="(-1,-1,0.5,0.75)">
+                    <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" labels="yes">
+                      <node at="1" p="(-1,-1)"/>
+                      <node at="2" p="(0.25,-1)"/>
+                      <node at="3" p="(-0.7,-0.5)"/>
+                      <node at="4" p="(0.5,-0.5)"/>
+                      <node at="5" p="(-1,0.25)"/>
+                      <node at="6" p="(0.25,0.25)"/>
+                      <node at="7" p="(-0.7,0.75)"/>
+                      <node at="8" p="(0.5,0.75)"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
+          </figure>
+          <figure>
+            <caption><m>\bfG_6</m> (cube with interior diagonals)</caption>
+            
+            <image>
+              <shortdescription>A graph with 8 vertices</shortdescription>
+              <description>
+                <p>
+                  A graph with 8 vertices. The adjacencies are given below.
+                </p>
+                <tabular>
+                  <row bottom="minor">
+                    <cell>Vertex</cell>
+                    <cell>Neighbors</cell>
+                  </row>
+                  <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>5</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>1</m>, <m>4</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>1</m>, <m>4</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>5</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>5</m></cell>
+                    <cell><m>1</m>, <m>4</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>6</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>5</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>7</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>5</m>, <m>8</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>8</m></cell>
+                    <cell><m>1</m>, <m>4</m>, <m>6</m>, <m>7</m></cell>
+                  </row>
+                </tabular>
+              </description>
+              
+              <prefigure xmlns="https://prefigure.org" label="cube-interior-diagonals">
+                <diagram dimensions="(250,300)" margins="15">
+                  <definition>graph={1:[2,3,5,8],2:[4,6,7],3:[4,6,7],4:[5,8],5:[6,7],6:[8],7:[8]}</definition>
+                  <coordinates bbox="(-1,-1,0.5,0.75)">
+                    <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" labels="yes">
+                      <node at="1" p="(-1,-1)"/>
+                      <node at="2" p="(0.25,-1)"/>
+                      <node at="3" p="(-0.7,-0.5)"/>
+                      <node at="4" p="(0.5,-0.5)"/>
+                      <node at="5" p="(-1,0.25)"/>
+                      <node at="6" p="(0.25,0.25)"/>
+                      <node at="7" p="(-0.7,0.75)"/>
+                      <node at="8" p="(0.5,0.75)"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
+            
+          </figure>
+        </sidebyside>
+      </sbsgroup>
+    </worksheet>
+    <worksheet xml:id="ws-prufer-codes" component="graphs-prufer">
+      <title>Counting Labeled Trees</title>
+      <activity>
+        <task>
+          <p>
+            Construct <m>\prufer(\bfT)</m> for the two trees below.
+          </p>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Be prepared to answer the following questions:
+              <ol marker="i.">
+                <li>
+                  <p>
+                    What is the relationship between the length of the Pr&#252;fer code of a tree and the number of vertices of the tree?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    What type(s) of vertices have labels appearing in the Pr&#252;fer code of a tree?
+                  </p>
+                </li>
+                
+              </ol>
+            </p>
+          </statement>
+        </task>
+        <task workspace="0cm">
+          <statement>
+            <p>
+              Extra time? Draw a tree for another group to find the Pr&#252;fer code of.
+            </p>
+          </statement>
+        </task>
+        
+      </activity>
+      <image width="50%">
+        <description>
+          <p>
+            A tree with 6 vertices. The neighbors of each vertex are given in the table below.
+          </p>
+          <tabular>
+            <row>
+              <cell>Vertex</cell>
+              <cell>Neighbors</cell>
+            </row>
+            <row>
+              <cell><m>1</m></cell>
+              <cell><m>2</m>, <m>3</m>, <m>4</m>, <m>5</m></cell>
+            </row>
+            <row>
+              <cell><m>2</m></cell>
+              <cell><m>1</m></cell>
+            </row>
+            <row>
+              <cell><m>3</m></cell>
+              <cell><m>1</m>, <m>6</m></cell>
+            </row>
+            <row>
+              <cell><m>4</m></cell>
+              <cell><m>1</m></cell>
+            </row>
+            <row>
+              <cell><m>5</m></cell>
+              <cell><m>1</m></cell>
+            </row>
+            <row>
+              <cell><m>6</m></cell>
+              <cell><m>3</m></cell>
+            </row>
+          </tabular>
+        </description>
+        <prefigure xmlns="https://prefigure.org" label="graph-prufer-6">
+          <diagram dimensions="(300,200)" margins="15">
+            <definition>graph={1:[2,3,4,5],3:[6]}</definition>
+            <coordinates bbox="(-1,-1,1,1)">
+              <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="73" labels="yes" rotate="90">
+              </network>
+            </coordinates>
+          </diagram>
+        </prefigure>
+      </image>    
+      <image width="50%">
+        <description>
+          <p>
+            A tree with 14 vertices. The neighbors of each vertex are given in the table below.
+          </p>
+          <tabular>
+            <row>
+              <cell>Vertex</cell>
+              <cell>Neighbors</cell>
+            </row>
+            <row>
+              <cell><m>1</m></cell>
+              <cell><m>9</m></cell>
+            </row>
+            <row>
+              <cell><m>2</m></cell>
+              <cell><m>8</m>, <m>9</m>, <m>10</m>, <m>11</m>, <m>14</m></cell>
+            </row>
+            <row>
+              <cell><m>3</m></cell>
+              <cell><m>11</m></cell>
+            </row>
+            <row>
+              <cell><m>4</m></cell>
+              <cell><m>12</m></cell>
+            </row>
+            <row>
+              <cell><m>5</m></cell>
+              <cell><m>6</m>, <m>7</m>, <m>12</m>, <m>14</m></cell>
+            </row>
+            <row>
+              <cell><m>6</m></cell>
+              <cell><m>5</m></cell>
+            </row>
+            <row>
+              <cell><m>7</m></cell>
+              <cell><m>5</m>, <m>13</m></cell>
+            </row>
+            <row>
+              <cell><m>8</m></cell>
+              <cell><m>2</m></cell>
+            </row>
+            <row>
+              <cell><m>9</m></cell>
+              <cell><m>1</m>, <m>2</m></cell>
+            </row>
+            <row>
+              <cell><m>10</m></cell>
+              <cell><m>2</m></cell>
+            </row>
+            <row>
+              <cell><m>11</m></cell>
+              <cell><m>2</m>, <m>3</m></cell>
+            </row>
+            <row>
+              <cell><m>12</m></cell>
+              <cell><m>4</m>, <m>5</m></cell>
+            </row>
+            <row>
+              <cell><m>13</m></cell>
+              <cell><m>7</m></cell>
+            </row>
+            <row>
+              <cell><m>14</m></cell>
+              <cell><m>2</m>, <m>5</m></cell>
+            </row>
+          </tabular>
+        </description>
+        <prefigure xmlns="https://prefigure.org" label="graph-prufer-14">
+          <diagram dimensions="(300,200)" margins="15">
+            <definition>graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12],
+              5:[6,7,12,14],7:[13],
+            }</definition>
+            <coordinates bbox="(-1,-1,1,1)">
+              <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="38" layout="spring" labels="yes" rotate="120">
+              </network>
+            </coordinates>
+          </diagram>
+        </prefigure>
+      </image>
+    </worksheet>
+  </chapter>
