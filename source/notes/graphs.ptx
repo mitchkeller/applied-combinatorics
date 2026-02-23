@@ -786,10 +786,184 @@
   
   
   <handout xml:id="planar" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>PLanar Graphs</title>
+    <title>Planar Graphs</title>
+    <page>
+        <p>
+      <ul>
+        <li>
+          <p>
+            A <term>drawing</term> of a graph is a way of associating the graph's vertices with points in the plane and its edges with simple polygonal arcs between the points corresponding to the edge's endpoints.
+          </p>
+        </li>
+        <li>
+          <p>
+            A <term>planar drawing</term> of a graph is one in which the polygonal arcs corresponding to edges intersect only at the points corresponding to the endpoints of the appropriate edges.
+          </p>
+        </li>
+        <li>
+          <p>
+            A graph is <term>planar</term> if it has a planar drawing.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <tabular>
+      <row bottom="minor" header="yes">
+        <cell>Polyhedron</cell>
+        <cell>Vertices <m>n</m></cell>
+        <cell>Edges <m>m</m></cell>
+        <cell>Faces <m>f</m></cell>
+      </row>
+      <row>
+        <cell>Tetrahedron</cell>
+        <cell component="a">4</cell>
+        <cell component="a">6</cell>
+        <cell component="a">4</cell>
+      </row>
+      <row component="b">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Octahedron</cell>
+        <cell component="a">6</cell>
+        <cell component="a">12</cell>
+        <cell component="a">8</cell>
+      </row>
+      <row component="b">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Cube</cell>
+        <cell component="a">8</cell>
+        <cell component="a">12</cell>
+        <cell component="a">6</cell>
+      </row>
+      <row component="b">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Icosahedron</cell>
+        <cell component="a">12</cell>
+        <cell component="a">30</cell>
+        <cell component="a">20</cell>
+      </row>
+      <row component="b">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Dodecahedron</cell>
+        <cell component="a">20</cell>
+        <cell component="a">30</cell>
+        <cell component="a">12</cell>
+      </row>
+      <row component="b">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+    <p component="a">
+      We conjecture the formula
+      <md>
+        n-m+f = 2
+      </md>
+      and will sketch a proof through the activity.
+    </p>
+    <p workspace="0.5cm">
+      
+    </p>
+    <sidebyside widths="48% 48%">
+      <image source="5-5_math_art_detail.jpg">
+        <shortdescription>Polyhedra zoomed in so that axis scales are visible</shortdescription>
+      </image>
+      <image source="5-5_math_art_expanded.jpg">
+        <shortdescription>The plane of polyhedra</shortdescription>
+      </image>
+    </sidebyside>
+  <p component="b" workspace="0.1cm">
     
-    
-  
+  </p>
+  </page>
+    <page>
+    <p component="a">
+      There are two common drawings of <m>\bfK_4</m>, only one of which is planar. The existence of this planar drawing tells us that <m>\bfK_4</m> is planar. Keep in mind that there is always an unbounded face when we count faces in a planar drawing!
+    </p>
+    <p workspace="2cm">
+      
+    </p>
+    <p>
+      Takeaways from the handout:
+      <ul>
+        <li>
+          <p component="a">
+            If <m>\bfG</m> is planar, then <m>m\leq 3n-6</m>. This is more useful in the form <q>If <m>m\gt 3n-6</m>, then <m>\bfG</m> is not planar.</q>
+          </p>
+          <p component="b" workspace="1cm">
+            
+          </p>
+        </li>
+        <li>
+          <p component="a">
+            Corollary: <m>\bfK_5</m> is not planar.
+          </p>
+          <p component="b" workspace="1cm">
+            
+          </p>
+        </li>
+        <li>
+          <p component="a">
+            <m>\bfK_{3,3}</m> is not planar.
+          </p>
+          <p component="b" workspace="1cm">
+            
+          </p>
+        </li>
+      </ul>
+    </p>
+    <theorem xml:id="thm-kuratowski">
+      <title>Kuratowski's Theorem</title>
+      
+      
+      <statement>
+        <p>
+          A graph <m>\bfG</m> is planar if and only if it does not contain a subdivision of <m>\bfK_5</m> or <m>\bfK_{3,3}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p component="a">
+      A subdivision is formed by replacing one or more edges of <m>\bfG</m> by <em>disjoint</em> paths. Morally, the only nonplanar graphs contain <m>\bfK_5</m> and <m>\bfK_{3,3}</m>.
+    </p>
+    <p component="b" workspace="3cm">
+      
+    </p>
+    <theorem xml:id="thm-four-color">
+      <title>The Four Color Theorem</title>
+      
+      
+      <statement>
+        <p>
+          If <m>\bfG</m> is a planar graph, then <m>\chi(\bfG)\leq 4</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p component="a">
+      This theorem was <q>proved</q> many times over the years, but all the proofs were flawed until Appel and Haken provided a computer-assisted proof. This was the first computer-assisted proof that could not be readily converted to a pencil and paper proof that ended up being widely accepted. In the early 1990's, a computer assisted proof with fewer cases was provided, but to this day, no one knows a proof that does not rely on computers.
+    </p>
+  </page>
   </handout>
   <handout component="pruefer">
     <title>Counting Labeled Trees</title>
