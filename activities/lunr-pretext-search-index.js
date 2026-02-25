@@ -440,6 +440,33 @@ var ptx_lunr_docs = [
   "number": "5.8",
   "title": "",
   "body": " (cube with interior diagonals)   A graph with 8 vertices   A graph with 8 vertices. The adjacencies are given below.    Vertex  Neighbors     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,     , , ,       graph={1:[2,3,5,8],2:[4,6,7],3:[4,6,7],4:[5,8],5:[6,7],6:[8],7:[8]}                 "
+},
+{
+  "id": "ws-prufer-codes",
+  "level": "1",
+  "url": "ws-prufer-codes.html",
+  "type": "Worksheet",
+  "number": "5.5",
+  "title": "Counting Labeled Trees",
+  "body": " Counting Labeled Trees    Construct for the two trees below.     A tree with 6 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     , , ,         ,                   graph={1:[2,3,4,5],3:[6]}           A tree with 14 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors         , , , ,             , , ,         ,         ,         ,     ,         ,       graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12], 5:[6,7,12,14],7:[13], }             Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?         Extra time? Draw a tree for another group to find the Prüfer code of.        Complete the table (and draw the tree) for the Prüfer code .      Find the tree for the Prüfer code .            Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)              Extra time? Make up a Prüfer code and have another group find the tree.            Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)             "
+},
+{
+  "id": "ws-prufer-codes-2",
+  "level": "2",
+  "url": "ws-prufer-codes.html#ws-prufer-codes-2",
+  "type": "Activity",
+  "number": "5.5.1",
+  "title": "",
+  "body": "  Construct for the two trees below.     A tree with 6 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     , , ,         ,                   graph={1:[2,3,4,5],3:[6]}           A tree with 14 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors         , , , ,             , , ,         ,         ,         ,     ,         ,       graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12], 5:[6,7,12,14],7:[13], }             Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?         Extra time? Draw a tree for another group to find the Prüfer code of.    "
+},
+{
+  "id": "ws-prufer-codes-3",
+  "level": "2",
+  "url": "ws-prufer-codes.html#ws-prufer-codes-3",
+  "type": "Activity",
+  "number": "5.5.2",
+  "title": "",
+  "body": "   Complete the table (and draw the tree) for the Prüfer code .      Find the tree for the Prüfer code .            Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)              Extra time? Make up a Prüfer code and have another group find the tree.            Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)            "
 }
 ]
 

@@ -440,6 +440,33 @@ var ptx_lunr_docs = [
   "number": "5.12",
   "title": "The Four Color Theorem.",
   "body": " The Four Color Theorem   If is a planar graph, then .   "
+},
+{
+  "id": "graphs-prufer",
+  "level": "1",
+  "url": "graphs-prufer.html",
+  "type": "Handout",
+  "number": "5.5",
+  "title": "Counting Labeled Trees",
+  "body": " Counting Labeled Trees    Labeled vs Unlabeled Trees (and Graphs) and Counting    Big Idea                     Labeled Tree Prüfer Code  Assume is a labeled tree with at least vertices.   is defined recursively by   If , return the empty string.    Else, let be the leaf of with the smallest label and let be its unique neighbor. Let be the label of . Return .       Peer instruction question 1 followed by Activity 5.5.1.    Peer instruction questions 2 3.    Prüfer Code Labeled Tree     Keep track of three things   Prüfer code    Labels remaining    Edge added       Smallest remaining label not in code and first label of code determine edge to add    Remove first entry of Prüfer code. Remove label just used from label set.    Repeat until Prüfer code is empty (remaining labels are edge).    Build tree reading edges from bottom to top.       Peer Instruction Question 4.           Prüfer code  Label set  Edge added    8431875                                                                     Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)           "
+},
+{
+  "id": "graphs-prufer-3-1",
+  "level": "2",
+  "url": "graphs-prufer.html#graphs-prufer-3-1",
+  "type": "Algorithm",
+  "number": "5.13",
+  "title": "Labeled Tree <span class=\"process-math\">\\(\\longrightarrow\\)<\/span> Prüfer Code.",
+  "body": " Labeled Tree Prüfer Code  Assume is a labeled tree with at least vertices.   is defined recursively by   If , return the empty string.    Else, let be the leaf of with the smallest label and let be its unique neighbor. Let be the label of . Return .     "
+},
+{
+  "id": "graphs-prufer-3-4",
+  "level": "2",
+  "url": "graphs-prufer.html#graphs-prufer-3-4",
+  "type": "Algorithm",
+  "number": "5.14",
+  "title": "Prüfer Code <span class=\"process-math\">\\(\\longrightarrow\\)<\/span> Labeled Tree.",
+  "body": " Prüfer Code Labeled Tree     Keep track of three things   Prüfer code    Labels remaining    Edge added       Smallest remaining label not in code and first label of code determine edge to add    Remove first entry of Prüfer code. Remove label just used from label set.    Repeat until Prüfer code is empty (remaining labels are edge).    Build tree reading edges from bottom to top.     "
 }
 ]
 
