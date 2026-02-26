@@ -156,6 +156,19 @@
               </description></image>
             </figure>
           </statement>
+          <solution>
+            <p>
+              We first address hamiltonicity.
+              Notice that because <m>g</m> and <m>n</m> both have degree <m>2</m>, if there is a hamiltonian cycle, it must use the edges incident with <m>g</m> and <m>n</m>.
+              However, both of these vertices are adjacent to <m>m</m>.
+              Thus, <m>m</m> already has two edges in a hypothetical hamiltonian cycle, which means that there cannot be a hamiltonian cycle as no other vertices could be included.
+            </p>
+            
+            <p>
+              We now proceed to apply the algorithm to find an eulerian circuit.
+              The algorithm finds an eulerian circuit without needing multiple phases, and that circuit is <m>(a,b,l,a,e,f,c,i,d,h,m,c,j,d,l,j,m,g,n,m,i,f,k,a)</m>.
+            </p>
+          </solution>
         </exercise>
         <exercise>
           <statement>
@@ -211,6 +224,14 @@
                 </description></image>
               </figure>
             </statement>
+            <solution>
+              <p>
+                Notice that the vertices <m>\{f,b,g,l\}</m> form a clique of size 4.
+                Thus, the chromatic number of <m>\mathbf{G}</m> is at least 4.
+                There are many proper colorings using four colors, so <m>\chi(\mathbf{G}) = 4</m>.
+                A complete and correct solution will show such a proper coloring.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
@@ -230,11 +251,22 @@
                 </me>
               </p>
             </statement>
+            <solution>
+              <p>
+                We can define a graph from this situation by letting the vertices be the chemicals.
+                We place an edge between two vertices if and only if the corresponding chemicals cannot be stored in the same room, which means we place an edge if and only if there is a 1 in the matrix.
+                A proper coloring of this graph corresponds to a storage plan, since we can safely place all chemicals with the same color in a single warehouse.
+                The chromatic number of the graph is thus the minimum number of warehouses required.
+                After drawing such a graph (labeling the vertices by the row/column number to which they correspond), we identify that <m>\{1,2,4,5\}</m> is a 4-clique in the graph.
+                Thus, the chromatic number is at least 4.
+                There are many proper 4-colorings, so the chromatic number is 4 and 4 is the minimum number of warehouses required.
+                A complete and correct solution will show such a proper coloring.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
               <p>A school is preparing the schedule of classes for the next academic year. They are concerned about scheduling calculus, physics, English, statistics, economics, chemistry, and German classes, planning to offer a single section of each one. Below are the lists of courses that each of six students must take in order to successfully graduate. Determine the smallest number of class periods that can be used to schedule these courses if each student can take at most one course per class period. Explain why fewer class periods cannot be used.</p>
-              <sidebyside>
                 <tabular>
                   <col halign="center"/><col/>
                   <row bottom="minor"><cell>Student</cell><cell>Courses</cell></row>
@@ -245,13 +277,31 @@
                   <row><cell>5</cell><cell>English, Chemistry</cell></row>
                   <row><cell>6</cell><cell>Chemistry, Economics</cell></row>
                 </tabular>
-              </sidebyside>
             </statement>
+            <solution>
+              <p>
+                We use a graph-theoretic model in which the vertices of our graph are the courses.
+                We place an edge between two vertices/courses if and only if a student needs to take both of the courses, as then a proper coloring of the graph will ensure that no pair of courses that must both be taken by any student are scheduled at the same time.
+                After constructing the graph, we see that there are multiple <m>3</m>-cliques (for example, chemistry, physics, and economics), so we know that at least three colors (class periods) are required.
+                As an example of a proper 3-coloring, we could color physics, English, and calculus with color 1; color chemistry and German with color 2; and color economics and statistics with color 3.
+                This shows that 3 is the minimum number of class periods required.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
               <p>All trees with more than one vertex have the same chromatic number. What is it, and why?</p>
             </statement>
+            <solution>
+              <p>
+                By definition, a tree is a connected graph with no cycles.
+                If <m>\mathbf{T}</m> is a tree, it therefore cannot contain any odd cycles since it has no cycles.
+                Thus, we know that <m>\mathbf{T}</m> is bipartite.
+                Since we have assumed the tree has at least two vertices, it has at least one edge.
+                Therefore, we cannot use only one color.
+                Thus, <m>\chi(\mathbf{T}) = 2</m>.
+              </p>
+            </solution>
           </exercise>
           <exercise xml:id="ex_color">
             <statement>

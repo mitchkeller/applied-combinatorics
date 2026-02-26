@@ -812,7 +812,7 @@
           </figure>
         </sidebyside>
         <sidebyside>
-                    <figure>
+          <figure>
             <caption><m>\bfG_3</m></caption>
             <image>
               <shortdescription>A graph with 8 vertices</shortdescription>
@@ -878,7 +878,7 @@
               </prefigure>
             </image>
           </figure>
-
+          
           <figure>
             <caption><m>\bfG_4</m></caption>
             <image>
@@ -1050,6 +1050,99 @@
           </figure>
         </sidebyside>
       </sbsgroup>
+      <p component="planar-solns">
+        <ul>
+          <li>
+            <p>
+              The graph <m>\bfG_1</m> is not planar, as it contains a <m>\bfK_{3,3}</m>. In fact, this graph is <m>\bfK_{3,3}</m> plus two additional edges (<m>45</m> and <m>34</m>.)
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\bfG_2</m> is not planar, but this is tougher to see. Refer to <xref ref="petersen-nonplanar"/>, where we illustrate a <m>\bfK_{3,3}</m> subdivision. The vertex <m>8</m>, which is shown in magenta, is not required for the <m>\bfK_{3,3}</m> subdivision. The yellow vertices <m>\set{0,2,9}</m> form one side of the <m>\bfK_{3,3}</m> while <m>\set{1,4,7}</m> form the other. The dashed edges through the gray vertices (<m>05,57, 16,69, 23,34</m>) are the disjoint paths that, when combined with the edges around the outside of the hexagon (<m>04,49,97,72,21,10</m>) complete the <m>\bfK_{3,3}</m> subdivision.
+            </p>
+          </li>
+          <li>
+            <p>
+              The graph <m>\bfG_3</m> is planar, as shown in <xref ref="cube-plus-two-planar"/>
+            </p>
+          </li>
+          <li>
+            <p>
+              The graph <m>\bfG_4</m> is not planar, as it has <m>5\cdot 8/2 = 20</m> edges and <m>8</m> vertices, but <m>3\cdot 8-6 = 18</m>. Thus, it has too many edges to be planar.
+            </p>
+          </li>
+          <li>
+            <p>
+              The graph <m>\bfG_5</m> is not planar because it has <m>6\cdot 8 /2 = 24</m> edges and <m>8</m> vertices, but <m>3\cdot 8-6 = 18</m>. Thus, it has too many edges to be planar.
+            </p>
+          </li>
+          <li>
+            <p>
+              The graph <m>\bfG_6</m> is not planar because it contains <m>\bfK_{3,3}</m>. As one example of a <m>\bfK_{3,3}</m>, put <m>\set{2,5,8}</m> in one set and <m>\set{4,6,7}</m> in the other. We then have an edge from each vertex of the first set to each vertex of the second set.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <figure component="planar-solns" xml:id="cube-plus-two-planar">
+        <caption>A planar drawing of <m>\bfG_3</m></caption>
+      
+        <image width="50%">
+          <shortdescription>A planar drawing</shortdescription>
+          <description>
+            <p>
+              A planar drawing of the graph <m>\bfG_2</m> formed by adding the diagonals to two opposite faces of a cube.
+            </p>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="cube-plus-two-planar">
+            <diagram dimensions="(250,300)" margins="15">
+              <definition>graph={1:[2,3,5,6],2:[4,6],3:[4,7],4:[7,8],5:[6,7],6:[8],7:[8]}</definition>
+              <coordinates bbox="(-1,-1,0.5,0.75)">
+                <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" layout="planar" labels="yes">
+                </network>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+      </figure>
+      <figure xml:id="petersen-nonplanar" component="planar-solns">
+        <caption>Demonstrating that the Petersen graph is nonplanar</caption>
+        <image width="50%">
+          <description>
+            <p>
+              A drawing of the Petersen graph that emphasizes the <m>\bfK_{3,3}</m> subdivision it contains. The text contains more details about this image.
+            </p>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="petersen-nonplanar">
+            <diagram dimensions="(300,300)" margins="15">
+              <definition>N=6</definition>
+              <definition>M=3</definition>
+              <definition>g(t)=(0.55*cos(2*pi*t/M+pi/6), 0.55*sin(2*pi*t/M+pi/6))</definition>
+              <definition>f(t)=(cos(2*pi*t/N), sin(2*pi*t/N))</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network scale="0.8" node-fill="white" node-stroke="black" seed="1" labels="yes" tactile-node-size="40">
+                  <node at="0" p="f(0)" edges="[1,4,5]" fill="#FEFE62"/>
+                  <node at="1" p="f(5)" edges="[2,6]"/>
+                  <node at="2" p="f(4)" edges="[3,7]" fill="#FEFE62"/>
+                  <node at="3" p="g(2)" edges="[4,8]" fill="#ccc"/>
+                  <node at="4" p="f(1)" edges="[9]" />
+                  <node at="5" p="g(0)" edges="[7,8]" fill="#ccc"/>
+                  <node at="6" p="g(1)" edges="[8,9]" fill="#ccc"/>
+                  <node at="7" p="f(3)" edges="[9]"/>
+                  <node at="8" p="(0,0)" edges="[]" fill="#D35FB7"/>
+                  <node at="9" p="f(2)" edges="[]" fill="#FEFE62"/>
+                  <edge vertices="[9,6]" dash="9 9" />
+                  <edge vertices="[6,1]" dash="9 9" />
+                  <edge vertices="[2,3]" dash="9 9" />
+                  <edge vertices="[3,4]" dash="9 9" />
+                  <edge vertices="[7,5]" dash="9 9" />
+                  <edge vertices="[5,0]" dash="9 9" />
+                </network>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+      </figure>
     </worksheet>
     <worksheet xml:id="ws-prufer-codes" component="graphs-prufer">
       <title>Counting Labeled Trees</title>
@@ -1058,6 +1151,136 @@
           <p>
             Construct <m>\prufer(\bfT)</m> for the two trees below.
           </p>
+          <sidebyside widths="48% 48%">
+            
+            <image width="50%">
+              <description>
+                <p>
+                  A tree with 6 vertices. The neighbors of each vertex are given in the table below.
+                </p>
+                <tabular>
+                  <row>
+                    <cell>Vertex</cell>
+                    <cell>Neighbors</cell>
+                  </row>
+                  <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m>, <m>3</m>, <m>4</m>, <m>5</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>1</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>1</m>, <m>6</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>1</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>5</m></cell>
+                    <cell><m>1</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>6</m></cell>
+                    <cell><m>3</m></cell>
+                  </row>
+                </tabular>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="graph-prufer-6">
+                <diagram dimensions="(300,200)" margins="15">
+                  <definition>graph={1:[2,3,4,5],3:[6]}</definition>
+                  <coordinates bbox="(-1,-1,1,1)">
+                    <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="73" labels="yes" rotate="90">
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>    
+            <image width="50%">
+              <description>
+                <p>
+                  A tree with 14 vertices. The neighbors of each vertex are given in the table below.
+                </p>
+                <tabular>
+                  <row>
+                    <cell>Vertex</cell>
+                    <cell>Neighbors</cell>
+                  </row>
+                  <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>9</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>8</m>, <m>9</m>, <m>10</m>, <m>11</m>, <m>14</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>11</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>12</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>5</m></cell>
+                    <cell><m>6</m>, <m>7</m>, <m>12</m>, <m>14</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>6</m></cell>
+                    <cell><m>5</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>7</m></cell>
+                    <cell><m>5</m>, <m>13</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>8</m></cell>
+                    <cell><m>2</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>9</m></cell>
+                    <cell><m>1</m>, <m>2</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>10</m></cell>
+                    <cell><m>2</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>11</m></cell>
+                    <cell><m>2</m>, <m>3</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>12</m></cell>
+                    <cell><m>4</m>, <m>5</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>13</m></cell>
+                    <cell><m>7</m></cell>
+                  </row>
+                  <row>
+                    <cell><m>14</m></cell>
+                    <cell><m>2</m>, <m>5</m></cell>
+                  </row>
+                </tabular>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="graph-prufer-14">
+                <diagram dimensions="(300,200)" margins="15">
+                  <definition>graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12],
+                    5:[6,7,12,14],7:[13],
+                  }</definition>
+                  <coordinates bbox="(-1,-1,1,1)">
+                    <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="38" layout="spring" labels="yes" rotate="120">
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
+          </sidebyside>
+          
         </task>
         <task>
           <statement>
@@ -1066,12 +1289,12 @@
               <ol marker="i.">
                 <li>
                   <p>
-                    What is the relationship between the length of the Pr&#252;fer code of a tree and the number of vertices of the tree?
+                    What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?
                   </p>
                 </li>
                 <li>
                   <p>
-                    What type(s) of vertices have labels appearing in the Pr&#252;fer code of a tree?
+                    What type(s) of vertices have labels appearing in the Prüfer code of a tree?
                   </p>
                 </li>
                 
@@ -1079,140 +1302,215 @@
             </p>
           </statement>
         </task>
-        <task workspace="0cm">
+        <task>
           <statement>
             <p>
-              Extra time? Draw a tree for another group to find the Pr&#252;fer code of.
+              Extra time? Draw a tree for another group to find the Prüfer code of.
             </p>
           </statement>
         </task>
         
+        
+        
       </activity>
-      <image width="50%">
-        <description>
-          <p>
-            A tree with 6 vertices. The neighbors of each vertex are given in the table below.
-          </p>
-          <tabular>
-            <row>
-              <cell>Vertex</cell>
-              <cell>Neighbors</cell>
-            </row>
-            <row>
-              <cell><m>1</m></cell>
-              <cell><m>2</m>, <m>3</m>, <m>4</m>, <m>5</m></cell>
-            </row>
-            <row>
-              <cell><m>2</m></cell>
-              <cell><m>1</m></cell>
-            </row>
-            <row>
-              <cell><m>3</m></cell>
-              <cell><m>1</m>, <m>6</m></cell>
-            </row>
-            <row>
-              <cell><m>4</m></cell>
-              <cell><m>1</m></cell>
-            </row>
-            <row>
-              <cell><m>5</m></cell>
-              <cell><m>1</m></cell>
-            </row>
-            <row>
-              <cell><m>6</m></cell>
-              <cell><m>3</m></cell>
-            </row>
-          </tabular>
-        </description>
-        <prefigure xmlns="https://prefigure.org" label="graph-prufer-6">
-          <diagram dimensions="(300,200)" margins="15">
-            <definition>graph={1:[2,3,4,5],3:[6]}</definition>
-            <coordinates bbox="(-1,-1,1,1)">
-              <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="73" labels="yes" rotate="90">
-              </network>
-            </coordinates>
-          </diagram>
-        </prefigure>
-      </image>    
-      <image width="50%">
-        <description>
-          <p>
-            A tree with 14 vertices. The neighbors of each vertex are given in the table below.
-          </p>
-          <tabular>
-            <row>
-              <cell>Vertex</cell>
-              <cell>Neighbors</cell>
-            </row>
-            <row>
-              <cell><m>1</m></cell>
-              <cell><m>9</m></cell>
-            </row>
-            <row>
-              <cell><m>2</m></cell>
-              <cell><m>8</m>, <m>9</m>, <m>10</m>, <m>11</m>, <m>14</m></cell>
-            </row>
-            <row>
-              <cell><m>3</m></cell>
-              <cell><m>11</m></cell>
-            </row>
-            <row>
-              <cell><m>4</m></cell>
-              <cell><m>12</m></cell>
-            </row>
-            <row>
-              <cell><m>5</m></cell>
-              <cell><m>6</m>, <m>7</m>, <m>12</m>, <m>14</m></cell>
-            </row>
-            <row>
-              <cell><m>6</m></cell>
-              <cell><m>5</m></cell>
-            </row>
-            <row>
-              <cell><m>7</m></cell>
-              <cell><m>5</m>, <m>13</m></cell>
-            </row>
-            <row>
-              <cell><m>8</m></cell>
-              <cell><m>2</m></cell>
-            </row>
-            <row>
-              <cell><m>9</m></cell>
-              <cell><m>1</m>, <m>2</m></cell>
-            </row>
-            <row>
-              <cell><m>10</m></cell>
-              <cell><m>2</m></cell>
-            </row>
-            <row>
-              <cell><m>11</m></cell>
-              <cell><m>2</m>, <m>3</m></cell>
-            </row>
-            <row>
-              <cell><m>12</m></cell>
-              <cell><m>4</m>, <m>5</m></cell>
-            </row>
-            <row>
-              <cell><m>13</m></cell>
-              <cell><m>7</m></cell>
-            </row>
-            <row>
-              <cell><m>14</m></cell>
-              <cell><m>2</m>, <m>5</m></cell>
-            </row>
-          </tabular>
-        </description>
-        <prefigure xmlns="https://prefigure.org" label="graph-prufer-14">
-          <diagram dimensions="(300,200)" margins="15">
-            <definition>graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12],
-              5:[6,7,12,14],7:[13],
-            }</definition>
-            <coordinates bbox="(-1,-1,1,1)">
-              <network graph="graph" scale="0.8" node-fill="#eee" node-stroke="black" seed="38" layout="spring" labels="yes" rotate="120">
-              </network>
-            </coordinates>
-          </diagram>
-        </prefigure>
-      </image>
+      <activity>
+        <task>
+          <statement>
+            <p>
+              Complete the table (and draw the tree) for the Prüfer code <m>8431875</m>.
+            </p>
+          </statement>
+          <solution component="prufer-solns">
+            <tabular>
+              <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
+              <row bottom="minor">
+                <cell>Prüfer code</cell>
+                <cell>Label set</cell>
+                <cell>Edge added</cell>
+              </row>
+              
+              <row>
+                <cell>8431875</cell>
+                <cell> <m>\{1,2,3,4,5,6,7,8,9\}</m> </cell>
+                <cell> <m>2-8</m> </cell>
+              </row>
+              
+              <row>
+                <cell>431875</cell>
+                <cell> <m>\{1,3,4,5,6,7,8,9\}</m> </cell>
+                <cell> <m>6-4</m> </cell>
+              </row>
+              
+              <row>
+                <cell>31875</cell>
+                <cell> <m>\{1,3,4,5,7,8,9\}</m> </cell>
+                <cell> <m>4-3</m> </cell>
+              </row>
+              
+              <row>
+                <cell>1875</cell>
+                <cell> <m>\{1,3,5,7,8,9\}</m> </cell>
+                <cell> <m>3-1</m> </cell>
+              </row>
+              
+              <row>
+                <cell>875</cell>
+                <cell> <m>\{1,5,7,8,9\}</m> </cell>
+                <cell> <m>1-8</m> </cell>
+              </row>
+              
+              <row>
+                <cell>75</cell>
+                <cell> <m>\{5,7,8,9\}</m> </cell>
+                <cell> <m>8-7</m> </cell>
+              </row>
+              
+              <row>
+                <cell>5</cell>
+                <cell> <m>\{5,7,9\}</m> </cell>
+                <cell> <m>7-5</m> </cell>
+              </row>
+              
+              <row>
+                <cell>(empty string)</cell>
+                <cell> <m>\{5,9\}</m> </cell>
+                <cell> <m>5-9</m> </cell>
+              </row>
+            </tabular>
+          </solution>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              Find the tree for the Prüfer code <m>4747313</m>.
+            </p>
+          </statement>
+          <solution>
+            <tabular>
+              <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
+              <row bottom="minor">
+                <cell>Prüfer code</cell>
+                <cell>Label set</cell>
+                <cell>Edge added</cell>
+              </row>
+              
+              <row>
+                <cell>8431875</cell>
+                <cell> <m>\{1,2,3,4,5,6,7,8,9\}</m> </cell>
+                <cell> <m>2-8</m> </cell>
+              </row>
+              
+              <row>
+                <cell>431875</cell>
+                <cell> <m>\{1,3,4,5,6,7,8,9\}</m> </cell>
+                <cell> <m>6-4</m> </cell>
+              </row>
+              
+              <row>
+                <cell>31875</cell>
+                <cell> <m>\{1,3,4,5,7,8,9\}</m> </cell>
+                <cell> <m>4-3</m> </cell>
+              </row>
+              
+              <row>
+                <cell>1875</cell>
+                <cell> <m>\{1,3,5,7,8,9\}</m> </cell>
+                <cell> <m>3-1</m> </cell>
+              </row>
+              
+              <row>
+                <cell>875</cell>
+                <cell> <m>\{1,5,7,8,9\}</m> </cell>
+                <cell> <m>1-8</m> </cell>
+              </row>
+              
+              <row>
+                <cell>75</cell>
+                <cell> <m>\{5,7,8,9\}</m> </cell>
+                <cell> <m>8-7</m> </cell>
+              </row>
+              
+              <row>
+                <cell>5</cell>
+                <cell> <m>\{5,7,9\}</m> </cell>
+                <cell> <m>7-5</m> </cell>
+              </row>
+              
+              <row>
+                <cell>(empty string)</cell>
+                <cell> <m>\{5,9\}</m> </cell>
+                <cell> <m>5-9</m> </cell>
+              </row>
+            </tabular>
+          </solution>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              Extra time? Make up a Prüfer code and have another group find the tree.
+            </p>
+          </statement>
+          <solution>
+            <tabular>
+              <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
+              <row bottom="minor">
+                <cell>Prüfer code</cell>
+                <cell>Label set</cell>
+                <cell>Edge added</cell>
+              </row>
+              
+              <row>
+                <cell>8431875</cell>
+                <cell> <m>\{1,2,3,4,5,6,7,8,9\}</m> </cell>
+                <cell> <m>2-8</m> </cell>
+              </row>
+              
+              <row>
+                <cell>431875</cell>
+                <cell> <m>\{1,3,4,5,6,7,8,9\}</m> </cell>
+                <cell> <m>6-4</m> </cell>
+              </row>
+              
+              <row>
+                <cell>31875</cell>
+                <cell> <m>\{1,3,4,5,7,8,9\}</m> </cell>
+                <cell> <m>4-3</m> </cell>
+              </row>
+              
+              <row>
+                <cell>1875</cell>
+                <cell> <m>\{1,3,5,7,8,9\}</m> </cell>
+                <cell> <m>3-1</m> </cell>
+              </row>
+              
+              <row>
+                <cell>875</cell>
+                <cell> <m>\{1,5,7,8,9\}</m> </cell>
+                <cell> <m>1-8</m> </cell>
+              </row>
+              
+              <row>
+                <cell>75</cell>
+                <cell> <m>\{5,7,8,9\}</m> </cell>
+                <cell> <m>8-7</m> </cell>
+              </row>
+              
+              <row>
+                <cell>5</cell>
+                <cell> <m>\{5,7,9\}</m> </cell>
+                <cell> <m>7-5</m> </cell>
+              </row>
+              
+              <row>
+                <cell>(empty string)</cell>
+                <cell> <m>\{5,9\}</m> </cell>
+                <cell> <m>5-9</m> </cell>
+              </row>
+            </tabular>
+          </solution>
+        </task>
+      </activity>
     </worksheet>
   </chapter>

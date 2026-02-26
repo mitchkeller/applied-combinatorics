@@ -966,20 +966,16 @@
     </p>
   </page>
   </handout>
-  <handout component="pruefer">
+  <handout component="prufer" label="graphs-prufer">
     <title>Counting Labeled Trees</title>
     <page>
-      <paragraphs>
-        <title>Labeled vs Unlabeled Trees (and Graphs) and Counting</title>
-        <p workspace="2in">
-          
-        </p>
-      </paragraphs>
-      <paragraphs>
-        <title>Big Idea</title>
+      <p workspace="2in">
+        <alert>Labeled vs Unlabeled Trees (and Graphs) and Counting</alert>
+      </p>
+      <p>
+        <alert>Big Idea</alert>
+      </p>
         <sidebyside widths="60% 40%">
-          
-          
           <image>
             <description component="a">
               <p>
@@ -999,12 +995,16 @@
             <nbsp/>
           </p>
         </sidebyside>
-      </paragraphs>
+      
     </page>
     <page>
-      <paragraphs>
-        <title>Constructing Pr&#252;fer Codes</title>
+      
+        <algorithm>
+          <title>Labeled Tree <m>\longrightarrow</m> Prüfer Code</title>
+          
+          
         <p>
+
           Assume <m>\bfT</m> is a labeled tree with at least <m>2</m> vertices.
         </p>
         <p>
@@ -1025,15 +1025,16 @@
             </li>
           </ol>
         </p>
+        </algorithm>
         <p>
-          <alert>Peer instruction question 1 followed by activity.</alert>
+          <alert>Peer instruction question 1 followed by Activity 5.5.1.</alert>
         </p>
-      </paragraphs>
+      
       <p>
         <alert>Peer instruction questions 2<ndash/>3.</alert>
       </p>
-      <paragraphs>
-        <title>Constructing Labeled Trees from Pr&#252;fer Codes</title>
+      <algorithm>
+        <title>Prüfer Code <m>\longrightarrow</m> Labeled Tree</title>
         <p>
           <ol marker="1.">
             <li>
@@ -1042,7 +1043,7 @@
                 <ul>
                   <li>
                     <p>
-                      Pr&#252;fer code
+                      Prüfer code
                     </p>
                   </li>
                   
@@ -1069,14 +1070,14 @@
             
             <li>
               <p>
-                Remove first entry of Pr&#252;fer code.
+                Remove first entry of Prüfer code.
                 Remove label just used from label set.
               </p>
             </li>
             
             <li>
               <p>
-                Repeat until Pr&#252;fer code is empty (remaining labels are edge).
+                Repeat until Prüfer code is empty (remaining labels are edge).
               </p>
             </li>
             
@@ -1087,36 +1088,82 @@
             </li>
           </ol>
         </p>
+        </algorithm>
         <p>
           <alert>Peer Instruction Question 4.</alert>
         </p>
-        <activity>
-          <task workspace="2cm">
-            <p>
-              Complete the table (and draw the tree) for the Pr&#252;fer code <m>8431875</m>.
-            </p>
-          </task>
-          
-          <task workspace="0cm">
-            <p>
-              Find the tree for the Pr&#252;fer code <m>4747313</m>.
-            </p>
-          </task>
-          
-          <task workspace="4cm">
-            <p>
-              Extra time? Make up a Pr&#252;fer code and have another group find the tree.
-            </p>
-          </task>
-        </activity>
         
-      </paragraphs>
+        <tabular component="b">
+        <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
+        <row bottom="minor">
+          <cell>Prüfer code</cell>
+          <cell>Label set</cell>
+          <cell>Edge added</cell>
+        </row>
+        
+        <row>
+          <cell>8431875</cell>
+          <cell> <m>\{1,2,3,4,5,6,7,8,9\}</m> </cell>
+          <cell>  </cell>
+        </row>
+        <row>
+          <cell><m>\phantom{123456789123456789}</m></cell>
+          <cell><m>\phantom{1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9}</m></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><nbsp/></cell>
+        </row>
+        </tabular>
+      
     </page>
     <page>
       <tabular>
         <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
         <row bottom="minor">
-          <cell>Pr&#252;fer code</cell>
+          <cell>Prüfer code</cell>
           <cell>Label set</cell>
           <cell>Edge added</cell>
         </row>
