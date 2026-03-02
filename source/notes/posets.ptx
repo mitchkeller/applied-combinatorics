@@ -1,6 +1,6 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-posets" component="posets">
   <title>Partially Ordered Sets</title>
-  <handout>
+  <handout component="posets-notation" label="posets-notation">
     <title>Notation and Terminology</title>
     <page>
       <paragraphs>
@@ -18,6 +18,9 @@
               <p>
                 Binary relation: Ordered pairs (subset of <m>X\times X</m>)
               </p>
+              <p component="a">
+                The set <m>p</m> contains pairs such as <m>(a,b)</m>, <m>(a,a)</m>, and <m>(b,c)</m>. We interpret these as <m>a\leq b</m>, <m>a\leq a</m>, and <m>b\leq c</m>.
+              </p>
             </li>
             
             <li>
@@ -27,6 +30,11 @@
                   <li>
                     <p>
                       <m>x\leq x</m> in <m>P</m>
+                    </p>
+                  </li>
+                  <li component="a">
+                    <p>
+                      This says that everything is less than or equal to itself.
                     </p>
                   </li>
                 </ul>
@@ -42,6 +50,11 @@
                       If <m>x\leq y</m> in <m>P</m> and <m>y\leq x</m> in <m>P</m>, then <m>x=y</m>.
                     </p>
                   </li>
+                  <li component="a">
+                    <p>
+                      If you have seen set equality before, this is exactly the condition you had there: <m>A = B</m> if and only if (<m>A\subseteq B</m> and <m>B\subseteq A</m>).
+                    </p>
+                  </li>
                 </ul>
               </p>
             </li>
@@ -53,6 +66,11 @@
                   <li>
                     <p>
                       If <m>x\leq y</m> in <m>P</m> and <m>y\leq z</m> in <m>P</m>, then <m>x\leq z</m> in <m>P</m>.
+                    </p>
+                  </li>
+                  <li component="a">
+                    <p>
+                      Helpful to think of this as being the key thing that tells us it's OK to call this relation <q>less than or equal to</q>.
                     </p>
                   </li>
                 </ul>
@@ -157,11 +175,21 @@
             </ol>
           </p>
           
-          <p>
+          <p component="b">
             <nbsp/>
           </p>
-          
+          <image component="a" source="movies">
+            <description>
+              <p>A diagram depicting seven points labeled with movie titles as given in the table above. Jurassic Park is at the bottom of the diagram and has line segments going up to points labeled Forrest Gump, Braveheart, and Titanic. From Forrest Gump, there are two line segments going up to Saving Private Ryan and Life is Beautiful. From Braveheart, there are two line segments going up to Saving Private Ryan and Life is Beautiful. From Titanic, there is a line segment going up to Good Will Hunting. From Good Will Hunting there are two line segments going up to Saving Private Ryan and Life is Beautiful.</p>
+            </description>
+          </image>
         </sidebyside>
+        <p component="a">
+          From the diagram, we can deduce certain relationships such as Jurassic Park is less than Titanic, which is less than Good Will Hunting, which is less than Saving Private Ryan.
+        </p>
+        <p component="a">
+          We call a diagram of this type a <term>Hasse diagram</term> or an <term>order diagram</term>.
+        </p>
       </paragraphs>
     </page>
     <page>
@@ -172,25 +200,30 @@
           <ul>
             <li>
               <p>
-                If <m>x&lt;y</m> in <m>P</m> or <m>y&lt;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>comparable</em>.
+                If <m>x\lt y</m> in <m>P</m> or <m>y\lt x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <term>comparable</term>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x \lt y</m> in <m>P</m> and there does not exist <m>z</m> so that <m>x\lt z\lt y</m> in <m>P</m>, then <m>y</m> <term>covers</term> <m>x</m>
               </p>
             </li>
             
             <li>
               <p>
-                If <m>x,y\in X</m> and neither <m>x&lt;y</m> in <m>P</m> nor <m>y&lt;x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <em>incomparable</em>.
+                If <m>x,y\in X</m> and neither <m>x\lt y</m> in <m>P</m> nor <m>y\lt x</m> in <m>P</m>, then <m>x</m> and <m>y</m> are <term>incomparable</term>.
               </p>
             </li>
             
             <li>
               <p>
-                A set <m>A\subseteq X</m> is an <em>antichain</em> if no pair of distinct points in <m>A</m> is comparable in <m>P</m>.
+                A set <m>A\subseteq X</m> is an <term>antichain</term> if no pair of distinct points in <m>A</m> is comparable in <m>P</m>.
               </p>
             </li>
             
             <li>
               <p>
-                A set <m>C\subseteq X</m> is a <em>chain</em> if every pair of distinct points in <m>C</m> is comparable in <m>P</m>.
+                A set <m>C\subseteq X</m> is a <term>chain</term> if every pair of distinct points in <m>C</m> is comparable in <m>P</m>.
               </p>
             </li>
           </ul>
@@ -229,10 +262,28 @@
           </statement>
         </definition>
         
-        <p workspace="1cm">
+        <p workspace="1cm" component="b">
           <nbsp/>
         </p>
-        
+        <p component="a">
+          <ul>
+            <li>
+              <p>
+                A maximal chain is one to which you cannot add another point while still being a chain.
+              </p>
+            </li>
+            <li>
+              <p>
+                A maximum chain is a chain with the largest possible number of points (for that poset)
+              </p>
+            </li>
+            <li>
+              <p>
+                Maximum implies maximal.
+              </p>
+            </li>
+          </ul>
+        </p>
         <definition>
           <statement>
             <p>
@@ -263,16 +314,20 @@
             </p>
           </statement>
         </definition>
-        
+        <p component="a">
+          Nothing larger than <m>x</m>.
+        </p>
         <definition workspace="4cm">
           <statement>
             <p>
               Let <m>\bfP=(X,P)</m> be a poset.
-              An element <m>x\in X</m> is <term>minimal</term> if there is no <m>y\in X</m> with <m>y&lt; x</m> in <m>P</m>.
+              An element <m>x\in X</m> is <term>minimal</term> if there is no <m>y\in X</m> with <m>y\lt  x</m> in <m>P</m>.
             </p>
           </statement>
         </definition>
-        
+        <p component="a">
+          Nothing less than <m>x</m>.
+        </p>
       </paragraphs>
     </page>
     <page>
@@ -292,6 +347,11 @@
             </prefigure>
           </image>
         </statement>
+        <solution component="poset-notation-solns">
+          <p>
+            The set of maximal elements is <m>\set{8,20,17,28,29,33,1,5,10,32}</m>. The set of minimal elements is <m>\set{23,14,22,3,35,18,11,34,12}</m>
+          </p>
+        </solution>
       </activity>
     </page>
     <page>
@@ -300,7 +360,7 @@
         <definition>
           <statement>
             <p>
-              The <term>height</term> of a poset <m>\bfP</m> is the size of a maxim<alert>um</alert> chain in <m>\bfP</m>
+              The <term>height</term> of a poset <m>\bfP</m> is the number of points in a maxim<alert>um</alert> chain in <m>\bfP</m>
             </p>
           </statement>
         </definition>
@@ -308,7 +368,7 @@
         <definition>
           <statement>
             <p>
-              The <term>width</term> of a poset <m>\bfP</m> is the size of a maxim<alert>um</alert> antichain in <m>\bfP</m>
+              The <term>width</term> of a poset <m>\bfP</m> is the number of points in a maxim<alert>um</alert> antichain in <m>\bfP</m>
             </p>
           </statement>
         </definition>
@@ -318,7 +378,7 @@
       </paragraphs>
     </page>
   </handout>
-  <handout>
+  <handout component="posets-partitioning">
     <title>Antichain and Chain Partitioning</title>
     <page>
       <paragraphs>
@@ -477,7 +537,7 @@
     </page>
   </handout>
   
-  <handout>
+  <handout component="posets-subset">
     <title>Linear Extensions and the Subset Lattice</title>
     <paragraphs>
       <title>Linear Extensions</title>
@@ -485,7 +545,7 @@
         <statement>
           <p>
             Let <m>\mbf{P}=(X,P')</m> be a poset.
-            A total order <m>L</m> on <m>X</m> is a <em>linear extension</em> of <m>P'</m> provided that if <m>x &lt; y</m> in <m>P'</m>, then <m>x &lt; y</m> in <m>L</m>.
+            A total order <m>L</m> on <m>X</m> is a <term>linear extension</term> of <m>P'</m> provided that if <m>x \lt  y</m> in <m>P'</m>, then <m>x \lt  y</m> in <m>L</m>.
           </p>
         </statement>
       </definition>
@@ -526,7 +586,7 @@
         <statement>
           <p>
             Let <m>n</m> be a positive integer.
-            The <em>subset lattice</em> <m>\bftwo^{n}</m> is the poset <m>(X,P')</m> where <m>X</m> is the set of all subsets of <m>\{1,2,\dots,n\}</m> and <m>S\leq T</m> in <m>P'</m> if and only if <m>S\subseteq T</m>.
+            The <term>subset lattice</term> <m>\bftwo^{n}</m> is the poset <m>(X,P')</m> where <m>X</m> is the set of all subsets of <m>\{1,2,\dots,n\}</m> and <m>S\leq T</m> in <m>P'</m> if and only if <m>S\subseteq T</m>.
           </p>
         </statement>
       </definition>
@@ -535,206 +595,206 @@
       </p>
     </paragraphs>
   </handout>  
-  <handout>
+  <handout component="posets-intord">
     <title>Interval Orders</title>
     <page>
-    <p>
-      <ul>
-        <li>
-          <p>
-            An <term>interval order</term> is a special type of poset <m>\mbf{P}=(X,P')</m>.
-          </p>
-        </li>
-        
-        <li>
-          <p>
-            Each <m>x\in X</m> is associated with an interval <m component="b">[a_{x},b_{x}]</m><m component="a">[a_{x},b_{x}]=\set{c\in\R\mid a_x\leq c\leq b_x}</m>
-          </p>
-        </li>
-        
-        <li>
-          <p>
-            <m>x&lt; y</m> in <m>P'</m> if and only if <m>b_{x} &lt; a_{y}</m>
-            <ul>
-              <li>
-                <p component="b">
-                  <m>x</m>&#8217;s interval stops
-                </p>
-                <p component="a">
-                  <m>x</m>&#8217;s interval stops before <m>y</m>&#8217;s interval starts
-                </p>
-              </li>
-              
-              <li>
-                <p component="b">
-                  <m>x</m>&#8217;s interval is completely
-                </p>
-                <p component="a">
-                  <m>x</m>&#8217;s interval is completely to the left of <m>y</m>&#8217;s interval
-                </p>
-              </li>
-            </ul>
-          </p>
-        </li>
-        
-        <li>
-          <p>
-            We call the collection of intervals an <term>interval representation</term> of <m>\mbf{P}</m>.
-          </p>
-        </li>
-      </ul>
-    </p>
-    <p workspace="3cm">
-      Sketch of an example, then <alert>peer instruction questions 1<ndash/>2 and handout activity</alert>.
-    </p>
-    <activity>
-      <statement>
-        <p>
-          The poset below is denoted <m>\bftwo+\bftwo</m>, which we read as <q>two plus two</q>. Draw an interval representation for this poset or explain why it is not possible.
-        </p>
-        <sidebyside widths="15% 85%">
-        <image>
-          <description>
-            <p>The order diagram of a poset with four points. The points are labeled <m>x,y,z,w</m>. There are two cover relations: <m>y\lt x</m> and <m>w\lt z</m>.</p>
-          </description>
-          <prefigure xmlns="https://prefigure.org" label="two-plus-two">
-            <diagram dimensions="(100,100)" margins="15">
-              <coordinates bbox="(0,0,1,1)">
-                <network node-fill="#ccc" labels="yes" scale="0.8">
-                  <node at="1" p="(0,1)" edges="[2]"><m>x</m></node>
-                  <node at="2" p="(0,0)"><m>y</m></node>
-                  <node at="3" p="(1,1)" edges="[4]"><m>z</m></node>
-                  <node at="4" p="(1,0)"><m>w</m></node>
-                </network>
-              </coordinates>
-            </diagram>            
-          </prefigure>
-        </image>
-        <p component="b">
-          <nbsp/>
-        </p>
-        <p component="a">
-          Try to draw and get stuck because once you have <m>w</m> overlapping both <m>y</m> and <m>x</m> intervals, you can't put <m>z</m> somewhere so that it is both to the right of <m>w</m>'s interval and overlaps with both those for <m>x</m> and <m>y</m>.
-        </p>
-      </sidebyside>
-      </statement>
-    </activity>
-    <p workspace="2cm">
-      There are four incomparabilities we must check when confirming a <m>\bftwo+\bftwo</m>
-    </p>
-    <p>
-      <alert>Peer instruction question 3</alert>
-    </p>
-    <theorem xml:id="thm-fishburn">
-      <title>Fishburn's Theorem</title>
-      <statement>
-        <p>
-          A poset is an interval order if and only if it does not contain <m>\bftwo+\bftwo</m> as a subposet.
-        </p>
-      </statement>
-    </theorem>
-    <image width="65%" source="notes/fishburn_title.png">
-      <description><pubtitle>Intransitive Indifference with Unequal Indifference Intervals</pubtitle> by Peter C. Fishburn of the Research Analysis Corporation, McLean, Virginia. Masthead indicates <pubtitle>Journal of Mathematical Psychology</pubtitle>, volume 7, pages 144<ndash/>149 (1970).</description>
-    </image>
-  </page>
-  <page>
-    <paragraphs>
-      <title>Can we find a representation?</title>
-      <sidebyside widths="40% 60%">
-        <image>
-          <description>
-            <p>
-              The order diagram of a poset with 10 points. The points are labeled from 1 to 10.
-            </p>
-          </description>
-          <prefigure xmlns="https://prefigure.org" label="intord-find-rep-motivate">
-            <diagram dimensions="(350,200)" margins="15">
-              <coordinates bbox="(0.5,0,4,2)">
-                <network node-fill="#ccc" labels="yes" scale="0.8">
-                  <node at="1" p="(2,1)" edges="[5,3,6,7]"/>
-                  <node at="2" p="(0.5,2)" edges="[8]"/>
-                  <node at="3" p="(2,0)" edges="[8,10,4]"/>
-                  <node at="4" p="(4,1)" edges="[]"/>
-                  <node at="5" p="(2.5,2)" edges="[8,10]"/>
-                  <node at="6" p="(3,0)" edges="[8,10]"/>
-                  <node at="7" p="(4,0)" edges="[8,10]"/>
-                  <node at="8" p="(1,1)" edges="[9]"/>
-                  <node at="9" p="(1.5,2)" edges="[]"/>
-                  <node at="10" p="(3,1)" edges="[]"/>
-                </network>
-              </coordinates>
-            </diagram>
-          </prefigure>
-        </image>
-        <p>
-          <nbsp/>
-        </p>
-      </sidebyside>
       <p>
+        <ul>
+          <li>
+            <p>
+              An <term>interval order</term> is a special type of poset <m>\mbf{P}=(X,P')</m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Each <m>x\in X</m> is associated with an interval <m component="b">[a_{x},b_{x}]</m><m component="a">[a_{x},b_{x}]=\set{c\in\R\mid a_x\leq c\leq b_x}</m>
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m>x\lt  y</m> in <m>P'</m> if and only if <m>b_{x} \lt  a_{y}</m>
+              <ul>
+                <li>
+                  <p component="b">
+                    <m>x</m>&#8217;s interval stops
+                  </p>
+                  <p component="a">
+                    <m>x</m>&#8217;s interval stops before <m>y</m>&#8217;s interval starts
+                  </p>
+                </li>
+                
+                <li>
+                  <p component="b">
+                    <m>x</m>&#8217;s interval is completely
+                  </p>
+                  <p component="a">
+                    <m>x</m>&#8217;s interval is completely to the left of <m>y</m>&#8217;s interval
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              We call the collection of intervals an <term>interval representation</term> of <m>\mbf{P}</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p workspace="3cm">
+        Sketch of an example, then <alert>peer instruction questions 1<ndash/>2 and handout activity</alert>.
+      </p>
+      <activity>
+        <statement>
+          <p>
+            The poset below is denoted <m>\bftwo+\bftwo</m>, which we read as <q>two plus two</q>. Draw an interval representation for this poset or explain why it is not possible.
+          </p>
+          <sidebyside widths="15% 85%">
+            <image>
+              <description>
+                <p>The order diagram of a poset with four points. The points are labeled <m>x,y,z,w</m>. There are two cover relations: <m>y\lt x</m> and <m>w\lt z</m>.</p>
+              </description>
+              <prefigure xmlns="https://prefigure.org" label="two-plus-two">
+                <diagram dimensions="(100,100)" margins="15">
+                  <coordinates bbox="(0,0,1,1)">
+                    <network node-fill="#ccc" labels="yes" scale="0.8">
+                      <node at="1" p="(0,1)" edges="[2]"><m>x</m></node>
+                      <node at="2" p="(0,0)"><m>y</m></node>
+                      <node at="3" p="(1,1)" edges="[4]"><m>z</m></node>
+                      <node at="4" p="(1,0)"><m>w</m></node>
+                    </network>
+                  </coordinates>
+                </diagram>            
+              </prefigure>
+            </image>
+            <p component="b">
+              <nbsp/>
+            </p>
+            <p component="a">
+              Try to draw and get stuck because once you have <m>w</m> overlapping both <m>y</m> and <m>x</m> intervals, you can't put <m>z</m> somewhere so that it is both to the right of <m>w</m>'s interval and overlaps with both those for <m>x</m> and <m>y</m>.
+            </p>
+          </sidebyside>
+        </statement>
+      </activity>
+      <p workspace="2cm">
+        There are four incomparabilities we must check when confirming a <m>\bftwo+\bftwo</m>
+      </p>
+      <p>
+        <alert>Peer instruction question 3</alert>
+      </p>
+      <theorem xml:id="thm-fishburn">
+        <title>Fishburn's Theorem</title>
+        <statement>
+          <p>
+            A poset is an interval order if and only if it does not contain <m>\bftwo+\bftwo</m> as a subposet.
+          </p>
+        </statement>
+      </theorem>
+      <image width="65%" source="notes/fishburn_title.png">
+        <description><pubtitle>Intransitive Indifference with Unequal Indifference Intervals</pubtitle> by Peter C. Fishburn of the Research Analysis Corporation, McLean, Virginia. Masthead indicates <pubtitle>Journal of Mathematical Psychology</pubtitle>, volume 7, pages 144<ndash/>149 (1970).</description>
+      </image>
+    </page>
+    <page>
+      <paragraphs>
+        <title>Can we find a representation?</title>
+        <sidebyside widths="40% 60%">
+          <image>
+            <description>
+              <p>
+                The order diagram of a poset with 10 points. The points are labeled from 1 to 10.
+              </p>
+            </description>
+            <prefigure xmlns="https://prefigure.org" label="intord-find-rep-motivate">
+              <diagram dimensions="(350,200)" margins="15">
+                <coordinates bbox="(0.5,0,4,2)">
+                  <network node-fill="#ccc" labels="yes" scale="0.8">
+                    <node at="1" p="(2,1)" edges="[5,3,6,7]"/>
+                    <node at="2" p="(0.5,2)" edges="[8]"/>
+                    <node at="3" p="(2,0)" edges="[8,10,4]"/>
+                    <node at="4" p="(4,1)" edges="[]"/>
+                    <node at="5" p="(2.5,2)" edges="[8,10]"/>
+                    <node at="6" p="(3,0)" edges="[8,10]"/>
+                    <node at="7" p="(4,0)" edges="[8,10]"/>
+                    <node at="8" p="(1,1)" edges="[9]"/>
+                    <node at="9" p="(1.5,2)" edges="[]"/>
+                    <node at="10" p="(3,1)" edges="[]"/>
+                  </network>
+                </coordinates>
+              </diagram>
+            </prefigure>
+          </image>
+          <p>
+            <nbsp/>
+          </p>
+        </sidebyside>
+        <p>
           For a poset <m>\mbf{P}=(X,P')</m>, we define the following notation:
           <ul>
             <li>
               <p workspace="0.5cm">
-                Down-set (or down set): <m>D(x) = \{y\in X\colon y &lt; x\text{ in }P'\}</m>.
+                Down-set (or down set): <m>D(x) = \{y\in X\colon y \lt  x\text{ in }P'\}</m>.
               </p>
             </li>
-
+            
             <li>
               <p workspace="0.5cm">
                 Up-set (or up set): <m>U(x) = \{y\in X\colon y &gt; x\text{ in }P'\}</m>.
               </p>
             </li>
-
+            
             <li>
               <p workspace="0.5cm">
                 <m>\mc{D}</m>: the set of all down-sets.
               </p>
             </li>
-
+            
             <li>
               <p workspace="0.5cm">
                 <m>\mc{U}</m>: the set of all up-sets.
               </p>
             </li>
           </ul>
-      </p>
-      <activity>
-        <statement>
-          <p>
-            Find the down-sets <m>D(8)</m> and <m>D(2)</m> as well as the up-sets <m>U(5)</m>, <m>U(6)</m>, <m>U(7)</m>, and <m>U(9)</m> for the poset shown below.
-          </p>
-          <sidebyside widths="40% 60%">
-            <image>
-              <description>
-                <p>
-                  The order diagram of a poset with 10 points. The points are labeled from 1 to 10.
-                </p>
-              </description>
-              <prefigure xmlns="https://prefigure.org" label="intord-find-rep-updown-sets">
-                <diagram dimensions="(350,200)" margins="15">
-                  <coordinates bbox="(0.5,0,4,2)">
-                    <network node-fill="#ccc" labels="yes" scale="0.8">
-                      <node at="1" p="(2,1)" edges="[5,3,6,7]"/>
-                      <node at="2" p="(0.5,2)" edges="[8]"/>
-                      <node at="3" p="(2,0)" edges="[8,10,4]"/>
-                      <node at="4" p="(4,1)" edges="[]"/>
-                      <node at="5" p="(2.5,2)" edges="[8,10]"/>
-                      <node at="6" p="(3,0)" edges="[8,10]"/>
-                      <node at="7" p="(4,0)" edges="[8,10]"/>
-                      <node at="8" p="(1,1)" edges="[9]"/>
-                      <node at="9" p="(1.5,2)" edges="[]"/>
-                      <node at="10" p="(3,1)" edges="[]"/>
-                    </network>
-                  </coordinates>
-                </diagram>
-              </prefigure>
-            </image>
+        </p>
+        <activity>
+          <statement>
             <p>
-              <nbsp/>
+              Find the down-sets <m>D(8)</m> and <m>D(2)</m> as well as the up-sets <m>U(5)</m>, <m>U(6)</m>, <m>U(7)</m>, and <m>U(9)</m> for the poset shown below.
             </p>
-          </sidebyside>
-        </statement>
-      </activity>
+            <sidebyside widths="40% 60%">
+              <image>
+                <description>
+                  <p>
+                    The order diagram of a poset with 10 points. The points are labeled from 1 to 10.
+                  </p>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="intord-find-rep-updown-sets">
+                  <diagram dimensions="(350,200)" margins="15">
+                    <coordinates bbox="(0.5,0,4,2)">
+                      <network node-fill="#ccc" labels="yes" scale="0.8">
+                        <node at="1" p="(2,1)" edges="[5,3,6,7]"/>
+                        <node at="2" p="(0.5,2)" edges="[8]"/>
+                        <node at="3" p="(2,0)" edges="[8,10,4]"/>
+                        <node at="4" p="(4,1)" edges="[]"/>
+                        <node at="5" p="(2.5,2)" edges="[8,10]"/>
+                        <node at="6" p="(3,0)" edges="[8,10]"/>
+                        <node at="7" p="(4,0)" edges="[8,10]"/>
+                        <node at="8" p="(1,1)" edges="[9]"/>
+                        <node at="9" p="(1.5,2)" edges="[]"/>
+                        <node at="10" p="(3,1)" edges="[]"/>
+                      </network>
+                    </coordinates>
+                  </diagram>
+                </prefigure>
+              </image>
+              <p>
+                <nbsp/>
+              </p>
+            </sidebyside>
+          </statement>
+        </activity>
         <proposition>
           <statement>
             <p>
@@ -769,217 +829,217 @@
             </p>
           </statement>
         </proposition>
-    </paragraphs>
-  </page>
-  <page>
-    <algorithm>
-      <title>Poset to Interval Representation</title>
-      
-      
-      <statement>
-        <p>
-          Input: An interval order <m>\mbf{P}=(X,P')</m>.
-          <ol marker="1.">
-            <li>
-              <p>
-                Determine <m>D(x)</m> for each <m>x\in X</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                Write down <m>\mc{D}</m> as <m>\{\} = D_{1} \subsetneq D_{2}\subsetneq \cdots\subsetneq D_{d}</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                Determine <m>U(x)</m> for each <m>x\in X</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                Write down <m>\mc{U}</m> as <m>U_{1} \supsetneq U_{2}\supsetneq \cdots\supsetneq U_{d} = \{\}</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                For each <m>x\in X</m>, find <m>D(x) = D_{i}</m> and <m>U(x)=U_{j}</m>.
-                Then let <m>I(x)=[i,j]</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                (Optional unless instructed) Draw the interval representation.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </algorithm>
-    <p>
-      <alert>Peer instruction questions 4<ndash/>5.</alert>
-    </p>
-  </page>
-  </handout>
-  <handout>
-    <title>Algorithms for Interval Orders</title>
+      </paragraphs>
+    </page>
     <page>
-    <algorithm>
-      <title>Poset to Interval Representation</title>
-      
-      
-      <statement>
-        <p>
-          Input: An interval order <m>\mbf{P}=(X,P')</m>.
-          <ol marker="1.">
-            <li>
-              <p>
-                Determine <m>D(x)</m> for each <m>x\in X</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                Write down <m>\mc{D}</m> as <m>\{\} = D_{1} \subsetneq D_{2}\subsetneq \cdots\subsetneq D_{d}</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                Determine <m>U(x)</m> for each <m>x\in X</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                Write down <m>\mc{U}</m> as <m>U_{1} \supsetneq U_{2}\supsetneq \cdots\supsetneq U_{d} = \{\}</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                For each <m>x\in X</m>, find <m>D(x) = D_{i}</m> and <m>U(x)=U_{j}</m>.
-                Then let <m>I(x)=[i,j]</m>.
-              </p>
-            </li>
-            
-            <li>
-              <p>
-                (Optional unless instructed) Draw the interval representation.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </algorithm>
-    <p>
-      <alert>Peer instruction question 1.</alert>
-    </p>
-    <p>
-      This algorithm has benefits and drawbacks:
-      <dl>
-        <li>
-          <title>Benefit</title>
-          <p>
-            Uses the smallest number of endpoints possible (because <m>\mc{D} = \mc{U}</m>).
-          </p>
-        </li>
-        <li>
-          <title>Drawback</title>
-          <p>
-            Creates lots of degenerate intervals of the form <m>[3,3]</m>.
-          </p>
-        </li>
-      </dl>
-    </p>
-    <activity>
-      <task>
-        <statement>
-        <p>
-          Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).
-        </p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are <m>d</m> down sets (and thus <m>d</m> up sets).
-            If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?
-          </p>
-        </statement>
-      </task>
-    </activity>
-  </page>
-  <page>
-    <paragraphs>
-      <title>Greedy or First Fit Algorithms</title>
-      <p>
-          <ul>
-  <li>
-    <p>
-      The simplest algorithms for many problems are &#8220;greedy&#8221; in the sense that they look at <fillin characters="15"/> in some predetermined order and assign them to something by trying to use as few <fillin characters="15"/> as possible at the moment.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      There&#8217;s usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      First Fit can often succeed if there&#8217;s a &#8220;natural&#8221; order to use.
-    </p>
-  </li>
-</ul>
-      </p>
-      <algorithm xml:id="alg-first-fit-chain">
-        <title>First Fit for Chain Partitioning Interval Orders</title>
+      <algorithm>
+        <title>Poset to Interval Representation</title>
+        
         
         <statement>
           <p>
+            Input: An interval order <m>\mbf{P}=(X,P')</m>.
             <ol marker="1.">
               <li>
                 <p>
-                  Fix an order in which intervals will be considered.
+                  Determine <m>D(x)</m> for each <m>x\in X</m>.
                 </p>
               </li>
               
               <li>
                 <p>
-                  Assign intervals to chains <m>C_{1},C_{2},\dots</m>.
+                  Write down <m>\mc{D}</m> as <m>\{\} = D_{1} \subsetneq D_{2}\subsetneq \cdots\subsetneq D_{d}</m>.
                 </p>
               </li>
               
               <li>
                 <p>
-                  When considering a new interval, determine which chains it can be added to.
+                  Determine <m>U(x)</m> for each <m>x\in X</m>.
                 </p>
               </li>
               
               <li>
                 <p>
-                  Add it to chain with smallest subscript.
+                  Write down <m>\mc{U}</m> as <m>U_{1} \supsetneq U_{2}\supsetneq \cdots\supsetneq U_{d} = \{\}</m>.
                 </p>
               </li>
               
               <li>
                 <p>
-                  If cannot add to any existing chain, make a new one with subscript as small as possible.
+                  For each <m>x\in X</m>, find <m>D(x) = D_{i}</m> and <m>U(x)=U_{j}</m>.
+                  Then let <m>I(x)=[i,j]</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  (Optional unless instructed) Draw the interval representation.
                 </p>
               </li>
             </ol>
           </p>
         </statement>
       </algorithm>
-      <p workspace="5cm">
-        <alert>Peer instruction question 2</alert>
+      <p>
+        <alert>Peer instruction questions 4<ndash/>5.</alert>
       </p>
+    </page>
+  </handout>
+  <handout component="posets-intord-algs">
+    <title>Algorithms for Interval Orders</title>
+    <page>
+      <algorithm>
+        <title>Poset to Interval Representation</title>
+        
+        
+        <statement>
+          <p>
+            Input: An interval order <m>\mbf{P}=(X,P')</m>.
+            <ol marker="1.">
+              <li>
+                <p>
+                  Determine <m>D(x)</m> for each <m>x\in X</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Write down <m>\mc{D}</m> as <m>\{\} = D_{1} \subsetneq D_{2}\subsetneq \cdots\subsetneq D_{d}</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Determine <m>U(x)</m> for each <m>x\in X</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  Write down <m>\mc{U}</m> as <m>U_{1} \supsetneq U_{2}\supsetneq \cdots\supsetneq U_{d} = \{\}</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  For each <m>x\in X</m>, find <m>D(x) = D_{i}</m> and <m>U(x)=U_{j}</m>.
+                  Then let <m>I(x)=[i,j]</m>.
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  (Optional unless instructed) Draw the interval representation.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </algorithm>
+      <p>
+        <alert>Peer instruction question 1.</alert>
+      </p>
+      <p>
+        This algorithm has benefits and drawbacks:
+        <dl>
+          <li>
+            <title>Benefit</title>
+            <p>
+              Uses the smallest number of endpoints possible (because <m>\mc{D} = \mc{U}</m>).
+            </p>
+          </li>
+          <li>
+            <title>Drawback</title>
+            <p>
+              Creates lots of degenerate intervals of the form <m>[3,3]</m>.
+            </p>
+          </li>
+        </dl>
+      </p>
+      <activity>
+        <task>
+          <statement>
+            <p>
+              Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are <m>d</m> down sets (and thus <m>d</m> up sets).
+              If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?
+            </p>
+          </statement>
+        </task>
+      </activity>
+    </page>
+    <page>
+      <paragraphs>
+        <title>Greedy or First Fit Algorithms</title>
+        <p>
+          <ul>
+            <li>
+              <p>
+                The simplest algorithms for many problems are &#8220;greedy&#8221; in the sense that they look at <fillin characters="15"/> in some predetermined order and assign them to something by trying to use as few <fillin characters="15"/> as possible at the moment.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                There&#8217;s usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                First Fit can often succeed if there&#8217;s a &#8220;natural&#8221; order to use.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <algorithm xml:id="alg-first-fit-chain">
+          <title>First Fit for Chain Partitioning Interval Orders</title>
+          
+          <statement>
+            <p>
+              <ol marker="1.">
+                <li>
+                  <p>
+                    Fix an order in which intervals will be considered.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    Assign intervals to chains <m>C_{1},C_{2},\dots</m>.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    When considering a new interval, determine which chains it can be added to.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    Add it to chain with smallest subscript.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    If cannot add to any existing chain, make a new one with subscript as small as possible.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </algorithm>
+        <p workspace="5cm">
+          <alert>Peer instruction question 2</alert>
+        </p>
       </paragraphs>
     </page>
     <page>
@@ -989,7 +1049,7 @@
         
         <statement>
           <p>
-             <ol marker="1.">
+            <ol marker="1.">
               <li>
                 <p>
                   Consider the intervals in order by left endpoint.
@@ -1045,20 +1105,20 @@
               \draw[{[-]}, thick] (1,0.475) -- node[above] {$e$} (3,0.475);
               \draw[{[-]}, thick] (5,0.475) -- node[above] {$f$} (6,0.475);
               \draw[{[-]}, thick] (7,0.475) -- node[above] {$g$} (8,0.475);
-    
+              
               \draw[{[-]}, thick] (0,0) -- node[above] {$h$} (1.2,0);
               \draw[{[-]}, thick] (1.85,0) -- node[above] {$i$} (3,0);
               \draw[{[-]}, thick] (4,0) -- node[above] {$j$} (5,0);
               \draw[{[-]}, thick] (8,0) -- node[above] {$k$} (9,0);
-    
+              
               \draw[{[-]}, thick] (0.25,0.95) -- node[above] {$l$} (2,0.95);
               \draw[{[-]}, thick] (2.75,0.95) -- node[above] {$m$} (4,0.95);
               \draw[{[-]}, thick] (6,0.95) -- node[above] {$n$} (8,0.95);
               
-    
+              
               \draw[{[-]}, thick] (-0.5,1.425) -- node[above] {$o$} (3,1.425);
               \draw[{[-]}, thick] (5,1.425) -- node[above] {$p$} (7,1.425);
-    
+              
               \draw[{[-]}, thick] (1.75,1.9) -- node[above] {$q$} (4,1.9);
               \end{tikzpicture}
             </latex-image>
@@ -1071,11 +1131,11 @@
       <activity>
         <statement>
           <p>
-              Use First Fit to find the width of the interval representations given on your handout as well as a partition into as few chains as possible.
+            Use First Fit to find the width of the interval representations given on your handout as well as a partition into as few chains as possible.
           </p>
         </statement>
       </activity>
     </page>
   </handout>
-    
+  
 </chapter>

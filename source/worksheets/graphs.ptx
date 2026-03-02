@@ -1156,6 +1156,7 @@
       <title>Counting Labeled Trees</title>
       <activity>
         <task>
+          <statement>
           <p>
             Construct <m>\prufer(\bfT)</m> for the two trees below.
           </p>
@@ -1288,7 +1289,12 @@
               </prefigure>
             </image>
           </sidebyside>
-          
+        </statement>
+          <solution component="prufer-solns">
+            <p>
+              <m>1113</m> is the Prüfer code for the tree on the left. <m>(9,11,12,5,2,2,2,2,14,5,7,5)</m> is the Prüfer code for the tree on the right.
+            </p>
+          </solution>
         </task>
         <task>
           <statement>
@@ -1404,51 +1410,51 @@
               </row>
               
               <row>
-                <cell>8431875</cell>
+                <cell>4747313</cell>
                 <cell> <m>\{1,2,3,4,5,6,7,8,9\}</m> </cell>
-                <cell> <m>2-8</m> </cell>
+                <cell> <m>2-4</m> </cell>
               </row>
               
               <row>
-                <cell>431875</cell>
+                <cell>747313</cell>
                 <cell> <m>\{1,3,4,5,6,7,8,9\}</m> </cell>
+                <cell> <m>5-7</m> </cell>
+              </row>
+              
+              <row>
+                <cell>47313</cell>
+                <cell> <m>\{1,3,4,6,7,8,9\}</m> </cell>
                 <cell> <m>6-4</m> </cell>
               </row>
               
               <row>
-                <cell>31875</cell>
-                <cell> <m>\{1,3,4,5,7,8,9\}</m> </cell>
-                <cell> <m>4-3</m> </cell>
+                <cell>7313</cell>
+                <cell> <m>\{1,3,4,7,8,9\}</m> </cell>
+                <cell> <m>4-7</m> </cell>
               </row>
               
               <row>
-                <cell>1875</cell>
-                <cell> <m>\{1,3,5,7,8,9\}</m> </cell>
-                <cell> <m>3-1</m> </cell>
+                <cell>313</cell>
+                <cell> <m>\{1,3,7,8,9\}</m> </cell>
+                <cell> <m>7-3</m> </cell>
               </row>
               
               <row>
-                <cell>875</cell>
-                <cell> <m>\{1,5,7,8,9\}</m> </cell>
-                <cell> <m>1-8</m> </cell>
+                <cell>13</cell>
+                <cell> <m>\{1,3,8,9\}</m> </cell>
+                <cell> <m>8-1</m> </cell>
               </row>
               
               <row>
-                <cell>75</cell>
-                <cell> <m>\{5,7,8,9\}</m> </cell>
-                <cell> <m>8-7</m> </cell>
-              </row>
-              
-              <row>
-                <cell>5</cell>
-                <cell> <m>\{5,7,9\}</m> </cell>
-                <cell> <m>7-5</m> </cell>
+                <cell>3</cell>
+                <cell> <m>\{1,3,9\}</m> </cell>
+                <cell> <m>1-3</m> </cell>
               </row>
               
               <row>
                 <cell>(empty string)</cell>
-                <cell> <m>\{5,9\}</m> </cell>
-                <cell> <m>5-9</m> </cell>
+                <cell> <m>\{3,9\}</m> </cell>
+                <cell> <m>3-9</m> </cell>
               </row>
             </tabular>
           </solution>
