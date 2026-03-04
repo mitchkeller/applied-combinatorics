@@ -4,17 +4,271 @@
      
   <title>Partially Ordered Sets</title>
 
-  <worksheet xml:id="ws-posets-antichain-partitioning">
-    <title>Antichain Partitioning</title>
-    
-    
+  <worksheet xml:id="ws-posets-antichain-partitioning" component="posets-partioning">
+    <title>Posets and Graphs; Antichain Partitioning</title>
+    <page>
+      <activity>
+          <task>
+            <statement>
+              <p>
+                Classify each of the terms below as a poset term or a graph theory term. You will have six terms of each type.
+                <ul cols="4">
+                  <li>Antichain</li>
+                  <li>Chain</li>
+                  <li>Chromatic number</li>
+                  <li>Clique</li>
+                  <li>Clique number</li>
+                  <li>Height</li>
+                  <li>Independent set</li>
+                  <li>Partition into disjoint antichains</li>
+                  <li>Partition into disjoint chains</li>
+                  <li>Partition into disjoint cliques</li>
+                  <li>Proper coloring</li>
+                  <li>Width</li>
+                </ul>
+              </p>
+            </statement>
+            <solution component="posets-partioning-solns">
+              <p>
+                The poset terms are:
+                <ul cols="3">
+                  <li>Antichain</li>
+                  <li>Chain</li>
+                  <li>Height</li>
+                  <li>Partition into disjoint antichains</li>
+                  <li>Partition into disjoint chains</li>
+                  <li>Width</li>
+                </ul>
+              </p>
+              <p>
+                The graph theory terms are:
+                <ul cols="3">
+                  <li>Chromatic number</li>
+                  <li>Clique</li>
+                  <li>Clique number</li>
+                  <li>Independent set</li>
+                  <li>Partition into disjoint cliques</li>
+                  <li>Proper coloring</li>
+                </ul>
+              </p>
+            </solution>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Write the six poset terms from the previous part on separate rows in the Poset column of the table below. Place each of the six graph theory terms into <em>both</em> the Comparability Graph column and the Incomparability Graph column, choosing the row in which a term is placed so that the graph term for that type of graph corresponds to the poset term in that row. <alert>You will have one empty cell in each of the graph columns and one cell in each graph column will contain two graph theory terms! </alert>
+              </p>
+              <tabular>
+                <col right="minor" width="33%"/>
+                <col right="minor" width="33%"/>
+                <col width="33%"/>
+                <row bottom="minor" header="yes">
+                  <cell halign="center">Poset</cell>
+                  <cell halign="center">Comparability Graph</cell>
+                  <cell halign="center">Inomparability Graph</cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row bottom="minor">
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row bottom="minor">
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row bottom="minor">
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row bottom="minor">
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row bottom="minor">
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+                <row>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                  <cell><m>\phantom{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}</m></cell>
+                </row>
+              </tabular>
+            </statement>
+            <solution component="posets-partioning-solns">
+              <tabular>
+                <col right="minor" width="33%"/>
+                <col right="minor" width="33%"/>
+                <col width="33%"/>
+                <row bottom="minor" header="yes">
+                  <cell halign="center">Poset</cell>
+                  <cell halign="center">Comparability Graph</cell>
+                  <cell halign="center">Inomparability Graph</cell>
+                </row>
+                <row bottom="minor">
+                  <cell>Antichain</cell>
+                  <cell>Independent set</cell>
+                  <cell>Clique</cell>
+                </row>
+                <row bottom="minor">
+                  <cell>Chain</cell>
+                  <cell>Clique</cell>
+                  <cell>Independent set</cell>
+                </row>
+                <row bottom="minor">
+                  <cell>Height</cell>
+                  <cell>Clique number / Chromatic number</cell>
+                  <cell></cell>
+                </row>
+                <row bottom="minor">
+                  <cell>Partition into disjoint antichains</cell>
+                  <cell>Proper coloring</cell>
+                  <cell>Partition into disjoint cliques</cell>
+                </row>
+                <row bottom="minor">
+                  <cell>Partition into disjoint chains</cell>
+                  <cell>Partition into disjoint cliques</cell>
+                  <cell>Proper coloring</cell>
+                </row>
+                <row bottom="minor">
+                  <cell>Width</cell>
+                  <cell></cell>
+                  <cell>Clique number / Chromatic number</cell>
+                </row>
+              </tabular>
+            </solution>
+          </task>
+        </activity>
+    </page>
+    <page>
     <activity>
       <task>
         <statement>
           <p>
-            Use the algorithm to find the height <m>h</m>, a maximum chain, and a partition into <m>h</m> antichains for each of the posets below.
+            Use the algorithm to find the height <m>h</m>, a partition into <m>h</m> antichains, and a maximum chain for each of the posets below.
           </p>
         </statement>
+        <solution component="posets-partioning-solns">
+          <p>
+            For the poset on the left, the height is <m>4</m>. A partition into <m>4</m> antichains is given by 
+            <md>
+              <mrow>A_1 \amp= \set{6,7,10}</mrow>
+              <mrow>A_2 \amp= \set{2,4,8}</mrow>
+              <mrow>A_3 \amp= \set{1,5}</mrow>
+              <mrow>A_4 \amp= \set{3,9}</mrow>
+            </md>
+            and a maximum chain is <m>\set{9,5,4,6}</m>.
+          </p>
+          <p>
+            For the poset on the right, the height is <m>9</m>. A partition into <m>9</m> antichains is given by
+            <md>
+              <mrow> A_1 \amp= \set{7,18,19,25}</mrow>
+              <mrow> A_2 \amp= \set{3,10,16,17}</mrow>
+              <mrow> A_3 \amp= \set{2,12,20,24}</mrow>
+              <mrow> A_4 \amp= \set{14,21}</mrow>
+              <mrow> A_5 \amp= \set{1,8,9}</mrow>
+              <mrow> A_6 \amp= \set{13,11,22}</mrow>
+              <mrow> A_7 \amp= \set{4,15}</mrow>
+              <mrow> A_8 \amp= \set{5,23}</mrow>
+              <mrow> A_9 \amp= \set{6}</mrow>
+            </md>
+            and a maximum chain is <m>\set{6,5,15,22,9,14,24,16,25}</m>.
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
@@ -22,10 +276,36 @@
             What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?
           </p>
         </statement>
+        <solution component="posets-partioning-solns">
+          <p>
+            We will not learn an algorithm for chain partitioning in this class, as it requires material from Chapters 13 and 14. However, finding the width, a maximum antichain, and a partition into disjoint chains for the poset on the left is reasonable as homework or a test question. Will give the solution for the poset on the right, but it's much larger than would be reasonable for a test question.
+          </p>
+          <p>
+            The width of the poset on the left is <m>3</m>. A maximum antichain is <m>\set{2,4,8}</m>. A partition into disjoint chains is given by
+            <md>
+              <mrow> C_1 \amp=\set{7,2,1,3} </mrow>
+              <mrow> C_2 \amp=\set{10,8} </mrow>
+              <mrow> C_3 \amp=\set{6,4,5,9} </mrow>
+            </md>.
+          </p>
+          <p>
+            The width of the poset on the right is <m>7</m>, which is much larger than any antichain found by the height algorithm! A maximum antichain is <m>\set{10,11,1,15,2,8,12}</m>. A partition into disjoint chains is given by
+            <md>
+              <mrow> C_1 \amp=\set{25,16,24,14,8} </mrow>
+              <mrow> C_2 \amp=\set{18,3,2,13} </mrow>
+              <mrow> C_3 \amp=\set{19,17,12,6} </mrow>
+              <mrow> C_4 \amp=\set{20,21,22,15,5} </mrow>
+              <mrow> C_5 \amp=\set{9,11} </mrow>
+              <mrow> C_6 \amp=\set{1,4} </mrow>
+              <mrow> C_7 \amp=\set{7,10,23} </mrow>
+            </md>.
+          </p>
+        </solution>
       </task> 
     </activity>
     <sidebyside widths="30% 45%">
       <image width="30%">
+        <description><p>The diagram of a poset with 10 points.</p></description>
         <prefigure xmlns="https://prefigure.org" label="poset-antichain-part-10pts">
           <diagram dimensions="(200,300)" margins="15">
             <coordinates bbox="(0,0,2,4)">
@@ -44,8 +324,9 @@
             </coordinates>
           </diagram>        
         </prefigure>
-      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+      </image>
       <image width="45%">
+        <description><p>The diagram of a poset with 25 points.</p></description>
         <prefigure xmlns="https://prefigure.org" label="poset-antichain-part-25pts">
           <diagram dimensions="(300,600)" margins="15">
             <coordinates bbox="(0,0,4,7)">
@@ -79,10 +360,11 @@
             </coordinates>
           </diagram>        
         </prefigure>
-      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+      </image>
     </sidebyside>
+    </page>
   </worksheet>
-  <worksheet xml:id="ws-posets-subset-lattice">
+  <worksheet xml:id="ws-posets-subset-lattice" component="posets-subset">
     <title>Width of the Subset Lattice</title>
     <!-- <page> -->
       <exercise workspace="1.5in">
@@ -96,6 +378,7 @@
         </statement>
       </exercise>
       <image width="40%">
+        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description>
         <prefigure xmlns="https://prefigure.org" label="subset-lattice-4">
           <diagram dimensions="(300,240)" margins="15">
             <definition>graph={0:[1,2,3,4],1:[12,13,14],2:[12,23,24],3:[13,23,34],
@@ -125,8 +408,9 @@
             </coordinates>
           </diagram>
         </prefigure>
-      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+      </image>
       <image width="80%">
+        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description>
         <prefigure xmlns="https://prefigure.org" label="subset-lattice-5">
           <diagram dimensions="(600,280)" margins="15">
             <definition>graph={0:[1,2,3,4,5],1:[12,13,14,15],2:[12,23,24,25],3:[13,23,34,35],
@@ -178,7 +462,7 @@
             </coordinates>
           </diagram>
         </prefigure>
-      <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+      </image>
       <exercise>
         <introduction>
           <p>
@@ -437,7 +721,7 @@
           </solution>
         </exercise>
       </worksheet>
-      <worksheet xml:id="ws-posets-intord-draw-diag">
+      <worksheet xml:id="ws-posets-intord-draw-diag" component="posets-intord-draw-diag">
         <title>Interval Representations to Diagrams</title>
         
         <page>

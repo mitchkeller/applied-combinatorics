@@ -378,7 +378,7 @@
       </paragraphs>
     </page>
   </handout>
-  <handout component="posets-partitioning">
+  <handout component="posets-partitioning" label="posets-partitioning">
     <title>Antichain and Chain Partitioning</title>
     <page>
       <paragraphs>
@@ -407,11 +407,17 @@
               <p workspace="1cm">
                 Only linear orders have paths as cover graphs.
               </p>
+              <p component="a">
+                This is false. Consider a poset of height <m>2</m> whose diagram is a zig-zag shape. The cover graph is still a path, but the poset is not a lienar order.
+              </p>
             </li>
             
             <li>
               <p workspace="1cm">
                 A poset and its dual have the same cover graph and the same comparability graph.
+              </p>
+              <p component="a">
+                This is true. Cover relations and comparabilities are reversed, but since the cover graph and comparability graph are not directed, this doesn't change the graphs.
               </p>
             </li>
             
@@ -419,24 +425,26 @@
               <p workspace="1cm">
                 Any two posets with the same cover graph have the same height and the same width.
               </p>
+              <p component="a">
+                This is false. Consider the zig-zag poset mentioned earlier and compare it to a linear order on the same number of points.
+              </p>
             </li>
             
             <li>
               <p workspace="1cm">
                 Any two posets with the same comparability graph have the same height and the same width.
               </p>
+              <p component="a">
+                This is true because heighth of a poset is the clique number of the comparability graph and width of a poset is the size of a largest independent set in the comparability graph.
+              </p>
             </li>
           </ol>
         </p>
-        <activity>
-          <statement>
-            <p>
-              Use the small pieces of paper to fill in the grid. Every row in the <q>Poset</q> column will contain exactly one poset term. You will use the rest of the pieces of paper to fill in the <q>Comparability Graph</q> and <q>Incomparability Graph</q> columns as best as you can. It is possible that some squares in those columns will be blank or that some will contain more than one piece of paper. You will use all the pieces of paper, however!
-            </p>
-          </statement>
-        </activity>
+        <p>
+          <alert>Handout page 1.</alert>
+        </p>
       </paragraphs>
-    </page>
+      </page>
     <page>
       <paragraphs>
         <title>Height and Antichain Partitioning</title>
@@ -507,7 +515,7 @@
           </p>
         </sidebyside>
         <p>
-          <alert>Handout</alert>
+          <alert>Handout page 2.</alert>
         </p>
       </paragraphs>
     </page>
@@ -518,7 +526,7 @@
           Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?
         </p>
         <theorem>
-          <title>Dilworths Theorem</title>
+          <title>Dilworth's Theorem</title>
           
           <statement>
             <p>
