@@ -647,6 +647,33 @@ var ptx_lunr_docs = [
   "number": "6.9",
   "title": "",
   "body": "  The width of a poset is the number of points in a maxim um antichain in    "
+},
+{
+  "id": "posets-partitioning",
+  "level": "1",
+  "url": "posets-partitioning.html",
+  "type": "Handout",
+  "number": "6.2",
+  "title": "Antichain and Chain Partitioning",
+  "body": " Antichain and Chain Partitioning    Duals, Cover Graphs, and Comparability Graphs    Dual of is denoted   Comparability Graph    Cover Graph  Incomparability Graph    Bob's Claims:   Only linear orders have paths as cover graphs.  This is false. Consider a poset of height whose diagram is a zig-zag shape. The cover graph is still a path, but the poset is not a lienar order.    A poset and its dual have the same cover graph and the same comparability graph.  This is true. Cover relations and comparabilities are reversed, but since the cover graph and comparability graph are not directed, this doesn't change the graphs.    Any two posets with the same cover graph have the same height and the same width.  This is false. Consider the zig-zag poset mentioned earlier and compare it to a linear order on the same number of points.    Any two posets with the same comparability graph have the same height and the same width.  This is true because heighth of a poset is the clique number of the comparability graph and width of a poset is the size of a largest independent set in the comparability graph.      Handout page 1.       Height and Antichain Partitioning   Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.          The order diagram of a poset with 7 points. The points are labeled with letters from to .       a  b  c  d  e  f  g            Handout page 2.       Chain Partitioning and Width  Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?   Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with          "
+},
+{
+  "id": "thm-dual-dilworth",
+  "level": "2",
+  "url": "posets-partitioning.html#thm-dual-dilworth",
+  "type": "Theorem",
+  "number": "6.10",
+  "title": "Dual of Dilworth’s Theorem.",
+  "body": " Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.      "
+},
+{
+  "id": "posets-partitioning-4-1-3",
+  "level": "2",
+  "url": "posets-partitioning.html#posets-partitioning-4-1-3",
+  "type": "Theorem",
+  "number": "6.11",
+  "title": "Dilworth’s Theorem.",
+  "body": " Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with    "
 }
 ]
 
