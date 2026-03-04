@@ -267,16 +267,16 @@
           <exercise>
             <statement>
               <p>A school is preparing the schedule of classes for the next academic year. They are concerned about scheduling calculus, physics, English, statistics, economics, chemistry, and German classes, planning to offer a single section of each one. Below are the lists of courses that each of six students must take in order to successfully graduate. Determine the smallest number of class periods that can be used to schedule these courses if each student can take at most one course per class period. Explain why fewer class periods cannot be used.</p>
-                <tabular>
-                  <col halign="center"/><col/>
-                  <row bottom="minor"><cell>Student</cell><cell>Courses</cell></row>
-                  <row><cell>1</cell><cell>Chemistry, Physics, Economics</cell></row>
-                  <row><cell>2</cell><cell>English, German, Statistics</cell></row>
-                  <row><cell>3</cell><cell>Statistics, Calculus, German</cell></row>
-                  <row><cell>4</cell><cell>Chemistry, Physics</cell></row>
-                  <row><cell>5</cell><cell>English, Chemistry</cell></row>
-                  <row><cell>6</cell><cell>Chemistry, Economics</cell></row>
-                </tabular>
+              <tabular>
+                <col halign="center"/><col/>
+                <row bottom="minor"><cell>Student</cell><cell>Courses</cell></row>
+                <row><cell>1</cell><cell>Chemistry, Physics, Economics</cell></row>
+                <row><cell>2</cell><cell>English, German, Statistics</cell></row>
+                <row><cell>3</cell><cell>Statistics, Calculus, German</cell></row>
+                <row><cell>4</cell><cell>Chemistry, Physics</cell></row>
+                <row><cell>5</cell><cell>English, Chemistry</cell></row>
+                <row><cell>6</cell><cell>Chemistry, Economics</cell></row>
+              </tabular>
             </statement>
             <solution>
               <p>
@@ -350,284 +350,530 @@
                       <p>
                         A collection of 14 intervals. They are arranged in four rows so that intervals in each row do not overlap one another.
                       </p>
-                  </description></image>
-                </figure>
-              </statement>
-              <solution>
-                <image width="50%">
-                  <description>
-                    <p>
-                      A graph with 14 vertices. The neighbors of each vertex are given in the table.
-                    </p>
-                    <tabular>
-                      <row>
-                        <cell>Vertex</cell>
-                        <cell>Neighbors</cell>
-                      </row>
-                      <row>
-                        <cell><m>c</m></cell>
-                        <cell><m>h</m>, <m>l</m>, <m>e</m>, <m>p</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>d</m></cell>
-                        <cell><m>f</m>, <m>h</m>, <m>l</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>e</m></cell>
-                        <cell><m>h</m>, <m>l</m>, <m>c</m>, <m>i</m>, <m>j</m>, <m>p</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>f</m></cell>
-                        <cell><m>k</m>, <m>d</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>g</m></cell>
-                        <cell><m>m</m>, <m>o</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>h</m></cell>
-                        <cell><m>d</m>, <m>l</m>, <m>c</m>, <m>e</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>i</m></cell>
-                        <cell><m>e</m>, <m>j</m>, <m>p</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>j</m></cell>
-                        <cell><m>e</m>, <m>i</m>, <m>p</m>, <m>m</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>k</m></cell>
-                        <cell><m>f</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>l</m></cell>
-                        <cell><m>d</m>, <m>h</m>, <m>c</m>, <m>e</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>m</m></cell>
-                        <cell><m>j</m>, <m>p</m>, <m>o</m>, <m>n</m>, <m>g</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>n</m></cell>
-                        <cell><m>m</m>, <m>o</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>o</m></cell>
-                        <cell><m>m</m>, <m>n</m>, <m>g</m></cell>
-                      </row>
-                      <row>
-                        <cell><m>p</m></cell>
-                        <cell><m>c</m>, <m>e</m>, <m>i</m>, <m>j</m>, <m>m</m></cell>
-                      </row>
-                      
-                    </tabular>
-                  </description>
-                  <prefigure xmlns="https://prefigure.org" label="graphs-ex-interval-graph-soln">
-                    <diagram dimensions="(300,300)" margins="5">
-                      <definition>graph={1:[2],2:[3],3:[4,5],4:[5,6,7],5:[6,7],6:[7,10],
-                        7:[8,9,10],8:[9,10],9:[10,11],10:[11],11:[14,13,12],12:[13,14]}</definition>
-                        <definition>labels={1:'k',2:'f',3:'d',4:'h',5:'l',6:'c',
-                          7:'e',8:'i',9:'j',10:'p',11:'m',12:'o',13:'n',14:'g'}
-                        </definition>
-                        <coordinates bbox="(-4,-4,4,4)">
-                          <network graph="graph" labels="yes" label-dictionary="labels" layout="spring" seed="39" node-fill="#ccc">
-                          </network>
-                        </coordinates>
-                      </diagram>
-                    </prefigure>
-                  </image>
-                </solution>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Use the First Fit coloring algorithm to find the chromatic number of the interval graph whose interval representation is shown in <xref ref="fig_graphs_intervals-ex"/> as well as a proper coloring using as few colors as possible.</p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>
-                    <ol>
-                      <li><p>From <xref ref="ex_graphs_first-fit-color"/> you know that choosing a bad ordering of the vertices of a graph can lead to the First Fit coloring algorithm producing a coloring that is far from optimal. However, you can use this algorithm to prove a bound on the chromatic number. Show that if every vertex of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</p></li>
-                      <li><p>Give an example of a bipartite graph with <m>D=1000</m> to show that this bound need not be tight.</p></li>
-                    </ol>
-                  </p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Is the graph in <xref ref="fig_graphs_coloring_ex"/> planar? If it is, find a drawing without edges crossings. If it is not give a reason why it is not.</p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Is the graph in <xref ref="fig_graphs_planar_ex"/> planar? If it is, find a drawing without edge crossings. If it is not give a reason why it is not.</p>
-                  <figure xml:id="fig_graphs_planar_ex">
-                    <caption>Is this graph planar?</caption>
-                    <image width="40%" source="planar_ex"><description><p>Is this graph planar?</p>
                     </description></image>
                   </figure>
                 </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Find a planar drawing of the graph <m>\bfK_5-e</m>, by which we mean the graph formed from the complete graph on <m>5</m> vertices by deleting any edge.</p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Exhibit a planar drawing of an eulerian planar graph with <m>10</m> vertices and <m>21</m> edges.</p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Show that every planar graph has a vertex that is incident to at most five edges.</p>
-                </statement>
-              </exercise>
-              <exercise xml:id="ex_graphs_degseq">
-                <statement>
-                  <p> Let <m>\GVE</m> be a graph with <m>V=\{v_1,v_2,\dots,v_n\}</m>. Its <em>degree sequence</em> is the list of the degrees of its vertices, arranged in nonincreasing order. That is, the degree sequence of <m>\mathbf{G}</m> is <m>(\deg_\mathbf{G}(v_1),\deg_\mathbf{G}(v_2),\dots,\deg_\mathbf{G}(v_n))</m> with the vertices arranged such that <m>\deg_\mathbf{G}(v_1) \geq \deg_\mathbf{G}(v_2)\geq \cdots\geq \deg_\mathbf{G}(v_n)</m>. Below are five sequences of integers (along with <m>n</m>, the number of integers in the sequence). Identify
-                    <ul>
-                      <li>the <em>one</em> sequence that <alert>cannot be the degree sequence of any graph</alert>;</li>
-                      <li>the <em>two</em> sequences that could be the degree sequence of a <alert>planar</alert> graph;</li>
-                      <li>the <em>one</em> sequence that could be the degree sequence of a <alert>tree</alert>;</li>
-                      <li>the <em>one</em> sequence that is the degree sequence of an <alert>eulerian</alert> graph; and</li>
-                      <li>the <em>one</em> sequence that is the degree sequence of a graph that must be <alert>hamiltonian</alert>.</li>
-                    </ul>
-                    Explain your answers. (Note that one sequence will get two labels from above.)
-                    <ol>
-                      <li><p><m>n=10</m>: <m>(4,4,2,2,1,1,1,1,1,1)</m></p></li>
-                      <li><p><m>n=9</m>: <m>(8,8,8,6,4,4,4,4,4)</m></p></li>
-                      <li><p><m>n=7</m>: <m>(5,4,4,3,2,1,0)</m></p></li>
-                      <li><p><m>n=10</m>: <m>(7,7,6,6,6,6,5,5,5,5)</m></p></li>
-                      <li><p><m>n=6</m>: <m>(5,4,3,2,2,2)</m></p></li>
-                      
-                    </ol>
-                  </p>
-                </statement>
-              </exercise>
-              <exercise xml:id="ex_graphs_degseq2">
-                <statement>
-                  <p> Below are three sequences of length <m>10</m>. One of the sequences cannot be the degree sequence (see <xref ref="ex_graphs_degseq"/>) of any graph. Identify it and say why. For each of the other two, say <em>why</em> (if you have enough information) a <em>connected</em> graph with that degree sequence
-                    <ul>
-                      <li>is definitely hamiltonian/cannot be hamiltonian;</li>
-                      <li>is definitely eulerian/cannot be eulerian;</li>
-                      <li>is definitely a tree/cannot be a tree; and</li>
-                      <li>is definitely planar/cannot be planar.</li>
-                    </ul>
-                    (If you do not have enough information to make a determination for a sequence without having specific graph(s) with that degree sequence, write <q>not enough information</q> for that property.)
-                    <ol>
-                      <li><p><m>(6,6,4,4,4,4,2,2,2,2)</m></p></li>
-                      <li><p><m>(7,7,7,7,6,6,6,2,1,1)</m></p></li>
-                      <li><p><m>(8,6,4,4,4,3,2,2,1,1)</m></p></li>
-                      
-                    </ol>
-                  </p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>For the two degree sequences in <xref ref="ex_graphs_degseq2"/> that correspond to graphs, there were some properties for which the degree sequence was not sufficient information to determine if the graph had that property. For each of those situations, see if you can draw both a graph that has the property and a graph that does not have the property.</p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Draw the <m>16</m> labeled trees on <m>4</m> vertices.</p>
-                </statement>
-              </exercise>
-              <exercise>
-                <statement>
-                  <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1"/>.</p>
-                  <figure xml:id="fig_graphs_tree-10verts-ex1">
-                    <caption>A <m>10</m>-vertex tree</caption>
-                    <image width="75%">
-                      <description><p>A <m>10</m>-vertex tree</p>
-                      </description><latex-image>\begin{overpic}{external/tree-10verts-ex1}
-                        \put(35,11.2){\(1\)}
-                        \put(46,2){\(2\)}
-                        \put(22,25){\(3\)}
-                        \put(22,9){\(4\)}
-                        \put(68,2.5){\(5\)}
-                        \put(90,11){\(6\)}
-                        \put(5,16){\(7\)}
-                        \put(77,21){\(8\)}
-                        \put(62,14.5){\(9\)}
-                        \put(0.5,2){\(10\)}
-                        \end{overpic}</latex-image>
-                      </image>
-                      
-                    </figure>
+                <solution>
+                  <image width="50%">
+                    <description>
+                      <p>
+                        A graph with 14 vertices. The neighbors of each vertex are given in the table.
+                      </p>
+                      <tabular>
+                        <row>
+                          <cell>Vertex</cell>
+                          <cell>Neighbors</cell>
+                        </row>
+                        <row>
+                          <cell><m>c</m></cell>
+                          <cell><m>h</m>, <m>l</m>, <m>e</m>, <m>p</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>d</m></cell>
+                          <cell><m>f</m>, <m>h</m>, <m>l</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>e</m></cell>
+                          <cell><m>h</m>, <m>l</m>, <m>c</m>, <m>i</m>, <m>j</m>, <m>p</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>f</m></cell>
+                          <cell><m>k</m>, <m>d</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>g</m></cell>
+                          <cell><m>m</m>, <m>o</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>h</m></cell>
+                          <cell><m>d</m>, <m>l</m>, <m>c</m>, <m>e</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>i</m></cell>
+                          <cell><m>e</m>, <m>j</m>, <m>p</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>j</m></cell>
+                          <cell><m>e</m>, <m>i</m>, <m>p</m>, <m>m</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>k</m></cell>
+                          <cell><m>f</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>l</m></cell>
+                          <cell><m>d</m>, <m>h</m>, <m>c</m>, <m>e</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>m</m></cell>
+                          <cell><m>j</m>, <m>p</m>, <m>o</m>, <m>n</m>, <m>g</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>n</m></cell>
+                          <cell><m>m</m>, <m>o</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>o</m></cell>
+                          <cell><m>m</m>, <m>n</m>, <m>g</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>p</m></cell>
+                          <cell><m>c</m>, <m>e</m>, <m>i</m>, <m>j</m>, <m>m</m></cell>
+                        </row>
+                        
+                      </tabular>
+                    </description>
+                    <prefigure xmlns="https://prefigure.org" label="graphs-ex-interval-graph-soln">
+                      <diagram dimensions="(300,300)" margins="5">
+                        <definition>graph={1:[2],2:[3],3:[4,5],4:[5,6,7],5:[6,7],6:[7,10],
+                          7:[8,9,10],8:[9,10],9:[10,11],10:[11],11:[14,13,12],12:[13,14]}</definition>
+                          <definition>labels={1:'k',2:'f',3:'d',4:'h',5:'l',6:'c',
+                            7:'e',8:'i',9:'j',10:'p',11:'m',12:'o',13:'n',14:'g'}
+                          </definition>
+                          <coordinates bbox="(-4,-4,4,4)">
+                            <network graph="graph" labels="yes" label-dictionary="labels" layout="spring" seed="39" node-fill="#ccc">
+                            </network>
+                          </coordinates>
+                        </diagram>
+                      </prefigure>
+                    </image>
+                  </solution>
+                </exercise>
+                <exercise>
+                  <statement>
+                    <p>Use the First Fit coloring algorithm to find the chromatic number of the interval graph whose interval representation is shown in <xref ref="fig_graphs_intervals-ex"/> as well as a proper coloring using as few colors as possible.</p>
                   </statement>
                 </exercise>
                 <exercise>
                   <statement>
-                    <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2"/>.</p>
-                    <figure xml:id="fig_graphs_tree-10verts-ex2">
-                      <caption>A <m>10</m>-vertex tree</caption>
-                      <image width="65%">
-                        <description><p>A <m>10</m>-vertex tree</p>
-                        </description><latex-image>\begin{overpic}{external/tree-8verts-ex2}
-                          \put(50,32){\(1\)}
-                          \put(44,2){\(2\)}
-                          \put(26,22){\(3\)}
-                          \put(31,48){\(4\)}
-                          \put(62,56){\(5\)}
-                          \put(94,32){\(6\)}
-                          \put(5,16){\(7\)}
-                          \put(77,21){\(8\)}
-                          \end{overpic}</latex-image>
-                        </image>
+                    <p>
+                      <ol>
+                        <li><p>From <xref ref="ex_graphs_first-fit-color"/> you know that choosing a bad ordering of the vertices of a graph can lead to the First Fit coloring algorithm producing a coloring that is far from optimal. However, you can use this algorithm to prove a bound on the chromatic number. Show that if every vertex of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</p></li>
+                        <li><p>Give an example of a bipartite graph with <m>D=1000</m> to show that this bound need not be tight.</p></li>
+                      </ol>
+                    </p>
+                  </statement>
+                </exercise>
+                <exercise>
+                  <statement>
+                    <p>Is the graph in <xref ref="fig_graphs_coloring_ex"/> planar? If it is, find a drawing without edges crossings. If it is not give a reason why it is not.</p>
+                  </statement>
+                  <solution>
+                    <p>
+                      The graph is planar. Answers will vary.
+                    </p>
+                  </solution>
+                </exercise>
+                <exercise>
+                  <statement>
+                    <p>Is the graph in <xref ref="fig_graphs_planar_ex"/> planar? If it is, find a drawing without edge crossings. If it is not give a reason why it is not.</p>
+                    <figure xml:id="fig_graphs_planar_ex">
+                      <caption>Is this graph planar?</caption>
+                      <image width="40%" source="planar_ex">
+                        <description>
+                          <p>A graph with <m>12</m> vertices.</p>
+                        </description>
+                      </image>
+                    </figure>
+                  </statement>
+                  <solution>
+                    <p>
+                      This graph is not planar.
+                      It contains a subdivision of <m>\mathbf{K}_{3,3}</m>.
+                      The vertices on one side of the <m>\mathbf{K}_{3,3}</m> are <m>\{d,a,g\}</m> and on the other side you have <m>\{e,l,i\}</m>.
+                      These vertices form a <m>\mathbf{C}_{6}</m> in the given graph, so we just need paths or edges from <m>d</m> to <m>l</m>, from <m>a</m> to <m>i</m>, and from <m>g</m> to <m>e</m>.
+                      We can use <m>(d,j,c,l)</m>, <m>(a,f,i)</m>, and <m>(g,k,h,e)</m> to do this.
+                      (Note that since there are not five vertices of degree at least <m>4</m>, there cannot be a <m>\mathbf{K}_{5}</m> subdivision.)
+                    </p>
+                  </solution>
+                </exercise>
+                <exercise>
+                  <statement>
+                    <p>Find a planar drawing of the graph <m>\bfK_5-e</m>, by which we mean the graph formed from the complete graph on <m>5</m> vertices by deleting any edge.</p>
+                  </statement>
+                </exercise>
+                <exercise>
+                  <statement>
+                    <p>Exhibit a planar drawing of an eulerian planar graph with <m>10</m> vertices and <m>21</m> edges.</p>
+                  </statement>
+                  <solution>
+                    <image>
+                      <description>
+                        <p>
+                          A graph with <m>10</m> vertices and <m>21</m> edges. The vertices are labeled from <m>0</m> to <m>9</m>. Adjacencies are given in the table below.
+                        </p>
+                        <tabular>
+                        <row>
+                          <cell>Vertex</cell>
+                          <cell>Neighbors</cell>
+                        </row>
+                        <row>
+                          <cell>0</cell>
+                          <cell>1,2,4,6,8,9</cell>
+                        </row>
+                        <row>
+                          <cell>1</cell>
+                          <cell>0,2,3,9</cell>
+                        </row>
+                        <row>
+                          <cell>2</cell>
+                          <cell>0,1,3,4</cell>
+                        </row>
+                        <row>
+                          <cell>3</cell>
+                          <cell>0,2,4,5</cell>
+                        </row>
+                        <row>
+                          <cell>4</cell>
+                          <cell>0,2,3,5</cell>
+                        </row>
+                        <row>
+                          <cell>5</cell>
+                          <cell>3,4,6,7</cell>
+                        </row>
+                        <row>
+                          <cell>6</cell>
+                          <cell>0,5,7,8</cell>
+                        </row>
+                        <row>
+                          <cell>7</cell>
+                          <cell>5,6,8,9</cell>
+                        </row>
+                        <row>
+                          <cell>8</cell>
+                          <cell>0,6,7,9</cell>
+                        </row>
+                        <row>
+                          <cell>9</cell>
+                          <cell>0,1,7,8</cell>
+                        </row>
+                      </tabular>
+                      </description>
+                      <prefigure xmlns="https://prefigure.org" label="planar-eulerian-n-10-m-21">
+                        <diagram dimensions="(300,300)" margins="15">
+                          <coordinates bbox="(-1,-1,1,1)">
+                            <network scale="0.9" labels="yes" node-fill="#ddd" layout="planar" node-stroke="black">
+                              <node at="0"  edges="[1,2,9]"/>
+                              <node at="1"  edges="[2,3,9]"/>
+                              <node at="2"  edges="[3,4]"/>
+                              <node at="3"  edges="[4,5]"/>
+                              <node at="4"  edges="[5,0]"/>
+                              <node at="5"  edges="[6,7]"/>
+                              <node at="6"  edges="[7,8,0]"/>
+                              <node at="7"  edges="[8,9]"/>
+                              <node at="8"  edges="[9,0]"/>
+                              <node at="9" />
+                            </network>
+                          </coordinates>
+                        </diagram>
+                      </prefigure>
+                    </image>
+                </solution>
+                </exercise>
+                <exercise>
+                  <statement>
+                    <p>Show that every planar graph has a vertex that is incident to at most five edges.</p>
+                  </statement>
+                </exercise>
+                <exercise xml:id="ex_graphs_degseq">
+                  <statement>
+                    <p> Let <m>\GVE</m> be a graph with <m>V=\{v_1,v_2,\dots,v_n\}</m>. Its <em>degree sequence</em> is the list of the degrees of its vertices, arranged in nonincreasing order. That is, the degree sequence of <m>\mathbf{G}</m> is <m>(\deg_\mathbf{G}(v_1),\deg_\mathbf{G}(v_2),\dots,\deg_\mathbf{G}(v_n))</m> with the vertices arranged such that <m>\deg_\mathbf{G}(v_1) \geq \deg_\mathbf{G}(v_2)\geq \cdots\geq \deg_\mathbf{G}(v_n)</m>. Below are five sequences of integers (along with <m>n</m>, the number of integers in the sequence). Identify
+                      <ul>
+                        <li>the <em>one</em> sequence that <alert>cannot be the degree sequence of any graph</alert>;</li>
+                        <li>the <em>two</em> sequences that could be the degree sequence of a <alert>planar</alert> graph;</li>
+                        <li>the <em>one</em> sequence that could be the degree sequence of a <alert>tree</alert>;</li>
+                        <li>the <em>one</em> sequence that is the degree sequence of an <alert>eulerian</alert> graph; and</li>
+                        <li>the <em>one</em> sequence that is the degree sequence of a graph that must be <alert>hamiltonian</alert>.</li>
+                      </ul>
+                      Explain your answers. (Note that one sequence will get two labels from above.)
+                      <ol marker="a.">
+                        <li><p><m>n=10</m>: <m>(4,4,2,2,1,1,1,1,1,1)</m></p></li>
+                        <li><p><m>n=9</m>: <m>(8,8,8,6,4,4,4,4,4)</m></p></li>
+                        <li><p><m>n=7</m>: <m>(5,4,4,3,2,1,0)</m></p></li>
+                        <li><p><m>n=10</m>: <m>(7,7,6,6,6,6,5,5,5,5)</m></p></li>
+                        <li><p><m>n=6</m>: <m>(5,4,3,2,2,2)</m></p></li>
                         
-                      </figure>
-                    </statement>
-                  </exercise>
-                  <exercise>
-                    <statement>
-                      <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3"/>.</p>
-                      <figure xml:id="fig_graphs_tree-14verts-ex3">
-                        <caption>A <m>14</m>-vertex tree</caption>
-                        <image width="65%">
-                          <description><p>A <m>14</m>-vertex tree</p>
-                          </description><latex-image>\begin{overpic}{external/tree-14verts-ex3}
-                            \put(50,32){\(1\)}
-                            \put(44,2){\(2\)}
-                            \put(2,34){\(3\)}
-                            \put(31,48){\(4\)}
-                            \put(62,56){\(5\)}
-                            \put(77,21){\(6\)}
-                            \put(17,51){\(7\)}
-                            \put(94,32){\(8\)}
-                            \put(34,20){\(9\)}
-                            \put(5,16){\(10\)}
-                            \put(74,2){\(11\)}
-                            \put(44,9){\(12\)}
-                            \put(87,14){\(13\)}
-                            \put(64,14){\(14\)}
-                            \end{overpic}</latex-image>
-                          </image>
-                        </figure>
-                      </statement>
-                    </exercise>
-                    <exercise>
-                      <statement>
-                        <p>Construct the labeled tree <m>\bfT</m> with Pr&#252;fer code <m>96113473</m>.</p>
-                      </statement>
-                    </exercise>
-                    <exercise>
-                      <statement>
-                        <p>Construct the labeled tree <m>\bfT</m> with Pr&#252;fer code <m>23134</m>.</p>
-                      </statement>
-                    </exercise>
-                    <exercise>
-                      <statement>
-                        <p>Construct the labeled tree <m>\bfT</m> with Pr&#252;fer code (using commas to separate symbols in the string, since we have labels greater than <m>9</m>) <m>10,1,7,4,3,4,10,2,2,8</m>.</p>
-                      </statement>
-                    </exercise>
-                    <exercise>
-                      <statement>
-                        <p>(Challenge problem) When <m>\GVE</m> is a graph, let <m>\Delta(\bfG)</m> denote the maximum degree in <m>\bfG</m>.  Prove <em>Brooks' Theorem</em>: If <m>\bfG</m> is connected and <m>\Delta(\bfG)=k</m>, then <m>\chi(\bfG)\le k+1</m>.  Furthermore, equality holds if and only if (a)<nbsp/><m>k=2</m> and <m>\bfG</m> is an odd cycle, or (b)<nbsp/><m>k\neq2</m> and <m>\bfG=\bfK_{k+1}</m>.</p>
-                      </statement>
-                      <hint><p>Hint: It's clear that <m>\chi(\bfG)\le k+1</m> (in fact, this was already assigned as an exercise). Assume that <m>\chi(\bfG)=k+1</m> but that neither conclusion (a) or (b) holds.  Take a spanning tree of <m>\bfG</m> and an appropriate ordering of the vertices, with two leaves of the tree coming first.  Then show that a First Fit coloring of the graph will only use <m>k</m> colors.</p>
-                      </hint>
-                    </exercise>
-                  </exercises>
+                      </ol>
+                    </p>
+                  </statement>
+                  <solution>
+                    <p>
+                      <ol marker="a.">
+                        <li>Could be a tree (if connected) because has 10 vertices and 9 edges since the sum of the degrees is 18.
+                          Could be planar since <m>9\leq 3\cdot 10-6 = 24</m>.</li>
+                          <li>This graph must be eulerian.
+                            The degrees are all even, and the existence of a vertex of degree 8 in a graph on <m>9</m> vertices means there is a vertex that is adjacent to all others, which makes the graph connected.
+                            Not planar since has 25 edges, while <m>3\cdot 9 -6 = 21</m> is the maximum number of edges for a <m>9</m>-vertex planar graph.</li>
+                            <li>No graph with this degree sequence exists, since it would need to have three vertices of odd degree. Since three is odd, this would violate the First Theorem of Graph Theory.</li>
+                            <li>By Dirac's Theorem, this graph must be hamiltonian, as it has 10 vertices and each vertex has degree at least <m>10/2 = 5</m>.
+                              Not planar since has <m>29</m> edges while <m>3\cdot 10-6=24</m> is the maximum number of edges for a <m>10</m>-vertex planar graph.</li>
+                              <li>Could be planar since has 9 edges, which is less than the maximum of <m>3\cdot 6-6 = 12</m> for a <m>6</m>-vertex planar graph.</li>
+                            </ol>
+                          </p>
+                        </solution>
+                      </exercise>
+                      <exercise xml:id="ex_graphs_degseq2">
+                        <statement>
+                          <p> Below are three sequences of length <m>10</m>. One of the sequences cannot be the degree sequence (see <xref ref="ex_graphs_degseq"/>) of any graph. Identify it and say why. For each of the other two, say <em>why</em> (if you have enough information) a <em>connected</em> graph with that degree sequence
+                            <ul>
+                              <li>is definitely hamiltonian/cannot be hamiltonian;</li>
+                              <li>is definitely eulerian/cannot be eulerian;</li>
+                              <li>is definitely a tree/cannot be a tree; and</li>
+                              <li>is definitely planar/cannot be planar.</li>
+                            </ul>
+                            (If you do not have enough information to make a determination for a sequence without having specific graph(s) with that degree sequence, write <q>not enough information</q> for that property.)
+                            <ol>
+                              <li><p><m>(6,6,4,4,4,4,2,2,2,2)</m></p></li>
+                              <li><p><m>(7,7,7,7,6,6,6,2,1,1)</m></p></li>
+                              <li><p><m>(8,6,4,4,4,3,2,2,1,1)</m></p></li>
+                              
+                            </ol>
+                          </p>
+                        </statement>
+                      </exercise>
+                      <exercise>
+                        <statement>
+                          <p>For the two degree sequences in <xref ref="ex_graphs_degseq2"/> that correspond to graphs, there were some properties for which the degree sequence was not sufficient information to determine if the graph had that property. For each of those situations, see if you can draw both a graph that has the property and a graph that does not have the property.</p>
+                        </statement>
+                      </exercise>
+                      <exercise>
+                        <statement>
+                          <p>Draw the <m>16</m> labeled trees on <m>4</m> vertices.</p>
+                        </statement>
+                      </exercise>
+                      <exercise>
+                        <statement>
+                          <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex1"/>.</p>
+                          <figure xml:id="fig_graphs_tree-10verts-ex1">
+                            <caption>A <m>10</m>-vertex tree</caption>
+                            <image width="75%">
+                              <description><p>A <m>10</m>-vertex tree</p>
+                              </description><latex-image>\begin{overpic}{external/tree-10verts-ex1}
+                                \put(35,11.2){\(1\)}
+                                \put(46,2){\(2\)}
+                                \put(22,25){\(3\)}
+                                \put(22,9){\(4\)}
+                                \put(68,2.5){\(5\)}
+                                \put(90,11){\(6\)}
+                                \put(5,16){\(7\)}
+                                \put(77,21){\(8\)}
+                                \put(62,14.5){\(9\)}
+                                \put(0.5,2){\(10\)}
+                                \end{overpic}</latex-image>
+                              </image>
+                              
+                            </figure>
+                          </statement>
+                          <solution>
+                            <p>
+                              Applying the algorithm, we obtain <m>(1,4,6,9,4,9,1,4)</m>.
+                            </p>
+                          </solution>
+                        </exercise>
+                        <exercise>
+                          <statement>
+                            <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> in <xref ref="fig_graphs_tree-10verts-ex2"/>.</p>
+                            <figure xml:id="fig_graphs_tree-10verts-ex2">
+                              <caption>A <m>10</m>-vertex tree</caption>
+                              <image width="65%">
+                                <description><p>A <m>10</m>-vertex tree</p>
+                                </description><latex-image>\begin{overpic}{external/tree-8verts-ex2}
+                                  \put(50,32){\(1\)}
+                                  \put(44,2){\(2\)}
+                                  \put(26,22){\(3\)}
+                                  \put(31,48){\(4\)}
+                                  \put(62,56){\(5\)}
+                                  \put(94,32){\(6\)}
+                                  \put(5,16){\(7\)}
+                                  \put(77,21){\(8\)}
+                                  \end{overpic}</latex-image>
+                                </image>
+                                
+                              </figure>
+                            </statement>
+                          </exercise>
+                          <exercise>
+                            <statement>
+                              <p>Determine <m>\prufer(\bfT)</m> for the tree <m>\bfT</m> <xref ref="fig_graphs_tree-14verts-ex3"/>.</p>
+                              <figure xml:id="fig_graphs_tree-14verts-ex3">
+                                <caption>A <m>14</m>-vertex tree</caption>
+                                <image width="65%">
+                                  <description><p>A <m>14</m>-vertex tree</p>
+                                  </description><latex-image>\begin{overpic}{external/tree-14verts-ex3}
+                                    \put(50,32){\(1\)}
+                                    \put(44,2){\(2\)}
+                                    \put(2,34){\(3\)}
+                                    \put(31,48){\(4\)}
+                                    \put(62,56){\(5\)}
+                                    \put(77,21){\(6\)}
+                                    \put(17,51){\(7\)}
+                                    \put(94,32){\(8\)}
+                                    \put(34,20){\(9\)}
+                                    \put(5,16){\(10\)}
+                                    \put(74,2){\(11\)}
+                                    \put(44,9){\(12\)}
+                                    \put(87,14){\(13\)}
+                                    \put(64,14){\(14\)}
+                                    \end{overpic}</latex-image>
+                                  </image>
+                                </figure>
+                              </statement>
+                              <solution>
+                                <p>
+                                  Applying the algorithm, we find that the Prüfer code for this tree is <m>(9,3,9,5,9,4,5,14,1,6,5,1)</m>.
+                                </p>
+                              </solution>
+                            </exercise>
+                            <exercise>
+                              <statement>
+                                <p>Construct the labeled tree <m>\bfT</m> with Prüfer code <m>96113473</m>.</p>
+                              </statement>
+                              <solution>
+                                <p>
+                                  We are given the Prüfer code <m>96113473</m>.
+                                  This has length 8, so we know that the tree has <m>10=8+2</m> vertices.
+                                  We construct the table that will allow us to identify the edges:
+                                </p>
+                                <tabular>
+                                  <col right="minor"/>
+                                  <col right="minor"/>
+                                  <col/>
+                                  <row bottom="minor" header="yes">
+                                    <cell>Prüfer Code</cell>
+                                    <cell>Labels Remaining</cell>
+                                    <cell>Edge Added</cell>
+                                  </row>
+                                  <row>
+                                    <cell>96113473</cell>
+                                    <cell>\(\{1,2,3,4,5,6,7,8,9,10\}\)</cell>
+                                    <cell>2<ndash/>9</cell>
+                                  </row>
+                                  <row>
+                                    <cell>6113473</cell>
+                                    <cell>\(\{1,3,4,5,6,7,8,9,10\}\)</cell>
+                                    <cell>5<ndash/>6</cell>
+                                  </row>
+                                  <row>
+                                    <cell>113473</cell>
+                                    <cell>\(\{1,3,4,6,7,8,9,10\}\)</cell>
+                                    <cell>6<ndash/>1</cell>
+                                  </row>
+                                  <row>
+                                    <cell>13473</cell>
+                                    <cell>\(\{1,3,4,7,8,9,10\}\)</cell>
+                                    <cell>8<ndash/>1</cell>
+                                  </row>
+                                  <row>
+                                    <cell>3473</cell>
+                                    <cell>\(\{1,3,4,7,9,10\}\)</cell>
+                                    <cell>1<ndash/>3</cell>
+                                  </row>
+                                  <row>
+                                    <cell>473</cell>
+                                    <cell>\(\{3,4,7,9,10\}\)</cell>
+                                    <cell>9<ndash/>4</cell>
+                                  </row>
+                                  <row>
+                                    <cell>73</cell>
+                                    <cell>\(\{3,4,7,10\}\)</cell>
+                                    <cell>4<ndash/>7</cell>
+                                  </row>
+                                  <row>
+                                    <cell>3</cell>
+                                    <cell>\(\{3,7,10\}\)</cell>
+                                    <cell>7<ndash/>3</cell>
+                                  </row>
+                                  <row>
+                                    <cell>empty string</cell>
+                                    <cell>\(\{3,10\}\)</cell>
+                                    <cell>10<ndash/>3</cell>
+                                  </row>
+                                </tabular>
+
+                              </solution>
+                            </exercise>
+                            <exercise>
+                              <statement>
+                                <p>Construct the labeled tree <m>\bfT</m> with Prüfer code <m>23134</m>.</p>
+                              </statement>
+                            </exercise>
+                            <exercise>
+                              <statement>
+                                <p>Construct the labeled tree <m>\bfT</m> with Prüfer code (using commas to separate symbols in the string, since we have labels greater than <m>9</m>) <m>10,1,7,4,3,4,10,2,2,8</m>.</p>
+                              </statement>
+                              <solution>
+                                <tabular>
+                                  <col right="minor"></col>
+                                  <col right="minor"></col>
+                                  <col></col>
+                                  <row bottom="minor" header="yes">
+                                    <cell>Prüfer Code</cell>
+                                    <cell>Labels Remaining</cell>
+                                    <cell>Edge Added</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(10,1,7,4,3,4,10,2,2,8)</cell>
+                                    <cell>\(\{1,2,3,4,5,6,7,8,9,10,11,12\}\)</cell>
+                                    <cell>5<ndash/>10</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(1,7,4,3,4,10,2,2,8)</cell>
+                                    <cell>\(\{1,2,3,4,6,7,8,9,10,11,12\}\)</cell>
+                                    <cell>6<ndash/>1</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(7,4,3,4,10,2,2,8)</cell>
+                                    <cell>\(\{1,2,3,4,7,8,9,10,11,12\}\)</cell>
+                                    <cell>1<ndash/>7</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(4,3,4,10,2,2,8)</cell>
+                                    <cell>\(\{2,3,4,7,8,9,10,11,12\}\)</cell>
+                                    <cell>7<ndash/>4</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(3,4,10,2,2,8)</cell>
+                                    <cell>\(\{2,3,4,8,9,10,11,12\}\)</cell>
+                                    <cell>9<ndash/>3</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(4,10,2,2,8)</cell>
+                                    <cell>\(\{2,3,4,8,10,11,12\}\)</cell>
+                                    <cell>3<ndash/>4</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(10,2,2,8)</cell>
+                                    <cell>\(\{2,4,8,10,11,12\}\)</cell>
+                                    <cell>4<ndash/>10</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(2,2,8)</cell>
+                                    <cell>\(\{2,8,10,11,12\}\)</cell>
+                                    <cell>10<ndash/>2</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(2,8)</cell>
+                                    <cell>\(\{2,8,11,12\}\)</cell>
+                                    <cell>11<ndash/>2</cell>
+                                  </row>
+                                  <row>
+                                    <cell>(8)</cell>
+                                    <cell>\(\{2,8,12\}\)</cell>
+                                    <cell>2<ndash/>8</cell>
+                                  </row>
+                                  <row>
+                                    <cell>empty string</cell>
+                                    <cell>\(\{8,12\}\)</cell>
+                                    <cell>8<ndash/>12</cell>
+                                  </row>
+                                </tabular>
+                              </solution>
+                            </exercise>
+                            <exercise>
+                              <statement>
+                                <p>(Challenge problem) When <m>\GVE</m> is a graph, let <m>\Delta(\bfG)</m> denote the maximum degree in <m>\bfG</m>.  Prove <em>Brooks' Theorem</em>: If <m>\bfG</m> is connected and <m>\Delta(\bfG)=k</m>, then <m>\chi(\bfG)\le k+1</m>.  Furthermore, equality holds if and only if (a)<nbsp/><m>k=2</m> and <m>\bfG</m> is an odd cycle, or (b)<nbsp/><m>k\neq2</m> and <m>\bfG=\bfK_{k+1}</m>.</p>
+                              </statement>
+                              <hint><p>Hint: It's clear that <m>\chi(\bfG)\le k+1</m> (in fact, this was already assigned as an exercise). Assume that <m>\chi(\bfG)=k+1</m> but that neither conclusion (a) or (b) holds.  Take a spanning tree of <m>\bfG</m> and an appropriate ordering of the vertices, with two leaves of the tree coming first.  Then show that a First Fit coloring of the graph will only use <m>k</m> colors.</p>
+                              </hint>
+                            </exercise>
+                          </exercises>
