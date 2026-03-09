@@ -667,7 +667,7 @@ a
   </page>
 </handout>
 
-<handout component="posets-subset">
+<handout component="posets-subset" label="notes-subset-lattice-width">
   <title>Linear Extensions and the Subset Lattice</title>
   <paragraphs>
     <title>Linear Extensions</title>
@@ -680,10 +680,108 @@ a
       </statement>
     </definition>
     
-    <p workspace="4cm">
+    <p>
       <alert>Intuition</alert>: A linear extension can&#8217;t change the order from <m>P'</m>, but it can put incomparable elements in either way.
     </p>
     
+<sidebyside widths="23% 55%">
+  <image>
+    <description>
+      <p>
+        A poset with six points. There is a four-point chain <m>x\lt y\lt z\lt w</m> shown centrally. The other cover relations depicted are <m>a\lt z</m> and <m>y\lt b</m>.
+      </p>
+    </description>
+    <prefigure xmlns="https://prefigure.org" label="poset-for-linextn">
+      <diagram dimensions="(150,300)" margins="15">
+        <definition>graph={0:[1],1:[2],2:[3],4:[2],5:[1]}</definition>
+        <definition>labels={0:'x',1:'y',2:'z',3:'w',4:'a',5:'b'}</definition>
+          <coordinates bbox="(0,0,2,3)">
+            <network directed="no" graph="graph" labels="yes" label-dictionary="labels" scale="0.8" node-fill="#eee" node-stroke="black">
+            <node at="0" p="(1,0)"/>
+            <node at="1" p="(1,1)"/>
+            <node at="2" p="(1,2)"/>
+            <node at="3" p="(1,3)"/>
+            <node at="4" p="(0,1)"/>
+            <node at="5" p="(2,2)"/>
+          </network>
+        </coordinates>
+      </diagram>
+    </prefigure>
+  </image>
+  <image component="a">
+    <description>
+      <p>
+        Three linear orderings on <m>\set{a,b,x,y,z,w}</m>: <m>x\lt y\lt a\lt b\lt z\lt w</m>, <m>a\lt x\lt y\lt z\lt w\lt b</m>, and <m>x\lt y\lt b\lt z\lt a\lt w</m>.
+      </p>
+    </description>
+    <prefigure xmlns="https://prefigure.org" label="linear-orders-labeled">
+      <diagram dimensions="(400,300)" margins="15">
+          <coordinates bbox="(0,0,6,5)">
+            <network directed="no" labels="yes" scale="0.8" node-fill="#eee" node-stroke="black">
+            <node at="l0" p="(1,0)" edges="['l1']"><m>x</m></node>
+            <node at="l1" p="(1,1)" edges="['l2']"><m>y</m></node>
+            <node at="l2" p="(1,2)" edges="['l3']"><m>a</m></node>
+            <node at="l3" p="(1,3)" edges="['l4']"><m>b</m></node>
+            <node at="l4" p="(1,4)" edges="['l5']"><m>z</m></node>
+            <node at="l5" p="(1,5)"><m>w</m></node>
+
+            <node at="m0" p="(3,0)" edges="['m1']"><m>a</m></node>
+            <node at="m1" p="(3,1)" edges="['m2']"><m>x</m></node>
+            <node at="m2" p="(3,2)" edges="['m3']"><m>y</m></node>
+            <node at="m3" p="(3,3)" edges="['m4']"><m>z</m></node>
+            <node at="m4" p="(3,4)" edges="['m5']"><m>w</m></node>
+            <node at="m5" p="(3,5)"><m>b</m></node>
+
+            <node at="n0" p="(5,0)" edges="['n1']"><m>x</m></node>
+            <node at="n1" p="(5,1)" edges="['n2']"><m>y</m></node>
+            <node at="n2" p="(5,2)" edges="['n3']"><m>b</m></node>
+            <node at="n3" p="(5,3)" edges="['n4']"><m>z</m></node>
+            <node at="n4" p="(5,4)" edges="['n5']"><m>a</m></node>
+            <node at="n5" p="(5,5)"><m>w</m></node>
+          </network>
+        </coordinates>
+      </diagram>
+    </prefigure>
+  </image>
+  <image component="b">
+    <description>
+      <p>
+        Three linear orderings with six points in each.
+      </p>
+    </description>
+    <prefigure xmlns="https://prefigure.org" label="linear-orders-unlabeled">
+      <diagram dimensions="(400,300)" margins="15">
+          <coordinates bbox="(0,0,6,5)">
+            <network directed="no" labels="no" scale="0.8" node-fill="#eee" node-stroke="black">
+            <node at="l0" p="(1,0)" edges="['l1']"><m>x</m></node>
+            <node at="l1" p="(1,1)" edges="['l2']"><m>y</m></node>
+            <node at="l2" p="(1,2)" edges="['l3']"><m>a</m></node>
+            <node at="l3" p="(1,3)" edges="['l4']"><m>b</m></node>
+            <node at="l4" p="(1,4)" edges="['l5']"><m>z</m></node>
+            <node at="l5" p="(1,5)"><m>w</m></node>
+
+            <node at="m0" p="(3,0)" edges="['m1']"><m>a</m></node>
+            <node at="m1" p="(3,1)" edges="['m2']"><m>x</m></node>
+            <node at="m2" p="(3,2)" edges="['m3']"><m>y</m></node>
+            <node at="m3" p="(3,3)" edges="['m4']"><m>z</m></node>
+            <node at="m4" p="(3,4)" edges="['m5']"><m>w</m></node>
+            <node at="m5" p="(3,5)"><m>b</m></node>
+
+            <node at="n0" p="(5,0)" edges="['n1']"><m>x</m></node>
+            <node at="n1" p="(5,1)" edges="['n2']"><m>y</m></node>
+            <node at="n2" p="(5,2)" edges="['n3']"><m>b</m></node>
+            <node at="n3" p="(5,3)" edges="['n4']"><m>z</m></node>
+            <node at="n4" p="(5,4)" edges="['n5']"><m>a</m></node>
+            <node at="n5" p="(5,5)"><m>w</m></node>
+          </network>
+        </coordinates>
+      </diagram>
+    </prefigure>
+  </image>
+</sidebyside>
+  <p component="a">
+    The first two linear orderings above <em>are</em> linear extensions of the poset shown. The third is <em>not</em> a linear extension because it places <m>a</m> above <m>z</m>, but <m>a\lt z</m> in the poset.
+  </p>
     <p>
       <alert>Why care?</alert>
     </p>

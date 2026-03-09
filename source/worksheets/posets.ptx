@@ -373,12 +373,14 @@
             Below are diagrams for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m>.
             (Without any of the points labeled with corresponding sets.) In the space provided, draw <m>\mbf{2}^{1}</m>, <m>\mbf{2}^{2}</m>, and <m>\mbf{2}^{3}</m>.
             (Label the sets, too.
-            You can just write &#8220;<m>12</m>&#8221; instead of &#8220;<m>\{1,2\}</m>&#8221;.) Label a few of the points in the diagrams provided for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m> to make sure you understand how to do it.
+            You can just write <q><m>12</m></q> instead of <q><m>\{1,2\}</m></q>.) Label a few of the points in the diagrams provided for <m>\mbf{2}^{4}</m> and <m>\mbf{2}^{5}</m> to make sure you understand how to do it.
           </p>
         </statement>
       </exercise>
       <image width="40%">
-        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description>
+        <description>
+          <p>The unlabeled lattice of subsets of <m>\set{1,2,3,4}</m>. The points are displayed in five layers. The bottom layer has a single point. The second layer from the bottom contains four points. The third layer from the bottom contains six points. The fourth layer from the bottom contains four points. The top layer contains a single point.</p>
+        </description>
         <prefigure xmlns="https://prefigure.org" label="subset-lattice-4">
           <diagram dimensions="(300,240)" margins="15">
             <definition>graph={0:[1,2,3,4],1:[12,13,14],2:[12,23,24],3:[13,23,34],
@@ -410,7 +412,9 @@
         </prefigure>
       </image>
       <image width="80%">
-        <description><p>ADD ALT TEXT TO THIS IMAGE</p></description>
+        <description>
+          <p>The unlabeled lattice of subsets of <m>\set{1,2,3,4,5}</m>. The points are displayed in five layers. The bottom layer has a single point. The second layer from the bottom contains five points. The third and fourth layers from the bottom each contain 10 points. The fifth layer from the bottom contains five points. The top layer contains a single point.</p>  
+        </description>
         <prefigure xmlns="https://prefigure.org" label="subset-lattice-5">
           <diagram dimensions="(600,280)" margins="15">
             <definition>graph={0:[1,2,3,4,5],1:[12,13,14,15],2:[12,23,24,25],3:[13,23,34,35],
@@ -532,16 +536,15 @@
       <exercise workspace="0.5in">
         <statement>
           <p>
-            To be able to verify our conjecture, let&#8217;s think about a seemingly unrelated question: counting maximal chains in <m>\mbf{2}^{n}</m>. How many maximal chains are there in <m>\mbf{2}^{n}</m>? <em>Hint</em>: Start with <m>n=1,2,3</m>.
-              Think about the number of choices of the &#8220;next&#8221; set when forming a maximal chain.
+            To be able to verify our conjecture, let's think about a seemingly unrelated question: counting maximal chains in <m>\mbf{2}^{n}</m>. How many maximal chains are there in <m>\mbf{2}^{n}</m>? 
           </p>
         </statement>
-        <!-- <hint>
+        <hint>
             <p>
               Start with <m>n=1,2,3</m>.
-              Think about the number of choices of the &#8220;next&#8221; set when forming a maximal chain.
+              Think about the number of choices of the <q>next</q> set when forming a maximal chain.
             </p>
-          </hint> -->
+          </hint>
         
           
           <solution component="sublat-width-soln">
@@ -553,7 +556,7 @@
         <exercise>
           <introduction>
             <p>
-              Now let&#8217;s think about maximal chains through particular sets.
+              Now let's think about maximal chains through particular sets.
               Look at <m>\mbf{2}^{5}</m>.
             </p>
           </introduction>
@@ -633,18 +636,13 @@
       <exercise workspace="1in">
         <statement>
           <p>
-            Now let&#8217;s see how we can use counting maximal chains through a set to get an upper bound on <m>\width(\mbf{2}^{n})</m>.
+            Now let's see how we can use counting maximal chains through a set to get an upper bound on <m>\width(\mbf{2}^{n})</m>.
           </p>
           <p>
               Fix an antichain <m>\mc{A}=\{S_{1},S_{2},\dots,S_{t}\}</m> with <m>|S_{i}|=s_{i}</m>.
-              How many maximal chains pass through <em>some</em> set in <m>\mc{A}</m>? <em>Hint</em>: Express your answer as a summation.
+              How many maximal chains pass through <em>some</em> set in <m>\mc{A}</m>? Express your answer as a summation.
             </p>
         </statement>
-          <!-- <hint>
-            <p>
-              Express your answer as a summation.
-            </p>
-          </hint> -->
           <solution component="sublat-width-soln">
             <p>
               We know that the number of maximal chains passing through <m>S_{i}</m> is <m>s_{i}!(n-s_{i})!</m>, so then we add up and get
