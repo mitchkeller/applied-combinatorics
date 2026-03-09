@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "6.2",
   "title": "Antichain and Chain Partitioning",
-  "body": " Antichain and Chain Partitioning    Duals, Cover Graphs, and Comparability Graphs    Dual of is denoted   Comparability Graph      A poset and its dual are depicted side-by-side. The order diagram of the poset on the left has a minimal element which is less than . The point is less than two maximal elements, which are labeled and . The diagram of on the right is rotated 180 degrees so that it has two minimal elements, labeled and . Both of those elements are less than , which is less than .     graph={1:[2],2:[3,4],5:[6],6:[7,8]}  labels={1:'x',2:'y',3:'z',4:'w',5:'x',6:'y',7:'z',8:'w'}                   The comparability graph of the poset shown in the previous image. The vertices are labeled . The vertices and are adjacent to each other as well as to both of and . The vertices and are not adjacent.     graph={1:[2,3,4],2:[3,4]}  labels={1:'x',2:'y',3:'z',4:'w',}               Cover Graph  Incomparability Graph    Bob's Claims:   Only linear orders have paths as cover graphs.    A poset and its dual have the same cover graph and the same comparability graph.    Any two posets with the same cover graph have the same height and the same width.    Any two posets with the same comparability graph have the same height and the same width.      Handout page 1.       Height and Antichain Partitioning   Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.          The order diagram of a poset with 7 points. The points are labeled with letters from to .       a  b  c  d  e  f  g            Handout page 2.       Chain Partitioning and Width  Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?   Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with          "
+  "body": " Antichain and Chain Partitioning    Duals, Cover Graphs, and Comparability Graphs    Dual of is denoted   Comparability Graph    Cover Graph  Incomparability Graph    Bob's Claims:   Only linear orders have paths as cover graphs.    A poset and its dual have the same cover graph and the same comparability graph.    Any two posets with the same cover graph have the same height and the same width.    Any two posets with the same comparability graph have the same height and the same width.      Handout page 1.       Height and Antichain Partitioning   Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.          The order diagram of a poset with 7 points. The points are labeled with letters from to .       a  b  c  d  e  f  g            Handout page 2.       Chain Partitioning and Width  Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?   Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with          "
 },
 {
   "id": "thm-dual-dilworth",
@@ -602,6 +602,33 @@ var ptx_lunr_docs = [
   "number": "6.11",
   "title": "Dilworth’s Theorem.",
   "body": " Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with    "
+},
+{
+  "id": "notes-subset-lattice-width",
+  "level": "1",
+  "url": "notes-subset-lattice-width.html",
+  "type": "Handout",
+  "number": "6.3",
+  "title": "Linear Extensions and the Subset Lattice",
+  "body": " Linear Extensions and the Subset Lattice   Linear Extensions    Let be a poset. A total order on is a linear extension of provided that if in , then in .     Intuition : A linear extension can’t change the order from , but it can put incomparable elements in either way.     A poset with six points. There is a four-point chain shown centrally. The other cover relations depicted are and .     graph={0:[1],1:[2],2:[3],4:[2],5:[1]}  labels={0:'x',1:'y',2:'z',3:'w',4:'a',5:'b'}                 Three linear orderings with six points in each.       x  y  a  b  z  w  a  x  y  z  w  b  x  y  b  z  a  w         Why care?     When intersecting linear orders to form a poset, the linear orders are linear extensions of the resulting poset.    Sorting problems can be viewed as trying to find a particular linear extension of a poset.    Finding a linear extension of a poset is a common need. Lots of settings require ranked lists. Can we make them fair(-ish)?      The Subset Lattice    Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .     Peer instruction questions 1 3.    "
+},
+{
+  "id": "notes-subset-lattice-width-2-2",
+  "level": "2",
+  "url": "notes-subset-lattice-width.html#notes-subset-lattice-width-2-2",
+  "type": "Definition",
+  "number": "6.12",
+  "title": "",
+  "body": "  Let be a poset. A total order on is a linear extension of provided that if in , then in .   "
+},
+{
+  "id": "notes-subset-lattice-width-3-2",
+  "level": "2",
+  "url": "notes-subset-lattice-width.html#notes-subset-lattice-width-3-2",
+  "type": "Definition",
+  "number": "6.13",
+  "title": "",
+  "body": "  Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .   "
 }
 ]
 
