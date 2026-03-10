@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "6.2",
   "title": "Width of the Subset Lattice",
-  "body": " Width of the Subset Lattice     Below are diagrams for and . (Without any of the points labeled with corresponding sets.) In the space provided, draw , , and . (Label the sets, too. You can just write instead of .) Label a few of the points in the diagrams provided for and to make sure you understand how to do it.      The unlabeled lattice of subsets of . The points are displayed in five layers. The bottom layer has a single point. The second layer from the bottom contains four points. The third layer from the bottom contains six points. The fourth layer from the bottom contains four points. The top layer contains a single point.     graph={0:[1,2,3,4],1:[12,13,14],2:[12,23,24],3:[13,23,34], 4:[14,24,34],12:[123,124],23:[123,234],24:[124,234],34:[134,234],13:[123,134], 14:[124,134], 1234:[123,124,134,234]}                           The unlabeled lattice of subsets of . The points are displayed in five layers. The bottom layer has a single point. The second layer from the bottom contains five points. The third and fourth layers from the bottom each contain 10 points. The fifth layer from the bottom contains five points. The top layer contains a single point.     graph={0:[1,2,3,4,5],1:[12,13,14,15],2:[12,23,24,25],3:[13,23,34,35], 4:[14,24,34,45],12:[123,124,125],23:[123,234,235],24:[124,234,245],34:[134,234,345], 13:[123,134,135], 14:[124,134,145], 1234:[123,124,134,234,12345], 123:[1235],124:[1245],234:[2345],134:[1345], 5:[15,25,35,45],15:[125,135,145],25:[125,235,245],35:[135,235,345], 45:[145,245,345],125:[1235,1245],235:[1235,2345],245:[1245,2345],345:[1345,2345], 135:[1235,1345], 145:[1245,1345], 12345:[1235,1245,1345,2345]}                                           Let's investigate the width of the subset lattice.     For , find the width of and a partition into chains.                   1  2  3  4  5                       Develop a conjecture about the width of for general .       To be able to verify our conjecture, let's think about a seemingly unrelated question: counting maximal chains in . How many maximal chains are there in ?    Start with . Think about the number of choices of the next set when forming a maximal chain.      Now let's think about maximal chains through particular sets. Look at .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?       Now think about .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?      How many maximal chains pass through a set with ?       Now let's see how we can use counting maximal chains through a set to get an upper bound on .  Fix an antichain with . How many maximal chains pass through some set in ? Express your answer as a summation.      Can a maximal chain pass through two different sets with ? What does this tell you that the sum from the previous question must be less than or equal to?      As a result of the previous step, you should have an inequality with a summation on the small side and a factorial on the big side. Divide the factorial over (and into the summation) so that you have a summation less than or equal to . Rewrite your summation so that it is a sum of reciprocals of binomial coefficients.      We will establish a formula for by showing that is bounded above and below by the same quantity. Explain why for each possible value of . What is the largest lower bound that you get for in this way?      Let us now return to the inequality involving a summation and that you obtained earlier. To find an upper bound for , we assume that is a maximum antichain so that . Also assume that for all . We can do this since the inequality is true for any antichain. Explain how this lets you eliminate the summation from your inequality and then give an upper bound for .    "
+  "body": " Width of the Subset Lattice     Below are diagrams for and . (Without any of the points labeled with corresponding sets.) In the space provided, draw , , and . (Label the sets, too. You can just write instead of .) Label a few of the points in the diagrams provided for and to make sure you understand how to do it.      The unlabeled lattice of subsets of . The points are displayed in five layers. The bottom layer has a single point. The second layer from the bottom contains four points. The third layer from the bottom contains six points. The fourth layer from the bottom contains four points. The top layer contains a single point.     graph={0:[1,2,3,4],1:[12,13,14],2:[12,23,24],3:[13,23,34], 4:[14,24,34],12:[123,124],23:[123,234],24:[124,234],34:[134,234],13:[123,134], 14:[124,134], 1234:[123,124,134,234]}                           The unlabeled lattice of subsets of . The points are displayed in five layers. The bottom layer has a single point. The second layer from the bottom contains five points. The third and fourth layers from the bottom each contain 10 points. The fifth layer from the bottom contains five points. The top layer contains a single point.     graph={0:[1,2,3,4,5],1:[12,13,14,15],2:[12,23,24,25],3:[13,23,34,35], 4:[14,24,34,45],12:[123,124,125],23:[123,234,235],24:[124,234,245],34:[134,234,345], 13:[123,134,135], 14:[124,134,145], 1234:[123,124,134,234,12345], 123:[1235],124:[1245],234:[2345],134:[1345], 5:[15,25,35,45],15:[125,135,145],25:[125,235,245],35:[135,235,345], 45:[145,245,345],125:[1235,1245],235:[1235,2345],245:[1245,2345],345:[1345,2345], 135:[1235,1345], 145:[1245,1345], 12345:[1235,1245,1345,2345]}                                           Let's investigate the width of the subset lattice.     For , find the width of and a partition into chains.                 1  2  3  4                                  1  2  3  4       1  2  3  6        Develop a conjecture about the width of for general .    It looks like the width of is the largest binomial coefficient , and it appears this happens when is around .       To be able to verify our conjecture, let's think about a seemingly unrelated question: counting maximal chains in . How many maximal chains are there in ?    Start with . Think about the number of choices of the next set when forming a maximal chain.    There are maximal chains, since you can start from the empty set and add elements one-by-one in orders until you get to .      Now let's think about maximal chains through particular sets. Look at .     How many maximal chains pass through the set ?     since we have in which to add and and then orders in which to add the remaining three elements.      How many maximal chains pass through the set ?    Here we have ways to add the elements and then ways to add and . Thus, there are maximal chains through this set.       Now think about .     How many maximal chains pass through the set ?     since we have in which to add and and then orders in which to add the remaining elements.      How many maximal chains pass through the set ?    Here we have ways to add the elements and then ways to add the remaining elements. Thus, there are maximal chains through this set.      How many maximal chains pass through a set with ?    Here we have ways to add the elements that are in the set and then ways to add the remaining elements. Thus, there are maximal chains through this set.       Now let's see how we can use counting maximal chains through a set to get an upper bound on .  Fix an antichain with . How many maximal chains pass through some set in ? Express your answer as a summation.    We know that the number of maximal chains passing through is , so then we add up and get       Can a maximal chain pass through two different sets with ? What does this tell you that the sum from the previous question must be less than or equal to?           As a result of the previous step, you should have an inequality with a summation on the small side and a factorial on the big side. Divide the factorial over (and into the summation) so that you have a summation less than or equal to . Rewrite your summation so that it is a sum of reciprocals of binomial coefficients.           We will establish a formula for by showing that is bounded above and below by the same quantity. Explain why for each possible value of . What is the largest lower bound that you get for in this way?    Since the -element subsets of each form an antichain and there are  -element subsets of , we know that for all . The largest possible bound is thus the largest binomial coefficient, which happens when . (Because of the symmetry of binomial coefficients, when is odd, we have the same value if .)      Let us now return to the inequality involving a summation and that you obtained earlier. To find an upper bound for , we assume that is a maximum antichain so that . Also assume that for all . We can do this since the inequality is true for any antichain. Explain how this lets you eliminate the summation from your inequality and then give an upper bound for .    When all the terms have the same value, the inequality can be rewritten as which implies . We now have matching upper and lower bounds for the width, since we know there is an antichain with elements. Thus, this is the width.    "
 },
 {
   "id": "ws-posets-subset-lattice-2",
@@ -538,7 +538,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.2",
   "title": "",
-  "body": "  Let's investigate the width of the subset lattice.     For , find the width of and a partition into chains.                   1  2  3  4  5                       Develop a conjecture about the width of for general .    "
+  "body": "  Let's investigate the width of the subset lattice.     For , find the width of and a partition into chains.                 1  2  3  4                                  1  2  3  4       1  2  3  6        Develop a conjecture about the width of for general .    It looks like the width of is the largest binomial coefficient , and it appears this happens when is around .    "
 },
 {
   "id": "ws-posets-subset-lattice-6",
@@ -547,7 +547,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.3",
   "title": "",
-  "body": "  To be able to verify our conjecture, let's think about a seemingly unrelated question: counting maximal chains in . How many maximal chains are there in ?    Start with . Think about the number of choices of the next set when forming a maximal chain.   "
+  "body": "  To be able to verify our conjecture, let's think about a seemingly unrelated question: counting maximal chains in . How many maximal chains are there in ?    Start with . Think about the number of choices of the next set when forming a maximal chain.    There are maximal chains, since you can start from the empty set and add elements one-by-one in orders until you get to .   "
 },
 {
   "id": "ws-posets-subset-lattice-7",
@@ -556,7 +556,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.4",
   "title": "",
-  "body": "  Now let's think about maximal chains through particular sets. Look at .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?    "
+  "body": "  Now let's think about maximal chains through particular sets. Look at .     How many maximal chains pass through the set ?     since we have in which to add and and then orders in which to add the remaining three elements.      How many maximal chains pass through the set ?    Here we have ways to add the elements and then ways to add and . Thus, there are maximal chains through this set.    "
 },
 {
   "id": "ws-posets-subset-lattice-8",
@@ -565,7 +565,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.5",
   "title": "",
-  "body": "  Now think about .     How many maximal chains pass through the set ?      How many maximal chains pass through the set ?      How many maximal chains pass through a set with ?    "
+  "body": "  Now think about .     How many maximal chains pass through the set ?     since we have in which to add and and then orders in which to add the remaining elements.      How many maximal chains pass through the set ?    Here we have ways to add the elements and then ways to add the remaining elements. Thus, there are maximal chains through this set.      How many maximal chains pass through a set with ?    Here we have ways to add the elements that are in the set and then ways to add the remaining elements. Thus, there are maximal chains through this set.    "
 },
 {
   "id": "ws-posets-subset-lattice-9",
@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.6",
   "title": "",
-  "body": "  Now let's see how we can use counting maximal chains through a set to get an upper bound on .  Fix an antichain with . How many maximal chains pass through some set in ? Express your answer as a summation.   "
+  "body": "  Now let's see how we can use counting maximal chains through a set to get an upper bound on .  Fix an antichain with . How many maximal chains pass through some set in ? Express your answer as a summation.    We know that the number of maximal chains passing through is , so then we add up and get    "
 },
 {
   "id": "ws-posets-subset-lattice-10",
@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.7",
   "title": "",
-  "body": "  Can a maximal chain pass through two different sets with ? What does this tell you that the sum from the previous question must be less than or equal to?   "
+  "body": "  Can a maximal chain pass through two different sets with ? What does this tell you that the sum from the previous question must be less than or equal to?        "
 },
 {
   "id": "ws-posets-subset-lattice-11",
@@ -592,7 +592,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.8",
   "title": "",
-  "body": "  As a result of the previous step, you should have an inequality with a summation on the small side and a factorial on the big side. Divide the factorial over (and into the summation) so that you have a summation less than or equal to . Rewrite your summation so that it is a sum of reciprocals of binomial coefficients.   "
+  "body": "  As a result of the previous step, you should have an inequality with a summation on the small side and a factorial on the big side. Divide the factorial over (and into the summation) so that you have a summation less than or equal to . Rewrite your summation so that it is a sum of reciprocals of binomial coefficients.        "
 },
 {
   "id": "ws-posets-subset-lattice-12",
@@ -601,7 +601,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.9",
   "title": "",
-  "body": "  We will establish a formula for by showing that is bounded above and below by the same quantity. Explain why for each possible value of . What is the largest lower bound that you get for in this way?   "
+  "body": "  We will establish a formula for by showing that is bounded above and below by the same quantity. Explain why for each possible value of . What is the largest lower bound that you get for in this way?    Since the -element subsets of each form an antichain and there are  -element subsets of , we know that for all . The largest possible bound is thus the largest binomial coefficient, which happens when . (Because of the symmetry of binomial coefficients, when is odd, we have the same value if .)   "
 },
 {
   "id": "ws-posets-subset-lattice-13",
@@ -610,7 +610,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.2.10",
   "title": "",
-  "body": "  Let us now return to the inequality involving a summation and that you obtained earlier. To find an upper bound for , we assume that is a maximum antichain so that . Also assume that for all . We can do this since the inequality is true for any antichain. Explain how this lets you eliminate the summation from your inequality and then give an upper bound for .   "
+  "body": "  Let us now return to the inequality involving a summation and that you obtained earlier. To find an upper bound for , we assume that is a maximum antichain so that . Also assume that for all . We can do this since the inequality is true for any antichain. Explain how this lets you eliminate the summation from your inequality and then give an upper bound for .    When all the terms have the same value, the inequality can be rewritten as which implies . We now have matching upper and lower bounds for the width, since we know there is an antichain with elements. Thus, this is the width.   "
 }
 ]
 
