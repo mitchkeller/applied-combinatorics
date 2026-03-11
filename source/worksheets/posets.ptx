@@ -730,14 +730,129 @@
           <task workspace="4cm">
             <statement>
               <image width="40%" source="workbook/intrep-draw-diagram-1">
-                <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+                <description>
+                  <p>A collection of intervals. The intervals are displayed with a number line that allows identification of the endpoints of the intervals.
+                    <md>
+                      <mrow>a \amp = [6,6]</mrow>
+                      <mrow>b \amp = [6,6]</mrow>
+                      <mrow>c \amp = [1,3]</mrow>
+                      <mrow>d \amp = [5,6]</mrow>
+                      <mrow>e \amp = [1,1]</mrow>
+                      <mrow>f \amp = [4,6]</mrow>
+                      <mrow>g \amp = [4,5]</mrow>
+                      <mrow>h \amp = [2,2]</mrow>
+                      <mrow>i \amp = [3,4]</mrow>
+                      <mrow>j \amp = [2,2]</mrow>
+                    </md>
+                  </p>
+                </description></image>
             </statement>
+            <solution component="posets-intord-draw-diag-solns">
+              <image>
+                <description>
+                  <p>
+                    The order diagram of the poset whose interval representation was given. Annotations give cover relations for each of the points.
+                  </p>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="intrep-draw-diagram-1-soln">
+                  <diagram dimensions="(400,300)" margins="15">
+                    <coordinates bbox="(0,0,5,3)">
+                      <definition>labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j'}</definition>
+                      <network scale="0.9" labels="yes"
+                              node-fill="#ddd" label-dictionary="labels" node-stroke="black">
+                        <node at="1"  p="(3,3)" edges="[]"/>       <!-- a -->
+                        <node at="2"  p="(4,3)" edges="[]"/>       <!-- b -->
+                        <node at="3"  p="(3,0)" edges="[4,6,7]"/>  <!-- c -->
+                        <node at="4"  p="(2,3)" edges="[]"/>       <!-- d -->
+                        <node at="5"  p="(0,0)" edges="[8,10]"/>   <!-- e -->
+                        <node at="6"  p="(5,2)" edges="[]"/>       <!-- f -->
+                        <node at="7"  p="(3,2)" edges="[1,2]"/>    <!-- g -->
+                        <node at="8"  p="(1,1)" edges="[9,7,6]"/>  <!-- h -->
+                        <node at="9"  p="(1,2)" edges="[1,2,4]"/>  <!-- i -->
+                        <node at="10" p="(0,1)" edges="[9,7,6]"/>  <!-- j -->
+                      </network>
+                    </coordinates>
+                    <annotations>
+                      <annotation ref="figure"
+                                  text="The order diagram of an interval order with points labeled by letters from a to j">
+                          <annotation ref="node-1" text="The maximal point a covers points g and i."/>
+                          <annotation ref="node-2" text="The maximal point b covers points g and i."/>
+                          <annotation ref="node-3" text="The minimal point c is covered by points d, g, and f."/>
+                          <annotation ref="node-4" text="The maximal point d covers points c and i."/>
+                          <annotation ref="node-5" text="The minimal point e is covered by points h and j."/>
+                          <annotation ref="node-6" text="The maximal point f covers points c, h, and j."/>
+                          <annotation ref="node-7" text="The point g covers points c, h, and j and is covered by points a and b."/>
+                          <annotation ref="node-8" text="The point h covers point e and is covered by points f, g, and i."/>
+                          <annotation ref="node-9" text="The point i covers points h and j and is covered by points a, b, and d."/>
+                          <annotation ref="node-10" text="The point j covers point e and is covered by points f, g, and i."/>
+                      </annotation>
+                    </annotations>
+                  </diagram>
+                </prefigure>
+              </image>
+            </solution>
           </task>
           <task workspace="8cm">
             <statement>
               <image width="65%" source="workbook/intrep-draw-diagram-2">
-                <description><p>ADD ALT TEXT TO THIS IMAGE</p></description></image>
+                <description>
+                  <p>
+                    A collection of intervals labeled with letters from <m>a</m> to <m>l</m>. The intervals are not displayed with a number line. Using <m>\ell(x)</m> and <m>r(x)</m> to denote the left and right endpoints of the interval <m>x</m>, respectively, we have the following (strict) ordering of the endpoints
+                    <md>
+                      \ell(c) \lt \ell(d) \lt \ell(l) \lt r(d) \lt \ell(b)\lt r(b)\lt \ell(i)\lt r(c)\lt r(l)\lt \ell(h)\lt \ell(a)\lt r(h)\lt \ell(g)\lt r(a)\lt \ell(e)\lt r(g)\lt r(i)\lt \ell(f)\lt \ell(j)\lt r(e)\lt \ell(k)\lt r(f)\lt r(k)\lt r(j)
+                    </md>.
+                  </p>
+                  </description>
+                </image>
             </statement>
+            <solution component="posets-intord-draw-diag-solns">
+              <image>
+                <description>
+                  <p>
+                    The order diagram of the poset whose interval representation was given. Annotations give cover relations for each of the points.
+                  </p>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="intrep-draw-diagram-2-soln">
+                  <diagram dimensions="(200,300)" margins="15">
+                    <coordinates bbox="(0,0,4,5)">
+                      <definition>labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j',11:'k',12:'l'}</definition>
+                      <network scale="0.9" labels="yes"
+                              node-fill="#ddd" label-dictionary="labels" node-stroke="black">
+                        <node at="1"  p="(3,2.5)" edges="[5,6,10]"/>       <!-- a -->
+                        <node at="2"  p="(0,1)" edges="[1,8,9]"/>       <!-- b -->
+                        <node at="3"  p="(4,0)" edges="[1,8]"/>  <!-- c -->
+                        <node at="4"  p="(0,0)" edges="[2]"/>       <!-- d -->
+                        <node at="5"  p="(0,4)" edges="[11]"/>   <!-- e -->
+                        <node at="6"  p="(4,4.5)" edges="[]"/>       <!-- f -->
+                        <node at="7"  p="(1.7,3.5)" edges="[6,10,11]"/>    <!-- g -->
+                        <node at="8"  p="(0,2)" edges="[5,7]"/>  <!-- h -->
+                        <node at="9"  p="(1,2)" edges="[6,10,11]"/>  <!-- i -->
+                        <node at="10" p="(1.5,4.5)" edges="[]"/>  <!-- j -->
+                        <node at="11" p="(0,5)" edges="[]"/>  <!-- k -->
+                        <node at="12" p="(2,0)" edges="[1,8]"/>  <!-- l -->
+                      </network>
+                    </coordinates>
+                    <annotations>
+                      <annotation ref="figure"
+                                  text="The order diagram of an interval order with points labeled by letters from a to l.">
+                          <annotation ref="node-1" text="The point a covers points b, c, and l and is covered by points e, f, and j."/>
+                          <annotation ref="node-2" text="The point b covers point d and is covered by points a, h, and i."/>
+                          <annotation ref="node-3" text="The minimal point c is covered by points a and h ."/>
+                          <annotation ref="node-4" text="The minimal point d is covered by point b."/>
+                          <annotation ref="node-5" text="The point e covers points a and h and is covered by point k."/>
+                          <annotation ref="node-6" text="The maximal point f covers points a, h, and i."/>
+                          <annotation ref="node-7" text="The point g covers the point h and is covered by points f, j, and k."/>
+                          <annotation ref="node-8" text="The point h covers point b and is covered by points e and g."/>
+                          <annotation ref="node-9" text="The point i covers point b and is covered by points f, j, and k."/>
+                          <annotation ref="node-10" text="The maximal point j covers points a, g, and i."/>
+                          <annotation ref="node-11" text="The maximal point k covers points e, g, and i."/>
+                          <annotation ref="node-12" text="The minimal point l is covered by points a and h."/>
+                      </annotation>
+                    </annotations>
+                  </diagram>                  
+                </prefigure>
+              </image>
+            </solution>
           </task>
         </activity>
       </page>

@@ -681,7 +681,7 @@ a
     </definition>
     
     <p>
-      <alert>Intuition</alert>: A linear extension can&#8217;t change the order from <m>P'</m>, but it can put incomparable elements in either way.
+      <alert>Intuition</alert>: A linear extension can't change the order from <m>P'</m>, but it can put incomparable elements in either way.
     </p>
     
 <sidebyside widths="23% 55%">
@@ -853,7 +853,7 @@ a
     </prefigure>
   </image>
 </handout>  
-<handout component="posets-intord">
+<handout label="notes-posets-intords" component="posets-intord">
   <title>Interval Orders</title>
   <page>
     <p>
@@ -866,7 +866,7 @@ a
         
         <li>
           <p>
-            Each <m>x\in X</m> is associated with an interval <m component="b">[a_{x},b_{x}]</m><m component="a">[a_{x},b_{x}]=\set{c\in\R\mid a_x\leq c\leq b_x}</m>
+            Each <m>x\in X</m> is associated with an interval <m component="b">[a_{x},b_{x}]</m><m component="a">[a_{x},b_{x}]=\set{c\in\mathbb{R}\mid a_x\leq c\leq b_x}</m>
           </p>
         </li>
         
@@ -876,19 +876,19 @@ a
             <ul>
               <li>
                 <p component="b">
-                  <m>x</m>&#8217;s interval stops
+                  <m>x</m>'s interval stops
                 </p>
                 <p component="a">
-                  <m>x</m>&#8217;s interval stops before <m>y</m>&#8217;s interval starts
+                  <m>x</m>'s interval stops before <m>y</m>'s interval starts
                 </p>
               </li>
               
               <li>
                 <p component="b">
-                  <m>x</m>&#8217;s interval is completely
+                  <m>x</m>'s interval is completely
                 </p>
                 <p component="a">
-                  <m>x</m>&#8217;s interval is completely to the left of <m>y</m>&#8217;s interval
+                  <m>x</m>'s interval is completely to the left of <m>y</m>'s interval
                 </p>
               </li>
             </ul>
@@ -1019,7 +1019,7 @@ a
       <activity>
         <statement>
           <p>
-            Find the down-sets <m>D(8)</m> and <m>D(2)</m> as well as the up-sets <m>U(5)</m>, <m>U(6)</m>, <m>U(7)</m>, and <m>U(9)</m> for the poset shown below.
+            Find the down-sets <m>D(2)</m> and <m>D(8)</m> as well as the up-sets <m>U(5)</m>, <m>U(6)</m>, <m>U(7)</m>, and <m>U(9)</m> for the poset shown below.
           </p>
           <sidebyside widths="40% 60%">
             <image>
@@ -1052,6 +1052,18 @@ a
             </p>
           </sidebyside>
         </statement>
+        <solution>
+          <p>
+            <md>
+              <mrow>D(2) \amp = \set{8,3,6,7}</mrow>
+              <mrow>D(8) \amp = \set{3,6,7}</mrow>
+              <mrow>U(5) \amp = \set{}</mrow>
+              <mrow>U(6) \amp = \set{10,1,8,2,9,5}</mrow>
+              <mrow>U(7) \amp = \set{10,1,8,2,9,5}</mrow>
+              <mrow>U(9) \amp = \set{}</mrow>
+            </md>
+          </p>
+        </solution>
       </activity>
       <proposition>
         <statement>
@@ -1245,13 +1257,13 @@ a
           
           <li>
             <p>
-              There&#8217;s usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.
+              There's usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.
             </p>
           </li>
           
           <li>
             <p>
-              First Fit can often succeed if there&#8217;s a &#8220;natural&#8221; order to use.
+              First Fit can often succeed if there's a &#8220;natural&#8221; order to use.
             </p>
           </li>
         </ul>
