@@ -611,6 +611,24 @@ var ptx_lunr_docs = [
   "number": "6.2.10",
   "title": "",
   "body": "  Let us now return to the inequality involving a summation and that you obtained earlier. To find an upper bound for , we assume that is a maximum antichain so that . Also assume that for all . We can do this since the inequality is true for any antichain. Explain how this lets you eliminate the summation from your inequality and then give an upper bound for .    When all the terms have the same value, the inequality can be rewritten as which implies . We now have matching upper and lower bounds for the width, since we know there is an antichain with elements. Thus, this is the width.   "
+},
+{
+  "id": "ws-posets-intord-draw-diag",
+  "level": "1",
+  "url": "ws-posets-intord-draw-diag.html",
+  "type": "Worksheet",
+  "number": "6.3",
+  "title": "Interval Representations to Diagrams",
+  "body": " Interval Representations to Diagrams     Below are two collections of intervals. For each, draw the order diagram of the interval order represented by these intervals.       A collection of intervals. The intervals are displayed with a number line that allows identification of the endpoints of the intervals.          A collection of intervals labeled with letters from to . The intervals are not displayed with a number line. Using and to denote the left and right endpoints of the interval , respectively, we have the following (strict) ordering of the endpoints .        "
+},
+{
+  "id": "ws-posets-intord-draw-diag-2-1",
+  "level": "2",
+  "url": "ws-posets-intord-draw-diag.html#ws-posets-intord-draw-diag-2-1",
+  "type": "Activity",
+  "number": "6.3.1",
+  "title": "",
+  "body": "  Below are two collections of intervals. For each, draw the order diagram of the interval order represented by these intervals.       A collection of intervals. The intervals are displayed with a number line that allows identification of the endpoints of the intervals.          A collection of intervals labeled with letters from to . The intervals are not displayed with a number line. Using and to denote the left and right endpoints of the interval , respectively, we have the following (strict) ordering of the endpoints .      "
 }
 ]
 

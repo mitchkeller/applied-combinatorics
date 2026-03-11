@@ -610,7 +610,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "6.3",
   "title": "Linear Extensions and the Subset Lattice",
-  "body": " Linear Extensions and the Subset Lattice   Linear Extensions    Let be a poset. A total order on is a linear extension of provided that if in , then in .     Intuition : A linear extension can’t change the order from , but it can put incomparable elements in either way.     A poset with six points. There is a four-point chain shown centrally. The other cover relations depicted are and .     graph={0:[1],1:[2],2:[3],4:[2],5:[1]}  labels={0:'x',1:'y',2:'z',3:'w',4:'a',5:'b'}                 Three linear orderings with six points in each.       x  y  a  b  z  w  a  x  y  z  w  b  x  y  b  z  a  w         Why care?     When intersecting linear orders to form a poset, the linear orders are linear extensions of the resulting poset.    Sorting problems can be viewed as trying to find a particular linear extension of a poset.    Finding a linear extension of a poset is a common need. Lots of settings require ranked lists. Can we make them fair(-ish)?      The Subset Lattice    Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .     Peer instruction questions 1 3.    "
+  "body": " Linear Extensions and the Subset Lattice   Linear Extensions    Let be a poset. A total order on is a linear extension of provided that if in , then in .     Intuition : A linear extension can't change the order from , but it can put incomparable elements in either way.     A poset with six points. There is a four-point chain shown centrally. The other cover relations depicted are and .     graph={0:[1],1:[2],2:[3],4:[2],5:[1]}  labels={0:'x',1:'y',2:'z',3:'w',4:'a',5:'b'}                 Three linear orderings with six points in each.       x  y  a  b  z  w  a  x  y  z  w  b  x  y  b  z  a  w         Why care?     When intersecting linear orders to form a poset, the linear orders are linear extensions of the resulting poset.    Sorting problems can be viewed as trying to find a particular linear extension of a poset.    Finding a linear extension of a poset is a common need. Lots of settings require ranked lists. Can we make them fair(-ish)?      The Subset Lattice    Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .     Peer instruction questions 1 3.    "
 },
 {
   "id": "notes-subset-lattice-width-2-2",
@@ -629,6 +629,78 @@ var ptx_lunr_docs = [
   "number": "6.13",
   "title": "",
   "body": "  Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .   "
+},
+{
+  "id": "notes-posets-intords",
+  "level": "1",
+  "url": "notes-posets-intords.html",
+  "type": "Handout",
+  "number": "6.4",
+  "title": "Interval Orders",
+  "body": " Interval Orders      An interval order is a special type of poset .    Each is associated with an interval      in if and only if     's interval stops     's interval is completely       We call the collection of intervals an interval representation of .     Sketch of an example, then peer instruction questions 1 2 and handout activity .    The poset below is denoted , which we read as two plus two . Draw an interval representation for this poset or explain why it is not possible.     The order diagram of a poset with four points. The points are labeled . There are two cover relations: and .       x  y  z  w             There are four incomparabilities we must check when confirming a    Peer instruction question 3    Fishburn's Theorem   A poset is an interval order if and only if it does not contain as a subposet.     Intransitive Indifference with Unequal Indifference Intervals by Peter C. Fishburn of the Research Analysis Corporation, McLean, Virginia. Masthead indicates Journal of Mathematical Psychology , volume 7, pages 144 149 (1970).      Can we find a representation?     The order diagram of a poset with 10 points. The points are labeled from 1 to 10.                          For a poset , we define the following notation:   Down-set (or down set): .    Up-set (or up set): .     : the set of all down-sets.     : the set of all up-sets.       Find the down-sets and as well as the up-sets , , , and for the poset shown below.     The order diagram of a poset with 10 points. The points are labeled from 1 to 10.                                   Let be a poset. Then the following are equivalent:    is an interval order.    Any two distinct sets in are ordered by inclusion.    Any two distinct sets in are ordered by inclusion.         If is an interval order, then .        Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.        Peer instruction questions 4 5.    "
+},
+{
+  "id": "notes-posets-intords-2-1",
+  "level": "2",
+  "url": "notes-posets-intords.html#notes-posets-intords-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "interval order interval representation "
+},
+{
+  "id": "notes-posets-intords-2-3",
+  "level": "2",
+  "url": "notes-posets-intords.html#notes-posets-intords-2-3",
+  "type": "Activity",
+  "number": "6.4.1",
+  "title": "",
+  "body": "  The poset below is denoted , which we read as two plus two . Draw an interval representation for this poset or explain why it is not possible.     The order diagram of a poset with four points. The points are labeled . There are two cover relations: and .       x  y  z  w            "
+},
+{
+  "id": "thm-fishburn",
+  "level": "2",
+  "url": "notes-posets-intords.html#thm-fishburn",
+  "type": "Theorem",
+  "number": "6.14",
+  "title": "Fishburn’s Theorem.",
+  "body": " Fishburn's Theorem   A poset is an interval order if and only if it does not contain as a subposet.   "
+},
+{
+  "id": "notes-posets-intords-3-1-4",
+  "level": "2",
+  "url": "notes-posets-intords.html#notes-posets-intords-3-1-4",
+  "type": "Activity",
+  "number": "6.4.2",
+  "title": "",
+  "body": "  Find the down-sets and as well as the up-sets , , , and for the poset shown below.     The order diagram of a poset with 10 points. The points are labeled from 1 to 10.                                "
+},
+{
+  "id": "notes-posets-intords-3-1-5",
+  "level": "2",
+  "url": "notes-posets-intords.html#notes-posets-intords-3-1-5",
+  "type": "Proposition",
+  "number": "6.15",
+  "title": "",
+  "body": "  Let be a poset. Then the following are equivalent:    is an interval order.    Any two distinct sets in are ordered by inclusion.    Any two distinct sets in are ordered by inclusion.      "
+},
+{
+  "id": "notes-posets-intords-3-1-6",
+  "level": "2",
+  "url": "notes-posets-intords.html#notes-posets-intords-3-1-6",
+  "type": "Proposition",
+  "number": "6.16",
+  "title": "",
+  "body": "  If is an interval order, then .   "
+},
+{
+  "id": "notes-posets-intords-4-1",
+  "level": "2",
+  "url": "notes-posets-intords.html#notes-posets-intords-4-1",
+  "type": "Algorithm",
+  "number": "6.17",
+  "title": "Poset to Interval Representation.",
+  "body": " Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.      "
 }
 ]
 
