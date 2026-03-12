@@ -44,6 +44,15 @@
             <statement>
               <p>Alice and Bob are considering posets <m>\bfP</m> and <m>\bfQ</m>. They soon realize that <m>\bfQ</m> is isomorphic to <m>\bfP^d</m>. After <m>10</m> minutes of work, they figure out that <m>\bfP</m> has height <m>5</m> and width <m>3</m>. Bob doesn't want do find the height and width of <m>\bfQ</m>, since he figures it will take (at least) another <m>10</m> minutes to answer these questions for <m>\bfQ</m>. Alice says Bob is crazy and that she already knows the height and width of <m>\bfQ</m>. Who's right and why?</p>
             </statement>
+            <solution>
+              <p>
+                Alice is correct.
+                Recall that <m>\mathbf{P}</m> and <m>\mathbf{P}^{d}</m> have the same comparability graph and the same incomparability graph.
+                Recall also that the width of a poset is the clique number of its incomparability graph while the height of a poset is the clique number of its comparability graph.
+                Thus, the width of <m>\mathbf{P}^{d}</m> is the same as the width of <m>\mathbf{P}</m> and the heights are also equal.
+                (One could also explain this by noting that the order diagram of <m>\mathbf{P}^{d}</m> is obtained from the order diagram of <m>\mathbf{P}</m> by rotating it <m>180^{\circ}</m> and that this transformation preserves chains and antichains, so the height and width are unchanged.)
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
@@ -58,6 +67,37 @@
                 </ol>
               </p>
             </statement>
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      The maximal elements are those that are not less than any other element: 15,8,11,2,17,3.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The minimal elements are those that are not greater than any other element: 16,1,5,14.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Since <m>\{16,8\}</m> consists of a minimal element and a maximal element and 8 covers 16, this is a maximal chain with two points.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The chain <m>\{5,10,2\}</m> contains three points but is not maximal because <m>5\leq 4\leq 10</m>, so we could add 4 to this set and still have a chain.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The antichain <m>\{16,1,5,14\}</m> is maximal because it contains all the minimal elements and thus no other points can be added.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
@@ -73,11 +113,42 @@
                 </image>
               </sidebyside>
             </statement>
+            <solution>
+              <p>
+                Applying the algorithm where we label the minimal elements, remove those points, label the minimal elements of what's left, remove those points, etc., we get the following partition into antichains:
+                <md>
+                  <mrow>A_1 \amp = \{22,18,23,12,16\}</mrow>
+                  <mrow>A_2 \amp = \{2,3,13,17,11,21\}</mrow>
+                  <mrow>A_3 \amp = \{4,25,10\}</mrow>
+                  <mrow>A_4 \amp = \{5,24,8\}</mrow>
+                  <mrow>A_5 \amp = \{20\}</mrow>
+                  <mrow>A_6 \amp = \{19,9\}</mrow>
+                  <mrow>A_7 \amp = \{6,7\}</mrow>
+                  <mrow>A_8 \amp = \{1,26\}</mrow>
+                  <mrow>A_9 \amp = \{14,15\}</mrow>
+                </md>
+                Thus, the height is 9 which is witnessed by the 9-element chain <m>\{15,26,7,9,20,5,4,3,22\}</m>.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
               <p>For each of the two distinct (up to isomorphism) posets in <xref ref="fig_constructposets"/>, find the width <m>w</m>, an antichain of size <m>w</m>, and a partition of the ground set into <m>w</m> chains.</p>
             </statement>
+            <solution>
+              <p>
+                For the two isomorphic posets on the left, let's use the middle one.
+                One three-element antichain is <m>\{10,66,21\}</m>, but there are others.
+                A possible partition into 3 chains is <m>C_{1} = \{2,10,50\}</m>, <m>C_{2} = \{66\}</m>, and <m>C_{3} = \{3,21,210\}</m>.
+                Thus, the width is 3.
+              </p>
+              
+              <p>
+                For the right-hand poset, one three-element antichain is <m>\{(2,5,4),(5,7,3),(4,1,5)\}</m>.
+                A possible partition into 3 chains is <m>C_{1} = \{(2,5,4)\}</m>, <m>C_{2} = \{(1,2,1),(3,3,2),(5,7,3)\}</m>, and <m>C_{3} = \{(4,1,5),(6,4,5),(7,6,7)\}</m>.
+                Thus, the width is 3.
+              </p>
+            </solution>
           </exercise>
           
           <exercise>
