@@ -857,4 +857,78 @@
         </activity>
       </page>
       </worksheet>
+      <worksheet label="posets-intord-findrep" component="posets-intord-findrep">
+      <title>Finding Representations of Interval Orders; First Fit for Chain Partitioning</title>
+      <exercise>
+        <statement>
+          <p>
+            For each of the posets below, determine if the poset is an interval order. If a poset is an interval order, use the algorithm to find a representation.
+          </p>
+          <p>
+            The images are currently provided separately on Canvas.
+          </p>
+        </statement>
+        <solution component="posets-intord-findrep-solns">
+          <p>
+            For the first poset, we have
+            <md>
+              <mrow>D_6 \amp = D(a)=D(b) = \set{i,g,h,j,c,e} </mrow>
+              <mrow>D_5 \amp = D(d) = \set{i,c,h,j,e}</mrow>
+              <mrow>D_4 \amp = D(f)=D(g) = \set{h,c,j,e}</mrow>
+              <mrow>D_3 \amp = D(i) = \set{h,j,e}</mrow>
+              <mrow>D_2 \amp = D(h) = D(j) = \set{e}</mrow>
+              <mrow>D_1 \amp = D(c) = D(e) = \set{}</mrow>
+            </md>
+            and
+            <md>
+              <mrow>U_6 \amp = U(a) = U(b) = U(d) = U(f) = \set{}</mrow>
+              <mrow>U_5 \amp = U(g) = \set{a,b}</mrow>
+              <mrow>U_4 \amp = U(i) = \set{a,d,b}</mrow>
+              <mrow>U_3 \amp = U(c) = \set{d,f,g,a,b}</mrow>
+              <mrow>U_2 \amp = U(h) = U(j) = \set{i,f,g,a,d,b}</mrow>
+              <mrow>U_1 \amp = U(e) = \set{h,i,j,f,g,a,d,b}</mrow>
+            </md>
+            From these, we can put together 
+            <md>
+              <mrow>I(a) \amp = [6,6] \amp I(f)\amp = [4,6]</mrow>
+              <mrow>I(b) \amp = [6,6] \amp I(g)\amp = [4,5]</mrow>
+              <mrow>I(c) \amp = [1,3] \amp I(h)\amp = [2,2]</mrow>
+              <mrow>I(d) \amp = [5,6] \amp I(i)\amp = [3,4]</mrow>
+              <mrow>I(e) \amp = [1,1] \amp I(j)\amp = [2,2]</mrow>
+            </md>.
+          </p>
+          <p>
+            The second poset is not an interval order because the points <m>\set{d,h,g,c}</m> form a <m>\mathbf{2}+\mathbf{2}</m>.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible.
+          </p>
+        </statement>
+        <solution component="posets-intord-findrep-solns">
+          <p>
+            For the first interval order, First Fit gives us
+            <md>
+              <mrow>C_1 \amp = \set{c,f}</mrow>
+              <mrow>C_2 \amp = \set{e,h,i,d}</mrow>
+              <mrow>C_3 \amp = \set{j,g,a}</mrow>
+              <mrow>C_4 \amp = \set{b}</mrow>
+            </md>
+            The width is thus <m>4</m>, and a maximum antichain is <m>\set{f,d,b,a}</m>.
+          </p>
+          <p>
+            For the second interval order, First Fit gives us
+            <md>
+              <mrow>C_1 \amp = \set{c,h,g,f}</mrow>
+              <mrow>C_2 \amp = \set{d,b,i,j}</mrow>
+              <mrow>C_3 \amp = \set{l,a,e,k}</mrow>
+            </md>
+            The width is thus <m>e</m>, and a maximum antichain is <m>\set{l,d,c}</m>.
+          </p>
+        </solution>
+      </exercise>
+    </worksheet>
 </chapter>

@@ -1155,7 +1155,7 @@ a
     </p>
   </page>
 </handout>
-<handout component="posets-intord-algs">
+<handout label="notes-posets-intord-algs" component="posets-intord-algs">
   <title>Algorithms for Interval Orders</title>
   <page>
     <algorithm>
@@ -1215,13 +1215,13 @@ a
         <li>
           <title>Benefit</title>
           <p>
-            Uses the smallest number of endpoints possible (because <m>\mc{D} = \mc{U}</m>).
+            Uses the smallest number of endpoints possible (because <m>|\mc{D}| = |\mc{U}|</m>).
           </p>
         </li>
         <li>
           <title>Drawback</title>
           <p>
-            Creates lots of degenerate intervals of the form <m>[3,3]</m>.
+            Creates lots of trivial intervals of the form <m>[3,3]</m>.
           </p>
         </li>
       </dl>
@@ -1251,7 +1251,7 @@ a
         <ul>
           <li>
             <p>
-              The simplest algorithms for many problems are &#8220;greedy&#8221; in the sense that they look at <fillin characters="15"/> in some predetermined order and assign them to something by trying to use as few <fillin characters="15"/> as possible at the moment.
+              The simplest algorithms for many problems are <q>greedy</q> in the sense that they look at <fillin characters="15" component="b"/><em component="a">intervals</em> in some predetermined order and assign them to something by trying to use as few <fillin characters="15" component="b"/><em component="a">chains</em> as possible at the moment.
             </p>
           </li>
           
@@ -1263,7 +1263,7 @@ a
           
           <li>
             <p>
-              First Fit can often succeed if there's a &#8220;natural&#8221; order to use.
+              First Fit can often succeed if there's a <q>natural</q> order to use.
             </p>
           </li>
         </ul>
@@ -1372,24 +1372,24 @@ a
           <description>An interval order</description>
           <latex-image>
             \begin{tikzpicture}
-            \draw[{[-]}, thick] (1,0.475) -- node[above] {$e$} (3,0.475);
+            \draw[{[-]}, thick] (1,0.475) -- node[above] {$e$} (3.15,0.475);
             \draw[{[-]}, thick] (5,0.475) -- node[above] {$f$} (6,0.475);
-            \draw[{[-]}, thick] (7,0.475) -- node[above] {$g$} (8,0.475);
+            \draw[{[-]}, thick] (7.15,0.475) -- node[above] {$g$} (7.85,0.475);
             
             \draw[{[-]}, thick] (0,0) -- node[above] {$h$} (1.2,0);
             \draw[{[-]}, thick] (1.85,0) -- node[above] {$i$} (3,0);
-            \draw[{[-]}, thick] (4,0) -- node[above] {$j$} (5,0);
+            \draw[{[-]}, thick] (4,0) -- node[above] {$j$} (4.85,0);
             \draw[{[-]}, thick] (8,0) -- node[above] {$k$} (9,0);
             
             \draw[{[-]}, thick] (0.25,0.95) -- node[above] {$l$} (2,0.95);
-            \draw[{[-]}, thick] (2.75,0.95) -- node[above] {$m$} (4,0.95);
-            \draw[{[-]}, thick] (6,0.95) -- node[above] {$n$} (8,0.95);
+            \draw[{[-]}, thick] (2.75,0.95) -- node[above] {$m$} (3.7,0.95);
+            \draw[{[-]}, thick] (6.15,0.95) -- node[above] {$n$} (7.7,0.95);
             
             
-            \draw[{[-]}, thick] (-0.5,1.425) -- node[above] {$o$} (3,1.425);
-            \draw[{[-]}, thick] (5,1.425) -- node[above] {$p$} (7,1.425);
+            \draw[{[-]}, thick] (-0.5,1.425) -- node[above] {$o$} (3.3,1.425);
+            \draw[{[-]}, thick] (5.15,1.425) -- node[above] {$p$} (7,1.425);
             
-            \draw[{[-]}, thick] (1.75,1.9) -- node[above] {$q$} (4,1.9);
+            \draw[{[-]}, thick] (1.75,1.9) -- node[above] {$q$} (3.85,1.9);
             \end{tikzpicture}
           </latex-image>
         </image>
@@ -1398,10 +1398,10 @@ a
         </p>
       </statement>
     </example>
-    <activity>
+    <activity workspace="3.75cm">
       <statement>
         <p>
-          Use First Fit to find the width of the interval representations given on your handout as well as a partition into as few chains as possible.
+          Use First Fit to find the width of the interval orders whose interval representations are on your handout. Also find a partition into as few chains as possible.
         </p>
       </statement>
     </activity>
