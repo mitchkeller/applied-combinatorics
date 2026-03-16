@@ -701,6 +701,69 @@ var ptx_lunr_docs = [
   "number": "6.17",
   "title": "Poset to Interval Representation.",
   "body": " Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.      "
+},
+{
+  "id": "notes-posets-intord-algs",
+  "level": "1",
+  "url": "notes-posets-intord-algs.html",
+  "type": "Handout",
+  "number": "6.5",
+  "title": "Algorithms for Interval Orders",
+  "body": " Algorithms for Interval Orders    Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.        Peer instruction question 1.   This algorithm has benefits and drawbacks:   Benefit  Uses the smallest number of endpoints possible (because ).    Drawback  Creates lots of trivial intervals of the form .        Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).      Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are down sets (and thus up sets). If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?        Greedy or First Fit Algorithms     The simplest algorithms for many problems are greedy in the sense that they look at in some predetermined order and assign them to something by trying to use as few as possible at the moment.    There's usually an order for which a greedy algorithm gives an optimal result, but finding that order is often hard.    First Fit can often succeed if there's a natural order to use.      First Fit for Chain Partitioning Interval Orders      Fix an order in which intervals will be considered.    Assign intervals to chains .    When considering a new interval, determine which chains it can be added to.    Add it to chain with smallest subscript.    If cannot add to any existing chain, make a new one with subscript as small as possible.        Peer instruction question 2       Optimal First Fit for Chain Partitioning Interval Orders      Consider the intervals in order by left endpoint.   Break ties by choosing interval with smallest label.       Assign intervals to chains .    When considering a new interval, determine which chains it can be added to.    Add it to chain with smallest subscript.    If cannot add to any existing chain, make a new one with subscript as small as possible.        Peer instruction question 3.     Let's use First Fit (optimally) to find a chain partition of this interval order and the width of the interval order.   An interval order           Use First Fit to find the width of the interval orders whose interval representations are on your handout. Also find a partition into as few chains as possible.     "
+},
+{
+  "id": "notes-posets-intord-algs-2-1",
+  "level": "2",
+  "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-2-1",
+  "type": "Algorithm",
+  "number": "6.18",
+  "title": "Poset to Interval Representation.",
+  "body": " Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.      "
+},
+{
+  "id": "notes-posets-intord-algs-2-4",
+  "level": "2",
+  "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-2-4",
+  "type": "Activity",
+  "number": "6.5.1",
+  "title": "",
+  "body": "   Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).      Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are down sets (and thus up sets). If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?    "
+},
+{
+  "id": "alg-first-fit-chain",
+  "level": "2",
+  "url": "notes-posets-intord-algs.html#alg-first-fit-chain",
+  "type": "Algorithm",
+  "number": "6.19",
+  "title": "First Fit for Chain Partitioning Interval Orders.",
+  "body": " First Fit for Chain Partitioning Interval Orders      Fix an order in which intervals will be considered.    Assign intervals to chains .    When considering a new interval, determine which chains it can be added to.    Add it to chain with smallest subscript.    If cannot add to any existing chain, make a new one with subscript as small as possible.      "
+},
+{
+  "id": "alg-first-fit-optimal",
+  "level": "2",
+  "url": "notes-posets-intord-algs.html#alg-first-fit-optimal",
+  "type": "Algorithm",
+  "number": "6.20",
+  "title": "Optimal First Fit for Chain Partitioning Interval Orders.",
+  "body": " Optimal First Fit for Chain Partitioning Interval Orders      Consider the intervals in order by left endpoint.   Break ties by choosing interval with smallest label.       Assign intervals to chains .    When considering a new interval, determine which chains it can be added to.    Add it to chain with smallest subscript.    If cannot add to any existing chain, make a new one with subscript as small as possible.      "
+},
+{
+  "id": "notes-posets-intord-algs-4-3",
+  "level": "2",
+  "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-4-3",
+  "type": "Example",
+  "number": "6.21",
+  "title": "",
+  "body": "  Let's use First Fit (optimally) to find a chain partition of this interval order and the width of the interval order.   An interval order        "
+},
+{
+  "id": "notes-posets-intord-algs-4-4",
+  "level": "2",
+  "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-4-4",
+  "type": "Activity",
+  "number": "6.5.2",
+  "title": "",
+  "body": "  Use First Fit to find the width of the interval orders whose interval representations are on your handout. Also find a partition into as few chains as possible.   "
 }
 ]
 

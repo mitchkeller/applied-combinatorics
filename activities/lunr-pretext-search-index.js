@@ -629,6 +629,33 @@ var ptx_lunr_docs = [
   "number": "6.3.1",
   "title": "",
   "body": "  Below are two collections of intervals. For each, draw the order diagram of the interval order represented by these intervals.       A collection of intervals. The intervals are displayed with a number line that allows identification of the endpoints of the intervals.        The order diagram of the poset whose interval representation was given. Annotations give cover relations for each of the points.      labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j'}                                                A collection of intervals labeled with letters from to . The intervals are not displayed with a number line. Using and to denote the left and right endpoints of the interval , respectively, we have the following (strict) ordering of the endpoints .        The order diagram of the poset whose interval representation was given. Annotations give cover relations for each of the points.      labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j',11:'k',12:'l'}                                                  "
+},
+{
+  "id": "posets-intord-findrep",
+  "level": "1",
+  "url": "posets-intord-findrep.html",
+  "type": "Worksheet",
+  "number": "6.4",
+  "title": "Finding Representations of Interval Orders; First Fit for Chain Partitioning",
+  "body": " Finding Representations of Interval Orders; First Fit for Chain Partitioning    For each of the posets below, determine if the poset is an interval order. If a poset is an interval order, use the algorithm to find a representation.  The images are currently provided separately on Canvas.    For the first poset, we have and From these, we can put together .  The second poset is not an interval order because the points form a .      Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible.    For the first interval order, First Fit gives us The width is thus , and a maximum antichain is .  For the second interval order, First Fit gives us The width is thus , and a maximum antichain is .    "
+},
+{
+  "id": "posets-intord-findrep-2",
+  "level": "2",
+  "url": "posets-intord-findrep.html#posets-intord-findrep-2",
+  "type": "Problem",
+  "number": "6.4.1",
+  "title": "",
+  "body": "  For each of the posets below, determine if the poset is an interval order. If a poset is an interval order, use the algorithm to find a representation.  The images are currently provided separately on Canvas.    For the first poset, we have and From these, we can put together .  The second poset is not an interval order because the points form a .   "
+},
+{
+  "id": "posets-intord-findrep-3",
+  "level": "2",
+  "url": "posets-intord-findrep.html#posets-intord-findrep-3",
+  "type": "Problem",
+  "number": "6.4.2",
+  "title": "",
+  "body": "  Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible.    For the first interval order, First Fit gives us The width is thus , and a maximum antichain is .  For the second interval order, First Fit gives us The width is thus , and a maximum antichain is .   "
 }
 ]
 
