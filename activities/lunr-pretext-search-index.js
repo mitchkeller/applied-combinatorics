@@ -637,7 +637,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "6.4",
   "title": "Finding Representations of Interval Orders; First Fit for Chain Partitioning",
-  "body": " Finding Representations of Interval Orders; First Fit for Chain Partitioning    For each of the posets below, determine if the poset is an interval order. If a poset is an interval order, use the algorithm to find a representation.  The images are currently provided separately on Canvas.    For the first poset, we have and From these, we can put together .  The second poset is not an interval order because the points form a .      Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible.    For the first interval order, First Fit gives us The width is thus , and a maximum antichain is .  For the second interval order, First Fit gives us The width is thus , and a maximum antichain is .    "
+  "body": " Finding Representations of Interval Orders; First Fit for Chain Partitioning    For each of the posets below, determine if the poset is an interval order. If a poset is an interval order, use the algorithm to find a representation.  The images are currently provided separately on Canvas.    For the first poset, we have and From these, we can put together .  The second poset is not an interval order because the points form a .      Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible and a maximum antichain.    For the first interval order, First Fit gives us The width is thus , and a maximum antichain is .  For the second interval order, First Fit gives us The width is thus , and a maximum antichain is .    "
 },
 {
   "id": "posets-intord-findrep-2",
@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "6.4.2",
   "title": "",
-  "body": "  Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible.    For the first interval order, First Fit gives us The width is thus , and a maximum antichain is .  For the second interval order, First Fit gives us The width is thus , and a maximum antichain is .   "
+  "body": "  Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible and a maximum antichain.    For the first interval order, First Fit gives us The width is thus , and a maximum antichain is .  For the second interval order, First Fit gives us The width is thus , and a maximum antichain is .   "
 }
 ]
 

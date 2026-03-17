@@ -268,7 +268,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -326,37 +329,44 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Algorithm 6.18: Poset to Interval Representation"><a href="#notes-posets-intord-algs-2-1" title="Copy heading and permalink for Algorithm 6.18: Poset to Interval Representation" aria-label="Copy heading and permalink for Algorithm 6.18: Poset to Interval Representation">🔗</a></div></article><div class="para" id="notes-posets-intord-algs-2-2">
-<em class="alert">Peer instruction question 1.</em><div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Algorithm 6.18: Poset to Interval Representation"><a href="#notes-posets-intord-algs-2-1" title="Copy heading and permalink for Algorithm 6.18: Poset to Interval Representation" aria-label="Copy heading and permalink for Algorithm 6.18: Poset to Interval Representation">🔗</a></div></article><div class="para" id="notes-posets-intord-algs-2-2">If you input an arbitrary poset, then the algorithm in step 2 could produce two down-sets that cannot be totally ordered by inclusion. You can then use those two down-sets to identify a <span class="process-math">\(\mathbf{2}+\mathbf{2}\text{.}\)</span> Note that if you try to do step 4 (after succeeding in step 2) but cannot totally order the up-sets, then you have a mistake in your up-sets or your down-sets, so you will need to re-check them.<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="notes-posets-intord-algs-2-3">
+<div class="para" id="notes-posets-intord-algs-2-3">
+<em class="alert">Peer instruction question 1.</em><div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="notes-posets-intord-algs-2-4">
 <div class="para">This algorithm has benefits and drawbacks:</div>
 <dl class="description-list">
-<dt id="notes-posets-intord-algs-2-3-1-1">Benefit<div class="autopermalink" data-description="Item: Benefit"><a href="#notes-posets-intord-algs-2-3-1-1" title="Copy heading and permalink for Item: Benefit" aria-label="Copy heading and permalink for Item: Benefit">🔗</a></div>
+<dt id="notes-posets-intord-algs-2-4-1-1">Benefit<div class="autopermalink" data-description="Item: Benefit"><a href="#notes-posets-intord-algs-2-4-1-1" title="Copy heading and permalink for Item: Benefit" aria-label="Copy heading and permalink for Item: Benefit">🔗</a></div>
 </dt>
-<dd><div class="para" id="notes-posets-intord-algs-2-3-1-1-2">Uses the smallest number of endpoints possible (because <span class="process-math">\(|\mc{D}| = |\mc{U}|\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-3-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dd><div class="para" id="notes-posets-intord-algs-2-4-1-1-2">Uses the smallest number of endpoints possible (because <span class="process-math">\(|\mc{D}| = |\mc{U}|\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-4-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></dd>
-<dt id="notes-posets-intord-algs-2-3-1-2">Drawback<div class="autopermalink" data-description="Item: Drawback"><a href="#notes-posets-intord-algs-2-3-1-2" title="Copy heading and permalink for Item: Drawback" aria-label="Copy heading and permalink for Item: Drawback">🔗</a></div>
+<dt id="notes-posets-intord-algs-2-4-1-2">Drawback<div class="autopermalink" data-description="Item: Drawback"><a href="#notes-posets-intord-algs-2-4-1-2" title="Copy heading and permalink for Item: Drawback" aria-label="Copy heading and permalink for Item: Drawback">🔗</a></div>
 </dt>
-<dd><div class="para" id="notes-posets-intord-algs-2-3-1-2-2">Creates lots of trivial intervals of the form <span class="process-math">\([3,3]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-3-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dd><div class="para" id="notes-posets-intord-algs-2-4-1-2-2">Creates lots of trivial intervals of the form <span class="process-math">\([3,3]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-4-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></dd>
 </dl>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="notes-posets-intord-algs-2-4"><h3 class="heading">
+<article class="activity project-like" id="notes-posets-intord-algs-2-5"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<article class="task exercise-like" id="notes-posets-intord-algs-2-4-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="notes-posets-intord-algs-2-4-1-1-1">Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="notes-posets-intord-algs-2-5-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="notes-posets-intord-algs-2-5-1-1-1">Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.5.1.a"><a href="#notes-posets-intord-algs-2-4-1" title="Copy heading and permalink for Task 6.5.1.a" aria-label="Copy heading and permalink for Task 6.5.1.a">🔗</a></div></article><article class="task exercise-like" id="notes-posets-intord-algs-2-4-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="notes-posets-intord-algs-2-4-2-1-1">Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are <span class="process-math">\(d\)</span> down sets (and thus <span class="process-math">\(d\)</span> up sets). If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Task 6.5.1.a"><a href="#notes-posets-intord-algs-2-5-1" title="Copy heading and permalink for Task 6.5.1.a" aria-label="Copy heading and permalink for Task 6.5.1.a">🔗</a></div></article><article class="task exercise-like" id="notes-posets-intord-algs-2-5-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="notes-posets-intord-algs-2-5-2-1-1">Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are <span class="process-math">\(d\)</span> down sets (and thus <span class="process-math">\(d\)</span> up sets). If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 6.5.1.b"><a href="#notes-posets-intord-algs-2-4-2" title="Copy heading and permalink for Task 6.5.1.b" aria-label="Copy heading and permalink for Task 6.5.1.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 6.5.1"><a href="#notes-posets-intord-algs-2-4" title="Copy heading and permalink for Activity 6.5.1" aria-label="Copy heading and permalink for Activity 6.5.1">🔗</a></div></article></section><section class="onepage" id="notes-posets-intord-algs-3"><section class="paragraphs" id="notes-posets-intord-algs-3-1"><h3 class="heading"><span class="title">Greedy or First Fit Algorithms.</span></h3>
+<div class="solutions"><details id="notes-posets-intord-algs-2-5-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="notes-posets-intord-algs-2-5-2-2-1">From the given information, we can tell that this point’s down-set is empty and it’s up-set is empty as well. This means that the interval the algorithm produces will be <span class="process-math">\([1,d]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-2-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.1.b.1"><a href="#notes-posets-intord-algs-2-5-2-2" title="Copy heading and permalink for Solution 6.5.1.b.1" aria-label="Copy heading and permalink for Solution 6.5.1.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 6.5.1.b"><a href="#notes-posets-intord-algs-2-5-2" title="Copy heading and permalink for Task 6.5.1.b" aria-label="Copy heading and permalink for Task 6.5.1.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 6.5.1"><a href="#notes-posets-intord-algs-2-5" title="Copy heading and permalink for Activity 6.5.1" aria-label="Copy heading and permalink for Activity 6.5.1">🔗</a></div></article></section><section class="onepage" id="notes-posets-intord-algs-3"><section class="paragraphs" id="notes-posets-intord-algs-3-1"><h3 class="heading"><span class="title">Greedy or First Fit Algorithms.</span></h3>
 <div class="para logical" id="notes-posets-intord-algs-3-1-2">
 <ul class="disc" id="notes-posets-intord-algs-3-1-2-1">
 <li id="notes-posets-intord-algs-3-1-2-1-1">
-<div class="para" id="notes-posets-intord-algs-3-1-2-1-1-1">The simplest algorithms for many problems are “greedy” in the sense that they look at <em class="emphasis">intervals</em> in some predetermined order and assign them to something by trying to use as few <em class="emphasis">chains</em> as possible at the moment.<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="notes-posets-intord-algs-3-1-2-1-1-1">The simplest algorithms for many problems are “greedy” in the sense that they look at <em class="emphasis">intervals (for example)</em> in some predetermined order and assign them to something by trying to use as few <em class="emphasis">chains (for example)</em> as possible at the moment.<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-3-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#notes-posets-intord-algs-3-1-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
@@ -457,9 +467,25 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="notes-posets-intord-algs-4-3-1-1">Let’s use First Fit (optimally) to find a chain partition of this interval order and the width of the interval order.<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/notes-posets_dilworth-intord.svg" role="img" class="contained" alt="An interval order"></div> <div class="para" id="notes-posets-intord-algs-4-3-1-3"> <div class="workspace" data-space="5cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-4-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/notes-posets_dilworth-intord.svg" role="img" class="contained" alt="An interval order"></div>
+<div class="solutions"><details id="notes-posets-intord-algs-4-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="notes-posets-intord-algs-4-3-2-1">
+<div class="para">Using First Fit in the prescribed order produces the following chains:</div>
+<div class="displaymath process-math" id="notes-posets-intord-algs-4-3-2-1-1">
+\begin{align*}
+C_1 \amp = \set{o,j,f,n,k}\\
+C_2 \amp = \set{h,q,p,g}\\
+C_3 \amp = \set{l,m}\\
+C_4 \amp = \set{e}\\
+C_5 \amp = \set{i}
+\end{align*}
 </div>
+<div class="para">Thus, the width of the poset is <span class="process-math">\(4\text{,}\)</span> which is witnessed by the maximum antichain <span class="process-math">\(\set{o,q,l,e,i}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#notes-posets-intord-algs-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.21.1"><a href="#notes-posets-intord-algs-4-3-2" title="Copy heading and permalink for Solution 6.21.1" aria-label="Copy heading and permalink for Solution 6.21.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Example 6.21"><a href="#notes-posets-intord-algs-4-3" title="Copy heading and permalink for Example 6.21" aria-label="Copy heading and permalink for Example 6.21">🔗</a></div></article><article class="activity project-like" id="notes-posets-intord-algs-4-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
