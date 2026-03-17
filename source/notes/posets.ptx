@@ -1206,6 +1206,9 @@ a
         </p>
       </statement>
     </algorithm>
+    <p component="a">
+      If you input an arbitrary poset, then the algorithm in step 2 could produce two down-sets that cannot be totally ordered by inclusion. You can then use those two down-sets to identify a <m>\mathbf{2}+\mathbf{2}</m>. Note that if you try to do step 4 (after succeeding in step 2) but cannot totally order the up-sets, then you have a mistake in your up-sets or your down-sets, so you will need to re-check them.
+    </p>
     <p>
       <alert>Peer instruction question 1.</alert>
     </p>
@@ -1241,6 +1244,11 @@ a
             If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?
           </p>
         </statement>
+        <solution component="a">
+          <p>
+            From the given information, we can tell that this point's down-set is empty and it's up-set is empty as well. This means that the interval the algorithm produces will be <m>[1,d]</m>.
+          </p>
+        </solution>
       </task>
     </activity>
   </page>
@@ -1251,7 +1259,7 @@ a
         <ul>
           <li>
             <p>
-              The simplest algorithms for many problems are <q>greedy</q> in the sense that they look at <fillin characters="15" component="b"/><em component="a">intervals</em> in some predetermined order and assign them to something by trying to use as few <fillin characters="15" component="b"/><em component="a">chains</em> as possible at the moment.
+              The simplest algorithms for many problems are <q>greedy</q> in the sense that they look at <fillin characters="15" component="b"/><em component="a">intervals (for example)</em> in some predetermined order and assign them to something by trying to use as few <fillin characters="15" component="b"/><em component="a">chains (for example)</em> as possible at the moment.
             </p>
           </li>
           
@@ -1393,10 +1401,23 @@ a
             \end{tikzpicture}
           </latex-image>
         </image>
-        <p workspace="5cm">
+        <p workspace="5cm" component="b">
           <nbsp/>
         </p>
       </statement>
+      <solution component="a">
+        <p>
+          Using First Fit in the prescribed order produces the following chains:
+          <md>
+            <mrow>C_1 \amp = \set{o,j,f,n,k}</mrow>
+            <mrow>C_2 \amp = \set{h,q,p,g}</mrow>
+            <mrow>C_3 \amp = \set{l,m}</mrow>
+            <mrow>C_4 \amp = \set{e}</mrow>
+            <mrow>C_5 \amp = \set{i}</mrow>
+          </md>
+          Thus, the width of the poset is <m>4</m>, which is witnessed by the maximum antichain <m>\set{o,q,l,e,i}</m>.
+        </p>
+      </solution>
     </example>
     <activity workspace="3.75cm">
       <statement>
