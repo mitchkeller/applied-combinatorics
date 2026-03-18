@@ -39,6 +39,36 @@
             <statement>
               <p>A <term>linear extension</term><idx><h>linear extension</h></idx> of a poset <m>\bfP=(X,P)</m> is a total order <m>L</m> on <m>X</m> such that if <m>x\leq y</m> in <m>P</m>, then <m>x\leq y</m> in <m>L</m>. Give linear extension of the three posets shown in <xref ref="fig_constructposets"/>.  If you feel very ambitious, try to count the number of linear extensions of the poset on the left side of the figure.  Don't list them.  Just provide an integer as your answer.</p>
             </statement>
+            <solution>
+              <p>
+                There are many linear extensions for each of these posets, so we just give one for each of these posets.
+                For ease of formatting, they are written horizontally with the smallest element at the left:
+                <me>
+                  \{3\} \lt \{2\} \lt \{3,7\} \lt \{2,5\} \lt \{2,3,11\} \lt \{2,3,5,7\} \lt \{2,5,25\}
+                </me>
+                <me>
+                  2 \lt 10\lt 66 \lt 3\lt 21 \lt 210 \lt 50
+                </me>
+                <me>
+                  (1,2,1) \lt (2,5,4) \lt (4,1,5)\lt (3,3,2)\lt (6,4,5)\lt (7,6,7)\lt (5,7,3)
+                </me>
+              </p>
+
+              <p>
+                The count for the rightmost poset is reasonable to do.
+                There's a unique chain of 4 points that has to be in that order and the three points not in that chain form an antichain.
+                (I'm going to omit parentheses and commas when writing the elements here.) If we have both 573 at the top of the linear extension and 415 at the bottom of the linear extension, then there are three spots for 254, so 3 linear extensions in this case.
+                If 573 is at the top of the linear extension but 415 is not at the bottom, then there are two choices for where to put 415 and after doing that, there are 4 spots for where to put 254, which results in 8 linear extensions for this case.
+                The case with 415 at the bottom and 573 not at the top is dual, so 8 more.
+                If we have 767 at the top and 121 at the bottom (the only remaining scenario), then there are 5 ways to place 573 and 415 into the 4-point chain (listing them out is the quickest way to see this, I think).
+                Once that is done, there are 5 spots for 254 to go, so 25 linear extensions in this case.
+                Thus, there are 44 in total.
+              </p>
+
+              <p>
+                The count for the left-hand poset, which is isomorphic to the middle poset, is harder. Using software, there are 73 linear extensions. A reasonable attempt probably splits things up into some cases based on what happens with the minimal elements. To work a bit crudely on a lower bound, you could note that the order diagram is drawn with three "layers" of antichains, so there must be at least \(2!3!2! = 24\) linear extensions if we just focus on keeping the layers together. But then notice that \(\{2,3,11\}\) is also maximal, so we could have drawn it in the top layer. If we want to ensure we don't count anything we've already counted, we need to think of putting \(\{2,3,11\}\) above at least one of \(\{2,3,5,7\}\) and \(\{2,5,25\}\). So then there's \(2!2!\cdot 2\cdot 2! = 16\) more linear extensions here (order the minimal elements, order the two remaining middle layer elements, pick which of \(\{2,3,5,7\}\) and \(\{2,5,25\}\) comes next, order the other one of those with \(\{2,3,11\}\)). One could continue working at this by recognizing that the two minimal elements of the poset not need be the lowest two elements in a linear extension, and so on.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
@@ -155,6 +185,15 @@
             <statement>
               <p>A restaurant chef has designed a new set of dishes for his menu. His set of dishes contains <m>10</m> main courses, and he will select a subset of them to place on the menu each night. To ensure variety of main courses for his patrons, he wants to guarantee that a night's menu is neither completely contained in nor completely contains another night's menu. What is the largest number of menus he can plan using his <m>10</m> main courses subject to this requirement?</p>
             </statement>
+            <solution>
+              <p>
+                We can view a menu as a subset of the list of 10 possible main courses.
+                To avoid a menu that is contained in or contains another night's menu, we need to find a collection of subsets (menus) so that no subset is a subset of any other.
+                That means we need an antichain in <m>\mathbf{2}^{10}</m>.
+                By Sperner's Theorem, we know that the width of <m>\mathbf{2}^{10}</m>, which is the number of points in a maximum antichain, is <m>C(10,5) = 252</m>.
+                Thus, the largest number of menus he can plan subject to this requirement is 252.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
@@ -166,6 +205,50 @@
                 </description></image>
               </figure>
             </statement>
+            <solution>
+              <image>
+                <description>
+                  <p>
+                    The order diagram of a poset. The points are labeled using letters from <m>c</m> to <m>j</m>. The cover relations are encoded in the annotations.
+                  </p>
+                </description>
+                <prefigure xmlns="https://prefigure.org" label="intord-to-diagram-exercise1">
+                  <diagram dimensions="(300,300)" margins="15">
+                    <coordinates bbox="(0,0,2,2)">
+                      <definition>labels={1:'j',2:'k',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i'}</definition>
+                      <network scale="0.9" labels="yes"
+                              node-fill="#ddd" label-dictionary="labels" node-stroke="black">
+                        <node at="1"  p="(0,2)" edges="[]"/>       <!-- j -->
+                        <node at="2"  p="(0,1.3)" edges="[1]"/>       <!-- k -->
+                        <node at="3"  p="(0.8,1.55)" edges="[1]"/>  <!-- c -->
+                        <node at="4"  p="(0,0)" edges="[2,9]"/>       <!-- d -->
+                        <node at="5"  p="(1,0)" edges="[2,3,8]"/>   <!-- e -->
+                        <node at="6"  p="(2,0)" edges="[9,2]"/>       <!-- f -->
+                        <node at="7"  p="(2,2)" edges="[]"/>    <!-- g -->
+                        <node at="8"  p="(2,1.6)" edges="[1,7]"/>  <!-- h -->
+                        <node at="9"  p="(0.65,1.1)" edges="[3,8]"/>  <!-- i -->
+                        
+                      </network>
+                    </coordinates>
+                    <annotations>
+                      <annotation ref="figure"
+                                  text="The order diagram of an interval order with 9 points labeled by letters from c to k">
+                          
+                          <annotation ref="node-3" text="The point c covers points e and i and is covered by point i."/>
+                          <annotation ref="node-4" text="The minimal point d is covered by points i and i ."/>
+                          <annotation ref="node-5" text="The minimal point e is covered by points h, i, and k."/>
+                          <annotation ref="node-6" text="The minimal point f is covered by points i and k."/>
+                          <annotation ref="node-7" text="The maximal point g covers point h."/>
+                          <annotation ref="node-8" text="The point h covers points f and i and is covered by points g and j."/>
+                          <annotation ref="node-9" text="The point i covers points d and f and is covered by points c and h."/>
+                          <annotation ref="node-1" text="The maximal point j covers points c, h, and k."/>
+                          <annotation ref="node-2" text="The point k covers points d, e, and f and is covered by point j."/>
+                      </annotation>
+                    </annotations>
+                  </diagram>                  
+                </prefigure>
+              </image>
+            </solution>
           </exercise>
           <exercise>
             <statement>
