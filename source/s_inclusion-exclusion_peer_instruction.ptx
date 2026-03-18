@@ -46,8 +46,19 @@
   <exercise label="inclusion-exclusion_PI_surjection">
     <statement>
       <p>Which of the following functions from <m>[6]</m> to <m>[4]</m> are
-        surjections?</p>
-          <tabular>
+        surjections?
+        <md>
+          \begin{array}{c|cccccc}
+          x \amp 1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6\\\hline
+          f(x) \amp 3 \amp 3 \amp 3 \amp 2 \amp 4 \amp 2\\
+          g(x) \amp 1 \amp 3 \amp 3 \amp 2 \amp 4 \amp 2\\
+          h(x) \amp 1 \amp 2 \amp 3 \amp 1 \amp 2 \amp 4
+          \end{array}
+        </md>
+      </p>
+
+        <!-- TODO Restore this after getting Runestone to do a better job rendering tables -->
+          <!-- <tabular>
             <col right="minor"/>
             <col right="minor"/>
             <col right="minor"/>
@@ -91,7 +102,7 @@
             <cell>2</cell>
             <cell>4</cell>
           </row>
-        </tabular>
+        </tabular> -->
     </statement>
     <choices>
       <choice>
@@ -150,8 +161,16 @@
   </exercise>
   <exercise label="inclusion-exclusion_PI_function-property">
     <statement>
-      <p>Define <m>f\colon [8] \to [5]</m> as shown below. Which properties does <m>f</m> satisfy?</p>
-      <tabular>
+      <p>Define <m>f\colon [8] \to [5]</m> as shown below. Which properties does <m>f</m> satisfy?
+      <md>
+          \begin{array}{c|cccccccccc}
+          x \amp 1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \amp 7\amp 8\\\hline
+          f(x) \amp 5 \amp 2 \amp 3 \amp 3 \amp 2 \amp 5 \amp 2 \amp 3
+          \end{array}
+        </md>
+      </p>
+      <!-- TODO Restore this after getting Runestone to do a better job rendering tables -->
+      <!-- <tabular>
         <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col>
         <col right="minor"> </col> <col right="minor"> </col> <col> </col>
         <row bottom="minor">
@@ -177,7 +196,7 @@
           <cell>2</cell>
           <cell>3</cell>
         </row>
-      </tabular>
+      </tabular> -->
     </statement>
     <choices>
       <choice correct="yes">
@@ -245,7 +264,14 @@
         A permutation <m>\sigma</m> of <m>[n]</m> satisfies property <m>P_{i}</m> if <m>\sigma(i)=i</m>.
       </p>
       <p>Define <m>\sigma\colon [6]\to [6]</m> as shown in the table below. Which properties does <m>\sigma</m> satisfy?</p>
-      <tabular>
+      <md>
+          \begin{array}{c|cccccccccc}
+          x \amp 1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6\\\hline
+          \sigma(x) \amp 2 \amp 5 \amp 3 \amp 1 \amp 4 \amp 6
+          \end{array}
+        </md>
+      <!-- TODO Restore this after getting Runestone to do a better job rendering tables -->
+      <!-- <tabular>
         <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col> <col right="minor"> </col>
         <col right="minor"> </col> <col right="minor"> </col> <col> </col>
         <row bottom="minor">
@@ -266,7 +292,7 @@
           <cell>4</cell>
           <cell>6</cell>
         </row>
-      </tabular>
+      </tabular> -->
     </statement>
     <choices>
       <choice>
