@@ -836,6 +836,87 @@ var ptx_lunr_docs = [
   "number": "6.5.2",
   "title": "",
   "body": "  Use First Fit to find the width of the interval orders whose interval representations are on your handout. Also find a partition into as few chains as possible.   "
+},
+{
+  "id": "notes-pie-intro-surjections",
+  "level": "1",
+  "url": "notes-pie-intro-surjections.html",
+  "type": "Handout",
+  "number": "7.1",
+  "title": "Introduction; Counting Surjections",
+  "body": " Introduction; Counting Surjections    Overcounting. No, undercounting. Wait, overcounting! Hmm, undercounting?   Revisiting an Old Problem   How many lattice paths from to do not pass through or ?    We count all lattice paths from to and subtract those that path through either or . We do this by first subtracting those that pass through and then subtracting those that pass through ). However, this subtracts those that pass through both intermediate points twice, so we need to add back that number. This gives us .    We need to introduce some notation:   A property  is something that an element of a set either satisfies or does not satisfy.    If is a family of properties and , then is the number of objects that satisfy for every .   If , then is the number of objects satisfying , , and . (We don't care about the other .)         Principle of Inclusion-Exclusion   Let be a set and a family of properties. The number of elements of which satisfy none of the properties in is given by .     Peer instruction question 1.     A class of students was polled to determine the programming languages in which they were proficient.                   Language(s)     Language(s)     Language(s)    32  ALGOL60  12  ALGOL60 + PL\/I  2  All 3    17  PL\/I  17  ALGOL60 + COBOL        26  COBOL  3  PL\/I + COBOL        How many of the students are proficient in none of the languages? Answer this question by doing the following:     Identify properties.    Let be that a student knows ALGOL60, be that a student knows PL\/I, and be that a student knows COBOL.      Write out inclusion-exclusion sum.              Counting Surjections    A function is called a surjection provided that for every , there is at least one such that . Surjections are also called onto functions .      The range of a function is the set .     Peer instruction question 2.     Let be the set of all functions from to . We say satisfies property if is not in the range of .     Peer instruction questions 3 4 followed by activity handout.     The number of surjections from to is given by .       Formula will be provided to you on Test II and the Final Exam.    You will not be expected to derive this formula.    You will be expected to recognize when a counting problem calls for surjections and to use the formula in answers.       "
+},
+{
+  "id": "notes-pie-intro-surjections-2-1-2",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-2-1-2",
+  "type": "Example",
+  "number": "7.1",
+  "title": "Revisiting an Old Problem.",
+  "body": " Revisiting an Old Problem   How many lattice paths from to do not pass through or ?    We count all lattice paths from to and subtract those that path through either or . We do this by first subtracting those that pass through and then subtracting those that pass through ). However, this subtracts those that pass through both intermediate points twice, so we need to add back that number. This gives us .   "
+},
+{
+  "id": "notes-pie-intro-surjections-2-1-3",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-2-1-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "property "
+},
+{
+  "id": "notes-pie-intro-surjections-2-1-4",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-2-1-4",
+  "type": "Theorem",
+  "number": "7.2",
+  "title": "Principle of Inclusion-Exclusion.",
+  "body": " Principle of Inclusion-Exclusion   Let be a set and a family of properties. The number of elements of which satisfy none of the properties in is given by .   "
+},
+{
+  "id": "notes-pie-intro-surjections-2-1-6",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-2-1-6",
+  "type": "Activity",
+  "number": "7.1.1",
+  "title": "",
+  "body": "  A class of students was polled to determine the programming languages in which they were proficient.                   Language(s)     Language(s)     Language(s)    32  ALGOL60  12  ALGOL60 + PL\/I  2  All 3    17  PL\/I  17  ALGOL60 + COBOL        26  COBOL  3  PL\/I + COBOL        How many of the students are proficient in none of the languages? Answer this question by doing the following:     Identify properties.    Let be that a student knows ALGOL60, be that a student knows PL\/I, and be that a student knows COBOL.      Write out inclusion-exclusion sum.         "
+},
+{
+  "id": "notes-pie-intro-surjections-3-1-2",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-3-1-2",
+  "type": "Definition",
+  "number": "7.3",
+  "title": "",
+  "body": "  A function is called a surjection provided that for every , there is at least one such that . Surjections are also called onto functions .   "
+},
+{
+  "id": "notes-pie-intro-surjections-3-1-3",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-3-1-3",
+  "type": "Definition",
+  "number": "7.4",
+  "title": "",
+  "body": "  The range of a function is the set .   "
+},
+{
+  "id": "notes-pie-intro-surjections-3-1-5",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-3-1-5",
+  "type": "Definition",
+  "number": "7.5",
+  "title": "",
+  "body": "  Let be the set of all functions from to . We say satisfies property if is not in the range of .   "
+},
+{
+  "id": "notes-pie-intro-surjections-3-1-7",
+  "level": "2",
+  "url": "notes-pie-intro-surjections.html#notes-pie-intro-surjections-3-1-7",
+  "type": "Theorem",
+  "number": "7.6",
+  "title": "",
+  "body": "  The number of surjections from to is given by .   "
 }
 ]
 

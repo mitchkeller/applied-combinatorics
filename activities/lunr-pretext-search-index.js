@@ -656,6 +656,33 @@ var ptx_lunr_docs = [
   "number": "6.4.2",
   "title": "",
   "body": "  Use First Fit to find the width of the interval orders whose interval representations are given below. Also find a partition into as few chains as possible and a maximum antichain.    For the first interval order, First Fit gives us The width is thus , and a maximum antichain is .  For the second interval order, First Fit gives us The width is thus , and a maximum antichain is .   "
+},
+{
+  "id": "ws-inclusion-exclusion-surjections",
+  "level": "1",
+  "url": "ws-inclusion-exclusion-surjections.html",
+  "type": "Worksheet",
+  "number": "7.1",
+  "title": "Counting Surjections",
+  "body": " Counting Surjections     Let's first focus on the case of counting surjections from to .    How many properties are in ? What are they?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Use inclusion-exclusion to find the number of surjections from to . (You might want to put your formula into an online calculator.)        Now let's count surjections from to ( ).    How many properties are in ?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Let with . How many functions satisfy all properties in ?     How many subsets of have size ?     Use inclusion-exclusion to find the number of surjections from to .     "
+},
+{
+  "id": "ws-inclusion-exclusion-surjections-2-1",
+  "level": "2",
+  "url": "ws-inclusion-exclusion-surjections.html#ws-inclusion-exclusion-surjections-2-1",
+  "type": "Problem",
+  "number": "7.1.1",
+  "title": "",
+  "body": "  Let's first focus on the case of counting surjections from to .    How many properties are in ? What are they?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Use inclusion-exclusion to find the number of surjections from to . (You might want to put your formula into an online calculator.)   "
+},
+{
+  "id": "ws-inclusion-exclusion-surjections-3-1",
+  "level": "2",
+  "url": "ws-inclusion-exclusion-surjections.html#ws-inclusion-exclusion-surjections-3-1",
+  "type": "Problem",
+  "number": "7.1.2",
+  "title": "",
+  "body": "  Now let's count surjections from to ( ).    How many properties are in ?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Let with . How many functions satisfy all properties in ?     How many subsets of have size ?     Use inclusion-exclusion to find the number of surjections from to .   "
 }
 ]
 
