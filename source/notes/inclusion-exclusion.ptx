@@ -1,6 +1,6 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-inclusion-exclusion" component="inclusion-exclusion">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-inclusion-exclusion" component="pie">
   <title>Principle of Inclusion-Exclusion</title>
-  <handout>
+  <handout xml:id="notes-pie-intro-surjections" component="pie-intro-surjections">
     <title>Introduction; Counting Surjections</title>
     <page>
       <paragraphs>
@@ -12,6 +12,14 @@
               How many lattice paths from <m>(0,0)</m> to <m>(6,7)</m> do not pass through <m>(2,3)</m> or <m>(3,5)</m>?
             </p>
           </statement>
+          <solution>
+            <p>
+              We count all lattice paths from <m>(0,0)</m> to <m>(6,7)</m> and subtract those that path through either <m>(2,3)</m> or <m>(3,5)</m>. We do this by first subtracting those that pass through <m>(2,3)</m> and then subtracting those that pass through <m>(3,5</m>). However, this subtracts those that pass through both intermediate points twice, so we need to add back that number. This gives us
+              <md>
+                \binom{13}{6} - \binom{5}{2}\binom{8}{4} - \binom{8}{3}\binom{5}{3} + \binom{5}{2}\binom{3}{1}\binom{5}{3}
+              </md>.
+            </p>
+          </solution>
         </example>
         <p>
           We need to introduce some notation:
@@ -108,6 +116,11 @@
                 Identify properties.
               </p>
             </statement>
+            <solution>
+              <p>
+                Let <m>P_A</m> be that a student knows ALGOL60, <m>P_I</m> be that a student knows PL/I, and <m>P_C</m> be that a student knows COBOL.
+              </p>
+            </solution>
           </task>
           <task>
             <statement>
@@ -115,6 +128,13 @@
                  Write out inclusion-exclusion sum.
               </p>
             </statement>
+            <solution>
+              <p>
+                <md>
+                  50 - 32-17-26+12+17+3-2 = 5
+                </md>
+              </p>
+            </solution>
           </task>
         </activity>
       </paragraphs>
@@ -189,7 +209,7 @@
       </paragraphs>
     </page>
   </handout>
-  <handout>
+  <handout component="pie-derangements-euler-phi">
     <title>Counting Derangements and Euler's <m>\phi</m> Function</title>
     <page>
       <paragraphs>
