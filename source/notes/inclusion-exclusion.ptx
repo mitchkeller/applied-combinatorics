@@ -180,7 +180,7 @@
             <p>
               The number <m>S(n,m)</m> of surjections from <m>[n]</m> to <m>[m]</m> is given by
               <me>
-                S(n,m) = \sum_{k=0}^{m} (-1)^{j}\binom{m}{j}(m-j)^{n}
+                S(n,m) = \sum_{j=0}^{m} (-1)^{j}\binom{m}{j}(m-j)^{n}
               </me>.
             </p>
           </statement>
