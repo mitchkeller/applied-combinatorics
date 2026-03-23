@@ -1,56 +1,98 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ws-inclusion-exclusion" component="pie">
   
-    <!-- </page> -->
-     
+  <!-- </page> -->
+  
   <title>Principle of Inclusion-Exclusion</title>
-
+  
   <worksheet xml:id="ws-inclusion-exclusion-surjections" component="pie-surjections">
     <title>Counting Surjections</title>
     <page>
-    <exercise workspace="1cm">
-      <introduction>
-        <p>
-          Let's first focus on the case of counting surjections from <m>[8]</m> to <m>[5]</m>.
-        </p>
-      </introduction>
-
-      
-      <task>
-        <p>
-          How many properties are in <m>\mc{P}</m>? What are they?
-        </p>
-      </task>
-
-      <task>
-        <p>
-          How many functions satisfy <m>P_{1}</m>? What about <m>P_{3}</m>?
-        </p>
-      </task>
-
-      <task>
-        <p>
-          How many functions satisfy <m>P_{1}</m> <em>and</em> <m>P_{3}</m>?
-        </p>
-      </task>
-
-      <task>
-        <p>
-          How many functions satisfy <m>P_{2}</m> <em>and</em> <m>P_{5}</m>?
-        </p>
-      </task>
-
-      <task>
-        <p>
-          Let <m>S\subseteq [5]</m> with <m>|S|=3</m>.
-          How many functions satisfy all properties in <m>S</m>?
-        </p>
-      </task>
-
-      <task workspace="2cm">
-        <p>
-          Use inclusion-exclusion to find the number of surjections from <m>[8]</m> to <m>[5]</m>.
-          (You might want to put your formula into an online calculator.)
-        </p>
+      <exercise workspace="1cm">
+        <introduction>
+          <p>
+            Let's first focus on the case of counting surjections from <m>[8]</m> to <m>[5]</m>.
+          </p>
+        </introduction>
+        
+        
+        <task>
+          <statement>
+            <p>
+              How many properties are in <m>\mc{P}</m>? What are they?
+            </p>
+          </statement>
+          <solution component="pie-surjections-solns">
+            <p>
+              There are <m>5</m> properties: <m>P_1,P_2,P_3,P_4,P_5</m>.
+            </p>
+          </solution>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              How many functions satisfy <m>P_{1}</m>? What about <m>P_{3}</m>?
+            </p>
+          </statement>
+          <solution component="pie-surjections-solns">
+            <p>
+              <m>4^8</m>, <m>4^8</m>. In each case, <m>1</m> number has been excluded from the possible outputs.
+            </p>
+          </solution>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              How many functions satisfy <m>P_{1}</m> <em>and</em> <m>P_{3}</m>?
+            </p>
+          </statement>
+          <solution component="pie-surjections-solns">
+            <p>
+              <m>3^8</m> since <m>2</m> numbers have been excluded from the possible outputs.
+            </p>
+          </solution>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              How many functions satisfy <m>P_{2}</m> <em>and</em> <m>P_{5}</m>?
+            </p>
+          </statement>
+          <solution component="pie-surjections-solns">
+            <p>
+              <m>3^8</m> since <m>2</m> numbers have been excluded from the possible outputs.
+            </p>
+          </solution>
+        </task>
+        
+        <task>
+          <statement>
+            <p>
+              Let <m>S\subseteq [5]</m> with <m>|S|=3</m>.
+              How many functions satisfy all properties in <m>S</m>?
+            </p>
+          </statement>
+          <solution component="pie-surjections-solns">
+            <p>
+              <m>2^8</m> since <m>3</m> numbers have been excluded from the possible outputs.
+            </p>
+          </solution>
+        </task>
+        
+        <task workspace="2cm">
+          <statement>
+          <p>
+            Use inclusion-exclusion to find the number of surjections from <m>[8]</m> to <m>[5]</m>.
+            (You might want to put your formula into an online calculator.)
+          </p>
+        </statement>
+        <solution component="pie-surjections-solns">
+          <p>
+            <md>\sum_{j=0}^5 (-1)^j\binom{5}{j}(5-j)^8 = 126\, 000</md>
+          </p>
+        </solution>
       </task>
     </exercise>
   </page>
@@ -61,38 +103,73 @@
           Now let's count surjections from <m>[n]</m> to <m>[m]</m> (<m>n\geq m</m>).
         </p>
       </introduction>
-
+      
       
       <task>
-        <p>
-          How many properties are in <m>\mc{P}</m>? 
-        </p>
+        <statement>
+          <p>
+            How many properties are in <m>\mc{P}</m>? 
+          </p>
+        </statement>
+        <solution component="pie-surjections-solns">
+          <p>
+            There are <m>m</m> properties: one for each element of the set of possible outputs <m>[m]</m>.
+          </p>
+        </solution>
       </task>
-
+      
       <task>
-        <p>
-          How many functions satisfy <m>P_{1}</m>? What about <m>P_{3}</m>?
-        </p>
+        <statement>
+          <p>
+            How many functions satisfy <m>P_{1}</m>? What about <m>P_{3}</m>?
+          </p>
+        </statement>
+        <solution component="pie-surjections-solns">
+          <p>
+            In each case, one possible output is excluded, so there are <m>(m-1)^n</m>.
+          </p>
+        </solution>
       </task>
-
+      
       <task>
-        <p>
-          How many functions satisfy <m>P_{1}</m> <em>and</em> <m>P_{3}</m>?
-        </p>
+        <statement>
+          <p>
+            How many functions satisfy <m>P_{1}</m> <em>and</em> <m>P_{3}</m>?
+          </p>
+        </statement>
+        <solution component="pie-surjections-solns">
+          <p>
+            Here two possible outputs are excluded, so we have <m>(m-2)^n</m>.
+          </p>
+        </solution>
       </task>
-
+      
       <task>
-        <p>
-          Let <m>S\subseteq [m]</m> with <m>|S|=4</m>.
-          How many functions satisfy all properties in <m>S</m>?
-        </p>
+        <statement>
+          <p>
+            Let <m>S\subseteq [m]</m> with <m>|S|=4</m>.
+            How many functions satisfy all properties in <m>S</m>?
+          </p>
+        </statement>
+        <solution component="pie-surjections-solns">
+          <p>
+            Here four possible outputs are excluded, giving us <m>(m-4)^n</m>.
+          </p>
+        </solution>
       </task>
-
+      
       <task>
-        <p>
-          Let <m>S\subseteq [m]</m> with <m>|S|=j</m>.
-          How many functions satisfy all properties in <m>S</m>?
-        </p>
+        <statement>
+          <p>
+            Let <m>S\subseteq [m]</m> with <m>|S|=j</m>.
+            How many functions satisfy all properties in <m>S</m>?
+          </p>
+        </statement>
+        <solution component="pie-surjections-solns">
+          <p>
+            Here <m>j</m> possible outputs are excluded, giving us <m>(m-j)^n</m>.
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
@@ -100,14 +177,29 @@
             How many subsets of <m>[m]</m> have size <m>j</m>?
           </p>
         </statement>
+        <solution component="pie-surjections-solns">
+          <p>
+            There are <m>C(m,j)</m> such subsets, which tells us how many times <m>(m-j)^n</m> is added/subtracted in the inclusion-exclusion sum.
+          </p>
+        </solution>
       </task>
       <task workspace="2cm">
+        <statement>
         <p>
           Use inclusion-exclusion to find the number of surjections from <m>[n]</m> to <m>[m]</m>.
           
         </p>
-      </task>
-    </exercise>
-  </page>
-  </worksheet>
+      </statement>
+      <solution component="pie-surjections-solns">
+        <p>
+          <md>
+            \sum_{j=0}^m (-1)^j \binom{m}{j}(m-j)^n
+          </md>
+          
+        </p>
+      </solution>
+    </task>
+  </exercise>
+</page>
+</worksheet>
 </chapter>

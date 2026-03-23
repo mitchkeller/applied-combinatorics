@@ -78,7 +78,7 @@
                 <cell> <m>\#</m> </cell>
                 <cell>Language(s)</cell>
               </row>
-
+              
               <row>
                 <cell>32</cell>
                 <cell>ALGOL60</cell>
@@ -87,7 +87,7 @@
                 <cell>2</cell>
                 <cell>All 3</cell>
               </row>
-
+              
               <row>
                 <cell>17</cell>
                 <cell>PL/I</cell>
@@ -96,7 +96,7 @@
                 <cell> </cell>
                 <cell> </cell>
               </row>
-
+              
               <row>
                 <cell>26</cell>
                 <cell>COBOL</cell>
@@ -125,7 +125,7 @@
           <task>
             <statement>
               <p>
-                 Write out inclusion-exclusion sum.
+                Write out inclusion-exclusion sum.
               </p>
             </statement>
             <solution>
@@ -209,7 +209,7 @@
       </paragraphs>
     </page>
   </handout>
-  <handout component="pie-derangements-euler-phi">
+  <handout xml:id="notes-pie-derangements-euler-phi" component="pie-derangements-euler-phi">
     <title>Counting Derangements and Euler's <m>\phi</m> Function</title>
     <page>
       <paragraphs>
@@ -217,9 +217,12 @@
         <p>
           Suppose we randomly distributed name table tents corresponding only to students here today. How many ways can we do this in which no one gets their own table tent?
         </p>
-
+        
         <p workspace="1cm">
           A <term>permutation</term> of <m>[n]</m> is a bijection from <m>[n]</m> to <m>[n]</m>.   
+        </p>
+        <p component="a">
+          A bijection is a function that is both one-to-one and onto. We sometimes also call a bijection a one-to-one correspondence.
         </p>
         <p workspace="2cm">
           A <term>derangement</term> of <m>[n]</m> is a permutation <m>\sigma</m> of <m>[n]</m> if <m>\sigma(i)\neq i</m> for all <m>i\in[n]</m>.
@@ -231,149 +234,230 @@
           A permutation <m>\sigma</m> of <m>[n]</m> satisfies property <m>P_i</m> provided that <fillin characters="10" component="b"/><m component="a">\sigma(i) = i</m>.
         </p>
         <p>
-          To frame your discussion, think about how to fill in this blank: With inclusion-exclusion, our goal is to count the objects that satisfy <fillin characters="10"/> of the properties.
+          To frame your discussion, think about how to fill in this blank: With inclusion-exclusion, our goal is to count the objects that satisfy <fillin characters="10" component="b"/><em component="a">none</em> of the properties.
         </p>
         <p>
           <alert>Peer instruction question 2.</alert>
         </p>
-        <activity workspace="0.25cm">
+        <activity>
           <introduction>
             <p>
               Let's count derangements of <m>[n]</m>.
             </p>
           </introduction>
           
-  <task>
-    <p>
-      How many properties are in <m>\mc{P}</m>?
-    </p>
-  </task>
-
-  <task>
-    <p>
-      How many permutations satisfy <m>P_{1}</m>? What about <m>P_{3}</m>?
-    </p>
-  </task>
-
-  <task>
-    <p>
-      How many permutations satisfy <m>P_{1}</m> <alert>and</alert> <m>P_{3}</m>?
-    </p>
-  </task>
-
-  <task>
-    <p>
-      Let <m>S\subseteq [n]</m> with <m>|S|=4</m>.
-      How many permutations satisfy all properties in <m>S</m>?
-    </p>
-  </task>
-
-  <task>
-    <p>
-      Let <m>S\subseteq [n]</m> with <m>|S|=j</m>.
-      How many permutations satisfy all properties in <m>S</m>?
-    </p>
-  </task>
-
-  <task>
-    <p>
-      How many subsets of <m>[n]</m> have size <m>j</m>?
-    </p>
-  </task>
-
-  <task>
-    <p>
-      Use inclusion-exclusion to find <m>d_{n}</m>, the number of derangements of <m>[n]</m>
-    </p>
-  </task>
-
+          <task>
+            <statement>
+              <p>
+                How many properties are in <m>\mc{P}</m>?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                There are <m>n</m> properties, one for each element of the set being permuted.
+              </p>
+            </solution>
+          </task>
+          
+          <task>
+            <statement>
+              <p>
+                How many permutations satisfy <m>P_{1}</m>? What about <m>P_{3}</m>?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                In both cases, there are <m>(n-1)!</m> permutations since a single value is fixed and the other <m>n-1</m> can be arranged in any possible way.
+              </p>
+            </solution>
+          </task>
+          
+          <task>
+            <statement>
+              <p>
+                How many permutations satisfy <m>P_{1}</m> <alert>and</alert> <m>P_{3}</m>?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Here two values are fixed, so there are <m>(n-2)!</m> permutations.
+              </p>
+            </solution>
+          </task>
+          
+          <task>
+            <statement>
+              <p>
+                Let <m>S\subseteq [n]</m> with <m>|S|=4</m>.
+                How many permutations satisfy all properties in <m>S</m>?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Here we have <m>4</m> fixed values, so there are <m>(n-4)!</m> permutations.
+              </p>
+            </solution>
+          </task>
+          
+          <task>
+            <statement>
+              <p>
+                Let <m>S\subseteq [n]</m> with <m>|S|=j</m>.
+                How many permutations satisfy all properties in <m>S</m>?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Here we have <m>j</m> fixed values, so there are <m>(n-j)!</m> permutations.
+              </p>
+            </solution>
+          </task>
+          
+          <task>
+            <statement>
+              <p>
+                How many subsets of <m>[n]</m> have size <m>j</m>?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <m>\displaystyle\binom{n}{j}</m>
+              </p>
+            </solution>
+          </task>
+          
+          <task>
+            <statement>
+              <p>
+                Use inclusion-exclusion to find <m>d_{n}</m>, the number of derangements of <m>[n]</m>
+              </p>
+            </statement>
+            <solution>
+              <p>
+                <md>
+                  \sum_{j=0}^n (-1)^j \binom{n}{j}(n-j)!
+                </md>
+                
+              </p>
+            </solution>
+          </task>
+          
         </activity>
       </paragraphs>
     </page>
     <page>
       <p>
-          <me component="a">
-  d_{n} = \sum_{k=0}^{n} (-1)^{k}\binom{n}{k}(n-k)! = n! \sum_{k=0}^{n} \frac{(-1)^{k}}{k!}\approx \frac{n!}{e}
-</me>
-<me component="b">
-  d_{n} = \sum_{k=0}^{n} (-1)^{k}\binom{n}{k}(n-k)!\phantom{= n! \sum_{k=0}^{n} \frac{(-1)^{k}}{k!}\approx \frac{n!}{e}}
-</me>
+        <me component="a">
+          d_{n} = \sum_{j=0}^{n} (-1)^{k}\binom{n}{j}(n-j)! = n! \sum_{j=0}^{n} \frac{(-1)^{j}}{j!}\approx \frac{n!}{e}
+        </me>
+        <me component="b">
+          d_{n} = \sum_{j=0}^{n} (-1)^{j}\binom{n}{j}(n-j)!\phantom{= n! \sum_{j=0}^{n} \frac{(-1)^{j}}{j!}\approx \frac{n!}{e}}
+        </me>
       </p>
       <paragraphs>
         <title>Euler <m>\phi</m> function</title>
-          <definition>
-            <statement>
-              <p>
-                Let <m>m</m> and <m>n</m> be integers.
-                The <term>greatest common divisor</term> of <m>m</m> and <m>n</m> is an integer <m>t</m> such that <m>t</m> divides both <m>m</m> and <m>n</m> and if <m>t'</m> also divides <m>m</m> and <m>n</m>, then <m>t'\leq t</m>.
-                We say that <m>m</m> and <m>n</m> are <term>relatively prime</term> provided that <m>\gcd(m,n)=1</m>.
-              </p>
-            </statement>
-          </definition>
-          <p>
-            <alert>Peer instruction question 3.</alert>
-          </p>
-          <definition>
-            <statement>
-              <p>
-                If <m>n\geq 2</m> is an integer, define the <term>Euler <m>\phi</m> function</term> (sometimes <term>Euler totient function</term>)
-                <me>
-                  \phi(n) = \left\vert\{m\in [n]\colon \gcd(m,n) = 1\}\right\vert
-                </me>.
-              </p>
-            </statement>
-          </definition>
-          <activity>
-            <statement>
-              <p>
-                With your group, find the following by listing the integers counted by each:
-                <ul>
-                  <li>
-                    <p workspace="1cm">
-                      <m>\phi(4)</m>
-                    </p>
-                  </li>
-                  
-                  <li>
-                    <p workspace="1cm">
-                      <m>\phi(12)</m>
-                    </p>
-                  </li>
-                  
-                  <li>
-                    <p workspace="1cm">
-                      <m>\phi(13)</m>
-                    </p>
-                  </li>
-                </ul>
-              </p>
-            </statement>
-          </activity>
-          <p>
-            We can also say that  two integers are relatively prime if and only if they do not have any common prime factors.
-          </p>
-          <activity>
-            <statement>
-              <p workspace="4cm">
-                Use inclusion-exclusion to find <m>\phi(30)</m> by excluding those numbers having a common prime factor with <m>30=2\cdot 3\cdot 5</m>.
-              </p>
-              <tabular>
-                <col halign="center" right="minor"> </col> <col> </col>
-                <row bottom="minor">
-                  <cell>2</cell>
-                  <cell>2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30</cell>
-                </row>
-                <row bottom="minor">
-                  <cell>3</cell>
-                  <cell>3, 6, 9, 12, 15, 18, 21, 24, 27, 30</cell>
-                </row>
-                <row>
-                  <cell>5</cell>
-                  <cell>5, 10, 15, 20, 25, 30</cell>
-                </row>
-              </tabular>
-            </statement>
-          </activity>
+        <definition>
+          <statement>
+            <p>
+              Let <m>m</m> and <m>n</m> be integers.
+              The <term>greatest common divisor</term> of <m>m</m> and <m>n</m> is an integer <m>t</m> such that <m>t</m> divides both <m>m</m> and <m>n</m> and if <m>t'</m> also divides <m>m</m> and <m>n</m>, then <m>t'\leq t</m>.
+              We say that <m>m</m> and <m>n</m> are <term>relatively prime</term> provided that <m>\gcd(m,n)=1</m>.
+            </p>
+          </statement>
+        </definition>
+        <p>
+          <alert>Peer instruction question 3.</alert>
+        </p>
+        <definition>
+          <statement>
+            <p>
+              If <m>n\geq 2</m> is an integer, define the <term>Euler <m>\phi</m> function</term> (sometimes <term>Euler totient function</term>)
+              <me>
+                \phi(n) = \left\vert\{m\in [n]\colon \gcd(m,n) = 1\}\right\vert
+              </me>.
+            </p>
+          </statement>
+        </definition>
+        <activity>
+          <statement>
+            <p>
+              With your group, find the following by listing the integers counted by each:
+              <ul>
+                <li>
+                  <p workspace="1cm">
+                    <m>\phi(4)</m>
+                  </p>
+                </li>
+                
+                <li>
+                  <p workspace="1cm">
+                    <m>\phi(12)</m>
+                  </p>
+                </li>
+                
+                <li>
+                  <p workspace="1cm">
+                    <m>\phi(13)</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <m>\phi(4)=2</m> because only <m>1</m> and <m>3</m> in <m>[4]</m> are relatively prime to <m>4</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\phi(12)=4</m> because <m>1,5,7,11</m> are the integers in <m>[12]</m> that are relatively prime to <m>12</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Since <m>13</m> is prime, all of the integers from <m>1</m> to <m>12</m> are relatively prime to <m>13</m> and thus <m>\phi(13)=12</m>.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </solution>
+        </activity>
+        <p>
+          We can also say that  two integers are relatively prime if and only if they do not have any common prime factors.
+        </p>
+        <activity>
+          <statement>
+            <p workspace="4cm">
+              Use inclusion-exclusion to find <m>\phi(30)</m> by excluding those numbers having a common prime factor with <m>30=2\cdot 3\cdot 5</m>.
+            </p>
+            <tabular>
+              <col halign="center" right="minor"> </col> <col> </col>
+              <row bottom="minor">
+                <cell>2</cell>
+                <cell>2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30</cell>
+              </row>
+              <row bottom="minor">
+                <cell>3</cell>
+                <cell>3, 6, 9, 12, 15, 18, 21, 24, 27, 30</cell>
+              </row>
+              <row>
+                <cell>5</cell>
+                <cell>5, 10, 15, 20, 25, 30</cell>
+              </row>
+            </tabular>
+          </statement>
+          <solution>
+            <p>
+              <md>
+                30-15-10-6+5+3+2-1 = 8
+              </md>
+              
+            </p>
+          </solution>
+        </activity>
       </paragraphs>
     </page>
     <page>
@@ -411,6 +495,11 @@
             to compute <m>\phi(1369122257328767073)</m>.
           </p>
         </statement>
+        <solution>
+          <p>
+            <md>\phi(1369122257328767073) = (3)^{3}(11)(19)^{4}(31)^{2}(6067)^{2}\cdot \frac{2}{3} \frac{10}{11}\frac{18}{19}\frac{30}{31}\frac{6066}{6067} = (3)^{2}(19)^{3}(31)(6067)\cdot 2\cdot 10\cdot 18\cdot 30 </md>
+          </p>
+        </solution>
       </example>
       
     </page>
@@ -420,7 +509,7 @@
           <statement>
             <p>
               Find <m>\phi(n)</m> for each of the following integers <m>n</m>.
-              (Use technology to factor!)
+              (Use <em>reliable</em> technology such as WolframAlpha to factor!)
               <ol marker="a.">
                 <li>
                   <p>
@@ -442,6 +531,29 @@
               </ol>
             </p>
           </statement>
+          <solution>
+            <p>
+              <ol marker="a.">
+                <li>
+                  <p>
+                    <m>\phi(600)=\phi(2^3\cdot 3\cdot 5^2) = 2^3\cdot 3\cdot 5^2\frac{1}{2}\frac{2}{3}\frac{4}{5} = 2^2\cdot 2\cdot 5\cdot 4 = =160</m>.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>\phi(12784)=\phi(2^4\cdot 17\cdot 47) = 2^4\cdot 17\cdot 47\cdot \frac{1}{2}\frac{16}{17}\frac{46}{47} = 2^3\cdot 16\cdot 46=5888</m>.
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>\phi(8675309)=8675308</m> because <m>8675309</m> is prime.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
         </task>
         <task>
           <statement>
@@ -455,22 +567,32 @@
               Why might this be hard, despite the information we have learned today?
             </p>
           </statement>
+          <solution>
+            <p>
+              We need the prime factors of <m>n</m>.
+            </p>
+          </solution>
         </task>
         <task workspace="2cm">
           <statement>
             <p>
               Would knowing that <m>n= p_{1}p_{2}</m> for primes
-            <md>
-              <mrow>
-                p_{1} \amp = 470287785858076441566723507866751092927015824834881906763507
-              </mrow>
-              <mrow>
-                 p_{2} \amp = 669483106578092405936560831017556154622901950048903016651289
-              </mrow>
-            </md>
+              <md>
+                <mrow>
+                  p_{1} \amp = 470287785858076441566723507866751092927015824834881906763507
+                </mrow>
+                <mrow>
+                  p_{2} \amp = 669483106578092405936560831017556154622901950048903016651289
+                </mrow>
+              </md>
               help?
             </p>
           </statement>
+          <solution>
+            <p>
+              Yes! Now we can just apply the formula arrived at through inclusion-exclusion.
+            </p>
+          </solution>
         </task>
       </activity>
       <activity workspace="4cm">
@@ -478,23 +600,23 @@
           <p>
             What's wrong with this exercise?
           </p>
-            <blockquote>
-              <p>
-                  A graduate student eats lunch in the campus food court every
-    Tuesday over the course of a 15-week semester. He is joined each
-    week by some subset of a group of six friends from across
-    campus. Over the course of a semester, he ate lunch with each
-    friend 11 times, each pair 9 times, and each triple 6 times. He
-    ate lunch with each group of four friends 4 times and each group of
-    five friends 4 times. All seven of them ate lunch together only once
-    that semester. Did the graduate student ever eat lunch alone? If
-    so, how many times?
-              </p>
-            </blockquote>
+          <blockquote>
+            <p>
+              A graduate student eats lunch in the campus food court every
+              Tuesday over the course of a 15-week semester. He is joined each
+              week by some subset of a group of six friends from across
+              campus. Over the course of a semester, he ate lunch with each
+              friend 11 times, each pair 9 times, and each triple 6 times. He
+              ate lunch with each group of four friends 4 times and each group of
+              five friends 4 times. All seven of them ate lunch together only once
+              that semester. Did the graduate student ever eat lunch alone? If
+              so, how many times?
+            </p>
+          </blockquote>
           
         </statement>
       </activity>
     </page>
   </handout>
-    
+  
 </chapter>
