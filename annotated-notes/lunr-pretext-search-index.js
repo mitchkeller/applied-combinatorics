@@ -917,6 +917,123 @@ var ptx_lunr_docs = [
   "number": "7.6",
   "title": "",
   "body": "  The number of surjections from to is given by .   "
+},
+{
+  "id": "notes-pie-derangements-euler-phi",
+  "level": "1",
+  "url": "notes-pie-derangements-euler-phi.html",
+  "type": "Handout",
+  "number": "7.2",
+  "title": "Counting Derangements and Euler’s <span class=\"process-math\">\\(\\phi\\)<\/span> Function",
+  "body": " Counting Derangements and Euler's Function    Counting Derangements  Suppose we randomly distributed name table tents corresponding only to students here today. How many ways can we do this in which no one gets their own table tent?  A permutation of is a bijection from to .  A bijection is a function that is both one-to-one and onto. We sometimes also call a bijection a one-to-one correspondence.  A derangement of is a permutation of if for all .   Peer instruction question 1.   A permutation of satisfies property provided that .  To frame your discussion, think about how to fill in this blank: With inclusion-exclusion, our goal is to count the objects that satisfy none of the properties.   Peer instruction question 2.     Let's count derangements of .     How many properties are in ?    There are properties, one for each element of the set being permuted.      How many permutations satisfy ? What about ?    In both cases, there are permutations since a single value is fixed and the other can be arranged in any possible way.      How many permutations satisfy  and  ?    Here two values are fixed, so there are permutations.      Let with . How many permutations satisfy all properties in ?    Here we have fixed values, so there are permutations.      Let with . How many permutations satisfy all properties in ?    Here we have fixed values, so there are permutations.      How many subsets of have size ?           Use inclusion-exclusion to find , the number of derangements of                  Euler function    Let and be integers. The greatest common divisor of and is an integer such that divides both and and if also divides and , then . We say that and are relatively prime provided that .     Peer instruction question 3.     If is an integer, define the Euler function (sometimes Euler totient function ) .      With your group, find the following by listing the integers counted by each:                         because only and in are relatively prime to .     because are the integers in that are relatively prime to .    Since is prime, all of the integers from to are relatively prime to and thus .       We can also say that two integers are relatively prime if and only if they do not have any common prime factors.    Use inclusion-exclusion to find by excluding those numbers having a common prime factor with .        2  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30    3  3, 6, 9, 12, 15, 18, 21, 24, 27, 30    5  5, 10, 15, 20, 25, 30                Let , , and let be distinct primes each of which divide . The number of integers from which are divisible by each of these primes is       Let be a positive integer and suppose that has distinct prime factors: , . Then       Use the fact that to compute .              Find for each of the following integers . (Use reliable technology such as WolframAlpha to factor!)                         .     .     because is prime.         Suppose you need to find where . Why might this be hard, despite the information we have learned today?    We need the prime factors of .      Would knowing that for primes help?    Yes! Now we can just apply the formula arrived at through inclusion-exclusion.       What's wrong with this exercise?   A graduate student eats lunch in the campus food court every Tuesday over the course of a 15-week semester. He is joined each week by some subset of a group of six friends from across campus. Over the course of a semester, he ate lunch with each friend 11 times, each pair 9 times, and each triple 6 times. He ate lunch with each group of four friends 4 times and each group of five friends 4 times. All seven of them ate lunch together only once that semester. Did the graduate student ever eat lunch alone? If so, how many times?      "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-2-1-3",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-2-1-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "permutation "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-2-1-5",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-2-1-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "derangement "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-2-1-10",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-2-1-10",
+  "type": "Activity",
+  "number": "7.2.1",
+  "title": "",
+  "body": "  Let's count derangements of .     How many properties are in ?    There are properties, one for each element of the set being permuted.      How many permutations satisfy ? What about ?    In both cases, there are permutations since a single value is fixed and the other can be arranged in any possible way.      How many permutations satisfy  and  ?    Here two values are fixed, so there are permutations.      Let with . How many permutations satisfy all properties in ?    Here we have fixed values, so there are permutations.      Let with . How many permutations satisfy all properties in ?    Here we have fixed values, so there are permutations.      How many subsets of have size ?           Use inclusion-exclusion to find , the number of derangements of          "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-3-2-2",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-3-2-2",
+  "type": "Definition",
+  "number": "7.7",
+  "title": "",
+  "body": "  Let and be integers. The greatest common divisor of and is an integer such that divides both and and if also divides and , then . We say that and are relatively prime provided that .   "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-3-2-4",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-3-2-4",
+  "type": "Definition",
+  "number": "7.8",
+  "title": "",
+  "body": "  If is an integer, define the Euler function (sometimes Euler totient function ) .   "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-3-2-5",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-3-2-5",
+  "type": "Activity",
+  "number": "7.2.2",
+  "title": "",
+  "body": "  With your group, find the following by listing the integers counted by each:                         because only and in are relatively prime to .     because are the integers in that are relatively prime to .    Since is prime, all of the integers from to are relatively prime to and thus .      "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-3-2-7",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-3-2-7",
+  "type": "Activity",
+  "number": "7.2.3",
+  "title": "",
+  "body": "  Use inclusion-exclusion to find by excluding those numbers having a common prime factor with .        2  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30    3  3, 6, 9, 12, 15, 18, 21, 24, 27, 30    5  5, 10, 15, 20, 25, 30          "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-4-1",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-4-1",
+  "type": "Proposition",
+  "number": "7.9",
+  "title": "",
+  "body": "  Let , , and let be distinct primes each of which divide . The number of integers from which are divisible by each of these primes is    "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-4-2",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-4-2",
+  "type": "Theorem",
+  "number": "7.10",
+  "title": "",
+  "body": "  Let be a positive integer and suppose that has distinct prime factors: , . Then    "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-4-3",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-4-3",
+  "type": "Example",
+  "number": "7.11",
+  "title": "",
+  "body": "  Use the fact that to compute .        "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-5-1",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-5-1",
+  "type": "Activity",
+  "number": "7.2.4",
+  "title": "",
+  "body": "   Find for each of the following integers . (Use reliable technology such as WolframAlpha to factor!)                         .     .     because is prime.         Suppose you need to find where . Why might this be hard, despite the information we have learned today?    We need the prime factors of .      Would knowing that for primes help?    Yes! Now we can just apply the formula arrived at through inclusion-exclusion.    "
+},
+{
+  "id": "notes-pie-derangements-euler-phi-5-2",
+  "level": "2",
+  "url": "notes-pie-derangements-euler-phi.html#notes-pie-derangements-euler-phi-5-2",
+  "type": "Activity",
+  "number": "7.2.5",
+  "title": "",
+  "body": "  What's wrong with this exercise?   A graduate student eats lunch in the campus food court every Tuesday over the course of a 15-week semester. He is joined each week by some subset of a group of six friends from across campus. Over the course of a semester, he ate lunch with each friend 11 times, each pair 9 times, and each triple 6 times. He ate lunch with each group of four friends 4 times and each group of five friends 4 times. All seven of them ate lunch together only once that semester. Did the graduate student ever eat lunch alone? If so, how many times?    "
 }
 ]
 

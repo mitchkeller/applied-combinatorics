@@ -664,7 +664,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "7.1",
   "title": "Counting Surjections",
-  "body": " Counting Surjections     Let's first focus on the case of counting surjections from to .    How many properties are in ? What are they?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Use inclusion-exclusion to find the number of surjections from to . (You might want to put your formula into an online calculator.)        Now let's count surjections from to ( ).    How many properties are in ?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Let with . How many functions satisfy all properties in ?     How many subsets of have size ?     Use inclusion-exclusion to find the number of surjections from to .     "
+  "body": " Counting Surjections     Let's first focus on the case of counting surjections from to .     How many properties are in ? What are they?    There are properties: .      How many functions satisfy ? What about ?     , . In each case, number has been excluded from the possible outputs.      How many functions satisfy  and  ?     since numbers have been excluded from the possible outputs.      How many functions satisfy  and  ?     since numbers have been excluded from the possible outputs.      Let with . How many functions satisfy all properties in ?     since numbers have been excluded from the possible outputs.      Use inclusion-exclusion to find the number of surjections from to . (You might want to put your formula into an online calculator.)              Now let's count surjections from to ( ).     How many properties are in ?    There are properties: one for each element of the set of possible outputs .      How many functions satisfy ? What about ?    In each case, one possible output is excluded, so there are .      How many functions satisfy  and  ?    Here two possible outputs are excluded, so we have .      Let with . How many functions satisfy all properties in ?    Here four possible outputs are excluded, giving us .      Let with . How many functions satisfy all properties in ?    Here possible outputs are excluded, giving us .      How many subsets of have size ?    There are such subsets, which tells us how many times is added\/subtracted in the inclusion-exclusion sum.      Use inclusion-exclusion to find the number of surjections from to .           "
 },
 {
   "id": "ws-inclusion-exclusion-surjections-2-1",
@@ -673,7 +673,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "7.1.1",
   "title": "",
-  "body": "  Let's first focus on the case of counting surjections from to .    How many properties are in ? What are they?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Use inclusion-exclusion to find the number of surjections from to . (You might want to put your formula into an online calculator.)   "
+  "body": "  Let's first focus on the case of counting surjections from to .     How many properties are in ? What are they?    There are properties: .      How many functions satisfy ? What about ?     , . In each case, number has been excluded from the possible outputs.      How many functions satisfy  and  ?     since numbers have been excluded from the possible outputs.      How many functions satisfy  and  ?     since numbers have been excluded from the possible outputs.      Let with . How many functions satisfy all properties in ?     since numbers have been excluded from the possible outputs.      Use inclusion-exclusion to find the number of surjections from to . (You might want to put your formula into an online calculator.)         "
 },
 {
   "id": "ws-inclusion-exclusion-surjections-3-1",
@@ -682,7 +682,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "7.1.2",
   "title": "",
-  "body": "  Now let's count surjections from to ( ).    How many properties are in ?    How many functions satisfy ? What about ?    How many functions satisfy  and  ?    Let with . How many functions satisfy all properties in ?    Let with . How many functions satisfy all properties in ?     How many subsets of have size ?     Use inclusion-exclusion to find the number of surjections from to .   "
+  "body": "  Now let's count surjections from to ( ).     How many properties are in ?    There are properties: one for each element of the set of possible outputs .      How many functions satisfy ? What about ?    In each case, one possible output is excluded, so there are .      How many functions satisfy  and  ?    Here two possible outputs are excluded, so we have .      Let with . How many functions satisfy all properties in ?    Here four possible outputs are excluded, giving us .      Let with . How many functions satisfy all properties in ?    Here possible outputs are excluded, giving us .      How many subsets of have size ?    There are such subsets, which tells us how many times is added\/subtracted in the inclusion-exclusion sum.      Use inclusion-exclusion to find the number of surjections from to .         "
 }
 ]
 
