@@ -224,12 +224,13 @@
         <p component="a">
           A bijection is a function that is both one-to-one and onto. We sometimes also call a bijection a one-to-one correspondence.
         </p>
-        <p workspace="2cm">
-          A <term>derangement</term> of <m>[n]</m> is a permutation <m>\sigma</m> of <m>[n]</m> if <m>\sigma(i)\neq i</m> for all <m>i\in[n]</m>.
-        </p>
         <p>
           <alert>Peer instruction question 1.</alert>
         </p>
+        <p workspace="2cm">
+          A <term>derangement</term> of <m>[n]</m> is a permutation <m>\sigma</m> of <m>[n]</m> if <m>\sigma(i)\neq i</m> for all <m>i\in[n]</m>.
+        </p>
+        
         <p>
           A permutation <m>\sigma</m> of <m>[n]</m> satisfies property <m>P_i</m> provided that <fillin characters="10" component="b"/><m component="a">\sigma(i) = i</m>.
         </p>
@@ -289,7 +290,7 @@
             <statement>
               <p>
                 Let <m>S\subseteq [n]</m> with <m>|S|=4</m>.
-                How many permutations satisfy all properties in <m>S</m>?
+                How many permutations satisfy all properties with subscript in <m>S</m>?
               </p>
             </statement>
             <solution>
@@ -303,7 +304,7 @@
             <statement>
               <p>
                 Let <m>S\subseteq [n]</m> with <m>|S|=j</m>.
-                How many permutations satisfy all properties in <m>S</m>?
+                How many permutations satisfy all properties with subscript in <m>S</m>?
               </p>
             </statement>
             <solution>
@@ -497,7 +498,7 @@
         </statement>
         <solution>
           <p>
-            <md>\phi(1369122257328767073) = (3)^{3}(11)(19)^{4}(31)^{2}(6067)^{2}\cdot \frac{2}{3} \frac{10}{11}\frac{18}{19}\frac{30}{31}\frac{6066}{6067} = (3)^{2}(19)^{3}(31)(6067)\cdot 2\cdot 10\cdot 18\cdot 30 </md>
+            <md>\phi(1369122257328767073) = (3)^{3}(11)(19)^{4}(31)^{2}(6067)^{2}\cdot \frac{2}{3} \frac{10}{11}\frac{18}{19}\frac{30}{31}\frac{6066}{6067} = (3)^{2}(19)^{3}(31)(6067)\cdot 2\cdot 10\cdot 18\cdot 30\cdot 6066 </md>
           </p>
         </solution>
       </example>
