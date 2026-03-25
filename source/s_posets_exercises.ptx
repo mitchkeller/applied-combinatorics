@@ -59,7 +59,7 @@
                 There's a unique chain of 4 points that has to be in that order and the three points not in that chain form an antichain.
                 (I'm going to omit parentheses and commas when writing the elements here.) If we have both 573 at the top of the linear extension and 415 at the bottom of the linear extension, then there are three spots for 254, so 3 linear extensions in this case.
                 If 573 is at the top of the linear extension but 415 is not at the bottom, then there are two choices for where to put 415 and after doing that, there are 4 spots for where to put 254, which results in 8 linear extensions for this case.
-                The case with 415 at the bottom and 573 not at the top is dual, so 8 more.
+                The case with 415 at the bottom and 573 not at the top is dual, so 8 more.
                 If we have 767 at the top and 121 at the bottom (the only remaining scenario), then there are 5 ways to place 573 and 415 into the 4-point chain (listing them out is the quickest way to see this, I think).
                 Once that is done, there are 5 spots for 254 to go, so 25 linear extensions in this case.
                 Thus, there are 44 in total.
