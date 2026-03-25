@@ -3,6 +3,15 @@
     <statement>
       <p>A school has <m>147</m> third graders. The third grade teachers have planned a special treat for the last day of school and brought ice cream for their students. There are three flavors: mint chip, chocolate, and strawberry. Suppose that <m>60</m> students like (at least) mint chip, <m>103</m> like chocolate, <m>50</m> like strawberry, <m>30</m> like mint chip and strawberry, <m>40</m> like mint chip and chocolate, <m>25</m> like chocolate and strawberry, and <m>18</m> like all three flavors. How many students don't like any of the flavors available?</p>
     </statement>
+    <solution>
+      <p>
+        This is a straightforward application of the Principle of Inclusion-Exclusion, and we have
+        <me>
+          147 - 60-103-50+30+40+25-18 = 29
+        </me>
+        students who like none of the flavors.
+      </p>
+    </solution>
   </exercise>
   <exercise>
     <statement>
@@ -29,6 +38,21 @@
           <p>How many positive integers less than or equal to <m>1000</m> are
             divisible by none of <m>3</m>, <m>8</m>, and <m>25</m>?</p>
           </statement>
+          <solution>
+            <p>
+              There are 333 multiples of <m>3</m> between 1 and 1000.
+              There are 125 multiples of 8 between 1 and 1000.
+              There are 40 multiples of 25 in this range.
+              Since 3, 8, and 25 do not have any prime factors in common, being divisible by two of these means being divisible by 24, 75, or 200, respectively.
+              There are 41, 13, and 5 multiples in this range, respectively.
+              Finally, being divisible by all three is the same as being divisible by 600, so there is 1 number.
+              Thus, applying the Principle of Inclusion-Exclusion, we have
+              <me>
+                1000-333-125-40+41+13+5-1=560
+              </me>
+              numbers between 1 and 1000 that are divisible by none of 3, 8, and 25.
+            </p>
+          </solution>
         </exercise>
         <exercise>
           <statement>
@@ -169,6 +193,18 @@
             <statement>
               <p>A professor is working with six undergraduate research students. He has <m>12</m> topics that he would like these students to begin investigating. Since he has been working with Katie for several terms, he wants to ensure that she is given the most challenging topic (and possibly others). Each topic must be assigned to a single student. Subject to this, in how many ways can he assign the topics to his students if each student must be assigned at least one topic?</p>
             </statement>
+            <solution>
+              <p>
+                We do the counting here by considering two cases.
+                First, we count where Katie receives only the one, hardest topic.
+                Second, we count where Katie receives that topic and at least one additional topic.
+                When Katie receives only the one, hardest topic, we just distribute the remaining 11 topics to the five other students using a surjection so each student gets at least one topic.
+                There are <m>S(11,5)</m> ways to do this.
+                When Katie gets more than just the hardest topic, we still have 11 other topics to distribute, but now we must have a surjection to the set of all six students.
+                Thus, there are <m>S(11,6)</m> for this case.
+                The total number is the sum of these: <m>S(11,5)+S(11,6)</m>.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
@@ -189,6 +225,17 @@
             <statement>
               <p>A careless payroll clerk is placing employees' paychecks into envelopes that have been pre-labeled. The envelopes are sealed before the clerk realizes he didn't match the names on the paychecks with the names on the envelopes. If there are seven employees, in how many ways could he have placed the paychecks into the envelopes so that exactly three employees receive the correct paycheck?</p>
             </statement>
+            <solution>
+              <p>
+                First we choose the three who do get the correct paycheck.
+                There are <m>C(7,3)</m> ways to do this.
+                Then the other four checks must be distributed using a derangement, so we have
+                <me>
+                  \binom{7}{3}d_{4} = \binom{7}{3}\sum_{k=0}^{4}(-1)^{k}\binom{4}{k}(4-k)!
+                </me>
+                ways.
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
