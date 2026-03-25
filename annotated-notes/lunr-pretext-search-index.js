@@ -1034,6 +1034,78 @@ var ptx_lunr_docs = [
   "number": "7.2.5",
   "title": "",
   "body": "  What's wrong with this exercise?   A graduate student eats lunch in the campus food court every Tuesday over the course of a 15-week semester. He is joined each week by some subset of a group of six friends from across campus. Over the course of a semester, he ate lunch with each friend 11 times, each pair 9 times, and each triple 6 times. He ate lunch with each group of four friends 4 times and each group of five friends 4 times. All seven of them ate lunch together only once that semester. Did the graduate student ever eat lunch alone? If so, how many times?    "
+},
+{
+  "id": "genfunction-intro-ogf",
+  "level": "1",
+  "url": "genfunction-intro-ogf.html",
+  "type": "Handout",
+  "number": "8.1",
+  "title": "Introduction to Ordinary Generating Functions",
+  "body": " Introduction to Ordinary Generating Functions    Formal Power Series     Sequence     Formal power series     Convergence tests? Don't care!   Notice that , the constant term, so occasionally we might put in for this reason.    Interval and radius of convergence? Don't care!     Representing as functions? Whenever possible!       In combinatorics, we call formal power series generating functions .       Let and be generating functions. Then is the generating function of the sequence whose coefficient on is given by      PAINFUL!   Let's suppose we want to find the coefficient on the term in the product. Then we only really need to think about the terms up through the terms in the factors:     Handing stuff out again  Suppose you wanted to make a really boring fruit basket that contains only apples. Let's also say that you have only (identical) apples available. For aesthetic reasons, you insist that the basket contain exactly , , or apples.   Peer instruction questions 1 2.   The generating function for the number of fruit baskets with apples subject to these rules is .  Now we've got oranges, too! We have six (identical) oranges to use in fruit baskets, and we don't care about aesthetics for oranges. (Still only allow 1, 3, or 4 apples.)  How many ways to make a fruit basket with    piece of fruit?  Just 1: A     pieces of fruit?  2: AAA, AOO     pieces of fruit?  3: AOOOOOO, AAAOOOO, AAAAOOO           Suppose we now have bananas to add and that we must place at least one banana in a fruit basket. This introduces which factor? Peer instruction question 3      Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Pears: at least     Peaches: an even number    Kiwi: at least and no more than     Grapefruit: either none or at least                              The generating function is thus .     Peer instruction question 4.     Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Apples: , , or     Oranges: At most six    Bananas: At least one    Peaches: An odd number                             The generating function is thus .        Suppose in the country Combinatoria, they use coins with values 1, 2, 5, 10, 50, and 100. If you would like to write a generating function in which the coefficient on is the number of ways to form a collection of coins worth subject to the restriction that the number of coins of value is one, three, four, or five, what factor would you introduce into your generating function?            My Own Journey with Generating Functions   Keller and Young 2020   The ordinary generating function for the number of hereditary unit interval orders with points, , is and is asymptotically .     OEIS A293499 ( New! )    Keller and Young 2020   The generating function for the number of unit interval orders of dimension at most with points, , is and is asymptotically .     OEIS A293498 ( New! )    "
+},
+{
+  "id": "genfunction-intro-ogf-2-1-2",
+  "level": "2",
+  "url": "genfunction-intro-ogf.html#genfunction-intro-ogf-2-1-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "generating functions "
+},
+{
+  "id": "genfunction-intro-ogf-2-1-3",
+  "level": "2",
+  "url": "genfunction-intro-ogf.html#genfunction-intro-ogf-2-1-3",
+  "type": "Proposition",
+  "number": "8.1",
+  "title": "",
+  "body": "  Let and be generating functions. Then is the generating function of the sequence whose coefficient on is given by    "
+},
+{
+  "id": "genfunction-intro-ogf-3-3",
+  "level": "2",
+  "url": "genfunction-intro-ogf.html#genfunction-intro-ogf-3-3",
+  "type": "Activity",
+  "number": "8.1.1",
+  "title": "",
+  "body": "  Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Pears: at least     Peaches: an even number    Kiwi: at least and no more than     Grapefruit: either none or at least                              The generating function is thus .   "
+},
+{
+  "id": "genfunction-intro-ogf-3-5",
+  "level": "2",
+  "url": "genfunction-intro-ogf.html#genfunction-intro-ogf-3-5",
+  "type": "Activity",
+  "number": "8.1.2",
+  "title": "",
+  "body": "  Find the generating function in which the coefficient on is the number of fruit baskets containing pieces of fruit subject to the following restrictions:   Apples: , , or     Oranges: At most six    Bananas: At least one    Peaches: An odd number                             The generating function is thus .   "
+},
+{
+  "id": "genfunction-intro-ogf-4-1",
+  "level": "2",
+  "url": "genfunction-intro-ogf.html#genfunction-intro-ogf-4-1",
+  "type": "Activity",
+  "number": "8.1.3",
+  "title": "",
+  "body": "  Suppose in the country Combinatoria, they use coins with values 1, 2, 5, 10, 50, and 100. If you would like to write a generating function in which the coefficient on is the number of ways to form a collection of coins worth subject to the restriction that the number of coins of value is one, three, four, or five, what factor would you introduce into your generating function?        "
+},
+{
+  "id": "genfunction-intro-ogf-5-1-2",
+  "level": "2",
+  "url": "genfunction-intro-ogf.html#genfunction-intro-ogf-5-1-2",
+  "type": "Theorem",
+  "number": "8.2",
+  "title": "Keller and Young 2020.",
+  "body": " Keller and Young 2020   The ordinary generating function for the number of hereditary unit interval orders with points, , is and is asymptotically .   "
+},
+{
+  "id": "genfunction-intro-ogf-5-1-4",
+  "level": "2",
+  "url": "genfunction-intro-ogf.html#genfunction-intro-ogf-5-1-4",
+  "type": "Theorem",
+  "number": "8.3",
+  "title": "Keller and Young 2020.",
+  "body": " Keller and Young 2020   The generating function for the number of unit interval orders of dimension at most with points, , is and is asymptotically .   "
 }
 ]
 
