@@ -1,6 +1,6 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="notes-genfunction" component="genfunction">
   <title>Generating Functions</title>
-  <handout>
+  <handout xml:id="genfunction-intro-ogf" component="genfunction-intro-ogf">
     <title>Introduction to Ordinary Generating Functions</title>
     <page>
       <paragraphs>
@@ -22,6 +22,9 @@
             <li>
               <p component="a">
                 Convergence tests? <alert>Don't care!</alert>
+              </p>
+              <p component="a">
+                Notice that <m>F(0)=a_0</m>, the constant term, so occasionally we might put in <m>x=0</m> for this reason.
               </p>
               <p component="b">
                 Convergence tests?
@@ -73,22 +76,35 @@
         <p workspace="1cm">
           <alert>PAINFUL!</alert>
         </p>
+        <p component="a">
+          Let's suppose we want to find the coefficient on the <m>x^3</m> term in the product. Then we only really need to think about the terms up through the <m>x^3</m> terms in the factors:
+          <md>
+            (a_0 + a_1 x+a_2 x^2 + a_3x^3 + \cdots)(b_0 + b_1 x + b_2x^2 + b_3 x^3 + \cdots) = \cdots + [a_0b_3+a_1b_2+a_2b_1+a_3b_0]x^3 + \cdots
+          </md>
+          
+        </p>
       </paragraphs>
       <paragraphs>
         <title>Handing stuff out again</title>
         <p>
-          Suppose you wanted to make a really boring &#8220;fruit&#8221; basket that contains only apples.
-          Let&#8217;s also say that you have only <m>6</m> (identical) apples available.
+          Suppose you wanted to make a really boring <q>fruit</q> basket that contains only apples.
+          Let's also say that you have only <m>6</m> (identical) apples available.
           For aesthetic reasons, you insist that the basket contain exactly <m>1</m>, <m>3</m>, or <m>4</m> apples.
         </p>
         <p>
           <alert>Peer instruction questions 1<ndash/>2.</alert>
         </p>
-        <p workspace="1cm">
+        <p workspace="1cm" component="b">
           The generating function for the number of fruit baskets with <m>n</m> apples subject to these rules is
         </p>
+        <p component="a">
+          The generating function for the number of fruit baskets with <m>n</m> apples subject to these rules is
+          <md>
+            0 + x^1 + 0x^2 + x^3 + x^4 + 0x^5 + 0x^6 = x+x^3+x^4
+          </md>.
+        </p>
         <p>
-          Now we&#8217;ve got oranges, too! We have six (identical) oranges to use in fruit baskets, and we don&#8217;t care about aesthetics for oranges.
+          Now we've got oranges, too! We have six (identical) oranges to use in fruit baskets, and we don't care about aesthetics for oranges.
           (Still only allow 1, 3, or 4 apples.)
         </p>
         
@@ -99,17 +115,26 @@
               <p>
                 <m>1</m> piece of fruit?
               </p>
+              <p component="a">
+                Just 1: A
+              </p>
             </li>
             
             <li>
               <p>
                 <m>3</m> pieces of fruit?
               </p>
+              <p component="a">
+                2: AAA, AOO
+              </p>
             </li>
             
             <li>
               <p>
                 <m>7</m> pieces of fruit?
+              </p>
+              <p component="a">
+                3: AOOOOOO, AAAOOOO, AAAAOOO
               </p>
             </li>
           </ul>
@@ -125,12 +150,16 @@
       </p>
       <p workspace="3cm">
         Suppose we now have bananas to add and that we must place at least one banana in a fruit basket. This introduces which factor? <alert>Peer instruction question 3</alert>
+        <md component="a">
+          x + x^2 + x^3 + \cdots = \sum_{n=1}^\infty x^n = x\sum_{n=1}^\infty x^{n-1} = x\sum_{n=0}^\infty x^{n} = x\frac{1}{1-x} = \frac{x}{1-x}
+        </md>
+        
       </p>
       <activity workspace="4cm">
         <statement>
           <p>
             Find the generating function in which the coefficient on <m>x^{n}</m> is the number of fruit baskets containing <m>n</m> pieces of fruit subject to the following restrictions:
-            <ol marker="(1)">
+            <ol marker="a.">
               <li>
                 <p>
                   Pears: at least <m>3</m>
@@ -157,6 +186,40 @@
             </ol>
           </p>
         </statement>
+        <solution>
+          <p>
+            <ol marker="a.">
+              <li>
+                <p>
+                  <m>\displaystyle \frac{x^3}{1-x}</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  <m>\displaystyle \frac{1}{1-x^2}</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  <m>x^2 + x^3 + x^4 + x^5</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  <m>1 + \sum_{n=7}^\infty x^n = 1 + \displaystyle\frac{x^7}{1-x}</m>
+                </p>
+              </li>
+            </ol>
+            The generating function is thus
+            <md>
+              \frac{x^3}{1-x}\cdot \frac{1}{1-x^2} \cdot \left(x^2 + x^3 + x^4 + x^5 \right)\cdot \left(1 + \displaystyle\frac{x^7}{1-x}\right)
+            </md>.
+            
+          </p>
+        </solution>
       </activity>
       <p>
         <alert>Peer instruction question 4.</alert>
@@ -165,7 +228,7 @@
         <statement>
           <p>
             Find the generating function in which the coefficient on <m>x^{n}</m> is the number of fruit baskets containing <m>n</m> pieces of fruit subject to the following restrictions:
-            <ol marker="(1)">
+            <ol marker="a.">
               <li>
                 <p>
                   Apples: <m>1</m>, <m>3</m>, or <m>4</m>
@@ -192,6 +255,40 @@
             </ol>
           </p>
         </statement>
+        <solution>
+          <p>
+            <ol marker="a.">
+              <li>
+                <p>
+                  <m>x + x^3 + x^4</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  <m>1+x+x^2+x^3+x^4+x^5+x^6</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  <m>\displaystyle \frac{x}{1-x}</m>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                  <m>\displaystyle \sum_{n=0}^\infty x^{2n+1} = x\sum_{n=0}^\infty x^{2n} = \frac{x}{1-x^2}</m>
+                </p>
+              </li>
+            </ol>
+            The generating function is thus
+            <md>
+              \left( x + x^3 + x^4\right)\left(1+x+x^2+x^3+x^4+x^5+x^6\right)\cdot \frac{x}{1-x}\cdot \frac{x}{1-x^2}
+            </md>.
+            
+          </p>
+        </solution>
       </activity>
     </page>
     <page>
@@ -202,6 +299,11 @@
             If you would like to write a generating function in which the coefficient on <m>x^{n}</m> is the number of ways to form a collection of coins worth <m>n</m> subject to the restriction that the number of coins of value <m>5</m> is one, three, four, or five, what factor would you introduce into your generating function?
           </p>
         </statement>
+        <solution>
+          <p>
+            <m>x^5 + x^{3\cdot 5} + x^{4\cdot 5} + x^{5\cdot 5} = x^5 + x^{15} + x^{20} + x^{25}</m>
+          </p>
+        </solution>
       </activity>
     </page>
     <page>
@@ -255,7 +357,7 @@
       </paragraphs>
     </page>
   </handout>
-  <handout>
+  <handout xml:id="genfunction-partitions-newton" component="genfunction-partitions-newton">
     <title>Partitions and Newton's Binomial Theorem</title>
     <page>
     <paragraphs>
@@ -434,7 +536,7 @@
           <task workspace="7cm">
             <statement>
               <p>
-                Use Newton&#8217;s Binomial Theorem and the step above to write <m>(1-4x)^{-1/2}</m> as a formal power series in which the coefficient on <m>x^{n}</m> is a binomial coefficient in which both numbers are <alert>integers</alert>.
+                Use Newton's Binomial Theorem and the step above to write <m>(1-4x)^{-1/2}</m> as a formal power series in which the coefficient on <m>x^{n}</m> is a binomial coefficient in which both numbers are <alert>integers</alert>.
               </p>
             </statement>
           </task>
@@ -442,7 +544,7 @@
     </paragraphs>
   </page>
   </handout>
-  <handout xml:id="notes-exp-genfn">
+  <handout xml:id="notes-exp-genfn" component="genfunction-expgf">
     <title>Exponential Generating Functions</title>
     <p>
       <alert>Peer instruction questions 1<ndash/>3.</alert>

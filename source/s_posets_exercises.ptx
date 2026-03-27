@@ -59,7 +59,7 @@
                 There's a unique chain of 4 points that has to be in that order and the three points not in that chain form an antichain.
                 (I'm going to omit parentheses and commas when writing the elements here.) If we have both 573 at the top of the linear extension and 415 at the bottom of the linear extension, then there are three spots for 254, so 3 linear extensions in this case.
                 If 573 is at the top of the linear extension but 415 is not at the bottom, then there are two choices for where to put 415 and after doing that, there are 4 spots for where to put 254, which results in 8 linear extensions for this case.
-                The case with 415 at the bottom and 573 not at the top is dual, so 8 more.
+                The case with 415 at the bottom and 573 not at the top is dual, so 8 more.
                 If we have 767 at the top and 121 at the bottom (the only remaining scenario), then there are 5 ways to place 573 and 415 into the 4-point chain (listing them out is the quickest way to see this, I think).
                 Once that is done, there are 5 spots for 254 to go, so 25 linear extensions in this case.
                 Thus, there are 44 in total.
@@ -284,6 +284,11 @@
               </figure>
               
             </statement>
+            <solution>
+              <p>
+                This poset is not an interval order. There are many occurrences of <m>\mathbf{2}+\mathbf{2}</m>. One example would be <m>\set{1,3,8,4}</m>. 
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
@@ -295,6 +300,43 @@
                 </description></image>
               </figure>
             </statement>
+            <solution>
+              <p>
+                We write out the down-sets and up-sets:
+                <md>
+                  <mrow>D(1)\amp = \{2,7\}\amp U(1)\amp = \{6,8,9,11\}</mrow>
+                  <mrow> D(2)\amp = \{7\}\amp U(2)\amp = \{1,3,5,6,8,9,10,11,12\}</mrow>
+                  <mrow> D(3)\amp = \{2,4,7,10\}\amp U(3)\amp = \{\}</mrow>
+                  <mrow> D(4)\amp = \{\}\amp U(4)\amp = \{3,6,8,9,10,11\}</mrow>
+                  <mrow> D(5)\amp = \{2,7\}\amp U(5)\amp = \{8,9,11\}</mrow>
+                  <mrow> D(6)\amp = \{1,2,4,7,10\}\amp U(6)\amp = \{9,11\}</mrow>
+                  <mrow> D(7)\amp = \{\}\amp U(7)\amp = \{1,2,3,5,6,8,9,10,11,12\}</mrow>
+                  <mrow> D(8)\amp = \{1,2,4,5,7,10,12\}\amp U(8)\amp = \{9,11\}</mrow>
+                  <mrow> D(9)\amp = \{1,2,4,5,6,7,8,10,12\}\amp U(9)\amp = \{\}</mrow>
+                  <mrow> D(10)\amp = \{2,4,7\}\amp U(10)\amp = \{3,6,8,9,11\}</mrow>
+                  <mrow> D(11)\amp = \{1,2,4,5,6,7,8,10,12\}\amp U(11)\amp = \{\}</mrow>
+                  <mrow> D(12)\amp = \{2,7\}\amp U(12)\amp = \{8,9,11\}</mrow>
+                </md>
+                
+                Putting the down-sets in ascending order and the up-sets in ascending order, we have
+                <me>
+                  \{\} \subsetneq \{7\}\subsetneq \{2,7\}\subsetneq \{2,4,7\} \subsetneq \{2,4,7,10\}\subsetneq \{1,2,4,7,10\}\subsetneq \{1,2,4,5,7,10,12\}\subsetneq \{1,2,4,5,6,7,8,10,12\}
+                </me>
+                <me>
+                  \{1,2,3,5,6,8,9,10,11,12\}\supsetneq \{1,3,5,6,8,9,10,11,12\}\supsetneq \{3,6,8,9,10,11\}\supsetneq \{3,6,8,9,11\} \supsetneq \{6,8,9,11\}\supsetneq \{8,9,11\}\supsetneq \{9,11\}\supsetneq \{\}
+                </me>
+                Therefore, the the poset is an interval order and an interval representation is
+                
+                <md>
+                  <mrow>I(1)\amp = [3,4]\amp I(7)\amp = [1,1]</mrow>
+                  <mrow> I(2)\amp = [2,2]\amp I(8)\amp = [7,7]</mrow>
+                  <mrow> I(3)\amp = [5,8]\amp I(9)\amp = [8,8]</mrow>
+                  <mrow> I(4)\amp = [1,3]\amp I(10)\amp = [4,4]</mrow>
+                  <mrow> I(5)\amp = [3,6]\amp I(11)\amp = [8,8]</mrow>
+                  <mrow> I(6)\amp = [6,7]\amp I(12)\amp = [3,6]</mrow>
+                  </md>
+                </p>
+              </solution>
           </exercise>
           <exercise>
             <statement>
@@ -317,6 +359,21 @@
                 </description></image>
               </figure>
             </statement>
+            <solution>
+              <p>
+                First Fit produces the chain partition below:
+              
+              <md>
+                <mrow>C_{1}\amp = \{f,d,j,k,\}</mrow>
+                <mrow>C_{2}\amp = \{b,h,c,l,e,m,o\}</mrow>
+                <mrow>C_{3}\amp = \{g,n,a,i\}</mrow>
+              </md>
+              
+              
+                The set <m>\{n,l,j\}</m> is one of many 3-element antichains, so because we have both the chain partition and the antichain of size 3, the width of this interval order is 3.
+              
+              </p>
+            </solution>
           </exercise>
           <exercise>
             <statement>
