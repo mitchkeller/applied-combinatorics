@@ -1,9 +1,9 @@
 <section xml:id="s_polya_apps">
-    <title>Applications of P&#243;lya's Enumeration Formula</title>
+    <title>Applications of Pólya's Enumeration Formula</title>
 
 
     <introduction>
-        <p>This section explores a number of situations in which P&#243;lya's enumeration formula can be used. The applications are from a variety of domains and are arranged in increasing order of complexity, beginning with an example from music theory and concluding with counting nonisomorphic graphs.
+        <p>This section explores a number of situations in which Pólya's enumeration formula can be used. The applications are from a variety of domains and are arranged in increasing order of complexity, beginning with an example from music theory and concluding with counting nonisomorphic graphs.
         </p>
     </introduction>
 
@@ -72,7 +72,7 @@
         Since xylenol has one hydroxyl group and two methyl groups, we are looking for the coefficient on <m>hm^2</m> in this generating function. The coefficient is <m>6</m>, so there are six isomers of xylenol.
         </p>
 
-        <p>In his original paper, P&#243;lya used his techniques to enumerate the number of isomers of the alkanes <m>\text{C} _n\text{H} _{2n+2}</m>. When modeled as graphs, these chemical compounds are special types of trees. Since that time, <xref ref="thm_polya_polya" text="title"/> has been used to enumerate isomers for many different chemical compounds.
+        <p>In his original paper, Pólya used his techniques to enumerate the number of isomers of the alkanes <m>\text{C} _n\text{H} _{2n+2}</m>. When modeled as graphs, these chemical compounds are special types of trees. Since that time, <xref ref="thm_polya_polya" text="title"/> has been used to enumerate isomers for many different chemical compounds.
         </p>
     </subsection>
 
@@ -117,7 +117,7 @@
             </image>
 
         </figure>
-        <p>We begin by considering all <m>2^{C(n,2)}</m> graphs with vertex set <m>[n]</m> and choosing an appropriate permutation group to act in the situation. Since any vertex can be mapped to any other vertex, the symmetric group <m>S_4</m> acts on the vertices. However, we have to be careful about how we find the cycle index here. When we were working with colorings of the vertices of the square, we realized that all the vertices appearing in the same cycle of a permutation <m>\pi</m> had to be colored the same color. Since we're concerned with edges here and not vertex colorings, what we really need for a permutation to fix a graph is that every edge be sent to an edge and every non-edge be sent to a non-edge. To be specific, if <m>\{1,2\}</m> is an edge of some <m>\bfG</m> and <m>\pi\in S_4</m> fixes <m>\bfG</m>, then <m>\{\pi(1),\pi(2)\}</m> must also be an edge of <m>\bfG</m>. Similarly, if vertices <m>3</m> and <m>4</m> are not adjacent in <m>\bfG</m>, then <m>\pi(3)</m> and <m>\pi(4)</m> must also be nonadjacent in <m>\bfG</m>.
+        <p>We begin by considering all <m>2^{C(n,2)}</m> graphs with vertex set <m>[n]</m> and choosing an appropriate permutation group to act in the situation. To keep things manageable, we will consider the example here of <m>n=4</m>, but the methods all generalize. Since any vertex can be mapped to any other vertex, the symmetric group <m>S_4</m> acts on the vertices. However, we have to be careful about how we find the cycle index here. When we were working with colorings of the vertices of the square, we realized that all the vertices appearing in the same cycle of a permutation <m>\pi</m> had to be colored the same color. Since we're concerned with edges here and not vertex colorings, what we really need for a permutation to fix a graph is that every edge be sent to an edge and every non-edge be sent to a non-edge. To be specific, if <m>\{1,2\}</m> is an edge of some <m>\bfG</m> and <m>\pi\in S_4</m> fixes <m>\bfG</m>, then <m>\{\pi(1),\pi(2)\}</m> must also be an edge of <m>\bfG</m>. Similarly, if vertices <m>3</m> and <m>4</m> are not adjacent in <m>\bfG</m>, then <m>\pi(3)</m> and <m>\pi(4)</m> must also be nonadjacent in <m>\bfG</m>.
         </p>
 
         <p>To account for edges, we move from the symmetric group <m>S_4</m> to its <term>pair group</term> <m>S_4^{(2)}</m>. The objects that <m>S_4^{(2)}</m> permutes are the <m>2</m>-element subsets of <m>\{1,2,3,4\}</m>. For ease of notation, we will denote the <m>2</m>-element subset <m>\{i,j\}</m> by <m>e_{ij}</m>. To find the permutations in <m>S_4^{(2)}</m>, we consider the vertex permutations in <m>S_4</m> and see how they permute the <m>e_{ij}</m>. The identity permutation <m>\iota=(1)(2)(3)(4)</m> of <m>S_4</m> corresponds to the identity permutation <m>\iota=(e_{12})(e_{13}) (e_{14}) (e_{23}) (e_{24}) (e_{34})</m> of <m>S_4^{(2)}</m>. Now let's consider the permutation <m>(12)(3)(4)</m>. It fixes <m>e_{12}</m> since it sends <m>1</m> to <m>2</m> and <m>2</m> to <m>1</m>. It also fixes <m>e_{34}</m> by fixing <m>3</m> and <m>4</m>. However, it interchanges <m>e_{13}</m> with <m>e_{23}</m> (<m>3</m> is fixed and <m>1</m> is swapped with <m>2</m>) and <m>e_{14}</m> with <m>e_{24}</m> (<m>1</m> is sent to <m>2</m> and <m>4</m> is fixed). Thus, the corresponding permutation of pairs is <m>(e_{12})(e_{13}e_{23})(e_{14}e_{24})(e_{34})</m>. For another example, consider the permutation <m>(123)(4)</m>. It corresponds to the permutation <m>(e_{12}e_{23}e_{13})(e_{14}e_{24}e_{34})</m> in <m>S_4^{(2)}</m>.
