@@ -410,6 +410,42 @@ window.addEventListener("load",function(event) {
 
 // The new method for creating pages and adjusting workspace //
 
+// Unwrap section.paragraphs containers so their children flow directly
+// into the parent, enabling CSS page breaks between the inner elements.
+function flattenParagraphsSections(printout) {
+    const paragraphsSections = printout.querySelectorAll('section.paragraphs');
+    paragraphsSections.forEach(section => {
+        const parent = section.parentNode;
+        // Move all children out of the section wrapper and into the parent
+        while (section.firstChild) {
+            parent.insertBefore(section.firstChild, section);
+        }
+        // Remove the now-empty section wrapper
+        parent.removeChild(section);
+    });
+}
+
+// Wait for all images inside a container to finish loading.
+// Returns a promise that resolves when every <img> has loaded (or on timeout).
+function waitForImages(container, timeoutMs = 5000) {
+    const images = container.querySelectorAll('img');
+    const promises = [];
+    for (const img of images) {
+        if (!img.complete) {
+            promises.push(new Promise(resolve => {
+                img.addEventListener('load', resolve, { once: true });
+                img.addEventListener('error', resolve, { once: true });
+            }));
+        }
+    }
+    if (promises.length === 0) return Promise.resolve();
+    // Race all image loads against a timeout so broken images don't block forever
+    return Promise.race([
+        Promise.all(promises),
+        new Promise(resolve => setTimeout(resolve, timeoutMs))
+    ]);
+}
+
 // This is used multiple places to set height of workspace divs to their author-provided heights
 function setInitialWorkspaceHeights() {
     const workspaces = document.querySelectorAll('.workspace');
@@ -751,10 +787,10 @@ function getElemWorkspaceHeight(elem) {
 // Functions for finding the optimal page breaks
 function findPageBreaks(rows, pageHeight) {
     console.log("*** Finding page breaks for", rows.length, "rows with page height:", pageHeight);
-    // An array for the page breaks.  The nth element will be the index of the last row on page n.
+    // An array for the page breaks.  The nth element will be the index of the first row on page n+1.
     let pageBreaks = [];
     // An array for the minimum cost possible for rows i to the end.
-    let minCost = Array(rows.length).fill(Infinity);
+    let minCost = Array(rows.length + 1).fill(Infinity);
     minCost[rows.length] = 0; // No cost for no rows
     // An array to keep track of the next row to start a new page after i in minCost.
     let nextPageBreak = Array(rows.length).fill(-1);
@@ -1069,6 +1105,17 @@ window.addEventListener("DOMContentLoaded", async function(event) {
         }
 
         // Finally, with everything set up, we create or adjust the printout pages as needed.
+
+        // Flatten paragraphs sections so page breaks can occur inside them.
+        const printoutSection = document.querySelector('section.worksheet, section.handout');
+        if (printoutSection) {
+            flattenParagraphsSections(printoutSection);
+        }
+
+        // Wait for all images to load so height measurements are accurate.
+        if (printoutSection) {
+            await waitForImages(printoutSection);
+        }
 
         // If the printout has authored pages, there will be at least one .onepage element.
         if (document.querySelector('.onepage')) {

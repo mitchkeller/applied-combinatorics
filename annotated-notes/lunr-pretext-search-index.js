@@ -1106,6 +1106,114 @@ var ptx_lunr_docs = [
   "number": "8.3",
   "title": "Keller and Young 2020.",
   "body": " Keller and Young 2020   The generating function for the number of unit interval orders of dimension at most with points, , is and is asymptotically .   "
+},
+{
+  "id": "genfunction-partitions-newton",
+  "level": "1",
+  "url": "genfunction-partitions-newton.html",
+  "type": "Handout",
+  "number": "8.2",
+  "title": "Partitions and Newton’s Binomial Theorem",
+  "body": " Partitions and Newton's Binomial Theorem    Partitions of Integers    A partition of the positive integer is a way of writing as a sum of nonincreasing positive integers.     is a partition of . We also note that is a partition of . However, we do not count as a partition of because the terms in the sum are not in nonincreasing order.    A partition of a positive integer is said to be a partition into odd parts if every term (also referred to as a part ) in the sum is odd.     is a partition of into odd parts. Also note that is a partition of into odd parts.    A partition of a positive integer is said to be a partition into distinct parts if each integer appears in the sum at most once.     is a partition of into distinct parts. is a partition of into distinct parts.    List the partitions of . Count the number of partitions into odd parts. Count the number of partitions into distinct parts.    Be systematic! One way to do this is by grouping partitions by their largest part.          There are 8 partitions into odd parts and 8 partitions into distinct parts.  How would we write a generating function in which the coefficient on is the number of partitions of ?        Write a generating function in which the coefficient on is the number of partitions of into distinct parts.    This is conveniently done as a product of simple generating functions.           Write a generating function in which the coefficient on is the number of partitions of into odd parts.    A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.           Show that your generating functions above are actually equal to one another.          by cancelling all the factors from the numerator with the factors in the denominator that have odd powers of .        Newton's Binomial Theorem    For all real numbers and nonnegative integers , the number is defined by    for all real numbers and     for all real numbers and integers .        based on what we did in Chapter 2. Here we can work it out and find .    For all real numbers and nonnegative integers , .      Compute .          Newton's Binomial Theorem   For all real with , .      For each , .      Use mathematical induction to show that for all , .     Use Newton's Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .          Recall that the Catalan numbers are , so the generating function above is very close. If we integrate both sides of the solution to the activity above, we get I'll leave the tinkering with the constants of integration to another day.    "
+},
+{
+  "id": "genfunction-partitions-newton-2-1-2",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-2-1-2",
+  "type": "Definition",
+  "number": "8.4",
+  "title": "",
+  "body": "  A partition of the positive integer is a way of writing as a sum of nonincreasing positive integers.   "
+},
+{
+  "id": "genfunction-partitions-newton-2-1-4",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-2-1-4",
+  "type": "Definition",
+  "number": "8.5",
+  "title": "",
+  "body": "  A partition of a positive integer is said to be a partition into odd parts if every term (also referred to as a part ) in the sum is odd.   "
+},
+{
+  "id": "genfunction-partitions-newton-2-1-6",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-2-1-6",
+  "type": "Definition",
+  "number": "8.6",
+  "title": "",
+  "body": "  A partition of a positive integer is said to be a partition into distinct parts if each integer appears in the sum at most once.   "
+},
+{
+  "id": "genfunction-partitions-newton-2-1-8",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-2-1-8",
+  "type": "Activity",
+  "number": "8.2.1",
+  "title": "",
+  "body": "  List the partitions of . Count the number of partitions into odd parts. Count the number of partitions into distinct parts.    Be systematic! One way to do this is by grouping partitions by their largest part.   "
+},
+{
+  "id": "genfunction-partitions-newton-4-1",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-4-1",
+  "type": "Activity",
+  "number": "8.2.2",
+  "title": "",
+  "body": "   Write a generating function in which the coefficient on is the number of partitions of into distinct parts.    This is conveniently done as a product of simple generating functions.           Write a generating function in which the coefficient on is the number of partitions of into odd parts.    A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.           Show that your generating functions above are actually equal to one another.          by cancelling all the factors from the numerator with the factors in the denominator that have odd powers of .    "
+},
+{
+  "id": "genfunction-partitions-newton-5-1-2",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-5-1-2",
+  "type": "Definition",
+  "number": "8.7",
+  "title": "",
+  "body": "  For all real numbers and nonnegative integers , the number is defined by    for all real numbers and     for all real numbers and integers .      "
+},
+{
+  "id": "genfunction-partitions-newton-5-1-4",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-5-1-4",
+  "type": "Definition",
+  "number": "8.8",
+  "title": "",
+  "body": "  For all real numbers and nonnegative integers , .   "
+},
+{
+  "id": "genfunction-partitions-newton-5-1-5",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-5-1-5",
+  "type": "Activity",
+  "number": "8.2.3",
+  "title": "",
+  "body": "  Compute .        "
+},
+{
+  "id": "genfunction-partitions-newton-5-1-6",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-5-1-6",
+  "type": "Theorem",
+  "number": "8.9",
+  "title": "Newton’s Binomial Theorem.",
+  "body": " Newton's Binomial Theorem   For all real with , .   "
+},
+{
+  "id": "genfunction-partitions-newton-5-1-7",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-5-1-7",
+  "type": "Lemma",
+  "number": "8.10",
+  "title": "",
+  "body": "  For each , .   "
+},
+{
+  "id": "genfunction-partitions-newton-5-1-8",
+  "level": "2",
+  "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-5-1-8",
+  "type": "Activity",
+  "number": "8.2.4",
+  "title": "",
+  "body": "  Use mathematical induction to show that for all , .     Use Newton's Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .         "
 }
 ]
 
