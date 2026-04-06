@@ -369,6 +369,9 @@
           </p>
         </statement>
       </definition>
+      <p component="a">
+        <m>4+2+2+1+1</m> is a partition of <m>10</m>. We also note that <m>10</m> is a partition of <m>10</m>. However, we do <em>not</em> count <m>4+2+1+2+1</m> as a partition of <m>10</m> because the terms in the sum are not in nonincreasing order.
+      </p>
       
       <definition>
         <statement>
@@ -377,7 +380,9 @@
           </p>
         </statement>
       </definition>
-      
+      <p component="a">
+        <m>3+1+1</m> is a partition of <m>5</m> into odd parts. Also note that <m>5</m> is a partition of <m>5</m> into odd parts.
+      </p>
       <definition>
         <statement>
           <p workspace="1cm">
@@ -385,6 +390,9 @@
           </p>
         </statement>
       </definition>
+      <p component="a">
+        <m>3+1</m> is a partition of <m>4</m> into distinct parts. <m>5+2+1</m> is a partition of <m>8</m> into distinct parts.
+      </p>
       <activity workspace="10cm">
         <statement>
           <p>
@@ -423,6 +431,16 @@
         <mrow>4\amp +1+1+1+1+1 \amp </mrow>
       </md>
     </p>
+    <p component="a">
+      There are 8 partitions into odd parts and 8 partitions into distinct parts.
+    </p>
+    <p>
+      How would we write a generating function in which the coefficient on <m>x^n</m> is the number of partitions of <m>n</m>?
+      <md component="a">
+        \left(\sum_{n=0}^\infty x^n\right)\left(\sum_{n=0}^\infty x^{2n}\right)\left(\sum_{n=0}^\infty x^{3n}\right)\cdots = \left(\frac{1}{1-x}\right)\left(\frac{1}{1-x^2}\right)\left(\frac{1}{1-x^3}\right)\cdots = \prod_{k=1}^\infty \frac{1}{1-x^k}
+      </md>
+      
+    </p>
   </page>
   <page>
     <activity>
@@ -431,39 +449,52 @@
           <p>
             Write a generating function in which the coefficient on <m>x^{n}</m> is the number of partitions of <m>n</m> into distinct parts.
           </p>
-        <!-- </statement> -->
-        <!-- <hint> -->
-          <p>
-            <em>Hint</em>: This is conveniently done as a product of simple generating functions.
-          </p>
-        <!-- </hint> -->
         </statement>
+        <hint>
+          <p>
+            This is conveniently done as a product of simple generating functions.
+          </p>
+        </hint>
+        <solution>
+          <p>
+            <m>\displaystyle \prod_{k=1}^\infty (1+x^k)</m>
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
           <p>
            Write a generating function in which the coefficient on <m>x^{n}</m> is the number of partitions of <m>n</m> into odd parts.
           </p>
-        <!-- </statement> -->
-        <!-- <hint> -->
-          <p>
-            <em>Hint</em>: A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.
-          </p>
-        <!-- </hint> -->
         </statement>
+        <hint>
+          <p>
+            A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.
+          </p>
+        </hint>
+        <solution>
+          <p>
+            <m>\displaystyle \prod_{k=0}^\infty \frac{1}{1-x^{2k+1}} = \prod_{k=1}^\infty \frac{1}{1-x^{2k-1}}</m>
+          </p>
+        </solution>
       </task>
       <task>
         <statement>
           <p>
             Show that your generating functions above are actually equal to one another.
           </p>
-        <!-- </statement> -->
-        <!-- <hint> -->
-          <p>
-            <em>Hint</em>: <m>\displaystyle (1+x^{k})\frac{1-x^{k}}{1-x^{k}}= \frac{\text{?}}{1-x^{k}}</m>
-          </p>
-        <!-- </hint> -->
         </statement>
+        <hint>
+          <p>
+            <m>\displaystyle (1+x^{k})\frac{1-x^{k}}{1-x^{k}}= \frac{\text{?}}{1-x^{k}}</m>
+          </p>
+        </hint>
+        <solution>
+          <p>
+            <m>\displaystyle \prod_{k=1}^\infty (1+x^k) = \prod_{k=1}^\infty \frac{1-x^{2k}}{1-x^k} = \prod_{k=0}^\infty \frac{1}{1-x^{2k+1}}</m>
+            by cancelling all the factors from the numerator with the factors in the denominator that have odd powers of <m>x</m>.
+          </p>
+        </solution>
       </task>
     </activity>
   </page>
@@ -490,6 +521,9 @@
           </p>
         </statement>
       </definition>
+      <p component="a">
+        <m>P(5,3)=5\cdot 4\cdot 3</m> based on what we did in Chapter 2. Here we can work it out and find <m>P(5,3) = 5\cdot P(4,2) = 5\cdot 4\cdot P(3,1) = 5\cdot 4\cdot 3\cdot P(2,0) = 5\cdot 4\cdot 3\cdot 1</m>.
+      </p>
       
       <definition>
         <statement>
@@ -500,6 +534,7 @@
             </me>.
           </p>
         </statement>
+
       </definition>
       
       <activity workspace="2cm">
@@ -508,8 +543,16 @@
             Compute <m>\displaystyle\binom{-9/2}{5}</m>.
           </p>
         </statement>
+        <solution>
+          <p>
+            <m>\displaystyle \binom{-9/2}{5} = \frac{P(-9/2,5)}{5!} = \frac{1}{5!}\left(\frac{-9}{2}\right) \left(\frac{-11}{2}\right) \left(\frac{-13}{2}\right) \left(\frac{-15}{2}\right) \left(\frac{-17}{2}\right) = -\frac{1}{5!} \frac{1}{2^5} (9\cdot 11 \cdot 13\cdot 15\cdot 17)</m>
+          </p>
+        </solution>
       </activity>
       <theorem>
+        <title>Newton's Binomial Theorem</title>
+        
+        
         <statement>
           <p>
             For all real <m>p</m> with <m>p\neq0</m>,
@@ -539,8 +582,24 @@
                 Use Newton's Binomial Theorem and the step above to write <m>(1-4x)^{-1/2}</m> as a formal power series in which the coefficient on <m>x^{n}</m> is a binomial coefficient in which both numbers are <alert>integers</alert>.
               </p>
             </statement>
+            <solution>
+              <p>
+                <md>
+                  <mrow>(1-4x)^{-1/2} \amp = \sum_{k=0}^\infty \binom{-1/2}{k} (-4x)^k = \sum_{k=0}^\infty (-1)^k \frac{\binom{2k}{k}}{2^{2k}}(-1)^k 4^k x^k</mrow>
+                  <mrow> \amp = \sum_{k=0}^\infty \binom{2k}{k} x^k</mrow>
+                </md>
+              </p>
+            </solution>
           </task>
         </activity>
+        <p component="a">
+          Recall that the Catalan numbers are <m>\displaystyle\frac{1}{n+1}\binom{2n}{n}</m>, so the generating function above is very close. If we integrate both sides of the solution to the activity above, we get
+          <md>
+            <mrow>\int (1-4x)^{-1/2}\, dx \amp = \int\sum_{k=0}^\infty \binom{2k}{k}x^k\, dx</mrow>
+            <mrow> -\frac{1}{2}(1-4x)^{1/2} + C\amp = \sum_{k=0}^\infty \frac{1}{k+1}\binom{2k}{k}x^{k+1} + D = x\sum_{k=0}^\infty \frac{1}{k+1}\binom{2k}{k}x^k + D</mrow>
+          </md>
+          I'll leave the tinkering with the constants of integration to another day.
+        </p>
     </paragraphs>
   </page>
   </handout>
