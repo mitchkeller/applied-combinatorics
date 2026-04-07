@@ -36,11 +36,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -73,10 +73,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '7.13.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -623,10 +623,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_recurrence_intro"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_recurrence_intro">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction</span>
 </h2>
-<section class="subsection" id="s_recurrence_intro_fib"><h3 class="heading hide-type">
+<section class="subsection" id="s_recurrence_intro_fib">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fibonacci numbers</span>
 </h3>
 <div class="para" id="s_recurrence_intro_fib-3">One of the most well-known recurrences arises from a simple story. Suppose that a scientist introduces a pair of newborn rabbits to an isolated island. This species of rabbits is unable to reproduce until their third month of life, but after that produces a new pair of rabbits each month. Thus, in the first and second months, there is one pair of rabbits on the island, but in the third month, there are two pairs of rabbits, as the first pair has a pair of offspring. In the fourth month, the original pair of rabbits is still there, as is their first pair of offspring, which are not yet mature enough to reproduce. However, the original pair gives birth to another pair of rabbits, meaning that the island now has three pairs of rabbits. Assuming that there are no rabbit-killing predators on the island and the rabbits have an indefinite lifespan, how many pairs of rabbits are on the island in the tenth month?<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_fib-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -652,7 +655,11 @@ f_{1000} \lt  232748383849990383201823093383773932
 </div>
 <div class="para" id="s_recurrence_intro_fib-6">Consider the sequence <span class="process-math">\(\{f_{n+1}/f_n:n\ge1\}\)</span> of ratios of consecutive terms of the Fibonacci sequence. <a href="s_recurrence_intro.html#tab_fib-ratios" class="xref" data-knowl="./knowl/xref/tab_fib-ratios.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.1">Figure 9.1</a> shows these ratios for <span class="process-math">\(n\leq 18\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_fib-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="tab_fib-ratios"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tab_fib-ratios-2-1">
+<figure class="figure figure-like" id="tab_fib-ratios">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tab_fib-ratios-2-1">
 <div class="displaymath process-math" id="tab_fib-ratios-2-1-1">
 \begin{align*}
 1/1 \amp = 1.0000000000 \amp  89/55 \amp = 1.6181818182\\
@@ -667,15 +674,24 @@ f_{1000} \lt  232748383849990383201823093383773932
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#tab_fib-ratios-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></div></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The ratios <span class="process-math">\(f_{n+1}/f_{n}\)</span> for <span class="process-math">\(n\leq 18\)</span><div class="autopermalink" data-description="Figure 9.1"><a href="#tab_fib-ratios" title="Copy heading and permalink for Figure 9.1" aria-label="Copy heading and permalink for Figure 9.1">🔗</a></div></figcaption></figure><div class="para" id="s_recurrence_intro_fib-8">The ratios seem to be converging to a number. Can we determine this number? Does this number have anything to do with an explicit formula for <span class="process-math">\(f_n\)</span> (if one even exists)?<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_fib-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The ratios <span class="process-math">\(f_{n+1}/f_{n}\)</span> for <span class="process-math">\(n\leq 18\)</span><div class="autopermalink" data-description="Figure 9.1"><a href="#tab_fib-ratios" title="Copy heading and permalink for Figure 9.1" aria-label="Copy heading and permalink for Figure 9.1">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="s_recurrence_intro_fib-8">The ratios seem to be converging to a number. Can we determine this number? Does this number have anything to do with an explicit formula for <span class="process-math">\(f_n\)</span> (if one even exists)?<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_fib-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="s_recurrence_intro_fib-9"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="s_recurrence_intro_fib-9-1">The Fibonacci sequence would not be as well-studied as it is if it were only good for counting pairs of rabbits on a hypothetical island. Here’s another instance which again results in the Fibonacci sequence. Let <span class="process-math">\(c_n\)</span> count the number of ways a <span class="process-math">\(2\times n\)</span> checkerboard can be covered by <span class="process-math">\(2\times 1\)</span> tiles. Then <span class="process-math">\(c_1=1\)</span> and <span class="process-math">\(c_2=2\)</span> while the recurrence is just <span class="process-math">\(c_{n+2} = c_{n+1}+c_n\text{,}\)</span> since either the rightmost column of the checkerboard contains a vertical tile (and thus the rest of it can be tiled in <span class="process-math">\(c_{n+1}\)</span> ways) or the rightmost two columns contain two horizontal tiles (and thus the rest of it can be tiled in <span class="process-math">\(c_n\)</span> ways).<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_fib-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 9.2"><a href="#s_recurrence_intro_fib-9" title="Copy heading and permalink for Example 9.2" aria-label="Copy heading and permalink for Example 9.2">🔗</a></div></article><div class="autopermalink" data-description="Subsection 9.1.1: Fibonacci numbers"><a href="#s_recurrence_intro_fib" title="Copy heading and permalink for Subsection 9.1.1: Fibonacci numbers" aria-label="Copy heading and permalink for Subsection 9.1.1: Fibonacci numbers">🔗</a></div></section><section class="subsection" id="s_recurrence_intro_strings"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Example 9.2"><a href="#s_recurrence_intro_fib-9" title="Copy heading and permalink for Example 9.2" aria-label="Copy heading and permalink for Example 9.2">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 9.1.1: Fibonacci numbers"><a href="#s_recurrence_intro_fib" title="Copy heading and permalink for Subsection 9.1.1: Fibonacci numbers" aria-label="Copy heading and permalink for Subsection 9.1.1: Fibonacci numbers">🔗</a></div>
+</section>
+<section class="subsection" id="s_recurrence_intro_strings">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recurrences for strings</span>
 </h3>
 <div class="para" id="s_recurrence_intro_strings-2">In <a href="ch_induction.html" class="internal" title="Chapter 3: Induction">Chapter 3</a>, we saw several times how we could find recurrences that gave us the number of binary or ternary strings of length <span class="process-math">\(n\)</span> when we place a restriction on certain patterns appearing in the string. Let’s recall a couple of those types of questions in order to help generate more recurrences to work with.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_strings-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -696,23 +712,36 @@ f_{1000} \lt  232748383849990383201823093383773932
 </div>
 <div class="para" id="ex_recurrence_binary-strings-no-11-3">As a result, this sequence is just the Fibonacci numbers, albeit offset by <span class="process-math">\(1\)</span> position, i.e, <span class="process-math">\(a_{n} = f_{n+1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_binary-strings-no-11-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 9.3"><a href="#ex_recurrence_binary-strings-no-11" title="Copy heading and permalink for Example 9.3" aria-label="Copy heading and permalink for Example 9.3">🔗</a></div></article><article class="example example-like" id="ex_recurrence_ternary-strings-no-20"><h4 class="heading">
+<div class="autopermalink" data-description="Example 9.3"><a href="#ex_recurrence_binary-strings-no-11" title="Copy heading and permalink for Example 9.3" aria-label="Copy heading and permalink for Example 9.3">🔗</a></div>
+</article>
+<article class="example example-like" id="ex_recurrence_ternary-strings-no-20"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex_recurrence_ternary-strings-no-20-2">Let <span class="process-math">\(t_n\)</span> count the number of ternary strings in which we never have <span class="process-math">\((2,0)\)</span> occurring as a substring in two consecutive positions. Now <span class="process-math">\(t_1=3\)</span> and <span class="process-math">\(t_2=8\text{,}\)</span> as of the <span class="process-math">\(9\)</span> ternary strings of length <span class="process-math">\(2\text{,}\)</span> exactly one of them is “bad.” Now consider the set of all good strings grouped according to the last character. If this character is a <span class="process-math">\(2\)</span> or a <span class="process-math">\(1\text{,}\)</span> then the preceding <span class="process-math">\(n+1\)</span> characters can be any “good” string of length <span class="process-math">\(n+1\text{.}\)</span> However, if the last character is a <span class="process-math">\(0\text{,}\)</span> then the first <span class="process-math">\(n+1\)</span> characters form a good string of length  <span class="process-math">\(n+1\)</span> which does not end in a <span class="process-math">\(2\text{.}\)</span> The number of such strings is <span class="process-math">\(t_{n+1} - t_n\text{.}\)</span> Accordingly, the recurrence is <span class="process-math">\(t_{n+2} = 3t_{n+1} - t_n\text{.}\)</span> In particular, <span class="process-math">\(t_3 = 21\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_ternary-strings-no-20-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 9.4"><a href="#ex_recurrence_ternary-strings-no-20" title="Copy heading and permalink for Example 9.4" aria-label="Copy heading and permalink for Example 9.4">🔗</a></div></article><div class="autopermalink" data-description="Subsection 9.1.2: Recurrences for strings"><a href="#s_recurrence_intro_strings" title="Copy heading and permalink for Subsection 9.1.2: Recurrences for strings" aria-label="Copy heading and permalink for Subsection 9.1.2: Recurrences for strings">🔗</a></div></section><section class="subsection" id="s_recurrence_intro_lines"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Example 9.4"><a href="#ex_recurrence_ternary-strings-no-20" title="Copy heading and permalink for Example 9.4" aria-label="Copy heading and permalink for Example 9.4">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 9.1.2: Recurrences for strings"><a href="#s_recurrence_intro_strings" title="Copy heading and permalink for Subsection 9.1.2: Recurrences for strings" aria-label="Copy heading and permalink for Subsection 9.1.2: Recurrences for strings">🔗</a></div>
+</section>
+<section class="subsection" id="s_recurrence_intro_lines">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lines and regions in the plane</span>
 </h3>
 <div class="para" id="s_recurrence_intro_lines-2">Our next example takes us back to one of the motivating problems discussed in <a href="ch_intro.html" class="internal" title="Chapter 1: An Introduction to Combinatorics">Chapter 1</a>. In <a href="s_recurrence_intro.html#fig_geomregions" class="xref" data-knowl="./knowl/xref/fig_geomregions.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.5">Figure 9.5</a>, we show a family of <span class="process-math">\(4\)</span> lines in the plane. Each pair of lines intersects and no point in the plane belongs to more than two lines.  These lines determine <span class="process-math">\(11\)</span> regions.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_lines-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig_geomregions"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;">
-<img src="external/lines-regions.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_geomregions-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_geomregions-2-description"><div class="para" id="fig_geomregions-2-1-1">Four lines drawn in the plane so that each pair of lines intersects and no three lines intersect at a single point. On one of the lines, the three points of intersection with the other three lines are marked with dots. The regions determined by the lines are numbered from <span class="process-math">\(1\)</span> to <span class="process-math">\(11\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig_geomregions-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<img src="external/lines-regions.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_geomregions-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_geomregions-2-description">
+<div class="para" id="fig_geomregions-2-1-1">Four lines drawn in the plane so that each pair of lines intersects and no three lines intersect at a single point. On one of the lines, the three points of intersection with the other three lines are marked with dots. The regions determined by the lines are numbered from <span class="process-math">\(1\)</span> to <span class="process-math">\(11\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fig_geomregions-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Lines and regions in the plane<div class="autopermalink" data-description="Figure 9.5"><a href="#fig_geomregions" title="Copy heading and permalink for Figure 9.5" aria-label="Copy heading and permalink for Figure 9.5">🔗</a></div></figcaption></figure><div class="para" id="s_recurrence_intro_lines-4">We ask how many regions a family of <span class="process-math">\(1000\)</span> lines would determine, given these same restrictions on how the lines intersect. More generally, let <span class="process-math">\(r_n\)</span> denote the number of regions determined by <span class="process-math">\(n\)</span> lines. Evidently, <span class="process-math">\(r_1=2\text{,}\)</span> <span class="process-math">\(r_2=4\text{,}\)</span> <span class="process-math">\(r_3=7\)</span> and <span class="process-math">\(r_4=11\text{.}\)</span> Now it is easy to see that we have the recurrence <span class="process-math">\(r_{n+1} = r_n+n+1\text{.}\)</span> To see this, choose any one of the <span class="process-math">\(n+1\)</span> lines and call it <span class="process-math">\(l\text{.}\)</span> Line <span class="process-math">\(l\)</span> intersects each of the other lines and since no point in the plane belongs to three or more lines, the points where <span class="process-math">\(l\)</span> intersects the other lines are distinct. Label them consecutively as <span class="process-math">\(x_1,x_2,\dots,x_n\text{.}\)</span> Then these points divide line <span class="process-math">\(l\)</span> into <span class="process-math">\(n+1\)</span> segments, two of which (first and last) are infinite. Each of these segments partitions one of the regions determined by the other <span class="process-math">\(n\)</span> lines into two parts, meaning we have the <span class="process-math">\(r_n\)</span> regions determined by the other <span class="process-math">\(n\)</span> lines and <span class="process-math">\(n+1\)</span> new regions that <span class="process-math">\(l\)</span> creates.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_lines-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
 </div>
-<div class="autopermalink" data-description="Subsection 9.1.3: Lines and regions in the plane"><a href="#s_recurrence_intro_lines" title="Copy heading and permalink for Subsection 9.1.3: Lines and regions in the plane" aria-label="Copy heading and permalink for Subsection 9.1.3: Lines and regions in the plane">🔗</a></div></section><div class="autopermalink" data-description="Section 9.1: Introduction"><a href="#s_recurrence_intro" title="Copy heading and permalink for Section 9.1: Introduction" aria-label="Copy heading and permalink for Section 9.1: Introduction">🔗</a></div></section></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Lines and regions in the plane<div class="autopermalink" data-description="Figure 9.5"><a href="#fig_geomregions" title="Copy heading and permalink for Figure 9.5" aria-label="Copy heading and permalink for Figure 9.5">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="s_recurrence_intro_lines-4">We ask how many regions a family of <span class="process-math">\(1000\)</span> lines would determine, given these same restrictions on how the lines intersect. More generally, let <span class="process-math">\(r_n\)</span> denote the number of regions determined by <span class="process-math">\(n\)</span> lines. Evidently, <span class="process-math">\(r_1=2\text{,}\)</span> <span class="process-math">\(r_2=4\text{,}\)</span> <span class="process-math">\(r_3=7\)</span> and <span class="process-math">\(r_4=11\text{.}\)</span> Now it is easy to see that we have the recurrence <span class="process-math">\(r_{n+1} = r_n+n+1\text{.}\)</span> To see this, choose any one of the <span class="process-math">\(n+1\)</span> lines and call it <span class="process-math">\(l\text{.}\)</span> Line <span class="process-math">\(l\)</span> intersects each of the other lines and since no point in the plane belongs to three or more lines, the points where <span class="process-math">\(l\)</span> intersects the other lines are distinct. Label them consecutively as <span class="process-math">\(x_1,x_2,\dots,x_n\text{.}\)</span> Then these points divide line <span class="process-math">\(l\)</span> into <span class="process-math">\(n+1\)</span> segments, two of which (first and last) are infinite. Each of these segments partitions one of the regions determined by the other <span class="process-math">\(n\)</span> lines into two parts, meaning we have the <span class="process-math">\(r_n\)</span> regions determined by the other <span class="process-math">\(n\)</span> lines and <span class="process-math">\(n+1\)</span> new regions that <span class="process-math">\(l\)</span> creates.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_intro_lines-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 9.1.3: Lines and regions in the plane"><a href="#s_recurrence_intro_lines" title="Copy heading and permalink for Subsection 9.1.3: Lines and regions in the plane" aria-label="Copy heading and permalink for Subsection 9.1.3: Lines and regions in the plane">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 9.1: Introduction"><a href="#s_recurrence_intro" title="Copy heading and permalink for Section 9.1: Introduction" aria-label="Copy heading and permalink for Section 9.1: Introduction">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch_recurrence.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_recurrence_linear.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

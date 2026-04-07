@@ -36,11 +36,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -73,10 +73,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '7.13.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -623,10 +623,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_background_decimal"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_background_decimal">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation for Natural Numbers</span>
 </h2>
-<section class="introduction" id="s_background_decimal-2"><div class="para logical" id="s_background_decimal-2-1">
+<section class="introduction" id="s_background_decimal-2">
+<div class="para logical" id="s_background_decimal-2-1">
 <div class="para">In some sense, we already have a workable notation for natural numbers.  In fact, we really didn’t need a special symbol for <span class="process-math">\(s(0)\text{.}\)</span>  The natural number <span class="process-math">\(0\)</span> and the sucessor function <span class="process-math">\(s\)</span> are enough.  For example, the positive integer associated with the number of fingers (including the thumb) on one hand is <span class="process-math">\(s(s(s(s(s(0)))))\text{,}\)</span> our net worth is <span class="process-math">\(0\text{,}\)</span> and the age of Professor Trotter’s son in years when this section was first written was</div>
 <div class="displaymath process-math" id="s_background_decimal-2-1-6">
 \begin{equation*}
@@ -645,13 +648,19 @@ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(0)))))))))))))))))).
 </h3>
 <div class="para" id="s_background_decimal-2-4-1-1">Let <span class="process-math">\(n,d\in \nonnegints\)</span> with <span class="process-math">\(d&gt;0\text{.}\)</span> Then there exist unique natural numbers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> so that <span class="process-math">\(n=qd+r\)</span> and <span class="process-math">\(0\le r \lt d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem B.34"><a href="#s_background_decimal-2-4" title="Copy heading and permalink for Theorem B.34" aria-label="Copy heading and permalink for Theorem B.34">🔗</a></div></article><details id="s_background_decimal-2-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="s_background_decimal-2-4-2-1">Let <span class="process-math">\(d\in \nonnegints\)</span> with <span class="process-math">\(d&gt;0\text{.}\)</span> We first show that for each <span class="process-math">\(n\in\nonnegints\text{,}\)</span> there exists <span class="process-math">\(q,r\in\nonnegints\)</span> so that <span class="process-math">\(n=qd+r\)</span> and <span class="process-math">\(0\le r\lt d\text{.}\)</span> If <span class="process-math">\(n=0\text{,}\)</span> we can take <span class="process-math">\(q=0\)</span> and <span class="process-math">\(r=0\text{.}\)</span> Now suppose that <span class="process-math">\(k=qd+r\)</span> and <span class="process-math">\(0\le r\lt m\)</span> for some <span class="process-math">\(k\in \nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem B.34"><a href="#s_background_decimal-2-4" title="Copy heading and permalink for Theorem B.34" aria-label="Copy heading and permalink for Theorem B.34">🔗</a></div>
+</article>
+<details id="s_background_decimal-2-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="s_background_decimal-2-4-2-1">Let <span class="process-math">\(d\in \nonnegints\)</span> with <span class="process-math">\(d&gt;0\text{.}\)</span> We first show that for each <span class="process-math">\(n\in\nonnegints\text{,}\)</span> there exists <span class="process-math">\(q,r\in\nonnegints\)</span> so that <span class="process-math">\(n=qd+r\)</span> and <span class="process-math">\(0\le r\lt d\text{.}\)</span> If <span class="process-math">\(n=0\text{,}\)</span> we can take <span class="process-math">\(q=0\)</span> and <span class="process-math">\(r=0\text{.}\)</span> Now suppose that <span class="process-math">\(k=qd+r\)</span> and <span class="process-math">\(0\le r\lt m\)</span> for some <span class="process-math">\(k\in \nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_background_decimal-2-4-2-2">Note that <span class="process-math">\(r\lt d\)</span> implies <span class="process-math">\(r+1\le d\text{.}\)</span>  If <span class="process-math">\(r+1\lt d\text{,}\)</span> then <span class="process-math">\(k+1=qd+(r+1)\text{.}\)</span> On the other hand, if <span class="process-math">\(r+1=d\text{,}\)</span> then <span class="process-math">\(k+1=(q+1)d+0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_background_decimal-2-4-2-3">Now that existence has been settled, we note that the uniqueness of <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> follow immediately from the cancellation properties.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.34.1"><a href="#s_background_decimal-2-4-2" title="Copy heading and permalink for Proof B.34.1" aria-label="Copy heading and permalink for Proof B.34.1">🔗</a></div></article></details><div class="para" id="s_background_decimal-2-5">Now suppose that for some <span class="process-math">\(k\in \nonnegints\text{,}\)</span> with <span class="process-math">\(k\ge 7\text{,}\)</span> we have defined a base eight notation for the representation of <span class="process-math">\(k\text{,}\)</span> for all <span class="process-math">\(n\)</span> with <span class="process-math">\(0\le n\le k\text{,}\)</span> and that in each case, this representation consists of a string of digits, written left to right, and selected from <span class="process-math">\(\{0,1,2,3,4,5,6,7\}\text{.}\)</span>  Write <span class="process-math">\(k+1=qb+r\)</span> where <span class="process-math">\(0\le r\lt b\text{.}\)</span> Note that <span class="process-math">\(q\le k\text{,}\)</span> so that we already have a representation for <span class="process-math">\(q\text{.}\)</span> To obtain a representation of <span class="process-math">\(k+1\text{,}\)</span> we simply append <span class="process-math">\(r\)</span> at the (right) end.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof B.34.1"><a href="#s_background_decimal-2-4-2" title="Copy heading and permalink for Proof B.34.1" aria-label="Copy heading and permalink for Proof B.34.1">🔗</a></div>
+</article></details>
+<div class="para" id="s_background_decimal-2-5">Now suppose that for some <span class="process-math">\(k\in \nonnegints\text{,}\)</span> with <span class="process-math">\(k\ge 7\text{,}\)</span> we have defined a base eight notation for the representation of <span class="process-math">\(k\text{,}\)</span> for all <span class="process-math">\(n\)</span> with <span class="process-math">\(0\le n\le k\text{,}\)</span> and that in each case, this representation consists of a string of digits, written left to right, and selected from <span class="process-math">\(\{0,1,2,3,4,5,6,7\}\text{.}\)</span>  Write <span class="process-math">\(k+1=qb+r\)</span> where <span class="process-math">\(0\le r\lt b\text{.}\)</span> Note that <span class="process-math">\(q\le k\text{,}\)</span> so that we already have a representation for <span class="process-math">\(q\text{.}\)</span> To obtain a representation of <span class="process-math">\(k+1\text{,}\)</span> we simply append <span class="process-math">\(r\)</span> at the (right) end.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_background_decimal-2-6">For example, consider the age of Professor Trotter’s son. It is then written as 22. And to emphasize the base eight notation, most people would say <span class="process-math">\(22\text{,}\)</span> base <span class="process-math">\(8\)</span> and write <span class="process-math">\((22)_8\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -666,7 +675,9 @@ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(0)))))))))))))))))).
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_background_decimal-2-8">For any base <span class="process-math">\(b&gt;1\text{,}\)</span> caution must be exercised when discussing multiplication, since writing the product <span class="process-math">\(m\times n\)</span> in the abbreviated form <span class="process-math">\(mn\)</span> causes us some grief. For example, if <span class="process-math">\(b = 8\text{,}\)</span> then writing the product <span class="process-math">\(372\times4885\)</span> as <span class="process-math">\(3724885\)</span> is ambiguous. For this reason, when using base <span class="process-math">\(b\)</span> notation, the product symbol <span class="process-math">\(\times\)</span> (or some variation of <span class="process-math">\(\times\)</span>) is always used.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="s_background_decimal-3"><h3 class="heading hide-type">
+</div></section>
+<section class="subsection" id="s_background_decimal-3">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.12.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alternate Versions of Induction</span>
 </h3>
 <div class="para logical" id="s_background_decimal-3-2">
@@ -694,7 +705,11 @@ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(0)))))))))))))))))).
 </h4>
 <div class="para" id="s_background_decimal-3-5-1-1">Let <span class="process-math">\(\mathbb{M}\subseteq\posints\text{.}\)</span> If <span class="process-math">\(\mathbb{M}\neq\posints\text{,}\)</span> then there is a unique least positive integer <span class="process-math">\(n\)</span> that does not belong to <span class="process-math">\(\mathbb{M}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_decimal-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem B.35"><a href="#s_background_decimal-3-5" title="Copy heading and permalink for Theorem B.35" aria-label="Copy heading and permalink for Theorem B.35">🔗</a></div></article><div class="autopermalink" data-description="Subsection B.12.1: Alternate Versions of Induction"><a href="#s_background_decimal-3" title="Copy heading and permalink for Subsection B.12.1: Alternate Versions of Induction" aria-label="Copy heading and permalink for Subsection B.12.1: Alternate Versions of Induction">🔗</a></div></section><div class="autopermalink" data-description="Section B.12: Notation for Natural Numbers"><a href="#s_background_decimal" title="Copy heading and permalink for Section B.12: Notation for Natural Numbers" aria-label="Copy heading and permalink for Section B.12: Notation for Natural Numbers">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Theorem B.35"><a href="#s_background_decimal-3-5" title="Copy heading and permalink for Theorem B.35" aria-label="Copy heading and permalink for Theorem B.35">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection B.12.1: Alternate Versions of Induction"><a href="#s_background_decimal-3" title="Copy heading and permalink for Subsection B.12.1: Alternate Versions of Induction" aria-label="Copy heading and permalink for Subsection B.12.1: Alternate Versions of Induction">🔗</a></div>
+</section><div class="autopermalink" data-description="Section B.12: Notation for Natural Numbers"><a href="#s_background_decimal" title="Copy heading and permalink for Section B.12: Notation for Natural Numbers" aria-label="Copy heading and permalink for Section B.12: Notation for Natural Numbers">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_background_total-order-N.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_background_equivalence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

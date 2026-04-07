@@ -36,11 +36,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -73,10 +73,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '7.13.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -623,7 +623,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_genfunction_binom-app"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_genfunction_binom-app">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Application of the Binomial Theorem</span>
 </h2>
 <div class="para" id="s_genfunction_binom-app-2">In this section, we see how <a href="s_genfunction_gen-bin-thm.html#thm_newton-binomial" class="xref" data-knowl="./knowl/xref/thm_newton-binomial.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.10: Newton’s Binomial Theorem">Newton’s Binomial Theorem</a> can be used to derive another useful identity. We begin by establishing a different recursive formula for <span class="process-math">\(P(p,k)\)</span> than was used in our definition of it.<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -633,7 +635,11 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="s_genfunction_binom-app-3-1-1">For each <span class="process-math">\(k\ge0\text{,}\)</span> <span class="process-math">\(P(p,k+1)=P(p,k)(p-k)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 8.11"><a href="#s_genfunction_binom-app-3" title="Copy heading and permalink for Lemma 8.11" aria-label="Copy heading and permalink for Lemma 8.11">🔗</a></div></article><details id="s_genfunction_binom-app-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_genfunction_binom-app-3-2-1">
+<div class="autopermalink" data-description="Lemma 8.11"><a href="#s_genfunction_binom-app-3" title="Copy heading and permalink for Lemma 8.11" aria-label="Copy heading and permalink for Lemma 8.11">🔗</a></div>
+</article>
+<details id="s_genfunction_binom-app-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_genfunction_binom-app-3-2-1">
 <div class="para">When <span class="process-math">\(k=0\text{,}\)</span> both sides evaluate to <span class="process-math">\(p\text{.}\)</span> Now assume validity when <span class="process-math">\(k=m\)</span> for some non-negative integer <span class="process-math">\(m\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="s_genfunction_binom-app-3-2-1-5">
 \begin{align*}
@@ -645,14 +651,20 @@ P(p,m+2)\amp =pP(p-1,m+1)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 8.11.1"><a href="#s_genfunction_binom-app-3-2" title="Copy heading and permalink for Proof 8.11.1" aria-label="Copy heading and permalink for Proof 8.11.1">🔗</a></div></article></details><div class="para" id="s_genfunction_binom-app-4">Our goal in this section will be to invoke <a href="s_genfunction_gen-bin-thm.html#thm_newton-binomial" class="xref" data-knowl="./knowl/xref/thm_newton-binomial.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.10: Newton’s Binomial Theorem">Newton’s Binomial Theorem</a> with the exponent <span class="process-math">\(p=-1/2\text{.}\)</span> To do so in a meaningful manner, we need a simplified expression for <span class="process-math">\(C(-1/2,k)\text{,}\)</span> which the next lemma provides.<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 8.11.1"><a href="#s_genfunction_binom-app-3-2" title="Copy heading and permalink for Proof 8.11.1" aria-label="Copy heading and permalink for Proof 8.11.1">🔗</a></div>
+</article></details>
+<div class="para" id="s_genfunction_binom-app-4">Our goal in this section will be to invoke <a href="s_genfunction_gen-bin-thm.html#thm_newton-binomial" class="xref" data-knowl="./knowl/xref/thm_newton-binomial.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.10: Newton’s Binomial Theorem">Newton’s Binomial Theorem</a> with the exponent <span class="process-math">\(p=-1/2\text{.}\)</span> To do so in a meaningful manner, we need a simplified expression for <span class="process-math">\(C(-1/2,k)\text{,}\)</span> which the next lemma provides.<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="l_newbinom"><h3 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="l_newbinom-1-1">For each <span class="process-math">\(k\ge0\text{,}\)</span> <span class="process-math">\(\displaystyle\binom{-1/2}{k}=(-1)^k\frac{\binom{2k}{k}}{2^{2k}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#l_newbinom-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 8.12"><a href="#l_newbinom" title="Copy heading and permalink for Lemma 8.12" aria-label="Copy heading and permalink for Lemma 8.12">🔗</a></div></article><details id="l_newbinom-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="l_newbinom-2-1">
+<div class="autopermalink" data-description="Lemma 8.12"><a href="#l_newbinom" title="Copy heading and permalink for Lemma 8.12" aria-label="Copy heading and permalink for Lemma 8.12">🔗</a></div>
+</article>
+<details id="l_newbinom-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="l_newbinom-2-1">
 <div class="para">We proceed by induction on <span class="process-math">\(k\text{.}\)</span> Both sides reduce to <span class="process-math">\(1\)</span> when <span class="process-math">\(k=0\text{.}\)</span> Now assume validity when <span class="process-math">\(k=m\)</span> for some non-negative integer <span class="process-math">\(m\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="l_newbinom-2-1-6">
 \begin{align*}
@@ -667,12 +679,18 @@ P(p,m+2)\amp =pP(p-1,m+1)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#l_newbinom-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 8.12.1"><a href="#l_newbinom-2" title="Copy heading and permalink for Proof 8.12.1" aria-label="Copy heading and permalink for Proof 8.12.1">🔗</a></div></article></details><article class="theorem theorem-like" id="t_sqrt"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 8.12.1"><a href="#l_newbinom-2" title="Copy heading and permalink for Proof 8.12.1" aria-label="Copy heading and permalink for Proof 8.12.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="t_sqrt"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="t_sqrt-1-1">The function <span class="process-math">\(f(x)=(1-4x)^{-1/2}\)</span> is the generating function of the sequence <span class="process-math">\(\{\binom{2n}{n}:n\ge0\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#t_sqrt-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 8.13"><a href="#t_sqrt" title="Copy heading and permalink for Theorem 8.13" aria-label="Copy heading and permalink for Theorem 8.13">🔗</a></div></article><details id="t_sqrt-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="t_sqrt-2-1">
+<div class="autopermalink" data-description="Theorem 8.13"><a href="#t_sqrt" title="Copy heading and permalink for Theorem 8.13" aria-label="Copy heading and permalink for Theorem 8.13">🔗</a></div>
+</article>
+<details id="t_sqrt-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="t_sqrt-2-1">
 <div class="para">By <a href="s_genfunction_gen-bin-thm.html#thm_newton-binomial" class="xref" data-knowl="./knowl/xref/thm_newton-binomial.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.10: Newton’s Binomial Theorem">Newton’s Binomial Theorem</a> and <a href="s_genfunction_binom-app.html#l_newbinom" class="xref" data-knowl="./knowl/xref/l_newbinom.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 8.12">Lemma 8.12</a>, we know that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_newton-binomial.html ./knowl/xref/l_newbinom.html" id="t_sqrt-2-1-3">
 \begin{align*}
@@ -683,7 +701,9 @@ P(p,m+2)\amp =pP(p-1,m+1)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#t_sqrt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 8.13.1"><a href="#t_sqrt-2" title="Copy heading and permalink for Proof 8.13.1" aria-label="Copy heading and permalink for Proof 8.13.1">🔗</a></div></article></details><div class="para" id="s_genfunction_binom-app-7">We will return to this generating function in <a href="s_recurrence_rubots.html" class="internal" title="Section 9.7: Solving a nonlinear recurrence">Section 9.7</a>, where it will play a role in a seemingly new counting problem that actually is a problem we’ve already studied in disguise.<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 8.13.1"><a href="#t_sqrt-2" title="Copy heading and permalink for Proof 8.13.1" aria-label="Copy heading and permalink for Proof 8.13.1">🔗</a></div>
+</article></details>
+<div class="para" id="s_genfunction_binom-app-7">We will return to this generating function in <a href="s_recurrence_rubots.html" class="internal" title="Section 9.7: Solving a nonlinear recurrence">Section 9.7</a>, where it will play a role in a seemingly new counting problem that actually is a problem we’ve already studied in disguise.<div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_genfunction_binom-app-8">Now recalling <a href="s_genfunction_intro.html#prop_genfunction-product" class="xref" data-knowl="./knowl/xref/prop_genfunction-product.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 8.3">Proposition 8.3</a> about the coefficients in the product of two generating functions, we are able to deduce the following corollary of <a href="s_genfunction_binom-app.html#t_sqrt" class="xref" data-knowl="./knowl/xref/t_sqrt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.13">Theorem 8.13</a> by squaring the function <span class="process-math">\(f(x) = (1-4x)^{-1/2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -700,7 +720,10 @@ P(p,m+2)\amp =pP(p-1,m+1)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_genfunction_binom-app-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 8.14"><a href="#s_genfunction_binom-app-9" title="Copy heading and permalink for Corollary 8.14" aria-label="Copy heading and permalink for Corollary 8.14">🔗</a></div></article><div class="autopermalink" data-description="Section 8.4: An Application of the Binomial Theorem"><a href="#s_genfunction_binom-app" title="Copy heading and permalink for Section 8.4: An Application of the Binomial Theorem" aria-label="Copy heading and permalink for Section 8.4: An Application of the Binomial Theorem">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Corollary 8.14"><a href="#s_genfunction_binom-app-9" title="Copy heading and permalink for Corollary 8.14" aria-label="Copy heading and permalink for Corollary 8.14">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 8.4: An Application of the Binomial Theorem"><a href="#s_genfunction_binom-app" title="Copy heading and permalink for Section 8.4: An Application of the Binomial Theorem" aria-label="Copy heading and permalink for Section 8.4: An Application of the Binomial Theorem">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_genfunction_gen-bin-thm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_genfunction_partitions-integer.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

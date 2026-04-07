@@ -36,11 +36,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -73,10 +73,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '7.13.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -623,10 +623,13 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_background_formal-num-sys"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_background_formal-num-sys">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Formal Development of Number Systems</span>
 </h2>
-<section class="introduction" id="s_background_formal-num-sys-2"><div class="para logical" id="s_background_formal-num-sys-2-1">
+<section class="introduction" id="s_background_formal-num-sys-2">
+<div class="para logical" id="s_background_formal-num-sys-2-1">
 <div class="para">Up to this point, we have been discussing number systems in an entirely informal manner, assuming everyone knew all that needed to be known. Now let’s pause and put things on a more firm foundation. So for the time being, do a memory dump and forget everything you have ever learned about numbers and arithmetic. The set of natural numbers has just been delivered on our door step in a big box with a warning label saying <em class="alert">Assembly Required.</em> We open the box and find a single piece of paper on which the following “instructions” are printed. These defining properties of the natural numbers are known as the <dfn class="terminology">Peano Postulates</dfn>.</div>
 <ol class="lower-roman ol-marker-5" id="s_background_formal-num-sys-2-1-5">
 <li id="s_background_formal-num-sys-2-1-5-1">
@@ -676,9 +679,16 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="s_background_formal-num-sys-2-3-1-1">Let <span class="process-math">\(n\)</span> be a natural number with <span class="process-math">\(n\neq0\text{.}\)</span> Then there is a natural number <span class="process-math">\(m\)</span> so that <span class="process-math">\(n=s(m)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_formal-num-sys-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition B.13"><a href="#s_background_formal-num-sys-2-3" title="Copy heading and permalink for Proposition B.13" aria-label="Copy heading and permalink for Proposition B.13">🔗</a></div></article><details id="s_background_formal-num-sys-2-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="s_background_formal-num-sys-2-3-2-1">Let <span class="process-math">\(\mathbb{S}=\{n\in\nonnegints:\exists m\in\nonnegints, n=s(m)\}\text{.}\)</span> Then set <span class="process-math">\(\mathbb{M}=\{0\}\cup\mathbb{S}\text{.}\)</span>  We show that <span class="process-math">\(\mathbb{M}=\nonnegints\text{.}\)</span> First, note that <span class="process-math">\(0\in\mathbb{M}\text{.}\)</span> Next, we will show that for all <span class="process-math">\(k\in\nonnegints\text{,}\)</span> if <span class="process-math">\(k\in\mathbb{M}\text{,}\)</span> then <span class="process-math">\(s(k)\in\mathbb{M}\text{.}\)</span> However, this is trivial since for all <span class="process-math">\(k\in\nonnegints\text{,}\)</span> we have <span class="process-math">\(s(k)\in\mathbb{S}\subseteq\mathbb{M}\text{.}\)</span>  We conclude that <span class="process-math">\(\mathbb{M}=\nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_formal-num-sys-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition B.13"><a href="#s_background_formal-num-sys-2-3" title="Copy heading and permalink for Proposition B.13" aria-label="Copy heading and permalink for Proposition B.13">🔗</a></div>
+</article>
+<details id="s_background_formal-num-sys-2-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="s_background_formal-num-sys-2-3-2-1">Let <span class="process-math">\(\mathbb{S}=\{n\in\nonnegints:\exists m\in\nonnegints, n=s(m)\}\text{.}\)</span> Then set <span class="process-math">\(\mathbb{M}=\{0\}\cup\mathbb{S}\text{.}\)</span>  We show that <span class="process-math">\(\mathbb{M}=\nonnegints\text{.}\)</span> First, note that <span class="process-math">\(0\in\mathbb{M}\text{.}\)</span> Next, we will show that for all <span class="process-math">\(k\in\nonnegints\text{,}\)</span> if <span class="process-math">\(k\in\mathbb{M}\text{,}\)</span> then <span class="process-math">\(s(k)\in\mathbb{M}\text{.}\)</span> However, this is trivial since for all <span class="process-math">\(k\in\nonnegints\text{,}\)</span> we have <span class="process-math">\(s(k)\in\mathbb{S}\subseteq\mathbb{M}\text{.}\)</span>  We conclude that <span class="process-math">\(\mathbb{M}=\nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_formal-num-sys-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.13.1"><a href="#s_background_formal-num-sys-2-3-2" title="Copy heading and permalink for Proof B.13.1" aria-label="Copy heading and permalink for Proof B.13.1">🔗</a></div></article></details></section><section class="subsection" id="s_background_add"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Proof B.13.1"><a href="#s_background_formal-num-sys-2-3-2" title="Copy heading and permalink for Proof B.13.1" aria-label="Copy heading and permalink for Proof B.13.1">🔗</a></div>
+</article></details></section>
+<section class="subsection" id="s_background_add">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Addition as a Binary Operation</span>
 </h3>
 <div class="para logical" id="s_background_add-2">
@@ -729,13 +739,19 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Principle B.14: Principle of Induction"><a href="#s_background_add-7" title="Copy heading and permalink for Principle B.14: Principle of Induction" aria-label="Copy heading and permalink for Principle B.14: Principle of Induction">🔗</a></div></article><article class="theorem theorem-like" id="s_background_add-8"><h4 class="heading">
+<div class="autopermalink" data-description="Principle B.14: Principle of Induction"><a href="#s_background_add-7" title="Copy heading and permalink for Principle B.14: Principle of Induction" aria-label="Copy heading and permalink for Principle B.14: Principle of Induction">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="s_background_add-8"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Associative Property of Addition.</span>
 </h4>
 <div class="para" id="s_background_add-8-2-1">
 <span class="process-math">\(m+(n+p) = (m+n)+p\text{,}\)</span> for all <span class="process-math">\(m,n,p\in \nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem B.15: Associative Property of Addition"><a href="#s_background_add-8" title="Copy heading and permalink for Theorem B.15: Associative Property of Addition" aria-label="Copy heading and permalink for Theorem B.15: Associative Property of Addition">🔗</a></div></article><details id="s_background_add-8-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="s_background_add-8-3-1">Let <span class="process-math">\(m,n\in \nonnegints\text{.}\)</span> Then let <span class="process-math">\(\mathbb{M}\)</span> denote the set of all natural numbers <span class="process-math">\(p\)</span> for which <span class="process-math">\(m+(n+p)=(m+n)+p\text{.}\)</span> We show that <span class="process-math">\(\mathbb{M}=\nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem B.15: Associative Property of Addition"><a href="#s_background_add-8" title="Copy heading and permalink for Theorem B.15: Associative Property of Addition" aria-label="Copy heading and permalink for Theorem B.15: Associative Property of Addition">🔗</a></div>
+</article>
+<details id="s_background_add-8-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="s_background_add-8-3-1">Let <span class="process-math">\(m,n\in \nonnegints\text{.}\)</span> Then let <span class="process-math">\(\mathbb{M}\)</span> denote the set of all natural numbers <span class="process-math">\(p\)</span> for which <span class="process-math">\(m+(n+p)=(m+n)+p\text{.}\)</span> We show that <span class="process-math">\(\mathbb{M}=\nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="s_background_add-8-3-2">
 <div class="para">Note that</div>
@@ -758,7 +774,9 @@ m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1).
 <div class="para">Notice here that the first, second, and fourth equalities follow from the second part of the definition of addition while the third uses our inductive assumption that <span class="process-math">\(m+(n+k)=(m+n)+k)\text{.}\)</span> This shows that <span class="process-math">\(k+1\in \mathbb{M}\text{.}\)</span> Therefore, <span class="process-math">\(\mathbb{M}= \nonnegints\text{.}\)</span> Since <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> were arbitrary elements of <span class="process-math">\(\nonnegints\text{,}\)</span> the theorem follows.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-8-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.15.1"><a href="#s_background_add-8-3" title="Copy heading and permalink for Proof B.15.1" aria-label="Copy heading and permalink for Proof B.15.1">🔗</a></div></article></details><div class="para" id="s_background_add-9">In proofs to follow, we will trim out some of the wording and leave only the essential mathematical steps intact.  In particular, we will (i) omit reference to the set <span class="process-math">\(\mathbb{M}\text{,}\)</span> and (ii) drop the phrase “For all <span class="process-math">\(k\in\nonnegints\)</span>” For example, to define addition, we will just write (i) <span class="process-math">\(n+0=n\text{,}\)</span> and (ii) <span class="process-math">\(n+(k+1) = (n+k)+1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof B.15.1"><a href="#s_background_add-8-3" title="Copy heading and permalink for Proof B.15.1" aria-label="Copy heading and permalink for Proof B.15.1">🔗</a></div>
+</article></details>
+<div class="para" id="s_background_add-9">In proofs to follow, we will trim out some of the wording and leave only the essential mathematical steps intact.  In particular, we will (i) omit reference to the set <span class="process-math">\(\mathbb{M}\text{,}\)</span> and (ii) drop the phrase “For all <span class="process-math">\(k\in\nonnegints\)</span>” For example, to define addition, we will just write (i) <span class="process-math">\(n+0=n\text{,}\)</span> and (ii) <span class="process-math">\(n+(k+1) = (n+k)+1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="s_background_add-10"><h4 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -766,7 +784,11 @@ m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1).
 <div class="para" id="s_background_add-10-1-1">
 <span class="process-math">\(m+(n+1) = (m+1)+n\text{,}\)</span> for all <span class="process-math">\(m,n\in\nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma B.16"><a href="#s_background_add-10" title="Copy heading and permalink for Lemma B.16" aria-label="Copy heading and permalink for Lemma B.16">🔗</a></div></article><details id="s_background_add-10-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_background_add-10-2-1">
+<div class="autopermalink" data-description="Lemma B.16"><a href="#s_background_add-10" title="Copy heading and permalink for Lemma B.16" aria-label="Copy heading and permalink for Lemma B.16">🔗</a></div>
+</article>
+<details id="s_background_add-10-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_background_add-10-2-1">
 <div class="para">Fix <span class="process-math">\(m\in \nonnegints\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="s_background_add-10-2-1-2">
 \begin{equation*}
@@ -781,7 +803,9 @@ m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.16.1"><a href="#s_background_add-10-2" title="Copy heading and permalink for Proof B.16.1" aria-label="Copy heading and permalink for Proof B.16.1">🔗</a></div></article></details><div class="para" id="s_background_add-11">We next prove the commutative property, a task that takes two steps. First, we prove the following special case.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof B.16.1"><a href="#s_background_add-10-2" title="Copy heading and permalink for Proof B.16.1" aria-label="Copy heading and permalink for Proof B.16.1">🔗</a></div>
+</article></details>
+<div class="para" id="s_background_add-11">We next prove the commutative property, a task that takes two steps. First, we prove the following special case.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="s_background_add-12"><h4 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -789,7 +813,11 @@ m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
 <div class="para" id="s_background_add-12-1-1">
 <span class="process-math">\(n+0 = 0+n=n\text{,}\)</span> for all <span class="process-math">\(n\in \nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma B.17"><a href="#s_background_add-12" title="Copy heading and permalink for Lemma B.17" aria-label="Copy heading and permalink for Lemma B.17">🔗</a></div></article><details id="s_background_add-12-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_background_add-12-2-1">
+<div class="autopermalink" data-description="Lemma B.17"><a href="#s_background_add-12" title="Copy heading and permalink for Lemma B.17" aria-label="Copy heading and permalink for Lemma B.17">🔗</a></div>
+</article>
+<details id="s_background_add-12-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_background_add-12-2-1">
 <div class="para">The statement is trivially true when <span class="process-math">\(n= 0\text{.}\)</span>  Now suppose that <span class="process-math">\(k+0=0+k=k\)</span> for some <span class="process-math">\(k\in \nonnegints\text{.}\)</span>  Then</div>
 <div class="displaymath process-math" id="s_background_add-12-2-1-4">
 \begin{equation*}
@@ -798,13 +826,19 @@ m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.17.1"><a href="#s_background_add-12-2" title="Copy heading and permalink for Proof B.17.1" aria-label="Copy heading and permalink for Proof B.17.1">🔗</a></div></article></details><article class="theorem theorem-like" id="s_background_add-13"><h4 class="heading">
+<div class="autopermalink" data-description="Proof B.17.1"><a href="#s_background_add-12-2" title="Copy heading and permalink for Proof B.17.1" aria-label="Copy heading and permalink for Proof B.17.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="s_background_add-13"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Commutative Law of Addition.</span>
 </h4>
 <div class="para" id="s_background_add-13-2-1">
 <span class="process-math">\(m+n=n+m\)</span> for all <span class="process-math">\(m,n\in \nonnegints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem B.18: Commutative Law of Addition"><a href="#s_background_add-13" title="Copy heading and permalink for Theorem B.18: Commutative Law of Addition" aria-label="Copy heading and permalink for Theorem B.18: Commutative Law of Addition">🔗</a></div></article><details id="s_background_add-13-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_background_add-13-3-1">
+<div class="autopermalink" data-description="Theorem B.18: Commutative Law of Addition"><a href="#s_background_add-13" title="Copy heading and permalink for Theorem B.18: Commutative Law of Addition" aria-label="Copy heading and permalink for Theorem B.18: Commutative Law of Addition">🔗</a></div>
+</article>
+<details id="s_background_add-13-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_background_add-13-3-1">
 <div class="para">Let <span class="process-math">\(m\in \nonnegints\text{.}\)</span> Then <span class="process-math">\(m+0=0+m\)</span> from the preceding lemma.  Assume <span class="process-math">\(m+k=k+m\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="s_background_add-13-3-1-4">
 \begin{equation*}
@@ -813,19 +847,31 @@ m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.18.1"><a href="#s_background_add-13-3" title="Copy heading and permalink for Proof B.18.1" aria-label="Copy heading and permalink for Proof B.18.1">🔗</a></div></article></details><article class="lemma theorem-like" id="lem_sum0"><h4 class="heading">
+<div class="autopermalink" data-description="Proof B.18.1"><a href="#s_background_add-13-3" title="Copy heading and permalink for Proof B.18.1" aria-label="Copy heading and permalink for Proof B.18.1">🔗</a></div>
+</article></details>
+<article class="lemma theorem-like" id="lem_sum0"><h4 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="lem_sum0-1-1">If <span class="process-math">\(m,n\in\nonnegints\)</span> and <span class="process-math">\(m+n=0\text{,}\)</span> then <span class="process-math">\(m=n=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lem_sum0-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma B.19"><a href="#lem_sum0" title="Copy heading and permalink for Lemma B.19" aria-label="Copy heading and permalink for Lemma B.19">🔗</a></div></article><details id="lem_sum0-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="lem_sum0-2-1">Suppose that either of <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> is not zero. Since addition is commutative, we may assume without loss of generality that <span class="process-math">\(n\neq0\text{.}\)</span> Then there exists a natural number <span class="process-math">\(p\)</span> so that <span class="process-math">\(n=s(p)\text{.}\)</span> This implies that <span class="process-math">\(m+n=m+s(p)=s(m+p)=0\text{,}\)</span> which is impossible since <span class="process-math">\(0\)</span> is not the successor of any natural number.<div class="autopermalink" data-description="Paragraph"><a href="#lem_sum0-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Lemma B.19"><a href="#lem_sum0" title="Copy heading and permalink for Lemma B.19" aria-label="Copy heading and permalink for Lemma B.19">🔗</a></div>
+</article>
+<details id="lem_sum0-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="lem_sum0-2-1">Suppose that either of <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> is not zero. Since addition is commutative, we may assume without loss of generality that <span class="process-math">\(n\neq0\text{.}\)</span> Then there exists a natural number <span class="process-math">\(p\)</span> so that <span class="process-math">\(n=s(p)\text{.}\)</span> This implies that <span class="process-math">\(m+n=m+s(p)=s(m+p)=0\text{,}\)</span> which is impossible since <span class="process-math">\(0\)</span> is not the successor of any natural number.<div class="autopermalink" data-description="Paragraph"><a href="#lem_sum0-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.19.1"><a href="#lem_sum0-2" title="Copy heading and permalink for Proof B.19.1" aria-label="Copy heading and permalink for Proof B.19.1">🔗</a></div></article></details><article class="theorem theorem-like" id="s_background_add-15"><h4 class="heading">
+<div class="autopermalink" data-description="Proof B.19.1"><a href="#lem_sum0-2" title="Copy heading and permalink for Proof B.19.1" aria-label="Copy heading and permalink for Proof B.19.1">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="s_background_add-15"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cancellation Law of Addition.</span>
 </h4>
 <div class="para" id="s_background_add-15-2-1">If <span class="process-math">\(m,n,p\in \nonnegints\)</span> and <span class="process-math">\(m+p=n+p\text{,}\)</span> then <span class="process-math">\(m=n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem B.20: Cancellation Law of Addition"><a href="#s_background_add-15" title="Copy heading and permalink for Theorem B.20: Cancellation Law of Addition" aria-label="Copy heading and permalink for Theorem B.20: Cancellation Law of Addition">🔗</a></div></article><details id="s_background_add-15-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_background_add-15-3-1">
+<div class="autopermalink" data-description="Theorem B.20: Cancellation Law of Addition"><a href="#s_background_add-15" title="Copy heading and permalink for Theorem B.20: Cancellation Law of Addition" aria-label="Copy heading and permalink for Theorem B.20: Cancellation Law of Addition">🔗</a></div>
+</article>
+<details id="s_background_add-15-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_background_add-15-3-1">
 <div class="para">Let <span class="process-math">\(m,n\in \nonnegints\text{.}\)</span> Suppose that <span class="process-math">\(m+0=n+0\text{.}\)</span> Then <span class="process-math">\(m=n\text{.}\)</span>  Now suppose that <span class="process-math">\(m=n\)</span> whenever <span class="process-math">\(m+k=n+k\text{.}\)</span>  If <span class="process-math">\(m+(k+1)=n+(k+1)\text{,}\)</span> then</div>
 <div class="displaymath process-math" id="s_background_add-15-3-1-7">
 \begin{equation*}
@@ -836,7 +882,11 @@ s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k).
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_add-15-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.20.1"><a href="#s_background_add-15-3" title="Copy heading and permalink for Proof B.20.1" aria-label="Copy heading and permalink for Proof B.20.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection B.7.1: Addition as a Binary Operation"><a href="#s_background_add" title="Copy heading and permalink for Subsection B.7.1: Addition as a Binary Operation" aria-label="Copy heading and permalink for Subsection B.7.1: Addition as a Binary Operation">🔗</a></div></section><div class="autopermalink" data-description="Section B.7: Formal Development of Number Systems"><a href="#s_background_formal-num-sys" title="Copy heading and permalink for Section B.7: Formal Development of Number Systems" aria-label="Copy heading and permalink for Section B.7: Formal Development of Number Systems">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Proof B.20.1"><a href="#s_background_add-15-3" title="Copy heading and permalink for Proof B.20.1" aria-label="Copy heading and permalink for Proof B.20.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection B.7.1: Addition as a Binary Operation"><a href="#s_background_add" title="Copy heading and permalink for Subsection B.7.1: Addition as a Binary Operation" aria-label="Copy heading and permalink for Subsection B.7.1: Addition as a Binary Operation">🔗</a></div>
+</section><div class="autopermalink" data-description="Section B.7: Formal Development of Number Systems"><a href="#s_background_formal-num-sys" title="Copy heading and permalink for Section B.7: Formal Development of Number Systems" aria-label="Copy heading and permalink for Section B.7: Formal Development of Number Systems">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_background_notation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_background_mult.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

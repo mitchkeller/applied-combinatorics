@@ -1042,7 +1042,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "8.2",
   "title": "Partitions and Newton’s Binomial Theorem",
-  "body": " Partitions and Newton's Binomial Theorem    Partitions of Integers    A partition of the positive integer is a way of writing as a sum of nonincreasing positive integers.      A partition of a positive integer is said to be a partition into odd parts if every term (also referred to as a part ) in the sum is odd.      A partition of a positive integer is said to be a partition into distinct parts if each integer appears in the sum at most once.      List the partitions of . Count the number of partitions into odd parts. Count the number of partitions into distinct parts.    Be systematic! One way to do this is by grouping partitions by their largest part.               Write a generating function in which the coefficient on is the number of partitions of into distinct parts.     Hint : This is conveniently done as a product of simple generating functions.       Write a generating function in which the coefficient on is the number of partitions of into odd parts.     Hint : A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.       Show that your generating functions above are actually equal to one another.     Hint :          Newton's Binomial Theorem    For all real numbers and nonnegative integers , the number is defined by    for all real numbers and     for all real numbers and integers .         For all real numbers and nonnegative integers , .      Compute .      For all real with , .      For each , .      Use mathematical induction to show that for all , .     Use Newton's Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .       "
+  "body": " Partitions and Newton's Binomial Theorem    Partitions of Integers    A partition of the positive integer is a way of writing as a sum of nonincreasing positive integers.      A partition of a positive integer is said to be a partition into odd parts if every term (also referred to as a part ) in the sum is odd.      A partition of a positive integer is said to be a partition into distinct parts if each integer appears in the sum at most once.      List the partitions of . Count the number of partitions into odd parts. Count the number of partitions into distinct parts.    Be systematic! One way to do this is by grouping partitions by their largest part.          How would we write a generating function in which the coefficient on is the number of partitions of ?       Write a generating function in which the coefficient on is the number of partitions of into distinct parts.    This is conveniently done as a product of simple generating functions.           Write a generating function in which the coefficient on is the number of partitions of into odd parts.    A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.           Show that your generating functions above are actually equal to one another.          by cancelling all the factors from the numerator with the factors in the denominator that have odd powers of .        Newton's Binomial Theorem    For all real numbers and nonnegative integers , the number is defined by    for all real numbers and     for all real numbers and integers .         For all real numbers and nonnegative integers , .      Compute .          Newton's Binomial Theorem   For all real with , .      For each , .      Use mathematical induction to show that for all , .     Use Newton's Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .            "
 },
 {
   "id": "genfunction-partitions-newton-2-1-2",
@@ -1087,7 +1087,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "8.2.2",
   "title": "",
-  "body": "   Write a generating function in which the coefficient on is the number of partitions of into distinct parts.     Hint : This is conveniently done as a product of simple generating functions.       Write a generating function in which the coefficient on is the number of partitions of into odd parts.     Hint : A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.       Show that your generating functions above are actually equal to one another.     Hint :      "
+  "body": "   Write a generating function in which the coefficient on is the number of partitions of into distinct parts.    This is conveniently done as a product of simple generating functions.           Write a generating function in which the coefficient on is the number of partitions of into odd parts.    A convenient form is a product of rational functions, but you might want to start with a product of power series and rewrite it.           Show that your generating functions above are actually equal to one another.          by cancelling all the factors from the numerator with the factors in the denominator that have odd powers of .    "
 },
 {
   "id": "genfunction-partitions-newton-5-1-2",
@@ -1114,7 +1114,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "8.2.3",
   "title": "",
-  "body": "  Compute .   "
+  "body": "  Compute .        "
 },
 {
   "id": "genfunction-partitions-newton-5-1-5",
@@ -1122,8 +1122,8 @@ var ptx_lunr_docs = [
   "url": "genfunction-partitions-newton.html#genfunction-partitions-newton-5-1-5",
   "type": "Theorem",
   "number": "8.9",
-  "title": "",
-  "body": "  For all real with , .   "
+  "title": "Newton’s Binomial Theorem.",
+  "body": " Newton's Binomial Theorem   For all real with , .   "
 },
 {
   "id": "genfunction-partitions-newton-5-1-6",
@@ -1141,7 +1141,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "8.2.4",
   "title": "",
-  "body": "  Use mathematical induction to show that for all , .     Use Newton's Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .    "
+  "body": "  Use mathematical induction to show that for all , .     Use Newton's Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .         "
 }
 ]
 

@@ -36,11 +36,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -73,10 +73,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -120,16 +120,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '7.13.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="appcomb" class="pretext book ignore-math">
@@ -623,7 +623,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_strings_comb-proof"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_strings_comb-proof">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Combinatorial Proofs</span>
 </h2>
 <div class="para" id="s_strings_comb-proof-3">Combinatorial arguments are among the most beautiful in all of mathematics. Oftentimes, statements that can be proved by other, more complicated methods (usually involving large amounts of tedious algebraic manipulations) have very short proofs once you can make a connection to counting. In this section, we introduce a new way of thinking about combinatorial problems with several examples. Our goal is to help you develop a “gut feeling” for combinatorial problems.<div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -639,11 +641,17 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_strings_comb-proof_sum-ints-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <figure class="figure figure-like" id="fig_squaredots"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
-<img src="external/3012-fig25.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_squaredots-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_squaredots-2-description"><div class="para" id="fig_squaredots-2-1-1">The sum of the first <span class="process-math">\(n\)</span> integers<div class="autopermalink" data-description="Paragraph"><a href="#fig_squaredots-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+</div> 
+<figure class="figure figure-like" id="fig_squaredots"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
+<img src="external/3012-fig25.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_squaredots-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_squaredots-2-description">
+<div class="para" id="fig_squaredots-2-1-1">The sum of the first <span class="process-math">\(n\)</span> integers<div class="autopermalink" data-description="Paragraph"><a href="#fig_squaredots-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sum of the first <span class="process-math">\(n\)</span> integers<div class="autopermalink" data-description="Figure 2.14"><a href="#fig_squaredots" title="Copy heading and permalink for Figure 2.14" aria-label="Copy heading and permalink for Figure 2.14">🔗</a></div></figcaption></figure><div class="solutions"><details id="ex_strings_comb-proof_sum-ints-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sum of the first <span class="process-math">\(n\)</span> integers<div class="autopermalink" data-description="Figure 2.14"><a href="#fig_squaredots" title="Copy heading and permalink for Figure 2.14" aria-label="Copy heading and permalink for Figure 2.14">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details id="ex_strings_comb-proof_sum-ints-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="ex_strings_comb-proof_sum-ints-2-1">Consider an <span class="process-math">\((n+1)\times (n+1)\)</span> array of dots as depicted in <a href="s_strings_comb-proof.html#fig_squaredots" class="xref" data-knowl="./knowl/xref/fig_squaredots.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.14">Figure 2.14</a>. There are <span class="process-math">\((n+1)^2\)</span> dots altogether, with exactly <span class="process-math">\(n+1\)</span> on the main diagonal.  The off-diagonal entries split naturally into two equal size parts, those above and those below the diagonal.<div class="autopermalink" data-description="Paragraph"><a href="#ex_strings_comb-proof_sum-ints-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex_strings_comb-proof_sum-ints-2-2">
@@ -657,8 +665,11 @@ S(n)=\frac{(n+1)^2-(n+1)}{2}
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_strings_comb-proof_sum-ints-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.13.1"><a href="#ex_strings_comb-proof_sum-ints-2" title="Copy heading and permalink for Solution 2.13.1" aria-label="Copy heading and permalink for Solution 2.13.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.13"><a href="#ex_strings_comb-proof_sum-ints" title="Copy heading and permalink for Example 2.13" aria-label="Copy heading and permalink for Example 2.13">🔗</a></div></article><article class="example example-like" id="s_strings_comb-proof-5"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.13"><a href="#ex_strings_comb-proof_sum-ints" title="Copy heading and permalink for Example 2.13" aria-label="Copy heading and permalink for Example 2.13">🔗</a></div>
+</article>
+<article class="example example-like" id="s_strings_comb-proof-5"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_strings_comb-proof-5-1-1">
@@ -669,16 +680,25 @@ S(n)=\frac{(n+1)^2-(n+1)}{2}
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <figure class="figure figure-like" id="fig_oddsum2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
-<img src="external/3012-fig21.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_oddsum2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_oddsum2-2-description"><div class="para" id="fig_oddsum2-2-1-1">The sum of the first <span class="process-math">\(n\)</span> odd integers<div class="autopermalink" data-description="Paragraph"><a href="#fig_oddsum2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+</div> 
+<figure class="figure figure-like" id="fig_oddsum2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;">
+<img src="external/3012-fig21.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_oddsum2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_oddsum2-2-description">
+<div class="para" id="fig_oddsum2-2-1-1">The sum of the first <span class="process-math">\(n\)</span> odd integers<div class="autopermalink" data-description="Paragraph"><a href="#fig_oddsum2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sum of the first <span class="process-math">\(n\)</span> odd integers<div class="autopermalink" data-description="Figure 2.16"><a href="#fig_oddsum2" title="Copy heading and permalink for Figure 2.16" aria-label="Copy heading and permalink for Figure 2.16">🔗</a></div></figcaption></figure><div class="solutions"><details id="s_strings_comb-proof-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The sum of the first <span class="process-math">\(n\)</span> odd integers<div class="autopermalink" data-description="Figure 2.16"><a href="#fig_oddsum2" title="Copy heading and permalink for Figure 2.16" aria-label="Copy heading and permalink for Figure 2.16">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details id="s_strings_comb-proof-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="s_strings_comb-proof-5-2-1">The left hand side is just the sum of the first <span class="process-math">\(n\)</span> odd integers. But as suggested in <a href="s_strings_comb-proof.html#fig_oddsum2" class="xref" data-knowl="./knowl/xref/fig_oddsum2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.16">Figure 2.16</a>, this is clearly equal to <span class="process-math">\(n^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.15.1"><a href="#s_strings_comb-proof-5-2" title="Copy heading and permalink for Solution 2.15.1" aria-label="Copy heading and permalink for Solution 2.15.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.15"><a href="#s_strings_comb-proof-5" title="Copy heading and permalink for Example 2.15" aria-label="Copy heading and permalink for Example 2.15">🔗</a></div></article><article class="example example-like" id="s_strings_comb-proof-6"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.15"><a href="#s_strings_comb-proof-5" title="Copy heading and permalink for Example 2.15" aria-label="Copy heading and permalink for Example 2.15">🔗</a></div>
+</article>
+<article class="example example-like" id="s_strings_comb-proof-6"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_strings_comb-proof-6-2-1">
@@ -690,12 +710,17 @@ S(n)=\frac{(n+1)^2-(n+1)}{2}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="s_strings_comb-proof-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="s_strings_comb-proof-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="s_strings_comb-proof-6-3-1">Both sides count the number of bit strings of length <span class="process-math">\(n\text{,}\)</span> with the left side first grouping them according to the number of <span class="process-math">\(0\)</span>’s.<div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.17.1"><a href="#s_strings_comb-proof-6-3" title="Copy heading and permalink for Solution 2.17.1" aria-label="Copy heading and permalink for Solution 2.17.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.17"><a href="#s_strings_comb-proof-6" title="Copy heading and permalink for Example 2.17" aria-label="Copy heading and permalink for Example 2.17">🔗</a></div></article><article class="example example-like" id="s_strings_comb-proof-7"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.17"><a href="#s_strings_comb-proof-6" title="Copy heading and permalink for Example 2.17" aria-label="Copy heading and permalink for Example 2.17">🔗</a></div>
+</article>
+<article class="example example-like" id="s_strings_comb-proof-7"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_strings_comb-proof-7-2-1">
@@ -709,12 +734,17 @@ S(n)=\frac{(n+1)^2-(n+1)}{2}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="s_strings_comb-proof-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="s_strings_comb-proof-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="s_strings_comb-proof-7-3-1">To prove this formula, we simply observe that both sides count the number of bit strings of length <span class="process-math">\(n\)</span> that contain <span class="process-math">\(k+1\)</span> <span class="process-math">\(1\)</span>’s with the right hand side first partitioning them according to the last occurence of a <span class="process-math">\(1\text{.}\)</span> (For example, if the last <span class="process-math">\(1\)</span> occurs in position <span class="process-math">\(k+5\text{,}\)</span> then the remaining <span class="process-math">\(k\)</span> <span class="process-math">\(1\)</span>’s must appear in the preceding <span class="process-math">\(k+4\)</span> positions, giving <span class="process-math">\(C(k+4,k)\)</span> strings of this type.) Note that when <span class="process-math">\(k=1\)</span> (so <span class="process-math">\(k+1=2\)</span>), we have the same formula as developed earlier for the sum of the first <span class="process-math">\(n\)</span> positive integers.<div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.18.1"><a href="#s_strings_comb-proof-7-3" title="Copy heading and permalink for Solution 2.18.1" aria-label="Copy heading and permalink for Solution 2.18.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.18"><a href="#s_strings_comb-proof-7" title="Copy heading and permalink for Example 2.18" aria-label="Copy heading and permalink for Example 2.18">🔗</a></div></article><article class="example example-like" id="s_strings_comb-proof-8"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.18"><a href="#s_strings_comb-proof-7" title="Copy heading and permalink for Example 2.18" aria-label="Copy heading and permalink for Example 2.18">🔗</a></div>
+</article>
+<article class="example example-like" id="s_strings_comb-proof-8"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="s_strings_comb-proof-8-2-1">
@@ -727,12 +757,17 @@ S(n)=\frac{(n+1)^2-(n+1)}{2}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="s_strings_comb-proof-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="s_strings_comb-proof-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="s_strings_comb-proof-8-3-1">Both sides count the number of <span class="process-math">\(\{0,1,2\}\)</span>-strings of length <span class="process-math">\(n\text{,}\)</span> the right hand side first partitioning them according to positions in the string which are not <span class="process-math">\(2\text{.}\)</span> (For instance, if <span class="process-math">\(6\)</span> of the positions are not <span class="process-math">\(2\text{,}\)</span> we must first choose those <span class="process-math">\(6\)</span> positions in <span class="process-math">\(C(n,6)\)</span> ways and then there are <span class="process-math">\(2^6\)</span> ways to fill in those six positions by choosing either a <span class="process-math">\(0\)</span> or a <span class="process-math">\(1\)</span> for each position.)<div class="autopermalink" data-description="Paragraph"><a href="#s_strings_comb-proof-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.19.1"><a href="#s_strings_comb-proof-8-3" title="Copy heading and permalink for Solution 2.19.1" aria-label="Copy heading and permalink for Solution 2.19.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.19"><a href="#s_strings_comb-proof-8" title="Copy heading and permalink for Example 2.19" aria-label="Copy heading and permalink for Example 2.19">🔗</a></div></article><article class="example example-like" id="ex_strings_comb-proof_2n-choose-n"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.19"><a href="#s_strings_comb-proof-8" title="Copy heading and permalink for Example 2.19" aria-label="Copy heading and permalink for Example 2.19">🔗</a></div>
+</article>
+<article class="example example-like" id="ex_strings_comb-proof_2n-choose-n"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="ex_strings_comb-proof_2n-choose-n-2-1">
@@ -747,12 +782,18 @@ S(n)=\frac{(n+1)^2-(n+1)}{2}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_strings_comb-proof_2n-choose-n-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex_strings_comb-proof_2n-choose-n-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex_strings_comb-proof_2n-choose-n-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="ex_strings_comb-proof_2n-choose-n-3-1">Both sides count the number of bit strings of length <span class="process-math">\(2n\)</span> with half the bits being <span class="process-math">\(0\)</span>’s, with the right side first partitioning them according to the number of <span class="process-math">\(1\)</span>’s occurring in the first <span class="process-math">\(n\)</span> positions of the string. Note that we are also using the trivial identity <span class="process-math">\(\binom{n}{k}=\binom{n}{n-k}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_strings_comb-proof_2n-choose-n-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.20.1"><a href="#ex_strings_comb-proof_2n-choose-n-3" title="Copy heading and permalink for Solution 2.20.1" aria-label="Copy heading and permalink for Solution 2.20.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 2.20"><a href="#ex_strings_comb-proof_2n-choose-n" title="Copy heading and permalink for Example 2.20" aria-label="Copy heading and permalink for Example 2.20">🔗</a></div></article><div class="autopermalink" data-description="Section 2.4: Combinatorial Proofs"><a href="#s_strings_comb-proof" title="Copy heading and permalink for Section 2.4: Combinatorial Proofs" aria-label="Copy heading and permalink for Section 2.4: Combinatorial Proofs">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.20"><a href="#ex_strings_comb-proof_2n-choose-n" title="Copy heading and permalink for Example 2.20" aria-label="Copy heading and permalink for Example 2.20">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 2.4: Combinatorial Proofs"><a href="#s_strings_comb-proof" title="Copy heading and permalink for Section 2.4: Combinatorial Proofs" aria-label="Copy heading and permalink for Section 2.4: Combinatorial Proofs">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_strings_combinations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_strings_bin-coeff.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

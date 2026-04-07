@@ -36,11 +36,11 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
         "newcommand",
+        "textmacros",
         "knowl"
       ]
     }
@@ -73,10 +73,10 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
+      "[tex]/textmacros",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
@@ -122,16 +122,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.19';
+eBookConfig.runestone_version = '7.13.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -304,7 +304,8 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="worksheet" id="ws-graphs-planar" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<section class="worksheet" id="ws-graphs-planar" data-margins="13mm 13mm 13mm 13mm">
+<h2 class="heading hide-type">
 <span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler’s Polyhedral Formula</span><div class="print-links"><a href="?printpreview=ws-graphs-planar" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
 <div class="para" id="ws-graphs-planar-2">It turns out that you could draw hundreds of connected planar graphs and keep finding the same pattern that arises in the platonic solids:<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -314,53 +315,81 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="ws-graphs-planar-3-2-1">Let <span class="process-math">\(\bfG\)</span> be a connected planar graph with <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(m\)</span> edges. Then every planar drawing of <span class="process-math">\(\bfG\)</span> has <span class="process-math">\(f\)</span> faces, where <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(n-m+f=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.2: Euler’s Formula"><a href="#ws-graphs-planar-3" title="Copy heading and permalink for Theorem 5.2: Euler’s Formula" aria-label="Copy heading and permalink for Theorem 5.2: Euler’s Formula">🔗</a></div></article><article class="exercise exercise-like" id="ws-graphs-planar-4"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Theorem 5.2: Euler’s Formula"><a href="#ws-graphs-planar-3" title="Copy heading and permalink for Theorem 5.2: Euler’s Formula" aria-label="Copy heading and permalink for Theorem 5.2: Euler’s Formula">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ws-graphs-planar-4"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="ws-graphs-planar-4-1-1">Notice that Euler’s Formula requires that <span class="process-math">\(\bfG\)</span> be a <dfn class="terminology">connected</dfn> planar graph. Find a counterexample to show that the formula <span class="process-math">\(n-m+f=2\)</span> does not hold if <span class="process-math">\(\bfG\)</span> is a planar graph that is not connected.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.35in"></div>
-<div class="autopermalink" data-description="Problem 5.3.1"><a href="#ws-graphs-planar-4" title="Copy heading and permalink for Problem 5.3.1" aria-label="Copy heading and permalink for Problem 5.3.1">🔗</a></div></article><article class="exercise exercise-like" id="ws-graphs-planar-5"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Problem 5.3.1"><a href="#ws-graphs-planar-4" title="Copy heading and permalink for Problem 5.3.1" aria-label="Copy heading and permalink for Problem 5.3.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ws-graphs-planar-5"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="ws-graphs-planar-5-1-1">Since <span class="process-math">\(\bfG\)</span> must be connected, we start by considering the minimal case in which <span class="process-math">\(\bfG\)</span> has no cycles (but for the general number <span class="process-math">\(n\)</span> of vertices). What type of graph does that mean <span class="process-math">\(\bfG\)</span> is? How many edges does <span class="process-math">\(\bfG\)</span> have (in terms of <span class="process-math">\(n\)</span>)? (In future questions, I’ll call this value of <span class="process-math">\(m\)</span> by the name <span class="process-math">\(m_{0}\text{.}\)</span>) Verify Euler’s formula in this case.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Problem 5.3.2"><a href="#ws-graphs-planar-5" title="Copy heading and permalink for Problem 5.3.2" aria-label="Copy heading and permalink for Problem 5.3.2">🔗</a></div></article><article class="exercise exercise-like" id="ws-graphs-planar-6"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Problem 5.3.2"><a href="#ws-graphs-planar-5" title="Copy heading and permalink for Problem 5.3.2" aria-label="Copy heading and permalink for Problem 5.3.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ws-graphs-planar-6"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <article class="task exercise-like" id="ws-graphs-planar-6-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="ws-graphs-planar-6-1-1">Draw a planar drawing of a connected planar graph <span class="process-math">\(\bfG\)</span> with with <span class="process-math">\(n=7\)</span> or <span class="process-math">\(n=8\)</span> vertices and more than <span class="process-math">\(m_{0}\)</span> edges. Make sure your graph has at least one vertex of degree <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.7in"></div>
-<div class="autopermalink" data-description="Task 5.3.3.a"><a href="#ws-graphs-planar-6-1" title="Copy heading and permalink for Task 5.3.3.a" aria-label="Copy heading and permalink for Task 5.3.3.a">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-6-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.3.a"><a href="#ws-graphs-planar-6-1" title="Copy heading and permalink for Task 5.3.3.a" aria-label="Copy heading and permalink for Task 5.3.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-6-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="ws-graphs-planar-6-2-1-1">Find <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m\text{,}\)</span> and <span class="process-math">\(f\)</span> for your graph.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.3.3.b"><a href="#ws-graphs-planar-6-2" title="Copy heading and permalink for Task 5.3.3.b" aria-label="Copy heading and permalink for Task 5.3.3.b">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-6-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.3.b"><a href="#ws-graphs-planar-6-2" title="Copy heading and permalink for Task 5.3.3.b" aria-label="Copy heading and permalink for Task 5.3.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-6-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="ws-graphs-planar-6-3-1-1">Is there an edge <span class="process-math">\(e\)</span> you can erase from your graph and leave a graph <span class="process-math">\(\bfG'\)</span> that is still connected? What determines whether or not an edge is safe to remove while still leaving a connected graph?<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.25in"></div>
-<div class="autopermalink" data-description="Task 5.3.3.c"><a href="#ws-graphs-planar-6-3" title="Copy heading and permalink for Task 5.3.3.c" aria-label="Copy heading and permalink for Task 5.3.3.c">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-6-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.3.c"><a href="#ws-graphs-planar-6-3" title="Copy heading and permalink for Task 5.3.3.c" aria-label="Copy heading and permalink for Task 5.3.3.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-6-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="ws-graphs-planar-6-4-1-1">Erase an edge <span class="process-math">\(e\)</span> from <span class="process-math">\(\bfG\)</span> to give you a planar drawing of a connected planar graph <span class="process-math">\(\bfG'\text{.}\)</span> Let <span class="process-math">\(n'\text{,}\)</span> <span class="process-math">\(m'\text{,}\)</span> and <span class="process-math">\(f'\)</span> be the number of vertices, edges, and faces respectively of <span class="process-math">\(\bfG'\text{.}\)</span> What are <span class="process-math">\(n',m',f'\)</span> for your graph?<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.3.d"><a href="#ws-graphs-planar-6-4" title="Copy heading and permalink for Task 5.3.3.d" aria-label="Copy heading and permalink for Task 5.3.3.d">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-6-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.3.d"><a href="#ws-graphs-planar-6-4" title="Copy heading and permalink for Task 5.3.3.d" aria-label="Copy heading and permalink for Task 5.3.3.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-6-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="ws-graphs-planar-6-5-1-1">Find equations that relate <span class="process-math">\(n'\text{,}\)</span> <span class="process-math">\(m'\text{,}\)</span> and <span class="process-math">\(f'\)</span> to <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m\text{,}\)</span> and <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 5.3.3.e"><a href="#ws-graphs-planar-6-5" title="Copy heading and permalink for Task 5.3.3.e" aria-label="Copy heading and permalink for Task 5.3.3.e">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.3.3"><a href="#ws-graphs-planar-6" title="Copy heading and permalink for Problem 5.3.3" aria-label="Copy heading and permalink for Problem 5.3.3">🔗</a></div></article><article class="exercise exercise-like" id="ws-graphs-planar-7"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="introduction" id="ws-graphs-planar-7-1"><div class="para" id="ws-graphs-planar-7-1-1">Now let’s suppose that <span class="process-math">\(\bfG\)</span> is a connected planar graph with <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(m\)</span> edges where <span class="process-math">\(m\gt m_{0}\text{.}\)</span> Suppose that Euler’s formula holds for any connected planar graph with fewer than <span class="process-math">\(m\)</span> edges. (What type of proof are we setting up here?)<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" data-description="Task 5.3.3.e"><a href="#ws-graphs-planar-6-5" title="Copy heading and permalink for Task 5.3.3.e" aria-label="Copy heading and permalink for Task 5.3.3.e">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 5.3.3"><a href="#ws-graphs-planar-6" title="Copy heading and permalink for Problem 5.3.3" aria-label="Copy heading and permalink for Problem 5.3.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ws-graphs-planar-7"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ws-graphs-planar-7-1">
+<div class="para" id="ws-graphs-planar-7-1-1">Now let’s suppose that <span class="process-math">\(\bfG\)</span> is a connected planar graph with <span class="process-math">\(n\)</span> vertices and <span class="process-math">\(m\)</span> edges where <span class="process-math">\(m\gt m_{0}\text{.}\)</span> Suppose that Euler’s formula holds for any connected planar graph with fewer than <span class="process-math">\(m\)</span> edges. (What type of proof are we setting up here?)<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="ws-graphs-planar-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="ws-graphs-planar-7-2-1-1">Why is there an edge <span class="process-math">\(e\)</span> you can delete from <span class="process-math">\(\bfG\)</span> to produce a connected planar graph <span class="process-math">\(\bfG'\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.25in"></div>
-<div class="autopermalink" data-description="Task 5.3.4.a"><a href="#ws-graphs-planar-7-2" title="Copy heading and permalink for Task 5.3.4.a" aria-label="Copy heading and permalink for Task 5.3.4.a">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.4.a"><a href="#ws-graphs-planar-7-2" title="Copy heading and permalink for Task 5.3.4.a" aria-label="Copy heading and permalink for Task 5.3.4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="ws-graphs-planar-7-3-1-1">Let <span class="process-math">\(n'\text{,}\)</span> <span class="process-math">\(m'\text{,}\)</span> and <span class="process-math">\(f'\)</span> be the number of vertices, edges, and faces respectively of <span class="process-math">\(\bfG'\text{.}\)</span> What are <span class="process-math">\(n',m',f'\)</span> in terms of <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m\text{,}\)</span> and <span class="process-math">\(f\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.25in"></div>
-<div class="autopermalink" data-description="Task 5.3.4.b"><a href="#ws-graphs-planar-7-3" title="Copy heading and permalink for Task 5.3.4.b" aria-label="Copy heading and permalink for Task 5.3.4.b">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.4.b"><a href="#ws-graphs-planar-7-3" title="Copy heading and permalink for Task 5.3.4.b" aria-label="Copy heading and permalink for Task 5.3.4.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="ws-graphs-planar-7-4-1-1">What equation involving <span class="process-math">\(n'\text{,}\)</span> <span class="process-math">\(m'\text{,}\)</span> and <span class="process-math">\(f'\)</span> must hold? Why?<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-7-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.35in"></div>
-<div class="autopermalink" data-description="Task 5.3.4.c"><a href="#ws-graphs-planar-7-4" title="Copy heading and permalink for Task 5.3.4.c" aria-label="Copy heading and permalink for Task 5.3.4.c">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.4.c"><a href="#ws-graphs-planar-7-4" title="Copy heading and permalink for Task 5.3.4.c" aria-label="Copy heading and permalink for Task 5.3.4.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="ws-graphs-planar-7-5-1-1">Prove that <span class="process-math">\(n-m+f=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-7-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.35in"></div>
-<div class="autopermalink" data-description="Task 5.3.4.d"><a href="#ws-graphs-planar-7-5" title="Copy heading and permalink for Task 5.3.4.d" aria-label="Copy heading and permalink for Task 5.3.4.d">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.3.4"><a href="#ws-graphs-planar-7" title="Copy heading and permalink for Problem 5.3.4" aria-label="Copy heading and permalink for Problem 5.3.4">🔗</a></div></article><article class="exercise exercise-like" id="ws-graphs-planar-8"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Task 5.3.4.d"><a href="#ws-graphs-planar-7-5" title="Copy heading and permalink for Task 5.3.4.d" aria-label="Copy heading and permalink for Task 5.3.4.d">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 5.3.4"><a href="#ws-graphs-planar-7" title="Copy heading and permalink for Problem 5.3.4" aria-label="Copy heading and permalink for Problem 5.3.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ws-graphs-planar-8"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="introduction" id="ws-graphs-planar-8-1">
 <div class="para" id="ws-graphs-planar-8-1-1">In the grand scheme of things, Euler’s formula doesn’t seem that useful for determining if a graph is planar or not. However, we can deduce something useful from it. In this problem, we’re going to imagine a fixed planar drawing of a connected planar graph <span class="process-math">\(\bfG\)</span> and let <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m\text{,}\)</span> and <span class="process-math">\(f\)</span> be the number of vertices, edges, and faces, respectively, in our planar drawing. We’ll assume that <span class="process-math">\(n\geq 4\)</span> to avoid some annoying things.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -371,57 +400,87 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="ws-graphs-planar-8-2-1-1">If I pick an edge <span class="process-math">\(e_{1}\)</span> of <span class="process-math">\(\bfG\text{,}\)</span> what is the largest possible number of faces that <span class="process-math">\(e_{1}\)</span> can be part of the boundary of? So what does that tell us about the number of ordered pairs in <span class="process-math">\(S\)</span> that have <span class="process-math">\(e_{1}\)</span> as the first coordinate?<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.5.a"><a href="#ws-graphs-planar-8-2" title="Copy heading and permalink for Task 5.3.5.a" aria-label="Copy heading and permalink for Task 5.3.5.a">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.5.a"><a href="#ws-graphs-planar-8-2" title="Copy heading and permalink for Task 5.3.5.a" aria-label="Copy heading and permalink for Task 5.3.5.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="ws-graphs-planar-8-3-1-1">Use the previous part to find an inequality involving <span class="process-math">\(m\)</span> and <span class="process-math">\(|S|\)</span> (the size of <span class="process-math">\(S\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.5.b"><a href="#ws-graphs-planar-8-3" title="Copy heading and permalink for Task 5.3.5.b" aria-label="Copy heading and permalink for Task 5.3.5.b">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.5.b"><a href="#ws-graphs-planar-8-3" title="Copy heading and permalink for Task 5.3.5.b" aria-label="Copy heading and permalink for Task 5.3.5.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="ws-graphs-planar-8-4-1-1">If I pick a face <span class="process-math">\(F_{1}\)</span> of <span class="process-math">\(\bfG\text{,}\)</span> what is the smallest possible number of edges that can be used to form the boundary of <span class="process-math">\(F_{1}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.5.c"><a href="#ws-graphs-planar-8-4" title="Copy heading and permalink for Task 5.3.5.c" aria-label="Copy heading and permalink for Task 5.3.5.c">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.5.c"><a href="#ws-graphs-planar-8-4" title="Copy heading and permalink for Task 5.3.5.c" aria-label="Copy heading and permalink for Task 5.3.5.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="ws-graphs-planar-8-5-1-1">Use the previous part to find an inequality involving <span class="process-math">\(f\)</span> and <span class="process-math">\(|S|\)</span> (the size of <span class="process-math">\(S\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.5.d"><a href="#ws-graphs-planar-8-5" title="Copy heading and permalink for Task 5.3.5.d" aria-label="Copy heading and permalink for Task 5.3.5.d">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-8-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.5.d"><a href="#ws-graphs-planar-8-5" title="Copy heading and permalink for Task 5.3.5.d" aria-label="Copy heading and permalink for Task 5.3.5.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-8-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="ws-graphs-planar-8-6-1-1">Combine two previous parts to get an inequality involving <span class="process-math">\(m\)</span> and <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.5.e"><a href="#ws-graphs-planar-8-6" title="Copy heading and permalink for Task 5.3.5.e" aria-label="Copy heading and permalink for Task 5.3.5.e">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-8-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.5.e"><a href="#ws-graphs-planar-8-6" title="Copy heading and permalink for Task 5.3.5.e" aria-label="Copy heading and permalink for Task 5.3.5.e">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-8-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="ws-graphs-planar-8-7-1-1">Using Euler’s formula and the previous part, show that <span class="process-math">\(m\leq 3n-6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.5.f"><a href="#ws-graphs-planar-8-7" title="Copy heading and permalink for Task 5.3.5.f" aria-label="Copy heading and permalink for Task 5.3.5.f">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-8-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.5.f"><a href="#ws-graphs-planar-8-7" title="Copy heading and permalink for Task 5.3.5.f" aria-label="Copy heading and permalink for Task 5.3.5.f">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-8-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para" id="ws-graphs-planar-8-8-1-1">Prove that <span class="process-math">\(\bfK_{5}\)</span> is not planar.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-8-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.15in"></div>
-<div class="autopermalink" data-description="Task 5.3.5.g"><a href="#ws-graphs-planar-8-8" title="Copy heading and permalink for Task 5.3.5.g" aria-label="Copy heading and permalink for Task 5.3.5.g">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.3.5"><a href="#ws-graphs-planar-8" title="Copy heading and permalink for Problem 5.3.5" aria-label="Copy heading and permalink for Problem 5.3.5">🔗</a></div></article><article class="exercise exercise-like" id="ws-graphs-planar-9"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="introduction" id="ws-graphs-planar-9-1"><div class="para" id="ws-graphs-planar-9-1-1">Recall that the complete bipartite graph <span class="process-math">\(\bfK_{3,3}\)</span> is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="autopermalink" data-description="Task 5.3.5.g"><a href="#ws-graphs-planar-8-8" title="Copy heading and permalink for Task 5.3.5.g" aria-label="Copy heading and permalink for Task 5.3.5.g">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 5.3.5"><a href="#ws-graphs-planar-8" title="Copy heading and permalink for Problem 5.3.5" aria-label="Copy heading and permalink for Problem 5.3.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ws-graphs-planar-9"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ws-graphs-planar-9-1">
+<div class="para" id="ws-graphs-planar-9-1-1">Recall that the complete bipartite graph <span class="process-math">\(\bfK_{3,3}\)</span> is the bipartite graph with two independent sets each of size three and all the possible edges (nine in total) between vertices in different independent sets.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="ws-graphs-planar-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="ws-graphs-planar-9-2-1-1">Can you make a planar drawing of <span class="process-math">\(\bfK_{3,3}\text{?}\)</span> If not, what does the <span class="process-math">\(m\leq 3n-6\)</span> restriction tell you here?<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-9-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1.5in"></div>
-<div class="autopermalink" data-description="Task 5.3.6.a"><a href="#ws-graphs-planar-9-2" title="Copy heading and permalink for Task 5.3.6.a" aria-label="Copy heading and permalink for Task 5.3.6.a">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.6.a"><a href="#ws-graphs-planar-9-2" title="Copy heading and permalink for Task 5.3.6.a" aria-label="Copy heading and permalink for Task 5.3.6.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="ws-graphs-planar-9-3-1-1">Notice that since <span class="process-math">\(\bfK_{3,3}\)</span> does not contain any vertices of degree <span class="process-math">\(1\text{,}\)</span> every face of a planar drawing would be bounded by a cycle, and thus every edge is part of the boundary of two faces. Since <span class="process-math">\(\bfK_{3,3}\)</span> is bipartite, what can you say about the length of every cycle in <span class="process-math">\(\bfK_{3,3}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-9-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.5in"></div>
-<div class="autopermalink" data-description="Task 5.3.6.b"><a href="#ws-graphs-planar-9-3" title="Copy heading and permalink for Task 5.3.6.b" aria-label="Copy heading and permalink for Task 5.3.6.b">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-9-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.6.b"><a href="#ws-graphs-planar-9-3" title="Copy heading and permalink for Task 5.3.6.b" aria-label="Copy heading and permalink for Task 5.3.6.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-9-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="ws-graphs-planar-9-4-1-1">As in the previous problem, count edge-face pairs. How many pairs must there be for <span class="process-math">\(\bfK_{3,3}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-9-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.25in"></div>
-<div class="autopermalink" data-description="Task 5.3.6.c"><a href="#ws-graphs-planar-9-4" title="Copy heading and permalink for Task 5.3.6.c" aria-label="Copy heading and permalink for Task 5.3.6.c">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-9-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.6.c"><a href="#ws-graphs-planar-9-4" title="Copy heading and permalink for Task 5.3.6.c" aria-label="Copy heading and permalink for Task 5.3.6.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-9-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="ws-graphs-planar-9-5-1-1">Let <span class="process-math">\(f_{4}\)</span> be the number of faces bounded by a cycle of length <span class="process-math">\(4\)</span> and let <span class="process-math">\(f_{6}\)</span> be the number of faces bounded by a cycle of length <span class="process-math">\(6\text{.}\)</span> Express the total number of faces <span class="process-math">\(f\)</span> in terms of <span class="process-math">\(f_{4}\)</span> and <span class="process-math">\(f_{6}\text{.}\)</span> Then express the number of edge-face pairs in terms of <span class="process-math">\(f_{4}\)</span> and <span class="process-math">\(f_{6}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-9-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.35in"></div>
-<div class="autopermalink" data-description="Task 5.3.6.d"><a href="#ws-graphs-planar-9-5" title="Copy heading and permalink for Task 5.3.6.d" aria-label="Copy heading and permalink for Task 5.3.6.d">🔗</a></div></article><article class="task exercise-like" id="ws-graphs-planar-9-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="autopermalink" data-description="Task 5.3.6.d"><a href="#ws-graphs-planar-9-5" title="Copy heading and permalink for Task 5.3.6.d" aria-label="Copy heading and permalink for Task 5.3.6.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ws-graphs-planar-9-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="ws-graphs-planar-9-6-1-1">What does Euler’s formula tell you <span class="process-math">\(f\)</span> would have to be for <span class="process-math">\(\bfK_{3,3}\text{?}\)</span> What lower bound does this give you for the number of edge-face pairs, and how does this show that <span class="process-math">\(\bfK_{3,3}\)</span> is not planar?<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-9-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Task 5.3.6.e"><a href="#ws-graphs-planar-9-6" title="Copy heading and permalink for Task 5.3.6.e" aria-label="Copy heading and permalink for Task 5.3.6.e">🔗</a></div></article><div class="autopermalink" data-description="Problem 5.3.6"><a href="#ws-graphs-planar-9" title="Copy heading and permalink for Problem 5.3.6" aria-label="Copy heading and permalink for Problem 5.3.6">🔗</a></div></article><article class="exercise exercise-like" id="ws-graphs-planar-10"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Task 5.3.6.e"><a href="#ws-graphs-planar-9-6" title="Copy heading and permalink for Task 5.3.6.e" aria-label="Copy heading and permalink for Task 5.3.6.e">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 5.3.6"><a href="#ws-graphs-planar-9" title="Copy heading and permalink for Problem 5.3.6" aria-label="Copy heading and permalink for Problem 5.3.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ws-graphs-planar-10"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para" id="ws-graphs-planar-10-1-1">For each graph on the next page, find a planar drawing or give a reason why the graph is not planar.<div class="autopermalink" data-description="Paragraph"><a href="#ws-graphs-planar-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Problem 5.3.7"><a href="#ws-graphs-planar-10" title="Copy heading and permalink for Problem 5.3.7" aria-label="Copy heading and permalink for Problem 5.3.7">🔗</a></div></article><div class="autopermalink" data-description="Worksheet 5.3: Euler’s Polyhedral Formula"><a href="#ws-graphs-planar" title="Copy heading and permalink for Worksheet 5.3: Euler’s Polyhedral Formula" aria-label="Copy heading and permalink for Worksheet 5.3: Euler’s Polyhedral Formula">🔗</a></div></section>
+<div class="autopermalink" data-description="Problem 5.3.7"><a href="#ws-graphs-planar-10" title="Copy heading and permalink for Problem 5.3.7" aria-label="Copy heading and permalink for Problem 5.3.7">🔗</a></div>
+</article><div class="autopermalink" data-description="Worksheet 5.3: Euler’s Polyhedral Formula"><a href="#ws-graphs-planar" title="Copy heading and permalink for Worksheet 5.3: Euler’s Polyhedral Formula" aria-label="Copy heading and permalink for Worksheet 5.3: Euler’s Polyhedral Formula">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ws-triangle-free.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-planar-or-not.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
