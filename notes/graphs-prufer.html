@@ -47,7 +47,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -114,7 +131,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -269,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-intro-ogf.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Ordinary Generating Functions</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-partitions-newton.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Partitions and Newton’s Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-exp-genfn.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Generating Functions</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -297,28 +315,21 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="graphs-prufer" data-margins="13mm 13mm 13mm 13mm">
-<h2 class="heading hide-type">
+<section class="handout" id="graphs-prufer" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Counting Labeled Trees</span><div class="print-links"><a href="?printpreview=graphs-prufer" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="onepage" id="graphs-prufer-2">
-<div class="para" id="graphs-prufer-2-1">
+<section class="onepage" id="graphs-prufer-2"><div class="para" id="graphs-prufer-2-1">
 <em class="alert">Labeled vs Unlabeled Trees (and Graphs) and Counting</em><div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="graphs-prufer-2-2">
 <em class="alert">Big Idea</em><div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside">
-<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:60% 40%;column-gap:0%;">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:60% 40%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box"><img src="generated/prefigure/ellipses-prufer.svg" role="img" class="contained"></div></div>
-<div class="sbspanel sbspanel--top top" style="">
-<div class="para" id="graphs-prufer-2-3-2"> <div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-</div>
-</div></section><section class="onepage" id="graphs-prufer-3">
-<article class="algorithm theorem-like" id="graphs-prufer-3-1"><h3 class="heading">
+<div class="sbspanel sbspanel--top top" style=""><div class="para" id="graphs-prufer-2-3-2"> <div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+</div></div></section><section class="onepage" id="graphs-prufer-3"><article class="algorithm theorem-like" id="graphs-prufer-3-1"><h3 class="heading">
 <span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Labeled Tree <span class="process-math">\(\longrightarrow\)</span> Prüfer Code.</span>
 </h3>
 <div class="para" id="graphs-prufer-3-1-2">Assume <span class="process-math">\(\bfT\)</span> is a labeled tree with at least <span class="process-math">\(2\)</span> vertices.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -340,9 +351,7 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Algorithm 5.13: Labeled Tree \longrightarrow Prüfer Code"><a href="#graphs-prufer-3-1" title="Copy heading and permalink for Algorithm 5.13: Labeled Tree \longrightarrow Prüfer Code" aria-label="Copy heading and permalink for Algorithm 5.13: Labeled Tree \longrightarrow Prüfer Code">🔗</a></div>
-</article>
-<div class="para" id="graphs-prufer-3-2">
+<div class="autopermalink" data-description="Algorithm 5.13: Labeled Tree \longrightarrow Prüfer Code"><a href="#graphs-prufer-3-1" title="Copy heading and permalink for Algorithm 5.13: Labeled Tree \longrightarrow Prüfer Code" aria-label="Copy heading and permalink for Algorithm 5.13: Labeled Tree \longrightarrow Prüfer Code">🔗</a></div></article><div class="para" id="graphs-prufer-3-2">
 <em class="alert">Peer instruction question 1 followed by Activity 5.5.1.</em><div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="graphs-prufer-3-3">
@@ -400,9 +409,7 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Algorithm 5.14: Prüfer Code \longrightarrow Labeled Tree"><a href="#graphs-prufer-3-4" title="Copy heading and permalink for Algorithm 5.14: Prüfer Code \longrightarrow Labeled Tree" aria-label="Copy heading and permalink for Algorithm 5.14: Prüfer Code \longrightarrow Labeled Tree">🔗</a></div>
-</article>
-<div class="para" id="graphs-prufer-3-5">
+<div class="autopermalink" data-description="Algorithm 5.14: Prüfer Code \longrightarrow Labeled Tree"><a href="#graphs-prufer-3-4" title="Copy heading and permalink for Algorithm 5.14: Prüfer Code \longrightarrow Labeled Tree" aria-label="Copy heading and permalink for Algorithm 5.14: Prüfer Code \longrightarrow Labeled Tree">🔗</a></div></article><div class="para" id="graphs-prufer-3-5">
 <em class="alert">Peer Instruction Question 4.</em><div class="autopermalink" data-description="Paragraph"><a href="#graphs-prufer-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="tabular-box natural-width"><table class="tabular">
@@ -512,8 +519,7 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b0 r1 l0 t0 lines"><span class="process-math">\(\{5,9\}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(5-9\)</span></td>
 </tr>
-</table></div></section><div class="autopermalink" data-description="Handout 5.5: Counting Labeled Trees"><a href="#graphs-prufer" title="Copy heading and permalink for Handout 5.5: Counting Labeled Trees" aria-label="Copy heading and permalink for Handout 5.5: Counting Labeled Trees">🔗</a></div>
-</section>
+</table></div></section><div class="autopermalink" data-description="Handout 5.5: Counting Labeled Trees"><a href="#graphs-prufer" title="Copy heading and permalink for Handout 5.5: Counting Labeled Trees" aria-label="Copy heading and permalink for Handout 5.5: Counting Labeled Trees">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="planar.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-posets.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

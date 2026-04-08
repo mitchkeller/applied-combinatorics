@@ -1214,6 +1214,33 @@ var ptx_lunr_docs = [
   "number": "8.2.4",
   "title": "",
   "body": "  Use mathematical induction to show that for all , .     Use Newton's Binomial Theorem and the step above to write as a formal power series in which the coefficient on is a binomial coefficient in which both numbers are integers .         "
+},
+{
+  "id": "notes-exp-genfn",
+  "level": "1",
+  "url": "notes-exp-genfn.html",
+  "type": "Handout",
+  "number": "8.3",
+  "title": "Exponential Generating Functions",
+  "body": " Exponential Generating Functions   Peer instruction questions 1 3.     Suppose we are making strings using the alphabet . If the number of times appears in the string is at least one and at most four, the number of times appears in the string is a positive even number, and there are at least three occurrences of in the string, write an exponential generating function in which the coefficient on is the number of such strings of length .    There are no restrictions on the number of times that or appear in the string, so each contributes a factor of to the generating function. For the digit , since we need a positive even number of occurrence in the string, we get . For the digit , since we need at least three occurrences, we have . Finally, for the digit 4, we have to allow only between 1 and 4 occurrences. Therefore, the generating function is .    Let's see how to use SageMath to find the number of strings of length 15 meeting these restrictions:   Why does multiplying exponential generating functions give us what we want? Let's consider the example of exponential generating functions for the number of ways to arrange books on two shelves where the number of ways to arrange books on the first shelf is (and does not depend on which books are on the shelf) and the number of ways to arrange books on the second shelf is .  Multiplying by just thinking of these as formal power series, we have . Now thinking from first principles about the book arrangement problem, we need to consider each possible number from to of books that are placed on the first shelf. There are ways to choose that number of books to put on the first shelf (and the rest go on the second). There are then ways to arrange the books on the first shelf and ways to arrange the books on the second shelf. We need to sum this up over all values of , and that's exactly what we have as the coefficient on in the product above.     Find an exponential generating function in which the coefficient on is the number of surjections from the set to the set . Then use some algebra to find an explicit formula for the number of surjections from to .    We can think of a surjection as a string of length with symbols from the set in which each symbol appears at least once. This means the exponential generating function is .      Find an exponential generating function in which the coefficient on is the number of surjections from the set to the set .     since we can view this as strings of length with symbols chosen from the set subject to the restriction that each element of appears at least once.     "
+},
+{
+  "id": "notes-exp-genfn-3",
+  "level": "2",
+  "url": "notes-exp-genfn.html#notes-exp-genfn-3",
+  "type": "Activity",
+  "number": "8.3.1",
+  "title": "",
+  "body": "  Suppose we are making strings using the alphabet . If the number of times appears in the string is at least one and at most four, the number of times appears in the string is a positive even number, and there are at least three occurrences of in the string, write an exponential generating function in which the coefficient on is the number of such strings of length .    There are no restrictions on the number of times that or appear in the string, so each contributes a factor of to the generating function. For the digit , since we need a positive even number of occurrence in the string, we get . For the digit , since we need at least three occurrences, we have . Finally, for the digit 4, we have to allow only between 1 and 4 occurrences. Therefore, the generating function is .   "
+},
+{
+  "id": "notes-exp-genfn-8",
+  "level": "2",
+  "url": "notes-exp-genfn.html#notes-exp-genfn-8",
+  "type": "Activity",
+  "number": "8.3.2",
+  "title": "",
+  "body": "   Find an exponential generating function in which the coefficient on is the number of surjections from the set to the set . Then use some algebra to find an explicit formula for the number of surjections from to .    We can think of a surjection as a string of length with symbols from the set in which each symbol appears at least once. This means the exponential generating function is .      Find an exponential generating function in which the coefficient on is the number of surjections from the set to the set .     since we can view this as strings of length with symbols chosen from the set subject to the restriction that each element of appears at least once.    "
 }
 ]
 

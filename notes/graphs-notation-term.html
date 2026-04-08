@@ -47,7 +47,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -114,7 +131,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.56158f4758afd49f.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.46363294e9238f09.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -269,6 +286,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-intro-ogf.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Ordinary Generating Functions</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-partitions-newton.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Partitions and Newton’s Binomial Theorem</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-exp-genfn.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Generating Functions</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -300,30 +318,24 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="graphs-notation-term" data-margins="13mm 13mm 13mm 13mm">
-<h2 class="heading hide-type">
+<section class="handout" id="graphs-notation-term" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation and Terminology</span><div class="print-links"><a href="?printpreview=graphs-notation-term" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="onepage" id="graphs-notation-term-2">
-<div class="para" id="graphs-notation-term-2-1">
+<section class="onepage" id="graphs-notation-term-2"><div class="para" id="graphs-notation-term-2-1">
 <em class="alert">Peer instruction questions 1–3.</em><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/spanning_subgraph.svg" role="img" class="contained"></div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/non_subgraph.svg" role="img" class="contained"></div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/induced_subgraph.svg" role="img" class="contained"></div></section><section class="onepage" id="graphs-notation-term-3">
-<article class="activity project-like" id="graphs-notation-term-3-1"><h3 class="heading">
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/induced_subgraph.svg" role="img" class="contained"></div></section><section class="onepage" id="graphs-notation-term-3"><article class="activity project-like" id="graphs-notation-term-3-1"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="graphs-notation-term-3-1-1-1">Suppose <span class="process-math">\(\bfH\)</span> is an induced spanning subgraph of a graph <span class="process-math">\(\bfG\text{.}\)</span> Discuss with your group what this would mean.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 5.1.1"><a href="#graphs-notation-term-3-1" title="Copy heading and permalink for Activity 5.1.1" aria-label="Copy heading and permalink for Activity 5.1.1">🔗</a></div>
-</article></section><section class="onepage" id="graphs-notation-term-4">
-<div class="para" id="graphs-notation-term-4-1">
+<div class="autopermalink" data-description="Activity 5.1.1"><a href="#graphs-notation-term-3-1" title="Copy heading and permalink for Activity 5.1.1" aria-label="Copy heading and permalink for Activity 5.1.1">🔗</a></div></article></section><section class="onepage" id="graphs-notation-term-4"><div class="para" id="graphs-notation-term-4-1">
 <em class="alert">Peer instruction questions 4–5.</em><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/isomorphic_graphs-PI.svg" role="img" class="contained"></div>
-<div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/nonisomorphic_graphs-PI.svg" role="img" class="contained"></div></section><section class="onepage" id="graphs-notation-term-5">
-<div class="para" id="graphs-notation-term-5-1">
+<div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/nonisomorphic_graphs-PI.svg" role="img" class="contained"></div></section><section class="onepage" id="graphs-notation-term-5"><div class="para" id="graphs-notation-term-5-1">
 <em class="alert">On the Complexity of Graph Isomorphism</em><div class="workspace" data-space="3cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -340,9 +352,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="3cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-first-thm-gt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.1: The First Theorem of Graph Theory"><a href="#thm-first-thm-gt" title="Copy heading and permalink for Theorem 5.1: The First Theorem of Graph Theory" aria-label="Copy heading and permalink for Theorem 5.1: The First Theorem of Graph Theory">🔗</a></div>
-</article>
-<div class="para logical" id="graphs-notation-term-5-3">
+<div class="autopermalink" data-description="Theorem 5.1: The First Theorem of Graph Theory"><a href="#thm-first-thm-gt" title="Copy heading and permalink for Theorem 5.1: The First Theorem of Graph Theory" aria-label="Copy heading and permalink for Theorem 5.1: The First Theorem of Graph Theory">🔗</a></div></article><div class="para logical" id="graphs-notation-term-5-3">
 <div class="displaymath process-math" id="graphs-notation-term-5-3-1">
 \begin{equation*}
 |E| = \frac{1}{2} \sum_{v\in V}\deg_{\bfG}(v)
@@ -356,38 +366,29 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="cor-num-odd-vts-1-1">In any graph, the number of vertices of odd degree is even.<div class="workspace" data-space="1cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cor-num-odd-vts-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 5.2"><a href="#cor-num-odd-vts" title="Copy heading and permalink for Corollary 5.2" aria-label="Copy heading and permalink for Corollary 5.2">🔗</a></div>
-</article>
-<div class="para logical" id="graphs-notation-term-5-5">
+<div class="autopermalink" data-description="Corollary 5.2"><a href="#cor-num-odd-vts" title="Copy heading and permalink for Corollary 5.2" aria-label="Copy heading and permalink for Corollary 5.2">🔗</a></div></article><div class="para logical" id="graphs-notation-term-5-5">
 <dl class="description-list">
 <dt id="graphs-notation-term-5-5-1-1">Walk<div class="autopermalink" data-description="Item: Walk"><a href="#graphs-notation-term-5-5-1-1" title="Copy heading and permalink for Item: Walk" aria-label="Copy heading and permalink for Item: Walk">🔗</a></div>
 </dt>
-<dd>
-<div class="para" id="graphs-notation-term-5-5-1-1-2">
+<dd><div class="para" id="graphs-notation-term-5-5-1-1-2">
 <div class="workspace" data-space="1cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-5-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</dd>
+</div></dd>
 <dt id="graphs-notation-term-5-5-1-2">Path<div class="autopermalink" data-description="Item: Path"><a href="#graphs-notation-term-5-5-1-2" title="Copy heading and permalink for Item: Path" aria-label="Copy heading and permalink for Item: Path">🔗</a></div>
 </dt>
-<dd>
-<div class="para" id="graphs-notation-term-5-5-1-2-2">
+<dd><div class="para" id="graphs-notation-term-5-5-1-2-2">
 <div class="workspace" data-space="1cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-5-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</dd>
+</div></dd>
 <dt id="graphs-notation-term-5-5-1-3">Cycle<div class="autopermalink" data-description="Item: Cycle"><a href="#graphs-notation-term-5-5-1-3" title="Copy heading and permalink for Item: Cycle" aria-label="Copy heading and permalink for Item: Cycle">🔗</a></div>
 </dt>
-<dd>
-<div class="para" id="graphs-notation-term-5-5-1-3-2">
+<dd><div class="para" id="graphs-notation-term-5-5-1-3-2">
 <div class="workspace" data-space="1cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-5-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</dd>
+</div></dd>
 </dl>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="graphs-notation-term-6">
-<article class="definition definition-like" id="def-tree"><h3 class="heading">
+</div></section><section class="onepage" id="graphs-notation-term-6"><article class="definition definition-like" id="def-tree"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-tree-1-1">
@@ -404,25 +405,19 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="1cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-tree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 5.3"><a href="#def-tree" title="Copy heading and permalink for Definition 5.3" aria-label="Copy heading and permalink for Definition 5.3">🔗</a></div>
-</article>
-<article class="theorem theorem-like" id="thm-tree-leaves"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 5.3"><a href="#def-tree" title="Copy heading and permalink for Definition 5.3" aria-label="Copy heading and permalink for Definition 5.3">🔗</a></div></article><article class="theorem theorem-like" id="thm-tree-leaves"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="thm-tree-leaves-1-1">Every tree on at least two vertices has at least two leaves.<div class="workspace" data-space="5cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-tree-leaves-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.4"><a href="#thm-tree-leaves" title="Copy heading and permalink for Theorem 5.4" aria-label="Copy heading and permalink for Theorem 5.4">🔗</a></div>
-</article>
-<article class="theorem theorem-like" id="thm-tree-unique-path"><h3 class="heading">
+<div class="autopermalink" data-description="Theorem 5.4"><a href="#thm-tree-leaves" title="Copy heading and permalink for Theorem 5.4" aria-label="Copy heading and permalink for Theorem 5.4">🔗</a></div></article><article class="theorem theorem-like" id="thm-tree-unique-path"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="thm-tree-unique-path-1-1">If <span class="process-math">\(\bfT\)</span> is a tree, then for every pair of distinct vertices <span class="process-math">\(u,v\text{,}\)</span> there exists a unique path from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\)</span> in <span class="process-math">\(\bfT\text{.}\)</span><div class="workspace" data-space="7cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-tree-unique-path-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.5"><a href="#thm-tree-unique-path" title="Copy heading and permalink for Theorem 5.5" aria-label="Copy heading and permalink for Theorem 5.5">🔗</a></div>
-</article></section><section class="onepage" id="graphs-notation-term-7">
-<article class="activity project-like" id="graphs-notation-term-7-1"><h3 class="heading">
+<div class="autopermalink" data-description="Theorem 5.5"><a href="#thm-tree-unique-path" title="Copy heading and permalink for Theorem 5.5" aria-label="Copy heading and permalink for Theorem 5.5">🔗</a></div></article></section><section class="onepage" id="graphs-notation-term-7"><article class="activity project-like" id="graphs-notation-term-7-1"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="graphs-notation-term-7-1-1-1">
@@ -439,9 +434,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="6cm"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 5.1.2"><a href="#graphs-notation-term-7-1" title="Copy heading and permalink for Activity 5.1.2" aria-label="Copy heading and permalink for Activity 5.1.2">🔗</a></div>
-</article></section><div class="autopermalink" data-description="Handout 5.1: Notation and Terminology"><a href="#graphs-notation-term" title="Copy heading and permalink for Handout 5.1: Notation and Terminology" aria-label="Copy heading and permalink for Handout 5.1: Notation and Terminology">🔗</a></div>
-</section>
+<div class="autopermalink" data-description="Activity 5.1.2"><a href="#graphs-notation-term-7-1" title="Copy heading and permalink for Activity 5.1.2" aria-label="Copy heading and permalink for Activity 5.1.2">🔗</a></div></article></section><div class="autopermalink" data-description="Handout 5.1: Notation and Terminology"><a href="#graphs-notation-term" title="Copy heading and permalink for Handout 5.1: Notation and Terminology" aria-label="Copy heading and permalink for Handout 5.1: Notation and Terminology">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-eulerham.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
