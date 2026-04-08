@@ -608,12 +608,73 @@
     <p>
       <alert>Peer instruction questions 1<ndash/>3.</alert>
     </p>
-    <activity>
+    <activity workspace="5cm">
       <statement>
         <p>
            Suppose we are making strings using the alphabet <m>\{0,1,2,3,4\}</m>. If the number of times <m>4</m> appears in the string is at least one and at most four, the number of times <m>2</m> appears in the string is a positive even number, and there are at least three occurrences of <m>3</m> in the string, write an exponential generating function in which the coefficient on <m>x^{n}/n!</m> is the number of such strings of length <m>n</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+          There are no restrictions on the number of times that <m>0</m> or <m>1</m> appear in the string, so each contributes a factor of <m>e^x</m> to the generating function. For the digit <m>2</m>, since we need a positive even number of occurrence in the string, we get <m>\displaystyle \sum_{n=1}^\infty\frac{x^{2n}}{(2n)!}</m>. For the digit <m>3</m>, since we need at least three occurrences, we have <m>e^x - 1 - x - x^2/2!</m>. Finally, for the digit 4, we have <m>x+x^2/2!+x^3/3! + x^4/4!</m> to allow only between 1 and 4 occurrences. Therefore, the generating function is 
+          <md>
+            e^{2x}\left(\sum_{n=1}^\infty\frac{x^{2n}}{(2n)!}\right)\left(e^x - 1 - x - \frac{x^2}{2!}\right)\left(x+\frac{x^2}{2!}+\frac{x^3}{3!} + \frac{x^4}{4!}\right)
+          </md>.
+          
+        </p>
+      </solution>
+    </activity>
+    <p>
+      Let's see how to use SageMath to find the number of strings of length 15 meeting these restrictions:
+    </p>
+    <sage>
+      <input component="a">
+        f(x) = exp(2*x)*(((exp(x)+exp(-x))/2)-1)*(exp(x)-1-x-x^2/2)*(x+x^2/2+x^3/6+x^4/24)
+        f(x).series(x,16).list()[15]*factorial(15)
+      </input>
+      <input component="b">
+        f(x) = exp(2*x)*(((exp(x)+exp(-x))/2)-1)*(exp(x)-1-x-x^2/2)*(x+x^2/2+x^3/6+x^4/24)
+      </input>
+      <output component="a">
+        7095140325
+      </output>
+    </sage>
+    <p workspace="8cm">
+      Why does multiplying <em>exponential</em> generating functions give us what we want? Let's consider the example of exponential generating functions for the number of ways to arrange books on two shelves where the number of ways to arrange <m>i</m> books on the first shelf is <m>a_i</m> (and does not depend on which <m>i</m> books are on the shelf) and the number of ways to arrange <m>i</m> books on the second shelf is <m>b_i</m>.
+    </p>
+    <p component="a">
+      Multiplying by just thinking of these as formal power series, we have
+      <md>
+        \left(\sum_{n=0}^\infty a_n \frac{x^n}{n!}\right)\left(\sum_{n=0}^\infty b_n \frac{x^n}{n!}\right) = \sum_{n=0}^\infty \left(\sum_{k=0}^n \frac{a_k}{k!}\frac{b_{n-k}}{(n-k)!}\right) x^n
+        = \sum_{n=0}^\infty \left(\sum_{k=0}^n \frac{n!}{k!(n-k)!}a_kb_{n-k}\right) \frac{x^n}{n!} = \sum_{n=0}^\infty \left(\sum_{k=0}^n \binom{n}{k}a_kb_{n-k}\right) \frac{x^n}{n!}
+      </md>.
+      Now thinking from first principles about the book arrangement problem, we need to consider each possible number <m>k</m> from <m>0</m> to <m>n</m> of books that are placed on the first shelf. There are <m>C(n,k)</m> ways to choose that number of books to put on the first shelf (and the rest go on the second). There are then <m>a_k</m> ways to arrange the books on the first shelf and <m>b_{n-k}</m> ways to arrange the books on the second shelf. We need to sum this up over all values of <m>k</m>, and that's exactly what we have as the coefficient on <m>x^n/n!</m> in the product above.
+    </p>
+    <activity>
+      <task>
+        <statement>
+          <p>
+            Find an exponential generating function in which the coefficient on <m>x^n/n!</m> is the number of surjections from the set <m>[n]</m> to the set <m>[2]</m>. Then use some algebra to find an explicit formula for the number of surjections from <m>[n]</m> to <m>[2]</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We can think of a surjection as a string of length <m>n</m> with symbols from the set <m>[2]</m> in which each symbol appears at least once. This means the exponential generating function is <md>(e^x-1)^2 = e^{2x}-2e^x+1 = \sum_{n=0}^\infty 2^n \frac{x^n}{n!} - 2\sum_{n=0}^\infty \frac{x^n}{n!} + 1 = \sum_{n=1}^\infty (2^n-2)\frac{x^n}{n!}</md>.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find an exponential generating function in which the coefficient on <m>x^n/n!</m> is the number of surjections from the set <m>[n]</m> to the set <m>[k]</m>. 
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>(e^x-1)^k</m> since we can view this as strings of length <m>n</m> with symbols chosen from the set <m>[k]</m> subject to the restriction that each element of <m>[k]</m> appears at least once.
+          </p>
+        </solution>
+      </task>
     </activity>
   </handout>
 </chapter>
