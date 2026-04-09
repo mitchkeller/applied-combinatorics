@@ -673,6 +673,16 @@
           <p>
             <m>(e^x-1)^k</m> since we can view this as strings of length <m>n</m> with symbols chosen from the set <m>[k]</m> subject to the restriction that each element of <m>[k]</m> appears at least once.
           </p>
+          <p>
+            We can expand out this generating function using the binomial theorem:
+            <md>
+              <mrow>(e^x-1)^k \amp = \sum_{j=0}^k \binom{k}{j}(-1)^j \left(e^x\right)^{k-j}</mrow>
+              <mrow> \amp = \sum_{j=0}^k \binom{k}{j}(-1)^j \left(e^{(k-j)x}\right)</mrow>
+              <mrow> \amp = \sum_{j=0}^k \binom{k}{j}(-1)^j \left(\sum_{n=0}^\infty \frac{(k-j)^nx^n}{n!}\right)</mrow>
+              <mrow> \amp = \sum_{n=0}^\infty \left(\sum_{j=0}^k (-1)^j\binom{k}{j} (k-j)^n\right)\frac{x^n}{n!}</mrow>
+            </md>
+            Notice that the coefficient on <m>x^n/n!</m> here is exactly our familiar formula for the number of surjections from a <m>n</m>-element set to a <m>k</m>-element set that we arrived at earlier using the Principle of Inclusion-Exclusion!
+          </p>
         </solution>
       </task>
     </activity>
