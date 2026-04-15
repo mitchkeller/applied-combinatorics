@@ -701,6 +701,60 @@ var ptx_lunr_docs = [
   "number": "8.1.1",
   "title": "",
   "body": "  Our goal is to use generating functions to find the number of ways to make certain amounts of money for using coins.     If you want to find the number of ways to make $1, you should plan to look for the coefficient on for what ?      Suppose first that you only have pennies and nickels. What's the generating function? How many ways to make $1 using pennies and nickels?       Now suppose you have pennies, nickels, dimes, and quarters. What's the generating function? Number of ways to make $1? Number of ways to make $0.83?      Suppose you have pennies, nickels, dimes, quarters, half dollars, and dollar coins. What's the generating function? What's the number of ways to make $1? What's the number of ways to make $2.50?    "
+},
+{
+  "id": "ws-recurrence-homog",
+  "level": "1",
+  "url": "ws-recurrence-homog.html",
+  "type": "Worksheet",
+  "number": "9.1",
+  "title": "Solving Linear, Constant Coefficient Homogeneous Recurrence Equations",
+  "body": " Solving Linear, Constant Coefficient Homogeneous Recurrence Equations   These activities will help you develop methods for solving advancement operator equations. Recall that these are convenient ways of writing recurrence relations. Our focus at first will be on homogeneous, linear, constant coefficient equations. This activity concludes with an initial investigation of the nonhomogeneous (linear, constant coefficient) case, which we will explore further in a future activity. Nonlinear recurrences and those with nonconstant coefficients require additional, advanced techniques.   Degree two, no other roots    Verify that is a solution of . Hint : To do this, you need to evaluate and simplify fully. I recommend doing this by first evaluating . When you simplify that, you should get , but do the work and make sure you get this simplified form. Then apply to and simplify. You should get .       Determine if is a solution of . If it's not, what do you get instead of ?      Since we already know that is a solution of (and thus ), adding it to gives a two parameter family of solutions. Find and so that is a solution of if and .      Repeated root of degree two, other roots    Now consider the advancement operator equation . Use part and what you learned in the class prep to propose a general solution to this equation.      Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations and you can commute the factors in an advancement operator polynomial so that applying will give the same result as applying . This fact is not true of all linear transformations matrix multiplication is not commutative, after all! However, it works here.      Higher degrees, no other roots    Consider the advancement operator equation . Conjecture what terms should be in its solution.      Verify your conjecture from the previous step.      Apply to . What's the highest power of remaining? How many more times would you need to apply to finally get ?      Apply to . What's the highest power of remaining?      Conjecture what the highest power of is that remains when you apply to . (Here is an integer.)      Use the Binomial Theorem to explain why your conjecture in the previous step is correct.      What value of makes for the function from part ? We say here that  annihilates  because applying the operator to yields .      Higher degrees, lots of roots   Write down the general solution (i.e., with constants running around) for each of the following advancement opeator eqations. Do not verify that these are actually solutions, as you will have an algebraic mess on your hands!                                 Working toward the non-homogeneous case    What happens if you apply to the function ? (Write your answer as a multiple of .)      Now suppose we're trying to solve ? (Look, ma, the right side isn't zero!)     What does the previous step suggest might be a function you could apply to while retaining a power of afterward?      Apply to your function. Write the result as a multiple of .      You want this result to be just . What do you need to do to achieve this? Hint : Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?       What can you add to your function without affecting the fact that ?       Suppose now that you're trying to solve . What would you need to try in order to preserve the when applying ?      "
+},
+{
+  "id": "ws-recurrence-homog-3",
+  "level": "2",
+  "url": "ws-recurrence-homog.html#ws-recurrence-homog-3",
+  "type": "Activity",
+  "number": "9.1.1",
+  "title": "Degree two, no other roots.",
+  "body": " Degree two, no other roots    Verify that is a solution of . Hint : To do this, you need to evaluate and simplify fully. I recommend doing this by first evaluating . When you simplify that, you should get , but do the work and make sure you get this simplified form. Then apply to and simplify. You should get .       Determine if is a solution of . If it's not, what do you get instead of ?      Since we already know that is a solution of (and thus ), adding it to gives a two parameter family of solutions. Find and so that is a solution of if and .    "
+},
+{
+  "id": "ws-recurrence-homog-4",
+  "level": "2",
+  "url": "ws-recurrence-homog.html#ws-recurrence-homog-4",
+  "type": "Activity",
+  "number": "9.1.2",
+  "title": "Repeated root of degree two, other roots.",
+  "body": " Repeated root of degree two, other roots    Now consider the advancement operator equation . Use part and what you learned in the class prep to propose a general solution to this equation.      Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations and you can commute the factors in an advancement operator polynomial so that applying will give the same result as applying . This fact is not true of all linear transformations matrix multiplication is not commutative, after all! However, it works here.    "
+},
+{
+  "id": "ws-recurrence-homog-5",
+  "level": "2",
+  "url": "ws-recurrence-homog.html#ws-recurrence-homog-5",
+  "type": "Activity",
+  "number": "9.1.3",
+  "title": "Higher degrees, no other roots.",
+  "body": " Higher degrees, no other roots    Consider the advancement operator equation . Conjecture what terms should be in its solution.      Verify your conjecture from the previous step.      Apply to . What's the highest power of remaining? How many more times would you need to apply to finally get ?      Apply to . What's the highest power of remaining?      Conjecture what the highest power of is that remains when you apply to . (Here is an integer.)      Use the Binomial Theorem to explain why your conjecture in the previous step is correct.      What value of makes for the function from part ? We say here that  annihilates  because applying the operator to yields .    "
+},
+{
+  "id": "ws-recurrence-homog-6",
+  "level": "2",
+  "url": "ws-recurrence-homog.html#ws-recurrence-homog-6",
+  "type": "Activity",
+  "number": "9.1.4",
+  "title": "Higher degrees, lots of roots.",
+  "body": " Higher degrees, lots of roots   Write down the general solution (i.e., with constants running around) for each of the following advancement opeator eqations. Do not verify that these are actually solutions, as you will have an algebraic mess on your hands!                               "
+},
+{
+  "id": "ws-recurrence-homog-7",
+  "level": "2",
+  "url": "ws-recurrence-homog.html#ws-recurrence-homog-7",
+  "type": "Activity",
+  "number": "9.1.5",
+  "title": "Working toward the non-homogeneous case.",
+  "body": " Working toward the non-homogeneous case    What happens if you apply to the function ? (Write your answer as a multiple of .)      Now suppose we're trying to solve ? (Look, ma, the right side isn't zero!)     What does the previous step suggest might be a function you could apply to while retaining a power of afterward?      Apply to your function. Write the result as a multiple of .      You want this result to be just . What do you need to do to achieve this? Hint : Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?       What can you add to your function without affecting the fact that ?       Suppose now that you're trying to solve . What would you need to try in order to preserve the when applying ?    "
 }
 ]
 
