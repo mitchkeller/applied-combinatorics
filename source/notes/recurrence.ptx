@@ -40,14 +40,21 @@
             </me>
             where <m>k\ge1</m> is an integer and <m>g\colon\mathbb{Z}\to\mathbb{R}</m> is a function.
           </p>
+          <p component="a">
+            We call the <m>a_i</m> terms the <term>recursive terms</term> and <term>linear</term> relates to not being able to multiply recursive terms. The functions <m>c_k(n)</m> are the <term>coefficients</term>.
+          </p>
           
           <p workspace="1cm">
             If each <m>c_{0}(n),c_{1}(n),\dots,c_{k}(n)</m> is a contant with <m>c_{0}(n),c_{k}(n)\neq0</m>, then we say the equation has <term>constant coefficients</term>.
+            <md component="a">
+              c_0a_{n+k} + c_1 a_{n+k-1} + c_2 a_{n+k-2} + \cdots + c_k a_n = g(n)
+            </md>
+            
           </p>
         </statement>
       </definition>
       <p>
-        <alert>Peer instruction question 4.</alert>
+        <alert>Peer instruction question 1.</alert>
       </p>
       <definition xml:id="def-homog-recurr">
         <statement>
@@ -58,10 +65,13 @@
             </me>
             is called <term>homogeneous</term> if <m>g(n)=0</m> for all <m>n</m>.
           </p>
+          <p component="a">
+            Key here is to get all of the recursive terms on one the left-hand side and all non-recursive terms on the right-hand side. After doing that, the equation is homogeneous if and only if the right-hand side is <m>0</m>.
+          </p>
         </statement>
       </definition>
       <p>
-        <alert>Peer instruction question 5.</alert>
+        <alert>Peer instruction question 2.</alert>
       </p>
       <paragraphs>
         <title>An analogy to calculus (or differential equations)</title>
@@ -74,7 +84,7 @@
         </p>
       
         <p component="a">
-          Put another way: Find a function <m>f</m> such that <m>f'(x) = 5f(x)</m> and <m>f(0)=3</m>.
+          Put another way: Find a function <m>f</m> such that <m>f'(x) = 5f(x)</m> and <m>f(0)=3</m>. The function <m>f(x) = 3e^{5x}</m> has this property because <m>D[3e^{5x}] = 5\cdot 3\cdot e^{5x}</m> and <m>f(0)=3</m>.
         </p>
       </paragraphs>
     </page>
@@ -86,11 +96,17 @@
               Let <m>f\colon \mathbb{Z}\to \mathbb{R}</m>.
               The <term>advancement operator</term> <m>A</m> is defined so that <m>Af(n) = f(n+1)</m> for all <m>n\in \mathbb{Z}</m>.
             </p>
+            <p component="a">
+              Here we think of sequences as functions. Usually we think of sequences as only being infinite in one direction, but it will be convenient here to allow them to be infinite in both directions. We can extend to <m>-\infty</m> by filling with <m>0</m>. I usually read <m>Af(n)</m> as <q><m>A</m> of <m>f(n)</m></q>.
+            </p>
           </li>
           
           <li>
-            <p>
+            <p workspace="1cm">
               For <m>p</m> a positive integer, <m>A^{p}f(n)</m> denotes applying <m>A</m> to <m>f(n)</m> <m>p</m> times.
+            </p>
+            <p component="a">
+              <m>A^2f(n) = AAf(n) = Af(n+1)=f(n+2)</m>
             </p>
           </li>
         </ul>
@@ -123,6 +139,32 @@
             </ol>
           </p>
         </statement>
+        <solution>
+          <p>
+            <ol marker="a." cols="4">
+              <li>
+                <p>
+                  <m>f(6)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(n+2)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(n+7)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(n+p)</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
       </activity>
       <activity>
         <task workspace="1cm">
@@ -130,18 +172,20 @@
             <p>
               Let <m>f(n) = 3n+4</m>. Verify that <m>(A^{3}-2A^{2}+7A+2)f(2) = 98</m>.
             </p>
-            <p component="a">
+          </statement>
+          <solution>
+            <p>
               <me>
                 f(5)-2f(4)+7f(3)+2f(2) = 98
               </me>
             </p>
-          </statement>
+          </solution>
         </task>
         <task workspace="10cm">
           <statement>
             <p>
               Write each of the following recurrence equations as advancement operator equations.
-              <ol cols="3">
+              <ol cols="3" marker="i.">
                 <li>
                   <p>
                     <m>t_{n+2}= 3t_{n+1}-t_{n}</m>
@@ -162,6 +206,27 @@
               </ol>
             </p>
           </statement>
+          <solution>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    <m>(A^2-3A+1)t(n)=0</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(A-1)r(n)=n+1</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(A^2-A-1)f(n)=0</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
         </task>
       </activity>
     </page>
@@ -181,6 +246,11 @@
           with the initial condition <m>f(0)=2</m>.
         </p>
       </statement>
+      <solution component="a">
+        <p>
+          One way to examine this is to multiply out the equation, which gives us <m>Af+4f =0</m>, which is equivalent to <m>f(n+1)+4f(n)=0</m> or <m>f(n+1)=-4f(n)</m>. This suggests that we will want to use powers of <m>-4</m>, so we're looking at <m>f(n)=c\cdot 4^n</m>. Since <m>f(0)=2</m>, we must have <m>c=2</m> and the solution is <m>f(n) = 2\cdot 4^n</m>.
+        </p>
+      </solution>
     </example>
     <example>
       <title>Applying Advancement Operator Polynomials</title>
@@ -190,7 +260,24 @@
           Compute <m>(A+4)(A-3)f(n)</m>.
         </p>
       </statement>
-      
+      <solution component="a">
+        <p>
+          We start with
+          <md>
+            <mrow>(A-3)f(n) \amp = (A-3)[c_13^n + c_2(-4)^n</mrow>
+            <mrow> \amp= (A-3)[c_1 3^n] + (A-3)[c_2 (-4)^n] </mrow>
+            <mrow> \amp = c_1 3^{n+1} - 3c_1 3^n + c_2(-4)^{n+1} - 3c_2 (-4)^n</mrow>
+            <mrow> \amp = -4c_2(-4)^n -3c_2(-4)^n = -7c_2(-4)^n</mrow>
+          </md>.
+          Now we apply <m>(A+4)</m> to this and have
+          <md>
+            <mrow>(A+4)[(A-3)[f(n)]] \amp = (A+4)[-7c_2(-4)^n</mrow>
+            <mrow> \amp = -7c_2(-4)^{n+1} -4\cdot 7c_2(-4)^n</mrow>
+            <mrow> \amp = 28c_2(-4)^n -28c_2 (-4)^n </mrow>
+            <mrow> \amp = 0</mrow>
+          </md>.
+        </p>
+      </solution>
     </example>
     <proposition xml:id="prop-adv-op-distinct">
       <statement>
@@ -200,16 +287,23 @@
             (A-b_{1})(A-b_{2})\cdots (A-b_{k})f(n) = 0
           </me>
           where <m>b_{i}\neq b_{j}</m> if <m>i\neq j</m> is
+          <md component="a">
+            f(n) = c_1b_1^n + c_2b_2^n + \cdots + c_kb_k^n, \qquad c_i\in\mathbb{R}
+          </md>.
+        </p>
+        <p component="a">
+          <alert>Notice that this restriction forces the roots to be distinct!!</alert>
         </p>
       </statement>
     </proposition>
     <p>
-      <alert>When solving
+      <alert>Note: </alert>
+      When solving
         <me>
           p(A)f(n)=g(n)
         </me>
-        we&#8217;ll focus on <m>p(0)\neq 0</m>.
-        Any factors of <m>A</m> in <m>p(A)</m> could be dealt with by shifting solutions.</alert>
+        we'll focus on <m>p(0)\neq 0</m>.
+        Any factors of <m>A</m> in <m>p(A)</m> could be dealt with by shifting solutions.
     </p>
   </handout>
   <handout xml:id="notes-recurrence-rubots">
