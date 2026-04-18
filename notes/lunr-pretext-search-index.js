@@ -1169,6 +1169,168 @@ var ptx_lunr_docs = [
   "number": "8.3.2",
   "title": "",
   "body": "   Find an exponential generating function in which the coefficient on is the number of surjections from the set to the set . Then use some algebra to find an explicit formula for the number of surjections from to .    We can think of a surjection as a string of length with symbols from the set in which each symbol appears at least once. This means the exponential generating function is .      Find an exponential generating function in which the coefficient on is the number of surjections from the set to the set .     since we can view this as strings of length with symbols chosen from the set subject to the restriction that each element of appears at least once.  We can expand out this generating function using the binomial theorem: Notice that the coefficient on here is exactly our familiar formula for the number of surjections from a -element set to a -element set that we arrived at earlier using the Principle of Inclusion-Exclusion!    "
+},
+{
+  "id": "notes-recurrence-intro",
+  "level": "1",
+  "url": "notes-recurrence-intro.html",
+  "type": "Handout",
+  "number": "9.1",
+  "title": "Introduction to Advancement Operators",
+  "body": " Introduction to Advancement Operators     Rabbits   , ,     Strings   , ,     Regions   ,       A linear recurrence equation is of the form where is an integer and is a function.  If each is a contant with , then we say the equation has constant coefficients .     Peer instruction question 1.     The linear recurrence equation is called homogeneous if for all .     Peer instruction question 2.    An analogy to calculus (or differential equations)  Let's write for the differential operator . Solve the equation where is a differentiable function of with and        Let . The advancement operator  is defined so that for all .    For a positive integer, denotes applying to  times.       Rewrite each of the following expressions so that it does not use the advancement operator.                                                       Let . Verify that .           Write each of the following recurrence equations as advancement operator equations.                                            "
+},
+{
+  "id": "def-linear-recurrence",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#def-linear-recurrence",
+  "type": "Definition",
+  "number": "9.1",
+  "title": "",
+  "body": "  A linear recurrence equation is of the form where is an integer and is a function.  If each is a contant with , then we say the equation has constant coefficients .   "
+},
+{
+  "id": "def-homog-recurr",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#def-homog-recurr",
+  "type": "Definition",
+  "number": "9.2",
+  "title": "",
+  "body": "  The linear recurrence equation is called homogeneous if for all .   "
+},
+{
+  "id": "notes-recurrence-intro-3-1",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#notes-recurrence-intro-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "advancement operator "
+},
+{
+  "id": "notes-recurrence-intro-3-2",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#notes-recurrence-intro-3-2",
+  "type": "Activity",
+  "number": "9.1.1",
+  "title": "",
+  "body": "  Rewrite each of the following expressions so that it does not use the advancement operator.                                                   "
+},
+{
+  "id": "notes-recurrence-intro-3-3",
+  "level": "2",
+  "url": "notes-recurrence-intro.html#notes-recurrence-intro-3-3",
+  "type": "Activity",
+  "number": "9.1.2",
+  "title": "",
+  "body": "   Let . Verify that .           Write each of the following recurrence equations as advancement operator equations.                                          "
+},
+{
+  "id": "notes-recurrence-3",
+  "level": "1",
+  "url": "notes-recurrence-3.html",
+  "type": "Handout",
+  "number": "9.2",
+  "title": "Homogeneous Recurrence Equations",
+  "body": " Homogeneous Recurrence Equations   Solving Advancement Operator Equations   Solve the advancement operator equation with the initial condition .     Applying Advancement Operator Polynomials   Let and be constants and define . Compute .      The solution to the advancement operator equation where if is .     Note: When solving we'll focus on . Any factors of in could be dealt with by shifting solutions.  "
+},
+{
+  "id": "notes-recurrence-3-2",
+  "level": "2",
+  "url": "notes-recurrence-3.html#notes-recurrence-3-2",
+  "type": "Example",
+  "number": "9.3",
+  "title": "Solving Advancement Operator Equations.",
+  "body": " Solving Advancement Operator Equations   Solve the advancement operator equation with the initial condition .   "
+},
+{
+  "id": "notes-recurrence-3-3",
+  "level": "2",
+  "url": "notes-recurrence-3.html#notes-recurrence-3-3",
+  "type": "Example",
+  "number": "9.4",
+  "title": "Applying Advancement Operator Polynomials.",
+  "body": " Applying Advancement Operator Polynomials   Let and be constants and define . Compute .   "
+},
+{
+  "id": "prop-adv-op-distinct",
+  "level": "2",
+  "url": "notes-recurrence-3.html#prop-adv-op-distinct",
+  "type": "Proposition",
+  "number": "9.5",
+  "title": "",
+  "body": "  The solution to the advancement operator equation where if is .   "
+},
+{
+  "id": "notes-recurrence-rubots",
+  "level": "1",
+  "url": "notes-recurrence-rubots.html",
+  "type": "Handout",
+  "number": "9.3",
+  "title": "Solving a Nonlinear Recurrence",
+  "body": " Solving a Nonlinear Recurrence    RUBOTS     Rooted       Unlabeled       Binary       Ordered       Trees        By convention, we want the -vertex graph to be a RUBOT with one leaf.  Let denote the number of RUBOTs with  leaves . ( NOT vertices!) Take by convention. The generating function for the number of RUBOTs is then     Find , , , and by drawing the RUBOTs with , , , and leaves and then start writing out .     Decomposing RUBOTs    Let and be the left and right children, respectively, of the root of a RUBOT. How many RUBOTs with leaves have of those leaves descendants of and descendants of ?      Generalize to a formula for the number of RUBOTs with leaves in which the left child has leaves.      Give a nonlinear recurrence for .             Use the quadratic formula to solve for .    Recall that .    The generating function for the number of rooted, unlabeled, binary, ordered trees with leaves is        Ramsey Numbers    The Ramsey number  is the least number such that every graph on at least vertices contains a clique of size or an independent set of size .      What is a clique? What is an independent set?    Explain why .    Can you draw a -vertex graph that has neither a -clique nor an independent set of size ? What about vertices? vertices?      The Ramsey number .    Paul Erdős on vs and Small Ramsey Numbers by S.P. Radziszowski    "
+},
+{
+  "id": "notes-recurrence-rubots-2-1-5",
+  "level": "2",
+  "url": "notes-recurrence-rubots.html#notes-recurrence-rubots-2-1-5",
+  "type": "Activity",
+  "number": "9.3.1",
+  "title": "",
+  "body": "  Find , , , and by drawing the RUBOTs with , , , and leaves and then start writing out .   "
+},
+{
+  "id": "notes-recurrence-rubots-2-1-6",
+  "level": "2",
+  "url": "notes-recurrence-rubots.html#notes-recurrence-rubots-2-1-6",
+  "type": "Activity",
+  "number": "9.3.2",
+  "title": "Decomposing RUBOTs.",
+  "body": " Decomposing RUBOTs    Let and be the left and right children, respectively, of the root of a RUBOT. How many RUBOTs with leaves have of those leaves descendants of and descendants of ?      Generalize to a formula for the number of RUBOTs with leaves in which the left child has leaves.      Give a nonlinear recurrence for .    "
+},
+{
+  "id": "notes-recurrence-rubots-3-2",
+  "level": "2",
+  "url": "notes-recurrence-rubots.html#notes-recurrence-rubots-3-2",
+  "type": "Activity",
+  "number": "9.3.3",
+  "title": "",
+  "body": "  Use the quadratic formula to solve for .   "
+},
+{
+  "id": "notes-recurrence-rubots-3-4",
+  "level": "2",
+  "url": "notes-recurrence-rubots.html#notes-recurrence-rubots-3-4",
+  "type": "Theorem",
+  "number": "9.6",
+  "title": "",
+  "body": "  The generating function for the number of rooted, unlabeled, binary, ordered trees with leaves is    "
+},
+{
+  "id": "notes-recurrence-rubots-4-1-2",
+  "level": "2",
+  "url": "notes-recurrence-rubots.html#notes-recurrence-rubots-4-1-2",
+  "type": "Definition",
+  "number": "9.7",
+  "title": "",
+  "body": "  The Ramsey number  is the least number such that every graph on at least vertices contains a clique of size or an independent set of size .   "
+},
+{
+  "id": "notes-recurrence-rubots-4-1-3",
+  "level": "2",
+  "url": "notes-recurrence-rubots.html#notes-recurrence-rubots-4-1-3",
+  "type": "Activity",
+  "number": "9.3.4",
+  "title": "",
+  "body": "  What is a clique? What is an independent set?    Explain why .    Can you draw a -vertex graph that has neither a -clique nor an independent set of size ? What about vertices? vertices?   "
+},
+{
+  "id": "prop-r33",
+  "level": "2",
+  "url": "notes-recurrence-rubots.html#prop-r33",
+  "type": "Proposition",
+  "number": "9.8",
+  "title": "",
+  "body": "  The Ramsey number .   "
 }
 ]
 
