@@ -66,7 +66,7 @@
       </activity>
       <activity>
         <title>Repeated root of degree two, other roots</title>
-        <task workspace="0.5in">
+        <task workspace="0.35in">
           <statement>
             <p>
              Now consider the advancement operator equation <m>(A+2)(A-3)^{2}f=0</m>. Use <xref ref="ws-recurrence-homog-repeat">part</xref> and what you learned in the class prep to propose a general solution to this equation.
@@ -80,7 +80,7 @@
             </p>
           </solution>
         </task>
-        <task workspace="1.25in">
+        <task workspace="1in">
           <statement>
             <p>
               Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations <alert>and</alert> you can commute the factors in an advancement operator polynomial so that applying <m>(A-3)^{2}(A+2)</m> will give the same result as applying <m>(A+2)(A-3)^{2}</m>. This fact is not true of all linear transformations<mdash/>matrix multiplication is not commutative, after all! However, it works here.
