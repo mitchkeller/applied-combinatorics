@@ -762,8 +762,8 @@ var ptx_lunr_docs = [
   "url": "ws-recurrence-nonhomog.html",
   "type": "Worksheet",
   "number": "9.2",
-  "title": "Nonhomogeneous Advancedment Operator Equations",
-  "body": " Nonhomogeneous Advancedment Operator Equations  We want to solve an advancement operator equation of the form where is not identically . To do this, we seek any solution to the equation. We call this a particular solution . We then solve the homogeneous equation (Yes, the same .) and call its general solution . The general solution of the nonhomogeneous equation is then .  We first consider when does not “interfere” with and recap the last portion of our previous class's activity. We want to solve . If you apply to the function , then you have . Thus, we really would like to have a constant in . We try and compute . The output from this needs to be , so we set and solve for to find and . To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation and find . Thus the general solution of the nonhomogeneous equation is     If we try using as a particular solution of , we find the following: . Why is this an issue?      Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)      Find the general solution of .    Let's make a bit more complicated.    Find a particular solution of .      Write the general solution of .      Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)    Now for interference between and .    Predict what will happen if you try as a particular solution of . Why is this the case?      Find a particular solution of .      Find a particular solution of . (Think about what's on the left-hand side and what it will do to your proposed before trying to find constant(s).)      Find a particular solution of .      Find a particular solution of .      Find the general solution of .    "
+  "title": "Starting Nonhomogeneous Advancement Operator Equations",
+  "body": " Starting Nonhomogeneous Advancement Operator Equations  We want to solve an advancement operator equation of the form where is not identically . To do this, we seek any solution to the equation. We call this a particular solution . We then solve the homogeneous equation (Yes, the same .) and call its general solution . The general solution of the nonhomogeneous equation is then .  We first consider when does not “interfere” with and recap the last portion of our previous class's activity. We want to solve . If you apply to the function , then you have . Thus, we really would like to have a constant in . We try and compute . The output from this needs to be , so we set and solve for to find and . To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation and find . Thus the general solution of the nonhomogeneous equation is     If we try using as a particular solution of , we find the following: . Why is this an issue?      Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)      Find the general solution of .    "
 },
 {
   "id": "ws-recurrence-nonhomog-2",
@@ -798,87 +798,6 @@ var ptx_lunr_docs = [
   "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-6",
   "type": "Problem",
   "number": "9.2.3",
-  "title": "",
-  "body": "  Find the general solution of .   "
-},
-{
-  "id": "ws-recurrence-nonhomog-multiterm",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-multiterm",
-  "type": "Problem",
-  "number": "9.2.4",
-  "title": "",
-  "body": "  Find a particular solution of .   "
-},
-{
-  "id": "ws-recurrence-nonhomog-9",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-9",
-  "type": "Problem",
-  "number": "9.2.5",
-  "title": "",
-  "body": "  Write the general solution of .   "
-},
-{
-  "id": "ws-recurrence-nonhomog-10",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-10",
-  "type": "Problem",
-  "number": "9.2.6",
-  "title": "",
-  "body": "  Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)   "
-},
-{
-  "id": "ws-recurrence-nonhomog-12",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-12",
-  "type": "Problem",
-  "number": "9.2.7",
-  "title": "",
-  "body": "  Predict what will happen if you try as a particular solution of . Why is this the case?   "
-},
-{
-  "id": "ws-recurrence-nonhomog-13",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-13",
-  "type": "Problem",
-  "number": "9.2.8",
-  "title": "",
-  "body": "  Find a particular solution of .   "
-},
-{
-  "id": "ws-recurrence-nonhomog-14",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-14",
-  "type": "Problem",
-  "number": "9.2.9",
-  "title": "",
-  "body": "  Find a particular solution of . (Think about what's on the left-hand side and what it will do to your proposed before trying to find constant(s).)   "
-},
-{
-  "id": "ws-recurrence-nonhomog-15",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-15",
-  "type": "Problem",
-  "number": "9.2.10",
-  "title": "",
-  "body": "  Find a particular solution of .   "
-},
-{
-  "id": "ws-recurrence-nonhomog-16",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-16",
-  "type": "Problem",
-  "number": "9.2.11",
-  "title": "",
-  "body": "  Find a particular solution of .   "
-},
-{
-  "id": "ws-recurrence-nonhomog-17",
-  "level": "2",
-  "url": "ws-recurrence-nonhomog.html#ws-recurrence-nonhomog-17",
-  "type": "Problem",
-  "number": "9.2.12",
   "title": "",
   "body": "  Find the general solution of .   "
 }
