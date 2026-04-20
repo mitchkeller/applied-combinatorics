@@ -46,7 +46,7 @@ print(s(10))
     <p><q>Is this going somewhere?</q>, Bob asked impatiently. For these values, both <c>r</c> and <c>s</c> seemed to be giving them answers equally quickly. Dave said he'd heard something about a <c>timeit</c> command in SageMath that would allow them to compare run times and comandeered Alice's keyboard to type:</p>
     <sage>
         <input>
-for n in range(31):
+for n in range(26):
     if n % 5 == 0:
         print("For n = {}:".format(n))
         print("\t"+str(timeit("r(n)",number=5)))
@@ -71,9 +71,6 @@ For n = 20:
 For n = 25:
     5 loops, best of 3: 133 ms per loop
     5 loops, best of 3: 50.4 &#181;s per loop
-For n = 30:
-    5 loops, best of 3: 1.49 s per loop
-    5 loops, best of 3: 48.8 &#181;s per loop
         </output>
     </sage>
     <p>This finally got Bob's attention, since it <c>s</c> seems to be taking a relatively constant time to run even as <m>n</m> increases, while <c>r</c> seems to be taking about 10 times as long to run for each increase of 5 in the value of <m>n</m>. As a final test, they execute the SageMath code below, which calculates <c>s(100)</c> almost instantly. On the other hand, it seems like getting a refill on their coffee would be a good way to pass the time waiting on <c>r(40)</c>.</p>
@@ -87,4 +84,14 @@ For n = 30:
 29931149867237            
         </output>
     </sage>
+    <reading-questions xml:id="rqs-recurrence_discussion">
+        <exercise label="recurrence_discussion_takeaways">
+            <statement>
+                <p>
+                    Write a couple of sentences describing your observations about the value of having explicit solutions to recurrence equations rather than computing values recursively after reading this section and running the SageMath code cells.
+                </p>
+            </statement>
+            <response/>
+        </exercise>
+    </reading-questions>
 </section>
