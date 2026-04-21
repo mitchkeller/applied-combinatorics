@@ -1303,7 +1303,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "9.2",
   "title": "Homogeneous Recurrence Equations",
-  "body": " Homogeneous Recurrence Equations   Solving Advancement Operator Equations   Solve the advancement operator equation with the initial condition .    One way to examine this is to multiply out the equation, which gives us , which is equivalent to or . This suggests that we will want to use powers of , so we're looking at . Since , we must have and the solution is .     Applying Advancement Operator Polynomials   Let and be constants and define . Compute .    We start with . Now we apply to this and have .      The solution to the advancement operator equation where if is .   Notice that this restriction forces the roots to be distinct!!      Note: When solving we'll focus on . Any factors of in could be dealt with by shifting solutions.  "
+  "body": " Homogeneous Recurrence Equations   Solving Advancement Operator Equations   Solve the advancement operator equation with the initial condition .    One way to examine this is to multiply out the equation, which gives us , which is equivalent to or . This suggests that we will want to use powers of , so we're looking at . Since , we must have and the solution is .     Applying Advancement Operator Polynomials   Let and be constants and define . Compute .     We start with . Now we apply to this and have .      The solution to the advancement operator equation where if is .   Notice that this restriction forces the roots to be distinct!!      Note: When solving we'll focus on . Any factors of in could be dealt with by shifting solutions.  "
 },
 {
   "id": "notes-recurrence-3-2",
@@ -1321,7 +1321,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "9.4",
   "title": "Applying Advancement Operator Polynomials.",
-  "body": " Applying Advancement Operator Polynomials   Let and be constants and define . Compute .    We start with . Now we apply to this and have .   "
+  "body": " Applying Advancement Operator Polynomials   Let and be constants and define . Compute .     We start with . Now we apply to this and have .   "
 },
 {
   "id": "prop-adv-op-distinct",
