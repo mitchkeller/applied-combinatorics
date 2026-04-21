@@ -248,7 +248,7 @@
       </statement>
       <solution component="a">
         <p>
-          One way to examine this is to multiply out the equation, which gives us <m>Af+4f =0</m>, which is equivalent to <m>f(n+1)+4f(n)=0</m> or <m>f(n+1)=-4f(n)</m>. This suggests that we will want to use powers of <m>-4</m>, so we're looking at <m>f(n)=c\cdot 4^n</m>. Since <m>f(0)=2</m>, we must have <m>c=2</m> and the solution is <m>f(n) = 2\cdot 4^n</m>.
+          One way to examine this is to multiply out the equation, which gives us <m>Af+4f =0</m>, which is equivalent to <m>f(n+1)+4f(n)=0</m> or <m>f(n+1)=-4f(n)</m>. This suggests that we will want to use powers of <m>-4</m>, so we're looking at <m>f(n)=c\cdot(-4)^n</m>. Since <m>f(0)=2</m>, we must have <m>c=2</m> and the solution is <m>f(n) = 2\cdot(-4)^n</m>.
         </p>
       </solution>
     </example>
