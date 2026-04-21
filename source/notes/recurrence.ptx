@@ -262,9 +262,10 @@
       </statement>
       <solution component="a">
         <p>
+          <!-- Consider adding a version where you distribute and commute the factors. -->
           We start with
           <md>
-            <mrow>(A-3)f(n) \amp = (A-3)[c_13^n + c_2(-4)^n</mrow>
+            <mrow>(A-3)f(n) \amp = (A-3)[c_13^n + c_2(-4)^n]</mrow>
             <mrow> \amp= (A-3)[c_1 3^n] + (A-3)[c_2 (-4)^n] </mrow>
             <mrow> \amp = c_1 3^{n+1} - 3c_1 3^n + c_2(-4)^{n+1} - 3c_2 (-4)^n</mrow>
             <mrow> \amp = -4c_2(-4)^n -3c_2(-4)^n = -7c_2(-4)^n</mrow>
