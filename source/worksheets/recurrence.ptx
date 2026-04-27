@@ -348,7 +348,7 @@ Constants are helpful.
       </activity>
     <!-- </page> -->
   </worksheet>
-  <worksheet xml:id="ws-recurrence-nonhomog" component="recurrence-nonhomog-starting">
+  <worksheet xml:id="ws-recurrence-nonhomog-starting" component="recurrence-nonhomog-starting">
     <title>Starting Nonhomogeneous Advancement Operator Equations</title>
     
     <p>
@@ -439,7 +439,7 @@ Constants are helpful.
   </worksheet>
   <worksheet xml:id="ws-recurrence-nonhomog" component="recurrence-nonhomog-full">
     <title>Nonhomogeneous Advancement Operator Equations</title>
-    
+    <!--
     <p>
       We want to solve an advancement operator equation of the form
       <me>
@@ -524,7 +524,7 @@ Constants are helpful.
           </me>
         </p>
       </solution>
-    </exercise>
+    </exercise>-->
     <p>
       Let's make <m>g(n)</m> a bit more complicated.
     </p>
@@ -571,7 +571,7 @@ Constants are helpful.
     <exercise workspace="0.75in">
       <statement>
         <p>
-          Describe how you would change your work in <xref ref="ws-recurrence-nonhomog-multiterm" text="type-local"/> if the advancement operator equation were <m>(A+1)(A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} + n+2</m>.
+          Describe how you would change your work in <xref ref="ws-recurrence-nonhomog-multiterm" text="type-local"/> if the advancement operator equation were <m>(A+1)(A-4)f(n) = 2\cdot 3^{n} + 5n3^{n} -15 n+2</m>.
           (You don’t have to go through all the steps.)
         </p>
       </statement>
