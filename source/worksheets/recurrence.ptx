@@ -412,11 +412,11 @@ Constants are helpful.
           Throw in an extra constant, trying <m>f_{1}(n) = d_{1} n+d_{2}</m>. Hence
           <md>
             <mrow>(A+1)(A-4)[d_1n+d_2] \amp = (A+1)[d_1(n+1)+d_2 - 4d_1 n -4d_2]</mrow>
-            <mrow> \amp = (A+1)[-3d_1n-3d_2]</mrow>
-            <mrow> \amp = -3d_1(n+1)-3d_2 + (-3d_1n-3d_2)</mrow>
-            <mrow> \amp = -6d_1 n - 3d_1-6d_2</mrow>
+            <mrow> \amp = (A+1)[-3d_1n+d_1-3d_2]</mrow>
+            <mrow> \amp = -3d_1(n+1)+d_1-3d_2 + (-3d_1n+d_1-3d_2)</mrow>
+            <mrow> \amp = -6d_1 n - d_1-6d_2</mrow>
           </md>.
-          Hence, we need <m>d_1 = -2</m>. We also need <m>-3d_1-6d_2 = 0</m>, so we have <m>d_2 = 1</m>. Thus, we have <m>f_1(n) = -2n + 1</m>.
+          Hence, we need <m>d_1 = -2</m>. We also need <m>-d_1-6d_2 = 0</m>, so we have <m>d_2 = 1/3</m>. Thus, we have <m>f_1(n) = -2n + 1</m>.
         </p>
       </solution>
     </exercise>
@@ -431,7 +431,7 @@ Constants are helpful.
           The general solution of the homogeneous equation <m>(A+1)(A-4)f(n) = 0</m> is <m>f_{0}(n) = c_{1}(-1)^{n} + c_{2} 4^{n}</m>.
           Add that to your solution from the previous step, so you have
           <me>
-            f(n) = c_{1}(-1)^{n} + c_{2} 4^{n} -2n +1.
+            f(n) = c_{1}(-1)^{n} + c_{2} 4^{n} -2n +\frac{1}{3}.
           </me>
         </p>
       </solution>
@@ -501,11 +501,11 @@ Constants are helpful.
           Throw in an extra constant, trying <m>f_{1}(n) = d_{1} n+d_{2}</m>. Hence
           <md>
             <mrow>(A+1)(A-4)[d_1n+d_2] \amp = (A+1)[d_1(n+1)+d_2 - 4d_1 n -4d_2]</mrow>
-            <mrow> \amp = (A+1)[-3d_1n-3d_2]</mrow>
-            <mrow> \amp = -3d_1(n+1)-3d_2 + (-3d_1n-3d_2)</mrow>
-            <mrow> \amp = -6d_1 n - 3d_1-6d_2</mrow>
+            <mrow> \amp = (A+1)[-3d_1n+d_1-3d_2]</mrow>
+            <mrow> \amp = -3d_1(n+1)+d_1-3d_2 + (-3d_1n+d_1-3d_2)</mrow>
+            <mrow> \amp = -6d_1 n - d_1-6d_2</mrow>
           </md>.
-          Hence, we need <m>d_1 = -2</m>. We also need <m>-3d_1-6d_2 = 0</m>, so we have <m>d_2 = 1</m>. Thus, we have <m>f_1(n) = -2n + 1</m>.
+          Hence, we need <m>d_1 = -2</m>. We also need <m>-d_1-6d_2 = 0</m>, so we have <m>d_2 = 1/3</m>. Thus, we have <m>f_1(n) = -2n + 1/3</m>.
         </p>
       </solution>
     </exercise>
@@ -520,7 +520,7 @@ Constants are helpful.
           The general solution of the homogeneous equation <m>(A+1)(A-4)f(n) = 0</m> is <m>f_{0}(n) = c_{1}(-1)^{n} + c_{2} 4^{n}</m>.
           Add that to your solution from the previous step, so you have
           <me>
-            f(n) = c_{1}(-1)^{n} + c_{2} 4^{n} -2n +1.
+            f(n) = c_{1}(-1)^{n} + c_{2} 4^{n} -2n +\frac{1}{3}.
           </me>
         </p>
       </solution>
