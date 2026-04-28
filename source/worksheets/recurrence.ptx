@@ -626,7 +626,9 @@ Constants are helpful.
         <p>
           Trying <m>f_{1}(n) = dn3^{n}</m> is not going to work, since the <m>(A-3)</m> in <m>p(A)</m> will turn it into a <m>3^{n}</m> term with no factor of <m>n</m>.
           Starting with an <m>n^{2}3^{n}</m> term is good, but we have to be careful.
-          If we just do <m>f_{1}(n) =d_{1}n^{2}3^{n}</m>, we’re going to be stuck like we were in <xref ref="ws-recurrence-nonhomog-stuck" text="type-local"/>
+          If we just do <m>f_{1}(n) =d_{1}n^{2}3^{n}</m>, we’re going to be stuck like we were in 
+          an earlier problem.
+          <!-- <xref ref="ws-recurrence-nonhomog-stuck" text="type-local"/> -->
           Thus, let’s go with <m>f_{1}(n) = d_{1}n^{2}3^{n} + d_{2} n3^{n}</m>.
           <me>
             (A-3)(A+2)f_{1}(n) = 30d_{1} n3^{n}+(33d_{1} + 15 d_{2})3^{n}
