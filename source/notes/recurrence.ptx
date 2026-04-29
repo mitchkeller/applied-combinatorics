@@ -367,7 +367,7 @@
       <p>
         Let <m>c_{n}</m> denote the number of RUBOTs with <m>n</m> <em>leaves</em>.
         (<alert>NOT</alert> vertices!) Take <m>c_{0}=0</m> by convention.
-        The generating function for the number of RUBOTs is then <md>C(x)\displaystyle = \sum_{n=0}^{\infty} c_{n}x^{n} = \phantom{0+1x+2x^3+5x^4 + \cdots}</md>
+        The generating function for the number of RUBOTs is then <md>C(x)\displaystyle = \sum_{n=0}^{\infty} c_{n}x^{n} = \phantom{0+1x+1x^2+2x^3+5x^4 + \cdots}</md>
       </p>
       <activity>
         <statement>
@@ -375,6 +375,78 @@
             Find <m>c_{1}</m>, <m>c_{2}</m>, <m>c_{3}</m>, and <m>c_{4}</m> by drawing the RUBOTs with <m>1</m>, <m>2</m>, <m>3</m>, and <m>4</m> leaves and then start writing out <m>C(x)</m>.
           </p>
         </statement>
+        <solution>
+          <image>
+            <shortdescription>The RUBOTs with at most four leaves</shortdescription>
+            <prefigure xmlns="https://prefigure.org">
+              <diagram dimensions="(600,300)" margins="15">
+                <coordinates bbox="(0,-1,11,5)">
+                  <network node-fill="#eee">
+                    <node at="0" p="(1,5)" />
+                    <node at="1" p="(2.5,5)" edges="[2,3]"/>
+                    <node at="2" p="(2,4)" />
+                    <node at="3" p="(3,4)"/>
+                    <node at="4" p="(5,5)" edges="[5,6]"/>
+                    <node at="5" p="(4.5,4)" edges="[7,8]" />
+                    <node at="6" p="(5.5,4)"/>
+                    <node at="7" p="(4,3)" />
+                    <node at="8" p="(5,3)"/>
+
+                    <node at="9" p="(8,5)" edges="[10,11]"/>
+                    <node at="10" p="(7.5,4)"  />
+                    <node at="11" p="(8.5,4)" edges="[12,13]"/>
+                    <node at="12" p="(8,3)" />
+                    <node at="13" p="(9,3)"/>
+
+                    <node at="14" p="(1.5,2.5)" edges="[15,16]"/>
+                    <node at="15" p="(1,1.5)" edges="[17,18]"  />
+                    <node at="16" p="(2,1.5)"/>
+                    <node at="17" p="(0.5,0.5)" edges="[40,41]"/>
+                    <node at="18" p="(1.5,0.5)"/>
+                    <node at="40" p="(0,-0.5)"/>
+                    <node at="41" p="(1,-0.5)"/>
+
+                    <node at="19" p="(3.5,2.5)" edges="[20,21]"/>
+                    <node at="20" p="(3,1.5)" edges="[22,23]" />
+                    <node at="21" p="(4,1.5)" />
+                    <node at="22" p="(2.5,0.5)" />
+                    <node at="23" p="(3.5,0.5)" edges="[42,43]"/>
+                    <node at="42" p="(3,-0.5)"/>
+                    <node at="43" p="(4,-0.5)"/>
+
+                    <node at="24" p="(5.5,2.5)" edges="[25,26]"/>
+                    <node at="25" p="(5,1.5)"  edges="[44,45]"/>
+                    <node at="26" p="(6,1.5)" edges="[27,28]"/>
+                    <node at="27" p="(5.7,0.5)" />
+                    <node at="28" p="(6.5,0.5)"/>
+                    <node at="44" p="(4.5,0.5)"/>
+                    <node at="45" p="(5.3,0.5)"/>
+
+                    <node at="30" p="(7.5,2.5)" edges="[31,32]"/>
+                    <node at="31" p="(7,1.5)" />
+                    <node at="32" p="(8,1.5)" edges="[33,34]"  />
+                    <node at="33" p="(7.5,0.5)" edges="[35,36]"/>
+                    <node at="34" p="(8.5,0.5)"/>
+                    <node at="35" p="(7,-0.5)"/>
+                    <node at="36" p="(8,-0.5)"/>
+
+                    <node at="50" p="(9.5,2.5)" edges="[51,52]"/>
+                    <node at="51" p="(9,1.5)"  />
+                    <node at="52" p="(10,1.5)" edges="[53,54]"/>
+                    <node at="53" p="(9.5,0.5)" />
+                    <node at="54" p="(10.5,0.5)" edges="[55,56]"/>
+                    <node at="55" p="(10,-0.5)"/>
+                    <node at="56" p="(11,-0.5)"/>
+                  </network>
+                </coordinates>
+              </diagram>
+            </prefigure>  
+            
+          </image>
+          <p>
+            <m>c_1 = 1</m>, <m>c_2 = 1</m>, <m>c_3 = 2</m>, <m>c_4 = 5</m>
+          </p>
+        </solution>
       </activity>
       <activity>
         <title>Decomposing RUBOTs</title>
@@ -384,6 +456,11 @@
               Let <m>l</m> and <m>r</m> be the left and right children, respectively, of the root of a RUBOT. How many RUBOTs with <m>17</m> leaves have <m>12</m> of those leaves descendants of <m>l</m> and <m>5</m> descendants of <m>r</m>? 
             </p>
           </statement>
+          <solution>
+            <p>
+              <m>c_5\cdot c_{12}</m>
+            </p>
+          </solution>
         </task>
         <task workspace="1cm">
           <statement>
@@ -391,6 +468,11 @@
               Generalize to a formula for the number of RUBOTs with <m>n</m> leaves in which the left child has <m>k</m> leaves.
             </p>
           </statement>
+          <solution>
+            <p>
+              <m>c_k\cdot c_{n-k}</m>
+            </p>
+          </solution>
         </task>
         <task workspace="4cm">
           <statement>
@@ -398,6 +480,14 @@
               Give a nonlinear recurrence for <m>c_{n}</m>.
             </p>
           </statement>
+          <solution>
+            <p>
+              <md>
+                c_n = \sum_{k=1}^{n-1} c_k\cdot c_{n-k}
+              </md>
+              
+            </p>
+          </solution>
         </task>
       </activity>
       </paragraphs>
@@ -427,11 +517,20 @@
             <me>
               C(x) = \frac{1\pm \sqrt{1-4x}}{2}= \frac{1}{2}\pm \frac{1}{2}(1-4x)^{1/2}
             </me>
+            We want a constant term of 0, which means that we need to choose the minus from the <m>\pm</m>.
           </p>
         </solution>
       </activity>
       <p workspace="10cm">
         Recall that <m>\displaystyle (1-4x)^{-1/2}= \sum_{n=0}^{\infty} \binom{2n}{n}x^{n}</m>.
+      </p>
+      <p component="a">
+        <md>
+          <mrow>\int(1-4x)^{-1/2}\, dx  \amp= \int -\frac{1}{4} u^{-1/2}\, du  = \frac{1}{2}u^{1/2} + D</mrow>
+          <mrow> \amp = -\frac{1}{2}(1-4x)^{1/2} + D</mrow>
+          <mrow>\int\sum_{n=0}^\infty \binom{2n}{n}x^n \amp = \sum_{n=0}^\infty \frac{1}{n+1}\binom{2n}{n}x^{n+1} + E</mrow>
+        </md>
+        We need <m>D=1/2</m> to get exactly <m>C(x)</m>. That then gives us a constant term of 0, so we take <m>E=0</m>.
       </p>
       <theorem>
         <statement>
@@ -457,21 +556,42 @@
         </definition>
         <activity>
           <task workspace="2cm">
-            <p>
-              What is a clique? What is an independent set?
-            </p>
+            <statement>
+              <p>
+                What is a clique? What is an independent set?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                A clique is a set of vertices, each pair of which are adjacent. An independent set is a set of vertices, no pair of which are adjacent.
+              </p>
+            </solution>
           </task>
           
           <task workspace="1cm">
-            <p>
-              Explain why <m>R(2,2) = 2</m>.
-            </p>
+            <statement>
+              <p>
+                Explain why <m>R(2,2) = 2</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                As soon as you have two vertices, they must either have an edge between them or be non-adjacent. The first creates a 2-clique and the second creates an independent set of size 2.
+              </p>
+            </solution>
           </task>
           
           <task workspace="2cm">
-            <p>
-              Can you draw a <m>4</m>-vertex graph that has neither a <m>3</m>-clique nor an independent set of size <m>3</m>? What about <m>5</m> vertices? <m>6</m> vertices?
-            </p>
+            <statement>
+              <p>
+                Can you draw a <m>4</m>-vertex graph that has neither a <m>3</m>-clique nor an independent set of size <m>3</m>? What about <m>5</m> vertices? <m>6</m> vertices?
+              </p>
+            </statement>
+            <solution>
+              <p>
+                For four vertices, consider <m>\mathbf{C}_4</m>. For five vertices, consider <m>\mathbf{C}_5</m>. This is impossible for six vertices.
+              </p>
+            </solution>
           </task>
         </activity>
         <proposition xml:id="prop-r33">
@@ -480,6 +600,11 @@
               The Ramsey number <m>R(3,3) =6</m>.
             </p>
           </statement>
+          <proof component="a">
+            <p>
+              Fix a vertex <m>v</m>. The degree of <m>v</m> is an integer between 0 and 5. We first consider the case where the degree of <m>v</m> is at least 3. In this case, if any pair amongst the (at least) three neighbors of <m>v</m> are adjacent, we have a <m>\bfK_{3}</m> formed by <m>v</m> and a pair of its adjacent neighbors. Otherwise, there are no edges amongst these (at least) three neighbors of <m>v</m>, and we have a 3-vertex (or larger) independent set. Now suppose that the degree of <m>v</m> is at most 2. In this case, if any pair amongst the (at least) three non-neighbors of <m>v</m> are <em>not</em> adjacent, then <m>v</m> along with those two vertices forms a 3-vertex independent set. Otherwise, all of the non-neighbors of <m>v</m> are adjacent and form a clique. Since <m>v</m> has at least 3 non-neighbors in this case, we have a clique of size at least 3.
+            </p>
+          </proof>
         </proposition>
         <p>
           Paul Erdős on <m>R(5,5)</m> vs <m>R(6,6)</m> and <url href="https://www.combinatorics.org/files/Surveys/ds1/ds1v16-2021.pdf"><pubtitle>Small Ramsey Numbers</pubtitle></url> by S.P. Radziszowski
