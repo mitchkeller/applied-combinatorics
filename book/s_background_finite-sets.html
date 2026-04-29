@@ -626,7 +626,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_background_finite-sets"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_background_finite-sets">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finite Sets</span>
 </h2>
 <div class="para" id="s_background_finite-sets-2">A set <span class="process-math">\(X\)</span> is said to be <dfn class="terminology">finite</dfn> when either (1) <span class="process-math">\(X=\emptyset\text{;}\)</span> or (2) there exists positive integer <span class="process-math">\(n\)</span> and a bijection <span class="process-math">\(f:[n]\bijection X\text{.}\)</span>  When <span class="process-math">\(X\)</span> is not finite, it is called <dfn class="terminology">infinite</dfn>. For example, <span class="process-math">\(\{a,\emptyset,(3,2),\posints\}\)</span> is a finite set as is <span class="process-math">\(\posints\times\emptyset\text{.}\)</span> On the other hand, <span class="process-math">\(\posints\times \{\emptyset\}\)</span> is infinite. Of course, <span class="process-math">\([n]\)</span> and <span class="process-math">\(\bfn\)</span> are finite sets for every <span class="process-math">\(n\in\posints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -636,14 +638,20 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="s_background_finite-sets-3-1-1">If <span class="process-math">\(X\)</span> be a non-empty finite set, then there is a unique positive integer <span class="process-math">\(n\)</span> for which there is a bijection <span class="process-math">\(f:[n]\bijection X\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition B.7"><a href="#s_background_finite-sets-3" title="Copy heading and permalink for Proposition B.7" aria-label="Copy heading and permalink for Proposition B.7">🔗</a></div></article><div class="para" id="s_background_finite-sets-4">In some cases, it may take some effort to determine whether a set is finite or infinite. Here is a truly classic result.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition B.7"><a href="#s_background_finite-sets-3" title="Copy heading and permalink for Proposition B.7" aria-label="Copy heading and permalink for Proposition B.7">🔗</a></div>
+</article>
+<div class="para" id="s_background_finite-sets-4">In some cases, it may take some effort to determine whether a set is finite or infinite. Here is a truly classic result.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="s_background_finite-sets-5"><h3 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="s_background_finite-sets-5-1-1">The set <span class="process-math">\(P\)</span> of primes is infinite.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition B.8"><a href="#s_background_finite-sets-5" title="Copy heading and permalink for Proposition B.8" aria-label="Copy heading and permalink for Proposition B.8">🔗</a></div></article><details id="s_background_finite-sets-5-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_background_finite-sets-5-2-1">
+<div class="autopermalink" data-description="Proposition B.8"><a href="#s_background_finite-sets-5" title="Copy heading and permalink for Proposition B.8" aria-label="Copy heading and permalink for Proposition B.8">🔗</a></div>
+</article>
+<details id="s_background_finite-sets-5-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_background_finite-sets-5-2-1">
 <div class="para">Suppose that the set <span class="process-math">\(P\)</span> of primes is finite. It is non-empty since <span class="process-math">\(2\in P\text{.}\)</span> Let <span class="process-math">\(n\)</span> be the unique positive integer for which there exists a bijection <span class="process-math">\(f:[n]\rightarrow P\text{.}\)</span> Then let</div>
 <div class="displaymath process-math" id="s_background_finite-sets-5-2-1-5">
 \begin{equation*}
@@ -653,7 +661,9 @@ p=1+f(1)\times f(2)\times f(3)\times \dots\times f(n)
 <div class="para">Then <span class="process-math">\(p\)</span> is not divisible by any of the primes in <span class="process-math">\(P\)</span> but is larger than any element of <span class="process-math">\(P\text{.}\)</span>  Thus, either <span class="process-math">\(p\)</span> is prime or there is a prime that does not belong to <span class="process-math">\(P\text{.}\)</span> The contradiction completes the proof.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof B.8.1"><a href="#s_background_finite-sets-5-2" title="Copy heading and permalink for Proof B.8.1" aria-label="Copy heading and permalink for Proof B.8.1">🔗</a></div></article></details><div class="para" id="s_background_finite-sets-6">Here’s a famous example of a set where no one knows if the set is finite or not.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof B.8.1"><a href="#s_background_finite-sets-5-2" title="Copy heading and permalink for Proof B.8.1" aria-label="Copy heading and permalink for Proof B.8.1">🔗</a></div>
+</article></details>
+<div class="para" id="s_background_finite-sets-6">Here’s a famous example of a set where no one knows if the set is finite or not.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="conjecture theorem-like" id="s_background_finite-sets-7"><h3 class="heading">
 <span class="type">Conjecture</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -668,14 +678,18 @@ primes } \}.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Conjecture B.9"><a href="#s_background_finite-sets-7" title="Copy heading and permalink for Conjecture B.9" aria-label="Copy heading and permalink for Conjecture B.9">🔗</a></div></article><div class="para" id="s_background_finite-sets-8">This conjecture is known as the <em class="emphasis">Twin Primes Conjecture</em>.  Guaranteed <span class="process-math">\(\text{A} ++\)</span> for any student who can settle it!<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Conjecture B.9"><a href="#s_background_finite-sets-7" title="Copy heading and permalink for Conjecture B.9" aria-label="Copy heading and permalink for Conjecture B.9">🔗</a></div>
+</article>
+<div class="para" id="s_background_finite-sets-8">This conjecture is known as the <em class="emphasis">Twin Primes Conjecture</em>.  Guaranteed <span class="process-math">\(\text{A} ++\)</span> for any student who can settle it!<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="exe_sb"><h3 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="exe_sb-1-1">Let <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> be finite sets. If there exists an injection <span class="process-math">\(f:X\injection Y\)</span> and an injection <span class="process-math">\(g:Y \injection X\text{,}\)</span> then there exists a bijection <span class="process-math">\(h:X \bijection Y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe_sb-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition B.10"><a href="#exe_sb" title="Copy heading and permalink for Proposition B.10" aria-label="Copy heading and permalink for Proposition B.10">🔗</a></div></article><div class="para logical" id="s_background_finite-sets-10">
+<div class="autopermalink" data-description="Proposition B.10"><a href="#exe_sb" title="Copy heading and permalink for Proposition B.10" aria-label="Copy heading and permalink for Proposition B.10">🔗</a></div>
+</article>
+<div class="para logical" id="s_background_finite-sets-10">
 <div class="para">When <span class="process-math">\(X\)</span> is a finite non-empty set, the <dfn class="terminology">cardinality</dfn> of <span class="process-math">\(X\text{,}\)</span> denoted <span class="process-math">\(|X|\)</span> is the unique positive integer <span class="process-math">\(n\)</span> for which there is a bijection <span class="process-math">\(f:[n]\bijection X\text{.}\)</span> Intuitively, <span class="process-math">\(|X|\)</span> is the number of elements in <span class="process-math">\(X\text{.}\)</span> For example,</div>
 <div class="displaymath process-math" id="s_background_finite-sets-10-11">
 \begin{equation*}
@@ -691,7 +705,9 @@ primes } \}.
 </h3>
 <div class="para" id="prop_xy-1-1">If <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are finite non-empty sets, then <span class="process-math">\(|X\times Y| =|X|\times |Y|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_xy-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition B.11"><a href="#prop_xy" title="Copy heading and permalink for Proposition B.11" aria-label="Copy heading and permalink for Proposition B.11">🔗</a></div></article><div class="para" id="s_background_finite-sets-12">We note that the statement in <a href="s_background_finite-sets.html#prop_xy" class="xref" data-knowl="./knowl/xref/prop_xy.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition B.11">Proposition B.11</a> is an example of “operator overloading”, a technique featured in several programming languages. Specifically, the times sign <span class="process-math">\(\times\)</span> is used twice but has different meanings. As part of <span class="process-math">\(X\times Y\text{,}\)</span> it denotes the cartesian product, while as part of <span class="process-math">\(|X|\times |Y|\text{,}\)</span> it means ordinary multiplication of positive integers. Programming languages can keep track of the data types of variables and apply the correct interpretation of an operator like <span class="process-math">\(\times\)</span> depending on the variables to which it is applied.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition B.11"><a href="#prop_xy" title="Copy heading and permalink for Proposition B.11" aria-label="Copy heading and permalink for Proposition B.11">🔗</a></div>
+</article>
+<div class="para" id="s_background_finite-sets-12">We note that the statement in <a href="s_background_finite-sets.html#prop_xy" class="xref" data-knowl="./knowl/xref/prop_xy.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition B.11">Proposition B.11</a> is an example of “operator overloading”, a technique featured in several programming languages. Specifically, the times sign <span class="process-math">\(\times\)</span> is used twice but has different meanings. As part of <span class="process-math">\(X\times Y\text{,}\)</span> it denotes the cartesian product, while as part of <span class="process-math">\(|X|\times |Y|\text{,}\)</span> it means ordinary multiplication of positive integers. Programming languages can keep track of the data types of variables and apply the correct interpretation of an operator like <span class="process-math">\(\times\)</span> depending on the variables to which it is applied.<div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="s_background_finite-sets-13">
 <div class="para">We also have the following general form of <a href="s_background_finite-sets.html#prop_xy" class="xref" data-knowl="./knowl/xref/prop_xy.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition B.11">Proposition B.11</a>:</div>
@@ -726,7 +742,10 @@ primes } \}.
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_background_finite-sets-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem B.12"><a href="#s_background_finite-sets-14" title="Copy heading and permalink for Theorem B.12" aria-label="Copy heading and permalink for Theorem B.12">🔗</a></div></article><div class="autopermalink" data-description="Section B.5: Finite Sets"><a href="#s_background_finite-sets" title="Copy heading and permalink for Section B.5: Finite Sets" aria-label="Copy heading and permalink for Section B.5: Finite Sets">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Theorem B.12"><a href="#s_background_finite-sets-14" title="Copy heading and permalink for Theorem B.12" aria-label="Copy heading and permalink for Theorem B.12">🔗</a></div>
+</article><div class="autopermalink" data-description="Section B.5: Finite Sets"><a href="#s_background_finite-sets" title="Copy heading and permalink for Section B.5: Finite Sets" aria-label="Copy heading and permalink for Section B.5: Finite Sets">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_background_relations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_background_notation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

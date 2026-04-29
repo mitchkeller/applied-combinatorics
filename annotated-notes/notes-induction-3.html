@@ -326,16 +326,20 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="notes-induction-3" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<section class="handout" id="notes-induction-3" data-margins="13mm 13mm 13mm 13mm">
+<h2 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Principle of Mathematical Induction</span><div class="print-links"><a href="?printpreview=notes-induction-3" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
 <article class="axiom theorem-like" id="axiom-induction"><h3 class="heading">
 <span class="type">Axiom</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Principle of Mathematical Induction.</span>
 </h3>
 <div class="para" id="axiom-induction-2-1">Let <span class="process-math">\(S_{n}\)</span> be an open statement involving a positive integer <span class="process-math">\(n\text{.}\)</span> If <span class="process-math">\(S_{1}\)</span> is true, and for every positive integer <span class="process-math">\(k\text{,}\)</span> the statement <span class="process-math">\(S_{k+1}\)</span> is true whenever <span class="process-math">\(S_{k}\)</span> is true, then <span class="process-math">\(S_{n}\)</span> is true for every positive integer <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#axiom-induction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="axiom-induction-2-2">We can rephrase “the statement <span class="process-math">\(S_{k+1}\)</span> is true whenever <span class="process-math">\(S_{k}\)</span> is true” as “if <span class="process-math">\(S_k\)</span> is true, then <span class="process-math">\(S_{k+1}\)</span> is true”.<div class="autopermalink" data-description="Paragraph"><a href="#axiom-induction-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="axiom-induction-2-2">We can rephrase “the statement <span class="process-math">\(S_{k+1}\)</span> is true whenever <span class="process-math">\(S_{k}\)</span> is true” as “if <span class="process-math">\(S_k\)</span> is true, then <span class="process-math">\(S_{k+1}\)</span> is true”.<div class="autopermalink" data-description="Paragraph"><a href="#axiom-induction-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Axiom 3.1: Principle of Mathematical Induction"><a href="#axiom-induction" title="Copy heading and permalink for Axiom 3.1: Principle of Mathematical Induction" aria-label="Copy heading and permalink for Axiom 3.1: Principle of Mathematical Induction">🔗</a></div></article><article class="assemblage assemblage-like" id="assemblage-ind-proof-parts"><h3 class="heading"><span class="title">Key Parts of an Inductive Proof.</span></h3>
+<div class="autopermalink" data-description="Axiom 3.1: Principle of Mathematical Induction"><a href="#axiom-induction" title="Copy heading and permalink for Axiom 3.1: Principle of Mathematical Induction" aria-label="Copy heading and permalink for Axiom 3.1: Principle of Mathematical Induction">🔗</a></div>
+</article>
+<article class="assemblage assemblage-like" id="assemblage-ind-proof-parts"><h3 class="heading"><span class="title">Key Parts of an Inductive Proof.</span></h3>
 <div class="para logical" id="assemblage-ind-proof-parts-2">
 <div class="para">When trying to prove an open statement <span class="process-math">\(S_{n}\)</span> is true for all positive integers <span class="process-math">\(n\)</span> by mathematical induction, the key steps are</div>
 <dl class="description-list">
@@ -358,7 +362,9 @@ eBookConfig.enable_chatcodes =  false;
 </dl>
 <div class="autopermalink" data-description="Paragraph"><a href="#assemblage-ind-proof-parts-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Assemblage: Key Parts of an Inductive Proof"><a href="#assemblage-ind-proof-parts" title="Copy heading and permalink for Assemblage: Key Parts of an Inductive Proof" aria-label="Copy heading and permalink for Assemblage: Key Parts of an Inductive Proof">🔗</a></div></article><div class="para" id="notes-induction-3-4">
+<div class="autopermalink" data-description="Assemblage: Key Parts of an Inductive Proof"><a href="#assemblage-ind-proof-parts" title="Copy heading and permalink for Assemblage: Key Parts of an Inductive Proof" aria-label="Copy heading and permalink for Assemblage: Key Parts of an Inductive Proof">🔗</a></div>
+</article>
+<div class="para" id="notes-induction-3-4">
 <em class="alert">PI questions: getting started, after basis step, after IH.</em><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-ind-example"><h3 class="heading">
@@ -366,7 +372,9 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="thm-ind-example-1-1">For all positive integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\displaystyle \sum_{i=1}^{n} (4i-3) = n(2n-1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-ind-example-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.2"><a href="#thm-ind-example" title="Copy heading and permalink for Theorem 3.2" aria-label="Copy heading and permalink for Theorem 3.2">🔗</a></div></article><article class="proof" id="thm-ind-example-2"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="autopermalink" data-description="Theorem 3.2"><a href="#thm-ind-example" title="Copy heading and permalink for Theorem 3.2" aria-label="Copy heading and permalink for Theorem 3.2">🔗</a></div>
+</article>
+<article class="proof" id="thm-ind-example-2"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
 <div class="para logical" id="thm-ind-example-2-1">
 <div class="para">We will prove this by induction. The basis step is to substitute <span class="process-math">\(n=1\)</span> into each side:</div>
 <div class="displaymath process-math" id="thm-ind-example-2-1-2">
@@ -400,7 +408,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">Thus, the formula is true for <span class="process-math">\(k+1\)</span> and therefore holds for all <span class="process-math">\(n\geq 1\)</span> by the Principle of Mathematical Induction.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-ind-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.2.1"><a href="#thm-ind-example-2" title="Copy heading and permalink for Proof 3.2.1" aria-label="Copy heading and permalink for Proof 3.2.1">🔗</a></div></article><article class="activity project-like" id="notes-induction-3-6"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 3.2.1"><a href="#thm-ind-example-2" title="Copy heading and permalink for Proof 3.2.1" aria-label="Copy heading and permalink for Proof 3.2.1">🔗</a></div>
+</article>
+<article class="activity project-like" id="notes-induction-3-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <article class="task exercise-like" id="notes-induction-3-6-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
@@ -414,7 +424,9 @@ r(n) = \binom{n+1}{2}+1\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="notes-induction-3-6-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="notes-induction-3-6-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <article class="proof" id="notes-induction-3-6-1-2-1"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="notes-induction-3-6-1-2-1-1">We will prove this by induction. For the base case, let <span class="process-math">\(n=1\text{.}\)</span> By definition, <span class="process-math">\(r(1) = 1\text{.}\)</span> We also see that <span class="process-math">\(\binom{1+1}{2} + 1 = \binom{2}{2} +1 = 1+1 = 2\text{,}\)</span> which completes the verification of the base case.<div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -439,20 +451,30 @@ r(n) = \binom{n+1}{2}+1
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-1-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.2.1.a.1.1"><a href="#notes-induction-3-6-1-2-1" title="Copy heading and permalink for Proof 3.2.1.a.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.a.1.1">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.2.1.a.1"><a href="#notes-induction-3-6-1-2" title="Copy heading and permalink for Solution 3.2.1.a.1" aria-label="Copy heading and permalink for Solution 3.2.1.a.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 3.2.1.a"><a href="#notes-induction-3-6-1" title="Copy heading and permalink for Task 3.2.1.a" aria-label="Copy heading and permalink for Task 3.2.1.a">🔗</a></div></article><article class="task exercise-like" id="notes-induction-3-6-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Proof 3.2.1.a.1.1"><a href="#notes-induction-3-6-1-2-1" title="Copy heading and permalink for Proof 3.2.1.a.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.a.1.1">🔗</a></div>
+</article><div class="autopermalink" data-description="Solution 3.2.1.a.1"><a href="#notes-induction-3-6-1-2" title="Copy heading and permalink for Solution 3.2.1.a.1" aria-label="Copy heading and permalink for Solution 3.2.1.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 3.2.1.a"><a href="#notes-induction-3-6-1" title="Copy heading and permalink for Task 3.2.1.a" aria-label="Copy heading and permalink for Task 3.2.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="notes-induction-3-6-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="notes-induction-3-6-2-1-1">We say that an integer <span class="process-math">\(a\)</span> <em class="emphasis">divides</em> an integer <span class="process-math">\(b\)</span> provided that there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(b=ma\text{.}\)</span> Prove that for all integers <span class="process-math">\(n\geq 1\text{,}\)</span> <span class="process-math">\(4\)</span> divides <span class="process-math">\(5^{n}-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="notes-induction-3-6-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="notes-induction-3-6-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <article class="proof" id="notes-induction-3-6-2-2-1"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="notes-induction-3-6-2-2-1-1">We will prove this by induction. The basis step is <span class="process-math">\(n=1\text{,}\)</span> for which we have <span class="process-math">\(5^1-1=4=1\cdot 4\text{.}\)</span> Therefore, we can see that <span class="process-math">\(4\)</span> divides <span class="process-math">\(5^1-1\)</span> as required.<div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="notes-induction-3-6-2-2-1-2">Now assume that for some positive integer <span class="process-math">\(k\text{,}\)</span> we have that <span class="process-math">\(4\)</span> divides <span class="process-math">\(5^k-1\text{.}\)</span> This means that there exists an integer <span class="process-math">\(m\)</span> so that <span class="process-math">\(5^k-1=4m\text{.}\)</span> We can rearrange this to say that <span class="process-math">\(5^k=4m+1\text{.}\)</span> Now we consider <span class="process-math">\(5^{k+1}-1\)</span> for the induction step. We can write <span class="process-math">\(5^{k+1}\)</span> as <span class="process-math">\(5^k\cdot 5\text{,}\)</span> so we have <span class="process-math">\(5^{k+1}-1 = 5^k\cdot 5 -1 = (4m+1)\cdot 5 -1\)</span> by the induction hypothesis. Using algebra, we now have that this equals <span class="process-math">\(20m+5-1 = 20m+4=4(5m+1)\text{.}\)</span> Since <span class="process-math">\(m\)</span> is an integer, <span class="process-math">\(5m+1\)</span> is also an integer. Therefore, <span class="process-math">\(5^{k+1}-1\)</span> is four times an integer, which is what it means for <span class="process-math">\(4\)</span> to divide <span class="process-math">\(5^{k+1}-1\text{.}\)</span> Hence, by the Principle of Mathematical Induction, <span class="process-math">\(4\)</span> divides <span class="process-math">\(5^n-1\)</span> for all positive integers <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-2-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.2.1.b.1.1"><a href="#notes-induction-3-6-2-2-1" title="Copy heading and permalink for Proof 3.2.1.b.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.b.1.1">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.2.1.b.1"><a href="#notes-induction-3-6-2-2" title="Copy heading and permalink for Solution 3.2.1.b.1" aria-label="Copy heading and permalink for Solution 3.2.1.b.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 3.2.1.b"><a href="#notes-induction-3-6-2" title="Copy heading and permalink for Task 3.2.1.b" aria-label="Copy heading and permalink for Task 3.2.1.b">🔗</a></div></article><article class="task exercise-like" id="notes-induction-3-6-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Proof 3.2.1.b.1.1"><a href="#notes-induction-3-6-2-2-1" title="Copy heading and permalink for Proof 3.2.1.b.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.b.1.1">🔗</a></div>
+</article><div class="autopermalink" data-description="Solution 3.2.1.b.1"><a href="#notes-induction-3-6-2-2" title="Copy heading and permalink for Solution 3.2.1.b.1" aria-label="Copy heading and permalink for Solution 3.2.1.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 3.2.1.b"><a href="#notes-induction-3-6-2" title="Copy heading and permalink for Task 3.2.1.b" aria-label="Copy heading and permalink for Task 3.2.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="notes-induction-3-6-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para logical" id="notes-induction-3-6-3-1-1">
 <div class="para">Let <span class="process-math">\(f(1)=5\text{,}\)</span> <span class="process-math">\(f(2) = 13\text{,}\)</span> and for all integers <span class="process-math">\(n\geq 3\text{,}\)</span>
 </div>
@@ -465,7 +487,9 @@ f(n)=5f(n-1)-6f(n-2).
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="notes-induction-3-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="notes-induction-3-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <article class="proof" id="notes-induction-3-6-3-2-1"><h5 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="notes-induction-3-6-3-2-1-1">We will prove this using strong induction. Because the recursive formula only applies for <span class="process-math">\(n\geq 3\text{,}\)</span> we will need to address <span class="process-math">\(n=1\)</span> and <span class="process-math">\(n=2\)</span> as base cases. We are given that <span class="process-math">\(f(1) = 5\)</span> and <span class="process-math">\(f(2) = 13\text{.}\)</span> The formula <span class="process-math">\(2^n+3^n\text{,}\)</span> when considered for <span class="process-math">\(n=1\)</span> and <span class="process-math">\(n=2\text{,}\)</span> yields <span class="process-math">\(2^1+3^1 = 5\)</span> and <span class="process-math">\(2^2+3^2 = 4+9 = 13\text{,}\)</span> respectively. Thus, the basis step is complete.<div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -485,9 +509,14 @@ f(k+1) \amp  = 5f(k)-6f(k-1)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#notes-induction-3-6-3-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.2.1.c.1.1"><a href="#notes-induction-3-6-3-2-1" title="Copy heading and permalink for Proof 3.2.1.c.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.c.1.1">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.2.1.c.1"><a href="#notes-induction-3-6-3-2" title="Copy heading and permalink for Solution 3.2.1.c.1" aria-label="Copy heading and permalink for Solution 3.2.1.c.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 3.2.1.c"><a href="#notes-induction-3-6-3" title="Copy heading and permalink for Task 3.2.1.c" aria-label="Copy heading and permalink for Task 3.2.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.2.1"><a href="#notes-induction-3-6" title="Copy heading and permalink for Activity 3.2.1" aria-label="Copy heading and permalink for Activity 3.2.1">🔗</a></div></article><div class="autopermalink" data-description="Handout 3.2: Principle of Mathematical Induction"><a href="#notes-induction-3" title="Copy heading and permalink for Handout 3.2: Principle of Mathematical Induction" aria-label="Copy heading and permalink for Handout 3.2: Principle of Mathematical Induction">🔗</a></div></section>
+<div class="autopermalink" data-description="Proof 3.2.1.c.1.1"><a href="#notes-induction-3-6-3-2-1" title="Copy heading and permalink for Proof 3.2.1.c.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.c.1.1">🔗</a></div>
+</article><div class="autopermalink" data-description="Solution 3.2.1.c.1"><a href="#notes-induction-3-6-3-2" title="Copy heading and permalink for Solution 3.2.1.c.1" aria-label="Copy heading and permalink for Solution 3.2.1.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 3.2.1.c"><a href="#notes-induction-3-6-3" title="Copy heading and permalink for Task 3.2.1.c" aria-label="Copy heading and permalink for Task 3.2.1.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 3.2.1"><a href="#notes-induction-3-6" title="Copy heading and permalink for Activity 3.2.1" aria-label="Copy heading and permalink for Activity 3.2.1">🔗</a></div>
+</article><div class="autopermalink" data-description="Handout 3.2: Principle of Mathematical Induction"><a href="#notes-induction-3" title="Copy heading and permalink for Handout 3.2: Principle of Mathematical Induction" aria-label="Copy heading and permalink for Handout 3.2: Principle of Mathematical Induction">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-induction-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-php-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

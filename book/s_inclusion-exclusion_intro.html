@@ -626,7 +626,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_inclusion-exclusion_intro"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_inclusion-exclusion_intro">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction</span>
 </h2>
 <div class="para" id="s_inclusion-exclusion_intro-2">We start this chapter with an elementary example.<div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_intro-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -636,14 +638,20 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="exa_inclusion-exclusion_students-1-1">Let <span class="process-math">\(X\)</span> be the set of <span class="process-math">\(63\)</span> students in an applied combinatorics course at a large technological university. Suppose there are <span class="process-math">\(47\)</span> computer science majors and <span class="process-math">\(51\)</span> male students. Also, we know there are <span class="process-math">\(45\)</span> male students majoring in computer science. How many students in the class are female students not majoring in computer science?<div class="autopermalink" data-description="Paragraph"><a href="#exa_inclusion-exclusion_students-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="exa_inclusion-exclusion_students-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exa_inclusion-exclusion_students-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exa_inclusion-exclusion_students-2-1">Although the Venn diagrams that you’ve probably seen drawn many times over the years aren’t always the best illustrations (especially if you try to think with some sort of scale), let’s use one to get started. In <a href="s_inclusion-exclusion_intro.html#fig_venn-app-comb" class="xref" data-knowl="./knowl/xref/fig_venn-app-comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.2">Figure 7.2</a>, we see how the groups in the scenario might overlap.<div class="autopermalink" data-description="Paragraph"><a href="#exa_inclusion-exclusion_students-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig_venn-app-comb"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;">
-<img src="generated/latex-image/venn-diagram-students.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="venn-diagram-students-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="venn-diagram-students-description"><div class="para" id="venn-diagram-students-1-1">A Venn diagram for an applied combinatorics class<div class="autopermalink" data-description="Paragraph"><a href="#venn-diagram-students-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<img src="generated/latex-image/venn-diagram-students.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="venn-diagram-students-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="venn-diagram-students-description">
+<div class="para" id="venn-diagram-students-1-1">A Venn diagram for an applied combinatorics class<div class="autopermalink" data-description="Paragraph"><a href="#venn-diagram-students-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A Venn diagram for an applied combinatorics class<div class="autopermalink" data-description="Figure 7.2"><a href="#fig_venn-app-comb" title="Copy heading and permalink for Figure 7.2" aria-label="Copy heading and permalink for Figure 7.2">🔗</a></div></figcaption></figure><div class="para logical" id="exa_inclusion-exclusion_students-2-3">
+</div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A Venn diagram for an applied combinatorics class<div class="autopermalink" data-description="Figure 7.2"><a href="#fig_venn-app-comb" title="Copy heading and permalink for Figure 7.2" aria-label="Copy heading and permalink for Figure 7.2">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="exa_inclusion-exclusion_students-2-3">
 <div class="para">Now we can see that we’re after the number of students in the white rectangle but outside the two shaded ovals, which is the female students not majoring in computer science. To compute this, we can start by subtracting the number of male students (the blue region) from the total number of students in the class and then subtracting the number of computer science majors (the yellow region). However, we’ve now subtracted the overlapping region (the male computer science majors) <em class="emphasis">twice</em>, so we must add that number back. Thus, the number of female students in the class who are not majoring in computer science is</div>
 <div class="displaymath process-math" id="exa_inclusion-exclusion_students-2-3-2">
 \begin{equation*}
@@ -653,8 +661,11 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#exa_inclusion-exclusion_students-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 7.1.1"><a href="#exa_inclusion-exclusion_students-2" title="Copy heading and permalink for Solution 7.1.1" aria-label="Copy heading and permalink for Solution 7.1.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 7.1"><a href="#exa_inclusion-exclusion_students" title="Copy heading and permalink for Example 7.1" aria-label="Copy heading and permalink for Example 7.1">🔗</a></div></article><article class="example example-like" id="exa_inclusion-exclusion_int-solns"><h3 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 7.1"><a href="#exa_inclusion-exclusion_students" title="Copy heading and permalink for Example 7.1" aria-label="Copy heading and permalink for Example 7.1">🔗</a></div>
+</article>
+<article class="example example-like" id="exa_inclusion-exclusion_int-solns"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="exa_inclusion-exclusion_int-solns-1">
@@ -686,7 +697,9 @@ x_1' + x_2 + x_3 + x_4' = 97
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#exa_inclusion-exclusion_int-solns-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 7.3"><a href="#exa_inclusion-exclusion_int-solns" title="Copy heading and permalink for Example 7.3" aria-label="Copy heading and permalink for Example 7.3">🔗</a></div></article><div class="para" id="s_inclusion-exclusion_intro-5">From these examples, you should start to see a pattern emerging that leads to a more general setting. In full generality, we will consider a set <span class="process-math">\(X\)</span> and a family <span class="process-math">\(\mathcal{P}=\{P_1,P_2,\dots,P_m\}\)</span> of <dfn class="terminology">properties</dfn>. We intend that for every <span class="process-math">\(x\in
+<div class="autopermalink" data-description="Example 7.3"><a href="#exa_inclusion-exclusion_int-solns" title="Copy heading and permalink for Example 7.3" aria-label="Copy heading and permalink for Example 7.3">🔗</a></div>
+</article>
+<div class="para" id="s_inclusion-exclusion_intro-5">From these examples, you should start to see a pattern emerging that leads to a more general setting. In full generality, we will consider a set <span class="process-math">\(X\)</span> and a family <span class="process-math">\(\mathcal{P}=\{P_1,P_2,\dots,P_m\}\)</span> of <dfn class="terminology">properties</dfn>. We intend that for every <span class="process-math">\(x\in
 X\)</span> and each <span class="process-math">\(i=1,2,\dots,m\text{,}\)</span> either <span class="process-math">\(x\)</span> satisfies <span class="process-math">\(P_i\)</span> or it does not. There is no ambiguity. Ultimately, we are interested in determining the number of elements of <span class="process-math">\(X\)</span> which satisfy <em class="emphasis">none</em> of the properties in <span class="process-math">\(\mathcal{P}\text{.}\)</span> In <a href="s_inclusion-exclusion_intro.html#exa_inclusion-exclusion_students" class="xref" data-knowl="./knowl/xref/exa_inclusion-exclusion_students.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.1">Example 7.1</a>, we could have made property <span class="process-math">\(P_1\)</span> “is a computer science major” and property <span class="process-math">\(P_2\)</span> “is male”. Then the number of students satisfying <em class="emphasis">neither</em> <span class="process-math">\(P_1\)</span> nor <span class="process-math">\(P_2\)</span> would be the number of female students majoring in something other than computer science, exactly the number we were asked to determine. What would the properties <span class="process-math">\(P_1\)</span> and <span class="process-math">\(P_2\)</span> be for <a href="s_inclusion-exclusion_intro.html#exa_inclusion-exclusion_int-solns" class="xref" data-knowl="./knowl/xref/exa_inclusion-exclusion_int-solns.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.3">Example 7.3</a>?<div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_intro-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_inclusion-exclusion_intro-6">Let’s consider three examples of larger sets of properties. These properties will come back up during the remainder of the chapter as we apply inclusion-exclusion to some more involved situations. Recall that throughout this book, we use the notation <span class="process-math">\([n]\)</span> for the set <span class="process-math">\(\{1,2,\dots,n\}\)</span> when <span class="process-math">\(n\)</span> is a positive integer.<div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_intro-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -699,7 +712,9 @@ X\text{,}\)</span> we say that <span class="process-math">\(f\)</span> satisfies
 </div>
 <div class="para" id="exa_inclusion-exclusion_prop-inject-2">As a specific example, suppose that <span class="process-math">\(n=5\)</span> and <span class="process-math">\(m=3\text{.}\)</span> Then the function given by the table below satisfies <span class="process-math">\(P_1\)</span> but not <span class="process-math">\(P_2\)</span> or <span class="process-math">\(P_3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exa_inclusion-exclusion_prop-inject-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel fixed-width sbspanel--top top" style=""><table class="tabular">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel fixed-width sbspanel--top top" style=""><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(i\)</span></td>
 <td class="l m b1 r0 l0 t0 lines">1</td>
@@ -716,8 +731,12 @@ X\text{,}\)</span> we say that <span class="process-math">\(f\)</span> satisfies
 <td class="l m b0 r0 l0 t0 lines">2</td>
 <td class="l m b0 r0 l0 t0 lines">3</td>
 </tr>
-</table></div></div></div>
-<div class="autopermalink" data-description="Example 7.4"><a href="#exa_inclusion-exclusion_prop-inject" title="Copy heading and permalink for Example 7.4" aria-label="Copy heading and permalink for Example 7.4">🔗</a></div></article><article class="example example-like" id="exa_inclusion-exclusion_prop-derange"><h3 class="heading">
+</table></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Example 7.4"><a href="#exa_inclusion-exclusion_prop-inject" title="Copy heading and permalink for Example 7.4" aria-label="Copy heading and permalink for Example 7.4">🔗</a></div>
+</article>
+<article class="example example-like" id="exa_inclusion-exclusion_prop-derange"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="exa_inclusion-exclusion_prop-derange-1">Let <span class="process-math">\(m\)</span> be a fixed positive integer and let <span class="process-math">\(X\)</span> consist of all bijections from <span class="process-math">\([m]\)</span> to <span class="process-math">\([m]\text{.}\)</span> Elements of <span class="process-math">\(X\)</span> are called <dfn class="terminology">permutations</dfn>. Then for each <span class="process-math">\(i=1,2,\dots,m\text{,}\)</span> and each permutation <span class="process-math">\(\sigma\in
@@ -725,7 +744,9 @@ X\text{,}\)</span> we say that <span class="process-math">\(\sigma\)</span> sati
 </div>
 <div class="para" id="exa_inclusion-exclusion_prop-derange-2">For example, the permutation <span class="process-math">\(\sigma\)</span> of <span class="process-math">\([5]\)</span> given in by the table below satisfies <span class="process-math">\(P_3\)</span> and <span class="process-math">\(P_5\)</span> and no other <span class="process-math">\(P_i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exa_inclusion-exclusion_prop-derange-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel fixed-width sbspanel--top top" style=""><table class="tabular">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel fixed-width sbspanel--top top" style=""><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(i\)</span></td>
 <td class="l m b1 r0 l0 t0 lines">1</td>
@@ -742,8 +763,12 @@ X\text{,}\)</span> we say that <span class="process-math">\(\sigma\)</span> sati
 <td class="l m b0 r0 l0 t0 lines">1</td>
 <td class="l m b0 r0 l0 t0 lines">5</td>
 </tr>
-</table></div></div></div>
-<div class="autopermalink" data-description="Example 7.5"><a href="#exa_inclusion-exclusion_prop-derange" title="Copy heading and permalink for Example 7.5" aria-label="Copy heading and permalink for Example 7.5">🔗</a></div></article><div class="para" id="s_inclusion-exclusion_intro-9">Note that in the previous example, we could have said that <span class="process-math">\(\sigma\)</span> satisfies property <span class="process-math">\(P_i\)</span> if <span class="process-math">\(\sigma(i)\neq i\text{.}\)</span> But remembering that our goal is to count the number of elements satisfying none of the properties, we would then be counting the number of permutations satisfying <span class="process-math">\(\sigma(i)=i\)</span> for each <span class="process-math">\(i=1,2,\dots,n\text{,}\)</span> and perhaps we don’t need a lot of theory to accomplish this task—the number is one, of course.<div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_intro-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</table></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Example 7.5"><a href="#exa_inclusion-exclusion_prop-derange" title="Copy heading and permalink for Example 7.5" aria-label="Copy heading and permalink for Example 7.5">🔗</a></div>
+</article>
+<div class="para" id="s_inclusion-exclusion_intro-9">Note that in the previous example, we could have said that <span class="process-math">\(\sigma\)</span> satisfies property <span class="process-math">\(P_i\)</span> if <span class="process-math">\(\sigma(i)\neq i\text{.}\)</span> But remembering that our goal is to count the number of elements satisfying none of the properties, we would then be counting the number of permutations satisfying <span class="process-math">\(\sigma(i)=i\)</span> for each <span class="process-math">\(i=1,2,\dots,n\text{,}\)</span> and perhaps we don’t need a lot of theory to accomplish this task—the number is one, of course.<div class="autopermalink" data-description="Paragraph"><a href="#s_inclusion-exclusion_intro-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="exa_inclusion-exclusion_prop-divis"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -752,7 +777,10 @@ X\text{,}\)</span> we say that <span class="process-math">\(\sigma\)</span> sati
 </div>
 <div class="para" id="exa_inclusion-exclusion_prop-divis-2">At first this may appear to be the most complicated of the sets of properties we’ve discussed thus far. However, being concrete should help clear up any confusion. Suppose that <span class="process-math">\(n=m=15\text{.}\)</span> Which properties does <span class="process-math">\(12\)</span> satisfy? The divisors of <span class="process-math">\(12\)</span> are <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> and <span class="process-math">\(12\text{,}\)</span> so <span class="process-math">\(12\)</span> satisfies <span class="process-math">\(P_1\text{,}\)</span> <span class="process-math">\(P_2\text{,}\)</span> <span class="process-math">\(P_3\text{,}\)</span> <span class="process-math">\(P_4\text{,}\)</span> <span class="process-math">\(P_6\text{,}\)</span> and <span class="process-math">\(P_{12}\text{.}\)</span> On the other end of the spectrum, notice that <span class="process-math">\(7\)</span> satisfies only properties <span class="process-math">\(P_1\)</span> and <span class="process-math">\(P_7\text{,}\)</span> since those are its only divisors.<div class="autopermalink" data-description="Paragraph"><a href="#exa_inclusion-exclusion_prop-divis-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 7.6"><a href="#exa_inclusion-exclusion_prop-divis" title="Copy heading and permalink for Example 7.6" aria-label="Copy heading and permalink for Example 7.6">🔗</a></div></article><div class="autopermalink" data-description="Section 7.1: Introduction"><a href="#s_inclusion-exclusion_intro" title="Copy heading and permalink for Section 7.1: Introduction" aria-label="Copy heading and permalink for Section 7.1: Introduction">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 7.6"><a href="#exa_inclusion-exclusion_prop-divis" title="Copy heading and permalink for Example 7.6" aria-label="Copy heading and permalink for Example 7.6">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 7.1: Introduction"><a href="#s_inclusion-exclusion_intro" title="Copy heading and permalink for Section 7.1: Introduction" aria-label="Copy heading and permalink for Section 7.1: Introduction">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch_inclusion-exclusion.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_inclusion-exclusion_statement.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

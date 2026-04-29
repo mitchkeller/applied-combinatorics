@@ -338,7 +338,8 @@ sagecell.makeSagecell({
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="notes-exp-genfn" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<section class="handout" id="notes-exp-genfn" data-margins="13mm 13mm 13mm 13mm">
+<h2 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exponential Generating Functions</span><div class="print-links"><a href="?printpreview=notes-exp-genfn" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
 <div class="para" id="notes-exp-genfn-2">
@@ -350,7 +351,9 @@ sagecell.makeSagecell({
 <div class="para" id="notes-exp-genfn-3-1-1">Suppose we are making strings using the alphabet <span class="process-math">\(\{0,1,2,3,4\}\text{.}\)</span> If the number of times <span class="process-math">\(4\)</span> appears in the string is at least one and at most four, the number of times <span class="process-math">\(2\)</span> appears in the string is a positive even number, and there are at least three occurrences of <span class="process-math">\(3\)</span> in the string, write an exponential generating function in which the coefficient on <span class="process-math">\(x^{n}/n!\)</span> is the number of such strings of length <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-exp-genfn-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="5cm"></div>
-<div class="autopermalink" data-description="Activity 8.3.1"><a href="#notes-exp-genfn-3" title="Copy heading and permalink for Activity 8.3.1" aria-label="Copy heading and permalink for Activity 8.3.1">🔗</a></div></article><div class="para" id="notes-exp-genfn-4">Let’s see how to use SageMath to find the number of strings of length 15 meeting these restrictions:<div class="autopermalink" data-description="Paragraph"><a href="#notes-exp-genfn-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Activity 8.3.1"><a href="#notes-exp-genfn-3" title="Copy heading and permalink for Activity 8.3.1" aria-label="Copy heading and permalink for Activity 8.3.1">🔗</a></div>
+</article>
+<div class="para" id="notes-exp-genfn-4">Let’s see how to use SageMath to find the number of strings of length 15 meeting these restrictions:<div class="autopermalink" data-description="Paragraph"><a href="#notes-exp-genfn-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div id="notes-exp-genfn-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f(x) = exp(2*x)*(((exp(x)+exp(-x))/2)-1)*(exp(x)-1-x-x^2/2)*(x+x^2/2+x^3/6+x^4/24)
 </script></div>
@@ -363,10 +366,15 @@ sagecell.makeSagecell({
 <article class="task exercise-like" id="notes-exp-genfn-7-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="notes-exp-genfn-7-1-1-1">Find an exponential generating function in which the coefficient on <span class="process-math">\(x^n/n!\)</span> is the number of surjections from the set <span class="process-math">\([n]\)</span> to the set <span class="process-math">\([2]\text{.}\)</span> Then use some algebra to find an explicit formula for the number of surjections from <span class="process-math">\([n]\)</span> to <span class="process-math">\([2]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-exp-genfn-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 8.3.2.a"><a href="#notes-exp-genfn-7-1" title="Copy heading and permalink for Task 8.3.2.a" aria-label="Copy heading and permalink for Task 8.3.2.a">🔗</a></div></article><article class="task exercise-like" id="notes-exp-genfn-7-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" data-description="Task 8.3.2.a"><a href="#notes-exp-genfn-7-1" title="Copy heading and permalink for Task 8.3.2.a" aria-label="Copy heading and permalink for Task 8.3.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="notes-exp-genfn-7-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="notes-exp-genfn-7-2-1-1">Find an exponential generating function in which the coefficient on <span class="process-math">\(x^n/n!\)</span> is the number of surjections from the set <span class="process-math">\([n]\)</span> to the set <span class="process-math">\([k]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-exp-genfn-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 8.3.2.b"><a href="#notes-exp-genfn-7-2" title="Copy heading and permalink for Task 8.3.2.b" aria-label="Copy heading and permalink for Task 8.3.2.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 8.3.2"><a href="#notes-exp-genfn-7" title="Copy heading and permalink for Activity 8.3.2" aria-label="Copy heading and permalink for Activity 8.3.2">🔗</a></div></article><div class="autopermalink" data-description="Handout 8.3: Exponential Generating Functions"><a href="#notes-exp-genfn" title="Copy heading and permalink for Handout 8.3: Exponential Generating Functions" aria-label="Copy heading and permalink for Handout 8.3: Exponential Generating Functions">🔗</a></div></section>
+<div class="autopermalink" data-description="Task 8.3.2.b"><a href="#notes-exp-genfn-7-2" title="Copy heading and permalink for Task 8.3.2.b" aria-label="Copy heading and permalink for Task 8.3.2.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Activity 8.3.2"><a href="#notes-exp-genfn-7" title="Copy heading and permalink for Activity 8.3.2" aria-label="Copy heading and permalink for Activity 8.3.2">🔗</a></div>
+</article><div class="autopermalink" data-description="Handout 8.3: Exponential Generating Functions"><a href="#notes-exp-genfn" title="Copy heading and permalink for Handout 8.3: Exponential Generating Functions" aria-label="Copy heading and permalink for Handout 8.3: Exponential Generating Functions">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="genfunction-partitions-newton.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-recurrence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

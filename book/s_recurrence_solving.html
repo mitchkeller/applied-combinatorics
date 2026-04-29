@@ -626,11 +626,16 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_recurrence_solving"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_recurrence_solving">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving advancement operator equations</span>
 </h2>
-<section class="introduction" id="s_recurrence_solving-2"><div class="para" id="s_recurrence_solving-2-1">In this section, we will explore some ways of solving advancement operator equations. Some we will make up just for the sake of solving, while others will be drawn from the examples we developed in <a href="s_recurrence_intro.html" class="internal" title="Section 9.1: Introduction">Section 9.1</a>. Again, readers familiar with differential equations will notice many similarities between the techniques used here and those used to solve linear differential equations with constant coefficients, but we will not give any further examples to make those parallels explicit.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="s_recurrence_solving_homogeneous"><h3 class="heading hide-type">
+<section class="introduction" id="s_recurrence_solving-2">
+<div class="para" id="s_recurrence_solving-2-1">In this section, we will explore some ways of solving advancement operator equations. Some we will make up just for the sake of solving, while others will be drawn from the examples we developed in <a href="s_recurrence_intro.html" class="internal" title="Section 9.1: Introduction">Section 9.1</a>. Again, readers familiar with differential equations will notice many similarities between the techniques used here and those used to solve linear differential equations with constant coefficients, but we will not give any further examples to make those parallels explicit.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="s_recurrence_solving_homogeneous">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous equations</span>
 </h3>
 <div class="para" id="s_recurrence_solving_homogeneous-2">Homogeneous equations, it will turn out, can be solved using very explicit methodology that will work any time we can find the roots of a polynomial. Let’s start with another fairly straightforward example.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_homogeneous-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -647,7 +652,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_deg2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex_recurrence_deg2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex_recurrence_deg2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="ex_recurrence_deg2-2-1">
 <div class="para">Before focusing on finding <em class="emphasis">all</em> solutions as we’ve been asked to do, let’s just try to find <em class="emphasis">some</em> solution. We start by noticing that here <span class="process-math">\(p(A) = A^2+A-6 =
 (A+3)(A-2)\text{.}\)</span> With <span class="process-math">\(p(A)\)</span> factored like this, we realize that we’ve already solved part of this problem in <a href="s_recurrence_adv-ops.html#ex_recurrence_adveq" class="xref" data-knowl="./knowl/xref/ex_recurrence_adveq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.8">Example 9.8</a>! In that example, the polynomial of <span class="process-math">\(A\)</span> we encountered was (while not explicitly stated as such there) <span class="process-math">\(A-2\text{.}\)</span> The solutions to <span class="process-math">\((A-2)f_1=0\)</span> are of the form <span class="process-math">\(f_1(n) = c_12^n\text{.}\)</span> What happens if we try such a function here? We have</div>
@@ -678,8 +685,11 @@ c_2(-3)^n))\\
 <div class="para" id="ex_recurrence_deg2-2-3">It’s not all that hard to see that since <span class="process-math">\(f\)</span> gives a two-parameter family of solutions to <a href="s_recurrence_solving.html#eqn_recurrence_deg2" class="xref" data-knowl="./knowl/xref/eqn_recurrence_deg2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.4.1">(9.4.1)</a>, it gives us all the solutions, as we will show in detail in <a href="s_recurrence_rigorous.html" class="internal" title="Section 9.5: Formalizing our approach to recurrence equations">Section 9.5</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_deg2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 9.9.1"><a href="#ex_recurrence_deg2-2" title="Copy heading and permalink for Solution 9.9.1" aria-label="Copy heading and permalink for Solution 9.9.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 9.9"><a href="#ex_recurrence_deg2" title="Copy heading and permalink for Example 9.9" aria-label="Copy heading and permalink for Example 9.9">🔗</a></div></article><div class="para" id="s_recurrence_solving_homogeneous-4">What happened in this example is far from a fluke. If you have an advancement operator equation of the form <span class="process-math">\(p(A)f=0\)</span> (the constant term of <span class="process-math">\(p\)</span> nonzero) and <span class="process-math">\(p\)</span> has degree <span class="process-math">\(k\text{,}\)</span> then the <dfn class="terminology">general solution</dfn> of <span class="process-math">\(p(A)f=0\)</span> will be a <span class="process-math">\(k\)</span>-parameter family (in the previous example, our parameters are the constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span>) whose terms come from solutions to simpler equations arising from the factors of <span class="process-math">\(p\text{.}\)</span> We’ll return to this thought in a little bit, but first let’s look at another example.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_homogeneous-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 9.9"><a href="#ex_recurrence_deg2" title="Copy heading and permalink for Example 9.9" aria-label="Copy heading and permalink for Example 9.9">🔗</a></div>
+</article>
+<div class="para" id="s_recurrence_solving_homogeneous-4">What happened in this example is far from a fluke. If you have an advancement operator equation of the form <span class="process-math">\(p(A)f=0\)</span> (the constant term of <span class="process-math">\(p\)</span> nonzero) and <span class="process-math">\(p\)</span> has degree <span class="process-math">\(k\text{,}\)</span> then the <dfn class="terminology">general solution</dfn> of <span class="process-math">\(p(A)f=0\)</span> will be a <span class="process-math">\(k\)</span>-parameter family (in the previous example, our parameters are the constants <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span>) whose terms come from solutions to simpler equations arising from the factors of <span class="process-math">\(p\text{.}\)</span> We’ll return to this thought in a little bit, but first let’s look at another example.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_homogeneous-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="ex_recurrence_ternary-strings-no-20-solved"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -730,7 +740,9 @@ t(n) = \left(\frac{3\sqrt{5}}{10} + \frac{1}{2}\right)
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_ternary-strings-no-20-solved-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 9.10"><a href="#ex_recurrence_ternary-strings-no-20-solved" title="Copy heading and permalink for Example 9.10" aria-label="Copy heading and permalink for Example 9.10">🔗</a></div></article><article class="example example-like" id="s_recurrence_solving_homogeneous-6"><h4 class="heading">
+<div class="autopermalink" data-description="Example 9.10"><a href="#ex_recurrence_ternary-strings-no-20-solved" title="Copy heading and permalink for Example 9.10" aria-label="Copy heading and permalink for Example 9.10">🔗</a></div>
+</article>
+<article class="example example-like" id="s_recurrence_solving_homogeneous-6"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="s_recurrence_solving_homogeneous-6-1-1">
@@ -742,7 +754,9 @@ t(n) = \left(\frac{3\sqrt{5}}{10} + \frac{1}{2}\right)
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_homogeneous-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="s_recurrence_solving_homogeneous-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="s_recurrence_solving_homogeneous-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="s_recurrence_solving_homogeneous-6-2-1">
 <div class="para">By now, you shouldn’t be surprised that we immediately make use of the roots of <span class="process-math">\(p(A)\)</span> and have that the solution is</div>
 <div class="displaymath process-math" id="s_recurrence_solving_homogeneous-6-2-1-2">
@@ -753,8 +767,11 @@ f(n) = c_1(-1)^n + c_2 6^n + c_3 (-4)^n.
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_homogeneous-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 9.11.1"><a href="#s_recurrence_solving_homogeneous-6-2" title="Copy heading and permalink for Solution 9.11.1" aria-label="Copy heading and permalink for Solution 9.11.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 9.11"><a href="#s_recurrence_solving_homogeneous-6" title="Copy heading and permalink for Example 9.11" aria-label="Copy heading and permalink for Example 9.11">🔗</a></div></article><div class="para" id="s_recurrence_solving_homogeneous-7">By now, you should be able to see most of the pattern for solving homogeneous advancement operator equations. However, the examples we’ve considered thus far have all had one thing in common: the roots of <span class="process-math">\(p(A)\)</span> were all distinct. Solving advancement operator equations in which this is not the case is not much harder than what we’ve done so far, but we do need to treat it as a distinct case.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_homogeneous-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 9.11"><a href="#s_recurrence_solving_homogeneous-6" title="Copy heading and permalink for Example 9.11" aria-label="Copy heading and permalink for Example 9.11">🔗</a></div>
+</article>
+<div class="para" id="s_recurrence_solving_homogeneous-7">By now, you should be able to see most of the pattern for solving homogeneous advancement operator equations. However, the examples we’ve considered thus far have all had one thing in common: the roots of <span class="process-math">\(p(A)\)</span> were all distinct. Solving advancement operator equations in which this is not the case is not much harder than what we’ve done so far, but we do need to treat it as a distinct case.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_homogeneous-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="ex_recurrence_deg2-repeated"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -768,7 +785,9 @@ f(n) = c_1(-1)^n + c_2 6^n + c_3 (-4)^n.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_deg2-repeated-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex_recurrence_deg2-repeated-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex_recurrence_deg2-repeated-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="ex_recurrence_deg2-repeated-3-1">Here we have the repeated root problem that we mentioned a moment ago. We see immediately that <span class="process-math">\(f_1(n) = c_12^n\)</span> is a solution to this equation, but that can’t be all, as we mentioned earlier that we must have a <span class="process-math">\(2\)</span>-parameter family of solutions to such an equation. You might be tempted to try <span class="process-math">\(f_2(n) = c_2 2^n\)</span> and <span class="process-math">\(f(n) = f_1(n) +
 f_2(n)\text{,}\)</span> but then this is just <span class="process-math">\((c_1+c_2)2^n\text{,}\)</span> which is really just a single parameter, <span class="process-math">\(c=c_1+c_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_deg2-repeated-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -791,8 +810,11 @@ f(n) = c_1 2^n + c_2 n2^n.
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_deg2-repeated-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 9.12.1"><a href="#ex_recurrence_deg2-repeated-3" title="Copy heading and permalink for Solution 9.12.1" aria-label="Copy heading and permalink for Solution 9.12.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 9.12"><a href="#ex_recurrence_deg2-repeated" title="Copy heading and permalink for Example 9.12" aria-label="Copy heading and permalink for Example 9.12">🔗</a></div></article><article class="example example-like" id="ex_recurrence_deg4-repeated"><h4 class="heading">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 9.12"><a href="#ex_recurrence_deg2-repeated" title="Copy heading and permalink for Example 9.12" aria-label="Copy heading and permalink for Example 9.12">🔗</a></div>
+</article>
+<article class="example example-like" id="ex_recurrence_deg4-repeated"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="ex_recurrence_deg4-repeated-1-1">
@@ -806,7 +828,9 @@ f_{n+4} = -2f_{n+3} + 12f_{n+2} + -14 f_{n+1} + 5f_n
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_deg4-repeated-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex_recurrence_deg4-repeated-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex_recurrence_deg4-repeated-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="ex_recurrence_deg4-repeated-2-1">
 <div class="para">We again start by writing the given recurrence equation as an advancement operator equation for a function <span class="process-math">\(f(n)\text{:}\)</span>
 </div>
@@ -856,8 +880,13 @@ f(n) = \frac{1}{72} (-5)^n +\frac{71}{72} + \frac{5}{6} n +\frac{1}{4} n^2.
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_deg4-repeated-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 9.13.1"><a href="#ex_recurrence_deg4-repeated-2" title="Copy heading and permalink for Solution 9.13.1" aria-label="Copy heading and permalink for Solution 9.13.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 9.13"><a href="#ex_recurrence_deg4-repeated" title="Copy heading and permalink for Example 9.13" aria-label="Copy heading and permalink for Example 9.13">🔗</a></div></article><div class="autopermalink" data-description="Subsection 9.4.1: Homogeneous equations"><a href="#s_recurrence_solving_homogeneous" title="Copy heading and permalink for Subsection 9.4.1: Homogeneous equations" aria-label="Copy heading and permalink for Subsection 9.4.1: Homogeneous equations">🔗</a></div></section><section class="subsection" id="s_recurrence_solving_nonhomogeneous"><h3 class="heading hide-type">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 9.13"><a href="#ex_recurrence_deg4-repeated" title="Copy heading and permalink for Example 9.13" aria-label="Copy heading and permalink for Example 9.13">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 9.4.1: Homogeneous equations"><a href="#s_recurrence_solving_homogeneous" title="Copy heading and permalink for Subsection 9.4.1: Homogeneous equations" aria-label="Copy heading and permalink for Subsection 9.4.1: Homogeneous equations">🔗</a></div>
+</section>
+<section class="subsection" id="s_recurrence_solving_nonhomogeneous">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Nonhomogeneous equations</span>
 </h3>
 <div class="para" id="s_recurrence_solving_nonhomogeneous-3">As we mentioned earlier, nonhomogeneous equations are a bit trickier than solving homogeneous equations, and sometimes our first attempt at a solution will not be successful but will suggest a better function to try. Before we’re done, we’ll revisit the problem of lines in the plane that we’ve considered a couple of times, but let’s start with a more illustrative example.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -913,7 +942,9 @@ f(n) = f_0(n) + f_1(n) = -\frac{1}{15}3^n + c_1 (-2)^n + c_2
 </div>
 <div class="para" id="s_recurrence_solving_nonhomogeneous-4-5">We leave it to you to verify that this does satisfy the given equation.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 9.14"><a href="#s_recurrence_solving_nonhomogeneous-4" title="Copy heading and permalink for Example 9.14" aria-label="Copy heading and permalink for Example 9.14">🔗</a></div></article><div class="para" id="s_recurrence_solving_nonhomogeneous-5">You hopefully noticed that in the previous example, we said that the first guess to try for a particular solution looks a lot like right hand side of the equation, rather than exactly like. Our next example will show why we can’t always take something that matches exactly.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 9.14"><a href="#s_recurrence_solving_nonhomogeneous-4" title="Copy heading and permalink for Example 9.14" aria-label="Copy heading and permalink for Example 9.14">🔗</a></div>
+</article>
+<div class="para" id="s_recurrence_solving_nonhomogeneous-5">You hopefully noticed that in the previous example, we said that the first guess to try for a particular solution looks a lot like right hand side of the equation, rather than exactly like. Our next example will show why we can’t always take something that matches exactly.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="s_recurrence_solving_nonhomogeneous-6"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -930,7 +961,9 @@ f(n) = f_0(n) + f_1(n) = -\frac{1}{15}3^n + c_1 (-2)^n + c_2
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="s_recurrence_solving_nonhomogeneous-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="s_recurrence_solving_nonhomogeneous-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="s_recurrence_solving_nonhomogeneous-6-2-1">
 <div class="para">The corresponding homogeneous equation here is the same as in the previous example, so its general solution is again <span class="process-math">\(f_1(n) = c_1(-2)^n + c_2 6^n\text{.}\)</span> Thus, the real work here is finding a particular solution <span class="process-math">\(f_0\)</span> to the given advancement operator equation. Let’s just try what our work on the previous example would suggest here, namely <span class="process-math">\(f_0(n)
 = d6^n\text{.}\)</span> Applying the advancement operator polynomial <span class="process-math">\((A+2)(A-6)\)</span> to <span class="process-math">\(f_0\)</span> then gives, uh, well, zero, since <span class="process-math">\((A-6)(d6^n) = d6^{n+1}-6d6^n =0\text{.}\)</span> Huh, that didn’t work out so well. However, we can take a cue from how we tackled homogeneous advancement operator equations with repeated roots and introduce a factor of <span class="process-math">\(n\text{.}\)</span> Let’s try <span class="process-math">\(f_0(n)
@@ -968,8 +1001,11 @@ f(n) = \frac{1}{48}n6^n + \frac{9}{64} (-2)^n + \frac{55}{64} 6^n.
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 9.15.1"><a href="#s_recurrence_solving_nonhomogeneous-6-2" title="Copy heading and permalink for Solution 9.15.1" aria-label="Copy heading and permalink for Solution 9.15.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 9.15"><a href="#s_recurrence_solving_nonhomogeneous-6" title="Copy heading and permalink for Example 9.15" aria-label="Copy heading and permalink for Example 9.15">🔗</a></div></article><div class="para" id="s_recurrence_solving_nonhomogeneous-7">What’s the lesson we should take away from this example? When making a guess at a particular solution of a nonhomogeneous advancement operator equation, it does us no good to use any terms that are also solutions of the corresponding homogeneous equation, as they will be annihilated by the advancement operator polynomial. Let’s see how this comes into play when finally resolving one of our longstanding examples.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 9.15"><a href="#s_recurrence_solving_nonhomogeneous-6" title="Copy heading and permalink for Example 9.15" aria-label="Copy heading and permalink for Example 9.15">🔗</a></div>
+</article>
+<div class="para" id="s_recurrence_solving_nonhomogeneous-7">What’s the lesson we should take away from this example? When making a guess at a particular solution of a nonhomogeneous advancement operator equation, it does us no good to use any terms that are also solutions of the corresponding homogeneous equation, as they will be annihilated by the advancement operator polynomial. Let’s see how this comes into play when finally resolving one of our longstanding examples.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="ex_recurrence_lines-solved"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -1007,7 +1043,9 @@ f(n) = 1 + \frac{n^2+n}{2} = \binom{n+1}{2} + 1
 <div class="para">is the number of regions into which the plane is divided by <span class="process-math">\(n\)</span> lines in general position.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_recurrence_lines-solved-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 9.16"><a href="#ex_recurrence_lines-solved" title="Copy heading and permalink for Example 9.16" aria-label="Copy heading and permalink for Example 9.16">🔗</a></div></article><div class="para" id="s_recurrence_solving_nonhomogeneous-9">We conclude this section with one more example showing how to deal with a nonhomogeneous advancement operator equation in which the right hand side is of “mixed type”.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 9.16"><a href="#ex_recurrence_lines-solved" title="Copy heading and permalink for Example 9.16" aria-label="Copy heading and permalink for Example 9.16">🔗</a></div>
+</article>
+<div class="para" id="s_recurrence_solving_nonhomogeneous-9">We conclude this section with one more example showing how to deal with a nonhomogeneous advancement operator equation in which the right hand side is of “mixed type”.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="s_recurrence_solving_nonhomogeneous-10"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -1021,7 +1059,9 @@ f(n) = 1 + \frac{n^2+n}{2} = \binom{n+1}{2} + 1
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="s_recurrence_solving_nonhomogeneous-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="s_recurrence_solving_nonhomogeneous-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="s_recurrence_solving_nonhomogeneous-10-2-1">
 <div class="para">Finding the solution to the corresponding homogeneous equation is getting pretty easy at this point, so just note that</div>
 <div class="displaymath process-math" id="s_recurrence_solving_nonhomogeneous-10-2-1-1">
@@ -1058,8 +1098,13 @@ f(n) = 3^n+2n+4 + c_1 2^n + c_2 n 2^n.
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_solving_nonhomogeneous-10-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 9.17.1"><a href="#s_recurrence_solving_nonhomogeneous-10-2" title="Copy heading and permalink for Solution 9.17.1" aria-label="Copy heading and permalink for Solution 9.17.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 9.17"><a href="#s_recurrence_solving_nonhomogeneous-10" title="Copy heading and permalink for Example 9.17" aria-label="Copy heading and permalink for Example 9.17">🔗</a></div></article><div class="autopermalink" data-description="Subsection 9.4.2: Nonhomogeneous equations"><a href="#s_recurrence_solving_nonhomogeneous" title="Copy heading and permalink for Subsection 9.4.2: Nonhomogeneous equations" aria-label="Copy heading and permalink for Subsection 9.4.2: Nonhomogeneous equations">🔗</a></div></section><div class="autopermalink" data-description="Section 9.4: Solving advancement operator equations"><a href="#s_recurrence_solving" title="Copy heading and permalink for Section 9.4: Solving advancement operator equations" aria-label="Copy heading and permalink for Section 9.4: Solving advancement operator equations">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 9.17"><a href="#s_recurrence_solving_nonhomogeneous-10" title="Copy heading and permalink for Example 9.17" aria-label="Copy heading and permalink for Example 9.17">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 9.4.2: Nonhomogeneous equations"><a href="#s_recurrence_solving_nonhomogeneous" title="Copy heading and permalink for Subsection 9.4.2: Nonhomogeneous equations" aria-label="Copy heading and permalink for Subsection 9.4.2: Nonhomogeneous equations">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 9.4: Solving advancement operator equations"><a href="#s_recurrence_solving" title="Copy heading and permalink for Section 9.4: Solving advancement operator equations" aria-label="Copy heading and permalink for Section 9.4: Solving advancement operator equations">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_recurrence_adv-ops.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_recurrence_rigorous.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

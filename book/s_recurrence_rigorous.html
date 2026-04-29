@@ -626,13 +626,18 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_recurrence_rigorous"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_recurrence_rigorous">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Formalizing our approach to recurrence equations</span>
 </h2>
-<section class="introduction" id="s_recurrence_rigorous-2"><div class="para" id="s_recurrence_rigorous-2-1">So far, our approach to solving recurrence equations has been based on intuition, and we’ve not given a lot of explanation for why the solutions we’ve given have been the general solution. In this section, we endeavor to remedy this. Some familiarity with the language of linear algebra will be useful for the remainder of this section, but it is not essential.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="s_recurrence_rigorous-2">
+<div class="para" id="s_recurrence_rigorous-2-1">So far, our approach to solving recurrence equations has been based on intuition, and we’ve not given a lot of explanation for why the solutions we’ve given have been the general solution. In this section, we endeavor to remedy this. Some familiarity with the language of linear algebra will be useful for the remainder of this section, but it is not essential.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="s_recurrence_rigorous-2-2">
-<div class="para">Our techniques for solving recurrence equations have their roots in a fundamentally important concept in mathematics, the notion of a vector space. Recall that a vector space<details class="ptx-footnote" aria-live="polite" id="s_recurrence_rigorous-2-2-1"><summary class="ptx-footnote__number" title="Footnote 9.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="s_recurrence_rigorous-2-2-1">To be more complete, we should say that we are talking about a vector space over the field of real numbers, but in our course, these are the only kind of vector spaces we will consider.  For this reason, we just use the short phrase “vector space”.</div></details> consists of a set <span class="process-math">\(V\)</span> of elements called <dfn class="terminology">vectors</dfn>; in addition, there is a binary operation called <dfn class="terminology">addition</dfn> with the sum of vectors <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> denoted by <span class="process-math">\(x+y\text{;}\)</span> furthermore, there is an operation called <dfn class="terminology">scalar multiplication</dfn> which combines a scalar (real number) <span class="process-math">\(\alpha\)</span> and a vector <span class="process-math">\(x\)</span> to form a product denoted <span class="process-math">\(\alpha x\text{.}\)</span> These operations satisfy the following properties:</div>
+<div class="para">Our techniques for solving recurrence equations have their roots in a fundamentally important concept in mathematics, the notion of a vector space. Recall that a vector space<details class="ptx-footnote" aria-live="polite" id="s_recurrence_rigorous-2-2-1"><summary class="ptx-footnote__number" title="Footnote 9.5.1"><sup> 1 </sup></summary>
+<div class="ptx-footnote__contents" id="s_recurrence_rigorous-2-2-1">To be more complete, we should say that we are talking about a vector space over the field of real numbers, but in our course, these are the only kind of vector spaces we will consider.  For this reason, we just use the short phrase “vector space”.
+</div></details> consists of a set <span class="process-math">\(V\)</span> of elements called <dfn class="terminology">vectors</dfn>; in addition, there is a binary operation called <dfn class="terminology">addition</dfn> with the sum of vectors <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> denoted by <span class="process-math">\(x+y\text{;}\)</span> furthermore, there is an operation called <dfn class="terminology">scalar multiplication</dfn> which combines a scalar (real number) <span class="process-math">\(\alpha\)</span> and a vector <span class="process-math">\(x\)</span> to form a product denoted <span class="process-math">\(\alpha x\text{.}\)</span> These operations satisfy the following properties:</div>
 <ol class="decimal" id="s_recurrence_rigorous-2-2-12">
 <li id="s_recurrence_rigorous-2-2-12-1">
 <div class="para" id="s_recurrence_rigorous-2-2-12-1-1">
@@ -686,7 +691,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="s_recurrence_rigorous-2-3">When <span class="process-math">\(V\)</span> is a vector space, a function <span class="process-math">\(\phi\colon V\rightarrow V\)</span> is called an <dfn class="terminology">linear operator</dfn>, or just <dfn class="terminology">operator</dfn> for short, when <span class="process-math">\(\phi(x+y)=\phi(x)+\phi(y)\)</span> and <span class="process-math">\(\phi(\alpha x)=\alpha\phi(x)\text{.}\)</span> When <span class="process-math">\(\phi\colon V\rightarrow V\)</span> is an operator, it is customary to write <span class="process-math">\(\phi x\)</span> rather than <span class="process-math">\(\phi(x)\text{,}\)</span> saving a set of parentheses. The set of all operators over a vector space <span class="process-math">\(V\)</span> is itself a vector space with addition defined by <span class="process-math">\((\phi+\rho)x = \phi x +\rho x\)</span> and scalar multiplication by <span class="process-math">\((\alpha\phi)x=\alpha(\phi x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_recurrence_rigorous-2-4">In this chapter, we focus on the real vector space <span class="process-math">\(V\)</span> consisting of all functions of the form <span class="process-math">\(f\colon\ints\rightarrow\reals\text{.}\)</span> Addition is defined by <span class="process-math">\((f+g)(n)= f(n)+g(n)\)</span> and scalar multiplication is defined by <span class="process-math">\((\alpha f)(n)=\alpha(f(n))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="s_recurrence_rigorous_principal"><h3 class="heading hide-type">
+</div></section>
+<section class="subsection" id="s_recurrence_rigorous_principal">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Principal Theorem</span>
 </h3>
 <div class="para" id="s_recurrence_rigorous_principal-2">Here is the basic theorem about solving recurrence equations (stated in terms of advancement operator equations)—and while we won’t prove the full result, we will provide enough of an outline where it shouldn’t be too difficult to fill in the missing details.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_principal-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -705,7 +712,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm_advance-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 9.18"><a href="#thm_advance" title="Copy heading and permalink for Theorem 9.18" aria-label="Copy heading and permalink for Theorem 9.18">🔗</a></div></article><div class="para logical" id="s_recurrence_rigorous_principal-4">
+<div class="autopermalink" data-description="Theorem 9.18"><a href="#thm_advance" title="Copy heading and permalink for Theorem 9.18" aria-label="Copy heading and permalink for Theorem 9.18">🔗</a></div>
+</article>
+<div class="para logical" id="s_recurrence_rigorous_principal-4">
 <div class="para">The conclusion that the set <span class="process-math">\(W\)</span> of all solutions is a subspace of <span class="process-math">\(V\)</span> is immediate, since</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_advance.html" id="s_recurrence_rigorous_principal-4-3">
 \begin{equation*}
@@ -715,7 +724,10 @@ p(A)(f+g)=p(A)f+p(A)g\quad\text{ and } \quad p(a)(\alpha f)=\alpha p(A)(f).
 <div class="para">What takes a bit of work is to show that <span class="process-math">\(W\)</span> is a <span class="process-math">\(k\)</span>-dimensional subspace. But once this is done, then to solve the advancement operator equation given in the form of <a href="s_recurrence_rigorous.html#thm_advance" class="xref" data-knowl="./knowl/xref/thm_advance.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.18">Theorem 9.18</a>, it suffices to find a <dfn class="terminology">basis</dfn> for the vector space <span class="process-math">\(W\text{.}\)</span>  Every solution is just a linear combination of basis vectors.  In the next several subsections, we outline how this goal can be achieved.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_principal-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 9.5.1: The Principal Theorem"><a href="#s_recurrence_rigorous_principal" title="Copy heading and permalink for Subsection 9.5.1: The Principal Theorem" aria-label="Copy heading and permalink for Subsection 9.5.1: The Principal Theorem">🔗</a></div></section><section class="subsection" id="s_recurrence_rigorous_start"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Subsection 9.5.1: The Principal Theorem"><a href="#s_recurrence_rigorous_principal" title="Copy heading and permalink for Subsection 9.5.1: The Principal Theorem" aria-label="Copy heading and permalink for Subsection 9.5.1: The Principal Theorem">🔗</a></div>
+</section>
+<section class="subsection" id="s_recurrence_rigorous_start">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Starting Case</span>
 </h3>
 <div class="para" id="s_recurrence_rigorous_start-2">The development proceeds by induction (surprise!) with the case <span class="process-math">\(k=1\)</span> being the base case. In this case, we study a simple equation of the form <span class="process-math">\((c_0A+c_1)f=0\text{.}\)</span> Dividing by <span class="process-math">\(c_0\)</span> and rewriting using subtraction rather than addition, it is clear that we are just talking about an equation of the form <span class="process-math">\((A-r)f=0\)</span> where <span class="process-math">\(r\neq0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_start-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -725,7 +737,11 @@ p(A)(f+g)=p(A)f+p(A)g\quad\text{ and } \quad p(a)(\alpha f)=\alpha p(A)(f).
 </h4>
 <div class="para" id="lem_base-1-1">Let <span class="process-math">\(r\neq0\text{,}\)</span> and let <span class="process-math">\(f\)</span> be a solution to the operator equation <span class="process-math">\((A-r)f=0\text{.}\)</span> If <span class="process-math">\(c=f(0)\text{,}\)</span> then <span class="process-math">\(f(n)=cr^n\)</span> for every <span class="process-math">\(n\in \ints\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#lem_base-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 9.19"><a href="#lem_base" title="Copy heading and permalink for Lemma 9.19" aria-label="Copy heading and permalink for Lemma 9.19">🔗</a></div></article><details id="lem_base-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem_base-2-1">
+<div class="autopermalink" data-description="Lemma 9.19"><a href="#lem_base" title="Copy heading and permalink for Lemma 9.19" aria-label="Copy heading and permalink for Lemma 9.19">🔗</a></div>
+</article>
+<details id="lem_base-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lem_base-2-1">
 <div class="para">We first show that <span class="process-math">\(f(n)=cr^n\)</span> for every <span class="process-math">\(n\ge0\text{,}\)</span> by induction on <span class="process-math">\(n\text{.}\)</span> The base case is trivial since <span class="process-math">\(c=f(0) = cr^0\text{.}\)</span> Now suppose that <span class="process-math">\(f(k)=cr^k\)</span> for some non-negative integer <span class="process-math">\(k\text{.}\)</span> Then <span class="process-math">\((A-r)f=0\)</span> implies that <span class="process-math">\(f(k+1)-rf(k)=0\text{,}\)</span> i.e.,</div>
 <div class="displaymath process-math" id="lem_base-2-1-10">
 \begin{equation*}
@@ -736,7 +752,9 @@ f(k+1)=rf(k)= rcr^k=cr^{k+1}.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#lem_base-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 9.19.1"><a href="#lem_base-2" title="Copy heading and permalink for Proof 9.19.1" aria-label="Copy heading and permalink for Proof 9.19.1">🔗</a></div></article></details><article class="lemma theorem-like" id="lem_particular"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 9.19.1"><a href="#lem_base-2" title="Copy heading and permalink for Proof 9.19.1" aria-label="Copy heading and permalink for Proof 9.19.1">🔗</a></div>
+</article></details>
+<article class="lemma theorem-like" id="lem_particular"><h4 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="lem_particular-1-1">
@@ -756,7 +774,11 @@ p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0.\tag{9.5.3}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#lem_particular-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 9.20"><a href="#lem_particular" title="Copy heading and permalink for Lemma 9.20" aria-label="Copy heading and permalink for Lemma 9.20">🔗</a></div></article><details id="lem_particular-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem_particular-2-1">
+<div class="autopermalink" data-description="Lemma 9.20"><a href="#lem_particular" title="Copy heading and permalink for Lemma 9.20" aria-label="Copy heading and permalink for Lemma 9.20">🔗</a></div>
+</article>
+<details id="lem_particular-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="lem_particular-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be a solution of <a href="s_recurrence_rigorous.html#eqn_nonhomogeneous" class="xref" data-knowl="./knowl/xref/eqn_nonhomogeneous.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.5.2">(9.5.2)</a>, and let <span class="process-math">\(f_1=f-f_0\text{.}\)</span>  Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn_nonhomogeneous.html ./knowl/xref/eqn_nonhomogeneous.html" id="lem_particular-2-1-4">
 \begin{equation*}
@@ -766,7 +788,9 @@ p(A)f_1 = p(A)(f-f_0)=p(A)f-p(A)f_0=g-g=0.
 <div class="para">This implies that <span class="process-math">\(f_1\in W\)</span> and that <span class="process-math">\(f=f_0+f_1\)</span> so that all solutions to <a href="s_recurrence_rigorous.html#eqn_nonhomogeneous" class="xref" data-knowl="./knowl/xref/eqn_nonhomogeneous.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.5.2">(9.5.2)</a> do in fact have the desired form.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#lem_particular-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 9.20.1"><a href="#lem_particular-2" title="Copy heading and permalink for Proof 9.20.1" aria-label="Copy heading and permalink for Proof 9.20.1">🔗</a></div></article></details><div class="para" id="s_recurrence_rigorous_start-5">Using the preceding two results, we can now provide an outline of the inductive step in the proof of <a href="s_recurrence_rigorous.html#thm_advance" class="xref" data-knowl="./knowl/xref/thm_advance.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.18">Theorem 9.18</a>, at least in the case where the polynomial in the advancement operator has distinct roots.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_start-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 9.20.1"><a href="#lem_particular-2" title="Copy heading and permalink for Proof 9.20.1" aria-label="Copy heading and permalink for Proof 9.20.1">🔗</a></div>
+</article></details>
+<div class="para" id="s_recurrence_rigorous_start-5">Using the preceding two results, we can now provide an outline of the inductive step in the proof of <a href="s_recurrence_rigorous.html#thm_advance" class="xref" data-knowl="./knowl/xref/thm_advance.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.18">Theorem 9.18</a>, at least in the case where the polynomial in the advancement operator has distinct roots.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_start-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="s_recurrence_rigorous_start-6"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -786,7 +810,11 @@ f(n)=c_1r_1^n+c_2 r_2^n+c_3r_3^n+\dots+c_kr_k^n.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_start-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 9.21"><a href="#s_recurrence_rigorous_start-6" title="Copy heading and permalink for Theorem 9.21" aria-label="Copy heading and permalink for Theorem 9.21">🔗</a></div></article><details id="s_recurrence_rigorous_start-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="s_recurrence_rigorous_start-6-2-1">
+<div class="autopermalink" data-description="Theorem 9.21"><a href="#s_recurrence_rigorous_start-6" title="Copy heading and permalink for Theorem 9.21" aria-label="Copy heading and permalink for Theorem 9.21">🔗</a></div>
+</article>
+<details id="s_recurrence_rigorous_start-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="s_recurrence_rigorous_start-6-2-1">
 <div class="para">The case <span class="process-math">\(k=1\)</span> is <a href="s_recurrence_rigorous.html#lem_base" class="xref" data-knowl="./knowl/xref/lem_base.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 9.19">Lemma 9.19</a>. Now suppose we have established the theorem for some positive integer <span class="process-math">\(m\)</span> and consider the case <span class="process-math">\(k=m+1\text{.}\)</span> Rewrite <a href="s_recurrence_rigorous.html#eqn_distinct" class="xref" data-knowl="./knowl/xref/eqn_distinct.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.5.4">(9.5.4)</a> as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem_base.html ./knowl/xref/eqn_distinct.html ./knowl/xref/eqn_distinct.html ./knowl/xref/eqn_distinct2.html" id="s_recurrence_rigorous_start-6-2-1-6">
 \begin{equation*}
@@ -825,7 +853,11 @@ f(n)=f_0(n)+f_1(n) = c_1r_1^n+c_2r_2^n+\dots+c_m r_m^n+cr_{m+1}^n,
 <div class="para">which is exactly what we want!</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_start-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 9.21.1"><a href="#s_recurrence_rigorous_start-6-2" title="Copy heading and permalink for Proof 9.21.1" aria-label="Copy heading and permalink for Proof 9.21.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 9.5.2: The Starting Case"><a href="#s_recurrence_rigorous_start" title="Copy heading and permalink for Subsection 9.5.2: The Starting Case" aria-label="Copy heading and permalink for Subsection 9.5.2: The Starting Case">🔗</a></div></section><section class="subsection" id="s_recurrence_rigorous_repeated"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 9.21.1"><a href="#s_recurrence_rigorous_start-6-2" title="Copy heading and permalink for Proof 9.21.1" aria-label="Copy heading and permalink for Proof 9.21.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 9.5.2: The Starting Case"><a href="#s_recurrence_rigorous_start" title="Copy heading and permalink for Subsection 9.5.2: The Starting Case" aria-label="Copy heading and permalink for Subsection 9.5.2: The Starting Case">🔗</a></div>
+</section>
+<section class="subsection" id="s_recurrence_rigorous_repeated">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Repeated Roots</span>
 </h3>
 <div class="para" id="s_recurrence_rigorous_repeated-2">It is straightforward to modify the proof given in the preceding section to obtain the following result. We leave the details as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_repeated-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -848,7 +880,11 @@ f(n)=c_1r^n+c_2nr^n+c_3n^2r^n+c_4n^3r^n+\dots+c_kn^{k-1}r^n.\tag{9.5.8}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#lem_rr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 9.22"><a href="#lem_rr" title="Copy heading and permalink for Lemma 9.22" aria-label="Copy heading and permalink for Lemma 9.22">🔗</a></div></article><div class="autopermalink" data-description="Subsection 9.5.3: Repeated Roots"><a href="#s_recurrence_rigorous_repeated" title="Copy heading and permalink for Subsection 9.5.3: Repeated Roots" aria-label="Copy heading and permalink for Subsection 9.5.3: Repeated Roots">🔗</a></div></section><section class="subsection" id="s_recurrence_rigorous_general"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Lemma 9.22"><a href="#lem_rr" title="Copy heading and permalink for Lemma 9.22" aria-label="Copy heading and permalink for Lemma 9.22">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 9.5.3: Repeated Roots"><a href="#s_recurrence_rigorous_repeated" title="Copy heading and permalink for Subsection 9.5.3: Repeated Roots" aria-label="Copy heading and permalink for Subsection 9.5.3: Repeated Roots">🔗</a></div>
+</section>
+<section class="subsection" id="s_recurrence_rigorous_general">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The General Case</span>
 </h3>
 <div class="para" id="s_recurrence_rigorous_general-2">Combining the results in the preceding sections, we can quickly write the general solution of any homogeneous equation of the form <span class="process-math">\(p(A)f=0\)</span> <em class="emphasis">provided</em> we can factor the polynomial <span class="process-math">\(p(A)\text{.}\)</span> Note that in general, this solution takes us into the field of <em class="emphasis">complex numbers</em>, since the roots of a polynomial with real coefficients are sometimes complex numbers—with non-zero imaginary parts.<div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_general-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -877,7 +913,11 @@ f(n)=\amp c_1+c_2n+c_3n^2+c_4n^3+c_5n^4\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_recurrence_rigorous_general-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 9.23"><a href="#s_recurrence_rigorous_general-4" title="Copy heading and permalink for Example 9.23" aria-label="Copy heading and permalink for Example 9.23">🔗</a></div></article><div class="autopermalink" data-description="Subsection 9.5.4: The General Case"><a href="#s_recurrence_rigorous_general" title="Copy heading and permalink for Subsection 9.5.4: The General Case" aria-label="Copy heading and permalink for Subsection 9.5.4: The General Case">🔗</a></div></section><div class="autopermalink" data-description="Section 9.5: Formalizing our approach to recurrence equations"><a href="#s_recurrence_rigorous" title="Copy heading and permalink for Section 9.5: Formalizing our approach to recurrence equations" aria-label="Copy heading and permalink for Section 9.5: Formalizing our approach to recurrence equations">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 9.23"><a href="#s_recurrence_rigorous_general-4" title="Copy heading and permalink for Example 9.23" aria-label="Copy heading and permalink for Example 9.23">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection 9.5.4: The General Case"><a href="#s_recurrence_rigorous_general" title="Copy heading and permalink for Subsection 9.5.4: The General Case" aria-label="Copy heading and permalink for Subsection 9.5.4: The General Case">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 9.5: Formalizing our approach to recurrence equations"><a href="#s_recurrence_rigorous" title="Copy heading and permalink for Section 9.5: Formalizing our approach to recurrence equations" aria-label="Copy heading and permalink for Section 9.5: Formalizing our approach to recurrence equations">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_recurrence_solving.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_recurrence_genfunction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
