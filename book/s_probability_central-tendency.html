@@ -626,13 +626,10 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<section class="section" id="s_probability_central-tendency">
-<h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_probability_central-tendency"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Central Tendency</span>
 </h2>
-<section class="introduction" id="s_probability_central-tendency-2">
-<div class="para logical" id="s_probability_central-tendency-2-1">
+<section class="introduction" id="s_probability_central-tendency-2"><div class="para logical" id="s_probability_central-tendency-2-1">
 <div class="para">Consider the following two situations:</div>
 <ul class="disc" id="s_probability_central-tendency-2-1-1">
 <li id="s_probability_central-tendency-2-1-1-1">
@@ -665,11 +662,7 @@ P(|X|\ge k) \le E(|X|)/k.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm_markov-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 10.20: Markov’s Inequality"><a href="#thm_markov" title="Copy heading and permalink for Theorem 10.20: Markov’s Inequality" aria-label="Copy heading and permalink for Theorem 10.20: Markov’s Inequality">🔗</a></div>
-</article>
-<details id="thm_markov-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
-<article class="hiddenproof knowl__content">
-<div class="para logical" id="thm_markov-3-1">
+<div class="autopermalink" data-description="Theorem 10.20: Markov’s Inequality"><a href="#thm_markov" title="Copy heading and permalink for Theorem 10.20: Markov’s Inequality" aria-label="Copy heading and permalink for Theorem 10.20: Markov’s Inequality">🔗</a></div></article><details id="thm_markov-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm_markov-3-1">
 <div class="para">Of course, the inequality holds trivially unless <span class="process-math">\(k&gt; E(|X|)\text{.}\)</span> For <span class="process-math">\(k\)</span> in this range, we establish the equivalent inequality: <span class="process-math">\(k P(|X|\ge k)\le E(|X|)\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="thm_markov-3-1-4">
@@ -682,12 +675,8 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm_markov-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 10.20.1"><a href="#thm_markov-3" title="Copy heading and permalink for Proof 10.20.1" aria-label="Copy heading and permalink for Proof 10.20.1">🔗</a></div>
-</article></details>
-<div class="para" id="s_probability_central-tendency-2-5">To make Markov’s inequality more concrete, we see that on the basis of this trivial result, the probability that either the winning lottery ticket or the number of heads is at least <span class="process-math">\(7,500\)</span> is at most <span class="process-math">\(5000/7500=2/3\text{.}\)</span> So nothing alarming here in either case. Since we still feel that the two cases are quite different, a more subtle measure will be required.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section>
-<section class="subsection" id="s_probability_central-tendency-3">
-<h3 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 10.20.1"><a href="#thm_markov-3" title="Copy heading and permalink for Proof 10.20.1" aria-label="Copy heading and permalink for Proof 10.20.1">🔗</a></div></article></details><div class="para" id="s_probability_central-tendency-2-5">To make Markov’s inequality more concrete, we see that on the basis of this trivial result, the probability that either the winning lottery ticket or the number of heads is at least <span class="process-math">\(7,500\)</span> is at most <span class="process-math">\(5000/7500=2/3\text{.}\)</span> So nothing alarming here in either case. Since we still feel that the two cases are quite different, a more subtle measure will be required.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="s_probability_central-tendency-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variance and Standard Deviation</span>
 </h3>
 <div class="para" id="s_probability_central-tendency-3-2">Again, let <span class="process-math">\((S,P)\)</span> be a probability space and let <span class="process-math">\(X\)</span> be a random variable.  The quantity <span class="process-math">\(E((X-E(X))^2)\)</span> is called the <dfn class="terminology">variance</dfn> of <span class="process-math">\(X\)</span> and is denoted <span class="process-math">\(\var(X)\text{.}\)</span> Evidently, the variance of <span class="process-math">\(X\)</span> is a non-negative number. The <dfn class="terminology">standard deviation</dfn> of <span class="process-math">\(X\text{,}\)</span> denoted <span class="process-math">\(\sigma_X\)</span> is then defined as the quantity <span class="process-math">\(\sqrt{\var(x)}\text{,}\)</span> i.e., <span class="process-math">\(\sigma_X^2 =\var(X)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -711,9 +700,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 10.21"><a href="#s_probability_central-tendency-3-3" title="Copy heading and permalink for Example 10.21" aria-label="Copy heading and permalink for Example 10.21">🔗</a></div>
-</article>
-<article class="example example-like" id="s_probability_central-tendency-3-4"><h4 class="heading">
+<div class="autopermalink" data-description="Example 10.21"><a href="#s_probability_central-tendency-3-3" title="Copy heading and permalink for Example 10.21" aria-label="Copy heading and permalink for Example 10.21">🔗</a></div></article><article class="example example-like" id="s_probability_central-tendency-3-4"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="s_probability_central-tendency-3-4-1">
@@ -737,18 +724,12 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </div>
 <div class="para" id="s_probability_central-tendency-3-4-3">With the aid of this observation, the calculation of the variance of the random variable <span class="process-math">\(X\)</span> which counts the number of successes becomes a trivial calculation. But in fact, the entire treatment we have outlined here is just a small part of a more complex subject which can be treated more elegantly and ultimately much more compactly—provided you first develop additional background material on families of random variables. For this we will refer you to suitable probability and statistics texts, such as those given in our references.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 10.22"><a href="#s_probability_central-tendency-3-4" title="Copy heading and permalink for Example 10.22" aria-label="Copy heading and permalink for Example 10.22">🔗</a></div>
-</article>
-<article class="proposition theorem-like" id="prop_altvar"><h4 class="heading">
+<div class="autopermalink" data-description="Example 10.22"><a href="#s_probability_central-tendency-3-4" title="Copy heading and permalink for Example 10.22" aria-label="Copy heading and permalink for Example 10.22">🔗</a></div></article><article class="proposition theorem-like" id="prop_altvar"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="prop_altvar-1-1">Let <span class="process-math">\(X\)</span> be a random variable in a probability space <span class="process-math">\((S,P)\text{.}\)</span>  Then <span class="process-math">\(\var(X)= E(X^2)-E^2(X)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop_altvar-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 10.23"><a href="#prop_altvar" title="Copy heading and permalink for Proposition 10.23" aria-label="Copy heading and permalink for Proposition 10.23">🔗</a></div>
-</article>
-<details id="prop_altvar-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
-<article class="hiddenproof knowl__content">
-<div class="para logical" id="prop_altvar-2-1">
+<div class="autopermalink" data-description="Proposition 10.23"><a href="#prop_altvar" title="Copy heading and permalink for Proposition 10.23" aria-label="Copy heading and permalink for Proposition 10.23">🔗</a></div></article><details id="prop_altvar-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop_altvar-2-1">
 <div class="para">Let <span class="process-math">\(E(X)=\mu\text{.}\)</span> From its definition, we note that</div>
 <div class="displaymath process-math" id="prop_altvar-2-1-2">
 \begin{align*}
@@ -762,9 +743,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#prop_altvar-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 10.23.1"><a href="#prop_altvar-2" title="Copy heading and permalink for Proof 10.23.1" aria-label="Copy heading and permalink for Proof 10.23.1">🔗</a></div>
-</article></details>
-<div class="para" id="s_probability_central-tendency-3-6">Variance (and standard deviation) are quite useful tools in discussions of just how likely a random variable is to be near its expected value.  This is reflected in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 10.23.1"><a href="#prop_altvar-2" title="Copy heading and permalink for Proof 10.23.1" aria-label="Copy heading and permalink for Proof 10.23.1">🔗</a></div></article></details><div class="para" id="s_probability_central-tendency-3-6">Variance (and standard deviation) are quite useful tools in discussions of just how likely a random variable is to be near its expected value.  This is reflected in the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm_chebyshev"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chebyshev’s Inequality.</span>
@@ -778,11 +757,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm_chebyshev-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 10.24: Chebyshev’s Inequality"><a href="#thm_chebyshev" title="Copy heading and permalink for Theorem 10.24: Chebyshev’s Inequality" aria-label="Copy heading and permalink for Theorem 10.24: Chebyshev’s Inequality">🔗</a></div>
-</article>
-<details id="thm_chebyshev-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
-<article class="hiddenproof knowl__content">
-<div class="para" id="thm_chebyshev-3-1">Let <span class="process-math">\(A=\{r\in \reals:|r-\mu|&gt;k\sigma_X\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_chebyshev-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 10.24: Chebyshev’s Inequality"><a href="#thm_chebyshev" title="Copy heading and permalink for Theorem 10.24: Chebyshev’s Inequality" aria-label="Copy heading and permalink for Theorem 10.24: Chebyshev’s Inequality">🔗</a></div></article><details id="thm_chebyshev-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm_chebyshev-3-1">Let <span class="process-math">\(A=\{r\in \reals:|r-\mu|&gt;k\sigma_X\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_chebyshev-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="thm_chebyshev-3-2">
 <div class="para">Then we have:</div>
@@ -803,18 +778,14 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm_chebyshev-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 10.24.1"><a href="#thm_chebyshev-3" title="Copy heading and permalink for Proof 10.24.1" aria-label="Copy heading and permalink for Proof 10.24.1">🔗</a></div>
-</article></details>
-<article class="example example-like" id="s_probability_central-tendency-3-8"><h4 class="heading">
+<div class="autopermalink" data-description="Proof 10.24.1"><a href="#thm_chebyshev-3" title="Copy heading and permalink for Proof 10.24.1" aria-label="Copy heading and permalink for Proof 10.24.1">🔗</a></div></article></details><article class="example example-like" id="s_probability_central-tendency-3-8"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="s_probability_central-tendency-3-8-1">Here’s an example of how <a href="s_probability_central-tendency.html#thm_chebyshev" class="xref" data-knowl="./knowl/xref/thm_chebyshev.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.24: Chebyshev’s Inequality">Chebyshev’s Inequality</a> can be applied.  Consider <span class="process-math">\(n\)</span> tosses of a fair coin with <span class="process-math">\(X\)</span> counting the number of heads. As noted before, <span class="process-math">\(\mu=E(X)=n/2\)</span> and <span class="process-math">\(\var(X)=n/4\text{,}\)</span> so <span class="process-math">\(\sigma_X=\sqrt{n}/2\text{.}\)</span> When <span class="process-math">\(n=10,000\)</span> and <span class="process-math">\(\mu=5,000\)</span> and <span class="process-math">\(\sigma_X=50\text{.}\)</span> Setting <span class="process-math">\(k=50\)</span> so that <span class="process-math">\(k\sigma_X=2500\text{,}\)</span> we see that the probability that <span class="process-math">\(X\)</span> is within <span class="process-math">\(2500\)</span> of the expected value of <span class="process-math">\(5000\)</span> is at least <span class="process-math">\(0.9996\text{.}\)</span>  So it seems very unlikely indeed that the number of heads is at least <span class="process-math">\(7,500\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_probability_central-tendency-3-8-2">Going back to lottery tickets, if we make the rational assumption that all ticket numbers are equally likely, then the probability that the winning number is at least <span class="process-math">\(7,500\)</span> is exactly <span class="process-math">\(2501/100001\text{,}\)</span> which is very close to <span class="process-math">\(1/4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 10.25"><a href="#s_probability_central-tendency-3-8" title="Copy heading and permalink for Example 10.25" aria-label="Copy heading and permalink for Example 10.25">🔗</a></div>
-</article>
-<article class="example example-like" id="s_probability_central-tendency-3-9"><h4 class="heading">
+<div class="autopermalink" data-description="Example 10.25"><a href="#s_probability_central-tendency-3-8" title="Copy heading and permalink for Example 10.25" aria-label="Copy heading and permalink for Example 10.25">🔗</a></div></article><article class="example example-like" id="s_probability_central-tendency-3-9"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="s_probability_central-tendency-3-9-1">
@@ -827,11 +798,7 @@ k P(|X|\ge k) \amp    = \sum_{r\ge k} k P(|X|=r)\\
 <div class="para">Now a computer algebra system can make this calculation exactly, and you are encouraged to check it out just to see how truly small this quantity actually is.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_probability_central-tendency-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 10.26"><a href="#s_probability_central-tendency-3-9" title="Copy heading and permalink for Example 10.26" aria-label="Copy heading and permalink for Example 10.26">🔗</a></div>
-</article><div class="autopermalink" data-description="Subsection 10.5.1: Variance and Standard Deviation"><a href="#s_probability_central-tendency-3" title="Copy heading and permalink for Subsection 10.5.1: Variance and Standard Deviation" aria-label="Copy heading and permalink for Subsection 10.5.1: Variance and Standard Deviation">🔗</a></div>
-</section><div class="autopermalink" data-description="Section 10.5: Central Tendency"><a href="#s_probability_central-tendency" title="Copy heading and permalink for Section 10.5: Central Tendency" aria-label="Copy heading and permalink for Section 10.5: Central Tendency">🔗</a></div>
-</section>
-</div>
+<div class="autopermalink" data-description="Example 10.26"><a href="#s_probability_central-tendency-3-9" title="Copy heading and permalink for Example 10.26" aria-label="Copy heading and permalink for Example 10.26">🔗</a></div></article><div class="autopermalink" data-description="Subsection 10.5.1: Variance and Standard Deviation"><a href="#s_probability_central-tendency-3" title="Copy heading and permalink for Subsection 10.5.1: Variance and Standard Deviation" aria-label="Copy heading and permalink for Subsection 10.5.1: Variance and Standard Deviation">🔗</a></div></section><div class="autopermalink" data-description="Section 10.5: Central Tendency"><a href="#s_probability_central-tendency" title="Copy heading and permalink for Section 10.5: Central Tendency" aria-label="Copy heading and permalink for Section 10.5: Central Tendency">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_probability_discrete-random-variables.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_probability_infinite-outcomes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -626,13 +626,10 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<section class="section" id="s_networkflow_example">
-<h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_networkflow_example"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Concrete Example</span>
 </h2>
-<section class="introduction" id="s_networkflow_example-2">
-<div class="para logical" id="s_networkflow_example-2-1">
+<section class="introduction" id="s_networkflow_example-2"><div class="para logical" id="s_networkflow_example-2-1">
 <div class="para">Let’s apply the Labeling Algorithm to the network flow shown in <a href="s_networkflow_intro.html#fig_networkflow_netflow" class="xref" data-knowl="./knowl/xref/fig_networkflow_netflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 13.2">Figure 13.2</a>. Then we start with the source:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_networkflow_netflow.html" id="s_networkflow_example-2-1-2">
 \begin{equation*}
@@ -681,14 +678,10 @@ T:\quad(A,+,8)
 <div class="autopermalink" data-description="Paragraph"><a href="#s_networkflow_example-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig_networkflow_updated-flow"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;">
-<img src="external/webfig-31c.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_networkflow_updated-flow-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_networkflow_updated-flow-2-description">
-<div class="para" id="fig_networkflow_updated-flow-2-1-1">An Updated Network Flow<div class="autopermalink" data-description="Paragraph"><a href="#fig_networkflow_updated-flow-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<img src="external/webfig-31c.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_networkflow_updated-flow-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_networkflow_updated-flow-2-description"><div class="para" id="fig_networkflow_updated-flow-2-1-1">An Updated Network Flow<div class="autopermalink" data-description="Paragraph"><a href="#fig_networkflow_updated-flow-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
 </div>
-</div></details>
-</div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An Updated Network Flow<div class="autopermalink" data-description="Figure 13.12"><a href="#fig_networkflow_updated-flow" title="Copy heading and permalink for Figure 13.12" aria-label="Copy heading and permalink for Figure 13.12">🔗</a></div></figcaption>
-</figure>
-<div class="para logical" id="s_networkflow_example-2-4">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An Updated Network Flow<div class="autopermalink" data-description="Figure 13.12"><a href="#fig_networkflow_updated-flow" title="Copy heading and permalink for Figure 13.12" aria-label="Copy heading and permalink for Figure 13.12">🔗</a></div></figcaption></figure><div class="para logical" id="s_networkflow_example-2-4">
 <div class="para">Here is the sequence (reading down the columns) of labels that will be found when the labeling algorithm is applied to this updated flow. (Note that in the scan from <span class="process-math">\(S\text{,}\)</span> the vertex <span class="process-math">\(B\)</span> will not be labeled, since now the edge <span class="process-math">\((S,B)\)</span> is full.)</div>
 <div class="displaymath process-math" id="s_networkflow_example-2-4-4">
 \begin{align*}
@@ -703,22 +696,16 @@ B:\amp\quad(E,+,19)\amp T:\amp\quad(A,+,12)
 <div class="autopermalink" data-description="Paragraph"><a href="#s_networkflow_example-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="s_networkflow_example-2-5">After this update, the value of the flow has been increased and is now <span class="process-math">\(50=38+12\text{.}\)</span>  We start the labeling process over again and repeat until we reach a stage where some vertices (including the source) are labeled and some vertices (including the sink) are unlabeled.<div class="autopermalink" data-description="Paragraph"><a href="#s_networkflow_example-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section>
-<section class="subsection" id="s_networkflow_example-3">
-<h3 class="heading hide-type">
+</div></section><section class="subsection" id="s_networkflow_example-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How the Labeling Algorithm Halts</span>
 </h3>
 <div class="para" id="s_networkflow_example-3-2">Consider the network flow in <a href="s_networkflow_example.html#fig_networkflow_flow4" class="xref" data-knowl="./knowl/xref/fig_networkflow_flow4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 13.13">Figure 13.13</a>.<div class="autopermalink" data-description="Paragraph"><a href="#s_networkflow_example-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig_networkflow_flow4"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;">
-<img src="external/network_flow4.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_networkflow_flow4-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_networkflow_flow4-2-description">
-<div class="para" id="fig_networkflow_flow4-2-1-1">Another Network Flow<div class="autopermalink" data-description="Paragraph"><a href="#fig_networkflow_flow4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<img src="external/network_flow4.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="fig_networkflow_flow4-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="fig_networkflow_flow4-2-description"><div class="para" id="fig_networkflow_flow4-2-1-1">Another Network Flow<div class="autopermalink" data-description="Paragraph"><a href="#fig_networkflow_flow4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
 </div>
-</div></details>
-</div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Another Network Flow<div class="autopermalink" data-description="Figure 13.13"><a href="#fig_networkflow_flow4" title="Copy heading and permalink for Figure 13.13" aria-label="Copy heading and permalink for Figure 13.13">🔗</a></div></figcaption>
-</figure>
-<div class="para logical" id="s_networkflow_example-3-4">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Another Network Flow<div class="autopermalink" data-description="Figure 13.13"><a href="#fig_networkflow_flow4" title="Copy heading and permalink for Figure 13.13" aria-label="Copy heading and permalink for Figure 13.13">🔗</a></div></figcaption></figure><div class="para logical" id="s_networkflow_example-3-4">
 <div class="para">The value of the current flow is <span class="process-math">\(172\text{.}\)</span> Applying the labeling algorithm using the pseudo-alphabetic order results in the following labels (reading down the columns):</div>
 <div class="displaymath process-math" id="s_networkflow_example-3-4-2">
 \begin{align*}
@@ -746,10 +733,7 @@ F:\amp\quad(S,+,23)
 <div class="para">This shows that we have found a cut whose capacity is exactly equal to the value of the current flow. In turn, this shows that the flow is optimal.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#s_networkflow_example-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 13.5.1: How the Labeling Algorithm Halts"><a href="#s_networkflow_example-3" title="Copy heading and permalink for Subsection 13.5.1: How the Labeling Algorithm Halts" aria-label="Copy heading and permalink for Subsection 13.5.1: How the Labeling Algorithm Halts">🔗</a></div>
-</section><div class="autopermalink" data-description="Section 13.5: A Concrete Example"><a href="#s_networkflow_example" title="Copy heading and permalink for Section 13.5: A Concrete Example" aria-label="Copy heading and permalink for Section 13.5: A Concrete Example">🔗</a></div>
-</section>
-</div>
+<div class="autopermalink" data-description="Subsection 13.5.1: How the Labeling Algorithm Halts"><a href="#s_networkflow_example-3" title="Copy heading and permalink for Subsection 13.5.1: How the Labeling Algorithm Halts" aria-label="Copy heading and permalink for Subsection 13.5.1: How the Labeling Algorithm Halts">🔗</a></div></section><div class="autopermalink" data-description="Section 13.5: A Concrete Example"><a href="#s_networkflow_example" title="Copy heading and permalink for Section 13.5: A Concrete Example" aria-label="Copy heading and permalink for Section 13.5: A Concrete Example">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="s_networkflow_labeling-algorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_networkflow_integer-programming.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

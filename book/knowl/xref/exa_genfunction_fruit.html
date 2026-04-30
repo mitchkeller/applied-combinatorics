@@ -23,9 +23,7 @@
 </h3>
 <div class="para">A grocery store is preparing holiday fruit baskets for sale. Each fruit basket will have <span class="process-math">\(20\)</span> pieces of fruit in it, chosen from apples, pears, oranges, and grapefruit. How many different ways can such a basket be prepared if there must be at least one apple in a basket, a basket cannot contain more than three pears, and the number of oranges must be a multiple of four?<div class="autopermalink" data-description="Paragraph"><a href="#exa_genfunction_fruit-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical">
 <div class="para">In order to get at the number of baskets consisting of <span class="process-math">\(20\)</span> pieces of fruit, let’s solve the more general problem where each basket has <span class="process-math">\(n\)</span> pieces of fruit. Our method is simple: find the generating function for how to do this with each type of fruit individually and then multiply them. As in the previous example, the product will contain the term <span class="process-math">\(x^n\)</span> for every way of assembling a basket of <span class="process-math">\(n\)</span> pieces of fruit subject to our restrictions. The apple generating function is <span class="process-math">\(x/(1-x)\text{,}\)</span> since we only want positive powers of <span class="process-math">\(x\)</span> (corresponding to ensuring at least one apple). The generating function for pears is <span class="process-math">\((1+x+x^2+x^3)\text{,}\)</span> since we can have only zero, one, two, or three pears in basket. For oranges we have <span class="process-math">\(1/(1-x^4) = 1+x^4+x^8+\cdots\text{,}\)</span> and the unrestricted grapefruit give us a factor of <span class="process-math">\(1/(1-x)\text{.}\)</span> Multiplying, we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_genfunction_finite-geom.html">
@@ -48,9 +46,7 @@
 <div class="autopermalink" data-description="Paragraph"><a href="#exa_genfunction_fruit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 8.5.1"><a href="#exa_genfunction_fruit-2" title="Copy heading and permalink for Solution 8.5.1" aria-label="Copy heading and permalink for Solution 8.5.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" data-description="Example 8.5"><a href="#exa_genfunction_fruit" title="Copy heading and permalink for Example 8.5" aria-label="Copy heading and permalink for Example 8.5">🔗</a></div>
-</article><span class="incontext"><a class="internal" href="s_genfunction_distributions.html#exa_genfunction_fruit">In Context</a></span>
+</div></details></div>
+<div class="autopermalink" data-description="Example 8.5"><a href="#exa_genfunction_fruit" title="Copy heading and permalink for Example 8.5" aria-label="Copy heading and permalink for Example 8.5">🔗</a></div></article><span class="incontext"><a class="internal" href="s_genfunction_distributions.html#exa_genfunction_fruit">in-context</a></span>
 </body>
 </html>
