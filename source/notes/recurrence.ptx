@@ -509,7 +509,7 @@
             <me>
               C^{2}(x) -C(x) + x = 0
             </me>
-            for <m>C(x)</m>.
+            for <m>C(x)</m>. Use what you know about the constant term of <m>C(x)</m> to determine whether you want the plus or the minus from the <m>\pm</m> in the quadratic formula.
           </p>
         </statement>
         <solution component="a">
@@ -526,7 +526,7 @@
       </p>
       <p component="a">
         <md>
-          <mrow>\int(1-4x)^{-1/2}\, dx  \amp= \int -\frac{1}{4} u^{-1/2}\, du  = \frac{1}{2}u^{1/2} + D</mrow>
+          <mrow>\int(1-4x)^{-1/2}\, dx  \amp= \int -\frac{1}{4} u^{-1/2}\, du  = -\frac{1}{2}u^{1/2} + D</mrow>
           <mrow> \amp = -\frac{1}{2}(1-4x)^{1/2} + D</mrow>
           <mrow>\int\sum_{n=0}^\infty \binom{2n}{n}x^n \amp = \sum_{n=0}^\infty \frac{1}{n+1}\binom{2n}{n}x^{n+1} + E</mrow>
         </md>
