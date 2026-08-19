@@ -14,10 +14,10 @@
 
         <proof>
             <p>Let <m>m,n\in\nonnegints</m> with <m>m\neq0</m>. Then <m>m^{n+0}=m^n=m^n\,1=m^n\,m^0</m>.  Now suppose that <m>m^{n+k}=m^n\,m^k</m>.  Then
-            <me>
+            <md>
                 m^{n+(k+1)}=m^{(n+k)+1}=m\,m^{n+k}
                 = m(m^n\,m^k)=m^n(m\,m^k)=m^n\,m^{k+1}.
-            </me>
+            </md>
             </p>
         </proof>
     </theorem>
@@ -29,9 +29,9 @@
 
         <proof>
             <p>Let <m>m,n\in\nonnegints</m> with <m>m\neq0</m>. Then <m>(m^n)^0=1=m^0=m^{n0}</m>. Now suppose that <m>(m^n)^k=m^{nk}</m>.  Then
-            <me>
+            <md>
                 (m^n)^{k+1}=m^n(m^n)^k=m^n(m^{nk})=m^{n+nk}=m^{n(k+1)}.
-            </me>
+            </md>
             </p>
         </proof>
     </theorem>

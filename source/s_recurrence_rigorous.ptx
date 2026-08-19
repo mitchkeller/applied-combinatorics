@@ -37,18 +37,18 @@
         <theorem xml:id="thm_advance">
             <statement>
                 <p>Let <m>k</m> be a positive integer <m>k</m>, and let <m>c_0,c_1,\dots,c_k</m> be constants with <m>c_0,c_k\neq 0</m>. Then the set <m>W</m> of all solutions to the homogeneous linear equation
-                <men>
+                <md>
                     (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0
-                </men>
+                </md>
                 is a <m>k</m>-dimensional subspace of <m>V</m>.
                 </p>
             </statement>
         </theorem>
 
         <p>The conclusion that the set <m>W</m> of all solutions is a subspace of <m>V</m> is immediate, since
-        <me>
+        <md>
             p(A)(f+g)=p(A)f+p(A)g\quad\text{ and } \quad p(a)(\alpha f)=\alpha p(A)(f).
-        </me>
+        </md>
         What takes a bit of work is to show that <m>W</m> is a <m>k</m>-dimensional subspace. But once this is done, then to solve the advancement operator equation given in the form of <xref ref="thm_advance"/>, it suffices to find a <term>basis</term> for the vector space <m>W</m>.  Every solution is just a linear combination of basis vectors.  In the next several subsections, we outline how this goal can be achieved.
         </p>
     </subsection>
@@ -67,9 +67,9 @@
 
             <proof>
                 <p>We first show that <m>f(n)=cr^n</m> for every <m>n\ge0</m>, by induction on <m>n</m>. The base case is trivial since <m>c=f(0) = cr^0</m>. Now suppose that <m>f(k)=cr^k</m> for some non-negative integer <m>k</m>. Then <m>(A-r)f=0</m> implies that <m>f(k+1)-rf(k)=0</m>, <ie/>,
-                <me>
+                <md>
                     f(k+1)=rf(k)= rcr^k=cr^{k+1}.
-                </me>
+                </md>
                 A very similar argument shows that <m>f(-n) = cr^{-n}</m> for every <m>n\le0</m>.
                 </p>
             </proof>
@@ -78,21 +78,21 @@
             <statement>
                 <p>
                     Consider a nonhomogeneous operator equation of the form
-                    <men xml:id="eqn_nonhomogeneous">
+                    <md number="yes" xml:id="eqn_nonhomogeneous">
                         p(A)f= (c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g,
-                    </men>
+                    </md>
                     with <m>c_0,c_k\neq0</m>, and let <m>W</m> be the subspace of <m>V</m> consisting of all solutions to the corresponding homogeneous equation
-                    <men xml:id="eqn_homogeneous">
+                    <md number="yes" xml:id="eqn_homogeneous">
                         p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = 0.
-                    </men>
+                    </md>
                     If <m>f_0</m> is a solution to <xref ref="eqn_nonhomogeneous"/>, then every solution <m>f</m> to <xref ref="eqn_nonhomogeneous"/> has the form <m>f=f_0+f_1</m> where <m>f_1\in W</m>.
                 </p>
             </statement>
             <proof>
                 <p>Let <m>f</m> be a solution of <xref ref="eqn_nonhomogeneous"/>, and let <m>f_1=f-f_0</m>.  Then
-                <me>
+                <md>
                     p(A)f_1 = p(A)(f-f_0)=p(A)f-p(A)f_0=g-g=0.
-                </me>
+                </md>
                 This implies that <m>f_1\in W</m> and that <m>f=f_0+f_1</m> so that all solutions to <xref ref="eqn_nonhomogeneous"/> do in fact have the desired form.
                 </p>
             </proof>
@@ -104,39 +104,39 @@
             <statement>
                 <p>
                     Consider the following advancement operator equation
-                    <men xml:id="eqn_distinct">
+                    <md number="yes" xml:id="eqn_distinct">
                         p(A)f=(A-r_1)(A-r_2)\dots(A-r_k)f=0.
-                    </men>
+                    </md>
                     with <m>r_1,r_2,\dots,r_k</m> distinct non-zero constants.  Then every solution to <xref ref="eqn_distinct"/> has the form
-                    <me>
+                    <md>
                         f(n)=c_1r_1^n+c_2 r_2^n+c_3r_3^n+\dots+c_kr_k^n.
-                    </me>
+                    </md>
                 </p>
             </statement>
             <proof>
                 <p>The case <m>k=1</m> is <xref ref="lem_base"/>. Now suppose we have established the theorem for some positive integer <m>m</m> and consider the case <m>k=m+1</m>. Rewrite <xref ref="eqn_distinct"/> as
-                <me>
+                <md>
                     (A-r_1)(A-r_2)\dots(A-r_m)[(A-r_{m+1})f]=0.
-                </me>
+                </md>
                 By the inductive hypothesis, it follows that if <m>f</m> is a solution to <xref ref="eqn_distinct"/>, then <m>f</m> is also a solution to the nonhomogeneous equation
-                <men xml:id="eqn_distinct2">
+                <md number="yes" xml:id="eqn_distinct2">
                     (A-r_{m+1})f=d_1r_1^n+d_2r_2^n+\dots+d_mr_m^n.
-                </men>
+                </md>
                 To find a particular solution <m>f_0</m> to <xref ref="eqn_distinct2"/>, we look for a solution having the form
-                <men xml:id="eqn_distinct3">
+                <md number="yes" xml:id="eqn_distinct3">
                     f_0(n)= c_1 r_1^n+c_2 r_2^n+\dots+c_m r_m^n.
-                </men>
+                </md>
                 On the other hand, a simple calculation shows that for each <m>i=1,2,\dots,m</m>, we have
-                <me>
+                <md>
                     (A-r_{m+1})c_i r_i^n=c_i r_i^{n+1}-r_{m+1}c_i r_i^n=c_i (r_i-r_{m+1})r_i^n,
-                </me>
+                </md>
                 so it suffices to choose <m>c_i</m> so that <m>c_i(r_i-r_{m+1})=d_i</m>, for each <m>i=1,2,\dots,m</m>. This can be done since <m>r_{m+1}</m> is distinct from <m>r_i</m> for <m>i=1,2,\dots m</m>.
                 </p>
 
                 <p>Now we have a particular solution <m>f_0(n)=\sum_{i=1}^{m} c_i r_i^n</m>. Next we consider the corresponding homogeneous equation <m>(A-r_{m+1})f=0</m>. The general solution to this equation has the form <m>f_1(n)=c_{m+1}r_{m+1}^n</m>. It follows that every solution to the original equation has the form
-                <me>
+                <md>
                     f(n)=f_0(n)+f_1(n) = c_1r_1^n+c_2r_2^n+\dots+c_m r_m^n+cr_{m+1}^n,
-                </me>
+                </md>
                 which is exactly what we want!
                 </p>
             </proof>
@@ -152,13 +152,13 @@
         <lemma xml:id="lem_rr">
             <statement>
                 <p>Let <m>k\ge1</m> and consider the equation
-                <men xml:id="eqn_rr">
+                <md number="yes" xml:id="eqn_rr">
                     (A-r)^kf=0.
-                </men>
+                </md>
                 Then the general solution to <xref ref="eqn_rr"/> has the following form
-                <men xml:id="eqn_solutionrr">
+                <md number="yes" xml:id="eqn_solutionrr">
                     f(n)=c_1r^n+c_2nr^n+c_3n^2r^n+c_4n^3r^n+\dots+c_kn^{k-1}r^n.
-                </men>
+                </md>
                 </p>
             </statement>
         </lemma>
@@ -174,9 +174,9 @@
         </p>
         <example>
             <p>Consider the advancement operator equation
-            <me>
+            <md>
                 (A-1)^5(A+1)^3(A-3)^2(A+8)(A-9)^4f=0.
-            </me>
+            </md>
             Then every solution has the following form
             <md>
                 <mrow>  f(n)=\amp c_1+c_2n+c_3n^2+c_4n^3+c_5n^4</mrow>

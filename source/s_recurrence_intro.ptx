@@ -7,14 +7,14 @@
         </p>
 
         <p>Let's see how we can get a recurrence from this story. Let <m>f_n</m> denote the number of pairs rabbits on the island in month <m>n</m>. Thus, <m>f_1 = 1</m>, <m>f_2 = 1</m>, <m>f_3=2</m>, and <m>f_4=3</m> from our account above. How can we compute <m>f_n</m>? Well, in the <m>n^\text{th}</m> month we have all the pairs of rabbits that were there during the previous month, which is <m>f_{n-1}</m>; however, some of those pairs of rabbits also reproduce during this month. Only the ones who were born prior to the previous month are able to reproduce during month <m>n</m>, so there are <m>f_{n-2}</m> pairs of rabbits who are able to reproduce, and each produces a new pair of rabbits. Thus, we have that the number of rabbits in month <m>n</m> is <m>f_n = f_{n-1} + f_{n-2}</m> for <m>n\geq 3</m> with <m>f_1=f_2=1</m>. The sequence of numbers <m>\{f_n\colon n\geq 0\}</m> (we take <m>f_0=0</m>, which satisfies our recurrence) is known as the <term>Fibonacci sequence</term><idx><h>Fibonacci</h><h>sequence</h></idx> after Leonardo of Pisa, better known as Fibonacci, an Italian mathematician who lived from about 1170 until about 1250. The terms <m>f_0,f_1,\dots,f_{20}</m> of the Fibonacci sequence are
-        <me>
+        <md>
             0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987, 1597,2584,4181,6765.
-        </me>
+        </md>
         </p>
         <p>Thus, the answer to our question about the number of pairs of rabbits on the island in the tenth month is <m>55</m>. That's really easy to compute, but what if we asked for the value of <m>f_{1000}</m> in the Fibonacci sequence? Could you even tell whether the following inequality is true or false<mdash/>without actually finding <m>f_{1000}</m>?
-        <me>
+        <md>
             f_{1000} \lt  232748383849990383201823093383773932
-        </me>
+        </md>
         </p>
         <p>Consider the sequence <m>\{f_{n+1}/f_n:n\ge1\}</m> of ratios of consecutive terms of the Fibonacci sequence. <xref ref="tab_fib-ratios"/> shows these ratios for <m>n\leq 18</m>.
         </p>
@@ -52,9 +52,9 @@
         <example xml:id="ex_recurrence_binary-strings-no-11">
             <idx><h>string</h><h>binary</h></idx>
             <p>Let <m>a_{n}</m> count the number of binary strings of length <m>n</m> in which no two consecutive characters are<nbsp/><m>1</m>'s. Evidently, <m>a_1=2</m> since both binary strings of length<nbsp/><m>1</m> are <q>good.</q> Also, <m>a_2=3</m> since only one of the four binary strings of length<nbsp/><m>2</m> is <q>bad,</q>, namely <m>(1,1)</m>. And <m>a_3= 5</m>, since of the <m>8</m> binary strings of length<nbsp/><m>3</m>, the following three strings are <q>bad</q>:
-            <me>
+            <md>
                 (1,1,0), (0,1,1), (1,1,1).
-            </me>
+            </md>
             More generally, it is easy to see that the sequence satisfies the recurrence <m>a_{n+2} = a_{n+1}+a_n</m>, since we can partition the set of all <q>good</q> strings into two sets, those ending in <m>0</m> and those ending in<nbsp/><m>1</m>. If the last bit is<nbsp/><m>0</m>, then in the first <m>n+1</m> positions, we can have any <q>good</q> string of length<nbsp/><m>n+1</m>. However, if the last bit is<nbsp/><m>1</m>, then the preceding bit must be <m>0</m>, and then in the first <m>n</m> positions we can have any <q>good</q> string of length<nbsp/><m>n</m>.
             </p>
 

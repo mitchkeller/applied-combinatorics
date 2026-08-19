@@ -13,16 +13,16 @@
 
         <proof>
             <p><m>\le</m> is reflexive since <m>n+0=n</m> and therefore <m>n\le n</m>, for all <m>n\in \nonnegints</m>. Next, we show that <m>\le</m> is antisymmetric.  Let <m>m,n\in\nonnegints</m> and suppose that <m>m\le n</m> and <m>n\le m</m>.  Then there exist natural numbers <m>p</m> and <m>q</m> so that <m>m+p=n</m> and <m>n+q=m</m>.  It follows that
-            <me>
+            <md>
                 m+(p+q)= (m+p)+q=n+q =m=m+0
-            </me>
+            </md>
             Therefore <m>p+q=0</m>, which implies that <m>p=q=0</m>. Thus <m>m+p=m+0=m=n</m>.
             </p>
 
             <p>Next, we show that <m>\le</m> is transitive. Suppose that <m>m,n,p\in \nonnegints</m>, <m>m\le n</m> and <m>n\le p</m>. Then there exist natural numbers <m>q</m> and <m>r</m> so that <m>m+q=n</m> and <m>n+r=p</m>.  Then
-            <me>
+            <md>
                 m+(q+r)=(m+q)+r=n+r=p.
-            </me>
+            </md>
             Thus <m>m\le p</m>, and we have now shown that <m>\le</m> is a partial
             order on <m>\nonnegints</m>.
             </p>

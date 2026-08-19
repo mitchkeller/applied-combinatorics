@@ -183,9 +183,9 @@
     to <m>\bfH</m>. In particular, it is customary to say that <m>\bfG</m> contains the cycle <m>
     \bfC_n</m> (same for <m>\bfP_n</m> and <m>\bfK_n</m>) when <m>\bfG</m> contains a subgraph
     isomorphic to <m>\bfC_n</m>. The graphs in <xref ref="fig_isomorphic"/> are isomorphic. An
-    isomorphism between these graphs is given by <me>
+    isomorphism between these graphs is given by <md>
       f(a)=5,\quad f(b) = 3, \quad f(c) = 1,\quad f(d) = 6,\quad f(e)=2,\quad f(h)=4.
-    </me>
+    </md>
   </p>
   <figure xml:id="fig_isomorphic">
     <caption>A pair of isomorphic graphs</caption>
@@ -273,9 +273,9 @@
 
   <theorem xml:id="thm-graphs-first">
     <statement>
-      <p> Let <m>\deg_\bfG(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then <men xml:id="eq_graphs_degsum">
+      <p> Let <m>\deg_\bfG(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then <md number="yes" xml:id="eq_graphs_degsum">
           \sum_{v\in V}\deg_\bfG(v) = 2|E|
-        </men>.
+        </md>.
       </p>
     </statement>
 

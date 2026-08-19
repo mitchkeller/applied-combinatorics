@@ -28,12 +28,12 @@
 
         </figure>
         <p>We have now mathematically modeled musical scales as discrete structures in a way that we can use <xref ref="thm_polya_polya" text="title"/>. What is the group acting on our black/white colorings of the vertices of a regular <m>12</m>-gon? One permutation in the group is <m>\tau = (0\ 1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11)</m>, which corresponds to the transposition by one note. In fact, every element of the group can be realized as some power of <m>\tau</m> since only rotations are allowed and <m>\tau</m> is the smallest possible rotation. Thus, the group acting on the colorings is the <term>cyclic group of order <m>12</m></term>, denoted <m>C_{12} = \{\iota,\tau,\tau^2,\dots,\tau^{11}\}</m>. <xref ref="ex_polya_cyclic12"/> asks you to write all the elements of this group in cycle notation. The best way to do this is by multiplying <m>\tau^{i-1}</m> by <m>\tau</m> (<ie/>, compute <m>\tau\tau^{i-1}</m>) to find <m>\tau</m>. Once you've done this, you will be able to easily verify that the cycle index is
-        <me>
+        <md>
             P_{C_{12}}(x_1,\dots,x_{12}) = \frac{x_1^{12}}{12}+\frac{x_2^6}{12}+\frac{x_3^4}{6}+\frac{x_4^3}{6}+\frac{x_6^2}{6}+\frac{x_{12}}{3}.
-        </me>
+        </md>
         Since we've chosen colorings using black and white, it would make sense to substitute <m>x_i = b^i +w^i</m> for all <m>i</m> in <m>P_{C_{12}}</m> now to find the number of <m>k</m>-note scales. However, there is a convenient shortcut we may take to make the resulting generating function look more like those to which we grew accustomed in <xref ref="ch_genfunction"/>. The information about how many notes are <em>not</em> included in our scale (the number colored white) can be deduced from the number that are included. Thus, we may eliminate the use of the variable <m>w</m>, replacing it by <m>1</m>. We now find
-        <me>P_{C_{12}}(1+b,1+b^2,\dots,1+b^{12}) = b^{12}+b^{11}+6 b^{10}+19 b^9+43 b^8\\+66 b^7+80 b^6+66 b^5+43 b^4+19 b^3+6 b^2+b+1.
-        </me>
+        <md>P_{C_{12}}(1+b,1+b^2,\dots,1+b^{12}) = b^{12}+b^{11}+6 b^{10}+19 b^9+43 b^8\\+66 b^7+80 b^6+66 b^5+43 b^4+19 b^3+6 b^2+b+1.
+        </md>
         From this, we are able to deduce that the number of scales with <m>k</m> notes is the coefficient on <m>b^k</m>. Therefore, the answer to our question at the beginning of the chapter about the number of <m>6</m>-note scales is <m>80</m>.
         </p>
     </subsection>
@@ -60,15 +60,15 @@
             </tabular>
         </figure>
         <p>With the monomials associated to the permutations in <m>D_{12}</m> identified, we are able to write down the cycle index
-        <me>
+        <md>
             P_{D_{12}}(x_1,\dots,x_6) = \frac{1}{12}(x_1^6 + 2x_6^1 + 2x_3^2+4x_2^3 + 3x_1^2x_2^2).
-        </me>
+        </md>
         With the cycle index determined, we now turn our attention to using it to find the number of isomers of xylenol. This aromatic hydrocarbon has three hydrogen molecules, two methyl groups, and a hydroxyl group attached to the carbon atoms. Recalling that hydrogen atoms are the default from benzene, we can more or less ignore them when choosing the appropriate substitution for the <m>x_i</m> in the cycle index. If we let <m>m</m> denote methyl groups and <m>h</m> hydroxyl groups, we can then substitute <m>x_i = 1+m^i+h^i</m> in <m>P_{D_{12}}</m>. This substitution gives the generating function
-        <me>1+h+3 h^2+3 h^3+3 h^4+h^5+h^6+m+3 h m+6 h^2 m+6 h^3
+        <md>1+h+3 h^2+3 h^3+3 h^4+h^5+h^6+m+3 h m+6 h^2 m+6 h^3
         m\\+3 h^4 m+h^5 m+3 m^2+6 h m^2+11 h^2 m^2+6 h^3 m^2+3 h^4 m^2+3
         m^3+6 h m^3\\+6 h^2 m^3+3 h^3 m^3+3 m^4+3 h m^4+3 h^2 m^4+m^5+h
         m^5+m^6.
-        </me>
+        </md>
         Since xylenol has one hydroxyl group and two methyl groups, we are looking for the coefficient on <m>hm^2</m> in this generating function. The coefficient is <m>6</m>, so there are six isomers of xylenol.
         </p>
 
@@ -80,9 +80,9 @@
     <subsection xml:id="ss_polya_graphs">
         <title>Counting nonisomorphic graphs</title>
         <p>Counting the graphs with vertex set <m>[n]</m> is not difficult. There are <m>C(n,2)</m> possible edges, each of which can be included or excluded. Thus, there are <m>2^{C(n,2)}</m> <term>labeled graphs</term><idx><h>graph</h><h>labeled</h></idx> on <m>n</m> vertices. It's only a bit of extra thought to determine that if you only want to count the labeled graphs on <m>n</m> vertices with <m>k</m> edges, you simply must choose a <m>k</m>-element subset of the set of all <m>C(n,2)</m> possible edges. Thus, there are
-        <me>
+        <md>
             \binom{\binom{n}{2}}{k}
-        </me>
+        </md>
         graphs with vertex set <m>[n]</m> and exactly <m>k</m> edges.
         </p>
 
@@ -130,14 +130,14 @@
         </p>
 
         <p>Now we're prepared to write down the cycle index of the pair group
-        <me>
+        <md>
             P_{S_4^{(2)}}(x_1,\dots,x_6) = \frac{1}{24}\left( x_6^1 + 9x_1^2x_2^2 + 8 x_3^2 +
             6x_2x_4\right).
-        </me>
+        </md>
         To use this to enumerate graphs, we can now make the substitution <m>x_i = 1+x^i</m> for <m>1\leq i\leq 6</m>. This allows us to account for the two options of an edge not being present or being present. In doing so, we find
-        <me>
+        <md>
             P_{S_4^{(2)}}(1+x,\dots,1+x^6)= 1+x+2 x^2+3 x^3+2 x^4+x^5+x^6
-        </me>
+        </md>
         is the generating function for the number of <m>4</m>-vertex graphs with <m>m</m> edges, <m>0\leq m\leq 6</m>. To find the total number of nonisomorphic graphs on four vertices, we substitute <m>x=1</m> into this polynomial. This allows us to conclude there are <m>11</m> nonisomorphic graphs on four vertices, a marked reduction from the <m>64</m> labeled graphs.
         </p>
 

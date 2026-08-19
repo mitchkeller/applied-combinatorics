@@ -1,9 +1,9 @@
 <section xml:id="s_genfunction_intro">
     <title>Basic Notation and Terminology</title>
     <p>With a sequence <m>\sigma=\{a_n:n\ge0\}</m> of real numbers, we associate a <q>function</q> <m>F(x)</m> defined by
-    <me>
+    <md>
         F(x)=\sum_{n=0}^\infty a_n x^n.
-    </me>
+    </md>
     The word <q>function</q> is put in quotes as we do not necessarily care about substituting a value of <m>x</m> and obtaining a specific value for <m>F(x)</m>. In other words, we consider <m>F(x)</m> as a formal power series and frequently ignore issues of convergence.
     </p>
 
@@ -13,30 +13,30 @@
         <idx><h>series</h><h>infinite geometric</h></idx>
         <idx><h>series</h><h>infinite geometric</h><h>sum of</h></idx>
         <p>Consider the constant sequence <m>\sigma=\{a_n:n\ge0\}</m> with <m>a_n=1</m> for every <m>n\ge0</m>. Then the generating function <m>F(x)</m> of <m>\sigma</m> is given by
-        <me>
+        <md>
             F(x)=1+x+x^2+x^3+x^4+x^5+x^6+\cdots
-            </me>, which is called the <term>infinite geometric series</term>.
+            </md>, which is called the <term>infinite geometric series</term>.
         </p>
         <p>You may remember that this last expression is the Maclaurin series for the function <m>F(x)=1/(1-x)</m> and that the series converges when <m>|x|\lt 1</m>. Since we want to think in terms of formal power series, let's see that we can justify the expression
-        <me>
+        <md>
             \frac{1}{1-x}=1+x+x^2+x^3+x^4+x^5+x^6+\cdots=\sum_{n=0}^\infty x^n
-        </me>
+        </md>
         without any calculus techniques. Consider the product
-        <me>
+        <md>
             (1-x)(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
-        </me>
+        </md>
         and notice that, since we multiply formal power series just like we multiply polynomials (power series are pretty much polynomials that go on forever), we have that this product is
-        <me>            (1+x+x^2+x^3+x^4+x^5+x^6+\cdots)-x(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
+        <md>            (1+x+x^2+x^3+x^4+x^5+x^6+\cdots)-x(1+x+x^2+x^3+x^4+x^5+x^6+\cdots)
             = 1.
-        </me>
+        </md>
         Now we have that
-        <me>
+        <md>
             (1-x)(1+x+x^2+x^3+x^4+x^5+x^6+\cdots) = 1,
-        </me>
+        </md>
         or, more usefully, after dividing through by <m>1-x</m>,
-        <me>
+        <md>
             \frac{1}{1-x} = \sum_{n=0}^\infty x^n.
-        </me><idx><h>series</h><h>infinite geometric</h><h>sum of</h></idx>
+        </md><idx><h>series</h><h>infinite geometric</h><h>sum of</h></idx>
         </p>
     </example>
 
@@ -47,7 +47,7 @@
             <mrow>\amp= (1+x+\cdots + x^n) - (x+x^2+\cdots x^n + x^{n+1})</mrow>
             </md>.
             Looking carefully, we see that everything cancels in the final expression except <m>1-x^{n+1}</m>. Dividing both sides by <m>1-x</m> gives us
-            <men xml:id="eq_genfunction_finite-geom">1+x+\cdots + x^n = \frac{1-x^{n+1}}{1-x}</men><idx><h>series</h><h>finite geometric</h><h>sum of</h></idx>
+            <md number="yes" xml:id="eq_genfunction_finite-geom">1+x+\cdots + x^n = \frac{1-x^{n+1}}{1-x}</md><idx><h>series</h><h>finite geometric</h><h>sum of</h></idx>
             as the formula for the sum of a finite geometric series.
     </p>
     
@@ -56,20 +56,20 @@
         </p>
 
         <p>To see this in action, consider differentiating the power series of the previous example. This gives
-        <me>
+        <md>
             \frac{1}{(1-x)^2}=1+2x+3x^2+4x^3+5x^4+6x^5+7x^6+\dots=\sum_{n=1}^\infty nx^{n-1}.
-        </me>
+        </md>
         Integration of the series represented by <m>1/(1+x) = 1/(1-(-x))</m> yields (after a bit of algebraic manipulation)
-        <me>
+        <md>
             \log(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\frac{x^5}{5}-
             \frac{x^6}{6}+\dots=\sum_{n=1}^\infty (-1)^{n+1}\frac{x^n}{n}.
-        </me>
+        </md>
         </p>
     </example>
     <p>Before you become convinced that we're only going to concern ourselves with generating functions that actually converge, let's see that we can talk about the formal power series
-    <me>
+    <md>
         F(x)=\sum_{n=0}^{\infty} n! x^n,
-    </me>
+    </md>
     even though it has radius of convergence<nbsp/><m>0</m>, <ie/>, the series <m>F(x)</m> converges only for <m>x=0</m>, so that <m>F(0)=1</m>. Nevertheless, it makes sense to speak of the formal power series <m>F(x)</m> as the generating function for the sequence <m>\{a_n:n\ge0\}</m>, <m>a_0=1</m> and <m>a_n</m> is the number of permutations of <m>\{1,2,\dots,n\}</m> when <m>n\ge1</m>.
     </p>
 
@@ -79,9 +79,9 @@
     <proposition xml:id="prop_genfunction-product">
         <statement>
             <p>Let <m>A(x)=\sum_{n=0}^\infty a_nx^n</m> and <m>B(x)=\sum_{n=0}^\infty b_nx^n</m> be generating functions. Then <m>A(x)B(x)</m> is the generating function of the sequence whose <m>n^{th}</m> term is given by
-            <me>
+            <md>
                 a_0b_n+a_1b_{n-1}+a_2b_{n-2}+\dots+a_nb_0=\sum_{k=0}^n a_kb_{n-k}.
-            </me>
+            </md>
             </p>
         </statement>
     </proposition>

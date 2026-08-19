@@ -9,22 +9,22 @@
     <proposition xml:id="prop_polya_sum-stabs">
         <statement>
             <p>Let a group <m>G</m> act on a finite set <m>\cgC</m>. Then for all <m>C\in \cgC</m>,
-            <me>
+            <md>
                 \sum_{C'\in\langle C\rangle} |\stab_G(C')| = |G|.
-            </me>
+            </md>
             </p>
         </statement>
     <proof>
         <p>Let <m>\stab_G(C) = \{\pi_1,\dots,\pi_k\}</m> and <m>T(C,C') = \{\pi\in G\colon \pi^*(C) = C'\}</m>. (Note that <m>T(C,C) = \stab_G(C)</m>.) Take <m>\pi\in T(C,C')</m>. Then <m>\pi\circ \pi_i\in T(C,C')</m> for <m>1\leq i\leq k</m>. Furthermore, if <m>\pi\circ \pi_i = \pi\circ \pi_j</m>, then <m>\pi^{-1}\circ\pi\circ \pi_i=\pi^{-1}\circ\pi\circ \pi_j</m>. Thus <m>\pi_i=\pi_j</m> and <m>i=j</m>. If <m>\pi'\in T(C,C')</m>, then <m>\pi\inv\circ \pi'\in T(C,C)</m>. Thus, <m>\pi\inv\circ\pi' = \pi_i</m> for some <m>i</m>, and hence <m>\pi' = \pi\circ \pi_i</m>. Therefore <m>T(C,C') = \{\pi\circ\pi_1,\dots,\pi\circ\pi_k\}</m>. Additionally, we observe that <m>T(C',C) = \{\pi\inv\colon \pi\in T(C,C')\}</m>. Now for all <m>C'\in\langle C\rangle</m>,
-        <me>
+        <md>
             |\stab_G(C')|=|T(C',C')|=|T(C',C)| =
             |T(C,C')| = |T(C,C)| = |\stab_G(C)|.
-        </me>
+        </md>
         Therefore,
-        <me>
+        <md>
             \sum_{C'\in\langle C\rangle}|\stab_G(C')| =
             \sum_{C'\in\langle C\rangle} |T(C,C')|.
-        </me>
+        </md>
             Now notice that each element of <m>G</m> appears in <m>T(C,C')</m> for precisely one <m>C'\in\langle C\rangle</m>, and the proposition follows.
         </p>
     </proof>
@@ -36,9 +36,9 @@
         <title>Burnside's Lemma</title>
         <statement>
             <p>Let a group <m>G</m> act on a finite set <m>\cgC</m>. If <m>N</m> is the number of equivalence classes of <m>\cgC</m> induced by this action, then
-            <me>
+            <md>
                 N = \frac{1}{|G|} \sum_{\pi\in G} |\fix_\cgC(\pi)|.
-            </me>
+            </md>
             </p>
         </statement>
     </lemma>
@@ -47,11 +47,11 @@
 
     <proof>
         <p>Let <m>X=\{(\pi,C)\in G\times \cgC\colon \pi(C) = C\}</m>. Notice that <m>\sum_{\pi \in G} |\fix_\cgC(\pi)| = |X|</m>, since each term in the sum counts how many ordered pairs of <m>X</m> have <m>\pi</m> in their first coordinate. Similarly, <m>\sum_{C\in \cgC} |\stab_G(C)| = |X|</m>, with each term of this sum counting how many ordered pairs of <m>X</m> have <m>C</m> as their second coordinate. Thus, <m>\sum_{\pi \in G} |\fix_\cgC(\pi)|=\sum_{C\in \cgC} |\stab_G(C)|</m>. Now note that the latter sum may be rewritten as
-        <me>
+        <md>
             \sum_{\substack{\text{equivalence} \\\text{classes }  \langle
             C\rangle} }\left( \sum_{C'\in\langle C\rangle}
             |\stab_G(C')|\right).
-        </me>
+        </md>
         By <xref ref="prop_polya_sum-stabs"/>, the inner sum is <m>|G|</m>. Therefore, the total sum is <m>N\cdot |G|</m>, so solving for <m>N</m> gives the desired equation.
         </p>
     </proof>

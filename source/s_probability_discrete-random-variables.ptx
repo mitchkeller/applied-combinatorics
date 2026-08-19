@@ -8,20 +8,20 @@
         </p>
         <example>
             <p>For the spinner shown in <xref ref="fig_spinner"/>, let <m>X(i)=i^2</m> where <m>i</m> is the number of the region. Then
-            <me>
+            <md>
                 E(X)=\sum_{i\in S} i^2P(i)=1^2\frac{1}{8}+2^2\frac{2}{8}+3^2\frac{1}{8}+
                 4^2\frac{1}{8}+5^2\frac{3}{8}=\frac{109}{8}.
-            </me>
+            </md>
             Note that <m>109/8=13.625</m>. The significance of this quantity is captured in the following statement. If we record the result from the spinner <m>n</m> times in succession as <m>(i_1,i_2,\dots,i_n)</m> and Xing receives a prize worth <m>i_j^2</m> for each <m>j=1,2,\dots,n)</m>, then Xing should <q>expect</q> to receive a total prize worth <m>109n/8=13.625n</m>.  Bob asks how this statement can possibly be correct, since <m>13.625n</m> may not even be an integer, and any prize Xing receives will have integral value. Carlos goes on to explain that the concept of expected value provides a formal definition for what is meant by a fair game. If Xing pays <m>13.625</m> cents to play the game and is then paid <m>i^2</m> pennies where <m>i</m> is the number of the region where the spinner stops, then the game is fair. If he pays less, he has an unfair advantage, and if he pays more, the game is biased against him.  Bob says <q>How can Xing pay <m>13.625</m> pennies?</q> Brushing aside Bob's question, Carlos says that one can prove that for every <m>\epsilon &gt;0</m>, there is some <m>n_0</m> (which depends on <m>\epsilon</m>) so that if <m>n&gt;n_0</m>, then the probability that Xing's total winnings minus <m>13.625n</m>, divided by <m>n</m> is within <m>\epsilon</m> of <m>13.625</m> is at least <m>1-\epsilon</m>. Carlos turns to Dave and explains politely that this statement gives a precise meaning of what is meant by <q>close</q> and <q>large</q>.
             </p>
         </example>
 
         <example>
             <p>For Alice's game from the start of the chapter, <m>S=\{0,1,2,3,4,5\}</m>, we could take <m>X</m> to be the function defined by <m>X(d)= 2-d</m>. Then <m>X(d)</m> records the amount that Bob wins when the difference is <m>d</m> (a negative win for Bob is just a win for Alice in the same amount). We calculate the expectation of <m>X</m> as follows:
-            <me>
+            <md>
                 E(X)=\sum_{d=0}^{5}X(d)p(d)= -2\frac{1}{6} -1\frac{10}{36}+0
                 \frac{8}{36}+1\frac{6}{36}+2\frac{4}{36}+3{2}{36}=\frac{-2}{36}.
-            </me>
+            </md>
             Note that <m>-2/36=-.055555\dots</m>. So if points were dollars, each time the game is played, Bob should expect to lose slightly more than a nickel. Needless to say, Alice likes to play this game and the more times Bob can be tricked into playing, the more she likes it.  On the other hand, by this time in the chapter, Bob should be getting the message and telling Alice to go suck a lemon.
             </p>
         </example>
@@ -36,9 +36,9 @@
         <proposition xml:id="prop_linearexpect">
             <statement>
                 <p>Let <m>(S,P)</m> be a probability space and let <m>X_1,X_2,\dots,X_n</m> be random variables. Then
-                <me>
+                <md>
                     E(X_1+X_2+\dots+X_t)=E(X_1)+E(X_2)+\dots+E(X_n).
-                </me>
+                </md>
                 </p>
             </statement>
         </proposition>
@@ -49,20 +49,20 @@
         <title>Implications for Bernoulli Trials</title>
         <example>
             <p>Consider a series of <m>n</m> Bernoulli trials with <m>p</m>, the probability of success, and let <m>X</m> count the number of successes. Then, we claim that
-            <me>
+            <md>
                 E(X)=\sum_{i=0}^n i\binom{n}{i}p^i(1-p)^{n-i}=np
-            </me>
+            </md>
             To see this, consider the function <m>f(x)=[px+(1-p)]^n</m>. Taking the derivative by the chain rule, we find that <m>f'(x)=np[px+(1-p)]^{n-1}</m>.  Now when <m>x=1</m>, the derivative has value <m>np</m>.
             </p>
 
             <p>On the other hand, we can use the binomial theorem to expand the function <m>f</m>.
-            <me>
+            <md>
                 f(x)=\sum_{i=0}^n \binom{n}{i}x^ip^i(1-p)^{n-i}
-            </me>
+            </md>
             It follows that
-            <me>
+            <md>
                 f'(x)=\sum_{i=0}^n i \binom{n}{i}x^{i-}p^i(1-p)^{n-i}
-            </me>
+            </md>
             And now the claim follows by again setting <m>x=1</m>. Who says calculus isn't useful!
             </p>
         </example>

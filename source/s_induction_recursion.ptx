@@ -167,9 +167,9 @@
       </idx>
       <statement>
         <p>Let <m>m</m> and <m>n</m> be positive integers. Then there exist unique integers <m>q</m>
-          and <m>r</m> so that <me>
+          and <m>r</m> so that <md>
             m = q\cdot n+r\quad\text{and} \quad 0 \le r \lt n.
-          </me>
+          </md>
           We call <m>q</m> the <term>quotient</term> and <m>r</m> the <term>remainder</term>. </p>
       </statement>
 
@@ -182,15 +182,15 @@
         <p>First, we note that <m>n\neq 1</m>, for if <m>n=1</m>, then we could take <m>q=m</m> and <m>
           r=0</m>. Also, we cannot have <m>m=1</m>, for if <m>m=1</m>, then we can take <m>q=0</m>
           and <m>r=1</m>. Now the statement holds for the pair <m>m-1</m>, <m>n</m> so there are
-          integers <m>q</m> and <m>r</m> so that <me>
+          integers <m>q</m> and <m>r</m> so that <md>
             m-1 = q\cdot n+r\quad\text{and} \quad 0 \le r \lt n.
-          </me>
-          Since <m>r\lt n</m>, we know that <m>r+1\le n</m>. If <m>r+1\lt n</m>, then <me>
+          </md>
+          Since <m>r\lt n</m>, we know that <m>r+1\le n</m>. If <m>r+1\lt n</m>, then <md>
             m = q\cdot n+(r+1)\quad\text{and} \quad 0 \le r+1 \lt n.
-          </me>
-          On the other hand, if <m>r+1=n</m>, then <me>
+          </md>
+          On the other hand, if <m>r+1=n</m>, then <md>
             m = q\cdot n+(r+1)=nq+n=(q+1)n=(q+1)n+0.
-          </me> The
+          </md> The
           contradiction completes the proof. </p>
       </proof>
     </theorem>
@@ -227,9 +227,9 @@
       </idx>
       <statement>
         <p>Let <m>m,n</m> be positive integers with <m>m\gt n</m> and let <m>q</m> and <m>r</m> be
-          the unique integers for which <me>
+          the unique integers for which <md>
             m = q\cdot n+r\quad\text{and} \quad 0 \le r \lt n.
-          </me>
+          </md>
           If <m>r&gt;0</m>, then <m>\gcd(m,n)=\gcd(n,r)</m>. If <m>r=0</m>, then <m>n</m> divides <m>m</m>,
           and <m>\gcd(m,n) = n</m>. </p>
       </statement>
@@ -288,24 +288,24 @@
       </statement>
       <solution>
         <p>In solving the problem, we demonstrate how to perform the Euclidean algorithm so that we
-          can find <m>a</m> and <m>b</m> by working backward. First, we note that <me>
+          can find <m>a</m> and <m>b</m> by working backward. First, we note that <md>
             3920 = 15\cdot 252 + 140.
-          </me> Now the Euclidean
-          algorithm tells us that <m>\gcd(3920,252)=\gcd(252,140)</m>, so we write <me>
+          </md> Now the Euclidean
+          algorithm tells us that <m>\gcd(3920,252)=\gcd(252,140)</m>, so we write <md>
             252 = 1\cdot 140 + 112.
-          </me> Continuing, we have <m>140=
+          </md> Continuing, we have <m>140=
           1\cdot 112 + 28</m> and <m>112 = 4\cdot 28+0</m>, so <m>d=28</m>. </p>
 
         <p>To find <m>a</m> and <m>b</m>, we now work backward through the equations we found
-          earlier, <q>solving</q> them for the remainder term and then substituting. We begin with <me>
+          earlier, <q>solving</q> them for the remainder term and then substituting. We begin with <md>
           28 = 140-1\cdot 112.
-          </me> But we know that <m>112=252-1\cdot
-          140</m>, so <me>
+          </md> But we know that <m>112=252-1\cdot
+          140</m>, so <md>
             28=140-1(252-1\cdot 140) = 2\cdot 140 - 1\cdot 252.
-          </me>
-          Finally, <m>140 = 3920-15\cdot 252</m>, so now we have <me>
+          </md>
+          Finally, <m>140 = 3920-15\cdot 252</m>, so now we have <md>
             28= 2(3920-15\cdot 252) - 1\cdot 252 = 2\cdot 3920-31\cdot 252.
-          </me>
+          </md>
           Therefore <m>a=2</m> and <m>b=-31</m>. </p>
       </solution>
     </example>
@@ -328,8 +328,8 @@
     <p>To present merge sort<idx>
         <h>merge sort</h>
       </idx>, must first develop a strategy for solving a special case of
-      the sorting problem. Suppose we have <m>s+t</m> distinct integers <me>
-      \{u_0,u_1,\dots,u_{s-1},v_0,v_1,\dots,v_{t-1}\}</me> arranged as two lists with <m>u_0\lt
+      the sorting problem. Suppose we have <m>s+t</m> distinct integers <md>
+      \{u_0,u_1,\dots,u_{s-1},v_0,v_1,\dots,v_{t-1}\}</md> arranged as two lists with <m>u_0\lt
       u_1\lt \dots\lt u_{s-1}</m> and <m>v_0\lt v_1\lt \dots\lt v_{t-1}</m>. How do we <em>merge</em>
       these two sequences into a single increasing sequence of length <m>s+t</m>. Imagine the two
       sequences placed on two horizontal lines, one immediately under the other. Then let <m>u</m>

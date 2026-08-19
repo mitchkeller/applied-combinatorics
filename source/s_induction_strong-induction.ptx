@@ -8,9 +8,9 @@
 
     <p>
         But at this point, Bob seemed to hit a barrier, because
-        <me>
+        <md>
             f(k+1) = 2f(k) - f(k-1) = 2(2k+1) - f(k-1),
-        </me>
+        </md>
         using the inductive hypothesis to replace <m>f(k)</m> by <m>2k+1</m>. However, he's was totally perplexed about what to do with the <m>f(k-1)</m>. If he knew that <m>f(k-1)=2(k-1)+1</m>, then the right hand side would result in <m>2(2k+1) -(2k-1)= 2k+3=2(k+1)+1</m>, which is exactly what he wants. Bob always plays by the rules, and he has to admit that he doesn't know that <m>f(k-1)=2(k-1)+1</m>. He only knows that <m>f(k)=2k+1</m>.
     </p>
 

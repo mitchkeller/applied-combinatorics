@@ -6,9 +6,9 @@
     <solution>
       <p>
         This is a straightforward application of the Principle of Inclusion-Exclusion, and we have
-        <me>
+        <md>
           147 - 60-103-50+30+40+25-18 = 29
-        </me>
+        </md>
         students who like none of the flavors.
       </p>
     </solution>
@@ -47,9 +47,9 @@
               There are 41, 13, and 5 multiples in this range, respectively.
               Finally, being divisible by all three is the same as being divisible by 600, so there is 1 number.
               Thus, applying the Principle of Inclusion-Exclusion, we have
-              <me>
+              <md>
                 1000-333-125-40+41+13+5-1=560
-              </me>
+              </md>
               numbers between 1 and 1000 that are divisible by none of 3, 8, and 25.
             </p>
           </solution>
@@ -97,18 +97,18 @@
             <p>
               Notice that there are <m>C(4,1)</m> ways to pick a single upper bound constraint to violate and <m>C(4,2)</m> ways to pick two upper bound constraints to violate.
               Thus, the total number of solutions is
-              <me>
+              <md>
                 \binom{35}{3}- \binom{4}{1}\binom{24}{3}+ \binom{4}{2}\binom{13}{3}=165
-              </me>.
+              </md>.
             </p>
           </solution>
         </exercise>
         <exercise>
           <statement>
             <p>How many integer solutions are there to the inequality
-              <me>
+              <md>
                 y_1 + y_2 + y_3 + y_4 \lt 184
-              </me>
+              </md>
               with <m>y_1&gt;0</m>, <m>0\lt y_2\leq 10</m>, <m>0\leq y_3\leq 17</m>, and <m>0\leq y_4 \lt 19</m>?</p>
             </statement>
           </exercise>
@@ -230,9 +230,9 @@
                 First we choose the three who do get the correct paycheck.
                 There are <m>C(7,3)</m> ways to do this.
                 Then the other four checks must be distributed using a derangement, so we have
-                <me>
+                <md>
                   \binom{7}{3}d_{4} = \binom{7}{3}\sum_{k=0}^{4}(-1)^{k}\binom{4}{k}(4-k)!
-                </me>
+                </md>
                 ways.
               </p>
             </solution>
@@ -270,9 +270,9 @@
           <exercise>
             <statement>
               <p>Given that <m>1625190883965792 = (2)^5(3)^4(11)^2(13)(23)^3(181)^2</m>, compute
-                <me>
+                <md>
                   \phi(1625190883965792).
-                </me>
+                </md>
               </p>
             </statement>
           </exercise>

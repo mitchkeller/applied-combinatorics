@@ -21,20 +21,20 @@
     <subsection>
         <title>Decimal Representation of Real Numbers</title>
         <p>Every real number has a decimal expansion<mdash/>although the number of digits after the decimal point may be infinite.  A rational number <m>q=m/m</m> from <m>\rats</m> has an expansion in which a certain block of digits repeats indefinitely.  For example,
-        <me>
+        <md>
             \frac{2859}{35} = 81.6857142857142857142857142857142857142857142\dots
-        </me>
+        </md>
         In this case, the block <m>857142</m> of size<nbsp/><m>6</m> is repeated forever.
         </p>
 
         <p>Certain rational numbers have <term>terminating decimal expansions</term>.  For example, we know that <m>385/8= 48.125</m>. If we chose to do so, we could write this instead as an infinite decimal by appending trailing <m>0</m>'s, as a repeating block of size<nbsp/><m>1</m>:
-        <me>
+        <md>
             \frac{385}{8} = 48.1250000000000000000000000000000000\dots
-        </me>
+        </md>
         On the other hand, we can also write the decimal expansion of <m>385/8</m> as
-        <me>
+        <md>
             \frac{385}{8} = 48.12499999999999999999999999999999999\dots
-        </me>
+        </md>
         Here, we intend that the digit <m>9</m>, a block of size<nbsp/><m>1</m>, be repeated forever.  Apart from this anomaly, the decimal expansion of real numbers is unique.
         </p>
 
@@ -42,9 +42,9 @@
         </p>
 
         <p>You know that <m>\sqrt{2}</m> is irrational. Here is the first part of its decimal expansion:
-        <me>
+        <md>
             \sqrt{2} =1.41421356237309504880168872420969807856967187537694807317667973\dots
-        </me>
+        </md>
         An irrational number is said to be <term>algebraic</term> if it is the root of polynomial with integer coefficients; else it is said to be <term>transcendental</term>.  For example, <m>\sqrt{2}</m> is algebraic since it is the root of the polynomial <m>x^2-2</m>.
         </p>
 

@@ -8,16 +8,16 @@
     remaining <m>k_3 = n - (k_1+k_2)</m> are to be colored green. We may compute the number of ways
     to do this by first choosing <m>k_1</m> of the <m>n</m> elements to paint red, then from the
     remaining <m>n-k_1</m> elements choosing <m>k_2</m> to paint blue, and then painting the
-    remaining <m>k_3</m> elements green. It is easy to see that the number of ways to do this is <me>
+    remaining <m>k_3</m> elements green. It is easy to see that the number of ways to do this is <md>
     \binom{n}{k_1}\binom{n-k_1}{k_2} = \frac{n!}{k_1!(n-k_1)!}
       \frac{(n-k_1)!}{k_2!(n-(k_1+k_2))!} = \frac{n!}{k_1!k_2!k_3!}
-    </me>
+    </md>
     Numbers of this form are called <term>multinomial coefficients</term><idx>
       <h>multinomial coefficient</h>
     </idx>; they are an obvious generalization of the binomial
-    coefficients. The general notation is: <me>
+    coefficients. The general notation is: <md>
     \binom{n}{k_1,k_2,k_3,\dots,k_r}=\frac{n!}{k_1!k_2!k_3!\dots k_r!}.
-    </me>
+    </md>
     <notation>
       <usage>
         <m>\binom{n}{k_1,k_2,k_3,\dots,k_r}</m>
@@ -25,10 +25,10 @@
       <description>multinomial coefficient</description>
     </notation>
   </p>
-  <p> For example, <me>
+  <p> For example, <md>
       \binom{8}{3,2,1,2}=\frac{8!}{3!2!1!2!}=
       \frac{40320}{6\cdot2\cdot1\cdot2}=1680.
-    </me>
+    </md>
   </p>
   <p>Note that there is some <q>overkill</q> in this notation, since the value of <m>k_r</m> is
     determined by <m>n</m> and the values for <m>k_1</m>, <m>k_2,\dots,k_{r-1}</m>. For example,
@@ -37,18 +37,18 @@
 
   <example>
     <statement>
-      <p> How many different rearrangements of the string: <me>
+      <p> How many different rearrangements of the string: <md>
         \text{MITCHELTKELLERANDWILLIAMTTROTTERAREGENIUSES!!}
-        </me> are
+        </md> are
         possible if all letters and characters must be used? </p>
     </statement>
     <solution>
       <p>To answer this question, we note that there are a total of <m>45</m> characters distributed
         as follows: 3<nbsp/>A's, 1<nbsp/>C, 1<nbsp/>D, 7<nbsp/>E's, 1<nbsp/>G, 1<nbsp/>H, 4<nbsp/>I's,
         1<nbsp/>K, 5<nbsp/>L's, 2<nbsp/>M's, 2<nbsp/>N's, 1<nbsp/>O, 4<nbsp/>R's, 2<nbsp/>S's,
-        6<nbsp/>T's, 1<nbsp/>U, 1<nbsp/>W, and 2<nbsp/>!'s. So the number of rearrangements is <me>
+        6<nbsp/>T's, 1<nbsp/>U, 1<nbsp/>W, and 2<nbsp/>!'s. So the number of rearrangements is <md>
         \frac{45!}{3!1!1!7!1!1!4!1!5!2!2!1!4!2!6!1!1!2!}.
-        </me>
+        </md>
       </p>
     </solution>
   </example>
@@ -63,11 +63,11 @@
     </idx>
     <statement>
       <p>Let <m>x_1, x_2, \dots, x_r</m> be nonzero real numbers with <m>\sum_{i=1}^r x_i\neq 0</m>.
-        Then for every <m>n\in \nni</m>, <me>
+        Then for every <m>n\in \nni</m>, <md>
           (x_1+x_2+\cdots + x_r)^n =
           \sum_{k_1+k_2+\cdots+k_r=n}\binom{n}{k_1,k_2,\dots,k_r}
           x_1^{k_1}x_2^{k_2}\cdots x_r^{k_r}.
-        </me>
+        </md>
       </p>
     </statement>
   </theorem>
@@ -79,14 +79,14 @@
     </statement>
     <solution>
       <p>By the Multinomial Theorem, the expansion of <m>(2x^3+y-z^2)^{100}</m> has terms of the
-        form <me>
+        form <md>
           \binom{100}{k_1,k_2,k_3} (2x^3)^{k_1}y^{k_2}(-z^2)^{k_3} =
           \binom{100}{k_1,k_2,k_3} 2^{k_1}x^{3k_1}y^{k_2}(-1)^{k_3}z^{2k_3}.
-        </me>
+        </md>
         The <m>x^{99}y^{60}z^{14}</m> arises when <m>k_1 = 33</m>, <m>k_2=60</m>, and <m>k_3=7</m>,
-        so it must have coefficient <me>
+        so it must have coefficient <md>
           -\binom{100}{33,60,7}2^{33}.
-        </me> For <m>x^{99}y^{61}z^{13}</m>,
+        </md> For <m>x^{99}y^{61}z^{13}</m>,
         the exponent on <m>z</m> is odd, which cannot arise in the expansion of <m>
         (2x^3+y-z^2)^{100}</m>, so the coefficient is <m>0</m>. </p>
     </solution>

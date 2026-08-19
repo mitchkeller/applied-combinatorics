@@ -9,13 +9,13 @@
 
         <p>
             Addition of fractions is defined by
-        <me>
+        <md>
             (a,b)+(c,d) = (ad+bc,bd),
-        </me>
+        </md>
             while multiplication is defined by
-        <me>
+        <md>
             (a,b)(c,d) = (ac,bd).
-        </me>
+        </md>
             As was the case with integers, it is important to pause and prove that both operations are well defined.
         </p>
 
@@ -69,10 +69,10 @@
         </p>
 
         <p>Try to imagine the trouble you would have gotten into had you insisted that the real meaning of <m>\frac{1}{2}</m> was
-        <me>
+        <md>
             \frac{1}{2} =\langle(\langle(s(s(0)),s(0))\rangle,
             \langle(s(s(0)),0)\rangle)\rangle
-        </me>
+        </md>
         We can also define a total order on <m>\rats</m>. To do this, we assume that <m>(a,b),(c,d)\in\rats</m> have <m>b,d&gt;0</m>. (If <m>b\lt 0</m>, for example, we would replace it by <m>(a',b')=(-a,-b)</m>, which is in the same equivalence class as <m>(a,b)</m> and has <m>b'&gt;0</m>.) Then we set <m>(a,b)\leq (c,d)</m> in <m>\rats</m> if <m>ad\leq bc</m> in <m>\ints</m>.
         </p>
     </introduction>

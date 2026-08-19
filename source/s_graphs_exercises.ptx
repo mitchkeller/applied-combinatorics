@@ -236,7 +236,7 @@
           <exercise>
             <statement>
               <p>A pharmaceutical manufacturer is building a new warehouse to store its supply of <m>10</m> chemicals it uses in production. However, some of the chemicals cannot be stored in the same room due to undesirable reactions that will occur. The matrix below has a <m>1</m> in position <m>(i,j)</m> if and only if chemical <m>i</m> and chemical <m>j</m> cannot be stored in the same room. Develop an appropriate graph theoretic model and determine the smallest number of rooms into which they can divide their warehouse so that they can safely store all <m>10</m> chemicals in the warehouse.
-                <me>
+                <md>
                   \begin{bmatrix}0 \amp  1 \amp  0 \amp  1 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0\\
                   1 \amp  0 \amp  0 \amp  1 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1\\
                   0 \amp  0 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  1 \amp  0\\
@@ -248,7 +248,7 @@
                   0 \amp  0 \amp  1 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0 \amp  0\\
                   0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  1 \amp  0 \amp  0 \amp  0 \amp  0
                   \end{bmatrix}
-                </me>
+                </md>
               </p>
             </statement>
             <solution>

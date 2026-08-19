@@ -27,9 +27,9 @@
       <alert>Peer instruction question 1</alert>
     </p>
     <p workspace="7cm">
-      <me>
+      <md>
         \binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
-      </me>
+      </md>
       
     </p>
     <p component="a">
@@ -86,9 +86,9 @@
       <solution component="recur-count-soln">
         <p>
           We have 
-          <me>
+          <md>
             f(3) = 3f(2) + 2 = 3(3f(1)+2) + 2 = 9f(1) + 6+ 2= 9\cdot 0 + 8 = 8
-          </me>.
+          </md>.
         </p>
       </solution>
     </activity>
@@ -235,9 +235,9 @@
     <p>
       Recall that we have defined <m>r(n)</m> to be the number of regions in the plane determined by <m>n</m> lines arranged so that (1) each pair of lines intersects and (2) no three lines intersect at a single point and argued that <m>r(1) = 2</m> and for <m>n\geq 2</m>, <m>r(n) = r(n-1) + n</m>.
       Prove that for all positive integers <m>n</m>,
-      <me>
+      <md>
         r(n) = \binom{n+1}{2}+1
-      </me>.
+      </md>.
     </p>
     </statement>
     <solution>
@@ -255,9 +255,9 @@
             <mrow> \amp = \binom{k+2}{2} + 1</mrow>
           </md>.
           Therefore, by the Principle of Mathematical Induction, 
-          <me>
+          <md>
             r(n) = \binom{n+1}{2}+1
-          </me>
+          </md>
           for all positive integers <m>n</m>.
         </p>
       </proof>
@@ -287,9 +287,9 @@
     <statement>
       <p>
         Let <m>f(1)=5</m>, <m>f(2) = 13</m>, and for all integers <m>n\geq 3</m>,
-        <me>
+        <md>
           f(n)=5f(n-1)-6f(n-2).
-        </me>
+        </md>
         Prove that an explict formula for <m>f(n)</m> is given by <m>f(n)=2^{n}+3^{n}</m>.
       </p>
     </statement>

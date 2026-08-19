@@ -6,9 +6,9 @@
   <proposition xml:id="prop_sumints">
     <statement>
       <p>For every positive integer <m>n</m>, the sum of the first <m>n</m> positive integers is <m>
-        n(n+1)/2</m>, <ie/>, <me>
+        n(n+1)/2</m>, <ie/>, <md>
           \sum_{i=1}^n i=\frac{n(n+1)}{2}.
-        </me>
+        </md>
       </p>
     </statement>
   </proposition>
@@ -19,26 +19,26 @@
     in the second version of the proof. </p>
 
   <proof>
-    <p>Let <m>n</m> be a positive integer, and let <m>S_n</m> be the open statement <me>
+    <p>Let <m>n</m> be a positive integer, and let <m>S_n</m> be the open statement <md>
         \sum_{i=1}^n i = \frac{n(n+1)}{2}.
-      </me> We will prove that <m>S_n</m> is
+      </md> We will prove that <m>S_n</m> is
       true for all positive integers by induction. For the basis step, we must prove that <m>S_1</m>
       is true. When <m>n=1</m>, the left-hand side of <m>S_n</m> is just <m>1</m>, while the
       right-hand side evaluates to <m>1(1+1)/2=1</m>. Therefore, <m>S_1</m> is true. </p>
 
     <p>Next we assume that for some positive integer <m>k</m>, <m>S_k</m> is true. That is, we
-      assume <me>
+      assume <md>
         \sum_{i=1}^k i=\frac{k(k+1)}{2}.
-      </me> We now seek to prove that <m>
+      </md> We now seek to prove that <m>
       S_{k+1}</m> is true, and begin by considering the left-hand side of <m>S_{k+1}</m>. We notice
-      that <me>
+      that <md>
         \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
         \frac{k(k+1)}{2}+(k+1),
-      </me>
+      </md>
       since our inductive hypothesis that <m>S_k</m> is true gives us the simpler formula for the
-      summation. Now continuing with a bit of algebra, we find <me>
+      summation. Now continuing with a bit of algebra, we find <md>
       \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
-      </me>
+      </md>
       Therefore, <m>S_{k+1}</m> is true. Since we have shown that <m>S_1</m> is true and that for
       every positive integer <m>k</m>, if <m>S_k</m> is true, then <m>S_{k+1}</m> is true, we
       conclude that <m>S_n</m> is true for all positive integers <m>n</m> by the <xref ref="princ_math-induction" text="title"/>. </p>
@@ -82,12 +82,12 @@
       is just<nbsp/><m>1</m>, while the right-hand side evaluates to <m>1(1+1)/2=1</m>. </p>
 
     <p>Now assume that for some positive integer <m>k</m>, the formula holds when <m>n=k</m>, <ie/>,
-      assume that <me>
+      assume that <md>
         \sum_{i=1}^k i=\frac{k(k+1)}{2}.
-      </me> Then it follows that <me>
+      </md> Then it follows that <md>
       \sum_{i=1}^{k+1}i=\left(\sum_{i=1}^k i\right) +(k+1)=
       \frac{k(k+1)}{2}+(k+1)=\frac{k^2+3k+2}{2}=\frac{(k+1)(k+2)}{2}.
-      </me>
+      </md>
       Thus the formula also holds when <m>n=k+1</m>. By the <xref ref="princ_math-induction" text="title"/>, it holds for all positive integers <m>n</m>. </p>
   </proof>
 
@@ -104,21 +104,21 @@
   <proposition xml:id="prop_sumodd">
     <statement>
       <p>For each positive integer <m>n</m>, the sum of the first <m>n</m> odd positive integers is <m>
-        n^2</m>, <ie/>, <me>
+        n^2</m>, <ie/>, <md>
           \sum_{i=1}^n (2i-1)= n^2.
-        </me>
+        </md>
       </p>
     </statement>
 
     <proof>
       <p>We will prove this by induction. First, note that the formula holds when <m>n=1</m>. Now
         suppose that <m>k</m> is a positive integer and that the formula holds when <m>n=k</m>, <ie/>,
-        assume <me>
+        assume <md>
           \sum_{i=1}^k (2i-1)= k^2.
-        </me> Then <me>
+        </md> Then <md>
         \sum_{i=1}^{k+1}(2i-1)=\left(\sum_{i=1}^k 2i-1\right)+2k+1=
           k^2+(2k+1)=(k+1)^2.
-        </me>
+        </md>
         Therefore, the proposition follows by the <xref ref="princ_math-induction" text="title"/>. </p>
     </proof>
   </proposition>
@@ -129,9 +129,9 @@
 
   <proposition xml:id="prop_sum-bincoeffs">
     <statement>
-      <p>Let <m>n</m> and <m>k</m> be non-negative integers with <m>n\ge k</m>. Then <me>
+      <p>Let <m>n</m> and <m>k</m> be non-negative integers with <m>n\ge k</m>. Then <md>
         \sum_{i=k}^n \binom{i}{k}=\binom{n+1}{k+1}.
-        </me>
+        </md>
       </p>
     </statement>
 
@@ -140,9 +140,9 @@
         n=k</m>, note that the left hand side is just <m>\binom{k}{k}=1</m>, while the right hand
         side is <m>\binom{k+1}{k+1}</m> which is also<nbsp/><m>1</m>. Now assume that <m>m</m> is a
         non-negative integer, with <m>m\ge k</m>, and that the formula holds when <m>n=m</m>, <ie/>,
-        assume that <me>
+        assume that <md>
           \sum_{i=k}^m \binom{i}{k}=\binom{m+1}{k+1}.
-        </me> Then <md>
+        </md> Then <md>
           <mrow> \sum_{i=k}^{m+1}\binom{i}{k} \amp = \sum_{i=k}^{m}\binom{i}{k} +\binom{m+1}{k}</mrow>
           <mrow> \amp =\binom{m+1}{k+1}+\binom{m+1}{k}</mrow>
           <mrow> \amp =\binom{m+2}{k+1}.</mrow>

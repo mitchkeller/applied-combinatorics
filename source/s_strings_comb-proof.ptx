@@ -7,9 +7,9 @@
         <statement>
             <p>
                 Let <m>n</m> be a positive integer. Use <xref ref="fig_squaredots"/> to explain why
-            <me>
+            <md>
                 1+2+3+\dots+n=\frac{n(n+1)}{2}.
-            </me>
+            </md>
             </p>
             <figure xml:id="fig_squaredots">
                 <caption>The sum of the first <m>n</m> integers</caption>
@@ -22,9 +22,9 @@
             </p>
 
             <p>Furthermore, each of those two parts has <m>S(n)=1+2+3+\dots+n</m> dots.  It follows that
-            <me>
+            <md>
                 S(n)=\frac{(n+1)^2-(n+1)}{2}
-            </me>
+            </md>
                 and this is obvious! Now a little algebra on the right hand side of this expression produces the formula given earlier.
             </p>
         </solution>
@@ -34,9 +34,9 @@
         <statement>
             <p>
                 Let <m>n</m> be a positive integer. Explain why
-                <me>
+                <md>
                     1+3+5+\dots+2n-1=n^2.
-                </me>
+                </md>
             </p>
             <figure xml:id="fig_oddsum2">
                 <caption>The sum of the first <m>n</m> odd integers</caption>
@@ -58,9 +58,9 @@
         <statement>
             <p>
                 Let <m>n</m> be a positive integer. Explain why
-            <me>
+            <md>
                 \binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\dots+\binom{n}{n}=2^n.
-            </me>
+            </md>
             </p>
         </statement>
         <solution>
@@ -73,11 +73,11 @@
         <idx><h>binomial coefficient</h><h>identity involving</h></idx>
         <statement>
             <p>Let <m>n</m> and <m>k</m> be integers with <m>0\le k\lt n</m>.  Explain why
-            <me>
+            <md>
                 \binom{n}{k+1} = \binom{k}{k} + \binom{k+1}{k} +
                 \binom{k+2}{k} +\dots+
                 \binom{n-1}{k}.
-            </me>
+            </md>
             </p>
         </statement>
         <solution>
@@ -91,10 +91,10 @@
         <statement>
             <p>
                 Explain the identity
-            <me>
+            <md>
                 3^n=\binom{n}{0}2^0+\binom{n}{1}2^1+\binom{n}{2}2^2+
                 \dots+\binom{n}{n}2^n.
-            </me>
+            </md>
             </p>
         </statement>
         <solution>
@@ -108,11 +108,11 @@
         <statement>
             <p>
                 Explain why, for each non-negative integer<nbsp/><m>n</m>, 
-                <me>
+                <md>
                 \binom{2n}{n}=
                 {\binom{n}{0}}^2+{\binom{n}{1}}^2+{\binom{n}{2}}^2+\dots+
                 {\binom{n}{n}}^2.
-                </me>
+                </md>
             </p>
         </statement>
         <solution>
@@ -125,9 +125,9 @@
           <statement>
             <p>
               Consider the illustration below. Although the grid of circles is eight by seven, please treat it as if it had <m>n+1</m> rows and <m>n</m> columns. Explain how this illustration gives another way to arrive at the formula 
-              <me>
+              <md>
                 1 + 2 + 3+\cdots + n  = \frac{n(n+1)}{2}
-              </me>
+              </md>
               from <xref ref="ex_strings_comb-proof_sum-ints"/>.
             </p>
             <image label="img-rectangular-grid-sum-ints" width="40%">

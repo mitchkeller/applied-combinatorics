@@ -18,9 +18,9 @@
     </p>
     <example xml:id="ex_recurrence_deg2">
       <statement>
-        <p> Find all solutions to the advancement operator equation <men xml:id="eqn_recurrence_deg2">
+        <p> Find all solutions to the advancement operator equation <md number="yes" xml:id="eqn_recurrence_deg2">
             (A^2+A-6)f = 0.
-          </men>
+          </md>
         </p>
       </statement>
       <solution>
@@ -30,9 +30,9 @@
           part of this problem in <xref ref="ex_recurrence_adveq"/>! In that example, the
           polynomial of <m>A</m> we encountered was (while not explicitly stated as such there) <m>
           A-2</m>. The solutions to <m>(A-2)f_1=0</m> are of the form <m>f_1(n) = c_12^n</m>. What
-          happens if we try such a function here? We have <me>
+          happens if we try such a function here? We have <md>
             (A+3)(A-2)f_1(n) = (A+3)0 = 0,
-          </me> so that <m>f_1</m>
+          </md> so that <m>f_1</m>
           is a solution to our given advancement operator equation. Of course, it can't be <em>all</em>
           of them. However, it's not hard to see now that <m>(A+3)f_2 = 0</m> has as a solution <m>f_2(n)
           = c_2(-3)^n</m> by the same reasoning that we used in <xref ref="ex_recurrence_adveq"/>.
@@ -72,19 +72,19 @@
       </idx>
       <p>Let's revisit the problem of enumerating ternary strings of length <m>n</m> that do have <m>
         (2,0)</m> occurring as a substring in two consecutive positions that we encountered in <xref ref="ex_recurrence_ternary-strings-no-20"/>. There we saw that this number satisfies the
-        recurrence equation <me>
+        recurrence equation <md>
           t_{n+2} = 3t_{n+1} - t_n,\qquad n\geq 1
-        </me> and <m>t_1 = 3</m>
+        </md> and <m>t_1 = 3</m>
         and <m>t_2=8</m>. Before endeavoring to solve this, let's rewrite our recurrence equation as
-        an advancement operator equation. This gives us <men xml:id="eqn_recurrence_ternary">
+        an advancement operator equation. This gives us <md number="yes" xml:id="eqn_recurrence_ternary">
         p(A)t=(A^2-3A+1)t=0.
-        </men>
+        </md>
       </p>
       <p>The roots of <m>p(A)</m> are <m>(3\pm\sqrt{5})/2</m>. Following the approach of the
-        previous example, our general solution is <me>
+        previous example, our general solution is <md>
           t(n) = c_1\left(\frac{3+\sqrt{5}}{2}\right)^n +
           c_2\left(\frac{3-\sqrt{5}}{2}\right)^n.
-        </me>
+        </md>
         This probably looks suspicious; we're <em>counting
           strings</em> here, so <m>t(n)</m> needs to be a nonnegative integer, but the form we've
         given includes not just fractions but also square roots! You can mimic the verification we
@@ -96,29 +96,29 @@
           <mrow> 3 \amp = c_1\left(\frac{3+\sqrt{5}}{2}\right) + c_2 \left(\frac{3-\sqrt{5}}{2}\right)</mrow>
           <mrow> 8 \amp = c_1\left(\frac{3+\sqrt{5}}{2}\right)^2 + c_2 \left(\frac{3-\sqrt{5}}{2}\right)^2</mrow>
         </md>. 
-        A little bit of computation gives <me>
+        A little bit of computation gives <md>
           c_1 = \frac{3\sqrt{5}}{10} + \frac{1}{2} \quad\text{and} \quad c_2 =
           -\frac{3\sqrt{5}}{10} +\frac{1}{2}
-        </me>
-        so that <me>
+        </md>
+        so that <md>
           t(n) = \left(\frac{3\sqrt{5}}{10} + \frac{1}{2}\right)
           \left(\frac{3+\sqrt{5}}{2}\right)^n+ \left(-\frac{3\sqrt{5}}{10} +\frac{1}{2}\right) \left(\frac{3-\sqrt{5}}{2}\right)^n.
-        </me>
+        </md>
       </p>
     </example>
 
     <example>
       <statement>
-        <p>Find the general solution to the advancement operator equation <me>
+        <p>Find the general solution to the advancement operator equation <md>
             (A+1)(A-6)(A+4)f = 0.
-          </me>
+          </md>
         </p>
       </statement>
       <solution>
         <p>By now, you shouldn't be surprised that we immediately make use of the roots of <m>p(A)</m>
-          and have that the solution is <me>
+          and have that the solution is <md>
             f(n) = c_1(-1)^n + c_2 6^n + c_3 (-4)^n.
-          </me>
+          </md>
         </p>
       </solution>
     </example>
@@ -133,9 +133,9 @@
         <h>repeated roots</h>
       </idx>
       <statement>
-        <p> Find the general solution of the advancement operator equation <me>
+        <p> Find the general solution of the advancement operator equation <md>
             (A-2)^2 f=0.
-          </me>
+          </md>
         </p>
       </statement>
       <solution>
@@ -154,26 +154,26 @@
             <mrow> \amp = c_22^{n+2} - 2c_2 2^{n+1}</mrow>
             <mrow> \amp = 0.</mrow>
           </md> Since <m>f_2</m> satisfies our advancement
-          operator equation, we have that the general solution is <me>
+          operator equation, we have that the general solution is <md>
             f(n) = c_1 2^n + c_2 n2^n.
-          </me>
+          </md>
         </p>
       </solution>
     </example>
 
     <example xml:id="ex_recurrence_deg4-repeated">
       <statement>
-        <p>Consider the recurrence equation <me>
+        <p>Consider the recurrence equation <md>
             f_{n+4} = -2f_{n+3} + 12f_{n+2} + -14 f_{n+1} + 5f_n
-          </me>
+          </md>
           with initial conditions <m>f_0 = 1</m>, <m>f_1= 2</m>, <m>f_2 = 4</m>, and <m>f_3 = 4</m>.
           Find an explicit formula for <m>f_n</m>. </p>
       </statement>
       <solution>
         <p>We again start by writing the given recurrence equation as an advancement operator
-          equation for a function <m>f(n)</m>: <men xml:id="eqn_recurrence_deg4-repeated">
+          equation for a function <m>f(n)</m>: <md number="yes" xml:id="eqn_recurrence_deg4-repeated">
             (A^4 +2A^3 -12A^2+14A-5)f = 0.
-          </men> Factoring <m>p(A)
+          </md> Factoring <m>p(A)
           = A^4 +2A^3 -12A^2+14A-5</m> gives <m>p(A) = (A+5)(A-1)^3</m>. Right away, we see that <m>f_1(n)
           = c_1 (-5)^n</m> is a solution. The previous example should have you convinced that <m>f_2(n)
           = c_2\cdot 1^n = c_2</m> and <m>f_3(n) = c_3 n \cdot 1^n = c_3 n</m> are also solutions,
@@ -185,9 +185,9 @@
             <mrow> \amp = (A+5)(A-1)(2c_4)</mrow>
             <mrow> \amp = (A+5)(2c_4-2c_4)</mrow>
             <mrow> \amp = 0.</mrow>
-          </md> Thus, the general solution is <me>
+          </md> Thus, the general solution is <md>
             f(n) = c_1 (-5)^n + c_2 + c_3 n + c_4n^2.
-          </me>
+          </md>
         </p>
         <p> Since we have initial conditions, we see that <md>
             <mrow> 1= f(0) \amp = c_1+c_2</mrow>
@@ -196,9 +196,9 @@
             <mrow> 4 = f(3) \amp = -125c_1 + c_2 +3c_3 +9c_4</mrow>
           </md> is a system of
           equations whose solution gives the values for the <m>c_i</m>. Solving this system gives
-          that the desired solution is <me>
+          that the desired solution is <md>
             f(n) = \frac{1}{72} (-5)^n +\frac{71}{72} + \frac{5}{6} n +\frac{1}{4} n^2.
-          </me>
+          </md>
         </p>
       </solution>
     </example>
@@ -218,9 +218,9 @@
       example.
     </p>
     <example>
-      <p>Consider the advancement operator equation <me>
+      <p>Consider the advancement operator equation <md>
           (A+2)(A-6)f=3^n.
-        </me> Let's try to find the general solution
+        </md> Let's try to find the general solution
         to this, since once we have that, we could find the specific solution corresponding to any
         given set of initial conditions. </p>
 
@@ -228,12 +228,12 @@
         will be made clear in <xref ref="lem_particular"/>, but let's focus on the method for the
         moment. Our first step is to find the general solution of the homogeneous equation
         corresponding to the given nonhomogeneous equation. In this case, the homogeneous equation
-        we want to solve is <me>
+        we want to solve is <md>
           (A+2)(A-6)f=0,
-        </me> for which by now you should be quite
-        comfortable in rattling off a general solution of <me>
+        </md> for which by now you should be quite
+        comfortable in rattling off a general solution of <md>
           f_1(n) = c_1 (-2)^n + c_2 6^n.
-        </me>
+        </md>
       </p>
       <p>Now for the process of actually dealing with the nonhomogeneity of the advancement operator
         equation. It actually suffices to find <em>any</em> solution of the nonhomogeneous equation,
@@ -259,10 +259,10 @@
           <mrow> \amp = -5d 3^{n+1}.</mrow>
         </md> We want <m>f_0</m> to be a solution to the
         nonhomogeneous equation, meaning that <m>(A+2)(A-6)f_0 = 3^n</m>. This implies that we need
-        to take <m>d=-1/15</m>. Now, as we mentioned earlier, the general solution is <me>
+        to take <m>d=-1/15</m>. Now, as we mentioned earlier, the general solution is <md>
           f(n) = f_0(n) + f_1(n) = -\frac{1}{15}3^n + c_1 (-2)^n + c_2
           6^n.
-        </me>
+        </md>
       </p>
       <p>
         We leave it to you to verify that this does satisfy the given equation.
@@ -274,9 +274,9 @@
     </p>
     <example>
       <statement>
-        <p> Find the solution to the advancement operator equation <me>
+        <p> Find the solution to the advancement operator equation <md>
             (A+2)(A-6)f=6^n
-          </me> if <m>f(0) = 1</m> and <m>f(1)
+          </md> if <m>f(0) = 1</m> and <m>f(1)
           = 5</m>. </p>
       </statement>
       <solution>
@@ -294,18 +294,18 @@
             <mrow> \amp = d6^{n+2} + 2d 6^{n+1}</mrow>
             <mrow> \amp = 6^n(36d+12d) = 48d6^n.</mrow>
           </md> We want this to be equal to <m>
-          6^n</m>, so we have <m>d = 1/48</m>. Therefore, the general solution is <me>
+          6^n</m>, so we have <m>d = 1/48</m>. Therefore, the general solution is <md>
             f(n) = \frac{1}{48}n6^n + c_1 (-2)^n + c_2 6^n.
-          </me>
+          </md>
         </p>
         <p>All that remains is to use our initial conditions to find the constants <m>c_1</m> and <m>
           c_2</m>. We have that they satisfy the following pair of equations: <md>
             <mrow> 1 \amp = c_1 + c_2</mrow>
             <mrow> 5 \amp = \frac{1}{8} -2c_1+6c_2</mrow>
           </md> Solving these, we arrive at
-          the desired solution, which is <me>
+          the desired solution, which is <md>
             f(n) = \frac{1}{48}n6^n + \frac{9}{64} (-2)^n + \frac{55}{64} 6^n.
-          </me>
+          </md>
         </p>
       </solution>
     </example>
@@ -318,9 +318,9 @@
     <example xml:id="ex_recurrence_lines-solved">
       <p>We're now ready to answer the question of how many regions are determined by <m>n</m> lines
         in the plane in general position as we discussed in <xref ref="s_recurrence_intro_lines"/>.
-        We have the recurrence equation <me>
+        We have the recurrence equation <md>
           r_{n+1} = r_n + n+1,
-        </me> which yields the nonhomogeneous
+        </md> which yields the nonhomogeneous
         advancement operator equation <m>(A-1)r = n+1</m>. As usual, we need to start with the
         general solution to the corresponding homogeneous equation. This solution is <m>f_1(n) = c_1</m>.
         Now our temptation is to try <m>f_0(n)=d_1n+d_2</m> as a particular solution. However since
@@ -330,39 +330,39 @@
           <mrow> (A-1)(d_1n^2+d_2n) \amp = d_1(n+1)^2+d_2(n+1) - d_1n^2 -d_2n</mrow>
           <mrow> \amp = 2d_1n+d_1+d_2.</mrow>
         </md> This tells us that we need <m>d_1=1/2</m>
-        and <m>d_2=1/2</m>, giving <m>f_0(n) = n^2/2 + n/2</m>. The general solution is then <me>
+        and <m>d_2=1/2</m>, giving <m>f_0(n) = n^2/2 + n/2</m>. The general solution is then <md>
         f(n) = c_1 + \frac{n^2+n}{2}.
-        </me>
+        </md>
       </p>
       <p>What is our initial condition here? Well, one line divides the plane into two regions, so <m>f(1)
-        = 2</m>. On the other hand, <m>f(1) = c_1 + 1</m>, so <m>c_1=1</m> and thus <me>
+        = 2</m>. On the other hand, <m>f(1) = c_1 + 1</m>, so <m>c_1=1</m> and thus <md>
           f(n) = 1 + \frac{n^2+n}{2} = \binom{n+1}{2} + 1
-        </me> is the
+        </md> is the
         number of regions into which the plane is divided by <m>n</m> lines in general position. </p>
     </example>
     <p>We conclude this section with one more example showing how to deal with a nonhomogeneous
       advancement operator equation in which the right hand side is of <q>mixed type</q>. </p>
     <example>
       <statement>
-        <p> Give the general solution of the advancement operator equation <me>
+        <p> Give the general solution of the advancement operator equation <md>
             (A-2)^2 f = 3^n + 2n.
-          </me>
+          </md>
         </p>
       </statement>
       <solution>
         <p>Finding the solution to the corresponding homogeneous equation is getting pretty easy at
-          this point, so just note that <me>
+          this point, so just note that <md>
             f_1(n) = c_1 2^n + c_2 n2^n.
-          </me>
+          </md>
         </p>
         <p>What should we try as a particular solution? Fortunately, we have no interference from <m>
           p(A)=(A-2)^2</m> here. Our first instinct is probably to try <m>f_0(n) = d_1 3^n + d_2 n</m>.
           However, this won't actually work. (Try it. You wind up with a leftover constant term that
           you can't just make zero.) The key here is that if we use a term with a nonzero power of <m>
           n</m> in it, we need to include the lower order powers as well (so long as they're not
-          superfluous because of <m>p(A)</m>). Thus, we try <me>
+          superfluous because of <m>p(A)</m>). Thus, we try <md>
             f_0(n) = d_1 3^n + d_2 n + d_3.
-          </me> This gives <md>
+          </md> This gives <md>
             <mrow> (A-2)^2(d_1 3^n + d_2 n + d_3) \amp = (A-2)(d_13^{n+1} + d_2(n+1)+d_3
               - 2d_1 3^n - 2d_2 n -2d_3)</mrow>
             <mrow> \amp = (A-2)(d_13^n - d_2n + d_2 -d_3)</mrow>
@@ -371,9 +371,9 @@
             <mrow> \amp = d_1 3^n + d_2 n -2d_2 + d_3.</mrow>
           </md> We want this to be <m>
           3^n+2n</m>, so matching coefficients gives <m>d_1 = 1</m>, <m>d_2 =2</m>, and <m>d_3=4</m>.
-          Thus, the general solution is <me>
+          Thus, the general solution is <md>
             f(n) = 3^n+2n+4 + c_1 2^n + c_2 n 2^n.
-          </me>
+          </md>
         </p>
       </solution>
     </example>
@@ -390,7 +390,7 @@
     <exercise label="rq-recurrence_solving-solve-plus-deg-two">
       <statement>
         <p>
-          Let <m>c_1</m> and <m>c_2</m> be constants and define <m>f(n) = c_1 3^n + c_2 (-4)^n</m>. Compute <me>(A+4)(A-3)f(n)</me> in two steps: First, compute <m>(A-3)f(n)</m> and in the box below tell me what you get for this first step after simplifying. (Please do not put all your work in the box!) Second, take your answer from the first step and apply <m>(A+4)</m> to it. In the box below, tell me what you get for this second step after simplifying.
+          Let <m>c_1</m> and <m>c_2</m> be constants and define <m>f(n) = c_1 3^n + c_2 (-4)^n</m>. Compute <md>(A+4)(A-3)f(n)</md> in two steps: First, compute <m>(A-3)f(n)</m> and in the box below tell me what you get for this first step after simplifying. (Please do not put all your work in the box!) Second, take your answer from the first step and apply <m>(A+4)</m> to it. In the box below, tell me what you get for this second step after simplifying.
         </p>
       </statement>
       <response/>

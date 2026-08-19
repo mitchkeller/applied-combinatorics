@@ -20,16 +20,16 @@
     analogy with the ordinary generating function <m>1/(1-x)</m> of <xref ref="exam_genfunction_geom-series"/>. </p>
   <example>
     <p>Consider the constant sequence <m>1, 1, 1, 1, \dots</m>. Then the exponential generating
-      function for this sequence is <me>
+      function for this sequence is <md>
         E(x) = \sum_{n=0}^\infty \frac{x^n}{n!}.
-      </me> From calculus, you
+      </md> From calculus, you
       probably recall that this is the power series for the exponential function <m>e^x</m>, which
       is why we call this type of generating function an exponential generating function. From this
       example, we can quickly recognize that the exponential generating function for the number of
-      binary strings of length <m>n</m> is <m>e^{2x}</m> since <me>
+      binary strings of length <m>n</m> is <m>e^{2x}</m> since <md>
         e^{2x} = \sum_{n=0}^\infty \frac{(2x)^n}{n!} = \sum_{n=0}^\infty
         2^n\frac{x^n}{n!}.
-      </me>
+      </md>
     </p>
   </example>
   <p>In our study of ordinary generating functions earlier in this chapter, we considered examples
@@ -49,29 +49,29 @@
       even. (There are no restrictions on the number of <m>1</m>s and <m>2</m>s.) As with ordinary
       generating functions, we determine a generating function for each of the digits and multiply
       them. For <m>1</m>s and <m>2</m>s, since we may have any number of each of them, we introduce
-      a factor of <m>e^x</m> for each. For an even number of <m>0</m>s, we need <me>
+      a factor of <m>e^x</m> for each. For an even number of <m>0</m>s, we need <md>
         1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots =
         \sum_{n=0}^\infty \frac{x^{2n}}{(2n)!}.
-      </me>
+      </md>
       Unlike with ordinary generating functions, we cannot represent this series in a more compact
       form by simply substituting a function of <m>x</m> into the series for <m>e^y</m>. However,
       with a small amount of cleverness, we are able to achieve the desired result. To do this,
-      first notice that <me>
+      first notice that <md>
         e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots =
         \sum_{n=0}^\infty \frac{(-1)^nx^n}{n!}.
-      </me>
+      </md>
       Thus, when we add the series for <m>e^{-x}</m> to the series for <m>e^x</m> all of the terms
-      with odd powers of <m>x</m> will cancel! We thus find <me>
+      with odd powers of <m>x</m> will cancel! We thus find <md>
         e^x+e^{-x} = 2+2\frac{x^2}{2!} + 2\frac{x^4}{4!} + \cdots,
-      </me> which is
+      </md> which is
       exactly twice what we need. Therefore, the factor we introduce for <m>0</m>s is <m>
       (e^x+e^{-x})/2</m>. </p>
 
-    <p>Now we have an exponential generating function of <me>
+    <p>Now we have an exponential generating function of <md>
         \frac{e^x+e^{-x}}{2}e^x e^x = \frac{e^{3x} + e^x}{2} =
         \frac{1}{2}\left(\sum_{n=0}^\infty \frac{3^nx^n}{n!} +
         \sum_{n=0}^\infty \frac{x^n}{n!}\right).
-      </me>
+      </md>
       To find the number of ternary strings in which the number of <m>0</m>s is even, we thus need
       to look at the coefficient on <m>x^n/n!</m> in the series expansion. In doing this, we find
       that the number of ternary strings with an even number of <m>0</m>s is <m>(3^n+1)/2</m>. </p>
@@ -90,18 +90,18 @@
     </statement>
     <solution>
       <p>To ensure that a symbol appears at least once, we need the following exponential generating
-        function <me>
+        function <md>
           x+\frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n=1}^\infty
           \frac{x^n}{n!}.
-        </me>
+        </md>
         You should notice that this is almost the series for <m>e^x</m>, except it's missing the
-        first term. Thus, <m>\sum_{n=1}^\infty x^n/n! = e^x-1</m>. Using this, we now have <me>
+        first term. Thus, <m>\sum_{n=1}^\infty x^n/n! = e^x-1</m>. Using this, we now have <md>
         (e^x-1)(e^x-1)e^x=e^{3x}-2e^{2x}+e^x
-        </me> as the exponential
-        generating function for this problem. Finding the series expansion, we have <me>
+        </md> as the exponential
+        generating function for this problem. Finding the series expansion, we have <md>
         \sum_{n=0}^\infty \frac{3^nx^n}{n!} - 2\sum_{n=0}^\infty
           \frac{2^nx^n}{n!} + \sum_{n=0}^\infty \frac{x^n}{n!}.
-        </me>
+        </md>
         Now we can answer the question by reading off the coefficient on <m>x^n/n!</m>, which is <m>3^n
         - 2\cdot 2^n + 1</m>. </p>
     </solution>
@@ -127,10 +127,10 @@
       restrictions, a factor of <m>e^{7x}</m> is introduced. To account for an even number of <m>0</m>s,
       he uses <m>(e^x+e^{-x})/2</m>. For at least one <m>1</m>, a factor of <m>e^x-1</m> is
       required. Finally, <m>1+x+x^2/2!+x^3/3!</m> accounts for the restriction of at most three <m>2</m>s.
-      The exponential generating function for the number of <m>n</m>-digit passcodes is thus <me>
+      The exponential generating function for the number of <m>n</m>-digit passcodes is thus <md>
       e^{7x}\frac{e^x+e^{-x}}{2}(e^x-1)\left(1+x+\frac{x^2}{2!} +
         \frac{x^3}{3!}\right).
-      </me>
+      </md>
     </p>
     <p>Dave sees this mess written on the whiteboard and groans. He figures they'll be there all day
       multiplying and making algebra mistakes in trying to find the desired coefficient. Alice

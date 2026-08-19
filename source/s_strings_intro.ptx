@@ -50,9 +50,9 @@
     <solution>
       <p>Let <m>X</m> consist of the digits <m>\{0,1,2,\dots,9\}</m>, let <m>Y</m> be the singleton
         set whose only element is a space, and let <m>Z</m> denote the set of capital letters. A
-        valid license plate is just a string from <me>
+        valid license plate is just a string from <md>
           (X-\{0\})\times X\times X\times X\times Y\times Z\times Z\times Z
-        </me>
+        </md>
         so the number of different license plates is <m>9\times10^3\times1\times
           26^3=158\,184\,000</m>, since the size of a product of sets is the product of the sets'
         sizes. We can get a feel for why this is the case by focusing just on the digit part of the
@@ -200,10 +200,10 @@
       <p>Below each position in the string, we've written the number of options for that position.
         (For example, there are 62 options for the second position, since there are <m>52</m>
         letters once both cases are accounted for and <m>10</m> digits.) We then multiply these
-        possibilities together, since each choice is independent of the others. Therefore, we have <me>
+        possibilities together, since each choice is independent of the others. Therefore, we have <md>
         26\times 62^5 \times 2 \times 29^5\times 10 =
           9\,771\,287\,250\,890\,863\,360
-        </me>
+        </md>
         total possible usernames. </p>
     </solution>
   </example>

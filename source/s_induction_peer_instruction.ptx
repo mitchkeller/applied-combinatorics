@@ -40,7 +40,7 @@
     <statement>
       <p>
         Suppose that <m>f</m> is a function on the <em>positive</em> integers.  You know
-        <me>f(n) = 3 f(n-1) + 2f(n-2) - f(n-3)</me>
+        <md>f(n) = 3 f(n-1) + 2f(n-2) - f(n-3)</md>
 	      as well as <m>f(1) = 3</m>, <m>f(2) = 7</m>, and <m>f(4) = 8</m>. Then <m>f(6)</m>
       </p>
     </statement>
@@ -163,7 +163,7 @@
         <statement>
           <p>
 	          Use the inductive hypothesis to conclude 
-            <me>\sum_{i=1}^{k+1}(4i-3)= k(2k-1) + 4(k+1)-3</me>.
+            <md>\sum_{i=1}^{k+1}(4i-3)= k(2k-1) + 4(k+1)-3</md>.
           </p>
         </statement>
       </choice>

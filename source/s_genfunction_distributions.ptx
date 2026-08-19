@@ -17,13 +17,13 @@
       each child receives at least one apple? Well, this isn't too hard, there's only one way to do
       it<mdash/>give all the apples to the lucky kid! Thus the <em>sequence</em> that enumerates
       the number of ways to do this is <m>\{a_n\colon n\geq 1\}</m> with <m>a_n=1</m> for all <m>n\geq
-      1</m>. Then the generating function for this sequence is <me>
+      1</m>. Then the generating function for this sequence is <md>
         x+x^2+x^3+\cdots = x(1+x+x^2+x^3+\cdots) = \frac{x}{1-x}.
-      </me> How can
-      we get from this fact to the question of five children? Notice what happens when we multiply <me>
+      </md> How can
+      we get from this fact to the question of five children? Notice what happens when we multiply <md>
       (x+x^2+\cdots)(x+x^2+\cdots)(x+x^2+\cdots)(x+x^2+\cdots)
         (x+x^2+\cdots).
-      </me>
+      </md>
     </p>
     <p>To see what this product represents, first consider how many ways can we get an <m>x^6</m>?
       We could use the <m>x^2</m> from the first factor and <m>x</m> from each of the other four, or <m>
@@ -70,10 +70,10 @@
         powers of <m>x</m> (corresponding to ensuring at least one apple). The generating function
         for pears is <m>(1+x+x^2+x^3)</m>, since we can have only zero, one, two, or three pears in
         basket. For oranges we have <m>1/(1-x^4) = 1+x^4+x^8+\cdots</m>, and the unrestricted
-        grapefruit give us a factor of <m>1/(1-x)</m>. Multiplying, we have <me>
+        grapefruit give us a factor of <m>1/(1-x)</m>. Multiplying, we have <md>
           \frac{x}{1-x} (1+x+x^2+x^3) \frac{1}{1-x^4} \frac{1}{1-x} =
           \frac{x}{(1-x)^2(1-x^4)} (1+x+x^2+x^3).
-        </me>
+        </md>
         Now we want to make use of the fact that <m>(1+x+x^2+x^3) =(1-x^4)/(1-x)</m> (by <xref ref="eq_genfunction_finite-geom"/>) to see that our generating function is <md>
           <mrow>\frac{x}{(1-x)^3} \amp= \frac{x}{2}\sum_{n=0}^\infty n(n-1)x^{n-2} =
         \sum_{n=0}^\infty\frac{n(n-1)}{2} x^{n-1} </mrow>
@@ -90,29 +90,29 @@
     enumerative topics we have already covered.</p>
   <example xml:id="exa_genfunction_partial-fracs">
     <statement>
-      <p> Find the number of integer solutions to the equation <me>
+      <p> Find the number of integer solutions to the equation <md>
           x_1 + x_2 + x_3 = n
-        </me> (<m>n\geq 0</m> an integer) with <m>x_1
+        </md> (<m>n\geq 0</m> an integer) with <m>x_1
         \geq 0</m> even, <m>x_2\geq 0</m>, and <m>0\leq x_3\leq 2</m>. </p>
     </statement>
     <solution>
       <p>Again, we want to look at the generating function we would have if each variable existed
         individually and take their product. For <m>x_1</m>, we get a factor of <m>1/(1-x^2)</m>;
         for <m>x_2</m>, we have <m>1/(1-x)</m>; and for <m>x_3</m> our factor is <m>(1+x+x^2)</m>.
-        Therefore, the generating function for the number of solutions to the equation above is <me>
+        Therefore, the generating function for the number of solutions to the equation above is <md>
         \frac{1+x+x^2}{(1-x)(1-x^2)} = \frac{1+x+x^2}{(1+x)(1-x)^2}.
-        </me>
+        </md>
         In calculus, when we wanted to integrate a rational function of this form, we would use the
         method of partial fractions to write it as a sum of <q>simpler</q> rational functions whose
         antiderivatives we recognized. Here, our technique is the same, as we can readily recognize
-        the formal power series for many rational functions. Our goal is to write <me>
+        the formal power series for many rational functions. Our goal is to write <md>
         \frac{1+x+x^2}{(1+x)(1-x)^2} = \frac{A}{1+x} + \frac{B}{1-x} +
           \frac{C}{(1-x)^2}
-        </me>
+        </md>
         for appropriate constants, <m>A</m>, <m>B</m>, and <m>C</m>. To find the constants, we clear
-        the denominators, giving <me>
+        the denominators, giving <md>
           1+x+x^2 = A(1-x)^2 + B(1-x^2) + C(1+x).
-        </me> Equating
+        </md> Equating
         coefficients on terms of equal degree, we have: <md>
           <mrow> 1 \amp = A+B+C</mrow>
           <mrow> 1 \amp = -2A + C</mrow>
@@ -128,9 +128,9 @@
             x^{n-1}</mrow>
         </md>. </p>
       <p>The solution to our question is thus the coefficient on <m>x^n</m> in the above generating
-        function, which is <me>
+        function, which is <md>
           \frac{(-1)^n}{4} - \frac{3}{4} + \frac{3(n+1)}{2},
-        </me> a
+        </md> a
         surprising answer that would not be too easy to come up with via other methods! </p>
     </solution>
   </example>
@@ -213,7 +213,7 @@
   <example xml:id="exa_genfunction_multisets">
     <statement>
       <p> Let <m>n</m> be a positive integer. What is the coefficient on <m>x^k</m> in the
-        generating function <me>\frac{1}{(1-x)^n}</me>? </p>
+        generating function <md>\frac{1}{(1-x)^n}</md>? </p>
     </statement>
     <solution>
       <p> We have already encountered the case <m>n=5</m> in the midst of working on <xref ref="exa_genfunction_apples"/>, but there we appealed to calculus. Let's take a look at
@@ -227,8 +227,8 @@
         is the number of ways of distributing <m>k</m> apples to them. This requires <m>n</m>
         artificial apples, so we distribute <m>k+n</m> apples, which determine <m>k+n-1</m> gaps and
         we must choose <m>n-1</m> of them as the locations for dividers. Therefore, we can conclude
-        that <me>\frac{1}{(1-x)^n} = \sum_{k=0}^\infty \binom{k+n-1}{n-1}x^k = \sum_{k=0}^\infty
-        \binom{k+n-1}{k}x^k</me>. It's possible to arrive at this conclusion using techniques from
+        that <md>\frac{1}{(1-x)^n} = \sum_{k=0}^\infty \binom{k+n-1}{n-1}x^k = \sum_{k=0}^\infty
+        \binom{k+n-1}{k}x^k</md>. It's possible to arrive at this conclusion using techniques from
         calculus, but there are a lot of factorials and <m>-1</m>s to monitor, so this combinatorial
         approach may be less error prone!</p>
     </solution>

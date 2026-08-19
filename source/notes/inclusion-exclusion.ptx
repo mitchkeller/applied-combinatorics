@@ -54,9 +54,9 @@
             <p>
               Let <m>X</m> be a set and <m>\mathcal{P}=\{P_{1},\dots,P_{m}\}</m> a family of properties.
               The number of elements of <m>X</m> which satisfy none of the properties in <m>\mathcal{P}</m> is given by
-              <me>
+              <md>
                 \sum_{S\subseteq [m]}(-1)^{|S|}N(S)
-              </me>.
+              </md>.
             </p>
           </statement>
         </theorem>     
@@ -155,9 +155,9 @@
           <statement>
             <p>
               The <term>range</term> of a function <m>f\colon X\to Y</m> is the set
-              <me>
+              <md>
                 \{y\in Y\colon \text{ there is }x\in X\text{ such that }f(x) = y\}
-              </me>.
+              </md>.
             </p>
           </statement>
         </definition>
@@ -179,9 +179,9 @@
           <statement>
             <p>
               The number <m>S(n,m)</m> of surjections from <m>[n]</m> to <m>[m]</m> is given by
-              <me>
+              <md>
                 S(n,m) = \sum_{j=0}^{m} (-1)^{j}\binom{m}{j}(m-j)^{n}
-              </me>.
+              </md>.
             </p>
           </statement>
         </theorem>
@@ -350,10 +350,10 @@
       <p>
         <me component="a">
           d_{n} = \sum_{j=0}^{n} (-1)^{k}\binom{n}{j}(n-j)! = n! \sum_{j=0}^{n} \frac{(-1)^{j}}{j!}\approx \frac{n!}{e}
-        </me>
+        </md>
         <me component="b">
           d_{n} = \sum_{j=0}^{n} (-1)^{j}\binom{n}{j}(n-j)!\phantom{= n! \sum_{j=0}^{n} \frac{(-1)^{j}}{j!}\approx \frac{n!}{e}}
-        </me>
+        </md>
       </p>
       <paragraphs>
         <title>Euler <m>\phi</m> function</title>
@@ -373,9 +373,9 @@
           <statement>
             <p>
               If <m>n\geq 2</m> is an integer, define the <term>Euler <m>\phi</m> function</term> (sometimes <term>Euler totient function</term>)
-              <me>
+              <md>
                 \phi(n) = \left\vert\{m\in [n]\colon \gcd(m,n) = 1\}\right\vert
-              </me>.
+              </md>.
             </p>
           </statement>
         </definition>
@@ -469,9 +469,9 @@
             The number of integers from <m>[n]</m> which are divisible by each of these <m>k</m> primes is
             <me component="b">
               \phantom{\frac{n}{p_{1}p_{2}\cdots p_{k}}.}
-            </me><me component="a">
+            </md><me component="a">
               \frac{n}{p_{1}p_{2}\cdots p_{k}}.
-            </me>
+            </md>
           </p>
         </statement>
       </proposition>
@@ -480,9 +480,9 @@
           <p workspace="4cm">
             Let <m>n\ge2</m> be a positive integer and suppose that <m>n</m> has <m>m</m> distinct prime factors: <m>p_{1}</m>, <m>p_{2},\dots,p_{m}</m>.
             Then
-            <me>
+            <md>
               \phi(n) = n\prod_{i = 1}^{m}\frac{p_{i}-1}{p_{i}}.
-            </me>
+            </md>
           </p>
         </statement>
       </theorem>
@@ -490,9 +490,9 @@
         <statement>
           <p workspace="3cm">
             Use the fact that
-            <me>
+            <md>
               1369122257328767073 = (3)^{3}(11)(19)^{4}(31)^{2}(6067)^{2}
-            </me>
+            </md>
             to compute <m>\phi(1369122257328767073)</m>.
           </p>
         </statement>

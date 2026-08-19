@@ -5,9 +5,9 @@
 
     <p>Despite thinking the material of this chapter was interesting, Bob also wondered if they really needed all of this machinery. <q>Defining a recursive function is easy in almost all programming languages, so why not just use a computer to calculate the values you need?</q><fn>The history of how recursion made its way into ALGOL (and therefore most modern programming languages) involved some intrigue. Maarten van Emden recounts this in a blog post entitled <q><url href="https://vanemden.wordpress.com/2014/06/18/how-recursion-got-into-programming-a-comedy-of-errors-3/" visual="vanemden.wordpress.com/2014/06/18/how-recursion-got-into-programming-a-comedy-of-errors-3/">How recursion got into programming: a tale of intrigue, betrayal, and advanced programming-language semantics</url></q>.</fn> Xing started to remark that the techniques of this chapter could provide a good way to understand the growth rate of recursive functions in terms of the big Oh notation of <xref ref="ch_basics"/>, but Alice interrupted to propose a programming experiment as something that would raise her spirits. (The chance to prove Bob wrong was probably more motivational than the chance to do some coding, but she didn't want to be <em>too</em> mean.)</p>
     <p>The group decided to take a look at the recurrence in <xref ref="ex_recurrence_gf-nonhomog"/>, which they immediately wrote as a recursive function defined on the nonnegative integers by
-    <me>r(n) =\begin{cases} 2^n + r(n-1) + 2r(n-2)\amp \text{if }n\geq 2;\\
+    <md>r(n) =\begin{cases} 2^n + r(n-1) + 2r(n-2)\amp \text{if }n\geq 2;\\
     1\amp\text{if }n=1;\\
-    2\amp\text{if }n=0.\end{cases}</me>
+    2\amp\text{if }n=0.\end{cases}</md>
     Alice grabbed her computer and implemented this in SageMath and computed a few test values.
     </p>
     <sage>

@@ -39,10 +39,10 @@
       We saw this sum on the handout during our last class:
       <me component="a">
         \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}= 2^{n}
-      </me>
+      </md>
       <me component="b">
         \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}
-      </me>
+      </md>
     </p>
     <sidebyside widths="40% 55%">
       
@@ -115,9 +115,9 @@
       <statement>
         <p>
           We just saw that
-          <me>
+          <md>
             1 + 2 + \cdots + n = \binom{n+1}{2}
-          </me>. 
+          </md>. 
           Can we find a proof that counts <m>2</m>-element subsets?
         </p>
         <p>
@@ -224,9 +224,9 @@
         <introduction>
           <p>
             We want to count the number of solutions to
-            <me>
+            <md>
               x_1+x_2+x_3+x_4+x_5 = 37
-            </me>
+            </md>
             where each <m>x_i</m> is an integer. For each of the following scenarios, determine the number of solutions.
           </p>
         </introduction>
@@ -300,9 +300,9 @@
         <statement>
           <p>
             A <term>lattice path</term> is a sequence of ordered pairs of integers
-            <me>
+            <md>
               (m_{1},n_{1}), (m_{2},n_{2}), (m_{3},n_{3}),\dots,(m_{t},n_{t})
-            </me>
+            </md>
             so that for all <m>i=1,2,\dots,t-1</m>, either
             <ul>
               <li>
@@ -595,9 +595,9 @@
           <p>
             Let <m>x_{1},x_{2},\dots,x_{r}</m> be nonzero real numbers with <m>x_{1} + x_{2} + \cdots + x_{r} \neq 0</m>.
             Then for every nonnegative integer <m>n</m>,
-            <me>
+            <md>
               (x_{1}+x_{2} + \cdots + x_{r})^{n} = \sum_{k_1+k_2 + \cdots + k_r=n}\binom{n}{k_1,k_2,\dots,k_r}x_{1}^{k_1}x_{2}^{k_2}\cdots x_{r}^{k_r}.
-            </me>
+            </md>
           </p>
         </statement>
       </theorem>

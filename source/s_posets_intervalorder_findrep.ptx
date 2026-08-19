@@ -35,14 +35,14 @@
     you</em> will provide) the details for backing up the following statement: <m>
     |\mathcal{U}|=|\mathcal{D}|</m>, so for now we assume that this statement is valid. Label the
     sets in <m>\mathcal{D}</m> and <m>\mathcal{U}</m> respectively as <m>D_1</m>, <m>D_2,\dots,D_d</m>
-    and <m>U_1</m>, <m>U_2,\dots,U_d</m> so that <me>
+    and <m>U_1</m>, <m>U_2,\dots,U_d</m> so that <md>
       \emptyset= D_1\subset D_2\subset D_3\subset\dots\subset D_d
       \quad\text{and}
-    </me>
-    <me>
+    </md>
+    <md>
     U_1\supset U_{2}\cdots \supset U_{d-2}\supset U_{d-1}\supset\dots\supset U_d
       =\emptyset.
-    </me>
+    </md>
     We form an interval representation <m>I</m> of <m>\bfP</m> by the following rule: For each <m>x\in
     X</m>, set <m>I(x)=[i,j]</m>, where <m>D(x)=D_i</m> and <m>U(x)=U_j</m>. It is not immediately
     clear that this rule is legal, <ie/>, it might happen that applying the rule results in values

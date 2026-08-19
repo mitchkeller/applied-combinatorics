@@ -46,9 +46,9 @@
                   <ol>
                     <li><p>There is a <em>unique</em> path <m>P=(x_0,x_1,x_2,\dots,x_t)</m> with (a)<nbsp/><m>x=x_0</m>; (b)<nbsp/><m>y=x_t</m>; and (c)<nbsp/><m>x_ix_{i+1}\in S</m> for each <m>i=0,1,2,\dots,t-1</m>.</p></li>
                     <li><p>For each <m>i=0,1,2,\dots,t-1</m>, let <m>f_i=x_ix_{i+1}</m> and then set
-                    <me>
+                    <md>
                         S_i = \{e\}\cup\{g\in S: g\neq f_i\},
-                    </me>
+                    </md>
                     <ie/>, we <term>exchange</term> edge <m>f_i</m> for edge <m>e</m>. Then <m>\bfT_i=(V,S_i)</m> is a spanning tree of <m>\bfG</m>.</p></li>
                 
                   </ol>
@@ -119,9 +119,9 @@
                     <li>
                         <title>Inductive Step.</title>
                         <p>While <m>|S| \lt n-1</m>, let <m>j</m> be the least non-negative integer so that <m>j &gt; i</m> and there are no cycles in <m>S\cup\{e_j\}</m>. Then (using pseudo-code) set
-                        <me>
+                        <md>
                             i = j\quad\text{and} \quad S= S\cup\{j\}.
-                        </me>
+                        </md>
                         </p>
                     </li>
                </dl>
@@ -173,9 +173,9 @@ c h 79</pre>
                     <li>
                         <title>Inductive Step.</title>
                         <p>While <m>|W| \lt n</m>, let <m>e</m> be an edge of minimum weight among all edges with one endpoint in <m>W</m> and the other not in <m>W</m>.  If <m>e=xy</m>, <m>x\in W</m> and <m>y\not\in W</m>, update <m>W</m> and <m>S</m> by setting (using pseudo-code)
-                        <me>
+                        <md>
                             W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
-                        </me>
+                        </md>
                         </p>
                     </li>
                </dl>

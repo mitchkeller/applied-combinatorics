@@ -12,9 +12,9 @@
   <exercise>
     <statement>
       <p>Is the binary relation
-        <me>
+        <md>
           P=\{(1,1),(2,2),(3,3),(4,4),(1,3),(2,4),(2,5),(4,5),(3,5),(1,5)\}
-        </me>
+        </md>
         a partial order on the set <m>X=\{1,2,3,4,5\}</m>? If so, discuss what properties you verified and how. If not, list the ordered pairs that must be added to <m>P</m> to make it a partial order or say why it cannot be made a partial order by adding ordered pairs.</p>
       </statement>
     </exercise>
@@ -30,8 +30,8 @@
         <exercise>
           <statement>
             <p>Draw the diagram of the poset <m>\PXP</m> where
-              <me>X=\{\{1,3,4,5,6\},\{1,2,4,5,6\},\{1,2,3,6\},\{1,2,3\},\{1,5,6\},\\\{1,3,6\},\{1,2\},\{1,6\},\{3,5\},\{1\},\{3\},\{4\}\}
-              </me>
+              <md>X=\{\{1,3,4,5,6\},\{1,2,4,5,6\},\{1,2,3,6\},\{1,2,3\},\{1,5,6\},\\\{1,3,6\},\{1,2\},\{1,6\},\{3,5\},\{1\},\{3\},\{4\}\}
+              </md>
               and <m>P</m> is the partial order on <m>X</m> given by the <q>is a subset of</q> relationship.</p>
             </statement>
           </exercise>
@@ -43,15 +43,15 @@
               <p>
                 There are many linear extensions for each of these posets, so we just give one for each of these posets.
                 For ease of formatting, they are written horizontally with the smallest element at the left:
-                <me>
+                <md>
                   \{3\} \lt \{2\} \lt \{3,7\} \lt \{2,5\} \lt \{2,3,11\} \lt \{2,3,5,7\} \lt \{2,5,25\}
-                </me>
-                <me>
+                </md>
+                <md>
                   2 \lt 10\lt 66 \lt 3\lt 21 \lt 210 \lt 50
-                </me>
-                <me>
+                </md>
+                <md>
                   (1,2,1) \lt (2,5,4) \lt (4,1,5)\lt (3,3,2)\lt (6,4,5)\lt (7,6,7)\lt (5,7,3)
-                </me>
+                </md>
               </p>
 
               <p>
@@ -319,12 +319,12 @@
                 </md>
                 
                 Putting the down-sets in ascending order and the up-sets in ascending order, we have
-                <me>
+                <md>
                   \{\} \subsetneq \{7\}\subsetneq \{2,7\}\subsetneq \{2,4,7\} \subsetneq \{2,4,7,10\}\subsetneq \{1,2,4,7,10\}\subsetneq \{1,2,4,5,7,10,12\}\subsetneq \{1,2,4,5,6,7,8,10,12\}
-                </me>
-                <me>
+                </md>
+                <md>
                   \{1,2,3,5,6,8,9,10,11,12\}\supsetneq \{1,3,5,6,8,9,10,11,12\}\supsetneq \{3,6,8,9,10,11\}\supsetneq \{3,6,8,9,11\} \supsetneq \{6,8,9,11\}\supsetneq \{8,9,11\}\supsetneq \{9,11\}\supsetneq \{\}
-                </me>
+                </md>
                 Therefore, the the poset is an interval order and an interval representation is
                 
                 <md>

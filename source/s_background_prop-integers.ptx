@@ -4,9 +4,9 @@
     </p>
 
     <p>We define a binary operation <m>+</m> on <m>\ints</m> by the following rule:
-    <me>
+    <md>
         \langle(a,b)\rangle+\langle(c,d)\rangle = \langle(a+c,b+d)\rangle.
-    </me>
+    </md>
     Note that the definition of addition is made in terms of representatives of the class, so we must pause to make sure that <m>+</m> is <term>well defined</term>, <ie/>, independent of the particular representatives.
     </p>
 
@@ -40,9 +40,9 @@
     </theorem>
 
     <p>Next, we define a second binary operation called <term>multiplication</term>, and denoted <m>x\times y</m>, <m>x*y</m> or just <m>xy</m>. When <m>x=\langle(a,b)\rangle</m> and <m>y=\langle(c,d)\rangle</m>, we define:
-    <me>
+    <md>
         xy =\langle(a,b)\rangle\langle(c,d)\rangle= \langle(ac+bd, ad+bc)\rangle.
-    </me>
+    </md>
     </p>
     <theorem>
         <statement>

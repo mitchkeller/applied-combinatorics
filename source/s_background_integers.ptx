@@ -1,9 +1,9 @@
 <section xml:id="s_background_integers">
     <title>The Integers as Equivalence Classes of Ordered Pairs</title>
     <p>Define a binary relation <m>\cong</m> on the set <m>Z=\nonnegints \times\nonnegints</m> by
-    <me>
+    <md>
         (a,b)\cong (c,d)\quad\textit{iff}\quad a+d=b+c.
-    </me>
+    </md>
     </p>
     <lemma>
         <statement>
@@ -39,18 +39,18 @@
         <proof>
             <p>
                 Let <m>(a,b), (c,d), (e,f)\in Z</m>. Suppose that
-                <me>
+                <md>
                     (a,b)\cong(c,d)\quad\text{and} \quad (c,d)\cong (e,f).
-                </me>
+                </md>
                 Then <m>a+d=b+c</m> and <m>c+f=d+e</m>. Therefore,
 
-                <me>
+                <md>
                     (a+d)+(c+f) =(b+c)+(d+e).
-                </me>
+                </md>
                 It follows that
-                <me>
+                <md>
                     (a+f)+(c+d) =(b+e)+(c+d).
-                </me>
+                </md>
                 Thus <m>a+f = b+e</m> so that <m>(a,b)\cong(e,f)</m>.
             </p>
         </proof>

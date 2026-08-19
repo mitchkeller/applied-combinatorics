@@ -105,9 +105,9 @@
         <statement>
           <p workspace="3cm">
             Let <m>\deg_{\bfG}(v)</m> denote the degree of vertex <m>v</m> in graph <m>\GVE</m>. Then
-            <me>
+            <md>
               \sum_{v\in V}\deg_{\bfG}(v) = 2|E|
-            </me>.
+            </md>.
           </p>
         </statement>
         <proof component="a">
@@ -117,9 +117,9 @@
         </proof>
       </theorem>
       <p compnent="a">
-        <me>
+        <md>
           |E| = \frac{1}{2} \sum_{v\in V}\deg_{\bfG}(v)
-        </me>
+        </md>
       </p>
       <corollary xml:id="cor-num-odd-vts">
         <statement>

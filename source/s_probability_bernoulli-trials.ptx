@@ -18,17 +18,17 @@
 
     <example>
         <p>A fair coin is tossed <m>100</m> times and the outcome (heads or tails) is recorded. Then the probability of getting heads <m>40</m> times and tails the other <m>60</m> times is
-        <me>
+        <md>
             \binom{100}{40}\left(\frac{1}{2}\right)^{40}\left(\frac{1}{2}\right)^{60} =\frac{\binom{100}{40}}{2^{100}}.
-        </me>
+        </md>
         </p>
     </example>
 
     <remark>
         <p>Bob says that if a fair coin is tossed <m>100</m> times, it is fairly likely that you will get exactly <m>50</m> heads and <m>50</m> tails. Dave is not so certain this is right. Carlos fires up his computer and in few second, he reports that the probability of getting exactly <m>50</m> heads when a fair coin is tossed <m>100</m> times is
-        <me>
+        <md>
            \frac{12611418068195524166851562157}{158456325028528675187087900672}
-        </me>
+        </md>
         which is <m>.079589</m>, to six decimal places.  In other words, not very likely at all. Xing is doing a modestly more complicated calculation, and he reports that you have a <m>99</m>% chance that the number of heads is at least <m>20</m> and at most <m>80</m>. Carlos adds that when <m>n</m> is very large, then it is increasingly certain that the number of heads in <m>n</m> tosses will be close to <m>n/2</m>. Dave asks what do you mean by close, and what do you mean by very large?
         </p>
     </remark>

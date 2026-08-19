@@ -111,9 +111,9 @@
         that has not already been traversed. If there is no such integer, since there are edges that
         have not yet been traversed, then we have discovered that the graph is disconnected. We
         may assume that the integer <m>i</m> exists. Set <m>u_0=x_i</m>. We define a sequence <m>
-        (u_0,u_1,\dots,u_s)</m> recursively. If <m>j\ge 0</m>, set <me>
+        (u_0,u_1,\dots,u_s)</m> recursively. If <m>j\ge 0</m>, set <md>
           N_j=\{y: u_jy\text{ is an edge in }\bfG\text{ and has not yet been traversed.} \}
-        </me>
+        </md>
         If <m>N_j\neq\emptyset</m>, we take <m>u_{j+1}</m> as the least positive integer in <m>N_j</m>.
         If <m>N_j=\emptyset</m>, then <m>j\ge1</m> and we take <m>s=j</m> and halt this subroutine. </p>
 
@@ -274,9 +274,9 @@
         P=(x_1,x_2,\dots,x_t)</m> on <m>t</m> vertices. Clearly all neighbors of both <m>x_1</m> and <m>
         x_t</m> appear on this path. By the pigeon hole principle, there is some integer <m>i</m>
         with <m>1\le i\lt t</m> so that <m>x_1x_{i+1}</m> and <m>x_{i}x_t</m> are edges in <m>\bfG</m>.
-        However, this implies that <me>
+        However, this implies that <md>
           C=(x_1,x_2,x_3,\dots,x_i,x_t,x_{t-1},x_{t-2},\dots,x_{i+1})
-        </me> is a
+        </md> is a
         cycle of length <m>t</m> in <m>\bfG</m>. In turn, this requires <m>\lceil n/2\rceil \lt t\lt
         n</m>. But if <m>y</m> is any vertex not on the cycle, then <m>y</m> must have a neighbor on <m>
         C</m>, which implies that <m>\bfG</m> has a path on <m>t+1</m> vertices. The contradiction

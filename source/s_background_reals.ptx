@@ -16,9 +16,9 @@
     </p>
 
     <p>The operation of addition on cuts is defined in the natural way. If <m>S</m> and <m>T</m> are cuts, set <m>S+T=\{s+t:s\in S, t\in T\}</m>.  Order on cuts is defined in terms of inclusion, <ie/>, <m>S\lt T</m> if and only if <m>S\subsetneq T</m>. A cut is <term>positive</term> if it is greater than <m>\bar{0}</m>. When <m>S</m> and <m>T</m> are positive cuts, the product <m>ST</m> is defined by
-    <me>
+    <md>
         ST= \bar{0}\cup\{st:s\in S, t\in T, s\ge0, t\ge 0\}.
-    </me>
+    </md>
     One can easily show that there is a real number <m>r</m> so that <m>r^2=\bar{2}</m>. You may be surprised, but perhaps not, to learn that this real number is denoted <m>\sqrt2</m>.
     </p>
 

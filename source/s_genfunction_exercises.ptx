@@ -96,9 +96,9 @@
     <exercise xml:id="ex_genfunction_ineq-clean">
         <statement>
             <p>Consider the inequality
-            <me>
+            <md>
                 x_1+x_2+x_3+x_4\leq n
-            </me>
+            </md>
             where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of <m>4</m>, and <m>0\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of the inequality subject to these restrictions. Find the generating function for the sequence <m>\{c_n\colon n\geq 0\}</m> and use it to find a closed formula for <m>c_n</m>.</p>
         </statement>
         <solution>
@@ -109,14 +109,14 @@
                 For <m>x_{3}</m> to be a multiple of <m>4</m>, the generating function includes <m>1/(1-x^{4})</m>.
                 To have <m>0\leq x_{4}\leq 3</m>, we end up with <m>1+x+x^{2}+x^{3}</m> in the generating function.
                 Thus, the generating function is
-                <me>
+                <md>
                     \left(\frac{1}{1-x}\right)^{2} \frac{x^{2}}{1-x}\frac{1}{1-x^{4}}\left(1+x+x^{2}+x^{3}\right)
-                </me>.
+                </md>.
                 This generating function simplifies (by factoring <m>1-x^{4}</m>) to be <m>x^{2}/(1-x)^{4}</m>.
                 Noting that <m>1/(1-x)^{4}</m> is <m>1/6</m> times the third derivative of <m>1/(1-x)</m>, we have
-                <me>
+                <md>
                     \frac{x^{2}}{(1-x)^{4}}= x^{2}\frac{1}{6}\sum_{n=3}^{\infty} n(n-1)(n-2)x^{n-3}= \frac{1}{6}\sum_{n=0}^{\infty} (n+1)n(n-1)x^{n}
-                </me>
+                </md>
                 and therefore, we have <m>c_{n}=\frac{n(n^{2}-1)}{6}</m>.
             </p>
         </solution>
@@ -156,9 +156,9 @@
         </statement>
         <hint>
             <p>Find the partial fractions expansion for your generating function. Be careful here, as you want a partial fraction expansion in which all coefficients for your denominator polynomials have integer coefficients. The <c>partial_fraction()</c> method in SageMath should be useful here, and <c>pretty_print</c> will make it easier to read. Once you have the right partial fractions expansion, you may find the following identity helpful
-            <me>
+            <md>
                 \frac{p(x)}{1+x+x^2+\cdots + x^k} = \frac{p(x)(1-x)}{1-x^{k+1}},
-            </me>
+            </md>
             where <m>p(x)</m> will be a polynomial in this instance.
             </p>
         </hint>
@@ -191,9 +191,9 @@
                 The generating function thus includes <m>1+x^{20}</m>.
                 For milk chocolate bars, since we buy at most 3 at €7/bar, the generating function must include <m>1+x^{7}+x^{14}+x^{21}</m>.
                 Finally, for the 75
-                <me>
+                <md>
                     \frac{1}{1-x^{20}}\frac{x^{16}}{1-x^{8}}\left(1+x^{20}\right)\left(1+x^{7}+x^{14}+x^{21}\right)\frac{1}{1-x^{11}}
-                </me>.
+                </md>.
                 Putting this into SageMath, we find that <m>s_{100}= 16</m>, so there are <m>16</m> ways for her to spend €100.
             </p>
         </solution>
@@ -212,9 +212,9 @@
     <exercise>
         <statement>
             <p>Make up a combinatorial problem (similar to those found in this chapter) that leads to the generating function
-            <me>
+            <md>
                 \frac{(1+x^2+x^4)x^2}{(1-x)^3(1-x^3)(1-x^{10})}.
-            </me>
+            </md>
             </p>
         </statement>
     </exercise>
@@ -254,9 +254,9 @@
                     <li>We are seeking the number of solutions to the equation <m>a_1 +
 \cdots + a_k = n</m> (where <m>k</m> is allowed to vary) subject to
 <m>a_i\in\{1,5,10,25\}</m>. Therefore, the ordinary generating function is
-<me>
+<md>
 \sum_{k=0}^\infty (x+x^5+x^{10}+x^{25})^k=\frac{1}{1-x-x^5-x^{10}-x^{25}}
-</me>. A computer algebra system gives 1856250874024 as the coefficient on <m>x^{95}</m>.
+</md>. A computer algebra system gives 1856250874024 as the coefficient on <m>x^{95}</m>.
 </li>
                 </ol>
             </p>
@@ -357,9 +357,9 @@
     <exercise xml:id="ex_genfunction_ineq-messy">
         <statement>
             <p>Consider the inequality
-            <me>
+            <md>
                 x_1+x_2+x_3+x_4\leq n
-            </me>
+            </md>
             where <m>x_1,x_2,x_3,x_4,n\geq 0</m> are all integers. Suppose also that <m>x_2\geq 2</m>, <m>x_3</m> is a multiple of <m>4</m>, and <m>1\leq x_4\leq 3</m>. Let <m>c_n</m> be the number of solutions of the inequality subject to these restrictions. Find the generating function for the sequence <m>\{c_n\colon n\geq 0\}</m> and use it to find a closed formula for <m>c_n</m>.</p>
         </statement>
         <hint>

@@ -14,9 +14,9 @@
     <subsection>
         <title>Approximate and Asymptotic Solutions</title>
         <p>Here's an example of a famous problem that we can only discuss in terms of approximate solutions, at least when the input size is suitably large.  For an integer <m>n</m>, let <m>\pi(n)</m> denote the number of primes among the first <m>n</m> positive integers. For example, <m>\pi(12)=5</m> since <m>2</m>, <m>3</m>, <m>5</m>, <m>7</m> and <m>11</m> are primes.  The exact value of <m>\pi(n)</m> is known when <m>n\le 10^{23}</m>, and in fact:
-        <me>
+        <md>
             \pi(10^{23}) = 1,925,320,391,606,803,968,923
-        </me>
+        </md>
         </p>
         <p>On the other hand, you might ask whether <m>\pi(n)</m> tends to infinity as <m>n</m> grows larger and larger. The answer is yes, and here's a simple and quite classic argument. Suppose to the contrary that there were only <m>k</m> primes, where <m>k</m> is a positive integer. Suppose these <m>k</m> primes are listed in increasing order as <m>p_1\lt p_2\lt \dots\lt p_k</m>, and consider the number <m>n=1+p_1p_2\cdots p_k</m>.  Then <m>n</m> is not divisible by any of these primes, and it is larger than <m>p_k</m>, which implies that <m>n</m> is either a prime number larger than <m>p_k</m> or divisible by a prime number larger than <m>p_k</m>.
         </p>
@@ -25,9 +25,9 @@
         </p>
 
         <p>On the basis of computational results (done by hand, long before there were computers), Legendre conjectured in 1796 that <m>\pi(n)</m> goes to infinity like <m>n/\ln n</m>. To be more precise, he conjectured that
-        <me>
+        <md>
             \lim_{n\rightarrow\infty}\frac{\pi(n)\ln n}{n}=1.
-        </me>
+        </md>
             In 1896, exactly one hundred years after Legendre's conjecture, Hadamard and de la Vall&#233;e-Poussin independently published proofs of the conjecture, using techniques whose roots are in the Riemann's pioneering work in complex analysis. This result, now known simply as the <em>Prime Number Theorem</em>, continues to this day to be much studied topic at the boundary of analysis and number theory.
         </p>
     </subsection>

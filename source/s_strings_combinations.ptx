@@ -12,9 +12,9 @@
     <proposition xml:id="prop_strings_binomraw"><idx><h>binomial coefficient</h><h>formula for</h></idx><idx><h>combination</h><h>number of</h><h>formula for</h></idx>
         <statement>
             <p>If <m>n</m> and <m>k</m> are integers with <m>0\le k\le n</m>, then
-            <me>
+            <md>
                 \binom{n}{k}=C(n,k)=\frac{P(n,k)}{k!}=\frac{n!}{k!(n-k)!}
-            </me>
+            </md>
             </p>
         </statement>
         <proof>
@@ -36,9 +36,9 @@
         <statement>
             <p>
                 For all integers <m>n</m> and <m>k</m> with <m>0\le k\le n</m>,
-                <me>
+                <md>
                     \binom{n}{k}=\binom{n}{n-k}.
-                </me>
+                </md>
             </p>
         </statement>
     </proposition>

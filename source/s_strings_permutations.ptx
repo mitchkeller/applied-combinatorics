@@ -40,22 +40,22 @@
         <m>n!</m>
       </usage>
       <description><m>n</m> factorial</description>
-    </notation>) by <me>
+    </notation>) by <md>
       n! = n\cdot (n-1)\cdot (n-2)\cdot \cdots\cdot 3\cdot 2\cdot 1.
-    </me> By
+    </md> By
     convention, we set <m>0!=1</m>. As an example, <m>7!=7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2 \cdot
-    1=5040</m>. Now for integers <m>m,n</m> with <m>m\ge n\ge0</m> define <m>P(m,n)</m> by <me>
+    1=5040</m>. Now for integers <m>m,n</m> with <m>m\ge n\ge0</m> define <m>P(m,n)</m> by <md>
     P(m,n) = \frac{m!}{(m-n)!} = m(m-1)\cdots(m-n+1).
-    </me><notation>
+    </md><notation>
       <usage>
         <m>P(m,n)</m>
       </usage>
       <description>number of permutations</description>
     </notation> For example, <m>P(9,3)=9\cdot
     8\cdot 7=504</m> and <m>P(8,4)=8\cdot 7\cdot 6\cdot5 =1680</m>. Also, a computer algebra system
-    will quickly report that <me>
+    will quickly report that <md>
       P(68,23) = 20732231223375515741894286164203929600000.
-    </me>
+    </md>
   </p>
   <proposition xml:id="prop_strings_permutations">
     <statement>
@@ -70,9 +70,9 @@
         fixing <m>x_1</m>, we have that for <m>x_2</m>, there are <m>m-1</m> choices, as we can use
         any element of <m>X-\{x_1\}</m>. For <m>x_3</m>, there are <m>m-2</m> choices, since we can
         use any element in <m>X-\{x_1,x_2\}</m>. For <m>x_n</m>, there are <m>m-n+1</m> choices,
-        because we can use any element of <m>X</m> except <m>x_1,x_2,\dots x_{n-1}</m>. Noting that <me>
+        because we can use any element of <m>X</m> except <m>x_1,x_2,\dots x_{n-1}</m>. Noting that <md>
         P(m,n)=\frac{m!}{(m-n)!} = m(m-1)(m-2)\dots(m-n+1),
-        </me> our
+        </md> our
         proof is complete. </p>
     </proof>
   </proposition>

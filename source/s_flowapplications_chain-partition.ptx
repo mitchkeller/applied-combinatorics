@@ -94,9 +94,9 @@
     </p>
 
     <p>Even once we see that the above process does in fact generate a chain partition, it is not immediately clear that it's a minimum chain partition. For this, we need to find an antichain of as many points as there are chains in our partition. (In the example we've been using, we need to find a three-element antichain.) This is where tracking the labeled vertices comes in handy. Suppose we have determined a chain <m>C=\{x_1\lt x_2\lt \cdots \lt x_k\}</m> using the network flow. Since <m>x_1</m> is the minimal element of this chain, there is no flow into <m>x_1''</m> and hence no flow out of <m>x_1''</m>. Since <m>T</m> is unlabeled, this must mean that <m>x_1''</m> is unlabeled. Similarly, <m>x_k</m> is the maximal element of <m>C</m>, so there is no flow out of <m>x_k'</m>. Thus, <m>x_k'</m> is labeled. Now considering the sequence of vertices
-    <me>
+    <md>
         x_k',x_k'',x_{k-1}',x_{k-1}'',\dots,x_2',x_2'',x_1',x_1'',
-    </me>
+    </md>
     there must be a place where the vertices switch from being labeled to unlabeled. This must happen with <m>x_i'</m> labeled and <m>x_i''</m> unlabeled. To see why, suppose that <m>x_i'</m> and <m>x_i''</m> are both unlabeled while <m>x_{i+1}'</m> and <m>x_{i+1}''</m> are both labeled. Because <m>x_i</m> and <m>x_{i+1}</m> are consecutive in <m>C</m>, there is flow on <m>(x_i',x_{i+1}'')</m>. Therefore, when scanning from <m>x_{i+1}''</m>, the vertex <m>x_i'</m> would be labeled. For each chain of the chain partition, we then take the first element <m>y</m> for which <m>y'</m> is labeled and <m>y''</m> is unlabeled to form an antichain <m>A=\{y_1,\dots,y_w\}</m>. To see that <m>A</m> is an antichain, notice that if <m>y_i\lt y_j</m>, then <m>(y_i',y_j'')</m> is an edge in the network. Therefore, the scan from <m>y_i'</m> would label <m>y_j''</m>. Using this process, we find that a maximum antichain in our example is <m>\{x_1,x_5,x_8\}</m>.
     </p>
 </section>

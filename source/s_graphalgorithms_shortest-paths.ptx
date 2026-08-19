@@ -39,9 +39,9 @@
                     <li>
                         <title>Inductive Step (Step<nbsp/><m>i</m>, <m>i&gt;1</m>)</title>
                         <p>If <m>i\lt n</m>, then for each temporary <m>x</m>, let
-                        <me>
+                        <md>
                             \delta(x) = \min\{\delta(x), \delta(v_i)+w(v_i,x)\}.
-                        </me>
+                        </md>
                         If this assignment results in a reduction in the value of <m>\delta(x)</m>, let <m>P(x)</m> be the path obtained by adding <m>x</m> to the end of <m>P(v_i)</m>.
                         </p>
                         <p>Let <m>x</m> be a temporary vertex for which <m>\delta(x)</m> is minimum. Set <m>v_{i+1}=x</m>, and update <m>\sigma</m> by appending <m>v_{i+1}</m> to it. Increment <m>i</m>.
@@ -238,9 +238,9 @@
         <proposition>
             <statement>
                 <p>When the algorithm halts, let <m>\sigma=(v_1,v_2,v_3,\dots,v_n)</m>.  Then
-                <me>
+                <md>
                     \delta(v_1)\le \delta(v_2)\le\dots \le \delta(v_n).
-                </me>
+                </md>
                 </p>
             </statement>
         </proposition>
@@ -279,17 +279,17 @@
                 </p>
 
                 <p>Let <m>i</m> and <m>j</m> be the unique integers for which <m>u_k=v_i</m> and <m>x=v_j</m>. If <m>j \lt i</m>, then
-                <me>
+                <md>
                     \delta(x)= \delta(v_j)\le \delta(v_i)= \delta(u_k)\le
                     \delta(u_k)+w(u_k).
-                </me>
+                </md>
                 Therefore the algorithm has found a path <m>P(x)</m> from <m>r</m> to <m>x</m> having length <m>\delta(x)</m> which is at most the distance from <m>r</m> to <m>x</m>. Clearly, this implies that <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and that <m>P(x)</m> is a shortest path.
                 </p>
 
                 <p>On the other hand, if <m>j&gt;i</m>, then the inductive step at Step<nbsp/><m>i</m> results in
-                <me>
+                <md>
                     \delta(x)\le \delta(v_i)+w(v_i,y)=\delta(u_k)+w(u_k,x).
-                </me>
+                </md>
                 As before, this implies that <m>\delta(x)</m> is the distance from <m>r</m> to <m>x</m> and that <m>P(x)</m> is a shortest path.
                 </p>
             </proof>

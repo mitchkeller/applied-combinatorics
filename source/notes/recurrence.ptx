@@ -35,9 +35,9 @@
         <statement>
           <p workspace="1cm">
             A <term>linear recurrence equation</term> is of the form
-            <me>
+            <md>
               c_{0}(n)a_{n+k}+ c_{1}(n)a_{n+k-1}+ c_{2}(n)a_{n+k-2}+ \dots+c_{k}(n)a_{n}= g(n),
-            </me>
+            </md>
             where <m>k\ge1</m> is an integer and <m>g\colon\mathbb{Z}\to\mathbb{R}</m> is a function.
           </p>
           <p component="a">
@@ -60,9 +60,9 @@
         <statement>
           <p workspace="1cm">
             The linear recurrence equation
-            <me>
+            <md>
               c_{0}(n)a_{n+k}+ c_{1}(n)a_{n+k-1}+ c_{2}(n)a_{n+k-2}+ \dots+c_{k}(n)a_{n}= g(n),
-            </me>
+            </md>
             is called <term>homogeneous</term> if <m>g(n)=0</m> for all <m>n</m>.
           </p>
           <p component="a">
@@ -77,9 +77,9 @@
         <title>An analogy to calculus (or differential equations)</title>
         <p workspace="5cm">
           Let's write <m>D</m> for the differential operator <m>d/dx</m>. Solve the equation
-          <me>
+          <md>
             Df = 5f
-          </me>
+          </md>
           where <m>f</m> is a differentiable function of <m>x</m> with <m>f(0)=3</m> and 
         </p>
       
@@ -175,9 +175,9 @@
           </statement>
           <solution>
             <p>
-              <me>
+              <md>
                 f(5)-2f(4)+7f(3)+2f(2) = 98
-              </me>
+              </md>
             </p>
           </solution>
         </task>
@@ -240,9 +240,9 @@
       <statement>
         <p workspace="5cm">
           Solve the advancement operator equation
-          <me>
+          <md>
             (A+4)f=0
-          </me>
+          </md>
           with the initial condition <m>f(0)=2</m>.
         </p>
       </statement>
@@ -284,9 +284,9 @@
       <statement>
         <p workspace="2cm">
           The solution to the advancement operator equation
-          <me>
+          <md>
             (A-b_{1})(A-b_{2})\cdots (A-b_{k})f(n) = 0
-          </me>
+          </md>
           where <m>b_{i}\neq b_{j}</m> if <m>i\neq j</m> is
           <md component="a">
             f(n) = c_1b_1^n + c_2b_2^n + \cdots + c_kb_k^n, \qquad c_i\in\mathbb{R}
@@ -300,9 +300,9 @@
     <p>
       <alert>Note: </alert>
       When solving
-        <me>
+        <md>
           p(A)f(n)=g(n)
-        </me>
+        </md>
         we'll focus on <m>p(0)\neq 0</m>.
         Any factors of <m>A</m> in <m>p(A)</m> could be dealt with by shifting solutions.
     </p>
@@ -506,17 +506,17 @@
         <statement>
           <p>
             Use the quadratic formula to solve
-            <me>
+            <md>
               C^{2}(x) -C(x) + x = 0
-            </me>
+            </md>
             for <m>C(x)</m>. Use what you know about the constant term of <m>C(x)</m> to determine whether you want the plus or the minus from the <m>\pm</m> in the quadratic formula.
           </p>
         </statement>
         <solution component="a">
           <p>
-            <me>
+            <md>
               C(x) = \frac{1\pm \sqrt{1-4x}}{2}= \frac{1}{2}\pm \frac{1}{2}(1-4x)^{1/2}
-            </me>
+            </md>
             We want a constant term of 0, which means that we need to choose the minus from the <m>\pm</m>.
           </p>
         </solution>
@@ -536,9 +536,9 @@
         <statement>
           <p>
             The generating function for the number <m>c_{n}</m> of rooted, unlabeled, binary, ordered trees with <m>n</m> leaves is
-            <me>
+            <md>
               C(x) = \frac{1-\sqrt{1-4x}}{2}= \sum_{n=1}^{\infty} \frac{1}{n}\binom{2n-2}{n-1}x^{n}.
-            </me>
+            </md>
           </p>
         </statement>
       </theorem>
