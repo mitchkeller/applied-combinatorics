@@ -507,8 +507,6 @@
     </network>
   </coordinates>
 </diagram>
-a
-
             </prefigure>
           </image>
         </sidebyside>
@@ -785,7 +783,7 @@ a
     <p>
       <alert>Why care?</alert>
     </p>
-    
+    <p>
     <ul>
       <li>
         <p>
@@ -807,6 +805,7 @@ a
         </p>
       </li>
     </ul>
+    </p>
   </paragraphs>
   <paragraphs>
     <title>The Subset Lattice</title>
@@ -952,7 +951,7 @@ a
       </statement>
     </theorem>
     <image width="65%" source="notes/fishburn_title.png">
-      <description><pubtitle>Intransitive Indifference with Unequal Indifference Intervals</pubtitle> by Peter C. Fishburn of the Research Analysis Corporation, McLean, Virginia. Masthead indicates <pubtitle>Journal of Mathematical Psychology</pubtitle>, volume 7, pages 144<ndash/>149 (1970).</description>
+      <description><p><pubtitle>Intransitive Indifference with Unequal Indifference Intervals</pubtitle> by Peter C. Fishburn of the Research Analysis Corporation, McLean, Virginia. Masthead indicates <pubtitle>Journal of Mathematical Psychology</pubtitle>, volume 7, pages 144<ndash/>149 (1970).</p></description>
     </image>
   </page>
   <page>
@@ -1376,9 +1375,9 @@ a
         <p>
           Let's use First Fit (optimally) to find a chain partition of this interval order and the width of the interval order.
         </p>
-        <image label="notes-posets_dilworth-intord" width="75%">
-          <description>An interval order</description>
-          <latex-image>
+        <image width="75%">
+          <shortdescription>An interval order</shortdescription>
+          <latex-image label="notes-posets_dilworth-intord" >
             \begin{tikzpicture}
             \draw[{[-]}, thick] (1,0.475) -- node[above] {$e$} (3.15,0.475);
             \draw[{[-]}, thick] (5,0.475) -- node[above] {$f$} (6,0.475);

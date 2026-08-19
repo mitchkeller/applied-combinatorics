@@ -116,7 +116,7 @@
           </p>
         </proof>
       </theorem>
-      <p compnent="a">
+      <p component="a">
         <md>
           |E| = \frac{1}{2} \sum_{v\in V}\deg_{\bfG}(v)
         </md>
@@ -683,17 +683,17 @@
                 <node at="11" p="(4,-0.15)"><m>x_5</m></node>
                 <edge vertices="(7,11)"/>
               </network>
-              <label p="(1.87,2)" alignment="w"><m>1</m></label>
-              <label p="(0.2,1)" alignment="e"><m>2</m></label>
-              <label p="(1.1,1)" alignment="e"><m>3</m></label>
-              <label p="(2.1,1)" alignment="e"><m>4</m></label>
-              <label p="(3.1,1)" alignment="e"><m>2</m></label>
-              <label p="(4.1,1)" alignment="e"><m>5</m></label>
-              <label p="(0,-.25)" alignment="s"><m>4</m></label>
-              <label p="(1.1,0)" alignment="ne"><m>1</m></label>
-              <label p="(2.1,0)" alignment="ne"><m>5</m></label>
-              <label p="(2.9,0)" alignment="nw"><m>3</m></label>
-              <label p="(4,-0.25)" alignment="s"><m>1</m></label>
+              <label anchor="(1.87,2)" alignment="w"><m>1</m></label>
+              <label anchor="(0.2,1)" alignment="e"><m>2</m></label>
+              <label anchor="(1.1,1)" alignment="e"><m>3</m></label>
+              <label anchor="(2.1,1)" alignment="e"><m>4</m></label>
+              <label anchor="(3.1,1)" alignment="e"><m>2</m></label>
+              <label anchor="(4.1,1)" alignment="e"><m>5</m></label>
+              <label anchor="(0,-.25)" alignment="s"><m>4</m></label>
+              <label anchor="(1.1,0)" alignment="ne"><m>1</m></label>
+              <label anchor="(2.1,0)" alignment="ne"><m>5</m></label>
+              <label anchor="(2.9,0)" alignment="nw"><m>3</m></label>
+              <label anchor="(4,-0.25)" alignment="s"><m>1</m></label>
             </coordinates>
           </diagram>
         </prefigure>
