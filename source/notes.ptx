@@ -1,10 +1,12 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
 	<docinfo>
-		<brandlogo url="https://www.appliedcombinatorics.org/" source="front-cover.png"/>
+		<directories external="../assets"></directories>
 		<initialism>ACN</initialism>
 		<xi:include href="macros.ptx"/>
     <xi:include href="latex-image-preamble.ptx"/>
-		<cross-references text="type-global"/>
+		<defaults>
+			<xrefs text="type-global"/>
+		</defaults>
 		<rename element="remark" xml:lang="en-US">Discussion</rename>
 		<rename element="worksheetexercise" xml:lang="en-US">Problem</rename>
     <rename element="inlineexercise" xml:lang="en-US">Problem</rename>

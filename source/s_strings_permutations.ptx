@@ -125,27 +125,40 @@
     <exercise label="appcomb_strings_permutation_reading_officers">
         <statement>
           <p>
-            Suppose that Alice, Carlos, Dave, Xing, and Yolanda are the five candidates to serve as chair, vice chair, and treasurer of a student organization. You should be able to answer this without listing all the outcomes. However, to set the stage for things yet to come, write out all the possible outcomes somewhere for your reference. (Don't submit them all here, however! You probably also want to just write A, C, D, X, and Y rather than using everyone's full name.) How many possible outcomes are there for filling the three positions? <var width="10"/>
+            Suppose that Alice, Carlos, Dave, Xing, and Yolanda are the five candidates to serve as chair, vice chair, and treasurer of a student organization. You should be able to answer this without listing all the outcomes. However, to set the stage for things yet to come, write out all the possible outcomes somewhere for your reference. (Don't submit them all here, however! You probably also want to just write A, C, D, X, and Y rather than using everyone's full name.) How many possible outcomes are there for filling the three positions?
+          </p>
+          <p>
+            <fillin answer="60" mode="number"/>
           </p>
         </statement>
-        <setup>
-          <var>
-            <condition number="60">
+        <evaluation>
+          <evaluate>
+            <test correct="yes">
+              <numcmp use-answer="yes"/>
               <feedback>
                 <p>
                   Correct! We can multiply <m>5\cdot 4\cdot 3</m> and obtain <m>60</m>.
                 </p>
               </feedback>
-            </condition>
-            <condition string=".*">
+            </test>
+            <test>
+              <numcmp min="0" max="59"/>
               <feedback>
                 <p>
-                  Incorrect. Make sure to enter your answer as a number, not a product. If you haven't tried listing out all the options, try to do so in an organized manner to check.
+                  Incorrect. Your answer is too small.
                 </p>
               </feedback>
-            </condition>
-          </var>
-        </setup>
+            </test>
+            <test>
+              <numcmp min="61" max="99999999"/>
+              <feedback>
+                <p>
+                  Incorrect. Your answer is too large.
+                </p>
+              </feedback>
+            </test>
+          </evaluate>
+        </evaluation>
       </exercise>
       <exercise label="appcomb_strings_permutation_reading_cochairs">
         <statement>
@@ -153,43 +166,64 @@
             Suppose we change the election and instead of having three distinct officers, the organization is to elect three co-chairs. Group the outcomes you listed in the previous part so that all election outcomes that would lead to the same co-chairs are grouped together. For instance, ADC and CDA would be grouped together, since what matters here is simply that Alice, Carlos, and Dave were elected and not whether Alice or Carlos was elected chair.
           </p>
           <p>
-            Doing this forms <var width="10"/> groups, and each group contains <var width="10"/> outcomes.
+            Doing this forms <fillin answer="10" mode="number"/> groups, and each group contains <fillin answer="6" mode="number"/> outcomes.
           </p>
         </statement>
-        <setup>
-          <var>
-            <condition number="10">
+        <evaluation>
+          <evaluate>
+            <test correct="yes">
+              <numcmp use-answer="yes"/>
               <feedback>
                 <p>
                   Correct!
                 </p>
               </feedback>
-            </condition>
-            <condition string=".*">
+            </test>
+            <test>
+              <numcmp min="0" max="9"/>
               <feedback>
                 <p>
-                  Incorrect. 
+                  Incorrect. Your answer is too small. Make sure all the outcomes in a group contain exactly the same three co-chairs.
                 </p>
               </feedback>
-            </condition>
-          </var>
-          <var>
-            <condition number="6">
+            </test>
+            <test>
+              <numcmp min="11" max="99999999"/>
               <feedback>
                 <p>
-                  Correct!
+                  Incorrect. Your answer is too large. Make sure that you do not have two separate groups that actually have the same three co-chairs.
                 </p>
               </feedback>
-            </condition>
-            <condition string=".*">
+            </test>
+          </evaluate>
+          <evaluate>
+            <test correct="yes">
+              <numcmp use-answer="yes"/>
               <feedback>
                 <p>
-                  Incorrect. 
+                  Correct! There are <m>6 = 3\cdot 2\cdot 1</m> ways to arrange <m>3</m> objects.
                 </p>
               </feedback>
-            </condition>
-          </var>
-        </setup>
+            </test>
+            <test>
+              <numcmp min="0" max="5"/>
+              <feedback>
+                <p>
+                  Incorrect. Your answer is too small.
+                </p>
+              </feedback>
+            </test>
+            <test>
+              <numcmp min="7" max="99999999"/>
+              <feedback>
+                <p>
+                  Incorrect. Your answer is too large.
+                </p>
+              </feedback>
+            </test>
+          </evaluate>
+
+        </evaluation>        
       </exercise>
       <exercise label="appcomb_strings_permutation_reading_more">
         <statement>

@@ -348,10 +348,10 @@
     </page>
     <page>
       <p>
-        <me component="a">
+        <md component="a">
           d_{n} = \sum_{j=0}^{n} (-1)^{k}\binom{n}{j}(n-j)! = n! \sum_{j=0}^{n} \frac{(-1)^{j}}{j!}\approx \frac{n!}{e}
         </md>
-        <me component="b">
+        <md component="b">
           d_{n} = \sum_{j=0}^{n} (-1)^{j}\binom{n}{j}(n-j)!\phantom{= n! \sum_{j=0}^{n} \frac{(-1)^{j}}{j!}\approx \frac{n!}{e}}
         </md>
       </p>
@@ -467,9 +467,9 @@
           <p workspace="1cm">
             Let <m>n\geq 2</m>, <m>k\geq 1</m>, and let <m>p_{1},p_{2},\dots,p_{k}</m> be distinct primes each of which divide <m>n</m>.
             The number of integers from <m>[n]</m> which are divisible by each of these <m>k</m> primes is
-            <me component="b">
+            <md component="b">
               \phantom{\frac{n}{p_{1}p_{2}\cdots p_{k}}.}
-            </md><me component="a">
+            </md><md component="a">
               \frac{n}{p_{1}p_{2}\cdots p_{k}}.
             </md>
           </p>

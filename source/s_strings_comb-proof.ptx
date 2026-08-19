@@ -130,9 +130,13 @@
               </md>
               from <xref ref="ex_strings_comb-proof_sum-ints"/>.
             </p>
-            <image label="img-rectangular-grid-sum-ints" width="40%">
-                <description>An array of circles. The first row is seven unfilled circles. The second row is six unfilled circles followed by a filled circle. The third row is five unfilled circles followed by two filled circles. This pattern continues until the eighth row, which consists of seven filled circles.</description>
-                <latex-image>
+            <image width="40%">
+                <description>
+                    <p>
+                        An array of circles. The first row is seven unfilled circles. The second row is six unfilled circles followed by a filled circle. The third row is five unfilled circles followed by two filled circles. This pattern continues until the eighth row, which consists of seven filled circles.
+                    </p>
+                </description>
+                <latex-image label="img-rectangular-grid-sum-ints">
                     \begin{tikzpicture}[line width=.7pt, outer sep=0pt]
                     \foreach \x in {1,...,7}
                       \foreach \y in {1,...,8}

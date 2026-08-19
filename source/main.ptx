@@ -1,11 +1,13 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
   <docinfo>
-    <brandlogo url="https://www.appliedcombinatorics.org/" source="front-cover.png"/>
     <initialism>AC</initialism>
     <author-biographies length="long"/>
     <xi:include href="macros.ptx"/>
     <xi:include href="latex-image-preamble.ptx"/>
-    <cross-references text="type-global"/>
+    <defaults>
+      <xrefs text="type-global"/>
+    </defaults>
+    <directories external="../assets"/>
     <rename element="remark" xml:lang="en-US">Discussion</rename>
     <document-id>appcomb</document-id>
     <blurb shelf="Mathematics">
