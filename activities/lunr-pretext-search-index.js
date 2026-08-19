@@ -473,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-prufer-codes.html#ws-prufer-codes-2",
   "type": "Activity",
-  "number": "5.5.1",
+  "number": "5.11",
   "title": "",
   "body": "   Construct for the two trees below.     A tree with 6 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors     , , ,         ,                   graph={1:[2,3,4,5],3:[6]}           A tree with 14 vertices. The neighbors of each vertex are given in the table below.    Vertex  Neighbors         , , , ,             , , ,         ,         ,         ,     ,         ,       graph={1:[9],2:[8,9,10,11,14],3:[11],4:[12], 5:[6,7,12,14],7:[13], }             is the Prüfer code for the tree on the left. is the Prüfer code for the tree on the right.      Be prepared to answer the following questions:   What is the relationship between the length of the Prüfer code of a tree and the number of vertices of the tree?    What type(s) of vertices have labels appearing in the Prüfer code of a tree?         Extra time? Draw a tree for another group to find the Prüfer code of.    "
 },
@@ -482,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-prufer-codes.html#ws-prufer-codes-3",
   "type": "Activity",
-  "number": "5.5.2",
+  "number": "5.12",
   "title": "",
   "body": "   Complete the table (and draw the tree) for the Prüfer code .            Prüfer code  Label set  Edge added    8431875          431875          31875          1875          875          75          5          (empty string)              Find the tree for the Prüfer code .            Prüfer code  Label set  Edge added    4747313          747313          47313          7313          313          13          3          (empty string)              Extra time? Make up a Prüfer code and have another group find the tree.    "
 },
@@ -500,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-posets-antichain-partitioning.html#ws-posets-antichain-partitioning-2-1",
   "type": "Activity",
-  "number": "6.1.1",
+  "number": "6.1",
   "title": "",
   "body": "   Classify each of the terms below as a poset term or a graph theory term. You will have six terms of each type.  Antichain  Chain  Chromatic number  Clique  Clique number  Height  Independent set  Partition into disjoint antichains  Partition into disjoint chains  Partition into disjoint cliques  Proper coloring  Width      The poset terms are:  Antichain  Chain  Height  Partition into disjoint antichains  Partition into disjoint chains  Width    The graph theory terms are:  Chromatic number  Clique  Clique number  Independent set  Partition into disjoint cliques  Proper coloring        Write the six poset terms from the previous part on separate rows in the Poset column of the table below. Place each of the six graph theory terms into both the Comparability Graph column and the Incomparability Graph column, choosing the row in which a term is placed so that the graph term for that type of graph corresponds to the poset term in that row. You will have one empty cell in each of the graph columns and one cell in each graph column will contain two graph theory terms!        Poset  Comparability Graph  Inomparability Graph                                                                                                                                   Poset  Comparability Graph  Inomparability Graph    Antichain  Independent set  Clique    Chain  Clique  Independent set    Height  Clique number \/ Chromatic number     Partition into disjoint antichains  Proper coloring  Partition into disjoint cliques    Partition into disjoint chains  Partition into disjoint cliques  Proper coloring    Width   Clique number \/ Chromatic number      "
 },
@@ -509,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-posets-antichain-partitioning.html#ws-posets-antichain-partitioning-3-1",
   "type": "Activity",
-  "number": "6.1.2",
+  "number": "6.2",
   "title": "",
   "body": "   Use the algorithm to find the height , a partition into antichains, and a maximum chain for each of the posets below.    For the poset on the left, the height is . A partition into antichains is given by and a maximum chain is .  For the poset on the right, the height is . A partition into antichains is given by and a maximum chain is .      What can you say about the width of these posets? In particular, is one of the antichains in your antichain partition maximum?    We will not learn an algorithm for chain partitioning in this class, as it requires material from Chapters 13 and 14. However, finding the width, a maximum antichain, and a partition into disjoint chains for the poset on the left is reasonable as homework or a test question. Will give the solution for the poset on the right, but it's much larger than would be reasonable for a test question.  The width of the poset on the left is . A maximum antichain is . A partition into disjoint chains is given by .  The width of the poset on the right is , which is much larger than any antichain found by the height algorithm! A maximum antichain is . A partition into disjoint chains is given by .    "
 },
@@ -626,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-posets-intord-draw-diag.html#ws-posets-intord-draw-diag-2-1",
   "type": "Activity",
-  "number": "6.3.1",
+  "number": "6.3",
   "title": "",
   "body": "  Below are two collections of intervals. For each, draw the order diagram of the interval order represented by these intervals.       A collection of intervals. The intervals are displayed with a number line that allows identification of the endpoints of the intervals.        The order diagram of the poset whose interval representation was given. Annotations give cover relations for each of the points.      labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j'}                                                A collection of intervals labeled with letters from to . The intervals are not displayed with a number line. Using and to denote the left and right endpoints of the interval , respectively, we have the following (strict) ordering of the endpoints .        The order diagram of the poset whose interval representation was given. Annotations give cover relations for each of the points.      labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i',10:'j',11:'k',12:'l'}                                                  "
 },
@@ -698,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-genfunction-intro.html#ws-genfunction-intro-2-1",
   "type": "Activity",
-  "number": "8.1.1",
+  "number": "8.1",
   "title": "",
   "body": "  Our goal is to use generating functions to find the number of ways to make certain amounts of money for using coins.     If you want to find the number of ways to make $1, you should plan to look for the coefficient on for what ?      Suppose first that you only have pennies and nickels. What's the generating function? How many ways to make $1 using pennies and nickels?       Now suppose you have pennies, nickels, dimes, and quarters. What's the generating function? Number of ways to make $1? Number of ways to make $0.83?      Suppose you have pennies, nickels, dimes, quarters, half dollars, and dollar coins. What's the generating function? What's the number of ways to make $1? What's the number of ways to make $2.50?    "
 },
@@ -716,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-recurrence-homog.html#ws-recurrence-homog-3",
   "type": "Activity",
-  "number": "9.1.1",
+  "number": "9.1",
   "title": "Degree two, no other roots.",
   "body": " Degree two, no other roots    Verify that is a solution of .    To do this, you need to evaluate and simplify fully. I recommend doing this by first evaluating . When you simplify that, you should get , but do the work and make sure you get this simplified form. Then apply to and simplify. You should get .           Determine if is a solution of . If it's not, what do you get instead of ?           Since we already know that is a solution of (and thus ), adding it to gives a two parameter family of solutions. Find and so that is a solution of if and .    We find that and . We know the former is , so . Since and , we see that . Hence .    "
 },
@@ -725,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-recurrence-homog.html#ws-recurrence-homog-4",
   "type": "Activity",
-  "number": "9.1.2",
+  "number": "9.2",
   "title": "Repeated root of degree two, other roots.",
   "body": " Repeated root of degree two, other roots    Now consider the advancement operator equation . Use part and what you learned in the class prep to propose a general solution to this equation.           Verify that your solution works. You might think about how you can divide and conquer this verification work amongst your group. Note that advancement operator polynomials are linear transformations and you can commute the factors in an advancement operator polynomial so that applying will give the same result as applying . This fact is not true of all linear transformations matrix multiplication is not commutative, after all! However, it works here.    "
 },
@@ -734,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-recurrence-homog.html#ws-recurrence-homog-5",
   "type": "Activity",
-  "number": "9.1.3",
+  "number": "9.3",
   "title": "Higher degrees, no other roots.",
   "body": " Higher degrees, no other roots    Consider the advancement operator equation . Conjecture what terms should be in its solution.           Verify your conjecture from the previous step.      Apply to . What's the highest power of remaining? How many more times would you need to apply to finally get ?    The highest power of remaining is . You would need to apply four more times to get .      Apply to . What's the highest power of remaining?    The highest power of remaining is .      Conjecture what the highest power of is that remains when you apply to . (Here is an integer.)    The highest power that will remain is .      Use the Binomial Theorem to explain why your conjecture in the previous step is correct.           What value of makes for the function from part ? We say here that  annihilates  because applying the operator to yields .     annihilates .    "
 },
@@ -743,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-recurrence-homog.html#ws-recurrence-homog-6",
   "type": "Activity",
-  "number": "9.1.4",
+  "number": "9.4",
   "title": "Higher degrees, lots of roots.",
   "body": " Higher degrees, lots of roots   Write down the general solution (i.e., with constants running around) for each of the following advancement opeator eqations. Do not verify that these are actually solutions, as you will have an algebraic mess on your hands!                      This is equivalent to where and are the roots of . Thus we have .           This is equivalent to where and are the roots of . Thus we have .           This is equivalent to (note the factor and regroup on ) where and are the complex roots of . (Yeah, complex roots work just fine here.) Thus, we have where .    "
 },
@@ -752,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-recurrence-homog.html#ws-recurrence-homog-7",
   "type": "Activity",
-  "number": "9.1.5",
+  "number": "9.5",
   "title": "Working toward the non-homogeneous case.",
   "body": " Working toward the non-homogeneous case    What happens if you apply to the function ? (Write your answer as a multiple of .)    You get .      Now suppose we're trying to solve ? (Look, ma, the right side isn't zero!)     What does the previous step suggest might be a function you could apply to while retaining a power of afterward?    We might try .      Apply to your function. Write the result as a multiple of .    We just need to apply the advancement operator polynomial to . We get .      You want this result to be just . What do you need to do to achieve this?    Do you have an arbitrary constant remaining in the result? If not, how could you tweak the function you tried to get a constant in your result?    Set .      What can you add to your function without affecting the fact that ?    The solutions to the homogeneous equation, since we know that will transform to .       Suppose now that you're trying to solve . What would you need to try in order to preserve the when applying ?    We'd need since will be annihilated by the , but we know that will not annihilate . Constants are helpful.    "
 },
@@ -763,7 +763,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "9.2",
   "title": "Starting Nonhomogeneous Advancement Operator Equations",
-  "body": " Starting Nonhomogeneous Advancement Operator Equations  We want to solve an advancement operator equation of the form where is not identically . To do this, we seek any solution to the equation. We call this a particular solution . We then solve the homogeneous equation (Yes, the same .) and call its general solution . The general solution of the nonhomogeneous equation is then .  We first consider when does not “interfere” with and recap the last portion of our previous class's activity. We want to solve . If you apply to the function , then you have . Thus, we really would like to have a constant in . We try and compute . The output from this needs to be , so we set and solve for to find and . To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation and find . Thus the general solution of the nonhomogeneous equation is     If we try using as a particular solution of , we find the following: . Why is this an issue?    If we want this to be , then we simultaneously need and . Last time I checked, that's not going to work.      Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)    Throw in an extra constant, trying . Hence . Hence, we need . We also need , so we have . Thus, we have .      Find the general solution of .    The general solution of the homogeneous equation is . Add that to your solution from the previous step, so you have     "
+  "body": " Starting Nonhomogeneous Advancement Operator Equations  We want to solve an advancement operator equation of the form where is not identically . To do this, we seek any solution to the equation. We call this a particular solution . We then solve the homogeneous equation (Yes, the same .) and call its general solution . The general solution of the nonhomogeneous equation is then .  We first consider when does not interfere with and recap the last portion of our previous class's activity. We want to solve . If you apply to the function , then you have . Thus, we really would like to have a constant in . We try and compute . The output from this needs to be , so we set and solve for to find and . To find the general solution of the nonhomogeneous equation, we now solve the homogeneous equation and find . Thus the general solution of the nonhomogeneous equation is     If we try using as a particular solution of , we find the following: . Why is this an issue?    If we want this to be , then we simultaneously need and . Last time I checked, that's not going to work.      Adjust the proposed in the previous step to find a particular solution of . (Be sure to find the constants!)    Throw in an extra constant, trying . Hence . Hence, we need . We also need , so we have . Thus, we have .      Find the general solution of .    The general solution of the homogeneous equation is . Add that to your solution from the previous step, so you have     "
 },
 {
   "id": "ws-recurrence-nonhomog-starting-2",
@@ -808,7 +808,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "9.3",
   "title": "Nonhomogeneous Advancement Operator Equations",
-  "body": " Nonhomogeneous Advancement Operator Equations   Let's make a bit more complicated.    Find a particular solution of .    Try . We then find From this we see that we need , or . We also need , so . Continuing to match coefficients, we find or . We also have , so and . Thus, .      Write the general solution of .    The homogeneous solution is . Adding that to from the previous exercise gives .      Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)    You'd have to apply the advancement operator before finding the constants. The general solution would also have a term in it.    Now for interference between and .    Predict what will happen if you try as a particular solution of . Why is this the case?    You'll not have any success, since when you apply to , you're going to get instead of .      Find a particular solution of .    We saw last time that applying to will leave us with a term. Let's try . We have Thus, we take and have .      Find a particular solution of . (Think about what's on the left-hand side and what it will do to your proposed before trying to find constant(s).)    Trying is not going to work, since the in will turn it into a term with no factor of . Starting with an term is good, but we have to be careful. If we just do , we’re going to be stuck like we were in an earlier problem. Thus, let’s go with . . We thus need , so . We need , so .      Find a particular solution of .    We try . Applying the advancement operator polynomial to this, we get . We need this to equal , which leads us to the equations , and . Thus, we have .      Find a particular solution of .    We try , since lower powers of will be annihilated by here and we need an term to be able to reduce to having after applying twice. Applying , we have , so we need , , and . Thus, we have .      Find the general solution of .    The corresponding homogeneous solution is , which gives us .    "
+  "body": " Nonhomogeneous Advancement Operator Equations   Let's make a bit more complicated.    Find a particular solution of .    Try . We then find From this we see that we need , or . We also need , so . Continuing to match coefficients, we find or . We also have , so and . Thus, .      Write the general solution of .    The homogeneous solution is . Adding that to from the previous exercise gives .      Describe how you would change your work in if the advancement operator equation were . (You don't have to go through all the steps.)    You'd have to apply the advancement operator before finding the constants. The general solution would also have a term in it.    Now for interference between and .    Predict what will happen if you try as a particular solution of . Why is this the case?    You'll not have any success, since when you apply to , you're going to get instead of .      Find a particular solution of .    We saw last time that applying to will leave us with a term. Let's try . We have Thus, we take and have .      Find a particular solution of . (Think about what's on the left-hand side and what it will do to your proposed before trying to find constant(s).)    Trying is not going to work, since the in will turn it into a term with no factor of . Starting with an term is good, but we have to be careful. If we just do , we're going to be stuck like we were in an earlier problem. Thus, let's go with . . We thus need , so . We need , so .      Find a particular solution of .    We try . Applying the advancement operator polynomial to this, we get . We need this to equal , which leads us to the equations , and . Thus, we have .      Find a particular solution of .    We try , since lower powers of will be annihilated by here and we need an term to be able to reduce to having after applying twice. Applying , we have , so we need , , and . Thus, we have .      Find the general solution of .    The corresponding homogeneous solution is , which gives us .    "
 },
 {
   "id": "ws-recurrence-nonhomog-multiterm",
@@ -835,7 +835,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.3.3",
   "title": "",
-  "body": "  Describe how you would change your work in if the advancement operator equation were . (You don’t have to go through all the steps.)    You'd have to apply the advancement operator before finding the constants. The general solution would also have a term in it.   "
+  "body": "  Describe how you would change your work in if the advancement operator equation were . (You don't have to go through all the steps.)    You'd have to apply the advancement operator before finding the constants. The general solution would also have a term in it.   "
 },
 {
   "id": "ws-recurrence-nonhomog-7",
@@ -862,7 +862,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "9.3.6",
   "title": "",
-  "body": "  Find a particular solution of . (Think about what's on the left-hand side and what it will do to your proposed before trying to find constant(s).)    Trying is not going to work, since the in will turn it into a term with no factor of . Starting with an term is good, but we have to be careful. If we just do , we’re going to be stuck like we were in an earlier problem. Thus, let’s go with . . We thus need , so . We need , so .   "
+  "body": "  Find a particular solution of . (Think about what's on the left-hand side and what it will do to your proposed before trying to find constant(s).)    Trying is not going to work, since the in will turn it into a term with no factor of . Starting with an term is good, but we have to be careful. If we just do , we're going to be stuck like we were in an earlier problem. Thus, let's go with . . We thus need , so . We need , so .   "
 },
 {
   "id": "ws-recurrence-nonhomog-10",

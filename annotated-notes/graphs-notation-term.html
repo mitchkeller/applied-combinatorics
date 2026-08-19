@@ -20,87 +20,22 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:title" content="In-Class Notes to Accompany Applied Combinatorics">
+<meta property="og:title" content="In-Class Notes to Accompany Applied Combinatorics">
 <meta property="book:title" content="In-Class Notes to Accompany Applied Combinatorics">
-<meta property="book:author" content="Mitchel T.
-					Keller">
-<meta property="book:author" content="William T.
-					Trotter">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.49"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.49"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -122,42 +57,66 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.5';
+eBookConfig.runestone_version = '8.2.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.86d8a68ed7481f7e.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bb5ac777721d4056.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="https://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></h1>
+<div class="heading ptx-banner-heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></div>
 <p class="byline">Mitchel T. Keller, William T. Trotter</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-</div>
-<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
 <p>Copy the code below to embed this page in your own website or LMS page.</p>
-<div class="embed-code-container">
-<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-</div></span><span class="treebuttons"><a class="previous-button button" href="notes-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes-graphs.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="notes-eulerham.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="notes-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes-graphs.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="notes-eulerham.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
 \newcommand{\ints}{\mathbb{Z}}
 \newcommand{\posints}{\mathbb{N}}
@@ -236,11 +195,11 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="appcomb-notes-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-strings" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-strings-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Combinatorial Proofs</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-strings-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Ubiquitous Nature of Binomial Coefficients</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-lattice-binomial-multinomial.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lattice Paths, Binomial Theorem, Multinomial Theorem</span></a></div></li>
@@ -248,7 +207,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-induction" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-induction-2.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Recursive Counting</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-induction-3.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
 </ul>
@@ -256,7 +215,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-php-notes.html" class="internal"><span class="codenumber">4</span> <span class="title">Placeholder</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="notes-graphs.html" class="internal"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-notes-graphs">
 <li class="toc-item toc-handout active"><div class="toc-title-box"><a href="graphs-notation-term.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Notation and Terminology</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-eulerham.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-graphs-coloring.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Graph Coloring</span></a></div></li>
@@ -266,7 +225,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-posets.html" class="internal"><span class="codenumber">6</span> <span class="title">Partially Ordered Sets</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-posets" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="posets-notation.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Notation and Terminology</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="posets-partitioning.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Antichain and Chain Partitioning</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-subset-lattice-width.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Linear Extensions and the Subset Lattice</span></a></div></li>
@@ -276,14 +235,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-inclusion-exclusion.html" class="internal"><span class="codenumber">7</span> <span class="title">Principle of Inclusion-Exclusion</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-inclusion-exclusion" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-pie-intro-surjections.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction; Counting Surjections</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-pie-derangements-euler-phi.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Counting Derangements and Euler’s <span class="process-math">\(\phi\)</span> Function</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-genfunction.html" class="internal"><span class="codenumber">8</span> <span class="title">Generating Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-genfunction" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-intro-ogf.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Ordinary Generating Functions</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-partitions-newton.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Partitions and Newton’s Binomial Theorem</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-exp-genfn.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Generating Functions</span></a></div></li>
@@ -291,7 +250,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-recurrence" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction to Advancement Operators</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-3.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Homogeneous Recurrence Equations</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-rubots.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Solving a Nonlinear Recurrence</span></a></div></li>
@@ -326,65 +285,81 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="graphs-notation-term" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<section class="handout" id="graphs-notation-term" data-margins="13mm 13mm 13mm 13mm">
+<h1 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notation and Terminology</span><div class="print-links"><a href="?printpreview=graphs-notation-term" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
-</h2>
-<section class="onepage" id="graphs-notation-term-2"><div class="para" id="graphs-notation-term-2-1">
-<em class="alert">Peer instruction questions 1–3.</em><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h1>
+<section class="onepage" id="graphs-notation-term-2">
+<div class="para" id="graphs-notation-term-2-1">
+<em class="alert">Peer instruction questions 1–3.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
-<img src="external/spanning_subgraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-2-2-description"><div class="para" id="graphs-notation-term-2-2-1-1">Two graphs<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<img src="external/spanning_subgraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-2-2-description">
+<div class="para" id="graphs-notation-term-2-2-1-1">Two graphs<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="graphs-notation-term-2-3">We have that <span class="process-math">\(\bfH\)</span> is a spanning subgraph of <span class="process-math">\(\bfG\)</span> because all vertices of <span class="process-math">\(\bfG\)</span> appear in <span class="process-math">\(\bfH\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
 </div>
-<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
-<img src="external/non_subgraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-2-4-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-2-4-description"><div class="para" id="graphs-notation-term-2-4-1-1">Two graphs<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
-</div>
-<div class="para" id="graphs-notation-term-2-5">We have that <span class="process-math">\(\bfH\)</span> is not a subgraph of <span class="process-math">\(\bfG\)</span> because the edge <span class="process-math">\(\set{8,10}\)</span> in <span class="process-math">\(\bfH\)</span> is not an edge in <span class="process-math">\(\bfG\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="graphs-notation-term-2-3">We have that <span class="process-math">\(\bfH\)</span> is a spanning subgraph of <span class="process-math">\(\bfG\)</span> because all vertices of <span class="process-math">\(\bfG\)</span> appear in <span class="process-math">\(\bfH\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
-<img src="external/induced_subgraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-2-6-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-2-6-description"><div class="para" id="graphs-notation-term-2-6-1-1">Two graphs<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<img src="external/non_subgraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-2-4-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-2-4-description">
+<div class="para" id="graphs-notation-term-2-4-1-1">Two graphs<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<div class="para" id="graphs-notation-term-2-5">We have that <span class="process-math">\(\bfH\)</span> is not a subgraph of <span class="process-math">\(\bfG\)</span> because the edge <span class="process-math">\(\set{8,10}\)</span> in <span class="process-math">\(\bfH\)</span> is not an edge in <span class="process-math">\(\bfG\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+<img src="external/induced_subgraph.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-2-6-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-2-6-description">
+<div class="para" id="graphs-notation-term-2-6-1-1">Two graphs<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
 </div>
 <div class="para logical" id="graphs-notation-term-2-7">
 <ul class="disc" id="graphs-notation-term-2-7-1">
 <li id="graphs-notation-term-2-7-1-1">
-<div class="para" id="graphs-notation-term-2-7-1-1-1">We see that <span class="process-math">\(\bfH\)</span> is an induced subgraph of <span class="process-math">\(\bfG\)</span> because every edge of <span class="process-math">\(\bfG\)</span> between vertices that are in <span class="process-math">\(\bfH\)</span> is also an edge of <span class="process-math">\(\bfH\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="graphs-notation-term-2-7-1-1-1">We see that <span class="process-math">\(\bfH\)</span> is an induced subgraph of <span class="process-math">\(\bfG\)</span> because every edge of <span class="process-math">\(\bfG\)</span> between vertices that are in <span class="process-math">\(\bfH\)</span> is also an edge of <span class="process-math">\(\bfH\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#graphs-notation-term-2-7-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#graphs-notation-term-2-7-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="graphs-notation-term-2-7-1-2">
-<div class="para" id="graphs-notation-term-2-7-1-2-1">The word “vertex” is singular. Its plural is “vertices”. Yeah, Latin gave this to us, much like it gave us “matrix” and “matrices”.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-7-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="graphs-notation-term-2-7-1-2-1">The word “vertex” is singular. Its plural is “vertices”. Yeah, Latin gave this to us, much like it gave us “matrix” and “matrices”.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-7-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#graphs-notation-term-2-7-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#graphs-notation-term-2-7-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="graphs-notation-term-2-7-1-3">
-<div class="para" id="graphs-notation-term-2-7-1-3-1">Formally, <span class="process-math">\(\bfG=(V,E)\)</span> is an ordered pair of sets. Moreover, <span class="process-math">\(E\)</span> is a set of sets with each element of <span class="process-math">\(E\)</span> being a 2-element subset of <span class="process-math">\(V\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-7-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="graphs-notation-term-2-7-1-3-1">Formally, <span class="process-math">\(\bfG=(V,E)\)</span> is an ordered pair of sets. Moreover, <span class="process-math">\(E\)</span> is a set of sets with each element of <span class="process-math">\(E\)</span> being a 2-element subset of <span class="process-math">\(V\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-7-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#graphs-notation-term-2-7-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#graphs-notation-term-2-7-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="graphs-notation-term-3"><article class="activity project-like" id="graphs-notation-term-3-1"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="para" id="graphs-notation-term-3-1-1-1">Suppose <span class="process-math">\(\bfH\)</span> is an induced spanning subgraph of a graph <span class="process-math">\(\bfG\text{.}\)</span> Discuss with your group what this would mean.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="graphs-notation-term-3">
+<article class="activity project-like" id="graphs-notation-term-3-1"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="graphs-notation-term-3-1-1-1">Suppose <span class="process-math">\(\bfH\)</span> is an induced spanning subgraph of a graph <span class="process-math">\(\bfG\text{.}\)</span> Discuss with your group what this would mean.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="graphs-notation-term-3-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="graphs-notation-term-3-1-2-1">Here we must have that <span class="process-math">\(\bfG\)</span> and <span class="process-math">\(\bfH\)</span> are the same graph. The spanning property implies that <span class="process-math">\(\bfH\)</span> has all of the vertices of <span class="process-math">\(\bfG\text{.}\)</span> Being induced then forces all of the edges of <span class="process-math">\(\bfG\)</span> to be in <span class="process-math">\(\bfH\)</span> since <span class="process-math">\(\bfH\)</span> contains all edges of <span class="process-math">\(\bfG\)</span> that have both their endpoints in <span class="process-math">\(\bfH\text{,}\)</span> which has all of the vertices of <span class="process-math">\(\bfG\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="graphs-notation-term-3-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="graphs-notation-term-3-1-2-1">Here we must have that <span class="process-math">\(\bfG\)</span> and <span class="process-math">\(\bfH\)</span> are the same graph. The spanning property implies that <span class="process-math">\(\bfH\)</span> has all of the vertices of <span class="process-math">\(\bfG\text{.}\)</span> Being induced then forces all of the edges of <span class="process-math">\(\bfG\)</span> to be in <span class="process-math">\(\bfH\)</span> since <span class="process-math">\(\bfH\)</span> contains all edges of <span class="process-math">\(\bfG\)</span> that have both their endpoints in <span class="process-math">\(\bfH\text{,}\)</span> which has all of the vertices of <span class="process-math">\(\bfG\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.1.1"><a href="#graphs-notation-term-3-1-2" title="Copy heading and permalink for Solution 5.1.1.1" aria-label="Copy heading and permalink for Solution 5.1.1.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Activity 5.1.1"><a href="#graphs-notation-term-3-1" title="Copy heading and permalink for Activity 5.1.1" aria-label="Copy heading and permalink for Activity 5.1.1">🔗</a></div></article></section><section class="onepage" id="graphs-notation-term-4"><div class="para" id="graphs-notation-term-4-1">
-<em class="alert">Peer instruction questions 4–5.</em><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.1.1"><a tabindex="-1" href="#graphs-notation-term-3-1-2" title="Copy heading and permalink for Solution 5.1.1" aria-label="Copy heading and permalink for Solution 5.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.1"><a tabindex="-1" href="#graphs-notation-term-3-1" title="Copy heading and permalink for Activity 5.1" aria-label="Copy heading and permalink for Activity 5.1">🔗</a></div>
+</article></section><section class="onepage" id="graphs-notation-term-4">
+<div class="para" id="graphs-notation-term-4-1">
+<em class="alert">Peer instruction questions 4–5.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;">
-<img src="external/isomorphic_graphs-PI.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-4-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-4-2-description"><div class="para" id="graphs-notation-term-4-2-1-1">Two graphs<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<img src="external/isomorphic_graphs-PI.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-4-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-4-2-description">
+<div class="para" id="graphs-notation-term-4-2-1-1">Two graphs<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="graphs-notation-term-4-3">These graphs are isomorphic. One possible isomorphism is shown below.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details>
+</div>
+<div class="para" id="graphs-notation-term-4-3">These graphs are isomorphic. One possible isomorphism is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -407,19 +382,22 @@ eBookConfig.enable_chatcodes =  false;
 </tr>
 </table></div>
 <div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;">
-<img src="external/nonisomorphic_graphs-PI.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-4-5-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-4-5-description"><div class="para" id="graphs-notation-term-4-5-1-1">Two graphs<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div></details>
+<img src="external/nonisomorphic_graphs-PI.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="graphs-notation-term-4-5-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="graphs-notation-term-4-5-description">
+<div class="para" id="graphs-notation-term-4-5-1-1">Two graphs<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="graphs-notation-term-4-6">These graphs are not isomorphic. To see why they are not, we try to construct an isomorphism. Since <span class="process-math">\(a\)</span> and <span class="process-math">\(1\)</span> are the only vertices of degree <span class="process-math">\(1\text{,}\)</span> any isomorphism would have to pair them. This then forces <span class="process-math">\(c\)</span> and <span class="process-math">\(2\text{,}\)</span> as the unique neighbors of the vertices of degree <span class="process-math">\(1\)</span> to be paired. However, all neighbors of <span class="process-math">\(c\)</span> have degree <span class="process-math">\(3\text{,}\)</span> while <span class="process-math">\(2\)</span> has a neighbor (<span class="process-math">\(4\)</span>) of degree <span class="process-math">\(2\text{.}\)</span> Another independent reason would be that <span class="process-math">\(f\)</span> and <span class="process-math">\(4\)</span> are the unique vertices of degree <span class="process-math">\(2\)</span> in these graphs, so they would have to be paired. However, <span class="process-math">\(f\)</span> has two neighbors of degree <span class="process-math">\(3\text{,}\)</span> while <span class="process-math">\(4\)</span> has a neighbor of degree <span class="process-math">\(4\text{.}\)</span> As a third independent reason, notice that in the left graph, the vertex of degree <span class="process-math">\(1\)</span> and the vertex of degree <span class="process-math">\(2\)</span> are distance 3 apart. However, in the right graph, the vertex of degree <span class="process-math">\(1\)</span> and the vertex of degree <span class="process-math">\(2\)</span> are distance 2 apart.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="graphs-notation-term-5"><div class="para" id="graphs-notation-term-5-1">
+</div></details>
+</div>
+<div class="para" id="graphs-notation-term-4-6">These graphs are not isomorphic. To see why they are not, we try to construct an isomorphism. Since <span class="process-math">\(a\)</span> and <span class="process-math">\(1\)</span> are the only vertices of degree <span class="process-math">\(1\text{,}\)</span> any isomorphism would have to pair them. This then forces <span class="process-math">\(c\)</span> and <span class="process-math">\(2\text{,}\)</span> as the unique neighbors of the vertices of degree <span class="process-math">\(1\)</span> to be paired. However, all neighbors of <span class="process-math">\(c\)</span> have degree <span class="process-math">\(3\text{,}\)</span> while <span class="process-math">\(2\)</span> has a neighbor (<span class="process-math">\(4\)</span>) of degree <span class="process-math">\(2\text{.}\)</span> Another independent reason would be that <span class="process-math">\(f\)</span> and <span class="process-math">\(4\)</span> are the unique vertices of degree <span class="process-math">\(2\)</span> in these graphs, so they would have to be paired. However, <span class="process-math">\(f\)</span> has two neighbors of degree <span class="process-math">\(3\text{,}\)</span> while <span class="process-math">\(4\)</span> has a neighbor of degree <span class="process-math">\(4\text{.}\)</span> As a third independent reason, notice that in the left graph, the vertex of degree <span class="process-math">\(1\)</span> and the vertex of degree <span class="process-math">\(2\)</span> are distance 3 apart. However, in the right graph, the vertex of degree <span class="process-math">\(1\)</span> and the vertex of degree <span class="process-math">\(2\)</span> are distance 2 apart.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="graphs-notation-term-5">
+<div class="para" id="graphs-notation-term-5-1">
 <em class="alert">On the Complexity of Graph Isomorphism</em><div class="workspace" data-space="3cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="graphs-notation-term-5-2">The question we would like to answer algorithmically is “Given two graphs <span class="process-math">\(\bfG\)</span> and <span class="process-math">\(\bfH\text{,}\)</span> is <span class="process-math">\(\bfG\)</span> isomorphic to <span class="process-math">\(\bfH\text{?}\)</span>” The two most-studied classes of computational problems are <span class="process-math">\(\bfP\)</span> and <span class="process-math">\(\bfNP\text{,}\)</span> with a focus on <span class="process-math">\(\bfNP\)</span>-complete problems. The problems in <span class="process-math">\(\bfP\)</span> have efficient algorithms, by which we roughly mean the number of operations an algorithm takes is polynomial in the size of the input (usually number of vertices for graphs). The <span class="process-math">\(\bfNP\)</span>-complete problems are believed to be computationally intractable <em class="emphasis">but</em> must all be of a type where a yes or no answer can be readily verified. (For instance, if I give you a function that I claim is an isomorphism, it’s fast to verify this fact.) Most problems that fit this framework have been shown to be in <span class="process-math">\(\bfP\)</span> or to be <span class="process-math">\(\bfNP\)</span>-complete. However, graph isomorphism has not shown to be either. In fact, it is often considered to be the leading candidate for a problem that is neither in <span class="process-math">\(\bfP\)</span> nor <span class="process-math">\(\bfNP\)</span>-complete.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="graphs-notation-term-5-2">The question we would like to answer algorithmically is “Given two graphs <span class="process-math">\(\bfG\)</span> and <span class="process-math">\(\bfH\text{,}\)</span> is <span class="process-math">\(\bfG\)</span> isomorphic to <span class="process-math">\(\bfH\text{?}\)</span>” The two most-studied classes of computational problems are <span class="process-math">\(\bfP\)</span> and <span class="process-math">\(\bfNP\text{,}\)</span> with a focus on <span class="process-math">\(\bfNP\)</span>-complete problems. The problems in <span class="process-math">\(\bfP\)</span> have efficient algorithms, by which we roughly mean the number of operations an algorithm takes is polynomial in the size of the input (usually number of vertices for graphs). The <span class="process-math">\(\bfNP\)</span>-complete problems are believed to be computationally intractable <em class="emphasis">but</em> must all be of a type where a yes or no answer can be readily verified. (For instance, if I give you a function that I claim is an isomorphism, it’s fast to verify this fact.) Most problems that fit this framework have been shown to be in <span class="process-math">\(\bfP\)</span> or to be <span class="process-math">\(\bfNP\)</span>-complete. However, graph isomorphism has not shown to be either. In fact, it is often considered to be the leading candidate for a problem that is neither in <span class="process-math">\(\bfP\)</span> nor <span class="process-math">\(\bfNP\)</span>-complete.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="thm-first-thm-gt"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The First Theorem of Graph Theory aka The Handshaking Lemma.</span>
-</h3>
+<article class="theorem theorem-like" id="thm-first-thm-gt"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The First Theorem of Graph Theory aka The Handshaking Lemma.</span>
+</h2>
 <div class="para logical" id="thm-first-thm-gt-2-1">
 <div class="para">Let <span class="process-math">\(\deg_{\bfG}(v)\)</span> denote the degree of vertex <span class="process-math">\(v\)</span> in graph <span class="process-math">\(\GVE\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="thm-first-thm-gt-2-1-4">
@@ -428,103 +406,131 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="workspace" data-space="3cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-first-thm-gt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-first-thm-gt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.1: The First Theorem of Graph Theory aka The Handshaking Lemma"><a href="#thm-first-thm-gt" title="Copy heading and permalink for Theorem 5.1: The First Theorem of Graph Theory aka The Handshaking Lemma" aria-label="Copy heading and permalink for Theorem 5.1: The First Theorem of Graph Theory aka The Handshaking Lemma">🔗</a></div></article><article class="proof" id="thm-first-thm-gt-3"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para" id="thm-first-thm-gt-3-1">The summation counts an edge <span class="process-math">\(xy\)</span> twice: once when <span class="process-math">\(v=x\)</span> and once when <span class="process-math">\(v=y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-first-thm-gt-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.2: The First Theorem of Graph Theory aka The Handshaking Lemma"><a tabindex="-1" href="#thm-first-thm-gt" title="Copy heading and permalink for Theorem 5.2: The First Theorem of Graph Theory aka The Handshaking Lemma" aria-label="Copy heading and permalink for Theorem 5.2: The First Theorem of Graph Theory aka The Handshaking Lemma">🔗</a></div>
+</article>
+<article class="proof" id="thm-first-thm-gt-3"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
+<div class="para" id="thm-first-thm-gt-3-1">The summation counts an edge <span class="process-math">\(xy\)</span> twice: once when <span class="process-math">\(v=x\)</span> and once when <span class="process-math">\(v=y\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-first-thm-gt-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 5.1.1"><a href="#thm-first-thm-gt-3" title="Copy heading and permalink for Proof 5.1.1" aria-label="Copy heading and permalink for Proof 5.1.1">🔗</a></div></article><div class="para logical" id="graphs-notation-term-5-4">
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.2.1"><a tabindex="-1" href="#thm-first-thm-gt-3" title="Copy heading and permalink for Proof 5.2.1" aria-label="Copy heading and permalink for Proof 5.2.1">🔗</a></div>
+</article>
+<div class="para logical" id="graphs-notation-term-5-4">
 <div class="displaymath process-math" id="graphs-notation-term-5-4-1">
 \begin{equation*}
 |E| = \frac{1}{2} \sum_{v\in V}\deg_{\bfG}(v)
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="corollary theorem-like" id="cor-num-odd-vts"><h3 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="corollary theorem-like" id="cor-num-odd-vts"><h2 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para" id="cor-num-odd-vts-1-1">In any graph, the number of vertices of odd degree is even.<div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#cor-num-odd-vts-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cor-num-odd-vts-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 5.2"><a href="#cor-num-odd-vts" title="Copy heading and permalink for Corollary 5.2" aria-label="Copy heading and permalink for Corollary 5.2">🔗</a></div></article><article class="proof" id="cor-num-odd-vts-2"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para" id="cor-num-odd-vts-2-1">Adding up an odd number of odd numbers gives an odd number, and the sum would remain odd no matter how many even numbers are added in.<div class="autopermalink" data-description="Paragraph"><a href="#cor-num-odd-vts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 5.3"><a tabindex="-1" href="#cor-num-odd-vts" title="Copy heading and permalink for Corollary 5.3" aria-label="Copy heading and permalink for Corollary 5.3">🔗</a></div>
+</article>
+<article class="proof" id="cor-num-odd-vts-2"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
+<div class="para" id="cor-num-odd-vts-2-1">Adding up an odd number of odd numbers gives an odd number, and the sum would remain odd no matter how many even numbers are added in.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cor-num-odd-vts-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 5.2.1"><a href="#cor-num-odd-vts-2" title="Copy heading and permalink for Proof 5.2.1" aria-label="Copy heading and permalink for Proof 5.2.1">🔗</a></div></article><div class="para logical" id="graphs-notation-term-5-6">
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.3.1"><a tabindex="-1" href="#cor-num-odd-vts-2" title="Copy heading and permalink for Proof 5.3.1" aria-label="Copy heading and permalink for Proof 5.3.1">🔗</a></div>
+</article>
+<div class="para logical" id="graphs-notation-term-5-6">
 <dl class="description-list">
-<dt id="graphs-notation-term-5-6-1-1">Walk<div class="autopermalink" data-description="Item: Walk"><a href="#graphs-notation-term-5-6-1-1" title="Copy heading and permalink for Item: Walk" aria-label="Copy heading and permalink for Item: Walk">🔗</a></div>
+<dt id="graphs-notation-term-5-6-1-1">Walk<div class="autopermalink" aria-hidden="true" data-description="Item: Walk"><a tabindex="-1" href="#graphs-notation-term-5-6-1-1" title="Copy heading and permalink for Item: Walk" aria-label="Copy heading and permalink for Item: Walk">🔗</a></div>
 </dt>
-<dd><div class="para" id="graphs-notation-term-5-6-1-1-2">
-<span class="process-math">\((x_1,x_2,\dots,x_t)\)</span> so that <span class="process-math">\(x_ix_{i+1}\in E\)</span> for <span class="process-math">\(i=1,2,\dots,t-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-6-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
-<dt id="graphs-notation-term-5-6-1-2">Path<div class="autopermalink" data-description="Item: Path"><a href="#graphs-notation-term-5-6-1-2" title="Copy heading and permalink for Item: Path" aria-label="Copy heading and permalink for Item: Path">🔗</a></div>
+<dd>
+<div class="para" id="graphs-notation-term-5-6-1-1-2">
+<span class="process-math">\((x_1,x_2,\dots,x_t)\)</span> so that <span class="process-math">\(x_ix_{i+1}\in E\)</span> for <span class="process-math">\(i=1,2,\dots,t-1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-5-6-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="graphs-notation-term-5-6-1-2">Path<div class="autopermalink" aria-hidden="true" data-description="Item: Path"><a tabindex="-1" href="#graphs-notation-term-5-6-1-2" title="Copy heading and permalink for Item: Path" aria-label="Copy heading and permalink for Item: Path">🔗</a></div>
 </dt>
-<dd><div class="para" id="graphs-notation-term-5-6-1-2-2">Walk with no repeated vertices.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-6-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
-<dt id="graphs-notation-term-5-6-1-3">Cycle<div class="autopermalink" data-description="Item: Cycle"><a href="#graphs-notation-term-5-6-1-3" title="Copy heading and permalink for Item: Cycle" aria-label="Copy heading and permalink for Item: Cycle">🔗</a></div>
+<dd>
+<div class="para" id="graphs-notation-term-5-6-1-2-2">Walk with no repeated vertices.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-5-6-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="graphs-notation-term-5-6-1-3">Cycle<div class="autopermalink" aria-hidden="true" data-description="Item: Cycle"><a tabindex="-1" href="#graphs-notation-term-5-6-1-3" title="Copy heading and permalink for Item: Cycle" aria-label="Copy heading and permalink for Item: Cycle">🔗</a></div>
 </dt>
-<dd><div class="para" id="graphs-notation-term-5-6-1-3-2">Path with <span class="process-math">\(t\geq 3\)</span> for which <span class="process-math">\(x_1x_t\)</span> is also an edge.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-6-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
+<dd>
+<div class="para" id="graphs-notation-term-5-6-1-3-2">Path with <span class="process-math">\(t\geq 3\)</span> for which <span class="process-math">\(x_1x_t\)</span> is also an edge.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-5-6-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
 </dl>
-<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="graphs-notation-term-6"><article class="definition definition-like" id="def-tree"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="graphs-notation-term-6">
+<article class="definition definition-like" id="def-tree"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="def-tree-1-1">
 <ul class="disc" id="def-tree-1-1-1">
 <li id="def-tree-1-1-1-1">
 <div class="para" id="p-derived-def-tree-1-1-1-1">A <dfn class="terminology">tree</dfn> is a connected graph with no cycles.</div>
-<div class="autopermalink" data-description="Item"><a href="#def-tree-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#def-tree-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="def-tree-1-1-1-2">
 <div class="para" id="p-derived-def-tree-1-1-1-2">A vertex <span class="process-math">\(v\)</span> in a tree <span class="process-math">\(\GVE\)</span> is called a <dfn class="terminology">leaf</dfn> provided that <span class="process-math">\(\deg_\bfG(v) = 1\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#def-tree-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#def-tree-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-tree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-tree-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 5.3"><a href="#def-tree" title="Copy heading and permalink for Definition 5.3" aria-label="Copy heading and permalink for Definition 5.3">🔗</a></div></article><article class="theorem theorem-like" id="thm-tree-leaves"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="para" id="thm-tree-leaves-1-1">Every tree on at least two vertices has at least two leaves.<div class="workspace" data-space="5cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-tree-leaves-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Theorem 5.4"><a href="#thm-tree-leaves" title="Copy heading and permalink for Theorem 5.4" aria-label="Copy heading and permalink for Theorem 5.4">🔗</a></div></article><article class="theorem theorem-like" id="thm-tree-unique-path"><h3 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Definition 5.4"><a tabindex="-1" href="#def-tree" title="Copy heading and permalink for Definition 5.4" aria-label="Copy heading and permalink for Definition 5.4">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="thm-tree-leaves"><h2 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="para" id="thm-tree-unique-path-1-1">If <span class="process-math">\(\bfT\)</span> is a tree, then for every pair of distinct vertices <span class="process-math">\(u,v\text{,}\)</span> there exists a unique path from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\)</span> in <span class="process-math">\(\bfT\text{.}\)</span><div class="workspace" data-space="7cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-tree-unique-path-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h2>
+<div class="para" id="thm-tree-leaves-1-1">Every tree on at least two vertices has at least two leaves.<div class="workspace" data-space="5cm"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-tree-leaves-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 5.5"><a href="#thm-tree-unique-path" title="Copy heading and permalink for Theorem 5.5" aria-label="Copy heading and permalink for Theorem 5.5">🔗</a></div></article></section><section class="onepage" id="graphs-notation-term-7"><article class="activity project-like" id="graphs-notation-term-7-1"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.5"><a tabindex="-1" href="#thm-tree-leaves" title="Copy heading and permalink for Theorem 5.5" aria-label="Copy heading and permalink for Theorem 5.5">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="thm-tree-unique-path"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="thm-tree-unique-path-1-1">If <span class="process-math">\(\bfT\)</span> is a tree, then for every pair of distinct vertices <span class="process-math">\(u,v\text{,}\)</span> there exists a unique path from <span class="process-math">\(u\)</span> to <span class="process-math">\(v\)</span> in <span class="process-math">\(\bfT\text{.}\)</span><div class="workspace" data-space="7cm"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-tree-unique-path-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.6"><a tabindex="-1" href="#thm-tree-unique-path" title="Copy heading and permalink for Theorem 5.6" aria-label="Copy heading and permalink for Theorem 5.6">🔗</a></div>
+</article></section><section class="onepage" id="graphs-notation-term-7">
+<article class="activity project-like" id="graphs-notation-term-7-1"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="graphs-notation-term-7-1-1-1">
 <ol class="lower-alpha ol-marker-1" id="graphs-notation-term-7-1-1-1-1">
 <li id="graphs-notation-term-7-1-1-1-1-1">
 <div class="para" id="p-derived-graphs-notation-term-7-1-1-1-1-1">With your neighbors, use mathematical induction to prove that every tree on <span class="process-math">\(n\)</span> vertices has exactly <span class="process-math">\(n-1\)</span> edges.</div>
-<div class="autopermalink" data-description="Item a"><a href="#graphs-notation-term-7-1-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#graphs-notation-term-7-1-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="graphs-notation-term-7-1-1-1-1-2">
 <div class="para" id="p-derived-graphs-notation-term-7-1-1-1-1-2">How many edges would an <span class="process-math">\(n\)</span>-vertex forest consisting of <span class="process-math">\(k\)</span> trees have?</div>
-<div class="autopermalink" data-description="Item b"><a href="#graphs-notation-term-7-1-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#graphs-notation-term-7-1-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
 <div class="workspace" data-space="6cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="graphs-notation-term-7-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<article class="proof" id="graphs-notation-term-7-1-2-1"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="para" id="graphs-notation-term-7-1-2-1-1">For the base case, when <span class="process-math">\(n=1\text{,}\)</span> the tree has only one vertex and thus no edges. Since <span class="process-math">\(n-1 = 1-1=0\text{,}\)</span> we have the desired relationship. Now assume that for some <span class="process-math">\(k\geq 1\text{,}\)</span> every tree with <span class="process-math">\(k\)</span> vertices has exactly <span class="process-math">\(k-1\)</span> edges. Let <span class="process-math">\(\bfT\)</span> be a tree with <span class="process-math">\(k+1\)</span> vertices. The tree <span class="process-math">\(\bfT\)</span> has a leaf <span class="process-math">\(v\text{.}\)</span> Form <span class="process-math">\(\bfT'\)</span> from <span class="process-math">\(\bfT\)</span> by deleting <span class="process-math">\(v\)</span> and its edge. Then <span class="process-math">\(\bfT'\)</span> has <span class="process-math">\(k\)</span> vertices, so by the induction hypothesis, <span class="process-math">\(\bfT'\)</span> has <span class="process-math">\(k-1\)</span> edges. However, <span class="process-math">\(\bfT\)</span> has one more edge (incident with <span class="process-math">\(v\)</span>) than <span class="process-math">\(\bfT'\text{,}\)</span> so <span class="process-math">\(\bfT\)</span> has <span class="process-math">\(k = k+1-1\)</span> edges.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="graphs-notation-term-7-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<article class="proof" id="graphs-notation-term-7-1-2-1"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="graphs-notation-term-7-1-2-1-1">For the base case, when <span class="process-math">\(n=1\text{,}\)</span> the tree has only one vertex and thus no edges. Since <span class="process-math">\(n-1 = 1-1=0\text{,}\)</span> we have the desired relationship. Now assume that for some <span class="process-math">\(k\geq 1\text{,}\)</span> every tree with <span class="process-math">\(k\)</span> vertices has exactly <span class="process-math">\(k-1\)</span> edges. Let <span class="process-math">\(\bfT\)</span> be a tree with <span class="process-math">\(k+1\)</span> vertices. The tree <span class="process-math">\(\bfT\)</span> has a leaf <span class="process-math">\(v\text{.}\)</span> Form <span class="process-math">\(\bfT'\)</span> from <span class="process-math">\(\bfT\)</span> by deleting <span class="process-math">\(v\)</span> and its edge. Then <span class="process-math">\(\bfT'\)</span> has <span class="process-math">\(k\)</span> vertices, so by the induction hypothesis, <span class="process-math">\(\bfT'\)</span> has <span class="process-math">\(k-1\)</span> edges. However, <span class="process-math">\(\bfT\)</span> has one more edge (incident with <span class="process-math">\(v\)</span>) than <span class="process-math">\(\bfT'\text{,}\)</span> so <span class="process-math">\(\bfT\)</span> has <span class="process-math">\(k = k+1-1\)</span> edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 5.1.2.1.1"><a href="#graphs-notation-term-7-1-2-1" title="Copy heading and permalink for Proof 5.1.2.1.1" aria-label="Copy heading and permalink for Proof 5.1.2.1.1">🔗</a></div></article><div class="para" id="graphs-notation-term-7-1-2-2">Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-7-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 5.7.1.1"><a tabindex="-1" href="#graphs-notation-term-7-1-2-1" title="Copy heading and permalink for Proof 5.7.1.1" aria-label="Copy heading and permalink for Proof 5.7.1.1">🔗</a></div>
+</article>
+<div class="para" id="graphs-notation-term-7-1-2-2">Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-7-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="graphs-notation-term-7-1-2-3">A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have <span class="process-math">\(n-k\)</span> edges.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-notation-term-7-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="graphs-notation-term-7-1-2-3">A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have <span class="process-math">\(n-k\)</span> edges.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#graphs-notation-term-7-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.1.2.1"><a href="#graphs-notation-term-7-1-2" title="Copy heading and permalink for Solution 5.1.2.1" aria-label="Copy heading and permalink for Solution 5.1.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Activity 5.1.2"><a href="#graphs-notation-term-7-1" title="Copy heading and permalink for Activity 5.1.2" aria-label="Copy heading and permalink for Activity 5.1.2">🔗</a></div></article></section><div class="autopermalink" data-description="Handout 5.1: Notation and Terminology"><a href="#graphs-notation-term" title="Copy heading and permalink for Handout 5.1: Notation and Terminology" aria-label="Copy heading and permalink for Handout 5.1: Notation and Terminology">🔗</a></div></section>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.7.1"><a tabindex="-1" href="#graphs-notation-term-7-1-2" title="Copy heading and permalink for Solution 5.7.1" aria-label="Copy heading and permalink for Solution 5.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 5.7"><a tabindex="-1" href="#graphs-notation-term-7-1" title="Copy heading and permalink for Activity 5.7" aria-label="Copy heading and permalink for Activity 5.7">🔗</a></div>
+</article></section><div class="autopermalink" aria-hidden="true" data-description="Handout 5.1: Notation and Terminology"><a tabindex="-1" href="#graphs-notation-term" title="Copy heading and permalink for Handout 5.1: Notation and Terminology" aria-label="Copy heading and permalink for Handout 5.1: Notation and Terminology">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-graphs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-eulerham.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

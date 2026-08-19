@@ -20,87 +20,22 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:title" content="In-Class Notes to Accompany Applied Combinatorics">
+<meta property="og:title" content="In-Class Notes to Accompany Applied Combinatorics">
 <meta property="book:title" content="In-Class Notes to Accompany Applied Combinatorics">
-<meta property="book:author" content="Mitchel T.
-					Keller">
-<meta property="book:author" content="William T.
-					Trotter">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.49"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.49"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -122,42 +57,66 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.5';
+eBookConfig.runestone_version = '8.2.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.86d8a68ed7481f7e.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bb5ac777721d4056.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="https://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></h1>
+<div class="heading ptx-banner-heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></div>
 <p class="byline">Mitchel T. Keller, William T. Trotter</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-</div>
-<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
 <p>Copy the code below to embed this page in your own website or LMS page.</p>
-<div class="embed-code-container">
-<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-</div></span><span class="treebuttons"><a class="previous-button button" href="notes-recurrence-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes-recurrence.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="notes-recurrence-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="notes-recurrence.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
 \newcommand{\ints}{\mathbb{Z}}
 \newcommand{\posints}{\mathbb{N}}
@@ -236,11 +195,11 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="appcomb-notes-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Strings, Sets, and Binomial Coefficients</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-strings" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-strings-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Combinatorial Proofs</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-strings-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Ubiquitous Nature of Binomial Coefficients</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-lattice-binomial-multinomial.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lattice Paths, Binomial Theorem, Multinomial Theorem</span></a></div></li>
@@ -248,7 +207,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-induction.html" class="internal"><span class="codenumber">3</span> <span class="title">Induction</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-induction" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-induction-2.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Recursive Counting</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-induction-3.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Principle of Mathematical Induction</span></a></div></li>
 </ul>
@@ -256,7 +215,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-php-notes.html" class="internal"><span class="codenumber">4</span> <span class="title">Placeholder</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-graphs.html" class="internal"><span class="codenumber">5</span> <span class="title">Graph Theory</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-graphs" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="graphs-notation-term.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Notation and Terminology</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-eulerham.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Eulerian and Hamiltonian Graphs</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-graphs-coloring.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Graph Coloring</span></a></div></li>
@@ -266,7 +225,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-posets.html" class="internal"><span class="codenumber">6</span> <span class="title">Partially Ordered Sets</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-posets" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="posets-notation.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Notation and Terminology</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="posets-partitioning.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Antichain and Chain Partitioning</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-subset-lattice-width.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Linear Extensions and the Subset Lattice</span></a></div></li>
@@ -276,14 +235,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-inclusion-exclusion.html" class="internal"><span class="codenumber">7</span> <span class="title">Principle of Inclusion-Exclusion</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-inclusion-exclusion" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-pie-intro-surjections.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction; Counting Surjections</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-pie-derangements-euler-phi.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Counting Derangements and Euler’s <span class="process-math">\(\phi\)</span> Function</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="notes-genfunction.html" class="internal"><span class="codenumber">8</span> <span class="title">Generating Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-notes-genfunction" class="structural toc-item-list">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-intro-ogf.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Ordinary Generating Functions</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="genfunction-partitions-newton.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Partitions and Newton’s Binomial Theorem</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-exp-genfn.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Exponential Generating Functions</span></a></div></li>
@@ -291,7 +250,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="notes-recurrence.html" class="internal"><span class="codenumber">9</span> <span class="title">Recurrence Equations</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-notes-recurrence">
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-intro.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction to Advancement Operators</span></a></div></li>
 <li class="toc-item toc-handout"><div class="toc-title-box"><a href="notes-recurrence-3.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Homogeneous Recurrence Equations</span></a></div></li>
 <li class="toc-item toc-handout active"><div class="toc-title-box"><a href="notes-recurrence-rubots.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Solving a Nonlinear Recurrence</span></a></div></li>
@@ -326,36 +285,48 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="handout" id="notes-recurrence-rubots" data-margins="13mm 13mm 13mm 13mm"><h2 class="heading hide-type">
+<section class="handout" id="notes-recurrence-rubots" data-margins="13mm 13mm 13mm 13mm">
+<h1 class="heading hide-type">
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving a Nonlinear Recurrence</span><div class="print-links"><a href="?printpreview=notes-recurrence-rubots" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
-</h2>
-<section class="onepage" id="notes-recurrence-rubots-2"><section class="paragraphs" id="notes-recurrence-rubots-2-1"><h3 class="heading"><span class="title">RUBOTS.</span></h3>
+</h1>
+<section class="onepage" id="notes-recurrence-rubots-2">
+<section class="paragraphs" id="notes-recurrence-rubots-2-1"><h2 class="heading"><span class="title">RUBOTS.</span></h2>
 <div class="para logical" id="notes-recurrence-rubots-2-1-2">
 <dl class="description-list">
-<dt id="notes-recurrence-rubots-2-1-2-1-1">Rooted<div class="autopermalink" data-description="Item: Rooted"><a href="#notes-recurrence-rubots-2-1-2-1-1" title="Copy heading and permalink for Item: Rooted" aria-label="Copy heading and permalink for Item: Rooted">🔗</a></div>
+<dt id="notes-recurrence-rubots-2-1-2-1-1">Rooted<div class="autopermalink" aria-hidden="true" data-description="Item: Rooted"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-1" title="Copy heading and permalink for Item: Rooted" aria-label="Copy heading and permalink for Item: Rooted">🔗</a></div>
 </dt>
-<dd><div class="para" id="notes-recurrence-rubots-2-1-2-1-1-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
-<dt id="notes-recurrence-rubots-2-1-2-1-2">Unlabeled<div class="autopermalink" data-description="Item: Unlabeled"><a href="#notes-recurrence-rubots-2-1-2-1-2" title="Copy heading and permalink for Item: Unlabeled" aria-label="Copy heading and permalink for Item: Unlabeled">🔗</a></div>
-</dt>
-<dd><div class="para" id="notes-recurrence-rubots-2-1-2-1-2-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
-<dt id="notes-recurrence-rubots-2-1-2-1-3">Binary<div class="autopermalink" data-description="Item: Binary"><a href="#notes-recurrence-rubots-2-1-2-1-3" title="Copy heading and permalink for Item: Binary" aria-label="Copy heading and permalink for Item: Binary">🔗</a></div>
-</dt>
-<dd><div class="para" id="notes-recurrence-rubots-2-1-2-1-3-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-2-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
-<dt id="notes-recurrence-rubots-2-1-2-1-4">Ordered<div class="autopermalink" data-description="Item: Ordered"><a href="#notes-recurrence-rubots-2-1-2-1-4" title="Copy heading and permalink for Item: Ordered" aria-label="Copy heading and permalink for Item: Ordered">🔗</a></div>
-</dt>
-<dd><div class="para" id="notes-recurrence-rubots-2-1-2-1-4-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-2-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
-<dt id="notes-recurrence-rubots-2-1-2-1-5">Trees<div class="autopermalink" data-description="Item: Trees"><a href="#notes-recurrence-rubots-2-1-2-1-5" title="Copy heading and permalink for Item: Trees" aria-label="Copy heading and permalink for Item: Trees">🔗</a></div>
-</dt>
-<dd><div class="para" id="notes-recurrence-rubots-2-1-2-1-5-2"> <div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-2-1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></dd>
-</dl>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<dd>
+<div class="para" id="notes-recurrence-rubots-2-1-2-1-1-2"> <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="notes-recurrence-rubots-2-1-3">By convention, we want the <span class="process-math">\(1\)</span>-vertex graph to be a RUBOT with one leaf.<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</dd>
+<dt id="notes-recurrence-rubots-2-1-2-1-2">Unlabeled<div class="autopermalink" aria-hidden="true" data-description="Item: Unlabeled"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-2" title="Copy heading and permalink for Item: Unlabeled" aria-label="Copy heading and permalink for Item: Unlabeled">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="notes-recurrence-rubots-2-1-2-1-2-2"> <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="notes-recurrence-rubots-2-1-2-1-3">Binary<div class="autopermalink" aria-hidden="true" data-description="Item: Binary"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-3" title="Copy heading and permalink for Item: Binary" aria-label="Copy heading and permalink for Item: Binary">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="notes-recurrence-rubots-2-1-2-1-3-2"> <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="notes-recurrence-rubots-2-1-2-1-4">Ordered<div class="autopermalink" aria-hidden="true" data-description="Item: Ordered"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-4" title="Copy heading and permalink for Item: Ordered" aria-label="Copy heading and permalink for Item: Ordered">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="notes-recurrence-rubots-2-1-2-1-4-2"> <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="notes-recurrence-rubots-2-1-2-1-5">Trees<div class="autopermalink" aria-hidden="true" data-description="Item: Trees"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-5" title="Copy heading and permalink for Item: Trees" aria-label="Copy heading and permalink for Item: Trees">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="notes-recurrence-rubots-2-1-2-1-5-2"> <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2-1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+</dl>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-recurrence-rubots-2-1-3">By convention, we want the <span class="process-math">\(1\)</span>-vertex graph to be a RUBOT with one leaf.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="notes-recurrence-rubots-2-1-4">
 <div class="para">Let <span class="process-math">\(c_{n}\)</span> denote the number of RUBOTs with <span class="process-math">\(n\)</span> <em class="emphasis">leaves</em>. (<em class="alert">NOT</em> vertices!) Take <span class="process-math">\(c_{0}=0\)</span> by convention. The generating function for the number of RUBOTs is then</div>
@@ -364,30 +335,40 @@ eBookConfig.enable_chatcodes =  false;
 C(x)\displaystyle = \sum_{n=0}^{\infty} c_{n}x^{n} = \phantom{0+1x+1x^2+2x^3+5x^4 + \cdots}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="notes-recurrence-rubots-2-1-5"><h4 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
+<article class="activity project-like" id="notes-recurrence-rubots-2-1-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
 <div class="para" id="notes-recurrence-rubots-2-1-5-1-1">Find <span class="process-math">\(c_{1}\text{,}\)</span> <span class="process-math">\(c_{2}\text{,}\)</span> <span class="process-math">\(c_{3}\text{,}\)</span> and <span class="process-math">\(c_{4}\)</span> by drawing the RUBOTs with <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> and <span class="process-math">\(4\)</span> leaves and then start writing out <span class="process-math">\(C(x)\text{.}\)</span><div class="workspace" data-space="3cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Activity 9.3.1"><a href="#notes-recurrence-rubots-2-1-5" title="Copy heading and permalink for Activity 9.3.1" aria-label="Copy heading and permalink for Activity 9.3.1">🔗</a></div></article><article class="activity project-like" id="notes-recurrence-rubots-2-1-6"><h4 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Decomposing RUBOTs.</span>
-</h4>
-<article class="task exercise-like" id="notes-recurrence-rubots-2-1-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="notes-recurrence-rubots-2-1-6-2-1-1">Let <span class="process-math">\(l\)</span> and <span class="process-math">\(r\)</span> be the left and right children, respectively, of the root of a RUBOT. How many RUBOTs with <span class="process-math">\(17\)</span> leaves have <span class="process-math">\(12\)</span> of those leaves descendants of <span class="process-math">\(l\)</span> and <span class="process-math">\(5\)</span> descendants of <span class="process-math">\(r\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" data-description="Task 9.3.2.a"><a href="#notes-recurrence-rubots-2-1-6-2" title="Copy heading and permalink for Task 9.3.2.a" aria-label="Copy heading and permalink for Task 9.3.2.a">🔗</a></div></article><article class="task exercise-like" id="notes-recurrence-rubots-2-1-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="notes-recurrence-rubots-2-1-6-3-1-1">Generalize to a formula for the number of RUBOTs with <span class="process-math">\(n\)</span> leaves in which the left child has <span class="process-math">\(k\)</span> leaves.<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.8"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-5" title="Copy heading and permalink for Activity 9.8" aria-label="Copy heading and permalink for Activity 9.8">🔗</a></div>
+</article>
+<article class="activity project-like" id="notes-recurrence-rubots-2-1-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Decomposing RUBOTs.</span>
+</h3>
+<article class="task exercise-like" id="notes-recurrence-rubots-2-1-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="notes-recurrence-rubots-2-1-6-2-1-1">Let <span class="process-math">\(l\)</span> and <span class="process-math">\(r\)</span> be the left and right children, respectively, of the root of a RUBOT. How many RUBOTs with <span class="process-math">\(17\)</span> leaves have <span class="process-math">\(12\)</span> of those leaves descendants of <span class="process-math">\(l\)</span> and <span class="process-math">\(5\)</span> descendants of <span class="process-math">\(r\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" data-description="Task 9.3.2.b"><a href="#notes-recurrence-rubots-2-1-6-3" title="Copy heading and permalink for Task 9.3.2.b" aria-label="Copy heading and permalink for Task 9.3.2.b">🔗</a></div></article><article class="task exercise-like" id="notes-recurrence-rubots-2-1-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="notes-recurrence-rubots-2-1-6-4-1-1">Give a nonlinear recurrence for <span class="process-math">\(c_{n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-2-1-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.9.a"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-6-2" title="Copy heading and permalink for Task 9.9.a" aria-label="Copy heading and permalink for Task 9.9.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="notes-recurrence-rubots-2-1-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="notes-recurrence-rubots-2-1-6-3-1-1">Generalize to a formula for the number of RUBOTs with <span class="process-math">\(n\)</span> leaves in which the left child has <span class="process-math">\(k\)</span> leaves.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1cm"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.9.b"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-6-3" title="Copy heading and permalink for Task 9.9.b" aria-label="Copy heading and permalink for Task 9.9.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="notes-recurrence-rubots-2-1-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="notes-recurrence-rubots-2-1-6-4-1-1">Give a nonlinear recurrence for <span class="process-math">\(c_{n}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="4cm"></div>
-<div class="autopermalink" data-description="Task 9.3.2.c"><a href="#notes-recurrence-rubots-2-1-6-4" title="Copy heading and permalink for Task 9.3.2.c" aria-label="Copy heading and permalink for Task 9.3.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 9.3.2: Decomposing RUBOTs"><a href="#notes-recurrence-rubots-2-1-6" title="Copy heading and permalink for Activity 9.3.2: Decomposing RUBOTs" aria-label="Copy heading and permalink for Activity 9.3.2: Decomposing RUBOTs">🔗</a></div></article><div class="autopermalink" data-description="Paragraphs: RUBOTS"><a href="#notes-recurrence-rubots-2-1" title="Copy heading and permalink for Paragraphs: RUBOTS" aria-label="Copy heading and permalink for Paragraphs: RUBOTS">🔗</a></div></section></section><section class="onepage" id="notes-recurrence-rubots-3"><div class="para logical" id="notes-recurrence-rubots-3-1">
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.9.c"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-6-4" title="Copy heading and permalink for Task 9.9.c" aria-label="Copy heading and permalink for Task 9.9.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.9: Decomposing RUBOTs"><a tabindex="-1" href="#notes-recurrence-rubots-2-1-6" title="Copy heading and permalink for Activity 9.9: Decomposing RUBOTs" aria-label="Copy heading and permalink for Activity 9.9: Decomposing RUBOTs">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Paragraphs: RUBOTS"><a tabindex="-1" href="#notes-recurrence-rubots-2-1" title="Copy heading and permalink for Paragraphs: RUBOTS" aria-label="Copy heading and permalink for Paragraphs: RUBOTS">🔗</a></div>
+</section></section><section class="onepage" id="notes-recurrence-rubots-3">
+<div class="para logical" id="notes-recurrence-rubots-3-1">
 <div class="displaymath process-math" id="notes-recurrence-rubots-3-1-1">
 \begin{align*}
 C(x) \amp = 0 + x + c_1c_1 x^2 + (c_1c_2+c_2c_1)x^3 + \cdots +
@@ -397,11 +378,11 @@ C^2(x) \amp = c_0^2 + (c_0c_1 + c_1c_0)x + (c_0c_2 +c_1c_1 + c_2c_0)x^2 + \cdots
 C(x) \amp= x+C^2(x) 
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="activity project-like" id="notes-recurrence-rubots-3-2"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="activity project-like" id="notes-recurrence-rubots-3-2"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="notes-recurrence-rubots-3-2-1-1">
 <div class="para">Use the quadratic formula to solve</div>
 <div class="displaymath process-math" id="notes-recurrence-rubots-3-2-1-1-1">
@@ -410,15 +391,17 @@ C^{2}(x) -C(x) + x = 0
 \end{equation*}
 </div>
 <div class="para">for <span class="process-math">\(C(x)\text{.}\)</span> Use what you know about the constant term of <span class="process-math">\(C(x)\)</span> to determine whether you want the plus or the minus from the <span class="process-math">\(\pm\)</span> in the quadratic formula.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2cm"></div>
-<div class="autopermalink" data-description="Activity 9.3.3"><a href="#notes-recurrence-rubots-3-2" title="Copy heading and permalink for Activity 9.3.3" aria-label="Copy heading and permalink for Activity 9.3.3">🔗</a></div></article><div class="para" id="notes-recurrence-rubots-3-3">Recall that <span class="process-math">\(\displaystyle (1-4x)^{-1/2}= \sum_{n=0}^{\infty} \binom{2n}{n}x^{n}\text{.}\)</span><div class="workspace" data-space="10cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 9.10"><a tabindex="-1" href="#notes-recurrence-rubots-3-2" title="Copy heading and permalink for Activity 9.10" aria-label="Copy heading and permalink for Activity 9.10">🔗</a></div>
+</article>
+<div class="para" id="notes-recurrence-rubots-3-3">Recall that <span class="process-math">\(\displaystyle (1-4x)^{-1/2}= \sum_{n=0}^{\infty} \binom{2n}{n}x^{n}\text{.}\)</span><div class="workspace" data-space="10cm"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="notes-recurrence-rubots-3-4"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
+<article class="theorem theorem-like" id="notes-recurrence-rubots-3-4"><h2 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
 <div class="para logical" id="notes-recurrence-rubots-3-4-1-1">
 <div class="para">The generating function for the number <span class="process-math">\(c_{n}\)</span> of rooted, unlabeled, binary, ordered trees with <span class="process-math">\(n\)</span> leaves is</div>
 <div class="displaymath process-math" id="notes-recurrence-rubots-3-4-1-1-3">
@@ -426,38 +409,53 @@ C^{2}(x) -C(x) + x = 0
 C(x) = \frac{1-\sqrt{1-4x}}{2}= \sum_{n=1}^{\infty} \frac{1}{n}\binom{2n-2}{n-1}x^{n}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 9.6"><a href="#notes-recurrence-rubots-3-4" title="Copy heading and permalink for Theorem 9.6" aria-label="Copy heading and permalink for Theorem 9.6">🔗</a></div></article></section><section class="onepage" id="notes-recurrence-rubots-4"><section class="paragraphs" id="notes-recurrence-rubots-4-1"><h3 class="heading"><span class="title">Ramsey Numbers.</span></h3>
-<article class="definition definition-like" id="notes-recurrence-rubots-4-1-2"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="notes-recurrence-rubots-4-1-2-1-1">The <dfn class="terminology">Ramsey number</dfn> <span class="process-math">\(R(m,n)\)</span> is the least number <span class="process-math">\(t\)</span> such that every graph on at least <span class="process-math">\(t\)</span> vertices contains a clique of size <span class="process-math">\(m\)</span> or an independent set of size <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 9.11"><a tabindex="-1" href="#notes-recurrence-rubots-3-4" title="Copy heading and permalink for Theorem 9.11" aria-label="Copy heading and permalink for Theorem 9.11">🔗</a></div>
+</article></section><section class="onepage" id="notes-recurrence-rubots-4">
+<section class="paragraphs" id="notes-recurrence-rubots-4-1"><h2 class="heading"><span class="title">Ramsey Numbers.</span></h2>
+<article class="definition definition-like" id="notes-recurrence-rubots-4-1-2"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="notes-recurrence-rubots-4-1-2-1-1">The <dfn class="terminology">Ramsey number</dfn> <span class="process-math">\(R(m,n)\)</span> is the least number <span class="process-math">\(t\)</span> such that every graph on at least <span class="process-math">\(t\)</span> vertices contains a clique of size <span class="process-math">\(m\)</span> or an independent set of size <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 9.7"><a href="#notes-recurrence-rubots-4-1-2" title="Copy heading and permalink for Definition 9.7" aria-label="Copy heading and permalink for Definition 9.7">🔗</a></div></article><article class="activity project-like" id="notes-recurrence-rubots-4-1-3"><h4 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<article class="task exercise-like" id="notes-recurrence-rubots-4-1-3-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="notes-recurrence-rubots-4-1-3-1-1-1">What is a clique? What is an independent set?<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-4-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 9.12"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-2" title="Copy heading and permalink for Definition 9.12" aria-label="Copy heading and permalink for Definition 9.12">🔗</a></div>
+</article>
+<article class="activity project-like" id="notes-recurrence-rubots-4-1-3"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<article class="task exercise-like" id="notes-recurrence-rubots-4-1-3-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="notes-recurrence-rubots-4-1-3-1-1-1">What is a clique? What is an independent set?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2cm"></div>
-<div class="autopermalink" data-description="Task 9.3.4.a"><a href="#notes-recurrence-rubots-4-1-3-1" title="Copy heading and permalink for Task 9.3.4.a" aria-label="Copy heading and permalink for Task 9.3.4.a">🔗</a></div></article><article class="task exercise-like" id="notes-recurrence-rubots-4-1-3-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="notes-recurrence-rubots-4-1-3-2-1-1">Explain why <span class="process-math">\(R(2,2) = 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-4-1-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.13.a"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-3-1" title="Copy heading and permalink for Task 9.13.a" aria-label="Copy heading and permalink for Task 9.13.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="notes-recurrence-rubots-4-1-3-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="notes-recurrence-rubots-4-1-3-2-1-1">Explain why <span class="process-math">\(R(2,2) = 2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" data-description="Task 9.3.4.b"><a href="#notes-recurrence-rubots-4-1-3-2" title="Copy heading and permalink for Task 9.3.4.b" aria-label="Copy heading and permalink for Task 9.3.4.b">🔗</a></div></article><article class="task exercise-like" id="notes-recurrence-rubots-4-1-3-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="notes-recurrence-rubots-4-1-3-3-1-1">Can you draw a <span class="process-math">\(4\)</span>-vertex graph that has neither a <span class="process-math">\(3\)</span>-clique nor an independent set of size <span class="process-math">\(3\text{?}\)</span> What about <span class="process-math">\(5\)</span> vertices? <span class="process-math">\(6\)</span> vertices?<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-4-1-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.13.b"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-3-2" title="Copy heading and permalink for Task 9.13.b" aria-label="Copy heading and permalink for Task 9.13.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="notes-recurrence-rubots-4-1-3-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="notes-recurrence-rubots-4-1-3-3-1-1">Can you draw a <span class="process-math">\(4\)</span>-vertex graph that has neither a <span class="process-math">\(3\)</span>-clique nor an independent set of size <span class="process-math">\(3\text{?}\)</span> What about <span class="process-math">\(5\)</span> vertices? <span class="process-math">\(6\)</span> vertices?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2cm"></div>
-<div class="autopermalink" data-description="Task 9.3.4.c"><a href="#notes-recurrence-rubots-4-1-3-3" title="Copy heading and permalink for Task 9.3.4.c" aria-label="Copy heading and permalink for Task 9.3.4.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 9.3.4"><a href="#notes-recurrence-rubots-4-1-3" title="Copy heading and permalink for Activity 9.3.4" aria-label="Copy heading and permalink for Activity 9.3.4">🔗</a></div></article><article class="proposition theorem-like" id="prop-r33"><h4 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
+<div class="autopermalink" aria-hidden="true" data-description="Task 9.13.c"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-3-3" title="Copy heading and permalink for Task 9.13.c" aria-label="Copy heading and permalink for Task 9.13.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Activity 9.13"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-3" title="Copy heading and permalink for Activity 9.13" aria-label="Copy heading and permalink for Activity 9.13">🔗</a></div>
+</article>
+<article class="proposition theorem-like" id="prop-r33"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
 <div class="para" id="prop-r33-1-1">The Ramsey number <span class="process-math">\(R(3,3) =6\text{.}\)</span><div class="workspace" data-space="10cm"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#prop-r33-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#prop-r33-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 9.8"><a href="#prop-r33" title="Copy heading and permalink for Proposition 9.8" aria-label="Copy heading and permalink for Proposition 9.8">🔗</a></div></article><div class="para" id="notes-recurrence-rubots-4-1-5">Paul Erdős on <span class="process-math">\(R(5,5)\)</span> vs <span class="process-math">\(R(6,6)\)</span> and <a class="external" href="https://www.combinatorics.org/files/Surveys/ds1/ds1v16-2021.pdf" target="_blank"><span class="booktitle">Small Ramsey Numbers</span></a> by S.P. Radziszowski<div class="autopermalink" data-description="Paragraph"><a href="#notes-recurrence-rubots-4-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 9.14"><a tabindex="-1" href="#prop-r33" title="Copy heading and permalink for Proposition 9.14" aria-label="Copy heading and permalink for Proposition 9.14">🔗</a></div>
+</article>
+<div class="para" id="notes-recurrence-rubots-4-1-5">Paul Erdős on <span class="process-math">\(R(5,5)\)</span> vs <span class="process-math">\(R(6,6)\)</span> and <a class="external" href="https://www.combinatorics.org/files/Surveys/ds1/ds1v16-2021.pdf" target="_blank"><span class="booktitle">Small Ramsey Numbers</span></a> by S.P. Radziszowski<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-recurrence-rubots-4-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Ramsey Numbers"><a href="#notes-recurrence-rubots-4-1" title="Copy heading and permalink for Paragraphs: Ramsey Numbers" aria-label="Copy heading and permalink for Paragraphs: Ramsey Numbers">🔗</a></div></section></section><div class="autopermalink" data-description="Handout 9.3: Solving a Nonlinear Recurrence"><a href="#notes-recurrence-rubots" title="Copy heading and permalink for Handout 9.3: Solving a Nonlinear Recurrence" aria-label="Copy heading and permalink for Handout 9.3: Solving a Nonlinear Recurrence">🔗</a></div></section>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Ramsey Numbers"><a tabindex="-1" href="#notes-recurrence-rubots-4-1" title="Copy heading and permalink for Paragraphs: Ramsey Numbers" aria-label="Copy heading and permalink for Paragraphs: Ramsey Numbers">🔗</a></div>
+</section></section><div class="autopermalink" aria-hidden="true" data-description="Handout 9.3: Solving a Nonlinear Recurrence"><a tabindex="-1" href="#notes-recurrence-rubots" title="Copy heading and permalink for Handout 9.3: Solving a Nonlinear Recurrence" aria-label="Copy heading and permalink for Handout 9.3: Solving a Nonlinear Recurrence">🔗</a></div>
+</section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="notes-recurrence-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
