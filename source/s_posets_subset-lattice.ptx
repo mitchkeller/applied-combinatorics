@@ -31,9 +31,9 @@
             <title>Sperner's Theorem</title>
             <statement>
                 <p>For each <m>t\ge1</m>, the width of the subset lattice <m>\bftwo^t</m> is the maximum size of a rank, <ie/>,
-                <me>
+                <md>
                     \width(\bftwo^t)=\binom{t}{\lfloor\frac{t}{2}\rfloor}
-                </me>.
+                </md>.
                 </p>
             </statement>
 
@@ -51,22 +51,22 @@
                 </p>
 
                 <p>Altogether, there are exactly <m>t!</m> maximum chains in <m>\bftwo^t</m>. This implies that
-                <me>
+                <md>
                     \sum_{i=1}^{w} k_i!(t-k_i)!\le t!
-                </me>.
+                </md>.
                 This implies that
-                <me>
+                <md>
                     \sum_{i=1}^{w}\frac{k_i!(t-k_i)!}{t!}=
                     \sum_{i=1}^{w}\frac{1}{\binom{t}{k_i}}\le 1.
-                </me>
+                </md>
                 It follows that
-                <me>
+                <md>
                     \sum_{i=1}^{i=w}\frac{1}{\binom{t}{\lceil\frac{t}{2}\rceil}}\le 1
-                </me>.
+                </md>.
                 Thus
-                <me>
+                <md>
                     w\le \binom{t}{\lceil\frac{t}{2}\rceil}
-                </me>.
+                </md>.
                 </p>
             </proof>
         </theorem>

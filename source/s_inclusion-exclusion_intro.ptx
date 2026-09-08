@@ -34,9 +34,9 @@
         the total number of students in the class and then subtracting the number of computer
         science majors (the yellow region). However, we've now subtracted the overlapping region
         (the male computer science majors) <em>twice</em>, so we must add that number back. Thus,
-        the number of female students in the class who are not majoring in computer science is <me>
+        the number of female students in the class who are not majoring in computer science is <md>
         63 - 51 - 47 + 45 = 10.
-        </me>
+        </md>
       </p>
     </solution>
   </example>
@@ -45,17 +45,17 @@
   <example xml:id="exa_inclusion-exclusion_int-solns">
     <p>Another type of problem where we can readily see how such a technique is applicable is a
       generalization of the problem of enumerating integer solutions of equations. In <xref ref="ch_strings"/>, we discussed how to count the number of solutions to an equation such
-      as <me>
+      as <md>
         x_1 + x_2 + x_3 + x_4 = 100,
-      </me> where <m>x_1&gt;0</m>, <m>x_2, x_3 \geq 0</m>
+      </md> where <m>x_1&gt;0</m>, <m>x_2, x_3 \geq 0</m>
       and <m>2\leq x_4\leq 10</m>. However, we steered clear of the situation where we add the
       further restriction that <m>x_3\leq 7</m>. The previous example suggests a way of approaching
       this modified problem. </p>
 
     <p>First, let's set up the problem so that the lower bound on each variable is of the form <m>x_i\geq
-      0</m>. This leads us to the revised problem of enumerating the integer solutions to <me>
+      0</m>. This leads us to the revised problem of enumerating the integer solutions to <md>
         x_1' + x_2 + x_3 + x_4' = 97
-      </me> with <m>x_1',x_2,x_3,x_4'\geq 0</m>, <m>x_3\leq
+      </md> with <m>x_1',x_2,x_3,x_4'\geq 0</m>, <m>x_3\leq
       7</m>, and <m>x_4'\leq 8</m>. (We'll then have <m>x_1 = x_1'+1</m> and <m>x_4 = x_4' + 2</m>
       to get our desired solution.) To count the number of integer solutions to this equation with <m>x_3\leq
       7</m> and <m>x_4'\leq 8</m>, we must exclude any solution in which <m>x_3 \gt 7</m> <em>or</em> <m>x_4'
@@ -67,9 +67,9 @@
       To account for this, we notice that there are <m>C(83,3)</m> solutions with both <m>x_3\gt 7</m>
       and <m>x_4'\gt 8</m>. If we add this number back in after subtracting, we've ensured that the
       solutions with both <m>x_3\gt 7</m> and <m>x_4'\gt 8</m> are not included in the total count
-      and are not excluded more than once. Thus, the total number of solutions is <me>
+      and are not excluded more than once. Thus, the total number of solutions is <md>
         \binom{100}{3} - \binom{92}{3} - \binom{91}{3} + \binom{83}{3} = 6516.
-      </me>
+      </md>
     </p>
   </example>
   <p>From these examples, you should start to see a pattern emerging that leads to a more general

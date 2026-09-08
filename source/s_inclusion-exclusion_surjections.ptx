@@ -9,17 +9,17 @@
     <lemma>
         <statement>
             <p>For each subset <m>S\subseteq [m]</m>, <m>N(S)</m> depends only on <m>|S|</m>. In fact, if <m>|S|=k</m>, then
-            <me>
+            <md>
                 N(S)=(m-k)^n.
-            </me>
+            </md>
             </p>
         </statement>
 
         <proof>
             <p>Let <m>|S|=k</m>. Then a function <m>f</m> satisfying property <m>P_i</m> for each <m>i\in S</m> is a string of length <m>n</m> from an alphabet consisting of <m>m-k</m> letters.  This shows that
-            <me>
+            <md>
                 N(S)=(m-k)^n.
-            </me>
+            </md>
             </p>
         </proof>
     </lemma>
@@ -29,9 +29,9 @@
     <theorem>
         <statement>
             <p>The number <m>S(n,m)</m> of surjections from <m>[n]</m> to <m>[m]</m> is given by:
-            <me>
+            <md>
                 S(n,m) = \sum_{k=0}^m (-1)^k\binom{m}{k}(m-k)^n.
-            </me>
+            </md>
             </p>
         </statement>
     </theorem>

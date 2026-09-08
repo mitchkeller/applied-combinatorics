@@ -123,9 +123,9 @@
       <solution component="recur-count-soln">
         <p>
           Let <m>b(n)</m> be the number of binary strings of length <m>n</m> not containing 101. This means that all bit strings of length 1 and 2 satisfy the criterion, and only one bit string (101) of length 3 fails to satisfy it. This gives us initial conditions of
-          <me>
+          <md>
             b(1) = 2\qquad b(2) = 4 \qquad b(3) = 7
-          </me>.
+          </md>.
           If the first digit of a bit string of length <m>n</m> is 0, then the remaining <m>n-1</m> positions can be filled with any of the <m>b(n-1)</m> bit strings of length <m>n-1</m> that do not contain 101. If the first digit of a 101-avoiding bit string of length <m>n</m> is a 1, then the remaining <m>n-1</m> positions can be filled with any 101-avoiding bit string of length <m>n-1</m> that does not start with 01. There are <m>b(n-1)</m> bit strings of length <m>n-1</m> that avoid 101. Since we are <em>only</em> thinking now about those bit strings that we <em>know</em> don't contain 101, we are looking to subtract those that start with 01.
         </p>
         <p>

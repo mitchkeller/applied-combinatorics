@@ -21,9 +21,9 @@
 
     <proof>
         <p>Suppose that the set <m>P</m> of primes is finite. It is non-empty since <m>2\in P</m>. Let <m>n</m> be the unique positive integer for which there exists a bijection <m>f:[n]\rightarrow P</m>. Then let
-        <me>
+        <md>
             p=1+f(1)\times f(2)\times f(3)\times \dots\times f(n)
-        </me>
+        </md>
         Then <m>p</m> is not divisible by any of the primes in <m>P</m> but is larger than any element of <m>P</m>.  Thus, either <m>p</m> is prime or there is a prime that does not belong to <m>P</m>. The contradiction completes the proof.
         </p>
     </proof>
@@ -34,10 +34,10 @@
         <statement>
             <p>
             It is conjectured that the following set is infinite:
-            <me>
+            <md>
                 T=\{n\in\posints:n \text{ and }  n+2 \text{ are both
                 primes } \}.
-            </me>
+            </md>
             </p>
         </statement>
     </conjecture>
@@ -52,9 +52,9 @@
     </proposition>
 
     <p>When <m>X</m> is a finite non-empty set, the <term>cardinality</term><idx><h>cardinality</h></idx> of <m>X</m>, denoted <m>|X|</m> <notation><usage><m>|X|</m></usage><description>cardinality of set <m>X</m></description></notation>is the unique positive integer <m>n</m> for which there is a bijection <m>f:[n]\bijection X</m>. Intuitively, <m>|X|</m> is the number of elements in <m>X</m>. For example,
-    <me>
+    <md>
         |\{(6,2), (8,(4,\emptyset)), \{3,\{5\}\}\}|=3.
-    </me>
+    </md>
         By convention, the cardinality of the empty set is taken to be zero, and we write <m>|\emptyset|=0</m>.
     </p>
 
@@ -68,10 +68,10 @@
         <p>We note that the statement in <xref ref="prop_xy"/> is an example of <q>operator overloading</q>, a technique featured in several programming languages. Specifically, the times sign <m>\times</m> is used twice but has different meanings. As part of <m>X\times Y</m>, it denotes the cartesian product, while as part of <m>|X|\times |Y|</m>, it means ordinary multiplication of positive integers. Programming languages can keep track of the data types of variables and apply the correct interpretation of an operator like <m>\times</m> depending on the variables to which it is applied.
         </p>
         <p>We also have the following general form of <xref ref="prop_xy"/>:
-        <me>
+        <md>
             |X_1\times X_2\times\dots\times X_n|=
             |X_1|\times |X_2|\times\dots\times |X_n|
-        </me>
+        </md>
     </p>
 
     <theorem>

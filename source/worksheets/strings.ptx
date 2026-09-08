@@ -161,9 +161,9 @@
         <solution component="strings-soln">
           <p>
             We have to be careful here. One good way to do that is by separating into two cases: ends with 0 and ends with 5. If we know that the last digit is 0, then there are 9 choices for the first digit, 8 choices for the second digit, and 7 choices for the third digit, so there are <m>9\cdot 8\cdot 7</m> numbers ending with 0. When the final digit is 5, the first digit only has <m>8</m> choices (0 and 5 are excluded). The second digit can be any of <m>8</m> digits (not the first digit and not 5). The third digit can be any of the remaining <m>7</m> digits. Thus, there are <m>8\cdot 8\cdot 7</m> numbers ending with 5. Since these two groups are exclusive, we can add and have
-            <me>
+            <md>
               9\cdot 8\cdot 7 + 8\cdot 8\cdot 7 = 17\cdot 8\cdot 7
-            </me>
+            </md>
             <m>4</m>-digit numbers with distinct digits that are divisible by <m>5</m>. One way to come up with the <m>17</m> on its own would be to recognize that there are <m>18</m> choices for the first and last digits in a <m>4</m>-digit number that is divisible by <m>5</m> (9 choices for the first digit and two choices for the last digit), but this allows for numbers where the first and last digits are both <m>5</m>. We need to exclude that to get at distinct digits, so we have <m>18-1=17</m>.
           </p>
         </solution>
@@ -220,9 +220,9 @@
         <solution component="strings-soln">
           <p>
             Assuming that there's no reason to care about order for which two players are playing guard and which two players are playing forward, we have
-            <me>
+            <md>
               \binom{6}{2}\binom{5}{2}\binom{4}{1}
-            </me>.
+            </md>.
             
           </p>
         </solution>
@@ -282,9 +282,9 @@
         <solution component="strings-soln">
           <p>
             For this problem, we proceed in two phases. First we pick <em>where</em> the letters go (or where the digits go, as once we've made either choice, the other is forced). Then we fill in the positions. Since there are 6 positions and we need 3 letters, there are <m>\binom{6}{3}</m> ways to choose where the letters go. We then have <m>26^3</m> ways to fill in the letters. As noted, there is one way to pick where the digits now go, which we confirm by noting that <m>\binom{3}{3}=1</m>. There are <m>10^3</m> ways to fill in the digits. We must make <em>all</em> of these choices to fill out the license plate, so there are
-            <me>
+            <md>
               \binom{6}{3}26^3 10^3
-            </me>
+            </md>
             such license plates.
           </p>
         </solution>
@@ -294,9 +294,9 @@
       <statement>
         <p>
           Come up with a simple value for the sum
-          <me>
+          <md>
             \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+\binom{n}{n}
-          </me>.
+          </md>.
         </p>
       </statement>
       <hint>

@@ -18,9 +18,9 @@
         </statement>
         <proof>
             <p>Let <m>m,n\in \nonnegints</m>. Then
-            <me>
+            <md>
                 m(n+0)=mn = mn +0 = mn+ m0.
-            </me>
+            </md>
             Now assume <m>m(n+k) = mn + mk</m>.
             Then
             <md>
@@ -42,9 +42,9 @@
         <proof>
             <p>
                 Let <m>m,n\in \nonnegints</m>. Then
-                <me>
+                <md>
                     (m+n)0 =0 = 0+0 = m0 + n0.
-                </me>
+                </md>
                 Now assume <m>(m+n)k = mk + nk</m>.
                 Then
                 <md>
@@ -65,13 +65,13 @@
 
         <proof>
             <p>Let <m>m,n\in \nonnegints</m>. Then
-            <me>
+            <md>
                 m(n0)= m0 = 0 = (mn)0.
-            </me>
+            </md>
             Now assume that <m>m(nk)=(mn)k</m>. Then
-            <me>
+            <md>
                 m[n(k+1)]= m(nk + n)= m(nk) + mn =(mn)k + mn = (mn)(k+1).
-            </me>
+            </md>
             </p>
         </proof>
     </theorem>
@@ -91,9 +91,9 @@
             <p>
                 The lemma holds trivially when <m>n=0</m>. Assume <m>k0=
                 0k=0</m>. Then
-                <me>
+                <md>
                     (k+1)0 =0 = 0+0= 0k+0=0(k+1).
-                </me>
+                </md>
             </p>
         </proof>
     </lemma>
@@ -109,9 +109,9 @@
             <p>
                 <m>01=00+0=0 =10</m>. Assume
                 <m>k1=1k=k</m>. Then
-                <me>
+                <md>
                     (k+1)1=k1+11=1k+1=1(k+1).
-                </me>
+                </md>
             </p>
         </proof>
     </lemma>
@@ -128,9 +128,9 @@
         <proof>
             <p>
                 Let <m>m\in \nonnegints</m>.  Then <m>m0=0m</m>.  Assume <m>mk=km</m>. Then
-                <me>
+                <md>
                     m (k+1) = mk +m = km+m= km +1m=(k+1)m.
-                </me>
+                </md>
             </p>
         </proof>
     </theorem>

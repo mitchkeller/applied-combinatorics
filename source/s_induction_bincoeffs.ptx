@@ -10,9 +10,9 @@
       <h>binomial coefficient</h>
       <h>recursive formula for</h>
     </idx>
-    <me>
+    <md>
       \binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}.
-    </me> This recursion has a natural
+    </md> This recursion has a natural
     combinatorial interpretation. Both sides count the number of <m>k</m>-element subsets of <m>
     \{1,2,\dots,n\}</m>, with the right-hand side first grouping them into those which contain the
     element<nbsp/><m>n</m> and then those which don't. The traditional form of displaying this

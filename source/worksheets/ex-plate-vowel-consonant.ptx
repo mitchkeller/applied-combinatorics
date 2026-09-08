@@ -49,9 +49,9 @@
     <solution component="strings-soln">
       <p>
         We have to be careful here, because if we try adding the answers to the first two parts together, then we have counted license plates such as <q>EGA105</q> twice, since this is a vowel-consonant plate and a divisible by 5 plate. We can deal with this by subtracting the answer to the third part, as the plates that are both vowel-consonant plates and divisible by 5 plates are exactly those that are counted twice. Thus, the answer is
-        <me>
+        <md>
           26^3\cdot 10\cdot 10\cdot 2 + 26^3\cdot 10\cdot 10\cdot 2 - 5\cdot 21\cdot 26\cdot 10^2\cdot 2
-        </me>.
+        </md>.
       </p>
     </solution>
   </task>

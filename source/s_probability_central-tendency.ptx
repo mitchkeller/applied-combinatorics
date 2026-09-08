@@ -26,9 +26,9 @@
                 <p>
                     Let <m>X</m> be a random variable in a probability
                     space <m>(S,P)</m>. Then for every <m>k&gt;0</m>,
-                    <me>
+                    <md>
                         P(|X|\ge k) \le E(|X|)/k.
-                    </me>
+                    </md>
                 </p>
             </statement>
 
@@ -68,15 +68,15 @@
 
         <example>
             <p>Suppose that <m>0\lt p\lt 1</m> and consider a series of <m>n</m> Bernoulli trials with the probability of success being <m>p</m>, and let <m>X</m> count the number of successes. We have already noted that <m>E(X)=np</m>. Now we claim the variance of <m>X</m> is given by:
-            <me>
+            <md>
                 \var(X)=\sum_{i=0}^n (i-np)^2\binom{n}{i}p^i(1-p)^{n-i} = np(1-p)
-            </me>
+            </md>
             There are several ways to establish this claim. One way is to proceed directly from the definition, using the same method we used previously to obtain the expectation. But now you need also to calculate the second derivative. Here is a second approach, one that capitalizes on the fact that separate trials in a Bernoulli series are independent.
             </p>
             <p>Let <m>\cgF=\{X_1,X_2,\dots,X_n\}</m> be a family of random variables in a probability space <m>(S,P)</m>. We say the family <m>\cgF</m> is <term>independent</term><idx><h>independent</h><h>random variables</h></idx> if for each <m>i</m> and <m>j</m> with <m>1\le i\lt j\le n</m>, and for each pair <m>a,b</m> of real numbers with <m>0\le a,b\le 1</m>, the following two events are independent: <m>\{x\in S: X_i(x)\le a\}</m> and <m>\{x\in S:X_j(x)\le b\}</m>. When the family is independent, it is straightforward to verify that
-            <me>
+            <md>
                 \var(X_1+X_2+\dots+X_n)=\var(X_1)+\var(X_2)+\dots+\var(X_n).
-            </me>
+            </md>
             </p>
             <p>With the aid of this observation, the calculation of the variance of the random variable <m>X</m> which counts the number of successes becomes a trivial calculation. But in fact, the entire treatment we have outlined here is just a small part of a more complex subject which can be treated more elegantly and ultimately much more compactly<mdash/>provided you first develop additional background material on families of random variables. For this we will refer you to suitable probability and statistics texts, such as those given in our references.
             </p>
@@ -107,9 +107,9 @@
             <title>Chebyshev's Inequality</title>
             <statement>
                 <p>Let <m>X</m> be a random variable in a probability space <m>(S,P)</m>, and let <m>k&gt;0</m> be a positive real number. If the expectation <m>E(X)</m> of <m>X</m> is <m>\mu</m> and the standard deviation is <m>\sigma_X</m>, then
-                <me>
+                <md>
                     \prob(|X- E(X)|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
-                </me>
+                </md>
                 </p>
             </statement>
 
@@ -126,9 +126,9 @@
                     <mrow>  \amp \ge k^2\sigma_X^2\prob(|X-\mu|&gt;k\sigma_X).</mrow>
                 </md>
                 Since <m>\var(X)=\sigma_X^2</m>, we may now deduce that <m>1/k^2\geq \prob(|X-\mu|)&gt;k\sigma_X)</m>. Therefore, since <m>\prob(|X-\mu|\le k\sigma_X)=1-\prob(|X-\mu|&gt; k\sigma_X)</m>, we conclude that
-                <me>
+                <md>
                 \prob(|X- \mu|\le k\sigma_X)\ge 1-\frac{1}{k^2}.
-                </me>
+                </md>
             </p>
             </proof>
         </theorem>
@@ -143,9 +143,9 @@
 
         <example>
             <p>In the case of Bernoulli trials, we can use basic properties of binomial coefficients to make even more accurate estimates. Clearly, in the case of coin tossing, the probability that the number of heads in <m>10,000</m> tosses is at least <m>7,500</m> is given by
-            <me>
+            <md>
                 \sum_{i = 7,500}^{10,000} \binom{10,000}{i}/2^{10,000}
-            </me>
+            </md>
             Now a computer algebra system can make this calculation exactly, and you are encouraged to check it out just to see how truly small this quantity actually is.
             </p>
         </example>

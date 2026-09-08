@@ -1,14 +1,14 @@
 <section xml:id="s_networkflow_integer-programming">
     <title>Integer Solutions of Linear Programming Problems</title>
     <p>A linear programming problem is an optimization problem that can be stated in the following form: Find the maximum value of a linear function
-    <me>
+    <md>
         c_1x_1+c_2x_2+c_3x_3+\dots+c_n x_n
-    </me>
+    </md>
     subject to <m>m</m> constraints <m>C_1</m>, <m>C_2,\dots,C_m</m>, where
     each constraint <m>C_i</m> is a linear equation of the form:
-    <me>
+    <md>
         C_i:\quad a_{i1}x_1+a_{i2}x_2+a_{i3}x_3+\dots+a_{in}x_n=b_i
-    </me>
+    </md>
     where all coefficients and constants are real numbers.
     </p>
 

@@ -67,9 +67,9 @@
             <p>
               Let <m>A(x)=\sum_{n=0}^{\infty} a_{n}x^{n}</m> and <m>B(x)=\sum_{n=0}^{\infty} b_{n}x^{n}</m> be generating functions.
               Then <m>A(x)B(x)</m> is the generating function of the sequence whose coefficient on <m>x^{n}</m> is given by
-              <me>
+              <md>
                 a_{0}b_{n}+a_{1}b_{n-1}+a_{2}b_{n-2}+\dots+a_{n}b_{0}=\sum_{k=0}^{n} a_{k}b_{n-k}.
-              </me>
+              </md>
             </p>
           </statement>
         </proposition>
@@ -329,9 +329,9 @@
         </theorem>
         <p>
           <url href="https://oeis.org/A293499">OEIS A293499</url> (<alert>New!</alert>)
-          <me>
+          <md>
             C_{n} \sim \frac{4^{n}}{n^{3/2}\sqrt{\pi}}
-          </me>
+          </md>
         </p>
         <theorem>
           <title>Keller and Young 2020</title>
@@ -529,9 +529,9 @@
         <statement>
           <p>
             For all real numbers <m>p</m> and nonnegative integers <m>k</m>,
-            <me>
+            <md>
               \binom{p}{k}=\frac{P(p,k)}{k!}
-            </me>.
+            </md>.
           </p>
         </statement>
 
@@ -556,9 +556,9 @@
         <statement>
           <p>
             For all real <m>p</m> with <m>p\neq0</m>,
-            <me>
+            <md>
               (1+x)^{p}=\sum_{n=0}^{\infty}\binom{p}{n}x^{n}
-            </me>.
+            </md>.
           </p>
         </statement>
       </theorem>

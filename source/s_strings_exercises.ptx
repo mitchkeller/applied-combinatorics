@@ -60,9 +60,9 @@
         You could process <q>at least one K</q> by thinking of it as meaning <q>exactly one K or exactly two K's or exactly three K's</q> and <q>at least one digit is nonzero</q> as <q>exactly two digits are 0 or exactly one digit is 0 or no digits are 0</q>.
         For K's, you'd have then <m>C(3,1)25^{2} + C(3,2) 25^{1} + C(3,3)</m> since you need to pick which position(s) are K and then fill in the other position(s) with one of the other 25 letters.
         For digits, you'd have <m>C(3,1)9^{2} + C(3,2) 9^{1} + C(3,3)9^{3}</m>, and then you would multiply these to get the total number of license plates:
-        <me>
+        <md>
           \left(\binom{3}{1}25^{2} + \binom{3}{2}25^{1} + \binom{3}{3}\right)\left( \binom{3}{1}9^{2} + \binom{3}{2}9^{1} + \binom{3}{3}9^{3}\right)
-        </me>.
+        </md>.
       </p>
       
       <p>
@@ -250,9 +250,9 @@
                       Since the vowels used must be distinct, there are <m>P(5,3) = 5\cdot 4\cdot 3</m> ways to fill in those positions.
                       We are now left with 20 letters and 10 digits (since we <em>can</em> reuse the digits from the first and last positions) to use in the remaining six positions.
                       Therefore, the number of strings is
-                      <me>
+                      <md>
                         10\cdot 9\cdot \binom{13}{4}\cdot \binom{9}{3}\cdot P(5,3)\cdot 30^{6}
-                      </me>.
+                      </md>.
                     </p>
                   </solution>
                 </exercise>
@@ -329,9 +329,9 @@
                             Now Xing can choose 0, 1, 2, or 3 sprinkled toppings, and there are <m>C(10,0)</m>, <m>C(10,1)</m>, <m>C(10,2)</m>, <m>C(10,3)</m> ways to do these things, respectively.
                             Since he must make a single choice of how to approach sprinkled toppings, the total way to choose sprinkled toppings is the sum of these values.
                             We then replace <m>C(10,3)</m> in our original answer with this to get the answer to this part:
-                            <me>
+                            <md>
                               P(20,3)\cdot 6^{3}\cdot\left[\binom{10}{0}+\binom{10}{1}+\binom{10}{2}+\binom{10}{3}\right]
-                            </me>.
+                            </md>.
                           </p>
                         </li>
                       </ol>
@@ -354,9 +354,9 @@
                       Thus, we have <m>25-5-3 = 17</m> pencils, which determine <m>16</m> gaps.
                       As before, we need <m>3</m> dividers, so we have <m>C(16,3)</m> distributions in which Casper gets more than <m>5</m> pencils.
                       Thus, the final solution is
-                      <me>
+                      <md>
                         \binom{22}{3}- \binom{16}{3}.
-                      </me>
+                      </md>
                     </p>
                   </solution>
                 </exercise>
@@ -377,9 +377,9 @@
                 <exercise>
                   <statement>
                     <p>How many integer solutions are there to the equation
-                      <me>
+                      <md>
                         x_1+x_2+x_3+x_4 = 132
-                      </me>
+                      </md>
                       provided that <m>x_1&gt;0</m>, and <m>x_2,x_3,x_4\geq 0</m>? What if we add the restriction that <m>x_4\lt 17</m>?</p>
                     </statement>
                     <solution>
@@ -401,9 +401,9 @@
                   <exercise>
                     <statement>
                       <p>How many integer solutions are there to the inequality
-                        <me>
+                        <md>
                           x_1+x_2+x_3+x_4+x_5\leq 782
-                        </me>
+                        </md>
                         provided that <m>x_1,x_2&gt;0</m>, <m>x_3\geq 0</m>, and <m>x_4,x_5\geq 10</m>?</p>
                       </statement>
                       <solution>
@@ -468,9 +468,9 @@
                     <exercise>
                       <statement>
                         <p>Give a combinatorial argument to prove the identity
-                          <me>
+                          <md>
                             k\binom{n}{k} = n\binom{n-1}{k-1}.
-                          </me>
+                          </md>
                         </p>
                       </statement>
                       <hint>
@@ -480,9 +480,9 @@
                     <exercise>
                       <statement>
                         <p>Let <m>m</m> and <m>w</m> be positive integers. Give a combinatorial argument to prove that for integers <m>k\geq 0</m>,
-                          <me>
+                          <md>
                             \sum_{j=0}^k \binom{m}{j}\binom{w}{k-j} = \binom{m+w}{k}.
-                          </me>
+                          </md>
                         </p>
                       </statement>
                       <solution>
@@ -574,9 +574,9 @@
                                 </li>
                             </ul>
                             Therefore, the total is
-                            <me>
+                            <md>
                                 \binom{13}{6}-\binom{5}{2}\binom{8}{4}-\binom{8}{3}\binom{5}{3}+ \binom{5}{2}\binom{3}{1}\binom{5}{3}
-                            </me>.
+                            </md>.
                         </p>
                       </solution>
                     </exercise>
@@ -592,9 +592,9 @@
                       <solution>
                         <p>
                             The multinomial theorem tells us that
-                            <me>
+                            <md>
                                 (x^{3}+2xy^{2}+y+3)^{18}= \sum_{k_1+k_2+k_3+k_4 = 18}\binom{18}{k_1,k_2,k_3,k_4}(x^{3})^{k_1}(2xy^{2})^{k_2}y^{k_3}\cdot 3^{k_4}= \sum_{k_1+k_2+k_3+k_4 = 18}\binom{18}{k_1,k_2,k_3,k_4}2^{k_2}3^{k_4}x^{3k_1+k_2}y^{2k_2+k_3}
-                            </me>.
+                            </md>.
                         </p>
                         
                         <p>
@@ -605,9 +605,9 @@
                             When <m>k_{1} = 1</m>, we have <m>k_{2} = 9</m>, <m>k_{3} = 6</m>, and <m>k_{4} = 2</m>.
                             When <m>k_{1} = 2</m>, we would need <m>k_{3} = 12</m> and <m>k_{2} = 6</m>, but then the variables sum to more than <m>18</m>.
                             Thus, the coefficient on <m>x^{12}y^{24}</m> is
-                            <me>
+                            <md>
                                 \binom{18}{0,12,0,6}2^{12}3^{6} + \binom{18}{1,9,6,2}2^{9}3^{2}
-                            </me>.
+                            </md>.
                         </p>
                       </solution>
                     </exercise>
@@ -640,19 +640,19 @@
                                 ways to parenthesize a product of three factors (<m>(a_1(a_2a_3))</m>
                                 and <m>((a_1a_2)a_3)</m>), and there are five ways to parenthesize a
                                 product of four factors:
-                                <me>
+                                <md>
                                   (a_1(a_2(a_3a_4))),
                                   (a_1((a_2a_3)a_4)), ((a_1a_2)(a_3a_4)),
                                   ((a_1(a_2a_3))a_4), (((a_1a_2)a_3)a_4).
-                                </me>
+                                </md>
                               </p></li>
                               <li><p>Sequences of <m>n</m> <m>1</m>'s and <m>n</m> <m>-1</m>'s in which the sum of
                                 the first <m>i</m> terms is nonnegative for all <m>i</m>.</p></li>
                                 <li xml:id="ex_part_seq_cat"><p>Sequences <m>1\leq a_1\leq \cdots \leq a_n</m> of integers with
                                   <m>a_i\leq i</m>. For example, for <m>n=3</m>, the sequences are
-                                  <me>
+                                  <md>
                                     111\qquad 112\qquad 113\qquad 122\qquad 123.
-                                  </me>
+                                  </md>
                                 </p>
                               </li>
                               

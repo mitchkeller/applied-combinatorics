@@ -42,9 +42,9 @@
     <lemma>
         <statement>
             <p>For each subset <m>S\subseteq [n]</m>, <m>N(S)</m> depends only on <m>|S|</m>. In fact, if <m>|S|=k</m>, then
-            <me>
+            <md>
                 N(S) = (n-k)!
-            </me>
+            </md>
             </p>
         </statement>
 
@@ -60,9 +60,9 @@
     <theorem>
         <statement>
             <p>For each positive integer <m>n</m>, the number <m>d_n</m> of derangements of <m>[n]</m> satisfies
-            <me>
+            <md>
                 d_n=\sum_{k=0}^n (-1)^k\binom{n}{k}(n-k)!.
-            </me>
+            </md>
             </p>
         </statement>
     </theorem>
@@ -81,9 +81,9 @@
     <theorem>
         <statement>
             <p>For a positive integer <m>n</m>, let <m>d_n</m> denote the number of derangements of <m>[n]</m>. Then
-            <me>
+            <md>
                 \lim_{n\rightarrow\infty}\frac{d_n}{n!} = \frac{1}{e}.
-            </me>
+            </md>
             Equivalently, the fraction of all permutations of <m>[n]</m> that are derangements approaches <m>1/e</m> as <m>n</m> increases.
             </p>
         </statement>
@@ -96,9 +96,9 @@
                 <mrow>  \amp = \sum_{k=0}^n (-1)^k \frac{1}{k!}.</mrow>
             </md>
             Recall from Calculus that the Taylor series expansion of <m>e^x</m> is given by
-        <me>
+        <md>
             e^x = \sum_{k=0}^{\infty} \frac{x^k}{k!},
-        </me>
+        </md>
         and thus the result then follows by substituting <m>x=-1</m>.
             </p>
         </proof>

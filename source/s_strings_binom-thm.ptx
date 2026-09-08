@@ -13,16 +13,16 @@
     </idx>
     <statement>
       <p>Let <m>x</m> and <m>y</m> be real numbers with <m>x</m>, <m>y</m> and <m>x+y</m> non-zero.
-        Then for every non-negative integer <m>n</m>, <me>
+        Then for every non-negative integer <m>n</m>, <md>
         (x+y)^n=\sum_{i=0}^{n}\binom{n}{i}x^{n-i}y^{i}.
-        </me>
+        </md>
       </p>
     </statement>
 
     <proof>
-      <p>View <m>(x+y)^n</m> as a product <me>
+      <p>View <m>(x+y)^n</m> as a product <md>
         (x+y)^n=\underbrace{(x+y)(x+y)(x+y)(x+y)\dots(x+y)(x+y)}_{n\text{&#160;factors} }.
-        </me>
+        </md>
         Each term of the expansion of the product results from choosing either <m>x</m> or <m>y</m>
         from one of these factors. If <m>x</m> is chosen <m>n-i</m> times and <m>y</m> is chosen <m>
         i</m> times, then the resulting product is <m>x^{n-i}y^i</m>. Clearly, the number of such
@@ -42,9 +42,9 @@
       <statement>
         <p>
           Explain how you can use <xref ref="thm_binomial" text="title"/> to give yet another proof of the identity
-          <me>
+          <md>
             2^n = \binom{n}{0} + \binom{n}{1} + \cdots + \binom{n}{n-1}+\binom{n}{n} = \sum_{k=0}^n \binom{n}{k}
-          </me>.
+          </md>.
         </p>
       </statement>
       <response/>

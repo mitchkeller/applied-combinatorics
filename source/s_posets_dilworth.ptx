@@ -35,9 +35,9 @@
     </statement>
     <proof>
       <p>For each <m>x\in X</m>, let <m>\height(x)</m> be the largest integer <m>t</m> for which
-        there exists a chain <me>
+        there exists a chain <md>
           x_1\lt x_2\lt \dots \lt x_t
-        </me> with <m>x=x_t</m>.
+        </md> with <m>x=x_t</m>.
         Evidently, <m>\height(x)\le h</m> for all <m>x\in X</m>. Then for each <m>i=1,2,\dots,h</m>,
         let <m>A_i=\{x\in X:\height(x)=i\}</m>. It is easy to see that each <m>A_i</m> is an
         antichain, as if <m>x,y\in A_i</m> are such that <m>x\lt y</m>, then there is a chain <m>x_1\lt
@@ -175,14 +175,14 @@
     <p>Label the elements of <m>A</m> as <m>\{a_1,a_2,\dots,a_w\}</m>. Note that <m>U[A]\ne X</m>
       since <m>y\notin U[A]</m>, and <m>D[A]\ne X</m> since <m>x\notin D[A]</m>. Therefore, we may
       apply the inductive hypothesis to the subposets of <m>\bfP</m> determined by <m>D[A]</m> and <m>
-      U[A]</m>, respectively, and partition each of these two subposets into <m>w</m> chains: <me>
+      U[A]</m>, respectively, and partition each of these two subposets into <m>w</m> chains: <md>
       U[A]= C_1\cup C_2\cup\dots\cup C_w\quad\text{and} \quad
         D[A]=D_1\cup D_2\cup\dots\cup D_w.
-      </me>
+      </md>
       Without loss of generality, we may assume these chains have been labeled so that <m>a_i\in
-      C_i\cap D_i</m> for each <m>i=1,2,\dots,w</m>. However, this implies that <me>
+      C_i\cap D_i</m> for each <m>i=1,2,\dots,w</m>. However, this implies that <md>
         X=(C_1\cup D_1)\cup (C_2\cup D_2)\cup\dots\cup(C_w\cup D_w)
-      </me> is the
+      </md> is the
       desired partition which in turn completes the proof. </p>
 
     <p>In <xref ref="fig_width7"/>, we illustrate Dilworth's chain covering theorem for the poset

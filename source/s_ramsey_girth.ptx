@@ -26,16 +26,16 @@
             </p>
 
             <p>Now for some details. Let <m>X_1</m> be the random variable that counts the number of <m>s</m>-element independent sets. Then
-            <me>
+            <md>
                 E(X_1)=\binom{n}{s}(1-p)^{C(s,2)}
-            </me>
+            </md>
                 Now we want <m>E(X_1)\lt 1/4</m>. Since <m>C(n,s)\le n^s=e^{s\ln n}</m> and <m>(1-p)^{C(s,2)}\le e^{-ps^2/2}</m>, it suffices to set <m>s=2\ln n/p</m>. By <xref ref="thm_markov" text="title"/>, the probability that <m>X_1</m> exceeds <m>1/2\ge 2E(X_1)</m> is less than <m>1/2</m>.
             </p>
 
             <p>Now let <m>X_2</m> count the number of cycles in <m>G</m> of size at most <m>g</m>.  Then
-            <me>
+            <md>
                 E(X_2)\le \sum_{i=3}^g n(n-1)(n-2)\dots(n-i+1) p^i\le g(pn)^g.
-            </me>
+            </md>
             Now, we want <m>E(X_2)\le n/4</m>, and an easy calculation shows that <m>g(np)^g\le n/4</m> when <m>p=n^{1/g-1}/10</m>. Again by <xref ref="thm_markov" text="title"/>, the probability that <m>X_2</m> exceeds <m>n/2\ge 2E(X_2)</m> is less than <m>1/2</m>.
             </p>
 

@@ -83,16 +83,16 @@
                 </p>
 
                 <p>Note that
-                <me>
+                <md>
                     m+(n+0) = m+n = (m+n)+0
-                </me>
+                </md>
                 which shows that <m>0\in \mathbb{M}</m>.
                 </p>
                 <p>Now assume that <m>k\in \mathbb{M}</m>, <ie/>, <m>m+(n+k) = (m+n)+k</m>.
                 Then
-                <me>
+                <md>
                     m+[n+(k+1)]=m+[(n+k)+1]=[m+(n+k)]+1= [(m+n)+k]+1=(m+n)+(k+1).
-                </me>
+                </md>
                 Notice here that the first, second, and fourth equalities follow from the second part of the definition of addition while the third uses our inductive assumption that <m>m+(n+k)=(m+n)+k)</m>. This shows that <m>k+1\in \mathbb{M}</m>. Therefore, <m>\mathbb{M}= \nonnegints</m>. Since <m>m</m> and <m>n</m> were arbitrary elements of <m>\nonnegints</m>, the theorem follows.
                 </p>
             </proof>
@@ -110,14 +110,14 @@
 
             <proof>
                 <p>Fix <m>m\in \nonnegints</m>. Then
-                    <me>
+                    <md>
                         m+(0+1)=m+1= (m+0)+1.
-                    </me>
+                    </md>
                     Now assume that <m>m+(k+1)=(m+1)+k</m>.
                     Then
-                    <me>
+                    <md>
                         m+[(k+1)+1]=[m+(k+1)]+1=[(m+1)+k]+1=(m+1)+(k+1).
-                    </me>
+                    </md>
                 </p>
             </proof>
         </lemma>
@@ -134,9 +134,9 @@
 
             <proof>
                 <p>The statement is trivially true when <m>n= 0</m>.  Now suppose that <m>k+0=0+k=k</m> for some <m>k\in \nonnegints</m>.  Then
-                    <me>
+                    <md>
                         (k+1) +0 = k+1 = (0+k)+1= 0+(k+1).
-                    </me>
+                    </md>
                 </p>
             </proof>
         </lemma>
@@ -151,9 +151,9 @@
 
             <proof>
                 <p>Let <m>m\in \nonnegints</m>. Then <m>m+0=0+m</m> from the preceding lemma.  Assume <m>m+k=k+m</m>. Then
-                    <me>
+                    <md>
                         m+(k+1)=(m+k)+1=(k+m)+1= k+(m+1) = (k+1)+m.
-                    </me>
+                    </md>
                 </p>
             </proof>
         </theorem>
@@ -180,9 +180,9 @@
 
             <proof>
                 <p>Let <m>m,n\in \nonnegints</m>. Suppose that <m>m+0=n+0</m>. Then <m>m=n</m>.  Now suppose that <m>m=n</m> whenever <m>m+k=n+k</m>.  If <m>m+(k+1)=n+(k+1)</m>, then
-                    <me>
+                    <md>
                         s(m+k)=(m+k)+1=m+(k+1)=n+(k+1)=(n+k)+1=s(n+k).
-                    </me>
+                    </md>
                     Since <m>s</m> is an
                     injection, this implies <m>m+k=n+k</m>. Thus <m>m=n</m>.
                 </p>

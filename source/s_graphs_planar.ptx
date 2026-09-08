@@ -54,43 +54,43 @@
         <idx><h>Euler's formula</h></idx>
         <statement>
             <p>Let <m>\bfG</m> be a connected planar graph with <m>n</m> vertices and <m>m</m> edges. Every planar drawing of <m>\bfG</m> has <m>f</m> faces, where <m>f</m> satisfies
-            <me>
+            <md>
                 n-m+f=2.
-            </me>
+            </md>
             </p>
         </statement>
 
 
         <proof>
             <p>Our proof is by induction on the number <m>m</m> of edges. If <m>m=0</m>, then since <m>\bfG</m> is connected, our graph has a single vertex, and so there is one face. Thus <m>n-m+f = 1-0+1=2</m> as needed. Now suppose that we have proven Euler's formula for all graphs with less than <m>m</m> edges and let <m>\bfG</m> have <m>m</m> edges. Pick an edge <m>e</m> of <m>\bfG</m>. What happens if we form a new graph <m>\bfG'</m> by deleting <m>e</m> from <m>\bfG</m>? If <m>\bfG'</m> is connected, our inductive hypothesis applies. Say that <m>\bfG'</m> has <m>n'</m> vertices, <m>m'</m> edges, and <m>f'</m> faces. Then by induction, these numbers satisfy
-        <me>
+        <md>
             n'-m'+f'=2.
-        </me>
+        </md>
         Since we only deleted one edge, <m>n'=n</m> and <m>m'=m-1</m>. What did the removal of <m>e</m> do to the number of faces? In <m>\bfG'</m> there's a new face that was formerly two faces divided by <m>e</m> in <m>\bfG</m>. Thus, <m>f'=f-1</m>. Substituting these into <m>n'-m'+f'=2</m>, we have
-        <me>
+        <md>
             n-(m-1)+(f-1)=2 \iff n-m+f=2.
-        </me>
+        </md>
         Thus, if <m>\bfG'</m> is connected, we are done. If <m>\bfG'</m> is disconnected, however, we cannot apply the inductive assumption to <m>\bfG'</m> directly. Fortunately, since we removed only one edge, <m>\bfG'</m> has two components, which we can view as two connected graphs <m>\bfG'_1</m> and <m>\bfG'_2</m>. Each of these has fewer than <m>m</m> edges, so we may apply the inductive hypothesis to them. For <m>i=1,2</m>, let <m>n'_i</m> be the number of vertices of <m>\bfG'_i</m>, <m>m'_i</m> the number of edges of <m>\bfG'_i</m>, and <m>f'_i</m> the number of faces of <m>\bfG'_i</m>. Then by induction we have
-        <me>
+        <md>
             n'_1 - m'_1 + f'_1 = 2 \quad \text{and} \quad n'_2-m'_2+f'_2 =2.
-        </me>
+        </md>
         Adding these together, we have
-        <me>
+        <md>
             (n'_1 + n'_2) - (m'_1 + m'_2) + (f'_1 + f'_2) = 4.
-        </me>
+        </md>
         But now <m>n=n'_1 + n'_2</m>, and <m>m'_1 + m'_2 = m-1</m>, so the equality becomes
-        <me>
+        <md>
             n - (m-1) + (f'_1+f'_2) = 4 \iff n-m + (f'_1 + f'_2) = 3.
-        </me>
+        </md>
         The only thing we have yet to figure out is how <m>f'_1+f'_2</m> relates to <m>f</m>, and we have to hope that it will allow us to knock the <m>3</m> down to a <m>2</m>. Every face of <m>\bfG'_1</m> and <m>\bfG'_2</m> is a face of <m>\bfG</m>, since the fact that removing <m>e</m> disconnects <m>\bfG</m> means that <m>e</m> must be part of the boundary of the unbounded face. Further, the unbounded face is counted twice in the sum <m>f'_1 + f'_2</m>, so <m>f=f'_1 + f'_2 -1</m>. This gives exactly what we need to complete the proof.
             </p>
         </proof>
     </theorem>
 
     <p>Taken by itself, Euler's formula doesn't seem that useful, since it requires counting the number of faces in a planar embedding. However, we can use this formula to get a quick way to determine that a graph is not planar. Consider a drawing without edge crossings of a graph on <m>n</m> vertices and <m>m</m> edges, with <m>n\ge3</m>.  We consider pairs <m>(e,F)</m> where <m>e</m> is an edge of <m>\bfG</m> and <m>F</m> is a face that has <m>e</m> as part of its boundary. How many such pairs are there? Let's call the number of pairs <m>p</m>. Each edge can bound either one or two faces, so we have that <m>p\leq 2m</m>. We can also bound <m>p</m> by counting the number of pairs in which a face <m>F</m> appears. Each face is bounded by at least <m>3</m> edges, so it appears in at least <m>3</m> pairs, and so <m>p\geq 3f</m>. Thus <m>3f\leq 2m</m> or <m>f\leq 2m/3</m>. Now, utilizing Euler's formula, we have
-    <me>
+    <md>
         m = n+f-2 \leq n + \frac{2m}{3} - 2 \iff \frac{m}{3} \leq n-2.
-    </me>
+    </md>
         Thus, we've proven the following theorem.
     </p>
 

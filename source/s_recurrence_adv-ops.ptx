@@ -13,9 +13,9 @@
       following example. </p>
     <example xml:id="ex_recurrence_diffeq">
       <statement>
-        <p>Solve the equation <me>
+        <p>Solve the equation <md>
             Df = 3f
-          </me> if <m>f(0) = 2</m>. </p>
+          </md> if <m>f(0) = 2</m>. </p>
       </statement>
       <solution>
         <p>Even if you've not studied differential equations, you should recognize that this
@@ -50,9 +50,9 @@
     <example>
 
       <p>Let <m>f\in V</m> be defined by <m>f(n)=7n-9</m>. Then we apply the advancement operator
-        polynomial <m>3A^2-5A+4</m> to <m>f</m> with <m>n=0</m> as follows: <me>
+        polynomial <m>3A^2-5A+4</m> to <m>f</m> with <m>n=0</m> as follows: <md>
         (3A^2-5A+4)f(0)=3f(2) - 5f(1) +4f(0)= 3(5)-5(-2)+4(-9)=-11.
-        </me>
+        </md>
       </p>
     </example>
     <p>As an analogue of <xref ref="ex_recurrence_diffeq"/>, consider the following simple example
@@ -65,9 +65,9 @@
       <solution>
         <p>First, let's write the question in terms of the advancement operator. We can define a
           function <m>f(n) = s_n</m> for <m>n\geq 0</m>, and then the information given becomes that <m>
-          f(0)=3</m> and <me>
+          f(0)=3</m> and <md>
             Af(n) = 2f(n),\qquad n\geq 0.
-          </me> What function has
+          </md> What function has
           the property that when we advance it, <ie/>, evaluate it at <m>n+1</m>, it gives twice
           the value that it takes at <m>n</m>? The first function that comes into your mind should
           be <m>2^n</m>. Of course, just like with our differential equation, for any constant <m>c</m>
@@ -75,10 +75,10 @@
           we're well on our way to solving our problem. Since we know that <m>f(0) = 3</m>, we have <m>f(0)
           = c2^0 = c</m>, so <m>c= 3</m>. Therefore, <m>s_n = f(n) = 3\cdot 2^n</m> for <m>n\geq 0</m>.
           This clearly satisfies our initial condition, and now we can check that it also satisfies
-          our advancement operator equation: <me>
+          our advancement operator equation: <md>
             Af(n) = 3\cdot 2^{n+1} = 3\cdot 2\cdot 2^n = 2\cdot (3\cdot 2^n) =
             2\cdot f(n).
-          </me>
+          </md>
         </p>
       </solution>
     </example>
@@ -102,9 +102,9 @@
       <h>constant coefficients</h>
     </idx>
     <p>It is easy to see that a linear recurrence equation can be conveniently rewritten using a
-      polynomial <m>p(A)</m> of the advancement operator: <men xml:id="eqn_advance">
+      polynomial <m>p(A)</m> of the advancement operator: <md number="yes" xml:id="eqn_advance">
         p(A)f=(c_0A^{k}+ c_1A^{k-1} + c_2A^{k-2} + \dots+c_k)f = g.
-      </men> In <xref ref="eqn_advance"/>, we intend that <m>k\ge1</m> is an integer, <m>g</m> is a fixed vector
+      </md> In <xref ref="eqn_advance"/>, we intend that <m>k\ge1</m> is an integer, <m>g</m> is a fixed vector
       (function) from <m>V</m>, and <m>c_0,c_1,\dots, c_k</m> are constants with <m>c_0,c_k\neq0</m>.
       Note that since <m>c_0\neq0</m>, we can divide both sides by <m>c_0</m>, <ie/>, we may in
       fact assume that <m>c_0=1</m> whenever convenient to do so. </p>

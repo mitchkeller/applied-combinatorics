@@ -644,9 +644,9 @@
           <solution component="sublat-width-soln">
             <p>
               We know that the number of maximal chains passing through <m>S_{i}</m> is <m>s_{i}!(n-s_{i})!</m>, so then we add up and get
-              <me>
+              <md>
                 \sum_{i=1}^{t} s_{i}!(n-s_{i})!.
-              </me>
+              </md>
             </p>
           </solution>
         </exercise>
@@ -672,9 +672,9 @@
           </statement>
           <solution component="sublat-width-soln">
             <p>
-              <me>
+              <md>
                 \sum_{i=1}^{t} \frac{1}{\binom{n}{s_i}}\leq 1
-              </me>
+              </md>
             </p>
           </solution>
         </exercise>
@@ -707,9 +707,9 @@
           <solution component="sublat-width-soln">
             <p>
               When all the terms have the same value, the inequality can be rewritten as
-              <me>
+              <md>
                 \frac{w}{\binom{n}{\left\lceil \frac{n}{2}\right\rceil}}\leq 1,
-              </me>
+              </md>
               which implies <m>w\leq \binom{n}{\lceil n/2\rceil}</m>.
               We now have matching upper and lower bounds for the width, since we know there is an antichain with <m>\binom{n}{\lceil n/2\rceil}</m> elements.
               Thus, this is the width.

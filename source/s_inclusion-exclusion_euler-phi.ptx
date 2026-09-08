@@ -6,9 +6,9 @@
     </p>
 
     <p>For a positive integer <m>n\ge2</m>, let
-    <me>
+    <md>
         \phi(n)=|\{m\in \posints: m\le n, \gcd(m,n)=1\}|.
-    </me>
+    </md>
     This function is usually called the <term>Euler <m>\phi</m> function</term> or the <term>Euler totient function</term>    <idx><h>Euler <m>\phi</m> function</h></idx> and has many connections to number theory. We won't focus on the number-theoretic aspects here, only being able to compute <m>\phi(n)</m> efficiently for any <m>n</m>.<notation><usage><m>\phi(n)</m></usage><description>Euler <m>\phi</m> function</description></notation>
     </p>
 
@@ -43,9 +43,9 @@ phi(321974)
     <theorem xml:id="thm_eulerphi">
         <statement>
             <p>Let <m>n\ge2</m> be a positive integer and suppose that <m>n</m> has <m>m</m> distinct prime factors: <m>p_1</m>, <m>p_2,\dots,p_m</m>.  Then
-            <men xml:id="eq_eulerphi">
+            <md number="yes" xml:id="eq_eulerphi">
                 \phi(n) = n\prod_{i = 1}^{m}\frac{p_i-1}{p_i}.
-            </men>
+            </md>
             </p>
         </statement>
     </theorem>
@@ -56,9 +56,9 @@ phi(321974)
     <proposition xml:id="prop_num-divisible">
         <statement>
             <p>Let <m>n\ge2</m>, <m>k\ge1</m>, and let <m>p_1,p_2,\dots,p_k</m> be distinct primes each of which divide <m>n</m> evenly (without remainder).  Then the number of integers from <m>\{1,2,\dots,n\}</m> which are divisible by each of these <m>k</m> primes is
-                <me>
+                <md>
                     \frac{n}{p_1p_2\dots p_k}.
-                </me>
+                </md>
             </p>
         </statement>
     </proposition>
@@ -81,19 +81,19 @@ phi(321974)
 
     <example>
         <p>SageMath reports that
-            <me>
+            <md>
                 1369122257328767073 = (3)^3(11)(19)^4(31)^2(6067)^2
-            </me>
+            </md>
             is the factorization of <m>1369122257328767073</m> into primes.
             It follows that
-            <me>
+            <md>
                 \phi(1369122257328767073) = 1369122257328767073
                 \,\,\frac{2}{3}\,\frac{10}{11}\,\frac{18}{19}\,\frac{30}{31}\,\frac{6066}{6067}.
-            </me>
+            </md>
             Thus SageMath quickly reports that
-            <me>
+            <md>
                 \phi(1369122257328767073) =760615484618973600.
-            </me>
+            </md>
         </p>
     </example>
 

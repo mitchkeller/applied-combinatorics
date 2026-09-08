@@ -24,18 +24,18 @@
             </p>
         </example>
         <p>Ignoring, for the moment, the issue of finding augmenting paths, let's see how they can be used to modify the current flow in a way that increases its value by some <m>\delta &gt; 0</m>. Here's how for an augmenting path <m>P=(x_0,x_1,\dots,x_m)</m>. First, let <m>\delta_1</m> be the positive number defined by:
-        <me>
+        <md>
             \delta_1 =\min\{c(x_{i-1},x_i)-\phi(x_{i-1},x_i):(x_{i-1},x_i) 
             \text{ a forward edge of }  P.\}
-        </me>
+        </md>
         The quantity <m>c(x_{i-1},x_i)-\phi(x_{i-1},x_i)</m> is nothing but the spare capacity on the edge <m>(x_{i-1},x_i)</m>, and thus <m>\delta_1</m> is the largest amount by which <em>all</em> of the forward edges of <m>P</m>. Note that the edges <m>(x_0,x_1)</m> and <m>(x_{m-1},x_m)</m> are always forward edges, so the <em>positive</em> quantity <m>\delta_1</m> is defined for every augmenting path.
         </p>
 
         <p>When the augmenting path <m>P</m> has no backward edges, we set <m>\delta= \delta_1</m>. But when <m>P</m> has one or more backward edges, we pause to set
-        <me>
+        <md>
             \delta_2 =\min\{\phi(x_{i},x_{i-1}):(x_{i-1},x_i) 
             \text{ a backward edge of }  P\}.
-        </me>
+        </md>
         Since every backward edge is used, <m>\delta_2&gt;0</m> whenever we need to define it. We then set <m>\delta=\min\{\delta_1,\delta_2\}</m>.
         </p>
 

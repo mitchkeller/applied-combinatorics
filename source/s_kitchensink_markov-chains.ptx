@@ -25,7 +25,7 @@
         </p>
 
         <p>For example, here is the transition matrix for the graph in <xref provisional="fig-markovchain"/>.
-        <men xml:id="eqn_transition">
+        <md number="yes" xml:id="eqn_transition">
             P =\begin{pmatrix}0 \amp  1/4 \amp  1/4 \amp  1/4 \amp  1/4 \amp    0 \\
             1/2 \amp    0 \amp    0 \amp  1/2 \amp    0 \amp    0 \\
             1/3 \amp    0 \amp    0 \amp  1/3 \amp    0 \amp  1/3 \\
@@ -33,7 +33,7 @@
             1 \amp    0 \amp    0 \amp    0 \amp    0 \amp    0 \\
             0 \amp    0 \amp    1 \amp    0 \amp    0 \amp    0 \\
             \end{pmatrix}
-        </men>
+        </md>
         </p>
         <p>A transition matrix <m>P</m> is <term>regular</term><idx><h>regular</h><h>transition matrix</h></idx> if there is some integer <m>m</m> for which the matrix <m>P^m</m> has only positive entries. Here is a fundamental result from this subject, one that is easy to understand but a bit too complex to prove given our space constraints.
         </p>
@@ -56,7 +56,7 @@
         </p>
         <example>
             <p>We modify the transition matrix from <xref ref="eqn_transition"/> by making states <m>4</m> and <m>5</m> absorbing. The revised transition matrix is now:
-            <men xml:id="eqn_absorbing">
+            <md number="yes" xml:id="eqn_absorbing">
                 P =\begin{pmatrix}0 \amp  1/4 \amp  1/4 \amp  1/4 \amp  1/4 \amp    0 \\
                     1/2 \amp    0 \amp    0 \amp  1/2 \amp    0 \amp    0 \\
                     1/3 \amp    0 \amp    0 \amp  1/3 \amp    0 \amp  1/3 \\
@@ -64,7 +64,7 @@
                     0 \amp    0 \amp    0 \amp    0 \amp    1 \amp    0 \\
                     0 \amp    0 \amp    0 \amp    0 \amp    0 \amp    1 \\
                     \end{pmatrix}
-            </men>
+            </md>
             </p>
         </example>
         <p>Now we might consider the following game. Start at one of the four vertices in <m>\{1,2,3,4\}</m> and proceed as before, making moves by choosing a neighbor at random. Vertex <m>4</m> might be considered as an <q>escape</q> point, a safe harbor that once reached is never left. On the other hand, vertex <m>5</m> might be somewhere one meets a hungry tiger and be absorbed in a way not to be detailed here.

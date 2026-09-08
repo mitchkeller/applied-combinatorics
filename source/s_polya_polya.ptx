@@ -31,10 +31,10 @@
         </p>
 
         <p>Recall that <xref ref="lem_polya_burnside" text="title"/> states that the number of colorings fixed by the action of a group can be obtained by adding up the number fixed by each permutation and dividing by the number of permutations in the group. If we do that instead for the monomials arising from the permutations in a permutation group <m>G</m> in which every cycle of every permutation has at most <m>n</m> entries, we obtain a polynomial known as the <term>cycle index</term><idx><h>cycle index</h></idx> <m>P_G(x_1,x_2,\dots,x_n)</m>. For our running example, we find
-        <me>
+        <md>
             P_{D_8}(x_1,x_2,x_3,x_4) = \frac{1}{8}\left(x_1^4 + 2x_1^2x_2^1 +
             3x_2^2 + 2x_4^1\right).
-        </me>
+        </md>
         To find the number of distinct <m>2</m>-colorings of the square, we thus let <m>x_i=2</m> for all <m>i</m> and obtain <m>P_{D_8}(2,2,2,2) = 6</m> as before. Notice, however, that we have something more powerful than Burnside's lemma here. We may substitute <em>any</em> positive integer <m>m</m> for each <m>x_i</m> to find out how many nonequivalent <m>m</m>-colorings of the square exist. We no longer have to analyze how many colorings each permutation fixes. For instance, <m>P_{D_8}(3,3,3,3) = 21</m>, meaning that <m>21</m> of the <m>81</m> colorings of the vertices of the square using three colors are distinct.
         </p>
     </subsection>
@@ -46,29 +46,29 @@
         </p>
 
         <p>Let's again consider the cycle index for the dihedral group <m>D_8</m>:
-        <me>
+        <md>
             P_{D_8}(x_1,x_2,x_3,x_4) = \frac{1}{8}\left(x_1^4 + 2x_1^2x_2^1 +
             3x_2^2 + 2x_4^1\right).
-        </me>
+        </md>
         Instead of substituting integers for the <m>x_i</m>, let's consider what happens if we substitute something that allows us to track the colors used. Since <m>x_1</m> represents a cycle of length <m>1</m> in a permutation, the choice of white or gold for the vertex in such a cycle amounts to a single vertex receiving that color. What happens if we substitute <m>w+g</m> for <m>x_1</m>? The first term in <m>P_{D_8}</m> corresponds to the identity permutation <m>\iota</m>, which fixes all colorings of the square. Letting <m>x_1=w+g</m> in this term gives
-        <me>
+        <md>
             (w+g)^4 = g^4+4 g^3 w+6 g^2 w^2+4 g w^3+w^4,
-        </me>
+        </md>
         which tells us that <m>\iota</m> fixes one coloring with four gold vertices, four colorings with three gold vertices and one white vertex, six colorings with two gold vertices and two white vertices, four colorings with one gold vertex and three white vertices, and one coloring with four white vertices.
         </p>
 
         <p>Let's continue establishing a pattern here by considering the variable <m>x_2</m>. It represents the cycles of length <m>2</m> in a permutation. Such a cycle must be colored uniformly white or gold to be fixed by the permutation. Thus, choosing white or gold for the vertices in that cycle results in two white vertices or two gold vertices in the coloring. Since this happens for every cycle of length <m>2</m>, we want to substitute <m>w^2+g^2</m> for <m>x_2</m> in the cycle index. The <m>x_1^2x_2^1</m> terms in <m>P_{D_8}</m> are associated with the flips <m>p</m> and <m>n</m>. Letting <m>x_1=w+g</m> and <m>x_2 = w^2+g^2</m>, we find
-        <me>
+        <md>
             x_1^2x_2^1 = g^4+2 g^3 w+2 g^2 w^2+2 g w^3+w^4,
-        </me>
+        </md>
             from which we are able to deduce that <m>p</m> and <m>n</m> each fix one coloring with four gold vertices, two colorings with three gold vertices and one white vertex, and so on. Comparing this with <xref ref="tab_polya_fixed-square"/> shows that the generating function is right on.
         </p>
 
         <p>By now the pattern is becoming apparent. If we substitute <m>w^i+g^i</m> for <m>x_i</m> in the cycle index for each <m>i</m>, we then keep track of how many vertices are colored white and how many are colored gold. The simplification of the cycle index in this case is then a generating function in which the coefficient on <m>g^s w^t</m> is the number of distinct colorings of the vertices of the square with <m>s</m> vertices colored gold and <m>t</m> vertices colored white. Doing this and simplifying gives
-        <me>
+        <md>
             P_{D_8}(w+g,w^2+g^2,w^3+g^3,w^4+g^4) = g^4+g^3 w+2 g^2 w^2+g
             w^3+w^4.
-        </me>
+        </md>
             From this we find one coloring with all vertices gold, one coloring with all vertices white, one coloring with three gold vertices and one white vertex, one coloring with one gold vertex and three white vertices, and two colorings with two vertices of each color.
         </p>
 
@@ -79,18 +79,18 @@
             <title>P&#243;lya's Enumeration Theorem</title>
             <statement>
                 <p>Let <m>S</m> be a set with <m>|S|=r</m> and <m>\cgC</m> the set of colorings of <m>S</m> using the colors <m>c_1,\dots,c_m</m>. If a permutation group <m>G</m> acts on <m>S</m> to induce an equivalence relation on <m>\cgC</m>, then
-                <me>
+                <md>
                     P_G\left(\sum_{i=1}^m c_i, \sum_{i=1}^m c_i^2, \dots,\sum_{i=1}^m
                     c_i^r\right)
-                </me>
+                </md>
                     is the generating function for the number of nonequivalent colorings of <m>S</m> in <m>\cgC</m>.
                 </p>
             </statement>
         </theorem>
 
         <p>If we return to coloring the vertices of the square but now allow the color blue as well, we find
-        <me>P_{D_8}(w+g+b,w^2+g^2+b^2,w^3+g^3+b^3,w^4+g^4+b^4) = b^4+b^3 g+2 b^2 g^2\\+b g^3+g^4+b^3 w+2 b^2 g w+2 b g^2 w+g^3 w+2 b^2 w^2+2 b g w^2+2 g^2 w^2\\+b w^3+g w^3+w^4.
-        </me>
+        <md>P_{D_8}(w+g+b,w^2+g^2+b^2,w^3+g^3+b^3,w^4+g^4+b^4) = b^4+b^3 g+2 b^2 g^2\\+b g^3+g^4+b^3 w+2 b^2 g w+2 b g^2 w+g^3 w+2 b^2 w^2+2 b g w^2+2 g^2 w^2\\+b w^3+g w^3+w^4.
+        </md>
             From this generating function, we can readily determine the number of nonequivalent colorings with two blue vertices, one gold vertex, and one white vertex to be <m>2</m>. Because the generating function of <xref ref="thm_polya_polya " text="title"/> records the number of nonequivalent patterns, it is sometimes called the <term>pattern inventory</term>.<idx><h>pattern inventory</h></idx>
         </p>
 

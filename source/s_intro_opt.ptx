@@ -40,9 +40,9 @@
             </description></image>
         </figure>
         <p>The weight of the spanning tree is the sum of the weights on the edges. In our model, this represents the costs, again in millions of dollars, of building the data links associated with the edges in the spanning tree. For the spanning tree shown in <xref ref="fig_spantree-1"/>, this total is
-        <me>
+        <md>
             12+25+19+18+23+19 = 116.
-        </me>
+        </md>
         Of all spanning trees, the bank would naturally like to find one having minimum weight.
         </p>
         <p>How many spanning trees does this graph have? For a large graph, say one with <m>2875</m> vertices, does it make sense to find all spanning trees and simply take the one with minimum cost? In particular, for a positive integer<nbsp/><m>n</m>, how many trees have vertex set <m>\{1,2,3,\dots,n\}</m>?

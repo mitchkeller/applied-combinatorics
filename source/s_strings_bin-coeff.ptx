@@ -58,9 +58,9 @@
       of inequalities.
     </p>
 
-    <p>We count the number of integer solutions to the inequality <me>
+    <p>We count the number of integer solutions to the inequality <md>
         x_1+x_2+x_3+x_4+x_5+x_6\le 538
-      </me> subject to various sets of
+      </md> subject to various sets of
       restrictions on the values of <m>x_1,x_2,\dots,x_6</m>. Some of these restrictions will
       require that the inequality actually be an equation. </p>
 
@@ -80,9 +80,9 @@
   <p>A classical enumeration problem (with connections to several problems) involves counting
     lattice paths. A <term>lattice path</term><idx>
       <h>lattice path</h>
-    </idx> in the plane is a sequence of ordered pairs of integers: <me>
+    </idx> in the plane is a sequence of ordered pairs of integers: <md>
     (m_1,n_1), (m_2,n_2), (m_3,n_3),\dots,(m_t,n_t)
-    </me> so that for all <m>
+    </md> so that for all <m>
     i=1,2,\dots,t-1</m>, either <ol>
       <li><m>m_{i+1}=m_{i}+1</m> and <m>n_{i+1}=n_i</m>, or</li>
       <li><m>m_{i+1}=m_i</m> and <m>n_{i+1}=n_{i}+1</m>.</li>
@@ -116,9 +116,9 @@
         <h>lattice path</h>
         <h>number not crossing <m>y=x</m></h>
       </idx>
-        <me>
+        <md>
         C(n) =\frac{1}{n+1}\binom{2n}{n}.
-      </me>
+      </md>
     </p>
     <p>To see that this formula holds, consider the family <m>\cgP</m> of all lattice paths from <m>
       (0,0)</m> to <m>(n,n)</m>. A lattice path from <m>(0,0)</m> to <m>(n,n)</m> is just a <m>
@@ -165,10 +165,10 @@
       in the tail of <m>s'</m> creates a new string <m>s</m> that has <m>n</m> <m>H</m>'s and <m>n</m> <m>
       V</m>'s and thus represents a lattice path from <m>(0,0)</m> to <m>(n,n)</m>, but it's still a
       bad lattice path, as we did not adjust the first part of the path, which results in crossing
-      the line <m>y=x</m> in position <m>i</m>. Therefore, <m>|\cgB|=|\cgP'|</m> and thus <me>
+      the line <m>y=x</m> in position <m>i</m>. Therefore, <m>|\cgB|=|\cgP'|</m> and thus <md>
       C(n)=|\cgG|=|\cgP|-|\cgB|=|\cgP|-|\cgP'| = \binom{2n}{n} -
         \binom{2n}{n-1} = \frac{1}{n+1}\binom{2n}{n},
-      </me>
+      </md>
       after a bit of algebra. </p>
   </example>
   <p>It is worth observing that in <xref ref="exa_lattice-Catalan"/>, we made use of two common

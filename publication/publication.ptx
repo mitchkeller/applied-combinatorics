@@ -2,7 +2,7 @@
 
 <publication>
     <source>
-        <directories external="../assets" generated="../generated-assets"/>
+        <directories generated="../generated-assets"/>
         <version include="main" />
     </source>
     <common>
@@ -20,9 +20,10 @@
 
     <!-- HTML-Specific Options -->
     <html>
-        <css theme="default-modern" palette="blues" provide-dark-mode="no"/>
-	<knowl example="no" />
-	<analytics google-gst="G-DKXSTE8Z4T" />
+      <css theme="default-modern" palette="blues" provide-dark-mode="no"/>
+	    <knowl example="no" />
+	    <analytics google-gst="G-DKXSTE8Z4T" />
+      <brandlogo url="https://www.appliedcombinatorics.org/" source="front-cover.png"/>
 	<!-- <search google-cx="009375931950235294692:hxgsc7lzdau" /> -->
     </html>
     <latex sides="two" />
