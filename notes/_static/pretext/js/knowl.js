@@ -10,16 +10,11 @@ function addKnowls(target) {
   for (const xref of xrefs) {
     LinkKnowl.initializeXrefKnowl(xref);
   }
- 
+
   const bornHiddens = target.querySelectorAll(".born-hidden-knowl");
   for (const bhk of bornHiddens) {
     const summary = bhk.querySelector(":scope > summary");
     const contents = bhk.querySelector(":scope > summary + *");
-    if (!summary || !contents) {
-      // Skip elements that carry the class but aren't an actual
-      // <details>/<summary> knowl (e.g. a print-layout clone).
-      continue;
-    }
     new SlideRevealer(summary, contents, bhk);
   }
 }
@@ -44,44 +39,15 @@ class SlideRevealer {
     // mid animation state tracking
     this.animation = null;
     this.animationState = SlideRevealer.STATE.INACTIVE;
-    this.animatedElementInlineStyle = null;
 
     this.triggerElement.addEventListener('click', (e) => this.onClick(e));
-  }
-
-  isBusy() {
-    return this.animationState !== SlideRevealer.STATE.INACTIVE || this.animatedElementInlineStyle !== null;
-  }
-
-  storeAnimatedElementInlineStyle() {
-    if (this.animatedElementInlineStyle !== null) return;
-
-    this.animatedElementInlineStyle = {
-      overflow: this.animatedElement.style.overflow,
-      height: this.animatedElement.style.height,
-      paddingTop: this.animatedElement.style.paddingTop,
-      paddingBottom: this.animatedElement.style.paddingBottom
-    };
-  }
-
-  restoreAnimatedElementInlineStyle() {
-    if (this.animatedElementInlineStyle === null) return;
-
-    this.animatedElement.style.overflow = this.animatedElementInlineStyle.overflow;
-    this.animatedElement.style.height = this.animatedElementInlineStyle.height;
-    this.animatedElement.style.paddingTop = this.animatedElementInlineStyle.paddingTop;
-    this.animatedElement.style.paddingBottom = this.animatedElementInlineStyle.paddingBottom;
-    this.animatedElementInlineStyle = null;
   }
 
   onClick(e) {
     // Stop default behavior from the browser
     if (e) e.preventDefault();
 
-    if (this.isBusy()) return;
-
     // Add an overflow on the <details> to avoid content overflowing
-    this.storeAnimatedElementInlineStyle();
     this.animatedElement.style.overflow = 'hidden';
 
     // Check if the element is being closed or is already closed
@@ -90,57 +56,29 @@ class SlideRevealer {
       this.animatedElement.setAttribute("open","");
       this.triggerElement.setAttribute("open","");
       this.contentElement.style.display = '';
-      this.contentElement.style.visibility = 'hidden';
-
-      let closedHeight = 0;
-      if (this.animatedElement.contains(this.triggerElement))
-        closedHeight = this.triggerElement.offsetHeight;
-
-      const naturalStyle = window.getComputedStyle(this.animatedElement);
-      const naturalPaddingTop = naturalStyle.paddingTop;
-      const naturalPaddingBottom = naturalStyle.paddingBottom;
-
-      this.animatedElement.style.height = `${closedHeight}px`;
-      this.animatedElement.style.paddingTop = '0px';
-      this.animatedElement.style.paddingBottom = '0px';
-
-      // Trigger the animation to expand or collapse the knowl
-      // We assume content is already rendered and size is accurate.
-      // If not, there may be a jump at the end of the animation when styles are cleared
-      const expandingMeasurements = {
-        fullHeight: this.contentElement === this.animatedElement
-          ? this.contentElement.scrollHeight
-          : closedHeight + this.contentElement.offsetHeight,
-        paddingTop: naturalPaddingTop,
-        paddingBottom: naturalPaddingBottom
-      };
-      this.contentElement.style.visibility = '';
-      this.toggle(true, expandingMeasurements);
+      // Trigger the animation to expand or collapse the knowl.
+      // Delay the MathJax typesetting until the knowl is visible to ensure proper measurements
+      // are taken, but before the unrolling begins. This helps avoid layout shifts and ensures
+      // smooth animation with correctly sized content.
+      MathJax.typesetPromise().then(() => window.requestAnimationFrame(() => this.toggle(true)));
     } else if (this.animationState === SlideRevealer.STATE.EXPANDING || this.animatedElement.hasAttribute("open")) {
       this.toggle(false);
     }
   }
 
-  toggle(expanding, expandingMeasurements = null) {
+  toggle(expanding) {
     let closedHeight = 0;
     if (this.animatedElement.contains(this.triggerElement))
       closedHeight = this.triggerElement.offsetHeight;
+    const fullHeight = closedHeight + this.contentElement.offsetHeight;
 
-    const computedStyle = window.getComputedStyle(this.animatedElement);
-    const fullHeight = expandingMeasurements?.fullHeight ?? closedHeight + this.contentElement.offsetHeight;
-
-    const startHeight = `${expanding ? closedHeight : this.animatedElement.offsetHeight}px`;
+    const startHeight = `${expanding ? closedHeight : fullHeight}px`;
     const endHeight = `${expanding ? fullHeight : closedHeight}px`;
 
-    const currentPaddingTop = computedStyle.paddingTop;
-    const currentPaddingBottom = computedStyle.paddingBottom;
-    const endPaddingTop = expandingMeasurements?.paddingTop ?? currentPaddingTop;
-    const endPaddingBottom = expandingMeasurements?.paddingBottom ?? currentPaddingBottom;
-
-    const startPadTop = expanding ? '0px' : currentPaddingTop;
-    const endPadTop = expanding ? endPaddingTop : '0px';
-    const startPadBottom = expanding ? '0px' : currentPaddingBottom;
-    const endPadBottom = expanding ? endPaddingBottom : '0px';
+    // Need to animate padding to avoid extra height for xref knowls
+    const padding = this.animatedElement.offsetHeight - this.animatedElement.clientHeight;
+    const startPad = `${expanding ? 0 : padding}px`;
+    const endPad = `${expanding ? padding : 0}px`;
 
     // Cancel any existing animation
     if (this.animation) {
@@ -154,18 +92,15 @@ class SlideRevealer {
     this.animationState = expanding ? SlideRevealer.STATE.EXPANDING : SlideRevealer.STATE.CLOSING;
     this.animation = this.animatedElement.animate({
       height: [startHeight, endHeight],
-      paddingTop: [startPadTop, endPadTop],
-      paddingBottom: [startPadBottom, endPadBottom]
+      paddingTop: [startPad, endPad],
+      paddingBottom: [startPad, endPad]
     }, {
       duration: animDuration,
-      easing: 'ease-out'
+      easing: 'ease'
     });
 
     this.animation.onfinish = () => { this.onAnimationFinish(expanding); };
-    this.animation.oncancel = () => {
-      this.animationState = SlideRevealer.STATE.INACTIVE;
-      this.restoreAnimatedElementInlineStyle();
-    };
+    this.animation.oncancel = () => { this.animationState = SlideRevealer.STATE.INACTIVE; };
   }
 
   onAnimationFinish(isOpen) {
@@ -180,10 +115,9 @@ class SlideRevealer {
     }
 
     // Clear styles used in animation
-    this.restoreAnimatedElementInlineStyle();
+    this.animatedElement.style.overflow = '';
     if (!isOpen)
       this.contentElement.style.display = 'none';
-    this.contentElement.style.visibility = '';
 
     if (isOpen) {
       let hasCallback = this.contentElement.querySelectorAll("[data-knowl-callback]");
@@ -214,7 +148,6 @@ class LinkKnowl {
   constructor(knowlLinkElement) {
     this.linkElement = knowlLinkElement;
     this.outputElement = null;
-    this.slideHandler = null;
     this.uid = LinkKnowl.xrefCount++;
     knowlLinkElement.setAttribute("data-knowl-uid", this.uid);
 
@@ -329,25 +262,21 @@ class LinkKnowl {
     // prevent navigation
     event.preventDefault();
 
-    if (this.slideHandler?.isBusy()) {
-      return;
-    }
-
     if (this.outputElement !== null) {
       // output already created, toggle visibility
       this.toggle();
     } else {
       this.createOutputElement();
 
-      this.slideHandler = new SlideRevealer(this.linkElement, this.outputElement, this.outputElement);
+      const slideHandler = new SlideRevealer(this.linkElement, this.outputElement, this.outputElement);
       //slideHandler is now responsible for handling clicks to this element
-      this.linkElement.addEventListener('click', this.slideHandler);
+      this.linkElement.addEventListener('click', slideHandler);
 
       // Wait up to a half second in hopes of avoiding double content change
       // then render to show loading message
       let loadingTimeout = setTimeout(() => {
         loadingTimeout = null;
-        this.slideHandler.onClick(); //fake initial click
+        slideHandler.onClick(); //fake initial click
         this.toggle();
       }, 500);
 
@@ -362,7 +291,7 @@ class LinkKnowl {
           }
           // Now give code that follows .1 seconds to render before making visible
           setTimeout(() => {
-            this.slideHandler.onClick(); //fake initial click
+            slideHandler.onClick(); //fake initial click
             this.toggle();
           }, 100);
 
@@ -387,7 +316,6 @@ class LinkKnowl {
 
           // render any knowls and mathjax in the knowl
           addKnowls(this.outputElement);
-          MathJax.typesetPromise([this.outputElement]);
 
           // try prism highlighting
           Prism.highlightAllUnder(this.outputElement);

@@ -60,29 +60,16 @@ function scrollTocToActive() {
 }
 
 function toggletoc() {
-    let ptxSidebar = document.getElementById("ptx-sidebar");
-    let sideBarIsHidden = ptxSidebar.classList.contains("hidden") || (!ptxSidebar.classList.contains("visible") && ptxSidebar.offsetParent === null);
-
-    if (sideBarIsHidden) {
-        ptxSidebar.classList.add("visible");
-        ptxSidebar.classList.remove("hidden");
-    } else {
-        ptxSidebar.classList.remove("visible");
-        ptxSidebar.classList.add("hidden");
-    }
-    sideBarIsHidden = !sideBarIsHidden; //toggled value for aria-expanded
-
-    let ptxTocButton = document.getElementById("ptx-toc-toggle");
-    ptxTocButton.setAttribute("aria-expanded", !sideBarIsHidden);
-
-    if (!sideBarIsHidden) {
-        scrollTocToActive();
-        // Focus the TOC for accessibility
-        document.querySelector("#ptx-toc").focus();
-    } else {
-        // Focus the TOC toggle button for accessibility
-        ptxTocButton.focus();
-    }
+   thesidebar = document.getElementById("ptx-sidebar");
+   if (thesidebar.classList.contains("hidden") || thesidebar.classList.contains("visible")) {
+       thesidebar.classList.toggle("hidden");
+       thesidebar.classList.toggle("visible");
+   } else if (thesidebar.offsetParent === null) {  /* not currently visible */
+       thesidebar.classList.toggle("visible");
+   } else {
+       thesidebar.classList.toggle("hidden");
+   }
+   scrollTocToActive();
 }
 
 function samePageLink(a) {
@@ -106,35 +93,31 @@ function samePageLink(a) {
 
 
 window.addEventListener("DOMContentLoaded",function(event) {
-    let tocButton = document.getElementById("ptx-toc-toggle");
-
-    tocButton.addEventListener("click", (e) => {
+    thetocbutton = document.getElementsByClassName("toc-toggle")[0];
+    thetocbutton.addEventListener("click", (e) => {
         toggletoc();
         e.stopPropagation(); // keep global click handler from immediately toggling it back
     });
-
-    // determine if toc starts off hidden or not, use that to set aria-expanded
-    let ptxSidebar = document.getElementById("ptx-sidebar");
-    let sideBarIsHidden = ptxSidebar.classList.contains("hidden") || (!ptxSidebar.classList.contains("visible") && ptxSidebar.offsetParent === null);
-    tocButton.setAttribute("aria-expanded", !sideBarIsHidden);
 
     // For themes that want it, install click handlers to auto close the toc
     // when the reader clicks anywhere outside it or selects a subsection.
     // (Selecting other sections or chapters navigates away from the page so
     // effectively closes the TOC.)
-    const autoCollapseToc = getComputedStyle(document.documentElement).getPropertyValue('--auto-collapse-toc') == "yes";
-    if (autoCollapseToc) {
+    if (getComputedStyle(document.documentElement).getPropertyValue('--auto-collapse-toc') == "yes") {
+
+        const sidebar = document.getElementById("ptx-sidebar");
+
         // Handle all clicks outside the sidebar
         window.addEventListener("click", function(event) {
-            if (ptxSidebar.classList.contains("visible")) {
-                if (!event.composedPath().includes(ptxSidebar)) {
+            if (sidebar.classList.contains("visible")) {
+                if (!event.composedPath().includes(sidebar)) {
                     toggletoc();
                 }
             }
         });
 
         // Handle clicks inside the sidebar but on link within a subsection.
-        ptxSidebar.addEventListener("click", function (event) {
+        sidebar.addEventListener("click", function (event) {
             if (samePageLink(event.target.closest('a'))) {
                 toggletoc();
             }
@@ -143,28 +126,11 @@ window.addEventListener("DOMContentLoaded",function(event) {
         // Handle persistent sidebar if the page is restored from cache on back/forward buttons.
         window.addEventListener('pageshow', (e) => {
             if (e.persisted) {
-                ptxSidebar.classList.remove('visible');
-                ptxSidebar.classList.add('hidden');
-                tocButton.setAttribute("aria-expanded", "false");
+                sidebar.classList.remove('visible');
+                sidebar.classList.add('hidden');
             }
         });
-
     }
-
-    // Handle Escape key to close the sidebar when it is presented as a mobile overlay
-    // or at any size if autoCollapseToc is enabled
-    window.addEventListener("keydown", function(event) {
-        if (
-            event.key === "Escape"
-            && ptxSidebar.classList.contains("visible")
-            && (
-                getComputedStyle(ptxSidebar).position === "fixed"
-                || autoCollapseToc
-            )
-        ) {
-            toggletoc();
-        }
-    });
 });
 
 
@@ -173,20 +139,17 @@ window.addEventListener("DOMContentLoaded",function(event) {
 //-----------------------------------------------------------------------------
 
 //item is assumed to be expander in toc-item
-function toggleTOCItem(expander, event = null) {
+function toggleTOCItem(expander) {
     let listItem = expander.closest(".toc-item");
     listItem.classList.toggle("expanded");
     let expanded = listItem.classList.contains("expanded");
 
-    let groupName = listItem.querySelector(".toc-title-box").innerText;
+    let itemType = getTOCItemType(listItem);
     if(expanded) {
-        expander.title = "Close " + groupName;
-        expander.setAttribute("aria-expanded", "true");
+        expander.title = "Close" + (itemType !== "" ? " " + itemType : "");
     } else {
-        expander.title = "Expand " + groupName;
-        expander.setAttribute("aria-expanded", "false");
+        expander.title = "Expand" + (itemType !== "" ? " " + itemType : "");
     }
-    expander.setAttribute("aria-label", expander.title);
 
     //should be one of each... for/of for safety and built in null avoidance
     for (const childUL of listItem.querySelectorAll(":scope > ul.toc-item-list")) {
@@ -200,17 +163,16 @@ function toggleTOCItem(expander, event = null) {
             }
         }
     }
+}
 
-    // if opened by keyboard, focus on the first child item, if any
-    if (expanded && expander === document.activeElement && event && event instanceof KeyboardEvent) {
-        const firstChildItem = listItem.querySelector(":scope > ul.toc-item-list > li.toc-item");
-        if (firstChildItem) {
-            const firstChildLink = firstChildItem.querySelector("a");
-            if (firstChildLink) {
-                firstChildLink.focus();
-            }
-        }
+//finds item type from classes or empty string on failure
+function getTOCItemType(item) {
+    //Type should be class that looks like toc-X where X is not item. Find it and return X
+    for(let className of item.classList) {
+        if(className !== "toc-item" && className.length > 3 && className.slice(0,4) === "toc-")
+            return className.slice(4);
     }
+    return "";
 }
 
 //finds depth of toc-item as defined by number .toc-item-lists it is in
@@ -246,29 +208,23 @@ window.addEventListener("DOMContentLoaded", function(event) {
 
         if(hasChildren && depth < maxDepth) {
             let expander = document.createElement("button");
-            expander.type = "button";
             expander.classList.add('toc-expander');
             expander.classList.add('toc-chevron-surround');
             expander.title = 'toc-expander';
             // content of span is set by CSS :before rule.
             expander.innerHTML = '<span class="icon material-symbols-outlined" aria-hidden="true"></span>';
-            const subList = tocItem.querySelector('.toc-item-list');
-            expander.controlledGroup = subList.id;
-            expander.setAttribute('aria-controls', subList.id);
-            expander.setAttribute("aria-expanded", "false");
             tocItem.querySelector(".toc-title-box").append(expander);
-            expander.addEventListener('click', (e) => {
-                toggleTOCItem(expander, e);
+            expander.addEventListener('click', () => {
+                toggleTOCItem(expander);
             });
 
             let isActive = tocItem.classList.contains("contains-active") || tocItem.classList.contains("active");
             let preExpanded = isActive || depth < preexpandedLevels;
+            let itemType = getTOCItemType(tocItem);
             if(preExpanded) {
                 toggleTOCItem(expander);
             } else {
-                let groupName = tocItem.querySelector(".toc-title-box").innerText;
-                expander.title = "Expand " + groupName;
-                expander.setAttribute("aria-label", expander.title);
+                expander.title = "Expand" + (itemType !== "" ? " " + itemType : "");
             }
         }
     }
