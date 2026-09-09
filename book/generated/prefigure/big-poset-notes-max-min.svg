@@ -1,690 +1,690 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="diagram" width="330" height="480">
+<svg xmlns="http://www.w3.org/2000/svg" id="big-poset-notes-max-min-figure" width="330" height="480" viewBox="0 0 330 480">
   <defs>
-    <clipPath id="clipPath-0">
+    <clipPath id="big-poset-notes-max-min-__clipPath-0">
       <rect x="15.0" y="15.0" width="300.0" height="450.0"/>
     </clipPath>
-    <clipPath id="clipPath-1">
+    <clipPath id="big-poset-notes-max-min-__clipPath-1">
       <rect x="15.0" y="15.0" width="300.0" height="450.0"/>
     </clipPath>
   </defs>
-  <g id="g-0">
-    <g id="g-1">
-      <path id="edge-1-2" d="M 195.0 352.5 Q 183.0 366.0 171.0 379.5 Q 159.0 393.0 147.0 406.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-1-25" d="M 195.0 352.5 Q 222.0 363.8 249.0 375.0 Q 276.0 386.2 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-2-14" d="M 147.0 406.5 Q 151.5 420.0 156.0 433.5 Q 160.5 447.0 165.0 460.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-2-22" d="M 147.0 406.5 Q 162.0 418.9 177.0 431.2 Q 192.0 443.6 207.0 456.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-2-23" d="M 147.0 406.5 Q 115.5 417.8 84.0 429.0 Q 52.5 440.2 21.0 451.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-3-25" d="M 303.0 460.5 Q 303.0 444.8 303.0 429.0 Q 303.0 413.2 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-4-19" d="M 195.0 240.0 Q 222.0 217.5 249.0 195.0 Q 276.0 172.5 303.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-4-31" d="M 195.0 240.0 Q 180.0 255.7 165.0 271.5 Q 150.0 287.2 135.0 303.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-4-26" d="M 195.0 240.0 Q 175.5 229.9 156.0 219.8 Q 136.5 209.6 117.0 199.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-4-13" d="M 195.0 240.0 Q 169.5 217.5 144.0 195.0 Q 118.5 172.5 93.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-5-25" d="M 273.0 330.0 Q 280.5 346.9 288.0 363.8 Q 295.5 380.6 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-6-27" d="M 135.0 348.0 Q 168.0 321.0 201.0 294.0 Q 234.0 267.0 267.0 240.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-6-31" d="M 135.0 348.0 Q 135.0 336.8 135.0 325.5 Q 135.0 314.2 135.0 303.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-6-35" d="M 135.0 348.0 Q 157.5 366.0 180.0 384.0 Q 202.5 402.0 225.0 420.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-7-8" d="M 147.0 60.0 Q 129.0 51.0 111.0 42.0 Q 93.0 33.0 75.0 24.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-7-13" d="M 147.0 60.0 Q 133.5 82.5 120.0 105.0 Q 106.5 127.5 93.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-9-14" d="M 75.0 375.0 Q 97.5 396.4 120.0 417.8 Q 142.5 439.1 165.0 460.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-9-33" d="M 75.0 375.0 Q 61.5 363.8 48.0 352.5 Q 34.5 341.2 21.0 330.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-10-25" d="M 315.0 352.5 Q 312.0 363.8 309.0 375.0 Q 306.0 386.2 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-11-30" d="M 27.0 285.0 Q 54.0 249.6 81.0 214.1 Q 108.0 178.7 135.0 143.2" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-12-17" d="M 33.0 154.5 Q 66.0 119.6 99.0 84.8 Q 132.0 49.9 165.0 15.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-12-29" d="M 33.0 154.5 Q 99.0 121.9 165.0 89.2 Q 231.0 56.6 297.0 24.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-13-34" d="M 93.0 150.0 Q 84.0 159.0 75.0 168.0 Q 66.0 177.0 57.0 186.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-15-19" d="M 273.0 91.5 Q 280.5 106.1 288.0 120.8 Q 295.5 135.4 303.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-15-28" d="M 273.0 91.5 Q 261.0 76.9 249.0 62.3 Q 237.0 47.6 225.0 33.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-16-17" d="M 243.0 161.2 Q 223.5 124.7 204.0 88.1 Q 184.5 51.6 165.0 15.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-16-21" d="M 243.0 161.2 Q 201.0 202.3 159.0 243.4 Q 117.0 284.4 75.0 325.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-16-27" d="M 243.0 161.2 Q 249.0 180.9 255.0 200.6 Q 261.0 220.3 267.0 240.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-18-21" d="M 30.0 420.0 Q 41.2 396.4 52.5 372.8 Q 63.8 349.1 75.0 325.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-19-27" d="M 303.0 150.0 Q 294.0 172.5 285.0 195.0 Q 276.0 217.5 267.0 240.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-20-31" d="M 30.0 46.5 Q 56.2 110.6 82.5 174.8 Q 108.8 238.9 135.0 303.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-22-25" d="M 207.0 456.0 Q 231.0 441.4 255.0 426.8 Q 279.0 412.1 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-24-26" d="M 213.0 144.1 Q 189.0 158.0 165.0 171.8 Q 141.0 185.7 117.0 199.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-24-29" d="M 213.0 144.1 Q 234.0 114.1 255.0 84.1 Q 276.0 54.0 297.0 24.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-24-32" d="M 213.0 144.1 Q 204.0 133.2 195.0 122.3 Q 186.0 111.4 177.0 100.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
-      <path id="edge-27-30" d="M 267.0 240.0 Q 234.0 215.8 201.0 191.6 Q 168.0 167.4 135.0 143.2" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#clipPath-1)"/>
+  <g id="big-poset-notes-max-min-__group-0">
+    <g id="big-poset-notes-max-min-__group-1">
+      <path id="big-poset-notes-max-min-edge-1-2" d="M 195.0 352.5 Q 183.0 366.0 171.0 379.5 Q 159.0 393.0 147.0 406.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-1-25" d="M 195.0 352.5 Q 222.0 363.8 249.0 375.0 Q 276.0 386.2 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-2-14" d="M 147.0 406.5 Q 151.5 420.0 156.0 433.5 Q 160.5 447.0 165.0 460.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-2-22" d="M 147.0 406.5 Q 162.0 418.9 177.0 431.2 Q 192.0 443.6 207.0 456.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-2-23" d="M 147.0 406.5 Q 115.5 417.8 84.0 429.0 Q 52.5 440.2 21.0 451.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-3-25" d="M 303.0 460.5 Q 303.0 444.8 303.0 429.0 Q 303.0 413.2 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-4-19" d="M 195.0 240.0 Q 222.0 217.5 249.0 195.0 Q 276.0 172.5 303.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-4-31" d="M 195.0 240.0 Q 180.0 255.7 165.0 271.5 Q 150.0 287.2 135.0 303.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-4-26" d="M 195.0 240.0 Q 175.5 229.9 156.0 219.8 Q 136.5 209.6 117.0 199.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-4-13" d="M 195.0 240.0 Q 169.5 217.5 144.0 195.0 Q 118.5 172.5 93.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-5-25" d="M 273.0 330.0 Q 280.5 346.9 288.0 363.8 Q 295.5 380.6 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-6-27" d="M 135.0 348.0 Q 168.0 321.0 201.0 294.0 Q 234.0 267.0 267.0 240.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-6-31" d="M 135.0 348.0 Q 135.0 336.8 135.0 325.5 Q 135.0 314.2 135.0 303.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-6-35" d="M 135.0 348.0 Q 157.5 366.0 180.0 384.0 Q 202.5 402.0 225.0 420.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-7-8" d="M 147.0 60.0 Q 129.0 51.0 111.0 42.0 Q 93.0 33.0 75.0 24.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-7-13" d="M 147.0 60.0 Q 133.5 82.5 120.0 105.0 Q 106.5 127.5 93.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-9-14" d="M 75.0 375.0 Q 97.5 396.4 120.0 417.8 Q 142.5 439.1 165.0 460.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-9-33" d="M 75.0 375.0 Q 61.5 363.8 48.0 352.5 Q 34.5 341.2 21.0 330.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-10-25" d="M 315.0 352.5 Q 312.0 363.8 309.0 375.0 Q 306.0 386.2 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-11-30" d="M 27.0 285.0 Q 54.0 249.6 81.0 214.1 Q 108.0 178.7 135.0 143.2" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-12-17" d="M 33.0 154.5 Q 66.0 119.6 99.0 84.8 Q 132.0 49.9 165.0 15.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-12-29" d="M 33.0 154.5 Q 99.0 121.9 165.0 89.2 Q 231.0 56.6 297.0 24.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-13-34" d="M 93.0 150.0 Q 84.0 159.0 75.0 168.0 Q 66.0 177.0 57.0 186.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-15-19" d="M 273.0 91.5 Q 280.5 106.1 288.0 120.8 Q 295.5 135.4 303.0 150.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-15-28" d="M 273.0 91.5 Q 261.0 76.9 249.0 62.3 Q 237.0 47.6 225.0 33.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-16-17" d="M 243.0 161.2 Q 223.5 124.7 204.0 88.1 Q 184.5 51.6 165.0 15.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-16-21" d="M 243.0 161.2 Q 201.0 202.3 159.0 243.4 Q 117.0 284.4 75.0 325.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-16-27" d="M 243.0 161.2 Q 249.0 180.9 255.0 200.6 Q 261.0 220.3 267.0 240.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-18-21" d="M 30.0 420.0 Q 41.2 396.4 52.5 372.8 Q 63.8 349.1 75.0 325.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-19-27" d="M 303.0 150.0 Q 294.0 172.5 285.0 195.0 Q 276.0 217.5 267.0 240.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-20-31" d="M 30.0 46.5 Q 56.2 110.6 82.5 174.8 Q 108.8 238.9 135.0 303.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-22-25" d="M 207.0 456.0 Q 231.0 441.4 255.0 426.8 Q 279.0 412.1 303.0 397.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-24-26" d="M 213.0 144.1 Q 189.0 158.0 165.0 171.8 Q 141.0 185.7 117.0 199.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-24-29" d="M 213.0 144.1 Q 234.0 114.1 255.0 84.1 Q 276.0 54.0 297.0 24.0" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-24-32" d="M 213.0 144.1 Q 204.0 133.2 195.0 122.3 Q 186.0 111.4 177.0 100.5" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
+      <path id="big-poset-notes-max-min-edge-27-30" d="M 267.0 240.0 Q 234.0 215.8 201.0 191.6 Q 168.0 167.4 135.0 143.2" stroke="black" stroke-width="2" stroke-dasharray="none" fill="none" clip-path="url(#big-poset-notes-max-min-__clipPath-1)"/>
     </g>
-    <g id="g-2">
-      <circle id="node-1" cx="195.0" cy="352.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-0" transform="translate(195.0,352.5) translate(-4.5,-6.0)">
-        <g id="g-3">
+    <g id="big-poset-notes-max-min-__group-2">
+      <circle id="big-poset-notes-max-min-node-1" cx="195.0" cy="352.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-0" transform="translate(195.0,352.5) translate(-4.5,-6.0)">
+        <g id="big-poset-notes-max-min-__g-0">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-2-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-2-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="1">
-                  <use data-c="31" xlink:href="#MJX-2-TEX-N-31"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-2-TEX-N-31"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-2" cx="147.0" cy="406.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-1" transform="translate(147.0,406.5) translate(-4.5,-6.0)">
-        <g id="g-4">
+      <circle id="big-poset-notes-max-min-node-2" cx="147.0" cy="406.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-1" transform="translate(147.0,406.5) translate(-4.5,-6.0)">
+        <g id="big-poset-notes-max-min-__g-1">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-3-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-3-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="2">
-                  <use data-c="32" xlink:href="#MJX-3-TEX-N-32"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-3-TEX-N-32"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-3" cx="303.0" cy="460.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-2" transform="translate(303.0,460.5) translate(-4.5,-6.2)">
-        <g id="g-5">
+      <circle id="big-poset-notes-max-min-node-3" cx="303.0" cy="460.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-2" transform="translate(303.0,460.5) translate(-4.5,-6.2)">
+        <g id="big-poset-notes-max-min-__g-2">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="9.048px" height="12.432px" role="img" focusable="false" viewBox="0 -665 500 687" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-4-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-4-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="3">
-                  <use data-c="33" xlink:href="#MJX-4-TEX-N-33"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-4-TEX-N-33"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-4" cx="195.0" cy="240.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-3" transform="translate(195.0,240.0) translate(-4.5,-6.1)">
-        <g id="g-6">
+      <circle id="big-poset-notes-max-min-node-4" cx="195.0" cy="240.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-3" transform="translate(195.0,240.0) translate(-4.5,-6.1)">
+        <g id="big-poset-notes-max-min-__g-3">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.256px" role="img" focusable="false" viewBox="0 -677 500 677" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-5-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
+              <path id="big-poset-notes-max-min-MJX-5-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="4">
-                  <use data-c="34" xlink:href="#MJX-5-TEX-N-34"/>
+                  <use data-c="34" xlink:href="#big-poset-notes-max-min-MJX-5-TEX-N-34"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-5" cx="273.0" cy="330.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-4" transform="translate(273.0,330.0) translate(-4.5,-6.2)">
-        <g id="g-7">
+      <circle id="big-poset-notes-max-min-node-5" cx="273.0" cy="330.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-4" transform="translate(273.0,330.0) translate(-4.5,-6.2)">
+        <g id="big-poset-notes-max-min-__g-4">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="9.048px" height="12.456px" role="img" focusable="false" viewBox="0 -666 500 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-6-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
+              <path id="big-poset-notes-max-min-MJX-6-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="5">
-                  <use data-c="35" xlink:href="#MJX-6-TEX-N-35"/>
+                  <use data-c="35" xlink:href="#big-poset-notes-max-min-MJX-6-TEX-N-35"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-6" cx="135.0" cy="348.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-5" transform="translate(135.0,348.0) translate(-4.5,-6.2)">
-        <g id="g-8">
+      <circle id="big-poset-notes-max-min-node-6" cx="135.0" cy="348.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-5" transform="translate(135.0,348.0) translate(-4.5,-6.2)">
+        <g id="big-poset-notes-max-min-__g-5">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="9.048px" height="12.456px" role="img" focusable="false" viewBox="0 -666 500 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-7-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/>
+              <path id="big-poset-notes-max-min-MJX-7-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="6">
-                  <use data-c="36" xlink:href="#MJX-7-TEX-N-36"/>
+                  <use data-c="36" xlink:href="#big-poset-notes-max-min-MJX-7-TEX-N-36"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-7" cx="147.0" cy="60.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-6" transform="translate(147.0,60.0) translate(-4.5,-6.3)">
-        <g id="g-9">
+      <circle id="big-poset-notes-max-min-node-7" cx="147.0" cy="60.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-6" transform="translate(147.0,60.0) translate(-4.5,-6.3)">
+        <g id="big-poset-notes-max-min-__g-6">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="9.048px" height="12.632px" role="img" focusable="false" viewBox="0 -676 500 698" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-8-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"/>
+              <path id="big-poset-notes-max-min-MJX-8-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="7">
-                  <use data-c="37" xlink:href="#MJX-8-TEX-N-37"/>
+                  <use data-c="37" xlink:href="#big-poset-notes-max-min-MJX-8-TEX-N-37"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-8" cx="75.0" cy="24.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-7" transform="translate(75.0,24.0) translate(-4.5,-6.2)">
-        <g id="g-10">
+      <circle id="big-poset-notes-max-min-node-8" cx="75.0" cy="24.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-7" transform="translate(75.0,24.0) translate(-4.5,-6.2)">
+        <g id="big-poset-notes-max-min-__g-7">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="9.048px" height="12.456px" role="img" focusable="false" viewBox="0 -666 500 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-9-TEX-N-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"/>
+              <path id="big-poset-notes-max-min-MJX-9-TEX-N-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="8">
-                  <use data-c="38" xlink:href="#MJX-9-TEX-N-38"/>
+                  <use data-c="38" xlink:href="#big-poset-notes-max-min-MJX-9-TEX-N-38"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-9" cx="75.0" cy="375.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-8" transform="translate(75.0,375.0) translate(-4.5,-6.2)">
-        <g id="g-11">
+      <circle id="big-poset-notes-max-min-node-9" cx="75.0" cy="375.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-8" transform="translate(75.0,375.0) translate(-4.5,-6.2)">
+        <g id="big-poset-notes-max-min-__g-8">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="9.048px" height="12.456px" role="img" focusable="false" viewBox="0 -666 500 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-10-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"/>
+              <path id="big-poset-notes-max-min-MJX-10-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="9">
-                  <use data-c="39" xlink:href="#MJX-10-TEX-N-39"/>
+                  <use data-c="39" xlink:href="#big-poset-notes-max-min-MJX-10-TEX-N-39"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-10" cx="315.0" cy="352.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-9" transform="translate(315.0,352.5) translate(-9.0,-6.2)">
-        <g id="g-12">
+      <circle id="big-poset-notes-max-min-node-10" cx="315.0" cy="352.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-9" transform="translate(315.0,352.5) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-9">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-11-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-11-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/>
+              <path id="big-poset-notes-max-min-MJX-11-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-11-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="10">
-                  <use data-c="31" xlink:href="#MJX-11-TEX-N-31"/>
-                  <use data-c="30" xlink:href="#MJX-11-TEX-N-30" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-11-TEX-N-31"/>
+                  <use data-c="30" xlink:href="#big-poset-notes-max-min-MJX-11-TEX-N-30" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-11" cx="27.0" cy="285.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-10" transform="translate(27.0,285.0) translate(-9.0,-6.0)">
-        <g id="g-13">
+      <circle id="big-poset-notes-max-min-node-11" cx="27.0" cy="285.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-10" transform="translate(27.0,285.0) translate(-9.0,-6.0)">
+        <g id="big-poset-notes-max-min-__g-10">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="18.096px" height="12.056px" role="img" focusable="false" viewBox="0 -666 1000 666" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-12-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-12-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="11">
-                  <use data-c="31" xlink:href="#MJX-12-TEX-N-31"/>
-                  <use data-c="31" xlink:href="#MJX-12-TEX-N-31" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-12-TEX-N-31"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-12-TEX-N-31" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-12" cx="33.0" cy="154.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-11" transform="translate(33.0,154.5) translate(-9.0,-6.0)">
-        <g id="g-14">
+      <circle id="big-poset-notes-max-min-node-12" cx="33.0" cy="154.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-11" transform="translate(33.0,154.5) translate(-9.0,-6.0)">
+        <g id="big-poset-notes-max-min-__g-11">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="18.096px" height="12.056px" role="img" focusable="false" viewBox="0 -666 1000 666" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-13-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-13-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-13-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-13-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="12">
-                  <use data-c="31" xlink:href="#MJX-13-TEX-N-31"/>
-                  <use data-c="32" xlink:href="#MJX-13-TEX-N-32" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-13-TEX-N-31"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-13-TEX-N-32" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-13" cx="93.0" cy="150.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-12" transform="translate(93.0,150.0) translate(-9.0,-6.2)">
-        <g id="g-15">
+      <circle id="big-poset-notes-max-min-node-13" cx="93.0" cy="150.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-12" transform="translate(93.0,150.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-12">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-14-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-14-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-14-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-14-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="13">
-                  <use data-c="31" xlink:href="#MJX-14-TEX-N-31"/>
-                  <use data-c="33" xlink:href="#MJX-14-TEX-N-33" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-14-TEX-N-31"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-14-TEX-N-33" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-14" cx="165.0" cy="460.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-13" transform="translate(165.0,460.5) translate(-9.0,-6.1)">
-        <g id="g-16">
+      <circle id="big-poset-notes-max-min-node-14" cx="165.0" cy="460.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-13" transform="translate(165.0,460.5) translate(-9.0,-6.1)">
+        <g id="big-poset-notes-max-min-__g-13">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="18.096px" height="12.256px" role="img" focusable="false" viewBox="0 -677 1000 677" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-15-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-15-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
+              <path id="big-poset-notes-max-min-MJX-15-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-15-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="14">
-                  <use data-c="31" xlink:href="#MJX-15-TEX-N-31"/>
-                  <use data-c="34" xlink:href="#MJX-15-TEX-N-34" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-15-TEX-N-31"/>
+                  <use data-c="34" xlink:href="#big-poset-notes-max-min-MJX-15-TEX-N-34" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-15" cx="273.0" cy="91.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-14" transform="translate(273.0,91.5) translate(-9.0,-6.2)">
-        <g id="g-17">
+      <circle id="big-poset-notes-max-min-node-15" cx="273.0" cy="91.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-14" transform="translate(273.0,91.5) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-14">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-16-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-16-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
+              <path id="big-poset-notes-max-min-MJX-16-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-16-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="15">
-                  <use data-c="31" xlink:href="#MJX-16-TEX-N-31"/>
-                  <use data-c="35" xlink:href="#MJX-16-TEX-N-35" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-16-TEX-N-31"/>
+                  <use data-c="35" xlink:href="#big-poset-notes-max-min-MJX-16-TEX-N-35" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-16" cx="243.0" cy="161.2" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-15" transform="translate(243.0,161.2) translate(-9.0,-6.2)">
-        <g id="g-18">
+      <circle id="big-poset-notes-max-min-node-16" cx="243.0" cy="161.2" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-15" transform="translate(243.0,161.2) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-15">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-17-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-17-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/>
+              <path id="big-poset-notes-max-min-MJX-17-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-17-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="16">
-                  <use data-c="31" xlink:href="#MJX-17-TEX-N-31"/>
-                  <use data-c="36" xlink:href="#MJX-17-TEX-N-36" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-17-TEX-N-31"/>
+                  <use data-c="36" xlink:href="#big-poset-notes-max-min-MJX-17-TEX-N-36" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-17" cx="165.0" cy="15.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-16" transform="translate(165.0,15.0) translate(-9.0,-6.3)">
-        <g id="g-19">
+      <circle id="big-poset-notes-max-min-node-17" cx="165.0" cy="15.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-16" transform="translate(165.0,15.0) translate(-9.0,-6.3)">
+        <g id="big-poset-notes-max-min-__g-16">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.632px" role="img" focusable="false" viewBox="0 -676 1000 698" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-18-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-18-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"/>
+              <path id="big-poset-notes-max-min-MJX-18-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-18-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="17">
-                  <use data-c="31" xlink:href="#MJX-18-TEX-N-31"/>
-                  <use data-c="37" xlink:href="#MJX-18-TEX-N-37" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-18-TEX-N-31"/>
+                  <use data-c="37" xlink:href="#big-poset-notes-max-min-MJX-18-TEX-N-37" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-18" cx="30.0" cy="420.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-17" transform="translate(30.0,420.0) translate(-9.0,-6.2)">
-        <g id="g-20">
+      <circle id="big-poset-notes-max-min-node-18" cx="30.0" cy="420.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-17" transform="translate(30.0,420.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-17">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-19-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-19-TEX-N-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"/>
+              <path id="big-poset-notes-max-min-MJX-19-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-19-TEX-N-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="18">
-                  <use data-c="31" xlink:href="#MJX-19-TEX-N-31"/>
-                  <use data-c="38" xlink:href="#MJX-19-TEX-N-38" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-19-TEX-N-31"/>
+                  <use data-c="38" xlink:href="#big-poset-notes-max-min-MJX-19-TEX-N-38" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-19" cx="303.0" cy="150.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-18" transform="translate(303.0,150.0) translate(-9.0,-6.2)">
-        <g id="g-21">
+      <circle id="big-poset-notes-max-min-node-19" cx="303.0" cy="150.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-18" transform="translate(303.0,150.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-18">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-20-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
-              <path id="MJX-20-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"/>
+              <path id="big-poset-notes-max-min-MJX-20-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-20-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="19">
-                  <use data-c="31" xlink:href="#MJX-20-TEX-N-31"/>
-                  <use data-c="39" xlink:href="#MJX-20-TEX-N-39" transform="translate(500,0)"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-20-TEX-N-31"/>
+                  <use data-c="39" xlink:href="#big-poset-notes-max-min-MJX-20-TEX-N-39" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-20" cx="30.0" cy="46.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-19" transform="translate(30.0,46.5) translate(-9.0,-6.2)">
-        <g id="g-22">
+      <circle id="big-poset-notes-max-min-node-20" cx="30.0" cy="46.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-19" transform="translate(30.0,46.5) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-19">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-21-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-21-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/>
+              <path id="big-poset-notes-max-min-MJX-21-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-21-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="20">
-                  <use data-c="32" xlink:href="#MJX-21-TEX-N-32"/>
-                  <use data-c="30" xlink:href="#MJX-21-TEX-N-30" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-21-TEX-N-32"/>
+                  <use data-c="30" xlink:href="#big-poset-notes-max-min-MJX-21-TEX-N-30" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-21" cx="75.0" cy="325.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-20" transform="translate(75.0,325.5) translate(-9.0,-6.0)">
-        <g id="g-23">
+      <circle id="big-poset-notes-max-min-node-21" cx="75.0" cy="325.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-20" transform="translate(75.0,325.5) translate(-9.0,-6.0)">
+        <g id="big-poset-notes-max-min-__g-20">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="18.096px" height="12.056px" role="img" focusable="false" viewBox="0 -666 1000 666" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-22-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-22-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-22-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-22-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="21">
-                  <use data-c="32" xlink:href="#MJX-22-TEX-N-32"/>
-                  <use data-c="31" xlink:href="#MJX-22-TEX-N-31" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-22-TEX-N-32"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-22-TEX-N-31" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-22" cx="207.0" cy="456.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-21" transform="translate(207.0,456.0) translate(-9.0,-6.0)">
-        <g id="g-24">
+      <circle id="big-poset-notes-max-min-node-22" cx="207.0" cy="456.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-21" transform="translate(207.0,456.0) translate(-9.0,-6.0)">
+        <g id="big-poset-notes-max-min-__g-21">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="18.096px" height="12.056px" role="img" focusable="false" viewBox="0 -666 1000 666" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-23-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-23-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="22">
-                  <use data-c="32" xlink:href="#MJX-23-TEX-N-32"/>
-                  <use data-c="32" xlink:href="#MJX-23-TEX-N-32" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-23-TEX-N-32"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-23-TEX-N-32" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-23" cx="21.0" cy="451.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-22" transform="translate(21.0,451.5) translate(-9.0,-6.2)">
-        <g id="g-25">
+      <circle id="big-poset-notes-max-min-node-23" cx="21.0" cy="451.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-22" transform="translate(21.0,451.5) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-22">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-24-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-24-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-24-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-24-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="23">
-                  <use data-c="32" xlink:href="#MJX-24-TEX-N-32"/>
-                  <use data-c="33" xlink:href="#MJX-24-TEX-N-33" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-24-TEX-N-32"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-24-TEX-N-33" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-24" cx="213.0" cy="144.1" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-23" transform="translate(213.0,144.1) translate(-9.0,-6.1)">
-        <g id="g-26">
+      <circle id="big-poset-notes-max-min-node-24" cx="213.0" cy="144.1" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-23" transform="translate(213.0,144.1) translate(-9.0,-6.1)">
+        <g id="big-poset-notes-max-min-__g-23">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="18.096px" height="12.256px" role="img" focusable="false" viewBox="0 -677 1000 677" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-25-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-25-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
+              <path id="big-poset-notes-max-min-MJX-25-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-25-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="24">
-                  <use data-c="32" xlink:href="#MJX-25-TEX-N-32"/>
-                  <use data-c="34" xlink:href="#MJX-25-TEX-N-34" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-25-TEX-N-32"/>
+                  <use data-c="34" xlink:href="#big-poset-notes-max-min-MJX-25-TEX-N-34" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-25" cx="303.0" cy="397.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-24" transform="translate(303.0,397.5) translate(-9.0,-6.2)">
-        <g id="g-27">
+      <circle id="big-poset-notes-max-min-node-25" cx="303.0" cy="397.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-24" transform="translate(303.0,397.5) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-24">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-26-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-26-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
+              <path id="big-poset-notes-max-min-MJX-26-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-26-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="25">
-                  <use data-c="32" xlink:href="#MJX-26-TEX-N-32"/>
-                  <use data-c="35" xlink:href="#MJX-26-TEX-N-35" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-26-TEX-N-32"/>
+                  <use data-c="35" xlink:href="#big-poset-notes-max-min-MJX-26-TEX-N-35" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-26" cx="117.0" cy="199.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-25" transform="translate(117.0,199.5) translate(-9.0,-6.2)">
-        <g id="g-28">
+      <circle id="big-poset-notes-max-min-node-26" cx="117.0" cy="199.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-25" transform="translate(117.0,199.5) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-25">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-27-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-27-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/>
+              <path id="big-poset-notes-max-min-MJX-27-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-27-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="26">
-                  <use data-c="32" xlink:href="#MJX-27-TEX-N-32"/>
-                  <use data-c="36" xlink:href="#MJX-27-TEX-N-36" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-27-TEX-N-32"/>
+                  <use data-c="36" xlink:href="#big-poset-notes-max-min-MJX-27-TEX-N-36" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-27" cx="267.0" cy="240.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-26" transform="translate(267.0,240.0) translate(-9.0,-6.3)">
-        <g id="g-29">
+      <circle id="big-poset-notes-max-min-node-27" cx="267.0" cy="240.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-26" transform="translate(267.0,240.0) translate(-9.0,-6.3)">
+        <g id="big-poset-notes-max-min-__g-26">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.632px" role="img" focusable="false" viewBox="0 -676 1000 698" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-28-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-28-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"/>
+              <path id="big-poset-notes-max-min-MJX-28-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-28-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="27">
-                  <use data-c="32" xlink:href="#MJX-28-TEX-N-32"/>
-                  <use data-c="37" xlink:href="#MJX-28-TEX-N-37" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-28-TEX-N-32"/>
+                  <use data-c="37" xlink:href="#big-poset-notes-max-min-MJX-28-TEX-N-37" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-28" cx="225.0" cy="33.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-27" transform="translate(225.0,33.0) translate(-9.0,-6.2)">
-        <g id="g-30">
+      <circle id="big-poset-notes-max-min-node-28" cx="225.0" cy="33.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-27" transform="translate(225.0,33.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-27">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-29-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-29-TEX-N-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"/>
+              <path id="big-poset-notes-max-min-MJX-29-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-29-TEX-N-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="28">
-                  <use data-c="32" xlink:href="#MJX-29-TEX-N-32"/>
-                  <use data-c="38" xlink:href="#MJX-29-TEX-N-38" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-29-TEX-N-32"/>
+                  <use data-c="38" xlink:href="#big-poset-notes-max-min-MJX-29-TEX-N-38" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-29" cx="297.0" cy="24.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-28" transform="translate(297.0,24.0) translate(-9.0,-6.2)">
-        <g id="g-31">
+      <circle id="big-poset-notes-max-min-node-29" cx="297.0" cy="24.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-28" transform="translate(297.0,24.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-28">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-30-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
-              <path id="MJX-30-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"/>
+              <path id="big-poset-notes-max-min-MJX-30-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-30-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="29">
-                  <use data-c="32" xlink:href="#MJX-30-TEX-N-32"/>
-                  <use data-c="39" xlink:href="#MJX-30-TEX-N-39" transform="translate(500,0)"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-30-TEX-N-32"/>
+                  <use data-c="39" xlink:href="#big-poset-notes-max-min-MJX-30-TEX-N-39" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-30" cx="135.0" cy="143.2" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-29" transform="translate(135.0,143.2) translate(-9.0,-6.2)">
-        <g id="g-32">
+      <circle id="big-poset-notes-max-min-node-30" cx="135.0" cy="143.2" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-29" transform="translate(135.0,143.2) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-29">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-31-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
-              <path id="MJX-31-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/>
+              <path id="big-poset-notes-max-min-MJX-31-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-31-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="30">
-                  <use data-c="33" xlink:href="#MJX-31-TEX-N-33"/>
-                  <use data-c="30" xlink:href="#MJX-31-TEX-N-30" transform="translate(500,0)"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-31-TEX-N-33"/>
+                  <use data-c="30" xlink:href="#big-poset-notes-max-min-MJX-31-TEX-N-30" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-31" cx="135.0" cy="303.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-30" transform="translate(135.0,303.0) translate(-9.0,-6.2)">
-        <g id="g-33">
+      <circle id="big-poset-notes-max-min-node-31" cx="135.0" cy="303.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-30" transform="translate(135.0,303.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-30">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-32-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
-              <path id="MJX-32-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
+              <path id="big-poset-notes-max-min-MJX-32-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-32-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="31">
-                  <use data-c="33" xlink:href="#MJX-32-TEX-N-33"/>
-                  <use data-c="31" xlink:href="#MJX-32-TEX-N-31" transform="translate(500,0)"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-32-TEX-N-33"/>
+                  <use data-c="31" xlink:href="#big-poset-notes-max-min-MJX-32-TEX-N-31" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-32" cx="177.0" cy="100.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-31" transform="translate(177.0,100.5) translate(-9.0,-6.2)">
-        <g id="g-34">
+      <circle id="big-poset-notes-max-min-node-32" cx="177.0" cy="100.5" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-31" transform="translate(177.0,100.5) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-31">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-33-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
-              <path id="MJX-33-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
+              <path id="big-poset-notes-max-min-MJX-33-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-33-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="32">
-                  <use data-c="33" xlink:href="#MJX-33-TEX-N-33"/>
-                  <use data-c="32" xlink:href="#MJX-33-TEX-N-32" transform="translate(500,0)"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-33-TEX-N-33"/>
+                  <use data-c="32" xlink:href="#big-poset-notes-max-min-MJX-33-TEX-N-32" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-33" cx="21.0" cy="330.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-32" transform="translate(21.0,330.0) translate(-9.0,-6.2)">
-        <g id="g-35">
+      <circle id="big-poset-notes-max-min-node-33" cx="21.0" cy="330.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-32" transform="translate(21.0,330.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-32">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.432px" role="img" focusable="false" viewBox="0 -665 1000 687" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-34-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-34-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="33">
-                  <use data-c="33" xlink:href="#MJX-34-TEX-N-33"/>
-                  <use data-c="33" xlink:href="#MJX-34-TEX-N-33" transform="translate(500,0)"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-34-TEX-N-33"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-34-TEX-N-33" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-34" cx="57.0" cy="186.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-33" transform="translate(57.0,186.0) translate(-9.0,-6.3)">
-        <g id="g-36">
+      <circle id="big-poset-notes-max-min-node-34" cx="57.0" cy="186.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-33" transform="translate(57.0,186.0) translate(-9.0,-6.3)">
+        <g id="big-poset-notes-max-min-__g-33">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.648px" role="img" focusable="false" viewBox="0 -677 1000 699" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-35-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
-              <path id="MJX-35-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
+              <path id="big-poset-notes-max-min-MJX-35-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-35-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="34">
-                  <use data-c="33" xlink:href="#MJX-35-TEX-N-33"/>
-                  <use data-c="34" xlink:href="#MJX-35-TEX-N-34" transform="translate(500,0)"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-35-TEX-N-33"/>
+                  <use data-c="34" xlink:href="#big-poset-notes-max-min-MJX-35-TEX-N-34" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
           </svg>
         </g>
       </g>
-      <circle id="node-35" cx="225.0" cy="420.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
-      <g id="label-34" transform="translate(225.0,420.0) translate(-9.0,-6.2)">
-        <g id="g-37">
+      <circle id="big-poset-notes-max-min-node-35" cx="225.0" cy="420.0" r="12" stroke="black" stroke-width="1" fill="#ddd"/>
+      <g id="big-poset-notes-max-min-__label-34" transform="translate(225.0,420.0) translate(-9.0,-6.2)">
+        <g id="big-poset-notes-max-min-__g-34">
           <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.400px" width="18.096px" height="12.456px" role="img" focusable="false" viewBox="0 -666 1000 688" x="0.0" y="0.0">
             <defs>
-              <path id="MJX-36-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
-              <path id="MJX-36-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
+              <path id="big-poset-notes-max-min-MJX-36-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"/>
+              <path id="big-poset-notes-max-min-MJX-36-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"/>
             </defs>
             <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
               <g data-mml-node="math">
                 <g data-mml-node="mn" data-semantic-type="number" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="35">
-                  <use data-c="33" xlink:href="#MJX-36-TEX-N-33"/>
-                  <use data-c="35" xlink:href="#MJX-36-TEX-N-35" transform="translate(500,0)"/>
+                  <use data-c="33" xlink:href="#big-poset-notes-max-min-MJX-36-TEX-N-33"/>
+                  <use data-c="35" xlink:href="#big-poset-notes-max-min-MJX-36-TEX-N-35" transform="translate(500,0)"/>
                 </g>
               </g>
             </g>
