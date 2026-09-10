@@ -20,11 +20,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <style>
-@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
-@counter-style ptx-marker-2 { system: extends decimal; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-2 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-6 { system: extends lower-roman; prefix: ''; suffix: ' '; }
 </style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -668,7 +669,7 @@ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(0)))))))))))))))))).
 </h2>
 <div class="para logical" id="s_background_decimal-3-2">
 <div class="para">Many authors prefer to start the development of number systems with the set of <dfn class="terminology">positive integers</dfn> and defer the introduction of the concept of zero. In this setting, you have a non-empty set <span class="process-math">\(\posints\text{,}\)</span> a one-to-one <dfn class="terminology">successor</dfn> function <span class="process-math">\(s:\posints\injection\posints\)</span> and a positive integer called <dfn class="terminology">one</dfn> and denoted <span class="process-math">\(1\)</span> that is not the successor of any positive integer. The Principle of Induction then becomes: If <span class="process-math">\(\mathbb{M}\subseteq\posints\text{,}\)</span> then <span class="process-math">\(\mathbb{M} =\posints\)</span> if and only if</div>
-<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="s_background_decimal-3-2-11">
+<ol class="lower-alpha" style="list-style: ptx-marker-2;" id="s_background_decimal-3-2-11">
 <li id="s_background_decimal-3-2-11-1">
 <div class="para" id="p-derived-s_background_decimal-3-2-11-1">
 <span class="process-math">\(1\in \mathbb{M}\text{;}\)</span> and</div>

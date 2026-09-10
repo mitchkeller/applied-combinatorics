@@ -20,11 +20,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <style>
-@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
-@counter-style ptx-marker-2 { system: extends decimal; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-2 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-6 { system: extends lower-roman; prefix: ''; suffix: ' '; }
 </style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -621,7 +622,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="s_networkflow_augmenting-2-3">
 <div class="para">The key tool in modifying a network flow is a special type of path, and these paths are not necessarily directed paths. An <dfn class="terminology">augmenting path</dfn> is a sequence <span class="process-math">\(P=(x_0,x_1,\dots,x_m)\)</span> of distinct vertices in the network such that <span class="process-math">\(x_0=S\text{,}\)</span> <span class="process-math">\(x_m=T\text{,}\)</span> and for each <span class="process-math">\(i=1,2,\dots,m\text{,}\)</span> either</div>
-<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="s_networkflow_augmenting-2-3-7">
+<ol class="lower-alpha" style="list-style: ptx-marker-2;" id="s_networkflow_augmenting-2-3-7">
 <li id="networkflow_spare">
 <div class="para" id="p-derived-networkflow_spare">
 <span class="process-math">\((x_{i-1},x_i)\)</span> has spare capacity or</div>

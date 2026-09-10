@@ -20,11 +20,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <style>
-@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
-@counter-style ptx-marker-2 { system: extends decimal; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
-@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-2 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-3 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-6 { system: extends lower-roman; prefix: ''; suffix: ' '; }
 </style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -631,7 +632,7 @@ f(k+1) = 2f(k) - f(k-1) = 2(2k+1) - f(k-1),
 </div>
 <div class="para logical" id="s_induction_strong-induction-5">
 <div class="para">Bob was about to throw in the towel and ask his computer to start making the calculations recursively, when Carlos comes along and asks what he’s doing. Carlos sees right away that the approach Bob was taking to prove that <span class="process-math">\(f(n)=2n+1\)</span> by induction won’t work—but after a moment’s reflection, Carlos says that there’s a stronger form of an inductive proof that will do the trick.  Carlos patiently explained to Bob a proposition which is called the <dfn class="terminology">Strong Principle of Mathematical Induction</dfn>. To prove that an open statement <span class="process-math">\(S_n\)</span> is valid for all <span class="process-math">\(n\ge1\text{,}\)</span> it is enough to</div>
-<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="s_induction_strong-induction-5-7">
+<ol class="lower-alpha" style="list-style: ptx-marker-2;" id="s_induction_strong-induction-5-7">
 <li id="s_induction_strong-induction-5-7-1">
 <div class="para" id="s_induction_strong-induction-5-7-1-1">Show that <span class="process-math">\(S_1\)</span> is valid, and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_induction_strong-induction-5-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
