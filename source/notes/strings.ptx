@@ -44,6 +44,9 @@
         \binom{n}{0}+ \binom{n}{1}+ \binom{n}{2}+ \cdots + \binom{n}{n-1}+ \binom{n}{n}
       </md>
     </p>
+    <p component="a">
+      We can see why this holds by thinking about counting binary strings of length <m>n</m>. Since there are two choices for each of the <m>n</m> positions, we know that there are <m>2^n</m> such strings. The left-hand side groups the strings by the number of bits that are <m>1</m>. Specifically, <m>C(n,k)</m> is the number of bit strings of length <m>n</m> having exactly <m>k</m> bits that are <m>1</m>. This is because once we choose where the <m>1</m>s get placed, we must fill in the remaining positions with <m>0</m>s. The number of <m>1</m>s can be any number from <m>0</m> to <m>n</m>, and no bit string can have two different number of <m>1</m>s simultaneously. Thus, summing up the binomial coefficients is the correct approach.
+    </p>
     <sidebyside widths="40% 55%">
       
       
@@ -170,8 +173,34 @@
     <p workspace="0.5in">
       <alert>Peer instruction question 3</alert>
     </p>
+    <p component="a">
+      Two answer choices here are correct, which allows us to establish the identity 
+      <md>
+        \binom{n}{r}\binom{r}{k} = \binom{n}{k}\binom{n-k}{r-k}
+      </md>.
+      <ul>
+        <li>
+          <p>
+            The left-hand side counts the ways rather directly. First we choose the <m>r</m> members of the committee in <m>C(n,r)</m> ways. Then, from the <m>r</m> members of the committee, we choose <m>k</m> for the subcommittee in <m>C(r,k)</m> ways. We multiply to fully determine the committee and subcommittee.
+          </p>
+        </li>
+        <li>
+          <p>
+            The right-hand side counts the ways a bit less directly. First, it chooses the <m>k</m> members of the <em>sub</em>committee, which can be done in <m>C(n,k)</m> ways. We then still need to choose <m>r-k</m> additional members to form the full committee. Because we won't make anyone do double duty on the committee, these must be chosen from the <m>n-k</m> individuals who were not already chosen for the subcommittee. Thus, there are <m>C(n-k,r-k)</m> ways to choose the remainder of the committee. We multiply to fully determine the committee and the subcommittee.
+          </p>
+        </li>
+      </ul>
+      
+    </p>
     <p workspace="0.5in">
       <alert>Peer instruction question 4</alert>
+    </p>
+    <p component="a">
+      The first critical step here is to use the identity that <m>C(n,k) = C(n,n-k)</m> along with recognizing that <m>C(n,k)^2 = C(n,k)\cdot C(n,k)</m>. That allows us to rewrite the sum:
+      <md>
+        \binom{n}{0}^2 + \binom{n}{1}^2 + \binom{n}{2}^2 + \cdots +\binom{n}{n-1}^2 + \binom{n}{n}^2\\ = \binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n-1} + \binom{n}{2}\binom{n}{n-2} + \cdots +\binom{n}{n-1}\binom{n}{1} + \binom{n}{n}\binom{n}{0}
+      </md>
+      With this, we can now recognize that the sum counts the number of bit strings of length <m>2n</m> with exactly <m>n</m> (or half) of the positions being <m>1</m>. The term <m>C(n,k)C(n,n-k)</m> has exactly <m>k</m> of the first <m>n</m> positions being <m>1</m> and exactly <m>n-k</m> of the last <m>n</m> positions being <m>1</m>. Thus, there are exactly <m>k+(n-k)=n</m> positions that are <m>1</m> in the string. Therefore, the sum must equal <m>C(2n,n)</m>.
     </p>
   </handout>
   <handout component="ubiquitous">
