@@ -87,7 +87,7 @@
           <exercise>
             <statement>
               <p>For this exercise, consider the poset <m>\bfP</m> in <xref ref="fig_17ptposet"/>.
-                <ol>
+                <ol marker="(a)">
                   <li><p>List the maximal elements of <m>\bfP</m>.</p></li>
                   <li><p>List the minimal elements of <m>\bfP</m>.</p></li>
                   <li><p>Find a maximal chain with two points in <m>\bfP</m>.</p></li>
@@ -99,7 +99,7 @@
             </statement>
             <solution>
               <p>
-                <ol>
+                <ol marker="(a)">
                   <li>
                     <p>
                       The maximal elements are those that are not less than any other element: 15,8,11,2,17,3.
@@ -394,7 +394,7 @@
           <exercise>
             <statement>
               <p>The <term>dimension</term><idx><h>dimension</h></idx> of a poset <m>\PXP</m>, denoted <m>\dim(\bfP)</m>, is the least <m>t</m> for which <m>P</m> is the intersection of <m>t</m> linear orders on <m>X</m>.
-                <ol>
+                <ol marker="(a)">
                   <li><p>Show that the dimension of a poset <m>\bfP</m> is the same as the dimension of its dual.</p></li>
                   <li><p>Show that <m>\bfP</m> is a subposet of <m>\bfQ</m>, then <m>\dim(\bfP)\le \dim(\bfQ)</m>.</p></li>
                   <li><p>Show that the removal of a point can reduce the dimension by at most<nbsp/><m>1</m>.</p></li>

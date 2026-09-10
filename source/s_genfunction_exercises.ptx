@@ -6,7 +6,7 @@
     <exercise>
         <statement>
             <p>For each <em>finite</em> sequence below, give its generating function.
-                  <ol cols="2">
+                  <ol cols="2" marker="(a)">
                 <li><p><m>1, 4, 6, 4, 1</m></p></li>
                 <li><p><m>1,1,1,1,1,0,0,1</m></p></li>
                 <li><p><m>0,0,0,1,2,3,4,5</m></p></li>
@@ -21,7 +21,7 @@
     <exercise>
         <statement>
             <p>For each <em>infinite</em> sequence suggested below, give its generating function in closed form, <ie/>, <em>not</em> as an infinite sum. (Use the most obvious choice of form for the general term of each sequence.)
-                  <ol cols="2">
+                  <ol cols="2" marker="(a)">
                 <li><p><m>0,1,1,1,1,1,\dots</m></p></li>
                 <li><p><m>1,0,0,1,0,0,1,0,0,1,0,0,1,\dots</m></p></li>
                 <li><p><m>1,2,4,8,16,32,\dots</m></p></li>
@@ -43,7 +43,7 @@
         <statement>
             <p>For each generating function below, give a closed form
             for the <m>n^{\text{th} }</m> term of its associated sequence.
-                  <ol>
+                  <ol marker="(a)">
                 <li><p><m>(1+x)^{10}</m></p></li>
                 <li><p><m>\displaystyle \frac{1}{1-x^4}</m></p></li>
                 <li><p><m>\displaystyle \frac{x^3}{1-x^4}</m></p></li>
@@ -63,7 +63,7 @@
         <statement>
             <p>Find the coefficient on <m>x^{10}</m> in each of the generating
             functions below.
-                  <ol>
+                  <ol marker="(a)">
                 <li><p><m>(x^3+x^5+x^6)(x^4+x^5+x^7) (1+x^5+x^{10}+x^{15}+\cdots)</m></p></li>
                 <li><p><m>(1+x^3) (x^3+x^4+x^5+\cdots)(x^4+x^5+x^6+x^7+x^8+\cdots)</m></p></li>
                 <li><p><m>(1+x)^{12}</m></p></li>
@@ -201,7 +201,7 @@
     <exercise>
         <statement>
             <p>Bags of candy are being prepared to distribute to the children at a school. The types of candy available are chocolate bites, peanut butter cups, peppermint candies, and fruit chews. Each bag must contain at least two chocolate bites, an even number of peanut butter cups, and at most six peppermint candies. The fruit chews are available in four different flavors<mdash/>lemon, orange, strawberry, and cherry. A bag of candy may contain at most two fruit chews, which may be of the same or different flavors. Beyond the number of pieces of each type of candy included, bags of candy are distinguished by using the flavors of the fruit chews included, not just the number. For example, a bag containing two orange fruit chews is different from a bag containing a cherry fruit chew and a strawberry fruit chew, even if the number of pieces of each other type of candy is the same.
-                  <ol>
+                  <ol marker="(a)">
                 <li><p>Let <m>b_n</m> be the number of different bags of candy with <m>n</m> pieces of candy that can be formed subject to these restrictions.  Find the generating function for the sequence <m>\{b_n\colon n\geq 0\}</m>.</p></li>
                 <li><p>Suppose the school has <m>400</m> students and the teachers would like to ensure that each student gets a different bag of candy. However, they know there will be fights if the bags do not all contain the same number of pieces of candy. What is the smallest number of pieces of candy they can include in the bags that ensures each student gets a different bag of candy containing the same number of pieces of candy?</p></li>
             
@@ -221,7 +221,7 @@
     <exercise>
         <statement>
             <p>Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for $<m>0.95</m> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you're not asked for the coefficient on <m>x^n</m>.)
-                  <ol>
+                  <ol marker="(a)">
                 <li><p>Use a generating function and computer algebra system to determine the number of ways Carlos could pay his $<m>0.95</m> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)</p></li>
                 <li xml:id="exer_genfunction_coin-toll"><p>Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the $<m>0.95</m> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <m>10=C(5,2)</m> ways to insert this combination. Use a generating function and computer algebra system to determine the number of ways that Carlos could pay the $<m>0.95</m> toll when considering the order the coins are inserted.</p></li>
             
@@ -240,7 +240,7 @@
         </hint>
         <answer>
             <p>
-                <ol>
+                <ol marker="(a)">
                     <li>To be inserted.</li>
                     <li>1856250874024</li>
                 </ol>
@@ -248,7 +248,7 @@
         </answer>
         <solution>
             <p>
-                <ol>
+                <ol marker="(a)">
                     <li>To be inserted
                     </li>
                     <li>We are seeking the number of solutions to the equation <m>a_1 +
@@ -285,7 +285,7 @@
     <exercise>
         <statement>
             <p>Find the exponential generating function (in closed form, not as an infinite sum) for each infinite sequence <m>\{a_n\colon n\geq 0\}</m> whose general term is given below.
-                  <ol cols="2">
+                  <ol cols="2" marker="(a)">
                 <li><p><m>a_n = 5^n</m></p></li>
                 <li><p><m>a_n = (-1)^n2^n</m></p></li>
                 <li><p><m>a_n = 3^{n+2}</m></p></li>
@@ -300,7 +300,7 @@
     <exercise>
         <statement>
             <p>For each exponential generating function below, give a formula in closed form for the sequence <m>\{a_n\colon n\geq 0\}</m> it represents.
-                  <ol cols="2">
+                  <ol cols="2" marker="(a)">
                 <li><p><m>e^{7x}</m></p></li>
                 <li><p><m>x^2 e^{3x}</m></p></li>
                 <li><p><m>\displaystyle \frac{1}{1+x}</m></p></li>
@@ -313,7 +313,7 @@
     <exercise>
         <statement>
             <p>Find the coefficient on <m>x^{10}/{10!}</m> in each of the exponential generating functions below.
-                  <ol cols="2">
+                  <ol cols="2" marker="(a)">
                 <li><p><m>e^{3x}</m></p></li>
                 <li><p><m>\displaystyle\frac{e^x-e^{-x}}{2}</m></p></li>
                 <li><p><m>\displaystyle\frac{e^x+e^{-x}}{2}</m></p></li>

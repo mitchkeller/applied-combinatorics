@@ -79,7 +79,7 @@
   <exercise>
     <statement>
       <p>Mrs.<nbsp/>Steffen's third grade class has <m>30</m> students in it. The students are divided into three groups (numbered <m>1</m>, <m>2</m>, and <m>3</m>), each having <m>10</m> students.
-        <ol>
+        <ol marker="(a)">
           <li><p>The students in group <m>1</m> earned <m>10</m> extra minutes of recess by winning a class competition. Before going out for their extra recess time, they form a single file line. In how many ways can they line up?</p></li>
           <li><p>When all <m>30</m> students come in from recess together, they
             again form a single file line. However, this time the students
@@ -93,7 +93,7 @@
       </statement>
       <answer>
         <p>
-          <ol>
+          <ol marker="(a)">
             <li>
               <p>
                 <m>10!</m>
@@ -109,7 +109,7 @@
       </answer>
       <solution>
         <p>
-          <ol>
+          <ol marker="(a)">
             <li>
               <p>
                 There are <m>P(10,10)=10!</m> ways for the 10 students in Group 1 to line up.
@@ -148,7 +148,7 @@
         <exercise>
           <statement>
             <p>In this exercise, we consider strings made from uppercase letters in the English alphabet and decimal digits. How many strings of length <m>10</m> can be constructed in each of the following scenarios?
-              <ol>
+              <ol marker="(a)">
                 <li><p>The first and last characters of the string are letters.</p></li>
                 <li><p>The first character is a vowel, the second character is a
                   consonant, and the last character is a digit.</p></li>
@@ -164,7 +164,7 @@
                   </statement>
                   <solution>
                     <p>
-                      <ol>
+                      <ol marker="(a)">
                         <li>
                           <p>
                             We have 26 choices for each of the first and last positions and 36 for the interior eight, so we have <m>26^{2}\cdot 36^{8}</m> strings.
@@ -259,7 +259,7 @@
                 <exercise>
                   <statement>
                     <p>A donut shop sells 12 types of donuts. A manager wants to buy six donuts, one each for himself and his five employees.
-                      <ol>
+                      <ol marker="(a)">
                         <li><p>Suppose that he does this by selecting a specific type of donut for each person. (He can select the same type of donut for more than one person.) In how many ways can he do this?</p></li>
                         <li><p>How many ways could he select the donuts if he wants to ensure that he chooses a different type of donut for each person?</p></li>
                         <li><p>Suppose instead that he wishes to select one donut of each of six <em>different</em> types and place them in the breakroom. In how many ways can he do this? (The order of the donuts in the box is irrelevant.)</p></li>
@@ -287,7 +287,7 @@
                 <exercise>
                   <statement>
                     <p>Twenty students compete in a programming competition in which the top four students are recognized with trophies for first, second, third, and fourth places.
-                      <ol>
+                      <ol marker="(a)">
                         <li><p>How many different outcomes are there for the top four places?</p></li>
                         <li><p>At the last minute, the judges decide that they will award honorable mention certificates to four individuals who did not receive trophies. In how many ways can the honorable mention recipients be selected (after the top four places have been determined)? How many total outcomes (trophies plus certificates) are there then?</p></li>
                         
@@ -304,7 +304,7 @@
                         <li><p>There are <m>10</m> sprinkled toppings available, and he must choose three of them to have sprinkled over the entire banana split.</p></li>
                         
                       </ul>
-                      <ol>
+                      <ol marker="(a)">
                         <li><p>How many different ways are there for Xing to construct a banana split at this ice cream shop?</p></li>
                         <li><p>Suppose that instead of requiring that Xing choose exactly three sprinkled toppings, he is allowed to choose between zero and three sprinkled toppings. In this scenario, how many different ways are there for him to construct a banana split?</p></li>
                         
@@ -313,7 +313,7 @@
                   </statement>
                   <solution>
                     <p>
-                      <ol>
+                      <ol marker="(a)">
                         <li>
                           <p>
                             Since the bowl is not symmetrical, the position of the scoops of ice cream matters, so there are <m>P(20,3)=20\cdot 19\cdot 18</m> ways to pick and place the ice cream.
@@ -363,7 +363,7 @@
                 <exercise>
                   <statement>
                     <p>How many integer-valued solutions are there to each of the following equations and inequalities?
-                      <ol>
+                      <ol marker="(a)">
                         <li><p><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i&gt;0</m></p></li>
                         <li><p><m>x_1+x_2+x_3+x_4+x_5=63</m>, all <m>x_i\geq 0</m></p></li>
                         <li><p><m>x_1+x_2+x_3+x_4+x_5\leq 63</m>, all <m>x_i\geq 0</m></p></li>
@@ -614,7 +614,7 @@
                     <exercise>
                       <statement>
                         <p>For each word below, determine the number of rearrangements of the word in which all letters must be used.
-                          <ol>
+                          <ol marker="(a)">
                             <li><p>OVERNUMEROUSNESSES</p></li>
                             <li><p>OPHTHALMOOTORHINOLARYNGOLOGY</p></li>
                             <li><p>HONORIFICABILITUDINITATIBUS (the longest word in the English
@@ -632,7 +632,7 @@
                       <exercise>
                         <statement>
                           <p>There are many useful sets that are enumerated by the Catalan numbers. (Volume two of R.P.<nbsp/>Stanley's <pubtitle>Enumerative Combinatorics</pubtitle> contains a famous (or perhaps infamous) exercise in <m>66</m> parts asking readers to find bijections that will show that the number of various combinatorial structures is <m>C(n)</m>, and his <url href="http://www-math.mit.edu/~rstan/ec/catadd.pdf" visual="www-math.mit.edu/~rstan/ec/catadd.pdf">web page</url> boasts an additional list of at least <m>100</m> parts.) Give bijective arguments to show that each class of objects below is enumerated by <m>C(n)</m>. (All three were selected from the list in Stanley's book.)
-                            <ol>
+                            <ol marker="(a)">
                               <li><p>The number of ways to fully-parenthesize a product of <m>n+1</m>
                                 factors as if the <q>multiplication</q> operation in question were
                                 not necessarily associative. For example, there is one way to

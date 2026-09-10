@@ -4,7 +4,7 @@
       <p>The questions in this exercise pertain to the graph <m>\bfG</m> shown in <xref ref="fig_graphs_graph_ex"/>.
       </p>
       <sidebyside widths="60% 35%">
-        <ol>
+        <ol marker="(a)">
           <li><p>What is the degree of vertex <m>8</m>?</p></li>
           <li><p>What is the degree of vertex <m>10</m>?</p></li>
           <li><p>How many vertices of degree <m>2</m> are there in <m>\bfG</m>? List
@@ -49,7 +49,7 @@
     <exercise>
       <statement>
         <p>For this exercise, consider the graph <m>\bfG</m> in <xref ref="fig_graphs_subgraphs_ex"/>.
-          <ol>
+          <ol marker="(a)">
             <li><p>Let <m>V_1=\{g,j,c,h,e,f\}</m> and <m>E_1=\{ge,jg,ch,ef\}</m>. Is <m>(V_1,E_1)</m> a subgraph of <m>\bfG</m>?</p></li>
             <li><p>Let <m>V_2=\{g,j,c,h,e,f\}</m> and <m>E_2=\{ge,jg,ch,ef,cj\}</m>. Is <m>(V_2,E_2)</m> a subgraph of <m>\bfG</m>?</p></li>
             <li><p>Let <m>V_3=\{a,d,c,h,b\}</m> and <m>E_3=\{ch,ac,ad,bc\}</m>. Is <m>(V_3,E_3)</m> an induced subgraph of <m>\bfG</m>?</p></li>
@@ -447,7 +447,7 @@
                 <exercise>
                   <statement>
                     <p>
-                      <ol>
+                      <ol marker="(a)">
                         <li><p>From <xref ref="ex_graphs_first-fit-color"/> you know that choosing a bad ordering of the vertices of a graph can lead to the First Fit coloring algorithm producing a coloring that is far from optimal. However, you can use this algorithm to prove a bound on the chromatic number. Show that if every vertex of <m>\bfG</m> has degree at most <m>D</m>, then <m>\chi(\bfG)\leq D+1</m>.</p></li>
                         <li><p>Give an example of a bipartite graph with <m>D=1000</m> to show that this bound need not be tight.</p></li>
                       </ol>
@@ -622,7 +622,7 @@
                               <li>is definitely planar/cannot be planar.</li>
                             </ul>
                             (If you do not have enough information to make a determination for a sequence without having specific graph(s) with that degree sequence, write <q>not enough information</q> for that property.)
-                            <ol>
+                            <ol marker="(a)">
                               <li><p><m>(6,6,4,4,4,4,2,2,2,2)</m></p></li>
                               <li><p><m>(7,7,7,7,6,6,6,2,1,1)</m></p></li>
                               <li><p><m>(8,6,4,4,4,3,2,2,1,1)</m></p></li>
