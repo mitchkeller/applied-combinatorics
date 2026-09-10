@@ -19,7 +19,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
@@ -37,7 +43,7 @@ lang: "en-US",
 <meta name="twitter:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta property="og:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.49"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.49"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -59,15 +65,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.6';
+eBookConfig.runestone_version = '8.2.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.86d8a68ed7481f7e.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bb5ac777721d4056.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
 <script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -622,7 +628,7 @@ eBookConfig.enable_chatcodes =  false;
 </figure>
 <div class="para logical" id="s_flowapplications_bip-match-5">
 <div class="para">If <span class="process-math">\(\GVE\)</span> is a graph, a set <span class="process-math">\(M\subseteq E\)</span> is a <dfn class="terminology">matching</dfn> in <span class="process-math">\(\bfG\)</span> if no two edges of <span class="process-math">\(M\)</span> share an endpoint. If <span class="process-math">\(v\)</span> is a vertex that is the endpoint of an edge in <span class="process-math">\(M\text{,}\)</span> we say that <span class="process-math">\(M\)</span> saturates <span class="process-math">\(v\)</span> or <span class="process-math">\(v\)</span> is saturated by <span class="process-math">\(M\text{.}\)</span> When <span class="process-math">\(\bfG\)</span> is bipartite with <span class="process-math">\(V=V_1\cup V_2\text{,}\)</span> a matching is then a way to pair vertices in <span class="process-math">\(V_1\)</span> with vertices in <span class="process-math">\(V_2\)</span> so that no vertex is paired with more than one other vertex. We’re usually interested in finding a <dfn class="terminology">maximum matching</dfn>, which is a matching that contains the largest number of edges possible, and in bipartite graphs we usually fix the sets <span class="process-math">\(V_1\)</span> and <span class="process-math">\(V_2\)</span> and seek a maximum matching from <span class="process-math">\(V_1\)</span> to <span class="process-math">\(V_2\text{.}\)</span> In our workers and jobs example, the matching problem thus becomes trying to find an assignment of workers to jobs such that</div>
-<ol class="lower-roman ol-marker-5" id="s_flowapplications_bip-match-5-23">
+<ol class="lower-roman" style="list-style: ptx-marker-5;" id="s_flowapplications_bip-match-5-23">
 <li id="s_flowapplications_bip-match-5-23-1">
 <div class="para" id="p-derived-s_flowapplications_bip-match-5-23-1">each worker is assigned to a job for which he is qualified (meaning there’s an edge),</div>
 <div class="autopermalink" aria-hidden="true" data-description="Item i"><a tabindex="-1" href="#s_flowapplications_bip-match-5-23-1" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>

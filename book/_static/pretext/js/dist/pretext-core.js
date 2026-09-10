@@ -409,7 +409,7 @@
         this.close = () => this.closeDialogFallback();
         this.toggle = () => this.toggleDialogFallback();
       }
-      if (!_PTXDialog.hasNativeCommandInvokers() && this.kind === "light-close") {
+      if (this.kind === "light-close") {
         this.dialog.addEventListener("click", (event2) => {
           if (event2.target === this.dialog) {
             const rect = this.dialog.getBoundingClientRect();
@@ -505,6 +505,239 @@
     }
   };
   window.PTXDialog = PTXDialog2;
+
+  // ../../js/src/image-dialog.js
+  window.addEventListener("load", () => {
+    requestAnimationFrame(initializeImageDialogs);
+  });
+  var initializedImageDialogs = /* @__PURE__ */ new WeakSet();
+  var imageDialogNumber = 0;
+  function initializeImageDialogs() {
+    const magnifiableImageSelector = [
+      ".image-box > img",
+      ".image-box > pre.mermaid",
+      ".image-box > .ChemAccess-element",
+      // Prefigure interactive diagram
+      ".image-box > .asymptote-box",
+      ".sbspanel > img",
+      "figure > img",
+      "figure > div > img"
+    ].join(", ");
+    document.querySelectorAll(magnifiableImageSelector).forEach((image) => {
+      if (initializedImageDialogs.has(image)) {
+        return;
+      }
+      const imageBox = image.closest(".image-box");
+      const figure = imageBox?.parentElement?.matches("figure") ? imageBox.parentElement : null;
+      const isMermaid = image.matches("pre.mermaid");
+      const isDiagcess = image.matches(".ChemAccess-element");
+      const asymptoteIframe = image.querySelector?.("iframe.asymptote");
+      const asymptoteSVG = asymptoteIframe?.contentDocument?.querySelector("svg");
+      const asymptoteCanvas = asymptoteIframe?.contentDocument?.querySelector("canvas");
+      if (image.matches(".asymptote-box") && !asymptoteSVG && !asymptoteCanvas) {
+        if (asymptoteIframe?.contentDocument?.readyState !== "complete") {
+          asymptoteIframe?.addEventListener("load", initializeImageDialogs, { once: true });
+        }
+        return;
+      }
+      const isAsymptote2D = !!asymptoteSVG;
+      const isAsymptote3D = !!asymptoteCanvas;
+      const isAsymptote = isAsymptote2D || isAsymptote3D;
+      initializedImageDialogs.add(image);
+      const dialog = document.createElement("dialog");
+      dialog.id = `ptx-image-dialog-${++imageDialogNumber}`;
+      dialog.classList.add("ptx-image-dialog");
+      dialog.setAttribute("aria-label", "Expanded image");
+      const dialogContentContainer = document.createElement("div");
+      dialogContentContainer.classList.add("ptx-image-dialog-content");
+      dialog.append(dialogContentContainer);
+      document.body.append(dialog);
+      let dialogImage = null;
+      let dialogFigure = null;
+      let dialogContentRoot = null;
+      const initializeDialogDiagcess = (diagrams) => {
+        if (!diagrams.length || !window.diagcess?.Base) {
+          return;
+        }
+        const observer = new MutationObserver(() => {
+          if (diagrams.some((diagram) => diagram.querySelector("svg"))) {
+            observer.disconnect();
+            requestAnimationFrame(fitDialogToFigure);
+          }
+        });
+        diagrams.forEach((diagram) => {
+          observer.observe(diagram, { childList: true, subtree: true });
+        });
+        window.diagcess.Base.init();
+      };
+      const refreshDialogContent = () => {
+        let dialogContent = (figure || (isDiagcess ? imageBox : image)).cloneNode(true);
+        if (dialogContent.matches("img, .ChemAccess-element")) {
+          const dialogImageBox = document.createElement("div");
+          dialogImageBox.classList.add("image-box");
+          dialogImageBox.append(dialogContent);
+          dialogContent = dialogImageBox;
+        }
+        dialogContent.removeAttribute("id");
+        dialogContent.querySelectorAll("[id]").forEach((element) => {
+          if (!element.closest("svg")) {
+            element.removeAttribute("id");
+          }
+        });
+        dialogContent.querySelectorAll(".ptx-image-expand-button").forEach((button) => button.remove());
+        const clonedMermaids = [
+          ...dialogContent.matches("pre.mermaid") ? [dialogContent] : [],
+          ...dialogContent.querySelectorAll("pre.mermaid")
+        ];
+        clonedMermaids.forEach((mermaid) => {
+          mermaid.classList.replace("mermaid", "ptx-mermaid-dialog");
+        });
+        if (isAsymptote2D) {
+          const clonedAsymptoteBox = dialogContent.matches(".asymptote-box") ? dialogContent : dialogContent.querySelector(".asymptote-box");
+          const dialogAsymptoteSVG = asymptoteSVG.cloneNode(true);
+          dialogAsymptoteSVG.classList.add("ptx-asymptote-dialog");
+          clonedAsymptoteBox.replaceChildren(dialogAsymptoteSVG);
+          clonedAsymptoteBox.style.removeProperty("padding-top");
+        }
+        const clonedDiagcess = [
+          ...dialogContent.matches(".ChemAccess-element") ? [dialogContent] : [],
+          ...dialogContent.querySelectorAll(".ChemAccess-element")
+        ].map((diagram) => {
+          const placeholder = document.createElement("div");
+          placeholder.classList.add("ChemAccess-element");
+          [...diagram.attributes].forEach((attribute) => {
+            if (attribute.name.startsWith("data-") || attribute.name === "aria-label") {
+              placeholder.setAttribute(attribute.name, attribute.value);
+            }
+          });
+          diagram.replaceWith(placeholder);
+          return placeholder;
+        });
+        dialogContentContainer.replaceChildren(dialogContent);
+        dialogContentRoot = dialogContent;
+        dialogImage = dialogContent.matches("img, pre.ptx-mermaid-dialog, .ChemAccess-element, svg.ptx-asymptote-dialog, iframe.asymptote") ? dialogContent : dialogContent.querySelector("img, pre.ptx-mermaid-dialog, .ChemAccess-element, svg.ptx-asymptote-dialog, iframe.asymptote");
+        dialogFigure = dialogContent.matches("figure") ? dialogContent : null;
+        if (dialogImage instanceof HTMLImageElement || dialogImage instanceof HTMLIFrameElement) {
+          dialogImage.addEventListener("load", fitDialogToFigure);
+        }
+        initializeDialogDiagcess(clonedDiagcess);
+      };
+      const fitDialogToFigure = () => {
+        const displayedImage = isDiagcess ? dialogContentContainer.querySelector(".ChemAccess-element svg") : dialogImage;
+        if (!dialog.open || !displayedImage) {
+          return;
+        }
+        const maxWidth = window.innerWidth * 0.9;
+        const maxHeight = window.innerHeight * 0.9;
+        const dialogStyle = getComputedStyle(dialog);
+        const horizontalPadding = parseFloat(dialogStyle.paddingLeft) + parseFloat(dialogStyle.paddingRight);
+        const verticalPadding = parseFloat(dialogStyle.paddingTop) + parseFloat(dialogStyle.paddingBottom);
+        const maxContentWidth = Math.max(0, maxWidth - horizontalPadding);
+        const maxContentHeight = Math.max(0, maxHeight - verticalPadding);
+        const renderedSVG = displayedImage instanceof SVGSVGElement ? displayedImage : displayedImage.querySelector?.("svg");
+        const viewBox = renderedSVG?.viewBox?.baseVal;
+        const intrinsicAspectRatio = viewBox?.width && viewBox?.height ? viewBox.width / viewBox.height : isAsymptote3D && asymptoteCanvas.width && asymptoteCanvas.height ? asymptoteCanvas.width / asymptoteCanvas.height : displayedImage instanceof HTMLImageElement && displayedImage.naturalWidth && displayedImage.naturalHeight ? displayedImage.naturalWidth / displayedImage.naturalHeight : null;
+        let imageWidth = Math.min(maxContentWidth, maxContentHeight * (intrinsicAspectRatio || 1));
+        for (let attempt = 0; attempt < 2; attempt += 1) {
+          dialog.style.width = `${imageWidth + horizontalPadding}px`;
+          displayedImage.style.setProperty("width", `${imageWidth}px`, "important");
+          displayedImage.style.setProperty("max-height", `${maxContentHeight}px`, "important");
+          const imageRect = displayedImage.getBoundingClientRect();
+          if (!imageRect.width || !imageRect.height) {
+            return;
+          }
+          const contentRect = (dialogFigure || dialogContentRoot || displayedImage).getBoundingClientRect();
+          const nonImageHeight = Math.max(0, contentRect.height - imageRect.height);
+          const availableImageHeight = Math.max(0, maxContentHeight - nonImageHeight);
+          const aspectRatio = intrinsicAspectRatio || imageRect.width / imageRect.height;
+          imageWidth = Math.min(imageWidth, availableImageHeight * aspectRatio);
+        }
+        dialog.style.width = `${imageWidth + horizontalPadding}px`;
+        displayedImage.style.setProperty("width", `${imageWidth}px`, "important");
+      };
+      const trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.classList.add("ptx-image-expand-button");
+      const description = image.getAttribute("alt")?.trim() || (isMermaid ? "Mermaid diagram" : isDiagcess ? "interactive diagram" : isAsymptote ? asymptoteIframe.title?.trim() || "Asymptote diagram" : "");
+      const contentType = isMermaid || isDiagcess || isAsymptote ? "diagram" : "image";
+      trigger.setAttribute("aria-label", description ? `Expand ${contentType}: ${description}` : `Expand ${contentType}`);
+      trigger.setAttribute("title", trigger.getAttribute("aria-label"));
+      trigger.innerHTML = '<span class="material-symbols-outlined">open_in_full</span>';
+      const triggerContainer = imageBox || image.parentElement;
+      triggerContainer.classList.add("ptx-image-dialog-trigger-container");
+      image.after(trigger);
+      image.setAttribute("tabindex", "0");
+      image.setAttribute("role", "button");
+      image.setAttribute("aria-label", trigger.getAttribute("aria-label"));
+      if (isDiagcess) {
+        image.addEventListener("click", (clickEvent) => {
+          clickEvent.preventDefault();
+          clickEvent.stopImmediatePropagation();
+          trigger.click();
+        }, true);
+        image.addEventListener("keydown", (keyEvent) => {
+          keyEvent.stopImmediatePropagation();
+          if (keyEvent.key === "Enter" || keyEvent.key === " ") {
+            keyEvent.preventDefault();
+            trigger.click();
+          }
+        }, true);
+      } else if (isAsymptote) {
+        asymptoteIframe.tabIndex = -1;
+        asymptoteSVG?.setAttribute("aria-hidden", "true");
+        if (isAsymptote3D) {
+          let pointerStart = null;
+          const clickMovementThreshold = 5;
+          asymptoteIframe.contentDocument.addEventListener("pointerdown", (pointerEvent) => {
+            if (pointerEvent.button === 0) {
+              pointerStart = { x: pointerEvent.clientX, y: pointerEvent.clientY };
+            }
+          });
+          asymptoteIframe.contentDocument.addEventListener("pointerup", (pointerEvent) => {
+            if (pointerEvent.button === 0 && pointerStart) {
+              const distance = Math.hypot(
+                pointerEvent.clientX - pointerStart.x,
+                pointerEvent.clientY - pointerStart.y
+              );
+              if (distance <= clickMovementThreshold) {
+                trigger.click();
+              }
+            }
+            pointerStart = null;
+          });
+          asymptoteIframe.contentDocument.addEventListener("pointercancel", () => {
+            pointerStart = null;
+          });
+        } else {
+          asymptoteIframe.contentDocument.addEventListener("click", (clickEvent) => {
+            clickEvent.preventDefault();
+            trigger.click();
+          });
+        }
+        image.addEventListener("click", () => trigger.click());
+        image.addEventListener("keydown", (keyEvent) => {
+          if (keyEvent.key === "Enter" || keyEvent.key === " ") {
+            keyEvent.preventDefault();
+            trigger.click();
+          }
+        });
+      } else {
+        image.addEventListener("click", () => trigger.click());
+        image.addEventListener("keydown", (keyEvent) => {
+          if (keyEvent.key === "Enter" || keyEvent.key === " ") {
+            keyEvent.preventDefault();
+            image.click();
+          }
+        });
+      }
+      trigger.addEventListener("click", () => {
+        refreshDialogContent();
+        requestAnimationFrame(fitDialogToFigure);
+      });
+      window.addEventListener("resize", fitDialogToFigure);
+      new window.PTXDialog(dialog, trigger, { kind: "light-close" });
+    });
+  }
 
   // ../../js/src/pretext-dropdown.js
   var PTXDropdown2 = class {
@@ -1162,34 +1395,6 @@
   window.addEventListener(
     "load",
     function(event2) {
-      $("body").on("click", ".image-box > img:not(.draw_on_me):not(.mag_popup), .sbspanel > img:not(.draw_on_me):not(.mag_popup), figure > img:not(.draw_on_me):not(.mag_popup), figure > div > img:not(.draw_on_me):not(.mag_popup)", function() {
-        var img_big = document.createElement("div");
-        const content_element = document.getElementById("ptx-content");
-        img_big.setAttribute("class", "mag_popup_container");
-        img_big.innerHTML = `<img src="${$(this).attr("src")}" style="width:100%;" class="mag_popup"/>`;
-        place_to_put_big_img = $(this).parents(".image-box, .sbsrow, figure, li, .cols2 article:nth-of-type(2n)").last();
-        if (place_to_put_big_img.prop("tagName") == "ARTICLE") {
-          place_to_put_big_img = place_to_put_big_img.prev().children().first();
-        }
-        var img_big_parent = place_to_put_big_img[0].parentElement;
-        while (img_big_parent.id !== "ptx-content") {
-          const computed_position = getComputedStyle(img_big_parent).position;
-          if (computed_position !== "static") {
-            break;
-          }
-          img_big_parent = img_big_parent.parentElement;
-        }
-        const content_element_computed_style = getComputedStyle(content_element);
-        const content_padding_left = parseFloat(content_element_computed_style.paddingLeft);
-        const content_padding_right = parseFloat(content_element_computed_style.paddingRight);
-        const img_big_offset = content_element.getBoundingClientRect().left - img_big_parent.getBoundingClientRect().left + content_padding_left;
-        const doc_width = content_element.offsetWidth - content_padding_left - content_padding_right;
-        img_big.setAttribute("style", `width:${doc_width.toString()}px; left:${img_big_offset.toString()}px;`);
-        $(img_big).insertBefore(place_to_put_big_img);
-      });
-      $("body").on("click", "img.mag_popup", function() {
-        this.parentNode.remove();
-      });
       p_no_id = document.querySelectorAll(".main p:not([id])");
       for (var n = p_no_id.length - 1; n >= 0; --n) {
         e = p_no_id[n];
@@ -1406,6 +1611,42 @@
       }
     }
   });
+  document.addEventListener("click", (ev) => {
+    const codeBox = ev.target.closest(".clipboardable");
+    if (!navigator.clipboard || !codeBox) return;
+    const button = ev.target.closest(".code-copy");
+    const pre = codeBox.querySelector("pre").cloneNode(true);
+    pre.querySelectorAll(".unselectable").forEach((el2) => el2.remove());
+    const preContent = pre.textContent;
+    navigator.clipboard.writeText(preContent);
+    button.classList.toggle("copied");
+    setTimeout(() => button.classList.toggle("copied"), 1e3);
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".clipboardable");
+    for (el of elements) {
+      const div = document.createElement("div");
+      div.classList.add("clipboardable");
+      el.classList.remove("clipboardable");
+      el.replaceWith(div);
+      div.insertAdjacentElement("afterbegin", el);
+      div.insertAdjacentHTML("beforeend", `
+    <button class="code-copy" title="Copy code" role="button" aria-label="Copy code" >
+        <span class="copyicon material-symbols-outlined">content_copy</span>
+        <span class="checkmark material-symbols-outlined">check</span>
+    </button>
+            `.trim());
+    }
+  });
+  window.addEventListener("DOMContentLoaded", () => {
+    const userDropdownButton = document.getElementById("ptx-user-dropdown-button");
+    const userDropdownContent = document.getElementById("ptx-user-dropdown-content");
+    if (userDropdownButton && userDropdownContent) {
+      new PTXDropdown(userDropdownContent, userDropdownButton);
+    }
+  });
+
+  // ../../js/src/pretext-printouts.js
   function getPrintout() {
     return document.querySelector(".printout");
   }
@@ -1435,6 +1676,37 @@
       Promise.all(promises),
       new Promise((resolve) => setTimeout(resolve, timeoutMs))
     ]);
+  }
+  async function withIframesDetached(fn) {
+    const printout = getPrintout();
+    const parked = [];
+    if (printout) {
+      printout.querySelectorAll("iframe").forEach((iframe) => {
+        const rect = iframe.getBoundingClientRect();
+        const placeholder = document.createElement("div");
+        placeholder.className = "iframe-placeholder";
+        placeholder.style.width = rect.width + "px";
+        placeholder.style.height = rect.height + "px";
+        placeholder.style.display = getComputedStyle(iframe).display;
+        iframe.parentNode.insertBefore(placeholder, iframe);
+        iframe.remove();
+        parked.push({ iframe, placeholder });
+      });
+    }
+    try {
+      return await fn();
+    } finally {
+      parked.forEach(({ iframe, placeholder }) => {
+        placeholder.parentNode.insertBefore(iframe, placeholder);
+        placeholder.remove();
+      });
+    }
+  }
+  function isWorkspaceRow(elem) {
+    return elem.classList.contains("workspace") || elem.classList.contains("workspace-container");
+  }
+  function isVisibleWorkspaceRow(elem) {
+    return isWorkspaceRow(elem) && !elem.classList.contains("hidden");
   }
   function workspaceDivsIn(elem) {
     if (elem.classList.contains("workspace")) {
@@ -1488,6 +1760,22 @@
       });
     }
   }
+  var DEPTH_CLASSES = ["subtask", "subsubtask", "subsubsubtask"];
+  function depthClassForRowOut(owner) {
+    if (owner.classList.contains("subsubtask")) return "subsubsubtask";
+    if (owner.classList.contains("subtask")) return "subsubtask";
+    if (owner.classList.contains("task")) return "subtask";
+    return null;
+  }
+  function moveDepthClass(from, to) {
+    for (const cls of DEPTH_CLASSES) {
+      if (from.classList.contains(cls)) {
+        from.classList.remove(cls);
+        to.classList.add(cls);
+      }
+    }
+  }
+  var blockGroupSeq = 0;
   function flattenSolutionsIn(container) {
     for (const child of [...container.children]) {
       if (child.classList.contains("sidebyside") || child.classList.contains("solutions")) {
@@ -1496,13 +1784,35 @@
       const solutionsBlocks = [...child.querySelectorAll(".solutions")].filter((solutions) => !solutions.closest(".sidebyside"));
       let insertionAnchor = child;
       solutionsBlocks.forEach((solutions) => {
+        const owner = solutions.parentElement;
+        const depthClass = depthClassForRowOut(owner);
+        const group = `bg-${blockGroupSeq++}`;
         const solChildren = [...solutions.children];
         for (let i = solChildren.length - 1; i >= 0; i--) {
           container.insertBefore(solChildren[i], insertionAnchor.nextSibling);
+          if (depthClass) {
+            solChildren[i].classList.add(depthClass);
+          }
         }
         solutions.remove();
         if (solChildren.length > 0) {
           insertionAnchor = solChildren[solChildren.length - 1];
+        }
+        const workspace = owner.querySelector(":scope > .workspace");
+        if (workspace) {
+          container.insertBefore(workspace, insertionAnchor.nextSibling);
+          if (depthClass) {
+            workspace.classList.add(depthClass);
+          }
+          insertionAnchor = workspace;
+        }
+        const questionRow = owner === child ? child : null;
+        const anchors = [questionRow, ...solChildren].filter((el2) => el2 && el2.parentElement === container);
+        if (anchors.length === 0) return;
+        for (const el2 of [...anchors, workspace]) {
+          if (el2 && el2.parentElement === container) {
+            el2.dataset.blockGroup = group;
+          }
         }
       });
     }
@@ -1514,7 +1824,7 @@
       ws.setAttribute("contenteditable", "true");
     });
   }
-  function adjustPrintoutPages() {
+  function adjustPrintoutPages(margins) {
     console.log("*** Adjusting printout pages.");
     const printout = getPrintout();
     if (!printout) {
@@ -1541,32 +1851,45 @@
       nextChild = nextChild.nextSibling;
       lastPage.appendChild(tempChild);
     }
+    const contentHeight = 1056 - (margins.top + margins.bottom);
     pages.forEach((page) => {
       flattenTasksIn(page);
       flattenIntroductionsIn(page);
       flattenSolutionsIn(page);
+      flattenOversizedListsIn(page, contentHeight);
     });
-    console.log("Moved all content before the first page and after the last page into the respective pages, and split nested tasks, introductions, and solutions for independent repagination.");
+    console.log("Moved all content before the first page and after the last page into the respective pages, and split nested tasks, introductions, solutions, and oversized lists for independent repagination.");
   }
   function createPrintoutPages(margins) {
     console.log("*** Creating printout pages with margins:", margins);
+    const conservativePaperWidth = 794;
     const conservativeContentHeight = 1056 - (margins.top + margins.bottom);
-    const conservativeContentWidth = 794 - (margins.left + margins.right);
+    const conservativeContentWidth = conservativePaperWidth - (margins.left + margins.right);
     const printout = getPrintout();
     if (!printout) {
       console.warn("No printout found, exiting createPrintoutPages.");
       return;
     }
-    printout.style.width = conservativeContentWidth + "px";
+    printout.style.width = conservativePaperWidth + "px";
     setInitialWorkspaceHeights(printout);
     flattenTasksIn(printout);
     flattenIntroductionsIn(printout);
     flattenSolutionsIn(printout);
     let rows = [...printout.children];
+    const measuringPage = document.createElement("section");
+    measuringPage.classList.add("onepage");
+    measuringPage.style.width = conservativePaperWidth + "px";
+    measuringPage.style.height = "auto";
+    printout.appendChild(measuringPage);
+    rows.forEach((row) => measuringPage.appendChild(row));
+    if (flattenOversizedListsIn(measuringPage, conservativeContentHeight)) {
+      rows = [...measuringPage.children];
+    }
+    const footnoteMetrics = measureFootnotes(rows, measuringPage);
     let blockList = [];
     for (const row of rows) {
       let blockHeight = getElementTotalHeight(row);
-      if (blockHeight === 0 && !row.classList.contains("hidden")) {
+      if (row.offsetHeight === 0 && !row.classList.contains("hidden")) {
         console.log("Skipping row with zero height:", row);
         continue;
       }
@@ -1574,9 +1897,35 @@
       if (workspaceDivsIn(row).length > 0) {
         totalWorkspaceHeight = getElemWorkspaceHeight(row);
       }
-      blockList.push({ elem: row, height: blockHeight, workspaceHeight: totalWorkspaceHeight });
+      blockList.push({
+        elem: row,
+        height: blockHeight,
+        workspaceHeight: totalWorkspaceHeight,
+        // Set by flattenSolutionsIn() on the rows split out of a single
+        // exercise or task, so findPageBreaks() can tell which rows want
+        // to stay together on one page.  Undefined for rows that were
+        // never split out of anything.
+        group: row.dataset.blockGroup,
+        // A row that *is* a hoisted workspace, as opposed to one that
+        // merely contains a workspace nested inside it.  Such a row is
+        // pure blank writing space, so it must never be what a page
+        // opens with -- see findPageBreaks().  Suppressed writing space
+        // does not count; see isVisibleWorkspaceRow().
+        isWorkspace: isVisibleWorkspaceRow(row),
+        // How much room this row's own footnotes will take at the foot of
+        // whichever page it lands on.  Charged to the row rather than to
+        // the page because that is what makes the cost move with the row:
+        // the DP in findPageBreaks() then accumulates it over exactly the
+        // rows a candidate page holds, with no circularity to resolve.
+        footnoteHeight: footnoteMetrics.heights.get(row) || 0
+      });
     }
-    const pageBreaks = findPageBreaks(blockList, conservativeContentHeight);
+    rows.forEach((row) => printout.appendChild(row));
+    measuringPage.remove();
+    const pageBreaks = findPageBreaks(blockList, conservativeContentHeight, {
+      allowSqueeze: anySolutionShown(),
+      footnoteChrome: footnoteMetrics.chrome
+    });
     printout.style.width = "";
     for (let i = 0; i < pageBreaks.length; i++) {
       const pageDiv = document.createElement("section");
@@ -1595,7 +1944,7 @@
       }
       printout.appendChild(pageDiv);
     }
-    for (const child of printout.children) {
+    for (const child of [...printout.children]) {
       if (!child.classList.contains("onepage")) {
         console.log("Removing old child not in a page:", child);
         printout.removeChild(child);
@@ -1619,6 +1968,25 @@
     }
     return false;
   }
+  function hideWidowedWorkspaces() {
+    const printout = getPrintout();
+    if (!printout) return;
+    const stranding = anySolutionShown();
+    printout.querySelectorAll(".workspace, .workspace-container").forEach((ws) => ws.classList.remove("hidden"));
+    printout.querySelectorAll(":scope > .onepage").forEach((page) => {
+      const rows = [...page.children].filter((c) => !isPageFurnitureEl(c));
+      const questionGroupsOnPage = new Set(
+        rows.filter((r) => !isWorkspaceRow(r)).map((r) => r.dataset.blockGroup).filter(Boolean)
+      );
+      for (const row of rows) {
+        if (!isWorkspaceRow(row) || !row.dataset.blockGroup) continue;
+        if (stranding && !questionGroupsOnPage.has(row.dataset.blockGroup)) {
+          console.log("Hiding workspace stranded from its question:", row);
+          row.classList.add("hidden");
+        }
+      }
+    });
+  }
   function adjustWorkspaceOrRepaginate({ paperSize, margins, fullRecompute = false }) {
     adjustWorkspaceToFitPage({ paperSize, margins });
     if (pageOverflows()) {
@@ -1629,13 +1997,14 @@
       }
       adjustWorkspaceToFitPage({ paperSize, margins });
     }
+    hideWidowedWorkspaces();
   }
   function unwrapOnepages() {
     const printout = getPrintout();
     if (!printout) return;
     const pages = [...printout.querySelectorAll(":scope > .onepage")];
     pages.forEach((page) => {
-      page.querySelectorAll(":scope > .first-page-header, :scope > .running-header, :scope > .first-page-footer, :scope > .running-footer").forEach((hf) => hf.remove());
+      [...page.children].filter(isPageFurnitureEl).forEach((el2) => el2.remove());
       while (page.firstChild) {
         printout.insertBefore(page.firstChild, page);
       }
@@ -1647,20 +2016,28 @@
     createPrintoutPages(margins);
     addHeadersAndFootersToPrintout();
   }
-  function isHeaderFooterEl(el2) {
-    return el2.classList.contains("first-page-header") || el2.classList.contains("running-header") || el2.classList.contains("first-page-footer") || el2.classList.contains("running-footer");
+  function isPageTailEl(el2) {
+    return el2.classList.contains("footnotes") || el2.classList.contains("first-page-footer") || el2.classList.contains("running-footer");
+  }
+  function isPageFurnitureEl(el2) {
+    return el2.classList.contains("first-page-header") || el2.classList.contains("running-header") || isPageTailEl(el2);
   }
   function addSpilloverPages(margins) {
     const printout = getPrintout();
     if (!printout) return;
+    printout.querySelectorAll(":scope > .onepage > .footnotes").forEach((block) => {
+      block.style.marginTop = "";
+    });
     let pages = [...printout.querySelectorAll(":scope > .onepage")];
     for (let i = 0; i < pages.length; i++) {
       const page = pages[i];
-      const contentChildren = [...page.children].filter((c) => !isHeaderFooterEl(c));
+      const contentChildren = [...page.children].filter((c) => !isPageFurnitureEl(c));
+      const footnotes = [...page.children].find((c) => c.classList.contains("footnotes"));
+      const contentBottom = getPageContentBottom(page) - (footnotes ? getElementTotalHeight(footnotes) : 0);
       let overflowStartIndex = -1;
       for (let j = 0; j < contentChildren.length; j++) {
         const r = contentChildren[j].getBoundingClientRect();
-        if (r.bottom > getPageContentBottom(page) + 1) {
+        if (r.bottom > contentBottom + 1) {
           overflowStartIndex = j;
           break;
         }
@@ -1669,6 +2046,14 @@
       if (overflowStartIndex === 0) {
         if (contentChildren.length <= 1) continue;
         overflowStartIndex = 1;
+      }
+      while (overflowStartIndex > 1) {
+        const row = contentChildren[overflowStartIndex];
+        const prev = contentChildren[overflowStartIndex - 1];
+        const opensWithWorkspace = isVisibleWorkspaceRow(row);
+        const splitsGroup = !!(row.dataset.blockGroup && row.dataset.blockGroup === prev.dataset.blockGroup);
+        if (!opensWithWorkspace && !splitsGroup) break;
+        overflowStartIndex--;
       }
       const overflowElems = contentChildren.slice(overflowStartIndex);
       const newPage = document.createElement("section");
@@ -1679,17 +2064,17 @@
       }
       overflowElems.forEach((el2) => newPage.appendChild(el2));
       page.parentNode.insertBefore(newPage, page.nextSibling);
-      [...page.children].filter(isHeaderFooterEl).forEach((hf) => hf.remove());
+      [...page.children].filter(isPageFurnitureEl).forEach((hf) => hf.remove());
       pages.splice(i + 1, 0, newPage);
     }
     printout.querySelectorAll(":scope > .onepage").forEach((p) => {
-      [...p.children].filter(isHeaderFooterEl).forEach((hf) => hf.remove());
+      [...p.children].filter(isPageFurnitureEl).forEach((hf) => hf.remove());
     });
     addHeadersAndFootersToPrintout();
   }
   function appendPageContent(page, children2) {
-    const footer = [...page.children].find((c) => c.classList.contains("first-page-footer") || c.classList.contains("running-footer"));
-    children2.forEach((c) => page.insertBefore(c, footer || null));
+    const tail = [...page.children].find(isPageTailEl);
+    children2.forEach((c) => page.insertBefore(c, tail || null));
   }
   function collapseSpilloverPages(margins) {
     const printout = getPrintout();
@@ -1699,7 +2084,7 @@
       const page = pages[i];
       if (!page.classList.contains("spillover")) continue;
       const prevPage = pages[i - 1];
-      const contentChildren = [...page.children].filter((c) => !isHeaderFooterEl(c));
+      const contentChildren = [...page.children].filter((c) => !isPageFurnitureEl(c));
       appendPageContent(prevPage, contentChildren);
       if (page.classList.contains("lastpage")) {
         prevPage.classList.add("lastpage");
@@ -1707,9 +2092,137 @@
       page.remove();
     }
     printout.querySelectorAll(":scope > .onepage").forEach((p) => {
-      [...p.children].filter(isHeaderFooterEl).forEach((hf) => hf.remove());
+      [...p.children].filter(isPageFurnitureEl).forEach((hf) => hf.remove());
     });
     addHeadersAndFootersToPrintout();
+  }
+  function isListChunkStart(elem, list) {
+    return list.tagName === "DL" ? elem.tagName === "DT" : elem.tagName === "LI";
+  }
+  function isListEl(elem) {
+    return elem.tagName === "OL" || elem.tagName === "UL" || elem.tagName === "DL";
+  }
+  function splittableListsIn(row) {
+    const candidates = isListEl(row) ? [row] : [...row.querySelectorAll("ol, ul, dl")];
+    return candidates.filter(
+      (list) => !list.closest(".sidebyside") && !(list !== row && list.parentElement.closest("ol, ul, dl")) && ![...list.classList].some((cls) => /^cols\d+$/.test(cls))
+    );
+  }
+  function hoistListOut(container, child, list) {
+    const isRowItself = list === child;
+    const depthClass = isRowItself ? null : depthClassForRowOut(child);
+    const tail = [];
+    for (let node = list; node !== child; node = node.parentElement) {
+      for (let sib = node.nextElementSibling; sib; sib = sib.nextElementSibling) {
+        tail.push(sib);
+      }
+    }
+    const pieces = [];
+    let piece = null;
+    let itemNumber = parseInt(list.getAttribute("start"), 10) || 1;
+    for (const item of [...list.children]) {
+      if (isListChunkStart(item, list) || piece === null) {
+        piece = document.createElement(list.tagName);
+        piece.className = list.className;
+        piece.classList.add("split-list");
+        if (list.tagName === "OL") {
+          piece.setAttribute("start", String(itemNumber));
+        }
+        itemNumber++;
+        pieces.push(piece);
+      }
+      piece.appendChild(item);
+    }
+    if (pieces.length === 0) return;
+    list.parentNode.insertBefore(pieces[0], list);
+    list.remove();
+    if (!isRowItself) {
+      child.classList.add("split-block");
+    }
+    let anchor = isRowItself ? pieces[0] : child;
+    for (const row of [...pieces.slice(1), ...tail]) {
+      container.insertBefore(row, anchor.nextSibling);
+      if (depthClass) {
+        row.classList.add(depthClass);
+      }
+      anchor = row;
+    }
+  }
+  function flattenOversizedListsIn(container, pageHeight) {
+    let split = false;
+    for (const child of [...container.children]) {
+      if (getElementTotalHeight(child) <= pageHeight) continue;
+      const lists = splittableListsIn(child);
+      if (lists.length === 0) continue;
+      for (let i = lists.length - 1; i >= 0; i--) {
+        hoistListOut(container, child, lists[i]);
+      }
+      split = true;
+    }
+    return split;
+  }
+  function footnoteDetailsIn(root) {
+    return [...root.querySelectorAll("details.ptx-footnote")].filter((fn) => !fn.closest(".hidden"));
+  }
+  function footnoteMark(details) {
+    const sup = details.querySelector(".ptx-footnote__number sup");
+    return sup ? sup.textContent.trim() : "";
+  }
+  function buildFootnoteItem(details) {
+    const item = document.createElement("div");
+    item.classList.add("footnote-item");
+    const number = document.createElement("sup");
+    number.classList.add("footnote-item__number");
+    number.textContent = footnoteMark(details);
+    item.appendChild(number);
+    const contents = details.querySelector(".ptx-footnote__contents");
+    if (contents) {
+      const clone = contents.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.querySelectorAll("[id]").forEach((el2) => el2.removeAttribute("id"));
+      clone.classList.remove("ptx-footnote__contents");
+      clone.classList.add("footnote-item__contents");
+      item.appendChild(clone);
+    }
+    return item;
+  }
+  function buildFootnotesBlock(detailsList) {
+    const block = document.createElement("div");
+    block.classList.add("footnotes");
+    detailsList.forEach((details) => block.appendChild(buildFootnoteItem(details)));
+    return block;
+  }
+  function rebuildFootnotes() {
+    const printout = getPrintout();
+    if (!printout) return;
+    printout.querySelectorAll(":scope > .onepage > .footnotes").forEach((block) => block.remove());
+    printout.querySelectorAll(":scope > .onepage").forEach((page) => {
+      const notes = footnoteDetailsIn(page);
+      if (notes.length === 0) return;
+      appendPageContent(page, [buildFootnotesBlock(notes)]);
+    });
+  }
+  function measureFootnotes(rows, measuringPage) {
+    const heights = /* @__PURE__ */ new Map();
+    const owners = [];
+    for (const row of rows) {
+      for (const details of footnoteDetailsIn(row)) {
+        owners.push({ details, row });
+      }
+    }
+    if (owners.length === 0) return { heights, chrome: 0 };
+    const probe = buildFootnotesBlock(owners.map((o) => o.details));
+    measuringPage.appendChild(probe);
+    let itemTotal = 0;
+    [...probe.children].forEach((item, i) => {
+      const height = getElementTotalHeight(item);
+      itemTotal += height;
+      const row = owners[i].row;
+      heights.set(row, (heights.get(row) || 0) + height);
+    });
+    const chrome = Math.max(0, getElementTotalHeight(probe) - itemTotal);
+    probe.remove();
+    return { heights, chrome };
   }
   function addHeadersAndFootersToPrintout() {
     const printout = getPrintout();
@@ -1717,6 +2230,7 @@
       console.warn("No printout found, exiting addHeadersAndFootersToPrintout.");
       return;
     }
+    rebuildFootnotes();
     const pages = printout.querySelectorAll(".onepage");
     pages.forEach((page, index) => {
       const isFirstPage = index === 0;
@@ -1800,6 +2314,9 @@
     }
     const paperContentHeight = paperHeight - (margins.top + margins.bottom);
     setInitialWorkspaceHeights();
+    document.querySelectorAll(".onepage > .footnotes").forEach((block) => {
+      block.style.marginTop = "";
+    });
     const pages = document.querySelectorAll(".onepage");
     pages.forEach((page) => {
       console.log("Adjusting workspace height for page:", page);
@@ -1812,6 +2329,14 @@
         totalWorkspaceHeight += getElemWorkspaceHeight(row);
       }
       if (totalWorkspaceHeight === 0) {
+        const footnotes = [...page.children].find((c) => c.classList.contains("footnotes"));
+        if (footnotes) {
+          const gap = getPageContentBottom(page) - footnotes.getBoundingClientRect().bottom - 1;
+          if (gap > 0) {
+            const baseMargin = parseFloat(getComputedStyle(footnotes).marginTop) || 0;
+            footnotes.style.marginTop = baseMargin + gap + "px";
+          }
+        }
         console.log("No workspaces on this page, skipping workspace adjustment.");
         page.style.width = "";
         return;
@@ -1879,7 +2404,37 @@
     });
     return totalHeight / columns;
   }
-  function findPageBreaks(rows, pageHeight) {
+  var GROUP_BREAK_PENALTY_PAGES = 1;
+  var SQUEEZE_COST_SCALE = 0.25;
+  var DEAD_SPACE_EXPONENT = 0.75;
+  function anySolutionShown() {
+    const printout = getPrintout();
+    if (!printout) return false;
+    return [...printout.querySelectorAll(".hint, .answer, .solution")].some((el2) => !el2.closest(".hidden"));
+  }
+  function deadSpaceCost(slack, pageHeight, isLastPage) {
+    if (isLastPage) return 0;
+    return pageHeight ** 2 * (slack / pageHeight) ** DEAD_SPACE_EXPONENT;
+  }
+  function pageCost({ pageHeight, naturalHeight, workspaceHeight, splitsGroup, allowSqueeze, squeezeIsForced, isLastPage }) {
+    const groupPenalty = splitsGroup ? GROUP_BREAK_PENALTY_PAGES * pageHeight ** 2 : 0;
+    if (naturalHeight <= pageHeight) {
+      const slack = pageHeight - naturalHeight;
+      if (workspaceHeight > 0) {
+        return slack ** 2 + groupPenalty;
+      }
+      return deadSpaceCost(slack, pageHeight, isLastPage) + groupPenalty;
+    }
+    if (!allowSqueeze && !squeezeIsForced) {
+      return Infinity;
+    }
+    const squeeze = naturalHeight - pageHeight;
+    if (squeeze > workspaceHeight) {
+      return Infinity;
+    }
+    return SQUEEZE_COST_SCALE * squeeze ** 2 + groupPenalty;
+  }
+  function findPageBreaks(rows, pageHeight, { allowSqueeze = false, footnoteChrome = 0 } = {}) {
     console.log("*** Finding page breaks for", rows.length, "rows with page height:", pageHeight);
     let pageBreaks = [];
     let minCost = Array(rows.length + 1).fill(Infinity);
@@ -1888,24 +2443,43 @@
     for (let i = rows.length - 1; i >= 0; i--) {
       let cumulativeHeight = 0;
       let cumulativeWorkspaceHeight = 0;
+      let cumulativeFootnoteHeight = 0;
+      let tallestRow = 0;
       for (let j = i; j < rows.length; j++) {
         cumulativeHeight += rows[j].height;
         cumulativeWorkspaceHeight += rows[j].workspaceHeight;
-        if (cumulativeHeight > pageHeight) {
+        cumulativeFootnoteHeight += rows[j].footnoteHeight || 0;
+        const footnotesHeight = cumulativeFootnoteHeight > 0 ? cumulativeFootnoteHeight + footnoteChrome : 0;
+        const rowWithNotes = rows[j].footnoteHeight ? rows[j].height + rows[j].footnoteHeight + footnoteChrome : rows[j].height;
+        tallestRow = Math.max(tallestRow, rowWithNotes);
+        const next = rows[j + 1];
+        const thisPage = pageCost({
+          pageHeight,
+          naturalHeight: cumulativeHeight + footnotesHeight,
+          workspaceHeight: cumulativeWorkspaceHeight,
+          splitsGroup: !!(next && rows[j].group && rows[j].group === next.group),
+          allowSqueeze,
+          squeezeIsForced: tallestRow > pageHeight,
+          isLastPage: j === rows.length - 1
+        });
+        if (thisPage === Infinity) {
           if (j === i) {
             console.log("Row", i, "exceeds page height by itself, setting as its own page.");
             minCost[i] = 0;
             nextPageBreak[i] = i + 1;
-            break;
-          } else {
-            break;
           }
+          break;
         }
-        const cost = (pageHeight - cumulativeHeight) ** 2 + minCost[j + 1];
+        if (next && next.isWorkspace) continue;
+        const cost = thisPage + minCost[j + 1];
         if (cost < minCost[i]) {
           minCost[i] = cost;
           nextPageBreak[i] = j + 1;
         }
+      }
+      if (nextPageBreak[i] === -1) {
+        nextPageBreak[i] = i + 1;
+        minCost[i] = minCost[i + 1];
       }
     }
     let nextPage = 0;
@@ -1948,24 +2522,32 @@
         document.querySelectorAll(".workspace").forEach((workspace) => {
           const container = document.createElement("div");
           container.classList.add("workspace-container");
-          container.style.height = window.getComputedStyle(workspace).height;
+          container.style.position = "relative";
           const original = document.createElement("div");
           original.classList.add("original-workspace");
           const originalHeight = workspace.getAttribute("data-space") || "0px";
           original.setAttribute("title", "Author-specified workspace height (" + originalHeight + ")");
           original.style.height = originalHeight;
+          original.style.position = "absolute";
+          original.style.top = "0";
+          original.style.left = "0";
           container.appendChild(original);
+          if (workspace.dataset.blockGroup) {
+            container.dataset.blockGroup = workspace.dataset.blockGroup;
+          }
+          moveDepthClass(workspace, container);
+          workspace.parentNode.insertBefore(container, workspace);
+          container.appendChild(workspace);
           if (original.offsetHeight > workspace.offsetHeight) {
             original.classList.add("warning");
           }
-          workspace.parentNode.insertBefore(container, workspace);
-          container.appendChild(workspace);
         });
       }
     } else {
       document.body.classList.remove("highlight-workspace");
       document.querySelectorAll(".workspace-container").forEach((container) => {
         const workspace = container.querySelector(".workspace");
+        moveDepthClass(container, workspace);
         container.parentNode.insertBefore(workspace, container);
         container.remove();
       });
@@ -2025,10 +2607,17 @@
     const themeStylesheetHref = themeStylesheetLink ? themeStylesheetLink.getAttribute("href") : null;
     if (themeStylesheetHref) {
       const printStylesheetHref = themeStylesheetHref.replace(/theme.*\.css/, "print-worksheet.css");
-      themeStylesheetLink.setAttribute("href", printStylesheetHref);
-      await new Promise((resolve) => {
-        themeStylesheetLink.addEventListener("load", resolve, { once: true });
+      const printStylesheetLink = document.createElement("link");
+      printStylesheetLink.setAttribute("rel", "stylesheet");
+      printStylesheetLink.setAttribute("type", "text/css");
+      const stylesheetSettled = new Promise((resolve) => {
+        printStylesheetLink.addEventListener("load", resolve, { once: true });
+        printStylesheetLink.addEventListener("error", resolve, { once: true });
       });
+      printStylesheetLink.setAttribute("href", printStylesheetHref);
+      themeStylesheetLink.after(printStylesheetLink);
+      await stylesheetSettled;
+      themeStylesheetLink.remove();
     }
     let printableSection = document.getElementById(printableSectionID);
     if (!printableSection) {
@@ -2052,7 +2641,7 @@
     return solutionType === "answer" || solutionType === "solution";
   }
   async function rewriteSolutions() {
-    var born_hidden_knowls = document.querySelectorAll(".printout details");
+    var born_hidden_knowls = document.querySelectorAll(".printout details:not(.ptx-footnote)");
     born_hidden_knowls.forEach(function(detail) {
       const summary = detail.querySelector("summary");
       const content2 = detail.innerHTML.replace(summary.outerHTML, "");
@@ -2123,22 +2712,24 @@
         elem.classList.remove("hidden");
       }
     });
-    if (hidden) {
-      collapseSpilloverPages(margins);
-      adjustWorkspaceOrRepaginate({ paperSize, margins, fullRecompute: false });
-      await pollUntilSettled(() => {
+    await withIframesDetached(async () => {
+      if (hidden) {
         collapseSpilloverPages(margins);
         adjustWorkspaceOrRepaginate({ paperSize, margins, fullRecompute: false });
-      });
-    } else {
-      adjustWorkspaceOrRepaginate({ paperSize, margins, fullRecompute: false });
-      await pollUntilSettled(() => {
-        if (pageOverflows()) {
-          addSpilloverPages(margins);
-          adjustWorkspaceToFitPage({ paperSize, margins });
-        }
-      });
-    }
+        await pollUntilSettled(() => {
+          collapseSpilloverPages(margins);
+          adjustWorkspaceOrRepaginate({ paperSize, margins, fullRecompute: false });
+        });
+      } else {
+        adjustWorkspaceOrRepaginate({ paperSize, margins, fullRecompute: false });
+        await pollUntilSettled(() => {
+          if (pageOverflows()) {
+            addSpilloverPages(margins);
+            adjustWorkspaceToFitPage({ paperSize, margins });
+          }
+        });
+      }
+    });
   }
   window.addEventListener("DOMContentLoaded", async function(event2) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -2219,7 +2810,7 @@
         await MathJax.typesetPromise([getPrintout()]);
       }
       if (hasAuthoredPages) {
-        adjustPrintoutPages();
+        adjustPrintoutPages(margins);
       } else {
         createPrintoutPages(margins);
         pendingSettle = (async () => {
@@ -2287,40 +2878,6 @@
         }
       }
       console.log("finished adjusting workspace");
-    }
-  });
-  document.addEventListener("click", (ev) => {
-    const codeBox = ev.target.closest(".clipboardable");
-    if (!navigator.clipboard || !codeBox) return;
-    const button = ev.target.closest(".code-copy");
-    const pre = codeBox.querySelector("pre").cloneNode(true);
-    pre.querySelectorAll(".unselectable").forEach((el2) => el2.remove());
-    const preContent = pre.textContent;
-    navigator.clipboard.writeText(preContent);
-    button.classList.toggle("copied");
-    setTimeout(() => button.classList.toggle("copied"), 1e3);
-  });
-  document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".clipboardable");
-    for (el of elements) {
-      const div = document.createElement("div");
-      div.classList.add("clipboardable");
-      el.classList.remove("clipboardable");
-      el.replaceWith(div);
-      div.insertAdjacentElement("afterbegin", el);
-      div.insertAdjacentHTML("beforeend", `
-    <button class="code-copy" title="Copy code" role="button" aria-label="Copy code" >
-        <span class="copyicon material-symbols-outlined">content_copy</span>
-        <span class="checkmark material-symbols-outlined">check</span>
-    </button>
-            `.trim());
-    }
-  });
-  window.addEventListener("DOMContentLoaded", () => {
-    const userDropdownButton = document.getElementById("ptx-user-dropdown-button");
-    const userDropdownContent = document.getElementById("ptx-user-dropdown-content");
-    if (userDropdownButton && userDropdownContent) {
-      new PTXDropdown(userDropdownContent, userDropdownButton);
     }
   });
 

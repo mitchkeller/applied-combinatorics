@@ -19,7 +19,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
@@ -37,7 +43,7 @@ lang: "en-US",
 <meta name="twitter:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta property="og:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.49"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.49"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -59,15 +65,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.6';
+eBookConfig.runestone_version = '8.2.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.86d8a68ed7481f7e.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bb5ac777721d4056.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
 <script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -671,21 +677,21 @@ y_1 + y_2 + y_3 + y_4 \lt 184
 <div class="para logical" id="s_inclusion-exclusion_exercises-11-1-1">
 <div class="para">As in <a href="s_inclusion-exclusion_intro.html#exa_inclusion-exclusion_prop-inject" class="xref" data-knowl="./knowl/xref/exa_inclusion-exclusion_prop-inject.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.4">Example 7.4</a>, let <span class="process-math">\(X\)</span> be the set of functions from <span class="process-math">\([n]\)</span> to <span class="process-math">\([m]\)</span> and let a function <span class="process-math">\(f\in X\)</span> satisfy property <span class="process-math">\(P_i\)</span> if there is no <span class="process-math">\(j\)</span> such that <span class="process-math">\(f(j)=i\text{.}\)</span>
 </div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_inclusion-exclusion_exercises-11-1-1-9">
+<ol class="decimal" id="s_inclusion-exclusion_exercises-11-1-1-9">
 <li id="s_inclusion-exclusion_exercises-11-1-1-9-1">
 <div class="para" id="s_inclusion-exclusion_exercises-11-1-1-9-1-1">Let the function <span class="process-math">\(f\colon [8]\to [7]\)</span> be defined by <a href="s_inclusion-exclusion_exercises.html#tab_function_e-i-ex" class="xref" data-knowl="./knowl/xref/tab_function_e-i-ex.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.18">Figure 7.18</a>. Does <span class="process-math">\(f\)</span> satisfy property <span class="process-math">\(P_2\text{?}\)</span> Why or why not? What about property <span class="process-math">\(P_3\text{?}\)</span> List all the properties <span class="process-math">\(P_i\)</span> (with <span class="process-math">\(i\leq 7\)</span>) satisfied by <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.11.a"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-1" title="Copy heading and permalink for Item 7.7.11.a" aria-label="Copy heading and permalink for Item 7.7.11.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.11.1"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-1" title="Copy heading and permalink for Item 7.7.11.1" aria-label="Copy heading and permalink for Item 7.7.11.1">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-11-1-1-9-2">
 <div class="para" id="s_inclusion-exclusion_exercises-11-1-1-9-2-1">Is it possible to define a function <span class="process-math">\(g\colon [8]\to [7]\)</span> that satisfies no property <span class="process-math">\(P_i\text{,}\)</span> <span class="process-math">\(i\leq 7\text{?}\)</span> If so, give an example. If not, explain why not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.11.b"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-2" title="Copy heading and permalink for Item 7.7.11.b" aria-label="Copy heading and permalink for Item 7.7.11.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.11.2"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-2" title="Copy heading and permalink for Item 7.7.11.2" aria-label="Copy heading and permalink for Item 7.7.11.2">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-11-1-1-9-3">
 <div class="para" id="s_inclusion-exclusion_exercises-11-1-1-9-3-1">Is it possible to define a function <span class="process-math">\(h\colon [8]\to [9]\)</span> that satisfies no property <span class="process-math">\(P_i\text{,}\)</span> <span class="process-math">\(i\leq 9\text{?}\)</span> If so, give an example. If not, explain why not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.11.c"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-3" title="Copy heading and permalink for Item 7.7.11.c" aria-label="Copy heading and permalink for Item 7.7.11.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.11.3"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1-9-3" title="Copy heading and permalink for Item 7.7.11.3" aria-label="Copy heading and permalink for Item 7.7.11.3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -721,21 +727,21 @@ y_1 + y_2 + y_3 + y_4 \lt 184
 <div class="para logical" id="s_inclusion-exclusion_exercises-12-1-1">
 <div class="para">As in <a href="s_inclusion-exclusion_intro.html#exa_inclusion-exclusion_prop-derange" class="xref" data-knowl="./knowl/xref/exa_inclusion-exclusion_prop-derange.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.5">Example 7.5</a>, let <span class="process-math">\(X\)</span> be the set of permutations of <span class="process-math">\([n]\)</span> and say that <span class="process-math">\(\sigma\in X\)</span> satisfies property <span class="process-math">\(P_i\)</span> if <span class="process-math">\(\sigma(i) = i\text{.}\)</span>
 </div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_inclusion-exclusion_exercises-12-1-1-7">
+<ol class="decimal" id="s_inclusion-exclusion_exercises-12-1-1-7">
 <li id="s_inclusion-exclusion_exercises-12-1-1-7-1">
 <div class="para" id="s_inclusion-exclusion_exercises-12-1-1-7-1-1">Let the permutation <span class="process-math">\(\sigma\colon [8]\to [8]\)</span> be defined by <a href="s_inclusion-exclusion_exercises.html#tab_perm-e-i-ex" class="xref" data-knowl="./knowl/xref/tab_perm-e-i-ex.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.19">Figure 7.19</a>.  Does <span class="process-math">\(\sigma\)</span> satisfy property <span class="process-math">\(P_2\text{?}\)</span> Why or why not? What about property <span class="process-math">\(P_6\text{?}\)</span> List all the properties <span class="process-math">\(P_i\)</span> (with <span class="process-math">\(i\leq 8\)</span>) satisfied by <span class="process-math">\(\sigma\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.12.a"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-1" title="Copy heading and permalink for Item 7.7.12.a" aria-label="Copy heading and permalink for Item 7.7.12.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.12.1"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-1" title="Copy heading and permalink for Item 7.7.12.1" aria-label="Copy heading and permalink for Item 7.7.12.1">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-12-1-1-7-2">
 <div class="para" id="s_inclusion-exclusion_exercises-12-1-1-7-2-1">Give an example of a permutation <span class="process-math">\(\tau\colon[8]\to[8]\)</span> that satisfies properties <span class="process-math">\(P_1\text{,}\)</span> <span class="process-math">\(P_4\text{,}\)</span> and <span class="process-math">\(P_8\)</span> and no other properties <span class="process-math">\(P_i\)</span> with <span class="process-math">\(1\leq i\leq 8\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.12.b"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-2" title="Copy heading and permalink for Item 7.7.12.b" aria-label="Copy heading and permalink for Item 7.7.12.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.12.2"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-2" title="Copy heading and permalink for Item 7.7.12.2" aria-label="Copy heading and permalink for Item 7.7.12.2">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-12-1-1-7-3">
 <div class="para" id="s_inclusion-exclusion_exercises-12-1-1-7-3-1">Give an example of a permutation <span class="process-math">\(\pi\colon [8]\to[8]\)</span> that does not satisfy any property <span class="process-math">\(P_i\)</span> with <span class="process-math">\(1\leq i\leq 8\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.12.c"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-3" title="Copy heading and permalink for Item 7.7.12.c" aria-label="Copy heading and permalink for Item 7.7.12.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.12.3"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1-7-3" title="Copy heading and permalink for Item 7.7.12.3" aria-label="Copy heading and permalink for Item 7.7.12.3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -771,26 +777,26 @@ y_1 + y_2 + y_3 + y_4 \lt 184
 <div class="para logical" id="s_inclusion-exclusion_exercises-13-1-1">
 <div class="para">As in <a href="s_inclusion-exclusion_intro.html#exa_inclusion-exclusion_prop-divis" class="xref" data-knowl="./knowl/xref/exa_inclusion-exclusion_prop-divis.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.6">Example 7.6</a>, let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be positive integers and <span class="process-math">\(X=[n]\text{.}\)</span> Say that <span class="process-math">\(j\in X\)</span> satisfies property <span class="process-math">\(P_i\)</span> for an <span class="process-math">\(i\)</span> with <span class="process-math">\(1\leq i\leq m\)</span> if <span class="process-math">\(i\)</span> is a divisor of <span class="process-math">\(j\text{.}\)</span>
 </div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_inclusion-exclusion_exercises-13-1-1-11">
+<ol class="decimal" id="s_inclusion-exclusion_exercises-13-1-1-11">
 <li id="s_inclusion-exclusion_exercises-13-1-1-11-1">
 <div class="para" id="s_inclusion-exclusion_exercises-13-1-1-11-1-1">Let <span class="process-math">\(m=n=15\text{.}\)</span> Does <span class="process-math">\(12\)</span> satisfy property <span class="process-math">\(P_3\text{?}\)</span> Why or why not? What about property <span class="process-math">\(P_5\text{?}\)</span> List the properties <span class="process-math">\(P_i\)</span> with <span class="process-math">\(1\leq i\leq 15\)</span> that <span class="process-math">\(12\)</span> satisfies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.a"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-1" title="Copy heading and permalink for Item 7.7.13.a" aria-label="Copy heading and permalink for Item 7.7.13.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.1"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-1" title="Copy heading and permalink for Item 7.7.13.1" aria-label="Copy heading and permalink for Item 7.7.13.1">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-13-1-1-11-2">
 <div class="para" id="s_inclusion-exclusion_exercises-13-1-1-11-2-1">Give an example of an integer <span class="process-math">\(j\)</span> with <span class="process-math">\(1\leq j\leq 15\)</span> that satisfies exactly two properties <span class="process-math">\(P_i\)</span> with <span class="process-math">\(1\leq i\leq 15\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.b"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-2" title="Copy heading and permalink for Item 7.7.13.b" aria-label="Copy heading and permalink for Item 7.7.13.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.2"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-2" title="Copy heading and permalink for Item 7.7.13.2" aria-label="Copy heading and permalink for Item 7.7.13.2">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-13-1-1-11-3">
 <div class="para" id="s_inclusion-exclusion_exercises-13-1-1-11-3-1">Give an example of an integer <span class="process-math">\(j\)</span> with <span class="process-math">\(1\leq j\leq 15\)</span> that satisfies exactly four properties <span class="process-math">\(P_i\)</span> with <span class="process-math">\(1\leq i\leq 15\)</span> or explain why such an integer does not exist.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.c"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-3" title="Copy heading and permalink for Item 7.7.13.c" aria-label="Copy heading and permalink for Item 7.7.13.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.3"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-3" title="Copy heading and permalink for Item 7.7.13.3" aria-label="Copy heading and permalink for Item 7.7.13.3">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-13-1-1-11-4">
 <div class="para" id="s_inclusion-exclusion_exercises-13-1-1-11-4-1">Give an example of an integer <span class="process-math">\(j\)</span> with <span class="process-math">\(1\leq j\leq 15\)</span> that satisfies exactly three properties <span class="process-math">\(P_i\)</span> with <span class="process-math">\(1\leq i\leq 15\)</span> or explain why such an integer does not exist.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.d"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-4" title="Copy heading and permalink for Item 7.7.13.d" aria-label="Copy heading and permalink for Item 7.7.13.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.13.4"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1-11-4" title="Copy heading and permalink for Item 7.7.13.4" aria-label="Copy heading and permalink for Item 7.7.13.4">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -841,16 +847,16 @@ y_1 + y_2 + y_3 + y_4 \lt 184
 <div class="para logical" id="s_inclusion-exclusion_exercises-22-1-1">
 <div class="para">The principle of inclusion-exclusion is not the only approach available for counting derangements. We know that <span class="process-math">\(d_1=0\)</span> and <span class="process-math">\(d_2=1\text{.}\)</span> Using this initial information, it is possible to give a recursive form for <span class="process-math">\(d_n\text{.}\)</span> In this exercise, we consider two recursions for <span class="process-math">\(d_n\text{.}\)</span>
 </div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_inclusion-exclusion_exercises-22-1-1-5">
+<ol class="decimal" id="s_inclusion-exclusion_exercises-22-1-1-5">
 <li id="s_inclusion-exclusion_exercises-22-1-1-5-1">
 <div class="para" id="s_inclusion-exclusion_exercises-22-1-1-5-1-1">Give a combinatorial argument to prove that the number of derangements satisfies the recursive formula <span class="process-math">\(d_n = (n-1)(d_{n-1}+d_{n-2})\)</span> for <span class="process-math">\(n\geq 2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.a"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-1-1-5-1" title="Copy heading and permalink for Item 7.7.22.a" aria-label="Copy heading and permalink for Item 7.7.22.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.1"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-1-1-5-1" title="Copy heading and permalink for Item 7.7.22.1" aria-label="Copy heading and permalink for Item 7.7.22.1">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-22-1-1-5-2">
 <div class="para" id="s_inclusion-exclusion_exercises-22-1-1-5-2-1">Prove that the number of derangements also satisfies the recursive formula <span class="process-math">\(d_n = nd_{n-1} + (-1)^n\)</span> for <span class="process-math">\(n\geq 2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.b"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-1-1-5-2" title="Copy heading and permalink for Item 7.7.22.b" aria-label="Copy heading and permalink for Item 7.7.22.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.2"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-1-1-5-2" title="Copy heading and permalink for Item 7.7.22.2" aria-label="Copy heading and permalink for Item 7.7.22.2">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -859,16 +865,16 @@ y_1 + y_2 + y_3 + y_4 \lt 184
 <details id="s_inclusion-exclusion_exercises-22-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">
 <div class="para logical" id="s_inclusion-exclusion_exercises-22-2-1">
-<ol class="lower-alpha lower-alpha-level-1" id="s_inclusion-exclusion_exercises-22-2-1-1">
+<ol class="decimal" id="s_inclusion-exclusion_exercises-22-2-1-1">
 <li id="s_inclusion-exclusion_exercises-22-2-1-1-1">
 <div class="para" id="s_inclusion-exclusion_exercises-22-2-1-1-1-1">For a derangement <span class="process-math">\(\sigma\text{,}\)</span> consider the integer <span class="process-math">\(k\)</span> with <span class="process-math">\(\sigma(k)=1\text{.}\)</span> Argue based on the number of choices for <span class="process-math">\(k\)</span> and then whether <span class="process-math">\(\sigma(1)=k\)</span> or not.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.a"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-2-1-1-1" title="Copy heading and permalink for Item 7.7.22.a" aria-label="Copy heading and permalink for Item 7.7.22.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.1"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-2-1-1-1" title="Copy heading and permalink for Item 7.7.22.1" aria-label="Copy heading and permalink for Item 7.7.22.1">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-22-2-1-1-2">
 <div class="para" id="s_inclusion-exclusion_exercises-22-2-1-1-2-1">You may find it easiest to prove this using the other recursive formula and mathematical induction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.b"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-2-1-1-2" title="Copy heading and permalink for Item 7.7.22.b" aria-label="Copy heading and permalink for Item 7.7.22.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.22.2"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-2-1-1-2" title="Copy heading and permalink for Item 7.7.22.2" aria-label="Copy heading and permalink for Item 7.7.22.2">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-22-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -908,21 +914,21 @@ y_1 + y_2 + y_3 + y_4 \lt 184
 <article class="exercise exercise-like" id="s_inclusion-exclusion_exercises-27"><h2 class="heading"><span class="codenumber">27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_inclusion-exclusion_exercises-27-1-1">
 <div class="para">At a very small school, there is a class with nine students in it. The students, whom we will denote as <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\(D\text{,}\)</span> <span class="process-math">\(E\text{,}\)</span> <span class="process-math">\(F\text{,}\)</span> <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(H\text{,}\)</span> and <span class="process-math">\(I\text{,}\)</span> walk from their classroom to the lunchroom in the order <span class="process-math">\(ABCDEFGHI\text{.}\)</span> (Let’s say that <span class="process-math">\(A\)</span> is at the front of the line.) On the way back to their classroom after lunch, they would like to walk in an order so that no student walks immediately behind the same classmate he or she was behind on the way to lunch. (For instance, <span class="process-math">\(ACBDIHGFE\)</span> and <span class="process-math">\(IHGFEDCBA\)</span> would meet their criteria. However, they would not be happy with <span class="process-math">\(CEFGBADHI\)</span> since it contains <span class="process-math">\(FG\)</span> and <span class="process-math">\(HI\text{,}\)</span> so <span class="process-math">\(G\)</span> is following <span class="process-math">\(F\)</span> again and <span class="process-math">\(I\)</span> is following <span class="process-math">\(H\)</span> again.)</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_inclusion-exclusion_exercises-27-1-1-21">
+<ol class="decimal" id="s_inclusion-exclusion_exercises-27-1-1-21">
 <li id="s_inclusion-exclusion_exercises-27-1-1-21-1">
 <div class="para" id="s_inclusion-exclusion_exercises-27-1-1-21-1-1">One student ponders how many possible ways there would be for them to line up meeting this criterion. Help him out by determining the exact value of this number.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.27.a"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-1" title="Copy heading and permalink for Item 7.7.27.a" aria-label="Copy heading and permalink for Item 7.7.27.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.27.1"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-1" title="Copy heading and permalink for Item 7.7.27.1" aria-label="Copy heading and permalink for Item 7.7.27.1">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-27-1-1-21-2">
 <div class="para" id="s_inclusion-exclusion_exercises-27-1-1-21-2-1">Is this number bigger than, smaller than, or equal to the number of ways they could return so that no student walks in the same position as before (i.e., <span class="process-math">\(A\)</span> is not first, <span class="process-math">\(B\)</span> is not second, …, and <span class="process-math">\(I\)</span> is not last)?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.27.b"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-2" title="Copy heading and permalink for Item 7.7.27.b" aria-label="Copy heading and permalink for Item 7.7.27.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.27.2"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-2" title="Copy heading and permalink for Item 7.7.27.2" aria-label="Copy heading and permalink for Item 7.7.27.2">🔗</a></div>
 </li>
 <li id="s_inclusion-exclusion_exercises-27-1-1-21-3">
 <div class="para" id="s_inclusion-exclusion_exercises-27-1-1-21-3-1">What fraction (give it as a decimal) of the total number of ways they could line up meet their criterion of no student following immediately behind the same student on the return trip?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.27.c"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-3" title="Copy heading and permalink for Item 7.7.27.c" aria-label="Copy heading and permalink for Item 7.7.27.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 7.7.27.3"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1-21-3" title="Copy heading and permalink for Item 7.7.27.3" aria-label="Copy heading and permalink for Item 7.7.27.3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_inclusion-exclusion_exercises-27-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

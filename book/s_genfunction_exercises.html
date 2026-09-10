@@ -19,7 +19,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
@@ -37,7 +43,7 @@ lang: "en-US",
 <meta name="twitter:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta property="og:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.49"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.49"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -59,15 +65,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.6';
+eBookConfig.runestone_version = '8.2.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.86d8a68ed7481f7e.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bb5ac777721d4056.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
 <script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
@@ -628,42 +634,42 @@ sagecell.makeSagecell({
 <article class="exercise exercise-like" id="s_genfunction_exercises-2"><h2 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-2-1-1">
 <div class="para">For each <em class="emphasis">finite</em> sequence below, give its generating function.</div>
-<ol class="lower-alpha lower-alpha-level-1 cols2 multicolumn" id="s_genfunction_exercises-2-1-1-2">
+<ol class="decimal cols2 multicolumn" id="s_genfunction_exercises-2-1-1-2">
 <li id="s_genfunction_exercises-2-1-1-2-1">
 <div class="para" id="s_genfunction_exercises-2-1-1-2-1-1">
 <span class="process-math">\(\displaystyle 1, 4, 6, 4, 1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.a"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-1" title="Copy heading and permalink for Item 8.8.1.a" aria-label="Copy heading and permalink for Item 8.8.1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.1"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-1" title="Copy heading and permalink for Item 8.8.1.1" aria-label="Copy heading and permalink for Item 8.8.1.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-2-1-1-2-2">
 <div class="para" id="s_genfunction_exercises-2-1-1-2-2-1">
 <span class="process-math">\(\displaystyle 1,1,1,1,1,0,0,1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.b"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-2" title="Copy heading and permalink for Item 8.8.1.b" aria-label="Copy heading and permalink for Item 8.8.1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.2"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-2" title="Copy heading and permalink for Item 8.8.1.2" aria-label="Copy heading and permalink for Item 8.8.1.2">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-2-1-1-2-3">
 <div class="para" id="s_genfunction_exercises-2-1-1-2-3-1">
 <span class="process-math">\(\displaystyle 0,0,0,1,2,3,4,5\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.c"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-3" title="Copy heading and permalink for Item 8.8.1.c" aria-label="Copy heading and permalink for Item 8.8.1.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.3"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-3" title="Copy heading and permalink for Item 8.8.1.3" aria-label="Copy heading and permalink for Item 8.8.1.3">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-2-1-1-2-4">
 <div class="para" id="s_genfunction_exercises-2-1-1-2-4-1">
 <span class="process-math">\(\displaystyle 1,1,1,1,1,1,1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.d"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-4" title="Copy heading and permalink for Item 8.8.1.d" aria-label="Copy heading and permalink for Item 8.8.1.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.4"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-4" title="Copy heading and permalink for Item 8.8.1.4" aria-label="Copy heading and permalink for Item 8.8.1.4">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-2-1-1-2-5">
 <div class="para" id="s_genfunction_exercises-2-1-1-2-5-1">
 <span class="process-math">\(\displaystyle 3,0,0,1,-4,7\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.e"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-5" title="Copy heading and permalink for Item 8.8.1.e" aria-label="Copy heading and permalink for Item 8.8.1.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.5"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-5" title="Copy heading and permalink for Item 8.8.1.5" aria-label="Copy heading and permalink for Item 8.8.1.5">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-2-1-1-2-6">
 <div class="para" id="s_genfunction_exercises-2-1-1-2-6-1">
 <span class="process-math">\(\displaystyle 0,0,0,0,1,2,-3,0,1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.f"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-6" title="Copy heading and permalink for Item 8.8.1.f" aria-label="Copy heading and permalink for Item 8.8.1.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.1.6"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1-2-6" title="Copy heading and permalink for Item 8.8.1.6" aria-label="Copy heading and permalink for Item 8.8.1.6">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -673,78 +679,78 @@ sagecell.makeSagecell({
 <article class="exercise exercise-like" id="s_genfunction_exercises-3"><h2 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-3-1-1">
 <div class="para">For each <em class="emphasis">infinite</em> sequence suggested below, give its generating function in closed form, i.e., <em class="emphasis">not</em> as an infinite sum. (Use the most obvious choice of form for the general term of each sequence.)</div>
-<ol class="lower-alpha lower-alpha-level-1 cols2 multicolumn" id="s_genfunction_exercises-3-1-1-4">
+<ol class="decimal cols2 multicolumn" id="s_genfunction_exercises-3-1-1-4">
 <li id="s_genfunction_exercises-3-1-1-4-1">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-1-1">
 <span class="process-math">\(\displaystyle 0,1,1,1,1,1,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.a"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-1" title="Copy heading and permalink for Item 8.8.2.a" aria-label="Copy heading and permalink for Item 8.8.2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.1"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-1" title="Copy heading and permalink for Item 8.8.2.1" aria-label="Copy heading and permalink for Item 8.8.2.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-2">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-2-1">
 <span class="process-math">\(\displaystyle 1,0,0,1,0,0,1,0,0,1,0,0,1,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.b"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-2" title="Copy heading and permalink for Item 8.8.2.b" aria-label="Copy heading and permalink for Item 8.8.2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.2"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-2" title="Copy heading and permalink for Item 8.8.2.2" aria-label="Copy heading and permalink for Item 8.8.2.2">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-3">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-3-1">
 <span class="process-math">\(\displaystyle 1,2,4,8,16,32,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.c"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-3" title="Copy heading and permalink for Item 8.8.2.c" aria-label="Copy heading and permalink for Item 8.8.2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.3"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-3" title="Copy heading and permalink for Item 8.8.2.3" aria-label="Copy heading and permalink for Item 8.8.2.3">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-4">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-4-1">
 <span class="process-math">\(\displaystyle 0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.d"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-4" title="Copy heading and permalink for Item 8.8.2.d" aria-label="Copy heading and permalink for Item 8.8.2.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.4"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-4" title="Copy heading and permalink for Item 8.8.2.4" aria-label="Copy heading and permalink for Item 8.8.2.4">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-5">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-5-1">
 <span class="process-math">\(\displaystyle 1,-1,1,-1,1,-1,1,-1,1,-1,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.e"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-5" title="Copy heading and permalink for Item 8.8.2.e" aria-label="Copy heading and permalink for Item 8.8.2.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.5"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-5" title="Copy heading and permalink for Item 8.8.2.5" aria-label="Copy heading and permalink for Item 8.8.2.5">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-6">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-6-1">
 <span class="process-math">\(\displaystyle \displaystyle 2^8,2^7\binom{8}{1}, 2^6\binom{8}{2},\dots,\binom{8}{8},0,0,0,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.f"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-6" title="Copy heading and permalink for Item 8.8.2.f" aria-label="Copy heading and permalink for Item 8.8.2.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.6"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-6" title="Copy heading and permalink for Item 8.8.2.6" aria-label="Copy heading and permalink for Item 8.8.2.6">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-7">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-7-1">
 <span class="process-math">\(\displaystyle 1,1,1,0,0,1,1,1,1,1,1,1,1,1,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.g"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-7" title="Copy heading and permalink for Item 8.8.2.g" aria-label="Copy heading and permalink for Item 8.8.2.g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.7"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-7" title="Copy heading and permalink for Item 8.8.2.7" aria-label="Copy heading and permalink for Item 8.8.2.7">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-8">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-8-1">
 <span class="process-math">\(\displaystyle 0,0,0,1,2,3,4,5,6,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.h"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-8" title="Copy heading and permalink for Item 8.8.2.h" aria-label="Copy heading and permalink for Item 8.8.2.h">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.8"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-8" title="Copy heading and permalink for Item 8.8.2.8" aria-label="Copy heading and permalink for Item 8.8.2.8">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-9">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-9-1">
 <span class="process-math">\(\displaystyle 3,2,4,1,1,1,1,1,1,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.i"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-9" title="Copy heading and permalink for Item 8.8.2.i" aria-label="Copy heading and permalink for Item 8.8.2.i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.9"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-9" title="Copy heading and permalink for Item 8.8.2.9" aria-label="Copy heading and permalink for Item 8.8.2.9">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-10">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-10-1">
 <span class="process-math">\(\displaystyle 0,2,0,0,2,0,0,2,0,0,2,0,0,2,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.j"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-10" title="Copy heading and permalink for Item 8.8.2.j" aria-label="Copy heading and permalink for Item 8.8.2.j">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.10"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-10" title="Copy heading and permalink for Item 8.8.2.10" aria-label="Copy heading and permalink for Item 8.8.2.10">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-11">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-11-1">
 <span class="process-math">\(\displaystyle 6,0,-6,0,6,0,-6,0,6,\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.k"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-11" title="Copy heading and permalink for Item 8.8.2.k" aria-label="Copy heading and permalink for Item 8.8.2.k">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.11"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-11" title="Copy heading and permalink for Item 8.8.2.11" aria-label="Copy heading and permalink for Item 8.8.2.11">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-3-1-1-4-12">
 <div class="para" id="s_genfunction_exercises-3-1-1-4-12-1">
 <span class="process-math">\(\displaystyle \displaystyle 1,3,6,10,15,\dots,\binom{n+2}{2},\dots\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.l"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-12" title="Copy heading and permalink for Item 8.8.2.l" aria-label="Copy heading and permalink for Item 8.8.2.l">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.2.12"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1-4-12" title="Copy heading and permalink for Item 8.8.2.12" aria-label="Copy heading and permalink for Item 8.8.2.12">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -754,66 +760,66 @@ sagecell.makeSagecell({
 <article class="exercise exercise-like" id="s_genfunction_exercises-4"><h2 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-4-1-1">
 <div class="para">For each generating function below, give a closed form for the <span class="process-math">\(n^{\text{th} }\)</span> term of its associated sequence.</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_genfunction_exercises-4-1-1-2">
+<ol class="decimal" id="s_genfunction_exercises-4-1-1-2">
 <li id="s_genfunction_exercises-4-1-1-2-1">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-1-1">
 <span class="process-math">\(\displaystyle (1+x)^{10}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.a"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-1" title="Copy heading and permalink for Item 8.8.3.a" aria-label="Copy heading and permalink for Item 8.8.3.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.1"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-1" title="Copy heading and permalink for Item 8.8.3.1" aria-label="Copy heading and permalink for Item 8.8.3.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-2">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-2-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{1}{1-x^4}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.b"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-2" title="Copy heading and permalink for Item 8.8.3.b" aria-label="Copy heading and permalink for Item 8.8.3.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.2"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-2" title="Copy heading and permalink for Item 8.8.3.2" aria-label="Copy heading and permalink for Item 8.8.3.2">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-3">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-3-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{x^3}{1-x^4}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.c"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-3" title="Copy heading and permalink for Item 8.8.3.c" aria-label="Copy heading and permalink for Item 8.8.3.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.3"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-3" title="Copy heading and permalink for Item 8.8.3.3" aria-label="Copy heading and permalink for Item 8.8.3.3">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-4">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-4-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{1-x^4}{1-x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.d"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-4" title="Copy heading and permalink for Item 8.8.3.d" aria-label="Copy heading and permalink for Item 8.8.3.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.4"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-4" title="Copy heading and permalink for Item 8.8.3.4" aria-label="Copy heading and permalink for Item 8.8.3.4">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-5">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-5-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{1+x^2-x^4}{1-x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.e"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-5" title="Copy heading and permalink for Item 8.8.3.e" aria-label="Copy heading and permalink for Item 8.8.3.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.5"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-5" title="Copy heading and permalink for Item 8.8.3.5" aria-label="Copy heading and permalink for Item 8.8.3.5">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-6">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-6-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{1}{1-4x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.f"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-6" title="Copy heading and permalink for Item 8.8.3.f" aria-label="Copy heading and permalink for Item 8.8.3.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.6"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-6" title="Copy heading and permalink for Item 8.8.3.6" aria-label="Copy heading and permalink for Item 8.8.3.6">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-7">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-7-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{1}{1+4x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.g"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-7" title="Copy heading and permalink for Item 8.8.3.g" aria-label="Copy heading and permalink for Item 8.8.3.g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.7"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-7" title="Copy heading and permalink for Item 8.8.3.7" aria-label="Copy heading and permalink for Item 8.8.3.7">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-8">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-8-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{x^5}{(1-x)^4}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.h"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-8" title="Copy heading and permalink for Item 8.8.3.h" aria-label="Copy heading and permalink for Item 8.8.3.h">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.8"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-8" title="Copy heading and permalink for Item 8.8.3.8" aria-label="Copy heading and permalink for Item 8.8.3.8">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-9">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-9-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{x^2+x+1}{1-x^7}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.i"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-9" title="Copy heading and permalink for Item 8.8.3.i" aria-label="Copy heading and permalink for Item 8.8.3.i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.9"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-9" title="Copy heading and permalink for Item 8.8.3.9" aria-label="Copy heading and permalink for Item 8.8.3.9">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-4-1-1-2-10">
 <div class="para" id="s_genfunction_exercises-4-1-1-2-10-1">
 <span class="process-math">\(\displaystyle \displaystyle 3x^4 + 7x^3 -x^2 + 10 + \frac{1}{1-x^3}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.j"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-10" title="Copy heading and permalink for Item 8.8.3.j" aria-label="Copy heading and permalink for Item 8.8.3.j">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.3.10"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1-2-10" title="Copy heading and permalink for Item 8.8.3.10" aria-label="Copy heading and permalink for Item 8.8.3.10">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -823,54 +829,54 @@ sagecell.makeSagecell({
 <article class="exercise exercise-like" id="s_genfunction_exercises-5"><h2 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-5-1-1">
 <div class="para">Find the coefficient on <span class="process-math">\(x^{10}\)</span> in each of the generating functions below.</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_genfunction_exercises-5-1-1-2">
+<ol class="decimal" id="s_genfunction_exercises-5-1-1-2">
 <li id="s_genfunction_exercises-5-1-1-2-1">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-1-1">
 <span class="process-math">\(\displaystyle (x^3+x^5+x^6)(x^4+x^5+x^7) (1+x^5+x^{10}+x^{15}+\cdots)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.a"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-1" title="Copy heading and permalink for Item 8.8.4.a" aria-label="Copy heading and permalink for Item 8.8.4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.1"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-1" title="Copy heading and permalink for Item 8.8.4.1" aria-label="Copy heading and permalink for Item 8.8.4.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-5-1-1-2-2">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-2-1">
 <span class="process-math">\(\displaystyle (1+x^3) (x^3+x^4+x^5+\cdots)(x^4+x^5+x^6+x^7+x^8+\cdots)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.b"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-2" title="Copy heading and permalink for Item 8.8.4.b" aria-label="Copy heading and permalink for Item 8.8.4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.2"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-2" title="Copy heading and permalink for Item 8.8.4.2" aria-label="Copy heading and permalink for Item 8.8.4.2">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-5-1-1-2-3">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-3-1">
 <span class="process-math">\(\displaystyle (1+x)^{12}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.c"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-3" title="Copy heading and permalink for Item 8.8.4.c" aria-label="Copy heading and permalink for Item 8.8.4.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.3"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-3" title="Copy heading and permalink for Item 8.8.4.3" aria-label="Copy heading and permalink for Item 8.8.4.3">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-5-1-1-2-4">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-4-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{x^5}{1-3x^5}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.d"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-4" title="Copy heading and permalink for Item 8.8.4.d" aria-label="Copy heading and permalink for Item 8.8.4.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.4"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-4" title="Copy heading and permalink for Item 8.8.4.4" aria-label="Copy heading and permalink for Item 8.8.4.4">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-5-1-1-2-5">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-5-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{1}{(1-x)^3}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.e"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-5" title="Copy heading and permalink for Item 8.8.4.e" aria-label="Copy heading and permalink for Item 8.8.4.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.5"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-5" title="Copy heading and permalink for Item 8.8.4.5" aria-label="Copy heading and permalink for Item 8.8.4.5">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-5-1-1-2-6">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-6-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{1}{1-5x^4}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.f"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-6" title="Copy heading and permalink for Item 8.8.4.f" aria-label="Copy heading and permalink for Item 8.8.4.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.6"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-6" title="Copy heading and permalink for Item 8.8.4.6" aria-label="Copy heading and permalink for Item 8.8.4.6">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-5-1-1-2-7">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-7-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{x}{1-2x^3}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.g"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-7" title="Copy heading and permalink for Item 8.8.4.g" aria-label="Copy heading and permalink for Item 8.8.4.g">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.7"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-7" title="Copy heading and permalink for Item 8.8.4.7" aria-label="Copy heading and permalink for Item 8.8.4.7">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-5-1-1-2-8">
 <div class="para" id="s_genfunction_exercises-5-1-1-2-8-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{1-x^{14}}{1-x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.h"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-8" title="Copy heading and permalink for Item 8.8.4.h" aria-label="Copy heading and permalink for Item 8.8.4.h">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.4.8"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1-2-8" title="Copy heading and permalink for Item 8.8.4.8" aria-label="Copy heading and permalink for Item 8.8.4.8">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1007,16 +1013,16 @@ f(x).series(x,n) # Replace n with suitable value
 <article class="exercise exercise-like" id="s_genfunction_exercises-14"><h2 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-14-1-1">
 <div class="para">Bags of candy are being prepared to distribute to the children at a school. The types of candy available are chocolate bites, peanut butter cups, peppermint candies, and fruit chews. Each bag must contain at least two chocolate bites, an even number of peanut butter cups, and at most six peppermint candies. The fruit chews are available in four different flavors—lemon, orange, strawberry, and cherry. A bag of candy may contain at most two fruit chews, which may be of the same or different flavors. Beyond the number of pieces of each type of candy included, bags of candy are distinguished by using the flavors of the fruit chews included, not just the number. For example, a bag containing two orange fruit chews is different from a bag containing a cherry fruit chew and a strawberry fruit chew, even if the number of pieces of each other type of candy is the same.</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_genfunction_exercises-14-1-1-2">
+<ol class="decimal" id="s_genfunction_exercises-14-1-1-2">
 <li id="s_genfunction_exercises-14-1-1-2-1">
 <div class="para" id="s_genfunction_exercises-14-1-1-2-1-1">Let <span class="process-math">\(b_n\)</span> be the number of different bags of candy with <span class="process-math">\(n\)</span> pieces of candy that can be formed subject to these restrictions.  Find the generating function for the sequence <span class="process-math">\(\{b_n\colon n\geq 0\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-14-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.13.a"><a tabindex="-1" href="#s_genfunction_exercises-14-1-1-2-1" title="Copy heading and permalink for Item 8.8.13.a" aria-label="Copy heading and permalink for Item 8.8.13.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.13.1"><a tabindex="-1" href="#s_genfunction_exercises-14-1-1-2-1" title="Copy heading and permalink for Item 8.8.13.1" aria-label="Copy heading and permalink for Item 8.8.13.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-14-1-1-2-2">
 <div class="para" id="s_genfunction_exercises-14-1-1-2-2-1">Suppose the school has <span class="process-math">\(400\)</span> students and the teachers would like to ensure that each student gets a different bag of candy. However, they know there will be fights if the bags do not all contain the same number of pieces of candy. What is the smallest number of pieces of candy they can include in the bags that ensures each student gets a different bag of candy containing the same number of pieces of candy?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-14-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.13.b"><a tabindex="-1" href="#s_genfunction_exercises-14-1-1-2-2" title="Copy heading and permalink for Item 8.8.13.b" aria-label="Copy heading and permalink for Item 8.8.13.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.13.2"><a tabindex="-1" href="#s_genfunction_exercises-14-1-1-2-2" title="Copy heading and permalink for Item 8.8.13.2" aria-label="Copy heading and permalink for Item 8.8.13.2">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1038,16 +1044,16 @@ f(x).series(x,n) # Replace n with suitable value
 <article class="exercise exercise-like" id="s_genfunction_exercises-16"><h2 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-16-1-1">
 <div class="para">Tollbooths in Illinois accept all U.S. coins, including pennies. Carlos has a very large supply of pennies, nickels, dimes, and quarters in his car as he drives on a tollway. He encounters a toll for $<span class="process-math">\(0.95\)</span> and wonders how many different ways he could use his supply of coins to pay the toll without getting change back. (A computer algebra system is probably the best way to get the required coefficient once you have a generating function, since you’re not asked for the coefficient on <span class="process-math">\(x^n\text{.}\)</span>)</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_genfunction_exercises-16-1-1-3">
+<ol class="decimal" id="s_genfunction_exercises-16-1-1-3">
 <li id="s_genfunction_exercises-16-1-1-3-1">
 <div class="para" id="s_genfunction_exercises-16-1-1-3-1-1">Use a generating function and computer algebra system to determine the number of ways Carlos could pay his $<span class="process-math">\(0.95\)</span> toll by dropping the coins together into the toll bin. (Assume coins of the same denomination cannot be distinguished from each other.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-16-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.15.a"><a tabindex="-1" href="#s_genfunction_exercises-16-1-1-3-1" title="Copy heading and permalink for Item 8.8.15.a" aria-label="Copy heading and permalink for Item 8.8.15.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.15.1"><a tabindex="-1" href="#s_genfunction_exercises-16-1-1-3-1" title="Copy heading and permalink for Item 8.8.15.1" aria-label="Copy heading and permalink for Item 8.8.15.1">🔗</a></div>
 </li>
 <li id="exer_genfunction_coin-toll">
 <div class="para" id="exer_genfunction_coin-toll-1">Suppose that instead of having a bin into which motorists drop the coins to pay their toll, the coins must be inserted one-by-one into a coin slot. In this scenario, Carlos wonders how many ways he could pay the $<span class="process-math">\(0.95\)</span> toll when the order the coins are inserted matters. For instance, in the previous part, the use of three quarters and two dimes would be counted only one time. However, when the coins must be inserted individually into a slot, there are <span class="process-math">\(10=C(5,2)\)</span> ways to insert this combination. Use a generating function and computer algebra system to determine the number of ways that Carlos could pay the $<span class="process-math">\(0.95\)</span> toll when considering the order the coins are inserted.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exer_genfunction_coin-toll-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.15.b"><a tabindex="-1" href="#exer_genfunction_coin-toll" title="Copy heading and permalink for Item 8.8.15.b" aria-label="Copy heading and permalink for Item 8.8.15.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.15.2"><a tabindex="-1" href="#exer_genfunction_coin-toll" title="Copy heading and permalink for Item 8.8.15.2" aria-label="Copy heading and permalink for Item 8.8.15.2">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1057,7 +1063,7 @@ f(x).series(x,n) # Replace n with suitable value
 <div class="solutions">
 <details id="s_genfunction_exercises-16-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">
-<div class="para" id="s_genfunction_exercises-16-2-1">For <a href="s_genfunction_exercises.html#exer_genfunction_coin-toll" class="xref" data-knowl="./knowl/xref/exer_genfunction_coin-toll.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 8.8.15.b">part b</a>, you really want an ordinary generating function and not an exponential generating function, despite the fact that order matters. Once you think you have a generating function that works, you might check the coefficients on <span class="process-math">\(x^5,\dots,x^{10}\)</span> by hand to make sure that you’re on the right track.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="s_genfunction_exercises-16-2-1">For <a href="s_genfunction_exercises.html#exer_genfunction_coin-toll" class="xref" data-knowl="./knowl/xref/exer_genfunction_coin-toll.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 8.8.15.2">part 2</a>, you really want an ordinary generating function and not an exponential generating function, despite the fact that order matters. Once you think you have a generating function that works, you might check the coefficients on <span class="process-math">\(x^5,\dots,x^{10}\)</span> by hand to make sure that you’re on the right track.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Hint 8.8.15.1"><a tabindex="-1" href="#s_genfunction_exercises-16-2" title="Copy heading and permalink for Hint 8.8.15.1" aria-label="Copy heading and permalink for Hint 8.8.15.1">🔗</a></div>
 </div></details>
@@ -1087,42 +1093,42 @@ f(x).series(x,n) # Replace n with suitable value
 <article class="exercise exercise-like" id="s_genfunction_exercises-21"><h2 class="heading"><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-21-1-1">
 <div class="para">Find the exponential generating function (in closed form, not as an infinite sum) for each infinite sequence <span class="process-math">\(\{a_n\colon n\geq 0\}\)</span> whose general term is given below.</div>
-<ol class="lower-alpha lower-alpha-level-1 cols2 multicolumn" id="s_genfunction_exercises-21-1-1-2">
+<ol class="decimal cols2 multicolumn" id="s_genfunction_exercises-21-1-1-2">
 <li id="s_genfunction_exercises-21-1-1-2-1">
 <div class="para" id="s_genfunction_exercises-21-1-1-2-1-1">
 <span class="process-math">\(\displaystyle a_n = 5^n\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.a"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-1" title="Copy heading and permalink for Item 8.8.20.a" aria-label="Copy heading and permalink for Item 8.8.20.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.1"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-1" title="Copy heading and permalink for Item 8.8.20.1" aria-label="Copy heading and permalink for Item 8.8.20.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-21-1-1-2-2">
 <div class="para" id="s_genfunction_exercises-21-1-1-2-2-1">
 <span class="process-math">\(\displaystyle a_n = (-1)^n2^n\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.b"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-2" title="Copy heading and permalink for Item 8.8.20.b" aria-label="Copy heading and permalink for Item 8.8.20.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.2"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-2" title="Copy heading and permalink for Item 8.8.20.2" aria-label="Copy heading and permalink for Item 8.8.20.2">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-21-1-1-2-3">
 <div class="para" id="s_genfunction_exercises-21-1-1-2-3-1">
 <span class="process-math">\(\displaystyle a_n = 3^{n+2}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.c"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-3" title="Copy heading and permalink for Item 8.8.20.c" aria-label="Copy heading and permalink for Item 8.8.20.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.3"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-3" title="Copy heading and permalink for Item 8.8.20.3" aria-label="Copy heading and permalink for Item 8.8.20.3">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-21-1-1-2-4">
 <div class="para" id="s_genfunction_exercises-21-1-1-2-4-1">
 <span class="process-math">\(\displaystyle a_n = n!\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.d"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-4" title="Copy heading and permalink for Item 8.8.20.d" aria-label="Copy heading and permalink for Item 8.8.20.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.4"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-4" title="Copy heading and permalink for Item 8.8.20.4" aria-label="Copy heading and permalink for Item 8.8.20.4">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-21-1-1-2-5">
 <div class="para" id="s_genfunction_exercises-21-1-1-2-5-1">
 <span class="process-math">\(\displaystyle a_n = n\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.e"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-5" title="Copy heading and permalink for Item 8.8.20.e" aria-label="Copy heading and permalink for Item 8.8.20.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.5"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-5" title="Copy heading and permalink for Item 8.8.20.5" aria-label="Copy heading and permalink for Item 8.8.20.5">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-21-1-1-2-6">
 <div class="para" id="s_genfunction_exercises-21-1-1-2-6-1">
 <span class="process-math">\(\displaystyle a_n = 1/(n+1)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.f"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-6" title="Copy heading and permalink for Item 8.8.20.f" aria-label="Copy heading and permalink for Item 8.8.20.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.20.6"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1-2-6" title="Copy heading and permalink for Item 8.8.20.6" aria-label="Copy heading and permalink for Item 8.8.20.6">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1132,30 +1138,30 @@ f(x).series(x,n) # Replace n with suitable value
 <article class="exercise exercise-like" id="s_genfunction_exercises-22"><h2 class="heading"><span class="codenumber">21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-22-1-1">
 <div class="para">For each exponential generating function below, give a formula in closed form for the sequence <span class="process-math">\(\{a_n\colon n\geq 0\}\)</span> it represents.</div>
-<ol class="lower-alpha lower-alpha-level-1 cols2 multicolumn" id="s_genfunction_exercises-22-1-1-2">
+<ol class="decimal cols2 multicolumn" id="s_genfunction_exercises-22-1-1-2">
 <li id="s_genfunction_exercises-22-1-1-2-1">
 <div class="para" id="s_genfunction_exercises-22-1-1-2-1-1">
 <span class="process-math">\(\displaystyle e^{7x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.a"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-1" title="Copy heading and permalink for Item 8.8.21.a" aria-label="Copy heading and permalink for Item 8.8.21.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.1"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-1" title="Copy heading and permalink for Item 8.8.21.1" aria-label="Copy heading and permalink for Item 8.8.21.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-22-1-1-2-2">
 <div class="para" id="s_genfunction_exercises-22-1-1-2-2-1">
 <span class="process-math">\(\displaystyle x^2 e^{3x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.b"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-2" title="Copy heading and permalink for Item 8.8.21.b" aria-label="Copy heading and permalink for Item 8.8.21.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.2"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-2" title="Copy heading and permalink for Item 8.8.21.2" aria-label="Copy heading and permalink for Item 8.8.21.2">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-22-1-1-2-3">
 <div class="para" id="s_genfunction_exercises-22-1-1-2-3-1">
 <span class="process-math">\(\displaystyle \displaystyle \frac{1}{1+x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.c"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-3" title="Copy heading and permalink for Item 8.8.21.c" aria-label="Copy heading and permalink for Item 8.8.21.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.3"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-3" title="Copy heading and permalink for Item 8.8.21.3" aria-label="Copy heading and permalink for Item 8.8.21.3">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-22-1-1-2-4">
 <div class="para" id="s_genfunction_exercises-22-1-1-2-4-1">
 <span class="process-math">\(\displaystyle e^{x^4}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.d"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-4" title="Copy heading and permalink for Item 8.8.21.d" aria-label="Copy heading and permalink for Item 8.8.21.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.21.4"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1-2-4" title="Copy heading and permalink for Item 8.8.21.4" aria-label="Copy heading and permalink for Item 8.8.21.4">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-22-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1165,42 +1171,42 @@ f(x).series(x,n) # Replace n with suitable value
 <article class="exercise exercise-like" id="s_genfunction_exercises-23"><h2 class="heading"><span class="codenumber">22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_genfunction_exercises-23-1-1">
 <div class="para">Find the coefficient on <span class="process-math">\(x^{10}/{10!}\)</span> in each of the exponential generating functions below.</div>
-<ol class="lower-alpha lower-alpha-level-1 cols2 multicolumn" id="s_genfunction_exercises-23-1-1-2">
+<ol class="decimal cols2 multicolumn" id="s_genfunction_exercises-23-1-1-2">
 <li id="s_genfunction_exercises-23-1-1-2-1">
 <div class="para" id="s_genfunction_exercises-23-1-1-2-1-1">
 <span class="process-math">\(\displaystyle e^{3x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.a"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-1" title="Copy heading and permalink for Item 8.8.22.a" aria-label="Copy heading and permalink for Item 8.8.22.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.1"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-1" title="Copy heading and permalink for Item 8.8.22.1" aria-label="Copy heading and permalink for Item 8.8.22.1">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-23-1-1-2-2">
 <div class="para" id="s_genfunction_exercises-23-1-1-2-2-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{e^x-e^{-x}}{2}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.b"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-2" title="Copy heading and permalink for Item 8.8.22.b" aria-label="Copy heading and permalink for Item 8.8.22.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.2"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-2" title="Copy heading and permalink for Item 8.8.22.2" aria-label="Copy heading and permalink for Item 8.8.22.2">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-23-1-1-2-3">
 <div class="para" id="s_genfunction_exercises-23-1-1-2-3-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{e^x+e^{-x}}{2}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.c"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-3" title="Copy heading and permalink for Item 8.8.22.c" aria-label="Copy heading and permalink for Item 8.8.22.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.3"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-3" title="Copy heading and permalink for Item 8.8.22.3" aria-label="Copy heading and permalink for Item 8.8.22.3">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-23-1-1-2-4">
 <div class="para" id="s_genfunction_exercises-23-1-1-2-4-1">
 <span class="process-math">\(\displaystyle xe^{3x}-x^2\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.d"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-4" title="Copy heading and permalink for Item 8.8.22.d" aria-label="Copy heading and permalink for Item 8.8.22.d">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.4"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-4" title="Copy heading and permalink for Item 8.8.22.4" aria-label="Copy heading and permalink for Item 8.8.22.4">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-23-1-1-2-5">
 <div class="para" id="s_genfunction_exercises-23-1-1-2-5-1">
 <span class="process-math">\(\displaystyle \displaystyle\frac{1}{1-2x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.e"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-5" title="Copy heading and permalink for Item 8.8.22.e" aria-label="Copy heading and permalink for Item 8.8.22.e">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.5"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-5" title="Copy heading and permalink for Item 8.8.22.5" aria-label="Copy heading and permalink for Item 8.8.22.5">🔗</a></div>
 </li>
 <li id="s_genfunction_exercises-23-1-1-2-6">
 <div class="para" id="s_genfunction_exercises-23-1-1-2-6-1">
 <span class="process-math">\(\displaystyle e^{x^2}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.f"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-6" title="Copy heading and permalink for Item 8.8.22.f" aria-label="Copy heading and permalink for Item 8.8.22.f">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 8.8.22.6"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1-2-6" title="Copy heading and permalink for Item 8.8.22.6" aria-label="Copy heading and permalink for Item 8.8.22.6">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_genfunction_exercises-23-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

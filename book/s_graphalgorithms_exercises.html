@@ -19,7 +19,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-5 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+</style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
@@ -37,7 +43,7 @@ lang: "en-US",
 <meta name="twitter:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta property="og:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.49"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.49"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -59,15 +65,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.6';
+eBookConfig.runestone_version = '8.2.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.86d8a68ed7481f7e.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.bb5ac777721d4056.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
 <script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -872,16 +878,16 @@ a_3 a_4 \amp \quad 6
 <article class="exercise exercise-like" id="s_graphalgorithms_exercises-16"><h2 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2>
 <div class="para logical" id="s_graphalgorithms_exercises-16-1-1">
 <div class="para">Notice that in our discussion of Dijkstra’s algorithm, we required that the edge weights be nonnegative. If the edge weights are lengths and meant to model distance, this makes perfect sense. However, in some cases, it might be reasonable to allow negative edge weights. For example, suppose that a positive weight means there is a cost to travel along the directed edge while a negative edge weight means that you make money for traveling along the directed edge. In this case, a directed path with positive total weight results in paying out to travel it, while one with negative total weight results in a profit.</div>
-<ol class="lower-alpha lower-alpha-level-1" id="s_graphalgorithms_exercises-16-1-1-1">
+<ol class="decimal" id="s_graphalgorithms_exercises-16-1-1-1">
 <li id="s_graphalgorithms_exercises-16-1-1-1-1">
 <div class="para" id="s_graphalgorithms_exercises-16-1-1-1-1-1">Give an example to show that Dijkstra’s algorithm does not always find the path of minimum total weight when negative edge weights are allowed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_graphalgorithms_exercises-16-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 12.5.16.a"><a tabindex="-1" href="#s_graphalgorithms_exercises-16-1-1-1-1" title="Copy heading and permalink for Item 12.5.16.a" aria-label="Copy heading and permalink for Item 12.5.16.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 12.5.16.1"><a tabindex="-1" href="#s_graphalgorithms_exercises-16-1-1-1-1" title="Copy heading and permalink for Item 12.5.16.1" aria-label="Copy heading and permalink for Item 12.5.16.1">🔗</a></div>
 </li>
 <li id="s_graphalgorithms_exercises-16-1-1-1-2">
 <div class="para" id="s_graphalgorithms_exercises-16-1-1-1-2-1">Bob and Xing are considering this situation, and Bob suggests that a little modification to the algorithm should solve the problem. He says that if there are negative weights, they just have to find the smallest (i.e., most negative weight) and add the absolute value of that weight to every directed edge. For example, if <span class="process-math">\(w(x,y)\geq -10\)</span> for every directed edge <span class="process-math">\((x,y)\text{,}\)</span> Bob is suggesting that they add <span class="process-math">\(10\)</span> to every edge weight. Xing is skeptical, and for good reason. Give an example to show why Bob’s modification won’t work.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_graphalgorithms_exercises-16-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 12.5.16.b"><a tabindex="-1" href="#s_graphalgorithms_exercises-16-1-1-1-2" title="Copy heading and permalink for Item 12.5.16.b" aria-label="Copy heading and permalink for Item 12.5.16.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 12.5.16.2"><a tabindex="-1" href="#s_graphalgorithms_exercises-16-1-1-1-2" title="Copy heading and permalink for Item 12.5.16.2" aria-label="Copy heading and permalink for Item 12.5.16.2">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_graphalgorithms_exercises-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
