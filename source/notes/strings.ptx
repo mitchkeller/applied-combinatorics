@@ -535,7 +535,7 @@
           <p>
             Let <m>x</m> and <m>y</m> be real numbers so that <m>x</m>, <m>y</m>, and <m>x+y</m> are all nonzero. For every nonnegative integer <m>n</m>,
             <md component="a">
-              (x+y)^n = \sum_{k=0}^n x^{n-k}y^k
+              (x+y)^n = \sum_{k=0}^n \binom{n}{k}x^{n-k}y^k
             </md>
             <md component="b">
               \phantom{(x+y)^n = \sum_{k=0}^n \binom{n}{k}x^{n-k}y^k}
