@@ -44,7 +44,7 @@ lang: "en-US",
 <meta name="twitter:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta property="og:description" content="This is a text with more than enough material for a one-semester introduction to combinatorics. The original target audience was primarily computer science majors, but the topics included make it suitable for a variety of different students. Topics include basic enumeration, recursion and mathematical induction, graph theory, partially ordered sets, additional enumeration techniques, and graph algorithms.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -66,15 +66,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.10';
+eBookConfig.runestone_version = '8.2.13';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
+<script src="_static/prefix-runtime.a45d14e8fc8c534a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.538acb8e671a3b5d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.1bda041f5a098305.css">
 <script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -655,7 +655,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="s_graphalgorithms_min-wt-span-3-4">The following proposition establishes a way to take a spanning tree of a graph, remove an edge from it, and add an edge of the graph that is not in the spanning tree to create a new spanning tree. Effectively, the process exchanges two edges to form the new spanning tree, so we call this the <dfn class="terminology">exchange principle</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_graphalgorithms_min-wt-span-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop_graphalgorithms_exchange"><h3 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exchange Principle.</span>
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exchange Principle.</span>
 </h3>
 <div class="para logical" id="prop_graphalgorithms_exchange-2-1">
 <div class="para">Let <span class="process-math">\(\bfT=(V,S)\)</span> be spanning tree in a graph <span class="process-math">\(\bfG\text{,}\)</span> and let <span class="process-math">\(e=xy\)</span> be an edge of <span class="process-math">\(\bfG\)</span> which does not belong to <span class="process-math">\(\bfT\text{.}\)</span> Then</div>
@@ -744,7 +744,7 @@ S_i = \{e\}\cup\{g\in S: g\neq f_i\},
 <div class="para" id="s_graphalgorithms_min-wt-span-4-4">Once the edges are sorted, Kruskal’s algorithm proceeds to an initialization step and then inductively builds the spanning tree <span class="process-math">\(\bfT=(V,S)\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_graphalgorithms_min-wt-span-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="algorithm theorem-like" id="alg_kruskal"><h3 class="heading">
-<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kruskal’s Algorithm.</span>
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kruskal’s Algorithm.</span>
 </h3>
 <div class="para logical" id="alg_kruskal-4-1">
 <dl class="description-list">
@@ -775,7 +775,7 @@ i = j\quad\text{and} \quad S= S\cup\{j\}.
 <div class="para" id="s_graphalgorithms_min-wt-span-4-6">The correctness of Kruskal’s Algorithm follows from an inductive argument. First, the set <span class="process-math">\(S\)</span> is initialized as the empty set, so there is certainly a minimum weight spanning tree containing all the edges in <span class="process-math">\(S\text{.}\)</span> Now suppose that for some <span class="process-math">\(i\)</span> with <span class="process-math">\(0\le i \lt n\text{,}\)</span> <span class="process-math">\(|S|=i\)</span> and there is a minimum weight spanning tree containing all the edges in <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(\bfF\)</span> be the spanning forest determined by the edges in <span class="process-math">\(S\text{,}\)</span> and let <span class="process-math">\(C_1, C_2,\dots,C_s\)</span> be the components of <span class="process-math">\(\bfF\text{.}\)</span> For each <span class="process-math">\(k=1,2,\dots,s\text{,}\)</span> let <span class="process-math">\(f_k\)</span> be a minimum weight edge with one endpoint in <span class="process-math">\(C_k\)</span> and the other not in <span class="process-math">\(C_k\text{.}\)</span> Then the edge <span class="process-math">\(e\)</span> added to <span class="process-math">\(S\)</span> by Kruskal’s Algorithm is just the edge <span class="process-math">\(\{f_1,f_2,\dots,f_s\}\)</span> having minimum weight. Applying <a href="s_graphalgorithms_min-wt-span.html#lem_graphalgorithms_tech" class="xref" data-knowl="./knowl/xref/lem_graphalgorithms_tech.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 12.6">Lemma 12.6</a> and the inductive hypothesis, we know that there will still be a minimum weight spanning tree of <span class="process-math">\(\bfG\)</span> containing all the edges of <span class="process-math">\(S\cup\{e\}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_graphalgorithms_min-wt-span-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="s_graphalgorithms_min-wt-span-4-7"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kruskal’s Algorithm.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kruskal’s Algorithm.</span>
 </h3>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:80% 17.4358974358974%;column-gap:2.5%;">
@@ -808,7 +808,7 @@ c h 79
 <div class="para" id="alg_prim-2">We now develop <dfn class="terminology">Prim’s Algorithm</dfn> for finding a minimum weight spanning tree. This algorithm is also known by a more descriptive label: <em class="emphasis">Build Tree</em>. We begin by choosing a root vertex <span class="process-math">\(r\text{.}\)</span> Again, the algorithm proceeds with an initialization step followed by a series of inductive steps.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg_prim-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="algorithm theorem-like" id="alg_prim-3"><h3 class="heading">
-<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prim’s Algorithm.</span>
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prim’s Algorithm.</span>
 </h3>
 <div class="para logical" id="alg_prim-3-4-1">
 <dl class="description-list">
@@ -839,7 +839,7 @@ W = W\cup\{y\}\quad\text{and} \quad S = S\cup\{e\}.
 <div class="para" id="alg_prim-4">The correctness of Prim’s algorithm follows immediately from <a href="s_graphalgorithms_min-wt-span.html#lem_graphalgorithms_tech" class="xref" data-knowl="./knowl/xref/lem_graphalgorithms_tech.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 12.6">Lemma 12.6</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#alg_prim-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="alg_prim-5"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prim’s Algorithm.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prim’s Algorithm.</span>
 </h3>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:80% 17.4358974358974%;column-gap:2.5%;">
