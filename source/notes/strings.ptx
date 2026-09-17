@@ -196,6 +196,10 @@
       <alert>Peer instruction question 4</alert>
     </p>
     <p component="a">
+      The peer instruction question asks us to consider
+      <md>
+        \binom{n}{0}^2 + \binom{n}{1}^2 + \binom{n}{2}^2 + \cdots +\binom{n}{n-1}^2 + \binom{n}{n}^2
+      </md>.
       The first critical step here is to use the identity that <m>C(n,k) = C(n,n-k)</m> along with recognizing that <m>C(n,k)^2 = C(n,k)\cdot C(n,k)</m>. That allows us to rewrite the sum:
       <md>
         \binom{n}{0}^2 + \binom{n}{1}^2 + \binom{n}{2}^2 + \cdots +\binom{n}{n-1}^2 + \binom{n}{n}^2\\ = \binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n-1} + \binom{n}{2}\binom{n}{n-2} + \cdots +\binom{n}{n-1}\binom{n}{1} + \binom{n}{n}\binom{n}{0}
@@ -529,12 +533,12 @@
         <title>Binomial Theorem</title>
         <statement>
           <p>
-            Let <m>x</m> and <m>y</m> be real numbers to that <m>x</m>, <m>y</m>, and <m>x+y</m> are all nonzero. For every nonnegative integer <m>n</m>,
+            Let <m>x</m> and <m>y</m> be real numbers so that <m>x</m>, <m>y</m>, and <m>x+y</m> are all nonzero. For every nonnegative integer <m>n</m>,
             <md component="a">
               (x+y)^n = \sum_{k=0}^n x^{n-k}y^k
             </md>
             <md component="b">
-              \phantom{(x+y)^n = \sum_{k=0}^n x^{n-k}y^k}
+              \phantom{(x+y)^n = \sum_{k=0}^n \binom{n}{k}x^{n-k}y^k}
             </md>
           </p>
         </statement>
@@ -565,9 +569,11 @@
           <hint>
             
             
-            <tabular>
+            <tabular row-headers="yes">
+              <col halign="right" right="minor"/>
               <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /><col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" right="minor" /> <col halign="center" />
-              <row bottom="minor">
+              <row bottom="minor" header="yes">
+                <cell>Letter</cell>
                 <cell>A</cell>
                 <cell>P</cell>
                 <cell>L</cell>
@@ -588,6 +594,7 @@
                 <cell>K</cell>
               </row>
               <row>
+                <cell>Count</cell>
                 <cell>2</cell>
                 <cell>2</cell>
                 <cell>1</cell>
