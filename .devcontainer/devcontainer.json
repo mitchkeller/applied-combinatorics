@@ -21,7 +21,7 @@
   // The pretext-full image above includes pretext, prefigure, and enough parts of latex and sagemath for most cases.  If there are errors with sage, you can install the full sagemath package through Conda by running ./.devcontainer/installSage.sh, or uncommenting that line and rebuilding the container.
   "postCreateCommand": {
     // "install sagemath": "bash ./.devcontainer/installSage.sh",
-    "install additional tex packages": "tlmgr update --self && tlmgr install eepic overpic pict2e",
+    //"install additional tex packages": "tlmgr update --self && tlmgr install eepic overpic pict2e",
     // "install pandoc": "bash ./.devcontainer/installPandoc.sh",
     "mark repo as safe": "git config --global --add safe.directory $(pwd)"
     },
