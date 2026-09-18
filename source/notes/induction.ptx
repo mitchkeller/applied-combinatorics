@@ -145,6 +145,9 @@
     <p component="a">
       When adding the <m>n</m>-th line, this new line is cut exactly once by each of the existing <m>n-1</m> lines. The <m>n</m>-th line is thus cut into <m>n</m> pieces. Each of these pieces takes one of the regions that the <m>n-1</m> lines determined and divides it into two regions. This nets the addition of <m>n</m> new regions, if we count one of the pieces into which an existing region was cut as counting toward the <m>r(n-1)</m> existing regions. Thus, we have <m>r(n) = r(n-1) + n</m> for <m>n\geq 1</m> and <m>r(0)=1</m>. Alternatively, you could consider that there are <m>r(n-1)-n</m> regions that are untouched by the <m>n</m>-th line and <m>2n</m> new regions formed by the cutting of the new line. But this still gives <m>r(n) = r(n-1)-n + 2n = r(n-1)+n</m>.
     </p>
+    <image width="75%" source="notes/lines_painted_wall.jpg">
+      <shortdescription>A wall painted to show the regions into which five lines in general position divide the plane.</shortdescription>
+    </image>
   </handout>
   <handout component="induction-principle">
     <title>Principle of Mathematical Induction</title>
