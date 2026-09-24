@@ -160,7 +160,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "3.1",
   "title": "Recursive Counting",
-  "body": " Recursive Counting  How can we interpret the notation ?   Peer instruction question 1        Suppose that is a function defined on the positive integers. You know that and for all , . What is ?     Peer instruction question 2   Let be the number of regions determined by lines in the plane drawn so that each pair intersects but no three lines intersect at a single point.         0     1     2     3     4            A wall painted to show the regions into which five lines in general position divide the plane.   "
+  "body": " Recursive Counting  How can we interpret the notation ?   Peer instruction question 1        Suppose that is a function defined on the positive integers. You know that and for all , . What is ?     Peer instruction question 2   Let be the number of regions determined by lines in the plane drawn so that each pair intersects but no three lines intersect at a single point.         0     1     2     3     4           "
 },
 {
   "id": "notes-induction-2-5",
