@@ -6,21 +6,430 @@
       <p>
         <alert>Peer instruction questions 1<ndash/>3.</alert>
       </p>
-      <image source="spanning_subgraph" width="60%">
-        <description component="a"><p>Two graphs</p></description>
-      </image>
+      <sidebyside widths="30% 30%">
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfG</m> with <m>10</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>5</m>, <m>7</m></cell>
+                </row>
+                <row>
+                <cell><m>2</m></cell>
+                <cell><m>3</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
+                </row>
+                <row>
+                <cell><m>3</m></cell>
+                <cell><m>2</m>, <m>5</m>, <m>8</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>4</m></cell>
+                <cell><m>7</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>5</m></cell>
+                <cell><m>1</m>, <m>2</m>, <m>3</m>, <m>6</m></cell>
+                </row>
+                <row>
+                <cell><m>6</m></cell>
+                <cell><m>2</m>, <m>5</m></cell>
+                </row>
+                <row>
+                <cell><m>7</m></cell>
+                <cell><m>1</m>, <m>2</m>, <m>4</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>8</m></cell>
+                <cell><m>3</m>, <m>9</m></cell>
+                </row>
+                <row>
+                <cell><m>9</m></cell>
+                <cell><m>8</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>10</m></cell>
+                <cell><m>3</m>, <m>4</m>, <m>7</m>, <m>9</m></cell>
+                </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-spanning-subgraph-1">
+            <diagram dimensions="(200,300)" margins="5">
+              <definition>graph={1:[5,7],
+                2:[3,5,6,7],
+                3:[5,8,10],
+                4:[7,10],
+                5:[6],
+                7:[10],
+                8:[9],
+                9:[10]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network directed="no" graph="graph"
+                        scale="0.8" node-fill="#ddd" seed="781"
+                        labels="yes">
+                </network>
+                <label anchor="(0,-0.95)"><m>\mathbf{G}</m></label>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfH</m> with <m>10</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>5</m></cell>
+                </row>
+                <row>
+                <cell><m>2</m></cell>
+                <cell><m>3</m>, <m>5</m>, <m>6</m></cell>
+                </row>
+                <row>
+                <cell><m>3</m></cell>
+                <cell><m>2</m>, <m>8</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>4</m></cell>
+                <cell><m>7</m></cell>
+                </row>
+                <row>
+                <cell><m>5</m></cell>
+                <cell><m>1</m>, <m>2</m>, <m>6</m></cell>
+                </row>
+                <row>
+                <cell><m>6</m></cell>
+                <cell><m>2</m>, <m>5</m></cell>
+                </row>
+                <row>
+                <cell><m>7</m></cell>
+                <cell><m>4</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>8</m></cell>
+                <cell><m>3</m></cell>
+                </row>
+                <row>
+                <cell><m>9</m></cell>
+                <cell></cell>
+                </row>
+                <row>
+                <cell><m>10</m></cell>
+                <cell><m>3</m>, <m>7</m></cell>
+                </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-spanning-subgraph-2">
+            <diagram dimensions="(200,300)" margins="5">
+              <definition>graph={1:[5,7],
+                2:[3,5,6,7],
+                3:[5,8,10],
+                4:[7,10],
+                5:[6],
+                7:[10],
+                8:[9],
+                9:[10]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network directed="no" graph="graph"
+                        scale="0.8" node-fill="#ddd" seed="781"
+                        labels="yes">
+                  <edge vertices="(1,7)" stroke="none"/>
+                  <edge vertices="(4,10)" stroke="none"/>
+                  <edge vertices="(2,7)" stroke="none"/>
+                  <edge vertices="(3,5)" stroke="none"/>
+                  <edge vertices="(8,9)" stroke="none"/>
+                  <edge vertices="(9,10)" stroke="none"/>
+                </network>
+                <label anchor="(0,-0.95)"><m>\mathbf{H}</m></label>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+
+      </sidebyside>
       <p component="a">
         We have that <m>\bfH</m> is a spanning subgraph of <m>\bfG</m> because all vertices of <m>\bfG</m> appear in <m>\bfH</m>.
       </p>
-      <image source="non_subgraph" width="60%">
-        <description component="a"><p>Two graphs</p></description>
-      </image>
+      <sidebyside widths="30% 30%">
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfG</m> with <m>10</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>5</m>, <m>7</m></cell>
+                </row>
+                <row>
+                <cell><m>2</m></cell>
+                <cell><m>3</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
+                </row>
+                <row>
+                <cell><m>3</m></cell>
+                <cell><m>2</m>, <m>5</m>, <m>8</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>4</m></cell>
+                <cell><m>7</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>5</m></cell>
+                <cell><m>1</m>, <m>2</m>, <m>3</m>, <m>6</m></cell>
+                </row>
+                <row>
+                <cell><m>6</m></cell>
+                <cell><m>2</m>, <m>5</m></cell>
+                </row>
+                <row>
+                <cell><m>7</m></cell>
+                <cell><m>1</m>, <m>2</m>, <m>4</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>8</m></cell>
+                <cell><m>3</m>, <m>9</m></cell>
+                </row>
+                <row>
+                <cell><m>9</m></cell>
+                <cell><m>8</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>10</m></cell>
+                <cell><m>3</m>, <m>4</m>, <m>7</m>, <m>9</m></cell>
+                </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-nonsubgraph-1">
+            <diagram dimensions="(200,300)" margins="5">
+              <definition>graph={1:[5,7],
+                2:[3,5,6,7],
+                3:[5,8,10],
+                4:[7,10],
+                5:[6],
+                7:[10],
+                8:[9],
+                9:[10]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network directed="no" graph="graph"
+                        scale="0.8" node-fill="#ddd" seed="781"
+                        labels="yes">
+                </network>
+                <label anchor="(0,-0.95)"><m>\mathbf{G}</m></label>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfH</m> with <m>8</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+              <cell><m>1</m></cell>
+              <cell><m>5</m></cell>
+              </row>
+              <row>
+              <cell><m>2</m></cell>
+              <cell><m>5</m>, <m>6</m></cell>
+              </row>
+              <row>
+              <cell><m>3</m></cell>
+              <cell><m>5</m>, <m>8</m>, <m>10</m></cell>
+              </row>
+              <row>
+              <cell><m>5</m></cell>
+              <cell><m>1</m>, <m>2</m>, <m>3</m>, <m>6</m></cell>
+              </row>
+              <row>
+              <cell><m>6</m></cell>
+              <cell><m>2</m>, <m>5</m></cell>
+              </row>
+              <row>
+              <cell><m>8</m></cell>
+              <cell><m>3</m>, <m>10</m></cell>
+              </row>
+              <row>
+              <cell><m>9</m></cell>
+              <cell></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>3</m>, <m>8</m></cell>
+              </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-nonsubgraph-2">
+            <diagram dimensions="(200,300)" margins="5">
+              <definition>graph={1:[5],
+                2:[5,6],
+                3:[5,8,10],
+                5:[6],
+                8:[10],
+                9:[]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network directed="no" graph="graph"
+                        scale="0.8" node-fill="#ddd" seed="128"
+                        labels="yes">
+                        <edge vertices="(2,3)" stroke="none"/>
+                        <edge vertices="(10,9)" stroke="none"/>
+                </network>
+                <label anchor="(0,-0.95)"><m>\mathbf{H}</m></label>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+
+      </sidebyside>
       <p component="a">
         We have that <m>\bfH</m> is not a subgraph of <m>\bfG</m> because the edge <m>\set{8,10}</m> in <m>\bfH</m> is not an edge in <m>\bfG</m>.
       </p>
-      <image source="induced_subgraph" width="60%">
-        <description component="a"><p>Two graphs</p></description>
-      </image>
+      <sidebyside widths="30% 30%">
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfG</m> with <m>10</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>5</m>, <m>7</m></cell>
+                </row>
+                <row>
+                <cell><m>2</m></cell>
+                <cell><m>3</m>, <m>5</m>, <m>6</m>, <m>7</m></cell>
+                </row>
+                <row>
+                <cell><m>3</m></cell>
+                <cell><m>2</m>, <m>5</m>, <m>8</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>4</m></cell>
+                <cell><m>7</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>5</m></cell>
+                <cell><m>1</m>, <m>2</m>, <m>3</m>, <m>6</m></cell>
+                </row>
+                <row>
+                <cell><m>6</m></cell>
+                <cell><m>2</m>, <m>5</m></cell>
+                </row>
+                <row>
+                <cell><m>7</m></cell>
+                <cell><m>1</m>, <m>2</m>, <m>4</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>8</m></cell>
+                <cell><m>3</m>, <m>9</m></cell>
+                </row>
+                <row>
+                <cell><m>9</m></cell>
+                <cell><m>8</m>, <m>10</m></cell>
+                </row>
+                <row>
+                <cell><m>10</m></cell>
+                <cell><m>3</m>, <m>4</m>, <m>7</m>, <m>9</m></cell>
+                </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-subgraph-1">
+            <diagram dimensions="(200,300)" margins="5">
+              <definition>graph={1:[5,7],
+                2:[3,5,6,7],
+                3:[5,8,10],
+                4:[7,10],
+                5:[6],
+                7:[10],
+                8:[9],
+                9:[10]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network directed="no" graph="graph"
+                        scale="0.8" node-fill="#ddd" seed="781"
+                        labels="yes">
+                </network>
+                <label anchor="(0,-0.95)"><m>\mathbf{G}</m></label>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfH</m> with <m>6</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+              <cell><m>2</m></cell>
+              <cell><m>3</m>, <m>5</m>, <m>6</m></cell>
+              </row>
+              <row>
+              <cell><m>3</m></cell>
+              <cell><m>2</m>, <m>5</m>, <m>8</m>, <m>10</m></cell>
+              </row>
+              <row>
+              <cell><m>5</m></cell>
+              <cell><m>2</m>, <m>3</m>, <m>6</m></cell>
+              </row>
+              <row>
+              <cell><m>6</m></cell>
+              <cell><m>2</m>, <m>5</m></cell>
+              </row>
+              <row>
+              <cell><m>8</m></cell>
+              <cell><m>3</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>3</m></cell>
+              </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-subgraph-2">
+            <diagram dimensions="(200,300)" margins="5">
+              <definition>graph={2:[3,5,6],
+                3:[5,8,10],
+                5:[6]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network directed="no" graph="graph"
+                        scale="0.8" node-fill="#ddd" seed="128"
+                        labels="yes">
+                </network>
+                <label anchor="(0,-0.95)"><m>\mathbf{H}</m></label>
+              </coordinates>
+            </diagram>
+          </prefigure>
+        </image>
+      </sidebyside>
+
       <p component="a">
         <ul>
           <li>
@@ -59,9 +468,125 @@
       <p>
         <alert>Peer instruction questions 4<ndash/>5.</alert>
       </p>
-      <image source="isomorphic_graphs-PI" width="65%">
-        <description component="a"><p>Two graphs</p></description>
-      </image>
+      <sidebyside widths="40% 40%">
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfG</m> on <m>6</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+              <cell><m>a</m></cell>
+              <cell><m>e</m></cell>
+              </row>
+              <row>
+              <cell><m>b</m></cell>
+              <cell><m>c</m>, <m>d</m>, <m>f</m></cell>
+              </row>
+              <row>
+              <cell><m>c</m></cell>
+              <cell><m>b</m>, <m>d</m>, <m>e</m></cell>
+              </row>
+              <row>
+              <cell><m>d</m></cell>
+              <cell><m>b</m>, <m>c</m>, <m>e</m></cell>
+              </row>
+              <row>
+              <cell><m>e</m></cell>
+              <cell><m>a</m>, <m>c</m>, <m>d</m>, <m>f</m></cell>
+              </row>
+              <row>
+              <cell><m>f</m></cell>
+              <cell><m>b</m>, <m>e</m></cell>
+              </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-isomorphic1-G">
+            <diagram dimensions="(300,300)" margins="15">
+              <definition>graph={1:[5],2:[3,4,6],3:[4,5],4:[5],5:[6]}</definition>
+              <definition>labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}</definition>
+              <coordinates bbox="(0,0,5,5)">
+                <network directed="no" graph="graph"
+                        label-dictionary="labels"
+                        scale="0.8" node-fill="#ddd" seed="128"
+                        labels="yes">
+                  <node at="1" p="(1.75,2.5)" />
+                  <node at="2" p="(2.75,2.2)" />
+                  <node at="3" p="(5,0.3)" />
+                  <node at="4" p="(2.5,5)" />
+                  <node at="5" p="(0,0.3)" />
+                  <node at="6" p="(1.9,1.2)" />
+                </network>
+                <label anchor="(2.5,0)"><m>\mathbf{G}</m></label>
+              </coordinates>
+            </diagram>        
+          </prefigure>
+        </image>
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfH</m> on <m>6</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+              <cell><m>1</m></cell>
+              <cell><m>2</m></cell>
+              </row>
+              <row>
+              <cell><m>2</m></cell>
+              <cell><m>1</m>, <m>5</m>, <m>6</m>, <m>4</m></cell>
+              </row>
+              
+              <row>
+              <cell><m>3</m></cell>
+              <cell><m>5</m>, <m>6</m>, <m>4</m></cell>
+              </row>
+              <row>
+              <cell><m>4</m></cell>
+              <cell><m>3</m>, <m>2</m></cell>
+              </row>
+              <row>
+              <cell><m>5</m></cell>
+              <cell><m>3</m>, <m>6</m>, <m>2</m></cell>
+              </row>
+              <row>
+              <cell><m>6</m></cell>
+              <cell><m>3</m>, <m>5</m>, <m>2</m></cell>
+              </row>
+              
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-isomorphic1-H">
+            <diagram dimensions="(300,300)" margins="15">
+              <definition>graph={1:[5],2:[3,4,6],3:[4,5],4:[5],5:[6]}</definition>
+              <definition>labels={1:'1',2:'3',3:'5',4:'6',5:'2',6:'4'}</definition>
+              <coordinates bbox="(0,0,5,5)">
+                <network directed="no" graph="graph"
+                        label-dictionary="labels"
+                        scale="0.8" node-fill="#ddd" seed="128"
+                        labels="yes">
+                  <node at="1" p="(0,0)" />
+                  <node at="2" p="(4.5,4.5)" />
+                  <node at="3" p="(5,1.5)" />
+                  <node at="4" p="(2.5,3)" />
+                  <node at="5" p="(1.7,1.5)" />
+                  <node at="6" p="(0.9,4.5)" />
+                </network>
+                <label anchor="(2.5,0)"><m>\mathbf{H}</m></label>
+              </coordinates>
+            </diagram>   
+          </prefigure>
+        </image>    
+      </sidebyside>
+      
       <p component="a">
         These graphs are isomorphic. One possible isomorphism is shown below.
       </p>
@@ -85,9 +610,124 @@
           <cell><m>4</m></cell>
         </row>
       </tabular>
-      <image source="nonisomorphic_graphs-PI" width="65%">
-        <description component="a"><p>Two graphs</p></description>
-      </image>
+      <sidebyside widths="40% 40%">
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfG</m> on <m>6</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+              <cell><m>a</m></cell>
+              <cell><m>c</m></cell>
+              </row>
+              <row>
+              <cell><m>b</m></cell>
+              <cell><m>c</m>, <m>d</m>, <m>f</m></cell>
+              </row>
+              <row>
+              <cell><m>c</m></cell>
+              <cell><m>a</m>, <m>b</m>, <m>d</m>, <m>e</m></cell>
+              </row>
+              <row>
+              <cell><m>d</m></cell>
+              <cell><m>b</m>, <m>c</m>, <m>e</m></cell>
+              </row>
+              <row>
+              <cell><m>e</m></cell>
+              <cell><m>c</m>, <m>d</m>, <m>f</m></cell>
+              </row>
+              <row>
+              <cell><m>f</m></cell>
+              <cell><m>b</m>, <m>e</m></cell>
+              </row>
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-isomorphic2-G">
+            <diagram dimensions="(300,300)" margins="15">
+              <definition>graph={1:[3],2:[3,4,6],3:[4,5],4:[5],5:[6]}</definition>
+              <definition>labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}</definition>
+              <coordinates bbox="(0,0,5,5)">
+                <network directed="no" graph="graph"
+                        label-dictionary="labels"
+                        scale="0.8" node-fill="#ddd" seed="128"
+                        labels="yes">
+                  <node at="1" p="(3.25,0.75)" />
+                  <node at="2" p="(2.75,2.2)" />
+                  <node at="3" p="(5,0.3)" />
+                  <node at="4" p="(2.5,5)" />
+                  <node at="5" p="(0,0.3)" />
+                  <node at="6" p="(1.9,1.2)" />
+                </network>
+                <label anchor="(2.5,0)"><m>\mathbf{G}</m></label>
+              </coordinates>
+            </diagram>        
+          </prefigure>
+        </image>
+        <image>
+          <description>
+            <p>
+              A graph <m>\bfH</m> on <m>6</m> vertices. Adjacencies are given in the table below.
+            </p>
+            <tabular row-headers="yes">
+              <row header="yes">
+                <cell>Vertex</cell>
+                <cell>Neighbors</cell>
+              </row>
+              <row>
+              <cell><m>1</m></cell>
+              <cell><m>2</m></cell>
+              </row>
+              <row>
+              <cell><m>2</m></cell>
+              <cell><m>1</m>, <m>5</m>, <m>6</m>, <m>4</m></cell>
+              </row>
+              
+              <row>
+              <cell><m>3</m></cell>
+              <cell><m>5</m>, <m>6</m>, <m>4</m></cell>
+              </row>
+              <row>
+              <cell><m>4</m></cell>
+              <cell><m>3</m>, <m>2</m></cell>
+              </row>
+              <row>
+              <cell><m>5</m></cell>
+              <cell><m>3</m>, <m>6</m>, <m>2</m></cell>
+              </row>
+              <row>
+              <cell><m>6</m></cell>
+              <cell><m>3</m>, <m>5</m>, <m>2</m></cell>
+              </row>
+              
+            </tabular>
+          </description>
+          <prefigure xmlns="https://prefigure.org" label="img-isomorphic2-H">
+            <diagram dimensions="(300,300)" margins="15">
+              <definition>graph={1:[5],2:[3,4,6],3:[4,5],4:[5],5:[6]}</definition>
+              <definition>labels={1:'1',2:'3',3:'5',4:'6',5:'2',6:'4'}</definition>
+              <coordinates bbox="(0,0,5,5)">
+                <network directed="no" graph="graph"
+                        label-dictionary="labels"
+                        scale="0.8" node-fill="#ddd" seed="128"
+                        labels="yes">
+                  <node at="1" p="(0,0)" />
+                  <node at="2" p="(4.5,4.5)" />
+                  <node at="3" p="(5,1.5)" />
+                  <node at="4" p="(2.5,3)" />
+                  <node at="5" p="(1.7,1.5)" />
+                  <node at="6" p="(0.9,4.5)" />
+                </network>
+                <label anchor="(2.5,0)"><m>\mathbf{H}</m></label>
+              </coordinates>
+            </diagram>   
+          </prefigure>
+        </image>    
+      </sidebyside>
       <p component="a">
         These graphs are not isomorphic. To see why they are not, we try to construct an isomorphism. Since <m>a</m> and <m>1</m> are the only vertices of degree <m>1</m>, any isomorphism would have to pair them. This then forces <m>c</m> and <m>2</m>, as the unique neighbors of the vertices of degree <m>1</m> to be paired. However, all neighbors of <m>c</m> have degree <m>3</m>, while <m>2</m> has a neighbor (<m>4</m>) of degree <m>2</m>. Another independent reason would be that <m>f</m> and <m>4</m> are the unique vertices of degree <m>2</m> in these graphs, so they would have to be paired. However, <m>f</m> has two neighbors of degree <m>3</m>, while <m>4</m> has a neighbor of degree <m>4</m>. As a third independent reason, notice that in the left graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 3 apart. However, in the right graph, the vertex of degree <m>1</m> and the vertex of degree <m>2</m> are distance 2 apart.
       </p>
@@ -172,22 +812,29 @@
             <ul>
               <li>A <term>tree</term> is </li>
               <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that</li>
+              <li>A <term>forest</term> is </li>
             </ul>
           </p>
           <p workspace="1cm" component="a">
             <ul>
               <li>A <term>tree</term> is a connected graph with no cycles.</li>
               <li>A vertex <m>v</m> in a tree <m>\GVE</m> is called a <term>leaf</term> provided that <m>\deg_\bfG(v) = 1</m>.</li>
+              <li>A <term>forest</term> is a graph with no cycles.</li>
             </ul>
           </p>
         </statement>
       </definition>
       <theorem xml:id="thm-tree-leaves">
         <statement>
-          <p workspace="5cm">
+          <p>
             Every tree on at least two vertices has at least two leaves.
           </p>
         </statement>
+        <proof component="a">
+          <p>
+            See the text.
+          </p>
+        </proof>
       </theorem>
       <theorem xml:id="thm-tree-unique-path">
         <statement>
@@ -195,22 +842,62 @@
             If <m>\bfT</m> is a tree, then for every pair of distinct vertices <m>u,v</m>, there exists a unique path from <m>u</m> to <m>v</m> in <m>\bfT</m>.
           </p>
         </statement>
+        <proof component="a">
+          <p>
+            Let <m>u,v</m> be distinct vertices of <m>\bfT</m>. Suppose that there exist two paths <m>P=(u=p_0,p_1,\dots,p_t=v)</m> and <m>Q=(u=q_0,q_1,\dots,q_s=v)</m> from <m>u</m> to <m>v</m> in <m>\bfT</m>. Since the paths are distinct, there is a first place where they differ. That is, there is <m>j\geq 0</m> so that for <m>0\leq i \leq j</m>, <m>p_i=q_i</m> but <m>p_{j+1}\neq q_{j+1}</m>. There is also a next spot where the two paths coincide, which we will call <m>p_k=q_r</m>. (We don't know that the same number of steps are taken on each path between these vertices, so the indices may not be the same.) Note that it is possible that <m>v=p_k=q_r</m>, which is how we guarantee that such a vertex exists. Now consider 
+            <md>
+              (p_{j},p_{j+1},\dots,p_k=q_r,q_{r-1},\dots,q_{j+1})
+            </md>.
+            By the way we have chosen <m>p_j=q_j</m> and <m>p_k=q_r</m>, we know that this is a path in <m>\bfT</m>. Furthermore, since <m>q_{j+1}q_j</m> is an edge of <m>\bfT</m>, this is a cycle, which contradicts that <m>\bfT</m> is a tree.
+          </p>
+          <image width="100%" component="a">
+            <description>
+              <p>
+                An illustration of the paths described in the proof combine to form a cycle in <m>\bfT</m>. There is an initial portion with vertices labeled <m>u</m> and <m>p_1</m> and a terminal portion with vertices labeled <m>p_{t-1}</m> and <m>v</m>. Each of these portions is joined to a cycle by dashed edges. On the cycle, working from the left we have <m>p_j,p_{j+1},p_{j+2},\dots, q_r</m>. We also have a lower portion that proceeds <m>p_j,q_{j+1},q_{j+2},\dots, q_r</m>
+              </p>
+            </description>
+            <prefigure xmlns="https://prefigure.org" label="img-tree-unique-path">
+              <diagram dimensions="(600,300)" margins="5">
+                <definition>graph={1:[2],2:[3],3:[4,10],4:[5],5:[6],6:[7],10:[11],11:[12],20:[7,12,21],21:[22]}</definition>
+                <definition>labels={1:'u',
+                  2:'p_1',
+                  3:'p_j',
+                  4:'q_{j+1}',
+                  5:'q_{j+2}',
+                  6:'q_{j+3}',
+                  7:'q_{j+4}',
+                  10:'p_{j+1}',
+                  11:'p_{j+2}',
+                  12:'p_{j+3}',
+                  20:'q_r',
+                  21:'p_{t-1}',
+                  22:'v'}</definition>
+                <coordinates bbox="(-1,-1,1,1)">
+                  <network directed="no" graph="graph" arrows="middle"
+                          scale="0.8" node-fill="#ddd" seed="1"
+                          labels="yes" label-dictionary="labels" node-size="18">
+                          <edge vertices="(2,3)" dash="9 9" />
+                          <edge vertices="(20,21)" dash="9 9" />
+                          <edge vertices="(7,20)" dash="9 9" />
+                          <edge vertices="(12,20)" dash="9 9" />
+                  </network>
+                </coordinates>
+              </diagram>
+            </prefigure>
+            
+          </image>
+        </proof>
       </theorem>
     </page>
     <page>
       <activity>
+        <task>
         <statement>
-          <p workspace="6cm">
-            <ol marker="a.">
-              <li>With your neighbors, use mathematical induction to prove that every tree on <m>n</m> vertices has exactly <m>n-1</m> edges.
-              </li>
-              <li>
-                How many edges would an <m>n</m>-vertex forest consisting of <m>k</m> trees have?
-              </li>
-            </ol>
+          <p>
+            With your group, use mathematical induction to prove that every tree on <m>n</m> vertices has exactly <m>n-1</m> edges.
           </p>
-        </statement>
-        <solution>
+          </statement>
+          <solution>
           <proof>
             <p>
               For the base case, when <m>n=1</m>, the tree has only one vertex and thus no edges. Since <m>n-1 = 1-1=0</m>, we have the desired relationship. Now assume that for some <m>k\geq 1</m>, every tree with <m>k</m> vertices has exactly <m>k-1</m> edges. Let <m>\bfT</m> be a tree with <m>k+1</m> vertices. The tree <m>\bfT</m> has a leaf <m>v</m>. Form <m>\bfT'</m> from <m>\bfT</m> by deleting <m>v</m> and its edge. Then <m>\bfT'</m> has <m>k</m> vertices, so by the induction hypothesis, <m>\bfT'</m> has <m>k-1</m> edges. However, <m>\bfT</m> has one more edge (incident with <m>v</m>) than <m>\bfT'</m>, so <m>\bfT</m> has <m>k = k+1-1</m> edges.
@@ -219,10 +906,22 @@
           <p>
             Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).
           </p>
+        </solution>
+          </task>
+          <task>
+          <statement>
+              <p>
+                How many edges would an <m>n</m>-vertex forest consisting of <m>k</m> trees have?
+              </p>
+        </statement>
+                  <solution>
+        
           <p>
-            A forest is a graph with no cycles, meaning that each component of a forest is itself a tree. Thus, we would need to have <m>n-k</m> edges.
+            Notice in the proof above that it was essential to delete a leaf, as otherwise we would not know that the new graph is still a tree (it might be a forest).
           </p>
         </solution>
+        </task>
+        
       </activity>
     </page>
   </handout>
