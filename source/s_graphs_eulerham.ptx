@@ -117,8 +117,7 @@
         If <m>N_j\neq\emptyset</m>, we take <m>u_{j+1}</m> as the least positive integer in <m>N_j</m>.
         If <m>N_j=\emptyset</m>, then <m>j\ge1</m> and we take <m>s=j</m> and halt this subroutine. </p>
 
-      <p>When the subroutine halts, we consider two cases. If <m>u_0\neq u_s</m>, then <m>u_0</m>
-        and <m>u_s</m> are vertices of odd degree in <m>\bfG</m>. So we are left to consider the
+      <p>When the subroutine halts, we consider two cases. If <m>u_0\neq u_s</m>, then is <m>u_s</m> a vertex of odd degree in <m>\bfG</m>. So we are left to consider the
         case where <m>u_0=u_s=x_i</m>. In this case, we simply expand our original sequence <m>
         (x_0,x_1,\dots,x_t)</m> by replacing the integer <m>x_i</m> by the sequence <m>
         (u_0,u_1,\dots,u_s)</m>. </p>
@@ -173,7 +172,7 @@
                     <ol marker="i.">
                       <li>
                         <p>
-                          If <m>u_s\neq u_0</m>, then return <m>u_0</m> as a vertex of odd degree, showing that <m>\bfG</m> is not eulerian.
+                          If <m>u_s\neq u_0</m>, then return <m>u_s</m> as a vertex of odd degree, showing that <m>\bfG</m> is not eulerian.
                         </p>
                       </li>
                       <li>
