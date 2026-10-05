@@ -1325,7 +1325,7 @@
       </ol>
     </p>
     <p component="a">
-      an induced subgraph takes all edges of <m>\bfG</m> with both endpoints in <m>S</m>. Because all vertices of <m>S</m> have the same color and <m>\phi</m> is proper, there can't be any edges. We can also say that <m>S</m> is an <term>independent set</term>.
+      An induced subgraph takes all edges of <m>\bfG</m> with both endpoints in <m>S</m>. Because all vertices of <m>S</m> have the same color and <m>\phi</m> is proper, there can't be any edges. We can also say that <m>S</m> is an <term>independent set</term>.
     </p>
     <p workspace="1cm">
       What is the chromatic number of the complete graph on <m>n</m> vertices <m>\bfK_{n}</m>?
@@ -1479,7 +1479,7 @@
         </image>    
       </sidebyside>
       <p component="a">
-        First Fit uses 4 colors on the left graph because it colors each row of vertices (in the context of the graph as drawn) with the same color. Using the ordering on the left, the vertices in the left column are all colored 1 and those in the right column are all colored 2. This generalizes quite directly to a similar graph in which there are <m>n</m> vertices in each column, requiring <m>n</m> colors with the ordering on the left but still only 2 colors with the ordering on the right.
+        First Fit uses 4 colors on the left graph because it colors each row of vertices (in the context of the graph as drawn) with the same color. Using the ordering on the right, the vertices in the left column are all colored 1 and those in the right column are all colored 2. This generalizes quite directly to a similar graph in which there are <m>n</m> vertices in each column, requiring <m>n</m> colors with the ordering on the left but still only 2 colors with the ordering on the right.
       </p>
   </handout>
   

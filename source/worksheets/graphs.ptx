@@ -350,12 +350,12 @@
         We've already seen that the chromatic number <m>\chi(\bfG)</m> of a graph <m>\bfG</m> is at least its clique number <m>\omega(\bfG)</m>. (Recall that if <m>\omega(\bfG)=t</m>, then <m>\bfG</m> contains a subgraph isomorphic to <m>\bfK_{t}</m> and <m>\chi(\bfK_{t})=t</m>.) In this activity, we're going to see how to construct graphs with <m>\omega(\bfG)=2</m> and <m>\chi(\bfG)=t</m> for any integer <m>t\geq 2</m>. We will focus only on the construction of Mycielski, which is one of two constructions included in the text.
       </p>
       <p>
-        This construction aims to create a graph <m>\bfG_{t}</m> with <m>\chi(\bfG_t)=t</m> and <m>\omega(\bfG_{t})=2</m>. The construction is inductive. It starts by creating <m>\bfG_{3}</m>, then uses that to make <m>\bfG_{4}</m>, which it uses to make <m>\bfG_{5}</m>, etc. As you go through, discuss the steps with your group members. The questions in <em>italics</em> are questions you must be able to answer to ensure you understand as you go through things.
+        This construction aims to create a graph <m>\bfG_{t}</m> with <m>\chi(\bfG_t)=t</m> and <m>\omega(\bfG_{t})=2</m>. The construction is inductive on <m>t</m>. It starts by creating <m>\bfG_{3}</m>, then uses that to make <m>\bfG_{4}</m>, which it uses to make <m>\bfG_{5}</m>, etc. As you go through, discuss the steps with your group members.
       </p>
       <exercise workspace="0.5cm">
         <statement>
           <p>
-            We proceed by induction on <m>t</m>. For <m>t=3</m>, we take <m>\bfG_{3}</m> to be the cycle <m>\bfC_{5}</m> on five vertices. (<em>Why is <m>\chi(\bfG_{3})=3</m>? Why is <m>\omega(\bfG_{3})=2</m>?</em>)
+            For <m>t=3</m>, we take <m>\bfG_{3}</m> to be the cycle <m>\bfC_{5}</m> on five vertices. Why is <m>\chi(\bfG_{3})=3</m>? Why is <m>\omega(\bfG_{3})=2</m>?
           </p>
         </statement>
       </exercise>
@@ -366,14 +366,8 @@
             <ol marker="a.">
               <li>
                 <p>
-                  Begin with an independent set <m>I</m> of cardinality <m>n_{t}</m>.
-                  (<em>What is an independent set?</em>)
-                </p>
-              </li>
-              
-              <li>
-                <p>
-                  Label the points of <m>I</m> as <m>y_{1},y_{2},\dots,y_{n_t}</m>.
+                  Begin with an independent set <m>I=\set{y_{1},y_{2},\dots,y_{n_t}}</m>.
+                  (What is an independent set?)
                 </p>
               </li>
               
@@ -391,7 +385,7 @@
             </ol>
           </p>
           <p>
-            <em>How many vertices does <m>\bfG_{t+1}</m> contain?</em> (Your formula will contain <m>n_{t}</m>.) You should be able to draw <m>\bfG_{4}</m> by hand, and <m>\bfG_{5}</m> will have <m>23</m> vertices.
+            Find a formula containing <m>n_t</m> for the number of vertices in <m>\bfG_{t+1}</m>. You should be able to draw <m>\bfG_{4}</m> by hand, and <m>\bfG_{5}</m> will have <m>23</m> vertices.
           </p>
         </statement>
       </exercise>
@@ -443,42 +437,42 @@
         <task workspace="1cm">
           <statement>
             <p>
-              <em>What part of the construction ensures that <m>\chi(\bfG_{t+1})\ge t</m>?</em>
+              What part of the construction ensures that <m>\chi(\bfG_{t+1})\ge t</m>?
             </p>
           </statement>
         </task>
         <task workspace="2cm">
           <statement>
             <p>
-              <em>How can you color the vertices of <m>I</m> using <m>t</m> colors?</em> (Hint: Pair vertices of <m>I</m> with vertices of <m>\bfG_{t}</m>.) <em>What color does <m>z</m> get? How many colors have you used and what does this say about <m>\chi(\bfG_{t+1})</m>?</em>
+              Pair vertices of <m>I</m> with vertices of <m>\bfG_{t}</m> to find a way to color the vertices of <m>I</m> using <m>t</m> colors. What color does <m>z</m> get? How many colors have you used and what does this say about <m>\chi(\bfG_{t+1})</m>?
             </p>
           </statement>
         </task>
         <task workspace="2cm">
           <statement>
             <p>
-              Try coloring <m>\bfG_{t+1}</m> using only <m>t</m> colors. Suppose that <m>\phi</m> is a proper coloring of <m>\bfG_{t+1}</m> using the colors <m>\{1,2,\dots,t\}</m>. It's safe to assume that <m>\phi(z) = t</m> (reshuffle the colors otherwise). Let <m>S</m> be the set of vertices in the copy of <m>\bfG_{t}</m> to which <m>\phi</m> assigns color <m>t</m>. <em>Can the set <m>S</m> be empty? Explain your reasoning.</em>
+              Try coloring <m>\bfG_{t+1}</m> using only <m>t</m> colors. Suppose that <m>\phi</m> is a proper coloring of <m>\bfG_{t+1}</m> using the colors <m>\{1,2,\dots,t\}</m>. It's safe to assume that <m>\phi(z) = t</m> (reshuffle the colors otherwise). Let <m>S</m> be the set of vertices in the copy of <m>\bfG_{t}</m> to which <m>\phi</m> assigns color <m>t</m>. Can the set <m>S</m> be empty? Explain your reasoning.
             </p>
           </statement>
         </task>
         <task workspace="1.5cm">
           <statement>
             <p>
-              Since <m>\phi(z)=t</m>, <em>what do you know about the set (or even number) of colors used on <m>I</m>?</em>
+              Since <m>\phi(z)=t</m>, what do you know about the set (or even number) of colors used on <m>I</m>?
             </p>
           </statement>
         </task>
         <task workspace="1.5cm">
           <statement>
             <p>
-              <em>Why can you change the color of each <m>x_{i}\in S</m> to match the color <m>\phi</m> assigns to <m>y_{i}</m> and maintain a proper coloring?</em>
+              Why can you change the color of each <m>x_{i}\in S</m> to match the color <m>\phi</m> assigns to <m>y_{i}</m> and maintain a proper coloring?
             </p>
           </statement>
         </task>
         <task workspace="1cm">
           <statement>
             <p>
-              <em>Now how many colors have you used on the copy of <m>\bfG_{t}</m>?</em>
+              Now how many colors have you used on the copy of <m>\bfG_{t}</m>?
             </p>
           </statement>
         </task>
