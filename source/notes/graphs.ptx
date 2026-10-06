@@ -1250,7 +1250,7 @@
     <p component="a">
       Notice that this is <em>not</em> and if and only if theorem! Consider the graph <m>\bfC_{10}</m>, in which every vertex has degree <m>2\lt \lceil 10/2\rceil = 5</m>. However, this graph <em>is</em> hamiltonian. Thus, Dirac's theorem allows us to say that <em>some</em> graphs <em>are</em> hamiltonian, but it does not contain the power to say that a graph is <em>not</em> hamiltonian.
     </p>
-
+    <video component="a" width="75%" youtube="SZXHoWwBcDc" />
   </handout>
   
   <handout component="coloring" xml:id="notes-graphs-coloring">
@@ -1402,10 +1402,42 @@
         The given proper <m>5</m>-coloring shows that <m>\chi(\bfG)\leq 5</m>. However, there are several ways to recolor this graph using four colors. One example would involve changing the color of <m>y_5</m> to be <m>3</m> and then recoloring each <m>x_i</m> to have the same color as <m>y_i</m> has under the modified coloring. Notice that this graph does not contain any subgraphs isomorphic to <m>\bfK_3</m>, which we usually call a <term>triangle</term>.
       </p>
     </sidebyside>
+    <p>
+      Relationship between clique number and chromatic number:
+      <ul>
+        <li>
+          <p component="a">
+            If you have found a proper <m>t</m>-coloring of <m>\bfG</m>, then <m>\chi(\bfG)\leq t</m>.
+          </p>
+          <p component="b" workspace="0.5cm">
+            If you have found a proper <m>t</m>-coloring of <m>\bfG</m>, 
+          </p>
+        </li>
+        <li>
+          <p component="a">
+            If <m>\bfG</m> contains <m>\bfK_t</m> and no larger clique, then <m>\omega(\bfG)=t</m> and <m>\chi(\bfG)\geq t</m>.
+          </p>
+          <p component="b" workspace="0.5cm">
+            If <m>\bfG</m> contains <m>\bfK_t</m> and no larger clique, 
+          </p>
+        </li>
+        <li>
+          <p component="a">
+            If <m>\omega(\bfG)=t</m> and you have found a proper <m>t</m>-coloring of <m>\bfG</m>, then <m>\chi(\bfG)=t</m>.
+          </p>
+          <p component="b" workspace="0.5cm">
+            If <m>\omega(\bfG)=t</m> and you have found a proper <m>t</m>-coloring of <m>\bfG</m>, then 
+          </p>
+        </li>
+      </ul>
+    </p>
     <definition workspace="4cm">
       <statement>
         <p>
-          A graph is <term>bipartite</term> provided that its chromatic number is <m>2</m>.
+          A graph is <term>bipartite</term> provided that its chromatic number is at most <m>2</m>.
+        </p>
+        <p component="a">
+          A graph with chromatic number <m>1</m> has no edges, so any <em>interesting</em> bipartite graph has chromatic number equal to <m>2</m>.
         </p>
       </statement>
     </definition>
@@ -1480,6 +1512,9 @@
       </sidebyside>
       <p component="a">
         First Fit uses 4 colors on the left graph because it colors each row of vertices (in the context of the graph as drawn) with the same color. Using the ordering on the right, the vertices in the left column are all colored 1 and those in the right column are all colored 2. This generalizes quite directly to a similar graph in which there are <m>n</m> vertices in each column, requiring <m>n</m> colors with the ordering on the left but still only 2 colors with the ordering on the right.
+      </p>
+      <p component="a">
+        For any graph <m>\bfG</m>, there is an ordering of the vertices on which First Fit uses <m>\chi(\bfG)</m> colors. However, <em>finding</em> such an ordering is an equivalent problem to finding a proper coloring that uses <m>\chi(\bfG)</m> colors, so that's not really helpful in the end.
       </p>
   </handout>
   
