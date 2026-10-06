@@ -385,21 +385,21 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "5.3",
   "title": "Graph Coloring",
-  "body": " Graph Coloring   Peer instruction questions 1 3.   Let be a graph. Then is a proper coloring of if    is one-to-one     implies      uses as few colors from as possible    None of the above     Let be a graph and be a proper coloring of . Let be all vertices colored . How many edges does the subgraph of induced by contain?   0    1         Any number is possible.     What is the chromatic number of the complete graph on vertices ?                  There is no fixed formula depending on .           z  y_1  y_2  y_3  y_4  y_5  x_1  x_2  x_3  x_4  x_5    1  2  3  4  2  5  4  1  5  3  1          A graph is bipartite provided that its chromatic number is .      A graph is bipartite if and only if it does not contain any odd cycles.     Peer instruction question 4.    First Fit         v_1  v_3  v_5  v_7  v_2  v_4  v_6  v_8            v_1  v_2  v_3  v_4  v_5  v_6  v_7  v_8        "
-},
-{
-  "id": "notes-graphs-coloring-7",
-  "level": "2",
-  "url": "notes-graphs-coloring.html#notes-graphs-coloring-7",
-  "type": "Definition",
-  "number": "5.14",
-  "title": "",
-  "body": "  A graph is bipartite provided that its chromatic number is .   "
+  "body": " Graph Coloring   Peer instruction questions 1 3.   Let be a graph. Then is a proper coloring of if    is one-to-one     implies      uses as few colors from as possible    None of the above     Let be a graph and be a proper coloring of . Let be all vertices colored . How many edges does the subgraph of induced by contain?   0    1         Any number is possible.     What is the chromatic number of the complete graph on vertices ?                  There is no fixed formula depending on .           z  y_1  y_2  y_3  y_4  y_5  x_1  x_2  x_3  x_4  x_5    1  2  3  4  2  5  4  1  5  3  1        Relationship between clique number and chromatic number:   If you have found a proper -coloring of ,    If contains and no larger clique,    If and you have found a proper -coloring of , then       A graph is bipartite provided that its chromatic number is at most .      A graph is bipartite if and only if it does not contain any odd cycles.     Peer instruction question 4.    First Fit         v_1  v_3  v_5  v_7  v_2  v_4  v_6  v_8            v_1  v_2  v_3  v_4  v_5  v_6  v_7  v_8        "
 },
 {
   "id": "notes-graphs-coloring-8",
   "level": "2",
   "url": "notes-graphs-coloring.html#notes-graphs-coloring-8",
+  "type": "Definition",
+  "number": "5.14",
+  "title": "",
+  "body": "  A graph is bipartite provided that its chromatic number is at most .   "
+},
+{
+  "id": "notes-graphs-coloring-9",
+  "level": "2",
+  "url": "notes-graphs-coloring.html#notes-graphs-coloring-9",
   "type": "Theorem",
   "number": "5.15",
   "title": "",

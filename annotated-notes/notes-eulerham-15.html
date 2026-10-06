@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blues                        *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ACN </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-3 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-4 { system: extends upper-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="In-Class Notes to Accompany Applied Combinatorics">
+<meta property="og:title" content="In-Class Notes to Accompany Applied Combinatorics">
+<meta property="book:title" content="In-Class Notes to Accompany Applied Combinatorics">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math standalone-page">
+<a class="assistive" href="#ptx-content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\set}[1]{\{#1\}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\posints}{\mathbb{N}}
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexes}{\mathbb{C}}
+\newcommand{\twospace}{\mathbb{R}^2}
+\newcommand{\threepace}{\mathbb{R}^3}
+\newcommand{\dspace}{\mathbb{R}^d}
+\newcommand{\nni}{\mathbb{N}_0}
+\newcommand{\nonnegints}{\mathbb{N}_0}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\prob}{\operatorname{prob}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\height}{\operatorname{height}}
+\newcommand{\width}{\operatorname{width}}
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\crit}{\operatorname{crit}}
+\newcommand{\inc}{\operatorname{inc}}
+\newcommand{\HP}{\mathbf{H_P}}
+\newcommand{\HCP}{\mathbf{H^c_P}}
+\newcommand{\GP}{\mathbf{G_P}}
+\newcommand{\GQ}{\mathbf{G_Q}}
+\newcommand{\AG}{\mathbf{A_G}}
+\newcommand{\GCP}{\mathbf{G^c_P}}
+\newcommand{\PXP}{\mathbf{P}=(X,P)}
+\newcommand{\QYQ}{\mathbf{Q}=(Y,Q)}
+\newcommand{\GVE}{\mathbf{G}=(V,E)}
+\newcommand{\HWF}{\mathbf{H}=(W,F)}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfQ}{\mathbf{Q}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfNP}{\mathbf{NP}}
+\newcommand{\bftwo}{\mathbf{2}}
+\newcommand{\cgA}{\mathcal{A}}
+\newcommand{\cgB}{\mathcal{B}}
+\newcommand{\cgC}{\mathcal{C}}
+\newcommand{\cgD}{\mathcal{D}}
+\newcommand{\cgE}{\mathcal{E}}
+\newcommand{\cgF}{\mathcal{F}}
+\newcommand{\cgG}{\mathcal{G}}
+\newcommand{\cgM}{\mathcal{M}}
+\newcommand{\cgN}{\mathcal{N}}
+\newcommand{\cgP}{\mathcal{P}}
+\newcommand{\cgR}{\mathcal{R}}
+\newcommand{\cgS}{\mathcal{S}}
+\newcommand{\bfn}{\mathbf{n}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfk}{\mathbf{k}}
+\newcommand{\bfs}{\mathbf{s}}
+\newcommand{\bijection}{\xrightarrow[\text{onto}]{\text{$1$--$1$}}}
+\newcommand{\injection}{\xrightarrow[]{\text{$1$--$1$}}}
+\newcommand{\surjection}{\xrightarrow[\text{onto}]{}}
+\newcommand{\nin}{\not\in}
+\newcommand{\prufer}{\text{prüfer}}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\var}{var}
+\newcommand{\inv}{^{-1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://www.appliedcombinatorics.org/"><img src="external/front-cover.png" alt="Logo image"></a><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="appcomb-notes.html"><span class="title">In-Class Notes to Accompany <span class="booktitle">Applied Combinatorics</span></span></a></div>
+<p class="byline">Mitchel T. Keller, William T. Trotter</p>
+</div>
+</div></header><div class="ptx-page"><main class="ptx-main"><div id="ptx-content">
+<div style="text-align: center;">Reloading this page will reset a start location</div>
+<div class="video-box" style="width: 100%;padding-top: 56.25%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/SZXHoWwBcDc?&amp;modestbranding=1&amp;rel=0&amp;autoplay=1" id="notes-eulerham-15"></iframe></div>
+</div></main></div>
+</body>
+</html>
