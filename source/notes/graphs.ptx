@@ -1542,7 +1542,7 @@
       </ul>
     </p>
 
-    <tabular>
+    <tabular row-headers="yes">
       <row bottom="minor" header="yes">
         <cell>Polyhedron</cell>
         <cell>Vertices <m>n</m></cell>
@@ -1635,9 +1635,49 @@
   </page>
     <page>
     <p component="a">
-      There are two common drawings of <m>\bfK_4</m>, only one of which is planar. The existence of this planar drawing tells us that <m>\bfK_4</m> is planar. Keep in mind that there is always an unbounded face when we count faces in a planar drawing!
+      There are two common drawings of <m>\bfK_4</m>, only one of which is planar. (See below.) The existence of this planar drawing tells us that <m>\bfK_4</m> is planar. Keep in mind that there is always an unbounded face when we count faces in a planar drawing!
     </p>
-    <p workspace="2cm">
+    <sidebyside component="a" widths="33% 33%">
+      <image>
+        <description>
+          <p>
+            A drawing of the complete graph on four vertices. Each vertex has an edge to each of the other vertices. The graph is drawn so that two edges intersect in the interior of a convex quadrilateral formed by the vertices. The image contains a label reading <q><m>\mathbf{K}_4</m> drawing with crossing edges</q>.
+          </p>
+        </description>
+        <prefigure xmlns="https://prefigure.org" label="K4-nonplanar">
+          <diagram dimensions="(300,300)" margins="15">
+            <definition>graph={1:[2,3,4],2:[3,4],3:[4]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network graph="graph"
+                scale="0.8" node-fill="#ddd"
+                labels="no">
+              </network>
+              <label anchor="(0,-1)"><m>\mathbf{K}_4</m> drawing with crossing edges</label>
+            </coordinates>
+          </diagram>
+        </prefigure>
+      </image>
+      <image>
+        <description>
+          <p>
+            A drawing of the complete graph on four vertices. Each vertex has an edge to each of the other vertices. The graph is drawn so that edges do not intersect except at vertices. The image contains a label reading <q><m>\mathbf{K}_4</m> planar drawing</q>.
+          </p>
+        </description>
+        <prefigure xmlns="https://prefigure.org" label="K4-planar">
+          <diagram dimensions="(300,300)" margins="15">
+            <definition>graph={1:[2,3,4],2:[3,4],3:[4]}</definition>
+              <coordinates bbox="(-1,-1,1,1)">
+                <network graph="graph" layout="planar"
+                scale="0.8" node-fill="#ddd"
+                labels="no">
+              </network>
+              <label anchor="(0,-1)"><m>\mathbf{K}_4</m> planar drawing</label>
+            </coordinates>
+          </diagram>
+        </prefigure>
+      </image>
+    </sidebyside>
+    <p workspace="2cm" component="b">
       
     </p>
     <p>
@@ -1695,6 +1735,9 @@
         </p>
       </statement>
     </theorem>
+    <p component="b" workspace="3cm">
+      
+    </p>
     <p component="a">
       This theorem was <q>proved</q> many times over the years, but all the proofs were flawed until Appel and Haken provided a computer-assisted proof. This was the first computer-assisted proof that could not be readily converted to a pencil and paper proof that ended up being widely accepted. In the early 1990's, a computer assisted proof with fewer cases was provided, but to this day, no one knows a proof that does not rely on computers.
     </p>
