@@ -1331,7 +1331,7 @@
           <solution component="prufer-solns">
             <tabular>
               <col halign="center" right="minor"> </col> <col halign="center" right="minor"> </col> <col halign="center"> </col>
-              <row bottom="minor">
+              <row bottom="minor" header="yes">
                 <cell>Prüfer code</cell>
                 <cell>Label set</cell>
                 <cell>Edge added</cell>
@@ -1385,6 +1385,26 @@
                 <cell> <m>5-9</m> </cell>
               </row>
             </tabular>
+            <image width="56%">
+              <shortdescription>A tree with 9 vertices. The edges are given in the tabular above.</shortdescription>
+              <prefigure xmlns="https://prefigure.org" label="prufer-to-tree-soln-1">
+                <diagram dimensions="(350,250)" margins="15">
+                  <coordinates bbox="(-1,-1,0.5,0.75)">
+                    <network scale="0.8" node-fill="#eee" node-stroke="black" labels="yes">
+                      <node at="1" />
+                      <edge vertices="(2,8)"/>
+                      <edge vertices="(6,4)"/>
+                      <edge vertices="(4,3)"/>
+                      <edge vertices="(3,1)"/>
+                      <edge vertices="(1,8)"/>
+                      <edge vertices="(8,7)"/>
+                      <edge vertices="(7,5)"/>
+                      <edge vertices="(5,9)"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
           </solution>
         </task>
         
@@ -1451,6 +1471,27 @@
                 <cell> <m>3-9</m> </cell>
               </row>
             </tabular>
+           <image width="56%">
+              <shortdescription>A tree with 9 vertices. The edges are given in the tabular above.</shortdescription>
+              <prefigure xmlns="https://prefigure.org" label="prufer-to-tree-soln-2">
+                <diagram dimensions="(350,250)" margins="15">
+                  <coordinates bbox="(-1,-1,0.5,0.75)">
+                    <network scale="0.8" node-fill="#eee" node-stroke="black" labels="yes">
+                      <node at="1" />
+                      <edge vertices="(3,9)"/>
+                      <edge vertices="(1,3)"/>
+                      <edge vertices="(1,8)"/>
+                      <edge vertices="(7,3)"/>
+                      <edge vertices="(4,7)"/>
+                      <edge vertices="(6,4)"/>
+                      <edge vertices="(5,7)"/>
+                      <edge vertices="(2,4)"/>
+                    </network>
+                  </coordinates>
+                </diagram>
+              </prefigure>
+            </image>
+             
           </solution>
         </task>
         
