@@ -111,9 +111,9 @@
     are made between certain pairs of options but not between others.
     In this chapter, we make these observations more concrete by introducing the
     concept of a partially ordered set.
-    Elementary examples include (1) a family of sets which is partially
-    ordered by inclusion and (2) a set of positive integers which is
-    partially ordered by divisibility.
+    Elementary examples include (1) a family of sets which is partially ordered
+    by inclusion and (2) a set of positive integers which is partially ordered
+    by divisibility.
     From an applications standpoint, a complex construction job typically
     involves a large number of projects for which there is a notion of
     precedence between some but not all pairs.
@@ -121,42 +121,74 @@
     ordered sets whenever links are added.
   </p>
 
-  <p>A <term>binary relation</term> <m>R</m> on a set <m>X</m> is a subset of the cartesian product <m>X\times X = \set{(x,y)\colon x,y\in X}</m>. In discussions of binary relations, the notation <m>(x,y)\in R</m> is sometimes written as <m>xRy</m>.
-    </p>
+  <p>
+    A <term>binary relation</term> <m>R</m> on a set <m>X</m> is a subset of the
+    cartesian product <m>X\times X = \set{(x,y)\colon x,y\in X}</m>.
+    In discussions of binary relations, the notation <m>(x,y)\in R</m> is
+    sometimes written as <m>xRy</m>.
+  </p>
 
-    <p>A binary relation<idx><h>relation</h><h>binary</h></idx> <m>R</m> is:
+  <p>
+    A binary relation <idx><h>relation</h><h>binary</h></idx> <m>R</m> is:
     <ol marker="i.">
-        <li><term>reflexive</term> if <m>(x,x)\in R</m> for
-        all <m>x\in X</m>.<idx><h>reflexive</h></idx></li>
-        <li><term>antisymmetric</term> if <m>x=y</m> whenever <m>(x,y)\in R</m> and <m>(y,x)\in R</m>, for all <m>x,y\in X</m>. <idx><h>antisymmetric</h></idx></li>
-        <li><term>transitive</term> if <m>(x,y)\in R</m> and <m>(y,z)\in R</m> imply <m>(x,z)\in R</m>, for all <m>x,y,z\in X</m>.<idx><h>transitive</h></idx></li>
+      <li>
+        <term>reflexive</term> if <m>(x,x)\in R</m> for all <m>x\in X</m>.
+        <idx><h>reflexive</h></idx>
+      </li>
+
+      <li>
+        <term>antisymmetric</term> if <m>x=y</m> whenever <m>(x,y)\in R</m> and
+        <m>(y,x)\in R</m>, for all <m>x,y\in X</m>.
+        <idx><h>antisymmetric</h></idx>
+      </li>
+
+      <li>
+        <term>transitive</term> if <m>(x,y)\in R</m> and <m>(y,z)\in R</m> imply
+        <m>(x,z)\in R</m>, for all <m>x,y,z\in X</m>.
+        <idx><h>transitive</h></idx>
+      </li>
     </ol>
-    </p>
+  </p>
 
-    <p>When using the ordered pair notation for binary relations, to indicate that a pair <m>(x,y)</m> is not in the relation, we simply write <m>(x,y)\notin R</m>. When using the alternate notation, this is usually denoted by using the negation symbol from logic and writing <m>\lnot (xRy)</m>. 
-    </p>
+  <p>
+    When using the ordered pair notation for binary relations, to indicate that
+    a pair <m>(x,y)</m> is not in the relation, we simply write
+    <m>(x,y)\notin R</m>.
+    When using the alternate notation, this is usually denoted by using the
+    negation symbol from logic and writing <m>\lnot (xRy)</m>.
+  </p>
 
-    
-  <p>A <term>partially ordered set</term> or <term>poset</term><idx>
+  <p>
+    A <term>partially ordered set</term> or <term>poset</term>
+    <idx>
       <h>partially ordered set</h>
-    </idx><idx>
+    </idx>
+    <idx>
       <h>poset</h>
-    </idx> <m>\bfP</m> is a pair <m>(X,P)</m> where <m>X</m> is a set and <m>P</m>
-    is a reflexive, antisymmetric, and transitive binary relation on <m>X</m>. We
-    call <m>X</m> the <term>ground set</term><idx>
+    </idx> <m>\bfP</m> is a pair <m>(X,P)</m> where
+    <m>X</m> is a set and <m>P</m> is a reflexive, antisymmetric, and transitive
+    binary relation on <m>X</m>.
+    We call <m>X</m> the <term>ground set</term>
+    <idx>
       <h>ground set</h>
-    </idx> while <m>P</m> is a <term>partial order</term><idx>
+    </idx> while <m>P</m> is a
+    <term>partial order</term>
+    <idx>
       <h>order</h>
       <h>partial</h>
-    </idx> on <m>X</m>. Elements of the ground set <m>X</m> are also called <term>
-    points</term>, and the poset <m>\bfP</m> is <term>finite</term> if its ground set <m>X</m> is a
-    finite set. </p>
-
-
+    </idx> on <m>X</m>.
+    Elements of the ground set <m>X</m> are also called
+    <term>
+    points</term>, and the poset <m>\bfP</m> is <term>finite</term>
+    if its ground set <m>X</m> is a finite set.
+  </p>
 
   <example xml:id="exa_binaryrel-activity">
     <statement>
-      <p>Let <m>X=\{a,b,c,d,e,f\}</m>. Consider the following binary relations on <m>X</m>. <md>
+      <p>
+        Let <m>X=\{a,b,c,d,e,f\}</m>.
+        Consider the following binary relations on <m>X</m>.
+        <md>
           <mrow>R_1=\{\amp (a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(a,b),(a,c),(e,f)\}</mrow>
           <mrow>R_2=\{\amp (a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(d,b),(d,e),(b,a),(e,a),</mrow>
           <mrow>\amp(d,a),(c,f)\}</mrow>
@@ -166,178 +198,193 @@
           <mrow>R_5=\{\amp(a,a),(c,c),(d,d),(e,e),(a,e),(c,a),(c,e),(d,e)\}</mrow>
           <mrow>R_6=\{\amp(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(d,f),(b,e),(c,a),(e,b)\}</mrow>
         </md>
-        Which of the binary relations are partial orders on <m>X</m>? For those that are not partial
-        orders on <m>X</m>, which property or properties are violated? </p>
+        Which of the binary relations are partial orders on <m>X</m>?
+        For those that are not partial orders on <m>X</m>, which property or
+        properties are violated?
+      </p>
     </statement>
-    <solution>
-      <p>A bit of checking confirms that <m>R_1</m>, <m>R_2</m> and <m>R_3</m> are partial orders on <m>
-        X</m>, so <m>\bfP_1=(X,R_1)</m>, <m>\bfP_2=(X,R_2)</m> and <m>\bfP_3=(X,R_3)</m> are posets.
-        Several of the other examples we will discuss in this chapter will use the poset <m>
-        \bfP_3=(X,R_3)</m>. </p>
 
-      <p>On the other hand, <m>R_4</m>, <m>R_5</m> and <m>R_6</m> are not partial orders on <m>X</m>.
-        Note that <m>R_4</m> is not transitive, as it contains <m>(d,b)</m> and <m>(b,a)</m> but not <m>
-        (d,a)</m>. The relation <m>R_5</m> is not reflexive, since it doesn't contain <m>(b,b)</m>.
-        (Also, it also doesn't contain <m>(f,f)</m>, but one shortcoming is enough.) Note that <m>
-        R_5</m> is a partial order on <m>\{a,c,d,e\}</m>. The relation <m>R_6</m> is not
-        antisymmetric, as it contains both <m>(b,e)</m> and <m>(e,b)</m>. </p>
+    <solution>
+      <p>
+        A bit of checking confirms that <m>R_1</m>, <m>R_2</m> and <m>R_3</m>
+        are partial orders on <m>
+        X</m>, so <m>\bfP_1=(X,R_1)</m>,
+        <m>\bfP_2=(X,R_2)</m> and <m>\bfP_3=(X,R_3)</m> are posets.
+        Several of the other examples we will discuss in this chapter will use
+        the poset <m>
+        \bfP_3=(X,R_3)</m>.
+      </p>
+
+      <p>
+        On the other hand, <m>R_4</m>, <m>R_5</m> and <m>R_6</m> are not partial
+        orders on <m>X</m>.
+        Note that <m>R_4</m> is not transitive, as it contains <m>(d,b)</m> and
+        <m>(b,a)</m> but not <m>
+        (d,a)</m>.
+        The relation <m>R_5</m> is not reflexive, since it doesn't contain
+        <m>(b,b)</m>.
+        (Also, it also doesn't contain <m>(f,f)</m>, but one shortcoming is
+        enough.) Note that <m>
+        R_5</m> is a partial order on
+        <m>\{a,c,d,e\}</m>.
+        The relation <m>R_6</m> is not antisymmetric, as it contains both
+        <m>(b,e)</m> and <m>(e,b)</m>.
+      </p>
     </solution>
   </example>
 
-  <p>When <m>\PXP</m> is a poset, it is common to write <m>x\le y</m> in <m>P</m> or <m>y\ge x</m>
-    in <m>P</m> as substitutes for <m>(x,y)\in P</m>. Of course, the notations <m>x\lt y</m> in <m>P</m>
-    and <m>y&gt;x</m> in <m>P</m> mean <m>x\le y</m> in <m>P</m> and <m>x\ne y</m>. When the poset <m>
-    \bfP</m> remains fixed throughout a discussion, we will sometimes abbreviate <m>x\le y</m> in <m>
-    P</m> by just writing <m>x\le y</m>, <etc/> When <m>x</m> and <m>y</m> are distinct points from <m>
-    X</m>, we say <m>x</m> is <term>covered</term><fn>Reflecting the vagaries of the English
+  <p>
+    When <m>\PXP</m> is a poset, it is common to write <m>x\le y</m> in <m>P</m>
+    or <m>y\ge x</m> in <m>P</m> as substitutes for <m>(x,y)\in P</m>.
+    Of course, the notations <m>x\lt y</m> in <m>P</m> and <m>y&gt;x</m> in
+    <m>P</m> mean <m>x\le y</m> in <m>P</m> and <m>x\ne y</m>.
+    When the poset <m>
+    \bfP</m> remains fixed throughout a discussion, we
+    will sometimes abbreviate <m>x\le y</m> in <m>
+    P</m> by just writing
+    <m>x\le y</m>, etc.
+    We say that <m>x</m> is <term>comparable to</term> <m>y</m> in <m>P</m>
+    provided that <m>x\leq y</m> or <m>y\leq x</m> in <m>P</m>.
+    Otherwise, we say that <m>x</m> and <m>y</m> are <term>incomparable</term>.
+  </p>
+
+  <p>
+    When <m>x</m> and <m>y</m> are distinct points from <m>
+    X</m>, we say
+    <m>x</m> is <term>covered</term>
+    <fn>Reflecting the vagaries of the English
     language, mathematicians use the phrases: (1) <m>x</m> is covered by <m>y</m> in <m>P</m>; (2)<nbsp/><m>
     y</m> covers <m>x</m> in <m>P</m>; and (3)<nbsp/><m>(x,y)</m> is a cover in <m>P</m>
-    interchangeably.</fn><idx>
+    interchangeably.</fn>
+    <idx>
       <h>cover</h>
-    </idx> by <m>y</m> in <m>P</m> when <m>x\lt y</m> in <m>P</m>, and there is no point <m>z\in X</m> for
-    which <m>x\lt z</m> and <m>z\lt y</m> in <m>P</m>. For example, in the poset <m>\bfP_3=(X,R_3)</m>
-    from <xref ref="exa_binaryrel-activity"/>, <m>d</m> is covered by <m>e</m> and <m>c</m> covers <m>b</m>.
-    However, <m>a</m> is not covered by <m>f</m>, since <m>a\lt e\lt f</m> in <m>R_3</m>. We can
-    then associate with the poset <m>\bfP</m> a <term>cover graph</term><idx>
-      <h>graph</h>
-      <h>cover</h>
-    </idx> <m>\mathbf{G}</m> whose vertex set is the ground set <m>X</m> of <m>\bfP</m>
-    with <m>xy</m> an edge in <m>\mathbf{G}</m> if and only if one of <m>x</m> and <m>y</m> covers
-    the other in <m>\bfP</m>. 
+    </idx> by <m>y</m> in <m>P</m> when
+    <m>x\lt y</m> in <m>P</m>, and there is no point <m>z\in X</m> for which
+    <m>x\lt z</m> and <m>z\lt y</m> in <m>P</m>.
+    For example, in the poset <m>\bfP_3=(X,R_3)</m> from
+    <xref ref="exa_binaryrel-activity"/>, <m>d</m> is covered by <m>e</m> and
+    <m>c</m> covers <m>b</m>.
+    However, <m>a</m> is not covered by <m>f</m>, since <m>a\lt e\lt f</m> in
+    <m>R_3</m>.
   </p>
-  <p>It is convenient to illustrate a poset with a suitably drawn diagram in the
-    Euclidean plane. We choose a standard horizontal/vertical coordinate system in the plane and
-    require that the vertical coordinate of the point corresponding to <m>y</m> be larger than the
-    vertical coordinate of the point corresponding to <m>x</m> whenever <m>y</m> covers <m>x</m> in <m>
-    P</m>. Each cover relation is represented by a straight line segment which contains no
-    point corresponding to any element in the poset other than those associated with its two end
-    points. Such diagrams are called <term>Hasse diagrams</term><fn>Named for German mathematician Helmut Hasse, who was born in 1898. Care is required with things named after mathematicians of that era, since many of them were Nazis. Hasse's background is a bit complicated, but his doctoral supervisor was Jewish and he collaborated with many prominent Jewish mathematicians, including Emmy Noether. So we shall let the name persist.</fn> <idx>
+
+  <p>
+    It is convenient to illustrate a poset with a suitably drawn diagram in the
+    Euclidean plane.
+    We choose a standard horizontal/vertical coordinate system in the plane and
+    require that the vertical coordinate of the point corresponding to <m>y</m>
+    be larger than the vertical coordinate of the point corresponding to
+    <m>x</m> whenever <m>y</m> covers <m>x</m> in <m>
+    P</m>.
+    Each cover relation is represented by a straight line segment which contains
+    no point corresponding to any element in the poset other than those
+    associated with its two end points.
+    Such diagrams are called <term>Hasse diagrams</term>
+    <fn>Named for German mathematician Helmut Hasse, who was born in 1898. Care is required with things named after mathematicians of that era, since many of them were Nazis. Hasse's background is a bit complicated, but his doctoral supervisor was Jewish and he collaborated with many prominent Jewish mathematicians, including Emmy Noether. So we shall let the name persist.</fn>
+    <idx>
       <h>Hasse diagrams</h>
-    </idx> (<term>poset diagrams, order diagrams</term>, or just <term>
-    diagrams</term>). The drawing in <xref ref="fig-posets_intro-activity_diagram"/> is a diagram of the poset <m>\bfP_3</m> from <xref ref="exa_binaryrel"/>.</p>
+    </idx> (also
+    <term>poset diagrams</term>, <term>order diagrams</term>, or simply
+    <term>
+    diagrams</term> ).
+    The drawing in <xref ref="fig-posets_intro-activity_diagram"/> is a diagram
+    of the poset <m>\bfP_3</m> from <xref ref="exa_binaryrel-activity"/>.
+  </p>
 
   <figure xml:id="fig-posets_intro-activity_diagram">
     <caption>A diagram of a poset</caption>
     <image width="17%">
-      <shortdescription>A poset with points labeled a, b, c, d, e, f.</shortdescription>
-      <prefigure xlmns="https://prefigure.org" label="img-6pt-order-diagram">
-        <diagram xmlns="https://prefigure.org"
-                dimensions="(100, 300)" margins="15">
+      <shortdescription>
+        A poset with points labeled a, b, c, d, e, f.
+      </shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="img-6pt-order-diagram">
+        <diagram dimensions="(100, 300)" margins="15">
           <definition>
             poset={1:[3,5], 2:[3,4], 3:[], 4:[5], 5:[6], 6:[]}
           </definition>
-          <definition>labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}</definition>
+
+          <definition>
+            labels={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}
+          </definition>
           <poset covers="poset" labeled="yes" labels="labels" node-size="12"/>
         </diagram>
       </prefigure>
     </image>
   </figure>
-  <p>For posets of moderate size, diagrams are frequently used to define a poset<mdash/>rather than
-    the explicit binary relation notation illustrated in <xref ref="exa_binaryrel-activity"/>. In <xref ref="fig_17ptposet-activity"/>, we illustrate a poset <m>\PXP</m> with ground set <m>
-    X=[17]=\{1,2,\dots,17\}</m>. It would take several lines of text to write out the binary
-    relation <m>P</m>, and somehow the diagram serves to give us a more tactile sense of the
-    properties of the poset. </p>
+
+  <p>
+    For posets of moderate size, diagrams are frequently used to define a poset
+    <mdash/> rather than the explicit binary relation notation illustrated in
+    <xref ref="exa_binaryrel-activity"/>.
+    In <xref ref="fig_17ptposet-activity"/>, we illustrate a poset <m>\PXP</m>
+    with ground set <m>
+    X=[17]=\{1,2,\dots,17\}</m>.
+    It would take several lines of text to write out the binary relation
+    <m>P</m>, and somehow the diagram serves to give us a more tactile sense of
+    the properties of the poset.
+  </p>
+
   <figure xml:id="fig_17ptposet-activity">
     <caption>A Poset on 17 Points</caption>
-    <image width="65%" source="17ptposet"><description><p>A Poset on 17 Points</p>
-    </description></image>
+    <image width="65%" source="17ptposet">
+      <description>
+        <p>
+          A Poset on 17 Points
+        </p>
+      </description>
+    </image>
   </figure>
 
-  <exercise label="strings_lattice-paths_buzz-bucky">
+  <activity label="posets_intro-activity_covers">
     <introduction>
       <p>
-        The town of Mascotville is laid out as a grid.
-        There are seven parallel streets ( <m>1^{\text{st}}</m> through
-        <m>7^{\text{th}}</m> ) that run north-south and five parallel avenues (
-        <m>1^{\text{st}}</m> through <m>5^{\text{th}}</m> ) that run east-west.
+        Below is the diagram of a poset.
+        There are several questions about this poset on the tabs below.
+        Answer each of them.
       </p>
+
+      <image>
+        <shortdescription>
+          A poset with points labeled from 1 to 18
+        </shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="img-posets_intro-activity_covers">
+          <diagram xmlns="https://prefigure.org" dimensions="(600, 300)" margins="15">
+            <definition>
+              poset={1:[13],2:[],3:[],4:[10],5:[4,6,12],6:[10],7:[15,11],8:[],
+              9:[3,6],10:[2,8], 11: [], 12:[3],13:[7,18],14:[9,12],15:[], 16:[8],17:[],18:[17]}
+            </definition>
+
+            <definition>
+              locs={16:(0.78,2.3), 10:(0,2.87), 4:(0.13,1.75), 
+              1:(0.65,0), 3:(0.3,2.65),13:(0.75,1), 18:(1,2), 17:(1,3), 
+              9:(0.25,1.1), 15: (0.75,4), 11:(0.2,3.75), 5:(0,0), 6:(-0.15,2),
+              2:(-0.15,4)}
+            </definition>
+            <poset covers="poset" labeled="yes" node-size="12" locations="locs"/>
+          </diagram>
+        </prefigure>
+      </image>
     </introduction>
 
-    <task label="strings_lattice-paths_buzz-bucky-all">
+    <task label="posets_intro-activity_covers-9">
       <statement>
         <p>
-          Buzz starts at the intersection of <m>1^{\text{st}}</m> Street and
-          <m>1^{\text{st}}</m> Avenue and wants to get to Bucky's burrow at the
-          intersection of <m>7^{\text{th}}</m> Street and <m>5^{\text{th}}</m>
-          Avenue traveling only on streets/avenues, and always moving toward
-          Bucky's burrow.
-          How many ways can he do this?
+          Select all of the elements below that cover the point 9.
         </p>
       </statement>
 
-      <choices>
+      <choices multiple-correct="yes">
         <choice>
           <statement>
             <p>
-              <m>\displaystyle\binom{12}{7}</m>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <m>\displaystyle\binom{10}{5}</m>
-            </p>
-          </statement>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>
-              <m>\displaystyle\binom{10}{6}</m>
+              2
             </p>
           </statement>
 
           <feedback>
             <p>
-              Correct!
-              It's important to remember that our starting point here is
-              <m>(1,1)</m>.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <m>2^{12}</m>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <m>2^{10}</m>
-            </p>
-          </statement>
-        </choice>
-      </choices>
-    </task>
-
-    <task label="strings_lattice-paths_buzz-bucky-varsity">
-      <statement>
-        <p>
-          The Varsity is at the intersection of <m>3^{\text{rd}}</m> Street and
-          <m>3^{\text{rd}}</m> Avenue.
-          How many ways can Buzz get to Bucky's burrow if he insists on stopping
-          at The Varsity?
-        </p>
-      </statement>
-
-      <choices>
-        <choice>
-          <statement>
-            <p>
-              <m>\displaystyle\binom{4}{2} + \binom{6}{4}</m>
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Close, but remember that you need to make all the choices required
-              in order to fully specify a lattice path.
+              While <m>2 \gt 9</m> in the poset, this is not a cover relation
+              because <m>2\gt 10\gt 6\gt 9</m>.
             </p>
           </feedback>
         </choice>
@@ -345,70 +392,7 @@
         <choice correct="yes">
           <statement>
             <p>
-              <m>\displaystyle\binom{4}{2} \binom{6}{4}</m>
-            </p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct!
-              Any way from the start to The Varsity can be followed by any way
-              from The Varsity to Bucky's burrow, so we need to multiply.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <m>\displaystyle\binom{10}{6}</m>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <m>2^{4} + 2^6</m>
-            </p>
-          </statement>
-        </choice>
-      </choices>
-    </task>
-
-    <task label="strings_lattice-paths_buzz-bucky-avoid">
-      <statement>
-        <p>
-          Suppose Buzz is put on a diet and prohibited from eating at The
-          Varsity.
-          He knows if he goes by it, he'll stop and eat, so he must avoid it
-          completely.
-          How many ways are there for him to get to Bucky's burrow that avoid
-          The Varsity?
-        </p>
-      </statement>
-
-      <choices>
-        <choice>
-          <statement>
-            <p>
-              <m>\displaystyle \binom{10}{6} - \binom{4}{2} -\binom{6}{4}</m>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <m>\displaystyle \binom{10}{6} \binom{4}{2} \binom{6}{4}</m>
-            </p>
-          </statement>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>
-              <m>\displaystyle \binom{10}{6} + \binom{4}{2} \binom{6}{4}</m>
+              3
             </p>
           </statement>
         </choice>
@@ -416,437 +400,414 @@
         <choice correct="yes">
           <statement>
             <p>
-              <m>\displaystyle \binom{10}{6} - \binom{4}{2} \binom{6}{4}</m>
+              6
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              10
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              While <m>10\gt 9</m> in the poset, this is not a cover relation
+              because <m>10\gt 6\gt 9</m>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              14
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <q>Cover</q> is a directional term.
+              Here 9 covers 14, but the question asked for elements that cover
+              9.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </task>
+
+    <task label="posets_intro-activity_covers-7">
+      <statement>
+        <p>
+          Select all of the elements below that are comparable to the point 7.
+        </p>
+      </statement>
+
+      <choices multiple-correct="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              11
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              13
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              15
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              18
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Although <m>7\gt 13</m> and <m>18\gt 13</m> in the poset, these
+              relations do not line up in a way that provides a relation by
+              transitivity.
+              Thus, 7 and 18 are incomparable.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </task>
+
+    <task label="posets_intro-activity_covers-6">
+      <statement>
+        <p>
+          Select all of the elements below that are greater than point 6.
+        </p>
+      </statement>
+
+      <choices multiple-correct="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              2
             </p>
           </statement>
 
           <feedback>
             <p>
               Correct!
-              We can solve this by counting <em>all</em> the lattice paths and
-              then subtracting those that involve the forbidden temptation of
-              stopping at The Varstiy.
+              Since <m>6\lt 10\lt 2</m>, by transitivity we have that
+              <m>6\lt 2</m> or <m>2\gt 6</m>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Although physically higher in the diagram, there is not a sequence
+              of less than relations all in the same direction leading from 6 to
+              3, so 3 is incomparable to 6.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              8
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+              Since <m>6\lt 10\lt 8</m>, by transitivity we have that
+              <m>6\lt 8</m> or <m>8\gt 6</m>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              10
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct!
+              We can see that <m>10</m> covers <m>6</m>, so <m>10\gt 6</m>.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              11
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Although physically higher in the diagram, there is not a sequence
+              of less than relations all in the same direction leading from 6 to
+              11, so 11 is incomparable to 6.
             </p>
           </feedback>
         </choice>
       </choices>
     </task>
-  </exercise>
 
-  <p>
-    You will <em>not</em> be tested on the proof in
-    <xref ref="exa_lattice-Catalan"/>, but you are expected to know that the
-    number of lattice paths from <m>(0,0)</m> to <m>(n,n)</m> that do not go
-    above the diagonal <m>y=x</m> is counted by the Catalan numbers
-    <md>
-      C_n = \frac{1}{n+1}\binom{2n}{n}
-    </md>.
-    We will see the Catalan numbers come up a number times through the remainder
-    of our course, including quite likely on the very last day of the semester!
-    There are a couple of important <em>methods</em> that come up in the proof
-    that we will use often, and I do want to highlight those:
-    <ol marker="1.">
-      <li>
+    <task label="posets_intro-activity_covers-10">
+      <statement>
         <p>
-          Sometimes it appears hard to directly count the objects of interest
-          (the so-called <q>good</q> lattice paths), but it is still reasonable
-          to count all the objects in a larger set (all lattice paths from
-          <m>(0,0)</m> to <m>(n,n)</m> ) and then subtract off those we
-          <em>don't want to count</em> (the <q>bad</q> lattice paths).
+          Select all of the elements below that are incomparable to point 10.
         </p>
-      </li>
+      </statement>
 
-      <li>
+      <choices multiple-correct="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              2
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              7
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              10
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Because the relation in a poset is reflexive, we have that each
+              point is related to itself.
+              Thus, <m>10\leq 10</m> so we say that 10 is comparable to itself,
+              rather than being incomparable.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </task>
+  </activity>
+
+  <definition xml:id="def-max-min-elements">
+    <title>Maximal and Minimal Elements</title>
+
+    <statement>
+      <p>
+        Let <m>\bfP=(X,P)</m> be a poset.
+        An element <m>x\in X</m> is <term>maximal</term> if there is no
+        <m>y\in X</m> with <m>y\gt x</m> in <m>P</m>.
+      </p>
+
+      <p>
+        Let <m>\bfP=(X,P)</m> be a poset.
+        An element <m>x\in X</m> is <term>minimal</term> if there is no
+        <m>y\in X</m> with <m>y\lt  x</m> in <m>P</m>.
+      </p>
+    </statement>
+  </definition>
+  <activity label="posets_intro-activity_max-min">
+    <introduction>
+      <p>
+        Below is the diagram of a poset <m>\bfP</m>. Answer the questions about it on the tabs.
+      </p>
+      <image>
+        <shortdescription>A poset with points labeled from 1 to 12</shortdescription>
+        <prefigure xmlns="https://prefigure.org" label="img-posets_intro-activity_max-min">
+          <diagram xmlns="https://prefigure.org"
+                  dimensions="(600, 300)" margins="15">
+            <definition>
+              poset={1:[11],2:[],3:[],4:[7,10],5:[4,6],6:[10],7:[11],8:[],
+              9:[3,6],10:[2,8], 11: [], 12:[3]}
+            </definition>
+            <definition>locs={16:(0.78,2.3), 10:(0,2.87), 4:(0.13,1.75), 
+              1:(0.65,0), 3:(0.3,2.65),13:(0.75,1), 
+              9:(0.25,1.1), 15: (0.75,4), 11:(0.2,3.75), 5:(0,0), 6:(-0.15,2),
+              2:(-0.15,4)}</definition>
+            <poset covers="poset" labeled="yes" node-size="12"
+              locations="{1:(0.75,2),3:(0,1.5),12:(0.5,0.9)}"
+            />
+          </diagram>
+
+        </prefigure>
+      </image>
+    </introduction>
+    <task label="posets_intro-activity_max-min_max">
+      <statement>
         <p>
-          Sometimes on the surface, it is difficult to count the objects of
-          interest (the <q>bad</q> lattice paths) but we can transform them in
-          an invertible way to a collection of objects that is easier to count.
+          Select all of the following that are maximal elements of <m>\bfP</m>.
         </p>
-      </li>
-    </ol>
-  </p>
-
-  <p>
-    I do think that it's worthwhile spending some time understanding how we
-    define <q>bad</q> lattice path and the transformation in the text, here are
-    a couple of questions on the subject:
-  </p>
-
-  <exercise label="strings_PI_lattice-path-good-bad-activity">
-    <statement>
-      <p>
-        The bad lattice path <m>HHVVHVVHHVVH</m> from <m>(0,0)</m> to
-        <m>(6,6)</m> goes bad (crosses the diagonal) at position
-      </p>
-    </statement>
-
-    <choices>
-      <choice>
-        <statement>
-          <p>
-            5
-          </p>
-        </statement>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            7
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            11
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            This is a good lattice path
-          </p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-
-  <exercise label="strings_PI_lattice-path-transform-activity">
-    <statement>
-      <p>
-        The bad lattice path <m>HHVVHVVHHVVH</m> from <m>(0,0)</m> to
-        <m>(6,6)</m> is transformed to which of the following lattice paths from
-        <m>(0,0)</m> to <m>(5,7)</m>?
-      </p>
-    </statement>
-
-    <choices>
-      <choice>
-        <statement>
-          <p>
-            <m>HHVVHVHVVHHV</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            <m>HHVVHVVHHVVV</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            <m>HHVVHVVVVHHV</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            <m>VVHHVHHVVHHV</m>
-          </p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-
-  <p>
-    Let's now turn to some questions involving use of the binomial and
-    multinomial theorem.
-  </p>
-
-  <exercise label="strings_PI_binthm-activity">
-    <statement>
-      <p>
-        The coefficient on <m>x^{7}y^{13}</m> in the expansion of
-        <m>(2x-4y)^{20}</m> is
-      </p>
-    </statement>
-
-    <choices>
-      <choice>
-        <statement>
-          <p>
-            <m>\displaystyle 2^{7}4^{13}\binom{20}{7}</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            <m>\displaystyle\binom{20}{7}</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            <m>\displaystyle 2^{7}\binom{20}{13}</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            <m>\displaystyle 2^{7}(-4)^{13}\binom{20}{13}</m>
-          </p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-
-  <exercise label="act-strings-rearrange">
-    <statement>
-      <p>
-        How many rearrangements of the string
-        APPLIEDCOMBINATORICSISTHEMOSTINTERESTINGBOOKEVER are there if all
-        letters must be used?
-        (Note that there are a couple of hints <em>outside</em> the blue box on
-        Runestone!)
-      </p>
-    </statement>
-
-    <hint>
-      <p>
-        The length of string is 48 characters.
-      </p>
-    </hint>
-
-    <hint>
-      <p>
-        You might find these frequency counts useful.
-      </p>
-
-      <tabular>
-        <col halign="center" right="minor"/>
-        <col halign="center" right="minor"/>
-        <col halign="center" right="minor"/>
-        <col halign="center" right="minor"/>
-        <col halign="center" right="minor"/>
-        <col halign="center" right="minor"/>
-        <col halign="center" right="minor"/>
-        <col halign="center" right="minor"/>
-        <col halign="center"/>
-        <row bottom="minor">
-          <cell>A</cell>
-          <cell>P</cell>
-          <cell>L</cell>
-          <cell>I</cell>
-          <cell>E</cell>
-          <cell>D</cell>
-          <cell>C</cell>
-          <cell>O</cell>
-          <cell>M</cell>
-        </row>
-
-        <row>
-          <cell>2</cell>
-          <cell>2</cell>
-          <cell>1</cell>
-          <cell>6</cell>
-          <cell>6</cell>
-          <cell>1</cell>
-          <cell>2</cell>
-          <cell>5</cell>
-          <cell>2</cell>
-        </row>
-
-        <row bottom="minor">
-          <cell>B</cell>
-          <cell>N</cell>
-          <cell>T</cell>
-          <cell>R</cell>
-          <cell>S</cell>
-          <cell>H</cell>
-          <cell>G</cell>
-          <cell>V</cell>
-          <cell>K</cell>
-        </row>
-
-        <row>
-          <cell>2</cell>
-          <cell>3</cell>
-          <cell>5</cell>
-          <cell>3</cell>
-          <cell>4</cell>
-          <cell>1</cell>
-          <cell>1</cell>
-          <cell>1</cell>
-          <cell>1</cell>
-        </row>
-      </tabular>
-    </hint>
-    <response/>
-  </exercise>
-
-  <p>
-    One of the interesting things about understanding the
-    <xref ref="thm-strings-multinomial" text="title"/> is figuring out how many
-    terms are even in the summation, since the notation involves a summation
-    that you might not be familiar with.
-    The notation <m>\displaystyle \sum_{k_1+k_2+\cdots+k_r=n}</m> means that we
-    sum over all <em>nonnegative</em> (i.e., greater than or equal to 0)
-    integers <m>k_1,k_2,\dots,k_r</m> so that the sum
-    <m>k_1+k_2 + \cdots + k_r</m> is <em>exactly</em> <m>n</m>.
-  </p>
-
-  <exercise label="PI_strings_multinom_terms">
-    <statement>
-      <p>
-        How many (different) terms are there in the expansion of
-        <m>(x+y+z+w)^{17}</m>?
-      </p>
-    </statement>
-
-    <choices>
-      <choice>
-        <statement>
-          <p>
-            17
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            18
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            <m>\displaystyle\binom{16}{3}</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            <m>\displaystyle\binom{20}{3}</m>
-          </p>
-        </statement>
-
-        <feedback>
-          <p>
-            Yes!
-            This is really just folder distribution in disguise.
-            Here we must distribute <m>17</m> folders (what the exponents must
-            sum to) to four recipients (the number of terms).
-            However, we need an artificial folder for each exponent to allow
-            exponents to be zero.
-            Therefore, we're talking about 21 folders with 20 gaps and we need 3
-            dividers.
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            <m>\displaystyle\binom{20}{4}</m>
-          </p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-
-  <p>
-    To help you check yourself on the class prep assignment, the answer to the
-    question that asked for the coefficient on <m>x^{30}y^{80}z^{10}</m> in
-    <m>(2x^{3}+y-z^{2})^{100}</m> must be <m>0</m> because such a term cannot
-    arise.
-    Such a term would need an exponent of 5 on <m>-z^2</m> and an exponent of 10
-    on <m>2x^3</m>.
-    The sum of the exponents would need to be 100, so this leaves 85 as the
-    exponent on <m>y</m>.
-    However, the term inquired about has <m>y^{80}</m>.
-  </p>
-
-  <exercise label="PI_strings-multinom-coeff">
-    <statement>
-      <p>
-        What is the coefficient on <m>x^{3}y^{15}z^{8}</m> in the expansion of
-        <m>(x + 3y + 2z^{2})^{22}</m>?
-      </p>
-    </statement>
-
-    <choices>
-      <choice>
-        <statement>
-          <p>
-            <m>\binom{22}{3, 15, 8}</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>
-            <m>3^{15}2^{4} \binom{22}{3,15,4}</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            <m>3^{15}2^{8}\binom{26}{3, 15, 8}</m>
-          </p>
-        </statement>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>
-            There is no such term (so the coefficient is <m>0</m> )
-          </p>
-        </statement>
-      </choice>
-    </choices>
-  </exercise>
-
-  <exercise label="act-strings_multinomial_find-coeff">
-    <statement>
-      <p>
-        Consider the expansion of <m>(3+x^{5}+y+xy^{3})^{50}</m>.
-        Find the coefficient on each of the following terms.
-        <ol marker="a.">
-          <li>
+      </statement>
+      <choices multiple-correct="yes">
+        <choice>
+          <statement>
             <p>
-              <m>x^{30}y^{4}</m>
+              1
             </p>
-          </li>
-
-          <li>
+          </statement>
+          <feedback>
             <p>
-              <m>x^{3}y^{3}</m>
+              Since <m>11\gt 1</m>, we see that 1 is not maximal.
             </p>
-          </li>
+          </feedback>
+        </choice>
 
-          <li>
+        <choice correct="yes">
+          <statement>
             <p>
-              <m>x^{30}y^{15}</m>
+              2
             </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-    <response/>
-  </exercise>
+          </statement>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              7
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Since <m>11\gt 7</m>, we see that 7 is not maximal.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              11
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </task>
+    <task label="posets_intro-activity_max-min_min">
+      <statement>
+        <p>
+          Select all of the following that are minimal elements of <m>\bfP</m>.
+        </p>
+      </statement>
+      <choices multiple-correct="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              1
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Although 1 appears high in the diagram, 1 is not greater than any element of the poset and thus is minimal.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              3
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Since <m>3\gt 12</m>, we see that 3 is not minimal.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              5
+            </p>
+          </statement>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              10
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Since <m>10\gt 6</m>, we see that 10 is not minimal.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              12
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </task>
+  </activity>
 </section>
