@@ -538,21 +538,12 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "6.1",
   "title": "Notation and Terminology",
-  "body": " Notation and Terminology    Definition Parts    A poset is an ordered pair with a set and a binary relation on that is reflexive, antisymmetric, and transitive.       Binary relation: Ordered pairs (subset of )  The set contains pairs such as , , and . We interpret these as , , and .    Reflexive: For all , .    in     This says that everything is less than or equal to itself.       Antisymmetric: If and , then .   If in and in , then .    If you have seen set equality before, this is exactly the condition you had there: if and only if ( and ).       Transitive: If and , then .   If in and in , then in .    Helpful to think of this as being the key thing that tells us it's OK to call this relation less than or equal to .         Peer instruction question 1    The Critic:   Saving Private Ryan    Life is Beautiful    Forrest Gump    Braveheart    Good Will Hunting    Titanic    Jurassic Park     Alice:   Life is Beautiful    Saving Private Ryan    Good Will Hunting    Titanic    Braveheart    Forrest Gump    Jurassic Park       A diagram depicting seven points labeled with movie titles as given in the table above. Jurassic Park is at the bottom of the diagram and has line segments going up to points labeled Forrest Gump, Braveheart, and Titanic. From Forrest Gump, there are two line segments going up to Saving Private Ryan and Life is Beautiful. From Braveheart, there are two line segments going up to Saving Private Ryan and Life is Beautiful. From Titanic, there is a line segment going up to Good Will Hunting. From Good Will Hunting there are two line segments going up to Saving Private Ryan and Life is Beautiful.     From the diagram, we can deduce certain relationships such as Jurassic Park is less than Titanic, which is less than Good Will Hunting, which is less than Saving Private Ryan.  We call a diagram of this type a Hasse diagram or an order diagram .      Key Concepts for Posets  Let be a poset.   If in or in , then and are comparable .    If in and there does not exist so that in , then  covers      If and neither in nor in , then and are incomparable .    A set is an antichain if no pair of distinct points in is comparable in .    A set is a chain if every pair of distinct points in is comparable in .      Peer instruction questions 2 3.     The order diagram of a poset with 34 points. The points are labeled from 1 to 34.     graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                                Maximal vs Maximum    A chain is maxim al  if there is no chain so that .      A chain is maxim um  if there is no chain so that .       A maximal chain is one to which you cannot add another point while still being a chain.    A maximum chain is a chain with the largest possible number of points (for that poset)    Maximum implies maximal.       An antichain is maxim al  if there is no antichain so that .      An antichain is maxim um  if there is no antichain so that .     Peer instruction questions 4 6.     Maximal and Minimal Elements    Let be a poset. An element is maximal if there is no with in .    Nothing larger than .    Let be a poset. An element is minimal if there is no with in .    Nothing less than .       With your group, list the set of maximal elements and the set of minimal elements for this poset.    The order diagram of a poset with 34 points. The points are labeled from 1 to 34.     graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                              The set of maximal elements is . The set of minimal elements is        Height and Width    The height of a poset is the number of points in a maxim um chain in       The width of a poset is the number of points in a maxim um antichain in      Peer instruction question 7.     "
+  "body": " Notation and Terminology    Peer instruction question 1    The Critic:   Saving Private Ryan    Life is Beautiful    Forrest Gump    Braveheart    Good Will Hunting    Titanic    Jurassic Park     Alice:   Life is Beautiful    Saving Private Ryan    Good Will Hunting    Titanic    Braveheart    Forrest Gump    Jurassic Park       A diagram depicting seven points labeled with movie titles as given in the table above. Jurassic Park is at the bottom of the diagram and has line segments going up to points labeled Forrest Gump, Braveheart, and Titanic. From Forrest Gump, there are two line segments going up to Saving Private Ryan and Life is Beautiful. From Braveheart, there are two line segments going up to Saving Private Ryan and Life is Beautiful. From Titanic, there is a line segment going up to Good Will Hunting. From Good Will Hunting there are two line segments going up to Saving Private Ryan and Life is Beautiful.     From the diagram, we can deduce certain relationships such as Jurassic Park is less than Titanic, which is less than Good Will Hunting, which is less than Saving Private Ryan.  We call a diagram of this type a Hasse diagram or an order diagram .     Chains and Antichains  Let be a poset.   A set is a chain if every pair of distinct points in is comparable in .    A set is an antichain if no pair of distinct points in is comparable in .      Peer instruction questions 2 3.     The order diagram of a poset with 34 points. The points are labeled from 1 to 34.     graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                                Maximal vs Maximum Chains and Antichains    A chain is maxim al  if there is no chain so that .      A chain is maxim um  if there is no chain so that .       A maximal chain is one to which you cannot add another point while still being a chain.    A maximum chain is a chain with the largest possible number of points (for that poset)    Maximum implies maximal.       An antichain is maxim al  if there is no antichain so that .      An antichain is maxim um  if there is no antichain so that .     Peer instruction questions 4 6.        With your group, list the set of maximal elements and the set of minimal elements for this poset.    The order diagram of a poset with 34 points. The points are labeled from 1 to 34.     graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                              The set of maximal elements is . The set of minimal elements is        Height and Width    The height of a poset is the number of points in a maxim um chain in       The width of a poset is the number of points in a maxim um antichain in      Peer instruction question 7.       Duals, Cover Graphs, and Comparability Graphs    Dual of is denoted   Comparability Graph      A poset and its dual are depicted side-by-side. The order diagram of the poset on the left has a minimal element which is less than . The point is less than two maximal elements, which are labeled and . The diagram of on the right is rotated 180 degrees so that it has two minimal elements, labeled and . Both of those elements are less than , which is less than .     graph={1:[2],2:[3,4],5:[6],6:[7,8]}  labels={1:'x',2:'y',3:'z',4:'w',5:'x',6:'y',7:'z',8:'w'}                   The comparability graph of the poset shown in the previous image. The vertices are labeled . The vertices and are adjacent to each other as well as to both of and . The vertices and are not adjacent.     graph={1:[2,3,4],2:[3,4]}  labels={1:'x',2:'y',3:'z',4:'w',}               Cover Graph  Incomparability Graph      The cover graph of the poset is shown. It features a vertex of degree with edges to each of the vertices , , and . There are no other edges.     graph={1:[2],2:[3,4]}  labels={1:'x',2:'y',3:'z',4:'w'}           The incomparability graph of the poset shown in the previous image. The vertices are labeled . The vertices and are adjacent to each other and there are no other edges.     graph={3:[4]}  labels={1:'x',2:'y',3:'z',4:'w',}                    The dual of , denoted , is formed by reversing each comparability so that in if and only if in . The diagram of is formed by rotating the diagram of by 180 degrees.    The comparability graph of a poset is a graph in which if and only if is comparable to in .    The incomparability graph (or cocomparability graph ) of a poset is a graph in which if and only if is incomparable to in .    The cover graph of a poset is a graph in which if and only if ( covers in or covers in ).     Bob's Claims:   Only linear orders have paths as cover graphs.  This is false. Consider a poset of height whose diagram is a zig-zag shape. The cover graph is still a path, but the poset is not a lienar order.    A poset and its dual have the same cover graph and the same comparability graph.  This is true. Cover relations and comparabilities are reversed, but since the cover graph and comparability graph are not directed, this doesn't change the graphs.    Any two posets with the same cover graph have the same height and the same width.  This is false. Consider the zig-zag poset mentioned earlier and compare it to a linear order on the same number of points.    Any two posets with the same comparability graph have the same height and the same width.  This is true because heighth of a poset is the clique number of the comparability graph and width of a poset is the size of a largest independent set in the comparability graph.      Handout activity on posets and graphs.     "
 },
 {
-  "id": "posets-notation-2-1-2",
+  "id": "posets-notation-2-4",
   "level": "2",
-  "url": "posets-notation.html#posets-notation-2-1-2",
-  "type": "Definition",
-  "number": "6.1",
-  "title": "",
-  "body": "  A poset is an ordered pair with a set and a binary relation on that is reflexive, antisymmetric, and transitive.   "
-},
-{
-  "id": "posets-notation-2-1-7",
-  "level": "2",
-  "url": "posets-notation.html#posets-notation-2-1-7",
+  "url": "posets-notation.html#posets-notation-2-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -565,14 +556,14 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "comparable covers incomparable antichain chain "
+  "body": "chain antichain "
 },
 {
   "id": "posets-notation-4-1-2",
   "level": "2",
   "url": "posets-notation.html#posets-notation-4-1-2",
   "type": "Definition",
-  "number": "6.2",
+  "number": "6.1",
   "title": "",
   "body": "  A chain is maxim al  if there is no chain so that .   "
 },
@@ -581,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "posets-notation.html#posets-notation-4-1-3",
   "type": "Definition",
-  "number": "6.3",
+  "number": "6.2",
   "title": "",
   "body": "  A chain is maxim um  if there is no chain so that .   "
 },
@@ -590,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "posets-notation.html#posets-notation-4-1-5",
   "type": "Definition",
-  "number": "6.4",
+  "number": "6.3",
   "title": "",
   "body": "  An antichain is maxim al  if there is no antichain so that .   "
 },
@@ -599,34 +590,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "posets-notation.html#posets-notation-4-1-6",
   "type": "Definition",
-  "number": "6.5",
+  "number": "6.4",
   "title": "",
   "body": "  An antichain is maxim um  if there is no antichain so that .   "
-},
-{
-  "id": "posets-notation-4-2-2",
-  "level": "2",
-  "url": "posets-notation.html#posets-notation-4-2-2",
-  "type": "Definition",
-  "number": "6.6",
-  "title": "",
-  "body": "  Let be a poset. An element is maximal if there is no with in .   "
-},
-{
-  "id": "posets-notation-4-2-4",
-  "level": "2",
-  "url": "posets-notation.html#posets-notation-4-2-4",
-  "type": "Definition",
-  "number": "6.7",
-  "title": "",
-  "body": "  Let be a poset. An element is minimal if there is no with in .   "
 },
 {
   "id": "posets-notation-5-1",
   "level": "2",
   "url": "posets-notation.html#posets-notation-5-1",
   "type": "Activity",
-  "number": "6.8",
+  "number": "6.5",
   "title": "",
   "body": "  With your group, list the set of maximal elements and the set of minimal elements for this poset.    The order diagram of a poset with 34 points. The points are labeled from 1 to 34.     graph={1:[2,25], 2:[14,22,23], 3:[25], 4:[19,31,26,13], 5:[25], 6:[27,31,35], 7:[8,13], 9:[14,33], 10:[25], 11:[30], 12:[17,29], 13:[34], 15:[19,28], 16:[17,21,27], 18:[21], 19:[27], 20:[31], 22:[25], 24:[26,29,32], 27:[30]}                                              The set of maximal elements is . The set of minimal elements is    "
 },
@@ -635,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "posets-notation.html#posets-notation-6-1-2",
   "type": "Definition",
-  "number": "6.9",
+  "number": "6.6",
   "title": "",
   "body": "  The height of a poset is the number of points in a maxim um chain in    "
 },
@@ -644,9 +617,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "posets-notation.html#posets-notation-6-1-3",
   "type": "Definition",
-  "number": "6.10",
+  "number": "6.7",
   "title": "",
   "body": "  The width of a poset is the number of points in a maxim um antichain in    "
+},
+{
+  "id": "posets-notation-7-1-4",
+  "level": "2",
+  "url": "posets-notation.html#posets-notation-7-1-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "dual comparability graph incomparability graph cocomparability graph cover graph "
 },
 {
   "id": "posets-partitioning",
@@ -655,23 +637,23 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "6.2",
   "title": "Antichain and Chain Partitioning",
-  "body": " Antichain and Chain Partitioning    Duals, Cover Graphs, and Comparability Graphs    Dual of is denoted   Comparability Graph      A poset and its dual are depicted side-by-side. The order diagram of the poset on the left has a minimal element which is less than . The point is less than two maximal elements, which are labeled and . The diagram of on the right is rotated 180 degrees so that it has two minimal elements, labeled and . Both of those elements are less than , which is less than .     graph={1:[2],2:[3,4],5:[6],6:[7,8]}  labels={1:'x',2:'y',3:'z',4:'w',5:'x',6:'y',7:'z',8:'w'}                   The comparability graph of the poset shown in the previous image. The vertices are labeled . The vertices and are adjacent to each other as well as to both of and . The vertices and are not adjacent.     graph={1:[2,3,4],2:[3,4]}  labels={1:'x',2:'y',3:'z',4:'w',}               Cover Graph  Incomparability Graph      The cover graph of the poset is shown. It features a vertex of degree with edges to each of the vertices , , and . There are no other edges.     graph={1:[2],2:[3,4]}  labels={1:'x',2:'y',3:'z',4:'w'}           The incomparability graph of the poset shown in the previous image. The vertices are labeled . The vertices and are adjacent to each other and there are no other edges.     graph={3:[4]}  labels={1:'x',2:'y',3:'z',4:'w',}               Bob's Claims:   Only linear orders have paths as cover graphs.  This is false. Consider a poset of height whose diagram is a zig-zag shape. The cover graph is still a path, but the poset is not a lienar order.    A poset and its dual have the same cover graph and the same comparability graph.  This is true. Cover relations and comparabilities are reversed, but since the cover graph and comparability graph are not directed, this doesn't change the graphs.    Any two posets with the same cover graph have the same height and the same width.  This is false. Consider the zig-zag poset mentioned earlier and compare it to a linear order on the same number of points.    Any two posets with the same comparability graph have the same height and the same width.  This is true because heighth of a poset is the clique number of the comparability graph and width of a poset is the size of a largest independent set in the comparability graph.      Handout page 1.       Height and Antichain Partitioning   Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.          The order diagram of a poset with 7 points. The points are labeled with letters from to .       a  b  c  d  e  f  g       The partition the algorithm produces here is Thus, the height is , which is demonstrated by the chain . We obtain this chain by starting with an element of and working down the poset, always moving to a point with label one smaller.    Handout page 2.       Chain Partitioning and Width  Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?   Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with          "
+  "body": " Antichain and Chain Partitioning    Height and Antichain Partitioning   Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.          The order diagram of a poset with 7 points. The points are labeled with letters from to .       a  b  c  d  e  f  g       The partition the algorithm produces here is Thus, the height is , which is demonstrated by the chain . We obtain this chain by starting with an element of and working down the poset, always moving to a point with label one smaller.    Handout page 2.       Chain Partitioning and Width  Let's look back at the Dual of Dilworth's Theorem. What would be a similar result for width?   Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with          "
 },
 {
   "id": "thm-dual-dilworth",
   "level": "2",
   "url": "posets-partitioning.html#thm-dual-dilworth",
   "type": "Theorem",
-  "number": "6.11",
+  "number": "6.8",
   "title": "Dual of Dilworth’s Theorem.",
   "body": " Dual of Dilworth's Theorem   A poset has height if and only if is the smallest number so that there exist disjoint antichains with .    Proof by algorithm     Let . Place minimal elements of in . Let be formed from by deleting the points in . Place minimal elements of in .    General step: Form by removing from . Let be the minimal elements of .    Continue until every point is in an antichain.      "
 },
 {
-  "id": "posets-partitioning-4-1-3",
+  "id": "posets-partitioning-3-1-3",
   "level": "2",
-  "url": "posets-partitioning.html#posets-partitioning-4-1-3",
+  "url": "posets-partitioning.html#posets-partitioning-3-1-3",
   "type": "Theorem",
-  "number": "6.12",
+  "number": "6.9",
   "title": "Dilworth’s Theorem.",
   "body": " Dilworth's Theorem   Let be a poset. Then is the width of if and only if is the smallest number so that there exist disjoint chains with    "
 },
@@ -689,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-subset-lattice-width.html#notes-subset-lattice-width-2-2",
   "type": "Definition",
-  "number": "6.13",
+  "number": "6.10",
   "title": "",
   "body": "  Let be a poset. A total order on is a linear extension of provided that if in , then in .   "
 },
@@ -698,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-subset-lattice-width.html#notes-subset-lattice-width-3-2",
   "type": "Definition",
-  "number": "6.14",
+  "number": "6.11",
   "title": "",
   "body": "  Let be a positive integer. The subset lattice  is the poset where is the set of all subsets of and in if and only if .   "
 },
@@ -725,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intords.html#notes-posets-intords-2-3",
   "type": "Activity",
-  "number": "6.15",
+  "number": "6.12",
   "title": "",
   "body": "  The poset below is denoted , which we read as two plus two . Draw an interval representation for this poset or explain why it is not possible.     The order diagram of a poset with four points. The points are labeled . There are two cover relations: and .       x  y  z  w       Try to draw and get stuck because once you have overlapping both and intervals, you can't put somewhere so that it is both to the right of 's interval and overlaps with both those for and .    "
 },
@@ -734,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intords.html#thm-fishburn",
   "type": "Theorem",
-  "number": "6.16",
+  "number": "6.13",
   "title": "Fishburn’s Theorem.",
   "body": " Fishburn's Theorem   A poset is an interval order if and only if it does not contain as a subposet.   "
 },
@@ -743,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intords.html#notes-posets-intords-3-1-4",
   "type": "Activity",
-  "number": "6.17",
+  "number": "6.14",
   "title": "",
   "body": "  Find the down-sets and as well as the up-sets , , , and for the poset shown below.     The order diagram of a poset with 10 points. The points are labeled from 1 to 10.                                "
 },
@@ -752,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intords.html#notes-posets-intords-3-1-5",
   "type": "Proposition",
-  "number": "6.18",
+  "number": "6.15",
   "title": "",
   "body": "  Let be a poset. Then the following are equivalent:    is an interval order.    Any two distinct sets in are ordered by inclusion.    Any two distinct sets in are ordered by inclusion.      "
 },
@@ -761,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intords.html#notes-posets-intords-3-1-6",
   "type": "Proposition",
-  "number": "6.19",
+  "number": "6.16",
   "title": "",
   "body": "  If is an interval order, then .   "
 },
@@ -770,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intords.html#notes-posets-intords-4-1",
   "type": "Algorithm",
-  "number": "6.20",
+  "number": "6.17",
   "title": "Poset to Interval Representation.",
   "body": " Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.      "
 },
@@ -788,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-2-1",
   "type": "Algorithm",
-  "number": "6.21",
+  "number": "6.18",
   "title": "Poset to Interval Representation.",
   "body": " Poset to Interval Representation   Input: An interval order .   Determine for each .    Write down as .    Determine for each .    Write down as .    For each , find and . Then let .    (Optional unless instructed) Draw the interval representation.      "
 },
@@ -797,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-2-5",
   "type": "Activity",
-  "number": "6.22",
+  "number": "6.19",
   "title": "",
   "body": "   Use the algorithm to determine if the posets on your handout are interval orders (and find an interval representation if they are).      Suppose you learn that the down sets and up sets are totally ordered by inclusion and that there are down sets (and thus up sets). If the poset has a point that is incomparable to every other point, what interval would the algorithm assign?    From the given information, we can tell that this point's down-set is empty and it's up-set is empty as well. This means that the interval the algorithm produces will be .    "
 },
@@ -806,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intord-algs.html#alg-first-fit-chain",
   "type": "Algorithm",
-  "number": "6.23",
+  "number": "6.20",
   "title": "First Fit for Chain Partitioning Interval Orders.",
   "body": " First Fit for Chain Partitioning Interval Orders      Fix an order in which intervals will be considered.    Assign intervals to chains .    When considering a new interval, determine which chains it can be added to.    Add it to chain with smallest subscript.    If cannot add to any existing chain, make a new one with subscript as small as possible.      "
 },
@@ -815,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intord-algs.html#alg-first-fit-optimal",
   "type": "Algorithm",
-  "number": "6.24",
+  "number": "6.21",
   "title": "Optimal First Fit for Chain Partitioning Interval Orders.",
   "body": " Optimal First Fit for Chain Partitioning Interval Orders      Consider the intervals in order by left endpoint.   Break ties by choosing interval with smallest label.       Assign intervals to chains .    When considering a new interval, determine which chains it can be added to.    Add it to chain with smallest subscript.    If cannot add to any existing chain, make a new one with subscript as small as possible.      "
 },
@@ -824,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-4-3",
   "type": "Example",
-  "number": "6.25",
+  "number": "6.22",
   "title": "",
   "body": "  Let's use First Fit (optimally) to find a chain partition of this interval order and the width of the interval order.   An interval order      Using First Fit in the prescribed order produces the following chains: Thus, the width of the poset is , which is witnessed by the maximum antichain .   "
 },
@@ -833,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-posets-intord-algs.html#notes-posets-intord-algs-4-4",
   "type": "Activity",
-  "number": "6.26",
+  "number": "6.23",
   "title": "",
   "body": "  Use First Fit to find the width of the interval orders whose interval representations are on your handout. Also find a partition into as few chains as possible.   "
 },

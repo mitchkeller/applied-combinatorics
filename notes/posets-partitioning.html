@@ -62,14 +62,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.5';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -322,73 +322,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antichain and Chain Partitioning</span><div class="print-links"><a href="?printpreview=posets-partitioning" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h1>
 <section class="onepage" id="posets-partitioning-2">
-<section class="paragraphs" id="posets-partitioning-2-1"><h2 class="heading"><span class="title">Duals, Cover Graphs, and Comparability Graphs.</span></h2>
-<div class="sbsgroup">
-<div class="sidebyside">
-<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style="">
-<div class="para" id="posets-partitioning-2-1-2-1-1">Dual of <span class="process-math">\(\bfP\)</span> is denoted <span class="process-math">\(\bfP^d\)</span><div class="workspace" data-space="4cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-<div class="sbspanel sbspanel--top top" style="">
-<div class="para" id="posets-partitioning-2-1-2-1-2">Comparability Graph<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebyside">
-<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style="">
-<div class="para" id="posets-partitioning-2-1-2-2-1">Cover Graph<div class="workspace" data-space="4cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-<div class="sbspanel sbspanel--top top" style="">
-<div class="para" id="posets-partitioning-2-1-2-2-2">Incomparability Graph<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="para logical" id="posets-partitioning-2-1-3">
-<div class="para">Bob’s Claims:</div>
-<ol class="decimal" style="list-style: ptx-marker-1;" id="posets-partitioning-2-1-3-1">
-<li id="posets-partitioning-2-1-3-1-1">
-<div class="para" id="posets-partitioning-2-1-3-1-1-1">Only linear orders have paths as cover graphs.<div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="posets-partitioning-2-1-3-1-2">
-<div class="para" id="posets-partitioning-2-1-3-1-2-1">A poset and its dual have the same cover graph and the same comparability graph.<div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="posets-partitioning-2-1-3-1-3">
-<div class="para" id="posets-partitioning-2-1-3-1-3-1">Any two posets with the same cover graph have the same height and the same width.<div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-<li id="posets-partitioning-2-1-3-1-4">
-<div class="para" id="posets-partitioning-2-1-3-1-4-1">Any two posets with the same comparability graph have the same height and the same width.<div class="workspace" data-space="1cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="posets-partitioning-2-1-4">
-<em class="alert">Handout page 1.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Duals, Cover Graphs, and Comparability Graphs"><a tabindex="-1" href="#posets-partitioning-2-1" title="Copy heading and permalink for Paragraphs: Duals, Cover Graphs, and Comparability Graphs" aria-label="Copy heading and permalink for Paragraphs: Duals, Cover Graphs, and Comparability Graphs">🔗</a></div>
-</section></section><section class="onepage" id="posets-partitioning-3">
-<section class="paragraphs" id="posets-partitioning-3-1"><h2 class="heading"><span class="title">Height and Antichain Partitioning.</span></h2>
+<section class="paragraphs" id="posets-partitioning-2-1"><h2 class="heading"><span class="title">Height and Antichain Partitioning.</span></h2>
 <article class="theorem theorem-like" id="thm-dual-dilworth"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dual of Dilworth’s Theorem.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dual of Dilworth’s Theorem.</span>
 </h3>
 <div class="para logical" id="thm-dual-dilworth-2-1">
 <div class="para">A poset <span class="process-math">\(\bfP=(X,P')\)</span> has height <span class="process-math">\(h\)</span> if and only if <span class="process-math">\(h\)</span> is the smallest number so that there exist <span class="process-math">\(h\)</span> disjoint antichains <span class="process-math">\(A_{1},\dots, A_{h}\)</span> with</div>
@@ -399,7 +335,7 @@ X= A_{1}\cup A_{2}\cup\cdots\cup A_{h}\text{.}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-dual-dilworth-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.11: Dual of Dilworth’s Theorem"><a tabindex="-1" href="#thm-dual-dilworth" title="Copy heading and permalink for Theorem 6.11: Dual of Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.11: Dual of Dilworth’s Theorem">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.8: Dual of Dilworth’s Theorem"><a tabindex="-1" href="#thm-dual-dilworth" title="Copy heading and permalink for Theorem 6.8: Dual of Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.8: Dual of Dilworth’s Theorem">🔗</a></div>
 </article>
 <article class="proof" id="thm-dual-dilworth-3"><h3 class="heading"><span class="title">Proof by algorithm.</span></h3>
 <div class="para logical" id="thm-dual-dilworth-3-2">
@@ -422,49 +358,49 @@ X= A_{1}\cup A_{2}\cup\cdots\cup A_{h}\text{.}
 </ul>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-dual-dilworth-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 6.11.1: Proof by algorithm"><a tabindex="-1" href="#thm-dual-dilworth-3" title="Copy heading and permalink for Proof 6.11.1: Proof by algorithm" aria-label="Copy heading and permalink for Proof 6.11.1: Proof by algorithm">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.8.1: Proof by algorithm"><a tabindex="-1" href="#thm-dual-dilworth-3" title="Copy heading and permalink for Proof 6.8.1: Proof by algorithm" aria-label="Copy heading and permalink for Proof 6.8.1: Proof by algorithm">🔗</a></div>
 </article>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:25% 75%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style=""><div class="image-box">
-<img src="generated/prefigure/notes-antichain-part-examp.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="posets-partitioning-3-1-3-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="posets-partitioning-3-1-3-1-description">
-<div class="para" id="posets-partitioning-3-1-3-1-1-1">The order diagram of a poset with 7 points. The points are labeled with letters from <span class="process-math">\(a\)</span> to <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-3-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<img src="generated/prefigure/notes-antichain-part-examp.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="posets-partitioning-2-1-3-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="posets-partitioning-2-1-3-1-description">
+<div class="para" id="posets-partitioning-2-1-3-1-1-1">The order diagram of a poset with 7 points. The points are labeled with letters from <span class="process-math">\(a\)</span> to <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div></details>
 </div></div>
 <div class="sbspanel sbspanel--top top" style="">
-<div class="para" id="posets-partitioning-3-1-3-2"> <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-3-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="posets-partitioning-2-1-3-2"> <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 </div>
 </div>
-<div class="para" id="posets-partitioning-3-1-4">
-<em class="alert">Handout page 2.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-3-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="posets-partitioning-2-1-4">
+<em class="alert">Handout page 2.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-2-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Height and Antichain Partitioning"><a tabindex="-1" href="#posets-partitioning-3-1" title="Copy heading and permalink for Paragraphs: Height and Antichain Partitioning" aria-label="Copy heading and permalink for Paragraphs: Height and Antichain Partitioning">🔗</a></div>
-</section></section><section class="onepage" id="posets-partitioning-4">
-<section class="paragraphs" id="posets-partitioning-4-1"><h2 class="heading"><span class="title">Chain Partitioning and Width.</span></h2>
-<div class="para" id="posets-partitioning-4-1-2">Let’s look back at the Dual of Dilworth’s Theorem. What would be a similar result for width?<div class="workspace" data-space="5cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Height and Antichain Partitioning"><a tabindex="-1" href="#posets-partitioning-2-1" title="Copy heading and permalink for Paragraphs: Height and Antichain Partitioning" aria-label="Copy heading and permalink for Paragraphs: Height and Antichain Partitioning">🔗</a></div>
+</section></section><section class="onepage" id="posets-partitioning-3">
+<section class="paragraphs" id="posets-partitioning-3-1"><h2 class="heading"><span class="title">Chain Partitioning and Width.</span></h2>
+<div class="para" id="posets-partitioning-3-1-2">Let’s look back at the Dual of Dilworth’s Theorem. What would be a similar result for width?<div class="workspace" data-space="5cm"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="posets-partitioning-4-1-3"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dilworth’s Theorem.</span>
+<article class="theorem theorem-like" id="posets-partitioning-3-1-3"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dilworth’s Theorem.</span>
 </h3>
-<div class="para logical" id="posets-partitioning-4-1-3-2-1">
+<div class="para logical" id="posets-partitioning-3-1-3-2-1">
 <div class="para">Let <span class="process-math">\(\bfP=(X,P')\)</span> be a poset. Then <span class="process-math">\(w\)</span> is the width of <span class="process-math">\(\bfP\)</span> if and only if <span class="process-math">\(w\)</span> is the smallest number so that there exist <span class="process-math">\(w\)</span> disjoint chains <span class="process-math">\(C_{1},C_{2},\dots C_{w}\)</span> with</div>
-<div class="displaymath process-math" id="posets-partitioning-4-1-3-2-1-7">
+<div class="displaymath process-math" id="posets-partitioning-3-1-3-2-1-7">
 \begin{equation*}
 X=C_{1}\cup C_{2}\cup \cdots\cup C_{w}.
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-4-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-3-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.12: Dilworth’s Theorem"><a tabindex="-1" href="#posets-partitioning-4-1-3" title="Copy heading and permalink for Theorem 6.12: Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.12: Dilworth’s Theorem">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.9: Dilworth’s Theorem"><a tabindex="-1" href="#posets-partitioning-3-1-3" title="Copy heading and permalink for Theorem 6.9: Dilworth’s Theorem" aria-label="Copy heading and permalink for Theorem 6.9: Dilworth’s Theorem">🔗</a></div>
 </article>
-<div class="para" id="posets-partitioning-4-1-4"> <div class="workspace" data-space="16cm"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-4-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="posets-partitioning-3-1-4"> <div class="workspace" data-space="16cm"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#posets-partitioning-3-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Chain Partitioning and Width"><a tabindex="-1" href="#posets-partitioning-4-1" title="Copy heading and permalink for Paragraphs: Chain Partitioning and Width" aria-label="Copy heading and permalink for Paragraphs: Chain Partitioning and Width">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Chain Partitioning and Width"><a tabindex="-1" href="#posets-partitioning-3-1" title="Copy heading and permalink for Paragraphs: Chain Partitioning and Width" aria-label="Copy heading and permalink for Paragraphs: Chain Partitioning and Width">🔗</a></div>
 </section></section><div class="autopermalink" aria-hidden="true" data-description="Handout 6.2: Antichain and Chain Partitioning"><a tabindex="-1" href="#posets-partitioning" title="Copy heading and permalink for Handout 6.2: Antichain and Chain Partitioning" aria-label="Copy heading and permalink for Handout 6.2: Antichain and Chain Partitioning">🔗</a></div>
 </section>
 </div>
