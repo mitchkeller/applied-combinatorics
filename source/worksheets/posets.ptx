@@ -369,7 +369,7 @@
   </worksheet>
   <worksheet xml:id="ws-posets-subset-lattice" component="posets-subset">
     <title>Width of the Subset Lattice</title>
-    <!-- <page> -->
+    <page>
       <exercise workspace="1.5in">
         <statement>
           <p>
@@ -470,6 +470,8 @@
           </diagram>
         </prefigure>
       </image>
+      </page>
+      <page>
       <exercise>
         <introduction>
           <p>
@@ -587,6 +589,8 @@
             </solution>
           </task>
         </exercise>
+        </page>
+        <page>
           <exercise>
             <introduction>
               <p>
@@ -665,6 +669,8 @@
             </p>
           </solution>
         </exercise>
+        </page>
+        <page>
         <exercise workspace="1in">
           <statement>
             <p>
@@ -719,6 +725,7 @@
             </p>
           </solution>
         </exercise>
+        </page>
       </worksheet>
       <worksheet xml:id="ws-posets-intord-draw-diag" component="posets-intord-draw-diag">
         <title>Interval Representations to Diagrams</title>
