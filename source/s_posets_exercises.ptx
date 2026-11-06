@@ -213,39 +213,37 @@
                   </p>
                 </description>
                 <prefigure xmlns="https://prefigure.org" label="intord-to-diagram-exercise1">
-                  <diagram dimensions="(300,300)" margins="15">
-                    <coordinates bbox="(0,0,2,2)">
-                      <definition>labels={1:'j',2:'k',3:'c',4:'d',5:'e',6:'f',7:'g',8:'h',9:'i'}</definition>
-                      <network scale="0.9" labels="yes"
-                              node-fill="#ddd" label-dictionary="labels" node-stroke="black">
-                        <node at="1"  p="(0,2)" edges="[]"/>       <!-- j -->
-                        <node at="2"  p="(0,1.3)" edges="[1]"/>       <!-- k -->
-                        <node at="3"  p="(0.8,1.55)" edges="[1]"/>  <!-- c -->
-                        <node at="4"  p="(0,0)" edges="[2,9]"/>       <!-- d -->
-                        <node at="5"  p="(1,0)" edges="[2,3,8]"/>   <!-- e -->
-                        <node at="6"  p="(2,0)" edges="[9,2]"/>       <!-- f -->
-                        <node at="7"  p="(2,2)" edges="[]"/>    <!-- g -->
-                        <node at="8"  p="(2,1.6)" edges="[1,7]"/>  <!-- h -->
-                        <node at="9"  p="(0.65,1.1)" edges="[3,8]"/>  <!-- i -->
-                        
-                      </network>
+                  <diagram xmlns="https://prefigure.org"
+                          dimensions="(300, 450)" margins="22">
+                    <definition>
+                      poset={0:[7],1:[8,6],2:[0,5,8], 3:[6,8], 4:[], 
+                      5:[4,7], 6:[0,5], 7:[], 8:[7] }
+                    </definition>
+                    
+                    <definition>labels={0: 'c', 1: 'd', 2: 'e', 3:'f', 4:'g', 
+                      5:'h', 6:'i', 7:'j', 8:'k'}
+                    </definition>
+                    <coordinates bbox="(-1,0,1,3)">
+                      <!-- <grid-axes/> -->
+                    <poset covers="poset" labeled="yes" node-size="11"
+                      labels="labels" locations="{5:(0.25,2)}"
+                    />
                     </coordinates>
                     <annotations>
                       <annotation ref="figure"
-                                  text="The order diagram of an interval order with 9 points labeled by letters from c to k">
-                          
-                          <annotation ref="node-3" text="The point c covers points e and i and is covered by point i."/>
-                          <annotation ref="node-4" text="The minimal point d is covered by points i and i ."/>
-                          <annotation ref="node-5" text="The minimal point e is covered by points h, i, and k."/>
-                          <annotation ref="node-6" text="The minimal point f is covered by points i and k."/>
-                          <annotation ref="node-7" text="The maximal point g covers point h."/>
-                          <annotation ref="node-8" text="The point h covers points f and i and is covered by points g and j."/>
-                          <annotation ref="node-9" text="The point i covers points d and f and is covered by points c and h."/>
-                          <annotation ref="node-1" text="The maximal point j covers points c, h, and k."/>
-                          <annotation ref="node-2" text="The point k covers points d, e, and f and is covered by point j."/>
-                      </annotation>
-                    </annotations>
-                  </diagram>                  
+                                text="The order diagram of an interval order with 9 points labeled by letters from c to k">
+                        <annotation ref="node-0" text="The point c covers points e and i and is covered by point j."/>
+                        <annotation ref="node-1" text="The minimal point d is covered by points i and k."/>
+                        <annotation ref="node-2" text="The minimal point e is covered by points c, h, and k."/>
+                        <annotation ref="node-3" text="The minimal point f is covered by points i and k."/>
+                        <annotation ref="node-4" text="The maximal point g covers point h."/>
+                        <annotation ref="node-5" text="The point h covers points e and i and is covered by points g and j."/>
+                        <annotation ref="node-6" text="The point i covers points d and f and is covered by points c and h."/>
+                        <annotation ref="node-7" text="The maximal point j covers points c, h, and k."/>
+                        <annotation ref="node-8" text="The point k covers points d, e, and f and is covered by point j."/>
+                    </annotation>
+                  </annotations>
+                  </diagram>
                 </prefigure>
               </image>
             </solution>
