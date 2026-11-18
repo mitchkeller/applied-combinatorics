@@ -605,6 +605,7 @@
   </handout>
   <handout xml:id="notes-exp-genfn" component="genfunction-expgf">
     <title>Exponential Generating Functions</title>
+    <page>
     <p>
       <alert>Peer instruction questions 1<ndash/>3.</alert>
     </p>
@@ -650,6 +651,8 @@
       </md>.
       Now thinking from first principles about the book arrangement problem, we need to consider each possible number <m>k</m> from <m>0</m> to <m>n</m> of books that are placed on the first shelf. There are <m>C(n,k)</m> ways to choose that number of books to put on the first shelf (and the rest go on the second). There are then <m>a_k</m> ways to arrange the books on the first shelf and <m>b_{n-k}</m> ways to arrange the books on the second shelf. We need to sum this up over all values of <m>k</m>, and that's exactly what we have as the coefficient on <m>x^n/n!</m> in the product above.
     </p>
+    </page>
+    <page>
     <activity>
       <task>
         <statement>
@@ -686,5 +689,6 @@
         </solution>
       </task>
     </activity>
+    </page>
   </handout>
 </chapter>
