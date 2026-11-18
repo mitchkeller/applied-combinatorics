@@ -60,15 +60,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.6';
+eBookConfig.runestone_version = '8.4.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
+<script src="_static/prefix-runtime.7e2ee203f2ecd6c8.bundle.js"></script><script src="_static/prefix-23.7d27cb317c36911a.bundle.js"></script><script src="_static/prefix-runestone.35a40fea06647cf2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runestone.7062ede5334282a6.css">
 <script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
@@ -305,6 +304,7 @@ sagecell.makeSagecell({
 <option value="andika">Andika</option></select>
 </div>
 </div>
+<div class="ptx-print-options-group hide-solutions-options"><div class="hide-option"><label for="hide-solution-checkbox"><input type="checkbox" id="hide-solution-checkbox"><span>Hide solutions</span></label></div></div>
 <div class="ptx-print-options-group header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label><input type="checkbox" id="print-first-page-header-checkbox" checked><span>First page</span></label><label><input type="checkbox" id="print-running-header-checkbox" checked><span>Running</span></label>
@@ -332,6 +332,15 @@ sagecell.makeSagecell({
 <article class="task exercise-like" id="ws-genfunction-intro-2-1-2"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para" id="ws-genfunction-intro-2-1-2-1-1">If you want to find the number of ways to make $1, you should plan to look for the coefficient on <span class="process-math">\(x^{n}\)</span> for what <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-genfunction-intro-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions">
+<details id="ws-genfunction-intro-2-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ws-genfunction-intro-2-1-2-2-1">
+<span class="process-math">\(n=100\)</span> since exponent should be number of cents.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-genfunction-intro-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.1.a.1"><a tabindex="-1" href="#ws-genfunction-intro-2-1-2-2" title="Copy heading and permalink for Solution 8.1.a.1" aria-label="Copy heading and permalink for Solution 8.1.a.1">🔗</a></div>
+</div></details>
+</div>
 <div class="workspace" data-space="0.5cm"></div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 8.1.a"><a tabindex="-1" href="#ws-genfunction-intro-2-1-2" title="Copy heading and permalink for Task 8.1.a" aria-label="Copy heading and permalink for Task 8.1.a">🔗</a></div>
 </article>
@@ -344,17 +353,44 @@ f(x) =
 p(x) = f.series(x,n)
 p(x)
 </script></div>
+<div class="solutions">
+<details id="ws-genfunction-intro-2-1-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ws-genfunction-intro-2-1-3-2-1">
+<span class="process-math">\(\frac{1}{(1-x)(1-x^{5})}\text{,}\)</span> 21 ways<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-genfunction-intro-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.1.b.1"><a tabindex="-1" href="#ws-genfunction-intro-2-1-3-2" title="Copy heading and permalink for Solution 8.1.b.1" aria-label="Copy heading and permalink for Solution 8.1.b.1">🔗</a></div>
+</div></details>
+</div>
 <div class="workspace" data-space="2cm"></div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 8.1.b"><a tabindex="-1" href="#ws-genfunction-intro-2-1-3" title="Copy heading and permalink for Task 8.1.b" aria-label="Copy heading and permalink for Task 8.1.b">🔗</a></div>
 </article>
 <article class="task exercise-like" id="ws-genfunction-intro-2-1-4"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para" id="ws-genfunction-intro-2-1-4-1-1">Now suppose you have pennies, nickels, dimes, and quarters. What’s the generating function? Number of ways to make $1? Number of ways to make $0.83?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-genfunction-intro-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions">
+<details id="ws-genfunction-intro-2-1-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ws-genfunction-intro-2-1-4-2-1">
+<span class="process-math">\(\frac{1}{(1-x)(1-x^{5})(1-x^{10})(1-x^{25})}\text{.}\)</span> 242 ways for $1. 141 ways for $0.83.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-genfunction-intro-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.1.c.1"><a tabindex="-1" href="#ws-genfunction-intro-2-1-4-2" title="Copy heading and permalink for Solution 8.1.c.1" aria-label="Copy heading and permalink for Solution 8.1.c.1">🔗</a></div>
+</div></details>
+</div>
 <div class="workspace" data-space="2cm"></div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 8.1.c"><a tabindex="-1" href="#ws-genfunction-intro-2-1-4" title="Copy heading and permalink for Task 8.1.c" aria-label="Copy heading and permalink for Task 8.1.c">🔗</a></div>
 </article>
 <article class="task exercise-like" id="ws-genfunction-intro-2-1-5"><h3 class="heading"><span class="codenumber">(d)</span></h3>
 <div class="para" id="ws-genfunction-intro-2-1-5-1-1">Suppose you have pennies, nickels, dimes, quarters, half dollars, and dollar coins. What’s the generating function? What’s the number of ways to make $1? What’s the number of ways to make $2.50?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-genfunction-intro-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ws-genfunction-intro-2-1-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ws-genfunction-intro-2-1-5-2-1">
+<span class="process-math">\(\frac{1}{(1-x)(1-x^{5})(1-x^{10})(1-x^{25})(1-x^{50})(1-x^{100})}\text{.}\)</span> 293 ways for $1. 6148 ways for $2.50.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-genfunction-intro-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.1.d.1"><a tabindex="-1" href="#ws-genfunction-intro-2-1-5-2" title="Copy heading and permalink for Solution 8.1.d.1" aria-label="Copy heading and permalink for Solution 8.1.d.1">🔗</a></div>
+</div></details>
 </div>
 <div class="workspace" data-space="4cm"></div>
 <div class="autopermalink" aria-hidden="true" data-description="Task 8.1.d"><a tabindex="-1" href="#ws-genfunction-intro-2-1-5" title="Copy heading and permalink for Task 8.1.d" aria-label="Copy heading and permalink for Task 8.1.d">🔗</a></div>
