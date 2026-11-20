@@ -640,6 +640,22 @@
         7095140325
       </output>
     </sage>
+    <p workspace="5cm">
+      How do we deal with the number of something needing to be a multiple of an integer greater than <m>2</m>?
+    </p>
+    <p component="a">
+      When working with ordinary generating functions, if the number of apples in a fruit basket needed to be a multiple of 5, we would use <m>1/(1-x^5)</m> in the ordinary generating function because this is the rational form of <m>\displaystyle\sum_{n=0}^\infty (x^5)^n</m>. However, we need more care when working with exponential generating functions. Typically, it will be easiest to just use Sigma-notation because <m>\displaystyle\sum_{n=0}^\infty \frac{x^{5n}}{(5n)!}</m> doesn't come about easily by making a substitution into the series for <m>e^x</m>. To see this, consider the two substitutions you might be tempted to try:
+      <md>
+        <mrow>e^{5x} \amp = \sum_{n=0}^\infty \frac{(5x)^n}{n!} = \sum_{n=0}^\infty 5^n \frac{x^n}{n!}</mrow>
+        <mrow>e^{x^5} \amp = \sum_{n=0}^\infty \frac{(x^5)^n}{n!} = \sum_{n=0}^\infty \frac{x^{5n}}{n!}</mrow>
+      </md>
+      The first is not helpful because of the <m>5^n</m>, as a fundamental factor in a generating function should have coefficients of just 0 or 1. The second looks more promising, but the mismatch between the exponent (<m>5n</m>) and the factorial (<m>n</m>) in the denominator cannot be readily reconciled.
+    </p>
+    <p component="a">
+      The big takeaway is that Sigma-notation is generally your best approach when the number of occurrences of something in an <em>exponential</em> generating function must be a multiple of some integer greater than <m>2</m>.
+    </p>
+    </page>
+    <page>
     <p workspace="8cm">
       Why does multiplying <em>exponential</em> generating functions give us what we want? Let's consider the example of exponential generating functions for the number of ways to arrange books on two shelves where the number of ways to arrange <m>i</m> books on the first shelf is <m>a_i</m> (and does not depend on which <m>i</m> books are on the shelf) and the number of ways to arrange <m>i</m> books on the second shelf is <m>b_i</m>.
     </p>
